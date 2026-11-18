@@ -1,0 +1,644 @@
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=-1
+\documentclass[10pt,a4paper]{article}
+\usepackage{cmap}
+\usepackage[margin=1.8cm,headheight=14pt,headsep=10pt]{geometry}
+\usepackage[leqno]{amsmath}
+\usepackage{amssymb,booktabs,longtable,array,ragged2e,multicol,multirow,xcolor,fancyhdr,tikz}
+\definecolor{linkblue}{rgb}{0.08,0.33,0.58}
+\usepackage[colorlinks=true,linkcolor=linkblue,urlcolor=linkblue,citecolor=linkblue,
+  filecolor=linkblue,linktoc=all,pdfborder={0 0 0},bookmarksnumbered=true]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\setcounter{secnumdepth}{2}\setcounter{tocdepth}{2}
+\definecolor{partshade}{gray}{0.9}
+\definecolor{parttitle}{rgb}{0.6,0.1,0.1}
+\definecolor{parttitlelight}{HTML}{EC6B60}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}{-3ex plus -1ex minus -.2ex}%
+  {1.2ex plus .2ex}{\normalfont\large\sffamily\bfseries\color{parttitle}}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}{-2.5ex plus -1ex minus -.2ex}%
+  {.8ex plus .2ex}{\normalfont\sffamily\bfseries\color{parttitle}}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}{-2ex plus -1ex minus -.2ex}%
+  {.6ex plus .2ex}{\normalfont\small\sffamily\bfseries\color{parttitle}}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}{1.5ex plus .5ex minus .2ex}{-1em}%
+  {\normalfont\small\sffamily\bfseries\color{parttitle}}}
+\renewcommand\tagform@[1]{\maketag@@@{\textsf{\bfseries\footnotesize (#1)}}}
+\renewcommand*\l@part[2]{\par\addvspace{1.6ex}\noindent{\sffamily\bfseries #1}\hfill
+  {\sffamily\bfseries #2}\par\nobreak}
+\newcommand\tocnumber{1.8em}
+\newcommand\tocline[4]{\par{\rightskip \tocnumber plus 1fil\relax\parfillskip -\rightskip
+  \noindent\hangindent\dimexpr#1+#2\relax\hspace*{#1}%
+  \@tempdima #2{\sffamily\small #3}\nobreak\leaders\hbox{$\m@th\mkern 4.5mu\hbox{.}%
+  \mkern 4.5mu$}\hfill\nobreak\hbox to \tocnumber{\hfil\sffamily\small #4}\par}}
+\renewcommand*\l@section[2]{\tocline{0em}{2.2em}{#1}{#2}}
+\renewcommand*\l@subsection[2]{\tocline{2.2em}{2.6em}{#1}{#2}}
+\newcommand\contentspage{{\setlength{\columnsep}{24pt}\begin{multicols}{2}\@starttoc{toc}%
+  \end{multicols}}}
+\newcounter{docpart}\@addtoreset{section}{docpart}
+\renewcommand\thesection{\ifnum\value{docpart}>0 \arabic{docpart}.\fi\arabic{section}}
+\renewcommand\theHsection{\arabic{docpart}.\arabic{section}}
+\newcommand\partnumber[1]{#1\enspace}
+\pdfstringdefDisableCommands{\def\partnumber#1{#1 }}
+\newcommand{\partbox}[1]{\par\addvspace{12pt}\refstepcounter{docpart}\phantomsection
+  \addcontentsline{toc}{part}{\protect\partnumber{\thedocpart}#1}%
+  \noindent\colorbox{partshade}{\makebox[%
+  \dimexpr\textwidth-2\fboxsep\relax]{\rule[-6pt]{0pt}{20pt}\Large\sffamily\bfseries%
+  \textcolor{parttitle}{\thedocpart\quad #1}}}\par\nobreak\@nobreaktrue\addvspace{2pt}}
+\newmarks\LTstartmarks\newcount\LTstartcount
+\let\LT@startplain\LT@start
+\def\LT@start{\global\advance\LTstartcount\@ne\LT@startplain
+  \marks\LTstartmarks{\the\LTstartcount}}
+\newmarks\LTgroupmarks
+\newcount\LTspacebreak\LTspacebreak=-1
+\newcount\LTrulebreak\LTrulebreak=-2
+\def\grouprule#1#2{\noalign{\marks\LTgroupmarks{\the\belowrulesep}\nobreak\vskip#1%
+  \vskip\aboverulesep}\multispan\LT@cols\unskip{\leaders\hrule\@height#2\hfill\kern\z@}\cr
+  \noalign{\penalty\LTrulebreak\vskip\belowrulesep\global\@lastruleclass\z@}}
+\def\groupspace#1{\noalign{\marks\LTgroupmarks{\the\dimexpr#1\relax}\penalty\LTspacebreak
+  \vskip#1\global\@lastruleclass\z@}}
+\def\LT@unskips{\unskip\unpenalty\unskip\unpenalty\unskip\unpenalty\unskip\unpenalty}
+\def\LT@groupcut{\ifnum\outputpenalty=\LTrulebreak
+  \setbox\@cclv\vbox{\unvbox\@cclv\setbox\z@\lastbox\LT@unskips}\fi}
+\def\LT@groupjoin{\ifnum\outputpenalty=\LTspacebreak\vskip-\botmarks\LTgroupmarks\relax\fi
+  \ifnum\outputpenalty=\LTrulebreak\vskip-\botmarks\LTgroupmarks\relax\fi}
+\let\LT@outputplain\LT@output
+\def\LT@output{\ifnum\outputpenalty<-\@Mi\LT@outputplain\else
+  \edef\LT@marka{\botmarks\LTstartmarks}\edef\LT@markb{\the\LTstartcount}%
+  \ifx\LT@marka\LT@markb\LT@groupcut\LT@outputplain\LT@groupjoin
+  \else\setbox\LT@head\box\voidb@x\LT@outputplain\fi\fi}
+\makeatother
+\newcommand{\needspace}[1]{\par\penalty-100\begingroup\dimen0=#1\relax\dimen2=\pagegoal
+  \advance\dimen2-\pagetotal\ifdim\dimen0>\dimen2\relax\ifdim\dimen2>0pt\vfil\break\fi\fi
+  \endgroup}
+\numberwithin{equation}{section}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace #1}}
+\renewcommand{\subsectionmark}[1]{}
+\fancyhead[R]{\small\textsc{\rightmark}\quad\thepage}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small\thepage}}
+\definecolor{atlasI}{HTML}{991A1A}\definecolor{atlasIl}{HTML}{EC6B60}
+\definecolor{atlasII}{HTML}{295A2C}\definecolor{atlasIIl}{HTML}{6C9F6D}
+\definecolor{atlasIII}{HTML}{7A1466}\definecolor{atlasIIIl}{HTML}{D66EBC}
+\definecolor{atlasIV}{HTML}{9B690B}\definecolor{atlasIVl}{HTML}{F2A618}
+\makeatletter
+\newcommand\atlas@full{%
+\fill[atlasIII] (0.0394,0.0163) -- (0.3978,0.0163) arc[start angle=0.668, end angle=13.836, radius=1.3979] -- cycle;
+\fill[atlasI] (-0.0163,0.0394) -- (-0.0163,0.3978) arc[start angle=90.668, end angle=103.836, radius=1.3979] -- cycle;
+\fill[atlasIV] (-0.0394,-0.0163) -- (-0.3978,-0.0163) arc[start angle=-179.332, end angle=-166.164, radius=1.3979] -- cycle;
+\fill[atlasII] (0.0163,-0.0394) -- (0.0163,-0.3978) arc[start angle=-89.332, end angle=-76.164, radius=1.3979] -- cycle;
+\fill[atlasIIIl] (0.0163,0.0394) -- (0.3343,0.3573) arc[start angle=76.164, end angle=89.332, radius=1.3979] -- cycle;
+\fill[atlasIl] (-0.0394,0.0163) -- (-0.3573,0.3343) arc[start angle=166.164, end angle=179.332, radius=1.3979] -- cycle;
+\fill[atlasIVl] (-0.0163,-0.0394) -- (-0.3343,-0.3573) arc[start angle=-103.836, end angle=-90.668, radius=1.3979] -- cycle;
+\fill[atlasIIl] (0.0394,-0.0163) -- (0.3573,-0.3343) arc[start angle=-13.836, end angle=-0.668, radius=1.3979] -- cycle;
+\fill[atlasIIIl] (0.4304,0.0163) -- (0.9598,0.0163) arc[start angle=46.637, end angle=73.849, radius=1.3979] arc[start angle=13.862, end angle=0.653, radius=1.4305] -- cycle;
+\fill[atlasIl] (-0.0163,0.4304) -- (-0.0163,0.9598) arc[start angle=136.637, end angle=163.849, radius=1.3979] arc[start angle=103.862, end angle=90.653, radius=1.4305] -- cycle;
+\fill[atlasIVl] (-0.4304,-0.0163) -- (-0.9598,-0.0163) arc[start angle=-133.363, end angle=-106.151, radius=1.3979] arc[start angle=-166.138, end angle=-179.347, radius=1.4305] -- cycle;
+\fill[atlasIIl] (0.0163,-0.4304) -- (0.0163,-0.9598) arc[start angle=-43.363, end angle=-16.151, radius=1.3979] arc[start angle=-76.138, end angle=-89.347, radius=1.4305] -- cycle;
+\fill[atlasIII] (0.0163,0.4304) arc[start angle=89.347, end angle=76.138, radius=1.4305] arc[start angle=16.151, end angle=43.363, radius=1.3979] -- cycle;
+\fill[atlasI] (-0.4304,0.0163) arc[start angle=179.347, end angle=166.138, radius=1.4305] arc[start angle=106.151, end angle=133.363, radius=1.3979] -- cycle;
+\fill[atlasIV] (-0.0163,-0.4304) arc[start angle=-90.653, end angle=-103.862, radius=1.4305] arc[start angle=-163.849, end angle=-136.637, radius=1.3979] -- cycle;
+\fill[atlasII] (0.4304,-0.0163) arc[start angle=-0.653, end angle=-13.862, radius=1.4305] arc[start angle=-73.849, end angle=-46.637, radius=1.3979] -- cycle;
+\fill[atlasIII] (0.9997,0.0232) arc[start angle=1.329, end angle=44.066, radius=1] -- (0.3973,0.3742) arc[start angle=73.875, end angle=45.664, radius=1.4305] -- cycle;
+\fill[atlasI] (-0.0232,0.9997) arc[start angle=91.329, end angle=134.066, radius=1] -- (-0.3742,0.3973) arc[start angle=163.875, end angle=135.664, radius=1.4305] -- cycle;
+\fill[atlasIV] (-0.9997,-0.0232) arc[start angle=-178.671, end angle=-135.934, radius=1] -- (-0.3973,-0.3742) arc[start angle=-106.125, end angle=-134.336, radius=1.4305] -- cycle;
+\fill[atlasII] (0.0232,-0.9997) arc[start angle=-88.671, end angle=-45.934, radius=1] -- (0.3742,-0.3973) arc[start angle=-16.125, end angle=-44.336, radius=1.4305] -- cycle;
+\fill[atlasIIIl] (0.0232,0.9997) arc[start angle=44.336, end angle=16.125, radius=1.4305] -- (0.6955,0.7185) arc[start angle=45.934, end angle=88.671, radius=1] -- cycle;
+\fill[atlasIl] (-0.9997,0.0232) arc[start angle=134.336, end angle=106.125, radius=1.4305] -- (-0.7185,0.6955) arc[start angle=135.934, end angle=178.671, radius=1] -- cycle;
+\fill[atlasIVl] (-0.0232,-0.9997) arc[start angle=-135.664, end angle=-163.875, radius=1.4305] -- (-0.6955,-0.7185) arc[start angle=-134.066, end angle=-91.329, radius=1] -- cycle;
+\fill[atlasIIl] (0.9997,-0.0232) arc[start angle=-45.664, end angle=-73.875, radius=1.4305] -- (0.7185,-0.6955) arc[start angle=-44.066, end angle=-1.329, radius=1] -- cycle;
+}
+\newcommand\atlas@draw[2]{\begin{tikzpicture}[x=\dimexpr(#1)/2\relax,y=\dimexpr(#1)/2\relax]
+\useasboundingbox (-1,-1) rectangle (1,1);#2\end{tikzpicture}}
+\newcommand\atlas@volume[1]{{%
+\colorlet{atlasI}{parttitle}\colorlet{atlasIl}{parttitlelight}%
+\colorlet{atlasII}{parttitle}\colorlet{atlasIIl}{parttitlelight}%
+\colorlet{atlasIII}{parttitle}\colorlet{atlasIIIl}{parttitlelight}%
+\colorlet{atlasIV}{parttitle}\colorlet{atlasIVl}{parttitlelight}%
+#1}}
+\newcommand\atlasmark[1]{\atlas@draw{#1}{\atlas@full}}
+\newcommand\volumemark[1]{\atlas@volume{\atlasmark{#1}}}
+\makeatother
+\fancypagestyle{opening}{\fancyhf{}\fancyfoot[C]{\small\thepage}%
+  \fancyhead[L]{\smash{\raisebox{-9.5mm}{\volumemark{12mm}}}}}
+\hypersetup{pdftitle={C1v: Point Group Atlas, volume I: point groups}, pdfauthor={Victor V. Albert}, pdfsubject={Point Group Atlas record C1v, schema point-group-atlas/group/1}}
+\fancyhead[L]{\small $\grp{C_{1v}}$}
+\DeclareMathAlphabet{\mathelt}{OT1}{cmss}{m}{sl}
+\DeclareSymbolFont{eltgreek}{OML}{cmssm}{m}{it}
+\DeclareMathSymbol{\eltsigma}{\mathord}{eltgreek}{"1B}
+\DeclareSymbolFont{eltletters}{OT1}{cmss}{m}{sl}
+\DeclareMathSymbol{g}{\mathalpha}{eltletters}{`g}
+\DeclareMathSymbol{h}{\mathalpha}{eltletters}{`h}
+\DeclareMathSymbol{Q}{\mathalpha}{eltletters}{`Q}
+\DeclareMathSymbol{R}{\mathalpha}{eltletters}{`R}
+\DeclareMathSymbol{\xi}{\mathord}{eltgreek}{"18}
+\newcommand{\eltfont}[1]{{\let\sigma\eltsigma\mathelt{#1}}}
+\newcommand{\grp}[1]{\mathsf{#1}}
+\newcommand{\irr}[1]{\text{\normalfont\scshape #1}}
+\newcommand{\conjpair}[1]{{}^{#1}}
+\newcommand{\detbox}[1]{{\setlength{\fboxsep}{1pt}\fbox{#1}}}
+\newcommand{\cls}[1]{\eltfont{#1}}
+\newcommand{\comp}[1]{\eltfont{#1}}
+\newcommand{\elt}[1]{\eltfont{#1}}
+\newcommand{\hmname}[1]{#1}
+\newcommand{\orbname}[1]{#1}
+\newcommand{\conwayname}[1]{#1}
+\newcommand{\igname}[1]{#1}
+\newcommand{\olivename}[1]{#1}
+\newcommand{\spec}[1]{\mathrm{#1}}
+\newcommand{\ptag}[1]{\mathrm{#1}}
+\newcommand{\orbital}[1]{\mathrm{#1}}
+\newcommand{\dirprod}{\times}
+\newcommand{\sdprod}{\rtimes}
+\newcommand{\samecls}{\cong}
+\newcommand{\nconj}[1]{{\scriptsize$\times#1$}}
+\newcommand{\clsletter}[1]{\,{\scriptsize\color{black!55}#1}}
+\newcommand{\metclasses}[1]{\,{\scriptsize$\{#1\}$}}
+\newcommand{\Cyc}[1]{\grp{Z_{#1}}}
+\newcommand{\Dih}[1]{\grp{Dih_{#1}}}
+\newcommand{\Alt}[1]{\grp{Alt_{#1}}}
+\newcommand{\Sym}[1]{\grp{Sym_{#1}}}
+\newcommand{\dirvec}[3]{(#1, #2, #3)}
+\newcommand{\grpindex}[2]{[#1 : #2]}
+\newcommand{\iverson}[1]{[#1]}
+\newcommand{\restr}[2]{#1\!\downarrow#2}
+\newcommand{\Ind}[2]{\operatorname{Ind}_{#1}^{#2}}
+\newcommand{\genidx}[2]{#1^{[\mathrm{#2}]}}
+\newcommand{\pointr}{\mathbf{r}}
+\newcommand{\unitaxis}{\hat{\mathbf{v}}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\iunit}{\mathrm{i}}
+\newcommand{\expe}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\goldenratio}{\varphi}
+\newcommand{\rootunity}[1]{\zeta_{#1}}
+\newcommand{\irrJ}[1]{D^{(#1)}}
+\newcommand{\irrJp}[2]{D^{(#1,#2)}}
+\newcommand{\repD}[1]{D^{#1}}
+\newcommand{\wignerD}[1]{D^{#1}}
+\newcommand{\wignerd}[1]{d^{#1}}
+\newcommand{\irchar}[1]{\chi_{#1}}
+\newcommand{\chiA}{\chi_{\grp{A}}}
+\newcommand{\fsind}{\nu_{\mathrm{FS}}}
+\newcommand{\conj}[1]{{#1}^{*}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\trace}{\operatorname{tr}}
+\newcommand{\irrprod}{\otimes}
+\newcommand{\mult}{\kappa}
+\newcommand{\intx}{\mu}
+\newcommand{\cgnorm}{\mathcal{N}}
+\newcommand{\period}{L}
+\newcommand{\jm}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
+\newcommand{\cgket}[3]{\bigl\lvert{}^{#1}_{\,#2};#3\bigr\rangle}
+\newcommand{\irket}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
+\newcommand{\prodket}[2]{\lvert {#1}\,{#2}\rangle}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\matel}[5]{\bigl\langle{}^{#1}_{\,#2}\bigm\vert #3\bigm\vert{}^{#4}_{\,#5}\bigr\rangle}
+\newcommand{\cgc}[6]{\bigl\langle{}^{#1}_{\,#2}\,{}^{#3}_{\,#4}\bigm\vert{}^{#5}_{\,#6}\bigr\rangle}
+\newcommand{\cgcp}[9]{\bigl\langle{}^{#1,#3}_{\,#2}\,{}^{#4,#6}_{\,#5}\bigm\vert{}^{#7,#9}_{\,#8}\bigr\rangle}
+\newcommand{\cgck}[7]{\bigl\langle{}^{#1}_{\,#2}\,{}^{#3}_{\,#4}\bigm\vert{}^{#5}_{\,#6};#7\bigr\rangle}
+\newcommand{\cgcone}[3]{\langle #1\,#2\mid #3\rangle}
+\newcommand{\irrangle}{\text{--}}
+\newcommand{\jahn}[1]{\mathrm{#1}}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\rodrigues}{\boldsymbol{\rho}}
+\newcommand{\fcell}{\mathcal{D}}
+\newcommand{\fdomain}{\mathcal{F}}
+\newcommand{\lensspace}[2]{\mathsf{L}(#1, #2)}
+\newcommand{\twosphere}{\mathsf{S}^{2}}
+\newcommand{\projplane}{\mathbb{R}\mathsf{P}^{2}}
+\newcommand{\schur}[1]{\mathbb{S}_{#1}}
+\newcommand{\shape}[1]{[#1]}
+\newcommand{\term}[2]{{}^{#1}#2}
+\newcommand{\occ}[1]{\lvert #1\rangle}
+\newcommand{\sdet}[1]{\lvert #1\rvert}
+\newcommand{\hairsp}{\mkern1mu}
+\newenvironment{romanlist}{\begin{enumerate}%
+\renewcommand{\labelenumi}{(\roman{enumi})}}%
+  {\end{enumerate}}
+\makeatletter
+\newenvironment{irmatrix}[1]{\null\,\vcenter\bgroup\Let@\restore@math@cr\default@tag
+  \baselineskip8\ex@ \lineskip3\ex@ \lineskiplimit\lineskip
+  \ialign\bgroup\hfil$\m@th\scriptstyle##$\hfil&&\hskip#1\hfil$\m@th\scriptstyle##$\hfil\crcr}%
+  {\crcr\egroup\egroup\,}
+\makeatother
+\newlength{\fillwidth}\newlength{\cellwidth}\newlength{\colwidth}
+\newcommand{\cellmax}[1]{\settowidth{\cellwidth}{#1}%
+  \ifdim\cellwidth>\colwidth\setlength{\colwidth}{\cellwidth}\fi}
+\newcommand{\fillcap}{\ifdim\colwidth<\fillwidth\setlength{\fillwidth}{\colwidth}\fi}
+\newcommand{\signbreak}{\penalty100\relax}
+\begin{document}
+\thispagestyle{opening}
+\begin{center}
+{\LARGE\sffamily\bfseries\color{parttitle}The $\grp{C_{1v}}$ subgroup of $\grp{O(3)}$}
+\end{center}
+\contentspage
+\needspace{194pt}
+\partbox{The group}
+\section{Names and structure}\label{s:identification}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.0.1}{0.1}, \href{../../CONVENTIONS.pdf\#conv.2}{2}, \href{../../CONVENTIONS.pdf\#conv.3}{3} and \href{../../CONVENTIONS.pdf\#conv.12}{12}.
+\label{n:index.family.N}{\small\begin{longtable}{@{}ll@{}}\toprule
+\texttt{type} & III\\
+\texttt{family} & $\grp{C_{\mathnormal{N}v}}$, $N = 1$\\
+\texttt{o3\symbol{95}conjugates} & \href{C1h.pdf}{$\grp{C_{1h}}$}\\
+\grouprule{0pt}{\lightrulewidth}
+\texttt{abstract\symbol{95}type} & $\Cyc{2}$\\
+\texttt{order} & 2\\
+\grouprule{0pt}{\lightrulewidth}
+\texttt{principal\symbol{95}axis} & $\dirvec{0}{0}{1}$\\
+\texttt{contains\symbol{95}inversion} & no\\
+\texttt{contains\symbol{95}sigma\symbol{95}h} & no\\
+\texttt{polar} & yes\\
+\texttt{crystallographic} & yes\\
+\grouprule{0pt}{\lightrulewidth}
+\texttt{crystal\symbol{95}family} & monoclinic\\
+\texttt{crystal\symbol{95}system} & monoclinic\\
+\texttt{lattices} & mP, mS (holohedry \href{C2h.pdf}{$\grp{C_{2h}}$})\\
+\texttt{laue\symbol{95}class} & \href{C2h.pdf}{$\grp{C_{2h}}$}, index 2\\
+\grouprule{0pt}{\lightrulewidth}
+\texttt{rotation\symbol{95}subgroup} & \href{C1.pdf}{$\grp{C_{1}}$}, index 2\\
+\texttt{center} & \href{C1v.pdf}{$\grp{C_{s}}$}, index 1\\
+\texttt{commutator\symbol{95}subgroup} & \href{C1.pdf}{$\grp{C_{1}}$}, index 2\\
+\texttt{normalizer} & \href{Dinfh.pdf}{$\grp{D_{\infty h}}$}\\
+\texttt{centralizer} & \href{Dinfh.pdf}{$\grp{D_{\infty h}}$}, index 1 in the normalizer\\
+\texttt{hk} & \texttt{H}${} = {}$\href{D1.pdf}{$\grp{D_{1}}$}, \texttt{K}${} = {}$\href{C1.pdf}{$\grp{C_{1}}$}\\
+\texttt{product\symbol{95}form} & \begin{tabular}[t]{@{}l@{}}indecomposable (no form with both factors non-trivial)\end{tabular}\\
+\grouprule{0pt}{\lightrulewidth}
+\texttt{alternative\symbol{95}names} & \href{C1v.pdf}{$\grp{C_{s}}$}, \href{C1h.pdf}{$\grp{C_{1h}}$}\\
+\texttt{altmann\symbol{95}T} & 12\\
+\texttt{conway\symbol{95}smith} & $\conwayname{\grp{CD}(1)}$\\
+\texttt{gap\symbol{95}smallgroup\symbol{95}id} & [2, 1]\\
+\texttt{hermann\symbol{95}mauguin} & $\hmname{m}$\\
+\texttt{ihrig\symbol{95}golubitsky} & $\igname{\grp{Z_{2}^{-}}}$\\
+\texttt{olive} & $\olivename{\grp{Z_{2}^{-}}}$\\
+\texttt{orbifold} & $\orbname{{\ast}}$\\
+\texttt{schoenflies} & \href{C1v.pdf}{$\grp{C_{1v}}$}\\
+\bottomrule\end{longtable}}
+\leavevmode\label{n:element.inversion}In this table, \texttt{type} is I when every element of $\grp{C_{1v}}$ is a rotation, II when $\grp{C_{1v}}$ contains the inversion $\elt{i}$ and III otherwise; \texttt{hk} gives \texttt{H}, the group of rotations isomorphic to $\grp{C_{1v}}$, and \texttt{K}${} = \grp{C_{1v}} \cap \grp{SO(3)}$; \texttt{polar} is yes when $\grp{C_{1v}}$ fixes a nonzero vector; crystallographers call a group chiral, or enantiomorphic, when its type is I, and centrosymmetric when it contains $\elt{i}$; \texttt{lattices} gives the Bravais types of the lattices of the crystals of $\grp{C_{1v}}$ [\href{../../../REFERENCES.pdf\#ref.Aro16}{Aro16}], each with its holohedry, the group of the lattice; \texttt{laue\symbol{95}class} is the group that $\grp{C_{1v}}$ and $\elt{i}$ generate, the symmetry of the diffraction patterns of its crystals.
+\needspace{110pt}
+\section{Symmetry operations}\label{s:elements}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.4}{4} and \href{../../CONVENTIONS.pdf\#conv.5.1}{5.1}.
+\leavevmode\label{n:element.g}\label{n:matrix.element}\label{n:vector.point}\label{n:vector.coordinates}\label{n:element.h}An element $g$ is the matrix $P(g)$ that moves the point $\pointr = (x, y, z)$, a row, to $\pointr\,P(g)$; products compose as
+\begin{equation}\label{e:product}P(g)\,P(h) = P(gh),\qquad gh = \text{first } g\text{, then } h.\end{equation}
+On column vectors the matrix of $g$ is the transpose $P(g)^{\top}$, and products compose in the reverse order.
+\leavevmode\label{n:element.rotation.axis}\label{n:angle.omega}\label{n:vector.axis}\label{n:element.rotoreflection.axis}\label{n:element.mirror.axis}A proper element is the rotation $\elt{R_{\vv}}(\omega)$ by the angle $\omega$ about the axis $\vv$, counterclockwise as seen from the tip of $\vv$; an improper element is the rotoreflection
+\begin{equation}\label{e:axis}\elt{S_{\vv}}(\omega) = \elt{\sigma_{\vv}}\, \elt{R_{\vv}}(\omega),\end{equation}
+$\elt{\sigma_{\vv}}$ the reflection in the plane normal to $\vv$ (so $\omega = 0$ is that mirror). \label{n:vector.pole}$\elt{E}$ and $\elt{i}$ have no axis (a dash); $\vv$ is a direction, not normalized. \label{n:angle.euler.alpha}\label{n:angle.euler.beta}\label{n:angle.euler.gamma}$(\alpha,\beta,\gamma)$ are the Euler angles of the rotation $(\det g)\,g$: by $\alpha$ about $z$, then $\beta$ about $y$, then $\gamma$ about $z$ (fixed axes). \label{n:index.element}\label{n:index.element.inverse}\label{n:head.sym}\label{n:head.class}\label{n:head.ord}$k$ is the index of $g$, sym its symbol and class its conjugacy class, with the class size before the symbol (section~\ref{s:classes}); ord is its order and $k^{-1}$ the index of $g^{-1}$.
+{\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}rlllrrlll l@{}}\toprule
+$k$ & sym & class & $\det$ & ord & $k^{-1}$ & $(\alpha,\beta,\gamma)$ & $\omega$ & $\vv$ & $P$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+0 & $\cls{E}$ & $\cls{E}$ & $+1$ & 1 & 0 & $(0,0,0)$ & $0$ & --- & $\left(\begin{irmatrix}{0.2778em}1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1\end{irmatrix}\right)$\\*\addlinespace[6pt]
+1 & $\cls{\sigma_{v}}$ & $\cls{\sigma_{v}}$ & $-1$ & 2 & 1 & $(0,\pi,0)$ & $0$ & $\dirvec{0}{1}{0}$ & $\left(\begin{irmatrix}{0.2778em}1 & 0 & 0\\0 & -1 & 0\\0 & 0 & 1\end{irmatrix}\right)$\\
+\bottomrule\end{longtable}}
+\needspace{134pt}
+\section{Multiplication table}\label{s:multiplication}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.4.1}{4.1}.
+The entry in row $g$, column $h$ is the index of the product $gh$.
+{\normalsize\setlength{\tabcolsep}{0.1em}\setlength{\LTleft}{-8pt plus 1fill}\setlength{\LTright}{-8pt plus 1fill}\begin{longtable}{@{}r|rr@{}}\toprule
+$gh$ & 0 & 1\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+0 & 0 & 1\\*
+1 & 1 & 0\\
+\bottomrule\end{longtable}}
+\needspace{152pt}
+\section{Conjugacy classes}\label{s:classes}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.5}{5}.
+\leavevmode\label{n:head.size}\label{n:head.classof}$g$ is an element of the class: size is the number of its elements, ord their order, class of $g^{-1}$ and class of $g^{2}$ the classes of the inverse and the square of $g$, and $\vv$ the axis of a member (a dash for none).
+\begin{center}\begin{tabular}{@{}lrrlll@{}}\toprule
+class & size & ord & class of $g^{-1}$ & class of $g^{2}$ & $\vv$\\\midrule
+$\cls{E}$ & 1 & 1 & $\cls{E}$ & $\cls{E}$ & ---\\
+$\cls{\sigma_{v}}$ & 1 & 2 & $\cls{\sigma_{v}}$ & $\cls{E}$ & $\dirvec{0}{1}{0}$\\
+\bottomrule\end{tabular}\end{center}
+\needspace{103pt}
+\section{Fundamental domain}\label{s:fundamental_domain}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.17}{17}.
+\leavevmode\label{n:element.placement}\label{n:operator.cosets}A molecule with symmetry $\grp{C_{1v}}$ placed by $Q \in \grp{O(3)}$ is the same set of atoms when placed by $gQ$ with $g \in \grp{C_{1v}}$, as $P(gQ) = P(g)\,P(Q)$: its orientations are the cosets $\grp{C_{1v}}Q = \{gQ : g \in \grp{C_{1v}}\}$, the points of the space $\grp{C_{1v}}\backslash\grp{O(3)}$. On column vectors the matrices of a coset are $P(Q)^{\top}P(g)^{\top}$, a left coset of the transposes and a point of $\grp{O(3)}/\grp{C_{1v}}$.
+\leavevmode\label{n:operator.volume}Volumes are those of the invariant metric of \href{O3.pdf}{$\grp{O(3)}$} in which the distance from $\elt{E}$ to a rotation by $\omega \le \pi$ is $\omega$, so that $\vol\grp{SO(3)} = 8\pi^2$ and $\vol\grp{O(3)} = 16\pi^2$; a finite group has the counting measure, $\vol\grp{C_{1v}} = |\grp{C_{1v}}| = 2$.
+
+\leavevmode\label{n:set.cell}As $\grp{C_{1v}} \cap \grp{SO(3)} = \{\elt{E}\}$, the cell $\fcell$ of the rotations nearer to $\elt{E}$ than to any other element of $\grp{C_{1v}} \cap \grp{SO(3)}$ is all of \href{SO3.pdf}{$\grp{SO(3)}$}.
+
+\leavevmode\label{n:set.fundamental}As $\grp{C_{1v}}$ holds an improper element, every coset $\grp{C_{1v}}Q$ meets \href{SO3.pdf}{$\grp{SO(3)}$} in one coset of $\grp{C_{1v}} \cap \grp{SO(3)}$, so that $\fdomain = \fcell$ is a fundamental domain: it holds one element of every coset, more only on its boundary.
+\leavevmode\label{n:set.lens}$\grp{C_{1v}}\backslash\grp{O(3)}$ is \href{SO3.pdf}{$\grp{SO(3)}$}, the lens space $\lensspace{2}{1}$, and
+\begin{equation}\label{e:volume}\vol\fdomain = \vol\fcell = 8\pi^2,\qquad \vol\grp{C_{1v}}\cdot\vol\fdomain = 2\cdot 8\pi^2 = 16\pi^2 = \vol\grp{O(3)}.\end{equation}
+\needspace{171pt}
+\partbox{Representations}
+\section{Irreducible representations}\label{s:irreps}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.6}{6} and \href{../../CONVENTIONS.pdf\#conv.7}{7}.
+\leavevmode\label{n:function.character}\label{n:irrep.Gamma}$\irchar{\Gamma}(g)$ is the character of the irrep $\Gamma$ on the class of $g$, which section~\ref{s:character_table} gives.
+\leavevmode\label{n:index.dimension}\label{n:index.frobenius}\label{n:mark.determinant}\label{n:head.irrep}\label{n:head.bilbao}\label{n:irrep.alias.gamma}\label{n:head.reality}\label{n:head.conjugate}\label{n:head.kernel}\label{n:head.image}Bilbao is the irrep's symbol $\Gamma_n$ in the double point group tables of [\href{../../../REFERENCES.pdf\#ref.EBW+17}{EBW+17}] (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.6.5}{6.5}); $d$ is the dimension of the irrep and $\fsind = |\grp{C_{1v}}|^{-1}\allowbreak\sum_{g\in\grp{C_{1v}}}\irchar{\Gamma}(g^2)$ its Frobenius--Schur indicator, which gives its reality: real ($\fsind = +1$), pseudoreal ($\fsind = -1$) or complex ($\fsind = 0$, paired with its conjugate); conjugate is the conjugate of a complex irrep (a dash for the others); kernel the subgroup $\ker\Gamma$ of the elements that it maps to the identity, named as in section~\ref{s:subgroups}; and image the group that its matrices form, isomorphic to $\grp{C_{1v}}/\ker\Gamma$. The image of an irrep of dimension 1 is the cyclic group of the characters, roots of unity that turn the complex plane. The irreps are irreducible over $\mathbb{C}$. Each is real, and in a basis with real matrices it is also an irrep over $\mathbb{R}$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.7}{7}). The boxed irrep is the determinant character (\texttt{determinant\symbol{95}character}), whose character is $\det g$.
+\setlength{\emergencystretch}{2em}\par\setlength{\emergencystretch}{0pt}
+{\small\renewcommand{\arraystretch}{1.25}\begin{longtable}{@{}llrrllll@{}}\toprule
+irrep & Bilbao & $d$ & $\fsind$ & reality & conjugate & kernel & image\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}'$ & $\Gamma_{1}$ & 1 & $+1$ & real & --- & \href{C1v.pdf}{$\grp{C_{s}}$} & \href{C1.pdf}{$\grp{C_{1}}$}\\*
+\detbox{$\irr{a}''$} & $\Gamma_{2}$ & 1 & $+1$ & real & --- & \href{C1.pdf}{$\grp{C_{1}}$} & \href{C2.pdf}{$\grp{C_{2}}$}\\
+\bottomrule\end{longtable}}
+\needspace{134pt}
+\section{Character table}\label{s:character_table}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.6}{6} and \href{../../CONVENTIONS.pdf\#conv.7}{7}.
+The table gives the character $\irchar{\Gamma}(g)$ of each irrep $\Gamma$ (section~\ref{s:irreps}) on the class of $g$.
+{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lcc@{}}\toprule
+$\grp{C_{1v}}$ & $\cls{E}$ & $\cls{\sigma_{v}}$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}'$ & $1$ & $1$\\*
+$\irr{a}''$ & $1$ & $-1$\\
+\bottomrule\end{longtable}}
+\needspace{110pt}
+\section{Representation matrices}\label{s:irrep_matrices}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.9}{9}.
+\leavevmode\label{n:vector.ket.partner}\label{n:index.partner}\label{n:matrix.irrep}A basis $(\irket{\Gamma}{1}, \dots, \irket{\Gamma}{d})$ of the irrep $\Gamma$ obeys
+\begin{equation}\label{e:partner}g\irket{\Gamma}{\intx} = \sum_\nu \irket{\Gamma}{\nu}\, \repD{\Gamma}_{\nu,\intx}(g);\end{equation}
+row $k$ of each table holds $\repD{\Gamma}(g)$ for the element $k$ of section~\ref{s:elements}.
+$\repD{\Gamma}(g) = \irchar{\Gamma}(g)$.
+{\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}rlll@{}}\toprule
+$k$ & sym & $\irr{a}'$ & $\irr{a}''$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+0 & $\cls{E}$ & $1$ & $1$\\*
+1 & $\cls{\sigma_{v}}$ & $1$ & $-1$\\
+\bottomrule\end{longtable}}
+\needspace{134pt}
+\section{Direct products of irreps}\label{s:fusion}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.10}{10}.
+\leavevmode\label{n:irrep.Gamma.factors}Every product $\Gamma_1\irrprod\Gamma_2$ is one irrep, in row $\Gamma_1$ and column $\Gamma_2$ for $\Gamma_1 \le \Gamma_2$ in irrep order; $\Gamma_2\irrprod\Gamma_1$ is the same.
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}lcc@{}}\toprule
+$\irrprod$ & $\irr{a}'$ & $\irr{a}''$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}'$ & $\irr{a}'$ & $\irr{a}''$\\*
+$\irr{a}''$ &  & $\irr{a}'$\\
+\bottomrule\end{longtable}}
+\needspace{78pt}
+\section{Clebsch--Gordan coefficients}\label{s:clebsch_gordan}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.10}{10}.
+\leavevmode\label{n:function.cg.one}\label{n:vector.ket.one}Every irrep is one-dimensional, so each product $\Gamma_1\irrprod\Gamma_2$ is one irrep $\Gamma$ (the fusion rules of section~\ref{s:fusion}) and its coefficient is $\cgcone{\Gamma_1}{\Gamma_2}{\Gamma} = 1$: $\ket{\Gamma} = \ket{\Gamma_1}\ket{\Gamma_2}$ (\texttt{clebsch\symbol{95}gordan.\allowbreak products[]}).
+\needspace{171pt}
+\partbox{Subgroups}
+\section{Subgroup lattice}\label{s:subgroups}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.15}{15}.
+\leavevmode\label{n:index.conjugates.c}The diagram shows the conjugacy classes of subgroups, each joined to the classes of its maximal subgroups, the orders increasing upward; a normal subgroup is framed, and ${\times}c$ is the number $c > 1$ of conjugate subgroups. \label{n:group.H}\label{n:group.normalizer}\label{n:group.centralizer}\label{n:head.subgroup}\label{n:head.order}\label{n:head.conjugates}\label{n:head.normal}\label{n:head.classes}The table lists the classes by order, those of one symbol together; subgrp is the representative $\grp{H}$ of a class of subgroups, order its order, conjugates the number of subgroups in the class and normal whether $\grp{H}$ is normal; classes lists the classes of $\grp{C_{1v}}$, other than $\cls{E}$, that $\grp{H}$ meets (a dash for none), and $\grp{N}_{\hairsp \grp{C_{1v}}}(\grp{H})$ and $\grp{C}_{\hairsp \grp{C_{1v}}}(\grp{H})$ are the classes of its normalizer and its centralizer in $\grp{C_{1v}}$ (\texttt{normalizer}, \texttt{centralizer}); a subgroup's other names in its class of \href{O3.pdf}{$\grp{O(3)}$} follow $\samecls$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.2.1}{2.1}).
+\begin{center}
+\begin{tikzpicture}[x=1cm, y=1.300cm,
+  every node/.style={fill=white, font=\footnotesize, inner xsep=1.5pt, inner ysep=1.2pt, text height=5.6pt, text depth=1.6pt},
+  normal/.style={draw, line width=0.4pt}, cover/.style={black!50, line width=0.4pt}]
+\draw[cover] (0.00,0) -- (0.00,1);
+\node[normal] (n00) at (0.00,0) {$\grp{C_{1}}$};
+\node[normal] (n01) at (0.00,1) {$\grp{C_{s}}$};
+\end{tikzpicture}
+\end{center}
+{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-12\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\grp{C_{s}}$ $\samecls$ $\grp{C_{1v}}$ $\samecls$ $\grp{C_{1h}}$}\cellmax{subgrp}\cellmax{$\grp{C_{1}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{order}\cellmax{1}\cellmax{2}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{conjugates}\cellmax{1}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{normal}\cellmax{yes}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\grp{N}_{\hairsp \grp{C_{1v}}}(\grp{H})$}\cellmax{$\grp{C_{s}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\grp{C}_{\hairsp \grp{C_{1v}}}(\grp{H})$}\cellmax{$\grp{C_{s}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{classes}\cellmax{---}\cellmax{all}\fillcap\begin{longtable}{@{}lrrlll>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
+subgrp & order & conjugates & normal & $\grp{N}_{\hairsp \grp{C_{1v}}}(\grp{H})$ & $\grp{C}_{\hairsp \grp{C_{1v}}}(\grp{H})$ & classes\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\href{C1.pdf}{$\grp{C_{1}}$} & 1 & 1 & yes & \href{C1v.pdf}{$\grp{C_{s}}$} & \href{C1v.pdf}{$\grp{C_{s}}$} & ---\\*
+\href{C1v.pdf}{$\grp{C_{s}}$} $\samecls$ \href{C1v.pdf}{$\grp{C_{1v}}$} $\samecls$ \href{C1h.pdf}{$\grp{C_{1h}}$} & 2 & 1 & yes & \href{C1v.pdf}{$\grp{C_{s}}$} & \href{C1v.pdf}{$\grp{C_{s}}$} & all\\
+\bottomrule\end{longtable}}
+\needspace{171pt}
+\partbox{Permutation representations}
+\section{Figures}\label{s:permutation}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.12.4}{12.4} to \href{../../CONVENTIONS.pdf\#conv.12.6}{12.6}.
+\leavevmode\label{n:local.orbit.size}\label{n:element.coset.least}\label{n:index.coset}\label{n:local.coset.image}\label{n:local.matrix.permutation}Every class of subgroups $\grp{H}$ is the stabilizer of a figure in space, the subgroup of the elements that carry it into itself, and $\grp{C_{1v}}$ permutes the $N = [\grp{C_{1v}} : \grp{H}]$ copies of the figure as it permutes the right cosets $\grp{H}\xi_j$, $j = 0, 1, \dots, N - 1$, $\xi_j$ the element of least index of its coset, in the order of these indices ($\xi_0 = \cls{E}$): the copy $j$ is the figure moved by $\xi_j$. The element $g$ moves the copy $j$ to the copy $j'$, where $\grp{H}\xi_j g = \grp{H}\xi_{j'}$, and the permutation matrix $D(g)$, whose row $j$ has its one nonzero entry in column $j'$,
+\begin{equation}\label{e:perm.matrix}\pointr_j\, P(g) = \pointr_{j'}, \qquad D(g)_{j,j'} = 1,\end{equation}
+obeys $D(g)\, D(h) = D(gh)$. The copies are generated by the defining representation of $\grp{C_{1v}}$, its matrices $P(g)$ (section~\ref{s:elements}), acting on the figure and its root point $\pointr_0$: $\pointr_j = \pointr_0\, P(\xi_j)$ is the point of the copy $j$ that $\pointr_0$ moves to. The JSON record stores the coordinates of the points of every copy, the images $j'$ of every copy under every element and the table of marks (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.12.5}{12.5} and \href{../../CONVENTIONS.pdf\#conv.12.6}{12.6}).
+\leavevmode\label{n:head.figure}\label{n:head.site}\label{n:head.vertices}\label{n:head.rank}\label{n:head.cos}\label{n:head.hand}The figure of a class is the first of these whose stabilizer is $\grp{H}$: the root point $\pointr_0$; the line through the origin along $\pointr_0$; a spin, the axial vector $\pointr_0$, a sense of rotation about that line; a spinning arrow, the arrow $\pointr_0$ with a sense of rotation about itself; a helix, the line along $\pointr_0$ with a handedness (these two only when $\grp{H}$ has no improper element and $\grp{C_{1v}}$ has one); and otherwise the least orbit of $\pointr_0$ under $\grp{H}$ whose stabilizer is $\grp{H}$, a segment, a polygon or a polyhedron. The table has a row per class of subgroups, in the order of the table of section~\ref{s:subgroups} and named as there: $N$; the figure, by its shape or its number of points; site, the stabilizer of the point $\pointr_0$, which tells the symmetry elements of $\grp{C_{1v}}$ that the figure lies on; $\pointr_0$; vertices, what the points of all the copies form (the tips of the arrows and spins, both ends of the lines and helices), with ${\times}k$ when $k > 1$ copies pass through each; rank, the number of classes of pairs of copies under $\grp{C_{1v}}$, a copy with itself one of them; cos, for a point, a line or a spin of rank at most 5, the cosine of the angle between two copies, one per class of pairs other than a copy with itself (of the acute angle, for lines); and hand, 2 when $\grp{H}$ has no improper element and $\grp{C_{1v}}$ has one, so that the rotations of $\grp{C_{1v}}$ leave the copies in two classes, mirror images of each other: the left- and the right-handed copies of a chiral figure.
+{\small\setlength{\tabcolsep}{4pt}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-16\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{subgrp}\cellmax{$\grp{C_{1}}$}\cellmax{$\grp{C_{s}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$N$}\cellmax{1}\cellmax{2}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{figure}\cellmax{point}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{site}\cellmax{$\grp{C_{1}}$}\cellmax{$\grp{C_{s}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$(1, 0, 2)$}\cellmax{$(1, 2, 4)$}\cellmax{$\pointr_0$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{vertices}\cellmax{segment}\cellmax{point}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{rank}\cellmax{1}\cellmax{2}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{hand}\cellmax{2}\cellmax{}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{cos}\cellmax{${\tfrac{13}{21}}$}\fillcap{\renewcommand{\arraystretch}{1.3}\begin{longtable}{@{}lrllllr>{\RaggedRight\arraybackslash}p{\fillwidth}r@{}}\toprule
+subgrp & $N$ & figure & site & $\pointr_0$ & vertices & rank & cos & hand\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\href{C1.pdf}{$\grp{C_{1}}$} & 2 & point & \href{C1.pdf}{$\grp{C_{1}}$} & $(1, 2, 4)$ & segment & 2 & ${\tfrac{13}{21}}$ & 2\\*
+\href{C1v.pdf}{$\grp{C_{s}}$} & 1 & point & \href{C1v.pdf}{$\grp{C_{s}}$} & $(1, 0, 2)$ & point & 1 &  & \\
+\bottomrule\end{longtable}}}
+\needspace{159pt}
+\section{Decompositions}\label{s:decompositions}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.12.4}{12.4} and \href{../../CONVENTIONS.pdf\#conv.12.5}{12.5}.
+The kernel of the permutation representation of a class is the subgroup of the elements that leave every copy in place, and the decomposition is that of $D$, whose character at $g$ is the number of copies that $g$ leaves in place: an irrep occurs in $D$ as often as the trivial irrep of $\grp{H}$ occurs in its restriction to $\grp{H}$.
+{\small\medmuskip=4mu plus 2mu\relax\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-6\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{subgrp}\cellmax{$\grp{C_{1}}$}\cellmax{$\grp{C_{s}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$N$}\cellmax{1}\cellmax{2}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{kernel}\cellmax{$\grp{C_{1}}$}\cellmax{$\grp{C_{s}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{decomposition}\cellmax{$\irr{a}'\oplus \irr{a}''$}\cellmax{$\irr{a}'$}\fillcap\begin{longtable}{@{}lrl>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
+subgrp & $N$ & kernel & decomposition\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\href{C1.pdf}{$\grp{C_{1}}$} & 2 & \href{C1.pdf}{$\grp{C_{1}}$} & $\irr{a}'\oplus \irr{a}''$\\*
+\href{C1v.pdf}{$\grp{C_{s}}$} & 1 & \href{C1v.pdf}{$\grp{C_{s}}$} & $\irr{a}'$\\
+\bottomrule\end{longtable}}
+\needspace{103pt}
+\section{Cycle types}\label{s:cycle_types}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.12.5}{12.5}.
+\leavevmode\label{n:local.cycle.type}\label{n:local.cycle.length}\label{n:local.cycle.count}\label{n:local.cycles}\label{n:local.states}The entry in the row of a class of subgroups and the column of a class of elements is the cycle type of $j \mapsto j'$ for the elements of the class, $\ell^{c}$ for $c$ cycles of length $\ell$. The cycles of length 1 are the copies that the element leaves in place, whose number is the character of $D$; with $c(g)$ cycles in all, $g$ has the character $q^{c(g)}$ on the $q^N$ products of one of $q$ states of each copy (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.12.5}{12.5}).
+{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lrcc@{}}\toprule
+subgrp & $N$ & $\cls{E}$ & $\cls{\sigma_{v}}$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\href{C1.pdf}{$\grp{C_{1}}$} & 2 & $1^{2}$ & $2$\\
+\bottomrule\end{longtable}}
+\needspace{177pt}
+\partbox{Angular momentum}
+\section{Subduction from \texorpdfstring{$\grp{O(3)}$}{O(3)}}\label{s:subduction_o3}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.11}{11}.
+\leavevmode\label{n:index.J}\label{n:index.parity}\label{n:function.multiplicity}$\irrJp{J}{p}$ is the irrep of \href{O3.pdf}{$\grp{O(3)}$} of angular momentum $J$ and parity $p$ ($p = +1$: $\ptag{g}$, $p = -1$: $\ptag{u}$), and $b_\Gamma(J, p)$ the multiplicity of $\Gamma$ in
+\begin{equation}\label{e:o3}\restr{\irrJp{J}{p}}{\grp{C_{1v}}} .\end{equation}
+\leavevmode\label{n:index.increment}Each table gives $b_\Gamma(J, p)$ for $J \le 20$, and $b_\Gamma(J + 2, p) = b_\Gamma(J, p) + \Delta_\Gamma$ for every $J$, $\Delta_\Gamma$ the last row of the table of parity $p$.
+\needspace{182pt}
+\paragraph{Parity $\ptag{g}$ ($p = +1$).}
+{\small\begin{longtable}{@{}rrr@{\hspace{18pt}}rrr@{\hspace{18pt}}rrr@{}}\toprule
+$J$ & $\irr{a}'$ & $\irr{a}''$ & $J$ & $\irr{a}'$ & $\irr{a}''$ & $J$ & $\irr{a}'$ & $\irr{a}''$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+0 & 1 & 0 & 8 & 9 & 8 & 16 & 17 & 16\\*
+1 & 1 & 2 & 9 & 9 & 10 & 17 & 17 & 18\\*
+2 & 3 & 2 & 10 & 11 & 10 & 18 & 19 & 18\\*
+3 & 3 & 4 & 11 & 11 & 12 & 19 & 19 & 20\\*
+4 & 5 & 4 & 12 & 13 & 12 & 20 & 21 & 20\\*\noalign{\vskip 1.5pt}\multispan{3} & \multispan{3} & \multispan{3}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
+5 & 5 & 6 & 13 & 13 & 14 & $\Delta_\Gamma$ & 2 & 2\\*
+6 & 7 & 6 & 14 & 15 & 14 &  &  & \\*
+7 & 7 & 8 & 15 & 15 & 16 &  &  & \\
+\bottomrule\end{longtable}}
+\needspace{182pt}
+\paragraph{Parity $\ptag{u}$ ($p = -1$).}
+{\small\begin{longtable}{@{}rrr@{\hspace{18pt}}rrr@{\hspace{18pt}}rrr@{}}\toprule
+$J$ & $\irr{a}'$ & $\irr{a}''$ & $J$ & $\irr{a}'$ & $\irr{a}''$ & $J$ & $\irr{a}'$ & $\irr{a}''$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+0 & 0 & 1 & 8 & 8 & 9 & 16 & 16 & 17\\*
+1 & 2 & 1 & 9 & 10 & 9 & 17 & 18 & 17\\*
+2 & 2 & 3 & 10 & 10 & 11 & 18 & 18 & 19\\*
+3 & 4 & 3 & 11 & 12 & 11 & 19 & 20 & 19\\*
+4 & 4 & 5 & 12 & 12 & 13 & 20 & 20 & 21\\*\noalign{\vskip 1.5pt}\multispan{3} & \multispan{3} & \multispan{3}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
+5 & 6 & 5 & 13 & 14 & 13 & $\Delta_\Gamma$ & 2 & 2\\*
+6 & 6 & 7 & 14 & 14 & 15 &  &  & \\*
+7 & 8 & 7 & 15 & 16 & 15 &  &  & \\
+\bottomrule\end{longtable}}
+\needspace{110pt}
+\section{Multiplicities and allowed \texorpdfstring{$m$}{m}}\label{s:multiplicities}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.14}{14}.
+\leavevmode\label{n:function.generating}\label{n:index.generating.variable}$b_\Gamma(J) = b_\Gamma(J, (-1)^J)$, the number of blocks of $\Gamma$ at $J$, and
+\begin{equation}\label{e:gf}H_\Gamma(t) = \sum_{J\ge0} b_\Gamma(J)\,t^J,\end{equation}
+\leavevmode\label{n:function.generating.numerator}its generating function, $H_\Gamma(t) = P_\Gamma(t)/((1-t)(1-t))$. \label{n:head.parity}Every nonzero component of a vector of $\Gamma$ has $m \bmod 1$ in the listed residues, and each listed residue occurs; a dash: no block of $\Gamma$ at that parity of $J$. \label{n:delimiter.floor}\label{n:local.floor.x}\label{n:function.count}\label{n:index.modulus.K}\label{n:index.residue}The closed forms of $b_\Gamma(J)$ use the floor $\lfloor x\rfloor$, the greatest integer $\le x$, and
+\begin{equation}\label{e:count}n_K(J,q) = \Bigl\lfloor\frac{J-q}{K}\Bigr\rfloor + \Bigl\lfloor\frac{J+q}{K}\Bigr\rfloor + 1 = \#\{m\in[-J,J] : m\equiv q \pmod{K}\}.\end{equation}
+{\small{\renewcommand{\arraystretch}{1.3}\begin{longtable}{@{}llllll@{}}\toprule
+$\Gamma$ & $P_\Gamma(t)$ & $b_\Gamma(J)$, $J$ even & $J$ odd & $m \bmod 1$, $J$ even & $J$ odd\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}'$ & $1$ & $\bigl\lfloor\tfrac{J}{1}\bigr\rfloor + 1$ & $\bigl\lfloor\tfrac{J}{1}\bigr\rfloor + 1$ & 0 & 0\\*
+$\irr{a}''$ & $t$ & $\bigl\lfloor\tfrac{J}{1}\bigr\rfloor$ & $\bigl\lfloor\tfrac{J}{1}\bigr\rfloor$ & 0 & 0\\
+\bottomrule\end{longtable}}}
+\needspace{110pt}
+\section{Symmetry-adapted bases}\label{s:bases}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.14.1}{14.1}.
+\leavevmode\label{n:index.m}\label{n:vector.ket}\label{n:index.ketcoefficient}\label{n:vector.basis.symmetry}\label{n:index.ketweight}\label{n:index.total}The kets $\jm{J}{m}$ are the spherical harmonics (the inversion acts as $(-1)^J$), and a vector is listed by its coefficients $e_m$:
+\begin{equation}\label{e:ket}v = \frac{1}{\sqrt{\mathrm{tot}}}\sum_m e_m\sqrt{F_m}\;\jm{J}{m},\qquad F_m = (J+m)!\,(J-m)!,\qquad \mathrm{tot} = \sum_m |e_m|^2F_m,\end{equation}
+\leavevmode\label{n:index.pair.sign}so a single ket has amplitude 1 and a pair $\jm{J}{m} + s\,\jm{J}{-m}$ amplitudes $\tfrac{1}{2}\sqrt{2}$ and $\tfrac{1}{2}s\sqrt{2}$, $s = \pm1$; $e_m$ is $+1$, except that it may be $-1$ on $\jm{J}{-m}$ in a pair with $s = -1$.
+\leavevmode\label{n:group.A}\label{n:function.character.abelian}\label{n:element.mirror.angle}The subgroup $\grp{A} = \grp{C_{1v}}\cap\grp{C_{\infty h}}$ acts diagonally on the kets, on $\jm{J}{m}$ by the character $\chiA(m)$; $\grpindex{\grp{C_{1v}}}{\grp{A}} = 2$, and the flip $\elt{\sigma_v}(0)$, the mirror in the $xz$ plane, sends $m$ to $-m$. Every irrep is one-dimensional, so a block is one ket or a pair; blocks are ordered by $J$, then $|m|$, a pair with $s = +1$ first (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.14.1}{14.1}).
+\leavevmode\label{n:head.case}\label{n:head.partners}The table gives each case of block, its dimension $d$ and its partners, in order.
+\begin{center}\begin{tabular}{@{}lrl@{}}\toprule
+case & $d$ & partners\\\midrule
+$\chiA(m) = \chiA(-m)$, $m > 0$ & 1 & $\jm{J}{m} + s\,\jm{J}{-m}$, $s = \pm1$\\
+$m = 0$ & 1 & $\jm{J}{0}$\\
+\bottomrule\end{tabular}\end{center}
+\label{n:index.copy}\label{n:head.vector}121 blocks, 121 vectors, $J = 0, 1, \dots, 10$; a row gives a vector of a block at $J$: the block's irrep and copy index $\mult$, the partner index $\intx$ and the vector.
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}rlrr@{\hspace{4pt}}l@{\hspace{18pt}}rlrr@{\hspace{4pt}}l@{}}\toprule
+$J$ & irrep & $\mult$ & $\intx$ & vector & $J$ & irrep & $\mult$ & $\intx$ & vector\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+0 & $\irr{a}'$ & 1 & 1 & $\jm{0}{0}$ & 3 & $\irr{a}'$ & 2 & 1 & $\jm{3}{1}$ $-$ $\jm{3}{-1}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
+1 & $\irr{a}'$ & 1 & 1 & $\jm{1}{0}$ & 3 & $\irr{a}'$ & 3 & 1 & $\jm{3}{2}$ $+$ $\jm{3}{-2}$\\*
+1 & $\irr{a}''$ & 1 & 1 & $\jm{1}{1}$ $+$ $\jm{1}{-1}$ & 3 & $\irr{a}''$ & 2 & 1 & $\jm{3}{2}$ $-$ $\jm{3}{-2}$\\*
+1 & $\irr{a}'$ & 2 & 1 & $\jm{1}{1}$ $-$ $\jm{1}{-1}$ & 3 & $\irr{a}''$ & 3 & 1 & $\jm{3}{3}$ $+$ $\jm{3}{-3}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
+2 & $\irr{a}'$ & 1 & 1 & $\jm{2}{0}$ & 3 & $\irr{a}'$ & 4 & 1 & $\jm{3}{3}$ $-$ $\jm{3}{-3}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
+2 & $\irr{a}''$ & 1 & 1 & $\jm{2}{1}$ $+$ $\jm{2}{-1}$ & 4 & $\irr{a}'$ & 1 & 1 & $\jm{4}{0}$\\*
+2 & $\irr{a}'$ & 2 & 1 & $\jm{2}{1}$ $-$ $\jm{2}{-1}$ & 4 & $\irr{a}''$ & 1 & 1 & $\jm{4}{1}$ $+$ $\jm{4}{-1}$\\*
+2 & $\irr{a}'$ & 3 & 1 & $\jm{2}{2}$ $+$ $\jm{2}{-2}$ & 4 & $\irr{a}'$ & 2 & 1 & $\jm{4}{1}$ $-$ $\jm{4}{-1}$\\*
+2 & $\irr{a}''$ & 2 & 1 & $\jm{2}{2}$ $-$ $\jm{2}{-2}$ & 4 & $\irr{a}'$ & 3 & 1 & $\jm{4}{2}$ $+$ $\jm{4}{-2}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
+3 & $\irr{a}'$ & 1 & 1 & $\jm{3}{0}$ & 4 & $\irr{a}''$ & 2 & 1 & $\jm{4}{2}$ $-$ $\jm{4}{-2}$\\*
+3 & $\irr{a}''$ & 1 & 1 & $\jm{3}{1}$ $+$ $\jm{3}{-1}$ & 4 & $\irr{a}''$ & 3 & 1 & $\jm{4}{3}$ $+$ $\jm{4}{-3}$\\
+\grouprule{0pt}{\heavyrulewidth}
+4 & $\irr{a}'$ & 4 & 1 & $\jm{4}{3}$ $-$ $\jm{4}{-3}$ & 5 & $\irr{a}''$ & 4 & 1 & $\jm{5}{4}$ $-$ $\jm{5}{-4}$\\*
+4 & $\irr{a}'$ & 5 & 1 & $\jm{4}{4}$ $+$ $\jm{4}{-4}$ & 5 & $\irr{a}''$ & 5 & 1 & $\jm{5}{5}$ $+$ $\jm{5}{-5}$\\*
+4 & $\irr{a}''$ & 4 & 1 & $\jm{4}{4}$ $-$ $\jm{4}{-4}$ & 5 & $\irr{a}'$ & 6 & 1 & $\jm{5}{5}$ $-$ $\jm{5}{-5}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
+5 & $\irr{a}'$ & 1 & 1 & $\jm{5}{0}$ & 6 & $\irr{a}'$ & 1 & 1 & $\jm{6}{0}$\\*
+5 & $\irr{a}''$ & 1 & 1 & $\jm{5}{1}$ $+$ $\jm{5}{-1}$ & 6 & $\irr{a}''$ & 1 & 1 & $\jm{6}{1}$ $+$ $\jm{6}{-1}$\\*
+5 & $\irr{a}'$ & 2 & 1 & $\jm{5}{1}$ $-$ $\jm{5}{-1}$ & 6 & $\irr{a}'$ & 2 & 1 & $\jm{6}{1}$ $-$ $\jm{6}{-1}$\\*
+5 & $\irr{a}'$ & 3 & 1 & $\jm{5}{2}$ $+$ $\jm{5}{-2}$ & 6 & $\irr{a}'$ & 3 & 1 & $\jm{6}{2}$ $+$ $\jm{6}{-2}$\\*
+5 & $\irr{a}''$ & 2 & 1 & $\jm{5}{2}$ $-$ $\jm{5}{-2}$ & 6 & $\irr{a}''$ & 2 & 1 & $\jm{6}{2}$ $-$ $\jm{6}{-2}$\\*
+5 & $\irr{a}''$ & 3 & 1 & $\jm{5}{3}$ $+$ $\jm{5}{-3}$ & 6 & $\irr{a}''$ & 3 & 1 & $\jm{6}{3}$ $+$ $\jm{6}{-3}$\\*
+5 & $\irr{a}'$ & 4 & 1 & $\jm{5}{3}$ $-$ $\jm{5}{-3}$ & 6 & $\irr{a}'$ & 4 & 1 & $\jm{6}{3}$ $-$ $\jm{6}{-3}$\\*
+5 & $\irr{a}'$ & 5 & 1 & $\jm{5}{4}$ $+$ $\jm{5}{-4}$ & 6 & $\irr{a}'$ & 5 & 1 & $\jm{6}{4}$ $+$ $\jm{6}{-4}$\\
+\grouprule{0pt}{\heavyrulewidth}
+6 & $\irr{a}''$ & 4 & 1 & $\jm{6}{4}$ $-$ $\jm{6}{-4}$ & 7 & $\irr{a}'$ & 4 & 1 & $\jm{7}{3}$ $-$ $\jm{7}{-3}$\\*
+6 & $\irr{a}''$ & 5 & 1 & $\jm{6}{5}$ $+$ $\jm{6}{-5}$ & 7 & $\irr{a}'$ & 5 & 1 & $\jm{7}{4}$ $+$ $\jm{7}{-4}$\\*
+6 & $\irr{a}'$ & 6 & 1 & $\jm{6}{5}$ $-$ $\jm{6}{-5}$ & 7 & $\irr{a}''$ & 4 & 1 & $\jm{7}{4}$ $-$ $\jm{7}{-4}$\\*
+6 & $\irr{a}'$ & 7 & 1 & $\jm{6}{6}$ $+$ $\jm{6}{-6}$ & 7 & $\irr{a}''$ & 5 & 1 & $\jm{7}{5}$ $+$ $\jm{7}{-5}$\\*
+6 & $\irr{a}''$ & 6 & 1 & $\jm{6}{6}$ $-$ $\jm{6}{-6}$ & 7 & $\irr{a}'$ & 6 & 1 & $\jm{7}{5}$ $-$ $\jm{7}{-5}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
+7 & $\irr{a}'$ & 1 & 1 & $\jm{7}{0}$ & 7 & $\irr{a}'$ & 7 & 1 & $\jm{7}{6}$ $+$ $\jm{7}{-6}$\\*
+7 & $\irr{a}''$ & 1 & 1 & $\jm{7}{1}$ $+$ $\jm{7}{-1}$ & 7 & $\irr{a}''$ & 6 & 1 & $\jm{7}{6}$ $-$ $\jm{7}{-6}$\\*
+7 & $\irr{a}'$ & 2 & 1 & $\jm{7}{1}$ $-$ $\jm{7}{-1}$ & 7 & $\irr{a}''$ & 7 & 1 & $\jm{7}{7}$ $+$ $\jm{7}{-7}$\\*
+7 & $\irr{a}'$ & 3 & 1 & $\jm{7}{2}$ $+$ $\jm{7}{-2}$ & 7 & $\irr{a}'$ & 8 & 1 & $\jm{7}{7}$ $-$ $\jm{7}{-7}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
+7 & $\irr{a}''$ & 2 & 1 & $\jm{7}{2}$ $-$ $\jm{7}{-2}$ & 8 & $\irr{a}'$ & 1 & 1 & $\jm{8}{0}$\\*
+7 & $\irr{a}''$ & 3 & 1 & $\jm{7}{3}$ $+$ $\jm{7}{-3}$ & 8 & $\irr{a}''$ & 1 & 1 & $\jm{8}{1}$ $+$ $\jm{8}{-1}$\\
+\grouprule{0pt}{\heavyrulewidth}
+8 & $\irr{a}'$ & 2 & 1 & $\jm{8}{1}$ $-$ $\jm{8}{-1}$ & 8 & $\irr{a}''$ & 7 & 1 & $\jm{8}{7}$ $+$ $\jm{8}{-7}$\\*
+8 & $\irr{a}'$ & 3 & 1 & $\jm{8}{2}$ $+$ $\jm{8}{-2}$ & 8 & $\irr{a}'$ & 8 & 1 & $\jm{8}{7}$ $-$ $\jm{8}{-7}$\\*
+8 & $\irr{a}''$ & 2 & 1 & $\jm{8}{2}$ $-$ $\jm{8}{-2}$ & 8 & $\irr{a}'$ & 9 & 1 & $\jm{8}{8}$ $+$ $\jm{8}{-8}$\\*
+8 & $\irr{a}''$ & 3 & 1 & $\jm{8}{3}$ $+$ $\jm{8}{-3}$ & 8 & $\irr{a}''$ & 8 & 1 & $\jm{8}{8}$ $-$ $\jm{8}{-8}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
+8 & $\irr{a}'$ & 4 & 1 & $\jm{8}{3}$ $-$ $\jm{8}{-3}$ & 9 & $\irr{a}'$ & 1 & 1 & $\jm{9}{0}$\\*
+8 & $\irr{a}'$ & 5 & 1 & $\jm{8}{4}$ $+$ $\jm{8}{-4}$ & 9 & $\irr{a}''$ & 1 & 1 & $\jm{9}{1}$ $+$ $\jm{9}{-1}$\\*
+8 & $\irr{a}''$ & 4 & 1 & $\jm{8}{4}$ $-$ $\jm{8}{-4}$ & 9 & $\irr{a}'$ & 2 & 1 & $\jm{9}{1}$ $-$ $\jm{9}{-1}$\\*
+8 & $\irr{a}''$ & 5 & 1 & $\jm{8}{5}$ $+$ $\jm{8}{-5}$ & 9 & $\irr{a}'$ & 3 & 1 & $\jm{9}{2}$ $+$ $\jm{9}{-2}$\\*
+8 & $\irr{a}'$ & 6 & 1 & $\jm{8}{5}$ $-$ $\jm{8}{-5}$ & 9 & $\irr{a}''$ & 2 & 1 & $\jm{9}{2}$ $-$ $\jm{9}{-2}$\\*
+8 & $\irr{a}'$ & 7 & 1 & $\jm{8}{6}$ $+$ $\jm{8}{-6}$ & 9 & $\irr{a}''$ & 3 & 1 & $\jm{9}{3}$ $+$ $\jm{9}{-3}$\\*
+8 & $\irr{a}''$ & 6 & 1 & $\jm{8}{6}$ $-$ $\jm{8}{-6}$ & 9 & $\irr{a}'$ & 4 & 1 & $\jm{9}{3}$ $-$ $\jm{9}{-3}$\\
+\grouprule{0pt}{\heavyrulewidth}
+9 & $\irr{a}'$ & 5 & 1 & $\jm{9}{4}$ $+$ $\jm{9}{-4}$ & 9 & $\irr{a}'$ & 10 & 1 & $\jm{9}{9}$ $-$ $\jm{9}{-9}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
+9 & $\irr{a}''$ & 4 & 1 & $\jm{9}{4}$ $-$ $\jm{9}{-4}$ & 10 & $\irr{a}'$ & 1 & 1 & $\jm{10}{0}$\\*
+9 & $\irr{a}''$ & 5 & 1 & $\jm{9}{5}$ $+$ $\jm{9}{-5}$ & 10 & $\irr{a}''$ & 1 & 1 & $\jm{10}{1}$ $+$ $\jm{10}{-1}$\\*
+9 & $\irr{a}'$ & 6 & 1 & $\jm{9}{5}$ $-$ $\jm{9}{-5}$ & 10 & $\irr{a}'$ & 2 & 1 & $\jm{10}{1}$ $-$ $\jm{10}{-1}$\\*
+9 & $\irr{a}'$ & 7 & 1 & $\jm{9}{6}$ $+$ $\jm{9}{-6}$ & 10 & $\irr{a}'$ & 3 & 1 & $\jm{10}{2}$ $+$ $\jm{10}{-2}$\\*
+9 & $\irr{a}''$ & 6 & 1 & $\jm{9}{6}$ $-$ $\jm{9}{-6}$ & 10 & $\irr{a}''$ & 2 & 1 & $\jm{10}{2}$ $-$ $\jm{10}{-2}$\\*
+9 & $\irr{a}''$ & 7 & 1 & $\jm{9}{7}$ $+$ $\jm{9}{-7}$ & 10 & $\irr{a}''$ & 3 & 1 & $\jm{10}{3}$ $+$ $\jm{10}{-3}$\\*
+9 & $\irr{a}'$ & 8 & 1 & $\jm{9}{7}$ $-$ $\jm{9}{-7}$ & 10 & $\irr{a}'$ & 4 & 1 & $\jm{10}{3}$ $-$ $\jm{10}{-3}$\\*
+9 & $\irr{a}'$ & 9 & 1 & $\jm{9}{8}$ $+$ $\jm{9}{-8}$ & 10 & $\irr{a}'$ & 5 & 1 & $\jm{10}{4}$ $+$ $\jm{10}{-4}$\\*
+9 & $\irr{a}''$ & 8 & 1 & $\jm{9}{8}$ $-$ $\jm{9}{-8}$ & 10 & $\irr{a}''$ & 4 & 1 & $\jm{10}{4}$ $-$ $\jm{10}{-4}$\\*
+9 & $\irr{a}''$ & 9 & 1 & $\jm{9}{9}$ $+$ $\jm{9}{-9}$ & 10 & $\irr{a}''$ & 5 & 1 & $\jm{10}{5}$ $+$ $\jm{10}{-5}$\\
+\grouprule{0pt}{\heavyrulewidth}
+10 & $\irr{a}'$ & 6 & 1 & $\jm{10}{5}$ $-$ $\jm{10}{-5}$ & 10 & $\irr{a}''$ & 8 & 1 & $\jm{10}{8}$ $-$ $\jm{10}{-8}$\\*
+10 & $\irr{a}'$ & 7 & 1 & $\jm{10}{6}$ $+$ $\jm{10}{-6}$ & 10 & $\irr{a}''$ & 9 & 1 & $\jm{10}{9}$ $+$ $\jm{10}{-9}$\\*
+10 & $\irr{a}''$ & 6 & 1 & $\jm{10}{6}$ $-$ $\jm{10}{-6}$ & 10 & $\irr{a}'$ & 10 & 1 & $\jm{10}{9}$ $-$ $\jm{10}{-9}$\\*
+10 & $\irr{a}''$ & 7 & 1 & $\jm{10}{7}$ $+$ $\jm{10}{-7}$ & 10 & $\irr{a}'$ & 11 & 1 & $\jm{10}{10}$ $+$ $\jm{10}{-10}$\\*
+10 & $\irr{a}'$ & 8 & 1 & $\jm{10}{7}$ $-$ $\jm{10}{-7}$ & 10 & $\irr{a}''$ & 10 & 1 & $\jm{10}{10}$ $-$ $\jm{10}{-10}$\\*
+10 & $\irr{a}'$ & 9 & 1 & $\jm{10}{8}$ $+$ $\jm{10}{-8}$ &  &  &  &  & \\
+\bottomrule\end{longtable}}
+\needspace{323pt}
+\partbox{Tensors}
+\section{\texorpdfstring{$\orbital{s}$, $\orbital{p}$, $\orbital{d}$, $\orbital{f}$}{s, p, d, f} functions}\label{s:orbitals}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.13}{13}.
+\leavevmode\label{n:head.function}\label{n:head.polynomial}\label{n:head.irreps}A function is a real solid harmonic $\orbital{s}$, $\orbital{p}$, $\orbital{d}$ or $\orbital{f}$, of degree 0 to 3 with coprime integer coefficients, or a component $\orbital{R}_{x}$, $\orbital{R}_{y}$, $\orbital{R}_{z}$ of an axial vector; polynomial is the function in $x$, $y$, $z$, and irreps lists the irreps whose isotypic components of the function are nonzero.
+{\small\begin{longtable}{@{}lll@{\hspace{18pt}}lll@{}}\toprule
+function & polynomial & irreps & function & polynomial & irreps\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\orbital{s}$ & $1$ & $\irr{a}'$ & $\orbital{f}_{xz^2}$ & $-x^{3} - xy^{2} + 4xz^{2}$ & $\irr{a}'$\\*
+$\orbital{p}_{x}$ & $x$ & $\irr{a}'$ & $\orbital{f}_{yz^2}$ & $-x^{2}y - y^{3} + 4yz^{2}$ & $\irr{a}''$\\*
+$\orbital{p}_{y}$ & $y$ & $\irr{a}''$ & $\orbital{f}_{z(x^2-y^2)}$ & $x^{2}z - y^{2}z$ & $\irr{a}'$\\*
+$\orbital{p}_{z}$ & $z$ & $\irr{a}'$ & $\orbital{f}_{xyz}$ & $xyz$ & $\irr{a}''$\\*
+$\orbital{d}_{z^2}$ & $-x^{2} - y^{2} + 2z^{2}$ & $\irr{a}'$ & $\orbital{f}_{x(x^2-3y^2)}$ & $x^{3} - 3xy^{2}$ & $\irr{a}'$\\*
+$\orbital{d}_{x^2-y^2}$ & $x^{2} - y^{2}$ & $\irr{a}'$ & $\orbital{f}_{y(3x^2-y^2)}$ & $3x^{2}y - y^{3}$ & $\irr{a}''$\\*
+$\orbital{d}_{xy}$ & $xy$ & $\irr{a}''$ & $\orbital{R}_{x}$ & $x$ & $\irr{a}''$\\*
+$\orbital{d}_{yz}$ & $yz$ & $\irr{a}''$ & $\orbital{R}_{y}$ & $y$ & $\irr{a}'$\\*
+$\orbital{d}_{zx}$ & $xz$ & $\irr{a}'$ & $\orbital{R}_{z}$ & $z$ & $\irr{a}''$\\*
+$\orbital{f}_{z^3}$ & $-3x^{2}z - 3y^{2}z + 2z^{3}$ & $\irr{a}'$ &  &  & \\
+\bottomrule\end{longtable}}
+\needspace{247pt}
+\needspace{103pt}
+\section{Tensor spaces}\label{s:tensor_spaces}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.13}{13}.
+\leavevmode\label{n:head.name}\label{n:head.description}\label{n:head.dim}\label{n:head.decomposition}\label{n:label.jahn}A row is a space of Cartesian tensors: name is its Jahn symbol (V a polar vector, e an axial factor, a power the number of factors, brackets their symmetrized product), which names the space in the isotypic components too, and description the space in words: the symmetric polar tensors of a rank, the homogeneous polynomials of that degree; the axial vectors and the symmetric axial tensors of ranks 2 (optical activity) and 3; the elastic stiffness tensors, symmetric in their first two indices, in their last two and under the exchange of the two pairs; the piezoelectric tensors, symmetric in their last two indices; the electrogyration tensors, axial, symmetric in their first two indices; the photoelastic tensors, symmetric in their first two and in their last two indices (also electrostriction and the quadratic electro-optic effect); the third-harmonic susceptibilities, symmetric in their last three indices; or the general polar tensors of rank 4, without symmetry; dim is its dimension and decomposition the irreps of $\grp{C_{1v}}$ that it carries, with their multiplicities.
+{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-6\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\jahn{[[V^{2}]^{2}]}$}\cellmax{$\jahn{e[V^{2}]V}$}\cellmax{$\jahn{V[V^{2}]}$}\cellmax{$\jahn{V[V^{3}]}$}\cellmax{$\jahn{[V^{2}]^{2}}$}\cellmax{$\jahn{e[V^{2}]}$}\cellmax{$\jahn{e[V^{3}]}$}\cellmax{$\jahn{[V^{2}]}$}\cellmax{$\jahn{[V^{3}]}$}\cellmax{$\jahn{[V^{4}]}$}\cellmax{name}\cellmax{$\jahn{V^{0}}$}\cellmax{$\jahn{V^{4}}$}\cellmax{$\jahn{eV}$}\cellmax{$\jahn{V}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{third-harmonic susceptibilities}\cellmax{symmetric axial tensors, rank 2}\cellmax{symmetric axial tensors, rank 3}\cellmax{symmetric polar tensors, rank 2}\cellmax{symmetric polar tensors, rank 3}\cellmax{symmetric polar tensors, rank 4}\cellmax{general polar tensors, rank 4}\cellmax{elastic stiffness tensors}\cellmax{electrogyration tensors}\cellmax{piezoelectric tensors}\cellmax{photoelastic tensors}\cellmax{axial vectors}\cellmax{polar vectors}\cellmax{description}\cellmax{scalars}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{dim}\cellmax{10}\cellmax{15}\cellmax{18}\cellmax{21}\cellmax{30}\cellmax{36}\cellmax{81}\cellmax{1}\cellmax{3}\cellmax{6}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$16\,\irr{a}' \oplus\allowbreak 14\,\irr{a}''$}\cellmax{$20\,\irr{a}' \oplus\allowbreak 16\,\irr{a}''$}\cellmax{$41\,\irr{a}' \oplus\allowbreak 40\,\irr{a}''$}\cellmax{decomposition}\cellmax{$10\,\irr{a}' \oplus\allowbreak 8\,\irr{a}''$}\cellmax{$13\,\irr{a}' \oplus\allowbreak 8\,\irr{a}''$}\cellmax{$8\,\irr{a}' \oplus\allowbreak 10\,\irr{a}''$}\cellmax{$2\,\irr{a}' \oplus\allowbreak 4\,\irr{a}''$}\cellmax{$4\,\irr{a}' \oplus\allowbreak 2\,\irr{a}''$}\cellmax{$4\,\irr{a}' \oplus\allowbreak 6\,\irr{a}''$}\cellmax{$6\,\irr{a}' \oplus\allowbreak 4\,\irr{a}''$}\cellmax{$9\,\irr{a}' \oplus\allowbreak 6\,\irr{a}''$}\cellmax{$2\,\irr{a}' \oplus\allowbreak \irr{a}''$}\cellmax{$\irr{a}' \oplus\allowbreak 2\,\irr{a}''$}\cellmax{$\irr{a}'$}\fillcap\begin{longtable}{@{}llr>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
+name & description & dim & decomposition\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\jahn{V^{0}}$ & scalars & 1 & $\irr{a}'$\\*
+$\jahn{V}$ & polar vectors & 3 & $2\,\irr{a}' \oplus\allowbreak \irr{a}''$\\
+$\jahn{[V^{2}]}$ & symmetric polar tensors, rank 2 & 6 & $4\,\irr{a}' \oplus\allowbreak 2\,\irr{a}''$\\
+$\jahn{[V^{3}]}$ & symmetric polar tensors, rank 3 & 10 & $6\,\irr{a}' \oplus\allowbreak 4\,\irr{a}''$\\
+$\jahn{[V^{4}]}$ & symmetric polar tensors, rank 4 & 15 & $9\,\irr{a}' \oplus\allowbreak 6\,\irr{a}''$\\
+$\jahn{eV}$ & axial vectors & 3 & $\irr{a}' \oplus\allowbreak 2\,\irr{a}''$\\
+$\jahn{e[V^{2}]}$ & symmetric axial tensors, rank 2 & 6 & $2\,\irr{a}' \oplus\allowbreak 4\,\irr{a}''$\\
+$\jahn{e[V^{3}]}$ & symmetric axial tensors, rank 3 & 10 & $4\,\irr{a}' \oplus\allowbreak 6\,\irr{a}''$\\
+$\jahn{[[V^{2}]^{2}]}$ & elastic stiffness tensors & 21 & $13\,\irr{a}' \oplus\allowbreak 8\,\irr{a}''$\\
+$\jahn{V[V^{2}]}$ & piezoelectric tensors & 18 & $10\,\irr{a}' \oplus\allowbreak 8\,\irr{a}''$\\
+$\jahn{e[V^{2}]V}$ & electrogyration tensors & 18 & $8\,\irr{a}' \oplus\allowbreak 10\,\irr{a}''$\\
+$\jahn{[V^{2}]^{2}}$ & photoelastic tensors & 36 & $20\,\irr{a}' \oplus\allowbreak 16\,\irr{a}''$\\
+$\jahn{V[V^{3}]}$ & third-harmonic susceptibilities & 30 & $16\,\irr{a}' \oplus\allowbreak 14\,\irr{a}''$\\*
+$\jahn{V^{4}}$ & general polar tensors, rank 4 & 81 & $41\,\irr{a}' \oplus\allowbreak 40\,\irr{a}''$\\
+\bottomrule\end{longtable}}
+\needspace{223pt}
+\needspace{103pt}
+\section{Isotypic components}\label{s:isotypic}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.13}{13}.
+\leavevmode\label{n:head.multiplicity}\label{n:head.coefficients}\label{n:head.basis}A row is an isotypic component: name (the Jahn symbol of the space, as in the tensor spaces) and irrep give the space and the irrep, mult. the multiplicity of the irrep in the space, dim the dimension of the component, coefficients the field of the coefficients of its basis, rational or cyclotomic, and basis its reduced row echelon basis. \label{n:matrix.elastic}\label{n:matrix.piezoelectric}\label{n:matrix.electrogyration}\label{n:matrix.photoelastic}\label{n:matrix.susceptibility}A basis tensor of the elastic, piezoelectric, electrogyration or photoelastic tensors or of the third-harmonic susceptibilities is a combination of their coordinates $c_{11}, \dots, c_{66}$, $d_{11}, \dots, d_{36}$, $\mathnormal{g}_{11}, \dots, \mathnormal{g}_{63}$, $p_{11}, \dots, p_{66}$ or $\chi^{(3)}_{1111}, \dots, \chi^{(3)}_{3333}$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.13}{13}), each standing for the tensor with that coordinate 1 and every other coordinate 0; the symmetric axial tensors of ranks 2 and 3, the electrogyration and photoelastic tensors and the third-harmonic susceptibilities have only the row of the trivial irrep, the general polar tensors of rank 4 none.
+{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-10\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\jahn{[[V^{2}]^{2}]}$}\cellmax{$\jahn{e[V^{2}]V}$}\cellmax{$\jahn{V[V^{2}]}$}\cellmax{$\jahn{V[V^{3}]}$}\cellmax{$\jahn{[V^{2}]^{2}}$}\cellmax{$\jahn{e[V^{2}]}$}\cellmax{$\jahn{e[V^{3}]}$}\cellmax{$\jahn{[V^{2}]}$}\cellmax{$\jahn{[V^{3}]}$}\cellmax{$\jahn{[V^{4}]}$}\cellmax{name}\cellmax{$\jahn{V^{0}}$}\cellmax{$\jahn{eV}$}\cellmax{$\jahn{V}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{irrep}\cellmax{$\irr{a}''$}\cellmax{$\irr{a}'$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{mult.}\cellmax{10}\cellmax{13}\cellmax{16}\cellmax{20}\cellmax{1}\cellmax{2}\cellmax{4}\cellmax{6}\cellmax{8}\cellmax{9}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{dim}\cellmax{10}\cellmax{13}\cellmax{16}\cellmax{20}\cellmax{1}\cellmax{2}\cellmax{4}\cellmax{6}\cellmax{8}\cellmax{9}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{coefficients}\cellmax{rational}\addtolength{\fillwidth}{-\colwidth}\begin{longtable}{@{}llrrl>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
+name & irrep & mult. & dim & coefficients & basis\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\jahn{V^{0}}$ & $\irr{a}'$ & 1 & 1 & rational & $1$\\*
+$\jahn{V}$ & $\irr{a}'$ & 2 & 2 & rational & $x$, $z$\\
+$\jahn{V}$ & $\irr{a}''$ & 1 & 1 & rational & $y$\\
+$\jahn{[V^{2}]}$ & $\irr{a}'$ & 4 & 4 & rational & $x^{2}$, $xz$, $y^{2}$, $z^{2}$\\
+$\jahn{[V^{2}]}$ & $\irr{a}''$ & 2 & 2 & rational & $xy$, $yz$\\
+$\jahn{[V^{3}]}$ & $\irr{a}'$ & 6 & 6 & rational & $x^{3}$, $x^{2}z$, $xy^{2}$, $xz^{2}$, $y^{2}z$, $z^{3}$\\
+$\jahn{[V^{3}]}$ & $\irr{a}''$ & 4 & 4 & rational & $x^{2}y$, $xyz$, $y^{3}$, $yz^{2}$\\
+$\jahn{[V^{4}]}$ & $\irr{a}'$ & 9 & 9 & rational & $x^{4}$, $x^{3}z$, $x^{2}y^{2}$, $x^{2}z^{2}$, $xy^{2}z$, $xz^{3}$, $y^{4}$, $y^{2}z^{2}$, $z^{4}$\\
+$\jahn{[V^{4}]}$ & $\irr{a}''$ & 6 & 6 & rational & $x^{3}y$, $x^{2}yz$, $xy^{3}$, $xyz^{2}$, $y^{3}z$, $yz^{3}$\\
+$\jahn{eV}$ & $\irr{a}'$ & 1 & 1 & rational & $y$\\
+$\jahn{eV}$ & $\irr{a}''$ & 2 & 2 & rational & $x$, $z$\\
+$\jahn{e[V^{2}]}$ & $\irr{a}'$ & 2 & 2 & rational & $xy$, $yz$\\
+$\jahn{e[V^{3}]}$ & $\irr{a}'$ & 4 & 4 & rational & $x^{2}y$, $xyz$, $y^{3}$, $yz^{2}$\\
+$\jahn{[[V^{2}]^{2}]}$ & $\irr{a}'$ & 13 & 13 & rational & $c_{11}$, $c_{12}$, $c_{13}$, $c_{15}$, $c_{22}$, $c_{23}$, $c_{25}$, $c_{33}$, $c_{35}$, $c_{44}$, $c_{46}$, $c_{55}$, $c_{66}$\\
+$\jahn{[[V^{2}]^{2}]}$ & $\irr{a}''$ & 8 & 8 & rational & $c_{14}$, $c_{16}$, $c_{24}$, $c_{26}$, $c_{34}$, $c_{36}$, $c_{45}$, $c_{56}$\\
+$\jahn{V[V^{2}]}$ & $\irr{a}'$ & 10 & 10 & rational & $d_{11}$, $d_{12}$, $d_{13}$, $d_{15}$, $d_{24}$, $d_{26}$, $d_{31}$, $d_{32}$, $d_{33}$, $d_{35}$\\
+$\jahn{V[V^{2}]}$ & $\irr{a}''$ & 8 & 8 & rational & $d_{14}$, $d_{16}$, $d_{21}$, $d_{22}$, $d_{23}$, $d_{25}$, $d_{34}$, $d_{36}$\\
+$\jahn{e[V^{2}]V}$ & $\irr{a}'$ & 8 & 8 & rational & $\mathnormal{g}_{12}$, $\mathnormal{g}_{22}$, $\mathnormal{g}_{32}$, $\mathnormal{g}_{41}$, $\mathnormal{g}_{43}$, $\mathnormal{g}_{52}$, $\mathnormal{g}_{61}$, $\mathnormal{g}_{63}$\\
+$\jahn{[V^{2}]^{2}}$ & $\irr{a}'$ & 20 & 20 & rational & $p_{11}$, $p_{12}$, $p_{13}$, $p_{15}$, $p_{21}$, $p_{22}$, $p_{23}$, $p_{25}$, $p_{31}$, $p_{32}$, $p_{33}$, $p_{35}$, $p_{44}$, $p_{46}$, $p_{51}$, $p_{52}$, $p_{53}$, $p_{55}$, $p_{64}$, $p_{66}$\\*
+$\jahn{V[V^{3}]}$ & $\irr{a}'$ & 16 & 16 & rational & $\chi^{(3)}_{1111}$, $\chi^{(3)}_{1113}$, $\chi^{(3)}_{1122}$, $\chi^{(3)}_{1133}$, $\chi^{(3)}_{1223}$, $\chi^{(3)}_{1333}$, $\chi^{(3)}_{2112}$, $\chi^{(3)}_{2123}$, $\chi^{(3)}_{2222}$, $\chi^{(3)}_{2233}$, $\chi^{(3)}_{3111}$, $\chi^{(3)}_{3113}$, $\chi^{(3)}_{3122}$, $\chi^{(3)}_{3133}$, $\chi^{(3)}_{3223}$, $\chi^{(3)}_{3333}$\\
+\bottomrule\end{longtable}}
+\needspace{199pt}
+\needspace{103pt}
+\section{Invariant polynomials}\label{s:invariant_polynomials}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.13.1}{13.1}.
+The polynomials in $x$, $y$, $z$ that take the same value at $\pointr$ and at $\pointr\,P(g)$ for every point $\pointr$ and every element $g$, the invariants, form a ring with the Hilbert series $H_{\irr{a}'}(t)/(1-t^{2}) = 1/((1-t)(1-t)(1-t^{2}))$, in which the coefficient of a power of $t$ is the number of linearly independent invariants of that degree. \label{n:head.degree}\label{n:head.role}A row is an invariant of a minimal generating set of the ring (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.13.1}{13.1}): degree is its degree, polynomial the invariant and role whether it is a primary or a secondary invariant; every row is primary, and the ring is the polynomial ring in them.
+{\small\begin{longtable}{@{}rll@{}}\toprule
+degree & polynomial & role\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+1 & $x$ & primary\\*
+1 & $z$ & primary\\*
+2 & $x^{2} + y^{2} + z^{2}$ & primary\\
+\bottomrule\end{longtable}}
+\end{document}

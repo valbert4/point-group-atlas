@@ -1,0 +1,4237 @@
+{
+  "aliases": {
+    "finite": {
+      "2C1h": "2C1v",
+      "2D1": "2C2",
+      "2D1d": "2C2h",
+      "2D1h": "2C2v"
+    }
+  },
+  "counts": {
+    "covering_edges": 330,
+    "nodes": 112,
+    "relations": 1294
+  },
+  "edges": [
+    {
+      "covering": true,
+      "lower": "C1",
+      "upper": "2C1",
+      "witness": {
+        "in": "2C1",
+        "kind": "explicit subgroup of the record",
+        "node": "n00"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1",
+      "upper": "2C2",
+      "witness": {
+        "in": "2C2",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1",
+      "upper": "2C3",
+      "witness": {
+        "in": "2C3",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3",
+      "upper": "2C3",
+      "witness": {
+        "in": "2C3",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2",
+      "upper": "2C4",
+      "witness": {
+        "in": "2C4",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1",
+      "upper": "2C5",
+      "witness": {
+        "in": "2C5",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C5",
+      "upper": "2C5",
+      "witness": {
+        "in": "2C5",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2",
+      "upper": "2C6",
+      "witness": {
+        "in": "2C6",
+        "kind": "explicit subgroup of the record",
+        "node": "n03"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3",
+      "upper": "2C6",
+      "witness": {
+        "in": "2C6",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1",
+      "upper": "2C7",
+      "witness": {
+        "in": "2C7",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C7",
+      "upper": "2C7",
+      "witness": {
+        "in": "2C7",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C4",
+      "upper": "2C8",
+      "witness": {
+        "in": "2C8",
+        "kind": "explicit subgroup of the record",
+        "node": "n03"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3",
+      "upper": "2C9",
+      "witness": {
+        "in": "2C9",
+        "kind": "explicit subgroup of the record",
+        "node": "n03"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C9",
+      "upper": "2C9",
+      "witness": {
+        "in": "2C9",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2",
+      "upper": "2C10",
+      "witness": {
+        "in": "2C10",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C5",
+      "upper": "2C10",
+      "witness": {
+        "in": "2C10",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1",
+      "upper": "2C11",
+      "witness": {
+        "in": "2C11",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C11",
+      "upper": "2C11",
+      "witness": {
+        "in": "2C11",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C4",
+      "upper": "2C12",
+      "witness": {
+        "in": "2C12",
+        "kind": "explicit subgroup of the record",
+        "node": "n05"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C6",
+      "upper": "2C12",
+      "witness": {
+        "in": "2C12",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1",
+      "upper": "2S2",
+      "witness": {
+        "in": "2S2",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2",
+      "upper": "2S2",
+      "witness": {
+        "in": "2S2",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2b",
+      "upper": "2S2",
+      "witness": {
+        "in": "2S2",
+        "kind": "explicit subgroup of the record",
+        "node": "n03"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2",
+      "upper": "2S4",
+      "witness": {
+        "in": "2S4",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3",
+      "upper": "2S6",
+      "witness": {
+        "in": "2S6",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S2",
+      "upper": "2S6",
+      "witness": {
+        "in": "2S6",
+        "kind": "explicit subgroup of the record",
+        "node": "n05"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S6",
+      "upper": "2S6",
+      "witness": {
+        "in": "2S6",
+        "kind": "explicit subgroup of the record",
+        "node": "n07"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S6b",
+      "upper": "2S6",
+      "witness": {
+        "in": "2S6",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C4",
+      "upper": "2S8",
+      "witness": {
+        "in": "2S8",
+        "kind": "explicit subgroup of the record",
+        "node": "n03"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C5",
+      "upper": "2S10",
+      "witness": {
+        "in": "2S10",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S2",
+      "upper": "2S10",
+      "witness": {
+        "in": "2S10",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S10",
+      "upper": "2S10",
+      "witness": {
+        "in": "2S10",
+        "kind": "explicit subgroup of the record",
+        "node": "n07"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S10b",
+      "upper": "2S10",
+      "witness": {
+        "in": "2S10",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C6",
+      "upper": "2S12",
+      "witness": {
+        "in": "2S12",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S4",
+      "upper": "2S12",
+      "witness": {
+        "in": "2S12",
+        "kind": "explicit subgroup of the record",
+        "node": "n05"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C7",
+      "upper": "2S14",
+      "witness": {
+        "in": "2S14",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S2",
+      "upper": "2S14",
+      "witness": {
+        "in": "2S14",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S14",
+      "upper": "2S14",
+      "witness": {
+        "in": "2S14",
+        "kind": "explicit subgroup of the record",
+        "node": "n07"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S14b",
+      "upper": "2S14",
+      "witness": {
+        "in": "2S14",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C8",
+      "upper": "2S16",
+      "witness": {
+        "in": "2S16",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C9",
+      "upper": "2S18",
+      "witness": {
+        "in": "2S18",
+        "kind": "explicit subgroup of the record",
+        "node": "n11"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S6",
+      "upper": "2S18",
+      "witness": {
+        "in": "2S18",
+        "kind": "explicit subgroup of the record",
+        "node": "n10"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S18",
+      "upper": "2S18",
+      "witness": {
+        "in": "2S18",
+        "kind": "explicit subgroup of the record",
+        "node": "n12"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S18b",
+      "upper": "2S18",
+      "witness": {
+        "in": "2S18",
+        "kind": "explicit subgroup of the record",
+        "node": "n13"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C10",
+      "upper": "2S20",
+      "witness": {
+        "in": "2S20",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S4",
+      "upper": "2S20",
+      "witness": {
+        "in": "2S20",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C11",
+      "upper": "2S22",
+      "witness": {
+        "in": "2S22",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S2",
+      "upper": "2S22",
+      "witness": {
+        "in": "2S22",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S22",
+      "upper": "2S22",
+      "witness": {
+        "in": "2S22",
+        "kind": "explicit subgroup of the record",
+        "node": "n07"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S22b",
+      "upper": "2S22",
+      "witness": {
+        "in": "2S22",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C12",
+      "upper": "2S24",
+      "witness": {
+        "in": "2S24",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S8",
+      "upper": "2S24",
+      "witness": {
+        "in": "2S24",
+        "kind": "explicit subgroup of the record",
+        "node": "n07"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2",
+      "upper": "2C2h",
+      "witness": {
+        "in": "2C2h",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S2",
+      "upper": "2C2h",
+      "witness": {
+        "in": "2C2h",
+        "kind": "explicit subgroup of the record",
+        "node": "n05"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1v",
+      "upper": "2C2h",
+      "witness": {
+        "in": "2C2h",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3",
+      "upper": "2C3h",
+      "witness": {
+        "in": "2C3h",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1v",
+      "upper": "2C3h",
+      "witness": {
+        "in": "2C3h",
+        "kind": "explicit subgroup of the record",
+        "node": "n03"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C4",
+      "upper": "2C4h",
+      "witness": {
+        "in": "2C4h",
+        "kind": "explicit subgroup of the record",
+        "node": "n07"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S4",
+      "upper": "2C4h",
+      "witness": {
+        "in": "2C4h",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2h",
+      "upper": "2C4h",
+      "witness": {
+        "in": "2C4h",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C5",
+      "upper": "2C5h",
+      "witness": {
+        "in": "2C5h",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1v",
+      "upper": "2C5h",
+      "witness": {
+        "in": "2C5h",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C6",
+      "upper": "2C6h",
+      "witness": {
+        "in": "2C6h",
+        "kind": "explicit subgroup of the record",
+        "node": "n12"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S6",
+      "upper": "2C6h",
+      "witness": {
+        "in": "2C6h",
+        "kind": "explicit subgroup of the record",
+        "node": "n13"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2h",
+      "upper": "2C6h",
+      "witness": {
+        "in": "2C6h",
+        "kind": "explicit subgroup of the record",
+        "node": "n11"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3h",
+      "upper": "2C6h",
+      "witness": {
+        "in": "2C6h",
+        "kind": "explicit subgroup of the record",
+        "node": "n14"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C7",
+      "upper": "2C7h",
+      "witness": {
+        "in": "2C7h",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1v",
+      "upper": "2C7h",
+      "witness": {
+        "in": "2C7h",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C8",
+      "upper": "2C8h",
+      "witness": {
+        "in": "2C8h",
+        "kind": "explicit subgroup of the record",
+        "node": "n10"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S8",
+      "upper": "2C8h",
+      "witness": {
+        "in": "2C8h",
+        "kind": "explicit subgroup of the record",
+        "node": "n12"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C4h",
+      "upper": "2C8h",
+      "witness": {
+        "in": "2C8h",
+        "kind": "explicit subgroup of the record",
+        "node": "n11"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C9",
+      "upper": "2C9h",
+      "witness": {
+        "in": "2C9h",
+        "kind": "explicit subgroup of the record",
+        "node": "n07"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3h",
+      "upper": "2C9h",
+      "witness": {
+        "in": "2C9h",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C10",
+      "upper": "2C10h",
+      "witness": {
+        "in": "2C10h",
+        "kind": "explicit subgroup of the record",
+        "node": "n12"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S10",
+      "upper": "2C10h",
+      "witness": {
+        "in": "2C10h",
+        "kind": "explicit subgroup of the record",
+        "node": "n13"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2h",
+      "upper": "2C10h",
+      "witness": {
+        "in": "2C10h",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C5h",
+      "upper": "2C10h",
+      "witness": {
+        "in": "2C10h",
+        "kind": "explicit subgroup of the record",
+        "node": "n14"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C11",
+      "upper": "2C11h",
+      "witness": {
+        "in": "2C11h",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1v",
+      "upper": "2C11h",
+      "witness": {
+        "in": "2C11h",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C12",
+      "upper": "2C12h",
+      "witness": {
+        "in": "2C12h",
+        "kind": "explicit subgroup of the record",
+        "node": "n18"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S12",
+      "upper": "2C12h",
+      "witness": {
+        "in": "2C12h",
+        "kind": "explicit subgroup of the record",
+        "node": "n20"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C4h",
+      "upper": "2C12h",
+      "witness": {
+        "in": "2C12h",
+        "kind": "explicit subgroup of the record",
+        "node": "n17"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C6h",
+      "upper": "2C12h",
+      "witness": {
+        "in": "2C12h",
+        "kind": "explicit subgroup of the record",
+        "node": "n19"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1",
+      "upper": "2C1v",
+      "witness": {
+        "in": "2C1v",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2",
+      "upper": "2C2v",
+      "witness": {
+        "in": "2C2v",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1v",
+      "upper": "2C2v",
+      "witness": {
+        "in": "2C2v",
+        "kind": "explicit subgroup of the record",
+        "node": "n03"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3",
+      "upper": "2C3v",
+      "witness": {
+        "in": "2C3v",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1v",
+      "upper": "2C3v",
+      "witness": {
+        "in": "2C3v",
+        "kind": "explicit subgroup of the record",
+        "node": "n03"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C4",
+      "upper": "2C4v",
+      "witness": {
+        "in": "2C4v",
+        "kind": "explicit subgroup of the record",
+        "node": "n05"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2v",
+      "upper": "2C4v",
+      "witness": {
+        "in": "2C4v",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C5",
+      "upper": "2C5v",
+      "witness": {
+        "in": "2C5v",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1v",
+      "upper": "2C5v",
+      "witness": {
+        "in": "2C5v",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C6",
+      "upper": "2C6v",
+      "witness": {
+        "in": "2C6v",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2v",
+      "upper": "2C6v",
+      "witness": {
+        "in": "2C6v",
+        "kind": "explicit subgroup of the record",
+        "node": "n07"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3v",
+      "upper": "2C6v",
+      "witness": {
+        "in": "2C6v",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C7",
+      "upper": "2C7v",
+      "witness": {
+        "in": "2C7v",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1v",
+      "upper": "2C7v",
+      "witness": {
+        "in": "2C7v",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C8",
+      "upper": "2C8v",
+      "witness": {
+        "in": "2C8v",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C4v",
+      "upper": "2C8v",
+      "witness": {
+        "in": "2C8v",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C9",
+      "upper": "2C9v",
+      "witness": {
+        "in": "2C9v",
+        "kind": "explicit subgroup of the record",
+        "node": "n07"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3v",
+      "upper": "2C9v",
+      "witness": {
+        "in": "2C9v",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C10",
+      "upper": "2C10v",
+      "witness": {
+        "in": "2C10v",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2v",
+      "upper": "2C10v",
+      "witness": {
+        "in": "2C10v",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C5v",
+      "upper": "2C10v",
+      "witness": {
+        "in": "2C10v",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C11",
+      "upper": "2C11v",
+      "witness": {
+        "in": "2C11v",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C1v",
+      "upper": "2C11v",
+      "witness": {
+        "in": "2C11v",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C12",
+      "upper": "2C12v",
+      "witness": {
+        "in": "2C12v",
+        "kind": "explicit subgroup of the record",
+        "node": "n14"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C4v",
+      "upper": "2C12v",
+      "witness": {
+        "in": "2C12v",
+        "kind": "explicit subgroup of the record",
+        "node": "n13"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C6v",
+      "upper": "2C12v",
+      "witness": {
+        "in": "2C12v",
+        "kind": "explicit subgroup of the record",
+        "node": "n15"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2",
+      "upper": "2D2",
+      "witness": {
+        "in": "2D2",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2",
+      "upper": "2D3",
+      "witness": {
+        "in": "2D3",
+        "kind": "explicit subgroup of the record",
+        "node": "n03"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3",
+      "upper": "2D3",
+      "witness": {
+        "in": "2D3",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C4",
+      "upper": "2D4",
+      "witness": {
+        "in": "2D4",
+        "kind": "explicit subgroup of the record",
+        "node": "n05"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D2",
+      "upper": "2D4",
+      "witness": {
+        "in": "2D4",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2",
+      "upper": "2D5",
+      "witness": {
+        "in": "2D5",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C5",
+      "upper": "2D5",
+      "witness": {
+        "in": "2D5",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C6",
+      "upper": "2D6",
+      "witness": {
+        "in": "2D6",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D2",
+      "upper": "2D6",
+      "witness": {
+        "in": "2D6",
+        "kind": "explicit subgroup of the record",
+        "node": "n07"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D3",
+      "upper": "2D6",
+      "witness": {
+        "in": "2D6",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2",
+      "upper": "2D7",
+      "witness": {
+        "in": "2D7",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C7",
+      "upper": "2D7",
+      "witness": {
+        "in": "2D7",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C8",
+      "upper": "2D8",
+      "witness": {
+        "in": "2D8",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D4",
+      "upper": "2D8",
+      "witness": {
+        "in": "2D8",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C9",
+      "upper": "2D9",
+      "witness": {
+        "in": "2D9",
+        "kind": "explicit subgroup of the record",
+        "node": "n07"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D3",
+      "upper": "2D9",
+      "witness": {
+        "in": "2D9",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C10",
+      "upper": "2D10",
+      "witness": {
+        "in": "2D10",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D2",
+      "upper": "2D10",
+      "witness": {
+        "in": "2D10",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D5",
+      "upper": "2D10",
+      "witness": {
+        "in": "2D10",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2",
+      "upper": "2D11",
+      "witness": {
+        "in": "2D11",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C11",
+      "upper": "2D11",
+      "witness": {
+        "in": "2D11",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C12",
+      "upper": "2D12",
+      "witness": {
+        "in": "2D12",
+        "kind": "explicit subgroup of the record",
+        "node": "n14"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D4",
+      "upper": "2D12",
+      "witness": {
+        "in": "2D12",
+        "kind": "explicit subgroup of the record",
+        "node": "n13"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D6",
+      "upper": "2D12",
+      "witness": {
+        "in": "2D12",
+        "kind": "explicit subgroup of the record",
+        "node": "n15"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2h",
+      "upper": "2D2h",
+      "witness": {
+        "in": "2D2h",
+        "kind": "explicit subgroup of the record",
+        "node": "n12"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2v",
+      "upper": "2D2h",
+      "witness": {
+        "in": "2D2h",
+        "kind": "explicit subgroup of the record",
+        "node": "n13"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D2",
+      "upper": "2D2h",
+      "witness": {
+        "in": "2D2h",
+        "kind": "explicit subgroup of the record",
+        "node": "n11"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3h",
+      "upper": "2D3h",
+      "witness": {
+        "in": "2D3h",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2v",
+      "upper": "2D3h",
+      "witness": {
+        "in": "2D3h",
+        "kind": "explicit subgroup of the record",
+        "node": "n07"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3v",
+      "upper": "2D3h",
+      "witness": {
+        "in": "2D3h",
+        "kind": "explicit subgroup of the record",
+        "node": "n10"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D3",
+      "upper": "2D3h",
+      "witness": {
+        "in": "2D3h",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C4h",
+      "upper": "2D4h",
+      "witness": {
+        "in": "2D4h",
+        "kind": "explicit subgroup of the record",
+        "node": "n23"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C4v",
+      "upper": "2D4h",
+      "witness": {
+        "in": "2D4h",
+        "kind": "explicit subgroup of the record",
+        "node": "n24"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D4",
+      "upper": "2D4h",
+      "witness": {
+        "in": "2D4h",
+        "kind": "explicit subgroup of the record",
+        "node": "n22"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D2h",
+      "upper": "2D4h",
+      "witness": {
+        "in": "2D4h",
+        "kind": "explicit subgroup of the record",
+        "node": "n25"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D2d",
+      "upper": "2D4h",
+      "witness": {
+        "in": "2D4h",
+        "kind": "explicit subgroup of the record",
+        "node": "n26"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C5h",
+      "upper": "2D5h",
+      "witness": {
+        "in": "2D5h",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2v",
+      "upper": "2D5h",
+      "witness": {
+        "in": "2D5h",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C5v",
+      "upper": "2D5h",
+      "witness": {
+        "in": "2D5h",
+        "kind": "explicit subgroup of the record",
+        "node": "n10"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D5",
+      "upper": "2D5h",
+      "witness": {
+        "in": "2D5h",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C6h",
+      "upper": "2D6h",
+      "witness": {
+        "in": "2D6h",
+        "kind": "explicit subgroup of the record",
+        "node": "n31"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C6v",
+      "upper": "2D6h",
+      "witness": {
+        "in": "2D6h",
+        "kind": "explicit subgroup of the record",
+        "node": "n32"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D6",
+      "upper": "2D6h",
+      "witness": {
+        "in": "2D6h",
+        "kind": "explicit subgroup of the record",
+        "node": "n30"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D2h",
+      "upper": "2D6h",
+      "witness": {
+        "in": "2D6h",
+        "kind": "explicit subgroup of the record",
+        "node": "n29"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D3h",
+      "upper": "2D6h",
+      "witness": {
+        "in": "2D6h",
+        "kind": "explicit subgroup of the record",
+        "node": "n34"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D3d",
+      "upper": "2D6h",
+      "witness": {
+        "in": "2D6h",
+        "kind": "explicit subgroup of the record",
+        "node": "n33"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C7h",
+      "upper": "2D7h",
+      "witness": {
+        "in": "2D7h",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2v",
+      "upper": "2D7h",
+      "witness": {
+        "in": "2D7h",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C7v",
+      "upper": "2D7h",
+      "witness": {
+        "in": "2D7h",
+        "kind": "explicit subgroup of the record",
+        "node": "n10"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D7",
+      "upper": "2D7h",
+      "witness": {
+        "in": "2D7h",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C8h",
+      "upper": "2D8h",
+      "witness": {
+        "in": "2D8h",
+        "kind": "explicit subgroup of the record",
+        "node": "n34"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C8v",
+      "upper": "2D8h",
+      "witness": {
+        "in": "2D8h",
+        "kind": "explicit subgroup of the record",
+        "node": "n35"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D8",
+      "upper": "2D8h",
+      "witness": {
+        "in": "2D8h",
+        "kind": "explicit subgroup of the record",
+        "node": "n33"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D4h",
+      "upper": "2D8h",
+      "witness": {
+        "in": "2D8h",
+        "kind": "explicit subgroup of the record",
+        "node": "n36"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D4d",
+      "upper": "2D8h",
+      "witness": {
+        "in": "2D8h",
+        "kind": "explicit subgroup of the record",
+        "node": "n37"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C9h",
+      "upper": "2D9h",
+      "witness": {
+        "in": "2D9h",
+        "kind": "explicit subgroup of the record",
+        "node": "n15"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C9v",
+      "upper": "2D9h",
+      "witness": {
+        "in": "2D9h",
+        "kind": "explicit subgroup of the record",
+        "node": "n16"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D9",
+      "upper": "2D9h",
+      "witness": {
+        "in": "2D9h",
+        "kind": "explicit subgroup of the record",
+        "node": "n14"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D3h",
+      "upper": "2D9h",
+      "witness": {
+        "in": "2D9h",
+        "kind": "explicit subgroup of the record",
+        "node": "n13"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C10h",
+      "upper": "2D10h",
+      "witness": {
+        "in": "2D10h",
+        "kind": "explicit subgroup of the record",
+        "node": "n31"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C10v",
+      "upper": "2D10h",
+      "witness": {
+        "in": "2D10h",
+        "kind": "explicit subgroup of the record",
+        "node": "n32"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D10",
+      "upper": "2D10h",
+      "witness": {
+        "in": "2D10h",
+        "kind": "explicit subgroup of the record",
+        "node": "n30"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D2h",
+      "upper": "2D10h",
+      "witness": {
+        "in": "2D10h",
+        "kind": "explicit subgroup of the record",
+        "node": "n22"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D5h",
+      "upper": "2D10h",
+      "witness": {
+        "in": "2D10h",
+        "kind": "explicit subgroup of the record",
+        "node": "n34"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D5d",
+      "upper": "2D10h",
+      "witness": {
+        "in": "2D10h",
+        "kind": "explicit subgroup of the record",
+        "node": "n33"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C11h",
+      "upper": "2D11h",
+      "witness": {
+        "in": "2D11h",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2v",
+      "upper": "2D11h",
+      "witness": {
+        "in": "2D11h",
+        "kind": "explicit subgroup of the record",
+        "node": "n05"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C11v",
+      "upper": "2D11h",
+      "witness": {
+        "in": "2D11h",
+        "kind": "explicit subgroup of the record",
+        "node": "n10"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D11",
+      "upper": "2D11h",
+      "witness": {
+        "in": "2D11h",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C12h",
+      "upper": "2D12h",
+      "witness": {
+        "in": "2D12h",
+        "kind": "explicit subgroup of the record",
+        "node": "n53"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C12v",
+      "upper": "2D12h",
+      "witness": {
+        "in": "2D12h",
+        "kind": "explicit subgroup of the record",
+        "node": "n54"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D12",
+      "upper": "2D12h",
+      "witness": {
+        "in": "2D12h",
+        "kind": "explicit subgroup of the record",
+        "node": "n52"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D4h",
+      "upper": "2D12h",
+      "witness": {
+        "in": "2D12h",
+        "kind": "explicit subgroup of the record",
+        "node": "n51"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D6h",
+      "upper": "2D12h",
+      "witness": {
+        "in": "2D12h",
+        "kind": "explicit subgroup of the record",
+        "node": "n55"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D6d",
+      "upper": "2D12h",
+      "witness": {
+        "in": "2D12h",
+        "kind": "explicit subgroup of the record",
+        "node": "n56"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S4",
+      "upper": "2D2d",
+      "witness": {
+        "in": "2D2d",
+        "kind": "explicit subgroup of the record",
+        "node": "n06"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2v",
+      "upper": "2D2d",
+      "witness": {
+        "in": "2D2d",
+        "kind": "explicit subgroup of the record",
+        "node": "n07"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D2",
+      "upper": "2D2d",
+      "witness": {
+        "in": "2D2d",
+        "kind": "explicit subgroup of the record",
+        "node": "n05"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S6",
+      "upper": "2D3d",
+      "witness": {
+        "in": "2D3d",
+        "kind": "explicit subgroup of the record",
+        "node": "n13"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2h",
+      "upper": "2D3d",
+      "witness": {
+        "in": "2D3d",
+        "kind": "explicit subgroup of the record",
+        "node": "n11"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3v",
+      "upper": "2D3d",
+      "witness": {
+        "in": "2D3d",
+        "kind": "explicit subgroup of the record",
+        "node": "n14"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D3",
+      "upper": "2D3d",
+      "witness": {
+        "in": "2D3d",
+        "kind": "explicit subgroup of the record",
+        "node": "n12"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S8",
+      "upper": "2D4d",
+      "witness": {
+        "in": "2D4d",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C4v",
+      "upper": "2D4d",
+      "witness": {
+        "in": "2D4d",
+        "kind": "explicit subgroup of the record",
+        "node": "n10"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D4",
+      "upper": "2D4d",
+      "witness": {
+        "in": "2D4d",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S10",
+      "upper": "2D5d",
+      "witness": {
+        "in": "2D5d",
+        "kind": "explicit subgroup of the record",
+        "node": "n13"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2h",
+      "upper": "2D5d",
+      "witness": {
+        "in": "2D5d",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C5v",
+      "upper": "2D5d",
+      "witness": {
+        "in": "2D5d",
+        "kind": "explicit subgroup of the record",
+        "node": "n14"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D5",
+      "upper": "2D5d",
+      "witness": {
+        "in": "2D5d",
+        "kind": "explicit subgroup of the record",
+        "node": "n12"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S12",
+      "upper": "2D6d",
+      "witness": {
+        "in": "2D6d",
+        "kind": "explicit subgroup of the record",
+        "node": "n15"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C6v",
+      "upper": "2D6d",
+      "witness": {
+        "in": "2D6d",
+        "kind": "explicit subgroup of the record",
+        "node": "n16"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D6",
+      "upper": "2D6d",
+      "witness": {
+        "in": "2D6d",
+        "kind": "explicit subgroup of the record",
+        "node": "n14"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D2d",
+      "upper": "2D6d",
+      "witness": {
+        "in": "2D6d",
+        "kind": "explicit subgroup of the record",
+        "node": "n13"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S14",
+      "upper": "2D7d",
+      "witness": {
+        "in": "2D7d",
+        "kind": "explicit subgroup of the record",
+        "node": "n13"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2h",
+      "upper": "2D7d",
+      "witness": {
+        "in": "2D7d",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C7v",
+      "upper": "2D7d",
+      "witness": {
+        "in": "2D7d",
+        "kind": "explicit subgroup of the record",
+        "node": "n14"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D7",
+      "upper": "2D7d",
+      "witness": {
+        "in": "2D7d",
+        "kind": "explicit subgroup of the record",
+        "node": "n12"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S16",
+      "upper": "2D8d",
+      "witness": {
+        "in": "2D8d",
+        "kind": "explicit subgroup of the record",
+        "node": "n12"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C8v",
+      "upper": "2D8d",
+      "witness": {
+        "in": "2D8d",
+        "kind": "explicit subgroup of the record",
+        "node": "n13"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D8",
+      "upper": "2D8d",
+      "witness": {
+        "in": "2D8d",
+        "kind": "explicit subgroup of the record",
+        "node": "n11"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S18",
+      "upper": "2D9d",
+      "witness": {
+        "in": "2D9d",
+        "kind": "explicit subgroup of the record",
+        "node": "n21"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C9v",
+      "upper": "2D9d",
+      "witness": {
+        "in": "2D9d",
+        "kind": "explicit subgroup of the record",
+        "node": "n22"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D9",
+      "upper": "2D9d",
+      "witness": {
+        "in": "2D9d",
+        "kind": "explicit subgroup of the record",
+        "node": "n20"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D3d",
+      "upper": "2D9d",
+      "witness": {
+        "in": "2D9d",
+        "kind": "explicit subgroup of the record",
+        "node": "n19"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S20",
+      "upper": "2D10d",
+      "witness": {
+        "in": "2D10d",
+        "kind": "explicit subgroup of the record",
+        "node": "n15"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C10v",
+      "upper": "2D10d",
+      "witness": {
+        "in": "2D10d",
+        "kind": "explicit subgroup of the record",
+        "node": "n16"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D10",
+      "upper": "2D10d",
+      "witness": {
+        "in": "2D10d",
+        "kind": "explicit subgroup of the record",
+        "node": "n14"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D2d",
+      "upper": "2D10d",
+      "witness": {
+        "in": "2D10d",
+        "kind": "explicit subgroup of the record",
+        "node": "n10"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S22",
+      "upper": "2D11d",
+      "witness": {
+        "in": "2D11d",
+        "kind": "explicit subgroup of the record",
+        "node": "n13"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C2h",
+      "upper": "2D11d",
+      "witness": {
+        "in": "2D11d",
+        "kind": "explicit subgroup of the record",
+        "node": "n07"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C11v",
+      "upper": "2D11d",
+      "witness": {
+        "in": "2D11d",
+        "kind": "explicit subgroup of the record",
+        "node": "n14"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D11",
+      "upper": "2D11d",
+      "witness": {
+        "in": "2D11d",
+        "kind": "explicit subgroup of the record",
+        "node": "n12"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S24",
+      "upper": "2D12d",
+      "witness": {
+        "in": "2D12d",
+        "kind": "explicit subgroup of the record",
+        "node": "n21"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C12v",
+      "upper": "2D12d",
+      "witness": {
+        "in": "2D12d",
+        "kind": "explicit subgroup of the record",
+        "node": "n22"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D12",
+      "upper": "2D12d",
+      "witness": {
+        "in": "2D12d",
+        "kind": "explicit subgroup of the record",
+        "node": "n20"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D4d",
+      "upper": "2D12d",
+      "witness": {
+        "in": "2D12d",
+        "kind": "explicit subgroup of the record",
+        "node": "n19"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3",
+      "upper": "2T",
+      "witness": {
+        "in": "2T",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D2",
+      "upper": "2T",
+      "witness": {
+        "in": "2T",
+        "kind": "explicit subgroup of the record",
+        "node": "n05"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S6",
+      "upper": "2Th",
+      "witness": {
+        "in": "2Th",
+        "kind": "explicit subgroup of the record",
+        "node": "n14"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D2h",
+      "upper": "2Th",
+      "witness": {
+        "in": "2Th",
+        "kind": "explicit subgroup of the record",
+        "node": "n15"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2T",
+      "upper": "2Th",
+      "witness": {
+        "in": "2Th",
+        "kind": "explicit subgroup of the record",
+        "node": "n16"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C3v",
+      "upper": "2Td",
+      "witness": {
+        "in": "2Td",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D2d",
+      "upper": "2Td",
+      "witness": {
+        "in": "2Td",
+        "kind": "explicit subgroup of the record",
+        "node": "n10"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2T",
+      "upper": "2Td",
+      "witness": {
+        "in": "2Td",
+        "kind": "explicit subgroup of the record",
+        "node": "n11"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D3",
+      "upper": "2O",
+      "witness": {
+        "in": "2O",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D4",
+      "upper": "2O",
+      "witness": {
+        "in": "2O",
+        "kind": "explicit subgroup of the record",
+        "node": "n10"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2T",
+      "upper": "2O",
+      "witness": {
+        "in": "2O",
+        "kind": "explicit subgroup of the record",
+        "node": "n11"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D4h",
+      "upper": "2Oh",
+      "witness": {
+        "in": "2Oh",
+        "kind": "explicit subgroup of the record",
+        "node": "n34"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D3d",
+      "upper": "2Oh",
+      "witness": {
+        "in": "2Oh",
+        "kind": "explicit subgroup of the record",
+        "node": "n33"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2Th",
+      "upper": "2Oh",
+      "witness": {
+        "in": "2Oh",
+        "kind": "explicit subgroup of the record",
+        "node": "n36"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2Td",
+      "upper": "2Oh",
+      "witness": {
+        "in": "2Oh",
+        "kind": "explicit subgroup of the record",
+        "node": "n37"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2O",
+      "upper": "2Oh",
+      "witness": {
+        "in": "2Oh",
+        "kind": "explicit subgroup of the record",
+        "node": "n35"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D3",
+      "upper": "2I",
+      "witness": {
+        "in": "2I",
+        "kind": "explicit subgroup of the record",
+        "node": "n08"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D5",
+      "upper": "2I",
+      "witness": {
+        "in": "2I",
+        "kind": "explicit subgroup of the record",
+        "node": "n09"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2T",
+      "upper": "2I",
+      "witness": {
+        "in": "2I",
+        "kind": "explicit subgroup of the record",
+        "node": "n10"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D3d",
+      "upper": "2Ih",
+      "witness": {
+        "in": "2Ih",
+        "kind": "explicit subgroup of the record",
+        "node": "n26"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D5d",
+      "upper": "2Ih",
+      "witness": {
+        "in": "2Ih",
+        "kind": "explicit subgroup of the record",
+        "node": "n27"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2Th",
+      "upper": "2Ih",
+      "witness": {
+        "in": "2Ih",
+        "kind": "explicit subgroup of the record",
+        "node": "n28"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2I",
+      "upper": "2Ih",
+      "witness": {
+        "in": "2Ih",
+        "kind": "explicit subgroup of the record",
+        "node": "n29"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1",
+      "upper": "C3",
+      "witness": {
+        "in": "C3",
+        "kind": "explicit subgroup of the record",
+        "node": "n00"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1",
+      "upper": "C5",
+      "witness": {
+        "in": "C5",
+        "kind": "explicit subgroup of the record",
+        "node": "n00"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1",
+      "upper": "C7",
+      "witness": {
+        "in": "C7",
+        "kind": "explicit subgroup of the record",
+        "node": "n00"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3",
+      "upper": "C9",
+      "witness": {
+        "in": "C9",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1",
+      "upper": "C11",
+      "witness": {
+        "in": "C11",
+        "kind": "explicit subgroup of the record",
+        "node": "n00"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1",
+      "upper": "S2",
+      "witness": {
+        "in": "S2",
+        "kind": "explicit subgroup of the record",
+        "node": "n00"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1",
+      "upper": "S2b",
+      "witness": {
+        "in": "S2b",
+        "kind": "explicit subgroup of the record",
+        "node": "n00"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3",
+      "upper": "S6",
+      "witness": {
+        "in": "S6",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2",
+      "upper": "S6",
+      "witness": {
+        "in": "S6",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3",
+      "upper": "S6b",
+      "witness": {
+        "in": "S6b",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2b",
+      "upper": "S6b",
+      "witness": {
+        "in": "S6b",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C5",
+      "upper": "S10",
+      "witness": {
+        "in": "S10",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2",
+      "upper": "S10",
+      "witness": {
+        "in": "S10",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C5",
+      "upper": "S10b",
+      "witness": {
+        "in": "S10b",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2b",
+      "upper": "S10b",
+      "witness": {
+        "in": "S10b",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C7",
+      "upper": "S14",
+      "witness": {
+        "in": "S14",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2",
+      "upper": "S14",
+      "witness": {
+        "in": "S14",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C7",
+      "upper": "S14b",
+      "witness": {
+        "in": "S14b",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2b",
+      "upper": "S14b",
+      "witness": {
+        "in": "S14b",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C9",
+      "upper": "S18",
+      "witness": {
+        "in": "S18",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S6",
+      "upper": "S18",
+      "witness": {
+        "in": "S18",
+        "kind": "explicit subgroup of the record",
+        "node": "n03"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C9",
+      "upper": "S18b",
+      "witness": {
+        "in": "S18b",
+        "kind": "explicit subgroup of the record",
+        "node": "n04"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S6b",
+      "upper": "S18b",
+      "witness": {
+        "in": "S18b",
+        "kind": "explicit subgroup of the record",
+        "node": "n03"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C11",
+      "upper": "S22",
+      "witness": {
+        "in": "S22",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2",
+      "upper": "S22",
+      "witness": {
+        "in": "S22",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C11",
+      "upper": "S22b",
+      "witness": {
+        "in": "S22b",
+        "kind": "explicit subgroup of the record",
+        "node": "n02"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2b",
+      "upper": "S22b",
+      "witness": {
+        "in": "S22b",
+        "kind": "explicit subgroup of the record",
+        "node": "n01"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C7",
+      "upper": "2Cinf",
+      "witness": {
+        "entry": "finite/9",
+        "in": "2Cinf",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C8",
+      "upper": "2Cinf",
+      "witness": {
+        "entry": "finite/11",
+        "in": "2Cinf",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C9",
+      "upper": "2Cinf",
+      "witness": {
+        "entry": "finite/12",
+        "in": "2Cinf",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C10",
+      "upper": "2Cinf",
+      "witness": {
+        "entry": "finite/14",
+        "in": "2Cinf",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C11",
+      "upper": "2Cinf",
+      "witness": {
+        "entry": "finite/15",
+        "in": "2Cinf",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C12",
+      "upper": "2Cinf",
+      "witness": {
+        "entry": "finite/17",
+        "in": "2Cinf",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S14",
+      "upper": "2Cinfh",
+      "witness": {
+        "entry": "finite/30",
+        "in": "2Cinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S16",
+      "upper": "2Cinfh",
+      "witness": {
+        "entry": "finite/33",
+        "in": "2Cinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S18",
+      "upper": "2Cinfh",
+      "witness": {
+        "entry": "finite/34",
+        "in": "2Cinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S20",
+      "upper": "2Cinfh",
+      "witness": {
+        "entry": "finite/37",
+        "in": "2Cinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S22",
+      "upper": "2Cinfh",
+      "witness": {
+        "entry": "finite/38",
+        "in": "2Cinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2S24",
+      "upper": "2Cinfh",
+      "witness": {
+        "entry": "finite/41",
+        "in": "2Cinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C7h",
+      "upper": "2Cinfh",
+      "witness": {
+        "entry": "finite/48",
+        "in": "2Cinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C8h",
+      "upper": "2Cinfh",
+      "witness": {
+        "entry": "finite/49",
+        "in": "2Cinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C9h",
+      "upper": "2Cinfh",
+      "witness": {
+        "entry": "finite/50",
+        "in": "2Cinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C10h",
+      "upper": "2Cinfh",
+      "witness": {
+        "entry": "finite/51",
+        "in": "2Cinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C11h",
+      "upper": "2Cinfh",
+      "witness": {
+        "entry": "finite/52",
+        "in": "2Cinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C12h",
+      "upper": "2Cinfh",
+      "witness": {
+        "entry": "finite/53",
+        "in": "2Cinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2Cinf",
+      "upper": "2Cinfh",
+      "witness": {
+        "entry": "continuous/0",
+        "in": "2Cinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C7v",
+      "upper": "2Cinfv",
+      "witness": {
+        "entry": "finite/24",
+        "in": "2Cinfv",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C8v",
+      "upper": "2Cinfv",
+      "witness": {
+        "entry": "finite/25",
+        "in": "2Cinfv",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C9v",
+      "upper": "2Cinfv",
+      "witness": {
+        "entry": "finite/26",
+        "in": "2Cinfv",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C10v",
+      "upper": "2Cinfv",
+      "witness": {
+        "entry": "finite/27",
+        "in": "2Cinfv",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C11v",
+      "upper": "2Cinfv",
+      "witness": {
+        "entry": "finite/28",
+        "in": "2Cinfv",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2C12v",
+      "upper": "2Cinfv",
+      "witness": {
+        "entry": "finite/29",
+        "in": "2Cinfv",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2Cinf",
+      "upper": "2Cinfv",
+      "witness": {
+        "entry": "continuous/0",
+        "in": "2Cinfv",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D7",
+      "upper": "2Dinf",
+      "witness": {
+        "entry": "finite/24",
+        "in": "2Dinf",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D8",
+      "upper": "2Dinf",
+      "witness": {
+        "entry": "finite/25",
+        "in": "2Dinf",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D9",
+      "upper": "2Dinf",
+      "witness": {
+        "entry": "finite/26",
+        "in": "2Dinf",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D10",
+      "upper": "2Dinf",
+      "witness": {
+        "entry": "finite/27",
+        "in": "2Dinf",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D11",
+      "upper": "2Dinf",
+      "witness": {
+        "entry": "finite/28",
+        "in": "2Dinf",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D12",
+      "upper": "2Dinf",
+      "witness": {
+        "entry": "finite/29",
+        "in": "2Dinf",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2Cinf",
+      "upper": "2Dinf",
+      "witness": {
+        "entry": "continuous/0",
+        "in": "2Dinf",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D7h",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "finite/84",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D8h",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "finite/85",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D9h",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "finite/86",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D10h",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "finite/87",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D11h",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "finite/88",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D12h",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "finite/89",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D7d",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "finite/96",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D8d",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "finite/97",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D9d",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "finite/98",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D10d",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "finite/99",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D11d",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "finite/100",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2D12d",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "finite/101",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2Cinfh",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "continuous/1",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2Cinfv",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "continuous/2",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2Dinf",
+      "upper": "2Dinfh",
+      "witness": {
+        "entry": "continuous/3",
+        "in": "2Dinfh",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2O",
+      "upper": "SU2",
+      "witness": {
+        "entry": "finite/30",
+        "in": "SU2",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2I",
+      "upper": "SU2",
+      "witness": {
+        "entry": "finite/31",
+        "in": "SU2",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2Dinf",
+      "upper": "SU2",
+      "witness": {
+        "entry": "continuous/1",
+        "in": "SU2",
+        "kind": "explicit subgroup of the record"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2Oh",
+      "upper": "Pinminus3",
+      "witness": {
+        "kind": "argument",
+        "reason": "Pin^-(3) is the parent: every class lies in it"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2Ih",
+      "upper": "Pinminus3",
+      "witness": {
+        "kind": "argument",
+        "reason": "Pin^-(3) is the parent: every class lies in it"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "2Dinfh",
+      "upper": "Pinminus3",
+      "witness": {
+        "kind": "argument",
+        "reason": "Pin^-(3) is the parent: every class lies in it"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "SU2",
+      "upper": "Pinminus3",
+      "witness": {
+        "kind": "argument",
+        "reason": "Pin^-(3) is the parent: every class lies in it"
+      }
+    }
+  ],
+  "family_rules": {
+    "preimages": "rotation/point_groups#/family_rules",
+    "sections": "a section over H lies in a section over K exactly when H lies in K and, over S_2N, the lifts of i agree (S_6 in S_18, S_6b in S_18b); a section over H lies in the preimage 2K exactly when H lies in K; a preimage lies in no section"
+  },
+  "nodes": [
+    {
+      "class": "preimage",
+      "covers": "C1",
+      "id": "2C1",
+      "kind": "finite",
+      "order": 2,
+      "symbol": "2C_1"
+    },
+    {
+      "class": "preimage",
+      "covers": "C2",
+      "id": "2C2",
+      "kind": "finite",
+      "order": 4,
+      "symbol": "2C_2"
+    },
+    {
+      "class": "preimage",
+      "covers": "C3",
+      "id": "2C3",
+      "kind": "finite",
+      "order": 6,
+      "symbol": "2C_3"
+    },
+    {
+      "class": "preimage",
+      "covers": "C4",
+      "id": "2C4",
+      "kind": "finite",
+      "order": 8,
+      "symbol": "2C_4"
+    },
+    {
+      "class": "preimage",
+      "covers": "C5",
+      "id": "2C5",
+      "kind": "finite",
+      "order": 10,
+      "symbol": "2C_5"
+    },
+    {
+      "class": "preimage",
+      "covers": "C6",
+      "id": "2C6",
+      "kind": "finite",
+      "order": 12,
+      "symbol": "2C_6"
+    },
+    {
+      "class": "preimage",
+      "covers": "C7",
+      "id": "2C7",
+      "kind": "finite",
+      "order": 14,
+      "symbol": "2C_7"
+    },
+    {
+      "class": "preimage",
+      "covers": "C8",
+      "id": "2C8",
+      "kind": "finite",
+      "order": 16,
+      "symbol": "2C_8"
+    },
+    {
+      "class": "preimage",
+      "covers": "C9",
+      "id": "2C9",
+      "kind": "finite",
+      "order": 18,
+      "symbol": "2C_9"
+    },
+    {
+      "class": "preimage",
+      "covers": "C10",
+      "id": "2C10",
+      "kind": "finite",
+      "order": 20,
+      "symbol": "2C_10"
+    },
+    {
+      "class": "preimage",
+      "covers": "C11",
+      "id": "2C11",
+      "kind": "finite",
+      "order": 22,
+      "symbol": "2C_11"
+    },
+    {
+      "class": "preimage",
+      "covers": "C12",
+      "id": "2C12",
+      "kind": "finite",
+      "order": 24,
+      "symbol": "2C_12"
+    },
+    {
+      "class": "preimage",
+      "covers": "S2",
+      "id": "2S2",
+      "kind": "finite",
+      "order": 4,
+      "symbol": "2S_2"
+    },
+    {
+      "class": "preimage",
+      "covers": "S4",
+      "id": "2S4",
+      "kind": "finite",
+      "order": 8,
+      "symbol": "2S_4"
+    },
+    {
+      "class": "preimage",
+      "covers": "S6",
+      "id": "2S6",
+      "kind": "finite",
+      "order": 12,
+      "symbol": "2S_6"
+    },
+    {
+      "class": "preimage",
+      "covers": "S8",
+      "id": "2S8",
+      "kind": "finite",
+      "order": 16,
+      "symbol": "2S_8"
+    },
+    {
+      "class": "preimage",
+      "covers": "S10",
+      "id": "2S10",
+      "kind": "finite",
+      "order": 20,
+      "symbol": "2S_10"
+    },
+    {
+      "class": "preimage",
+      "covers": "S12",
+      "id": "2S12",
+      "kind": "finite",
+      "order": 24,
+      "symbol": "2S_12"
+    },
+    {
+      "class": "preimage",
+      "covers": "S14",
+      "id": "2S14",
+      "kind": "finite",
+      "order": 28,
+      "symbol": "2S_14"
+    },
+    {
+      "class": "preimage",
+      "covers": "S16",
+      "id": "2S16",
+      "kind": "finite",
+      "order": 32,
+      "symbol": "2S_16"
+    },
+    {
+      "class": "preimage",
+      "covers": "S18",
+      "id": "2S18",
+      "kind": "finite",
+      "order": 36,
+      "symbol": "2S_18"
+    },
+    {
+      "class": "preimage",
+      "covers": "S20",
+      "id": "2S20",
+      "kind": "finite",
+      "order": 40,
+      "symbol": "2S_20"
+    },
+    {
+      "class": "preimage",
+      "covers": "S22",
+      "id": "2S22",
+      "kind": "finite",
+      "order": 44,
+      "symbol": "2S_22"
+    },
+    {
+      "class": "preimage",
+      "covers": "S24",
+      "id": "2S24",
+      "kind": "finite",
+      "order": 48,
+      "symbol": "2S_24"
+    },
+    {
+      "class": "preimage",
+      "covers": "C2h",
+      "id": "2C2h",
+      "kind": "finite",
+      "order": 8,
+      "symbol": "2C_2h"
+    },
+    {
+      "class": "preimage",
+      "covers": "C3h",
+      "id": "2C3h",
+      "kind": "finite",
+      "order": 12,
+      "symbol": "2C_3h"
+    },
+    {
+      "class": "preimage",
+      "covers": "C4h",
+      "id": "2C4h",
+      "kind": "finite",
+      "order": 16,
+      "symbol": "2C_4h"
+    },
+    {
+      "class": "preimage",
+      "covers": "C5h",
+      "id": "2C5h",
+      "kind": "finite",
+      "order": 20,
+      "symbol": "2C_5h"
+    },
+    {
+      "class": "preimage",
+      "covers": "C6h",
+      "id": "2C6h",
+      "kind": "finite",
+      "order": 24,
+      "symbol": "2C_6h"
+    },
+    {
+      "class": "preimage",
+      "covers": "C7h",
+      "id": "2C7h",
+      "kind": "finite",
+      "order": 28,
+      "symbol": "2C_7h"
+    },
+    {
+      "class": "preimage",
+      "covers": "C8h",
+      "id": "2C8h",
+      "kind": "finite",
+      "order": 32,
+      "symbol": "2C_8h"
+    },
+    {
+      "class": "preimage",
+      "covers": "C9h",
+      "id": "2C9h",
+      "kind": "finite",
+      "order": 36,
+      "symbol": "2C_9h"
+    },
+    {
+      "class": "preimage",
+      "covers": "C10h",
+      "id": "2C10h",
+      "kind": "finite",
+      "order": 40,
+      "symbol": "2C_10h"
+    },
+    {
+      "class": "preimage",
+      "covers": "C11h",
+      "id": "2C11h",
+      "kind": "finite",
+      "order": 44,
+      "symbol": "2C_11h"
+    },
+    {
+      "class": "preimage",
+      "covers": "C12h",
+      "id": "2C12h",
+      "kind": "finite",
+      "order": 48,
+      "symbol": "2C_12h"
+    },
+    {
+      "class": "preimage",
+      "covers": "C1v",
+      "id": "2C1v",
+      "kind": "finite",
+      "order": 4,
+      "symbol": "2C_1v"
+    },
+    {
+      "class": "preimage",
+      "covers": "C2v",
+      "id": "2C2v",
+      "kind": "finite",
+      "order": 8,
+      "symbol": "2C_2v"
+    },
+    {
+      "class": "preimage",
+      "covers": "C3v",
+      "id": "2C3v",
+      "kind": "finite",
+      "order": 12,
+      "symbol": "2C_3v"
+    },
+    {
+      "class": "preimage",
+      "covers": "C4v",
+      "id": "2C4v",
+      "kind": "finite",
+      "order": 16,
+      "symbol": "2C_4v"
+    },
+    {
+      "class": "preimage",
+      "covers": "C5v",
+      "id": "2C5v",
+      "kind": "finite",
+      "order": 20,
+      "symbol": "2C_5v"
+    },
+    {
+      "class": "preimage",
+      "covers": "C6v",
+      "id": "2C6v",
+      "kind": "finite",
+      "order": 24,
+      "symbol": "2C_6v"
+    },
+    {
+      "class": "preimage",
+      "covers": "C7v",
+      "id": "2C7v",
+      "kind": "finite",
+      "order": 28,
+      "symbol": "2C_7v"
+    },
+    {
+      "class": "preimage",
+      "covers": "C8v",
+      "id": "2C8v",
+      "kind": "finite",
+      "order": 32,
+      "symbol": "2C_8v"
+    },
+    {
+      "class": "preimage",
+      "covers": "C9v",
+      "id": "2C9v",
+      "kind": "finite",
+      "order": 36,
+      "symbol": "2C_9v"
+    },
+    {
+      "class": "preimage",
+      "covers": "C10v",
+      "id": "2C10v",
+      "kind": "finite",
+      "order": 40,
+      "symbol": "2C_10v"
+    },
+    {
+      "class": "preimage",
+      "covers": "C11v",
+      "id": "2C11v",
+      "kind": "finite",
+      "order": 44,
+      "symbol": "2C_11v"
+    },
+    {
+      "class": "preimage",
+      "covers": "C12v",
+      "id": "2C12v",
+      "kind": "finite",
+      "order": 48,
+      "symbol": "2C_12v"
+    },
+    {
+      "class": "preimage",
+      "covers": "D2",
+      "id": "2D2",
+      "kind": "finite",
+      "order": 8,
+      "symbol": "2D_2"
+    },
+    {
+      "class": "preimage",
+      "covers": "D3",
+      "id": "2D3",
+      "kind": "finite",
+      "order": 12,
+      "symbol": "2D_3"
+    },
+    {
+      "class": "preimage",
+      "covers": "D4",
+      "id": "2D4",
+      "kind": "finite",
+      "order": 16,
+      "symbol": "2D_4"
+    },
+    {
+      "class": "preimage",
+      "covers": "D5",
+      "id": "2D5",
+      "kind": "finite",
+      "order": 20,
+      "symbol": "2D_5"
+    },
+    {
+      "class": "preimage",
+      "covers": "D6",
+      "id": "2D6",
+      "kind": "finite",
+      "order": 24,
+      "symbol": "2D_6"
+    },
+    {
+      "class": "preimage",
+      "covers": "D7",
+      "id": "2D7",
+      "kind": "finite",
+      "order": 28,
+      "symbol": "2D_7"
+    },
+    {
+      "class": "preimage",
+      "covers": "D8",
+      "id": "2D8",
+      "kind": "finite",
+      "order": 32,
+      "symbol": "2D_8"
+    },
+    {
+      "class": "preimage",
+      "covers": "D9",
+      "id": "2D9",
+      "kind": "finite",
+      "order": 36,
+      "symbol": "2D_9"
+    },
+    {
+      "class": "preimage",
+      "covers": "D10",
+      "id": "2D10",
+      "kind": "finite",
+      "order": 40,
+      "symbol": "2D_10"
+    },
+    {
+      "class": "preimage",
+      "covers": "D11",
+      "id": "2D11",
+      "kind": "finite",
+      "order": 44,
+      "symbol": "2D_11"
+    },
+    {
+      "class": "preimage",
+      "covers": "D12",
+      "id": "2D12",
+      "kind": "finite",
+      "order": 48,
+      "symbol": "2D_12"
+    },
+    {
+      "class": "preimage",
+      "covers": "D2h",
+      "id": "2D2h",
+      "kind": "finite",
+      "order": 16,
+      "symbol": "2D_2h"
+    },
+    {
+      "class": "preimage",
+      "covers": "D3h",
+      "id": "2D3h",
+      "kind": "finite",
+      "order": 24,
+      "symbol": "2D_3h"
+    },
+    {
+      "class": "preimage",
+      "covers": "D4h",
+      "id": "2D4h",
+      "kind": "finite",
+      "order": 32,
+      "symbol": "2D_4h"
+    },
+    {
+      "class": "preimage",
+      "covers": "D5h",
+      "id": "2D5h",
+      "kind": "finite",
+      "order": 40,
+      "symbol": "2D_5h"
+    },
+    {
+      "class": "preimage",
+      "covers": "D6h",
+      "id": "2D6h",
+      "kind": "finite",
+      "order": 48,
+      "symbol": "2D_6h"
+    },
+    {
+      "class": "preimage",
+      "covers": "D7h",
+      "id": "2D7h",
+      "kind": "finite",
+      "order": 56,
+      "symbol": "2D_7h"
+    },
+    {
+      "class": "preimage",
+      "covers": "D8h",
+      "id": "2D8h",
+      "kind": "finite",
+      "order": 64,
+      "symbol": "2D_8h"
+    },
+    {
+      "class": "preimage",
+      "covers": "D9h",
+      "id": "2D9h",
+      "kind": "finite",
+      "order": 72,
+      "symbol": "2D_9h"
+    },
+    {
+      "class": "preimage",
+      "covers": "D10h",
+      "id": "2D10h",
+      "kind": "finite",
+      "order": 80,
+      "symbol": "2D_10h"
+    },
+    {
+      "class": "preimage",
+      "covers": "D11h",
+      "id": "2D11h",
+      "kind": "finite",
+      "order": 88,
+      "symbol": "2D_11h"
+    },
+    {
+      "class": "preimage",
+      "covers": "D12h",
+      "id": "2D12h",
+      "kind": "finite",
+      "order": 96,
+      "symbol": "2D_12h"
+    },
+    {
+      "class": "preimage",
+      "covers": "D2d",
+      "id": "2D2d",
+      "kind": "finite",
+      "order": 16,
+      "symbol": "2D_2d"
+    },
+    {
+      "class": "preimage",
+      "covers": "D3d",
+      "id": "2D3d",
+      "kind": "finite",
+      "order": 24,
+      "symbol": "2D_3d"
+    },
+    {
+      "class": "preimage",
+      "covers": "D4d",
+      "id": "2D4d",
+      "kind": "finite",
+      "order": 32,
+      "symbol": "2D_4d"
+    },
+    {
+      "class": "preimage",
+      "covers": "D5d",
+      "id": "2D5d",
+      "kind": "finite",
+      "order": 40,
+      "symbol": "2D_5d"
+    },
+    {
+      "class": "preimage",
+      "covers": "D6d",
+      "id": "2D6d",
+      "kind": "finite",
+      "order": 48,
+      "symbol": "2D_6d"
+    },
+    {
+      "class": "preimage",
+      "covers": "D7d",
+      "id": "2D7d",
+      "kind": "finite",
+      "order": 56,
+      "symbol": "2D_7d"
+    },
+    {
+      "class": "preimage",
+      "covers": "D8d",
+      "id": "2D8d",
+      "kind": "finite",
+      "order": 64,
+      "symbol": "2D_8d"
+    },
+    {
+      "class": "preimage",
+      "covers": "D9d",
+      "id": "2D9d",
+      "kind": "finite",
+      "order": 72,
+      "symbol": "2D_9d"
+    },
+    {
+      "class": "preimage",
+      "covers": "D10d",
+      "id": "2D10d",
+      "kind": "finite",
+      "order": 80,
+      "symbol": "2D_10d"
+    },
+    {
+      "class": "preimage",
+      "covers": "D11d",
+      "id": "2D11d",
+      "kind": "finite",
+      "order": 88,
+      "symbol": "2D_11d"
+    },
+    {
+      "class": "preimage",
+      "covers": "D12d",
+      "id": "2D12d",
+      "kind": "finite",
+      "order": 96,
+      "symbol": "2D_12d"
+    },
+    {
+      "class": "preimage",
+      "covers": "T",
+      "id": "2T",
+      "kind": "finite",
+      "order": 24,
+      "symbol": "2T"
+    },
+    {
+      "class": "preimage",
+      "covers": "Th",
+      "id": "2Th",
+      "kind": "finite",
+      "order": 48,
+      "symbol": "2T_h"
+    },
+    {
+      "class": "preimage",
+      "covers": "Td",
+      "id": "2Td",
+      "kind": "finite",
+      "order": 48,
+      "symbol": "2T_d"
+    },
+    {
+      "class": "preimage",
+      "covers": "O",
+      "id": "2O",
+      "kind": "finite",
+      "order": 48,
+      "symbol": "2O"
+    },
+    {
+      "class": "preimage",
+      "covers": "Oh",
+      "id": "2Oh",
+      "kind": "finite",
+      "order": 96,
+      "symbol": "2O_h"
+    },
+    {
+      "class": "preimage",
+      "covers": "I",
+      "id": "2I",
+      "kind": "finite",
+      "order": 120,
+      "symbol": "2I"
+    },
+    {
+      "class": "preimage",
+      "covers": "Ih",
+      "id": "2Ih",
+      "kind": "finite",
+      "order": 240,
+      "symbol": "2I_h"
+    },
+    {
+      "class": "section",
+      "id": "C1",
+      "image": "C1",
+      "kind": "finite",
+      "order": 1,
+      "symbol": "C_1"
+    },
+    {
+      "class": "section",
+      "id": "C3",
+      "image": "C3",
+      "kind": "finite",
+      "order": 3,
+      "symbol": "C_3"
+    },
+    {
+      "class": "section",
+      "id": "C5",
+      "image": "C5",
+      "kind": "finite",
+      "order": 5,
+      "symbol": "C_5"
+    },
+    {
+      "class": "section",
+      "id": "C7",
+      "image": "C7",
+      "kind": "finite",
+      "order": 7,
+      "symbol": "C_7"
+    },
+    {
+      "class": "section",
+      "id": "C9",
+      "image": "C9",
+      "kind": "finite",
+      "order": 9,
+      "symbol": "C_9"
+    },
+    {
+      "class": "section",
+      "id": "C11",
+      "image": "C11",
+      "kind": "finite",
+      "order": 11,
+      "symbol": "C_11"
+    },
+    {
+      "class": "section",
+      "id": "S2",
+      "image": "S2",
+      "kind": "finite",
+      "order": 2,
+      "symbol": "S_2"
+    },
+    {
+      "class": "section",
+      "id": "S2b",
+      "image": "S2",
+      "kind": "finite",
+      "order": 2,
+      "symbol": "S_2b"
+    },
+    {
+      "class": "section",
+      "id": "S6",
+      "image": "S6",
+      "kind": "finite",
+      "order": 6,
+      "symbol": "S_6"
+    },
+    {
+      "class": "section",
+      "id": "S6b",
+      "image": "S6",
+      "kind": "finite",
+      "order": 6,
+      "symbol": "S_6b"
+    },
+    {
+      "class": "section",
+      "id": "S10",
+      "image": "S10",
+      "kind": "finite",
+      "order": 10,
+      "symbol": "S_10"
+    },
+    {
+      "class": "section",
+      "id": "S10b",
+      "image": "S10",
+      "kind": "finite",
+      "order": 10,
+      "symbol": "S_10b"
+    },
+    {
+      "class": "section",
+      "id": "S14",
+      "image": "S14",
+      "kind": "finite",
+      "order": 14,
+      "symbol": "S_14"
+    },
+    {
+      "class": "section",
+      "id": "S14b",
+      "image": "S14",
+      "kind": "finite",
+      "order": 14,
+      "symbol": "S_14b"
+    },
+    {
+      "class": "section",
+      "id": "S18",
+      "image": "S18",
+      "kind": "finite",
+      "order": 18,
+      "symbol": "S_18"
+    },
+    {
+      "class": "section",
+      "id": "S18b",
+      "image": "S18",
+      "kind": "finite",
+      "order": 18,
+      "symbol": "S_18b"
+    },
+    {
+      "class": "section",
+      "id": "S22",
+      "image": "S22",
+      "kind": "finite",
+      "order": 22,
+      "symbol": "S_22"
+    },
+    {
+      "class": "section",
+      "id": "S22b",
+      "image": "S22",
+      "kind": "finite",
+      "order": 22,
+      "symbol": "S_22b"
+    },
+    {
+      "class": "preimage",
+      "covers": "Cinf",
+      "id": "2Cinf",
+      "kind": "continuous",
+      "order": {
+        "reason": "continuous-group",
+        "value": null
+      },
+      "symbol": "2C_inf"
+    },
+    {
+      "class": "preimage",
+      "covers": "Cinfh",
+      "id": "2Cinfh",
+      "kind": "continuous",
+      "order": {
+        "reason": "continuous-group",
+        "value": null
+      },
+      "symbol": "2C_infh"
+    },
+    {
+      "class": "preimage",
+      "covers": "Cinfv",
+      "id": "2Cinfv",
+      "kind": "continuous",
+      "order": {
+        "reason": "continuous-group",
+        "value": null
+      },
+      "symbol": "2C_infv"
+    },
+    {
+      "class": "preimage",
+      "covers": "Dinf",
+      "id": "2Dinf",
+      "kind": "continuous",
+      "order": {
+        "reason": "continuous-group",
+        "value": null
+      },
+      "symbol": "2D_inf"
+    },
+    {
+      "class": "preimage",
+      "covers": "Dinfh",
+      "id": "2Dinfh",
+      "kind": "continuous",
+      "order": {
+        "reason": "continuous-group",
+        "value": null
+      },
+      "symbol": "2D_infh"
+    },
+    {
+      "class": "preimage",
+      "covers": "SO3",
+      "id": "SU2",
+      "kind": "continuous",
+      "order": {
+        "reason": "continuous-group",
+        "value": null
+      },
+      "symbol": "SU(2)"
+    },
+    {
+      "class": "preimage",
+      "covers": "O3",
+      "id": "Pinminus3",
+      "kind": "continuous",
+      "order": {
+        "reason": "continuous-group",
+        "value": null
+      },
+      "symbol": "Pin^-(3)"
+    }
+  ],
+  "schema": "point-group-atlas/double/lattice/1"
+}

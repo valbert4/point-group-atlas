@@ -1,0 +1,549 @@
+{
+  "C1": {
+    "altmann_T": 1,
+    "ihrig_golubitsky": "1",
+    "olive": "1"
+  },
+  "C10": {
+    "altmann_T": 10,
+    "ihrig_golubitsky": "Z_10",
+    "olive": "Z_10"
+  },
+  "C10h": {
+    "altmann_T": 68,
+    "ihrig_golubitsky": "Z_10 (+) Z_2^c",
+    "olive": "Z_10 + Z_2^c"
+  },
+  "C10v": {
+    "altmann_T": 58,
+    "ihrig_golubitsky": "D_10^z",
+    "olive": "D_10^v"
+  },
+  "C11": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "Z_11",
+    "olive": "Z_11"
+  },
+  "C11h": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "Z_22^-",
+    "olive": "Z_22^-"
+  },
+  "C11v": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "D_11^z",
+    "olive": "D_11^v"
+  },
+  "C12": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "Z_12",
+    "olive": "Z_12"
+  },
+  "C12h": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "Z_12 (+) Z_2^c",
+    "olive": "Z_12 + Z_2^c"
+  },
+  "C12v": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "D_12^z",
+    "olive": "D_12^v"
+  },
+  "C1h": {
+    "altmann_T": 12,
+    "ihrig_golubitsky": "Z_2^-",
+    "olive": "Z_2^-"
+  },
+  "C1v": {
+    "altmann_T": 12,
+    "ihrig_golubitsky": "Z_2^-",
+    "olive": "Z_2^-"
+  },
+  "C2": {
+    "altmann_T": 2,
+    "ihrig_golubitsky": "Z_2",
+    "olive": "Z_2"
+  },
+  "C2h": {
+    "altmann_T": 60,
+    "ihrig_golubitsky": "Z_2 (+) Z_2^c",
+    "olive": "Z_2 + Z_2^c"
+  },
+  "C2v": {
+    "altmann_T": 50,
+    "ihrig_golubitsky": "D_2^z",
+    "olive": "D_2^v"
+  },
+  "C3": {
+    "altmann_T": 3,
+    "ihrig_golubitsky": "Z_3",
+    "olive": "Z_3"
+  },
+  "C3h": {
+    "altmann_T": 61,
+    "ihrig_golubitsky": "Z_6^-",
+    "olive": "Z_6^-"
+  },
+  "C3v": {
+    "altmann_T": 51,
+    "ihrig_golubitsky": "D_3^z",
+    "olive": "D_3^v"
+  },
+  "C4": {
+    "altmann_T": 4,
+    "ihrig_golubitsky": "Z_4",
+    "olive": "Z_4"
+  },
+  "C4h": {
+    "altmann_T": 62,
+    "ihrig_golubitsky": "Z_4 (+) Z_2^c",
+    "olive": "Z_4 + Z_2^c"
+  },
+  "C4v": {
+    "altmann_T": 52,
+    "ihrig_golubitsky": "D_4^z",
+    "olive": "D_4^v"
+  },
+  "C5": {
+    "altmann_T": 5,
+    "ihrig_golubitsky": "Z_5",
+    "olive": "Z_5"
+  },
+  "C5h": {
+    "altmann_T": 63,
+    "ihrig_golubitsky": "Z_10^-",
+    "olive": "Z_10^-"
+  },
+  "C5v": {
+    "altmann_T": 53,
+    "ihrig_golubitsky": "D_5^z",
+    "olive": "D_5^v"
+  },
+  "C6": {
+    "altmann_T": 6,
+    "ihrig_golubitsky": "Z_6",
+    "olive": "Z_6"
+  },
+  "C6h": {
+    "altmann_T": 64,
+    "ihrig_golubitsky": "Z_6 (+) Z_2^c",
+    "olive": "Z_6 + Z_2^c"
+  },
+  "C6v": {
+    "altmann_T": 54,
+    "ihrig_golubitsky": "D_6^z",
+    "olive": "D_6^v"
+  },
+  "C7": {
+    "altmann_T": 7,
+    "ihrig_golubitsky": "Z_7",
+    "olive": "Z_7"
+  },
+  "C7h": {
+    "altmann_T": 65,
+    "ihrig_golubitsky": "Z_14^-",
+    "olive": "Z_14^-"
+  },
+  "C7v": {
+    "altmann_T": 55,
+    "ihrig_golubitsky": "D_7^z",
+    "olive": "D_7^v"
+  },
+  "C8": {
+    "altmann_T": 8,
+    "ihrig_golubitsky": "Z_8",
+    "olive": "Z_8"
+  },
+  "C8h": {
+    "altmann_T": 66,
+    "ihrig_golubitsky": "Z_8 (+) Z_2^c",
+    "olive": "Z_8 + Z_2^c"
+  },
+  "C8v": {
+    "altmann_T": 56,
+    "ihrig_golubitsky": "D_8^z",
+    "olive": "D_8^v"
+  },
+  "C9": {
+    "altmann_T": 9,
+    "ihrig_golubitsky": "Z_9",
+    "olive": "Z_9"
+  },
+  "C9h": {
+    "altmann_T": 67,
+    "ihrig_golubitsky": "Z_18^-",
+    "olive": "Z_18^-"
+  },
+  "C9v": {
+    "altmann_T": 57,
+    "ihrig_golubitsky": "D_9^z",
+    "olive": "D_9^v"
+  },
+  "Cinf": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "SO(2)",
+    "olive": "SO(2)"
+  },
+  "Cinfh": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "SO(2) (+) Z_2^c",
+    "olive": "SO(2) + Z_2^c"
+  },
+  "Cinfv": {
+    "altmann_T": 59,
+    "ihrig_golubitsky": "O(2)^-",
+    "olive": "O(2)^-"
+  },
+  "D1": {
+    "altmann_T": 2,
+    "ihrig_golubitsky": "Z_2",
+    "olive": "Z_2"
+  },
+  "D10": {
+    "altmann_T": 30,
+    "ihrig_golubitsky": "D_10",
+    "olive": "D_10"
+  },
+  "D10d": {
+    "altmann_T": 49,
+    "ihrig_golubitsky": "D_20^d",
+    "olive": "D_20^h"
+  },
+  "D10h": {
+    "altmann_T": 39,
+    "ihrig_golubitsky": "D_10 (+) Z_2^c",
+    "olive": "D_10 + Z_2^c"
+  },
+  "D11": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "D_11",
+    "olive": "D_11"
+  },
+  "D11d": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "D_11 (+) Z_2^c",
+    "olive": "D_11 + Z_2^c"
+  },
+  "D11h": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "D_22^d",
+    "olive": "D_22^h"
+  },
+  "D12": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "D_12",
+    "olive": "D_12"
+  },
+  "D12d": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "D_24^d",
+    "olive": "D_24^h"
+  },
+  "D12h": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "D_12 (+) Z_2^c",
+    "olive": "D_12 + Z_2^c"
+  },
+  "D1d": {
+    "altmann_T": 60,
+    "ihrig_golubitsky": "Z_2 (+) Z_2^c",
+    "olive": "Z_2 + Z_2^c"
+  },
+  "D1h": {
+    "altmann_T": 50,
+    "ihrig_golubitsky": "D_2^z",
+    "olive": "D_2^v"
+  },
+  "D2": {
+    "altmann_T": 22,
+    "ihrig_golubitsky": "D_2",
+    "olive": "D_2"
+  },
+  "D2d": {
+    "altmann_T": 41,
+    "ihrig_golubitsky": "D_4^d",
+    "olive": "D_4^h"
+  },
+  "D2h": {
+    "altmann_T": 31,
+    "ihrig_golubitsky": "D_2 (+) Z_2^c",
+    "olive": "D_2 + Z_2^c"
+  },
+  "D3": {
+    "altmann_T": 23,
+    "ihrig_golubitsky": "D_3",
+    "olive": "D_3"
+  },
+  "D3d": {
+    "altmann_T": 42,
+    "ihrig_golubitsky": "D_3 (+) Z_2^c",
+    "olive": "D_3 + Z_2^c"
+  },
+  "D3h": {
+    "altmann_T": 32,
+    "ihrig_golubitsky": "D_6^d",
+    "olive": "D_6^h"
+  },
+  "D4": {
+    "altmann_T": 24,
+    "ihrig_golubitsky": "D_4",
+    "olive": "D_4"
+  },
+  "D4d": {
+    "altmann_T": 43,
+    "ihrig_golubitsky": "D_8^d",
+    "olive": "D_8^h"
+  },
+  "D4h": {
+    "altmann_T": 33,
+    "ihrig_golubitsky": "D_4 (+) Z_2^c",
+    "olive": "D_4 + Z_2^c"
+  },
+  "D5": {
+    "altmann_T": 25,
+    "ihrig_golubitsky": "D_5",
+    "olive": "D_5"
+  },
+  "D5d": {
+    "altmann_T": 44,
+    "ihrig_golubitsky": "D_5 (+) Z_2^c",
+    "olive": "D_5 + Z_2^c"
+  },
+  "D5h": {
+    "altmann_T": 34,
+    "ihrig_golubitsky": "D_10^d",
+    "olive": "D_10^h"
+  },
+  "D6": {
+    "altmann_T": 26,
+    "ihrig_golubitsky": "D_6",
+    "olive": "D_6"
+  },
+  "D6d": {
+    "altmann_T": 45,
+    "ihrig_golubitsky": "D_12^d",
+    "olive": "D_12^h"
+  },
+  "D6h": {
+    "altmann_T": 35,
+    "ihrig_golubitsky": "D_6 (+) Z_2^c",
+    "olive": "D_6 + Z_2^c"
+  },
+  "D7": {
+    "altmann_T": 27,
+    "ihrig_golubitsky": "D_7",
+    "olive": "D_7"
+  },
+  "D7d": {
+    "altmann_T": 46,
+    "ihrig_golubitsky": "D_7 (+) Z_2^c",
+    "olive": "D_7 + Z_2^c"
+  },
+  "D7h": {
+    "altmann_T": 36,
+    "ihrig_golubitsky": "D_14^d",
+    "olive": "D_14^h"
+  },
+  "D8": {
+    "altmann_T": 28,
+    "ihrig_golubitsky": "D_8",
+    "olive": "D_8"
+  },
+  "D8d": {
+    "altmann_T": 47,
+    "ihrig_golubitsky": "D_16^d",
+    "olive": "D_16^h"
+  },
+  "D8h": {
+    "altmann_T": 37,
+    "ihrig_golubitsky": "D_8 (+) Z_2^c",
+    "olive": "D_8 + Z_2^c"
+  },
+  "D9": {
+    "altmann_T": 29,
+    "ihrig_golubitsky": "D_9",
+    "olive": "D_9"
+  },
+  "D9d": {
+    "altmann_T": 48,
+    "ihrig_golubitsky": "D_9 (+) Z_2^c",
+    "olive": "D_9 + Z_2^c"
+  },
+  "D9h": {
+    "altmann_T": 38,
+    "ihrig_golubitsky": "D_18^d",
+    "olive": "D_18^h"
+  },
+  "Dinf": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "O(2)",
+    "olive": "O(2)"
+  },
+  "Dinfh": {
+    "altmann_T": 40,
+    "ihrig_golubitsky": "O(2) (+) Z_2^c",
+    "olive": "O(2) + Z_2^c"
+  },
+  "I": {
+    "altmann_T": 74,
+    "ihrig_golubitsky": "I",
+    "olive": "I"
+  },
+  "Ih": {
+    "altmann_T": 75,
+    "ihrig_golubitsky": "I (+) Z_2^c",
+    "olive": "I + Z_2^c"
+  },
+  "O": {
+    "altmann_T": 69,
+    "ihrig_golubitsky": "O",
+    "olive": "O"
+  },
+  "O3": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "SO(3) (+) Z_2^c",
+    "olive": "O(3)"
+  },
+  "Oh": {
+    "altmann_T": 71,
+    "ihrig_golubitsky": "O (+) Z_2^c",
+    "olive": "O + Z_2^c"
+  },
+  "S10": {
+    "altmann_T": 16,
+    "ihrig_golubitsky": "Z_5 (+) Z_2^c",
+    "olive": "Z_5 + Z_2^c"
+  },
+  "S12": {
+    "altmann_T": 17,
+    "ihrig_golubitsky": "Z_12^-",
+    "olive": "Z_12^-"
+  },
+  "S14": {
+    "altmann_T": 18,
+    "ihrig_golubitsky": "Z_7 (+) Z_2^c",
+    "olive": "Z_7 + Z_2^c"
+  },
+  "S16": {
+    "altmann_T": 19,
+    "ihrig_golubitsky": "Z_16^-",
+    "olive": "Z_16^-"
+  },
+  "S18": {
+    "altmann_T": 20,
+    "ihrig_golubitsky": "Z_9 (+) Z_2^c",
+    "olive": "Z_9 + Z_2^c"
+  },
+  "S2": {
+    "altmann_T": 11,
+    "ihrig_golubitsky": "Z_2^c",
+    "olive": "1 + Z_2^c"
+  },
+  "S20": {
+    "altmann_T": 21,
+    "ihrig_golubitsky": "Z_20^-",
+    "olive": "Z_20^-"
+  },
+  "S22": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "Z_11 (+) Z_2^c",
+    "olive": "Z_11 + Z_2^c"
+  },
+  "S24": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "Z_24^-",
+    "olive": "Z_24^-"
+  },
+  "S4": {
+    "altmann_T": 13,
+    "ihrig_golubitsky": "Z_4^-",
+    "olive": "Z_4^-"
+  },
+  "S6": {
+    "altmann_T": 14,
+    "ihrig_golubitsky": "Z_3 (+) Z_2^c",
+    "olive": "Z_3 + Z_2^c"
+  },
+  "S8": {
+    "altmann_T": 15,
+    "ihrig_golubitsky": "Z_8^-",
+    "olive": "Z_8^-"
+  },
+  "SO3": {
+    "altmann_T": {
+      "reason": "not-in-source",
+      "value": null
+    },
+    "ihrig_golubitsky": "SO(3)",
+    "olive": "SO(3)"
+  },
+  "T": {
+    "altmann_T": 70,
+    "ihrig_golubitsky": "T",
+    "olive": "T"
+  },
+  "Td": {
+    "altmann_T": 73,
+    "ihrig_golubitsky": "O^-",
+    "olive": "O^-"
+  },
+  "Th": {
+    "altmann_T": 72,
+    "ihrig_golubitsky": "T (+) Z_2^c",
+    "olive": "T + Z_2^c"
+  }
+}

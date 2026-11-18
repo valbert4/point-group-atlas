@@ -1,0 +1,13818 @@
+# Th (T_h): data/json/Th.json as a Python dict of SymPy values.
+from sympy import I, Rational, S, exp, pi
+
+o3t = {
+    'cartesian_tensors': {
+        'functions': [
+            {
+                'J': 0,
+                'irreps': ['Ag'],
+                'kind': 'polar',
+                'name': 's',
+                'poly': {'0,0,0': Rational(1,1)},
+                'set': 's',
+                'single_irrep': True,
+                'space': 'polar-0'
+            },
+            {
+                'J': 1,
+                'irreps': ['Tu'],
+                'kind': 'polar',
+                'name': 'p_x',
+                'poly': {'1,0,0': Rational(1,1)},
+                'set': 'p',
+                'single_irrep': True,
+                'space': 'polar-1'
+            },
+            {
+                'J': 1,
+                'irreps': ['Tu'],
+                'kind': 'polar',
+                'name': 'p_y',
+                'poly': {'0,1,0': Rational(1,1)},
+                'set': 'p',
+                'single_irrep': True,
+                'space': 'polar-1'
+            },
+            {
+                'J': 1,
+                'irreps': ['Tu'],
+                'kind': 'polar',
+                'name': 'p_z',
+                'poly': {'0,0,1': Rational(1,1)},
+                'set': 'p',
+                'single_irrep': True,
+                'space': 'polar-1'
+            },
+            {
+                'J': 2,
+                'irreps': ['1Eg', '2Eg'],
+                'kind': 'polar',
+                'name': 'd_z2',
+                'poly': {'0,0,2': Rational(2,1), '0,2,0': Rational(-1,1), '2,0,0': Rational(-1,1)},
+                'set': 'd',
+                'single_irrep': False,
+                'space': 'polar-2'
+            },
+            {
+                'J': 2,
+                'irreps': ['1Eg', '2Eg'],
+                'kind': 'polar',
+                'name': 'd_x2-y2',
+                'poly': {'0,2,0': Rational(-1,1), '2,0,0': Rational(1,1)},
+                'set': 'd',
+                'single_irrep': False,
+                'space': 'polar-2'
+            },
+            {
+                'J': 2,
+                'irreps': ['Tg'],
+                'kind': 'polar',
+                'name': 'd_xy',
+                'poly': {'1,1,0': Rational(1,1)},
+                'set': 'd',
+                'single_irrep': True,
+                'space': 'polar-2'
+            },
+            {
+                'J': 2,
+                'irreps': ['Tg'],
+                'kind': 'polar',
+                'name': 'd_yz',
+                'poly': {'0,1,1': Rational(1,1)},
+                'set': 'd',
+                'single_irrep': True,
+                'space': 'polar-2'
+            },
+            {
+                'J': 2,
+                'irreps': ['Tg'],
+                'kind': 'polar',
+                'name': 'd_zx',
+                'poly': {'1,0,1': Rational(1,1)},
+                'set': 'd',
+                'single_irrep': True,
+                'space': 'polar-2'
+            },
+            {
+                'J': 3,
+                'irreps': ['Tu'],
+                'kind': 'polar',
+                'name': 'f_z3',
+                'poly': {'0,0,3': Rational(2,1), '0,2,1': Rational(-3,1), '2,0,1': Rational(-3,1)},
+                'set': 'f',
+                'single_irrep': True,
+                'space': 'polar-3'
+            },
+            {
+                'J': 3,
+                'irreps': ['Tu'],
+                'kind': 'polar',
+                'name': 'f_xz2',
+                'poly': {'1,0,2': Rational(4,1), '1,2,0': Rational(-1,1), '3,0,0': Rational(-1,1)},
+                'set': 'f',
+                'single_irrep': True,
+                'space': 'polar-3'
+            },
+            {
+                'J': 3,
+                'irreps': ['Tu'],
+                'kind': 'polar',
+                'name': 'f_yz2',
+                'poly': {'0,1,2': Rational(4,1), '0,3,0': Rational(-1,1), '2,1,0': Rational(-1,1)},
+                'set': 'f',
+                'single_irrep': True,
+                'space': 'polar-3'
+            },
+            {
+                'J': 3,
+                'irreps': ['Tu'],
+                'kind': 'polar',
+                'name': 'f_z(x2-y2)',
+                'poly': {'0,2,1': Rational(-1,1), '2,0,1': Rational(1,1)},
+                'set': 'f',
+                'single_irrep': True,
+                'space': 'polar-3'
+            },
+            {
+                'J': 3,
+                'irreps': ['Au'],
+                'kind': 'polar',
+                'name': 'f_xyz',
+                'poly': {'1,1,1': Rational(1,1)},
+                'set': 'f',
+                'single_irrep': True,
+                'space': 'polar-3'
+            },
+            {
+                'J': 3,
+                'irreps': ['Tu'],
+                'kind': 'polar',
+                'name': 'f_x(x2-3y2)',
+                'poly': {'1,2,0': Rational(-3,1), '3,0,0': Rational(1,1)},
+                'set': 'f',
+                'single_irrep': True,
+                'space': 'polar-3'
+            },
+            {
+                'J': 3,
+                'irreps': ['Tu'],
+                'kind': 'polar',
+                'name': 'f_y(3x2-y2)',
+                'poly': {'0,3,0': Rational(-1,1), '2,1,0': Rational(3,1)},
+                'set': 'f',
+                'single_irrep': True,
+                'space': 'polar-3'
+            },
+            {
+                'J': 1,
+                'irreps': ['Tg'],
+                'kind': 'axial',
+                'name': 'R_x',
+                'poly': {'1,0,0': Rational(1,1)},
+                'set': 'axial',
+                'single_irrep': True,
+                'space': 'axial-1'
+            },
+            {
+                'J': 1,
+                'irreps': ['Tg'],
+                'kind': 'axial',
+                'name': 'R_y',
+                'poly': {'0,1,0': Rational(1,1)},
+                'set': 'axial',
+                'single_irrep': True,
+                'space': 'axial-1'
+            },
+            {
+                'J': 1,
+                'irreps': ['Tg'],
+                'kind': 'axial',
+                'name': 'R_z',
+                'poly': {'0,0,1': Rational(1,1)},
+                'set': 'axial',
+                'single_irrep': True,
+                'space': 'axial-1'
+            }
+        ],
+        'spaces': [
+            {
+                'blocks': [
+                    {
+                        'basis': [{'0,0,0': Rational(1,1)}],
+                        'dim': 1,
+                        'field': 'Q',
+                        'irrep': 'Ag',
+                        'multiplicity': 1
+                    }
+                ],
+                'dim': 1,
+                'harmonic_dim': 1,
+                'id': 'polar-0',
+                'kind': 'polar',
+                'multiplicities': {'Ag': 1},
+                'rank': 0
+            },
+            {
+                'blocks': [
+                    {
+                        'basis': [{'1,0,0': Rational(1,1)}, {'0,1,0': Rational(1,1)}, {'0,0,1': Rational(1,1)}],
+                        'dim': 3,
+                        'field': 'Q',
+                        'irrep': 'Tu',
+                        'multiplicity': 1
+                    }
+                ],
+                'dim': 3,
+                'harmonic_dim': 3,
+                'id': 'polar-1',
+                'kind': 'polar',
+                'multiplicities': {'Tu': 1},
+                'rank': 1
+            },
+            {
+                'blocks': [
+                    {
+                        'basis': [{'0,0,2': Rational(1,1), '0,2,0': Rational(1,1), '2,0,0': Rational(1,1)}],
+                        'dim': 1,
+                        'field': 'Q',
+                        'irrep': 'Ag',
+                        'multiplicity': 1
+                    },
+                    {
+                        'basis': [
+                            {
+                                '0,0,2': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '0,2,0': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '2,0,0': Rational(1,1)
+                            }
+                        ],
+                        'dim': 1,
+                        'field': 'Q(zeta)',
+                        'irrep': '1Eg',
+                        'multiplicity': 1
+                    },
+                    {
+                        'basis': [
+                            {
+                                '0,0,2': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '0,2,0': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '2,0,0': Rational(1,1)
+                            }
+                        ],
+                        'dim': 1,
+                        'field': 'Q(zeta)',
+                        'irrep': '2Eg',
+                        'multiplicity': 1
+                    },
+                    {
+                        'basis': [{'1,1,0': Rational(1,1)}, {'1,0,1': Rational(1,1)}, {'0,1,1': Rational(1,1)}],
+                        'dim': 3,
+                        'field': 'Q',
+                        'irrep': 'Tg',
+                        'multiplicity': 1
+                    }
+                ],
+                'dim': 6,
+                'harmonic_dim': 5,
+                'id': 'polar-2',
+                'kind': 'polar',
+                'multiplicities': {'1Eg': 1, '2Eg': 1, 'Ag': 1, 'Tg': 1},
+                'rank': 2
+            },
+            {
+                'blocks': [
+                    {
+                        'basis': [{'1,1,1': Rational(1,1)}],
+                        'dim': 1,
+                        'field': 'Q',
+                        'irrep': 'Au',
+                        'multiplicity': 1
+                    },
+                    {
+                        'basis': [
+                            {'3,0,0': Rational(1,1)},
+                            {'2,1,0': Rational(1,1)},
+                            {'2,0,1': Rational(1,1)},
+                            {'1,2,0': Rational(1,1)},
+                            {'1,0,2': Rational(1,1)},
+                            {'0,3,0': Rational(1,1)},
+                            {'0,2,1': Rational(1,1)},
+                            {'0,1,2': Rational(1,1)},
+                            {'0,0,3': Rational(1,1)}
+                        ],
+                        'dim': 9,
+                        'field': 'Q',
+                        'irrep': 'Tu',
+                        'multiplicity': 3
+                    }
+                ],
+                'dim': 10,
+                'harmonic_dim': 7,
+                'id': 'polar-3',
+                'kind': 'polar',
+                'multiplicities': {'Au': 1, 'Tu': 3},
+                'rank': 3
+            },
+            {
+                'blocks': [
+                    {
+                        'basis': [
+                            {'0,0,4': Rational(1,1), '0,4,0': Rational(1,1), '4,0,0': Rational(1,1)},
+                            {'0,2,2': Rational(1,1), '2,0,2': Rational(1,1), '2,2,0': Rational(1,1)}
+                        ],
+                        'dim': 2,
+                        'field': 'Q',
+                        'irrep': 'Ag',
+                        'multiplicity': 2
+                    },
+                    {
+                        'basis': [
+                            {
+                                '0,0,4': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '0,4,0': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '4,0,0': Rational(1,1)
+                            },
+                            {
+                                '0,2,2': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '2,0,2': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '2,2,0': Rational(1,1)
+                            }
+                        ],
+                        'dim': 2,
+                        'field': 'Q(zeta)',
+                        'irrep': '1Eg',
+                        'multiplicity': 2
+                    },
+                    {
+                        'basis': [
+                            {
+                                '0,0,4': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '0,4,0': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '4,0,0': Rational(1,1)
+                            },
+                            {
+                                '0,2,2': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '2,0,2': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '2,2,0': Rational(1,1)
+                            }
+                        ],
+                        'dim': 2,
+                        'field': 'Q(zeta)',
+                        'irrep': '2Eg',
+                        'multiplicity': 2
+                    },
+                    {
+                        'basis': [
+                            {'3,1,0': Rational(1,1)},
+                            {'3,0,1': Rational(1,1)},
+                            {'2,1,1': Rational(1,1)},
+                            {'1,3,0': Rational(1,1)},
+                            {'1,2,1': Rational(1,1)},
+                            {'1,1,2': Rational(1,1)},
+                            {'1,0,3': Rational(1,1)},
+                            {'0,3,1': Rational(1,1)},
+                            {'0,1,3': Rational(1,1)}
+                        ],
+                        'dim': 9,
+                        'field': 'Q',
+                        'irrep': 'Tg',
+                        'multiplicity': 3
+                    }
+                ],
+                'dim': 15,
+                'harmonic_dim': 9,
+                'id': 'polar-4',
+                'kind': 'polar',
+                'multiplicities': {'1Eg': 2, '2Eg': 2, 'Ag': 2, 'Tg': 3},
+                'rank': 4
+            },
+            {
+                'blocks': [
+                    {
+                        'basis': [{'1,0,0': Rational(1,1)}, {'0,1,0': Rational(1,1)}, {'0,0,1': Rational(1,1)}],
+                        'dim': 3,
+                        'field': 'Q',
+                        'irrep': 'Tg',
+                        'multiplicity': 1
+                    }
+                ],
+                'dim': 3,
+                'harmonic_dim': 3,
+                'id': 'axial-1',
+                'kind': 'axial',
+                'multiplicities': {'Tg': 1},
+                'rank': 1
+            },
+            {
+                'blocks': [
+                    {
+                        'basis': [{'0,0,2': Rational(1,1), '0,2,0': Rational(1,1), '2,0,0': Rational(1,1)}],
+                        'dim': 1,
+                        'field': 'Q',
+                        'irrep': 'Au',
+                        'multiplicity': 1
+                    },
+                    {
+                        'basis': [
+                            {
+                                '0,0,2': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '0,2,0': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '2,0,0': Rational(1,1)
+                            }
+                        ],
+                        'dim': 1,
+                        'field': 'Q(zeta)',
+                        'irrep': '1Eu',
+                        'multiplicity': 1
+                    },
+                    {
+                        'basis': [
+                            {
+                                '0,0,2': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '0,2,0': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '2,0,0': Rational(1,1)
+                            }
+                        ],
+                        'dim': 1,
+                        'field': 'Q(zeta)',
+                        'irrep': '2Eu',
+                        'multiplicity': 1
+                    },
+                    {
+                        'basis': [{'1,1,0': Rational(1,1)}, {'1,0,1': Rational(1,1)}, {'0,1,1': Rational(1,1)}],
+                        'dim': 3,
+                        'field': 'Q',
+                        'irrep': 'Tu',
+                        'multiplicity': 1
+                    }
+                ],
+                'dim': 6,
+                'harmonic_dim': 5,
+                'id': 'axial-2',
+                'kind': 'axial',
+                'multiplicities': {'1Eu': 1, '2Eu': 1, 'Au': 1, 'Tu': 1},
+                'rank': 2
+            },
+            {
+                'blocks': [
+                    {
+                        'basis': [{'1,1,1': Rational(1,1)}],
+                        'dim': 1,
+                        'field': 'Q',
+                        'irrep': 'Ag',
+                        'multiplicity': 1
+                    },
+                    {
+                        'basis': [
+                            {'3,0,0': Rational(1,1)},
+                            {'2,1,0': Rational(1,1)},
+                            {'2,0,1': Rational(1,1)},
+                            {'1,2,0': Rational(1,1)},
+                            {'1,0,2': Rational(1,1)},
+                            {'0,3,0': Rational(1,1)},
+                            {'0,2,1': Rational(1,1)},
+                            {'0,1,2': Rational(1,1)},
+                            {'0,0,3': Rational(1,1)}
+                        ],
+                        'dim': 9,
+                        'field': 'Q',
+                        'irrep': 'Tg',
+                        'multiplicity': 3
+                    }
+                ],
+                'dim': 10,
+                'harmonic_dim': 7,
+                'id': 'axial-3',
+                'kind': 'axial',
+                'multiplicities': {'Ag': 1, 'Tg': 3},
+                'rank': 3
+            },
+            {
+                'blocks': [
+                    {
+                        'basis': [
+                            {'11': Rational(1,1), '22': Rational(1,1), '33': Rational(1,1)},
+                            {'12': Rational(1,1), '13': Rational(1,1), '23': Rational(1,1)},
+                            {'44': Rational(1,1), '55': Rational(1,1), '66': Rational(1,1)}
+                        ],
+                        'dim': 3,
+                        'field': 'Q',
+                        'irrep': 'Ag',
+                        'multiplicity': 3
+                    },
+                    {
+                        'basis': [
+                            {
+                                '11': Rational(1,1),
+                                '22': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '33': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                            },
+                            {
+                                '12': Rational(1,1),
+                                '13': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '23': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                            },
+                            {
+                                '44': Rational(1,1),
+                                '55': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '66': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                            }
+                        ],
+                        'dim': 3,
+                        'field': 'Q(zeta)',
+                        'irrep': '1Eg',
+                        'multiplicity': 3
+                    },
+                    {
+                        'basis': [
+                            {
+                                '11': Rational(1,1),
+                                '22': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '33': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                            },
+                            {
+                                '12': Rational(1,1),
+                                '13': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '23': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                            },
+                            {
+                                '44': Rational(1,1),
+                                '55': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '66': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                            }
+                        ],
+                        'dim': 3,
+                        'field': 'Q(zeta)',
+                        'irrep': '2Eg',
+                        'multiplicity': 3
+                    },
+                    {
+                        'basis': [
+                            {'14': Rational(1,1)},
+                            {'15': Rational(1,1)},
+                            {'16': Rational(1,1)},
+                            {'24': Rational(1,1)},
+                            {'25': Rational(1,1)},
+                            {'26': Rational(1,1)},
+                            {'34': Rational(1,1)},
+                            {'35': Rational(1,1)},
+                            {'36': Rational(1,1)},
+                            {'45': Rational(1,1)},
+                            {'46': Rational(1,1)},
+                            {'56': Rational(1,1)}
+                        ],
+                        'dim': 12,
+                        'field': 'Q',
+                        'irrep': 'Tg',
+                        'multiplicity': 4
+                    }
+                ],
+                'dim': 21,
+                'id': 'elastic',
+                'kind': 'polar',
+                'multiplicities': {'1Eg': 3, '2Eg': 3, 'Ag': 3, 'Tg': 4},
+                'rank': 4
+            },
+            {
+                'blocks': [
+                    {
+                        'basis': [{'14': Rational(1,1), '25': Rational(1,1), '36': Rational(1,1)}],
+                        'dim': 1,
+                        'field': 'Q',
+                        'irrep': 'Au',
+                        'multiplicity': 1
+                    },
+                    {
+                        'basis': [
+                            {
+                                '14': Rational(1,1),
+                                '25': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '36': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                            }
+                        ],
+                        'dim': 1,
+                        'field': 'Q(zeta)',
+                        'irrep': '1Eu',
+                        'multiplicity': 1
+                    },
+                    {
+                        'basis': [
+                            {
+                                '14': Rational(1,1),
+                                '25': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '36': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                            }
+                        ],
+                        'dim': 1,
+                        'field': 'Q(zeta)',
+                        'irrep': '2Eu',
+                        'multiplicity': 1
+                    },
+                    {
+                        'basis': [
+                            {'11': Rational(1,1)},
+                            {'12': Rational(1,1)},
+                            {'13': Rational(1,1)},
+                            {'15': Rational(1,1)},
+                            {'16': Rational(1,1)},
+                            {'21': Rational(1,1)},
+                            {'22': Rational(1,1)},
+                            {'23': Rational(1,1)},
+                            {'24': Rational(1,1)},
+                            {'26': Rational(1,1)},
+                            {'31': Rational(1,1)},
+                            {'32': Rational(1,1)},
+                            {'33': Rational(1,1)},
+                            {'34': Rational(1,1)},
+                            {'35': Rational(1,1)}
+                        ],
+                        'dim': 15,
+                        'field': 'Q',
+                        'irrep': 'Tu',
+                        'multiplicity': 5
+                    }
+                ],
+                'dim': 18,
+                'id': 'piezoelectric',
+                'kind': 'polar',
+                'multiplicities': {'1Eu': 1, '2Eu': 1, 'Au': 1, 'Tu': 5},
+                'rank': 3
+            },
+            {
+                'blocks': [
+                    {
+                        'basis': [{'41': Rational(1,1), '52': Rational(1,1), '63': Rational(1,1)}],
+                        'dim': 1,
+                        'field': 'Q',
+                        'irrep': 'Ag',
+                        'multiplicity': 1
+                    },
+                    {
+                        'basis': [
+                            {
+                                '41': Rational(1,1),
+                                '52': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '63': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                            }
+                        ],
+                        'dim': 1,
+                        'field': 'Q(zeta)',
+                        'irrep': '1Eg',
+                        'multiplicity': 1
+                    },
+                    {
+                        'basis': [
+                            {
+                                '41': Rational(1,1),
+                                '52': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '63': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                            }
+                        ],
+                        'dim': 1,
+                        'field': 'Q(zeta)',
+                        'irrep': '2Eg',
+                        'multiplicity': 1
+                    },
+                    {
+                        'basis': [
+                            {'11': Rational(1,1)},
+                            {'12': Rational(1,1)},
+                            {'13': Rational(1,1)},
+                            {'21': Rational(1,1)},
+                            {'22': Rational(1,1)},
+                            {'23': Rational(1,1)},
+                            {'31': Rational(1,1)},
+                            {'32': Rational(1,1)},
+                            {'33': Rational(1,1)},
+                            {'42': Rational(1,1)},
+                            {'43': Rational(1,1)},
+                            {'51': Rational(1,1)},
+                            {'53': Rational(1,1)},
+                            {'61': Rational(1,1)},
+                            {'62': Rational(1,1)}
+                        ],
+                        'dim': 15,
+                        'field': 'Q',
+                        'irrep': 'Tg',
+                        'multiplicity': 5
+                    }
+                ],
+                'dim': 18,
+                'id': 'electrogyration',
+                'kind': 'axial',
+                'multiplicities': {'1Eg': 1, '2Eg': 1, 'Ag': 1, 'Tg': 5},
+                'rank': 3
+            },
+            {
+                'blocks': [
+                    {
+                        'basis': [
+                            {'11': Rational(1,1), '22': Rational(1,1), '33': Rational(1,1)},
+                            {'12': Rational(1,1), '23': Rational(1,1), '31': Rational(1,1)},
+                            {'13': Rational(1,1), '21': Rational(1,1), '32': Rational(1,1)},
+                            {'44': Rational(1,1), '55': Rational(1,1), '66': Rational(1,1)}
+                        ],
+                        'dim': 4,
+                        'field': 'Q',
+                        'irrep': 'Ag',
+                        'multiplicity': 4
+                    },
+                    {
+                        'basis': [
+                            {
+                                '11': Rational(1,1),
+                                '22': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '33': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                            },
+                            {
+                                '12': Rational(1,1),
+                                '23': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '31': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                            },
+                            {
+                                '13': Rational(1,1),
+                                '21': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '32': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                            },
+                            {
+                                '44': Rational(1,1),
+                                '55': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '66': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                            }
+                        ],
+                        'dim': 4,
+                        'field': 'Q(zeta)',
+                        'irrep': '1Eg',
+                        'multiplicity': 4
+                    },
+                    {
+                        'basis': [
+                            {
+                                '11': Rational(1,1),
+                                '22': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '33': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                            },
+                            {
+                                '12': Rational(1,1),
+                                '23': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '31': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                            },
+                            {
+                                '13': Rational(1,1),
+                                '21': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '32': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                            },
+                            {
+                                '44': Rational(1,1),
+                                '55': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '66': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                            }
+                        ],
+                        'dim': 4,
+                        'field': 'Q(zeta)',
+                        'irrep': '2Eg',
+                        'multiplicity': 4
+                    },
+                    {
+                        'basis': [
+                            {'14': Rational(1,1)},
+                            {'15': Rational(1,1)},
+                            {'16': Rational(1,1)},
+                            {'24': Rational(1,1)},
+                            {'25': Rational(1,1)},
+                            {'26': Rational(1,1)},
+                            {'34': Rational(1,1)},
+                            {'35': Rational(1,1)},
+                            {'36': Rational(1,1)},
+                            {'41': Rational(1,1)},
+                            {'42': Rational(1,1)},
+                            {'43': Rational(1,1)},
+                            {'45': Rational(1,1)},
+                            {'46': Rational(1,1)},
+                            {'51': Rational(1,1)},
+                            {'52': Rational(1,1)},
+                            {'53': Rational(1,1)},
+                            {'54': Rational(1,1)},
+                            {'56': Rational(1,1)},
+                            {'61': Rational(1,1)},
+                            {'62': Rational(1,1)},
+                            {'63': Rational(1,1)},
+                            {'64': Rational(1,1)},
+                            {'65': Rational(1,1)}
+                        ],
+                        'dim': 24,
+                        'field': 'Q',
+                        'irrep': 'Tg',
+                        'multiplicity': 8
+                    }
+                ],
+                'dim': 36,
+                'id': 'photoelastic',
+                'kind': 'polar',
+                'multiplicities': {'1Eg': 4, '2Eg': 4, 'Ag': 4, 'Tg': 8},
+                'rank': 4
+            },
+            {
+                'blocks': [
+                    {
+                        'basis': [
+                            {'1111': Rational(1,1), '2222': Rational(1,1), '3333': Rational(1,1)},
+                            {'1122': Rational(1,1), '2233': Rational(1,1), '3113': Rational(1,1)},
+                            {'1133': Rational(1,1), '2112': Rational(1,1), '3223': Rational(1,1)}
+                        ],
+                        'dim': 3,
+                        'field': 'Q',
+                        'irrep': 'Ag',
+                        'multiplicity': 3
+                    },
+                    {
+                        'basis': [
+                            {
+                                '1111': Rational(1,1),
+                                '2222': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '3333': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                            },
+                            {
+                                '1122': Rational(1,1),
+                                '2233': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '3113': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                            },
+                            {
+                                '1133': Rational(1,1),
+                                '2112': (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                '3223': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                            }
+                        ],
+                        'dim': 3,
+                        'field': 'Q(zeta)',
+                        'irrep': '1Eg',
+                        'multiplicity': 3
+                    },
+                    {
+                        'basis': [
+                            {
+                                '1111': Rational(1,1),
+                                '2222': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '3333': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                            },
+                            {
+                                '1122': Rational(1,1),
+                                '2233': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '3113': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                            },
+                            {
+                                '1133': Rational(1,1),
+                                '2112': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                '3223': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                            }
+                        ],
+                        'dim': 3,
+                        'field': 'Q(zeta)',
+                        'irrep': '2Eg',
+                        'multiplicity': 3
+                    },
+                    {
+                        'basis': [
+                            {'1112': Rational(1,1)},
+                            {'1113': Rational(1,1)},
+                            {'1123': Rational(1,1)},
+                            {'1222': Rational(1,1)},
+                            {'1223': Rational(1,1)},
+                            {'1233': Rational(1,1)},
+                            {'1333': Rational(1,1)},
+                            {'2111': Rational(1,1)},
+                            {'2113': Rational(1,1)},
+                            {'2122': Rational(1,1)},
+                            {'2123': Rational(1,1)},
+                            {'2133': Rational(1,1)},
+                            {'2223': Rational(1,1)},
+                            {'2333': Rational(1,1)},
+                            {'3111': Rational(1,1)},
+                            {'3112': Rational(1,1)},
+                            {'3122': Rational(1,1)},
+                            {'3123': Rational(1,1)},
+                            {'3133': Rational(1,1)},
+                            {'3222': Rational(1,1)},
+                            {'3233': Rational(1,1)}
+                        ],
+                        'dim': 21,
+                        'field': 'Q',
+                        'irrep': 'Tg',
+                        'multiplicity': 7
+                    }
+                ],
+                'dim': 30,
+                'id': 'third-harmonic',
+                'kind': 'polar',
+                'multiplicities': {'1Eg': 3, '2Eg': 3, 'Ag': 3, 'Tg': 7},
+                'rank': 4
+            },
+            {
+                'dim': 81,
+                'id': 'general-4',
+                'kind': 'polar',
+                'multiplicities': {'1Eg': 7, '2Eg': 7, 'Ag': 7, 'Tg': 20},
+                'rank': 4
+            }
+        ]
+    },
+    'character_table': {
+        'class_count': 8,
+        'classes': [
+            {
+                'ambivalent': True,
+                'angle': [0, 1],
+                'axis_order_n': 1,
+                'axis_type': 'identity',
+                'det': 1,
+                'display': 'E',
+                'element_order': 1,
+                'id': 'E',
+                'inverse_class': 'E',
+                'label': 'E',
+                'pole': {'kind': 'none'},
+                'power_map': 'E',
+                'size': 1
+            },
+            {
+                'ambivalent': False,
+                'angle': [1, 3],
+                'axis_order_n': 3,
+                'axis_type': 'rotation-axis',
+                'det': 1,
+                'display': '4C_{3}',
+                'element_order': 3,
+                'id': 'C3',
+                'inverse_class': 'C32',
+                'label': '4C_3',
+                'pole': {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                'power_map': 'C32',
+                'size': 4
+            },
+            {
+                'ambivalent': False,
+                'angle': [2, 3],
+                'axis_order_n': 3,
+                'axis_type': 'rotation-axis',
+                'det': 1,
+                'display': '4C_{3}^{2}',
+                'element_order': 3,
+                'id': 'C32',
+                'inverse_class': 'C3',
+                'label': '4C_3^2',
+                'pole': {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                'power_map': 'C3',
+                'size': 4
+            },
+            {
+                'ambivalent': True,
+                'angle': [1, 2],
+                'axis_order_n': 2,
+                'axis_type': 'rotation-axis',
+                'det': 1,
+                'display': '3C_{2}',
+                'element_order': 2,
+                'id': 'C2',
+                'inverse_class': 'C2',
+                'label': '3C_2',
+                'pole': {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'},
+                'power_map': 'E',
+                'size': 3
+            },
+            {
+                'ambivalent': True,
+                'angle': [1, 2],
+                'axis_order_n': 1,
+                'axis_type': 'inversion',
+                'det': -1,
+                'display': 'i',
+                'element_order': 2,
+                'id': 'i',
+                'inverse_class': 'i',
+                'label': 'i',
+                'pole': {'kind': 'none'},
+                'power_map': 'E',
+                'size': 1
+            },
+            {
+                'ambivalent': False,
+                'angle': [1, 6],
+                'axis_order_n': 3,
+                'axis_type': 'rotation-axis',
+                'det': -1,
+                'display': '4S_{6}',
+                'element_order': 6,
+                'id': 'S6',
+                'inverse_class': 'S65',
+                'label': '4S_6',
+                'pole': {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                'power_map': 'C3',
+                'size': 4
+            },
+            {
+                'ambivalent': False,
+                'angle': [5, 6],
+                'axis_order_n': 3,
+                'axis_type': 'rotation-axis',
+                'det': -1,
+                'display': '4S_{6}^{5}',
+                'element_order': 6,
+                'id': 'S65',
+                'inverse_class': 'S6',
+                'label': '4S_6^5',
+                'pole': {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                'power_map': 'C32',
+                'size': 4
+            },
+            {
+                'ambivalent': True,
+                'angle': [0, 1],
+                'axis_order_n': 2,
+                'axis_type': 'cube-axis-mirror',
+                'det': -1,
+                'display': '3\\sigma_{h}',
+                'element_order': 2,
+                'id': 'sh',
+                'inverse_class': 'sh',
+                'label': '3sigma_h',
+                'pole': {
+                    'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)],
+                    'kind': 'plane_normal'
+                },
+                'power_map': 'E',
+                'size': 3
+            }
+        ],
+        'irreps': [
+            {
+                'bethe': 'Gamma_1^+',
+                'bilbao': 'Gamma_1^+',
+                'chi': [
+                    Rational(1,1),
+                    Rational(1,1),
+                    Rational(1,1),
+                    Rational(1,1),
+                    Rational(1,1),
+                    Rational(1,1),
+                    Rational(1,1),
+                    Rational(1,1)
+                ],
+                'conjugate_of': None,
+                'dim': 1,
+                'display': 'A_g',
+                'frobenius_schur': 1,
+                'id': 'Ag',
+                'image': 'C_1',
+                'kernel': 'n11',
+                'label': 'A_g',
+                'matrices': {
+                    'by_element': [
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]]
+                    ],
+                    'construction': {'method': 'linear', 'note': 'D(g) = [chi(g)]'},
+                    'dim': 1,
+                    'unitary': True
+                },
+                'mulliken': 'A_g',
+                'pair_label': None
+            },
+            {
+                'bethe': 'Gamma_2^+',
+                'bilbao': 'Gamma_2^+',
+                'chi': [
+                    Rational(1,1),
+                    (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                    (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                    Rational(1,1),
+                    Rational(1,1),
+                    (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                    (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                    Rational(1,1)
+                ],
+                'conjugate_of': '2Eg',
+                'dim': 1,
+                'display': '{}^{1}E_g',
+                'frobenius_schur': 0,
+                'id': '1Eg',
+                'image': 'C_3',
+                'kernel': 'n09',
+                'label': '1E_g',
+                'matrices': {
+                    'by_element': [
+                        [[Rational(1,1)]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]]
+                    ],
+                    'construction': {'method': 'linear', 'note': 'D(g) = [chi(g)]'},
+                    'dim': 1,
+                    'unitary': True
+                },
+                'mulliken': '1E_g',
+                'pair_label': 'E_g'
+            },
+            {
+                'bethe': 'Gamma_3^+',
+                'bilbao': 'Gamma_3^+',
+                'chi': [
+                    Rational(1,1),
+                    (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                    (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                    Rational(1,1),
+                    Rational(1,1),
+                    (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                    (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                    Rational(1,1)
+                ],
+                'conjugate_of': '1Eg',
+                'dim': 1,
+                'display': '{}^{2}E_g',
+                'frobenius_schur': 0,
+                'id': '2Eg',
+                'image': 'C_3',
+                'kernel': 'n09',
+                'label': '2E_g',
+                'matrices': {
+                    'by_element': [
+                        [[Rational(1,1)]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]]
+                    ],
+                    'construction': {'method': 'linear', 'note': 'D(g) = [chi(g)]'},
+                    'dim': 1,
+                    'unitary': True
+                },
+                'mulliken': '2E_g',
+                'pair_label': 'E_g'
+            },
+            {
+                'bethe': 'Gamma_4^+',
+                'bilbao': 'Gamma_4^+',
+                'chi': [
+                    Rational(3,1),
+                    Rational(0,1),
+                    Rational(0,1),
+                    Rational(-1,1),
+                    Rational(3,1),
+                    Rational(0,1),
+                    Rational(0,1),
+                    Rational(-1,1)
+                ],
+                'conjugate_of': None,
+                'dim': 3,
+                'display': 'T_g',
+                'frobenius_schur': 1,
+                'id': 'Tg',
+                'image': 'T',
+                'kernel': 'n02',
+                'label': 'T_g',
+                'matrices': {
+                    'by_element': [
+                        [
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)]
+                        ],
+                        [
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)]
+                        ],
+                        [
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)]
+                        ],
+                        [
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)]
+                        ],
+                        [
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)]
+                        ],
+                        [
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)]
+                        ]
+                    ],
+                    'construction': {
+                        'by': 'Au',
+                        'from': 'Tu',
+                        'method': 'twist',
+                        'note': 'D = D^from (x) lambda, lambda 1-dimensional'
+                    },
+                    'dim': 3,
+                    'unitary': True
+                },
+                'mulliken': 'T_g',
+                'pair_label': None
+            },
+            {
+                'bethe': 'Gamma_1^-',
+                'bilbao': 'Gamma_1^-',
+                'chi': [
+                    Rational(1,1),
+                    Rational(1,1),
+                    Rational(1,1),
+                    Rational(1,1),
+                    Rational(-1,1),
+                    Rational(-1,1),
+                    Rational(-1,1),
+                    Rational(-1,1)
+                ],
+                'conjugate_of': None,
+                'dim': 1,
+                'display': 'A_u',
+                'frobenius_schur': 1,
+                'id': 'Au',
+                'image': 'C_2',
+                'kernel': 'n10',
+                'label': 'A_u',
+                'matrices': {
+                    'by_element': [
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]]
+                    ],
+                    'construction': {'method': 'linear', 'note': 'D(g) = [chi(g)]'},
+                    'dim': 1,
+                    'unitary': True
+                },
+                'mulliken': 'A_u',
+                'pair_label': None
+            },
+            {
+                'bethe': 'Gamma_2^-',
+                'bilbao': 'Gamma_2^-',
+                'chi': [
+                    Rational(1,1),
+                    (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                    (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                    Rational(1,1),
+                    Rational(-1,1),
+                    (Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                    (Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                    Rational(-1,1)
+                ],
+                'conjugate_of': '2Eu',
+                'dim': 1,
+                'display': '{}^{1}E_u',
+                'frobenius_schur': 0,
+                'id': '1Eu',
+                'image': 'C_6',
+                'kernel': 'n05',
+                'label': '1E_u',
+                'matrices': {
+                    'by_element': [
+                        [[Rational(1,1)]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(-1,1)]],
+                        [[(Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]]
+                    ],
+                    'construction': {'method': 'linear', 'note': 'D(g) = [chi(g)]'},
+                    'dim': 1,
+                    'unitary': True
+                },
+                'mulliken': '1E_u',
+                'pair_label': 'E_u'
+            },
+            {
+                'bethe': 'Gamma_3^-',
+                'bilbao': 'Gamma_3^-',
+                'chi': [
+                    Rational(1,1),
+                    (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                    (Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                    Rational(1,1),
+                    Rational(-1,1),
+                    (Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                    (Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                    Rational(-1,1)
+                ],
+                'conjugate_of': '1Eu',
+                'dim': 1,
+                'display': '{}^{2}E_u',
+                'frobenius_schur': 0,
+                'id': '2Eu',
+                'image': 'C_6',
+                'kernel': 'n05',
+                'label': '2E_u',
+                'matrices': {
+                    'by_element': [
+                        [[Rational(1,1)]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(1,1)]],
+                        [[Rational(-1,1)]],
+                        [[(Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(-1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[(Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3)))]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]],
+                        [[Rational(-1,1)]]
+                    ],
+                    'construction': {'method': 'linear', 'note': 'D(g) = [chi(g)]'},
+                    'dim': 1,
+                    'unitary': True
+                },
+                'mulliken': '2E_u',
+                'pair_label': 'E_u'
+            },
+            {
+                'bethe': 'Gamma_4^-',
+                'bilbao': 'Gamma_4^-',
+                'chi': [
+                    Rational(3,1),
+                    Rational(0,1),
+                    Rational(0,1),
+                    Rational(-1,1),
+                    Rational(-3,1),
+                    Rational(0,1),
+                    Rational(0,1),
+                    Rational(1,1)
+                ],
+                'conjugate_of': None,
+                'dim': 3,
+                'display': 'T_u',
+                'frobenius_schur': 1,
+                'id': 'Tu',
+                'image': 'T_h',
+                'kernel': 'n00',
+                'label': 'T_u',
+                'matrices': {
+                    'by_element': [
+                        [
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)]
+                        ],
+                        [
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)]
+                        ],
+                        [
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)]
+                        ],
+                        [
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)]
+                        ],
+                        [
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(-1,1)]
+                        ],
+                        [
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)]
+                        ],
+                        [
+                            [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)]
+                        ]
+                    ],
+                    'construction': {
+                        'basis': 'the Cartesian frame of CONVENTIONS.md section 3',
+                        'method': 'defining',
+                        'note': 'D(g) = P(g) = elements.items[g].matrix, in the row-vector convention of CONVENTIONS.md section 4'
+                    },
+                    'dim': 3,
+                    'unitary': True
+                },
+                'mulliken': 'T_u',
+                'pair_label': None
+            }
+        ]
+    },
+    'clebsch_gordan': {
+        'irreps': ['Ag', '1Eg', '2Eg', 'Tg', 'Au', '1Eu', '2Eu', 'Tu'],
+        'kind': 'table',
+        'products': [
+            {
+                'a': 'Ag',
+                'b': 'Ag',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': '1Eg',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1Eg',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': '2Eg',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '2Eg',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': 'Tg',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Tg',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]},
+                            {'mu': 3, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 3}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': 'Au',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Au',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': '1Eu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1Eu',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': '2Eu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '2Eu',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': 'Tu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Tu',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]},
+                            {'mu': 3, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 3}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1Eg',
+                'b': '1Eg',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '2Eg',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1Eg',
+                'b': '2Eg',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1Eg',
+                'b': 'Tg',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Tg',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]},
+                            {
+                                'mu': 2,
+                                'terms': [
+                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 1, 'k': 2}
+                                ]
+                            },
+                            {
+                                'mu': 3,
+                                'terms': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 1, 'k': 3}]
+                            }
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1Eg',
+                'b': 'Au',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1Eu',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1Eg',
+                'b': '1Eu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '2Eu',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1Eg',
+                'b': '2Eu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Au',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1Eg',
+                'b': 'Tu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Tu',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]},
+                            {
+                                'mu': 2,
+                                'terms': [
+                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 1, 'k': 2}
+                                ]
+                            },
+                            {
+                                'mu': 3,
+                                'terms': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 1, 'k': 3}]
+                            }
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '2Eg',
+                'b': '2Eg',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1Eg',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '2Eg',
+                'b': 'Tg',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Tg',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]},
+                            {
+                                'mu': 2,
+                                'terms': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 1, 'k': 2}]
+                            },
+                            {
+                                'mu': 3,
+                                'terms': [
+                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 1, 'k': 3}
+                                ]
+                            }
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '2Eg',
+                'b': 'Au',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '2Eu',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '2Eg',
+                'b': '1Eu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Au',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '2Eg',
+                'b': '2Eu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1Eu',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '2Eg',
+                'b': 'Tu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Tu',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]},
+                            {
+                                'mu': 2,
+                                'terms': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 1, 'k': 2}]
+                            },
+                            {
+                                'mu': 3,
+                                'terms': [
+                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 1, 'k': 3}
+                                ]
+                            }
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Tg',
+                'b': 'Tg',
+                'couplings': [
+                    {
+                        'N': Rational(3,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': Rational(1,1), 'i': 1, 'k': 1},
+                                    {'e': Rational(1,1), 'i': 2, 'k': 2},
+                                    {'e': Rational(1,1), 'i': 3, 'k': 3}
+                                ]
+                            }
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(3,1),
+                        'c': '1Eg',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': Rational(1,1), 'i': 1, 'k': 1},
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2, 'k': 2},
+                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3, 'k': 3}
+                                ]
+                            }
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(3,1),
+                        'c': '2Eg',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': Rational(1,1), 'i': 1, 'k': 1},
+                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2, 'k': 2},
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3, 'k': 3}
+                                ]
+                            }
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Tg',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 2, 'k': 3}, {'e': Rational(1,1), 'i': 3, 'k': 2}]
+                            },
+                            {
+                                'mu': 2,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 3}, {'e': Rational(1,1), 'i': 3, 'k': 1}]
+                            },
+                            {
+                                'mu': 3,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Tg',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 2, 'k': 3}, {'e': Rational(-1,1), 'i': 3, 'k': 2}]
+                            },
+                            {
+                                'mu': 2,
+                                'terms': [{'e': Rational(-1,1), 'i': 1, 'k': 3}, {'e': Rational(1,1), 'i': 3, 'k': 1}]
+                            },
+                            {
+                                'mu': 3,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(-1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-antisymmetric'
+                    }
+                ]
+            },
+            {
+                'a': 'Tg',
+                'b': 'Au',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Tu',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 3, 'terms': [{'e': Rational(1,1), 'i': 3, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Tg',
+                'b': '1Eu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Tu',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]},
+                            {
+                                'mu': 2,
+                                'terms': [
+                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2, 'k': 1}
+                                ]
+                            },
+                            {
+                                'mu': 3,
+                                'terms': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Tg',
+                'b': '2Eu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Tu',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]},
+                            {
+                                'mu': 2,
+                                'terms': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2, 'k': 1}]
+                            },
+                            {
+                                'mu': 3,
+                                'terms': [
+                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Tg',
+                'b': 'Tu',
+                'couplings': [
+                    {
+                        'N': Rational(3,1),
+                        'c': 'Au',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': Rational(1,1), 'i': 1, 'k': 1},
+                                    {'e': Rational(1,1), 'i': 2, 'k': 2},
+                                    {'e': Rational(1,1), 'i': 3, 'k': 3}
+                                ]
+                            }
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(3,1),
+                        'c': '1Eu',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': Rational(1,1), 'i': 1, 'k': 1},
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2, 'k': 2},
+                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3, 'k': 3}
+                                ]
+                            }
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(3,1),
+                        'c': '2Eu',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': Rational(1,1), 'i': 1, 'k': 1},
+                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2, 'k': 2},
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3, 'k': 3}
+                                ]
+                            }
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Tu',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 2, 'k': 3}, {'e': Rational(1,1), 'i': 3, 'k': 2}]
+                            },
+                            {
+                                'mu': 2,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 3}, {'e': Rational(1,1), 'i': 3, 'k': 1}]
+                            },
+                            {
+                                'mu': 3,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Tu',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 2, 'k': 3}, {'e': Rational(-1,1), 'i': 3, 'k': 2}]
+                            },
+                            {
+                                'mu': 2,
+                                'terms': [{'e': Rational(-1,1), 'i': 1, 'k': 3}, {'e': Rational(1,1), 'i': 3, 'k': 1}]
+                            },
+                            {
+                                'mu': 3,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(-1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-antisymmetric'
+                    }
+                ]
+            },
+            {
+                'a': 'Au',
+                'b': 'Au',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Au',
+                'b': '1Eu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1Eg',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Au',
+                'b': '2Eu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '2Eg',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Au',
+                'b': 'Tu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Tg',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]},
+                            {'mu': 3, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 3}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1Eu',
+                'b': '1Eu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '2Eg',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1Eu',
+                'b': '2Eu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1Eu',
+                'b': 'Tu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Tg',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]},
+                            {
+                                'mu': 2,
+                                'terms': [
+                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 1, 'k': 2}
+                                ]
+                            },
+                            {
+                                'mu': 3,
+                                'terms': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 1, 'k': 3}]
+                            }
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '2Eu',
+                'b': '2Eu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1Eg',
+                        'kappa': 1,
+                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '2Eu',
+                'b': 'Tu',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': 'Tg',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]},
+                            {
+                                'mu': 2,
+                                'terms': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 1, 'k': 2}]
+                            },
+                            {
+                                'mu': 3,
+                                'terms': [
+                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 1, 'k': 3}
+                                ]
+                            }
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Tu',
+                'b': 'Tu',
+                'couplings': [
+                    {
+                        'N': Rational(3,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': Rational(1,1), 'i': 1, 'k': 1},
+                                    {'e': Rational(1,1), 'i': 2, 'k': 2},
+                                    {'e': Rational(1,1), 'i': 3, 'k': 3}
+                                ]
+                            }
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(3,1),
+                        'c': '1Eg',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': Rational(1,1), 'i': 1, 'k': 1},
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2, 'k': 2},
+                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3, 'k': 3}
+                                ]
+                            }
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(3,1),
+                        'c': '2Eg',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': Rational(1,1), 'i': 1, 'k': 1},
+                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2, 'k': 2},
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3, 'k': 3}
+                                ]
+                            }
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Tg',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 2, 'k': 3}, {'e': Rational(1,1), 'i': 3, 'k': 2}]
+                            },
+                            {
+                                'mu': 2,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 3}, {'e': Rational(1,1), 'i': 3, 'k': 1}]
+                            },
+                            {
+                                'mu': 3,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Tg',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 2, 'k': 3}, {'e': Rational(-1,1), 'i': 3, 'k': 2}]
+                            },
+                            {
+                                'mu': 2,
+                                'terms': [{'e': Rational(-1,1), 'i': 1, 'k': 3}, {'e': Rational(1,1), 'i': 3, 'k': 1}]
+                            },
+                            {
+                                'mu': 3,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(-1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-antisymmetric'
+                    }
+                ]
+            }
+        ]
+    },
+    'elements': {
+        'count': 24,
+        'identity_index': 0,
+        'items': [
+            {
+                'angle': [0, 1],
+                'class_id': 'E',
+                'class_label': 'E',
+                'det': 1,
+                'euler': {'alpha': {'turn': [0, 1]}, 'beta': {'turn': [0, 1]}, 'gamma': {'turn': [0, 1]}},
+                'index': 0,
+                'inverse': 0,
+                'matrix': [
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)]
+                ],
+                'operation': {'axis_count': 0, 'axis_index': None, 'name': 'E', 'root': 'E', 'sense': None},
+                'order': 1,
+                'pole': {'kind': 'none'},
+                'symbol': 'E'
+            },
+            {
+                'angle': [1, 3],
+                'class_id': 'C3',
+                'class_label': '4C_3',
+                'det': 1,
+                'euler': {'alpha': {'turn': [-1, 4]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [1, 2]}},
+                'index': 1,
+                'inverse': 5,
+                'matrix': [
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 1, 'name': 'C_3(1)^+', 'root': 'C_3', 'sense': '+'},
+                'order': 3,
+                'pole': {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                'symbol': 'C_3'
+            },
+            {
+                'angle': [1, 3],
+                'class_id': 'C3',
+                'class_label': '4C_3',
+                'det': 1,
+                'euler': {'alpha': {'turn': [-1, 4]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [0, 1]}},
+                'index': 2,
+                'inverse': 6,
+                'matrix': [
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                    [Rational(1,1), Rational(0,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 2, 'name': 'C_3(2)^+', 'root': 'C_3', 'sense': '+'},
+                'order': 3,
+                'pole': {'cartesian': [Rational(-1,1), Rational(1,1), Rational(-1,1)], 'kind': 'axis'},
+                'symbol': 'C_3'
+            },
+            {
+                'angle': [1, 3],
+                'class_id': 'C3',
+                'class_label': '4C_3',
+                'det': 1,
+                'euler': {'alpha': {'turn': [1, 4]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [1, 2]}},
+                'index': 3,
+                'inverse': 7,
+                'matrix': [
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 3, 'name': 'C_3(3)^+', 'root': 'C_3', 'sense': '+'},
+                'order': 3,
+                'pole': {'cartesian': [Rational(1,1), Rational(-1,1), Rational(-1,1)], 'kind': 'axis'},
+                'symbol': 'C_3'
+            },
+            {
+                'angle': [1, 3],
+                'class_id': 'C3',
+                'class_label': '4C_3',
+                'det': 1,
+                'euler': {'alpha': {'turn': [1, 4]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [0, 1]}},
+                'index': 4,
+                'inverse': 8,
+                'matrix': [
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    [Rational(1,1), Rational(0,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 4, 'name': 'C_3(4)^+', 'root': 'C_3', 'sense': '+'},
+                'order': 3,
+                'pole': {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                'symbol': 'C_3'
+            },
+            {
+                'angle': [2, 3],
+                'class_id': 'C32',
+                'class_label': '4C_3^2',
+                'det': 1,
+                'euler': {'alpha': {'turn': [0, 1]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [-1, 4]}},
+                'index': 5,
+                'inverse': 1,
+                'matrix': [
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 1, 'name': 'C_3(1)^2-', 'root': 'C_3^2', 'sense': '-'},
+                'order': 3,
+                'pole': {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                'symbol': 'C_3^2'
+            },
+            {
+                'angle': [2, 3],
+                'class_id': 'C32',
+                'class_label': '4C_3^2',
+                'det': 1,
+                'euler': {'alpha': {'turn': [1, 2]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [-1, 4]}},
+                'index': 6,
+                'inverse': 2,
+                'matrix': [
+                    [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 2, 'name': 'C_3(2)^2-', 'root': 'C_3^2', 'sense': '-'},
+                'order': 3,
+                'pole': {'cartesian': [Rational(-1,1), Rational(1,1), Rational(-1,1)], 'kind': 'axis'},
+                'symbol': 'C_3^2'
+            },
+            {
+                'angle': [2, 3],
+                'class_id': 'C32',
+                'class_label': '4C_3^2',
+                'det': 1,
+                'euler': {'alpha': {'turn': [0, 1]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [1, 4]}},
+                'index': 7,
+                'inverse': 3,
+                'matrix': [
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 3, 'name': 'C_3(3)^2-', 'root': 'C_3^2', 'sense': '-'},
+                'order': 3,
+                'pole': {'cartesian': [Rational(1,1), Rational(-1,1), Rational(-1,1)], 'kind': 'axis'},
+                'symbol': 'C_3^2'
+            },
+            {
+                'angle': [2, 3],
+                'class_id': 'C32',
+                'class_label': '4C_3^2',
+                'det': 1,
+                'euler': {'alpha': {'turn': [1, 2]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [1, 4]}},
+                'index': 8,
+                'inverse': 4,
+                'matrix': [
+                    [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 4, 'name': 'C_3(4)^2-', 'root': 'C_3^2', 'sense': '-'},
+                'order': 3,
+                'pole': {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                'symbol': 'C_3^2'
+            },
+            {
+                'angle': [1, 2],
+                'class_id': 'C2',
+                'class_label': '3C_2',
+                'det': 1,
+                'euler': {'alpha': {'turn': [0, 1]}, 'beta': {'turn': [0, 1]}, 'gamma': {'turn': [1, 2]}},
+                'index': 9,
+                'inverse': 9,
+                'matrix': [
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)]
+                ],
+                'operation': {'axis_count': 3, 'axis_index': 1, 'name': 'C_2(1)', 'root': 'C_2', 'sense': None},
+                'order': 2,
+                'pole': {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'},
+                'symbol': 'C_2'
+            },
+            {
+                'angle': [1, 2],
+                'class_id': 'C2',
+                'class_label': '3C_2',
+                'det': 1,
+                'euler': {'alpha': {'turn': [0, 1]}, 'beta': {'turn': [1, 2]}, 'gamma': {'turn': [0, 1]}},
+                'index': 10,
+                'inverse': 10,
+                'matrix': [
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)]
+                ],
+                'operation': {'axis_count': 3, 'axis_index': 2, 'name': 'C_2(2)', 'root': 'C_2', 'sense': None},
+                'order': 2,
+                'pole': {'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)], 'kind': 'axis'},
+                'symbol': 'C_2'
+            },
+            {
+                'angle': [1, 2],
+                'class_id': 'C2',
+                'class_label': '3C_2',
+                'det': 1,
+                'euler': {'alpha': {'turn': [0, 1]}, 'beta': {'turn': [1, 2]}, 'gamma': {'turn': [1, 2]}},
+                'index': 11,
+                'inverse': 11,
+                'matrix': [
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)]
+                ],
+                'operation': {'axis_count': 3, 'axis_index': 3, 'name': 'C_2(3)', 'root': 'C_2', 'sense': None},
+                'order': 2,
+                'pole': {'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)], 'kind': 'axis'},
+                'symbol': 'C_2'
+            },
+            {
+                'angle': [1, 2],
+                'class_id': 'i',
+                'class_label': 'i',
+                'det': -1,
+                'euler': {'alpha': {'turn': [0, 1]}, 'beta': {'turn': [0, 1]}, 'gamma': {'turn': [0, 1]}},
+                'index': 12,
+                'inverse': 12,
+                'matrix': [
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)]
+                ],
+                'operation': {'axis_count': 0, 'axis_index': None, 'name': 'i', 'root': 'i', 'sense': None},
+                'order': 2,
+                'pole': {'kind': 'none'},
+                'symbol': 'i'
+            },
+            {
+                'angle': [1, 6],
+                'class_id': 'S6',
+                'class_label': '4S_6',
+                'det': -1,
+                'euler': {'alpha': {'turn': [0, 1]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [-1, 4]}},
+                'index': 13,
+                'inverse': 17,
+                'matrix': [
+                    [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 1, 'name': 'S_6(1)^+', 'root': 'S_6', 'sense': '+'},
+                'order': 6,
+                'pole': {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                'symbol': 'S_6'
+            },
+            {
+                'angle': [1, 6],
+                'class_id': 'S6',
+                'class_label': '4S_6',
+                'det': -1,
+                'euler': {'alpha': {'turn': [1, 2]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [-1, 4]}},
+                'index': 14,
+                'inverse': 18,
+                'matrix': [
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 2, 'name': 'S_6(2)^+', 'root': 'S_6', 'sense': '+'},
+                'order': 6,
+                'pole': {'cartesian': [Rational(-1,1), Rational(1,1), Rational(-1,1)], 'kind': 'axis'},
+                'symbol': 'S_6'
+            },
+            {
+                'angle': [1, 6],
+                'class_id': 'S6',
+                'class_label': '4S_6',
+                'det': -1,
+                'euler': {'alpha': {'turn': [0, 1]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [1, 4]}},
+                'index': 15,
+                'inverse': 19,
+                'matrix': [
+                    [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 3, 'name': 'S_6(3)^+', 'root': 'S_6', 'sense': '+'},
+                'order': 6,
+                'pole': {'cartesian': [Rational(1,1), Rational(-1,1), Rational(-1,1)], 'kind': 'axis'},
+                'symbol': 'S_6'
+            },
+            {
+                'angle': [1, 6],
+                'class_id': 'S6',
+                'class_label': '4S_6',
+                'det': -1,
+                'euler': {'alpha': {'turn': [1, 2]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [1, 4]}},
+                'index': 16,
+                'inverse': 20,
+                'matrix': [
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 4, 'name': 'S_6(4)^+', 'root': 'S_6', 'sense': '+'},
+                'order': 6,
+                'pole': {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                'symbol': 'S_6'
+            },
+            {
+                'angle': [5, 6],
+                'class_id': 'S65',
+                'class_label': '4S_6^5',
+                'det': -1,
+                'euler': {'alpha': {'turn': [-1, 4]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [1, 2]}},
+                'index': 17,
+                'inverse': 13,
+                'matrix': [
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    [Rational(1,1), Rational(0,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 1, 'name': 'S_6(1)^5-', 'root': 'S_6^5', 'sense': '-'},
+                'order': 6,
+                'pole': {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                'symbol': 'S_6^5'
+            },
+            {
+                'angle': [5, 6],
+                'class_id': 'S65',
+                'class_label': '4S_6^5',
+                'det': -1,
+                'euler': {'alpha': {'turn': [-1, 4]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [0, 1]}},
+                'index': 18,
+                'inverse': 14,
+                'matrix': [
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 2, 'name': 'S_6(2)^5-', 'root': 'S_6^5', 'sense': '-'},
+                'order': 6,
+                'pole': {'cartesian': [Rational(-1,1), Rational(1,1), Rational(-1,1)], 'kind': 'axis'},
+                'symbol': 'S_6^5'
+            },
+            {
+                'angle': [5, 6],
+                'class_id': 'S65',
+                'class_label': '4S_6^5',
+                'det': -1,
+                'euler': {'alpha': {'turn': [1, 4]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [1, 2]}},
+                'index': 19,
+                'inverse': 15,
+                'matrix': [
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                    [Rational(1,1), Rational(0,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 3, 'name': 'S_6(3)^5-', 'root': 'S_6^5', 'sense': '-'},
+                'order': 6,
+                'pole': {'cartesian': [Rational(1,1), Rational(-1,1), Rational(-1,1)], 'kind': 'axis'},
+                'symbol': 'S_6^5'
+            },
+            {
+                'angle': [5, 6],
+                'class_id': 'S65',
+                'class_label': '4S_6^5',
+                'det': -1,
+                'euler': {'alpha': {'turn': [1, 4]}, 'beta': {'turn': [1, 4]}, 'gamma': {'turn': [0, 1]}},
+                'index': 20,
+                'inverse': 16,
+                'matrix': [
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)]
+                ],
+                'operation': {'axis_count': 4, 'axis_index': 4, 'name': 'S_6(4)^5-', 'root': 'S_6^5', 'sense': '-'},
+                'order': 6,
+                'pole': {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                'symbol': 'S_6^5'
+            },
+            {
+                'angle': [0, 1],
+                'class_id': 'sh',
+                'class_label': '3sigma_h',
+                'det': -1,
+                'euler': {'alpha': {'turn': [0, 1]}, 'beta': {'turn': [0, 1]}, 'gamma': {'turn': [1, 2]}},
+                'index': 21,
+                'inverse': 21,
+                'matrix': [
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)]
+                ],
+                'operation': {
+                    'axis_count': 3,
+                    'axis_index': 1,
+                    'name': 'sigma_h(1)',
+                    'root': 'sigma_h',
+                    'sense': None
+                },
+                'order': 2,
+                'pole': {
+                    'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)],
+                    'kind': 'plane_normal'
+                },
+                'symbol': 'sigma_h'
+            },
+            {
+                'angle': [0, 1],
+                'class_id': 'sh',
+                'class_label': '3sigma_h',
+                'det': -1,
+                'euler': {'alpha': {'turn': [0, 1]}, 'beta': {'turn': [1, 2]}, 'gamma': {'turn': [0, 1]}},
+                'index': 22,
+                'inverse': 22,
+                'matrix': [
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)]
+                ],
+                'operation': {
+                    'axis_count': 3,
+                    'axis_index': 2,
+                    'name': 'sigma_h(2)',
+                    'root': 'sigma_h',
+                    'sense': None
+                },
+                'order': 2,
+                'pole': {
+                    'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)],
+                    'kind': 'plane_normal'
+                },
+                'symbol': 'sigma_h'
+            },
+            {
+                'angle': [0, 1],
+                'class_id': 'sh',
+                'class_label': '3sigma_h',
+                'det': -1,
+                'euler': {'alpha': {'turn': [0, 1]}, 'beta': {'turn': [1, 2]}, 'gamma': {'turn': [1, 2]}},
+                'index': 23,
+                'inverse': 23,
+                'matrix': [
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)]
+                ],
+                'operation': {
+                    'axis_count': 3,
+                    'axis_index': 3,
+                    'name': 'sigma_h(3)',
+                    'root': 'sigma_h',
+                    'sense': None
+                },
+                'order': 2,
+                'pole': {
+                    'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)],
+                    'kind': 'plane_normal'
+                },
+                'symbol': 'sigma_h'
+            }
+        ],
+        'multiplication_table': [
+            [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+            [1, 5, 7, 8, 6, 0, 10, 9, 11, 2, 4, 3, 17, 12, 22, 21, 23, 13, 15, 16, 14, 18, 20, 19],
+            [2, 8, 6, 5, 7, 10, 0, 11, 9, 1, 3, 4, 18, 22, 12, 23, 21, 16, 14, 13, 15, 17, 19, 20],
+            [3, 6, 8, 7, 5, 9, 11, 0, 10, 4, 2, 1, 19, 21, 23, 12, 22, 14, 16, 15, 13, 20, 18, 17],
+            [4, 7, 5, 6, 8, 11, 9, 10, 0, 3, 1, 2, 20, 23, 21, 22, 12, 15, 13, 14, 16, 19, 17, 18],
+            [5, 0, 9, 11, 10, 1, 4, 2, 3, 7, 6, 8, 13, 17, 20, 18, 19, 12, 21, 23, 22, 15, 14, 16],
+            [6, 9, 0, 10, 11, 3, 2, 4, 1, 8, 5, 7, 14, 19, 18, 20, 17, 21, 12, 22, 23, 16, 13, 15],
+            [7, 11, 10, 0, 9, 4, 1, 3, 2, 5, 8, 6, 15, 20, 17, 19, 18, 23, 22, 12, 21, 13, 16, 14],
+            [8, 10, 11, 9, 0, 2, 3, 1, 4, 6, 7, 5, 16, 18, 19, 17, 20, 22, 23, 21, 12, 14, 15, 13],
+            [9, 3, 4, 1, 2, 6, 5, 8, 7, 0, 11, 10, 21, 14, 13, 16, 15, 19, 20, 17, 18, 12, 23, 22],
+            [10, 2, 1, 4, 3, 8, 7, 6, 5, 11, 0, 9, 22, 16, 15, 14, 13, 18, 17, 20, 19, 23, 12, 21],
+            [11, 4, 3, 2, 1, 7, 8, 5, 6, 10, 9, 0, 23, 15, 16, 13, 14, 20, 19, 18, 17, 22, 21, 12],
+            [12, 17, 18, 19, 20, 13, 14, 15, 16, 21, 22, 23, 0, 5, 6, 7, 8, 1, 2, 3, 4, 9, 10, 11],
+            [13, 12, 21, 23, 22, 17, 20, 18, 19, 15, 14, 16, 5, 1, 4, 2, 3, 0, 9, 11, 10, 7, 6, 8],
+            [14, 21, 12, 22, 23, 19, 18, 20, 17, 16, 13, 15, 6, 3, 2, 4, 1, 9, 0, 10, 11, 8, 5, 7],
+            [15, 23, 22, 12, 21, 20, 17, 19, 18, 13, 16, 14, 7, 4, 1, 3, 2, 11, 10, 0, 9, 5, 8, 6],
+            [16, 22, 23, 21, 12, 18, 19, 17, 20, 14, 15, 13, 8, 2, 3, 1, 4, 10, 11, 9, 0, 6, 7, 5],
+            [17, 13, 15, 16, 14, 12, 22, 21, 23, 18, 20, 19, 1, 0, 10, 9, 11, 5, 7, 8, 6, 2, 4, 3],
+            [18, 16, 14, 13, 15, 22, 12, 23, 21, 17, 19, 20, 2, 10, 0, 11, 9, 8, 6, 5, 7, 1, 3, 4],
+            [19, 14, 16, 15, 13, 21, 23, 12, 22, 20, 18, 17, 3, 9, 11, 0, 10, 6, 8, 7, 5, 4, 2, 1],
+            [20, 15, 13, 14, 16, 23, 21, 22, 12, 19, 17, 18, 4, 11, 9, 10, 0, 7, 5, 6, 8, 3, 1, 2],
+            [21, 19, 20, 17, 18, 14, 13, 16, 15, 12, 23, 22, 9, 6, 5, 8, 7, 3, 4, 1, 2, 0, 11, 10],
+            [22, 18, 17, 20, 19, 16, 15, 14, 13, 23, 12, 21, 10, 8, 7, 6, 5, 2, 1, 4, 3, 11, 0, 9],
+            [23, 20, 19, 18, 17, 15, 16, 13, 14, 22, 21, 12, 11, 7, 8, 5, 6, 4, 3, 2, 1, 10, 9, 0]
+        ]
+    },
+    'fundamental_domain': {
+        'cell': {
+            'facets': [
+                {
+                    'angle': [1, 3],
+                    'distance': (Rational(2,3)*exp(2*pi*I*Rational(1,12)) + Rational(-1,3)*exp(2*pi*I*Rational(3,12))),
+                    'element': 1,
+                    'inverse': 5,
+                    'unit_axis': [
+                        (Rational(-2,3)*exp(2*pi*I*Rational(1,12)) + Rational(1,3)*exp(2*pi*I*Rational(3,12))),
+                        (Rational(-2,3)*exp(2*pi*I*Rational(1,12)) + Rational(1,3)*exp(2*pi*I*Rational(3,12))),
+                        (Rational(2,3)*exp(2*pi*I*Rational(1,12)) + Rational(-1,3)*exp(2*pi*I*Rational(3,12)))
+                    ]
+                },
+                {
+                    'angle': [1, 3],
+                    'distance': (Rational(2,3)*exp(2*pi*I*Rational(1,12)) + Rational(-1,3)*exp(2*pi*I*Rational(3,12))),
+                    'element': 2,
+                    'inverse': 6,
+                    'unit_axis': [
+                        (Rational(-2,3)*exp(2*pi*I*Rational(1,12)) + Rational(1,3)*exp(2*pi*I*Rational(3,12))),
+                        (Rational(2,3)*exp(2*pi*I*Rational(1,12)) + Rational(-1,3)*exp(2*pi*I*Rational(3,12))),
+                        (Rational(-2,3)*exp(2*pi*I*Rational(1,12)) + Rational(1,3)*exp(2*pi*I*Rational(3,12)))
+                    ]
+                },
+                {
+                    'angle': [1, 3],
+                    'distance': (Rational(2,3)*exp(2*pi*I*Rational(1,12)) + Rational(-1,3)*exp(2*pi*I*Rational(3,12))),
+                    'element': 3,
+                    'inverse': 7,
+                    'unit_axis': [
+                        (Rational(2,3)*exp(2*pi*I*Rational(1,12)) + Rational(-1,3)*exp(2*pi*I*Rational(3,12))),
+                        (Rational(-2,3)*exp(2*pi*I*Rational(1,12)) + Rational(1,3)*exp(2*pi*I*Rational(3,12))),
+                        (Rational(-2,3)*exp(2*pi*I*Rational(1,12)) + Rational(1,3)*exp(2*pi*I*Rational(3,12)))
+                    ]
+                },
+                {
+                    'angle': [1, 3],
+                    'distance': (Rational(2,3)*exp(2*pi*I*Rational(1,12)) + Rational(-1,3)*exp(2*pi*I*Rational(3,12))),
+                    'element': 4,
+                    'inverse': 8,
+                    'unit_axis': [
+                        (Rational(2,3)*exp(2*pi*I*Rational(1,12)) + Rational(-1,3)*exp(2*pi*I*Rational(3,12))),
+                        (Rational(2,3)*exp(2*pi*I*Rational(1,12)) + Rational(-1,3)*exp(2*pi*I*Rational(3,12))),
+                        (Rational(2,3)*exp(2*pi*I*Rational(1,12)) + Rational(-1,3)*exp(2*pi*I*Rational(3,12)))
+                    ]
+                }
+            ],
+            'shape': 'octahedron',
+            'vertices': [
+                [Rational(0,1), Rational(0,1), Rational(1,1)],
+                [Rational(0,1), Rational(1,1), Rational(0,1)],
+                [Rational(1,1), Rational(0,1), Rational(0,1)],
+                [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                [Rational(0,1), Rational(0,1), Rational(-1,1)]
+            ]
+        },
+        'components': ['proper'],
+        'space': {
+            'lens': {'reason': 'not-defined-for-family', 'value': None},
+            'name': 'octahedral space'
+        },
+        'volumes': {
+            'cell': {'coefficient': [2, 3], 'dimension': 3, 'pi_power': 2},
+            'domain': {'coefficient': [2, 3], 'dimension': 3, 'pi_power': 2},
+            'group': {'coefficient': [24, 1], 'dimension': 0, 'pi_power': 0},
+            'o3': {'coefficient': [16, 1], 'dimension': 3, 'pi_power': 2}
+        }
+    },
+    'fusion': {
+        'identity': 'Ag',
+        'irreps': ['Ag', '1Eg', '2Eg', 'Tg', 'Au', '1Eu', '2Eu', 'Tu'],
+        'kind': 'table',
+        'n_irreps': 8,
+        'products': [
+            {
+                'a': 'Ag',
+                'antisymmetric': [],
+                'b': 'Ag',
+                'diagonal': True,
+                'display': 'A_g',
+                'symmetric': [{'irrep': 'Ag', 'mult': 1}],
+                'terms': [{'irrep': 'Ag', 'mult': 1}]
+            },
+            {
+                'a': 'Ag',
+                'b': '1Eg',
+                'diagonal': False,
+                'display': '1E_g',
+                'terms': [{'irrep': '1Eg', 'mult': 1}]
+            },
+            {
+                'a': 'Ag',
+                'b': '2Eg',
+                'diagonal': False,
+                'display': '2E_g',
+                'terms': [{'irrep': '2Eg', 'mult': 1}]
+            },
+            {
+                'a': 'Ag',
+                'b': 'Tg',
+                'diagonal': False,
+                'display': 'T_g',
+                'terms': [{'irrep': 'Tg', 'mult': 1}]
+            },
+            {
+                'a': 'Ag',
+                'b': 'Au',
+                'diagonal': False,
+                'display': 'A_u',
+                'terms': [{'irrep': 'Au', 'mult': 1}]
+            },
+            {
+                'a': 'Ag',
+                'b': '1Eu',
+                'diagonal': False,
+                'display': '1E_u',
+                'terms': [{'irrep': '1Eu', 'mult': 1}]
+            },
+            {
+                'a': 'Ag',
+                'b': '2Eu',
+                'diagonal': False,
+                'display': '2E_u',
+                'terms': [{'irrep': '2Eu', 'mult': 1}]
+            },
+            {
+                'a': 'Ag',
+                'b': 'Tu',
+                'diagonal': False,
+                'display': 'T_u',
+                'terms': [{'irrep': 'Tu', 'mult': 1}]
+            },
+            {
+                'a': '1Eg',
+                'antisymmetric': [],
+                'b': '1Eg',
+                'diagonal': True,
+                'display': '2E_g',
+                'symmetric': [{'irrep': '2Eg', 'mult': 1}],
+                'terms': [{'irrep': '2Eg', 'mult': 1}]
+            },
+            {
+                'a': '1Eg',
+                'b': '2Eg',
+                'diagonal': False,
+                'display': 'A_g',
+                'terms': [{'irrep': 'Ag', 'mult': 1}]
+            },
+            {
+                'a': '1Eg',
+                'b': 'Tg',
+                'diagonal': False,
+                'display': 'T_g',
+                'terms': [{'irrep': 'Tg', 'mult': 1}]
+            },
+            {
+                'a': '1Eg',
+                'b': 'Au',
+                'diagonal': False,
+                'display': '1E_u',
+                'terms': [{'irrep': '1Eu', 'mult': 1}]
+            },
+            {
+                'a': '1Eg',
+                'b': '1Eu',
+                'diagonal': False,
+                'display': '2E_u',
+                'terms': [{'irrep': '2Eu', 'mult': 1}]
+            },
+            {
+                'a': '1Eg',
+                'b': '2Eu',
+                'diagonal': False,
+                'display': 'A_u',
+                'terms': [{'irrep': 'Au', 'mult': 1}]
+            },
+            {
+                'a': '1Eg',
+                'b': 'Tu',
+                'diagonal': False,
+                'display': 'T_u',
+                'terms': [{'irrep': 'Tu', 'mult': 1}]
+            },
+            {
+                'a': '2Eg',
+                'antisymmetric': [],
+                'b': '2Eg',
+                'diagonal': True,
+                'display': '1E_g',
+                'symmetric': [{'irrep': '1Eg', 'mult': 1}],
+                'terms': [{'irrep': '1Eg', 'mult': 1}]
+            },
+            {
+                'a': '2Eg',
+                'b': 'Tg',
+                'diagonal': False,
+                'display': 'T_g',
+                'terms': [{'irrep': 'Tg', 'mult': 1}]
+            },
+            {
+                'a': '2Eg',
+                'b': 'Au',
+                'diagonal': False,
+                'display': '2E_u',
+                'terms': [{'irrep': '2Eu', 'mult': 1}]
+            },
+            {
+                'a': '2Eg',
+                'b': '1Eu',
+                'diagonal': False,
+                'display': 'A_u',
+                'terms': [{'irrep': 'Au', 'mult': 1}]
+            },
+            {
+                'a': '2Eg',
+                'b': '2Eu',
+                'diagonal': False,
+                'display': '1E_u',
+                'terms': [{'irrep': '1Eu', 'mult': 1}]
+            },
+            {
+                'a': '2Eg',
+                'b': 'Tu',
+                'diagonal': False,
+                'display': 'T_u',
+                'terms': [{'irrep': 'Tu', 'mult': 1}]
+            },
+            {
+                'a': 'Tg',
+                'antisymmetric': [{'irrep': 'Tg', 'mult': 1}],
+                'b': 'Tg',
+                'diagonal': True,
+                'display': 'A_g + 1E_g + 2E_g + T_g + {T_g}',
+                'symmetric': [
+                    {'irrep': 'Ag', 'mult': 1},
+                    {'irrep': '1Eg', 'mult': 1},
+                    {'irrep': '2Eg', 'mult': 1},
+                    {'irrep': 'Tg', 'mult': 1}
+                ],
+                'terms': [
+                    {'irrep': 'Ag', 'mult': 1},
+                    {'irrep': '1Eg', 'mult': 1},
+                    {'irrep': '2Eg', 'mult': 1},
+                    {'irrep': 'Tg', 'mult': 2}
+                ]
+            },
+            {
+                'a': 'Tg',
+                'b': 'Au',
+                'diagonal': False,
+                'display': 'T_u',
+                'terms': [{'irrep': 'Tu', 'mult': 1}]
+            },
+            {
+                'a': 'Tg',
+                'b': '1Eu',
+                'diagonal': False,
+                'display': 'T_u',
+                'terms': [{'irrep': 'Tu', 'mult': 1}]
+            },
+            {
+                'a': 'Tg',
+                'b': '2Eu',
+                'diagonal': False,
+                'display': 'T_u',
+                'terms': [{'irrep': 'Tu', 'mult': 1}]
+            },
+            {
+                'a': 'Tg',
+                'b': 'Tu',
+                'diagonal': False,
+                'display': 'A_u + 1E_u + 2E_u + 2T_u',
+                'terms': [
+                    {'irrep': 'Au', 'mult': 1},
+                    {'irrep': '1Eu', 'mult': 1},
+                    {'irrep': '2Eu', 'mult': 1},
+                    {'irrep': 'Tu', 'mult': 2}
+                ]
+            },
+            {
+                'a': 'Au',
+                'antisymmetric': [],
+                'b': 'Au',
+                'diagonal': True,
+                'display': 'A_g',
+                'symmetric': [{'irrep': 'Ag', 'mult': 1}],
+                'terms': [{'irrep': 'Ag', 'mult': 1}]
+            },
+            {
+                'a': 'Au',
+                'b': '1Eu',
+                'diagonal': False,
+                'display': '1E_g',
+                'terms': [{'irrep': '1Eg', 'mult': 1}]
+            },
+            {
+                'a': 'Au',
+                'b': '2Eu',
+                'diagonal': False,
+                'display': '2E_g',
+                'terms': [{'irrep': '2Eg', 'mult': 1}]
+            },
+            {
+                'a': 'Au',
+                'b': 'Tu',
+                'diagonal': False,
+                'display': 'T_g',
+                'terms': [{'irrep': 'Tg', 'mult': 1}]
+            },
+            {
+                'a': '1Eu',
+                'antisymmetric': [],
+                'b': '1Eu',
+                'diagonal': True,
+                'display': '2E_g',
+                'symmetric': [{'irrep': '2Eg', 'mult': 1}],
+                'terms': [{'irrep': '2Eg', 'mult': 1}]
+            },
+            {
+                'a': '1Eu',
+                'b': '2Eu',
+                'diagonal': False,
+                'display': 'A_g',
+                'terms': [{'irrep': 'Ag', 'mult': 1}]
+            },
+            {
+                'a': '1Eu',
+                'b': 'Tu',
+                'diagonal': False,
+                'display': 'T_g',
+                'terms': [{'irrep': 'Tg', 'mult': 1}]
+            },
+            {
+                'a': '2Eu',
+                'antisymmetric': [],
+                'b': '2Eu',
+                'diagonal': True,
+                'display': '1E_g',
+                'symmetric': [{'irrep': '1Eg', 'mult': 1}],
+                'terms': [{'irrep': '1Eg', 'mult': 1}]
+            },
+            {
+                'a': '2Eu',
+                'b': 'Tu',
+                'diagonal': False,
+                'display': 'T_g',
+                'terms': [{'irrep': 'Tg', 'mult': 1}]
+            },
+            {
+                'a': 'Tu',
+                'antisymmetric': [{'irrep': 'Tg', 'mult': 1}],
+                'b': 'Tu',
+                'diagonal': True,
+                'display': 'A_g + 1E_g + 2E_g + T_g + {T_g}',
+                'symmetric': [
+                    {'irrep': 'Ag', 'mult': 1},
+                    {'irrep': '1Eg', 'mult': 1},
+                    {'irrep': '2Eg', 'mult': 1},
+                    {'irrep': 'Tg', 'mult': 1}
+                ],
+                'terms': [
+                    {'irrep': 'Ag', 'mult': 1},
+                    {'irrep': '1Eg', 'mult': 1},
+                    {'irrep': '2Eg', 'mult': 1},
+                    {'irrep': 'Tg', 'mult': 2}
+                ]
+            }
+        ]
+    },
+    'group': {
+        'abstract_type': 'A_4 x Z_2',
+        'allowed_properties': [
+            {
+                'jahn': 'e[V2]V',
+                'properties': ['electrogyration', 'second-harmonic generation by a magnetic dipole'],
+                'spaces': ['electrogyration']
+            },
+            {
+                'jahn': 'e[V3]',
+                'properties': ['the second-order susceptibility of a magnetic dipole without dispersion'],
+                'spaces': ['axial-3']
+            }
+        ],
+        'alternative_names': [],
+        'altmann_T': 72,
+        'center': {'index': 12, 'node': 'n02', 'o3_class': 'S2', 'order': 2, 'schoenflies': 'C_i'},
+        'centralizer': {'normalizer_index': 24, 'schoenflies': 'C_i'},
+        'commutator_subgroup': {'index': 6, 'node': 'n05', 'o3_class': 'D2', 'order': 4, 'schoenflies': 'D_2'},
+        'contains_inversion': True,
+        'contains_sigma_h': True,
+        'conway_smith': '+-T',
+        'crystal_family': 'cubic',
+        'crystal_system': 'cubic',
+        'crystallographic': True,
+        'determinant_character': 'Au',
+        'family': {'reason': 'not-defined-for-family', 'value': None},
+        'gap_smallgroup_id': [24, 13],
+        'hermann_mauguin': 'm-3',
+        'hk': {'reason': 'not-defined-for-family', 'value': None},
+        'ihrig_golubitsky': 'T (+) Z_2^c',
+        'lattices': [
+            {'bravais': 'cP', 'holohedry': 'O_h'},
+            {'bravais': 'cI', 'holohedry': 'O_h'},
+            {'bravais': 'cF', 'holohedry': 'O_h'}
+        ],
+        'laue_class': {'index': 1, 'schoenflies': 'T_h'},
+        'normalizer': {'index': 2, 'schoenflies': 'O_h'},
+        'o3_conjugates': [],
+        'olive': 'T + Z_2^c',
+        'orbifold': '3*2',
+        'order': 24,
+        'polar': False,
+        'principal_axis': {'reason': 'not-defined-for-family', 'value': None},
+        'product_form': {
+            'count': {'direct': 1, 'semidirect': 3},
+            'decomposable': True,
+            'direct': [
+                {
+                    'H': {
+                        'class_ids': ['C2', 'C3', 'C32', 'E'],
+                        'class_size': 1,
+                        'node': 'n10',
+                        'o3_class': 'T',
+                        'order': 12,
+                        'schoenflies': 'T'
+                    },
+                    'K': {
+                        'class_ids': ['E', 'i'],
+                        'class_size': 1,
+                        'node': 'n02',
+                        'o3_class': 'S2',
+                        'order': 2,
+                        'schoenflies': 'C_i'
+                    },
+                    'symbol': 'T x C_i'
+                }
+            ],
+            'rotation_subgroup': {
+                'improper_complements': [
+                    {'kind': 'direct', 'node': 'n02', 'o3_class': 'S2', 'schoenflies': 'C_i'},
+                    {'kind': 'semidirect', 'node': 'n03', 'o3_class': 'C1v', 'schoenflies': 'C_s'}
+                ],
+                'index': 2,
+                'node': 'n10',
+                'o3_class': 'T',
+                'schoenflies': 'T'
+            },
+            'semidirect': [
+                {
+                    'H': {
+                        'class_ids': ['C2', 'C3', 'C32', 'E'],
+                        'class_size': 1,
+                        'node': 'n10',
+                        'o3_class': 'T',
+                        'order': 12,
+                        'schoenflies': 'T'
+                    },
+                    'K': {
+                        'class_ids': ['E', 'sh'],
+                        'class_size': 3,
+                        'node': 'n03',
+                        'o3_class': 'C1v',
+                        'order': 2,
+                        'schoenflies': 'C_s'
+                    },
+                    'symbol': 'T : C_s'
+                },
+                {
+                    'H': {
+                        'class_ids': ['C2', 'E', 'i', 'sh'],
+                        'class_size': 1,
+                        'node': 'n09',
+                        'o3_class': 'D2h',
+                        'order': 8,
+                        'schoenflies': 'D_2h'
+                    },
+                    'K': {
+                        'class_ids': ['C3', 'C32', 'E'],
+                        'class_size': 4,
+                        'node': 'n04',
+                        'o3_class': 'C3',
+                        'order': 3,
+                        'schoenflies': 'C_3'
+                    },
+                    'symbol': 'D_2h : C_3'
+                },
+                {
+                    'H': {
+                        'class_ids': ['C2', 'E'],
+                        'class_size': 1,
+                        'node': 'n05',
+                        'o3_class': 'D2',
+                        'order': 4,
+                        'schoenflies': 'D_2'
+                    },
+                    'K': {
+                        'class_ids': ['C3', 'C32', 'E', 'S6', 'S65', 'i'],
+                        'class_size': 4,
+                        'node': 'n08',
+                        'o3_class': 'S6',
+                        'order': 6,
+                        'schoenflies': 'S_6'
+                    },
+                    'symbol': 'D_2 : S_6'
+                }
+            ]
+        },
+        'rotation_subgroup': 'T',
+        'schoenflies': 'T_h',
+        'type': 'II'
+    },
+    'invariants': {
+        'hilbert_series': {'denominator': [2, 4, 6], 'numerator': [1, 0, 0, 0, 0, 0, 1]},
+        'polynomial_ring': False,
+        'polynomials': [
+            {
+                'degree': 2,
+                'generator': True,
+                'poly': {'0,0,2': Rational(1,1), '0,2,0': Rational(1,1), '2,0,0': Rational(1,1)},
+                'primary': True
+            },
+            {
+                'degree': 4,
+                'generator': True,
+                'poly': {
+                    '0,0,4': Rational(1,1),
+                    '0,2,2': Rational(-3,1),
+                    '0,4,0': Rational(1,1),
+                    '2,0,2': Rational(-3,1),
+                    '2,2,0': Rational(-3,1),
+                    '4,0,0': Rational(1,1)
+                },
+                'primary': True
+            },
+            {
+                'degree': 6,
+                'generator': True,
+                'poly': {
+                    '0,0,6': Rational(1,1),
+                    '0,2,4': Rational(-15,1),
+                    '0,6,0': Rational(1,1),
+                    '2,2,2': Rational(90,1),
+                    '2,4,0': Rational(-15,1),
+                    '4,0,2': Rational(-15,1),
+                    '6,0,0': Rational(1,1)
+                },
+                'primary': True
+            },
+            {
+                'degree': 6,
+                'generator': True,
+                'poly': {
+                    '0,2,4': Rational(-1,1),
+                    '0,4,2': Rational(1,1),
+                    '2,0,4': Rational(1,1),
+                    '2,4,0': Rational(-1,1),
+                    '4,0,2': Rational(-1,1),
+                    '4,2,0': Rational(1,1)
+                },
+                'primary': False
+            }
+        ]
+    },
+    'permutation_representations': {
+        'actions': [
+            {
+                'class_cycle_types': [[[1, 24]], [[3, 8]], [[3, 8]], [[2, 12]], [[2, 12]], [[6, 4]], [[6, 4]], [[2, 12]]],
+                'cosets': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                'degree': 24,
+                'fixed_dimension': 3,
+                'images': [
+                    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                    [1, 5, 8, 6, 7, 0, 9, 11, 10, 3, 2, 4, 17, 12, 21, 23, 22, 13, 16, 14, 15, 19, 18, 20],
+                    [2, 7, 6, 8, 5, 9, 0, 10, 11, 4, 1, 3, 18, 21, 12, 22, 23, 15, 14, 16, 13, 20, 17, 19],
+                    [3, 8, 5, 7, 6, 11, 10, 0, 9, 1, 4, 2, 19, 23, 22, 12, 21, 16, 13, 15, 14, 17, 20, 18],
+                    [4, 6, 7, 5, 8, 10, 11, 9, 0, 2, 3, 1, 20, 22, 23, 21, 12, 14, 15, 13, 16, 18, 19, 17],
+                    [5, 0, 10, 9, 11, 1, 3, 4, 2, 6, 8, 7, 13, 17, 19, 20, 18, 12, 22, 21, 23, 14, 16, 15],
+                    [6, 10, 0, 11, 9, 4, 2, 1, 3, 5, 7, 8, 14, 20, 18, 17, 19, 22, 12, 23, 21, 13, 15, 16],
+                    [7, 9, 11, 0, 10, 2, 4, 3, 1, 8, 6, 5, 15, 18, 20, 19, 17, 21, 23, 12, 22, 16, 14, 13],
+                    [8, 11, 9, 10, 0, 3, 1, 2, 4, 7, 5, 6, 16, 19, 17, 18, 20, 23, 21, 22, 12, 15, 13, 14],
+                    [9, 2, 1, 4, 3, 7, 8, 5, 6, 0, 11, 10, 21, 15, 16, 13, 14, 18, 17, 20, 19, 12, 23, 22],
+                    [10, 4, 3, 2, 1, 6, 5, 8, 7, 11, 0, 9, 22, 14, 13, 16, 15, 20, 19, 18, 17, 23, 12, 21],
+                    [11, 3, 4, 1, 2, 8, 7, 6, 5, 10, 9, 0, 23, 16, 15, 14, 13, 19, 20, 17, 18, 22, 21, 12],
+                    [12, 17, 18, 19, 20, 13, 14, 15, 16, 21, 22, 23, 0, 5, 6, 7, 8, 1, 2, 3, 4, 9, 10, 11],
+                    [13, 12, 22, 21, 23, 17, 19, 20, 18, 14, 16, 15, 5, 1, 3, 4, 2, 0, 10, 9, 11, 6, 8, 7],
+                    [14, 22, 12, 23, 21, 20, 18, 17, 19, 13, 15, 16, 6, 4, 2, 1, 3, 10, 0, 11, 9, 5, 7, 8],
+                    [15, 21, 23, 12, 22, 18, 20, 19, 17, 16, 14, 13, 7, 2, 4, 3, 1, 9, 11, 0, 10, 8, 6, 5],
+                    [16, 23, 21, 22, 12, 19, 17, 18, 20, 15, 13, 14, 8, 3, 1, 2, 4, 11, 9, 10, 0, 7, 5, 6],
+                    [17, 13, 16, 14, 15, 12, 21, 23, 22, 19, 18, 20, 1, 0, 9, 11, 10, 5, 8, 6, 7, 3, 2, 4],
+                    [18, 15, 14, 16, 13, 21, 12, 22, 23, 20, 17, 19, 2, 9, 0, 10, 11, 7, 6, 8, 5, 4, 1, 3],
+                    [19, 16, 13, 15, 14, 23, 22, 12, 21, 17, 20, 18, 3, 11, 10, 0, 9, 8, 5, 7, 6, 1, 4, 2],
+                    [20, 14, 15, 13, 16, 22, 23, 21, 12, 18, 19, 17, 4, 10, 11, 9, 0, 6, 7, 5, 8, 2, 3, 1],
+                    [21, 18, 17, 20, 19, 15, 16, 13, 14, 12, 23, 22, 9, 7, 8, 5, 6, 2, 1, 4, 3, 0, 11, 10],
+                    [22, 20, 19, 18, 17, 14, 13, 16, 15, 23, 12, 21, 10, 6, 5, 8, 7, 4, 3, 2, 1, 11, 0, 9],
+                    [23, 19, 20, 17, 18, 16, 15, 14, 13, 22, 21, 12, 11, 8, 7, 6, 5, 3, 4, 1, 2, 10, 9, 0]
+                ],
+                'seed': [Rational(1,1), Rational(2,1), Rational(4,1)],
+                'shape': {'reason': 'depends-on-the-point', 'value': None},
+                'subgroup_node': 'n00',
+                'uniform_shapes': ['truncated cube', 'rhombicuboctahedron']
+            },
+            {
+                'class_cycle_types': [[[1, 12]], [[3, 4]], [[3, 4]], [[2, 6]], [[2, 6]], [[6, 2]], [[6, 2]], [[1, 4], [2, 4]]],
+                'cosets': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                'degree': 12,
+                'fixed_dimension': 2,
+                'images': [
+                    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                    [1, 5, 8, 6, 7, 0, 9, 11, 10, 3, 2, 4],
+                    [2, 7, 6, 8, 5, 9, 0, 10, 11, 4, 1, 3],
+                    [3, 8, 5, 7, 6, 11, 10, 0, 9, 1, 4, 2],
+                    [4, 6, 7, 5, 8, 10, 11, 9, 0, 2, 3, 1],
+                    [5, 0, 10, 9, 11, 1, 3, 4, 2, 6, 8, 7],
+                    [6, 10, 0, 11, 9, 4, 2, 1, 3, 5, 7, 8],
+                    [7, 9, 11, 0, 10, 2, 4, 3, 1, 8, 6, 5],
+                    [8, 11, 9, 10, 0, 3, 1, 2, 4, 7, 5, 6],
+                    [9, 2, 1, 4, 3, 7, 8, 5, 6, 0, 11, 10],
+                    [10, 4, 3, 2, 1, 6, 5, 8, 7, 11, 0, 9],
+                    [11, 3, 4, 1, 2, 8, 7, 6, 5, 10, 9, 0],
+                    [9, 3, 4, 1, 2, 6, 5, 8, 7, 0, 11, 10],
+                    [6, 9, 11, 0, 10, 3, 1, 2, 4, 5, 7, 8],
+                    [5, 11, 9, 10, 0, 2, 4, 3, 1, 6, 8, 7],
+                    [8, 0, 10, 9, 11, 4, 2, 1, 3, 7, 5, 6],
+                    [7, 10, 0, 11, 9, 1, 3, 4, 2, 8, 6, 5],
+                    [3, 6, 7, 5, 8, 9, 0, 10, 11, 1, 4, 2],
+                    [4, 8, 5, 7, 6, 0, 9, 11, 10, 2, 3, 1],
+                    [1, 7, 6, 8, 5, 10, 11, 9, 0, 3, 2, 4],
+                    [2, 5, 8, 6, 7, 11, 10, 0, 9, 4, 1, 3],
+                    [0, 4, 3, 2, 1, 8, 7, 6, 5, 9, 10, 11],
+                    [11, 2, 1, 4, 3, 5, 6, 7, 8, 10, 9, 0],
+                    [10, 1, 2, 3, 4, 7, 8, 5, 6, 11, 0, 9]
+                ],
+                'seed': [Rational(1,1), Rational(2,1), Rational(0,1)],
+                'shape': {'reason': 'depends-on-the-point', 'value': None},
+                'subgroup_node': 'n03',
+                'uniform_shapes': ['icosahedron', 'cuboctahedron']
+            },
+            {
+                'class_cycle_types': [
+                    [[1, 8]],
+                    [[1, 2], [3, 2]],
+                    [[1, 2], [3, 2]],
+                    [[2, 4]],
+                    [[2, 4]],
+                    [[2, 1], [6, 1]],
+                    [[2, 1], [6, 1]],
+                    [[2, 4]]
+                ],
+                'cosets': [0, 2, 3, 4, 12, 14, 15, 16],
+                'degree': 8,
+                'fixed_dimension': 1,
+                'images': [
+                    [0, 1, 2, 3, 4, 5, 6, 7],
+                    [0, 2, 3, 1, 4, 6, 7, 5],
+                    [1, 3, 2, 0, 6, 4, 5, 7],
+                    [2, 0, 1, 3, 7, 5, 4, 6],
+                    [3, 1, 0, 2, 5, 7, 6, 4],
+                    [0, 3, 1, 2, 4, 7, 5, 6],
+                    [3, 0, 2, 1, 5, 6, 4, 7],
+                    [1, 2, 0, 3, 6, 5, 7, 4],
+                    [2, 1, 3, 0, 7, 4, 6, 5],
+                    [1, 0, 3, 2, 6, 7, 4, 5],
+                    [3, 2, 1, 0, 5, 4, 7, 6],
+                    [2, 3, 0, 1, 7, 6, 5, 4],
+                    [4, 6, 7, 5, 0, 3, 1, 2],
+                    [4, 5, 6, 7, 0, 2, 3, 1],
+                    [5, 4, 7, 6, 3, 1, 0, 2],
+                    [6, 7, 4, 5, 1, 3, 2, 0],
+                    [7, 6, 5, 4, 2, 0, 1, 3],
+                    [4, 7, 5, 6, 0, 1, 2, 3],
+                    [6, 5, 7, 4, 1, 0, 3, 2],
+                    [7, 4, 6, 5, 2, 3, 0, 1],
+                    [5, 6, 4, 7, 3, 2, 1, 0],
+                    [6, 4, 5, 7, 1, 2, 0, 3],
+                    [5, 7, 6, 4, 3, 0, 2, 1],
+                    [7, 5, 4, 6, 2, 1, 3, 0]
+                ],
+                'seed': [Rational(-1,1), Rational(-1,1), Rational(1,1)],
+                'shape': 'cube',
+                'subgroup_node': 'n04',
+                'uniform_shapes': ['cube']
+            },
+            {
+                'class_cycle_types': [
+                    [[1, 6]],
+                    [[3, 2]],
+                    [[3, 2]],
+                    [[1, 2], [2, 2]],
+                    [[2, 3]],
+                    [[6, 1]],
+                    [[6, 1]],
+                    [[1, 4], [2, 1]]
+                ],
+                'cosets': [0, 1, 2, 5, 7, 10],
+                'degree': 6,
+                'fixed_dimension': 1,
+                'images': [
+                    [0, 1, 2, 3, 4, 5],
+                    [1, 3, 4, 0, 5, 2],
+                    [2, 4, 3, 0, 5, 1],
+                    [1, 4, 3, 5, 0, 2],
+                    [2, 3, 4, 5, 0, 1],
+                    [3, 0, 5, 1, 2, 4],
+                    [3, 5, 0, 2, 1, 4],
+                    [4, 0, 5, 2, 1, 3],
+                    [4, 5, 0, 1, 2, 3],
+                    [0, 2, 1, 4, 3, 5],
+                    [5, 2, 1, 3, 4, 0],
+                    [5, 1, 2, 4, 3, 0],
+                    [5, 2, 1, 4, 3, 0],
+                    [4, 5, 0, 2, 1, 3],
+                    [4, 0, 5, 1, 2, 3],
+                    [3, 5, 0, 1, 2, 4],
+                    [3, 0, 5, 2, 1, 4],
+                    [2, 4, 3, 5, 0, 1],
+                    [1, 3, 4, 5, 0, 2],
+                    [2, 3, 4, 0, 5, 1],
+                    [1, 4, 3, 0, 5, 2],
+                    [5, 1, 2, 3, 4, 0],
+                    [0, 1, 2, 4, 3, 5],
+                    [0, 2, 1, 3, 4, 5]
+                ],
+                'seed': [Rational(0,1), Rational(0,1), Rational(1,1)],
+                'shape': 'octahedron',
+                'subgroup_node': 'n07',
+                'uniform_shapes': ['octahedron']
+            },
+            {
+                'class_cycle_types': [[[1, 1]], [[1, 1]], [[1, 1]], [[1, 1]], [[1, 1]], [[1, 1]], [[1, 1]], [[1, 1]]],
+                'cosets': [0],
+                'degree': 1,
+                'fixed_dimension': 0,
+                'images': [[0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0]],
+                'seed': [Rational(0,1), Rational(0,1), Rational(0,1)],
+                'shape': 'point',
+                'subgroup_node': 'n11',
+                'uniform_shapes': []
+            }
+        ],
+        'figures': [
+            {
+                'class_cycle_types': [[[1, 24]], [[3, 8]], [[3, 8]], [[2, 12]], [[2, 12]], [[6, 4]], [[6, 4]], [[2, 12]]],
+                'compound': {'reason': 'not-a-regular-compound', 'value': None},
+                'copies': [
+                    [0],
+                    [1],
+                    [2],
+                    [3],
+                    [4],
+                    [5],
+                    [6],
+                    [7],
+                    [8],
+                    [9],
+                    [10],
+                    [11],
+                    [12],
+                    [13],
+                    [14],
+                    [15],
+                    [16],
+                    [17],
+                    [18],
+                    [19],
+                    [20],
+                    [21],
+                    [22],
+                    [23]
+                ],
+                'copies_per_vertex': 1,
+                'cosets': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                'degree': 24,
+                'figure': {
+                    'kind': 'point',
+                    'orbit': 0,
+                    'vector': [Rational(1,1), Rational(2,1), Rational(4,1)]
+                },
+                'hands': [
+                    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                    [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+                ],
+                'images': [
+                    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                    [1, 5, 8, 6, 7, 0, 9, 11, 10, 3, 2, 4, 17, 12, 21, 23, 22, 13, 16, 14, 15, 19, 18, 20],
+                    [2, 7, 6, 8, 5, 9, 0, 10, 11, 4, 1, 3, 18, 21, 12, 22, 23, 15, 14, 16, 13, 20, 17, 19],
+                    [3, 8, 5, 7, 6, 11, 10, 0, 9, 1, 4, 2, 19, 23, 22, 12, 21, 16, 13, 15, 14, 17, 20, 18],
+                    [4, 6, 7, 5, 8, 10, 11, 9, 0, 2, 3, 1, 20, 22, 23, 21, 12, 14, 15, 13, 16, 18, 19, 17],
+                    [5, 0, 10, 9, 11, 1, 3, 4, 2, 6, 8, 7, 13, 17, 19, 20, 18, 12, 22, 21, 23, 14, 16, 15],
+                    [6, 10, 0, 11, 9, 4, 2, 1, 3, 5, 7, 8, 14, 20, 18, 17, 19, 22, 12, 23, 21, 13, 15, 16],
+                    [7, 9, 11, 0, 10, 2, 4, 3, 1, 8, 6, 5, 15, 18, 20, 19, 17, 21, 23, 12, 22, 16, 14, 13],
+                    [8, 11, 9, 10, 0, 3, 1, 2, 4, 7, 5, 6, 16, 19, 17, 18, 20, 23, 21, 22, 12, 15, 13, 14],
+                    [9, 2, 1, 4, 3, 7, 8, 5, 6, 0, 11, 10, 21, 15, 16, 13, 14, 18, 17, 20, 19, 12, 23, 22],
+                    [10, 4, 3, 2, 1, 6, 5, 8, 7, 11, 0, 9, 22, 14, 13, 16, 15, 20, 19, 18, 17, 23, 12, 21],
+                    [11, 3, 4, 1, 2, 8, 7, 6, 5, 10, 9, 0, 23, 16, 15, 14, 13, 19, 20, 17, 18, 22, 21, 12],
+                    [12, 17, 18, 19, 20, 13, 14, 15, 16, 21, 22, 23, 0, 5, 6, 7, 8, 1, 2, 3, 4, 9, 10, 11],
+                    [13, 12, 22, 21, 23, 17, 19, 20, 18, 14, 16, 15, 5, 1, 3, 4, 2, 0, 10, 9, 11, 6, 8, 7],
+                    [14, 22, 12, 23, 21, 20, 18, 17, 19, 13, 15, 16, 6, 4, 2, 1, 3, 10, 0, 11, 9, 5, 7, 8],
+                    [15, 21, 23, 12, 22, 18, 20, 19, 17, 16, 14, 13, 7, 2, 4, 3, 1, 9, 11, 0, 10, 8, 6, 5],
+                    [16, 23, 21, 22, 12, 19, 17, 18, 20, 15, 13, 14, 8, 3, 1, 2, 4, 11, 9, 10, 0, 7, 5, 6],
+                    [17, 13, 16, 14, 15, 12, 21, 23, 22, 19, 18, 20, 1, 0, 9, 11, 10, 5, 8, 6, 7, 3, 2, 4],
+                    [18, 15, 14, 16, 13, 21, 12, 22, 23, 20, 17, 19, 2, 9, 0, 10, 11, 7, 6, 8, 5, 4, 1, 3],
+                    [19, 16, 13, 15, 14, 23, 22, 12, 21, 17, 20, 18, 3, 11, 10, 0, 9, 8, 5, 7, 6, 1, 4, 2],
+                    [20, 14, 15, 13, 16, 22, 23, 21, 12, 18, 19, 17, 4, 10, 11, 9, 0, 6, 7, 5, 8, 2, 3, 1],
+                    [21, 18, 17, 20, 19, 15, 16, 13, 14, 12, 23, 22, 9, 7, 8, 5, 6, 2, 1, 4, 3, 0, 11, 10],
+                    [22, 20, 19, 18, 17, 14, 13, 16, 15, 23, 12, 21, 10, 6, 5, 8, 7, 4, 3, 2, 1, 11, 0, 9],
+                    [23, 19, 20, 17, 18, 16, 15, 14, 13, 22, 21, 12, 11, 8, 7, 6, 5, 3, 4, 1, 2, 10, 9, 0]
+                ],
+                'pair_classes': [
+                    {'copy': 0, 'cos': Rational(1,1), 'size': 1},
+                    {'copy': 1, 'cos': Rational(-10,21), 'size': 1},
+                    {'copy': 2, 'cos': Rational(-2,7), 'size': 1},
+                    {'copy': 3, 'cos': Rational(2,21), 'size': 1},
+                    {'copy': 4, 'cos': Rational(2,3), 'size': 1},
+                    {'copy': 5, 'cos': Rational(-10,21), 'size': 1},
+                    {'copy': 6, 'cos': Rational(-2,7), 'size': 1},
+                    {'copy': 7, 'cos': Rational(2,21), 'size': 1},
+                    {'copy': 8, 'cos': Rational(2,3), 'size': 1},
+                    {'copy': 9, 'cos': Rational(11,21), 'size': 1},
+                    {'copy': 10, 'cos': Rational(-13,21), 'size': 1},
+                    {'copy': 11, 'cos': Rational(-19,21), 'size': 1},
+                    {'copy': 12, 'cos': Rational(-1,1), 'size': 1},
+                    {'copy': 13, 'cos': Rational(10,21), 'size': 1},
+                    {'copy': 14, 'cos': Rational(2,7), 'size': 1},
+                    {'copy': 15, 'cos': Rational(-2,21), 'size': 1},
+                    {'copy': 16, 'cos': Rational(-2,3), 'size': 1},
+                    {'copy': 17, 'cos': Rational(10,21), 'size': 1},
+                    {'copy': 18, 'cos': Rational(2,7), 'size': 1},
+                    {'copy': 19, 'cos': Rational(-2,21), 'size': 1},
+                    {'copy': 20, 'cos': Rational(-2,3), 'size': 1},
+                    {'copy': 21, 'cos': Rational(-11,21), 'size': 1},
+                    {'copy': 22, 'cos': Rational(13,21), 'size': 1},
+                    {'copy': 23, 'cos': Rational(19,21), 'size': 1}
+                ],
+                'rank': 24,
+                'site_node': 'n00',
+                'subgroup_node': 'n00',
+                'vertex_shape': {'reason': 'not-a-named-shape', 'value': None},
+                'vertices': [
+                    [Rational(1,1), Rational(2,1), Rational(4,1)],
+                    [Rational(-4,1), Rational(1,1), Rational(-2,1)],
+                    [Rational(4,1), Rational(-1,1), Rational(-2,1)],
+                    [Rational(-4,1), Rational(-1,1), Rational(2,1)],
+                    [Rational(4,1), Rational(1,1), Rational(2,1)],
+                    [Rational(2,1), Rational(-4,1), Rational(-1,1)],
+                    [Rational(-2,1), Rational(-4,1), Rational(1,1)],
+                    [Rational(-2,1), Rational(4,1), Rational(-1,1)],
+                    [Rational(2,1), Rational(4,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(-2,1), Rational(4,1)],
+                    [Rational(-1,1), Rational(2,1), Rational(-4,1)],
+                    [Rational(1,1), Rational(-2,1), Rational(-4,1)],
+                    [Rational(-1,1), Rational(-2,1), Rational(-4,1)],
+                    [Rational(-2,1), Rational(4,1), Rational(1,1)],
+                    [Rational(2,1), Rational(4,1), Rational(-1,1)],
+                    [Rational(2,1), Rational(-4,1), Rational(1,1)],
+                    [Rational(-2,1), Rational(-4,1), Rational(-1,1)],
+                    [Rational(4,1), Rational(-1,1), Rational(2,1)],
+                    [Rational(-4,1), Rational(1,1), Rational(2,1)],
+                    [Rational(4,1), Rational(1,1), Rational(-2,1)],
+                    [Rational(-4,1), Rational(-1,1), Rational(-2,1)],
+                    [Rational(1,1), Rational(2,1), Rational(-4,1)],
+                    [Rational(1,1), Rational(-2,1), Rational(4,1)],
+                    [Rational(-1,1), Rational(2,1), Rational(4,1)]
+                ]
+            },
+            {
+                'class_cycle_types': [[[1, 12]], [[3, 4]], [[3, 4]], [[1, 4], [2, 4]], [[2, 6]], [[6, 2]], [[6, 2]], [[2, 6]]],
+                'compound': {'reason': 'not-a-regular-compound', 'value': None},
+                'copies': [[0], [1], [2], [3], [4], [5], [5], [4], [3], [2], [1], [0]],
+                'copies_per_vertex': 2,
+                'cosets': [0, 1, 2, 5, 7, 10, 12, 13, 15, 17, 18, 22],
+                'degree': 12,
+                'figure': {
+                    'kind': 'spinning arrow',
+                    'vector': [Rational(0,1), Rational(0,1), Rational(1,1)]
+                },
+                'hands': [[0, 1, 2, 3, 4, 5], [6, 7, 8, 9, 10, 11]],
+                'images': [
+                    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                    [1, 3, 4, 0, 5, 2, 9, 6, 11, 7, 8, 10],
+                    [2, 4, 3, 0, 5, 1, 10, 6, 11, 8, 7, 9],
+                    [1, 4, 3, 5, 0, 2, 9, 11, 6, 8, 7, 10],
+                    [2, 3, 4, 5, 0, 1, 10, 11, 6, 7, 8, 9],
+                    [3, 0, 5, 1, 2, 4, 7, 9, 10, 6, 11, 8],
+                    [3, 5, 0, 2, 1, 4, 7, 10, 9, 11, 6, 8],
+                    [4, 0, 5, 2, 1, 3, 8, 10, 9, 6, 11, 7],
+                    [4, 5, 0, 1, 2, 3, 8, 9, 10, 11, 6, 7],
+                    [0, 2, 1, 4, 3, 5, 6, 8, 7, 10, 9, 11],
+                    [5, 2, 1, 3, 4, 0, 11, 7, 8, 10, 9, 6],
+                    [5, 1, 2, 4, 3, 0, 11, 8, 7, 9, 10, 6],
+                    [6, 9, 10, 7, 8, 11, 0, 3, 4, 1, 2, 5],
+                    [7, 6, 11, 9, 10, 8, 3, 1, 2, 0, 5, 4],
+                    [7, 11, 6, 10, 9, 8, 3, 2, 1, 5, 0, 4],
+                    [8, 6, 11, 10, 9, 7, 4, 2, 1, 0, 5, 3],
+                    [8, 11, 6, 9, 10, 7, 4, 1, 2, 5, 0, 3],
+                    [9, 7, 8, 6, 11, 10, 1, 0, 5, 3, 4, 2],
+                    [10, 8, 7, 6, 11, 9, 2, 0, 5, 4, 3, 1],
+                    [9, 8, 7, 11, 6, 10, 1, 5, 0, 4, 3, 2],
+                    [10, 7, 8, 11, 6, 9, 2, 5, 0, 3, 4, 1],
+                    [6, 10, 9, 8, 7, 11, 0, 4, 3, 2, 1, 5],
+                    [11, 10, 9, 7, 8, 6, 5, 3, 4, 2, 1, 0],
+                    [11, 9, 10, 8, 7, 6, 5, 4, 3, 1, 2, 0]
+                ],
+                'pair_classes': [
+                    {'copy': 0, 'cos': Rational(1,1), 'same_hand': True, 'size': 1},
+                    {'copy': 1, 'cos': Rational(0,1), 'same_hand': True, 'size': 2},
+                    {'copy': 3, 'cos': Rational(0,1), 'same_hand': True, 'size': 2},
+                    {'copy': 5, 'cos': Rational(-1,1), 'same_hand': True, 'size': 1},
+                    {'copy': 6, 'cos': Rational(-1,1), 'same_hand': False, 'size': 1},
+                    {'copy': 7, 'cos': Rational(0,1), 'same_hand': False, 'size': 2},
+                    {'copy': 9, 'cos': Rational(0,1), 'same_hand': False, 'size': 2},
+                    {'copy': 11, 'cos': Rational(1,1), 'same_hand': False, 'size': 1}
+                ],
+                'rank': 8,
+                'site_node': 'n07',
+                'subgroup_node': 'n01',
+                'vertex_shape': 'octahedron',
+                'vertices': [
+                    [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)]
+                ]
+            },
+            {
+                'class_cycle_types': [[[1, 12]], [[3, 4]], [[3, 4]], [[2, 6]], [[1, 12]], [[3, 4]], [[3, 4]], [[2, 6]]],
+                'compound': {'reason': 'not-a-regular-compound', 'value': None},
+                'copies': [
+                    [0, 1],
+                    [2, 3],
+                    [4, 5],
+                    [6, 7],
+                    [8, 9],
+                    [10, 11],
+                    [12, 13],
+                    [14, 15],
+                    [16, 17],
+                    [18, 19],
+                    [20, 21],
+                    [22, 23]
+                ],
+                'copies_per_vertex': 1,
+                'cosets': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                'degree': 12,
+                'figure': {'kind': 'line', 'vector': [Rational(1,1), Rational(2,1), Rational(4,1)]},
+                'hands': {'reason': 'one-class-under-the-rotations', 'value': None},
+                'images': [
+                    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                    [1, 5, 8, 6, 7, 0, 9, 11, 10, 3, 2, 4],
+                    [2, 7, 6, 8, 5, 9, 0, 10, 11, 4, 1, 3],
+                    [3, 8, 5, 7, 6, 11, 10, 0, 9, 1, 4, 2],
+                    [4, 6, 7, 5, 8, 10, 11, 9, 0, 2, 3, 1],
+                    [5, 0, 10, 9, 11, 1, 3, 4, 2, 6, 8, 7],
+                    [6, 10, 0, 11, 9, 4, 2, 1, 3, 5, 7, 8],
+                    [7, 9, 11, 0, 10, 2, 4, 3, 1, 8, 6, 5],
+                    [8, 11, 9, 10, 0, 3, 1, 2, 4, 7, 5, 6],
+                    [9, 2, 1, 4, 3, 7, 8, 5, 6, 0, 11, 10],
+                    [10, 4, 3, 2, 1, 6, 5, 8, 7, 11, 0, 9],
+                    [11, 3, 4, 1, 2, 8, 7, 6, 5, 10, 9, 0],
+                    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                    [5, 0, 10, 9, 11, 1, 3, 4, 2, 6, 8, 7],
+                    [6, 10, 0, 11, 9, 4, 2, 1, 3, 5, 7, 8],
+                    [7, 9, 11, 0, 10, 2, 4, 3, 1, 8, 6, 5],
+                    [8, 11, 9, 10, 0, 3, 1, 2, 4, 7, 5, 6],
+                    [1, 5, 8, 6, 7, 0, 9, 11, 10, 3, 2, 4],
+                    [2, 7, 6, 8, 5, 9, 0, 10, 11, 4, 1, 3],
+                    [3, 8, 5, 7, 6, 11, 10, 0, 9, 1, 4, 2],
+                    [4, 6, 7, 5, 8, 10, 11, 9, 0, 2, 3, 1],
+                    [9, 2, 1, 4, 3, 7, 8, 5, 6, 0, 11, 10],
+                    [10, 4, 3, 2, 1, 6, 5, 8, 7, 11, 0, 9],
+                    [11, 3, 4, 1, 2, 8, 7, 6, 5, 10, 9, 0]
+                ],
+                'pair_classes': [
+                    {'copy': 0, 'cos': Rational(1,1), 'size': 1},
+                    {'copy': 1, 'cos': Rational(10,21), 'size': 1},
+                    {'copy': 2, 'cos': Rational(2,7), 'size': 1},
+                    {'copy': 3, 'cos': Rational(2,21), 'size': 1},
+                    {'copy': 4, 'cos': Rational(2,3), 'size': 1},
+                    {'copy': 5, 'cos': Rational(10,21), 'size': 1},
+                    {'copy': 6, 'cos': Rational(2,7), 'size': 1},
+                    {'copy': 7, 'cos': Rational(2,21), 'size': 1},
+                    {'copy': 8, 'cos': Rational(2,3), 'size': 1},
+                    {'copy': 9, 'cos': Rational(11,21), 'size': 1},
+                    {'copy': 10, 'cos': Rational(13,21), 'size': 1},
+                    {'copy': 11, 'cos': Rational(19,21), 'size': 1}
+                ],
+                'rank': 12,
+                'site_node': 'n00',
+                'subgroup_node': 'n02',
+                'vertex_shape': {'reason': 'not-a-named-shape', 'value': None},
+                'vertices': [
+                    [Rational(1,1), Rational(2,1), Rational(4,1)],
+                    [Rational(-1,1), Rational(-2,1), Rational(-4,1)],
+                    [Rational(-4,1), Rational(1,1), Rational(-2,1)],
+                    [Rational(4,1), Rational(-1,1), Rational(2,1)],
+                    [Rational(4,1), Rational(-1,1), Rational(-2,1)],
+                    [Rational(-4,1), Rational(1,1), Rational(2,1)],
+                    [Rational(-4,1), Rational(-1,1), Rational(2,1)],
+                    [Rational(4,1), Rational(1,1), Rational(-2,1)],
+                    [Rational(4,1), Rational(1,1), Rational(2,1)],
+                    [Rational(-4,1), Rational(-1,1), Rational(-2,1)],
+                    [Rational(2,1), Rational(-4,1), Rational(-1,1)],
+                    [Rational(-2,1), Rational(4,1), Rational(1,1)],
+                    [Rational(-2,1), Rational(-4,1), Rational(1,1)],
+                    [Rational(2,1), Rational(4,1), Rational(-1,1)],
+                    [Rational(-2,1), Rational(4,1), Rational(-1,1)],
+                    [Rational(2,1), Rational(-4,1), Rational(1,1)],
+                    [Rational(2,1), Rational(4,1), Rational(1,1)],
+                    [Rational(-2,1), Rational(-4,1), Rational(-1,1)],
+                    [Rational(-1,1), Rational(-2,1), Rational(4,1)],
+                    [Rational(1,1), Rational(2,1), Rational(-4,1)],
+                    [Rational(-1,1), Rational(2,1), Rational(-4,1)],
+                    [Rational(1,1), Rational(-2,1), Rational(4,1)],
+                    [Rational(1,1), Rational(-2,1), Rational(-4,1)],
+                    [Rational(-1,1), Rational(2,1), Rational(4,1)]
+                ]
+            },
+            {
+                'class_cycle_types': [[[1, 12]], [[3, 4]], [[3, 4]], [[2, 6]], [[2, 6]], [[6, 2]], [[6, 2]], [[1, 4], [2, 4]]],
+                'compound': {'reason': 'not-a-regular-compound', 'value': None},
+                'copies': [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11]],
+                'copies_per_vertex': 1,
+                'cosets': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                'degree': 12,
+                'figure': {
+                    'kind': 'point',
+                    'orbit': 1,
+                    'vector': [Rational(1,1), Rational(2,1), Rational(0,1)]
+                },
+                'hands': {'reason': 'one-class-under-the-rotations', 'value': None},
+                'images': [
+                    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                    [1, 5, 8, 6, 7, 0, 9, 11, 10, 3, 2, 4],
+                    [2, 7, 6, 8, 5, 9, 0, 10, 11, 4, 1, 3],
+                    [3, 8, 5, 7, 6, 11, 10, 0, 9, 1, 4, 2],
+                    [4, 6, 7, 5, 8, 10, 11, 9, 0, 2, 3, 1],
+                    [5, 0, 10, 9, 11, 1, 3, 4, 2, 6, 8, 7],
+                    [6, 10, 0, 11, 9, 4, 2, 1, 3, 5, 7, 8],
+                    [7, 9, 11, 0, 10, 2, 4, 3, 1, 8, 6, 5],
+                    [8, 11, 9, 10, 0, 3, 1, 2, 4, 7, 5, 6],
+                    [9, 2, 1, 4, 3, 7, 8, 5, 6, 0, 11, 10],
+                    [10, 4, 3, 2, 1, 6, 5, 8, 7, 11, 0, 9],
+                    [11, 3, 4, 1, 2, 8, 7, 6, 5, 10, 9, 0],
+                    [9, 3, 4, 1, 2, 6, 5, 8, 7, 0, 11, 10],
+                    [6, 9, 11, 0, 10, 3, 1, 2, 4, 5, 7, 8],
+                    [5, 11, 9, 10, 0, 2, 4, 3, 1, 6, 8, 7],
+                    [8, 0, 10, 9, 11, 4, 2, 1, 3, 7, 5, 6],
+                    [7, 10, 0, 11, 9, 1, 3, 4, 2, 8, 6, 5],
+                    [3, 6, 7, 5, 8, 9, 0, 10, 11, 1, 4, 2],
+                    [4, 8, 5, 7, 6, 0, 9, 11, 10, 2, 3, 1],
+                    [1, 7, 6, 8, 5, 10, 11, 9, 0, 3, 2, 4],
+                    [2, 5, 8, 6, 7, 11, 10, 0, 9, 4, 1, 3],
+                    [0, 4, 3, 2, 1, 8, 7, 6, 5, 9, 10, 11],
+                    [11, 2, 1, 4, 3, 5, 6, 7, 8, 10, 9, 0],
+                    [10, 1, 2, 3, 4, 7, 8, 5, 6, 11, 0, 9]
+                ],
+                'pair_classes': [
+                    {'copy': 0, 'cos': Rational(1,1), 'size': 1},
+                    {'copy': 1, 'cos': Rational(2,5), 'size': 2},
+                    {'copy': 2, 'cos': Rational(-2,5), 'size': 2},
+                    {'copy': 5, 'cos': Rational(2,5), 'size': 2},
+                    {'copy': 6, 'cos': Rational(-2,5), 'size': 2},
+                    {'copy': 9, 'cos': Rational(-1,1), 'size': 1},
+                    {'copy': 10, 'cos': Rational(3,5), 'size': 1},
+                    {'copy': 11, 'cos': Rational(-3,5), 'size': 1}
+                ],
+                'rank': 8,
+                'site_node': 'n03',
+                'subgroup_node': 'n03',
+                'vertex_shape': {'reason': 'not-a-named-shape', 'value': None},
+                'vertices': [
+                    [Rational(1,1), Rational(2,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(-2,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(-2,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(2,1)],
+                    [Rational(0,1), Rational(1,1), Rational(2,1)],
+                    [Rational(2,1), Rational(0,1), Rational(-1,1)],
+                    [Rational(-2,1), Rational(0,1), Rational(1,1)],
+                    [Rational(-2,1), Rational(0,1), Rational(-1,1)],
+                    [Rational(2,1), Rational(0,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(-2,1), Rational(0,1)],
+                    [Rational(-1,1), Rational(2,1), Rational(0,1)],
+                    [Rational(1,1), Rational(-2,1), Rational(0,1)]
+                ]
+            },
+            {
+                'class_cycle_types': [
+                    [[1, 8]],
+                    [[1, 2], [3, 2]],
+                    [[1, 2], [3, 2]],
+                    [[2, 4]],
+                    [[2, 4]],
+                    [[2, 1], [6, 1]],
+                    [[2, 1], [6, 1]],
+                    [[2, 4]]
+                ],
+                'compound': {'reason': 'not-a-regular-compound', 'value': None},
+                'copies': [[0], [1], [2], [3], [4], [5], [6], [7]],
+                'copies_per_vertex': 1,
+                'cosets': [0, 2, 3, 4, 12, 14, 15, 16],
+                'degree': 8,
+                'figure': {
+                    'kind': 'point',
+                    'orbit': 2,
+                    'vector': [Rational(-1,1), Rational(-1,1), Rational(1,1)]
+                },
+                'hands': [[0, 1, 2, 3], [4, 5, 6, 7]],
+                'images': [
+                    [0, 1, 2, 3, 4, 5, 6, 7],
+                    [0, 2, 3, 1, 4, 6, 7, 5],
+                    [1, 3, 2, 0, 6, 4, 5, 7],
+                    [2, 0, 1, 3, 7, 5, 4, 6],
+                    [3, 1, 0, 2, 5, 7, 6, 4],
+                    [0, 3, 1, 2, 4, 7, 5, 6],
+                    [3, 0, 2, 1, 5, 6, 4, 7],
+                    [1, 2, 0, 3, 6, 5, 7, 4],
+                    [2, 1, 3, 0, 7, 4, 6, 5],
+                    [1, 0, 3, 2, 6, 7, 4, 5],
+                    [3, 2, 1, 0, 5, 4, 7, 6],
+                    [2, 3, 0, 1, 7, 6, 5, 4],
+                    [4, 6, 7, 5, 0, 3, 1, 2],
+                    [4, 5, 6, 7, 0, 2, 3, 1],
+                    [5, 4, 7, 6, 3, 1, 0, 2],
+                    [6, 7, 4, 5, 1, 3, 2, 0],
+                    [7, 6, 5, 4, 2, 0, 1, 3],
+                    [4, 7, 5, 6, 0, 1, 2, 3],
+                    [6, 5, 7, 4, 1, 0, 3, 2],
+                    [7, 4, 6, 5, 2, 3, 0, 1],
+                    [5, 6, 4, 7, 3, 2, 1, 0],
+                    [6, 4, 5, 7, 1, 2, 0, 3],
+                    [5, 7, 6, 4, 3, 0, 2, 1],
+                    [7, 5, 4, 6, 2, 1, 3, 0]
+                ],
+                'pair_classes': [
+                    {'copy': 0, 'cos': Rational(1,1), 'size': 1},
+                    {'copy': 1, 'cos': Rational(-1,3), 'size': 3},
+                    {'copy': 4, 'cos': Rational(-1,1), 'size': 1},
+                    {'copy': 5, 'cos': Rational(1,3), 'size': 3}
+                ],
+                'rank': 4,
+                'site_node': 'n04',
+                'subgroup_node': 'n04',
+                'vertex_shape': 'cube',
+                'vertices': [
+                    [Rational(-1,1), Rational(-1,1), Rational(1,1)],
+                    [Rational(1,1), Rational(1,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(1,1), Rational(-1,1)],
+                    [Rational(1,1), Rational(-1,1), Rational(-1,1)],
+                    [Rational(1,1), Rational(1,1), Rational(-1,1)],
+                    [Rational(-1,1), Rational(1,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(-1,1), Rational(-1,1)],
+                    [Rational(1,1), Rational(-1,1), Rational(1,1)]
+                ]
+            },
+            {
+                'class_cycle_types': [[[1, 6]], [[3, 2]], [[3, 2]], [[1, 6]], [[2, 3]], [[6, 1]], [[6, 1]], [[2, 3]]],
+                'compound': {'reason': 'not-a-regular-compound', 'value': None},
+                'copies': [[0, 1], [2, 3], [4, 5], [0, 1], [4, 5], [2, 3]],
+                'copies_per_vertex': 2,
+                'cosets': [0, 1, 5, 12, 13, 17],
+                'degree': 6,
+                'figure': {'kind': 'helix', 'vector': [Rational(0,1), Rational(1,1), Rational(0,1)]},
+                'hands': [[0, 1, 2], [3, 4, 5]],
+                'images': [
+                    [0, 1, 2, 3, 4, 5],
+                    [1, 2, 0, 5, 3, 4],
+                    [1, 2, 0, 5, 3, 4],
+                    [1, 2, 0, 5, 3, 4],
+                    [1, 2, 0, 5, 3, 4],
+                    [2, 0, 1, 4, 5, 3],
+                    [2, 0, 1, 4, 5, 3],
+                    [2, 0, 1, 4, 5, 3],
+                    [2, 0, 1, 4, 5, 3],
+                    [0, 1, 2, 3, 4, 5],
+                    [0, 1, 2, 3, 4, 5],
+                    [0, 1, 2, 3, 4, 5],
+                    [3, 5, 4, 0, 2, 1],
+                    [4, 3, 5, 2, 1, 0],
+                    [4, 3, 5, 2, 1, 0],
+                    [4, 3, 5, 2, 1, 0],
+                    [4, 3, 5, 2, 1, 0],
+                    [5, 4, 3, 1, 0, 2],
+                    [5, 4, 3, 1, 0, 2],
+                    [5, 4, 3, 1, 0, 2],
+                    [5, 4, 3, 1, 0, 2],
+                    [3, 5, 4, 0, 2, 1],
+                    [3, 5, 4, 0, 2, 1],
+                    [3, 5, 4, 0, 2, 1]
+                ],
+                'pair_classes': [
+                    {'copy': 0, 'cos': Rational(1,1), 'same_hand': True, 'size': 1},
+                    {'copy': 1, 'cos': Rational(0,1), 'same_hand': True, 'size': 1},
+                    {'copy': 2, 'cos': Rational(0,1), 'same_hand': True, 'size': 1},
+                    {'copy': 3, 'cos': Rational(1,1), 'same_hand': False, 'size': 1},
+                    {'copy': 4, 'cos': Rational(0,1), 'same_hand': False, 'size': 1},
+                    {'copy': 5, 'cos': Rational(0,1), 'same_hand': False, 'size': 1}
+                ],
+                'rank': 6,
+                'site_node': 'n07',
+                'subgroup_node': 'n05',
+                'vertex_shape': 'octahedron',
+                'vertices': [
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)]
+                ]
+            },
+            {
+                'class_cycle_types': [
+                    [[1, 6]],
+                    [[3, 2]],
+                    [[3, 2]],
+                    [[1, 2], [2, 2]],
+                    [[1, 6]],
+                    [[3, 2]],
+                    [[3, 2]],
+                    [[1, 2], [2, 2]]
+                ],
+                'compound': {'reason': 'not-a-regular-compound', 'value': None},
+                'copies': [[0, 1], [2, 3], [4, 5], [6, 7], [8, 9], [10, 11]],
+                'copies_per_vertex': 1,
+                'cosets': [0, 1, 2, 5, 7, 10],
+                'degree': 6,
+                'figure': {'kind': 'line', 'vector': [Rational(1,1), Rational(2,1), Rational(0,1)]},
+                'hands': {'reason': 'one-class-under-the-rotations', 'value': None},
+                'images': [
+                    [0, 1, 2, 3, 4, 5],
+                    [1, 3, 4, 0, 5, 2],
+                    [2, 4, 3, 0, 5, 1],
+                    [1, 4, 3, 5, 0, 2],
+                    [2, 3, 4, 5, 0, 1],
+                    [3, 0, 5, 1, 2, 4],
+                    [3, 5, 0, 2, 1, 4],
+                    [4, 0, 5, 2, 1, 3],
+                    [4, 5, 0, 1, 2, 3],
+                    [0, 2, 1, 4, 3, 5],
+                    [5, 2, 1, 3, 4, 0],
+                    [5, 1, 2, 4, 3, 0],
+                    [0, 1, 2, 3, 4, 5],
+                    [3, 0, 5, 1, 2, 4],
+                    [3, 5, 0, 2, 1, 4],
+                    [4, 0, 5, 2, 1, 3],
+                    [4, 5, 0, 1, 2, 3],
+                    [1, 3, 4, 0, 5, 2],
+                    [2, 4, 3, 0, 5, 1],
+                    [1, 4, 3, 5, 0, 2],
+                    [2, 3, 4, 5, 0, 1],
+                    [0, 2, 1, 4, 3, 5],
+                    [5, 2, 1, 3, 4, 0],
+                    [5, 1, 2, 4, 3, 0]
+                ],
+                'pair_classes': [
+                    {'copy': 0, 'cos': Rational(1,1), 'size': 1},
+                    {'copy': 1, 'cos': Rational(2,5), 'size': 2},
+                    {'copy': 3, 'cos': Rational(2,5), 'size': 2},
+                    {'copy': 5, 'cos': Rational(3,5), 'size': 1}
+                ],
+                'rank': 4,
+                'site_node': 'n03',
+                'subgroup_node': 'n06',
+                'vertex_shape': {'reason': 'not-a-named-shape', 'value': None},
+                'vertices': [
+                    [Rational(1,1), Rational(2,1), Rational(0,1)],
+                    [Rational(-1,1), Rational(-2,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(-2,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(2,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(-2,1)],
+                    [Rational(0,1), Rational(1,1), Rational(2,1)],
+                    [Rational(2,1), Rational(0,1), Rational(-1,1)],
+                    [Rational(-2,1), Rational(0,1), Rational(1,1)],
+                    [Rational(-2,1), Rational(0,1), Rational(-1,1)],
+                    [Rational(2,1), Rational(0,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(2,1), Rational(0,1)],
+                    [Rational(1,1), Rational(-2,1), Rational(0,1)]
+                ]
+            },
+            {
+                'class_cycle_types': [
+                    [[1, 6]],
+                    [[3, 2]],
+                    [[3, 2]],
+                    [[1, 2], [2, 2]],
+                    [[2, 3]],
+                    [[6, 1]],
+                    [[6, 1]],
+                    [[1, 4], [2, 1]]
+                ],
+                'compound': {'reason': 'not-a-regular-compound', 'value': None},
+                'copies': [[0], [1], [2], [3], [4], [5]],
+                'copies_per_vertex': 1,
+                'cosets': [0, 1, 2, 5, 7, 10],
+                'degree': 6,
+                'figure': {
+                    'kind': 'point',
+                    'orbit': 3,
+                    'vector': [Rational(0,1), Rational(0,1), Rational(1,1)]
+                },
+                'hands': {'reason': 'one-class-under-the-rotations', 'value': None},
+                'images': [
+                    [0, 1, 2, 3, 4, 5],
+                    [1, 3, 4, 0, 5, 2],
+                    [2, 4, 3, 0, 5, 1],
+                    [1, 4, 3, 5, 0, 2],
+                    [2, 3, 4, 5, 0, 1],
+                    [3, 0, 5, 1, 2, 4],
+                    [3, 5, 0, 2, 1, 4],
+                    [4, 0, 5, 2, 1, 3],
+                    [4, 5, 0, 1, 2, 3],
+                    [0, 2, 1, 4, 3, 5],
+                    [5, 2, 1, 3, 4, 0],
+                    [5, 1, 2, 4, 3, 0],
+                    [5, 2, 1, 4, 3, 0],
+                    [4, 5, 0, 2, 1, 3],
+                    [4, 0, 5, 1, 2, 3],
+                    [3, 5, 0, 1, 2, 4],
+                    [3, 0, 5, 2, 1, 4],
+                    [2, 4, 3, 5, 0, 1],
+                    [1, 3, 4, 5, 0, 2],
+                    [2, 3, 4, 0, 5, 1],
+                    [1, 4, 3, 0, 5, 2],
+                    [5, 1, 2, 3, 4, 0],
+                    [0, 1, 2, 4, 3, 5],
+                    [0, 2, 1, 3, 4, 5]
+                ],
+                'pair_classes': [
+                    {'copy': 0, 'cos': Rational(1,1), 'size': 1},
+                    {'copy': 1, 'cos': Rational(0,1), 'size': 2},
+                    {'copy': 3, 'cos': Rational(0,1), 'size': 2},
+                    {'copy': 5, 'cos': Rational(-1,1), 'size': 1}
+                ],
+                'rank': 4,
+                'site_node': 'n07',
+                'subgroup_node': 'n07',
+                'vertex_shape': 'octahedron',
+                'vertices': [
+                    [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)]
+                ]
+            },
+            {
+                'class_cycle_types': [
+                    [[1, 4]],
+                    [[1, 1], [3, 1]],
+                    [[1, 1], [3, 1]],
+                    [[2, 2]],
+                    [[1, 4]],
+                    [[1, 1], [3, 1]],
+                    [[1, 1], [3, 1]],
+                    [[2, 2]]
+                ],
+                'compound': {'reason': 'not-a-regular-compound', 'value': None},
+                'copies': [[0, 1], [2, 3], [4, 5], [6, 7]],
+                'copies_per_vertex': 1,
+                'cosets': [0, 2, 3, 4],
+                'degree': 4,
+                'figure': {'kind': 'line', 'vector': [Rational(1,1), Rational(1,1), Rational(-1,1)]},
+                'hands': {'reason': 'one-class-under-the-rotations', 'value': None},
+                'images': [
+                    [0, 1, 2, 3],
+                    [0, 2, 3, 1],
+                    [1, 3, 2, 0],
+                    [2, 0, 1, 3],
+                    [3, 1, 0, 2],
+                    [0, 3, 1, 2],
+                    [3, 0, 2, 1],
+                    [1, 2, 0, 3],
+                    [2, 1, 3, 0],
+                    [1, 0, 3, 2],
+                    [3, 2, 1, 0],
+                    [2, 3, 0, 1],
+                    [0, 1, 2, 3],
+                    [0, 3, 1, 2],
+                    [3, 0, 2, 1],
+                    [1, 2, 0, 3],
+                    [2, 1, 3, 0],
+                    [0, 2, 3, 1],
+                    [1, 3, 2, 0],
+                    [2, 0, 1, 3],
+                    [3, 1, 0, 2],
+                    [1, 0, 3, 2],
+                    [3, 2, 1, 0],
+                    [2, 3, 0, 1]
+                ],
+                'pair_classes': [
+                    {'copy': 0, 'cos': Rational(1,1), 'size': 1},
+                    {'copy': 1, 'cos': Rational(1,3), 'size': 3}
+                ],
+                'rank': 2,
+                'site_node': 'n04',
+                'subgroup_node': 'n08',
+                'vertex_shape': 'cube',
+                'vertices': [
+                    [Rational(1,1), Rational(1,1), Rational(-1,1)],
+                    [Rational(-1,1), Rational(-1,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(-1,1), Rational(-1,1)],
+                    [Rational(1,1), Rational(1,1), Rational(1,1)],
+                    [Rational(1,1), Rational(-1,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(1,1), Rational(-1,1)],
+                    [Rational(-1,1), Rational(1,1), Rational(1,1)],
+                    [Rational(1,1), Rational(-1,1), Rational(-1,1)]
+                ]
+            },
+            {
+                'class_cycle_types': [[[1, 3]], [[3, 1]], [[3, 1]], [[1, 3]], [[1, 3]], [[3, 1]], [[3, 1]], [[1, 3]]],
+                'compound': {'reason': 'not-a-regular-compound', 'value': None},
+                'copies': [[0, 1], [2, 3], [4, 5]],
+                'copies_per_vertex': 1,
+                'cosets': [0, 1, 5],
+                'degree': 3,
+                'figure': {'kind': 'line', 'vector': [Rational(0,1), Rational(1,1), Rational(0,1)]},
+                'hands': {'reason': 'one-class-under-the-rotations', 'value': None},
+                'images': [
+                    [0, 1, 2],
+                    [1, 2, 0],
+                    [1, 2, 0],
+                    [1, 2, 0],
+                    [1, 2, 0],
+                    [2, 0, 1],
+                    [2, 0, 1],
+                    [2, 0, 1],
+                    [2, 0, 1],
+                    [0, 1, 2],
+                    [0, 1, 2],
+                    [0, 1, 2],
+                    [0, 1, 2],
+                    [2, 0, 1],
+                    [2, 0, 1],
+                    [2, 0, 1],
+                    [2, 0, 1],
+                    [1, 2, 0],
+                    [1, 2, 0],
+                    [1, 2, 0],
+                    [1, 2, 0],
+                    [0, 1, 2],
+                    [0, 1, 2],
+                    [0, 1, 2]
+                ],
+                'pair_classes': [
+                    {'copy': 0, 'cos': Rational(1,1), 'size': 1},
+                    {'copy': 1, 'cos': Rational(0,1), 'size': 1},
+                    {'copy': 2, 'cos': Rational(0,1), 'size': 1}
+                ],
+                'rank': 3,
+                'site_node': 'n07',
+                'subgroup_node': 'n09',
+                'vertex_shape': 'octahedron',
+                'vertices': [
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(-1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(-1,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(-1,1), Rational(0,1), Rational(0,1)]
+                ]
+            },
+            {
+                'class_cycle_types': [[[1, 2]], [[1, 2]], [[1, 2]], [[1, 2]], [[2, 1]], [[2, 1]], [[2, 1]], [[2, 1]]],
+                'compound': {'name': 'compound of two tetrahedra', 'uc': 'UC04'},
+                'copies': [[0, 1, 2, 3], [4, 5, 6, 7]],
+                'copies_per_vertex': 1,
+                'cosets': [0, 12],
+                'degree': 2,
+                'figure': {
+                    'kind': 'polyhedron',
+                    'points': [
+                        [Rational(-1,1), Rational(-1,1), Rational(1,1)],
+                        [Rational(1,1), Rational(1,1), Rational(1,1)],
+                        [Rational(-1,1), Rational(1,1), Rational(-1,1)],
+                        [Rational(1,1), Rational(-1,1), Rational(-1,1)]
+                    ],
+                    'shape': 'tetrahedron',
+                    'vector': [Rational(-1,1), Rational(-1,1), Rational(1,1)]
+                },
+                'hands': [[0], [1]],
+                'images': [
+                    [0, 1],
+                    [0, 1],
+                    [0, 1],
+                    [0, 1],
+                    [0, 1],
+                    [0, 1],
+                    [0, 1],
+                    [0, 1],
+                    [0, 1],
+                    [0, 1],
+                    [0, 1],
+                    [0, 1],
+                    [1, 0],
+                    [1, 0],
+                    [1, 0],
+                    [1, 0],
+                    [1, 0],
+                    [1, 0],
+                    [1, 0],
+                    [1, 0],
+                    [1, 0],
+                    [1, 0],
+                    [1, 0],
+                    [1, 0]
+                ],
+                'pair_classes': [
+                    {'copy': 0, 'shared_vertices': 4, 'size': 1},
+                    {'copy': 1, 'shared_vertices': 0, 'size': 1}
+                ],
+                'rank': 2,
+                'site_node': 'n04',
+                'subgroup_node': 'n10',
+                'vertex_shape': 'cube',
+                'vertices': [
+                    [Rational(-1,1), Rational(-1,1), Rational(1,1)],
+                    [Rational(1,1), Rational(1,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(1,1), Rational(-1,1)],
+                    [Rational(1,1), Rational(-1,1), Rational(-1,1)],
+                    [Rational(1,1), Rational(1,1), Rational(-1,1)],
+                    [Rational(-1,1), Rational(-1,1), Rational(-1,1)],
+                    [Rational(1,1), Rational(-1,1), Rational(1,1)],
+                    [Rational(-1,1), Rational(1,1), Rational(1,1)]
+                ]
+            },
+            {
+                'class_cycle_types': [[[1, 1]], [[1, 1]], [[1, 1]], [[1, 1]], [[1, 1]], [[1, 1]], [[1, 1]], [[1, 1]]],
+                'compound': {'reason': 'not-a-regular-compound', 'value': None},
+                'copies': [[0]],
+                'copies_per_vertex': 1,
+                'cosets': [0],
+                'degree': 1,
+                'figure': {
+                    'kind': 'point',
+                    'orbit': 4,
+                    'vector': [Rational(0,1), Rational(0,1), Rational(0,1)]
+                },
+                'hands': {'reason': 'one-class-under-the-rotations', 'value': None},
+                'images': [[0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0]],
+                'pair_classes': [{'copy': 0, 'size': 1}],
+                'rank': 1,
+                'site_node': 'n11',
+                'subgroup_node': 'n11',
+                'vertex_shape': {'reason': 'not-a-named-shape', 'value': None},
+                'vertices': [[Rational(0,1), Rational(0,1), Rational(0,1)]]
+            }
+        ],
+        'marks': {
+            'columns': ['n00', 'n01', 'n02', 'n03', 'n04', 'n05', 'n06', 'n07', 'n08', 'n09', 'n10', 'n11'],
+            'rows': [
+                [24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [12, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [12, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [12, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0],
+                [8, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0],
+                [6, 6, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0],
+                [6, 2, 6, 2, 0, 0, 2, 0, 0, 0, 0, 0],
+                [6, 2, 0, 4, 0, 0, 0, 2, 0, 0, 0, 0],
+                [4, 0, 4, 0, 1, 0, 0, 0, 1, 0, 0, 0],
+                [3, 3, 3, 3, 0, 3, 3, 3, 0, 3, 0, 0],
+                [2, 2, 0, 0, 2, 2, 0, 0, 0, 0, 2, 0],
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+            ]
+        }
+    },
+    'schema': 'point-group-atlas/group/1',
+    'subduction_basis': {
+        'allowed_m': {
+            'modulus': 2,
+            'residues': [
+                {'even': [0], 'irrep': 'A_g', 'irrep_id': 'Ag', 'odd': []},
+                {'even': [0], 'irrep': '1E_g', 'irrep_id': '1Eg', 'odd': []},
+                {'even': [0], 'irrep': '2E_g', 'irrep_id': '2Eg', 'odd': []},
+                {'even': [0, 1], 'irrep': 'T_g', 'irrep_id': 'Tg', 'odd': []},
+                {'even': [], 'irrep': 'A_u', 'irrep_id': 'Au', 'odd': [0]},
+                {'even': [], 'irrep': '1E_u', 'irrep_id': '1Eu', 'odd': [0]},
+                {'even': [], 'irrep': '2E_u', 'irrep_id': '2Eu', 'odd': [0]},
+                {'even': [], 'irrep': 'T_u', 'irrep_id': 'Tu', 'odd': [0, 1]}
+            ]
+        },
+        'computed_from': {
+            'group': 'T',
+            'intertwiner': {'l_even': {}, 'l_odd': {}},
+            'l_even': {'1E': '1E_g', '2E': '2E_g', 'A': 'A_g', 'T': 'T_g'},
+            'l_odd': {'1E': '1E_u', '2E': '2E_u', 'A': 'A_u', 'T': 'T_u'}
+        },
+        'enumerated': {
+            'J_max': 10,
+            'J_min': 0,
+            'block_count': 61,
+            'blocks': [
+                {
+                    'J': 0,
+                    'dim': 1,
+                    'display': 'A_g',
+                    'irrep': 'A_g',
+                    'kappa': 1,
+                    'vectors': [{'components': [{'e': Rational(1,1), 'm': 0}], 'mu': 1}]
+                },
+                {
+                    'J': 1,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -1}, {'e': Rational(-1,1), 'm': 1}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [{'m': -1, 'q': [1, 1]}, {'m': 1, 'q': [1, 1]}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {'components': [{'e': Rational(1,1), 'm': 0}], 'mu': 3}
+                    ]
+                },
+                {
+                    'J': 2,
+                    'dim': 1,
+                    'display': '{}^{1}E_g',
+                    'irrep': '1E_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -2},
+                                {'e': (Rational(-2,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,3))), 'm': 0},
+                                {'e': Rational(1,1), 'm': 2}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 2,
+                    'dim': 1,
+                    'display': '{}^{2}E_g',
+                    'irrep': '2E_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -2},
+                                {'e': (Rational(2,1) + Rational(4,1)*exp(2*pi*I*Rational(1,3))), 'm': 0},
+                                {'e': Rational(1,1), 'm': 2}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 2,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -1}, {'e': Rational(1,1), 'm': 1}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [{'m': -1, 'q': [1, 1]}, {'m': 1, 'q': [-1, 1]}],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -2}, {'e': Rational(-1,1), 'm': 2}],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 3,
+                    'dim': 1,
+                    'display': 'A_u',
+                    'irrep': 'A_u',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -2}, {'e': Rational(-1,1), 'm': 2}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 3,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -3}, {'e': Rational(-1,1), 'm': 3}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -3, 'q': [1, 1]},
+                                {'m': -1, 'q': [15, 1]},
+                                {'m': 1, 'q': [15, 1]},
+                                {'m': 3, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-3,1), 'm': -2},
+                                {'e': Rational(10,1), 'm': 0},
+                                {'e': Rational(-3,1), 'm': 2}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 3,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -1}, {'e': Rational(-1,1), 'm': 1}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -3, 'q': [1, 1]},
+                                {'m': -1, 'q': [-1, 1]},
+                                {'m': 1, 'q': [-1, 1]},
+                                {'m': 3, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-1,1), 'm': -2},
+                                {'e': Rational(-2,1), 'm': 0},
+                                {'e': Rational(-1,1), 'm': 2}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 4,
+                    'dim': 1,
+                    'display': 'A_g',
+                    'irrep': 'A_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -4},
+                                {'e': Rational(14,1), 'm': 0},
+                                {'e': Rational(1,1), 'm': 4}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 4,
+                    'dim': 1,
+                    'display': '{}^{1}E_g',
+                    'irrep': '1E_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -4},
+                                {'e': (Rational(4,1) + Rational(8,1)*exp(2*pi*I*Rational(1,3))), 'm': -2},
+                                {'e': Rational(-10,1), 'm': 0},
+                                {'e': (Rational(4,1) + Rational(8,1)*exp(2*pi*I*Rational(1,3))), 'm': 2},
+                                {'e': Rational(1,1), 'm': 4}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 4,
+                    'dim': 1,
+                    'display': '{}^{2}E_g',
+                    'irrep': '2E_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -4},
+                                {'e': (Rational(-4,1) + Rational(-8,1)*exp(2*pi*I*Rational(1,3))), 'm': -2},
+                                {'e': Rational(-10,1), 'm': 0},
+                                {'e': (Rational(-4,1) + Rational(-8,1)*exp(2*pi*I*Rational(1,3))), 'm': 2},
+                                {'e': Rational(1,1), 'm': 4}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 4,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -3}, {'e': Rational(1,1), 'm': 3}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -3, 'q': [3, 1]},
+                                {'m': -1, 'q': [7, 1]},
+                                {'m': 1, 'q': [-7, 1]},
+                                {'m': 3, 'q': [-3, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-1,1), 'm': -4},
+                                {'e': Rational(14,1), 'm': -2},
+                                {'e': Rational(-14,1), 'm': 2},
+                                {'e': Rational(1,1), 'm': 4}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 4,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -1}, {'e': Rational(1,1), 'm': 1}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -3, 'q': [1, 1]},
+                                {'m': -1, 'q': [-3, 1]},
+                                {'m': 1, 'q': [3, 1]},
+                                {'m': 3, 'q': [-1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-1,1), 'm': -4},
+                                {'e': Rational(-2,1), 'm': -2},
+                                {'e': Rational(2,1), 'm': 2},
+                                {'e': Rational(1,1), 'm': 4}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 5,
+                    'dim': 1,
+                    'display': '{}^{1}E_u',
+                    'irrep': '1E_u',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -4},
+                                {'e': (Rational(-2,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,3))), 'm': -2},
+                                {'e': (Rational(2,1) + Rational(4,1)*exp(2*pi*I*Rational(1,3))), 'm': 2},
+                                {'e': Rational(-1,1), 'm': 4}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 5,
+                    'dim': 1,
+                    'display': '{}^{2}E_u',
+                    'irrep': '2E_u',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -4},
+                                {'e': (Rational(2,1) + Rational(4,1)*exp(2*pi*I*Rational(1,3))), 'm': -2},
+                                {'e': (Rational(-2,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,3))), 'm': 2},
+                                {'e': Rational(-1,1), 'm': 4}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 5,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -5}, {'e': Rational(-1,1), 'm': 5}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -5, 'q': [1, 1]},
+                                {'m': -3, 'q': [45, 1]},
+                                {'m': -1, 'q': [210, 1]},
+                                {'m': 1, 'q': [210, 1]},
+                                {'m': 3, 'q': [45, 1]},
+                                {'m': 5, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(5,1), 'm': -4},
+                                {'e': Rational(-60,1), 'm': -2},
+                                {'e': Rational(126,1), 'm': 0},
+                                {'e': Rational(-60,1), 'm': 2},
+                                {'e': Rational(5,1), 'm': 4}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 5,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -3}, {'e': Rational(-1,1), 'm': 3}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -5, 'q': [1, 1]},
+                                {'m': -3, 'q': [13, 1]},
+                                {'m': -1, 'q': [-14, 1]},
+                                {'m': 1, 'q': [-14, 1]},
+                                {'m': 3, 'q': [13, 1]},
+                                {'m': 5, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(3,1), 'm': -4},
+                                {'e': Rational(-4,1), 'm': -2},
+                                {'e': Rational(-14,1), 'm': 0},
+                                {'e': Rational(-4,1), 'm': 2},
+                                {'e': Rational(3,1), 'm': 4}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 5,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 3,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -1}, {'e': Rational(-1,1), 'm': 1}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -5, 'q': [1, 1]},
+                                {'m': -3, 'q': [-3, 1]},
+                                {'m': -1, 'q': [2, 1]},
+                                {'m': 1, 'q': [2, 1]},
+                                {'m': 3, 'q': [-3, 1]},
+                                {'m': 5, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -4},
+                                {'e': Rational(4,1), 'm': -2},
+                                {'e': Rational(6,1), 'm': 0},
+                                {'e': Rational(4,1), 'm': 2},
+                                {'e': Rational(1,1), 'm': 4}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 6,
+                    'dim': 1,
+                    'display': 'A_g',
+                    'irrep': 'A_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -6},
+                                {'e': Rational(-33,1), 'm': -2},
+                                {'e': Rational(-33,1), 'm': 2},
+                                {'e': Rational(1,1), 'm': 6}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 6,
+                    'dim': 1,
+                    'display': 'A_g',
+                    'irrep': 'A_g',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -4},
+                                {'e': Rational(-2,1), 'm': 0},
+                                {'e': Rational(1,1), 'm': 4}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 6,
+                    'dim': 1,
+                    'display': '{}^{1}E_g',
+                    'irrep': '1E_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -6},
+                                {'e': (Rational(-2,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,3))), 'm': -4},
+                                {'e': Rational(15,1), 'm': -2},
+                                {'e': (Rational(-28,1) + Rational(-56,1)*exp(2*pi*I*Rational(1,3))), 'm': 0},
+                                {'e': Rational(15,1), 'm': 2},
+                                {'e': (Rational(-2,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,3))), 'm': 4},
+                                {'e': Rational(1,1), 'm': 6}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 6,
+                    'dim': 1,
+                    'display': '{}^{2}E_g',
+                    'irrep': '2E_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -6},
+                                {'e': (Rational(2,1) + Rational(4,1)*exp(2*pi*I*Rational(1,3))), 'm': -4},
+                                {'e': Rational(15,1), 'm': -2},
+                                {'e': (Rational(28,1) + Rational(56,1)*exp(2*pi*I*Rational(1,3))), 'm': 0},
+                                {'e': Rational(15,1), 'm': 2},
+                                {'e': (Rational(2,1) + Rational(4,1)*exp(2*pi*I*Rational(1,3))), 'm': 4},
+                                {'e': Rational(1,1), 'm': 6}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 6,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -5}, {'e': Rational(1,1), 'm': 5}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -5, 'q': [5, 1]},
+                                {'m': -3, 'q': [55, 1]},
+                                {'m': -1, 'q': [66, 1]},
+                                {'m': 1, 'q': [-66, 1]},
+                                {'m': 3, 'q': [-55, 1]},
+                                {'m': 5, 'q': [-5, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -6},
+                                {'e': Rational(-44,1), 'm': -4},
+                                {'e': Rational(165,1), 'm': -2},
+                                {'e': Rational(-165,1), 'm': 2},
+                                {'e': Rational(44,1), 'm': 4},
+                                {'e': Rational(-1,1), 'm': 6}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 6,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -3}, {'e': Rational(1,1), 'm': 3}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -5, 'q': [3, 1]},
+                                {'m': -3, 'q': [1, 1]},
+                                {'m': -1, 'q': [-18, 1]},
+                                {'m': 1, 'q': [18, 1]},
+                                {'m': 3, 'q': [-1, 1]},
+                                {'m': 5, 'q': [-3, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -6},
+                                {'e': Rational(-12,1), 'm': -4},
+                                {'e': Rational(-27,1), 'm': -2},
+                                {'e': Rational(27,1), 'm': 2},
+                                {'e': Rational(12,1), 'm': 4},
+                                {'e': Rational(-1,1), 'm': 6}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 6,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 3,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -1}, {'e': Rational(1,1), 'm': 1}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -5, 'q': [1, 1]},
+                                {'m': -3, 'q': [-5, 1]},
+                                {'m': -1, 'q': [10, 1]},
+                                {'m': 1, 'q': [-10, 1]},
+                                {'m': 3, 'q': [5, 1]},
+                                {'m': 5, 'q': [-1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -6},
+                                {'e': Rational(4,1), 'm': -4},
+                                {'e': Rational(5,1), 'm': -2},
+                                {'e': Rational(-5,1), 'm': 2},
+                                {'e': Rational(-4,1), 'm': 4},
+                                {'e': Rational(-1,1), 'm': 6}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 1,
+                    'display': 'A_u',
+                    'irrep': 'A_u',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -6},
+                                {'e': Rational(13,1), 'm': -2},
+                                {'e': Rational(-13,1), 'm': 2},
+                                {'e': Rational(-1,1), 'm': 6}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 1,
+                    'display': '{}^{1}E_u',
+                    'irrep': '1E_u',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -6},
+                                {'e': (Rational(4,1) + Rational(8,1)*exp(2*pi*I*Rational(1,3))), 'm': -4},
+                                {'e': Rational(-11,1), 'm': -2},
+                                {'e': Rational(11,1), 'm': 2},
+                                {'e': (Rational(-4,1) + Rational(-8,1)*exp(2*pi*I*Rational(1,3))), 'm': 4},
+                                {'e': Rational(-1,1), 'm': 6}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 1,
+                    'display': '{}^{2}E_u',
+                    'irrep': '2E_u',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -6},
+                                {'e': (Rational(-4,1) + Rational(-8,1)*exp(2*pi*I*Rational(1,3))), 'm': -4},
+                                {'e': Rational(-11,1), 'm': -2},
+                                {'e': Rational(11,1), 'm': 2},
+                                {'e': (Rational(4,1) + Rational(8,1)*exp(2*pi*I*Rational(1,3))), 'm': 4},
+                                {'e': Rational(-1,1), 'm': 6}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -7}, {'e': Rational(-1,1), 'm': 7}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -7, 'q': [1, 1]},
+                                {'m': -5, 'q': [91, 1]},
+                                {'m': -3, 'q': [1001, 1]},
+                                {'m': -1, 'q': [3003, 1]},
+                                {'m': 1, 'q': [3003, 1]},
+                                {'m': 3, 'q': [1001, 1]},
+                                {'m': 5, 'q': [91, 1]},
+                                {'m': 7, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-7,1), 'm': -6},
+                                {'e': Rational(182,1), 'm': -4},
+                                {'e': Rational(-1001,1), 'm': -2},
+                                {'e': Rational(1716,1), 'm': 0},
+                                {'e': Rational(-1001,1), 'm': 2},
+                                {'e': Rational(182,1), 'm': 4},
+                                {'e': Rational(-7,1), 'm': 6}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -5}, {'e': Rational(-1,1), 'm': 5}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -7, 'q': [1, 1]},
+                                {'m': -5, 'q': [43, 1]},
+                                {'m': -3, 'q': [121, 1]},
+                                {'m': -1, 'q': [-165, 1]},
+                                {'m': 1, 'q': [-165, 1]},
+                                {'m': 3, 'q': [121, 1]},
+                                {'m': 5, 'q': [43, 1]},
+                                {'m': 7, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-5,1), 'm': -6},
+                                {'e': Rational(50,1), 'm': -4},
+                                {'e': Rational(-11,1), 'm': -2},
+                                {'e': Rational(-132,1), 'm': 0},
+                                {'e': Rational(-11,1), 'm': 2},
+                                {'e': Rational(50,1), 'm': 4},
+                                {'e': Rational(-5,1), 'm': 6}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 3,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -3}, {'e': Rational(-1,1), 'm': 3}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -7, 'q': [1, 1]},
+                                {'m': -5, 'q': [11, 1]},
+                                {'m': -3, 'q': [-39, 1]},
+                                {'m': -1, 'q': [27, 1]},
+                                {'m': 1, 'q': [27, 1]},
+                                {'m': 3, 'q': [-39, 1]},
+                                {'m': 5, 'q': [11, 1]},
+                                {'m': 7, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-3,1), 'm': -6},
+                                {'e': Rational(-2,1), 'm': -4},
+                                {'e': Rational(19,1), 'm': -2},
+                                {'e': Rational(36,1), 'm': 0},
+                                {'e': Rational(19,1), 'm': 2},
+                                {'e': Rational(-2,1), 'm': 4},
+                                {'e': Rational(-3,1), 'm': 6}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 4,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -1}, {'e': Rational(-1,1), 'm': 1}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -7, 'q': [1, 1]},
+                                {'m': -5, 'q': [-5, 1]},
+                                {'m': -3, 'q': [9, 1]},
+                                {'m': -1, 'q': [-5, 1]},
+                                {'m': 1, 'q': [-5, 1]},
+                                {'m': 3, 'q': [9, 1]},
+                                {'m': 5, 'q': [-5, 1]},
+                                {'m': 7, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-1,1), 'm': -6},
+                                {'e': Rational(-6,1), 'm': -4},
+                                {'e': Rational(-15,1), 'm': -2},
+                                {'e': Rational(-20,1), 'm': 0},
+                                {'e': Rational(-15,1), 'm': 2},
+                                {'e': Rational(-6,1), 'm': 4},
+                                {'e': Rational(-1,1), 'm': 6}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 8,
+                    'dim': 1,
+                    'display': 'A_g',
+                    'irrep': 'A_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -8},
+                                {'e': Rational(28,1), 'm': -4},
+                                {'e': Rational(198,1), 'm': 0},
+                                {'e': Rational(28,1), 'm': 4},
+                                {'e': Rational(1,1), 'm': 8}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 8,
+                    'dim': 1,
+                    'display': '{}^{1}E_g',
+                    'irrep': '1E_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -8},
+                                {'e': Rational(-20,1), 'm': -4},
+                                {'e': (Rational(64,1) + Rational(128,1)*exp(2*pi*I*Rational(1,3))), 'm': -2},
+                                {'e': Rational(-90,1), 'm': 0},
+                                {'e': (Rational(64,1) + Rational(128,1)*exp(2*pi*I*Rational(1,3))), 'm': 2},
+                                {'e': Rational(-20,1), 'm': 4},
+                                {'e': Rational(1,1), 'm': 8}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 8,
+                    'dim': 1,
+                    'display': '{}^{1}E_g',
+                    'irrep': '1E_g',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))), 'm': -8},
+                                {'e': Rational(192,1), 'm': -6},
+                                {'e': (Rational(-364,1) + Rational(-728,1)*exp(2*pi*I*Rational(1,3))), 'm': -4},
+                                {'e': (Rational(858,1) + Rational(1716,1)*exp(2*pi*I*Rational(1,3))), 'm': 0},
+                                {'e': (Rational(-364,1) + Rational(-728,1)*exp(2*pi*I*Rational(1,3))), 'm': 4},
+                                {'e': Rational(192,1), 'm': 6},
+                                {'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))), 'm': 8}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 8,
+                    'dim': 1,
+                    'display': '{}^{2}E_g',
+                    'irrep': '2E_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -8},
+                                {'e': Rational(-20,1), 'm': -4},
+                                {'e': (Rational(-64,1) + Rational(-128,1)*exp(2*pi*I*Rational(1,3))), 'm': -2},
+                                {'e': Rational(-90,1), 'm': 0},
+                                {'e': (Rational(-64,1) + Rational(-128,1)*exp(2*pi*I*Rational(1,3))), 'm': 2},
+                                {'e': Rational(-20,1), 'm': 4},
+                                {'e': Rational(1,1), 'm': 8}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 8,
+                    'dim': 1,
+                    'display': '{}^{2}E_g',
+                    'irrep': '2E_g',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))), 'm': -8},
+                                {'e': Rational(192,1), 'm': -6},
+                                {'e': (Rational(364,1) + Rational(728,1)*exp(2*pi*I*Rational(1,3))), 'm': -4},
+                                {'e': (Rational(-858,1) + Rational(-1716,1)*exp(2*pi*I*Rational(1,3))), 'm': 0},
+                                {'e': (Rational(364,1) + Rational(728,1)*exp(2*pi*I*Rational(1,3))), 'm': 4},
+                                {'e': Rational(192,1), 'm': 6},
+                                {'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))), 'm': 8}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 8,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -7}, {'e': Rational(1,1), 'm': 7}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -7, 'q': [7, 1]},
+                                {'m': -5, 'q': [175, 1]},
+                                {'m': -3, 'q': [819, 1]},
+                                {'m': -1, 'q': [715, 1]},
+                                {'m': 1, 'q': [-715, 1]},
+                                {'m': 3, 'q': [-819, 1]},
+                                {'m': 5, 'q': [-175, 1]},
+                                {'m': 7, 'q': [-7, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-1,1), 'm': -8},
+                                {'e': Rational(90,1), 'm': -6},
+                                {'e': Rational(-910,1), 'm': -4},
+                                {'e': Rational(2002,1), 'm': -2},
+                                {'e': Rational(-2002,1), 'm': 2},
+                                {'e': Rational(910,1), 'm': 4},
+                                {'e': Rational(-90,1), 'm': 6},
+                                {'e': Rational(1,1), 'm': 8}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 8,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -5}, {'e': Rational(1,1), 'm': 5}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -7, 'q': [5, 1]},
+                                {'m': -5, 'q': [45, 1]},
+                                {'m': -3, 'q': [-39, 1]},
+                                {'m': -1, 'q': [-143, 1]},
+                                {'m': 1, 'q': [143, 1]},
+                                {'m': 3, 'q': [39, 1]},
+                                {'m': 5, 'q': [-45, 1]},
+                                {'m': 7, 'q': [-5, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-1,1), 'm': -8},
+                                {'e': Rational(42,1), 'm': -6},
+                                {'e': Rational(-78,1), 'm': -4},
+                                {'e': Rational(-286,1), 'm': -2},
+                                {'e': Rational(286,1), 'm': 2},
+                                {'e': Rational(78,1), 'm': 4},
+                                {'e': Rational(-42,1), 'm': 6},
+                                {'e': Rational(1,1), 'm': 8}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 8,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 3,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -3}, {'e': Rational(1,1), 'm': 3}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -7, 'q': [3, 1]},
+                                {'m': -5, 'q': [-5, 1]},
+                                {'m': -3, 'q': [-17, 1]},
+                                {'m': -1, 'q': [55, 1]},
+                                {'m': 1, 'q': [-55, 1]},
+                                {'m': 3, 'q': [17, 1]},
+                                {'m': 5, 'q': [5, 1]},
+                                {'m': 7, 'q': [-3, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-1,1), 'm': -8},
+                                {'e': Rational(10,1), 'm': -6},
+                                {'e': Rational(50,1), 'm': -4},
+                                {'e': Rational(66,1), 'm': -2},
+                                {'e': Rational(-66,1), 'm': 2},
+                                {'e': Rational(-50,1), 'm': 4},
+                                {'e': Rational(-10,1), 'm': 6},
+                                {'e': Rational(1,1), 'm': 8}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 8,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 4,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -1}, {'e': Rational(1,1), 'm': 1}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -7, 'q': [1, 1]},
+                                {'m': -5, 'q': [-7, 1]},
+                                {'m': -3, 'q': [21, 1]},
+                                {'m': -1, 'q': [-35, 1]},
+                                {'m': 1, 'q': [35, 1]},
+                                {'m': 3, 'q': [-21, 1]},
+                                {'m': 5, 'q': [7, 1]},
+                                {'m': 7, 'q': [-1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-1,1), 'm': -8},
+                                {'e': Rational(-6,1), 'm': -6},
+                                {'e': Rational(-14,1), 'm': -4},
+                                {'e': Rational(-14,1), 'm': -2},
+                                {'e': Rational(14,1), 'm': 2},
+                                {'e': Rational(14,1), 'm': 4},
+                                {'e': Rational(6,1), 'm': 6},
+                                {'e': Rational(1,1), 'm': 8}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 1,
+                    'display': 'A_u',
+                    'irrep': 'A_u',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -8},
+                                {'e': Rational(-34,1), 'm': -4},
+                                {'e': Rational(34,1), 'm': 4},
+                                {'e': Rational(-1,1), 'm': 8}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 1,
+                    'display': 'A_u',
+                    'irrep': 'A_u',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -6},
+                                {'e': Rational(-3,1), 'm': -2},
+                                {'e': Rational(3,1), 'm': 2},
+                                {'e': Rational(-1,1), 'm': 6}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 1,
+                    'display': '{}^{1}E_u',
+                    'irrep': '1E_u',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -8},
+                                {'e': (Rational(-2,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,3))), 'm': -6},
+                                {'e': Rational(14,1), 'm': -4},
+                                {'e': (Rational(-26,1) + Rational(-52,1)*exp(2*pi*I*Rational(1,3))), 'm': -2},
+                                {'e': (Rational(26,1) + Rational(52,1)*exp(2*pi*I*Rational(1,3))), 'm': 2},
+                                {'e': Rational(-14,1), 'm': 4},
+                                {'e': (Rational(2,1) + Rational(4,1)*exp(2*pi*I*Rational(1,3))), 'm': 6},
+                                {'e': Rational(-1,1), 'm': 8}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 1,
+                    'display': '{}^{2}E_u',
+                    'irrep': '2E_u',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -8},
+                                {'e': (Rational(2,1) + Rational(4,1)*exp(2*pi*I*Rational(1,3))), 'm': -6},
+                                {'e': Rational(14,1), 'm': -4},
+                                {'e': (Rational(26,1) + Rational(52,1)*exp(2*pi*I*Rational(1,3))), 'm': -2},
+                                {'e': (Rational(-26,1) + Rational(-52,1)*exp(2*pi*I*Rational(1,3))), 'm': 2},
+                                {'e': Rational(-14,1), 'm': 4},
+                                {'e': (Rational(-2,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,3))), 'm': 6},
+                                {'e': Rational(-1,1), 'm': 8}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -9}, {'e': Rational(-1,1), 'm': 9}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -9, 'q': [1, 1]},
+                                {'m': -7, 'q': [153, 1]},
+                                {'m': -5, 'q': [3060, 1]},
+                                {'m': -3, 'q': [18564, 1]},
+                                {'m': -1, 'q': [43758, 1]},
+                                {'m': 1, 'q': [43758, 1]},
+                                {'m': 3, 'q': [18564, 1]},
+                                {'m': 5, 'q': [3060, 1]},
+                                {'m': 7, 'q': [153, 1]},
+                                {'m': 9, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(9,1), 'm': -8},
+                                {'e': Rational(-408,1), 'm': -6},
+                                {'e': Rational(4284,1), 'm': -4},
+                                {'e': Rational(-15912,1), 'm': -2},
+                                {'e': Rational(24310,1), 'm': 0},
+                                {'e': Rational(-15912,1), 'm': 2},
+                                {'e': Rational(4284,1), 'm': 4},
+                                {'e': Rational(-408,1), 'm': 6},
+                                {'e': Rational(9,1), 'm': 8}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -7}, {'e': Rational(-1,1), 'm': 7}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -9, 'q': [1, 1]},
+                                {'m': -7, 'q': [89, 1]},
+                                {'m': -5, 'q': [820, 1]},
+                                {'m': -3, 'q': [1092, 1]},
+                                {'m': -1, 'q': [-2002, 1]},
+                                {'m': 1, 'q': [-2002, 1]},
+                                {'m': 3, 'q': [1092, 1]},
+                                {'m': 5, 'q': [820, 1]},
+                                {'m': 7, 'q': [89, 1]},
+                                {'m': 9, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(7,1), 'm': -8},
+                                {'e': Rational(-168,1), 'm': -6},
+                                {'e': Rational(644,1), 'm': -4},
+                                {'e': Rational(104,1), 'm': -2},
+                                {'e': Rational(-1430,1), 'm': 0},
+                                {'e': Rational(104,1), 'm': 2},
+                                {'e': Rational(644,1), 'm': 4},
+                                {'e': Rational(-168,1), 'm': 6},
+                                {'e': Rational(7,1), 'm': 8}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 3,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -5}, {'e': Rational(-1,1), 'm': 5}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -9, 'q': [1, 1]},
+                                {'m': -7, 'q': [41, 1]},
+                                {'m': -5, 'q': [36, 1]},
+                                {'m': -3, 'q': [-364, 1]},
+                                {'m': -1, 'q': [286, 1]},
+                                {'m': 1, 'q': [286, 1]},
+                                {'m': 3, 'q': [-364, 1]},
+                                {'m': 5, 'q': [36, 1]},
+                                {'m': 7, 'q': [41, 1]},
+                                {'m': 9, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(5,1), 'm': -8},
+                                {'e': Rational(-40,1), 'm': -6},
+                                {'e': Rational(-84,1), 'm': -4},
+                                {'e': Rational(104,1), 'm': -2},
+                                {'e': Rational(286,1), 'm': 0},
+                                {'e': Rational(104,1), 'm': 2},
+                                {'e': Rational(-84,1), 'm': 4},
+                                {'e': Rational(-40,1), 'm': 6},
+                                {'e': Rational(5,1), 'm': 8}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 4,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -3}, {'e': Rational(-1,1), 'm': 3}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -9, 'q': [1, 1]},
+                                {'m': -7, 'q': [9, 1]},
+                                {'m': -5, 'q': [-60, 1]},
+                                {'m': -3, 'q': [116, 1]},
+                                {'m': -1, 'q': [-66, 1]},
+                                {'m': 1, 'q': [-66, 1]},
+                                {'m': 3, 'q': [116, 1]},
+                                {'m': 5, 'q': [-60, 1]},
+                                {'m': 7, 'q': [9, 1]},
+                                {'m': 9, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(3,1), 'm': -8},
+                                {'e': Rational(8,1), 'm': -6},
+                                {'e': Rational(-12,1), 'm': -4},
+                                {'e': Rational(-72,1), 'm': -2},
+                                {'e': Rational(-110,1), 'm': 0},
+                                {'e': Rational(-72,1), 'm': 2},
+                                {'e': Rational(-12,1), 'm': 4},
+                                {'e': Rational(8,1), 'm': 6},
+                                {'e': Rational(3,1), 'm': 8}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 3,
+                    'display': 'T_u',
+                    'irrep': 'T_u',
+                    'kappa': 5,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -1}, {'e': Rational(-1,1), 'm': 1}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -9, 'q': [1, 1]},
+                                {'m': -7, 'q': [-7, 1]},
+                                {'m': -5, 'q': [20, 1]},
+                                {'m': -3, 'q': [-28, 1]},
+                                {'m': -1, 'q': [14, 1]},
+                                {'m': 1, 'q': [14, 1]},
+                                {'m': 3, 'q': [-28, 1]},
+                                {'m': 5, 'q': [20, 1]},
+                                {'m': 7, 'q': [-7, 1]},
+                                {'m': 9, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -8},
+                                {'e': Rational(8,1), 'm': -6},
+                                {'e': Rational(28,1), 'm': -4},
+                                {'e': Rational(56,1), 'm': -2},
+                                {'e': Rational(70,1), 'm': 0},
+                                {'e': Rational(56,1), 'm': 2},
+                                {'e': Rational(28,1), 'm': 4},
+                                {'e': Rational(8,1), 'm': 6},
+                                {'e': Rational(1,1), 'm': 8}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'display': 'A_g',
+                    'irrep': 'A_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -10},
+                                {'e': Rational(-19,1), 'm': -6},
+                                {'e': Rational(-494,1), 'm': -2},
+                                {'e': Rational(-494,1), 'm': 2},
+                                {'e': Rational(-19,1), 'm': 6},
+                                {'e': Rational(1,1), 'm': 10}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'display': 'A_g',
+                    'irrep': 'A_g',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -8},
+                                {'e': Rational(12,1), 'm': -4},
+                                {'e': Rational(-26,1), 'm': 0},
+                                {'e': Rational(12,1), 'm': 4},
+                                {'e': Rational(1,1), 'm': 8}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'display': '{}^{1}E_g',
+                    'irrep': '1E_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -10},
+                                {'e': Rational(5,1), 'm': -6},
+                                {'e': (Rational(-80,1) + Rational(-160,1)*exp(2*pi*I*Rational(1,3))), 'm': -4},
+                                {'e': Rational(250,1), 'm': -2},
+                                {'e': (Rational(-352,1) + Rational(-704,1)*exp(2*pi*I*Rational(1,3))), 'm': 0},
+                                {'e': Rational(250,1), 'm': 2},
+                                {'e': (Rational(-80,1) + Rational(-160,1)*exp(2*pi*I*Rational(1,3))), 'm': 4},
+                                {'e': Rational(5,1), 'm': 6},
+                                {'e': Rational(1,1), 'm': 10}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'display': '{}^{1}E_g',
+                    'irrep': '1E_g',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))), 'm': -10},
+                                {'e': Rational(394,1), 'm': -8},
+                                {'e': (Rational(1581,1) + Rational(3162,1)*exp(2*pi*I*Rational(1,3))), 'm': -6},
+                                {'e': Rational(-4488,1), 'm': -4},
+                                {'e': (Rational(-1326,1) + Rational(-2652,1)*exp(2*pi*I*Rational(1,3))), 'm': -2},
+                                {'e': Rational(9724,1), 'm': 0},
+                                {'e': (Rational(-1326,1) + Rational(-2652,1)*exp(2*pi*I*Rational(1,3))), 'm': 2},
+                                {'e': Rational(-4488,1), 'm': 4},
+                                {'e': (Rational(1581,1) + Rational(3162,1)*exp(2*pi*I*Rational(1,3))), 'm': 6},
+                                {'e': Rational(394,1), 'm': 8},
+                                {'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))), 'm': 10}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'display': '{}^{2}E_g',
+                    'irrep': '2E_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -10},
+                                {'e': Rational(5,1), 'm': -6},
+                                {'e': (Rational(80,1) + Rational(160,1)*exp(2*pi*I*Rational(1,3))), 'm': -4},
+                                {'e': Rational(250,1), 'm': -2},
+                                {'e': (Rational(352,1) + Rational(704,1)*exp(2*pi*I*Rational(1,3))), 'm': 0},
+                                {'e': Rational(250,1), 'm': 2},
+                                {'e': (Rational(80,1) + Rational(160,1)*exp(2*pi*I*Rational(1,3))), 'm': 4},
+                                {'e': Rational(5,1), 'm': 6},
+                                {'e': Rational(1,1), 'm': 10}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'display': '{}^{2}E_g',
+                    'irrep': '2E_g',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))), 'm': -10},
+                                {'e': Rational(394,1), 'm': -8},
+                                {'e': (Rational(-1581,1) + Rational(-3162,1)*exp(2*pi*I*Rational(1,3))), 'm': -6},
+                                {'e': Rational(-4488,1), 'm': -4},
+                                {'e': (Rational(1326,1) + Rational(2652,1)*exp(2*pi*I*Rational(1,3))), 'm': -2},
+                                {'e': Rational(9724,1), 'm': 0},
+                                {'e': (Rational(1326,1) + Rational(2652,1)*exp(2*pi*I*Rational(1,3))), 'm': 2},
+                                {'e': Rational(-4488,1), 'm': 4},
+                                {'e': (Rational(-1581,1) + Rational(-3162,1)*exp(2*pi*I*Rational(1,3))), 'm': 6},
+                                {'e': Rational(394,1), 'm': 8},
+                                {'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))), 'm': 10}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -9}, {'e': Rational(1,1), 'm': 9}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -9, 'q': [9, 1]},
+                                {'m': -7, 'q': [399, 1]},
+                                {'m': -5, 'q': [3876, 1]},
+                                {'m': -3, 'q': [11628, 1]},
+                                {'m': -1, 'q': [8398, 1]},
+                                {'m': 1, 'q': [-8398, 1]},
+                                {'m': 3, 'q': [-11628, 1]},
+                                {'m': 5, 'q': [-3876, 1]},
+                                {'m': 7, 'q': [-399, 1]},
+                                {'m': 9, 'q': [-9, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -10},
+                                {'e': Rational(-152,1), 'm': -8},
+                                {'e': Rational(2907,1), 'm': -6},
+                                {'e': Rational(-15504,1), 'm': -4},
+                                {'e': Rational(25194,1), 'm': -2},
+                                {'e': Rational(-25194,1), 'm': 2},
+                                {'e': Rational(15504,1), 'm': 4},
+                                {'e': Rational(-2907,1), 'm': 6},
+                                {'e': Rational(152,1), 'm': 8},
+                                {'e': Rational(-1,1), 'm': 10}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -7}, {'e': Rational(1,1), 'm': 7}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -9, 'q': [7, 1]},
+                                {'m': -7, 'q': [161, 1]},
+                                {'m': -5, 'q': [476, 1]},
+                                {'m': -3, 'q': [-748, 1]},
+                                {'m': -1, 'q': [-1326, 1]},
+                                {'m': 1, 'q': [1326, 1]},
+                                {'m': 3, 'q': [748, 1]},
+                                {'m': 5, 'q': [-476, 1]},
+                                {'m': 7, 'q': [-161, 1]},
+                                {'m': 9, 'q': [-7, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -10},
+                                {'e': Rational(-88,1), 'm': -8},
+                                {'e': Rational(731,1), 'm': -6},
+                                {'e': Rational(-272,1), 'm': -4},
+                                {'e': Rational(-3094,1), 'm': -2},
+                                {'e': Rational(3094,1), 'm': 2},
+                                {'e': Rational(272,1), 'm': 4},
+                                {'e': Rational(-731,1), 'm': 6},
+                                {'e': Rational(88,1), 'm': 8},
+                                {'e': Rational(-1,1), 'm': 10}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 3,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -5}, {'e': Rational(1,1), 'm': 5}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -9, 'q': [5, 1]},
+                                {'m': -7, 'q': [35, 1]},
+                                {'m': -5, 'q': [-124, 1]},
+                                {'m': -3, 'q': [-20, 1]},
+                                {'m': -1, 'q': [390, 1]},
+                                {'m': 1, 'q': [-390, 1]},
+                                {'m': 3, 'q': [20, 1]},
+                                {'m': 5, 'q': [124, 1]},
+                                {'m': 7, 'q': [-35, 1]},
+                                {'m': 9, 'q': [-5, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -10},
+                                {'e': Rational(-40,1), 'm': -8},
+                                {'e': Rational(-5,1), 'm': -6},
+                                {'e': Rational(400,1), 'm': -4},
+                                {'e': Rational(650,1), 'm': -2},
+                                {'e': Rational(-650,1), 'm': 2},
+                                {'e': Rational(-400,1), 'm': 4},
+                                {'e': Rational(5,1), 'm': 6},
+                                {'e': Rational(40,1), 'm': 8},
+                                {'e': Rational(-1,1), 'm': 10}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 4,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -3}, {'e': Rational(1,1), 'm': 3}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -9, 'q': [3, 1]},
+                                {'m': -7, 'q': [-11, 1]},
+                                {'m': -5, 'q': [-4, 1]},
+                                {'m': -3, 'q': [84, 1]},
+                                {'m': -1, 'q': [-182, 1]},
+                                {'m': 1, 'q': [182, 1]},
+                                {'m': 3, 'q': [-84, 1]},
+                                {'m': 5, 'q': [4, 1]},
+                                {'m': 7, 'q': [11, 1]},
+                                {'m': 9, 'q': [-3, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -10},
+                                {'e': Rational(-8,1), 'm': -8},
+                                {'e': Rational(-69,1), 'm': -6},
+                                {'e': Rational(-176,1), 'm': -4},
+                                {'e': Rational(-182,1), 'm': -2},
+                                {'e': Rational(182,1), 'm': 2},
+                                {'e': Rational(176,1), 'm': 4},
+                                {'e': Rational(69,1), 'm': 6},
+                                {'e': Rational(8,1), 'm': 8},
+                                {'e': Rational(-1,1), 'm': 10}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 3,
+                    'display': 'T_g',
+                    'irrep': 'T_g',
+                    'kappa': 5,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': -1}, {'e': Rational(1,1), 'm': 1}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -9, 'q': [1, 1]},
+                                {'m': -7, 'q': [-9, 1]},
+                                {'m': -5, 'q': [36, 1]},
+                                {'m': -3, 'q': [-84, 1]},
+                                {'m': -1, 'q': [126, 1]},
+                                {'m': 1, 'q': [-126, 1]},
+                                {'m': 3, 'q': [84, 1]},
+                                {'m': 5, 'q': [-36, 1]},
+                                {'m': 7, 'q': [9, 1]},
+                                {'m': 9, 'q': [-1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -10},
+                                {'e': Rational(8,1), 'm': -8},
+                                {'e': Rational(27,1), 'm': -6},
+                                {'e': Rational(48,1), 'm': -4},
+                                {'e': Rational(42,1), 'm': -2},
+                                {'e': Rational(-42,1), 'm': 2},
+                                {'e': Rational(-48,1), 'm': 4},
+                                {'e': Rational(-27,1), 'm': 6},
+                                {'e': Rational(-8,1), 'm': 8},
+                                {'e': Rational(-1,1), 'm': 10}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                }
+            ],
+            'vector_count': 121
+        },
+        'full_set': {
+            'J_max': 60,
+            'block_count': 1861,
+            'location': 'data/symmetry_adapted_bases/Th/',
+            'release': 'Th_J011-J060.tar',
+            'vector_count': 3721
+        },
+        'generating_function': {
+            'denominator': [4, 6],
+            'numerators': [
+                {'coefficients': [1, 0, 0, 0, 0, 0, 1], 'irrep': 'A_g', 'irrep_id': 'Ag'},
+                {'coefficients': [0, 0, 1, 0, 1], 'irrep': '1E_g', 'irrep_id': '1Eg'},
+                {'coefficients': [0, 0, 1, 0, 1], 'irrep': '2E_g', 'irrep_id': '2Eg'},
+                {'coefficients': [0, 0, 1, 0, 2, 0, 2, 0, 1], 'irrep': 'T_g', 'irrep_id': 'Tg'},
+                {'coefficients': [0, 0, 0, 1, 0, 0, 0, 0, 0, 1], 'irrep': 'A_u', 'irrep_id': 'Au'},
+                {'coefficients': [0, 0, 0, 0, 0, 1, 0, 1], 'irrep': '1E_u', 'irrep_id': '1Eu'},
+                {'coefficients': [0, 0, 0, 0, 0, 1, 0, 1], 'irrep': '2E_u', 'irrep_id': '2Eu'},
+                {'coefficients': [0, 1, 0, 2, 0, 2, 0, 1], 'irrep': 'T_u', 'irrep_id': 'Tu'}
+            ]
+        },
+        'status': 'enumerated'
+    },
+    'subduction_embeddings': {
+        'alternative_table_count': 4,
+        'count': 12,
+        'embeddings': [
+            {
+                'class_size': 1,
+                'elements': [0],
+                'id': 'n00',
+                'monomorphism': {'count': 1, 'determined': True, 'distinct_subductions': 1, 'map': [0], 'setting': []},
+                'normal': True,
+                'normalizer_order': 24,
+                'subduction': [
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Ag',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eg',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eg',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 2,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 3,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'projection'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tg',
+                        'terms': [{'irrep': 'A', 'multiplicity': 3}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Au',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eu',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eu',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 2,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 3,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'projection'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tu',
+                        'terms': [{'irrep': 'A', 'multiplicity': 3}]
+                    }
+                ],
+                'subgroup': {'index': 24, 'o3_class': 'C1', 'order': 1, 'schoenflies': 'C_1'},
+                'transversal': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+            },
+            {
+                'class_size': 3,
+                'elements': [0, 9],
+                'id': 'n01',
+                'monomorphism': {
+                    'count': 1,
+                    'determined': True,
+                    'distinct_subductions': 1,
+                    'map': [0, 9],
+                    'setting': [
+                        {'g_class': 'C2', 'g_index': 9, 'g_symbol': 'C_2', 'h_index': 1, 'h_symbol': 'C_2'}
+                    ]
+                },
+                'normal': False,
+                'normalizer_order': 8,
+                'subduction': [
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Ag',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eg',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eg',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B',
+                                'kappa': 2,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'projection'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tg',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}, {'irrep': 'B', 'multiplicity': 2}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Au',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eu',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eu',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B',
+                                'kappa': 2,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'projection'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tu',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}, {'irrep': 'B', 'multiplicity': 2}]
+                    }
+                ],
+                'subgroup': {'index': 12, 'o3_class': 'C2', 'order': 2, 'schoenflies': 'C_2'},
+                'transversal': [0, 1, 3, 5, 6, 10, 12, 13, 14, 17, 19, 22]
+            },
+            {
+                'class_size': 1,
+                'elements': [0, 12],
+                'id': 'n02',
+                'monomorphism': {
+                    'count': 1,
+                    'determined': True,
+                    'distinct_subductions': 1,
+                    'map': [0, 12],
+                    'setting': [
+                        {'g_class': 'i', 'g_index': 12, 'g_symbol': 'i', 'h_index': 1, 'h_symbol': 'i'}
+                    ]
+                },
+                'normal': True,
+                'normalizer_order': 24,
+                'subduction': [
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Ag',
+                        'terms': [{'irrep': 'Ag', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eg',
+                        'terms': [{'irrep': 'Ag', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eg',
+                        'terms': [{'irrep': 'Ag', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 2,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 3,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'projection'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tg',
+                        'terms': [{'irrep': 'Ag', 'multiplicity': 3}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Au',
+                        'terms': [{'irrep': 'Au', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eu',
+                        'terms': [{'irrep': 'Au', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eu',
+                        'terms': [{'irrep': 'Au', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 2,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 3,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'projection'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tu',
+                        'terms': [{'irrep': 'Au', 'multiplicity': 3}]
+                    }
+                ],
+                'subgroup': {'index': 12, 'o3_class': 'S2', 'order': 2, 'schoenflies': 'S_2'},
+                'transversal': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+            },
+            {
+                'class_size': 3,
+                'elements': [0, 21],
+                'id': 'n03',
+                'monomorphism': {
+                    'count': 1,
+                    'determined': True,
+                    'distinct_subductions': 1,
+                    'map': [0, 21],
+                    'setting': [
+                        {
+                            'g_class': 'sh',
+                            'g_index': 21,
+                            'g_symbol': 'sigma_h',
+                            'h_index': 1,
+                            'h_symbol': 'sigma_v'
+                        }
+                    ]
+                },
+                'normal': False,
+                'normalizer_order': 8,
+                'subduction': [
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ap',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Ag',
+                        'terms': [{'irrep': 'Ap', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ap',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eg',
+                        'terms': [{'irrep': 'Ap', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ap',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eg',
+                        'terms': [{'irrep': 'Ap', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ap',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'App',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'App',
+                                'kappa': 2,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'projection'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tg',
+                        'terms': [{'irrep': 'Ap', 'multiplicity': 1}, {'irrep': 'App', 'multiplicity': 2}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'App',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Au',
+                        'terms': [{'irrep': 'App', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'App',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eu',
+                        'terms': [{'irrep': 'App', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'App',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eu',
+                        'terms': [{'irrep': 'App', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ap',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ap',
+                                'kappa': 2,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'App',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tu',
+                        'terms': [{'irrep': 'Ap', 'multiplicity': 2}, {'irrep': 'App', 'multiplicity': 1}]
+                    }
+                ],
+                'subgroup': {'index': 12, 'o3_class': 'C1v', 'order': 2, 'schoenflies': 'C_1v'},
+                'transversal': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+            },
+            {
+                'alternative_settings': [
+                    {
+                        'map': [0, 5, 1],
+                        'setting': [
+                            {'g_class': 'C32', 'g_index': 5, 'g_symbol': 'C_3^2', 'h_index': 1, 'h_symbol': 'C_3'}
+                        ],
+                        'subduction': [
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': 'A',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': 'Ag',
+                                'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '2E1',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '1Eg',
+                                'terms': [{'irrep': '2E1', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '1E1',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '2Eg',
+                                'terms': [{'irrep': '1E1', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(3,1),
+                                        'irrep': 'A',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {
+                                                'mu': 1,
+                                                'terms': [
+                                                    {'e': Rational(1,1), 'i': 1},
+                                                    {'e': Rational(1,1), 'i': 2},
+                                                    {'e': Rational(-1,1), 'i': 3}
+                                                ]
+                                            }
+                                        ],
+                                        'separation': 'unique'
+                                    },
+                                    {
+                                        'N': Rational(3,1),
+                                        'irrep': '1E1',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {
+                                                'mu': 1,
+                                                'terms': [
+                                                    {'e': Rational(1,1), 'i': 1},
+                                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                                ]
+                                            }
+                                        ],
+                                        'separation': 'unique'
+                                    },
+                                    {
+                                        'N': Rational(3,1),
+                                        'irrep': '2E1',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {
+                                                'mu': 1,
+                                                'terms': [
+                                                    {'e': Rational(1,1), 'i': 1},
+                                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                                    {'e': (Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                                ]
+                                            }
+                                        ],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 3,
+                                'irrep': 'Tg',
+                                'terms': [
+                                    {'irrep': 'A', 'multiplicity': 1},
+                                    {'irrep': '1E1', 'multiplicity': 1},
+                                    {'irrep': '2E1', 'multiplicity': 1}
+                                ]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': 'A',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': 'Au',
+                                'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '2E1',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '1Eu',
+                                'terms': [{'irrep': '2E1', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '1E1',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '2Eu',
+                                'terms': [{'irrep': '1E1', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(3,1),
+                                        'irrep': 'A',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {
+                                                'mu': 1,
+                                                'terms': [
+                                                    {'e': Rational(1,1), 'i': 1},
+                                                    {'e': Rational(1,1), 'i': 2},
+                                                    {'e': Rational(-1,1), 'i': 3}
+                                                ]
+                                            }
+                                        ],
+                                        'separation': 'unique'
+                                    },
+                                    {
+                                        'N': Rational(3,1),
+                                        'irrep': '1E1',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {
+                                                'mu': 1,
+                                                'terms': [
+                                                    {'e': Rational(1,1), 'i': 1},
+                                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                                ]
+                                            }
+                                        ],
+                                        'separation': 'unique'
+                                    },
+                                    {
+                                        'N': Rational(3,1),
+                                        'irrep': '2E1',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {
+                                                'mu': 1,
+                                                'terms': [
+                                                    {'e': Rational(1,1), 'i': 1},
+                                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                                    {'e': (Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                                ]
+                                            }
+                                        ],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 3,
+                                'irrep': 'Tu',
+                                'terms': [
+                                    {'irrep': 'A', 'multiplicity': 1},
+                                    {'irrep': '1E1', 'multiplicity': 1},
+                                    {'irrep': '2E1', 'multiplicity': 1}
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                'class_size': 4,
+                'elements': [0, 1, 5],
+                'id': 'n04',
+                'monomorphism': {
+                    'count': 2,
+                    'determined': False,
+                    'distinct_subductions': 2,
+                    'map': [0, 1, 5],
+                    'setting': [
+                        {'g_class': 'C3', 'g_index': 1, 'g_symbol': 'C_3', 'h_index': 1, 'h_symbol': 'C_3'}
+                    ]
+                },
+                'normal': False,
+                'normalizer_order': 6,
+                'subduction': [
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Ag',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '1E1',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eg',
+                        'terms': [{'irrep': '1E1', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '2E1',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eg',
+                        'terms': [{'irrep': '2E1', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(3,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [
+                                    {
+                                        'mu': 1,
+                                        'terms': [
+                                            {'e': Rational(1,1), 'i': 1},
+                                            {'e': Rational(1,1), 'i': 2},
+                                            {'e': Rational(-1,1), 'i': 3}
+                                        ]
+                                    }
+                                ],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(3,1),
+                                'irrep': '1E1',
+                                'kappa': 1,
+                                'partners': [
+                                    {
+                                        'mu': 1,
+                                        'terms': [
+                                            {'e': Rational(1,1), 'i': 1},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                            {'e': (Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                        ]
+                                    }
+                                ],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(3,1),
+                                'irrep': '2E1',
+                                'kappa': 1,
+                                'partners': [
+                                    {
+                                        'mu': 1,
+                                        'terms': [
+                                            {'e': Rational(1,1), 'i': 1},
+                                            {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                            {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                        ]
+                                    }
+                                ],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tg',
+                        'terms': [
+                            {'irrep': 'A', 'multiplicity': 1},
+                            {'irrep': '1E1', 'multiplicity': 1},
+                            {'irrep': '2E1', 'multiplicity': 1}
+                        ]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Au',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '1E1',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eu',
+                        'terms': [{'irrep': '1E1', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '2E1',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eu',
+                        'terms': [{'irrep': '2E1', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(3,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [
+                                    {
+                                        'mu': 1,
+                                        'terms': [
+                                            {'e': Rational(1,1), 'i': 1},
+                                            {'e': Rational(1,1), 'i': 2},
+                                            {'e': Rational(-1,1), 'i': 3}
+                                        ]
+                                    }
+                                ],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(3,1),
+                                'irrep': '1E1',
+                                'kappa': 1,
+                                'partners': [
+                                    {
+                                        'mu': 1,
+                                        'terms': [
+                                            {'e': Rational(1,1), 'i': 1},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                            {'e': (Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                        ]
+                                    }
+                                ],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(3,1),
+                                'irrep': '2E1',
+                                'kappa': 1,
+                                'partners': [
+                                    {
+                                        'mu': 1,
+                                        'terms': [
+                                            {'e': Rational(1,1), 'i': 1},
+                                            {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                            {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                        ]
+                                    }
+                                ],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tu',
+                        'terms': [
+                            {'irrep': 'A', 'multiplicity': 1},
+                            {'irrep': '1E1', 'multiplicity': 1},
+                            {'irrep': '2E1', 'multiplicity': 1}
+                        ]
+                    }
+                ],
+                'subgroup': {'index': 8, 'o3_class': 'C3', 'order': 3, 'schoenflies': 'C_3'},
+                'transversal': [0, 2, 3, 4, 12, 14, 15, 16]
+            },
+            {
+                'class_size': 1,
+                'elements': [0, 9, 10, 11],
+                'id': 'n05',
+                'monomorphism': {
+                    'count': 6,
+                    'determined': True,
+                    'distinct_subductions': 1,
+                    'map': [0, 9, 10, 11],
+                    'setting': [
+                        {'g_class': 'C2', 'g_index': 9, 'g_symbol': 'C_2', 'h_index': 1, 'h_symbol': 'C_2'},
+                        {'g_class': 'C2', 'g_index': 10, 'g_symbol': 'C_2', 'h_index': 2, 'h_symbol': 'C_2'}
+                    ]
+                },
+                'normal': True,
+                'normalizer_order': 24,
+                'subduction': [
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Ag',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eg',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eg',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B1',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B2',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B3',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tg',
+                        'terms': [
+                            {'irrep': 'B1', 'multiplicity': 1},
+                            {'irrep': 'B2', 'multiplicity': 1},
+                            {'irrep': 'B3', 'multiplicity': 1}
+                        ]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Au',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eu',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eu',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B1',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B2',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B3',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tu',
+                        'terms': [
+                            {'irrep': 'B1', 'multiplicity': 1},
+                            {'irrep': 'B2', 'multiplicity': 1},
+                            {'irrep': 'B3', 'multiplicity': 1}
+                        ]
+                    }
+                ],
+                'subgroup': {'index': 6, 'o3_class': 'D2', 'order': 4, 'schoenflies': 'D_2'},
+                'transversal': [0, 1, 5, 12, 13, 17]
+            },
+            {
+                'class_size': 3,
+                'elements': [0, 9, 12, 21],
+                'id': 'n06',
+                'monomorphism': {
+                    'count': 1,
+                    'determined': True,
+                    'distinct_subductions': 1,
+                    'map': [0, 9, 12, 21],
+                    'setting': [
+                        {'g_class': 'C2', 'g_index': 9, 'g_symbol': 'C_2', 'h_index': 1, 'h_symbol': 'C_2'},
+                        {'g_class': 'i', 'g_index': 12, 'g_symbol': 'i', 'h_index': 2, 'h_symbol': 'i'}
+                    ]
+                },
+                'normal': False,
+                'normalizer_order': 8,
+                'subduction': [
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Ag',
+                        'terms': [{'irrep': 'Ag', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eg',
+                        'terms': [{'irrep': 'Ag', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eg',
+                        'terms': [{'irrep': 'Ag', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Bg',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Bg',
+                                'kappa': 2,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'projection'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tg',
+                        'terms': [{'irrep': 'Ag', 'multiplicity': 1}, {'irrep': 'Bg', 'multiplicity': 2}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Au',
+                        'terms': [{'irrep': 'Au', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eu',
+                        'terms': [{'irrep': 'Au', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eu',
+                        'terms': [{'irrep': 'Au', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Bu',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'projection'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Bu',
+                                'kappa': 2,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'projection'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tu',
+                        'terms': [{'irrep': 'Au', 'multiplicity': 1}, {'irrep': 'Bu', 'multiplicity': 2}]
+                    }
+                ],
+                'subgroup': {'index': 6, 'o3_class': 'C2h', 'order': 4, 'schoenflies': 'C_2h'},
+                'transversal': [0, 1, 3, 5, 6, 10]
+            },
+            {
+                'class_size': 3,
+                'elements': [0, 9, 22, 23],
+                'id': 'n07',
+                'monomorphism': {
+                    'count': 2,
+                    'determined': True,
+                    'distinct_subductions': 1,
+                    'map': [0, 9, 22, 23],
+                    'setting': [
+                        {'g_class': 'C2', 'g_index': 9, 'g_symbol': 'C_2', 'h_index': 1, 'h_symbol': 'C_2'},
+                        {
+                            'g_class': 'sh',
+                            'g_index': 22,
+                            'g_symbol': 'sigma_h',
+                            'h_index': 2,
+                            'h_symbol': 'sigma_v'
+                        }
+                    ]
+                },
+                'normal': False,
+                'normalizer_order': 8,
+                'subduction': [
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A1',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Ag',
+                        'terms': [{'irrep': 'A1', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A1',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eg',
+                        'terms': [{'irrep': 'A1', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A1',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eg',
+                        'terms': [{'irrep': 'A1', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A2',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B1',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B2',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tg',
+                        'terms': [
+                            {'irrep': 'A2', 'multiplicity': 1},
+                            {'irrep': 'B1', 'multiplicity': 1},
+                            {'irrep': 'B2', 'multiplicity': 1}
+                        ]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A2',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Au',
+                        'terms': [{'irrep': 'A2', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A2',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eu',
+                        'terms': [{'irrep': 'A2', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A2',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eu',
+                        'terms': [{'irrep': 'A2', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A1',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B1',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B2',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tu',
+                        'terms': [
+                            {'irrep': 'A1', 'multiplicity': 1},
+                            {'irrep': 'B1', 'multiplicity': 1},
+                            {'irrep': 'B2', 'multiplicity': 1}
+                        ]
+                    }
+                ],
+                'subgroup': {'index': 6, 'o3_class': 'C2v', 'order': 4, 'schoenflies': 'C_2v'},
+                'transversal': [0, 1, 3, 5, 6, 10]
+            },
+            {
+                'alternative_settings': [
+                    {
+                        'map': [0, 5, 1, 12, 17, 13],
+                        'setting': [
+                            {'g_class': 'C32', 'g_index': 5, 'g_symbol': 'C_3^2', 'h_index': 1, 'h_symbol': 'C_3'},
+                            {'g_class': 'i', 'g_index': 12, 'g_symbol': 'i', 'h_index': 3, 'h_symbol': 'i'}
+                        ],
+                        'subduction': [
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': 'Ag',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': 'Ag',
+                                'terms': [{'irrep': 'Ag', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '2E1g',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '1Eg',
+                                'terms': [{'irrep': '2E1g', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '1E1g',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '2Eg',
+                                'terms': [{'irrep': '1E1g', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(3,1),
+                                        'irrep': 'Ag',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {
+                                                'mu': 1,
+                                                'terms': [
+                                                    {'e': Rational(1,1), 'i': 1},
+                                                    {'e': Rational(1,1), 'i': 2},
+                                                    {'e': Rational(-1,1), 'i': 3}
+                                                ]
+                                            }
+                                        ],
+                                        'separation': 'unique'
+                                    },
+                                    {
+                                        'N': Rational(3,1),
+                                        'irrep': '1E1g',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {
+                                                'mu': 1,
+                                                'terms': [
+                                                    {'e': Rational(1,1), 'i': 1},
+                                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                                ]
+                                            }
+                                        ],
+                                        'separation': 'unique'
+                                    },
+                                    {
+                                        'N': Rational(3,1),
+                                        'irrep': '2E1g',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {
+                                                'mu': 1,
+                                                'terms': [
+                                                    {'e': Rational(1,1), 'i': 1},
+                                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                                    {'e': (Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                                ]
+                                            }
+                                        ],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 3,
+                                'irrep': 'Tg',
+                                'terms': [
+                                    {'irrep': 'Ag', 'multiplicity': 1},
+                                    {'irrep': '1E1g', 'multiplicity': 1},
+                                    {'irrep': '2E1g', 'multiplicity': 1}
+                                ]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': 'Au',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': 'Au',
+                                'terms': [{'irrep': 'Au', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '2E1u',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '1Eu',
+                                'terms': [{'irrep': '2E1u', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '1E1u',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '2Eu',
+                                'terms': [{'irrep': '1E1u', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(3,1),
+                                        'irrep': 'Au',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {
+                                                'mu': 1,
+                                                'terms': [
+                                                    {'e': Rational(1,1), 'i': 1},
+                                                    {'e': Rational(1,1), 'i': 2},
+                                                    {'e': Rational(-1,1), 'i': 3}
+                                                ]
+                                            }
+                                        ],
+                                        'separation': 'unique'
+                                    },
+                                    {
+                                        'N': Rational(3,1),
+                                        'irrep': '1E1u',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {
+                                                'mu': 1,
+                                                'terms': [
+                                                    {'e': Rational(1,1), 'i': 1},
+                                                    {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                                ]
+                                            }
+                                        ],
+                                        'separation': 'unique'
+                                    },
+                                    {
+                                        'N': Rational(3,1),
+                                        'irrep': '2E1u',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {
+                                                'mu': 1,
+                                                'terms': [
+                                                    {'e': Rational(1,1), 'i': 1},
+                                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                                    {'e': (Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                                ]
+                                            }
+                                        ],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 3,
+                                'irrep': 'Tu',
+                                'terms': [
+                                    {'irrep': 'Au', 'multiplicity': 1},
+                                    {'irrep': '1E1u', 'multiplicity': 1},
+                                    {'irrep': '2E1u', 'multiplicity': 1}
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                'class_size': 4,
+                'elements': [0, 1, 5, 12, 13, 17],
+                'id': 'n08',
+                'monomorphism': {
+                    'count': 2,
+                    'determined': False,
+                    'distinct_subductions': 2,
+                    'map': [0, 1, 5, 12, 13, 17],
+                    'setting': [
+                        {'g_class': 'C3', 'g_index': 1, 'g_symbol': 'C_3', 'h_index': 1, 'h_symbol': 'C_3'},
+                        {'g_class': 'i', 'g_index': 12, 'g_symbol': 'i', 'h_index': 3, 'h_symbol': 'i'}
+                    ]
+                },
+                'normal': False,
+                'normalizer_order': 6,
+                'subduction': [
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Ag',
+                        'terms': [{'irrep': 'Ag', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '1E1g',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eg',
+                        'terms': [{'irrep': '1E1g', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '2E1g',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eg',
+                        'terms': [{'irrep': '2E1g', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(3,1),
+                                'irrep': 'Ag',
+                                'kappa': 1,
+                                'partners': [
+                                    {
+                                        'mu': 1,
+                                        'terms': [
+                                            {'e': Rational(1,1), 'i': 1},
+                                            {'e': Rational(1,1), 'i': 2},
+                                            {'e': Rational(-1,1), 'i': 3}
+                                        ]
+                                    }
+                                ],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(3,1),
+                                'irrep': '1E1g',
+                                'kappa': 1,
+                                'partners': [
+                                    {
+                                        'mu': 1,
+                                        'terms': [
+                                            {'e': Rational(1,1), 'i': 1},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                            {'e': (Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                        ]
+                                    }
+                                ],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(3,1),
+                                'irrep': '2E1g',
+                                'kappa': 1,
+                                'partners': [
+                                    {
+                                        'mu': 1,
+                                        'terms': [
+                                            {'e': Rational(1,1), 'i': 1},
+                                            {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                            {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                        ]
+                                    }
+                                ],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tg',
+                        'terms': [
+                            {'irrep': 'Ag', 'multiplicity': 1},
+                            {'irrep': '1E1g', 'multiplicity': 1},
+                            {'irrep': '2E1g', 'multiplicity': 1}
+                        ]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Au',
+                        'terms': [{'irrep': 'Au', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '1E1u',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eu',
+                        'terms': [{'irrep': '1E1u', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '2E1u',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eu',
+                        'terms': [{'irrep': '2E1u', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(3,1),
+                                'irrep': 'Au',
+                                'kappa': 1,
+                                'partners': [
+                                    {
+                                        'mu': 1,
+                                        'terms': [
+                                            {'e': Rational(1,1), 'i': 1},
+                                            {'e': Rational(1,1), 'i': 2},
+                                            {'e': Rational(-1,1), 'i': 3}
+                                        ]
+                                    }
+                                ],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(3,1),
+                                'irrep': '1E1u',
+                                'kappa': 1,
+                                'partners': [
+                                    {
+                                        'mu': 1,
+                                        'terms': [
+                                            {'e': Rational(1,1), 'i': 1},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                            {'e': (Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                        ]
+                                    }
+                                ],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(3,1),
+                                'irrep': '2E1u',
+                                'kappa': 1,
+                                'partners': [
+                                    {
+                                        'mu': 1,
+                                        'terms': [
+                                            {'e': Rational(1,1), 'i': 1},
+                                            {'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 2},
+                                            {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'i': 3}
+                                        ]
+                                    }
+                                ],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tu',
+                        'terms': [
+                            {'irrep': 'Au', 'multiplicity': 1},
+                            {'irrep': '1E1u', 'multiplicity': 1},
+                            {'irrep': '2E1u', 'multiplicity': 1}
+                        ]
+                    }
+                ],
+                'subgroup': {'index': 4, 'o3_class': 'S6', 'order': 6, 'schoenflies': 'S_6'},
+                'transversal': [0, 2, 3, 4]
+            },
+            {
+                'class_size': 1,
+                'elements': [0, 9, 10, 11, 12, 21, 22, 23],
+                'id': 'n09',
+                'monomorphism': {
+                    'count': 6,
+                    'determined': True,
+                    'distinct_subductions': 1,
+                    'map': [0, 9, 10, 11, 12, 21, 23, 22],
+                    'setting': [
+                        {'g_class': 'C2', 'g_index': 9, 'g_symbol': 'C_2', 'h_index': 1, 'h_symbol': 'C_2'},
+                        {'g_class': 'C2', 'g_index': 10, 'g_symbol': 'C_2', 'h_index': 2, 'h_symbol': 'C_2'},
+                        {'g_class': 'i', 'g_index': 12, 'g_symbol': 'i', 'h_index': 4, 'h_symbol': 'i'}
+                    ]
+                },
+                'normal': True,
+                'normalizer_order': 24,
+                'subduction': [
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Ag',
+                        'terms': [{'irrep': 'Ag', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eg',
+                        'terms': [{'irrep': 'Ag', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eg',
+                        'terms': [{'irrep': 'Ag', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B1g',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B2g',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B3g',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tg',
+                        'terms': [
+                            {'irrep': 'B1g', 'multiplicity': 1},
+                            {'irrep': 'B2g', 'multiplicity': 1},
+                            {'irrep': 'B3g', 'multiplicity': 1}
+                        ]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Au',
+                        'terms': [{'irrep': 'Au', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eu',
+                        'terms': [{'irrep': 'Au', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eu',
+                        'terms': [{'irrep': 'Au', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B1u',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 3}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B2u',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            },
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'B3u',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tu',
+                        'terms': [
+                            {'irrep': 'B1u', 'multiplicity': 1},
+                            {'irrep': 'B2u', 'multiplicity': 1},
+                            {'irrep': 'B3u', 'multiplicity': 1}
+                        ]
+                    }
+                ],
+                'subgroup': {'index': 3, 'o3_class': 'D2h', 'order': 8, 'schoenflies': 'D_2h'},
+                'transversal': [0, 1, 5]
+            },
+            {
+                'alternative_settings': [
+                    {
+                        'map': [0, 5, 6, 8, 7, 1, 2, 4, 3, 10, 9, 11],
+                        'setting': [
+                            {'g_class': 'C32', 'g_index': 5, 'g_symbol': 'C_3^2', 'h_index': 1, 'h_symbol': 'C_3'},
+                            {'g_class': 'C32', 'g_index': 6, 'g_symbol': 'C_3^2', 'h_index': 2, 'h_symbol': 'C_3'}
+                        ],
+                        'subduction': [
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': 'A',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': 'Ag',
+                                'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '2E',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '1Eg',
+                                'terms': [{'irrep': '2E', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '1E',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '2Eg',
+                                'terms': [{'irrep': '1E', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': 'T',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]},
+                                            {'mu': 2, 'terms': [{'e': Rational(-1,1), 'i': 3}]},
+                                            {'mu': 3, 'terms': [{'e': Rational(-1,1), 'i': 2}]}
+                                        ],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 3,
+                                'irrep': 'Tg',
+                                'terms': [{'irrep': 'T', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': 'A',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': 'Au',
+                                'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '2E',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '1Eu',
+                                'terms': [{'irrep': '2E', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '1E',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '2Eu',
+                                'terms': [{'irrep': '1E', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': 'T',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]},
+                                            {'mu': 2, 'terms': [{'e': Rational(-1,1), 'i': 3}]},
+                                            {'mu': 3, 'terms': [{'e': Rational(-1,1), 'i': 2}]}
+                                        ],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 3,
+                                'irrep': 'Tu',
+                                'terms': [{'irrep': 'T', 'multiplicity': 1}]
+                            }
+                        ]
+                    }
+                ],
+                'class_size': 1,
+                'elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                'id': 'n10',
+                'monomorphism': {
+                    'count': 24,
+                    'determined': False,
+                    'distinct_subductions': 2,
+                    'map': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                    'setting': [
+                        {'g_class': 'C3', 'g_index': 1, 'g_symbol': 'C_3', 'h_index': 1, 'h_symbol': 'C_3'},
+                        {'g_class': 'C3', 'g_index': 2, 'g_symbol': 'C_3', 'h_index': 2, 'h_symbol': 'C_3'}
+                    ]
+                },
+                'normal': True,
+                'normalizer_order': 24,
+                'subduction': [
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Ag',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '1E',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eg',
+                        'terms': [{'irrep': '1E', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '2E',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eg',
+                        'terms': [{'irrep': '2E', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'T',
+                                'kappa': 1,
+                                'partners': [
+                                    {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]},
+                                    {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 2}]},
+                                    {'mu': 3, 'terms': [{'e': Rational(1,1), 'i': 3}]}
+                                ],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tg',
+                        'terms': [{'irrep': 'T', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'A',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Au',
+                        'terms': [{'irrep': 'A', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '1E',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eu',
+                        'terms': [{'irrep': '1E', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '2E',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eu',
+                        'terms': [{'irrep': '2E', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'T',
+                                'kappa': 1,
+                                'partners': [
+                                    {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]},
+                                    {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 2}]},
+                                    {'mu': 3, 'terms': [{'e': Rational(1,1), 'i': 3}]}
+                                ],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tu',
+                        'terms': [{'irrep': 'T', 'multiplicity': 1}]
+                    }
+                ],
+                'subgroup': {'index': 2, 'o3_class': 'T', 'order': 12, 'schoenflies': 'T'},
+                'transversal': [0, 12]
+            },
+            {
+                'alternative_settings': [
+                    {
+                        'map': [0, 5, 6, 8, 7, 1, 2, 4, 3, 10, 9, 11, 12, 17, 18, 20, 19, 13, 14, 16, 15, 22, 21, 23],
+                        'setting': [
+                            {'g_class': 'C32', 'g_index': 5, 'g_symbol': 'C_3^2', 'h_index': 1, 'h_symbol': 'C_3'},
+                            {'g_class': 'C32', 'g_index': 6, 'g_symbol': 'C_3^2', 'h_index': 2, 'h_symbol': 'C_3'},
+                            {'g_class': 'i', 'g_index': 12, 'g_symbol': 'i', 'h_index': 12, 'h_symbol': 'i'}
+                        ],
+                        'subduction': [
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': 'Ag',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': 'Ag',
+                                'terms': [{'irrep': 'Ag', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '2Eg',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '1Eg',
+                                'terms': [{'irrep': '2Eg', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '1Eg',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '2Eg',
+                                'terms': [{'irrep': '1Eg', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': 'Tg',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]},
+                                            {'mu': 2, 'terms': [{'e': Rational(-1,1), 'i': 3}]},
+                                            {'mu': 3, 'terms': [{'e': Rational(-1,1), 'i': 2}]}
+                                        ],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 3,
+                                'irrep': 'Tg',
+                                'terms': [{'irrep': 'Tg', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': 'Au',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': 'Au',
+                                'terms': [{'irrep': 'Au', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '2Eu',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '1Eu',
+                                'terms': [{'irrep': '2Eu', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': '1Eu',
+                                        'kappa': 1,
+                                        'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 1,
+                                'irrep': '2Eu',
+                                'terms': [{'irrep': '1Eu', 'multiplicity': 1}]
+                            },
+                            {
+                                'blocks': [
+                                    {
+                                        'N': Rational(1,1),
+                                        'irrep': 'Tu',
+                                        'kappa': 1,
+                                        'partners': [
+                                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]},
+                                            {'mu': 2, 'terms': [{'e': Rational(-1,1), 'i': 3}]},
+                                            {'mu': 3, 'terms': [{'e': Rational(-1,1), 'i': 2}]}
+                                        ],
+                                        'separation': 'unique'
+                                    }
+                                ],
+                                'dim': 3,
+                                'irrep': 'Tu',
+                                'terms': [{'irrep': 'Tu', 'multiplicity': 1}]
+                            }
+                        ]
+                    }
+                ],
+                'class_size': 1,
+                'elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                'id': 'n11',
+                'monomorphism': {
+                    'count': 24,
+                    'determined': False,
+                    'distinct_subductions': 2,
+                    'map': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                    'setting': [
+                        {'g_class': 'C3', 'g_index': 1, 'g_symbol': 'C_3', 'h_index': 1, 'h_symbol': 'C_3'},
+                        {'g_class': 'C3', 'g_index': 2, 'g_symbol': 'C_3', 'h_index': 2, 'h_symbol': 'C_3'},
+                        {'g_class': 'i', 'g_index': 12, 'g_symbol': 'i', 'h_index': 12, 'h_symbol': 'i'}
+                    ]
+                },
+                'normal': True,
+                'normalizer_order': 24,
+                'subduction': [
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Ag',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Ag',
+                        'terms': [{'irrep': 'Ag', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '1Eg',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eg',
+                        'terms': [{'irrep': '1Eg', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '2Eg',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eg',
+                        'terms': [{'irrep': '2Eg', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Tg',
+                                'kappa': 1,
+                                'partners': [
+                                    {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]},
+                                    {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 2}]},
+                                    {'mu': 3, 'terms': [{'e': Rational(1,1), 'i': 3}]}
+                                ],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tg',
+                        'terms': [{'irrep': 'Tg', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Au',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': 'Au',
+                        'terms': [{'irrep': 'Au', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '1Eu',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '1Eu',
+                        'terms': [{'irrep': '1Eu', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': '2Eu',
+                                'kappa': 1,
+                                'partners': [{'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]}],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 1,
+                        'irrep': '2Eu',
+                        'terms': [{'irrep': '2Eu', 'multiplicity': 1}]
+                    },
+                    {
+                        'blocks': [
+                            {
+                                'N': Rational(1,1),
+                                'irrep': 'Tu',
+                                'kappa': 1,
+                                'partners': [
+                                    {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1}]},
+                                    {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 2}]},
+                                    {'mu': 3, 'terms': [{'e': Rational(1,1), 'i': 3}]}
+                                ],
+                                'separation': 'unique'
+                            }
+                        ],
+                        'dim': 3,
+                        'irrep': 'Tu',
+                        'terms': [{'irrep': 'Tu', 'multiplicity': 1}]
+                    }
+                ],
+                'subgroup': {'index': 1, 'o3_class': 'Th', 'order': 24, 'schoenflies': 'T_h'},
+                'transversal': [0]
+            }
+        ],
+        'embeddings_with_alternative_settings': 4
+    },
+    'subduction_o3': {
+        'J_max_tabulated': 20,
+        'domain': 'integer J',
+        'embedding': {'id': 'T_h/standard'},
+        'parities': {
+            'g': {
+                'increment': {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 3, 'Tu': 0},
+                'residues': [
+                    {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 0, 'Tu': 0},
+                    {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                    {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                    {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 2, 'Tu': 0},
+                    {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 2, 'Tu': 0},
+                    {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 3, 'Tu': 0}
+                ],
+                'table': [
+                    {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 0, 'Tu': 0},
+                    {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                    {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                    {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 2, 'Tu': 0},
+                    {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 2, 'Tu': 0},
+                    {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 3, 'Tu': 0},
+                    {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 2, 'Au': 0, 'Tg': 3, 'Tu': 0},
+                    {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 4, 'Tu': 0},
+                    {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 4, 'Tu': 0},
+                    {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 2, 'Au': 0, 'Tg': 5, 'Tu': 0},
+                    {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 2, 'Au': 0, 'Tg': 5, 'Tu': 0},
+                    {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 6, 'Tu': 0},
+                    {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 3, 'Au': 0, 'Tg': 6, 'Tu': 0},
+                    {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 2, 'Au': 0, 'Tg': 7, 'Tu': 0},
+                    {'1Eg': 3, '1Eu': 0, '2Eg': 3, '2Eu': 0, 'Ag': 2, 'Au': 0, 'Tg': 7, 'Tu': 0},
+                    {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 3, 'Au': 0, 'Tg': 8, 'Tu': 0},
+                    {'1Eg': 3, '1Eu': 0, '2Eg': 3, '2Eu': 0, 'Ag': 3, 'Au': 0, 'Tg': 8, 'Tu': 0},
+                    {'1Eg': 3, '1Eu': 0, '2Eg': 3, '2Eu': 0, 'Ag': 2, 'Au': 0, 'Tg': 9, 'Tu': 0},
+                    {'1Eg': 3, '1Eu': 0, '2Eg': 3, '2Eu': 0, 'Ag': 4, 'Au': 0, 'Tg': 9, 'Tu': 0},
+                    {'1Eg': 3, '1Eu': 0, '2Eg': 3, '2Eu': 0, 'Ag': 3, 'Au': 0, 'Tg': 10, 'Tu': 0},
+                    {'1Eg': 4, '1Eu': 0, '2Eg': 4, '2Eu': 0, 'Ag': 3, 'Au': 0, 'Tg': 10, 'Tu': 0}
+                ]
+            },
+            'u': {
+                'increment': {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 3},
+                'residues': [
+                    {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 0},
+                    {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 0, 'Tu': 1},
+                    {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 0, 'Tg': 0, 'Tu': 1},
+                    {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 2},
+                    {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 2},
+                    {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 0, 'Tg': 0, 'Tu': 3}
+                ],
+                'table': [
+                    {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 0},
+                    {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 0, 'Tu': 1},
+                    {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 0, 'Tg': 0, 'Tu': 1},
+                    {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 2},
+                    {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 2},
+                    {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 0, 'Tg': 0, 'Tu': 3},
+                    {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 2, 'Tg': 0, 'Tu': 3},
+                    {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 4},
+                    {'1Eg': 0, '1Eu': 2, '2Eg': 0, '2Eu': 2, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 4},
+                    {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 2, 'Tg': 0, 'Tu': 5},
+                    {'1Eg': 0, '1Eu': 2, '2Eg': 0, '2Eu': 2, 'Ag': 0, 'Au': 2, 'Tg': 0, 'Tu': 5},
+                    {'1Eg': 0, '1Eu': 2, '2Eg': 0, '2Eu': 2, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 6},
+                    {'1Eg': 0, '1Eu': 2, '2Eg': 0, '2Eu': 2, 'Ag': 0, 'Au': 3, 'Tg': 0, 'Tu': 6},
+                    {'1Eg': 0, '1Eu': 2, '2Eg': 0, '2Eu': 2, 'Ag': 0, 'Au': 2, 'Tg': 0, 'Tu': 7},
+                    {'1Eg': 0, '1Eu': 3, '2Eg': 0, '2Eu': 3, 'Ag': 0, 'Au': 2, 'Tg': 0, 'Tu': 7},
+                    {'1Eg': 0, '1Eu': 2, '2Eg': 0, '2Eu': 2, 'Ag': 0, 'Au': 3, 'Tg': 0, 'Tu': 8},
+                    {'1Eg': 0, '1Eu': 3, '2Eg': 0, '2Eu': 3, 'Ag': 0, 'Au': 3, 'Tg': 0, 'Tu': 8},
+                    {'1Eg': 0, '1Eu': 3, '2Eg': 0, '2Eu': 3, 'Ag': 0, 'Au': 2, 'Tg': 0, 'Tu': 9},
+                    {'1Eg': 0, '1Eu': 3, '2Eg': 0, '2Eu': 3, 'Ag': 0, 'Au': 4, 'Tg': 0, 'Tu': 9},
+                    {'1Eg': 0, '1Eu': 3, '2Eg': 0, '2Eu': 3, 'Ag': 0, 'Au': 3, 'Tg': 0, 'Tu': 10},
+                    {'1Eg': 0, '1Eu': 4, '2Eg': 0, '2Eu': 4, 'Ag': 0, 'Au': 3, 'Tg': 0, 'Tu': 10}
+                ]
+            }
+        },
+        'period': 6
+    },
+    'subduction_unitary': {
+        'levels': [
+            {
+                'chain': {
+                    'image': {
+                        'conjugator': [
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)]
+                        ],
+                        'element_map': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 5, 6, 7, 8, 1, 2, 3, 4, 9, 10, 11],
+                        'record': 'data/json/T.json'
+                    },
+                    'kind': 'U(3) > O(3) > image',
+                    'rule': 'Sym^v = sum over l of r^(v-l) H_l; H_l = D^(l,(-1)^l) restricted to the image, pulled back by element_map'
+                },
+                'dim': 3,
+                'irrep': 'T_g',
+                'irrep_id': 'Tg',
+                'symmetric': {
+                    'bases': {
+                        'blocks': [
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 0,
+                                'v': 0,
+                                'vectors': [{'components': [{'e': Rational(1,1), 'quanta': [0, 0, 0]}], 'mu': 1}]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 1,
+                                'v': 1,
+                                'vectors': [
+                                    {'components': [{'e': Rational(1,1), 'quanta': [1, 0, 0]}], 'mu': 1},
+                                    {'components': [{'e': Rational(1,1), 'quanta': [0, 1, 0]}], 'mu': 2},
+                                    {'components': [{'e': Rational(1,1), 'quanta': [0, 0, 1]}], 'mu': 3}
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 2,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [2, 0, 0]},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 2, 0]},
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 0, 2]
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 2,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [2, 0, 0]},
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 2, 0]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 0, 2]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 2,
+                                'vectors': [
+                                    {'components': [{'e': Rational(1,1), 'quanta': [0, 1, 1]}], 'mu': 1},
+                                    {'components': [{'e': Rational(1,1), 'quanta': [1, 0, 1]}], 'mu': 2},
+                                    {'components': [{'e': Rational(1,1), 'quanta': [1, 1, 0]}], 'mu': 3}
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 0,
+                                'v': 2,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [2, 0, 0]},
+                                            {'e': Rational(1,1), 'quanta': [0, 2, 0]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 2]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 3,
+                                'v': 3,
+                                'vectors': [{'components': [{'e': Rational(1,1), 'quanta': [1, 1, 1]}], 'mu': 1}]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 3,
+                                'v': 3,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [3, 0, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [1, 0, 2]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-3,1), 'quanta': [2, 1, 0]},
+                                            {'e': Rational(1,1), 'quanta': [0, 3, 0]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-3,1), 'quanta': [0, 2, 1]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 3]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 2,
+                                'l': 3,
+                                'v': 3,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [3, 0, 0]},
+                                            {'e': Rational(4,1), 'quanta': [1, 2, 0]},
+                                            {'e': Rational(-1,1), 'quanta': [1, 0, 2]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [2, 1, 0]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 3, 0]},
+                                            {'e': Rational(4,1), 'quanta': [0, 1, 2]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(4,1), 'quanta': [2, 0, 1]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 2, 1]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 0, 3]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 1,
+                                'v': 3,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [3, 0, 0]},
+                                            {'e': Rational(1,1), 'quanta': [1, 2, 0]},
+                                            {'e': Rational(1,1), 'quanta': [1, 0, 2]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [2, 1, 0]},
+                                            {'e': Rational(1,1), 'quanta': [0, 3, 0]},
+                                            {'e': Rational(1,1), 'quanta': [0, 1, 2]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [2, 0, 1]},
+                                            {'e': Rational(1,1), 'quanta': [0, 2, 1]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 3]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 0, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [2, 2, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [2, 0, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 4, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [0, 2, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 0, 0]},
+                                            {
+                                                'e': (Rational(-6,1) + Rational(-6,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 2, 0]
+                                            },
+                                            {'e': (Rational(6,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [2, 0, 2]},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 4, 0]},
+                                            {'e': Rational(6,1), 'quanta': [0, 2, 2]},
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 0, 4]
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 0, 0]},
+                                            {'e': (Rational(6,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [2, 2, 0]},
+                                            {
+                                                'e': (Rational(-6,1) + Rational(-6,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 0]
+                                            },
+                                            {'e': Rational(6,1), 'quanta': [0, 2, 2]},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(3,1), 'quanta': [2, 1, 1]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 1, 3]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [3, 0, 1]},
+                                            {'e': Rational(3,1), 'quanta': [1, 2, 1]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [1, 3, 0]},
+                                            {'e': Rational(3,1), 'quanta': [1, 1, 2]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 2,
+                                'l': 4,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(-3,1), 'quanta': [2, 1, 1]},
+                                            {'e': Rational(4,1), 'quanta': [0, 3, 1]},
+                                            {'e': Rational(-3,1), 'quanta': [0, 1, 3]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-3,1), 'quanta': [3, 0, 1]},
+                                            {'e': Rational(-3,1), 'quanta': [1, 2, 1]},
+                                            {'e': Rational(4,1), 'quanta': [1, 0, 3]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(4,1), 'quanta': [3, 1, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [1, 3, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [1, 1, 2]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 0, 0]},
+                                            {
+                                                'e': (Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 2, 0]
+                                            },
+                                            {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [2, 0, 2]},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 4, 0]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 2, 2]},
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 0, 4]
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 0, 0]},
+                                            {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [2, 2, 0]},
+                                            {
+                                                'e': (Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 0]
+                                            },
+                                            {'e': Rational(-1,1), 'quanta': [0, 2, 2]},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [2, 1, 1]},
+                                            {'e': Rational(1,1), 'quanta': [0, 3, 1]},
+                                            {'e': Rational(1,1), 'quanta': [0, 1, 3]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [3, 0, 1]},
+                                            {'e': Rational(1,1), 'quanta': [1, 2, 1]},
+                                            {'e': Rational(1,1), 'quanta': [1, 0, 3]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [3, 1, 0]},
+                                            {'e': Rational(1,1), 'quanta': [1, 3, 0]},
+                                            {'e': Rational(1,1), 'quanta': [1, 1, 2]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 0,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 0, 0]},
+                                            {'e': Rational(2,1), 'quanta': [2, 2, 0]},
+                                            {'e': Rational(2,1), 'quanta': [2, 0, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 4, 0]},
+                                            {'e': Rational(2,1), 'quanta': [0, 2, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'l': 5,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [3, 1, 1]},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [1, 3, 1]},
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [1, 1, 3]
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'l': 5,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [3, 1, 1]},
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [1, 3, 1]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [1, 1, 3]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 5,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 0, 0]},
+                                            {'e': Rational(-10,1), 'quanta': [3, 0, 2]},
+                                            {'e': Rational(5,1), 'quanta': [1, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(5,1), 'quanta': [4, 1, 0]},
+                                            {'e': Rational(-10,1), 'quanta': [2, 3, 0]},
+                                            {'e': Rational(1,1), 'quanta': [0, 5, 0]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(5,1), 'quanta': [0, 4, 1]},
+                                            {'e': Rational(-10,1), 'quanta': [0, 2, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 5]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 2,
+                                'l': 5,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [5, 0, 0]},
+                                            {'e': Rational(8,1), 'quanta': [3, 2, 0]},
+                                            {'e': Rational(2,1), 'quanta': [3, 0, 2]},
+                                            {'e': Rational(-24,1), 'quanta': [1, 2, 2]},
+                                            {'e': Rational(3,1), 'quanta': [1, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(3,1), 'quanta': [4, 1, 0]},
+                                            {'e': Rational(2,1), 'quanta': [2, 3, 0]},
+                                            {'e': Rational(-24,1), 'quanta': [2, 1, 2]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 5, 0]},
+                                            {'e': Rational(8,1), 'quanta': [0, 3, 2]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-24,1), 'quanta': [2, 2, 1]},
+                                            {'e': Rational(8,1), 'quanta': [2, 0, 3]},
+                                            {'e': Rational(3,1), 'quanta': [0, 4, 1]},
+                                            {'e': Rational(2,1), 'quanta': [0, 2, 3]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 0, 5]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 3,
+                                'l': 5,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 0, 0]},
+                                            {'e': Rational(-12,1), 'quanta': [3, 2, 0]},
+                                            {'e': Rational(2,1), 'quanta': [3, 0, 2]},
+                                            {'e': Rational(8,1), 'quanta': [1, 4, 0]},
+                                            {'e': Rational(-12,1), 'quanta': [1, 2, 2]},
+                                            {'e': Rational(1,1), 'quanta': [1, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 1, 0]},
+                                            {'e': Rational(2,1), 'quanta': [2, 3, 0]},
+                                            {'e': Rational(-12,1), 'quanta': [2, 1, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 5, 0]},
+                                            {'e': Rational(-12,1), 'quanta': [0, 3, 2]},
+                                            {'e': Rational(8,1), 'quanta': [0, 1, 4]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(8,1), 'quanta': [4, 0, 1]},
+                                            {'e': Rational(-12,1), 'quanta': [2, 2, 1]},
+                                            {'e': Rational(-12,1), 'quanta': [2, 0, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 4, 1]},
+                                            {'e': Rational(2,1), 'quanta': [0, 2, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 5]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 3,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [3, 1, 1]},
+                                            {'e': Rational(1,1), 'quanta': [1, 3, 1]},
+                                            {'e': Rational(1,1), 'quanta': [1, 1, 3]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 3,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 0, 0]},
+                                            {'e': Rational(-1,1), 'quanta': [3, 0, 2]},
+                                            {'e': Rational(-1,1), 'quanta': [1, 4, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [1, 2, 2]},
+                                            {'e': Rational(-2,1), 'quanta': [1, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-2,1), 'quanta': [4, 1, 0]},
+                                            {'e': Rational(-1,1), 'quanta': [2, 3, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [2, 1, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 5, 0]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 1, 4]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [4, 0, 1]},
+                                            {'e': Rational(-3,1), 'quanta': [2, 2, 1]},
+                                            {'e': Rational(-2,1), 'quanta': [0, 4, 1]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 2, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 5]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 2,
+                                'l': 3,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [5, 0, 0]},
+                                            {'e': Rational(8,1), 'quanta': [3, 2, 0]},
+                                            {'e': Rational(-7,1), 'quanta': [3, 0, 2]},
+                                            {'e': Rational(9,1), 'quanta': [1, 4, 0]},
+                                            {'e': Rational(3,1), 'quanta': [1, 2, 2]},
+                                            {'e': Rational(-6,1), 'quanta': [1, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-6,1), 'quanta': [4, 1, 0]},
+                                            {'e': Rational(-7,1), 'quanta': [2, 3, 0]},
+                                            {'e': Rational(3,1), 'quanta': [2, 1, 2]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 5, 0]},
+                                            {'e': Rational(8,1), 'quanta': [0, 3, 2]},
+                                            {'e': Rational(9,1), 'quanta': [0, 1, 4]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(9,1), 'quanta': [4, 0, 1]},
+                                            {'e': Rational(3,1), 'quanta': [2, 2, 1]},
+                                            {'e': Rational(8,1), 'quanta': [2, 0, 3]},
+                                            {'e': Rational(-6,1), 'quanta': [0, 4, 1]},
+                                            {'e': Rational(-7,1), 'quanta': [0, 2, 3]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 0, 5]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 1,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 0, 0]},
+                                            {'e': Rational(2,1), 'quanta': [3, 2, 0]},
+                                            {'e': Rational(2,1), 'quanta': [3, 0, 2]},
+                                            {'e': Rational(1,1), 'quanta': [1, 4, 0]},
+                                            {'e': Rational(2,1), 'quanta': [1, 2, 2]},
+                                            {'e': Rational(1,1), 'quanta': [1, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 1, 0]},
+                                            {'e': Rational(2,1), 'quanta': [2, 3, 0]},
+                                            {'e': Rational(2,1), 'quanta': [2, 1, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 5, 0]},
+                                            {'e': Rational(2,1), 'quanta': [0, 3, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 1, 4]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 0, 1]},
+                                            {'e': Rational(2,1), 'quanta': [2, 2, 1]},
+                                            {'e': Rational(2,1), 'quanta': [2, 0, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 4, 1]},
+                                            {'e': Rational(2,1), 'quanta': [0, 2, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 5]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 6,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {'e': Rational(-15,1), 'quanta': [4, 0, 2]},
+                                            {'e': Rational(-15,1), 'quanta': [2, 4, 0]},
+                                            {'e': Rational(90,1), 'quanta': [2, 2, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 6, 0]},
+                                            {'e': Rational(-15,1), 'quanta': [0, 2, 4]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 6]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 2,
+                                'l': 6,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [6, 0, 0]},
+                                            {'e': Rational(46,1), 'quanta': [4, 2, 0]},
+                                            {'e': Rational(-31,1), 'quanta': [4, 0, 2]},
+                                            {'e': Rational(-31,1), 'quanta': [2, 4, 0]},
+                                            {'e': Rational(-90,1), 'quanta': [2, 2, 2]},
+                                            {'e': Rational(46,1), 'quanta': [2, 0, 4]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 6, 0]},
+                                            {'e': Rational(46,1), 'quanta': [0, 4, 2]},
+                                            {'e': Rational(-31,1), 'quanta': [0, 2, 4]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 0, 6]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'l': 6,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {
+                                                'e': (Rational(-5,1) + Rational(5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 2, 0]
+                                            },
+                                            {
+                                                'e': (Rational(-10,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(5,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 4, 0]
+                                            },
+                                            {
+                                                'e': (Rational(10,1) + Rational(5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 4]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 6, 0]},
+                                            {
+                                                'e': (Rational(-5,1) + Rational(-10,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 2]
+                                            },
+                                            {
+                                                'e': (Rational(5,1) + Rational(10,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 2, 4]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 0, 6]
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'l': 6,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {
+                                                'e': (Rational(-10,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 2, 0]
+                                            },
+                                            {
+                                                'e': (Rational(-5,1) + Rational(5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(10,1) + Rational(5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 4, 0]
+                                            },
+                                            {
+                                                'e': (Rational(5,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 4]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 6, 0]
+                                            },
+                                            {
+                                                'e': (Rational(5,1) + Rational(10,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-5,1) + Rational(-10,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 2, 4]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 0, 6]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 6,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(5,1), 'quanta': [4, 1, 1]},
+                                            {'e': Rational(-10,1), 'quanta': [2, 1, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 1, 5]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 0, 1]},
+                                            {'e': Rational(-10,1), 'quanta': [3, 2, 1]},
+                                            {'e': Rational(5,1), 'quanta': [1, 4, 1]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [1, 5, 0]},
+                                            {'e': Rational(-10,1), 'quanta': [1, 3, 2]},
+                                            {'e': Rational(5,1), 'quanta': [1, 1, 4]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 2,
+                                'l': 6,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(-9,1), 'quanta': [4, 1, 1]},
+                                            {'e': Rational(24,1), 'quanta': [2, 3, 1]},
+                                            {'e': Rational(-6,1), 'quanta': [2, 1, 3]},
+                                            {'e': Rational(-8,1), 'quanta': [0, 3, 3]},
+                                            {'e': Rational(3,1), 'quanta': [0, 1, 5]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(3,1), 'quanta': [5, 0, 1]},
+                                            {'e': Rational(-6,1), 'quanta': [3, 2, 1]},
+                                            {'e': Rational(-8,1), 'quanta': [3, 0, 3]},
+                                            {'e': Rational(-9,1), 'quanta': [1, 4, 1]},
+                                            {'e': Rational(24,1), 'quanta': [1, 2, 3]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-8,1), 'quanta': [3, 3, 0]},
+                                            {'e': Rational(24,1), 'quanta': [3, 1, 2]},
+                                            {'e': Rational(3,1), 'quanta': [1, 5, 0]},
+                                            {'e': Rational(-6,1), 'quanta': [1, 3, 2]},
+                                            {'e': Rational(-9,1), 'quanta': [1, 1, 4]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 3,
+                                'l': 6,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(5,1), 'quanta': [4, 1, 1]},
+                                            {'e': Rational(-20,1), 'quanta': [2, 3, 1]},
+                                            {'e': Rational(10,1), 'quanta': [2, 1, 3]},
+                                            {'e': Rational(8,1), 'quanta': [0, 5, 1]},
+                                            {'e': Rational(-20,1), 'quanta': [0, 3, 3]},
+                                            {'e': Rational(5,1), 'quanta': [0, 1, 5]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(5,1), 'quanta': [5, 0, 1]},
+                                            {'e': Rational(10,1), 'quanta': [3, 2, 1]},
+                                            {'e': Rational(-20,1), 'quanta': [3, 0, 3]},
+                                            {'e': Rational(5,1), 'quanta': [1, 4, 1]},
+                                            {'e': Rational(-20,1), 'quanta': [1, 2, 3]},
+                                            {'e': Rational(8,1), 'quanta': [1, 0, 5]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(8,1), 'quanta': [5, 1, 0]},
+                                            {'e': Rational(-20,1), 'quanta': [3, 3, 0]},
+                                            {'e': Rational(-20,1), 'quanta': [3, 1, 2]},
+                                            {'e': Rational(5,1), 'quanta': [1, 5, 0]},
+                                            {'e': Rational(10,1), 'quanta': [1, 3, 2]},
+                                            {'e': Rational(5,1), 'quanta': [1, 1, 4]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {'e': Rational(-2,1), 'quanta': [4, 2, 0]},
+                                            {'e': Rational(-2,1), 'quanta': [4, 0, 2]},
+                                            {'e': Rational(-2,1), 'quanta': [2, 4, 0]},
+                                            {'e': Rational(-9,1), 'quanta': [2, 2, 2]},
+                                            {'e': Rational(-2,1), 'quanta': [2, 0, 4]},
+                                            {'e': Rational(1,1), 'quanta': [0, 6, 0]},
+                                            {'e': Rational(-2,1), 'quanta': [0, 4, 2]},
+                                            {'e': Rational(-2,1), 'quanta': [0, 2, 4]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 6]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {
+                                                'e': (Rational(-5,1) + Rational(-6,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 2, 0]
+                                            },
+                                            {
+                                                'e': (Rational(1,1) + Rational(6,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-6,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 4, 0]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 4]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 6, 0]},
+                                            {
+                                                'e': (Rational(6,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 2]
+                                            },
+                                            {
+                                                'e': (Rational(5,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 2, 4]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 0, 6]
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {
+                                                'e': (Rational(1,1) + Rational(6,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 2, 0]
+                                            },
+                                            {
+                                                'e': (Rational(-5,1) + Rational(-6,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 4, 0]
+                                            },
+                                            {
+                                                'e': (Rational(-6,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 4]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 6, 0]
+                                            },
+                                            {
+                                                'e': (Rational(5,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 2]
+                                            },
+                                            {
+                                                'e': (Rational(6,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 2, 4]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 0, 6]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(3,1), 'quanta': [4, 1, 1]},
+                                            {'e': Rational(5,1), 'quanta': [2, 1, 3]},
+                                            {'e': Rational(-3,1), 'quanta': [0, 5, 1]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 3, 3]},
+                                            {'e': Rational(2,1), 'quanta': [0, 1, 5]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(2,1), 'quanta': [5, 0, 1]},
+                                            {'e': Rational(5,1), 'quanta': [3, 2, 1]},
+                                            {'e': Rational(-1,1), 'quanta': [3, 0, 3]},
+                                            {'e': Rational(3,1), 'quanta': [1, 4, 1]},
+                                            {'e': Rational(-3,1), 'quanta': [1, 0, 5]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-3,1), 'quanta': [5, 1, 0]},
+                                            {'e': Rational(-1,1), 'quanta': [3, 3, 0]},
+                                            {'e': Rational(2,1), 'quanta': [1, 5, 0]},
+                                            {'e': Rational(5,1), 'quanta': [1, 3, 2]},
+                                            {'e': Rational(3,1), 'quanta': [1, 1, 4]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 2,
+                                'l': 4,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(15,1), 'quanta': [4, 1, 1]},
+                                            {'e': Rational(16,1), 'quanta': [2, 3, 1]},
+                                            {'e': Rational(9,1), 'quanta': [2, 1, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 5, 1]},
+                                            {'e': Rational(-5,1), 'quanta': [0, 3, 3]},
+                                            {'e': Rational(-6,1), 'quanta': [0, 1, 5]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-6,1), 'quanta': [5, 0, 1]},
+                                            {'e': Rational(9,1), 'quanta': [3, 2, 1]},
+                                            {'e': Rational(-5,1), 'quanta': [3, 0, 3]},
+                                            {'e': Rational(15,1), 'quanta': [1, 4, 1]},
+                                            {'e': Rational(16,1), 'quanta': [1, 2, 3]},
+                                            {'e': Rational(1,1), 'quanta': [1, 0, 5]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 1, 0]},
+                                            {'e': Rational(-5,1), 'quanta': [3, 3, 0]},
+                                            {'e': Rational(16,1), 'quanta': [3, 1, 2]},
+                                            {'e': Rational(-6,1), 'quanta': [1, 5, 0]},
+                                            {'e': Rational(9,1), 'quanta': [1, 3, 2]},
+                                            {'e': Rational(15,1), 'quanta': [1, 1, 4]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {
+                                                'e': (Rational(2,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 2, 0]
+                                            },
+                                            {
+                                                'e': (Rational(1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 4, 0]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 4]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 6, 0]},
+                                            {
+                                                'e': (Rational(-1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-2,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 2, 4]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 0, 6]
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {
+                                                'e': (Rational(1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 2, 0]
+                                            },
+                                            {
+                                                'e': (Rational(2,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 4, 0]
+                                            },
+                                            {
+                                                'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 4]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 6, 0]
+                                            },
+                                            {
+                                                'e': (Rational(-2,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 2, 4]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 0, 6]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 1, 1]},
+                                            {'e': Rational(2,1), 'quanta': [2, 3, 1]},
+                                            {'e': Rational(2,1), 'quanta': [2, 1, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 5, 1]},
+                                            {'e': Rational(2,1), 'quanta': [0, 3, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 1, 5]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 0, 1]},
+                                            {'e': Rational(2,1), 'quanta': [3, 2, 1]},
+                                            {'e': Rational(2,1), 'quanta': [3, 0, 3]},
+                                            {'e': Rational(1,1), 'quanta': [1, 4, 1]},
+                                            {'e': Rational(2,1), 'quanta': [1, 2, 3]},
+                                            {'e': Rational(1,1), 'quanta': [1, 0, 5]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 1, 0]},
+                                            {'e': Rational(2,1), 'quanta': [3, 3, 0]},
+                                            {'e': Rational(2,1), 'quanta': [3, 1, 2]},
+                                            {'e': Rational(1,1), 'quanta': [1, 5, 0]},
+                                            {'e': Rational(2,1), 'quanta': [1, 3, 2]},
+                                            {'e': Rational(1,1), 'quanta': [1, 1, 4]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 0,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {'e': Rational(3,1), 'quanta': [4, 2, 0]},
+                                            {'e': Rational(3,1), 'quanta': [4, 0, 2]},
+                                            {'e': Rational(3,1), 'quanta': [2, 4, 0]},
+                                            {'e': Rational(6,1), 'quanta': [2, 2, 2]},
+                                            {'e': Rational(3,1), 'quanta': [2, 0, 4]},
+                                            {'e': Rational(1,1), 'quanta': [0, 6, 0]},
+                                            {'e': Rational(3,1), 'quanta': [0, 4, 2]},
+                                            {'e': Rational(3,1), 'quanta': [0, 2, 4]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 6]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            }
+                        ],
+                        'v_max': 6
+                    },
+                    'generating_function': {
+                        'denominator': [2, 3, 4],
+                        'numerators': [
+                            {'coefficients': [1, 0, 0, 0, 0, 0, 1], 'irrep': 'A_g', 'irrep_id': 'Ag'},
+                            {'coefficients': [0, 0, 1, 0, 1], 'irrep': '1E_g', 'irrep_id': '1Eg'},
+                            {'coefficients': [0, 0, 1, 0, 1], 'irrep': '2E_g', 'irrep_id': '2Eg'},
+                            {'coefficients': [0, 1, 1, 2, 1, 1], 'irrep': 'T_g', 'irrep_id': 'Tg'},
+                            {'coefficients': [0], 'irrep': 'A_u', 'irrep_id': 'Au'},
+                            {'coefficients': [0], 'irrep': '1E_u', 'irrep_id': '1Eu'},
+                            {'coefficients': [0], 'irrep': '2E_u', 'irrep_id': '2Eu'},
+                            {'coefficients': [0], 'irrep': 'T_u', 'irrep_id': 'Tu'}
+                        ]
+                    },
+                    'harmonic': {
+                        'l_max_tabulated': 12,
+                        'table': [
+                            {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 0, 'Tu': 0},
+                            {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                            {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                            {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 2, 'Tu': 0},
+                            {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 2, 'Tu': 0},
+                            {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 3, 'Tu': 0},
+                            {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 2, 'Au': 0, 'Tg': 3, 'Tu': 0},
+                            {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 4, 'Tu': 0},
+                            {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 4, 'Tu': 0},
+                            {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 2, 'Au': 0, 'Tg': 5, 'Tu': 0},
+                            {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 2, 'Au': 0, 'Tg': 5, 'Tu': 0},
+                            {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 6, 'Tu': 0},
+                            {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 3, 'Au': 0, 'Tg': 6, 'Tu': 0}
+                        ]
+                    },
+                    'table': [
+                        {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 0, 'Tu': 0},
+                        {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                        {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                        {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 3, 'Tu': 0},
+                        {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 2, 'Au': 0, 'Tg': 3, 'Tu': 0},
+                        {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 6, 'Tu': 0},
+                        {'1Eg': 3, '1Eu': 0, '2Eg': 3, '2Eu': 0, 'Ag': 4, 'Au': 0, 'Tg': 6, 'Tu': 0},
+                        {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 2, 'Au': 0, 'Tg': 10, 'Tu': 0},
+                        {'1Eg': 5, '1Eu': 0, '2Eg': 5, '2Eu': 0, 'Ag': 5, 'Au': 0, 'Tg': 10, 'Tu': 0},
+                        {'1Eg': 3, '1Eu': 0, '2Eg': 3, '2Eu': 0, 'Ag': 4, 'Au': 0, 'Tg': 15, 'Tu': 0},
+                        {'1Eg': 7, '1Eu': 0, '2Eg': 7, '2Eu': 0, 'Ag': 7, 'Au': 0, 'Tg': 15, 'Tu': 0},
+                        {'1Eg': 5, '1Eu': 0, '2Eg': 5, '2Eu': 0, 'Ag': 5, 'Au': 0, 'Tg': 21, 'Tu': 0},
+                        {'1Eg': 9, '1Eu': 0, '2Eg': 9, '2Eu': 0, 'Ag': 10, 'Au': 0, 'Tg': 21, 'Tu': 0}
+                    ],
+                    'v_max_tabulated': 12
+                },
+                'two_column': [
+                    {
+                        'bases': [
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'vectors': [{'components': [{'determinant': [], 'e': Rational(1,1)}], 'mu': 1}]
+                            }
+                        ],
+                        'dim': 1,
+                        'n': 0,
+                        'partition': [],
+                        'table': {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 0, 'Tu': 0},
+                        'twoS': 0
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {'components': [{'determinant': [[1, 1]], 'e': Rational(1,1)}], 'mu': 1},
+                                    {'components': [{'determinant': [[2, 1]], 'e': Rational(1,1)}], 'mu': 2},
+                                    {'components': [{'determinant': [[3, 1]], 'e': Rational(1,1)}], 'mu': 3}
+                                ]
+                            }
+                        ],
+                        'dim': 3,
+                        'n': 1,
+                        'partition': [1],
+                        'table': {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                        'twoS': 1
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[2, 1], [2, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[3, 1], [3, -1]], 'e': Rational(1,1)}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1]], 'e': Rational(1,1)},
+                                            {
+                                                'determinant': [[2, 1], [2, -1]],
+                                                'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                                            },
+                                            {
+                                                'determinant': [[3, 1], [3, -1]],
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1]], 'e': Rational(1,1)},
+                                            {
+                                                'determinant': [[2, 1], [2, -1]],
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                                            },
+                                            {
+                                                'determinant': [[3, 1], [3, -1]],
+                                                'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[2, 1], [3, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[2, -1], [3, 1]], 'e': Rational(-1,1)}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [3, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[1, -1], [3, 1]], 'e': Rational(-1,1)}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [2, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[1, -1], [2, 1]], 'e': Rational(-1,1)}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            }
+                        ],
+                        'dim': 6,
+                        'n': 2,
+                        'partition': [2],
+                        'table': {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                        'twoS': 0
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {'components': [{'determinant': [[2, 1], [3, 1]], 'e': Rational(1,1)}], 'mu': 1},
+                                    {'components': [{'determinant': [[1, 1], [3, 1]], 'e': Rational(-1,1)}], 'mu': 2},
+                                    {'components': [{'determinant': [[1, 1], [2, 1]], 'e': Rational(1,1)}], 'mu': 3}
+                                ]
+                            }
+                        ],
+                        'dim': 3,
+                        'n': 2,
+                        'partition': [1, 1],
+                        'table': {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                        'twoS': 2
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [2, 1], [3, -1]], 'e': Rational(1,1)},
+                                            {
+                                                'determinant': [[1, 1], [2, -1], [3, 1]],
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                                            },
+                                            {
+                                                'determinant': [[1, -1], [2, 1], [3, 1]],
+                                                'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [2, 1], [3, -1]], 'e': Rational(1,1)},
+                                            {
+                                                'determinant': [[1, 1], [2, -1], [3, 1]],
+                                                'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                                            },
+                                            {
+                                                'determinant': [[1, -1], [2, 1], [3, 1]],
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [{'determinant': [[1, 1], [2, 1], [2, -1]], 'e': Rational(1,1)}],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [{'determinant': [[2, 1], [3, 1], [3, -1]], 'e': Rational(1,1)}],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [{'determinant': [[1, 1], [1, -1], [3, 1]], 'e': Rational(1,1)}],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 2,
+                                'vectors': [
+                                    {
+                                        'components': [{'determinant': [[1, 1], [3, 1], [3, -1]], 'e': Rational(1,1)}],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [{'determinant': [[1, 1], [1, -1], [2, 1]], 'e': Rational(1,1)}],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [{'determinant': [[2, 1], [2, -1], [3, 1]], 'e': Rational(1,1)}],
+                                        'mu': 3
+                                    }
+                                ]
+                            }
+                        ],
+                        'dim': 8,
+                        'n': 3,
+                        'partition': [2, 1],
+                        'table': {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 2, 'Tu': 0},
+                        'twoS': 1
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [{'determinant': [[1, 1], [2, 1], [3, 1]], 'e': Rational(1,1)}],
+                                        'mu': 1
+                                    }
+                                ]
+                            }
+                        ],
+                        'dim': 1,
+                        'n': 3,
+                        'partition': [1, 1, 1],
+                        'table': {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 0, 'Tu': 0},
+                        'twoS': 3
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1], [2, 1], [2, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[1, 1], [1, -1], [3, 1], [3, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[2, 1], [2, -1], [3, 1], [3, -1]], 'e': Rational(1,1)}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1], [2, 1], [2, -1]], 'e': Rational(1,1)},
+                                            {
+                                                'determinant': [[1, 1], [1, -1], [3, 1], [3, -1]],
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                                            },
+                                            {
+                                                'determinant': [[2, 1], [2, -1], [3, 1], [3, -1]],
+                                                'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1], [2, 1], [2, -1]], 'e': Rational(1,1)},
+                                            {
+                                                'determinant': [[1, 1], [1, -1], [3, 1], [3, -1]],
+                                                'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                                            },
+                                            {
+                                                'determinant': [[2, 1], [2, -1], [3, 1], [3, -1]],
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1], [2, 1], [3, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[1, 1], [1, -1], [2, -1], [3, 1]], 'e': Rational(-1,1)}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [2, 1], [2, -1], [3, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[1, -1], [2, 1], [2, -1], [3, 1]], 'e': Rational(-1,1)}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [2, -1], [3, 1], [3, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[1, -1], [2, 1], [3, 1], [3, -1]], 'e': Rational(-1,1)}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            }
+                        ],
+                        'dim': 6,
+                        'n': 4,
+                        'partition': [2, 2],
+                        'table': {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                        'twoS': 0
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [{'determinant': [[1, 1], [1, -1], [2, 1], [3, 1]], 'e': Rational(1,1)}],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [{'determinant': [[1, 1], [2, 1], [2, -1], [3, 1]], 'e': Rational(-1,1)}],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [{'determinant': [[1, 1], [2, 1], [3, 1], [3, -1]], 'e': Rational(1,1)}],
+                                        'mu': 3
+                                    }
+                                ]
+                            }
+                        ],
+                        'dim': 3,
+                        'n': 4,
+                        'partition': [2, 1, 1],
+                        'table': {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                        'twoS': 2
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [2, 1], [2, -1], [3, 1], [3, -1]], 'e': Rational(1,1)}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1], [2, 1], [3, 1], [3, -1]], 'e': Rational(1,1)}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1], [2, 1], [2, -1], [3, 1]], 'e': Rational(1,1)}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            }
+                        ],
+                        'dim': 3,
+                        'n': 5,
+                        'partition': [2, 2, 1],
+                        'table': {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                        'twoS': 1
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {
+                                                'determinant': [[1, 1], [1, -1], [2, 1], [2, -1], [3, 1], [3, -1]],
+                                                'e': Rational(1,1)
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            }
+                        ],
+                        'dim': 1,
+                        'n': 6,
+                        'partition': [2, 2, 2],
+                        'table': {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 0, 'Tu': 0},
+                        'twoS': 0
+                    }
+                ]
+            },
+            {
+                'chain': {
+                    'image': {
+                        'conjugator': [
+                            [Rational(1,1), Rational(0,1), Rational(0,1)],
+                            [Rational(0,1), Rational(1,1), Rational(0,1)],
+                            [Rational(0,1), Rational(0,1), Rational(1,1)]
+                        ],
+                        'element_map': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                        'record': 'data/json/Th.json'
+                    },
+                    'kind': 'U(3) > O(3) > image',
+                    'rule': 'Sym^v = sum over l of r^(v-l) H_l; H_l = D^(l,(-1)^l) restricted to the image, pulled back by element_map'
+                },
+                'dim': 3,
+                'irrep': 'T_u',
+                'irrep_id': 'Tu',
+                'partner_functions': ['x', 'y', 'z'],
+                'symmetric': {
+                    'bases': {
+                        'blocks': [
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 0,
+                                'v': 0,
+                                'vectors': [{'components': [{'e': Rational(1,1), 'quanta': [0, 0, 0]}], 'mu': 1}]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_u',
+                                'irrep_id': 'Tu',
+                                'kappa': 1,
+                                'l': 1,
+                                'v': 1,
+                                'vectors': [
+                                    {'components': [{'e': Rational(1,1), 'quanta': [1, 0, 0]}], 'mu': 1},
+                                    {'components': [{'e': Rational(1,1), 'quanta': [0, 1, 0]}], 'mu': 2},
+                                    {'components': [{'e': Rational(1,1), 'quanta': [0, 0, 1]}], 'mu': 3}
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 2,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [2, 0, 0]},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 2, 0]},
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 0, 2]
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 2,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [2, 0, 0]},
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 2, 0]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 0, 2]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 2,
+                                'vectors': [
+                                    {'components': [{'e': Rational(1,1), 'quanta': [0, 1, 1]}], 'mu': 1},
+                                    {'components': [{'e': Rational(1,1), 'quanta': [1, 0, 1]}], 'mu': 2},
+                                    {'components': [{'e': Rational(1,1), 'quanta': [1, 1, 0]}], 'mu': 3}
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 0,
+                                'v': 2,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [2, 0, 0]},
+                                            {'e': Rational(1,1), 'quanta': [0, 2, 0]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 2]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_u',
+                                'irrep_id': 'Au',
+                                'kappa': 1,
+                                'l': 3,
+                                'v': 3,
+                                'vectors': [{'components': [{'e': Rational(1,1), 'quanta': [1, 1, 1]}], 'mu': 1}]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_u',
+                                'irrep_id': 'Tu',
+                                'kappa': 1,
+                                'l': 3,
+                                'v': 3,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [3, 0, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [1, 0, 2]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-3,1), 'quanta': [2, 1, 0]},
+                                            {'e': Rational(1,1), 'quanta': [0, 3, 0]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-3,1), 'quanta': [0, 2, 1]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 3]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_u',
+                                'irrep_id': 'Tu',
+                                'kappa': 2,
+                                'l': 3,
+                                'v': 3,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [3, 0, 0]},
+                                            {'e': Rational(4,1), 'quanta': [1, 2, 0]},
+                                            {'e': Rational(-1,1), 'quanta': [1, 0, 2]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [2, 1, 0]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 3, 0]},
+                                            {'e': Rational(4,1), 'quanta': [0, 1, 2]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(4,1), 'quanta': [2, 0, 1]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 2, 1]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 0, 3]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_u',
+                                'irrep_id': 'Tu',
+                                'kappa': 1,
+                                'l': 1,
+                                'v': 3,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [3, 0, 0]},
+                                            {'e': Rational(1,1), 'quanta': [1, 2, 0]},
+                                            {'e': Rational(1,1), 'quanta': [1, 0, 2]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [2, 1, 0]},
+                                            {'e': Rational(1,1), 'quanta': [0, 3, 0]},
+                                            {'e': Rational(1,1), 'quanta': [0, 1, 2]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [2, 0, 1]},
+                                            {'e': Rational(1,1), 'quanta': [0, 2, 1]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 3]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 0, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [2, 2, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [2, 0, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 4, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [0, 2, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 0, 0]},
+                                            {
+                                                'e': (Rational(-6,1) + Rational(-6,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 2, 0]
+                                            },
+                                            {'e': (Rational(6,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [2, 0, 2]},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 4, 0]},
+                                            {'e': Rational(6,1), 'quanta': [0, 2, 2]},
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 0, 4]
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 0, 0]},
+                                            {'e': (Rational(6,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [2, 2, 0]},
+                                            {
+                                                'e': (Rational(-6,1) + Rational(-6,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 0]
+                                            },
+                                            {'e': Rational(6,1), 'quanta': [0, 2, 2]},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(3,1), 'quanta': [2, 1, 1]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 1, 3]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [3, 0, 1]},
+                                            {'e': Rational(3,1), 'quanta': [1, 2, 1]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [1, 3, 0]},
+                                            {'e': Rational(3,1), 'quanta': [1, 1, 2]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 2,
+                                'l': 4,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(-3,1), 'quanta': [2, 1, 1]},
+                                            {'e': Rational(4,1), 'quanta': [0, 3, 1]},
+                                            {'e': Rational(-3,1), 'quanta': [0, 1, 3]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-3,1), 'quanta': [3, 0, 1]},
+                                            {'e': Rational(-3,1), 'quanta': [1, 2, 1]},
+                                            {'e': Rational(4,1), 'quanta': [1, 0, 3]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(4,1), 'quanta': [3, 1, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [1, 3, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [1, 1, 2]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 0, 0]},
+                                            {
+                                                'e': (Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 2, 0]
+                                            },
+                                            {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [2, 0, 2]},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 4, 0]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 2, 2]},
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 0, 4]
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 0, 0]},
+                                            {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [2, 2, 0]},
+                                            {
+                                                'e': (Rational(1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 0]
+                                            },
+                                            {'e': Rational(-1,1), 'quanta': [0, 2, 2]},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [2, 1, 1]},
+                                            {'e': Rational(1,1), 'quanta': [0, 3, 1]},
+                                            {'e': Rational(1,1), 'quanta': [0, 1, 3]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [3, 0, 1]},
+                                            {'e': Rational(1,1), 'quanta': [1, 2, 1]},
+                                            {'e': Rational(1,1), 'quanta': [1, 0, 3]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [3, 1, 0]},
+                                            {'e': Rational(1,1), 'quanta': [1, 3, 0]},
+                                            {'e': Rational(1,1), 'quanta': [1, 1, 2]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 0,
+                                'v': 4,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 0, 0]},
+                                            {'e': Rational(2,1), 'quanta': [2, 2, 0]},
+                                            {'e': Rational(2,1), 'quanta': [2, 0, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 4, 0]},
+                                            {'e': Rational(2,1), 'quanta': [0, 2, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_u',
+                                'irrep_id': '1Eu',
+                                'kappa': 1,
+                                'l': 5,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [3, 1, 1]},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [1, 3, 1]},
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [1, 1, 3]
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_u',
+                                'irrep_id': '2Eu',
+                                'kappa': 1,
+                                'l': 5,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [3, 1, 1]},
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [1, 3, 1]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [1, 1, 3]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_u',
+                                'irrep_id': 'Tu',
+                                'kappa': 1,
+                                'l': 5,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 0, 0]},
+                                            {'e': Rational(-10,1), 'quanta': [3, 0, 2]},
+                                            {'e': Rational(5,1), 'quanta': [1, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(5,1), 'quanta': [4, 1, 0]},
+                                            {'e': Rational(-10,1), 'quanta': [2, 3, 0]},
+                                            {'e': Rational(1,1), 'quanta': [0, 5, 0]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(5,1), 'quanta': [0, 4, 1]},
+                                            {'e': Rational(-10,1), 'quanta': [0, 2, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 5]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_u',
+                                'irrep_id': 'Tu',
+                                'kappa': 2,
+                                'l': 5,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [5, 0, 0]},
+                                            {'e': Rational(8,1), 'quanta': [3, 2, 0]},
+                                            {'e': Rational(2,1), 'quanta': [3, 0, 2]},
+                                            {'e': Rational(-24,1), 'quanta': [1, 2, 2]},
+                                            {'e': Rational(3,1), 'quanta': [1, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(3,1), 'quanta': [4, 1, 0]},
+                                            {'e': Rational(2,1), 'quanta': [2, 3, 0]},
+                                            {'e': Rational(-24,1), 'quanta': [2, 1, 2]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 5, 0]},
+                                            {'e': Rational(8,1), 'quanta': [0, 3, 2]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-24,1), 'quanta': [2, 2, 1]},
+                                            {'e': Rational(8,1), 'quanta': [2, 0, 3]},
+                                            {'e': Rational(3,1), 'quanta': [0, 4, 1]},
+                                            {'e': Rational(2,1), 'quanta': [0, 2, 3]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 0, 5]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_u',
+                                'irrep_id': 'Tu',
+                                'kappa': 3,
+                                'l': 5,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 0, 0]},
+                                            {'e': Rational(-12,1), 'quanta': [3, 2, 0]},
+                                            {'e': Rational(2,1), 'quanta': [3, 0, 2]},
+                                            {'e': Rational(8,1), 'quanta': [1, 4, 0]},
+                                            {'e': Rational(-12,1), 'quanta': [1, 2, 2]},
+                                            {'e': Rational(1,1), 'quanta': [1, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 1, 0]},
+                                            {'e': Rational(2,1), 'quanta': [2, 3, 0]},
+                                            {'e': Rational(-12,1), 'quanta': [2, 1, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 5, 0]},
+                                            {'e': Rational(-12,1), 'quanta': [0, 3, 2]},
+                                            {'e': Rational(8,1), 'quanta': [0, 1, 4]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(8,1), 'quanta': [4, 0, 1]},
+                                            {'e': Rational(-12,1), 'quanta': [2, 2, 1]},
+                                            {'e': Rational(-12,1), 'quanta': [2, 0, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 4, 1]},
+                                            {'e': Rational(2,1), 'quanta': [0, 2, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 5]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_u',
+                                'irrep_id': 'Au',
+                                'kappa': 1,
+                                'l': 3,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [3, 1, 1]},
+                                            {'e': Rational(1,1), 'quanta': [1, 3, 1]},
+                                            {'e': Rational(1,1), 'quanta': [1, 1, 3]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_u',
+                                'irrep_id': 'Tu',
+                                'kappa': 1,
+                                'l': 3,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 0, 0]},
+                                            {'e': Rational(-1,1), 'quanta': [3, 0, 2]},
+                                            {'e': Rational(-1,1), 'quanta': [1, 4, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [1, 2, 2]},
+                                            {'e': Rational(-2,1), 'quanta': [1, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-2,1), 'quanta': [4, 1, 0]},
+                                            {'e': Rational(-1,1), 'quanta': [2, 3, 0]},
+                                            {'e': Rational(-3,1), 'quanta': [2, 1, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 5, 0]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 1, 4]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [4, 0, 1]},
+                                            {'e': Rational(-3,1), 'quanta': [2, 2, 1]},
+                                            {'e': Rational(-2,1), 'quanta': [0, 4, 1]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 2, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 5]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_u',
+                                'irrep_id': 'Tu',
+                                'kappa': 2,
+                                'l': 3,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [5, 0, 0]},
+                                            {'e': Rational(8,1), 'quanta': [3, 2, 0]},
+                                            {'e': Rational(-7,1), 'quanta': [3, 0, 2]},
+                                            {'e': Rational(9,1), 'quanta': [1, 4, 0]},
+                                            {'e': Rational(3,1), 'quanta': [1, 2, 2]},
+                                            {'e': Rational(-6,1), 'quanta': [1, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-6,1), 'quanta': [4, 1, 0]},
+                                            {'e': Rational(-7,1), 'quanta': [2, 3, 0]},
+                                            {'e': Rational(3,1), 'quanta': [2, 1, 2]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 5, 0]},
+                                            {'e': Rational(8,1), 'quanta': [0, 3, 2]},
+                                            {'e': Rational(9,1), 'quanta': [0, 1, 4]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(9,1), 'quanta': [4, 0, 1]},
+                                            {'e': Rational(3,1), 'quanta': [2, 2, 1]},
+                                            {'e': Rational(8,1), 'quanta': [2, 0, 3]},
+                                            {'e': Rational(-6,1), 'quanta': [0, 4, 1]},
+                                            {'e': Rational(-7,1), 'quanta': [0, 2, 3]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 0, 5]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_u',
+                                'irrep_id': 'Tu',
+                                'kappa': 1,
+                                'l': 1,
+                                'v': 5,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 0, 0]},
+                                            {'e': Rational(2,1), 'quanta': [3, 2, 0]},
+                                            {'e': Rational(2,1), 'quanta': [3, 0, 2]},
+                                            {'e': Rational(1,1), 'quanta': [1, 4, 0]},
+                                            {'e': Rational(2,1), 'quanta': [1, 2, 2]},
+                                            {'e': Rational(1,1), 'quanta': [1, 0, 4]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 1, 0]},
+                                            {'e': Rational(2,1), 'quanta': [2, 3, 0]},
+                                            {'e': Rational(2,1), 'quanta': [2, 1, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 5, 0]},
+                                            {'e': Rational(2,1), 'quanta': [0, 3, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 1, 4]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 0, 1]},
+                                            {'e': Rational(2,1), 'quanta': [2, 2, 1]},
+                                            {'e': Rational(2,1), 'quanta': [2, 0, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 4, 1]},
+                                            {'e': Rational(2,1), 'quanta': [0, 2, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 5]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 6,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {'e': Rational(-15,1), 'quanta': [4, 0, 2]},
+                                            {'e': Rational(-15,1), 'quanta': [2, 4, 0]},
+                                            {'e': Rational(90,1), 'quanta': [2, 2, 2]},
+                                            {'e': Rational(1,1), 'quanta': [0, 6, 0]},
+                                            {'e': Rational(-15,1), 'quanta': [0, 2, 4]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 6]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 2,
+                                'l': 6,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(-1,1), 'quanta': [6, 0, 0]},
+                                            {'e': Rational(46,1), 'quanta': [4, 2, 0]},
+                                            {'e': Rational(-31,1), 'quanta': [4, 0, 2]},
+                                            {'e': Rational(-31,1), 'quanta': [2, 4, 0]},
+                                            {'e': Rational(-90,1), 'quanta': [2, 2, 2]},
+                                            {'e': Rational(46,1), 'quanta': [2, 0, 4]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 6, 0]},
+                                            {'e': Rational(46,1), 'quanta': [0, 4, 2]},
+                                            {'e': Rational(-31,1), 'quanta': [0, 2, 4]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 0, 6]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'l': 6,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {
+                                                'e': (Rational(-5,1) + Rational(5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 2, 0]
+                                            },
+                                            {
+                                                'e': (Rational(-10,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(5,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 4, 0]
+                                            },
+                                            {
+                                                'e': (Rational(10,1) + Rational(5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 4]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 6, 0]},
+                                            {
+                                                'e': (Rational(-5,1) + Rational(-10,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 2]
+                                            },
+                                            {
+                                                'e': (Rational(5,1) + Rational(10,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 2, 4]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 0, 6]
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'l': 6,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {
+                                                'e': (Rational(-10,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 2, 0]
+                                            },
+                                            {
+                                                'e': (Rational(-5,1) + Rational(5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(10,1) + Rational(5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 4, 0]
+                                            },
+                                            {
+                                                'e': (Rational(5,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 4]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 6, 0]
+                                            },
+                                            {
+                                                'e': (Rational(5,1) + Rational(10,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-5,1) + Rational(-10,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 2, 4]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 0, 6]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 6,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(5,1), 'quanta': [4, 1, 1]},
+                                            {'e': Rational(-10,1), 'quanta': [2, 1, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 1, 5]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 0, 1]},
+                                            {'e': Rational(-10,1), 'quanta': [3, 2, 1]},
+                                            {'e': Rational(5,1), 'quanta': [1, 4, 1]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [1, 5, 0]},
+                                            {'e': Rational(-10,1), 'quanta': [1, 3, 2]},
+                                            {'e': Rational(5,1), 'quanta': [1, 1, 4]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 2,
+                                'l': 6,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(-9,1), 'quanta': [4, 1, 1]},
+                                            {'e': Rational(24,1), 'quanta': [2, 3, 1]},
+                                            {'e': Rational(-6,1), 'quanta': [2, 1, 3]},
+                                            {'e': Rational(-8,1), 'quanta': [0, 3, 3]},
+                                            {'e': Rational(3,1), 'quanta': [0, 1, 5]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(3,1), 'quanta': [5, 0, 1]},
+                                            {'e': Rational(-6,1), 'quanta': [3, 2, 1]},
+                                            {'e': Rational(-8,1), 'quanta': [3, 0, 3]},
+                                            {'e': Rational(-9,1), 'quanta': [1, 4, 1]},
+                                            {'e': Rational(24,1), 'quanta': [1, 2, 3]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-8,1), 'quanta': [3, 3, 0]},
+                                            {'e': Rational(24,1), 'quanta': [3, 1, 2]},
+                                            {'e': Rational(3,1), 'quanta': [1, 5, 0]},
+                                            {'e': Rational(-6,1), 'quanta': [1, 3, 2]},
+                                            {'e': Rational(-9,1), 'quanta': [1, 1, 4]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 3,
+                                'l': 6,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(5,1), 'quanta': [4, 1, 1]},
+                                            {'e': Rational(-20,1), 'quanta': [2, 3, 1]},
+                                            {'e': Rational(10,1), 'quanta': [2, 1, 3]},
+                                            {'e': Rational(8,1), 'quanta': [0, 5, 1]},
+                                            {'e': Rational(-20,1), 'quanta': [0, 3, 3]},
+                                            {'e': Rational(5,1), 'quanta': [0, 1, 5]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(5,1), 'quanta': [5, 0, 1]},
+                                            {'e': Rational(10,1), 'quanta': [3, 2, 1]},
+                                            {'e': Rational(-20,1), 'quanta': [3, 0, 3]},
+                                            {'e': Rational(5,1), 'quanta': [1, 4, 1]},
+                                            {'e': Rational(-20,1), 'quanta': [1, 2, 3]},
+                                            {'e': Rational(8,1), 'quanta': [1, 0, 5]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(8,1), 'quanta': [5, 1, 0]},
+                                            {'e': Rational(-20,1), 'quanta': [3, 3, 0]},
+                                            {'e': Rational(-20,1), 'quanta': [3, 1, 2]},
+                                            {'e': Rational(5,1), 'quanta': [1, 5, 0]},
+                                            {'e': Rational(10,1), 'quanta': [1, 3, 2]},
+                                            {'e': Rational(5,1), 'quanta': [1, 1, 4]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {'e': Rational(-2,1), 'quanta': [4, 2, 0]},
+                                            {'e': Rational(-2,1), 'quanta': [4, 0, 2]},
+                                            {'e': Rational(-2,1), 'quanta': [2, 4, 0]},
+                                            {'e': Rational(-9,1), 'quanta': [2, 2, 2]},
+                                            {'e': Rational(-2,1), 'quanta': [2, 0, 4]},
+                                            {'e': Rational(1,1), 'quanta': [0, 6, 0]},
+                                            {'e': Rational(-2,1), 'quanta': [0, 4, 2]},
+                                            {'e': Rational(-2,1), 'quanta': [0, 2, 4]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 6]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {
+                                                'e': (Rational(-5,1) + Rational(-6,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 2, 0]
+                                            },
+                                            {
+                                                'e': (Rational(1,1) + Rational(6,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-6,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 4, 0]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 4]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 6, 0]},
+                                            {
+                                                'e': (Rational(6,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 2]
+                                            },
+                                            {
+                                                'e': (Rational(5,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 2, 4]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 0, 6]
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {
+                                                'e': (Rational(1,1) + Rational(6,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 2, 0]
+                                            },
+                                            {
+                                                'e': (Rational(-5,1) + Rational(-6,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 4, 0]
+                                            },
+                                            {
+                                                'e': (Rational(-6,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 4]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 6, 0]
+                                            },
+                                            {
+                                                'e': (Rational(5,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 2]
+                                            },
+                                            {
+                                                'e': (Rational(6,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 2, 4]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 0, 6]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 4,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(3,1), 'quanta': [4, 1, 1]},
+                                            {'e': Rational(5,1), 'quanta': [2, 1, 3]},
+                                            {'e': Rational(-3,1), 'quanta': [0, 5, 1]},
+                                            {'e': Rational(-1,1), 'quanta': [0, 3, 3]},
+                                            {'e': Rational(2,1), 'quanta': [0, 1, 5]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(2,1), 'quanta': [5, 0, 1]},
+                                            {'e': Rational(5,1), 'quanta': [3, 2, 1]},
+                                            {'e': Rational(-1,1), 'quanta': [3, 0, 3]},
+                                            {'e': Rational(3,1), 'quanta': [1, 4, 1]},
+                                            {'e': Rational(-3,1), 'quanta': [1, 0, 5]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-3,1), 'quanta': [5, 1, 0]},
+                                            {'e': Rational(-1,1), 'quanta': [3, 3, 0]},
+                                            {'e': Rational(2,1), 'quanta': [1, 5, 0]},
+                                            {'e': Rational(5,1), 'quanta': [1, 3, 2]},
+                                            {'e': Rational(3,1), 'quanta': [1, 1, 4]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 2,
+                                'l': 4,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(15,1), 'quanta': [4, 1, 1]},
+                                            {'e': Rational(16,1), 'quanta': [2, 3, 1]},
+                                            {'e': Rational(9,1), 'quanta': [2, 1, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 5, 1]},
+                                            {'e': Rational(-5,1), 'quanta': [0, 3, 3]},
+                                            {'e': Rational(-6,1), 'quanta': [0, 1, 5]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(-6,1), 'quanta': [5, 0, 1]},
+                                            {'e': Rational(9,1), 'quanta': [3, 2, 1]},
+                                            {'e': Rational(-5,1), 'quanta': [3, 0, 3]},
+                                            {'e': Rational(15,1), 'quanta': [1, 4, 1]},
+                                            {'e': Rational(16,1), 'quanta': [1, 2, 3]},
+                                            {'e': Rational(1,1), 'quanta': [1, 0, 5]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 1, 0]},
+                                            {'e': Rational(-5,1), 'quanta': [3, 3, 0]},
+                                            {'e': Rational(16,1), 'quanta': [3, 1, 2]},
+                                            {'e': Rational(-6,1), 'quanta': [1, 5, 0]},
+                                            {'e': Rational(9,1), 'quanta': [1, 3, 2]},
+                                            {'e': Rational(15,1), 'quanta': [1, 1, 4]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {
+                                                'e': (Rational(2,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 2, 0]
+                                            },
+                                            {
+                                                'e': (Rational(1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 4, 0]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 4]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 6, 0]},
+                                            {
+                                                'e': (Rational(-1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-2,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 2, 4]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 0, 6]
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {
+                                                'e': (Rational(1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 2, 0]
+                                            },
+                                            {
+                                                'e': (Rational(2,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [4, 0, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 4, 0]
+                                            },
+                                            {
+                                                'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [2, 0, 4]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 6, 0]
+                                            },
+                                            {
+                                                'e': (Rational(-2,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 4, 2]
+                                            },
+                                            {
+                                                'e': (Rational(-1,1) + Rational(1,1)*exp(2*pi*I*Rational(1,3))),
+                                                'quanta': [0, 2, 4]
+                                            },
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3))), 'quanta': [0, 0, 6]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'l': 2,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [4, 1, 1]},
+                                            {'e': Rational(2,1), 'quanta': [2, 3, 1]},
+                                            {'e': Rational(2,1), 'quanta': [2, 1, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 5, 1]},
+                                            {'e': Rational(2,1), 'quanta': [0, 3, 3]},
+                                            {'e': Rational(1,1), 'quanta': [0, 1, 5]}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 0, 1]},
+                                            {'e': Rational(2,1), 'quanta': [3, 2, 1]},
+                                            {'e': Rational(2,1), 'quanta': [3, 0, 3]},
+                                            {'e': Rational(1,1), 'quanta': [1, 4, 1]},
+                                            {'e': Rational(2,1), 'quanta': [1, 2, 3]},
+                                            {'e': Rational(1,1), 'quanta': [1, 0, 5]}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [5, 1, 0]},
+                                            {'e': Rational(2,1), 'quanta': [3, 3, 0]},
+                                            {'e': Rational(2,1), 'quanta': [3, 1, 2]},
+                                            {'e': Rational(1,1), 'quanta': [1, 5, 0]},
+                                            {'e': Rational(2,1), 'quanta': [1, 3, 2]},
+                                            {'e': Rational(1,1), 'quanta': [1, 1, 4]}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'l': 0,
+                                'v': 6,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'e': Rational(1,1), 'quanta': [6, 0, 0]},
+                                            {'e': Rational(3,1), 'quanta': [4, 2, 0]},
+                                            {'e': Rational(3,1), 'quanta': [4, 0, 2]},
+                                            {'e': Rational(3,1), 'quanta': [2, 4, 0]},
+                                            {'e': Rational(6,1), 'quanta': [2, 2, 2]},
+                                            {'e': Rational(3,1), 'quanta': [2, 0, 4]},
+                                            {'e': Rational(1,1), 'quanta': [0, 6, 0]},
+                                            {'e': Rational(3,1), 'quanta': [0, 4, 2]},
+                                            {'e': Rational(3,1), 'quanta': [0, 2, 4]},
+                                            {'e': Rational(1,1), 'quanta': [0, 0, 6]}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            }
+                        ],
+                        'v_max': 6
+                    },
+                    'generating_function': {
+                        'denominator': [2, 4, 6],
+                        'numerators': [
+                            {'coefficients': [1, 0, 0, 0, 0, 0, 1], 'irrep': 'A_g', 'irrep_id': 'Ag'},
+                            {'coefficients': [0, 0, 1, 0, 1], 'irrep': '1E_g', 'irrep_id': '1Eg'},
+                            {'coefficients': [0, 0, 1, 0, 1], 'irrep': '2E_g', 'irrep_id': '2Eg'},
+                            {'coefficients': [0, 0, 1, 0, 2, 0, 2, 0, 1], 'irrep': 'T_g', 'irrep_id': 'Tg'},
+                            {'coefficients': [0, 0, 0, 1, 0, 0, 0, 0, 0, 1], 'irrep': 'A_u', 'irrep_id': 'Au'},
+                            {'coefficients': [0, 0, 0, 0, 0, 1, 0, 1], 'irrep': '1E_u', 'irrep_id': '1Eu'},
+                            {'coefficients': [0, 0, 0, 0, 0, 1, 0, 1], 'irrep': '2E_u', 'irrep_id': '2Eu'},
+                            {'coefficients': [0, 1, 0, 2, 0, 2, 0, 1], 'irrep': 'T_u', 'irrep_id': 'Tu'}
+                        ]
+                    },
+                    'harmonic': {
+                        'l_max_tabulated': 12,
+                        'table': [
+                            {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 0, 'Tu': 0},
+                            {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 0, 'Tu': 1},
+                            {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                            {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 2},
+                            {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 2, 'Tu': 0},
+                            {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 0, 'Tg': 0, 'Tu': 3},
+                            {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 2, 'Au': 0, 'Tg': 3, 'Tu': 0},
+                            {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 4},
+                            {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 4, 'Tu': 0},
+                            {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 2, 'Tg': 0, 'Tu': 5},
+                            {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 2, 'Au': 0, 'Tg': 5, 'Tu': 0},
+                            {'1Eg': 0, '1Eu': 2, '2Eg': 0, '2Eu': 2, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 6},
+                            {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 3, 'Au': 0, 'Tg': 6, 'Tu': 0}
+                        ]
+                    },
+                    'table': [
+                        {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 0, 'Tu': 0},
+                        {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 0, 'Tu': 1},
+                        {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                        {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 3},
+                        {'1Eg': 2, '1Eu': 0, '2Eg': 2, '2Eu': 0, 'Ag': 2, 'Au': 0, 'Tg': 3, 'Tu': 0},
+                        {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 6},
+                        {'1Eg': 3, '1Eu': 0, '2Eg': 3, '2Eu': 0, 'Ag': 4, 'Au': 0, 'Tg': 6, 'Tu': 0},
+                        {'1Eg': 0, '1Eu': 2, '2Eg': 0, '2Eu': 2, 'Ag': 0, 'Au': 2, 'Tg': 0, 'Tu': 10},
+                        {'1Eg': 5, '1Eu': 0, '2Eg': 5, '2Eu': 0, 'Ag': 5, 'Au': 0, 'Tg': 10, 'Tu': 0},
+                        {'1Eg': 0, '1Eu': 3, '2Eg': 0, '2Eu': 3, 'Ag': 0, 'Au': 4, 'Tg': 0, 'Tu': 15},
+                        {'1Eg': 7, '1Eu': 0, '2Eg': 7, '2Eu': 0, 'Ag': 7, 'Au': 0, 'Tg': 15, 'Tu': 0},
+                        {'1Eg': 0, '1Eu': 5, '2Eg': 0, '2Eu': 5, 'Ag': 0, 'Au': 5, 'Tg': 0, 'Tu': 21},
+                        {'1Eg': 9, '1Eu': 0, '2Eg': 9, '2Eu': 0, 'Ag': 10, 'Au': 0, 'Tg': 21, 'Tu': 0}
+                    ],
+                    'v_max_tabulated': 12
+                },
+                'two_column': [
+                    {
+                        'bases': [
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'vectors': [{'components': [{'determinant': [], 'e': Rational(1,1)}], 'mu': 1}]
+                            }
+                        ],
+                        'dim': 1,
+                        'n': 0,
+                        'partition': [],
+                        'table': {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 0, 'Tu': 0},
+                        'twoS': 0
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 3,
+                                'irrep': 'T_u',
+                                'irrep_id': 'Tu',
+                                'kappa': 1,
+                                'vectors': [
+                                    {'components': [{'determinant': [[1, 1]], 'e': Rational(1,1)}], 'mu': 1},
+                                    {'components': [{'determinant': [[2, 1]], 'e': Rational(1,1)}], 'mu': 2},
+                                    {'components': [{'determinant': [[3, 1]], 'e': Rational(1,1)}], 'mu': 3}
+                                ]
+                            }
+                        ],
+                        'dim': 3,
+                        'n': 1,
+                        'partition': [1],
+                        'table': {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 0, 'Tu': 1},
+                        'twoS': 1
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[2, 1], [2, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[3, 1], [3, -1]], 'e': Rational(1,1)}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1]], 'e': Rational(1,1)},
+                                            {
+                                                'determinant': [[2, 1], [2, -1]],
+                                                'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                                            },
+                                            {
+                                                'determinant': [[3, 1], [3, -1]],
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1]], 'e': Rational(1,1)},
+                                            {
+                                                'determinant': [[2, 1], [2, -1]],
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                                            },
+                                            {
+                                                'determinant': [[3, 1], [3, -1]],
+                                                'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[2, 1], [3, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[2, -1], [3, 1]], 'e': Rational(-1,1)}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [3, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[1, -1], [3, 1]], 'e': Rational(-1,1)}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [2, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[1, -1], [2, 1]], 'e': Rational(-1,1)}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            }
+                        ],
+                        'dim': 6,
+                        'n': 2,
+                        'partition': [2],
+                        'table': {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                        'twoS': 0
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {'components': [{'determinant': [[2, 1], [3, 1]], 'e': Rational(1,1)}], 'mu': 1},
+                                    {'components': [{'determinant': [[1, 1], [3, 1]], 'e': Rational(-1,1)}], 'mu': 2},
+                                    {'components': [{'determinant': [[1, 1], [2, 1]], 'e': Rational(1,1)}], 'mu': 3}
+                                ]
+                            }
+                        ],
+                        'dim': 3,
+                        'n': 2,
+                        'partition': [1, 1],
+                        'table': {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                        'twoS': 2
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 1,
+                                'irrep': '1E_u',
+                                'irrep_id': '1Eu',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [2, 1], [3, -1]], 'e': Rational(1,1)},
+                                            {
+                                                'determinant': [[1, 1], [2, -1], [3, 1]],
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                                            },
+                                            {
+                                                'determinant': [[1, -1], [2, 1], [3, 1]],
+                                                'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_u',
+                                'irrep_id': '2Eu',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [2, 1], [3, -1]], 'e': Rational(1,1)},
+                                            {
+                                                'determinant': [[1, 1], [2, -1], [3, 1]],
+                                                'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                                            },
+                                            {
+                                                'determinant': [[1, -1], [2, 1], [3, 1]],
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_u',
+                                'irrep_id': 'Tu',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [{'determinant': [[1, 1], [2, 1], [2, -1]], 'e': Rational(1,1)}],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [{'determinant': [[2, 1], [3, 1], [3, -1]], 'e': Rational(1,1)}],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [{'determinant': [[1, 1], [1, -1], [3, 1]], 'e': Rational(1,1)}],
+                                        'mu': 3
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_u',
+                                'irrep_id': 'Tu',
+                                'kappa': 2,
+                                'vectors': [
+                                    {
+                                        'components': [{'determinant': [[1, 1], [3, 1], [3, -1]], 'e': Rational(1,1)}],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [{'determinant': [[1, 1], [1, -1], [2, 1]], 'e': Rational(1,1)}],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [{'determinant': [[2, 1], [2, -1], [3, 1]], 'e': Rational(1,1)}],
+                                        'mu': 3
+                                    }
+                                ]
+                            }
+                        ],
+                        'dim': 8,
+                        'n': 3,
+                        'partition': [2, 1],
+                        'table': {'1Eg': 0, '1Eu': 1, '2Eg': 0, '2Eu': 1, 'Ag': 0, 'Au': 0, 'Tg': 0, 'Tu': 2},
+                        'twoS': 1
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 1,
+                                'irrep': 'A_u',
+                                'irrep_id': 'Au',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [{'determinant': [[1, 1], [2, 1], [3, 1]], 'e': Rational(1,1)}],
+                                        'mu': 1
+                                    }
+                                ]
+                            }
+                        ],
+                        'dim': 1,
+                        'n': 3,
+                        'partition': [1, 1, 1],
+                        'table': {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 1, 'Tg': 0, 'Tu': 0},
+                        'twoS': 3
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1], [2, 1], [2, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[1, 1], [1, -1], [3, 1], [3, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[2, 1], [2, -1], [3, 1], [3, -1]], 'e': Rational(1,1)}
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '1E_g',
+                                'irrep_id': '1Eg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1], [2, 1], [2, -1]], 'e': Rational(1,1)},
+                                            {
+                                                'determinant': [[1, 1], [1, -1], [3, 1], [3, -1]],
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                                            },
+                                            {
+                                                'determinant': [[2, 1], [2, -1], [3, 1], [3, -1]],
+                                                'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 1,
+                                'irrep': '2E_g',
+                                'irrep_id': '2Eg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1], [2, 1], [2, -1]], 'e': Rational(1,1)},
+                                            {
+                                                'determinant': [[1, 1], [1, -1], [3, 1], [3, -1]],
+                                                'e': (Rational(1,1)*exp(2*pi*I*Rational(1,3)))
+                                            },
+                                            {
+                                                'determinant': [[2, 1], [2, -1], [3, 1], [3, -1]],
+                                                'e': (Rational(-1,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,3)))
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            },
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1], [2, 1], [3, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[1, 1], [1, -1], [2, -1], [3, 1]], 'e': Rational(-1,1)}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [2, 1], [2, -1], [3, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[1, -1], [2, 1], [2, -1], [3, 1]], 'e': Rational(-1,1)}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [2, -1], [3, 1], [3, -1]], 'e': Rational(1,1)},
+                                            {'determinant': [[1, -1], [2, 1], [3, 1], [3, -1]], 'e': Rational(-1,1)}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            }
+                        ],
+                        'dim': 6,
+                        'n': 4,
+                        'partition': [2, 2],
+                        'table': {'1Eg': 1, '1Eu': 0, '2Eg': 1, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                        'twoS': 0
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 3,
+                                'irrep': 'T_g',
+                                'irrep_id': 'Tg',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [{'determinant': [[1, 1], [1, -1], [2, 1], [3, 1]], 'e': Rational(1,1)}],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [{'determinant': [[1, 1], [2, 1], [2, -1], [3, 1]], 'e': Rational(-1,1)}],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [{'determinant': [[1, 1], [2, 1], [3, 1], [3, -1]], 'e': Rational(1,1)}],
+                                        'mu': 3
+                                    }
+                                ]
+                            }
+                        ],
+                        'dim': 3,
+                        'n': 4,
+                        'partition': [2, 1, 1],
+                        'table': {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 1, 'Tu': 0},
+                        'twoS': 2
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 3,
+                                'irrep': 'T_u',
+                                'irrep_id': 'Tu',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [2, 1], [2, -1], [3, 1], [3, -1]], 'e': Rational(1,1)}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1], [2, 1], [3, 1], [3, -1]], 'e': Rational(1,1)}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'determinant': [[1, 1], [1, -1], [2, 1], [2, -1], [3, 1]], 'e': Rational(1,1)}
+                                        ],
+                                        'mu': 3
+                                    }
+                                ]
+                            }
+                        ],
+                        'dim': 3,
+                        'n': 5,
+                        'partition': [2, 2, 1],
+                        'table': {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 0, 'Au': 0, 'Tg': 0, 'Tu': 1},
+                        'twoS': 1
+                    },
+                    {
+                        'bases': [
+                            {
+                                'dim': 1,
+                                'irrep': 'A_g',
+                                'irrep_id': 'Ag',
+                                'kappa': 1,
+                                'vectors': [
+                                    {
+                                        'components': [
+                                            {
+                                                'determinant': [[1, 1], [1, -1], [2, 1], [2, -1], [3, 1], [3, -1]],
+                                                'e': Rational(1,1)
+                                            }
+                                        ],
+                                        'mu': 1
+                                    }
+                                ]
+                            }
+                        ],
+                        'dim': 1,
+                        'n': 6,
+                        'partition': [2, 2, 2],
+                        'table': {'1Eg': 0, '1Eu': 0, '2Eg': 0, '2Eu': 0, 'Ag': 1, 'Au': 0, 'Tg': 0, 'Tu': 0},
+                        'twoS': 0
+                    }
+                ]
+            }
+        ]
+    },
+    'subgroup_lattice': {
+        'counts': {
+            'g_classes': 12,
+            'g_classes_by_order': {'1': 1, '12': 1, '2': 3, '24': 1, '3': 1, '4': 3, '6': 1, '8': 1},
+            'o3_classes': 12,
+            'o3_classes_by_order': {'1': 1, '12': 1, '2': 3, '24': 1, '3': 1, '4': 3, '6': 1, '8': 1},
+            'subgroups': 26
+        },
+        'edges': [
+            {
+                'embeddings_in_upper': 1,
+                'index': 2,
+                'lower': 'n00',
+                'upper': 'n01',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0],
+                    'lower_poles': [{'kind': 'none'}],
+                    'lower_symbols': ['E'],
+                    'upper_elements': [0, 9]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 2,
+                'lower': 'n00',
+                'upper': 'n02',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0],
+                    'lower_poles': [{'kind': 'none'}],
+                    'lower_symbols': ['E'],
+                    'upper_elements': [0, 12]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 2,
+                'lower': 'n00',
+                'upper': 'n03',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0],
+                    'lower_poles': [{'kind': 'none'}],
+                    'lower_symbols': ['E'],
+                    'upper_elements': [0, 21]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 3,
+                'lower': 'n00',
+                'upper': 'n04',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0],
+                    'lower_poles': [{'kind': 'none'}],
+                    'lower_symbols': ['E'],
+                    'upper_elements': [0, 1, 5]
+                }
+            },
+            {
+                'embeddings_in_upper': 3,
+                'index': 2,
+                'lower': 'n01',
+                'upper': 'n05',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 9],
+                    'lower_poles': [
+                        {'kind': 'none'},
+                        {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'}
+                    ],
+                    'lower_symbols': ['E', 'C_2'],
+                    'upper_elements': [0, 9, 10, 11]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 2,
+                'lower': 'n01',
+                'upper': 'n06',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 9],
+                    'lower_poles': [
+                        {'kind': 'none'},
+                        {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'}
+                    ],
+                    'lower_symbols': ['E', 'C_2'],
+                    'upper_elements': [0, 9, 12, 21]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 2,
+                'lower': 'n01',
+                'upper': 'n07',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 9],
+                    'lower_poles': [
+                        {'kind': 'none'},
+                        {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'}
+                    ],
+                    'lower_symbols': ['E', 'C_2'],
+                    'upper_elements': [0, 9, 22, 23]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 2,
+                'lower': 'n02',
+                'upper': 'n06',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 12],
+                    'lower_poles': [{'kind': 'none'}, {'kind': 'none'}],
+                    'lower_symbols': ['E', 'i'],
+                    'upper_elements': [0, 9, 12, 21]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 3,
+                'lower': 'n02',
+                'upper': 'n08',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 12],
+                    'lower_poles': [{'kind': 'none'}, {'kind': 'none'}],
+                    'lower_symbols': ['E', 'i'],
+                    'upper_elements': [0, 1, 5, 12, 13, 17]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 2,
+                'lower': 'n03',
+                'upper': 'n06',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 21],
+                    'lower_poles': [
+                        {'kind': 'none'},
+                        {
+                            'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)],
+                            'kind': 'plane_normal'
+                        }
+                    ],
+                    'lower_symbols': ['E', 'sigma_h'],
+                    'upper_elements': [0, 9, 12, 21]
+                }
+            },
+            {
+                'embeddings_in_upper': 2,
+                'index': 2,
+                'lower': 'n03',
+                'upper': 'n07',
+                'witness': {
+                    'conjugator': 5,
+                    'conjugator_symbol': 'C_3^2',
+                    'lower_elements': [0, 22],
+                    'lower_poles': [
+                        {'kind': 'none'},
+                        {
+                            'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)],
+                            'kind': 'plane_normal'
+                        }
+                    ],
+                    'lower_symbols': ['E', 'sigma_h'],
+                    'upper_elements': [0, 9, 22, 23]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 2,
+                'lower': 'n04',
+                'upper': 'n08',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 1, 5],
+                    'lower_poles': [
+                        {'kind': 'none'},
+                        {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'}
+                    ],
+                    'lower_symbols': ['E', 'C_3', 'C_3^2'],
+                    'upper_elements': [0, 1, 5, 12, 13, 17]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 4,
+                'lower': 'n04',
+                'upper': 'n10',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 1, 5],
+                    'lower_poles': [
+                        {'kind': 'none'},
+                        {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'}
+                    ],
+                    'lower_symbols': ['E', 'C_3', 'C_3^2'],
+                    'upper_elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 2,
+                'lower': 'n05',
+                'upper': 'n09',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 9, 10, 11],
+                    'lower_poles': [
+                        {'kind': 'none'},
+                        {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)], 'kind': 'axis'}
+                    ],
+                    'lower_symbols': ['E', 'C_2', 'C_2', 'C_2'],
+                    'upper_elements': [0, 9, 10, 11, 12, 21, 22, 23]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 3,
+                'lower': 'n05',
+                'upper': 'n10',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 9, 10, 11],
+                    'lower_poles': [
+                        {'kind': 'none'},
+                        {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)], 'kind': 'axis'}
+                    ],
+                    'lower_symbols': ['E', 'C_2', 'C_2', 'C_2'],
+                    'upper_elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                }
+            },
+            {
+                'embeddings_in_upper': 3,
+                'index': 2,
+                'lower': 'n06',
+                'upper': 'n09',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 9, 12, 21],
+                    'lower_poles': [
+                        {'kind': 'none'},
+                        {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'},
+                        {'kind': 'none'},
+                        {
+                            'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)],
+                            'kind': 'plane_normal'
+                        }
+                    ],
+                    'lower_symbols': ['E', 'C_2', 'i', 'sigma_h'],
+                    'upper_elements': [0, 9, 10, 11, 12, 21, 22, 23]
+                }
+            },
+            {
+                'embeddings_in_upper': 3,
+                'index': 2,
+                'lower': 'n07',
+                'upper': 'n09',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 9, 22, 23],
+                    'lower_poles': [
+                        {'kind': 'none'},
+                        {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'},
+                        {
+                            'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)],
+                            'kind': 'plane_normal'
+                        },
+                        {
+                            'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)],
+                            'kind': 'plane_normal'
+                        }
+                    ],
+                    'lower_symbols': ['E', 'C_2', 'sigma_h', 'sigma_h'],
+                    'upper_elements': [0, 9, 10, 11, 12, 21, 22, 23]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 4,
+                'lower': 'n08',
+                'upper': 'n11',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 1, 5, 12, 13, 17],
+                    'lower_poles': [
+                        {'kind': 'none'},
+                        {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                        {'kind': 'none'},
+                        {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'}
+                    ],
+                    'lower_symbols': ['E', 'C_3', 'C_3^2', 'i', 'S_6', 'S_6^5'],
+                    'upper_elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 3,
+                'lower': 'n09',
+                'upper': 'n11',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 9, 10, 11, 12, 21, 22, 23],
+                    'lower_poles': [
+                        {'kind': 'none'},
+                        {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)], 'kind': 'axis'},
+                        {'kind': 'none'},
+                        {
+                            'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)],
+                            'kind': 'plane_normal'
+                        },
+                        {
+                            'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)],
+                            'kind': 'plane_normal'
+                        },
+                        {
+                            'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)],
+                            'kind': 'plane_normal'
+                        }
+                    ],
+                    'lower_symbols': ['E', 'C_2', 'C_2', 'C_2', 'i', 'sigma_h', 'sigma_h', 'sigma_h'],
+                    'upper_elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+                }
+            },
+            {
+                'embeddings_in_upper': 1,
+                'index': 2,
+                'lower': 'n10',
+                'upper': 'n11',
+                'witness': {
+                    'conjugator': 0,
+                    'conjugator_symbol': 'E',
+                    'lower_elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                    'lower_poles': [
+                        {'kind': 'none'},
+                        {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(-1,1), Rational(1,1), Rational(-1,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(1,1), Rational(-1,1), Rational(-1,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(-1,1), Rational(1,1), Rational(-1,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(1,1), Rational(-1,1), Rational(-1,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)], 'kind': 'axis'},
+                        {'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)], 'kind': 'axis'}
+                    ],
+                    'lower_symbols': ['E', 'C_3', 'C_3', 'C_3', 'C_3', 'C_3^2', 'C_3^2', 'C_3^2', 'C_3^2', 'C_2', 'C_2', 'C_2'],
+                    'upper_elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+                }
+            }
+        ],
+        'nodes': [
+            {
+                'centralizer': {
+                    'elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                    'node': 'n11'
+                },
+                'class_size': 1,
+                'embedding': {
+                    'kind': 'G-conjugacy class of subgroups',
+                    'members': [{'conjugator': 0, 'conjugator_symbol': 'E', 'elements': [0]}],
+                    'representative': {'class_ids': ['E'], 'elements': [0], 'poles': [{'kind': 'none'}], 'symbols': ['E']}
+                },
+                'id': 'n00',
+                'index': 24,
+                'normal': True,
+                'normalizer': {
+                    'elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                    'node': 'n11'
+                },
+                'normalizer_order': 24,
+                'o3_class': 'C1',
+                'o3_schoenflies': 'C_1',
+                'order': 1
+            },
+            {
+                'centralizer': {'elements': [0, 9, 10, 11, 12, 21, 22, 23], 'node': 'n09'},
+                'class_size': 3,
+                'embedding': {
+                    'kind': 'G-conjugacy class of subgroups',
+                    'members': [
+                        {'conjugator': 0, 'conjugator_symbol': 'E', 'elements': [0, 9]},
+                        {'conjugator': 5, 'conjugator_symbol': 'C_3^2', 'elements': [0, 10]},
+                        {'conjugator': 1, 'conjugator_symbol': 'C_3', 'elements': [0, 11]}
+                    ],
+                    'representative': {
+                        'class_ids': ['C2', 'E'],
+                        'elements': [0, 9],
+                        'poles': [
+                            {'kind': 'none'},
+                            {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'}
+                        ],
+                        'symbols': ['E', 'C_2']
+                    }
+                },
+                'id': 'n01',
+                'index': 12,
+                'normal': False,
+                'normalizer': {'elements': [0, 9, 10, 11, 12, 21, 22, 23], 'node': 'n09'},
+                'normalizer_order': 8,
+                'o3_class': 'C2',
+                'o3_schoenflies': 'C_2',
+                'order': 2
+            },
+            {
+                'centralizer': {
+                    'elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                    'node': 'n11'
+                },
+                'class_size': 1,
+                'embedding': {
+                    'kind': 'G-conjugacy class of subgroups',
+                    'members': [{'conjugator': 0, 'conjugator_symbol': 'E', 'elements': [0, 12]}],
+                    'representative': {
+                        'class_ids': ['E', 'i'],
+                        'elements': [0, 12],
+                        'poles': [{'kind': 'none'}, {'kind': 'none'}],
+                        'symbols': ['E', 'i']
+                    }
+                },
+                'id': 'n02',
+                'index': 12,
+                'normal': True,
+                'normalizer': {
+                    'elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                    'node': 'n11'
+                },
+                'normalizer_order': 24,
+                'o3_class': 'S2',
+                'o3_schoenflies': 'C_i',
+                'order': 2
+            },
+            {
+                'centralizer': {'elements': [0, 9, 10, 11, 12, 21, 22, 23], 'node': 'n09'},
+                'class_size': 3,
+                'embedding': {
+                    'kind': 'G-conjugacy class of subgroups',
+                    'members': [
+                        {'conjugator': 0, 'conjugator_symbol': 'E', 'elements': [0, 21]},
+                        {'conjugator': 5, 'conjugator_symbol': 'C_3^2', 'elements': [0, 22]},
+                        {'conjugator': 1, 'conjugator_symbol': 'C_3', 'elements': [0, 23]}
+                    ],
+                    'representative': {
+                        'class_ids': ['E', 'sh'],
+                        'elements': [0, 21],
+                        'poles': [
+                            {'kind': 'none'},
+                            {
+                                'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)],
+                                'kind': 'plane_normal'
+                            }
+                        ],
+                        'symbols': ['E', 'sigma_h']
+                    }
+                },
+                'id': 'n03',
+                'index': 12,
+                'normal': False,
+                'normalizer': {'elements': [0, 9, 10, 11, 12, 21, 22, 23], 'node': 'n09'},
+                'normalizer_order': 8,
+                'o3_class': 'C1v',
+                'o3_schoenflies': 'C_s',
+                'order': 2
+            },
+            {
+                'centralizer': {'elements': [0, 1, 5, 12, 13, 17], 'node': 'n08'},
+                'class_size': 4,
+                'embedding': {
+                    'kind': 'G-conjugacy class of subgroups',
+                    'members': [
+                        {'conjugator': 0, 'conjugator_symbol': 'E', 'elements': [0, 1, 5]},
+                        {'conjugator': 3, 'conjugator_symbol': 'C_3', 'elements': [0, 2, 6]},
+                        {'conjugator': 4, 'conjugator_symbol': 'C_3', 'elements': [0, 3, 7]},
+                        {'conjugator': 2, 'conjugator_symbol': 'C_3', 'elements': [0, 4, 8]}
+                    ],
+                    'representative': {
+                        'class_ids': ['C3', 'C32', 'E'],
+                        'elements': [0, 1, 5],
+                        'poles': [
+                            {'kind': 'none'},
+                            {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'}
+                        ],
+                        'symbols': ['E', 'C_3', 'C_3^2']
+                    }
+                },
+                'id': 'n04',
+                'index': 8,
+                'normal': False,
+                'normalizer': {'elements': [0, 1, 5, 12, 13, 17], 'node': 'n08'},
+                'normalizer_order': 6,
+                'o3_class': 'C3',
+                'o3_schoenflies': 'C_3',
+                'order': 3
+            },
+            {
+                'centralizer': {'elements': [0, 9, 10, 11, 12, 21, 22, 23], 'node': 'n09'},
+                'class_size': 1,
+                'embedding': {
+                    'kind': 'G-conjugacy class of subgroups',
+                    'members': [{'conjugator': 0, 'conjugator_symbol': 'E', 'elements': [0, 9, 10, 11]}],
+                    'representative': {
+                        'class_ids': ['C2', 'E'],
+                        'elements': [0, 9, 10, 11],
+                        'poles': [
+                            {'kind': 'none'},
+                            {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)], 'kind': 'axis'}
+                        ],
+                        'symbols': ['E', 'C_2', 'C_2', 'C_2']
+                    }
+                },
+                'id': 'n05',
+                'index': 6,
+                'normal': True,
+                'normalizer': {
+                    'elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                    'node': 'n11'
+                },
+                'normalizer_order': 24,
+                'o3_class': 'D2',
+                'o3_schoenflies': 'D_2',
+                'order': 4
+            },
+            {
+                'centralizer': {'elements': [0, 9, 10, 11, 12, 21, 22, 23], 'node': 'n09'},
+                'class_size': 3,
+                'embedding': {
+                    'kind': 'G-conjugacy class of subgroups',
+                    'members': [
+                        {'conjugator': 0, 'conjugator_symbol': 'E', 'elements': [0, 9, 12, 21]},
+                        {'conjugator': 5, 'conjugator_symbol': 'C_3^2', 'elements': [0, 10, 12, 22]},
+                        {'conjugator': 1, 'conjugator_symbol': 'C_3', 'elements': [0, 11, 12, 23]}
+                    ],
+                    'representative': {
+                        'class_ids': ['C2', 'E', 'i', 'sh'],
+                        'elements': [0, 9, 12, 21],
+                        'poles': [
+                            {'kind': 'none'},
+                            {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'},
+                            {'kind': 'none'},
+                            {
+                                'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)],
+                                'kind': 'plane_normal'
+                            }
+                        ],
+                        'symbols': ['E', 'C_2', 'i', 'sigma_h']
+                    }
+                },
+                'id': 'n06',
+                'index': 6,
+                'normal': False,
+                'normalizer': {'elements': [0, 9, 10, 11, 12, 21, 22, 23], 'node': 'n09'},
+                'normalizer_order': 8,
+                'o3_class': 'C2h',
+                'o3_schoenflies': 'C_2h',
+                'order': 4
+            },
+            {
+                'centralizer': {'elements': [0, 9, 10, 11, 12, 21, 22, 23], 'node': 'n09'},
+                'class_size': 3,
+                'embedding': {
+                    'kind': 'G-conjugacy class of subgroups',
+                    'members': [
+                        {'conjugator': 0, 'conjugator_symbol': 'E', 'elements': [0, 9, 22, 23]},
+                        {'conjugator': 5, 'conjugator_symbol': 'C_3^2', 'elements': [0, 10, 21, 23]},
+                        {'conjugator': 1, 'conjugator_symbol': 'C_3', 'elements': [0, 11, 21, 22]}
+                    ],
+                    'representative': {
+                        'class_ids': ['C2', 'E', 'sh'],
+                        'elements': [0, 9, 22, 23],
+                        'poles': [
+                            {'kind': 'none'},
+                            {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'},
+                            {
+                                'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)],
+                                'kind': 'plane_normal'
+                            },
+                            {
+                                'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)],
+                                'kind': 'plane_normal'
+                            }
+                        ],
+                        'symbols': ['E', 'C_2', 'sigma_h', 'sigma_h']
+                    }
+                },
+                'id': 'n07',
+                'index': 6,
+                'normal': False,
+                'normalizer': {'elements': [0, 9, 10, 11, 12, 21, 22, 23], 'node': 'n09'},
+                'normalizer_order': 8,
+                'o3_class': 'C2v',
+                'o3_schoenflies': 'C_2v',
+                'order': 4
+            },
+            {
+                'centralizer': {'elements': [0, 1, 5, 12, 13, 17], 'node': 'n08'},
+                'class_size': 4,
+                'embedding': {
+                    'kind': 'G-conjugacy class of subgroups',
+                    'members': [
+                        {'conjugator': 0, 'conjugator_symbol': 'E', 'elements': [0, 1, 5, 12, 13, 17]},
+                        {'conjugator': 3, 'conjugator_symbol': 'C_3', 'elements': [0, 2, 6, 12, 14, 18]},
+                        {'conjugator': 4, 'conjugator_symbol': 'C_3', 'elements': [0, 3, 7, 12, 15, 19]},
+                        {'conjugator': 2, 'conjugator_symbol': 'C_3', 'elements': [0, 4, 8, 12, 16, 20]}
+                    ],
+                    'representative': {
+                        'class_ids': ['C3', 'C32', 'E', 'S6', 'S65', 'i'],
+                        'elements': [0, 1, 5, 12, 13, 17],
+                        'poles': [
+                            {'kind': 'none'},
+                            {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'kind': 'none'},
+                            {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'}
+                        ],
+                        'symbols': ['E', 'C_3', 'C_3^2', 'i', 'S_6', 'S_6^5']
+                    }
+                },
+                'id': 'n08',
+                'index': 4,
+                'normal': False,
+                'normalizer': {'elements': [0, 1, 5, 12, 13, 17], 'node': 'n08'},
+                'normalizer_order': 6,
+                'o3_class': 'S6',
+                'o3_schoenflies': 'S_6',
+                'order': 6
+            },
+            {
+                'centralizer': {'elements': [0, 9, 10, 11, 12, 21, 22, 23], 'node': 'n09'},
+                'class_size': 1,
+                'embedding': {
+                    'kind': 'G-conjugacy class of subgroups',
+                    'members': [
+                        {
+                            'conjugator': 0,
+                            'conjugator_symbol': 'E',
+                            'elements': [0, 9, 10, 11, 12, 21, 22, 23]
+                        }
+                    ],
+                    'representative': {
+                        'class_ids': ['C2', 'E', 'i', 'sh'],
+                        'elements': [0, 9, 10, 11, 12, 21, 22, 23],
+                        'poles': [
+                            {'kind': 'none'},
+                            {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)], 'kind': 'axis'},
+                            {'kind': 'none'},
+                            {
+                                'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)],
+                                'kind': 'plane_normal'
+                            },
+                            {
+                                'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)],
+                                'kind': 'plane_normal'
+                            },
+                            {
+                                'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)],
+                                'kind': 'plane_normal'
+                            }
+                        ],
+                        'symbols': ['E', 'C_2', 'C_2', 'C_2', 'i', 'sigma_h', 'sigma_h', 'sigma_h']
+                    }
+                },
+                'id': 'n09',
+                'index': 3,
+                'normal': True,
+                'normalizer': {
+                    'elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                    'node': 'n11'
+                },
+                'normalizer_order': 24,
+                'o3_class': 'D2h',
+                'o3_schoenflies': 'D_2h',
+                'order': 8
+            },
+            {
+                'centralizer': {'elements': [0, 12], 'node': 'n02'},
+                'class_size': 1,
+                'embedding': {
+                    'kind': 'G-conjugacy class of subgroups',
+                    'members': [
+                        {
+                            'conjugator': 0,
+                            'conjugator_symbol': 'E',
+                            'elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                        }
+                    ],
+                    'representative': {
+                        'class_ids': ['C2', 'C3', 'C32', 'E'],
+                        'elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                        'poles': [
+                            {'kind': 'none'},
+                            {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(-1,1), Rational(1,1), Rational(-1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(1,1), Rational(-1,1), Rational(-1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(-1,1), Rational(1,1), Rational(-1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(1,1), Rational(-1,1), Rational(-1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)], 'kind': 'axis'}
+                        ],
+                        'symbols': ['E', 'C_3', 'C_3', 'C_3', 'C_3', 'C_3^2', 'C_3^2', 'C_3^2', 'C_3^2', 'C_2', 'C_2', 'C_2']
+                    }
+                },
+                'id': 'n10',
+                'index': 2,
+                'normal': True,
+                'normalizer': {
+                    'elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                    'node': 'n11'
+                },
+                'normalizer_order': 24,
+                'o3_class': 'T',
+                'o3_schoenflies': 'T',
+                'order': 12
+            },
+            {
+                'centralizer': {'elements': [0, 12], 'node': 'n02'},
+                'class_size': 1,
+                'embedding': {
+                    'kind': 'G-conjugacy class of subgroups',
+                    'members': [
+                        {
+                            'conjugator': 0,
+                            'conjugator_symbol': 'E',
+                            'elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+                        }
+                    ],
+                    'representative': {
+                        'class_ids': ['C2', 'C3', 'C32', 'E', 'S6', 'S65', 'i', 'sh'],
+                        'elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                        'poles': [
+                            {'kind': 'none'},
+                            {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(-1,1), Rational(1,1), Rational(-1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(1,1), Rational(-1,1), Rational(-1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(-1,1), Rational(1,1), Rational(-1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(1,1), Rational(-1,1), Rational(-1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)], 'kind': 'axis'},
+                            {'kind': 'none'},
+                            {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(-1,1), Rational(1,1), Rational(-1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(1,1), Rational(-1,1), Rational(-1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(-1,1), Rational(-1,1), Rational(1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(-1,1), Rational(1,1), Rational(-1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(1,1), Rational(-1,1), Rational(-1,1)], 'kind': 'axis'},
+                            {'cartesian': [Rational(1,1), Rational(1,1), Rational(1,1)], 'kind': 'axis'},
+                            {
+                                'cartesian': [Rational(0,1), Rational(0,1), Rational(2,1)],
+                                'kind': 'plane_normal'
+                            },
+                            {
+                                'cartesian': [Rational(0,1), Rational(2,1), Rational(0,1)],
+                                'kind': 'plane_normal'
+                            },
+                            {
+                                'cartesian': [Rational(2,1), Rational(0,1), Rational(0,1)],
+                                'kind': 'plane_normal'
+                            }
+                        ],
+                        'symbols': [
+                            'E',
+                            'C_3',
+                            'C_3',
+                            'C_3',
+                            'C_3',
+                            'C_3^2',
+                            'C_3^2',
+                            'C_3^2',
+                            'C_3^2',
+                            'C_2',
+                            'C_2',
+                            'C_2',
+                            'i',
+                            'S_6',
+                            'S_6',
+                            'S_6',
+                            'S_6',
+                            'S_6^5',
+                            'S_6^5',
+                            'S_6^5',
+                            'S_6^5',
+                            'sigma_h',
+                            'sigma_h',
+                            'sigma_h'
+                        ]
+                    }
+                },
+                'id': 'n11',
+                'index': 1,
+                'normal': True,
+                'normalizer': {
+                    'elements': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                    'node': 'n11'
+                },
+                'normalizer_order': 24,
+                'o3_class': 'Th',
+                'o3_schoenflies': 'T_h',
+                'order': 24
+            }
+        ]
+    }
+}

@@ -1,0 +1,342 @@
+{
+  "$defs": {
+    "exact": {
+      "description": "An exact value. See CONVENTIONS.md section 8.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "f": {
+              "const": "q"
+            },
+            "v": {
+              "items": false,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "minimum": 1,
+                  "type": "integer"
+                }
+              ],
+              "type": "array"
+            }
+          },
+          "required": [
+            "f",
+            "v"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "M": {
+              "minimum": 3,
+              "type": "integer"
+            },
+            "c": {
+              "items": {
+                "items": false,
+                "minItems": 2,
+                "prefixItems": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "minimum": 1,
+                    "type": "integer"
+                  }
+                ],
+                "type": "array"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "f": {
+              "const": "cyc"
+            }
+          },
+          "required": [
+            "f",
+            "M",
+            "c"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "null": {
+      "additionalProperties": false,
+      "description": "A structured null. See CONVENTIONS.md section 8.",
+      "properties": {
+        "reason": {
+          "enum": [
+            "continuous-group",
+            "depends-on-the-point",
+            "not-a-named-shape",
+            "not-a-rational-turn",
+            "not-a-regular-compound",
+            "not-defined-for-family",
+            "not-in-source",
+            "one-class-under-the-rotations"
+          ]
+        },
+        "value": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "reason",
+        "value"
+      ],
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "See CONVENTIONS.md section 19.",
+  "properties": {
+    "group": {
+      "description": "See CONVENTIONS.md section 19.",
+      "type": "string"
+    },
+    "irrep": {
+      "description": "See CONVENTIONS.md section 19.",
+      "type": "string"
+    },
+    "irrep_id": {
+      "description": "See CONVENTIONS.md section 19.",
+      "type": "string"
+    },
+    "schema": {
+      "const": "point-group-atlas/level-states/1",
+      "description": "See CONVENTIONS.md section 19."
+    },
+    "symmetric": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 19.",
+      "properties": {
+        "blocks": {
+          "description": "See CONVENTIONS.md section 19.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 19.",
+            "properties": {
+              "dim": {
+                "description": "See CONVENTIONS.md section 19.",
+                "type": "integer"
+              },
+              "irrep": {
+                "description": "See CONVENTIONS.md section 19.",
+                "type": "string"
+              },
+              "irrep_id": {
+                "description": "See CONVENTIONS.md section 19.",
+                "type": "string"
+              },
+              "kappa": {
+                "description": "See CONVENTIONS.md section 19.",
+                "type": "integer"
+              },
+              "l": {
+                "description": "See CONVENTIONS.md section 19.",
+                "type": "integer"
+              },
+              "v": {
+                "description": "See CONVENTIONS.md section 19.",
+                "type": "integer"
+              },
+              "vectors": {
+                "description": "See CONVENTIONS.md section 19.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 19.",
+                  "properties": {
+                    "components": {
+                      "description": "See CONVENTIONS.md section 19.",
+                      "items": {
+                        "additionalProperties": false,
+                        "description": "See CONVENTIONS.md section 19.",
+                        "properties": {
+                          "e": {
+                            "$ref": "#/$defs/exact",
+                            "description": "See CONVENTIONS.md section 19."
+                          },
+                          "quanta": {
+                            "description": "See CONVENTIONS.md section 19.",
+                            "items": {
+                              "description": "See CONVENTIONS.md section 19.",
+                              "type": "integer"
+                            },
+                            "type": "array"
+                          }
+                        },
+                        "required": [
+                          "e",
+                          "quanta"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "mu": {
+                      "description": "See CONVENTIONS.md section 19.",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "components",
+                    "mu"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "dim",
+              "irrep",
+              "irrep_id",
+              "kappa",
+              "l",
+              "v",
+              "vectors"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "v_max": {
+          "description": "See CONVENTIONS.md section 19.",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "blocks",
+        "v_max"
+      ],
+      "type": "object"
+    },
+    "two_column": {
+      "description": "See CONVENTIONS.md section 19.",
+      "items": {
+        "additionalProperties": false,
+        "description": "See CONVENTIONS.md section 19.",
+        "properties": {
+          "blocks": {
+            "description": "See CONVENTIONS.md section 19.",
+            "items": {
+              "additionalProperties": false,
+              "description": "See CONVENTIONS.md section 19.",
+              "properties": {
+                "dim": {
+                  "description": "See CONVENTIONS.md section 19.",
+                  "type": "integer"
+                },
+                "irrep": {
+                  "description": "See CONVENTIONS.md section 19.",
+                  "type": "string"
+                },
+                "irrep_id": {
+                  "description": "See CONVENTIONS.md section 19.",
+                  "type": "string"
+                },
+                "kappa": {
+                  "description": "See CONVENTIONS.md section 19.",
+                  "type": "integer"
+                },
+                "vectors": {
+                  "description": "See CONVENTIONS.md section 19.",
+                  "items": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 19.",
+                    "properties": {
+                      "components": {
+                        "description": "See CONVENTIONS.md section 19.",
+                        "items": {
+                          "additionalProperties": false,
+                          "description": "See CONVENTIONS.md section 19.",
+                          "properties": {
+                            "determinant": {
+                              "description": "See CONVENTIONS.md section 19.",
+                              "items": {
+                                "description": "See CONVENTIONS.md section 19.",
+                                "items": {
+                                  "description": "See CONVENTIONS.md section 19.",
+                                  "type": "integer"
+                                },
+                                "type": "array"
+                              },
+                              "type": "array"
+                            },
+                            "e": {
+                              "$ref": "#/$defs/exact",
+                              "description": "See CONVENTIONS.md section 19."
+                            }
+                          },
+                          "required": [
+                            "determinant",
+                            "e"
+                          ],
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "mu": {
+                        "description": "See CONVENTIONS.md section 19.",
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "components",
+                      "mu"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "dim",
+                "irrep",
+                "irrep_id",
+                "kappa",
+                "vectors"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "n": {
+            "description": "See CONVENTIONS.md section 19.",
+            "type": "integer"
+          },
+          "twoS": {
+            "description": "See CONVENTIONS.md section 19.",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "blocks",
+          "n",
+          "twoS"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "group",
+    "irrep",
+    "irrep_id",
+    "schema",
+    "symmetric",
+    "two_column"
+  ],
+  "title": "Point Group Atlas states of a level",
+  "type": "object"
+}

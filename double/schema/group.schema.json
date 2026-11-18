@@ -1,0 +1,3610 @@
+{
+  "$defs": {
+    "exact": {
+      "description": "An exact value. See CONVENTIONS.md section 8.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "f": {
+              "const": "q"
+            },
+            "v": {
+              "items": false,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "minimum": 1,
+                  "type": "integer"
+                }
+              ],
+              "type": "array"
+            }
+          },
+          "required": [
+            "f",
+            "v"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "M": {
+              "minimum": 3,
+              "type": "integer"
+            },
+            "c": {
+              "items": {
+                "items": false,
+                "minItems": 2,
+                "prefixItems": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "minimum": 1,
+                    "type": "integer"
+                  }
+                ],
+                "type": "array"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "f": {
+              "const": "cyc"
+            }
+          },
+          "required": [
+            "f",
+            "M",
+            "c"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "null": {
+      "additionalProperties": false,
+      "description": "A structured null. See CONVENTIONS.md section 8.",
+      "properties": {
+        "reason": {
+          "enum": [
+            "continuous-group",
+            "depends-on-the-point",
+            "not-a-named-shape",
+            "not-a-rational-turn",
+            "not-a-regular-compound",
+            "not-defined-for-family",
+            "not-in-source",
+            "one-class-under-the-rotations"
+          ]
+        },
+        "value": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "reason",
+        "value"
+      ],
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "See CONVENTIONS.md section 20.",
+  "properties": {
+    "character_table": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 22.",
+      "properties": {
+        "class_count": {
+          "description": "See CONVENTIONS.md section 22.",
+          "type": "integer"
+        },
+        "classes": {
+          "description": "See CONVENTIONS.md section 22.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 22.",
+            "properties": {
+              "ambivalent": {
+                "description": "See CONVENTIONS.md section 22.",
+                "type": "boolean"
+              },
+              "bar": {
+                "description": "See CONVENTIONS.md section 22.",
+                "type": "boolean"
+              },
+              "base_class": {
+                "description": "See CONVENTIONS.md section 22.",
+                "type": "string"
+              },
+              "display": {
+                "description": "See CONVENTIONS.md section 22.",
+                "type": "string"
+              },
+              "element_order": {
+                "description": "See CONVENTIONS.md section 22.",
+                "type": "integer"
+              },
+              "id": {
+                "description": "See CONVENTIONS.md section 22.",
+                "type": "string"
+              },
+              "inverse_class": {
+                "description": "See CONVENTIONS.md section 22.",
+                "type": "string"
+              },
+              "label": {
+                "description": "See CONVENTIONS.md section 22.",
+                "type": "string"
+              },
+              "power_map": {
+                "description": "See CONVENTIONS.md section 22.",
+                "type": "string"
+              },
+              "size": {
+                "description": "See CONVENTIONS.md section 22.",
+                "type": "integer"
+              },
+              "su2_turn": {
+                "description": "See CONVENTIONS.md section 22.",
+                "items": {
+                  "description": "See CONVENTIONS.md section 22.",
+                  "type": "integer"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "ambivalent",
+              "bar",
+              "base_class",
+              "display",
+              "element_order",
+              "id",
+              "inverse_class",
+              "label",
+              "power_map",
+              "size",
+              "su2_turn"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "irreps": {
+          "description": "See CONVENTIONS.md section 23.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 23.",
+            "properties": {
+              "bethe": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "description": "See CONVENTIONS.md section 23.4."
+              },
+              "bilbao": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "description": "See CONVENTIONS.md section 23.4."
+              },
+              "chi": {
+                "description": "See CONVENTIONS.md section 23.",
+                "items": {
+                  "$ref": "#/$defs/exact",
+                  "description": "See CONVENTIONS.md section 23."
+                },
+                "type": "array"
+              },
+              "conjugate_of": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "description": "See CONVENTIONS.md section 23."
+              },
+              "dim": {
+                "description": "See CONVENTIONS.md section 23.",
+                "type": "integer"
+              },
+              "display": {
+                "description": "See CONVENTIONS.md section 23.",
+                "type": "string"
+              },
+              "frobenius_schur": {
+                "description": "See CONVENTIONS.md section 7.",
+                "type": "integer"
+              },
+              "id": {
+                "description": "See CONVENTIONS.md section 23.",
+                "type": "string"
+              },
+              "image": {
+                "description": "See CONVENTIONS.md section 23.",
+                "type": "string"
+              },
+              "kernel": {
+                "description": "See CONVENTIONS.md section 23.",
+                "type": "string"
+              },
+              "label": {
+                "description": "See CONVENTIONS.md section 23.",
+                "type": "string"
+              },
+              "matrices": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 23.3.",
+                "properties": {
+                  "by_element": {
+                    "description": "See CONVENTIONS.md section 23.3.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 23.3.",
+                      "items": {
+                        "description": "See CONVENTIONS.md section 23.3.",
+                        "items": {
+                          "$ref": "#/$defs/exact",
+                          "description": "See CONVENTIONS.md section 23.3."
+                        },
+                        "type": "array"
+                      },
+                      "type": "array"
+                    },
+                    "type": "array"
+                  },
+                  "construction": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 23.3.",
+                    "properties": {
+                      "by": {
+                        "description": "See CONVENTIONS.md section 23.3.",
+                        "type": "string"
+                      },
+                      "conductor": {
+                        "description": "See CONVENTIONS.md section 23.3.",
+                        "type": "integer"
+                      },
+                      "from": {
+                        "description": "See CONVENTIONS.md section 23.3.",
+                        "type": "string"
+                      },
+                      "method": {
+                        "description": "See CONVENTIONS.md section 23.3.",
+                        "type": "string"
+                      },
+                      "note": {
+                        "description": "See CONVENTIONS.md section 23.3.",
+                        "type": "string"
+                      },
+                      "parity": {
+                        "description": "See CONVENTIONS.md section 23.3.",
+                        "type": "string"
+                      },
+                      "sigma": {
+                        "description": "See CONVENTIONS.md section 23.3.",
+                        "type": "integer"
+                      },
+                      "twoJ": {
+                        "description": "See CONVENTIONS.md section 23.3.",
+                        "type": "integer"
+                      },
+                      "twoM": {
+                        "description": "See CONVENTIONS.md section 23.3.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 23.3.",
+                          "type": "integer"
+                        },
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "method",
+                      "note"
+                    ],
+                    "type": "object"
+                  },
+                  "dim": {
+                    "description": "See CONVENTIONS.md section 23.3.",
+                    "type": "integer"
+                  },
+                  "unitary": {
+                    "description": "See CONVENTIONS.md section 23.3.",
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "by_element",
+                  "construction",
+                  "dim",
+                  "unitary"
+                ],
+                "type": "object"
+              },
+              "mulliken": {
+                "description": "See CONVENTIONS.md section 23.",
+                "type": "string"
+              },
+              "pair_label": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "description": "See CONVENTIONS.md section 23."
+              },
+              "spinor": {
+                "description": "See CONVENTIONS.md section 23.",
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "bethe",
+              "bilbao",
+              "chi",
+              "conjugate_of",
+              "dim",
+              "display",
+              "frobenius_schur",
+              "id",
+              "image",
+              "kernel",
+              "label",
+              "matrices",
+              "mulliken",
+              "pair_label",
+              "spinor"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "vector_irreps": {
+          "description": "See CONVENTIONS.md section 22.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "class_count",
+        "classes",
+        "irreps",
+        "vector_irreps"
+      ],
+      "type": "object"
+    },
+    "clebsch_gordan": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 24.",
+      "properties": {
+        "irreps": {
+          "description": "See CONVENTIONS.md section 24.",
+          "items": {
+            "description": "See CONVENTIONS.md section 24.",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "kind": {
+          "description": "See CONVENTIONS.md section 24.",
+          "type": "string"
+        },
+        "products": {
+          "description": "See CONVENTIONS.md section 24.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 24.",
+            "properties": {
+              "a": {
+                "description": "See CONVENTIONS.md section 24.",
+                "type": "string"
+              },
+              "b": {
+                "description": "See CONVENTIONS.md section 24.",
+                "type": "string"
+              },
+              "couplings": {
+                "description": "See CONVENTIONS.md section 24.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 24.",
+                  "properties": {
+                    "N": {
+                      "$ref": "#/$defs/exact",
+                      "description": "See CONVENTIONS.md section 24."
+                    },
+                    "c": {
+                      "description": "See CONVENTIONS.md section 24.",
+                      "type": "string"
+                    },
+                    "kappa": {
+                      "description": "See CONVENTIONS.md section 24.",
+                      "type": "integer"
+                    },
+                    "parent_twoJ": {
+                      "description": "See CONVENTIONS.md section 24.",
+                      "type": "integer"
+                    },
+                    "partners": {
+                      "description": "See CONVENTIONS.md section 24.",
+                      "items": {
+                        "additionalProperties": false,
+                        "description": "See CONVENTIONS.md section 24.",
+                        "properties": {
+                          "mu": {
+                            "description": "See CONVENTIONS.md section 24.",
+                            "type": "integer"
+                          },
+                          "terms": {
+                            "description": "See CONVENTIONS.md section 24.",
+                            "items": {
+                              "additionalProperties": false,
+                              "description": "See CONVENTIONS.md section 24.",
+                              "properties": {
+                                "e": {
+                                  "$ref": "#/$defs/exact",
+                                  "description": "See CONVENTIONS.md section 24."
+                                },
+                                "i": {
+                                  "description": "See CONVENTIONS.md section 24.",
+                                  "type": "integer"
+                                },
+                                "k": {
+                                  "description": "See CONVENTIONS.md section 24.",
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "e",
+                                "i",
+                                "k"
+                              ],
+                              "type": "object"
+                            },
+                            "type": "array"
+                          }
+                        },
+                        "required": [
+                          "mu",
+                          "terms"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "separation": {
+                      "description": "See CONVENTIONS.md section 24.",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "N",
+                    "c",
+                    "kappa",
+                    "partners",
+                    "separation"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "a",
+              "b",
+              "couplings"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "vector_products": {
+          "description": "See CONVENTIONS.md section 24.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "irreps",
+        "kind",
+        "products",
+        "vector_products"
+      ],
+      "type": "object"
+    },
+    "elements": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 21.2.",
+      "properties": {
+        "count": {
+          "description": "See CONVENTIONS.md section 21.2.",
+          "type": "integer"
+        },
+        "ebar_index": {
+          "description": "See CONVENTIONS.md section 21.2.",
+          "type": "integer"
+        },
+        "identity_index": {
+          "description": "See CONVENTIONS.md section 21.2.",
+          "type": "integer"
+        },
+        "items": {
+          "description": "See CONVENTIONS.md section 21.2.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 21.2.",
+            "properties": {
+              "bar": {
+                "description": "See CONVENTIONS.md section 21.2.",
+                "type": "integer"
+              },
+              "base": {
+                "description": "See CONVENTIONS.md section 21.2.",
+                "type": "integer"
+              },
+              "class_id": {
+                "description": "See CONVENTIONS.md section 21.2.",
+                "type": "string"
+              },
+              "class_label": {
+                "description": "See CONVENTIONS.md section 21.2.",
+                "type": "string"
+              },
+              "euler_sign": {
+                "description": "See CONVENTIONS.md section 21.2.",
+                "type": "integer"
+              },
+              "index": {
+                "description": "See CONVENTIONS.md section 21.2.",
+                "type": "integer"
+              },
+              "inverse": {
+                "description": "See CONVENTIONS.md section 21.2.",
+                "type": "integer"
+              },
+              "matrix": {
+                "description": "See CONVENTIONS.md section 21.2.",
+                "items": {
+                  "description": "See CONVENTIONS.md section 21.2.",
+                  "items": {
+                    "$ref": "#/$defs/exact",
+                    "description": "See CONVENTIONS.md section 21.2."
+                  },
+                  "type": "array"
+                },
+                "type": "array"
+              },
+              "order": {
+                "description": "See CONVENTIONS.md section 21.2.",
+                "type": "integer"
+              },
+              "parity": {
+                "description": "See CONVENTIONS.md section 21.2.",
+                "type": "integer"
+              },
+              "su2_turn": {
+                "description": "See CONVENTIONS.md section 21.2.",
+                "items": {
+                  "description": "See CONVENTIONS.md section 21.2.",
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              "symbol": {
+                "description": "See CONVENTIONS.md section 21.2.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "bar",
+              "base",
+              "class_id",
+              "class_label",
+              "euler_sign",
+              "index",
+              "inverse",
+              "matrix",
+              "order",
+              "parity",
+              "su2_turn",
+              "symbol"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "multiplication_table": {
+          "description": "See CONVENTIONS.md section 21.2.",
+          "items": {
+            "description": "See CONVENTIONS.md section 21.2.",
+            "items": {
+              "description": "See CONVENTIONS.md section 21.2.",
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "count",
+        "ebar_index",
+        "identity_index",
+        "items",
+        "multiplication_table"
+      ],
+      "type": "object"
+    },
+    "fusion": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 24.",
+      "properties": {
+        "identity": {
+          "description": "See CONVENTIONS.md section 24.",
+          "type": "string"
+        },
+        "irreps": {
+          "description": "See CONVENTIONS.md section 24.",
+          "items": {
+            "description": "See CONVENTIONS.md section 24.",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "kind": {
+          "description": "See CONVENTIONS.md section 24.",
+          "type": "string"
+        },
+        "n_irreps": {
+          "description": "See CONVENTIONS.md section 24.",
+          "type": "integer"
+        },
+        "products": {
+          "description": "See CONVENTIONS.md section 24.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 24.",
+            "properties": {
+              "a": {
+                "description": "See CONVENTIONS.md section 24.",
+                "type": "string"
+              },
+              "antisymmetric": {
+                "description": "See CONVENTIONS.md section 24.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 24.",
+                  "properties": {
+                    "irrep": {
+                      "description": "See CONVENTIONS.md section 24.",
+                      "type": "string"
+                    },
+                    "mult": {
+                      "description": "See CONVENTIONS.md section 24.",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "irrep",
+                    "mult"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "b": {
+                "description": "See CONVENTIONS.md section 24.",
+                "type": "string"
+              },
+              "diagonal": {
+                "description": "See CONVENTIONS.md section 24.",
+                "type": "boolean"
+              },
+              "display": {
+                "description": "See CONVENTIONS.md section 24.",
+                "type": "string"
+              },
+              "symmetric": {
+                "description": "See CONVENTIONS.md section 24.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 24.",
+                  "properties": {
+                    "irrep": {
+                      "description": "See CONVENTIONS.md section 24.",
+                      "type": "string"
+                    },
+                    "mult": {
+                      "description": "See CONVENTIONS.md section 24.",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "irrep",
+                    "mult"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "terms": {
+                "description": "See CONVENTIONS.md section 24.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 24.",
+                  "properties": {
+                    "irrep": {
+                      "description": "See CONVENTIONS.md section 24.",
+                      "type": "string"
+                    },
+                    "mult": {
+                      "description": "See CONVENTIONS.md section 24.",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "irrep",
+                    "mult"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "a",
+              "b",
+              "diagonal",
+              "display",
+              "terms"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "vector_products": {
+          "description": "See CONVENTIONS.md section 24.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "identity",
+        "irreps",
+        "kind",
+        "n_irreps",
+        "products",
+        "vector_products"
+      ],
+      "type": "object"
+    },
+    "group": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 20.4.",
+      "properties": {
+        "abstract_type": {
+          "description": "See CONVENTIONS.md section 20.4.",
+          "type": "string"
+        },
+        "alternative_names": {
+          "description": "See CONVENTIONS.md section 20.4.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 20.4.",
+            "properties": {
+              "source": {
+                "description": "See CONVENTIONS.md section 20.4.",
+                "type": "null"
+              },
+              "symbol": {
+                "description": "See CONVENTIONS.md section 20.4.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "source",
+              "symbol"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "altmann_T": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/null"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "description": "See CONVENTIONS.md section 20.4."
+        },
+        "center": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 20.4.",
+          "properties": {
+            "double_class": {
+              "description": "See CONVENTIONS.md section 20.4.",
+              "type": "string"
+            },
+            "index": {
+              "description": "See CONVENTIONS.md section 20.4.",
+              "type": "integer"
+            },
+            "node": {
+              "description": "See CONVENTIONS.md section 20.4.",
+              "type": "string"
+            },
+            "order": {
+              "description": "See CONVENTIONS.md section 20.4.",
+              "type": "integer"
+            },
+            "symbol": {
+              "description": "See CONVENTIONS.md section 20.4.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "double_class",
+            "index",
+            "node",
+            "order",
+            "symbol"
+          ],
+          "type": "object"
+        },
+        "centralizer": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 20.4.",
+          "properties": {
+            "normalizer_index": {
+              "description": "See CONVENTIONS.md section 20.4.",
+              "type": "integer"
+            },
+            "symbol": {
+              "description": "See CONVENTIONS.md section 20.4.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "normalizer_index",
+            "symbol"
+          ],
+          "type": "object"
+        },
+        "commutator_subgroup": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 20.4.",
+          "properties": {
+            "double_class": {
+              "description": "See CONVENTIONS.md section 20.4.",
+              "type": "string"
+            },
+            "index": {
+              "description": "See CONVENTIONS.md section 20.4.",
+              "type": "integer"
+            },
+            "node": {
+              "description": "See CONVENTIONS.md section 20.4.",
+              "type": "string"
+            },
+            "order": {
+              "description": "See CONVENTIONS.md section 20.4.",
+              "type": "integer"
+            },
+            "symbol": {
+              "description": "See CONVENTIONS.md section 20.4.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "double_class",
+            "index",
+            "node",
+            "order",
+            "symbol"
+          ],
+          "type": "object"
+        },
+        "conway_smith": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/null"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "See CONVENTIONS.md section 20.4."
+        },
+        "cover_of": {
+          "description": "See CONVENTIONS.md section 20.4.",
+          "type": "string"
+        },
+        "gap_smallgroup_id": {
+          "description": "See CONVENTIONS.md section 20.4.",
+          "items": {
+            "description": "See CONVENTIONS.md section 20.4.",
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "hermann_mauguin": {
+          "description": "See CONVENTIONS.md section 20.4.",
+          "type": "string"
+        },
+        "hk": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/null"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "H": {
+                  "description": "See CONVENTIONS.md section 20.4.",
+                  "type": "string"
+                },
+                "K": {
+                  "description": "See CONVENTIONS.md section 20.4.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "H",
+                "K"
+              ],
+              "type": "object"
+            }
+          ],
+          "description": "See CONVENTIONS.md section 20.4."
+        },
+        "normalizer": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 20.4.",
+          "properties": {
+            "index": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/null"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "description": "See CONVENTIONS.md section 20.4."
+            },
+            "symbol": {
+              "description": "See CONVENTIONS.md section 20.4.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "index",
+            "symbol"
+          ],
+          "type": "object"
+        },
+        "order": {
+          "description": "See CONVENTIONS.md section 20.4.",
+          "type": "integer"
+        },
+        "product_form": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 12.",
+          "properties": {
+            "count": {
+              "additionalProperties": false,
+              "description": "See CONVENTIONS.md section 12.",
+              "properties": {
+                "direct": {
+                  "description": "See CONVENTIONS.md section 12.",
+                  "type": "integer"
+                },
+                "semidirect": {
+                  "description": "See CONVENTIONS.md section 12.",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "direct",
+                "semidirect"
+              ],
+              "type": "object"
+            },
+            "decomposable": {
+              "description": "See CONVENTIONS.md section 12.",
+              "type": "boolean"
+            },
+            "direct": {
+              "description": "See CONVENTIONS.md section 12.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 12.",
+                "properties": {
+                  "H": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 12.",
+                    "properties": {
+                      "class_ids": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 12.",
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "class_size": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "integer"
+                      },
+                      "double_class": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      },
+                      "node": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      },
+                      "order": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "integer"
+                      },
+                      "symbol": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "class_ids",
+                      "class_size",
+                      "double_class",
+                      "node",
+                      "order",
+                      "symbol"
+                    ],
+                    "type": "object"
+                  },
+                  "K": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 12.",
+                    "properties": {
+                      "class_ids": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 12.",
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "class_size": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "integer"
+                      },
+                      "double_class": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      },
+                      "node": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      },
+                      "order": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "integer"
+                      },
+                      "symbol": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "class_ids",
+                      "class_size",
+                      "double_class",
+                      "node",
+                      "order",
+                      "symbol"
+                    ],
+                    "type": "object"
+                  },
+                  "symbol": {
+                    "description": "See CONVENTIONS.md section 12.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "H",
+                  "K",
+                  "symbol"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "semidirect": {
+              "description": "See CONVENTIONS.md section 12.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 12.",
+                "properties": {
+                  "H": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 12.",
+                    "properties": {
+                      "class_ids": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 12.",
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "class_size": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "integer"
+                      },
+                      "double_class": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      },
+                      "node": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      },
+                      "order": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "integer"
+                      },
+                      "symbol": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "class_ids",
+                      "class_size",
+                      "double_class",
+                      "node",
+                      "order",
+                      "symbol"
+                    ],
+                    "type": "object"
+                  },
+                  "K": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 12.",
+                    "properties": {
+                      "class_ids": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 12.",
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "class_size": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "integer"
+                      },
+                      "double_class": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      },
+                      "node": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      },
+                      "order": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "integer"
+                      },
+                      "symbol": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "class_ids",
+                      "class_size",
+                      "double_class",
+                      "node",
+                      "order",
+                      "symbol"
+                    ],
+                    "type": "object"
+                  },
+                  "symbol": {
+                    "description": "See CONVENTIONS.md section 12.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "H",
+                  "K",
+                  "symbol"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "su2_subgroup": {
+              "additionalProperties": false,
+              "description": "See CONVENTIONS.md section 12.",
+              "properties": {
+                "double_class": {
+                  "description": "See CONVENTIONS.md section 12.",
+                  "type": "string"
+                },
+                "improper_complements": {
+                  "description": "See CONVENTIONS.md section 12.",
+                  "items": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 12.",
+                    "properties": {
+                      "double_class": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      },
+                      "kind": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      },
+                      "node": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      },
+                      "symbol": {
+                        "description": "See CONVENTIONS.md section 12.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "double_class",
+                      "kind",
+                      "node",
+                      "symbol"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "index": {
+                  "description": "See CONVENTIONS.md section 12.",
+                  "type": "integer"
+                },
+                "node": {
+                  "description": "See CONVENTIONS.md section 12.",
+                  "type": "string"
+                },
+                "symbol": {
+                  "description": "See CONVENTIONS.md section 12.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "double_class",
+                "improper_complements",
+                "index",
+                "node",
+                "symbol"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "count",
+            "decomposable",
+            "direct",
+            "semidirect",
+            "su2_subgroup"
+          ],
+          "type": "object"
+        },
+        "su2_subgroup": {
+          "description": "See CONVENTIONS.md section 20.4.",
+          "type": "string"
+        },
+        "symbol": {
+          "description": "See CONVENTIONS.md section 20.4.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract_type",
+        "alternative_names",
+        "altmann_T",
+        "center",
+        "centralizer",
+        "commutator_subgroup",
+        "conway_smith",
+        "cover_of",
+        "gap_smallgroup_id",
+        "hermann_mauguin",
+        "hk",
+        "normalizer",
+        "order",
+        "product_form",
+        "su2_subgroup",
+        "symbol"
+      ],
+      "type": "object"
+    },
+    "invariants": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 26.4.",
+      "properties": {
+        "binary": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 26.4.",
+          "properties": {
+            "generators": {
+              "description": "See CONVENTIONS.md section 26.4.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 26.4.",
+                "properties": {
+                  "degree": {
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "type": "integer"
+                  },
+                  "poly": {
+                    "additionalProperties": {
+                      "$ref": "#/$defs/exact",
+                      "description": "See CONVENTIONS.md section 26.4."
+                    },
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "degree",
+                  "poly"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "hilbert_series": {
+              "additionalProperties": false,
+              "description": "See CONVENTIONS.md section 26.4.",
+              "properties": {
+                "denominator": {
+                  "description": "See CONVENTIONS.md section 26.4.",
+                  "items": {
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                "numerator": {
+                  "description": "See CONVENTIONS.md section 26.4.",
+                  "items": {
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "type": "integer"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "denominator",
+                "numerator"
+              ],
+              "type": "object"
+            },
+            "image_order": {
+              "description": "See CONVENTIONS.md section 26.4.",
+              "type": "integer"
+            },
+            "relation": {
+              "additionalProperties": false,
+              "description": "See CONVENTIONS.md section 26.4.",
+              "properties": {
+                "degree": {
+                  "description": "See CONVENTIONS.md section 26.4.",
+                  "type": "integer"
+                },
+                "terms": {
+                  "description": "See CONVENTIONS.md section 26.4.",
+                  "items": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "properties": {
+                      "exponents": {
+                        "description": "See CONVENTIONS.md section 26.4.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 26.4.",
+                          "type": "integer"
+                        },
+                        "type": "array"
+                      },
+                      "value": {
+                        "$ref": "#/$defs/exact",
+                        "description": "See CONVENTIONS.md section 26.4."
+                      }
+                    },
+                    "required": [
+                      "exponents",
+                      "value"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "degree",
+                "terms"
+              ],
+              "type": "object"
+            },
+            "semi_invariants": {
+              "description": "See CONVENTIONS.md section 26.4.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 26.4.",
+                "properties": {
+                  "generators": {
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "items": {
+                      "additionalProperties": false,
+                      "description": "See CONVENTIONS.md section 26.4.",
+                      "properties": {
+                        "degree": {
+                          "description": "See CONVENTIONS.md section 26.4.",
+                          "type": "integer"
+                        },
+                        "poly": {
+                          "additionalProperties": {
+                            "$ref": "#/$defs/exact",
+                            "description": "See CONVENTIONS.md section 26.4."
+                          },
+                          "description": "See CONVENTIONS.md section 26.4.",
+                          "type": "object"
+                        }
+                      },
+                      "required": [
+                        "degree",
+                        "poly"
+                      ],
+                      "type": "object"
+                    },
+                    "type": "array"
+                  },
+                  "hilbert_series": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "properties": {
+                      "denominator": {
+                        "description": "See CONVENTIONS.md section 26.4.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 26.4.",
+                          "type": "integer"
+                        },
+                        "type": "array"
+                      },
+                      "numerator": {
+                        "description": "See CONVENTIONS.md section 26.4.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 26.4.",
+                          "type": "integer"
+                        },
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "denominator",
+                      "numerator"
+                    ],
+                    "type": "object"
+                  },
+                  "irrep": {
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "type": "string"
+                  },
+                  "irrep_id": {
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "generators",
+                  "hilbert_series",
+                  "irrep",
+                  "irrep_id"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "type": {
+              "description": "See CONVENTIONS.md section 26.4.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "generators",
+            "hilbert_series",
+            "image_order",
+            "relation",
+            "semi_invariants",
+            "type"
+          ],
+          "type": "object"
+        },
+        "higher": {
+          "description": "See CONVENTIONS.md section 26.4.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 26.4.",
+            "properties": {
+              "complete": {
+                "description": "See CONVENTIONS.md section 26.4.",
+                "type": "boolean"
+              },
+              "degree_cap": {
+                "description": "See CONVENTIONS.md section 26.4.",
+                "type": "integer"
+              },
+              "dim": {
+                "description": "See CONVENTIONS.md section 26.4.",
+                "type": "integer"
+              },
+              "generators": {
+                "description": "See CONVENTIONS.md section 26.4.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 26.4.",
+                  "properties": {
+                    "degree": {
+                      "description": "See CONVENTIONS.md section 26.4.",
+                      "type": "integer"
+                    },
+                    "poly": {
+                      "additionalProperties": {
+                        "$ref": "#/$defs/exact",
+                        "description": "See CONVENTIONS.md section 26.4."
+                      },
+                      "description": "See CONVENTIONS.md section 26.4.",
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "degree",
+                    "poly"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "irrep": {
+                "description": "See CONVENTIONS.md section 26.4.",
+                "type": "string"
+              },
+              "irrep_id": {
+                "description": "See CONVENTIONS.md section 26.4.",
+                "type": "string"
+              },
+              "primary": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 26.4.",
+                "properties": {
+                  "degrees": {
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 26.4.",
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "generators": {
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 26.4.",
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "degrees",
+                  "generators"
+                ],
+                "type": "object"
+              },
+              "same_as": {
+                "description": "See CONVENTIONS.md section 26.4.",
+                "type": "string"
+              },
+              "twoJ": {
+                "description": "See CONVENTIONS.md section 26.4.",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "dim",
+              "irrep",
+              "irrep_id"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "molien": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 26.4.",
+          "properties": {
+            "irreps": {
+              "description": "See CONVENTIONS.md section 26.4.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 26.4.",
+                "properties": {
+                  "dim": {
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "type": "integer"
+                  },
+                  "hilbert_series": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "properties": {
+                      "denominator": {
+                        "description": "See CONVENTIONS.md section 26.4.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 26.4.",
+                          "type": "integer"
+                        },
+                        "type": "array"
+                      },
+                      "numerator": {
+                        "description": "See CONVENTIONS.md section 26.4.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 26.4.",
+                          "type": "integer"
+                        },
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "denominator",
+                      "numerator"
+                    ],
+                    "type": "object"
+                  },
+                  "irrep": {
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "type": "string"
+                  },
+                  "irrep_id": {
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "dim",
+                  "hilbert_series",
+                  "irrep",
+                  "irrep_id"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "levels": {
+              "description": "See CONVENTIONS.md section 26.4.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 26.4.",
+                "properties": {
+                  "dim": {
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "type": "integer"
+                  },
+                  "hilbert_series": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "properties": {
+                      "denominator": {
+                        "description": "See CONVENTIONS.md section 26.4.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 26.4.",
+                          "type": "integer"
+                        },
+                        "type": "array"
+                      },
+                      "numerator": {
+                        "description": "See CONVENTIONS.md section 26.4.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 26.4.",
+                          "type": "integer"
+                        },
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "denominator",
+                      "numerator"
+                    ],
+                    "type": "object"
+                  },
+                  "kind": {
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "type": "string"
+                  },
+                  "members": {
+                    "description": "See CONVENTIONS.md section 26.4.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 26.4.",
+                      "type": "string"
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "dim",
+                  "hilbert_series",
+                  "kind",
+                  "members"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "irreps",
+            "levels"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "binary",
+        "molien"
+      ],
+      "type": "object"
+    },
+    "jj_configurations": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 25.3.",
+      "properties": {
+        "levels": {
+          "description": "See CONVENTIONS.md section 25.3.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 25.3.",
+            "properties": {
+              "dim": {
+                "description": "See CONVENTIONS.md section 25.3.",
+                "type": "integer"
+              },
+              "kind": {
+                "description": "See CONVENTIONS.md section 25.3.",
+                "type": "string"
+              },
+              "members": {
+                "description": "See CONVENTIONS.md section 25.3.",
+                "items": {
+                  "description": "See CONVENTIONS.md section 25.3.",
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "powers": {
+                "description": "See CONVENTIONS.md section 25.3.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 25.3.",
+                  "properties": {
+                    "n": {
+                      "description": "See CONVENTIONS.md section 25.3.",
+                      "type": "integer"
+                    },
+                    "terms": {
+                      "description": "See CONVENTIONS.md section 25.3.",
+                      "items": {
+                        "additionalProperties": false,
+                        "description": "See CONVENTIONS.md section 25.3.",
+                        "properties": {
+                          "irrep": {
+                            "description": "See CONVENTIONS.md section 25.3.",
+                            "type": "string"
+                          },
+                          "multiplicity": {
+                            "description": "See CONVENTIONS.md section 25.3.",
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "irrep",
+                          "multiplicity"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "n",
+                    "terms"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "dim",
+              "kind",
+              "members",
+              "powers"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "rule": {
+          "description": "See CONVENTIONS.md section 25.3.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "levels",
+        "rule"
+      ],
+      "type": "object"
+    },
+    "schema": {
+      "const": "point-group-atlas/double/group/1",
+      "description": "See CONVENTIONS.md section 20."
+    },
+    "spin_orbit_levels": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 20.",
+      "properties": {
+        "levels": {
+          "description": "See CONVENTIONS.md section 20.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 20.",
+            "properties": {
+              "orbital": {
+                "description": "See CONVENTIONS.md section 20.",
+                "type": "string"
+              },
+              "orbital_id": {
+                "description": "See CONVENTIONS.md section 20.",
+                "type": "string"
+              },
+              "terms": {
+                "description": "See CONVENTIONS.md section 20.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 20.",
+                  "properties": {
+                    "irrep": {
+                      "description": "See CONVENTIONS.md section 20.",
+                      "type": "string"
+                    },
+                    "irrep_id": {
+                      "description": "See CONVENTIONS.md section 20.",
+                      "type": "string"
+                    },
+                    "multiplicity": {
+                      "description": "See CONVENTIONS.md section 20.",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "irrep",
+                    "irrep_id",
+                    "multiplicity"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "twoS": {
+                "description": "See CONVENTIONS.md section 20.",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "orbital",
+              "orbital_id",
+              "terms",
+              "twoS"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "twoS_range": {
+          "description": "See CONVENTIONS.md section 20.",
+          "items": {
+            "description": "See CONVENTIONS.md section 20.",
+            "type": "integer"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "levels",
+        "twoS_range"
+      ],
+      "type": "object"
+    },
+    "spin_orbitals": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 25.4.",
+      "properties": {
+        "form": {
+          "description": "See CONVENTIONS.md section 25.4.",
+          "type": "string"
+        },
+        "shells": {
+          "description": "See CONVENTIONS.md section 25.4.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 25.4.",
+            "properties": {
+              "functions": {
+                "description": "See CONVENTIONS.md section 25.4.",
+                "items": {
+                  "description": "See CONVENTIONS.md section 25.4.",
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "l": {
+                "description": "See CONVENTIONS.md section 25.4.",
+                "type": "integer"
+              },
+              "levels": {
+                "description": "See CONVENTIONS.md section 25.4.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 25.4.",
+                  "properties": {
+                    "blocks": {
+                      "description": "See CONVENTIONS.md section 25.4.",
+                      "items": {
+                        "additionalProperties": false,
+                        "description": "See CONVENTIONS.md section 25.4.",
+                        "properties": {
+                          "dim": {
+                            "description": "See CONVENTIONS.md section 25.4.",
+                            "type": "integer"
+                          },
+                          "irrep": {
+                            "description": "See CONVENTIONS.md section 25.4.",
+                            "type": "string"
+                          },
+                          "irrep_id": {
+                            "description": "See CONVENTIONS.md section 25.4.",
+                            "type": "string"
+                          },
+                          "kappa": {
+                            "description": "See CONVENTIONS.md section 25.4.",
+                            "type": "integer"
+                          },
+                          "vectors": {
+                            "description": "See CONVENTIONS.md section 25.4.",
+                            "items": {
+                              "additionalProperties": false,
+                              "description": "See CONVENTIONS.md section 25.4.",
+                              "properties": {
+                                "components": {
+                                  "description": "See CONVENTIONS.md section 25.4.",
+                                  "items": {
+                                    "additionalProperties": false,
+                                    "description": "See CONVENTIONS.md section 25.4.",
+                                    "properties": {
+                                      "c": {
+                                        "$ref": "#/$defs/exact",
+                                        "description": "See CONVENTIONS.md section 25.4."
+                                      },
+                                      "function": {
+                                        "description": "See CONVENTIONS.md section 25.4.",
+                                        "type": "string"
+                                      },
+                                      "twoMs": {
+                                        "description": "See CONVENTIONS.md section 25.4.",
+                                        "type": "integer"
+                                      }
+                                    },
+                                    "required": [
+                                      "c",
+                                      "function",
+                                      "twoMs"
+                                    ],
+                                    "type": "object"
+                                  },
+                                  "type": "array"
+                                },
+                                "mu": {
+                                  "description": "See CONVENTIONS.md section 25.4.",
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "components",
+                                "mu"
+                              ],
+                              "type": "object"
+                            },
+                            "type": "array"
+                          }
+                        },
+                        "required": [
+                          "dim",
+                          "irrep",
+                          "irrep_id",
+                          "kappa",
+                          "vectors"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "multiplicity": {
+                      "description": "See CONVENTIONS.md section 25.4.",
+                      "type": "integer"
+                    },
+                    "orbital": {
+                      "description": "See CONVENTIONS.md section 25.4.",
+                      "type": "string"
+                    },
+                    "orbital_id": {
+                      "description": "See CONVENTIONS.md section 25.4.",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "blocks",
+                    "multiplicity",
+                    "orbital",
+                    "orbital_id"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "shell": {
+                "description": "See CONVENTIONS.md section 25.4.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "functions",
+              "l",
+              "levels",
+              "shell"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "form",
+        "shells"
+      ],
+      "type": "object"
+    },
+    "subduction_basis": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 26.2.",
+      "properties": {
+        "allowed_m": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 26.2.",
+          "properties": {
+            "modulus": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "integer"
+            },
+            "residues": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 26.2.",
+                "properties": {
+                  "irrep": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "string"
+                  },
+                  "irrep_id": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "string"
+                  },
+                  "residues": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 26.2.",
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "irrep",
+                  "irrep_id",
+                  "residues"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "modulus",
+            "residues"
+          ],
+          "type": "object"
+        },
+        "closed_form": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 26.2.",
+          "properties": {
+            "abelian_index": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "integer"
+            },
+            "abelian_part": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "string"
+            },
+            "cases": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 26.2.",
+                "properties": {
+                  "case": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "string"
+                  },
+                  "dim": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "integer"
+                  },
+                  "kind": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "string"
+                  },
+                  "vectors": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "case",
+                  "dim",
+                  "kind",
+                  "vectors"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "flip": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/null"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "description": "See CONVENTIONS.md section 26.2."
+            },
+            "multiplicity": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 26.2.",
+                "properties": {
+                  "formula": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "string"
+                  },
+                  "irrep": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "string"
+                  },
+                  "irrep_id": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "formula",
+                  "irrep",
+                  "irrep_id"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "parity_label_map": {
+              "additionalProperties": {
+                "description": "See CONVENTIONS.md section 26.2.",
+                "type": "string"
+              },
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "object"
+            },
+            "parity_rule": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "string"
+            },
+            "structure_theorem": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "abelian_index",
+            "abelian_part",
+            "cases",
+            "flip",
+            "multiplicity",
+            "parity_label_map",
+            "parity_rule",
+            "structure_theorem"
+          ],
+          "type": "object"
+        },
+        "computed_from": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 26.2.",
+          "properties": {
+            "group": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "string"
+            },
+            "irreps": {
+              "additionalProperties": false,
+              "description": "See CONVENTIONS.md section 26.2.",
+              "properties": {
+                "1G3h": {
+                  "description": "See CONVENTIONS.md section 26.2.",
+                  "type": "string"
+                },
+                "2G3h": {
+                  "description": "See CONVENTIONS.md section 26.2.",
+                  "type": "string"
+                },
+                "E1h": {
+                  "description": "See CONVENTIONS.md section 26.2.",
+                  "type": "string"
+                },
+                "E5h": {
+                  "description": "See CONVENTIONS.md section 26.2.",
+                  "type": "string"
+                },
+                "E7h": {
+                  "description": "See CONVENTIONS.md section 26.2.",
+                  "type": "string"
+                },
+                "G3h": {
+                  "description": "See CONVENTIONS.md section 26.2.",
+                  "type": "string"
+                },
+                "I5h": {
+                  "description": "See CONVENTIONS.md section 26.2.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "E1h"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "group",
+            "irreps"
+          ],
+          "type": "object"
+        },
+        "enumerated": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 26.2.",
+          "properties": {
+            "block_count": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "integer"
+            },
+            "blocks": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 26.2.",
+                "properties": {
+                  "dim": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "integer"
+                  },
+                  "irrep": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "string"
+                  },
+                  "irrep_id": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "string"
+                  },
+                  "kappa": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "integer"
+                  },
+                  "kind": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "string"
+                  },
+                  "seed_sign": {
+                    "$ref": "#/$defs/exact",
+                    "description": "See CONVENTIONS.md section 26.2."
+                  },
+                  "seed_twoM": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "integer"
+                  },
+                  "twoJ": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "integer"
+                  },
+                  "vectors": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "items": {
+                      "additionalProperties": false,
+                      "description": "See CONVENTIONS.md section 26.2.",
+                      "properties": {
+                        "components": {
+                          "description": "See CONVENTIONS.md section 26.2.",
+                          "items": {
+                            "additionalProperties": false,
+                            "description": "See CONVENTIONS.md section 26.2.",
+                            "properties": {
+                              "e": {
+                                "$ref": "#/$defs/exact",
+                                "description": "See CONVENTIONS.md section 26.2."
+                              },
+                              "q": {
+                                "description": "See CONVENTIONS.md section 26.2.",
+                                "items": {
+                                  "description": "See CONVENTIONS.md section 26.2.",
+                                  "type": "integer"
+                                },
+                                "type": "array"
+                              },
+                              "twoM": {
+                                "description": "See CONVENTIONS.md section 26.2.",
+                                "type": "integer"
+                              }
+                            },
+                            "required": [
+                              "twoM"
+                            ],
+                            "type": "object"
+                          },
+                          "type": "array"
+                        },
+                        "factor": {
+                          "$ref": "#/$defs/exact",
+                          "description": "See CONVENTIONS.md section 26.2."
+                        },
+                        "mu": {
+                          "description": "See CONVENTIONS.md section 26.2.",
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "components",
+                        "mu"
+                      ],
+                      "type": "object"
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "dim",
+                  "irrep",
+                  "irrep_id",
+                  "kappa",
+                  "twoJ",
+                  "vectors"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "twoJ_max": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "integer"
+            },
+            "twoJ_min": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "integer"
+            },
+            "vector_count": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "block_count",
+            "blocks",
+            "twoJ_max",
+            "twoJ_min",
+            "vector_count"
+          ],
+          "type": "object"
+        },
+        "full_set": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 26.2.",
+          "properties": {
+            "block_count": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "integer"
+            },
+            "location": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "string"
+            },
+            "release": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "string"
+            },
+            "twoJ_max": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "integer"
+            },
+            "vector_count": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "block_count",
+            "location",
+            "release",
+            "twoJ_max",
+            "vector_count"
+          ],
+          "type": "object"
+        },
+        "generating_function": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 26.2.",
+          "properties": {
+            "denominator": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "items": {
+                "description": "See CONVENTIONS.md section 26.2.",
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "numerators": {
+              "description": "See CONVENTIONS.md section 26.2.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 26.2.",
+                "properties": {
+                  "coefficients": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 26.2.",
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "irrep": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "string"
+                  },
+                  "irrep_id": {
+                    "description": "See CONVENTIONS.md section 26.2.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "coefficients",
+                  "irrep",
+                  "irrep_id"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "denominator",
+            "numerators"
+          ],
+          "type": "object"
+        },
+        "integer_J": {
+          "description": "See CONVENTIONS.md section 26.2.",
+          "type": "string"
+        },
+        "status": {
+          "description": "See CONVENTIONS.md section 26.2.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "allowed_m",
+        "enumerated",
+        "generating_function",
+        "integer_J",
+        "status"
+      ],
+      "type": "object"
+    },
+    "subduction_embeddings": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 28.2.",
+      "properties": {
+        "alternative_table_count": {
+          "description": "See CONVENTIONS.md section 28.2.",
+          "type": "integer"
+        },
+        "count": {
+          "description": "See CONVENTIONS.md section 28.2.",
+          "type": "integer"
+        },
+        "embeddings": {
+          "description": "See CONVENTIONS.md section 28.2.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 28.2.",
+            "properties": {
+              "alternative_settings": {
+                "description": "See CONVENTIONS.md section 28.2.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 28.2.",
+                  "properties": {
+                    "map": {
+                      "description": "See CONVENTIONS.md section 28.2.",
+                      "items": {
+                        "description": "See CONVENTIONS.md section 28.2.",
+                        "type": "integer"
+                      },
+                      "type": "array"
+                    },
+                    "setting": {
+                      "description": "See CONVENTIONS.md section 28.2.",
+                      "items": {
+                        "additionalProperties": false,
+                        "description": "See CONVENTIONS.md section 28.2.",
+                        "properties": {
+                          "g_class": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "type": "string"
+                          },
+                          "g_index": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "type": "integer"
+                          },
+                          "g_symbol": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "type": "string"
+                          },
+                          "h_index": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "type": "integer"
+                          },
+                          "h_symbol": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "g_class",
+                          "g_index",
+                          "g_symbol",
+                          "h_index",
+                          "h_symbol"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "subduction": {
+                      "description": "See CONVENTIONS.md section 28.2.",
+                      "items": {
+                        "additionalProperties": false,
+                        "description": "See CONVENTIONS.md section 28.2.",
+                        "properties": {
+                          "blocks": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "items": {
+                              "additionalProperties": false,
+                              "description": "See CONVENTIONS.md section 28.2.",
+                              "properties": {
+                                "N": {
+                                  "$ref": "#/$defs/exact",
+                                  "description": "See CONVENTIONS.md section 28.2."
+                                },
+                                "irrep": {
+                                  "description": "See CONVENTIONS.md section 28.2.",
+                                  "type": "string"
+                                },
+                                "kappa": {
+                                  "description": "See CONVENTIONS.md section 28.2.",
+                                  "type": "integer"
+                                },
+                                "partners": {
+                                  "description": "See CONVENTIONS.md section 28.2.",
+                                  "items": {
+                                    "additionalProperties": false,
+                                    "description": "See CONVENTIONS.md section 28.2.",
+                                    "properties": {
+                                      "mu": {
+                                        "description": "See CONVENTIONS.md section 28.2.",
+                                        "type": "integer"
+                                      },
+                                      "terms": {
+                                        "description": "See CONVENTIONS.md section 28.2.",
+                                        "items": {
+                                          "additionalProperties": false,
+                                          "description": "See CONVENTIONS.md section 28.2.",
+                                          "properties": {
+                                            "e": {
+                                              "$ref": "#/$defs/exact",
+                                              "description": "See CONVENTIONS.md section 28.2."
+                                            },
+                                            "i": {
+                                              "description": "See CONVENTIONS.md section 28.2.",
+                                              "type": "integer"
+                                            }
+                                          },
+                                          "required": [
+                                            "e",
+                                            "i"
+                                          ],
+                                          "type": "object"
+                                        },
+                                        "type": "array"
+                                      }
+                                    },
+                                    "required": [
+                                      "mu",
+                                      "terms"
+                                    ],
+                                    "type": "object"
+                                  },
+                                  "type": "array"
+                                },
+                                "separation": {
+                                  "description": "See CONVENTIONS.md section 28.2.",
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "N",
+                                "irrep",
+                                "kappa",
+                                "partners",
+                                "separation"
+                              ],
+                              "type": "object"
+                            },
+                            "type": "array"
+                          },
+                          "dim": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "type": "integer"
+                          },
+                          "irrep": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "type": "string"
+                          },
+                          "terms": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "items": {
+                              "additionalProperties": false,
+                              "description": "See CONVENTIONS.md section 28.2.",
+                              "properties": {
+                                "irrep": {
+                                  "description": "See CONVENTIONS.md section 28.2.",
+                                  "type": "string"
+                                },
+                                "multiplicity": {
+                                  "description": "See CONVENTIONS.md section 28.2.",
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "irrep",
+                                "multiplicity"
+                              ],
+                              "type": "object"
+                            },
+                            "type": "array"
+                          }
+                        },
+                        "required": [
+                          "blocks",
+                          "dim",
+                          "irrep",
+                          "terms"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "vector_subduction": {
+                      "description": "See CONVENTIONS.md section 28.2.",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "map",
+                    "setting",
+                    "subduction",
+                    "vector_subduction"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "class_size": {
+                "description": "See CONVENTIONS.md section 28.2.",
+                "type": "integer"
+              },
+              "elements": {
+                "description": "See CONVENTIONS.md section 28.2.",
+                "items": {
+                  "description": "See CONVENTIONS.md section 28.2.",
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              "id": {
+                "description": "See CONVENTIONS.md section 28.2.",
+                "type": "string"
+              },
+              "monomorphism": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 28.2.",
+                "properties": {
+                  "count": {
+                    "description": "See CONVENTIONS.md section 28.2.",
+                    "type": "integer"
+                  },
+                  "determined": {
+                    "description": "See CONVENTIONS.md section 28.2.",
+                    "type": "boolean"
+                  },
+                  "distinct_subductions": {
+                    "description": "See CONVENTIONS.md section 28.2.",
+                    "type": "integer"
+                  },
+                  "map": {
+                    "description": "See CONVENTIONS.md section 28.2.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 28.2.",
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "setting": {
+                    "description": "See CONVENTIONS.md section 28.2.",
+                    "items": {
+                      "additionalProperties": false,
+                      "description": "See CONVENTIONS.md section 28.2.",
+                      "properties": {
+                        "g_class": {
+                          "description": "See CONVENTIONS.md section 28.2.",
+                          "type": "string"
+                        },
+                        "g_index": {
+                          "description": "See CONVENTIONS.md section 28.2.",
+                          "type": "integer"
+                        },
+                        "g_symbol": {
+                          "description": "See CONVENTIONS.md section 28.2.",
+                          "type": "string"
+                        },
+                        "h_index": {
+                          "description": "See CONVENTIONS.md section 28.2.",
+                          "type": "integer"
+                        },
+                        "h_symbol": {
+                          "description": "See CONVENTIONS.md section 28.2.",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "g_class",
+                        "g_index",
+                        "g_symbol",
+                        "h_index",
+                        "h_symbol"
+                      ],
+                      "type": "object"
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "count",
+                  "determined",
+                  "distinct_subductions",
+                  "map",
+                  "setting"
+                ],
+                "type": "object"
+              },
+              "normal": {
+                "description": "See CONVENTIONS.md section 28.2.",
+                "type": "boolean"
+              },
+              "normalizer_order": {
+                "description": "See CONVENTIONS.md section 28.2.",
+                "type": "integer"
+              },
+              "preimage_node": {
+                "description": "See CONVENTIONS.md section 28.2.",
+                "type": "string"
+              },
+              "subduction": {
+                "description": "See CONVENTIONS.md section 28.2.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 28.2.",
+                  "properties": {
+                    "blocks": {
+                      "description": "See CONVENTIONS.md section 28.2.",
+                      "items": {
+                        "additionalProperties": false,
+                        "description": "See CONVENTIONS.md section 28.2.",
+                        "properties": {
+                          "N": {
+                            "$ref": "#/$defs/exact",
+                            "description": "See CONVENTIONS.md section 28.2."
+                          },
+                          "irrep": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "type": "string"
+                          },
+                          "kappa": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "type": "integer"
+                          },
+                          "partners": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "items": {
+                              "additionalProperties": false,
+                              "description": "See CONVENTIONS.md section 28.2.",
+                              "properties": {
+                                "mu": {
+                                  "description": "See CONVENTIONS.md section 28.2.",
+                                  "type": "integer"
+                                },
+                                "terms": {
+                                  "description": "See CONVENTIONS.md section 28.2.",
+                                  "items": {
+                                    "additionalProperties": false,
+                                    "description": "See CONVENTIONS.md section 28.2.",
+                                    "properties": {
+                                      "e": {
+                                        "$ref": "#/$defs/exact",
+                                        "description": "See CONVENTIONS.md section 28.2."
+                                      },
+                                      "i": {
+                                        "description": "See CONVENTIONS.md section 28.2.",
+                                        "type": "integer"
+                                      }
+                                    },
+                                    "required": [
+                                      "e",
+                                      "i"
+                                    ],
+                                    "type": "object"
+                                  },
+                                  "type": "array"
+                                }
+                              },
+                              "required": [
+                                "mu",
+                                "terms"
+                              ],
+                              "type": "object"
+                            },
+                            "type": "array"
+                          },
+                          "separation": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "N",
+                          "irrep",
+                          "kappa",
+                          "partners",
+                          "separation"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "dim": {
+                      "description": "See CONVENTIONS.md section 28.2.",
+                      "type": "integer"
+                    },
+                    "irrep": {
+                      "description": "See CONVENTIONS.md section 28.2.",
+                      "type": "string"
+                    },
+                    "terms": {
+                      "description": "See CONVENTIONS.md section 28.2.",
+                      "items": {
+                        "additionalProperties": false,
+                        "description": "See CONVENTIONS.md section 28.2.",
+                        "properties": {
+                          "irrep": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "type": "string"
+                          },
+                          "multiplicity": {
+                            "description": "See CONVENTIONS.md section 28.2.",
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "irrep",
+                          "multiplicity"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "blocks",
+                    "dim",
+                    "irrep",
+                    "terms"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "subgroup": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 28.2.",
+                "properties": {
+                  "double_class": {
+                    "description": "See CONVENTIONS.md section 28.2.",
+                    "type": "string"
+                  },
+                  "index": {
+                    "description": "See CONVENTIONS.md section 28.2.",
+                    "type": "integer"
+                  },
+                  "order": {
+                    "description": "See CONVENTIONS.md section 28.2.",
+                    "type": "integer"
+                  },
+                  "symbol": {
+                    "description": "See CONVENTIONS.md section 28.2.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "double_class",
+                  "index",
+                  "order",
+                  "symbol"
+                ],
+                "type": "object"
+              },
+              "transversal": {
+                "description": "See CONVENTIONS.md section 28.2.",
+                "items": {
+                  "description": "See CONVENTIONS.md section 28.2.",
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              "vector_subduction": {
+                "description": "See CONVENTIONS.md section 28.2.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "class_size",
+              "elements",
+              "id",
+              "monomorphism",
+              "normal",
+              "normalizer_order",
+              "subgroup",
+              "transversal"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "embeddings_with_alternative_settings": {
+          "description": "See CONVENTIONS.md section 28.2.",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "alternative_table_count",
+        "count",
+        "embeddings",
+        "embeddings_with_alternative_settings"
+      ],
+      "type": "object"
+    },
+    "subduction_parent": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 25.1.",
+      "properties": {
+        "domain": {
+          "description": "See CONVENTIONS.md section 25.1.",
+          "type": "string"
+        },
+        "embedding": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 25.1.",
+          "properties": {
+            "id": {
+              "description": "See CONVENTIONS.md section 25.1.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "type": "object"
+        },
+        "integer_J": {
+          "description": "See CONVENTIONS.md section 25.1.",
+          "type": "string"
+        },
+        "parities": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 25.1.",
+          "properties": {
+            "g": {
+              "additionalProperties": false,
+              "description": "See CONVENTIONS.md section 25.1.",
+              "properties": {
+                "increment": {
+                  "additionalProperties": {
+                    "description": "See CONVENTIONS.md section 25.1.",
+                    "type": "integer"
+                  },
+                  "description": "See CONVENTIONS.md section 25.1.",
+                  "type": "object"
+                },
+                "residues": {
+                  "description": "See CONVENTIONS.md section 25.1.",
+                  "items": {
+                    "additionalProperties": {
+                      "description": "See CONVENTIONS.md section 25.1.",
+                      "type": "integer"
+                    },
+                    "description": "See CONVENTIONS.md section 25.1.",
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "table": {
+                  "description": "See CONVENTIONS.md section 25.1.",
+                  "items": {
+                    "additionalProperties": {
+                      "description": "See CONVENTIONS.md section 25.1.",
+                      "type": "integer"
+                    },
+                    "description": "See CONVENTIONS.md section 25.1.",
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "increment",
+                "residues",
+                "table"
+              ],
+              "type": "object"
+            },
+            "u": {
+              "additionalProperties": false,
+              "description": "See CONVENTIONS.md section 25.1.",
+              "properties": {
+                "increment": {
+                  "additionalProperties": {
+                    "description": "See CONVENTIONS.md section 25.1.",
+                    "type": "integer"
+                  },
+                  "description": "See CONVENTIONS.md section 25.1.",
+                  "type": "object"
+                },
+                "residues": {
+                  "description": "See CONVENTIONS.md section 25.1.",
+                  "items": {
+                    "additionalProperties": {
+                      "description": "See CONVENTIONS.md section 25.1.",
+                      "type": "integer"
+                    },
+                    "description": "See CONVENTIONS.md section 25.1.",
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "table": {
+                  "description": "See CONVENTIONS.md section 25.1.",
+                  "items": {
+                    "additionalProperties": {
+                      "description": "See CONVENTIONS.md section 25.1.",
+                      "type": "integer"
+                    },
+                    "description": "See CONVENTIONS.md section 25.1.",
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "increment",
+                "residues",
+                "table"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "g",
+            "u"
+          ],
+          "type": "object"
+        },
+        "period": {
+          "description": "See CONVENTIONS.md section 25.1.",
+          "type": "integer"
+        },
+        "twoJ_max_tabulated": {
+          "description": "See CONVENTIONS.md section 25.1.",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "domain",
+        "embedding",
+        "integer_J",
+        "parities",
+        "period",
+        "twoJ_max_tabulated"
+      ],
+      "type": "object"
+    },
+    "subgroup_lattice": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 28.1.",
+      "properties": {
+        "counts": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 28.1.",
+          "properties": {
+            "double_classes": {
+              "description": "See CONVENTIONS.md section 28.1.",
+              "type": "integer"
+            },
+            "double_classes_by_order": {
+              "additionalProperties": {
+                "description": "See CONVENTIONS.md section 28.1.",
+                "type": "integer"
+              },
+              "description": "See CONVENTIONS.md section 28.1.",
+              "type": "object"
+            },
+            "g_classes": {
+              "description": "See CONVENTIONS.md section 28.1.",
+              "type": "integer"
+            },
+            "g_classes_by_order": {
+              "additionalProperties": {
+                "description": "See CONVENTIONS.md section 28.1.",
+                "type": "integer"
+              },
+              "description": "See CONVENTIONS.md section 28.1.",
+              "type": "object"
+            },
+            "subgroups": {
+              "description": "See CONVENTIONS.md section 28.1.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "double_classes",
+            "double_classes_by_order",
+            "g_classes",
+            "g_classes_by_order",
+            "subgroups"
+          ],
+          "type": "object"
+        },
+        "edges": {
+          "description": "See CONVENTIONS.md section 28.1.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 28.1.",
+            "properties": {
+              "embeddings_in_upper": {
+                "description": "See CONVENTIONS.md section 28.1.",
+                "type": "integer"
+              },
+              "index": {
+                "description": "See CONVENTIONS.md section 28.1.",
+                "type": "integer"
+              },
+              "lower": {
+                "description": "See CONVENTIONS.md section 28.1.",
+                "type": "string"
+              },
+              "upper": {
+                "description": "See CONVENTIONS.md section 28.1.",
+                "type": "string"
+              },
+              "witness": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 28.1.",
+                "properties": {
+                  "conjugator": {
+                    "description": "See CONVENTIONS.md section 28.1.",
+                    "type": "integer"
+                  },
+                  "conjugator_symbol": {
+                    "description": "See CONVENTIONS.md section 28.1.",
+                    "type": "string"
+                  },
+                  "lower_elements": {
+                    "description": "See CONVENTIONS.md section 28.1.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 28.1.",
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "lower_poles": {
+                    "description": "See CONVENTIONS.md section 28.1.",
+                    "items": {
+                      "additionalProperties": false,
+                      "description": "See CONVENTIONS.md section 28.1.",
+                      "properties": {
+                        "cartesian": {
+                          "description": "See CONVENTIONS.md section 28.1.",
+                          "items": {
+                            "$ref": "#/$defs/exact",
+                            "description": "See CONVENTIONS.md section 28.1."
+                          },
+                          "type": "array"
+                        },
+                        "kind": {
+                          "description": "See CONVENTIONS.md section 28.1.",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "kind"
+                      ],
+                      "type": "object"
+                    },
+                    "type": "array"
+                  },
+                  "lower_symbols": {
+                    "description": "See CONVENTIONS.md section 28.1.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 28.1.",
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "upper_elements": {
+                    "description": "See CONVENTIONS.md section 28.1.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 28.1.",
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "conjugator",
+                  "conjugator_symbol",
+                  "lower_elements",
+                  "lower_poles",
+                  "lower_symbols",
+                  "upper_elements"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "embeddings_in_upper",
+              "index",
+              "lower",
+              "upper",
+              "witness"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "nodes": {
+          "description": "See CONVENTIONS.md section 28.1.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 28.1.",
+            "properties": {
+              "centralizer": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 28.1.",
+                "properties": {
+                  "elements": {
+                    "description": "See CONVENTIONS.md section 28.1.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 28.1.",
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "node": {
+                    "description": "See CONVENTIONS.md section 28.1.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "elements",
+                  "node"
+                ],
+                "type": "object"
+              },
+              "class_size": {
+                "description": "See CONVENTIONS.md section 28.1.",
+                "type": "integer"
+              },
+              "double_class": {
+                "description": "See CONVENTIONS.md section 28.1.",
+                "type": "string"
+              },
+              "double_symbol": {
+                "description": "See CONVENTIONS.md section 28.1.",
+                "type": "string"
+              },
+              "embedding": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 28.1.",
+                "properties": {
+                  "kind": {
+                    "description": "See CONVENTIONS.md section 28.1.",
+                    "type": "string"
+                  },
+                  "members": {
+                    "description": "See CONVENTIONS.md section 28.1.",
+                    "items": {
+                      "additionalProperties": false,
+                      "description": "See CONVENTIONS.md section 28.1.",
+                      "properties": {
+                        "conjugator": {
+                          "description": "See CONVENTIONS.md section 28.1.",
+                          "type": "integer"
+                        },
+                        "conjugator_symbol": {
+                          "description": "See CONVENTIONS.md section 28.1.",
+                          "type": "string"
+                        },
+                        "elements": {
+                          "description": "See CONVENTIONS.md section 28.1.",
+                          "items": {
+                            "description": "See CONVENTIONS.md section 28.1.",
+                            "type": "integer"
+                          },
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "conjugator",
+                        "conjugator_symbol",
+                        "elements"
+                      ],
+                      "type": "object"
+                    },
+                    "type": "array"
+                  },
+                  "representative": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 28.1.",
+                    "properties": {
+                      "class_ids": {
+                        "description": "See CONVENTIONS.md section 28.1.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 28.1.",
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "elements": {
+                        "description": "See CONVENTIONS.md section 28.1.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 28.1.",
+                          "type": "integer"
+                        },
+                        "type": "array"
+                      },
+                      "poles": {
+                        "description": "See CONVENTIONS.md section 28.1.",
+                        "items": {
+                          "additionalProperties": false,
+                          "description": "See CONVENTIONS.md section 28.1.",
+                          "properties": {
+                            "cartesian": {
+                              "description": "See CONVENTIONS.md section 28.1.",
+                              "items": {
+                                "$ref": "#/$defs/exact",
+                                "description": "See CONVENTIONS.md section 28.1."
+                              },
+                              "type": "array"
+                            },
+                            "kind": {
+                              "description": "See CONVENTIONS.md section 28.1.",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "kind"
+                          ],
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "symbols": {
+                        "description": "See CONVENTIONS.md section 28.1.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 28.1.",
+                          "type": "string"
+                        },
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "class_ids",
+                      "elements",
+                      "poles",
+                      "symbols"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "kind",
+                  "members",
+                  "representative"
+                ],
+                "type": "object"
+              },
+              "id": {
+                "description": "See CONVENTIONS.md section 28.1.",
+                "type": "string"
+              },
+              "index": {
+                "description": "See CONVENTIONS.md section 28.1.",
+                "type": "integer"
+              },
+              "normal": {
+                "description": "See CONVENTIONS.md section 28.1.",
+                "type": "boolean"
+              },
+              "normalizer": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 28.1.",
+                "properties": {
+                  "elements": {
+                    "description": "See CONVENTIONS.md section 28.1.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 28.1.",
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "node": {
+                    "description": "See CONVENTIONS.md section 28.1.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "elements",
+                  "node"
+                ],
+                "type": "object"
+              },
+              "normalizer_order": {
+                "description": "See CONVENTIONS.md section 28.1.",
+                "type": "integer"
+              },
+              "order": {
+                "description": "See CONVENTIONS.md section 28.1.",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "centralizer",
+              "class_size",
+              "double_class",
+              "double_symbol",
+              "embedding",
+              "id",
+              "index",
+              "normal",
+              "normalizer",
+              "normalizer_order",
+              "order"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "counts",
+        "edges",
+        "nodes"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "character_table",
+    "clebsch_gordan",
+    "elements",
+    "fusion",
+    "group",
+    "invariants",
+    "jj_configurations",
+    "schema",
+    "spin_orbit_levels",
+    "spin_orbitals",
+    "subduction_basis",
+    "subduction_embeddings",
+    "subduction_parent",
+    "subgroup_lattice"
+  ],
+  "title": "Point Group Atlas double point-group record (a preimage)",
+  "type": "object"
+}

@@ -1,0 +1,6 @@
+# Python >= 3.12 (standard library only)
+# PDF stage: pdflatex (TeX Live 2025) with cmap, geometry, amsmath, amssymb, booktabs, longtable, array,
+#   ragged2e, multicol, multirow, xcolor, fancyhdr, tikz, hyperref (the documents of volume II also
+#   nicefrac, the volume stage also accsupp),
+#   and the fonts of sansmathfonts (the element font "sans-oblique", generator/formats/notation.py)
+# Loading data/sympy/*.py needs SymPy; building the data does not.

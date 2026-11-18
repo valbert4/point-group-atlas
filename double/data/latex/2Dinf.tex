@@ -1,0 +1,433 @@
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=-1
+\documentclass[10pt,a4paper]{article}
+\usepackage{cmap}
+\usepackage[margin=1.8cm,headheight=14pt,headsep=10pt]{geometry}
+\usepackage[leqno]{amsmath}
+\usepackage{amssymb,booktabs,longtable,array,ragged2e,multicol,multirow,xcolor,fancyhdr,tikz}
+\definecolor{linkblue}{rgb}{0.08,0.33,0.58}
+\usepackage[colorlinks=true,linkcolor=linkblue,urlcolor=linkblue,citecolor=linkblue,
+  filecolor=linkblue,linktoc=all,pdfborder={0 0 0},bookmarksnumbered=true]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\setcounter{secnumdepth}{2}\setcounter{tocdepth}{2}
+\definecolor{partshade}{gray}{0.9}
+\usepackage{nicefrac}
+\definecolor{parttitle}{HTML}{295A2C}
+\definecolor{parttitlelight}{HTML}{6C9F6D}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}{-3ex plus -1ex minus -.2ex}%
+  {1.2ex plus .2ex}{\normalfont\large\sffamily\bfseries\color{parttitle}}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}{-2.5ex plus -1ex minus -.2ex}%
+  {.8ex plus .2ex}{\normalfont\sffamily\bfseries\color{parttitle}}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}{-2ex plus -1ex minus -.2ex}%
+  {.6ex plus .2ex}{\normalfont\small\sffamily\bfseries\color{parttitle}}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}{1.5ex plus .5ex minus .2ex}{-1em}%
+  {\normalfont\small\sffamily\bfseries\color{parttitle}}}
+\renewcommand\tagform@[1]{\maketag@@@{\textsf{\bfseries\footnotesize (#1)}}}
+\renewcommand*\l@part[2]{\par\addvspace{1.6ex}\noindent{\sffamily\bfseries #1}\hfill
+  {\sffamily\bfseries #2}\par\nobreak}
+\newcommand\tocnumber{1.8em}
+\newcommand\tocline[4]{\par{\rightskip \tocnumber plus 1fil\relax\parfillskip -\rightskip
+  \noindent\hangindent\dimexpr#1+#2\relax\hspace*{#1}%
+  \@tempdima #2{\sffamily\small #3}\nobreak\leaders\hbox{$\m@th\mkern 4.5mu\hbox{.}%
+  \mkern 4.5mu$}\hfill\nobreak\hbox to \tocnumber{\hfil\sffamily\small #4}\par}}
+\renewcommand*\l@section[2]{\tocline{0em}{2.2em}{#1}{#2}}
+\renewcommand*\l@subsection[2]{\tocline{2.2em}{2.6em}{#1}{#2}}
+\newcommand\contentspage{{\setlength{\columnsep}{24pt}\begin{multicols}{2}\@starttoc{toc}%
+  \end{multicols}}}
+\newcounter{docpart}\@addtoreset{section}{docpart}
+\renewcommand\thesection{\ifnum\value{docpart}>0 \arabic{docpart}.\fi\arabic{section}}
+\renewcommand\theHsection{\arabic{docpart}.\arabic{section}}
+\newcommand\partnumber[1]{#1\enspace}
+\pdfstringdefDisableCommands{\def\partnumber#1{#1 }}
+\newcommand{\partbox}[1]{\par\addvspace{12pt}\refstepcounter{docpart}\phantomsection
+  \addcontentsline{toc}{part}{\protect\partnumber{\thedocpart}#1}%
+  \noindent\colorbox{partshade}{\makebox[%
+  \dimexpr\textwidth-2\fboxsep\relax]{\rule[-6pt]{0pt}{20pt}\Large\sffamily\bfseries%
+  \textcolor{parttitle}{\thedocpart\quad #1}}}\par\nobreak\@nobreaktrue\addvspace{2pt}}
+\newmarks\LTstartmarks\newcount\LTstartcount
+\let\LT@startplain\LT@start
+\def\LT@start{\global\advance\LTstartcount\@ne\LT@startplain
+  \marks\LTstartmarks{\the\LTstartcount}}
+\newmarks\LTgroupmarks
+\newcount\LTspacebreak\LTspacebreak=-1
+\newcount\LTrulebreak\LTrulebreak=-2
+\def\grouprule#1#2{\noalign{\marks\LTgroupmarks{\the\belowrulesep}\nobreak\vskip#1%
+  \vskip\aboverulesep}\multispan\LT@cols\unskip{\leaders\hrule\@height#2\hfill\kern\z@}\cr
+  \noalign{\penalty\LTrulebreak\vskip\belowrulesep\global\@lastruleclass\z@}}
+\def\groupspace#1{\noalign{\marks\LTgroupmarks{\the\dimexpr#1\relax}\penalty\LTspacebreak
+  \vskip#1\global\@lastruleclass\z@}}
+\def\LT@unskips{\unskip\unpenalty\unskip\unpenalty\unskip\unpenalty\unskip\unpenalty}
+\def\LT@groupcut{\ifnum\outputpenalty=\LTrulebreak
+  \setbox\@cclv\vbox{\unvbox\@cclv\setbox\z@\lastbox\LT@unskips}\fi}
+\def\LT@groupjoin{\ifnum\outputpenalty=\LTspacebreak\vskip-\botmarks\LTgroupmarks\relax\fi
+  \ifnum\outputpenalty=\LTrulebreak\vskip-\botmarks\LTgroupmarks\relax\fi}
+\let\LT@outputplain\LT@output
+\def\LT@output{\ifnum\outputpenalty<-\@Mi\LT@outputplain\else
+  \edef\LT@marka{\botmarks\LTstartmarks}\edef\LT@markb{\the\LTstartcount}%
+  \ifx\LT@marka\LT@markb\LT@groupcut\LT@outputplain\LT@groupjoin
+  \else\setbox\LT@head\box\voidb@x\LT@outputplain\fi\fi}
+\makeatother
+\newcommand{\needspace}[1]{\par\penalty-100\begingroup\dimen0=#1\relax\dimen2=\pagegoal
+  \advance\dimen2-\pagetotal\ifdim\dimen0>\dimen2\relax\ifdim\dimen2>0pt\vfil\break\fi\fi
+  \endgroup}
+\numberwithin{equation}{section}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace #1}}
+\renewcommand{\subsectionmark}[1]{}
+\fancyhead[R]{\small\textsc{\rightmark}\quad\thepage}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small\thepage}}
+\definecolor{atlasI}{HTML}{991A1A}\definecolor{atlasIl}{HTML}{EC6B60}
+\definecolor{atlasII}{HTML}{295A2C}\definecolor{atlasIIl}{HTML}{6C9F6D}
+\definecolor{atlasIII}{HTML}{7A1466}\definecolor{atlasIIIl}{HTML}{D66EBC}
+\definecolor{atlasIV}{HTML}{9B690B}\definecolor{atlasIVl}{HTML}{F2A618}
+\makeatletter
+\newcommand\atlas@full{%
+\fill[atlasIII] (0.0394,0.0163) -- (0.3978,0.0163) arc[start angle=0.668, end angle=13.836, radius=1.3979] -- cycle;
+\fill[atlasI] (-0.0163,0.0394) -- (-0.0163,0.3978) arc[start angle=90.668, end angle=103.836, radius=1.3979] -- cycle;
+\fill[atlasIV] (-0.0394,-0.0163) -- (-0.3978,-0.0163) arc[start angle=-179.332, end angle=-166.164, radius=1.3979] -- cycle;
+\fill[atlasII] (0.0163,-0.0394) -- (0.0163,-0.3978) arc[start angle=-89.332, end angle=-76.164, radius=1.3979] -- cycle;
+\fill[atlasIIIl] (0.0163,0.0394) -- (0.3343,0.3573) arc[start angle=76.164, end angle=89.332, radius=1.3979] -- cycle;
+\fill[atlasIl] (-0.0394,0.0163) -- (-0.3573,0.3343) arc[start angle=166.164, end angle=179.332, radius=1.3979] -- cycle;
+\fill[atlasIVl] (-0.0163,-0.0394) -- (-0.3343,-0.3573) arc[start angle=-103.836, end angle=-90.668, radius=1.3979] -- cycle;
+\fill[atlasIIl] (0.0394,-0.0163) -- (0.3573,-0.3343) arc[start angle=-13.836, end angle=-0.668, radius=1.3979] -- cycle;
+\fill[atlasIIIl] (0.4304,0.0163) -- (0.9598,0.0163) arc[start angle=46.637, end angle=73.849, radius=1.3979] arc[start angle=13.862, end angle=0.653, radius=1.4305] -- cycle;
+\fill[atlasIl] (-0.0163,0.4304) -- (-0.0163,0.9598) arc[start angle=136.637, end angle=163.849, radius=1.3979] arc[start angle=103.862, end angle=90.653, radius=1.4305] -- cycle;
+\fill[atlasIVl] (-0.4304,-0.0163) -- (-0.9598,-0.0163) arc[start angle=-133.363, end angle=-106.151, radius=1.3979] arc[start angle=-166.138, end angle=-179.347, radius=1.4305] -- cycle;
+\fill[atlasIIl] (0.0163,-0.4304) -- (0.0163,-0.9598) arc[start angle=-43.363, end angle=-16.151, radius=1.3979] arc[start angle=-76.138, end angle=-89.347, radius=1.4305] -- cycle;
+\fill[atlasIII] (0.0163,0.4304) arc[start angle=89.347, end angle=76.138, radius=1.4305] arc[start angle=16.151, end angle=43.363, radius=1.3979] -- cycle;
+\fill[atlasI] (-0.4304,0.0163) arc[start angle=179.347, end angle=166.138, radius=1.4305] arc[start angle=106.151, end angle=133.363, radius=1.3979] -- cycle;
+\fill[atlasIV] (-0.0163,-0.4304) arc[start angle=-90.653, end angle=-103.862, radius=1.4305] arc[start angle=-163.849, end angle=-136.637, radius=1.3979] -- cycle;
+\fill[atlasII] (0.4304,-0.0163) arc[start angle=-0.653, end angle=-13.862, radius=1.4305] arc[start angle=-73.849, end angle=-46.637, radius=1.3979] -- cycle;
+\fill[atlasIII] (0.9997,0.0232) arc[start angle=1.329, end angle=44.066, radius=1] -- (0.3973,0.3742) arc[start angle=73.875, end angle=45.664, radius=1.4305] -- cycle;
+\fill[atlasI] (-0.0232,0.9997) arc[start angle=91.329, end angle=134.066, radius=1] -- (-0.3742,0.3973) arc[start angle=163.875, end angle=135.664, radius=1.4305] -- cycle;
+\fill[atlasIV] (-0.9997,-0.0232) arc[start angle=-178.671, end angle=-135.934, radius=1] -- (-0.3973,-0.3742) arc[start angle=-106.125, end angle=-134.336, radius=1.4305] -- cycle;
+\fill[atlasII] (0.0232,-0.9997) arc[start angle=-88.671, end angle=-45.934, radius=1] -- (0.3742,-0.3973) arc[start angle=-16.125, end angle=-44.336, radius=1.4305] -- cycle;
+\fill[atlasIIIl] (0.0232,0.9997) arc[start angle=44.336, end angle=16.125, radius=1.4305] -- (0.6955,0.7185) arc[start angle=45.934, end angle=88.671, radius=1] -- cycle;
+\fill[atlasIl] (-0.9997,0.0232) arc[start angle=134.336, end angle=106.125, radius=1.4305] -- (-0.7185,0.6955) arc[start angle=135.934, end angle=178.671, radius=1] -- cycle;
+\fill[atlasIVl] (-0.0232,-0.9997) arc[start angle=-135.664, end angle=-163.875, radius=1.4305] -- (-0.6955,-0.7185) arc[start angle=-134.066, end angle=-91.329, radius=1] -- cycle;
+\fill[atlasIIl] (0.9997,-0.0232) arc[start angle=-45.664, end angle=-73.875, radius=1.4305] -- (0.7185,-0.6955) arc[start angle=-44.066, end angle=-1.329, radius=1] -- cycle;
+}
+\newcommand\atlas@draw[2]{\begin{tikzpicture}[x=\dimexpr(#1)/2\relax,y=\dimexpr(#1)/2\relax]
+\useasboundingbox (-1,-1) rectangle (1,1);#2\end{tikzpicture}}
+\newcommand\atlas@volume[1]{{%
+\colorlet{atlasI}{parttitle}\colorlet{atlasIl}{parttitlelight}%
+\colorlet{atlasII}{parttitle}\colorlet{atlasIIl}{parttitlelight}%
+\colorlet{atlasIII}{parttitle}\colorlet{atlasIIIl}{parttitlelight}%
+\colorlet{atlasIV}{parttitle}\colorlet{atlasIVl}{parttitlelight}%
+#1}}
+\newcommand\atlasmark[1]{\atlas@draw{#1}{\atlas@full}}
+\newcommand\volumemark[1]{\atlas@volume{\atlasmark{#1}}}
+\makeatother
+\fancypagestyle{opening}{\fancyhf{}\fancyfoot[C]{\small\thepage}%
+  \fancyhead[L]{\smash{\raisebox{-9.5mm}{\volumemark{12mm}}}}}
+\hypersetup{pdftitle={2Dinf: Point Group Atlas, volume II: double point groups}, pdfauthor={Victor V. Albert}, pdfsubject={Point Group Atlas double record 2Dinf, schema point-group-atlas/double/group-continuous/1}}
+\fancyhead[L]{\small $\grp{2D_{\infty }}$}
+\DeclareMathAlphabet{\mathelt}{OT1}{cmss}{m}{sl}
+\DeclareSymbolFont{eltgreek}{OML}{cmssm}{m}{it}
+\DeclareMathSymbol{\eltsigma}{\mathord}{eltgreek}{"1B}
+\DeclareSymbolFont{eltletters}{OT1}{cmss}{m}{sl}
+\DeclareMathSymbol{g}{\mathalpha}{eltletters}{`g}
+\DeclareMathSymbol{h}{\mathalpha}{eltletters}{`h}
+\DeclareMathSymbol{Q}{\mathalpha}{eltletters}{`Q}
+\DeclareMathSymbol{R}{\mathalpha}{eltletters}{`R}
+\DeclareMathSymbol{\xi}{\mathord}{eltgreek}{"18}
+\newcommand{\eltfont}[1]{{\let\sigma\eltsigma\mathelt{#1}}}
+\newcommand{\grp}[1]{\mathsf{#1}}
+\newcommand{\irr}[1]{\text{\normalfont\scshape #1}}
+\newcommand{\conjpair}[1]{{}^{#1}}
+\newcommand{\detbox}[1]{{\setlength{\fboxsep}{1pt}\fbox{#1}}}
+\newcommand{\cls}[1]{\eltfont{#1}}
+\newcommand{\comp}[1]{\eltfont{#1}}
+\newcommand{\elt}[1]{\eltfont{#1}}
+\newcommand{\hmname}[1]{#1}
+\newcommand{\conwayname}[1]{#1}
+\newcommand{\ptag}[1]{\mathrm{#1}}
+\newcommand{\orbital}[1]{\mathrm{#1}}
+\newcommand{\dirprod}{\times}
+\newcommand{\sdprod}{\rtimes}
+\newcommand{\samecls}{\cong}
+\newcommand{\nconj}[1]{{\scriptsize$\times#1$}}
+\newcommand{\clsletter}[1]{\,{\scriptsize\color{black!55}#1}}
+\newcommand{\Cyc}[1]{\grp{Z_{#1}}}
+\newcommand{\Sym}[1]{\grp{Sym_{#1}}}
+\newcommand{\dirvec}[3]{(#1, #2, #3)}
+\newcommand{\grpindex}[2]{[#1 : #2]}
+\newcommand{\iverson}[1]{[#1]}
+\newcommand{\restr}[2]{#1\!\downarrow#2}
+\newcommand{\Ind}[2]{\operatorname{Ind}_{#1}^{#2}}
+\newcommand{\genidx}[2]{#1^{[\mathrm{#2}]}}
+\newcommand{\pointr}{\mathbf{r}}
+\newcommand{\unitaxis}{\hat{\mathbf{v}}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\iunit}{\mathrm{i}}
+\newcommand{\expe}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\goldenratio}{\varphi}
+\newcommand{\rootunity}[1]{\zeta_{#1}}
+\newcommand{\irrJ}[1]{D^{(#1)}}
+\newcommand{\irrJp}[2]{D^{(#1,#2)}}
+\newcommand{\repD}[1]{D^{#1}}
+\newcommand{\wignerD}[1]{D^{#1}}
+\newcommand{\wignerd}[1]{d^{#1}}
+\newcommand{\irchar}[1]{\chi_{#1}}
+\newcommand{\chiA}{\chi_{\grp{A}}}
+\newcommand{\fsind}{\nu_{\mathrm{FS}}}
+\newcommand{\conj}[1]{{#1}^{*}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\irrprod}{\otimes}
+\newcommand{\mult}{\kappa}
+\newcommand{\intx}{\mu}
+\newcommand{\cgnorm}{\mathcal{N}}
+\newcommand{\jm}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
+\newcommand{\cgket}[3]{\bigl\lvert{}^{#1}_{\,#2};#3\bigr\rangle}
+\newcommand{\irket}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
+\newcommand{\prodket}[2]{\lvert {#1}\,{#2}\rangle}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\cgc}[6]{\bigl\langle{}^{#1}_{\,#2}\,{}^{#3}_{\,#4}\bigm\vert{}^{#5}_{\,#6}\bigr\rangle}
+\newcommand{\cgck}[7]{\bigl\langle{}^{#1}_{\,#2}\,{}^{#3}_{\,#4}\bigm\vert{}^{#5}_{\,#6};#7\bigr\rangle}
+\newcommand{\cgcone}[3]{\langle #1\,#2\mid #3\rangle}
+\newcommand{\irrangle}{\text{--}}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\fcell}{\mathcal{D}}
+\newcommand{\fdomain}{\mathcal{F}}
+\newcommand{\lensspace}[2]{\mathsf{L}(#1, #2)}
+\newcommand{\twosphere}{\mathsf{S}^{2}}
+\newcommand{\projplane}{\mathbb{R}\mathsf{P}^{2}}
+\newcommand{\term}[2]{{}^{#1}#2}
+\newcommand{\barred}[1]{\bar{#1}}
+\newcommand{\Quat}[1]{\grp{Q_{#1}}}
+\newcommand{\SL}[1]{\grp{SL}(2,#1)}
+\newcommand{\secondclass}{\mathrm{b}}
+\newcommand{\dmark}{{}^{d}}
+\newcommand{\lift}[1]{\tilde{#1}}
+\newcommand{\pauli}[1]{\sigma_{#1}}
+\newcommand{\paulivec}{\vec{\sigma}}
+\newcommand{\hairsp}{\mkern1mu}
+\newenvironment{romanlist}{\begin{enumerate}%
+\renewcommand{\labelenumi}{(\roman{enumi})}}%
+  {\end{enumerate}}
+\makeatletter
+\newenvironment{irmatrix}[1]{\null\,\vcenter\bgroup\Let@\restore@math@cr\default@tag
+  \baselineskip8\ex@ \lineskip3\ex@ \lineskiplimit\lineskip
+  \ialign\bgroup\hfil$\m@th\scriptstyle##$\hfil&&\hskip#1\hfil$\m@th\scriptstyle##$\hfil\crcr}%
+  {\crcr\egroup\egroup\,}
+\makeatother
+\newlength{\fillwidth}\newlength{\cellwidth}\newlength{\colwidth}
+\newcommand{\cellmax}[1]{\settowidth{\cellwidth}{#1}%
+  \ifdim\cellwidth>\colwidth\setlength{\colwidth}{\cellwidth}\fi}
+\newcommand{\fillcap}{\ifdim\colwidth<\fillwidth\setlength{\fillwidth}{\colwidth}\fi}
+\newcommand{\signbreak}{\penalty100\relax}
+\begin{document}
+\thispagestyle{opening}
+\begin{center}
+{\LARGE\sffamily\bfseries\color{parttitle}The $\grp{2D_{\infty }}$ subgroup of $\grp{Pin^{-}(3)}$}
+\end{center}
+\contentspage
+\needspace{194pt}
+\partbox{The group}
+\section{Names and structure}\label{s:identification}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.0.1}{0.1}, \href{../../../rotation/CONVENTIONS.pdf\#conv.2}{2}, \href{../../CONVENTIONS.pdf\#conv.20}{20} and \href{../../CONVENTIONS.pdf\#conv.29}{29}.
+{\small\begin{longtable}{@{}ll@{}}\toprule
+\texttt{symbol} & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$}\\
+\texttt{cover\symbol{95}of} & \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$}\\
+\grouprule{0pt}{\lightrulewidth}
+\texttt{abstract\symbol{95}type} & $\grp{Pin^{-}(2)}$\\
+\grouprule{0pt}{\lightrulewidth}
+\texttt{su2\symbol{95}subgroup} & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$}, index 1\\
+\texttt{normalizer} & \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$}, index 2\\
+\texttt{centralizer} & \href{2S2.pdf}{$\grp{2C_{i}}$}\\
+\texttt{product\symbol{95}form} & indecomposable (no form with both factors non-trivial)\\
+\texttt{center} & \href{2C1.pdf}{$\grp{2C_{1}}$}, order 2\\
+\texttt{commutator\symbol{95}subgroup} & \href{2Cinf.pdf}{$\grp{2C_{\infty }}$}, index 2\\
+\grouprule{0pt}{\lightrulewidth}
+\texttt{hermann\symbol{95}mauguin} & $\dmark\hmname{\infty 2}$\\
+\bottomrule\end{longtable}}
+\leavevmode\label{n:group.preimage}$\grp{2D_{\infty }}$ is the preimage in $\grp{Pin^{-}(3)}$ of \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$}, whose document holds the fields of $\grp{D_{\infty}}$ that this table does not repeat (\texttt{cover\symbol{95}of}): its type, names and geometry; in this table, \texttt{su2\symbol{95}subgroup} is $\grp{2D_{\infty }} \cap \grp{SU(2)}$; \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{Pin^{-}(3)}$. The group is continuous: its order and its GAP identifier are not defined.
+\needspace{103pt}
+\section{Fundamental domain}\label{s:fundamental_domain}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.17}{17} and \href{../../CONVENTIONS.pdf\#conv.21.3}{21.3}.
+\leavevmode\label{n:operator.cosets}An object with symmetry $\grp{2D_{\infty }}$ placed by $\lift{Q} \in \grp{Pin^{-}(3)}$ is the same when placed by $g\lift{Q}$ with $g \in \grp{2D_{\infty }}$: its orientations are the cosets $\grp{2D_{\infty }}\lift{Q} = \{g\lift{Q} : g \in \grp{2D_{\infty }}\}$, the points of the space $\grp{2D_{\infty }}\backslash\grp{Pin^{-}(3)}$. \label{n:operator.volume}Volumes are those of the metric that the covering map carries to that of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.17}{17}), so that $\vol\grp{SU(2)} = 16\pi^2$ and $\vol\grp{Pin^{-}(3)} = 32\pi^2$, twice those of $\grp{SO(3)}$ and $\grp{O(3)}$.
+\leavevmode\label{n:set.cell}\label{n:set.fundamental}\label{n:set.projective}As $\grp{2D_{\infty }}$ holds $\elt{\barred{E}}$, a coset $\grp{2D_{\infty }}\lift{Q}$ holds both lifts of every element of a coset of \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$} in $\grp{O(3)}$, and $\grp{2D_{\infty }}\backslash\grp{Pin^{-}(3)}$ is $\grp{D_{\infty}}\backslash\grp{O(3)}$, two copies of $\grp{D_{\infty}}\backslash\grp{SO(3)}$, the projective plane $\projplane$: the cell $\fcell$, each of its rotations by its canonical lift (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.21.1}{21.1}), and the fundamental domain $\fdomain$ are those of the document of \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$}, in its section Fundamental domain; $\grp{2D_{\infty }}$ covers \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$} twice, the circles of its components being of length $4\pi$. Hence
+\begin{equation}\label{e:volume}\vol\fdomain = 4\pi,\qquad \vol\grp{2D_{\infty }}\cdot\vol\fdomain = 8\pi\cdot 4\pi = 32\pi^2 = \vol\grp{Pin^{-}(3)}.\end{equation}
+\needspace{171pt}
+\partbox{Class space and representations}
+\section{Class space}\label{s:class_space}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.21}{21} and \href{../../CONVENTIONS.pdf\#conv.29.1}{29.1}.
+\leavevmode\label{n:angle.omega}\label{n:angle.psi}\label{n:head.component}\label{n:head.coset}\label{n:head.element}A row is a component of the class space of $\grp{2D_{\infty }}$, an arc of classes or an atom, a single class; coset tells whether its elements cover proper or improper elements of \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$}, element gives the element of $\grp{Pin^{-}(3)}$ at its angle: the lift $\lift{R}_z(\omega) = \cos\tfrac{\omega}{2} - \iunit\sin\tfrac{\omega}{2}\,\pauli{z}$, $0 \le \omega < 4\pi$ and the lifts of the binary rotations at the azimuth $\psi$, $0 \le \psi < 2\pi$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.29.1}{29.1}), and $\irr{e}_{n}$ the matrix of that element in the spinor irrep $\irr{e}_{n}$ (section~\ref{s:continuous_irreps}), on the kets $\jm{n}{-n}$, $\jm{n}{n}$ of $\irrJp{n}{+1}$.
+\begin{center}\begin{tabular}{@{}llll@{}}\toprule
+component & coset & element & $\irr{e}_{n}$\\\midrule
+$\comp{\lift{C}(\omega)}$ & proper & $\elt{\lift{C}}(\omega)$ & $\left(\begin{smallmatrix}\expe^{-\iunit n\omega} & 0\\ 0 & \expe^{\iunit n\omega}\end{smallmatrix}\right)$\\\addlinespace[6pt]
+$\comp{\infty\lift{C}_2'}$ & proper & $\elt{\lift{C}_2'}(\psi)$ & $\left(\begin{smallmatrix}0 & \iunit^{2n}\expe^{2\iunit n\psi}\\ \iunit^{2n}\expe^{-2\iunit n\psi} & 0\end{smallmatrix}\right)$\\
+\bottomrule\end{tabular}\end{center}
+Here $\iunit^{2n}$ is $\iunit$ for $n = \tfrac{1}{2}, \tfrac{5}{2}, \dots$ and $-\iunit$ for $n = \tfrac{3}{2}, \tfrac{7}{2}, \dots$.
+On an arc, $\elt{\lift{R}_z}(\omega)$ is conjugate to $\elt{\lift{R}_z}(4\pi - \omega)$, so the classes run over $0 \le \omega \le 2\pi$, from $\cls{E}$ through the half turns to $\cls{\barred{E}}$; an atom is one class: conjugation by $\elt{\lift{R}_z}(\pi)$ carries a lift of a binary rotation to the other lift.
+The distinguished points are $\cls{E}$ at $\omega = 0$, $\cls{C_2}$ at $\omega = \pi$, $\cls{\barred{E}}$ at $\omega = 2\pi$.
+\leavevmode\label{n:local.haar.h}The Haar measure, of total mass 1: $\diff h = \tfrac{1}{2}\,\diff\omega/(2\pi)$ on $\comp{\lift{C}(\omega)}$, of mass $\tfrac{1}{2}$; the atom $\comp{\infty\lift{C}_2'}$ has mass $\tfrac{1}{2}$.
+The vector irreps of $\grp{2D_{\infty }}$ are the families of \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$}, read on these classes through the covering map: a point $\omega$ of an arc covers the rotation angle $\phi = \omega$ modulo $2\pi$, an atom the atom of \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$} (\texttt{vector\symbol{95}families}). The spinor families, on which $\elt{\barred{E}}$ is $-1$, follow.
+\needspace{103pt}
+\section{Spinor irreps}\label{s:continuous_irreps}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.7}{7}, \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.23}{23} and \href{../../CONVENTIONS.pdf\#conv.29.2}{29.2}.
+\leavevmode\label{n:head.family.irreps}\label{n:index.dimension}\label{n:index.frobenius}\label{n:head.index.family}\label{n:head.kernel}\label{n:head.image}A row is a family of spinor irreps, one for every half-integer $n = \tfrac{1}{2}, \tfrac{3}{2}, \dots$: its dimension $d$, its Frobenius--Schur indicator $\fsind$, index the range of $n$, kernel the subgroup $\ker\Gamma$ of the elements that the irrep $\Gamma$ of the family maps to the identity, image the group that its matrices form, isomorphic to $\grp{2D_{\infty }}/\ker\Gamma$ (for $d = 2$ the preimage in $\grp{SU(2)}$ that the matrices form, \href{2Dinf.pdf}{$\grp{2D_{\infty }}$}), and its character on each component, in the angle $\omega$ of the lift; the class space (section~\ref{s:class_space}) gives the matrices of the families of dimension 2. As $2n$ is odd, the kernel of the instance $n$ is a section (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.27}{27}).
+{\small\begin{longtable}{@{}llllllll@{}}\toprule
+family & $d$ & $\fsind$ & index & kernel & image & $\comp{\lift{C}(\omega)}$ & $\comp{\infty\lift{C}_2'}$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{e}_{n}$ & 2 & $-1$ & $n \ge \tfrac{1}{2}$ & $\grp{C_{2\mathnormal{n}}}$ & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$} & $2\cos(n\omega)$ & $0$\\
+\bottomrule\end{longtable}}
+The records list the instances up to $n = 13/2$, with their characters at the distinguished points (\texttt{instances}).
+\needspace{91pt}
+\section{Direct products of irreps}\label{s:fusion}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.2}{10.2} and \href{../../CONVENTIONS.pdf\#conv.29.3}{29.3}.
+\leavevmode\label{n:index.family}A rule for every pair of families with a spinor factor, $n$ and $n'$ their indices, a vector index an integer and a spinor index a half-integer; the squares of the spinor families follow, with the antisymmetric part in braces; the products of two vector families are those of \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$} (\texttt{vector\symbol{95}rules}).
+\needspace{95pt}
+\paragraph{Products.}
+{\small\begin{longtable}{@{}l@{${}={}$}ll@{}}\toprule
+\multicolumn{3}{@{}l@{}}{\emph{a vector and a spinor factor}}\\*
+$\irr{a}_{1}\irrprod \irr{e}_{n}$ & $\irr{e}_{n}$ & \\
+$\irr{a}_{2}\irrprod \irr{e}_{n}$ & $\irr{e}_{n}$ & \\
+$\irr{e}_{n}\irrprod \irr{e}_{n'}$ & $\irr{e}_{n+n'}\oplus \irr{e}_{\lvert n-n'\rvert}$ & \\
+\multicolumn{3}{@{}l@{}}{\emph{two spinor factors}}\\*
+$\irr{e}_{n}\irrprod \irr{e}_{n'}$ & $\irr{e}_{n+n'}\oplus \irr{e}_{\lvert n-n'\rvert}$ & $n \ne n'$\\
+$\irr{e}_{n}\irrprod \irr{e}_{n'}$ & $\irr{a}_{1}\oplus \irr{a}_{2}\oplus \irr{e}_{2n'}$ & $n = n'$\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Squares.}
+{\small\begin{longtable}{@{}l@{${}={}$}ll@{}}\toprule
+$\irr{e}_{n}\irrprod \irr{e}_{n}$ & $\irr{a}_{2}\oplus \irr{e}_{2n}\oplus \{\irr{a}_{1}\}$ & \\
+\bottomrule\end{longtable}}
+\needspace{103pt}
+\section{Clebsch--Gordan coefficients}\label{s:clebsch_gordan}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.3}{10.3} and \href{../../CONVENTIONS.pdf\#conv.29.3}{29.3}.
+\leavevmode\label{n:vector.basis.factor}\label{n:irrep.lambda}The coupling rules of the products with a spinor factor, with $\ket{e_1}, \ket{e_2}$ and $\ket{f_1}, \ket{f_2}$ the bases of the two factors (a spinor's those of section~\ref{s:class_space}, a vector's those of \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$}) and $\ket{1}$, $\ket{2}$ the partners of the product; $\ket{2}$ carries the sign $s$ that the flip $\elt{\lift{C}_2'}(0)$ requires, and every coefficient written is 1 but $s$:
+\begin{romanlist}\raggedright
+\item $\lambda\irrprod\irr{e}_n = \irr{e}_n$ for a one-dimensional $\lambda$: $\ket{1} = \ket{f_1}$, $\ket{2} = \lambda(\elt{\lift{C}_2'}(0))\ket{f_2}$.
+\item $\irr{e}_n\irrprod\irr{e}_{n'} = \irr{e}_{n+n'}\oplus\irr{e}_{\lvert n-n'\rvert}$, $n$ a vector and $n'$ a spinor index: $\irr{e}_{n+n'}$ has $\ket{1} = \ket{e_1}\ket{f_1}$, $\ket{2} = s\ket{e_2}\ket{f_2}$, $s = $ $(-1)^{n}$; $\irr{e}_{n-n'}$ ($n > n'$) has $\ket{1} = \ket{e_1}\ket{f_2}$, $\ket{2} = s\ket{e_2}\ket{f_1}$, $s = $ $(-1)^{n+1}$; $\irr{e}_{n'-n}$ ($n < n'$) has $\ket{1} = \ket{e_2}\ket{f_1}$, $\ket{2} = s\ket{e_1}\ket{f_2}$, $s = $ $(-1)^{n}$.
+\item $\irr{e}_n\irrprod\irr{e}_{n'}$, $n \ne n'$ both spinor indices, the same partners with $s = $ $(-1)^{n+n'}$ for $\irr{e}_{n+n'}$, $(-1)^{n+n'}$ for $n > n'$ and $(-1)^{n+n'}$ for $n < n'$.
+\item $\irr{e}_n\irrprod\irr{e}_n = \irr{a}_1\oplus\irr{a}_2\oplus\irr{e}_{2n}$ for a spinor family: $\irr{a}_1$, $\irr{a}_2 = \tfrac{1}{2}\sqrt{2}\,(\ket{e_1}\ket{f_2} \mp \ket{e_2}\ket{f_1})$ ($\cgnorm = 2$); $\irr{e}_{2n}$ as $\irr{e}_{n+n'}$.
+\end{romanlist}
+\needspace{171pt}
+\partbox{Subgroups}
+\section{Closed subgroups}\label{s:subgroups}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.16.1}{16.1} and \href{../../CONVENTIONS.pdf\#conv.29.5}{29.5}.
+The closed subgroups of $\grp{2D_{\infty }}$ up to conjugacy in it: the preimages of the closed subgroups of \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$} (its section on closed subgroups) and the sections; normalizer and centralizer in $\grp{2D_{\infty }}$.
+\leavevmode\label{n:head.subgroup}\label{n:head.order}\label{n:head.conjugates}\label{n:head.normal}\label{n:head.normalizer}\label{n:head.centralizer}\label{n:index.family.N}A row is a class of subgroups (subgrp), with its order, the number of subgroups conjugate to it (conjugates), whether it is normal, and its normalizer and its centralizer: the continuous subgroups, then per family its preimages and its sections, a row whose symbol holds $N$ standing for every $N$ of its range, its entries functions of $N$. The record lists the members with $N \le 12$ (\texttt{subduction\symbol{95}subgroups}).
+{\small\begin{longtable}{@{}lrrlll@{}}\toprule
+subgrp & order & conjugates & normal & normalizer & centralizer\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\href{2Cinf.pdf}{$\grp{2C_{\infty }}$} & $\infty$ & 1 & yes & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$} & \href{2Cinf.pdf}{$\grp{2C_{\infty }}$}\\*
+\grouprule{0pt}{\lightrulewidth}
+\href{2C1.pdf}{$\grp{2C_{1}}$} & 2 & 1 & yes & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$} & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$}\\*
+$\grp{2C_{\mathnormal{N}}}$, $N \ge 2$ & $2N$ & 1 & yes & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$} & \href{2Cinf.pdf}{$\grp{2C_{\infty }}$}\\*
+\href{C1.pdf}{$\grp{C_{1}}$} & 1 & 1 & yes & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$} & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$}\\*
+$\grp{C_{\mathnormal{N}}}$, $N \ge 3$ odd & $N$ & 1 & yes & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$} & \href{2Cinf.pdf}{$\grp{2C_{\infty }}$}\\*
+\grouprule{0pt}{\lightrulewidth}
+\href{2D1.pdf}{$\grp{2D_{1}}$} & 4 & $\infty$ & no & \href{2D2.pdf}{$\grp{2D_{2}}$} & \href{2C2.pdf}{$\grp{2C_{2}}$}\\*
+$\grp{2D_{\mathnormal{N}}}$, $N \ge 2$ & $4N$ & $\infty$ & no & $\grp{2D_{2\mathnormal{N}}}$ & \href{2C1.pdf}{$\grp{2C_{1}}$}\\
+\bottomrule\end{longtable}}
+\needspace{147pt}
+\section{Descent of symmetry}\label{s:subduction}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.16.1}{16.1} and \href{../../CONVENTIONS.pdf\#conv.29.5}{29.5}.
+\leavevmode\label{n:index.residue}The restriction of the spinor families to each closed subgroup. For the preimages $\grp{2C_{\mathnormal{N}}}$, $\grp{2C_{\mathnormal{N}v}}$ and $\grp{2D_{\mathnormal{N}}}$, every $N$, the rules give it by $q$, $0 < q < N$:
+{\small\begin{longtable}{@{}ll>{\RaggedRight\arraybackslash}p{0.7\textwidth}@{}}\toprule
+subgrp & family & irreps\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\grp{2C_{\mathnormal{N}}}$ & $\irr{e}_{n}$ & $\conjpair{1}\irr{e}_{\min(q,N-q)}\oplus \conjpair{2}\irr{e}_{\min(q,N-q)}$ if $q \ne N/2$, $2\,\irr{a}_{N/2}$ if $q = N/2$; $q = n \bmod N$\\*
+$\grp{2D_{\mathnormal{N}}}$ & $\irr{e}_{n}$ & $\irr{e}_{\min(q,N-q)}$ if $q \ne N/2$, $\conjpair{1}\irr{e}_{N/2}\oplus \conjpair{2}\irr{e}_{N/2}$ if $q = N/2$; $q = n \bmod N$\\
+\bottomrule\end{longtable}}
+For a finite subgroup the restriction of $n$ depends on $n$ modulo its period $P$; the table gives, for $n = \tfrac{1}{2}, \tfrac{3}{2}, \dots, P - \tfrac{1}{2}$, the irreps of the subgroup (a section's are its preimage's, renamed); the record holds the intertwiners (\texttt{blocks}).
+{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-6\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{subgrp}\cellmax{$\grp{2C_{10}}$}\cellmax{$\grp{2C_{11}}$}\cellmax{$\grp{2C_{12}}$}\cellmax{$\grp{2D_{10}}$}\cellmax{$\grp{2D_{11}}$}\cellmax{$\grp{2D_{12}}$}\cellmax{$\grp{2C_{1}}$}\cellmax{$\grp{2C_{2}}$}\cellmax{$\grp{2C_{3}}$}\cellmax{$\grp{2C_{4}}$}\cellmax{$\grp{2C_{5}}$}\cellmax{$\grp{2C_{6}}$}\cellmax{$\grp{2C_{7}}$}\cellmax{$\grp{2C_{8}}$}\cellmax{$\grp{2C_{9}}$}\cellmax{$\grp{2D_{1}}$}\cellmax{$\grp{2D_{2}}$}\cellmax{$\grp{2D_{3}}$}\cellmax{$\grp{2D_{4}}$}\cellmax{$\grp{2D_{5}}$}\cellmax{$\grp{2D_{6}}$}\cellmax{$\grp{2D_{7}}$}\cellmax{$\grp{2D_{8}}$}\cellmax{$\grp{2D_{9}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{family}\cellmax{$\irr{e}_{n}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{10}\cellmax{11}\cellmax{12}\cellmax{14}\cellmax{18}\cellmax{22}\cellmax{$P$}\cellmax{1}\cellmax{2}\cellmax{3}\cellmax{4}\cellmax{5}\cellmax{6}\cellmax{7}\cellmax{8}\cellmax{9}\addtolength{\fillwidth}{-\colwidth}\begin{longtable}{@{}llr>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
+subgrp & family & $P$ & irreps\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\href{2C1.pdf}{$\grp{2C_{1}}$} & $\irr{e}_{n}$ & 1 & $\nicefrac{1}{2}$: 2$\irr{a}_{1/2}$\\*
+\href{2C2.pdf}{$\grp{2C_{2}}$} & $\irr{e}_{n}$ & 2 & $\nicefrac{1}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$\\
+\href{2C3.pdf}{$\grp{2C_{3}}$} & $\irr{e}_{n}$ & 3 & $\nicefrac{1}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$; $\nicefrac{3}{2}$: 2$\irr{a}_{3/2}$; $\nicefrac{5}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$\\
+\href{2C4.pdf}{$\grp{2C_{4}}$} & $\irr{e}_{n}$ & 4 & $\nicefrac{1}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{7}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$\\
+\href{2C5.pdf}{$\grp{2C_{5}}$} & $\irr{e}_{n}$ & 5 & $\nicefrac{1}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{5}{2}$: 2$\irr{a}_{5/2}$; $\nicefrac{7}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{9}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$\\
+\href{2C6.pdf}{$\grp{2C_{6}}$} & $\irr{e}_{n}$ & 6 & $\nicefrac{1}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{7}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{9}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{11}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$\\
+\href{2C7.pdf}{$\grp{2C_{7}}$} & $\irr{e}_{n}$ & 7 & $\nicefrac{1}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{7}{2}$: 2$\irr{a}_{7/2}$; $\nicefrac{9}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{11}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{13}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$\\
+\href{2C8.pdf}{$\grp{2C_{8}}$} & $\irr{e}_{n}$ & 8 & $\nicefrac{1}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{7}{2}$: $\conjpair{1}\irr{e}_{7/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{7/2}$; $\nicefrac{9}{2}$: $\conjpair{1}\irr{e}_{7/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{7/2}$; $\nicefrac{11}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{13}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{15}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$\\
+\href{2C9.pdf}{$\grp{2C_{9}}$} & $\irr{e}_{n}$ & 9 & $\nicefrac{1}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{7}{2}$: $\conjpair{1}\irr{e}_{7/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{7/2}$; $\nicefrac{9}{2}$: 2$\irr{a}_{9/2}$; $\nicefrac{11}{2}$: $\conjpair{1}\irr{e}_{7/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{7/2}$; $\nicefrac{13}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{15}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{17}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$\\
+\href{2C10.pdf}{$\grp{2C_{10}}$} & $\irr{e}_{n}$ & 10 & $\nicefrac{1}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{7}{2}$: $\conjpair{1}\irr{e}_{7/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{7/2}$; $\nicefrac{9}{2}$: $\conjpair{1}\irr{e}_{9/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{9/2}$; $\nicefrac{11}{2}$: $\conjpair{1}\irr{e}_{9/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{9/2}$; $\nicefrac{13}{2}$: $\conjpair{1}\irr{e}_{7/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{7/2}$; $\nicefrac{15}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{17}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{19}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$\\
+\href{2C11.pdf}{$\grp{2C_{11}}$} & $\irr{e}_{n}$ & 11 & $\nicefrac{1}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{7}{2}$: $\conjpair{1}\irr{e}_{7/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{7/2}$; $\nicefrac{9}{2}$: $\conjpair{1}\irr{e}_{9/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{9/2}$; $\nicefrac{11}{2}$: 2$\irr{a}_{11/2}$; $\nicefrac{13}{2}$: $\conjpair{1}\irr{e}_{9/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{9/2}$; $\nicefrac{15}{2}$: $\conjpair{1}\irr{e}_{7/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{7/2}$; $\nicefrac{17}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{19}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{21}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$\\
+\href{2C12.pdf}{$\grp{2C_{12}}$} & $\irr{e}_{n}$ & 12 & $\nicefrac{1}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{7}{2}$: $\conjpair{1}\irr{e}_{7/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{7/2}$; $\nicefrac{9}{2}$: $\conjpair{1}\irr{e}_{9/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{9/2}$; $\nicefrac{11}{2}$: $\conjpair{1}\irr{e}_{11/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{11/2}$; $\nicefrac{13}{2}$: $\conjpair{1}\irr{e}_{11/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{11/2}$; $\nicefrac{15}{2}$: $\conjpair{1}\irr{e}_{9/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{9/2}$; $\nicefrac{17}{2}$: $\conjpair{1}\irr{e}_{7/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{7/2}$; $\nicefrac{19}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{21}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{23}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$\\
+\href{2D1.pdf}{$\grp{2D_{1}}$} & $\irr{e}_{n}$ & 2 & $\nicefrac{1}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\conjpair{1}\irr{e}_{1/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{1/2}$\\
+\href{2D2.pdf}{$\grp{2D_{2}}$} & $\irr{e}_{n}$ & 2 & $\nicefrac{1}{2}$: $\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\irr{e}_{1/2}$\\
+\href{2D3.pdf}{$\grp{2D_{3}}$} & $\irr{e}_{n}$ & 6 & $\nicefrac{1}{2}$: $\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\irr{e}_{1/2}$; $\nicefrac{7}{2}$: $\irr{e}_{1/2}$; $\nicefrac{9}{2}$: $\conjpair{1}\irr{e}_{3/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{3/2}$; $\nicefrac{11}{2}$: $\irr{e}_{1/2}$\\
+\href{2D4.pdf}{$\grp{2D_{4}}$} & $\irr{e}_{n}$ & 4 & $\nicefrac{1}{2}$: $\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\irr{e}_{3/2}$; $\nicefrac{7}{2}$: $\irr{e}_{1/2}$\\
+\href{2D5.pdf}{$\grp{2D_{5}}$} & $\irr{e}_{n}$ & 10 & $\nicefrac{1}{2}$: $\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{7}{2}$: $\irr{e}_{3/2}$; $\nicefrac{9}{2}$: $\irr{e}_{1/2}$; $\nicefrac{11}{2}$: $\irr{e}_{1/2}$; $\nicefrac{13}{2}$: $\irr{e}_{3/2}$; $\nicefrac{15}{2}$: $\conjpair{1}\irr{e}_{5/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{5/2}$; $\nicefrac{17}{2}$: $\irr{e}_{3/2}$; $\nicefrac{19}{2}$: $\irr{e}_{1/2}$\\
+\href{2D6.pdf}{$\grp{2D_{6}}$} & $\irr{e}_{n}$ & 6 & $\nicefrac{1}{2}$: $\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\irr{e}_{5/2}$; $\nicefrac{7}{2}$: $\irr{e}_{5/2}$; $\nicefrac{9}{2}$: $\irr{e}_{3/2}$; $\nicefrac{11}{2}$: $\irr{e}_{1/2}$\\
+\href{2D7.pdf}{$\grp{2D_{7}}$} & $\irr{e}_{n}$ & 14 & $\nicefrac{1}{2}$: $\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\irr{e}_{5/2}$; $\nicefrac{7}{2}$: $\conjpair{1}\irr{e}_{7/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{7/2}$; $\nicefrac{9}{2}$: $\irr{e}_{5/2}$; $\nicefrac{11}{2}$: $\irr{e}_{3/2}$; $\nicefrac{13}{2}$: $\irr{e}_{1/2}$; $\nicefrac{15}{2}$: $\irr{e}_{1/2}$; $\nicefrac{17}{2}$: $\irr{e}_{3/2}$; $\nicefrac{19}{2}$: $\irr{e}_{5/2}$; $\nicefrac{21}{2}$: $\conjpair{1}\irr{e}_{7/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{7/2}$; $\nicefrac{23}{2}$: $\irr{e}_{5/2}$; $\nicefrac{25}{2}$: $\irr{e}_{3/2}$; $\nicefrac{27}{2}$: $\irr{e}_{1/2}$\\
+\href{2D8.pdf}{$\grp{2D_{8}}$} & $\irr{e}_{n}$ & 8 & $\nicefrac{1}{2}$: $\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\irr{e}_{5/2}$; $\nicefrac{7}{2}$: $\irr{e}_{7/2}$; $\nicefrac{9}{2}$: $\irr{e}_{7/2}$; $\nicefrac{11}{2}$: $\irr{e}_{5/2}$; $\nicefrac{13}{2}$: $\irr{e}_{3/2}$; $\nicefrac{15}{2}$: $\irr{e}_{1/2}$\\
+\href{2D9.pdf}{$\grp{2D_{9}}$} & $\irr{e}_{n}$ & 18 & $\nicefrac{1}{2}$: $\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\irr{e}_{5/2}$; $\nicefrac{7}{2}$: $\irr{e}_{7/2}$; $\nicefrac{9}{2}$: $\conjpair{1}\irr{e}_{9/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{9/2}$; $\nicefrac{11}{2}$: $\irr{e}_{7/2}$; $\nicefrac{13}{2}$: $\irr{e}_{5/2}$; $\nicefrac{15}{2}$: $\irr{e}_{3/2}$; $\nicefrac{17}{2}$: $\irr{e}_{1/2}$; $\nicefrac{19}{2}$: $\irr{e}_{1/2}$; $\nicefrac{21}{2}$: $\irr{e}_{3/2}$; $\nicefrac{23}{2}$: $\irr{e}_{5/2}$; $\nicefrac{25}{2}$: $\irr{e}_{7/2}$; $\nicefrac{27}{2}$: $\conjpair{1}\irr{e}_{9/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{9/2}$; $\nicefrac{29}{2}$: $\irr{e}_{7/2}$; $\nicefrac{31}{2}$: $\irr{e}_{5/2}$; $\nicefrac{33}{2}$: $\irr{e}_{3/2}$; $\nicefrac{35}{2}$: $\irr{e}_{1/2}$\\
+\href{2D10.pdf}{$\grp{2D_{10}}$} & $\irr{e}_{n}$ & 10 & $\nicefrac{1}{2}$: $\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\irr{e}_{5/2}$; $\nicefrac{7}{2}$: $\irr{e}_{7/2}$; $\nicefrac{9}{2}$: $\irr{e}_{9/2}$; $\nicefrac{11}{2}$: $\irr{e}_{9/2}$; $\nicefrac{13}{2}$: $\irr{e}_{7/2}$; $\nicefrac{15}{2}$: $\irr{e}_{5/2}$; $\nicefrac{17}{2}$: $\irr{e}_{3/2}$; $\nicefrac{19}{2}$: $\irr{e}_{1/2}$\\
+\href{2D11.pdf}{$\grp{2D_{11}}$} & $\irr{e}_{n}$ & 22 & $\nicefrac{1}{2}$: $\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\irr{e}_{5/2}$; $\nicefrac{7}{2}$: $\irr{e}_{7/2}$; $\nicefrac{9}{2}$: $\irr{e}_{9/2}$; $\nicefrac{11}{2}$: $\conjpair{1}\irr{e}_{11/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{11/2}$; $\nicefrac{13}{2}$: $\irr{e}_{9/2}$; $\nicefrac{15}{2}$: $\irr{e}_{7/2}$; $\nicefrac{17}{2}$: $\irr{e}_{5/2}$; $\nicefrac{19}{2}$: $\irr{e}_{3/2}$; $\nicefrac{21}{2}$: $\irr{e}_{1/2}$; $\nicefrac{23}{2}$: $\irr{e}_{1/2}$; $\nicefrac{25}{2}$: $\irr{e}_{3/2}$; $\nicefrac{27}{2}$: $\irr{e}_{5/2}$; $\nicefrac{29}{2}$: $\irr{e}_{7/2}$; $\nicefrac{31}{2}$: $\irr{e}_{9/2}$; $\nicefrac{33}{2}$: $\conjpair{1}\irr{e}_{11/2}$${}\oplus{}$$\conjpair{2}\irr{e}_{11/2}$; $\nicefrac{35}{2}$: $\irr{e}_{9/2}$; $\nicefrac{37}{2}$: $\irr{e}_{7/2}$; $\nicefrac{39}{2}$: $\irr{e}_{5/2}$; $\nicefrac{41}{2}$: $\irr{e}_{3/2}$; $\nicefrac{43}{2}$: $\irr{e}_{1/2}$\\*
+\href{2D12.pdf}{$\grp{2D_{12}}$} & $\irr{e}_{n}$ & 12 & $\nicefrac{1}{2}$: $\irr{e}_{1/2}$; $\nicefrac{3}{2}$: $\irr{e}_{3/2}$; $\nicefrac{5}{2}$: $\irr{e}_{5/2}$; $\nicefrac{7}{2}$: $\irr{e}_{7/2}$; $\nicefrac{9}{2}$: $\irr{e}_{9/2}$; $\nicefrac{11}{2}$: $\irr{e}_{11/2}$; $\nicefrac{13}{2}$: $\irr{e}_{11/2}$; $\nicefrac{15}{2}$: $\irr{e}_{9/2}$; $\nicefrac{17}{2}$: $\irr{e}_{7/2}$; $\nicefrac{19}{2}$: $\irr{e}_{5/2}$; $\nicefrac{21}{2}$: $\irr{e}_{3/2}$; $\nicefrac{23}{2}$: $\irr{e}_{1/2}$\\
+\bottomrule\end{longtable}}
+\needspace{177pt}
+\partbox{Angular momentum}
+\section{Subduction from \texorpdfstring{$\grp{Pin^{-}(3)}$}{Pin\unichar{8315}(3)}}\label{s:subduction_parent}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.11}{11}, \href{../../CONVENTIONS.pdf\#conv.25.1}{25.1} and \href{../../CONVENTIONS.pdf\#conv.29.4}{29.4}.
+\leavevmode\label{n:irrep.o3}\label{n:index.J}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{Pin^{-}(3)}$ at half-integer $J$ restricted to $\grp{2D_{\infty }}$ (\texttt{rule}):
+\begin{equation}\label{e:parent}\restr{\irrJp{J}{p}}{\grp{2D_{\infty }}} = \bigoplus_{n=1/2}^{J}\irr{e}_{n},\end{equation}
+for either $p$, the sum over $n = \tfrac{1}{2}, \tfrac{3}{2}, \dots, J$; at integer $J$, the subduction of \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$} (\texttt{integer\symbol{95}J}).
+\needspace{78pt}
+\section{Symmetry-adapted bases}\label{s:bases}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.14}{14}, \href{../../CONVENTIONS.pdf\#conv.26.2}{26.2} and \href{../../CONVENTIONS.pdf\#conv.29.4}{29.4}.
+\leavevmode\label{n:index.m}At half-integer $J$ the kets $\jm{J}{m}$ carry $\irrJp{J}{+1}$, and the block of $\irr{e}_{n}$, $n = \tfrac{1}{2}, \tfrac{3}{2}, \dots, J$, has the partners $\jm{J}{-n}$ and $(-1)^{J-n}\jm{J}{n}$; at integer $J$ the bases of \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$} (\texttt{integer\symbol{95}J}). The record lists the blocks for $2J \le 21$ (\texttt{enumerated}).
+\needspace{171pt}
+\partbox{Spinors and tensors}
+\section{Spin--orbitals}\label{s:spin_orbitals}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.25.4}{25.4}.
+\leavevmode\label{n:local.spinor.uv}\label{n:local.function.f}\label{n:index.orbital.l}\label{n:head.state}The states of an electron of orbital angular momentum $l$ and spin $\nicefrac{1}{2}$ in the functions $f$ of the $\orbital{s}$, $\orbital{p}$ and $\orbital{d}$ shells of \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.13}{13}) times the spin kets $u = \jm{1/2}{1/2}$ and $v = \jm{1/2}{-1/2}$, each up to a positive factor; the record holds the $\orbital{f}$ shell as well (\texttt{spin\symbol{95}orbitals}). An orbital level, the functions of degree $l$ that carry the instance $\Gamma$ of \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$}, times the spin splits into the spinor instances $\Lambda$ of $\grp{2D_{\infty }}$: under the heading of its shell a row gives $\Gamma$, $\Lambda$, its partner $\intx$ and the state, which, normalized (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.25.4}{25.4}), follows the partner law with the matrices of section~\ref{s:class_space}. The instances $\Lambda$ of a level $\Gamma$ are those of the doublet of $\Gamma$ in the spin--orbit levels (section~\ref{s:spin_orbit}, first column).
+{\small\begin{longtable}{@{}llrl@{\hspace{18pt}}llrl@{}}\toprule
+$\Gamma$ & $\Lambda$ & $\intx$ & state & $\Gamma$ & $\Lambda$ & $\intx$ & state\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\multicolumn{4}{@{}l@{\hspace{18pt}}}{$\orbital{s}$ shell} & \multicolumn{4}{@{}l@{}}{$\orbital{d}$ shell}\\*
+$\irr{a}_{1}$ & $\irr{e}_{1/2}$ & 1 & $\orbital{s}v$ & $\irr{a}_{1}$ & $\irr{e}_{1/2}$ & 1 & $\orbital{d}_{z^2}v$\\*
+ & $\irr{e}_{1/2}$ & 2 & $\orbital{s}u$ &  & $\irr{e}_{1/2}$ & 2 & $\orbital{d}_{z^2}u$\\*
+\multicolumn{4}{@{}l@{\hspace{18pt}}}{$\orbital{p}$ shell} & $\irr{e}_{1}$ & $\irr{e}_{1/2}$ & 1 & $\left(\orbital{d}_{yz} + \iunit{}\,\orbital{d}_{zx}\right)u$\\*
+$\irr{a}_{2}$ & $\irr{e}_{1/2}$ & 1 & $\orbital{p}_{z}v$ &  & $\irr{e}_{1/2}$ & 2 & $\left(\orbital{d}_{yz} - \iunit{}\,\orbital{d}_{zx}\right)v$\\*
+ & $\irr{e}_{1/2}$ & 2 & $-\orbital{p}_{z}u$ &  & $\irr{e}_{3/2}$ & 1 & $\left(\orbital{d}_{yz} + \iunit{}\,\orbital{d}_{zx}\right)v$\\*
+$\irr{e}_{1}$ & $\irr{e}_{1/2}$ & 1 & $\left(\orbital{p}_{x} - \iunit{}\,\orbital{p}_{y}\right)u$ &  & $\irr{e}_{3/2}$ & 2 & $\left(-\orbital{d}_{yz} + \iunit{}\,\orbital{d}_{zx}\right)u$\\*
+ & $\irr{e}_{1/2}$ & 2 & $\left(\orbital{p}_{x} + \iunit{}\,\orbital{p}_{y}\right)v$ & $\irr{e}_{2}$ & $\irr{e}_{3/2}$ & 1 & $\left(\orbital{d}_{x^2-y^2} - 2\iunit{}\,\orbital{d}_{xy}\right)u$\\*
+ & $\irr{e}_{3/2}$ & 1 & $\left(\orbital{p}_{x} - \iunit{}\,\orbital{p}_{y}\right)v$ &  & $\irr{e}_{3/2}$ & 2 & $-\left(\orbital{d}_{x^2-y^2} + 2\iunit{}\,\orbital{d}_{xy}\right)v$\\*
+ & $\irr{e}_{3/2}$ & 2 & $-\left(\orbital{p}_{x} + \iunit{}\,\orbital{p}_{y}\right)u$ &  & $\irr{e}_{5/2}$ & 1 & $\left(\orbital{d}_{x^2-y^2} - 2\iunit{}\,\orbital{d}_{xy}\right)v$\\*
+ &  &  &  &  & $\irr{e}_{5/2}$ & 2 & $\left(\orbital{d}_{x^2-y^2} + 2\iunit{}\,\orbital{d}_{xy}\right)u$\\
+\bottomrule\end{longtable}}
+\needspace{103pt}
+\section{Invariant polynomials}\label{s:invariants}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.26.4}{26.4}.
+\leavevmode\label{n:local.binary.form}A binary form $f = \sum_i c_i\, u^i v^{n-i}$ of degree $n$ in the spin kets $u = \jm{1/2}{1/2}$ and $v = \jm{1/2}{-1/2}$ is invariant when every element leaves it unchanged, the elements acting at the parity $+1$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.26.4}{26.4}). The matrices of the elements on $u$, $v$ are the diagonal matrices of $\grp{SU(2)}$ and the lifts of the half-turns about the axes of the $xy$ plane, which exchange $u$ and $v$ up to factors and send $uv$ to $-uv$: the invariant forms are the polynomials in $(uv)^{2}$, $(uv)^J$ being $J!$ times the ket $\jm{J}{0}$, whose diagonal matrix element is a Legendre polynomial [\href{../../../REFERENCES.pdf\#ref.VK91}{VK91}, section 6.3.11].
+\leavevmode\label{n:function.hilbert}\label{n:local.partner.x}Every spinor irrep $V$ of $\grp{2D_{\infty }}$ has dimension 2: the lifts of the rotations about $z$ multiply its partners $x$ and $y$ by inverse phases, and the other elements exchange them with factors whose product is $-1$, as they square to $\elt{\barred{E}}$; the number of independent invariant polynomials of degree $n$ in its partners, the multiplicity of the trivial irrep in the $n$-th symmetric power of $V$, is the coefficient of $t^n$ in its Molien series $H_V(t)$ [\href{../../../REFERENCES.pdf\#ref.Mol97}{Mol97}], and the invariants are the polynomials in $(xy)^{2}$: $H_V(t) = 1/(1 - t^{4})$. The record stores none of these series.
+\needspace{177pt}
+\partbox{Electronic levels}
+\section{Spin--orbit levels}\label{s:spin_orbit}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.19}{19}, \href{../../CONVENTIONS.pdf\#conv.25.2}{25.2} and \href{../../CONVENTIONS.pdf\#conv.29.4}{29.4}.
+\leavevmode\label{n:local.spin}\label{n:symbol.term}A term $\term{2S+1}{\Gamma}$, the orbital level $\Gamma$ with the spin $S$, splits under spin--orbit coupling into the irreps of $\grp{2D_{\infty }}$ in
+\begin{equation}\label{e:spinorbit}\restr{(\Gamma \irrprod \irrJp{S}{+1})}{\grp{2D_{\infty }}},\end{equation}
+the spin being even under the inversion: spinor irreps at half-integer $S$, vector irreps at integer $S$ (in a linear molecule, Hund's case (a): the levels $\Omega = \lvert\Lambda + \Sigma\rvert$, $\Sigma = -S, \dots, S$). Row $\Gamma$, column $2S + 1$ of a table gives the levels of $\term{2S+1}{\Gamma}$, as the grid of electronic terms of \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$} gives the terms, for the vector irreps of index at most 3 and $S \le \nicefrac{7}{2}$; the record holds them (\texttt{spin\symbol{95}orbit\symbol{95}levels}). For an orbital level of the shells of section~\ref{s:spin_orbitals}, column $2S + 1 = 2$ gives the levels of one electron, whose states that section writes out.
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}l>{\RaggedRight\arraybackslash}p{\dimexpr(\textwidth-61pt)*13/122\relax}>{\RaggedRight\arraybackslash}p{\dimexpr(\textwidth-61pt)*25/122\relax}>{\RaggedRight\arraybackslash}p{\dimexpr(\textwidth-61pt)*38/122\relax}>{\RaggedRight\arraybackslash}p{\dimexpr(\textwidth-61pt)*46/122\relax}@{}}\toprule
+$\Gamma$ & $2S + 1 = 2$ & $4$ & $6$ & $8$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1}$ & $\irr{e}_{1/2}$ & $\irr{e}_{1/2}\oplus \irr{e}_{3/2}$ & $\irr{e}_{1/2}\oplus \irr{e}_{3/2}\oplus \irr{e}_{5/2}$ & $\irr{e}_{1/2}\oplus \irr{e}_{3/2}\oplus \irr{e}_{5/2}\oplus \irr{e}_{7/2}$\\*
+$\irr{a}_{2}$ & $\irr{e}_{1/2}$ & $\irr{e}_{1/2}\oplus \irr{e}_{3/2}$ & $\irr{e}_{1/2}\oplus \irr{e}_{3/2}\oplus \irr{e}_{5/2}$ & $\irr{e}_{1/2}\oplus \irr{e}_{3/2}\oplus \irr{e}_{5/2}\oplus \irr{e}_{7/2}$\\
+$\irr{e}_{1}$ & $\irr{e}_{1/2}\oplus \irr{e}_{3/2}$ & $2\,\irr{e}_{1/2}\oplus \irr{e}_{3/2}\oplus \irr{e}_{5/2}$ & $2\,\irr{e}_{1/2}\oplus 2\,\irr{e}_{3/2}\oplus \irr{e}_{5/2}\oplus \irr{e}_{7/2}$ & $2\,\irr{e}_{1/2}\oplus 2\,\irr{e}_{3/2}\oplus 2\,\irr{e}_{5/2}\oplus \irr{e}_{7/2}\oplus \irr{e}_{9/2}$\\
+$\irr{e}_{2}$ & $\irr{e}_{3/2}\oplus \irr{e}_{5/2}$ & $\irr{e}_{1/2}\oplus \irr{e}_{3/2}\oplus \irr{e}_{5/2}\oplus \irr{e}_{7/2}$ & $2\,\irr{e}_{1/2}\oplus \irr{e}_{3/2}\oplus \irr{e}_{5/2}\oplus \irr{e}_{7/2}\oplus \irr{e}_{9/2}$ & $2\,\irr{e}_{1/2}\oplus 2\,\irr{e}_{3/2}\oplus \irr{e}_{5/2}\oplus \irr{e}_{7/2}\oplus \irr{e}_{9/2}\oplus \irr{e}_{11/2}$\\*
+$\irr{e}_{3}$ & $\irr{e}_{5/2}\oplus \irr{e}_{7/2}$ & $\irr{e}_{3/2}\oplus \irr{e}_{5/2}\oplus \irr{e}_{7/2}\oplus \irr{e}_{9/2}$ & $\irr{e}_{1/2}\oplus \irr{e}_{3/2}\oplus \irr{e}_{5/2}\oplus \irr{e}_{7/2}\oplus \irr{e}_{9/2}\oplus \irr{e}_{11/2}$ & $2\,\irr{e}_{1/2}\oplus \irr{e}_{3/2}\oplus \irr{e}_{5/2}\oplus \irr{e}_{7/2}\oplus \irr{e}_{9/2}\oplus \irr{e}_{11/2}\oplus \irr{e}_{13/2}$\\
+\bottomrule\end{longtable}}
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}llll@{}}\toprule
+$\Gamma$ & $2S + 1 = 3$ & $5$ & $7$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1}$ & $\irr{a}_{2}\oplus \irr{e}_{1}$ & $\irr{a}_{1}\oplus \irr{e}_{1}\oplus \irr{e}_{2}$ & $\irr{a}_{2}\oplus \irr{e}_{1}\oplus \irr{e}_{2}\oplus \irr{e}_{3}$\\*
+$\irr{a}_{2}$ & $\irr{a}_{1}\oplus \irr{e}_{1}$ & $\irr{a}_{2}\oplus \irr{e}_{1}\oplus \irr{e}_{2}$ & $\irr{a}_{1}\oplus \irr{e}_{1}\oplus \irr{e}_{2}\oplus \irr{e}_{3}$\\*
+$\irr{e}_{1}$ & $\irr{a}_{1}\oplus \irr{a}_{2}\oplus \irr{e}_{1}\oplus \irr{e}_{2}$ & $\irr{a}_{1}\oplus \irr{a}_{2}\oplus 2\,\irr{e}_{1}\oplus \irr{e}_{2}\oplus \irr{e}_{3}$ & $\irr{a}_{1}\oplus \irr{a}_{2}\oplus 2\,\irr{e}_{1}\oplus 2\,\irr{e}_{2}\oplus \irr{e}_{3}\oplus \irr{e}_{4}$\\*
+$\irr{e}_{2}$ & $\irr{e}_{1}\oplus \irr{e}_{2}\oplus \irr{e}_{3}$ & $\irr{a}_{1}\oplus \irr{a}_{2}\oplus \irr{e}_{1}\oplus \irr{e}_{2}\oplus \irr{e}_{3}\oplus \irr{e}_{4}$ & $\irr{a}_{1}\oplus \irr{a}_{2}\oplus 2\,\irr{e}_{1}\oplus \irr{e}_{2}\oplus \irr{e}_{3}\oplus \irr{e}_{4}\oplus \irr{e}_{5}$\\*
+$\irr{e}_{3}$ & $\irr{e}_{2}\oplus \irr{e}_{3}\oplus \irr{e}_{4}$ & $\irr{e}_{1}\oplus \irr{e}_{2}\oplus \irr{e}_{3}\oplus \irr{e}_{4}\oplus \irr{e}_{5}$ & $\irr{a}_{1}\oplus \irr{a}_{2}\oplus \irr{e}_{1}\oplus \irr{e}_{2}\oplus \irr{e}_{3}\oplus \irr{e}_{4}\oplus \irr{e}_{5}\oplus \irr{e}_{6}$\\
+\bottomrule\end{longtable}}
+\needspace{91pt}
+\section{\texorpdfstring{$jj$}{jj} configurations}\label{s:jj}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.19}{19} and \href{../../CONVENTIONS.pdf\#conv.25.3}{25.3}.
+A spinor level is a Kramers level: a pseudoreal spinor irrep alone, a real one twice, a complex-conjugate pair together. $n$ electrons in a level of dimension $d$ fill its exterior power $\Lambda^{n}$, $n = 0, \dots, d$: vector irreps at even $n$, spinor irreps at odd $n$. Every level of $\grp{2D_{\infty }}$ has dimension 2: $\Lambda^{1}$ is the level, and $\Lambda^{0}$ and $\Lambda^{2}$ are the trivial irrep (\texttt{jj\symbol{95}configurations}).
+\end{document}

@@ -1,0 +1,639 @@
+{
+ "2C1": {
+  "gap_smallgroup_id": [
+   2,
+   1
+  ],
+  "structure_description": "C2"
+ },
+ "2C10": {
+  "gap_smallgroup_id": [
+   20,
+   2
+  ],
+  "structure_description": "C20"
+ },
+ "2C10h": {
+  "gap_smallgroup_id": [
+   40,
+   9
+  ],
+  "structure_description": "C20 x C2"
+ },
+ "2C10v": {
+  "gap_smallgroup_id": [
+   40,
+   4
+  ],
+  "structure_description": "C5 : Q8"
+ },
+ "2C11": {
+  "gap_smallgroup_id": [
+   22,
+   2
+  ],
+  "structure_description": "C22"
+ },
+ "2C11h": {
+  "gap_smallgroup_id": [
+   44,
+   2
+  ],
+  "structure_description": "C44"
+ },
+ "2C11v": {
+  "gap_smallgroup_id": [
+   44,
+   1
+  ],
+  "structure_description": "C11 : C4"
+ },
+ "2C12": {
+  "gap_smallgroup_id": [
+   24,
+   2
+  ],
+  "structure_description": "C24"
+ },
+ "2C12h": {
+  "gap_smallgroup_id": [
+   48,
+   23
+  ],
+  "structure_description": "C24 x C2"
+ },
+ "2C12v": {
+  "gap_smallgroup_id": [
+   48,
+   8
+  ],
+  "structure_description": "C3 : Q16"
+ },
+ "2C1h": {
+  "gap_smallgroup_id": [
+   4,
+   1
+  ],
+  "structure_description": "C4"
+ },
+ "2C1v": {
+  "gap_smallgroup_id": [
+   4,
+   1
+  ],
+  "structure_description": "C4"
+ },
+ "2C2": {
+  "gap_smallgroup_id": [
+   4,
+   1
+  ],
+  "structure_description": "C4"
+ },
+ "2C2h": {
+  "gap_smallgroup_id": [
+   8,
+   2
+  ],
+  "structure_description": "C4 x C2"
+ },
+ "2C2v": {
+  "gap_smallgroup_id": [
+   8,
+   4
+  ],
+  "structure_description": "Q8"
+ },
+ "2C3": {
+  "gap_smallgroup_id": [
+   6,
+   2
+  ],
+  "structure_description": "C6"
+ },
+ "2C3h": {
+  "gap_smallgroup_id": [
+   12,
+   2
+  ],
+  "structure_description": "C12"
+ },
+ "2C3v": {
+  "gap_smallgroup_id": [
+   12,
+   1
+  ],
+  "structure_description": "C3 : C4"
+ },
+ "2C4": {
+  "gap_smallgroup_id": [
+   8,
+   1
+  ],
+  "structure_description": "C8"
+ },
+ "2C4h": {
+  "gap_smallgroup_id": [
+   16,
+   5
+  ],
+  "structure_description": "C8 x C2"
+ },
+ "2C4v": {
+  "gap_smallgroup_id": [
+   16,
+   9
+  ],
+  "structure_description": "Q16"
+ },
+ "2C5": {
+  "gap_smallgroup_id": [
+   10,
+   2
+  ],
+  "structure_description": "C10"
+ },
+ "2C5h": {
+  "gap_smallgroup_id": [
+   20,
+   2
+  ],
+  "structure_description": "C20"
+ },
+ "2C5v": {
+  "gap_smallgroup_id": [
+   20,
+   1
+  ],
+  "structure_description": "C5 : C4"
+ },
+ "2C6": {
+  "gap_smallgroup_id": [
+   12,
+   2
+  ],
+  "structure_description": "C12"
+ },
+ "2C6h": {
+  "gap_smallgroup_id": [
+   24,
+   9
+  ],
+  "structure_description": "C12 x C2"
+ },
+ "2C6v": {
+  "gap_smallgroup_id": [
+   24,
+   4
+  ],
+  "structure_description": "C3 : Q8"
+ },
+ "2C7": {
+  "gap_smallgroup_id": [
+   14,
+   2
+  ],
+  "structure_description": "C14"
+ },
+ "2C7h": {
+  "gap_smallgroup_id": [
+   28,
+   2
+  ],
+  "structure_description": "C28"
+ },
+ "2C7v": {
+  "gap_smallgroup_id": [
+   28,
+   1
+  ],
+  "structure_description": "C7 : C4"
+ },
+ "2C8": {
+  "gap_smallgroup_id": [
+   16,
+   1
+  ],
+  "structure_description": "C16"
+ },
+ "2C8h": {
+  "gap_smallgroup_id": [
+   32,
+   16
+  ],
+  "structure_description": "C16 x C2"
+ },
+ "2C8v": {
+  "gap_smallgroup_id": [
+   32,
+   20
+  ],
+  "structure_description": "Q32"
+ },
+ "2C9": {
+  "gap_smallgroup_id": [
+   18,
+   2
+  ],
+  "structure_description": "C18"
+ },
+ "2C9h": {
+  "gap_smallgroup_id": [
+   36,
+   2
+  ],
+  "structure_description": "C36"
+ },
+ "2C9v": {
+  "gap_smallgroup_id": [
+   36,
+   1
+  ],
+  "structure_description": "C9 : C4"
+ },
+ "2D1": {
+  "gap_smallgroup_id": [
+   4,
+   1
+  ],
+  "structure_description": "C4"
+ },
+ "2D10": {
+  "gap_smallgroup_id": [
+   40,
+   4
+  ],
+  "structure_description": "C5 : Q8"
+ },
+ "2D10d": {
+  "gap_smallgroup_id": [
+   80,
+   8
+  ],
+  "structure_description": "C5 : Q16"
+ },
+ "2D10h": {
+  "gap_smallgroup_id": [
+   80,
+   35
+  ],
+  "structure_description": "C2 x (C5 : Q8)"
+ },
+ "2D11": {
+  "gap_smallgroup_id": [
+   44,
+   1
+  ],
+  "structure_description": "C11 : C4"
+ },
+ "2D11d": {
+  "gap_smallgroup_id": [
+   88,
+   6
+  ],
+  "structure_description": "C2 x (C11 : C4)"
+ },
+ "2D11h": {
+  "gap_smallgroup_id": [
+   88,
+   3
+  ],
+  "structure_description": "C11 : Q8"
+ },
+ "2D12": {
+  "gap_smallgroup_id": [
+   48,
+   8
+  ],
+  "structure_description": "C3 : Q16"
+ },
+ "2D12d": {
+  "gap_smallgroup_id": [
+   96,
+   8
+  ],
+  "structure_description": "C3 : Q32"
+ },
+ "2D12h": {
+  "gap_smallgroup_id": [
+   96,
+   112
+  ],
+  "structure_description": "C2 x (C3 : Q16)"
+ },
+ "2D1d": {
+  "gap_smallgroup_id": [
+   8,
+   2
+  ],
+  "structure_description": "C4 x C2"
+ },
+ "2D1h": {
+  "gap_smallgroup_id": [
+   8,
+   4
+  ],
+  "structure_description": "Q8"
+ },
+ "2D2": {
+  "gap_smallgroup_id": [
+   8,
+   4
+  ],
+  "structure_description": "Q8"
+ },
+ "2D2d": {
+  "gap_smallgroup_id": [
+   16,
+   9
+  ],
+  "structure_description": "Q16"
+ },
+ "2D2h": {
+  "gap_smallgroup_id": [
+   16,
+   12
+  ],
+  "structure_description": "C2 x Q8"
+ },
+ "2D3": {
+  "gap_smallgroup_id": [
+   12,
+   1
+  ],
+  "structure_description": "C3 : C4"
+ },
+ "2D3d": {
+  "gap_smallgroup_id": [
+   24,
+   7
+  ],
+  "structure_description": "C2 x (C3 : C4)"
+ },
+ "2D3h": {
+  "gap_smallgroup_id": [
+   24,
+   4
+  ],
+  "structure_description": "C3 : Q8"
+ },
+ "2D4": {
+  "gap_smallgroup_id": [
+   16,
+   9
+  ],
+  "structure_description": "Q16"
+ },
+ "2D4d": {
+  "gap_smallgroup_id": [
+   32,
+   20
+  ],
+  "structure_description": "Q32"
+ },
+ "2D4h": {
+  "gap_smallgroup_id": [
+   32,
+   41
+  ],
+  "structure_description": "C2 x Q16"
+ },
+ "2D5": {
+  "gap_smallgroup_id": [
+   20,
+   1
+  ],
+  "structure_description": "C5 : C4"
+ },
+ "2D5d": {
+  "gap_smallgroup_id": [
+   40,
+   7
+  ],
+  "structure_description": "C2 x (C5 : C4)"
+ },
+ "2D5h": {
+  "gap_smallgroup_id": [
+   40,
+   4
+  ],
+  "structure_description": "C5 : Q8"
+ },
+ "2D6": {
+  "gap_smallgroup_id": [
+   24,
+   4
+  ],
+  "structure_description": "C3 : Q8"
+ },
+ "2D6d": {
+  "gap_smallgroup_id": [
+   48,
+   8
+  ],
+  "structure_description": "C3 : Q16"
+ },
+ "2D6h": {
+  "gap_smallgroup_id": [
+   48,
+   34
+  ],
+  "structure_description": "C2 x (C3 : Q8)"
+ },
+ "2D7": {
+  "gap_smallgroup_id": [
+   28,
+   1
+  ],
+  "structure_description": "C7 : C4"
+ },
+ "2D7d": {
+  "gap_smallgroup_id": [
+   56,
+   6
+  ],
+  "structure_description": "C2 x (C7 : C4)"
+ },
+ "2D7h": {
+  "gap_smallgroup_id": [
+   56,
+   3
+  ],
+  "structure_description": "C7 : Q8"
+ },
+ "2D8": {
+  "gap_smallgroup_id": [
+   32,
+   20
+  ],
+  "structure_description": "Q32"
+ },
+ "2D8d": {
+  "gap_smallgroup_id": [
+   64,
+   54
+  ],
+  "structure_description": "Q64"
+ },
+ "2D8h": {
+  "gap_smallgroup_id": [
+   64,
+   188
+  ],
+  "structure_description": "C2 x Q32"
+ },
+ "2D9": {
+  "gap_smallgroup_id": [
+   36,
+   1
+  ],
+  "structure_description": "C9 : C4"
+ },
+ "2D9d": {
+  "gap_smallgroup_id": [
+   72,
+   7
+  ],
+  "structure_description": "C2 x (C9 : C4)"
+ },
+ "2D9h": {
+  "gap_smallgroup_id": [
+   72,
+   4
+  ],
+  "structure_description": "C9 : Q8"
+ },
+ "2I": {
+  "gap_smallgroup_id": [
+   120,
+   5
+  ],
+  "structure_description": "SL(2,5)"
+ },
+ "2Ih": {
+  "gap_smallgroup_id": [
+   240,
+   94
+  ],
+  "structure_description": "C2 x SL(2,5)"
+ },
+ "2O": {
+  "gap_smallgroup_id": [
+   48,
+   28
+  ],
+  "structure_description": "C2 . S4 = SL(2,3) . C2"
+ },
+ "2Oh": {
+  "gap_smallgroup_id": [
+   96,
+   188
+  ],
+  "structure_description": "C2 x (C2 . S4 = SL(2,3) . C2)"
+ },
+ "2S10": {
+  "gap_smallgroup_id": [
+   20,
+   5
+  ],
+  "structure_description": "C10 x C2"
+ },
+ "2S12": {
+  "gap_smallgroup_id": [
+   24,
+   2
+  ],
+  "structure_description": "C24"
+ },
+ "2S14": {
+  "gap_smallgroup_id": [
+   28,
+   4
+  ],
+  "structure_description": "C14 x C2"
+ },
+ "2S16": {
+  "gap_smallgroup_id": [
+   32,
+   1
+  ],
+  "structure_description": "C32"
+ },
+ "2S18": {
+  "gap_smallgroup_id": [
+   36,
+   5
+  ],
+  "structure_description": "C18 x C2"
+ },
+ "2S2": {
+  "gap_smallgroup_id": [
+   4,
+   2
+  ],
+  "structure_description": "C2 x C2"
+ },
+ "2S20": {
+  "gap_smallgroup_id": [
+   40,
+   2
+  ],
+  "structure_description": "C40"
+ },
+ "2S22": {
+  "gap_smallgroup_id": [
+   44,
+   4
+  ],
+  "structure_description": "C22 x C2"
+ },
+ "2S24": {
+  "gap_smallgroup_id": [
+   48,
+   2
+  ],
+  "structure_description": "C48"
+ },
+ "2S4": {
+  "gap_smallgroup_id": [
+   8,
+   1
+  ],
+  "structure_description": "C8"
+ },
+ "2S6": {
+  "gap_smallgroup_id": [
+   12,
+   5
+  ],
+  "structure_description": "C6 x C2"
+ },
+ "2S8": {
+  "gap_smallgroup_id": [
+   16,
+   1
+  ],
+  "structure_description": "C16"
+ },
+ "2T": {
+  "gap_smallgroup_id": [
+   24,
+   3
+  ],
+  "structure_description": "SL(2,3)"
+ },
+ "2Td": {
+  "gap_smallgroup_id": [
+   48,
+   28
+  ],
+  "structure_description": "C2 . S4 = SL(2,3) . C2"
+ },
+ "2Th": {
+  "gap_smallgroup_id": [
+   48,
+   32
+  ],
+  "structure_description": "C2 x SL(2,3)"
+ }
+}

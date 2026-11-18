@@ -1,0 +1,8930 @@
+{
+  "aliases": {
+    "finite": {
+      "C1h": "C1v",
+      "D1": "C2",
+      "D1d": "C2h",
+      "D1h": "C2v"
+    }
+  },
+  "counts": {
+    "covering_edges": 285,
+    "nodes": 94,
+    "relations": 919
+  },
+  "edges": [
+    {
+      "covering": true,
+      "lower": "C1",
+      "upper": "C1v",
+      "witness": {
+        "elements": [
+          0
+        ],
+        "in": "C1v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1",
+      "upper": "C2",
+      "witness": {
+        "elements": [
+          0
+        ],
+        "in": "C2",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1",
+      "upper": "S2",
+      "witness": {
+        "elements": [
+          0
+        ],
+        "in": "S2",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1",
+      "upper": "C3",
+      "witness": {
+        "elements": [
+          0
+        ],
+        "in": "C3",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1",
+      "upper": "C5",
+      "witness": {
+        "elements": [
+          0
+        ],
+        "in": "C5",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1",
+      "upper": "C7",
+      "witness": {
+        "elements": [
+          0
+        ],
+        "in": "C7",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1",
+      "upper": "C11",
+      "witness": {
+        "elements": [
+          0
+        ],
+        "in": "C11",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1v",
+      "upper": "C2h",
+      "witness": {
+        "elements": [
+          0,
+          3
+        ],
+        "in": "C2h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "sigma_h"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1v",
+      "upper": "C2v",
+      "witness": {
+        "elements": [
+          0,
+          2
+        ],
+        "in": "C2v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1v",
+      "upper": "C3h",
+      "witness": {
+        "elements": [
+          0,
+          3
+        ],
+        "in": "C3h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "sigma_h"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1v",
+      "upper": "C3v",
+      "witness": {
+        "elements": [
+          0,
+          3
+        ],
+        "in": "C3v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1v",
+      "upper": "C5h",
+      "witness": {
+        "elements": [
+          0,
+          5
+        ],
+        "in": "C5h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "sigma_h"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1v",
+      "upper": "C5v",
+      "witness": {
+        "elements": [
+          0,
+          5
+        ],
+        "in": "C5v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1v",
+      "upper": "C7h",
+      "witness": {
+        "elements": [
+          0,
+          7
+        ],
+        "in": "C7h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "sigma_h"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1v",
+      "upper": "C7v",
+      "witness": {
+        "elements": [
+          0,
+          7
+        ],
+        "in": "C7v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1v",
+      "upper": "C11h",
+      "witness": {
+        "elements": [
+          0,
+          11
+        ],
+        "in": "C11h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "sigma_h"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C1v",
+      "upper": "C11v",
+      "witness": {
+        "elements": [
+          0,
+          11
+        ],
+        "in": "C11v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2",
+      "upper": "C2h",
+      "witness": {
+        "elements": [
+          0,
+          1
+        ],
+        "in": "C2h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2",
+      "upper": "C2v",
+      "witness": {
+        "elements": [
+          0,
+          1
+        ],
+        "in": "C2v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2",
+      "upper": "C4",
+      "witness": {
+        "elements": [
+          0,
+          2
+        ],
+        "in": "C4",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2",
+      "upper": "D2",
+      "witness": {
+        "elements": [
+          0,
+          1
+        ],
+        "in": "D2",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2",
+      "upper": "S4",
+      "witness": {
+        "elements": [
+          0,
+          1
+        ],
+        "in": "S4",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2",
+      "upper": "C6",
+      "witness": {
+        "elements": [
+          0,
+          3
+        ],
+        "in": "C6",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2",
+      "upper": "D3",
+      "witness": {
+        "elements": [
+          0,
+          3
+        ],
+        "in": "D3",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2",
+      "upper": "C10",
+      "witness": {
+        "elements": [
+          0,
+          5
+        ],
+        "in": "C10",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2",
+      "upper": "D5",
+      "witness": {
+        "elements": [
+          0,
+          5
+        ],
+        "in": "D5",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2",
+      "upper": "D7",
+      "witness": {
+        "elements": [
+          0,
+          7
+        ],
+        "in": "D7",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2",
+      "upper": "D11",
+      "witness": {
+        "elements": [
+          0,
+          11
+        ],
+        "in": "D11",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2",
+      "upper": "C2h",
+      "witness": {
+        "elements": [
+          0,
+          2
+        ],
+        "in": "C2h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "i"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2",
+      "upper": "S6",
+      "witness": {
+        "elements": [
+          0,
+          3
+        ],
+        "in": "S6",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "i"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2",
+      "upper": "S10",
+      "witness": {
+        "elements": [
+          0,
+          5
+        ],
+        "in": "S10",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "i"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2",
+      "upper": "S14",
+      "witness": {
+        "elements": [
+          0,
+          7
+        ],
+        "in": "S14",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "i"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S2",
+      "upper": "S22",
+      "witness": {
+        "elements": [
+          0,
+          11
+        ],
+        "in": "S22",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "i"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3",
+      "upper": "C3h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2
+        ],
+        "in": "C3h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3",
+      "upper": "C3v",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2
+        ],
+        "in": "C3v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3",
+      "upper": "C6",
+      "witness": {
+        "elements": [
+          0,
+          2,
+          4
+        ],
+        "in": "C6",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3",
+      "upper": "D3",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2
+        ],
+        "in": "D3",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3",
+      "upper": "S6",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2
+        ],
+        "in": "S6",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3",
+      "upper": "C9",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          6
+        ],
+        "in": "C9",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3",
+      "upper": "T",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          5
+        ],
+        "in": "T",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2h",
+      "upper": "C4h",
+      "witness": {
+        "elements": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "in": "C4h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "i",
+          "sigma_h"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2h",
+      "upper": "D2h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          4,
+          5
+        ],
+        "in": "D2h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "i",
+          "sigma_h"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2h",
+      "upper": "C6h",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          6,
+          7
+        ],
+        "in": "C6h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "i",
+          "sigma_h"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2h",
+      "upper": "D3d",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          6,
+          10
+        ],
+        "in": "D3d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "i",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2h",
+      "upper": "C10h",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          10,
+          11
+        ],
+        "in": "C10h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "i",
+          "sigma_h"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2h",
+      "upper": "D5d",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          10,
+          17
+        ],
+        "in": "D5d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "i",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2h",
+      "upper": "D7d",
+      "witness": {
+        "elements": [
+          0,
+          7,
+          14,
+          24
+        ],
+        "in": "D7d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "i",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2h",
+      "upper": "D11d",
+      "witness": {
+        "elements": [
+          0,
+          11,
+          22,
+          38
+        ],
+        "in": "D11d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "i",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2v",
+      "upper": "C4v",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          5
+        ],
+        "in": "C4v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2v",
+      "upper": "D2d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "in": "D2d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2v",
+      "upper": "D2h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "in": "D2h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "sigma_v",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2v",
+      "upper": "C6v",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          6,
+          10
+        ],
+        "in": "C6v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "sigma_v",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2v",
+      "upper": "D3h",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "in": "D3h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "sigma_h",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2v",
+      "upper": "C10v",
+      "witness": {
+        "elements": [
+          0,
+          9,
+          10,
+          17
+        ],
+        "in": "C10v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "sigma_v",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2v",
+      "upper": "D5h",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          10,
+          15
+        ],
+        "in": "D5h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "sigma_h",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2v",
+      "upper": "D7h",
+      "witness": {
+        "elements": [
+          0,
+          7,
+          14,
+          21
+        ],
+        "in": "D7h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "sigma_h",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C2v",
+      "upper": "D11h",
+      "witness": {
+        "elements": [
+          0,
+          11,
+          22,
+          33
+        ],
+        "in": "D11h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "sigma_h",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C4",
+      "upper": "C4h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "in": "C4h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_2",
+          "C_4^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C4",
+      "upper": "C4v",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "in": "C4v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C4",
+      "upper": "C8",
+      "witness": {
+        "elements": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "in": "C8",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_2",
+          "C_4^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C4",
+      "upper": "D4",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "in": "D4",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C4",
+      "upper": "S8",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "in": "S8",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_2",
+          "C_4^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C4",
+      "upper": "C12",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "in": "C12",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_2",
+          "C_4^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D2",
+      "upper": "D2d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "in": "D2d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D2",
+      "upper": "D2h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "in": "D2h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D2",
+      "upper": "D4",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          5
+        ],
+        "in": "D4",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D2",
+      "upper": "D6",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          6,
+          10
+        ],
+        "in": "D6",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D2",
+      "upper": "T",
+      "witness": {
+        "elements": [
+          0,
+          9,
+          10,
+          11
+        ],
+        "in": "T",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D2",
+      "upper": "D10",
+      "witness": {
+        "elements": [
+          0,
+          9,
+          10,
+          17
+        ],
+        "in": "D10",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S4",
+      "upper": "C4h",
+      "witness": {
+        "elements": [
+          0,
+          2,
+          6,
+          7
+        ],
+        "in": "C4h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "S_4",
+          "S_4^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S4",
+      "upper": "D2d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          4,
+          5
+        ],
+        "in": "D2d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "S_4",
+          "S_4^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S4",
+      "upper": "S12",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          7,
+          10
+        ],
+        "in": "S12",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "S_4",
+          "S_4^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S4",
+      "upper": "S20",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          12,
+          17
+        ],
+        "in": "S20",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "S_4",
+          "S_4^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C5",
+      "upper": "C10",
+      "witness": {
+        "elements": [
+          0,
+          2,
+          4,
+          6,
+          8
+        ],
+        "in": "C10",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^2",
+          "C_5^3",
+          "C_5^4"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C5",
+      "upper": "C5h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "in": "C5h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^2",
+          "C_5^3",
+          "C_5^4"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C5",
+      "upper": "C5v",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "in": "C5v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C5",
+      "upper": "D5",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "in": "D5",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C5",
+      "upper": "S10",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "in": "S10",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^2",
+          "C_5^3",
+          "C_5^4"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3h",
+      "upper": "C6h",
+      "witness": {
+        "elements": [
+          0,
+          2,
+          4,
+          7,
+          9,
+          10
+        ],
+        "in": "C6h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "sigma_h",
+          "S_3",
+          "S_3^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3h",
+      "upper": "D3h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          6,
+          7,
+          8
+        ],
+        "in": "D3h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "sigma_h",
+          "S_3",
+          "S_3^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3h",
+      "upper": "C9h",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "in": "C9h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "sigma_h",
+          "S_3",
+          "S_3^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3v",
+      "upper": "C6v",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "in": "C6v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3v",
+      "upper": "D3d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          9,
+          10,
+          11
+        ],
+        "in": "D3d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3v",
+      "upper": "D3h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          9,
+          10,
+          11
+        ],
+        "in": "D3h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3v",
+      "upper": "C9v",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          6,
+          9,
+          12,
+          15
+        ],
+        "in": "C9v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C3v",
+      "upper": "Td",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          20,
+          21,
+          22
+        ],
+        "in": "Td",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C6",
+      "upper": "C12",
+      "witness": {
+        "elements": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10
+        ],
+        "in": "C12",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_3",
+          "C_2",
+          "C_3^2",
+          "C_6^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C6",
+      "upper": "C6h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "in": "C6h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_3",
+          "C_2",
+          "C_3^2",
+          "C_6^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C6",
+      "upper": "C6v",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "in": "C6v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_6^5",
+          "C_3",
+          "C_3^2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C6",
+      "upper": "D6",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "in": "D6",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_6^5",
+          "C_3",
+          "C_3^2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C6",
+      "upper": "S12",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "in": "S12",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_3",
+          "C_2",
+          "C_3^2",
+          "C_6^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D3",
+      "upper": "D3d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "in": "D3d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D3",
+      "upper": "D3h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "in": "D3h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D3",
+      "upper": "D6",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "in": "D6",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D3",
+      "upper": "D9",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          6,
+          9,
+          12,
+          15
+        ],
+        "in": "D9",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D3",
+      "upper": "O",
+      "witness": {
+        "elements": [
+          0,
+          7,
+          8,
+          20,
+          21,
+          22
+        ],
+        "in": "O",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D3",
+      "upper": "I",
+      "witness": {
+        "elements": [
+          0,
+          25,
+          26,
+          49,
+          50,
+          52
+        ],
+        "in": "I",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S6",
+      "upper": "C6h",
+      "witness": {
+        "elements": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          11
+        ],
+        "in": "C6h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "i",
+          "S_6",
+          "S_6^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S6",
+      "upper": "D3d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          6,
+          7,
+          8
+        ],
+        "in": "D3d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "i",
+          "S_6",
+          "S_6^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S6",
+      "upper": "S18",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          6,
+          9,
+          11,
+          16
+        ],
+        "in": "S18",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "i",
+          "S_6",
+          "S_6^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S6",
+      "upper": "Th",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          5,
+          12,
+          13,
+          17
+        ],
+        "in": "Th",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "i",
+          "S_6",
+          "S_6^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C7",
+      "upper": "C7h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "in": "C7h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_7",
+          "C_7^2",
+          "C_7^3",
+          "C_7^4",
+          "C_7^5",
+          "C_7^6"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C7",
+      "upper": "C7v",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "in": "C7v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_7",
+          "C_7^6",
+          "C_7^2",
+          "C_7^5",
+          "C_7^3",
+          "C_7^4"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C7",
+      "upper": "D7",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "in": "D7",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_7",
+          "C_7^6",
+          "C_7^2",
+          "C_7^5",
+          "C_7^3",
+          "C_7^4"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C7",
+      "upper": "S14",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "in": "S14",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_7",
+          "C_7^2",
+          "C_7^3",
+          "C_7^4",
+          "C_7^5",
+          "C_7^6"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C7",
+      "upper": "Cinf",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_inf = SO(2): only the rotations about z"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C4h",
+      "upper": "C8h",
+      "witness": {
+        "elements": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          9,
+          11,
+          14
+        ],
+        "in": "C8h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_2",
+          "C_4^3",
+          "i",
+          "sigma_h",
+          "S_4",
+          "S_4^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C4h",
+      "upper": "D4h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          8,
+          9,
+          10,
+          11
+        ],
+        "in": "D4h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "i",
+          "sigma_h",
+          "S_4",
+          "S_4^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C4h",
+      "upper": "C12h",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          13,
+          16,
+          21
+        ],
+        "in": "C12h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_2",
+          "C_4^3",
+          "i",
+          "sigma_h",
+          "S_4",
+          "S_4^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C4v",
+      "upper": "C8v",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "in": "C8v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C4v",
+      "upper": "D4d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          12,
+          13,
+          14,
+          15
+        ],
+        "in": "D4d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C4v",
+      "upper": "D4h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          12,
+          13,
+          14,
+          15
+        ],
+        "in": "D4h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "sigma_v",
+          "sigma_v",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C4v",
+      "upper": "C12v",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          6,
+          11,
+          12,
+          15,
+          19,
+          22
+        ],
+        "in": "C12v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "sigma_v",
+          "sigma_v",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C8",
+      "upper": "C8h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "in": "C8h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_8",
+          "C_4",
+          "C_8^3",
+          "C_2",
+          "C_8^5",
+          "C_4^3",
+          "C_8^7"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C8",
+      "upper": "C8v",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "in": "C8v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_8",
+          "C_8^7",
+          "C_4",
+          "C_4^3",
+          "C_8^3",
+          "C_8^5",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C8",
+      "upper": "D8",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "in": "D8",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_8",
+          "C_8^7",
+          "C_4",
+          "C_4^3",
+          "C_8^3",
+          "C_8^5",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C8",
+      "upper": "S16",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "in": "S16",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_8",
+          "C_4",
+          "C_8^3",
+          "C_2",
+          "C_8^5",
+          "C_4^3",
+          "C_8^7"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C8",
+      "upper": "Cinf",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_inf = SO(2): only the rotations about z"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D2d",
+      "upper": "D4h",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          5,
+          10,
+          11,
+          14,
+          15
+        ],
+        "in": "D4h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "C_2",
+          "C_2",
+          "S_4",
+          "S_4^3",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D2d",
+      "upper": "D6d",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          6,
+          9,
+          14,
+          15,
+          19,
+          22
+        ],
+        "in": "D6d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "C_2",
+          "C_2",
+          "S_4",
+          "S_4^3",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D2d",
+      "upper": "Td",
+      "witness": {
+        "elements": [
+          0,
+          9,
+          10,
+          11,
+          12,
+          13,
+          21,
+          23
+        ],
+        "in": "Td",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "C_2",
+          "C_2",
+          "S_4",
+          "S_4^3",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D2d",
+      "upper": "D10d",
+      "witness": {
+        "elements": [
+          0,
+          9,
+          10,
+          15,
+          24,
+          25,
+          32,
+          37
+        ],
+        "in": "D10d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "C_2",
+          "C_2",
+          "S_4",
+          "S_4^3",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D2h",
+      "upper": "D4h",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          5,
+          8,
+          9,
+          12,
+          13
+        ],
+        "in": "D4h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "sigma_h",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D2h",
+      "upper": "D6h",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          6,
+          10,
+          12,
+          13,
+          18,
+          22
+        ],
+        "in": "D6h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "sigma_h",
+          "sigma_v",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D2h",
+      "upper": "Th",
+      "witness": {
+        "elements": [
+          0,
+          9,
+          10,
+          11,
+          12,
+          21,
+          22,
+          23
+        ],
+        "in": "Th",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "sigma_h",
+          "sigma_h",
+          "sigma_h"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D2h",
+      "upper": "D10h",
+      "witness": {
+        "elements": [
+          0,
+          9,
+          10,
+          17,
+          20,
+          21,
+          30,
+          37
+        ],
+        "in": "D10h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "sigma_h",
+          "sigma_v",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D4",
+      "upper": "D4d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "in": "D4d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D4",
+      "upper": "D4h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "in": "D4h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D4",
+      "upper": "D8",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "in": "D8",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D4",
+      "upper": "D12",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          6,
+          11,
+          12,
+          15,
+          19,
+          22
+        ],
+        "in": "D12",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D4",
+      "upper": "O",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          15,
+          16,
+          17,
+          21,
+          23
+        ],
+        "in": "O",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S8",
+      "upper": "C8h",
+      "witness": {
+        "elements": [
+          0,
+          2,
+          4,
+          6,
+          10,
+          12,
+          13,
+          15
+        ],
+        "in": "C8h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_2",
+          "C_4^3",
+          "S_8",
+          "S_8^3",
+          "S_8^5",
+          "S_8^7"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S8",
+      "upper": "D4d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          8,
+          9,
+          10,
+          11
+        ],
+        "in": "D4d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "S_8",
+          "S_8^7",
+          "S_8^3",
+          "S_8^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S8",
+      "upper": "S24",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          6,
+          9,
+          13,
+          16,
+          19,
+          22
+        ],
+        "in": "S24",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_2",
+          "C_4^3",
+          "S_8",
+          "S_8^3",
+          "S_8^5",
+          "S_8^7"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C9",
+      "upper": "C9h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "in": "C9h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_9",
+          "C_9^2",
+          "C_3",
+          "C_9^4",
+          "C_9^5",
+          "C_3^2",
+          "C_9^7",
+          "C_9^8"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C9",
+      "upper": "C9v",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "in": "C9v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_9",
+          "C_9^8",
+          "C_9^2",
+          "C_9^7",
+          "C_3",
+          "C_3^2",
+          "C_9^4",
+          "C_9^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C9",
+      "upper": "D9",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "in": "D9",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_9",
+          "C_9^8",
+          "C_9^2",
+          "C_9^7",
+          "C_3",
+          "C_3^2",
+          "C_9^4",
+          "C_9^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C9",
+      "upper": "S18",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "in": "S18",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_9",
+          "C_9^2",
+          "C_3",
+          "C_9^4",
+          "C_9^5",
+          "C_3^2",
+          "C_9^7",
+          "C_9^8"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C9",
+      "upper": "Cinf",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_inf = SO(2): only the rotations about z"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C10",
+      "upper": "C10h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "in": "C10h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_10",
+          "C_5",
+          "C_10^3",
+          "C_5^2",
+          "C_2",
+          "C_5^3",
+          "C_10^7",
+          "C_5^4",
+          "C_10^9"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C10",
+      "upper": "C10v",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "in": "C10v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_10",
+          "C_10^9",
+          "C_5",
+          "C_5^4",
+          "C_10^3",
+          "C_10^7",
+          "C_5^2",
+          "C_5^3",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C10",
+      "upper": "D10",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "in": "D10",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_10",
+          "C_10^9",
+          "C_5",
+          "C_5^4",
+          "C_10^3",
+          "C_10^7",
+          "C_5^2",
+          "C_5^3",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C10",
+      "upper": "S20",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "in": "S20",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_10",
+          "C_5",
+          "C_10^3",
+          "C_5^2",
+          "C_2",
+          "C_5^3",
+          "C_10^7",
+          "C_5^4",
+          "C_10^9"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C10",
+      "upper": "Cinf",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_inf = SO(2): only the rotations about z"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C5h",
+      "upper": "C10h",
+      "witness": {
+        "elements": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          11,
+          13,
+          15,
+          16,
+          18
+        ],
+        "in": "C10h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^2",
+          "C_5^3",
+          "C_5^4",
+          "sigma_h",
+          "S_5",
+          "S_5^7",
+          "S_5^3",
+          "S_5^9"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C5h",
+      "upper": "D5h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "in": "D5h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3",
+          "sigma_h",
+          "S_5",
+          "S_5^9",
+          "S_5^7",
+          "S_5^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C5v",
+      "upper": "C10v",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "in": "C10v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C5v",
+      "upper": "D5d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "in": "D5d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C5v",
+      "upper": "D5h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "in": "D5h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D5",
+      "upper": "D10",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "in": "D10",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D5",
+      "upper": "D5d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "in": "D5d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D5",
+      "upper": "D5h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "in": "D5h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D5",
+      "upper": "I",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          23,
+          24,
+          45,
+          46,
+          47,
+          48,
+          52
+        ],
+        "in": "I",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S10",
+      "upper": "C10h",
+      "witness": {
+        "elements": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          17,
+          19
+        ],
+        "in": "C10h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^2",
+          "C_5^3",
+          "C_5^4",
+          "i",
+          "S_10",
+          "S_10^3",
+          "S_10^7",
+          "S_10^9"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S10",
+      "upper": "D5d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "in": "D5d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3",
+          "i",
+          "S_10",
+          "S_10^9",
+          "S_10^3",
+          "S_10^7"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C11",
+      "upper": "C11h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "in": "C11h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_11",
+          "C_11^2",
+          "C_11^3",
+          "C_11^4",
+          "C_11^5",
+          "C_11^6",
+          "C_11^7",
+          "C_11^8",
+          "C_11^9",
+          "C_11^10"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C11",
+      "upper": "C11v",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "in": "C11v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_11",
+          "C_11^10",
+          "C_11^2",
+          "C_11^9",
+          "C_11^3",
+          "C_11^8",
+          "C_11^4",
+          "C_11^7",
+          "C_11^5",
+          "C_11^6"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C11",
+      "upper": "D11",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "in": "D11",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_11",
+          "C_11^10",
+          "C_11^2",
+          "C_11^9",
+          "C_11^3",
+          "C_11^8",
+          "C_11^4",
+          "C_11^7",
+          "C_11^5",
+          "C_11^6"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C11",
+      "upper": "S22",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "in": "S22",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_11",
+          "C_11^2",
+          "C_11^3",
+          "C_11^4",
+          "C_11^5",
+          "C_11^6",
+          "C_11^7",
+          "C_11^8",
+          "C_11^9",
+          "C_11^10"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C11",
+      "upper": "Cinf",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_inf = SO(2): only the rotations about z"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C12",
+      "upper": "C12h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "in": "C12h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_12",
+          "C_6",
+          "C_4",
+          "C_3",
+          "C_12^5",
+          "C_2",
+          "C_12^7",
+          "C_3^2",
+          "C_4^3",
+          "C_6^5",
+          "C_12^11"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C12",
+      "upper": "C12v",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "in": "C12v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_12",
+          "C_12^11",
+          "C_6",
+          "C_6^5",
+          "C_4",
+          "C_4^3",
+          "C_3",
+          "C_3^2",
+          "C_12^5",
+          "C_12^7",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C12",
+      "upper": "D12",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "in": "D12",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_12",
+          "C_12^11",
+          "C_6",
+          "C_6^5",
+          "C_4",
+          "C_4^3",
+          "C_3",
+          "C_3^2",
+          "C_12^5",
+          "C_12^7",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C12",
+      "upper": "S24",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "in": "S24",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_12",
+          "C_6",
+          "C_4",
+          "C_3",
+          "C_12^5",
+          "C_2",
+          "C_12^7",
+          "C_3^2",
+          "C_4^3",
+          "C_6^5",
+          "C_12^11"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C12",
+      "upper": "Cinf",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_inf = SO(2): only the rotations about z"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C6h",
+      "upper": "C12h",
+      "witness": {
+        "elements": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          13,
+          15,
+          17,
+          20,
+          22
+        ],
+        "in": "C12h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_3",
+          "C_2",
+          "C_3^2",
+          "C_6^5",
+          "i",
+          "sigma_h",
+          "S_6",
+          "S_3",
+          "S_3^5",
+          "S_6^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C6h",
+      "upper": "D6h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "in": "D6h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_6^5",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "i",
+          "sigma_h",
+          "S_6",
+          "S_6^5",
+          "S_3",
+          "S_3^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C6v",
+      "upper": "C12v",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "in": "C12v",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_6^5",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C6v",
+      "upper": "D6d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "in": "D6d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_6^5",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C6v",
+      "upper": "D6h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "in": "D6h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_6^5",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D3d",
+      "upper": "D6h",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          6,
+          7,
+          8,
+          12,
+          14,
+          15,
+          21,
+          22,
+          23
+        ],
+        "in": "D6h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "S_6",
+          "S_6^5",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D3d",
+      "upper": "D9d",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          22,
+          28,
+          31,
+          34
+        ],
+        "in": "D9d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "S_6",
+          "S_6^5",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D3d",
+      "upper": "Oh",
+      "witness": {
+        "elements": [
+          0,
+          7,
+          8,
+          20,
+          21,
+          22,
+          24,
+          31,
+          32,
+          44,
+          45,
+          46
+        ],
+        "in": "Oh",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "S_6",
+          "S_6^5",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D3d",
+      "upper": "Ih",
+      "witness": {
+        "elements": [
+          0,
+          25,
+          26,
+          49,
+          50,
+          52,
+          60,
+          85,
+          86,
+          109,
+          110,
+          112
+        ],
+        "in": "Ih",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "S_6",
+          "S_6^5",
+          "sigma",
+          "sigma",
+          "sigma"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D3h",
+      "upper": "D6h",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          6,
+          7,
+          8,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "in": "D6h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "sigma_h",
+          "S_3",
+          "S_3^5",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D3h",
+      "upper": "D9h",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          6,
+          9,
+          12,
+          15,
+          18,
+          23,
+          24,
+          27,
+          30,
+          33
+        ],
+        "in": "D9h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "sigma_h",
+          "S_3",
+          "S_3^5",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D6",
+      "upper": "D12",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "in": "D12",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_6^5",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D6",
+      "upper": "D6d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "in": "D6d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_6^5",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D6",
+      "upper": "D6h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "in": "D6h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_6^5",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S12",
+      "upper": "C12h",
+      "witness": {
+        "elements": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          14,
+          16,
+          18,
+          19,
+          21,
+          23
+        ],
+        "in": "C12h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_3",
+          "C_2",
+          "C_3^2",
+          "C_6^5",
+          "S_12",
+          "S_4",
+          "S_12^5",
+          "S_12^7",
+          "S_4^3",
+          "S_12^11"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S12",
+      "upper": "D6d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "in": "D6d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_6^5",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "S_12",
+          "S_12^11",
+          "S_4",
+          "S_4^3",
+          "S_12^5",
+          "S_12^7"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "T",
+      "upper": "O",
+      "witness": {
+        "elements": [
+          0,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "in": "O",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "T",
+      "upper": "Td",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "in": "Td",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "T",
+      "upper": "Th",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "in": "Th",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3",
+          "C_3",
+          "C_3",
+          "C_3^2",
+          "C_3^2",
+          "C_3^2",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "T",
+      "upper": "I",
+      "witness": {
+        "elements": [
+          0,
+          25,
+          26,
+          27,
+          28,
+          33,
+          34,
+          35,
+          36,
+          47,
+          53,
+          55
+        ],
+        "in": "I",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C7h",
+      "upper": "D7h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "in": "D7h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_7",
+          "C_7^6",
+          "C_7^2",
+          "C_7^5",
+          "C_7^3",
+          "C_7^4",
+          "sigma_h",
+          "S_7",
+          "S_7^13",
+          "S_7^9",
+          "S_7^5",
+          "S_7^3",
+          "S_7^11"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C7h",
+      "upper": "Cinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infh = SO(2) x {E, sigma_h}: C_N, C_Nh, S_2N"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C7v",
+      "upper": "D7d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "in": "D7d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_7",
+          "C_7^6",
+          "C_7^2",
+          "C_7^5",
+          "C_7^3",
+          "C_7^4",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C7v",
+      "upper": "D7h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "in": "D7h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_7",
+          "C_7^6",
+          "C_7^2",
+          "C_7^5",
+          "C_7^3",
+          "C_7^4",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C7v",
+      "upper": "Cinfv",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infv = O(2): only C_N and C_Nv (no sigma_h, no perpendicular C_2)"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D7",
+      "upper": "D7d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "in": "D7d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_7",
+          "C_7^6",
+          "C_7^2",
+          "C_7^5",
+          "C_7^3",
+          "C_7^4",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D7",
+      "upper": "D7h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "in": "D7h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_7",
+          "C_7^6",
+          "C_7^2",
+          "C_7^5",
+          "C_7^3",
+          "C_7^4",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D7",
+      "upper": "Dinf",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_inf = all rotations about z plus all perpendicular binary rotations"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S14",
+      "upper": "D7d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "in": "D7d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_7",
+          "C_7^6",
+          "C_7^2",
+          "C_7^5",
+          "C_7^3",
+          "C_7^4",
+          "i",
+          "S_14",
+          "S_14^13",
+          "S_14^3",
+          "S_14^11",
+          "S_14^5",
+          "S_14^9"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S14",
+      "upper": "Cinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infh = SO(2) x {E, sigma_h}: C_N, C_Nh, S_2N"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C8h",
+      "upper": "D8h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "in": "D8h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_8",
+          "C_8^7",
+          "C_4",
+          "C_4^3",
+          "C_8^3",
+          "C_8^5",
+          "C_2",
+          "i",
+          "sigma_h",
+          "S_8",
+          "S_8^7",
+          "S_4",
+          "S_4^3",
+          "S_8^3",
+          "S_8^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C8h",
+      "upper": "Cinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infh = SO(2) x {E, sigma_h}: C_N, C_Nh, S_2N"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C8v",
+      "upper": "D8d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "in": "D8d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_8",
+          "C_8^7",
+          "C_4",
+          "C_4^3",
+          "C_8^3",
+          "C_8^5",
+          "C_2",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C8v",
+      "upper": "D8h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "in": "D8h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_8",
+          "C_8^7",
+          "C_4",
+          "C_4^3",
+          "C_8^3",
+          "C_8^5",
+          "C_2",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C8v",
+      "upper": "Cinfv",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infv = O(2): only C_N and C_Nv (no sigma_h, no perpendicular C_2)"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D4d",
+      "upper": "D8h",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          18,
+          19,
+          22,
+          23,
+          28,
+          29,
+          30,
+          31
+        ],
+        "in": "D8h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "S_8",
+          "S_8^7",
+          "S_8^3",
+          "S_8^5",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D4d",
+      "upper": "D12d",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          6,
+          11,
+          12,
+          15,
+          18,
+          21,
+          26,
+          27,
+          32,
+          33,
+          37,
+          40,
+          43,
+          46
+        ],
+        "in": "D12d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "S_8",
+          "S_8^7",
+          "S_8^3",
+          "S_8^5",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D4h",
+      "upper": "D8h",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          16,
+          17,
+          20,
+          21,
+          24,
+          25,
+          26,
+          27
+        ],
+        "in": "D8h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "sigma_h",
+          "S_4",
+          "S_4^3",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D4h",
+      "upper": "D12h",
+      "witness": {
+        "elements": [
+          0,
+          5,
+          6,
+          11,
+          12,
+          15,
+          19,
+          22,
+          24,
+          25,
+          30,
+          31,
+          36,
+          39,
+          43,
+          46
+        ],
+        "in": "D12h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "sigma_h",
+          "S_4",
+          "S_4^3",
+          "sigma_v",
+          "sigma_v",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D4h",
+      "upper": "Oh",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          15,
+          16,
+          17,
+          21,
+          23,
+          24,
+          25,
+          26,
+          39,
+          40,
+          41,
+          45,
+          47
+        ],
+        "in": "Oh",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "S_4",
+          "S_4^3",
+          "sigma_h",
+          "sigma_h",
+          "sigma_h",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D8",
+      "upper": "D8d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "in": "D8d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_8",
+          "C_8^7",
+          "C_4",
+          "C_4^3",
+          "C_8^3",
+          "C_8^5",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D8",
+      "upper": "D8h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "in": "D8h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_8",
+          "C_8^7",
+          "C_4",
+          "C_4^3",
+          "C_8^3",
+          "C_8^5",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D8",
+      "upper": "Dinf",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_inf = all rotations about z plus all perpendicular binary rotations"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S16",
+      "upper": "D8d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "in": "D8d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_8",
+          "C_8^7",
+          "C_4",
+          "C_4^3",
+          "C_8^3",
+          "C_8^5",
+          "C_2",
+          "S_16",
+          "S_16^15",
+          "S_16^3",
+          "S_16^13",
+          "S_16^5",
+          "S_16^11",
+          "S_16^7",
+          "S_16^9"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S16",
+      "upper": "Cinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infh = SO(2) x {E, sigma_h}: C_N, C_Nh, S_2N"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C9h",
+      "upper": "D9h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "in": "D9h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_9",
+          "C_9^8",
+          "C_9^2",
+          "C_9^7",
+          "C_3",
+          "C_3^2",
+          "C_9^4",
+          "C_9^5",
+          "sigma_h",
+          "S_9",
+          "S_9^17",
+          "S_9^11",
+          "S_9^7",
+          "S_3",
+          "S_3^5",
+          "S_9^13",
+          "S_9^5"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C9h",
+      "upper": "Cinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infh = SO(2) x {E, sigma_h}: C_N, C_Nh, S_2N"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C9v",
+      "upper": "D9d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ],
+        "in": "D9d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_9",
+          "C_9^8",
+          "C_9^2",
+          "C_9^7",
+          "C_3",
+          "C_3^2",
+          "C_9^4",
+          "C_9^5",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C9v",
+      "upper": "D9h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ],
+        "in": "D9h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_9",
+          "C_9^8",
+          "C_9^2",
+          "C_9^7",
+          "C_3",
+          "C_3^2",
+          "C_9^4",
+          "C_9^5",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C9v",
+      "upper": "Cinfv",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infv = O(2): only C_N and C_Nv (no sigma_h, no perpendicular C_2)"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D9",
+      "upper": "D9d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "in": "D9d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_9",
+          "C_9^8",
+          "C_9^2",
+          "C_9^7",
+          "C_3",
+          "C_3^2",
+          "C_9^4",
+          "C_9^5",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D9",
+      "upper": "D9h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "in": "D9h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_9",
+          "C_9^8",
+          "C_9^2",
+          "C_9^7",
+          "C_3",
+          "C_3^2",
+          "C_9^4",
+          "C_9^5",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D9",
+      "upper": "Dinf",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_inf = all rotations about z plus all perpendicular binary rotations"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S18",
+      "upper": "D9d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "in": "D9d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_9",
+          "C_9^8",
+          "C_9^2",
+          "C_9^7",
+          "C_3",
+          "C_3^2",
+          "C_9^4",
+          "C_9^5",
+          "i",
+          "S_18",
+          "S_18^17",
+          "S_6",
+          "S_6^5",
+          "S_18^5",
+          "S_18^13",
+          "S_18^7",
+          "S_18^11"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S18",
+      "upper": "Cinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infh = SO(2) x {E, sigma_h}: C_N, C_Nh, S_2N"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C10h",
+      "upper": "D10h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "in": "D10h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_10",
+          "C_10^9",
+          "C_5",
+          "C_5^4",
+          "C_10^3",
+          "C_10^7",
+          "C_5^2",
+          "C_5^3",
+          "C_2",
+          "i",
+          "sigma_h",
+          "S_10",
+          "S_10^9",
+          "S_5",
+          "S_5^9",
+          "S_10^3",
+          "S_10^7",
+          "S_5^7",
+          "S_5^3"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C10h",
+      "upper": "Cinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infh = SO(2) x {E, sigma_h}: C_N, C_Nh, S_2N"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C10v",
+      "upper": "D10d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        "in": "D10d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_10",
+          "C_10^9",
+          "C_5",
+          "C_5^4",
+          "C_10^3",
+          "C_10^7",
+          "C_5^2",
+          "C_5^3",
+          "C_2",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C10v",
+      "upper": "D10h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        "in": "D10h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_10",
+          "C_10^9",
+          "C_5",
+          "C_5^4",
+          "C_10^3",
+          "C_10^7",
+          "C_5^2",
+          "C_5^3",
+          "C_2",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C10v",
+      "upper": "Cinfv",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infv = O(2): only C_N and C_Nv (no sigma_h, no perpendicular C_2)"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D10",
+      "upper": "D10d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "in": "D10d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_10",
+          "C_10^9",
+          "C_5",
+          "C_5^4",
+          "C_10^3",
+          "C_10^7",
+          "C_5^2",
+          "C_5^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D10",
+      "upper": "D10h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "in": "D10h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_10",
+          "C_10^9",
+          "C_5",
+          "C_5^4",
+          "C_10^3",
+          "C_10^7",
+          "C_5^2",
+          "C_5^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D10",
+      "upper": "Dinf",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_inf = all rotations about z plus all perpendicular binary rotations"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D5d",
+      "upper": "D10h",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          10,
+          11,
+          12,
+          13,
+          14,
+          20,
+          22,
+          23,
+          26,
+          27,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        "in": "D10h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "S_10",
+          "S_10^9",
+          "S_10^3",
+          "S_10^7",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D5d",
+      "upper": "Ih",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          23,
+          24,
+          45,
+          46,
+          47,
+          48,
+          52,
+          60,
+          61,
+          62,
+          83,
+          84,
+          105,
+          106,
+          107,
+          108,
+          112
+        ],
+        "in": "Ih",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "S_10^3",
+          "S_10^7",
+          "S_10",
+          "S_10^9",
+          "sigma",
+          "sigma",
+          "sigma",
+          "sigma",
+          "sigma"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D5h",
+      "upper": "D10h",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          10,
+          11,
+          12,
+          13,
+          14,
+          21,
+          24,
+          25,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34
+        ],
+        "in": "D10h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "sigma_h",
+          "S_5",
+          "S_5^9",
+          "S_5^7",
+          "S_5^3",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S20",
+      "upper": "D10d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "in": "D10d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_10",
+          "C_10^9",
+          "C_5",
+          "C_5^4",
+          "C_10^3",
+          "C_10^7",
+          "C_5^2",
+          "C_5^3",
+          "C_2",
+          "S_20",
+          "S_20^19",
+          "S_20^3",
+          "S_20^17",
+          "S_4",
+          "S_4^3",
+          "S_20^7",
+          "S_20^13",
+          "S_20^9",
+          "S_20^11"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S20",
+      "upper": "Cinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infh = SO(2) x {E, sigma_h}: C_N, C_Nh, S_2N"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C11h",
+      "upper": "D11h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "in": "D11h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_11",
+          "C_11^10",
+          "C_11^2",
+          "C_11^9",
+          "C_11^3",
+          "C_11^8",
+          "C_11^4",
+          "C_11^7",
+          "C_11^5",
+          "C_11^6",
+          "sigma_h",
+          "S_11",
+          "S_11^21",
+          "S_11^13",
+          "S_11^9",
+          "S_11^3",
+          "S_11^19",
+          "S_11^15",
+          "S_11^7",
+          "S_11^5",
+          "S_11^17"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C11h",
+      "upper": "Cinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infh = SO(2) x {E, sigma_h}: C_N, C_Nh, S_2N"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C11v",
+      "upper": "D11d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ],
+        "in": "D11d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_11",
+          "C_11^10",
+          "C_11^2",
+          "C_11^9",
+          "C_11^3",
+          "C_11^8",
+          "C_11^4",
+          "C_11^7",
+          "C_11^5",
+          "C_11^6",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C11v",
+      "upper": "D11h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ],
+        "in": "D11h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_11",
+          "C_11^10",
+          "C_11^2",
+          "C_11^9",
+          "C_11^3",
+          "C_11^8",
+          "C_11^4",
+          "C_11^7",
+          "C_11^5",
+          "C_11^6",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C11v",
+      "upper": "Cinfv",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infv = O(2): only C_N and C_Nv (no sigma_h, no perpendicular C_2)"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D11",
+      "upper": "D11d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "in": "D11d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_11",
+          "C_11^10",
+          "C_11^2",
+          "C_11^9",
+          "C_11^3",
+          "C_11^8",
+          "C_11^4",
+          "C_11^7",
+          "C_11^5",
+          "C_11^6",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D11",
+      "upper": "D11h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "in": "D11h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_11",
+          "C_11^10",
+          "C_11^2",
+          "C_11^9",
+          "C_11^3",
+          "C_11^8",
+          "C_11^4",
+          "C_11^7",
+          "C_11^5",
+          "C_11^6",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D11",
+      "upper": "Dinf",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_inf = all rotations about z plus all perpendicular binary rotations"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S22",
+      "upper": "D11d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "in": "D11d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_11",
+          "C_11^10",
+          "C_11^2",
+          "C_11^9",
+          "C_11^3",
+          "C_11^8",
+          "C_11^4",
+          "C_11^7",
+          "C_11^5",
+          "C_11^6",
+          "i",
+          "S_22",
+          "S_22^21",
+          "S_22^3",
+          "S_22^19",
+          "S_22^5",
+          "S_22^17",
+          "S_22^7",
+          "S_22^15",
+          "S_22^9",
+          "S_22^13"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S22",
+      "upper": "Cinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infh = SO(2) x {E, sigma_h}: C_N, C_Nh, S_2N"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C12h",
+      "upper": "D12h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ],
+        "in": "D12h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_12",
+          "C_12^11",
+          "C_6",
+          "C_6^5",
+          "C_4",
+          "C_4^3",
+          "C_3",
+          "C_3^2",
+          "C_12^5",
+          "C_12^7",
+          "C_2",
+          "i",
+          "sigma_h",
+          "S_12",
+          "S_12^11",
+          "S_6",
+          "S_6^5",
+          "S_4",
+          "S_4^3",
+          "S_3",
+          "S_3^5",
+          "S_12^5",
+          "S_12^7"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C12h",
+      "upper": "Cinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infh = SO(2) x {E, sigma_h}: C_N, C_Nh, S_2N"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C12v",
+      "upper": "D12d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "in": "D12d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_12",
+          "C_12^11",
+          "C_6",
+          "C_6^5",
+          "C_4",
+          "C_4^3",
+          "C_3",
+          "C_3^2",
+          "C_12^5",
+          "C_12^7",
+          "C_2",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C12v",
+      "upper": "D12h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "in": "D12h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_12",
+          "C_12^11",
+          "C_6",
+          "C_6^5",
+          "C_4",
+          "C_4^3",
+          "C_3",
+          "C_3^2",
+          "C_12^5",
+          "C_12^7",
+          "C_2",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "C12v",
+      "upper": "Cinfv",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infv = O(2): only C_N and C_Nv (no sigma_h, no perpendicular C_2)"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D12",
+      "upper": "D12d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "in": "D12d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_12",
+          "C_12^11",
+          "C_6",
+          "C_6^5",
+          "C_4",
+          "C_4^3",
+          "C_3",
+          "C_3^2",
+          "C_12^5",
+          "C_12^7",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D12",
+      "upper": "D12h",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "in": "D12h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_12",
+          "C_12^11",
+          "C_6",
+          "C_6^5",
+          "C_4",
+          "C_4^3",
+          "C_3",
+          "C_3^2",
+          "C_12^5",
+          "C_12^7",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D12",
+      "upper": "Dinf",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_inf = all rotations about z plus all perpendicular binary rotations"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D6d",
+      "upper": "D12h",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          26,
+          27,
+          30,
+          31,
+          34,
+          35,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "in": "D12h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_6^5",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "S_12",
+          "S_12^11",
+          "S_4",
+          "S_4^3",
+          "S_12^5",
+          "S_12^7",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D6h",
+      "upper": "D12h",
+      "witness": {
+        "elements": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          24,
+          25,
+          28,
+          29,
+          32,
+          33,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ],
+        "in": "D12h",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_6",
+          "C_6^5",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "sigma_h",
+          "S_6",
+          "S_6^5",
+          "S_3",
+          "S_3^5",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v",
+          "sigma_v"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "O",
+      "upper": "Oh",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "in": "Oh",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_4",
+          "C_4^3",
+          "C_4",
+          "C_4^3",
+          "C_4",
+          "C_4^3",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "O",
+      "upper": "SO3",
+      "witness": {
+        "kind": "argument",
+        "reason": "the proper (Type I) point groups only"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S24",
+      "upper": "D12d",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ],
+        "in": "D12d",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_12",
+          "C_12^11",
+          "C_6",
+          "C_6^5",
+          "C_4",
+          "C_4^3",
+          "C_3",
+          "C_3^2",
+          "C_12^5",
+          "C_12^7",
+          "C_2",
+          "S_24",
+          "S_24^23",
+          "S_8",
+          "S_8^7",
+          "S_24^5",
+          "S_24^19",
+          "S_24^7",
+          "S_24^17",
+          "S_8^3",
+          "S_8^5",
+          "S_24^11",
+          "S_24^13"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "S24",
+      "upper": "Cinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_infh = SO(2) x {E, sigma_h}: C_N, C_Nh, S_2N"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "Td",
+      "upper": "Oh",
+      "witness": {
+        "elements": [
+          0,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "in": "Oh",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "S_4",
+          "S_4^3",
+          "S_4",
+          "S_4^3",
+          "S_4",
+          "S_4^3",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d",
+          "sigma_d"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "Th",
+      "upper": "Oh",
+      "witness": {
+        "elements": [
+          0,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          24,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ],
+        "in": "Oh",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "S_6",
+          "S_6^5",
+          "S_6",
+          "S_6^5",
+          "S_6",
+          "S_6^5",
+          "S_6",
+          "S_6^5",
+          "sigma_h",
+          "sigma_h",
+          "sigma_h"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "Th",
+      "upper": "Ih",
+      "witness": {
+        "elements": [
+          0,
+          25,
+          26,
+          27,
+          28,
+          33,
+          34,
+          35,
+          36,
+          47,
+          53,
+          55,
+          60,
+          85,
+          86,
+          87,
+          88,
+          93,
+          94,
+          95,
+          96,
+          107,
+          113,
+          115
+        ],
+        "in": "Ih",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "i",
+          "S_6",
+          "S_6^5",
+          "S_6",
+          "S_6^5",
+          "S_6",
+          "S_6^5",
+          "S_6",
+          "S_6^5",
+          "sigma",
+          "sigma",
+          "sigma"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D7d",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh = Nor(z-axis) = O(2) x {E, sigma_h}: every axial point group"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D7h",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh = Nor(z-axis) = O(2) x {E, sigma_h}: every axial point group"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D8d",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh = Nor(z-axis) = O(2) x {E, sigma_h}: every axial point group"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D8h",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh = Nor(z-axis) = O(2) x {E, sigma_h}: every axial point group"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D9d",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh = Nor(z-axis) = O(2) x {E, sigma_h}: every axial point group"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D9h",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh = Nor(z-axis) = O(2) x {E, sigma_h}: every axial point group"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D10d",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh = Nor(z-axis) = O(2) x {E, sigma_h}: every axial point group"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D10h",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh = Nor(z-axis) = O(2) x {E, sigma_h}: every axial point group"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D11d",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh = Nor(z-axis) = O(2) x {E, sigma_h}: every axial point group"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D11h",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh = Nor(z-axis) = O(2) x {E, sigma_h}: every axial point group"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D12d",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh = Nor(z-axis) = O(2) x {E, sigma_h}: every axial point group"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "D12h",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh = Nor(z-axis) = O(2) x {E, sigma_h}: every axial point group"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "Oh",
+      "upper": "O3",
+      "witness": {
+        "kind": "argument",
+        "reason": "everything"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "I",
+      "upper": "Ih",
+      "witness": {
+        "elements": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59
+        ],
+        "in": "Ih",
+        "kind": "explicit subgroup of the record",
+        "symbols": [
+          "E",
+          "C_5",
+          "C_5^4",
+          "C_5",
+          "C_5^4",
+          "C_5",
+          "C_5^4",
+          "C_5",
+          "C_5^4",
+          "C_5",
+          "C_5^4",
+          "C_5",
+          "C_5^4",
+          "C_5^2",
+          "C_5^3",
+          "C_5^2",
+          "C_5^3",
+          "C_5^2",
+          "C_5^3",
+          "C_5^2",
+          "C_5^3",
+          "C_5^2",
+          "C_5^3",
+          "C_5^2",
+          "C_5^3",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_3",
+          "C_3^2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2",
+          "C_2"
+        ]
+      }
+    },
+    {
+      "covering": true,
+      "lower": "I",
+      "upper": "SO3",
+      "witness": {
+        "kind": "argument",
+        "reason": "the proper (Type I) point groups only"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "Ih",
+      "upper": "O3",
+      "witness": {
+        "kind": "argument",
+        "reason": "everything"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "Cinf",
+      "upper": "Cinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "C_inf x {E, sigma_h}"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "Cinf",
+      "upper": "Cinfv",
+      "witness": {
+        "kind": "argument",
+        "reason": "the rotation subgroup of O(2)"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "Cinf",
+      "upper": "Dinf",
+      "witness": {
+        "kind": "argument",
+        "reason": "the rotation subgroup about z"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "Cinfh",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh = D_inf x {E, sigma_h} contains C_infh"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "Cinfv",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh contains the vertical mirrors"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "Dinf",
+      "upper": "Dinfh",
+      "witness": {
+        "kind": "argument",
+        "reason": "D_infh = D_inf x {E, sigma_h}"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "Dinf",
+      "upper": "SO3",
+      "witness": {
+        "kind": "argument",
+        "reason": "all of D_inf is proper"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "Dinfh",
+      "upper": "O3",
+      "witness": {
+        "kind": "argument",
+        "reason": "improper, so not in SO(3)"
+      }
+    },
+    {
+      "covering": true,
+      "lower": "SO3",
+      "upper": "O3",
+      "witness": {
+        "kind": "argument",
+        "reason": "index 2"
+      }
+    }
+  ],
+  "family_rules": {
+    "rules": [
+      {
+        "lower_family": "Cn",
+        "rule": "M | N",
+        "upper_family": "Cn"
+      },
+      {
+        "lower_family": "S2n",
+        "rule": "never",
+        "upper_family": "Cn"
+      },
+      {
+        "lower_family": "Cnh",
+        "rule": "never",
+        "upper_family": "Cn"
+      },
+      {
+        "lower_family": "Cnv",
+        "rule": "never",
+        "upper_family": "Cn"
+      },
+      {
+        "lower_family": "Dn",
+        "rule": "never",
+        "upper_family": "Cn"
+      },
+      {
+        "lower_family": "Dnh",
+        "rule": "never",
+        "upper_family": "Cn"
+      },
+      {
+        "lower_family": "Dnd",
+        "rule": "never",
+        "upper_family": "Cn"
+      },
+      {
+        "lower_family": "Cn",
+        "rule": "M | N",
+        "upper_family": "S2n"
+      },
+      {
+        "lower_family": "S2n",
+        "rule": "M | N and N/M odd",
+        "upper_family": "S2n"
+      },
+      {
+        "lower_family": "Cnh",
+        "rule": "never",
+        "upper_family": "S2n"
+      },
+      {
+        "lower_family": "Cnv",
+        "rule": "never",
+        "upper_family": "S2n"
+      },
+      {
+        "lower_family": "Dn",
+        "rule": "never",
+        "upper_family": "S2n"
+      },
+      {
+        "lower_family": "Dnh",
+        "rule": "never",
+        "upper_family": "S2n"
+      },
+      {
+        "lower_family": "Dnd",
+        "rule": "never",
+        "upper_family": "S2n"
+      },
+      {
+        "lower_family": "Cn",
+        "rule": "M | N",
+        "upper_family": "Cnh"
+      },
+      {
+        "lower_family": "S2n",
+        "rule": "2M | N",
+        "upper_family": "Cnh"
+      },
+      {
+        "lower_family": "Cnh",
+        "rule": "M >= 2 and M | N",
+        "upper_family": "Cnh"
+      },
+      {
+        "lower_family": "Cnv",
+        "rule": "M = 1",
+        "upper_family": "Cnh"
+      },
+      {
+        "lower_family": "Dn",
+        "rule": "never",
+        "upper_family": "Cnh"
+      },
+      {
+        "lower_family": "Dnh",
+        "rule": "never",
+        "upper_family": "Cnh"
+      },
+      {
+        "lower_family": "Dnd",
+        "rule": "never",
+        "upper_family": "Cnh"
+      },
+      {
+        "lower_family": "Cn",
+        "rule": "M | N",
+        "upper_family": "Cnv"
+      },
+      {
+        "lower_family": "S2n",
+        "rule": "never",
+        "upper_family": "Cnv"
+      },
+      {
+        "lower_family": "Cnh",
+        "rule": "never",
+        "upper_family": "Cnv"
+      },
+      {
+        "lower_family": "Cnv",
+        "rule": "M | N",
+        "upper_family": "Cnv"
+      },
+      {
+        "lower_family": "Dn",
+        "rule": "never",
+        "upper_family": "Cnv"
+      },
+      {
+        "lower_family": "Dnh",
+        "rule": "never",
+        "upper_family": "Cnv"
+      },
+      {
+        "lower_family": "Dnd",
+        "rule": "never",
+        "upper_family": "Cnv"
+      },
+      {
+        "lower_family": "Cn",
+        "rule": "M | N or M = 2",
+        "upper_family": "Dn"
+      },
+      {
+        "lower_family": "S2n",
+        "rule": "never",
+        "upper_family": "Dn"
+      },
+      {
+        "lower_family": "Cnh",
+        "rule": "never",
+        "upper_family": "Dn"
+      },
+      {
+        "lower_family": "Cnv",
+        "rule": "never",
+        "upper_family": "Dn"
+      },
+      {
+        "lower_family": "Dn",
+        "rule": "M >= 2 and M | N",
+        "upper_family": "Dn"
+      },
+      {
+        "lower_family": "Dnh",
+        "rule": "never",
+        "upper_family": "Dn"
+      },
+      {
+        "lower_family": "Dnd",
+        "rule": "never",
+        "upper_family": "Dn"
+      },
+      {
+        "lower_family": "Cn",
+        "rule": "M | N or M = 2",
+        "upper_family": "Dnh"
+      },
+      {
+        "lower_family": "S2n",
+        "rule": "2M | N",
+        "upper_family": "Dnh"
+      },
+      {
+        "lower_family": "Cnh",
+        "rule": "M >= 2 and M | N",
+        "upper_family": "Dnh"
+      },
+      {
+        "lower_family": "Cnv",
+        "rule": "M <= 2 or M | N",
+        "upper_family": "Dnh"
+      },
+      {
+        "lower_family": "Dn",
+        "rule": "M >= 2 and M | N",
+        "upper_family": "Dnh"
+      },
+      {
+        "lower_family": "Dnh",
+        "rule": "M >= 2 and M | N",
+        "upper_family": "Dnh"
+      },
+      {
+        "lower_family": "Dnd",
+        "rule": "M >= 2 and 2M | N",
+        "upper_family": "Dnh"
+      },
+      {
+        "lower_family": "Cn",
+        "rule": "M | N or M = 2",
+        "upper_family": "Dnd"
+      },
+      {
+        "lower_family": "S2n",
+        "rule": "M | N and N/M odd",
+        "upper_family": "Dnd"
+      },
+      {
+        "lower_family": "Cnh",
+        "rule": "M = 2 and N odd",
+        "upper_family": "Dnd"
+      },
+      {
+        "lower_family": "Cnv",
+        "rule": "M = 1 or M | N",
+        "upper_family": "Dnd"
+      },
+      {
+        "lower_family": "Dn",
+        "rule": "M >= 2 and M | N",
+        "upper_family": "Dnd"
+      },
+      {
+        "lower_family": "Dnh",
+        "rule": "never",
+        "upper_family": "Dnd"
+      },
+      {
+        "lower_family": "Dnd",
+        "rule": "M >= 2 and M | N and N/M odd",
+        "upper_family": "Dnd"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "N": 1,
+      "family": "Cn",
+      "id": "C1",
+      "kind": "finite",
+      "order": 1,
+      "schoenflies": "C_1",
+      "type": "I"
+    },
+    {
+      "N": 1,
+      "family": "Cnv",
+      "id": "C1v",
+      "kind": "finite",
+      "order": 2,
+      "schoenflies": "C_s",
+      "type": "III"
+    },
+    {
+      "N": 2,
+      "family": "Cn",
+      "id": "C2",
+      "kind": "finite",
+      "order": 2,
+      "schoenflies": "C_2",
+      "type": "I"
+    },
+    {
+      "N": 1,
+      "family": "S2n",
+      "id": "S2",
+      "kind": "finite",
+      "order": 2,
+      "schoenflies": "C_i",
+      "type": "II"
+    },
+    {
+      "N": 3,
+      "family": "Cn",
+      "id": "C3",
+      "kind": "finite",
+      "order": 3,
+      "schoenflies": "C_3",
+      "type": "I"
+    },
+    {
+      "N": 2,
+      "family": "Cnh",
+      "id": "C2h",
+      "kind": "finite",
+      "order": 4,
+      "schoenflies": "C_2h",
+      "type": "II"
+    },
+    {
+      "N": 2,
+      "family": "Cnv",
+      "id": "C2v",
+      "kind": "finite",
+      "order": 4,
+      "schoenflies": "C_2v",
+      "type": "III"
+    },
+    {
+      "N": 4,
+      "family": "Cn",
+      "id": "C4",
+      "kind": "finite",
+      "order": 4,
+      "schoenflies": "C_4",
+      "type": "I"
+    },
+    {
+      "N": 2,
+      "family": "Dn",
+      "id": "D2",
+      "kind": "finite",
+      "order": 4,
+      "schoenflies": "D_2",
+      "type": "I"
+    },
+    {
+      "N": 2,
+      "family": "S2n",
+      "id": "S4",
+      "kind": "finite",
+      "order": 4,
+      "schoenflies": "S_4",
+      "type": "III"
+    },
+    {
+      "N": 5,
+      "family": "Cn",
+      "id": "C5",
+      "kind": "finite",
+      "order": 5,
+      "schoenflies": "C_5",
+      "type": "I"
+    },
+    {
+      "N": 3,
+      "family": "Cnh",
+      "id": "C3h",
+      "kind": "finite",
+      "order": 6,
+      "schoenflies": "C_3h",
+      "type": "III"
+    },
+    {
+      "N": 3,
+      "family": "Cnv",
+      "id": "C3v",
+      "kind": "finite",
+      "order": 6,
+      "schoenflies": "C_3v",
+      "type": "III"
+    },
+    {
+      "N": 6,
+      "family": "Cn",
+      "id": "C6",
+      "kind": "finite",
+      "order": 6,
+      "schoenflies": "C_6",
+      "type": "I"
+    },
+    {
+      "N": 3,
+      "family": "Dn",
+      "id": "D3",
+      "kind": "finite",
+      "order": 6,
+      "schoenflies": "D_3",
+      "type": "I"
+    },
+    {
+      "N": 3,
+      "family": "S2n",
+      "id": "S6",
+      "kind": "finite",
+      "order": 6,
+      "schoenflies": "S_6",
+      "type": "II"
+    },
+    {
+      "N": 7,
+      "family": "Cn",
+      "id": "C7",
+      "kind": "finite",
+      "order": 7,
+      "schoenflies": "C_7",
+      "type": "I"
+    },
+    {
+      "N": 4,
+      "family": "Cnh",
+      "id": "C4h",
+      "kind": "finite",
+      "order": 8,
+      "schoenflies": "C_4h",
+      "type": "II"
+    },
+    {
+      "N": 4,
+      "family": "Cnv",
+      "id": "C4v",
+      "kind": "finite",
+      "order": 8,
+      "schoenflies": "C_4v",
+      "type": "III"
+    },
+    {
+      "N": 8,
+      "family": "Cn",
+      "id": "C8",
+      "kind": "finite",
+      "order": 8,
+      "schoenflies": "C_8",
+      "type": "I"
+    },
+    {
+      "N": 2,
+      "family": "Dnd",
+      "id": "D2d",
+      "kind": "finite",
+      "order": 8,
+      "schoenflies": "D_2d",
+      "type": "III"
+    },
+    {
+      "N": 2,
+      "family": "Dnh",
+      "id": "D2h",
+      "kind": "finite",
+      "order": 8,
+      "schoenflies": "D_2h",
+      "type": "II"
+    },
+    {
+      "N": 4,
+      "family": "Dn",
+      "id": "D4",
+      "kind": "finite",
+      "order": 8,
+      "schoenflies": "D_4",
+      "type": "I"
+    },
+    {
+      "N": 4,
+      "family": "S2n",
+      "id": "S8",
+      "kind": "finite",
+      "order": 8,
+      "schoenflies": "S_8",
+      "type": "III"
+    },
+    {
+      "N": 9,
+      "family": "Cn",
+      "id": "C9",
+      "kind": "finite",
+      "order": 9,
+      "schoenflies": "C_9",
+      "type": "I"
+    },
+    {
+      "N": 10,
+      "family": "Cn",
+      "id": "C10",
+      "kind": "finite",
+      "order": 10,
+      "schoenflies": "C_10",
+      "type": "I"
+    },
+    {
+      "N": 5,
+      "family": "Cnh",
+      "id": "C5h",
+      "kind": "finite",
+      "order": 10,
+      "schoenflies": "C_5h",
+      "type": "III"
+    },
+    {
+      "N": 5,
+      "family": "Cnv",
+      "id": "C5v",
+      "kind": "finite",
+      "order": 10,
+      "schoenflies": "C_5v",
+      "type": "III"
+    },
+    {
+      "N": 5,
+      "family": "Dn",
+      "id": "D5",
+      "kind": "finite",
+      "order": 10,
+      "schoenflies": "D_5",
+      "type": "I"
+    },
+    {
+      "N": 5,
+      "family": "S2n",
+      "id": "S10",
+      "kind": "finite",
+      "order": 10,
+      "schoenflies": "S_10",
+      "type": "II"
+    },
+    {
+      "N": 11,
+      "family": "Cn",
+      "id": "C11",
+      "kind": "finite",
+      "order": 11,
+      "schoenflies": "C_11",
+      "type": "I"
+    },
+    {
+      "N": 12,
+      "family": "Cn",
+      "id": "C12",
+      "kind": "finite",
+      "order": 12,
+      "schoenflies": "C_12",
+      "type": "I"
+    },
+    {
+      "N": 6,
+      "family": "Cnh",
+      "id": "C6h",
+      "kind": "finite",
+      "order": 12,
+      "schoenflies": "C_6h",
+      "type": "II"
+    },
+    {
+      "N": 6,
+      "family": "Cnv",
+      "id": "C6v",
+      "kind": "finite",
+      "order": 12,
+      "schoenflies": "C_6v",
+      "type": "III"
+    },
+    {
+      "N": 3,
+      "family": "Dnd",
+      "id": "D3d",
+      "kind": "finite",
+      "order": 12,
+      "schoenflies": "D_3d",
+      "type": "II"
+    },
+    {
+      "N": 3,
+      "family": "Dnh",
+      "id": "D3h",
+      "kind": "finite",
+      "order": 12,
+      "schoenflies": "D_3h",
+      "type": "III"
+    },
+    {
+      "N": 6,
+      "family": "Dn",
+      "id": "D6",
+      "kind": "finite",
+      "order": 12,
+      "schoenflies": "D_6",
+      "type": "I"
+    },
+    {
+      "N": 6,
+      "family": "S2n",
+      "id": "S12",
+      "kind": "finite",
+      "order": 12,
+      "schoenflies": "S_12",
+      "type": "III"
+    },
+    {
+      "N": null,
+      "family": null,
+      "id": "T",
+      "kind": "finite",
+      "order": 12,
+      "schoenflies": "T",
+      "type": "I"
+    },
+    {
+      "N": 7,
+      "family": "Cnh",
+      "id": "C7h",
+      "kind": "finite",
+      "order": 14,
+      "schoenflies": "C_7h",
+      "type": "III"
+    },
+    {
+      "N": 7,
+      "family": "Cnv",
+      "id": "C7v",
+      "kind": "finite",
+      "order": 14,
+      "schoenflies": "C_7v",
+      "type": "III"
+    },
+    {
+      "N": 7,
+      "family": "Dn",
+      "id": "D7",
+      "kind": "finite",
+      "order": 14,
+      "schoenflies": "D_7",
+      "type": "I"
+    },
+    {
+      "N": 7,
+      "family": "S2n",
+      "id": "S14",
+      "kind": "finite",
+      "order": 14,
+      "schoenflies": "S_14",
+      "type": "II"
+    },
+    {
+      "N": 8,
+      "family": "Cnh",
+      "id": "C8h",
+      "kind": "finite",
+      "order": 16,
+      "schoenflies": "C_8h",
+      "type": "II"
+    },
+    {
+      "N": 8,
+      "family": "Cnv",
+      "id": "C8v",
+      "kind": "finite",
+      "order": 16,
+      "schoenflies": "C_8v",
+      "type": "III"
+    },
+    {
+      "N": 4,
+      "family": "Dnd",
+      "id": "D4d",
+      "kind": "finite",
+      "order": 16,
+      "schoenflies": "D_4d",
+      "type": "III"
+    },
+    {
+      "N": 4,
+      "family": "Dnh",
+      "id": "D4h",
+      "kind": "finite",
+      "order": 16,
+      "schoenflies": "D_4h",
+      "type": "II"
+    },
+    {
+      "N": 8,
+      "family": "Dn",
+      "id": "D8",
+      "kind": "finite",
+      "order": 16,
+      "schoenflies": "D_8",
+      "type": "I"
+    },
+    {
+      "N": 8,
+      "family": "S2n",
+      "id": "S16",
+      "kind": "finite",
+      "order": 16,
+      "schoenflies": "S_16",
+      "type": "III"
+    },
+    {
+      "N": 9,
+      "family": "Cnh",
+      "id": "C9h",
+      "kind": "finite",
+      "order": 18,
+      "schoenflies": "C_9h",
+      "type": "III"
+    },
+    {
+      "N": 9,
+      "family": "Cnv",
+      "id": "C9v",
+      "kind": "finite",
+      "order": 18,
+      "schoenflies": "C_9v",
+      "type": "III"
+    },
+    {
+      "N": 9,
+      "family": "Dn",
+      "id": "D9",
+      "kind": "finite",
+      "order": 18,
+      "schoenflies": "D_9",
+      "type": "I"
+    },
+    {
+      "N": 9,
+      "family": "S2n",
+      "id": "S18",
+      "kind": "finite",
+      "order": 18,
+      "schoenflies": "S_18",
+      "type": "II"
+    },
+    {
+      "N": 10,
+      "family": "Cnh",
+      "id": "C10h",
+      "kind": "finite",
+      "order": 20,
+      "schoenflies": "C_10h",
+      "type": "II"
+    },
+    {
+      "N": 10,
+      "family": "Cnv",
+      "id": "C10v",
+      "kind": "finite",
+      "order": 20,
+      "schoenflies": "C_10v",
+      "type": "III"
+    },
+    {
+      "N": 10,
+      "family": "Dn",
+      "id": "D10",
+      "kind": "finite",
+      "order": 20,
+      "schoenflies": "D_10",
+      "type": "I"
+    },
+    {
+      "N": 5,
+      "family": "Dnd",
+      "id": "D5d",
+      "kind": "finite",
+      "order": 20,
+      "schoenflies": "D_5d",
+      "type": "II"
+    },
+    {
+      "N": 5,
+      "family": "Dnh",
+      "id": "D5h",
+      "kind": "finite",
+      "order": 20,
+      "schoenflies": "D_5h",
+      "type": "III"
+    },
+    {
+      "N": 10,
+      "family": "S2n",
+      "id": "S20",
+      "kind": "finite",
+      "order": 20,
+      "schoenflies": "S_20",
+      "type": "III"
+    },
+    {
+      "N": 11,
+      "family": "Cnh",
+      "id": "C11h",
+      "kind": "finite",
+      "order": 22,
+      "schoenflies": "C_11h",
+      "type": "III"
+    },
+    {
+      "N": 11,
+      "family": "Cnv",
+      "id": "C11v",
+      "kind": "finite",
+      "order": 22,
+      "schoenflies": "C_11v",
+      "type": "III"
+    },
+    {
+      "N": 11,
+      "family": "Dn",
+      "id": "D11",
+      "kind": "finite",
+      "order": 22,
+      "schoenflies": "D_11",
+      "type": "I"
+    },
+    {
+      "N": 11,
+      "family": "S2n",
+      "id": "S22",
+      "kind": "finite",
+      "order": 22,
+      "schoenflies": "S_22",
+      "type": "II"
+    },
+    {
+      "N": 12,
+      "family": "Cnh",
+      "id": "C12h",
+      "kind": "finite",
+      "order": 24,
+      "schoenflies": "C_12h",
+      "type": "II"
+    },
+    {
+      "N": 12,
+      "family": "Cnv",
+      "id": "C12v",
+      "kind": "finite",
+      "order": 24,
+      "schoenflies": "C_12v",
+      "type": "III"
+    },
+    {
+      "N": 12,
+      "family": "Dn",
+      "id": "D12",
+      "kind": "finite",
+      "order": 24,
+      "schoenflies": "D_12",
+      "type": "I"
+    },
+    {
+      "N": 6,
+      "family": "Dnd",
+      "id": "D6d",
+      "kind": "finite",
+      "order": 24,
+      "schoenflies": "D_6d",
+      "type": "III"
+    },
+    {
+      "N": 6,
+      "family": "Dnh",
+      "id": "D6h",
+      "kind": "finite",
+      "order": 24,
+      "schoenflies": "D_6h",
+      "type": "II"
+    },
+    {
+      "N": null,
+      "family": null,
+      "id": "O",
+      "kind": "finite",
+      "order": 24,
+      "schoenflies": "O",
+      "type": "I"
+    },
+    {
+      "N": 12,
+      "family": "S2n",
+      "id": "S24",
+      "kind": "finite",
+      "order": 24,
+      "schoenflies": "S_24",
+      "type": "III"
+    },
+    {
+      "N": null,
+      "family": null,
+      "id": "Td",
+      "kind": "finite",
+      "order": 24,
+      "schoenflies": "T_d",
+      "type": "III"
+    },
+    {
+      "N": null,
+      "family": null,
+      "id": "Th",
+      "kind": "finite",
+      "order": 24,
+      "schoenflies": "T_h",
+      "type": "II"
+    },
+    {
+      "N": 7,
+      "family": "Dnd",
+      "id": "D7d",
+      "kind": "finite",
+      "order": 28,
+      "schoenflies": "D_7d",
+      "type": "II"
+    },
+    {
+      "N": 7,
+      "family": "Dnh",
+      "id": "D7h",
+      "kind": "finite",
+      "order": 28,
+      "schoenflies": "D_7h",
+      "type": "III"
+    },
+    {
+      "N": 8,
+      "family": "Dnd",
+      "id": "D8d",
+      "kind": "finite",
+      "order": 32,
+      "schoenflies": "D_8d",
+      "type": "III"
+    },
+    {
+      "N": 8,
+      "family": "Dnh",
+      "id": "D8h",
+      "kind": "finite",
+      "order": 32,
+      "schoenflies": "D_8h",
+      "type": "II"
+    },
+    {
+      "N": 9,
+      "family": "Dnd",
+      "id": "D9d",
+      "kind": "finite",
+      "order": 36,
+      "schoenflies": "D_9d",
+      "type": "II"
+    },
+    {
+      "N": 9,
+      "family": "Dnh",
+      "id": "D9h",
+      "kind": "finite",
+      "order": 36,
+      "schoenflies": "D_9h",
+      "type": "III"
+    },
+    {
+      "N": 10,
+      "family": "Dnd",
+      "id": "D10d",
+      "kind": "finite",
+      "order": 40,
+      "schoenflies": "D_10d",
+      "type": "III"
+    },
+    {
+      "N": 10,
+      "family": "Dnh",
+      "id": "D10h",
+      "kind": "finite",
+      "order": 40,
+      "schoenflies": "D_10h",
+      "type": "II"
+    },
+    {
+      "N": 11,
+      "family": "Dnd",
+      "id": "D11d",
+      "kind": "finite",
+      "order": 44,
+      "schoenflies": "D_11d",
+      "type": "II"
+    },
+    {
+      "N": 11,
+      "family": "Dnh",
+      "id": "D11h",
+      "kind": "finite",
+      "order": 44,
+      "schoenflies": "D_11h",
+      "type": "III"
+    },
+    {
+      "N": 12,
+      "family": "Dnd",
+      "id": "D12d",
+      "kind": "finite",
+      "order": 48,
+      "schoenflies": "D_12d",
+      "type": "III"
+    },
+    {
+      "N": 12,
+      "family": "Dnh",
+      "id": "D12h",
+      "kind": "finite",
+      "order": 48,
+      "schoenflies": "D_12h",
+      "type": "II"
+    },
+    {
+      "N": null,
+      "family": null,
+      "id": "Oh",
+      "kind": "finite",
+      "order": 48,
+      "schoenflies": "O_h",
+      "type": "II"
+    },
+    {
+      "N": null,
+      "family": null,
+      "id": "I",
+      "kind": "finite",
+      "order": 60,
+      "schoenflies": "I",
+      "type": "I"
+    },
+    {
+      "N": null,
+      "family": null,
+      "id": "Ih",
+      "kind": "finite",
+      "order": 120,
+      "schoenflies": "I_h",
+      "type": "II"
+    },
+    {
+      "N": null,
+      "family": null,
+      "id": "Cinf",
+      "kind": "continuous",
+      "order": null,
+      "schoenflies": "C_inf",
+      "type": "I"
+    },
+    {
+      "N": null,
+      "family": null,
+      "id": "Cinfh",
+      "kind": "continuous",
+      "order": null,
+      "schoenflies": "C_infh",
+      "type": "II"
+    },
+    {
+      "N": null,
+      "family": null,
+      "id": "Cinfv",
+      "kind": "continuous",
+      "order": null,
+      "schoenflies": "C_infv",
+      "type": "III"
+    },
+    {
+      "N": null,
+      "family": null,
+      "id": "Dinf",
+      "kind": "continuous",
+      "order": null,
+      "schoenflies": "D_inf",
+      "type": "I"
+    },
+    {
+      "N": null,
+      "family": null,
+      "id": "Dinfh",
+      "kind": "continuous",
+      "order": null,
+      "schoenflies": "D_infh",
+      "type": "II"
+    },
+    {
+      "N": null,
+      "family": null,
+      "id": "O3",
+      "kind": "continuous",
+      "order": null,
+      "schoenflies": "O(3)",
+      "type": "II"
+    },
+    {
+      "N": null,
+      "family": null,
+      "id": "SO3",
+      "kind": "continuous",
+      "order": null,
+      "schoenflies": "SO(3)",
+      "type": "I"
+    }
+  ],
+  "schema": "point-group-atlas/point-group-lattice/1"
+}

@@ -1,0 +1,290 @@
+{
+  "$defs": {
+    "exact": {
+      "description": "An exact value. See CONVENTIONS.md section 8.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "f": {
+              "const": "q"
+            },
+            "v": {
+              "items": false,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "minimum": 1,
+                  "type": "integer"
+                }
+              ],
+              "type": "array"
+            }
+          },
+          "required": [
+            "f",
+            "v"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "M": {
+              "minimum": 3,
+              "type": "integer"
+            },
+            "c": {
+              "items": {
+                "items": false,
+                "minItems": 2,
+                "prefixItems": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "minimum": 1,
+                    "type": "integer"
+                  }
+                ],
+                "type": "array"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "f": {
+              "const": "cyc"
+            }
+          },
+          "required": [
+            "f",
+            "M",
+            "c"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "null": {
+      "additionalProperties": false,
+      "description": "A structured null. See CONVENTIONS.md section 8.",
+      "properties": {
+        "reason": {
+          "enum": [
+            "continuous-group",
+            "depends-on-the-point",
+            "not-a-named-shape",
+            "not-a-rational-turn",
+            "not-a-regular-compound",
+            "not-defined-for-family",
+            "not-in-source",
+            "one-class-under-the-rotations"
+          ]
+        },
+        "value": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "reason",
+        "value"
+      ],
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "See CONVENTIONS.md section 28.3.",
+  "properties": {
+    "aliases": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 28.3.",
+      "properties": {
+        "finite": {
+          "additionalProperties": {
+            "description": "See CONVENTIONS.md section 28.3.",
+            "type": "string"
+          },
+          "description": "See CONVENTIONS.md section 28.3.",
+          "type": "object"
+        }
+      },
+      "required": [
+        "finite"
+      ],
+      "type": "object"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 28.3.",
+      "properties": {
+        "covering_edges": {
+          "description": "See CONVENTIONS.md section 28.3.",
+          "type": "integer"
+        },
+        "nodes": {
+          "description": "See CONVENTIONS.md section 28.3.",
+          "type": "integer"
+        },
+        "relations": {
+          "description": "See CONVENTIONS.md section 28.3.",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "covering_edges",
+        "nodes",
+        "relations"
+      ],
+      "type": "object"
+    },
+    "edges": {
+      "description": "See CONVENTIONS.md section 28.3.",
+      "items": {
+        "additionalProperties": false,
+        "description": "See CONVENTIONS.md section 28.3.",
+        "properties": {
+          "covering": {
+            "description": "See CONVENTIONS.md section 28.3.",
+            "type": "boolean"
+          },
+          "lower": {
+            "description": "See CONVENTIONS.md section 28.3.",
+            "type": "string"
+          },
+          "upper": {
+            "description": "See CONVENTIONS.md section 28.3.",
+            "type": "string"
+          },
+          "witness": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 28.3.",
+            "properties": {
+              "entry": {
+                "description": "See CONVENTIONS.md section 28.3.",
+                "type": "string"
+              },
+              "in": {
+                "description": "See CONVENTIONS.md section 28.3.",
+                "type": "string"
+              },
+              "kind": {
+                "description": "See CONVENTIONS.md section 28.3.",
+                "type": "string"
+              },
+              "node": {
+                "description": "See CONVENTIONS.md section 28.3.",
+                "type": "string"
+              },
+              "reason": {
+                "description": "See CONVENTIONS.md section 28.3.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "kind"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "covering",
+          "lower",
+          "upper",
+          "witness"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "family_rules": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 28.3.",
+      "properties": {
+        "preimages": {
+          "description": "See CONVENTIONS.md section 28.3.",
+          "type": "string"
+        },
+        "sections": {
+          "description": "See CONVENTIONS.md section 28.3.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "preimages",
+        "sections"
+      ],
+      "type": "object"
+    },
+    "nodes": {
+      "description": "See CONVENTIONS.md section 28.3.",
+      "items": {
+        "additionalProperties": false,
+        "description": "See CONVENTIONS.md section 28.3.",
+        "properties": {
+          "class": {
+            "description": "See CONVENTIONS.md section 28.3.",
+            "type": "string"
+          },
+          "covers": {
+            "description": "See CONVENTIONS.md section 28.3.",
+            "type": "string"
+          },
+          "id": {
+            "description": "See CONVENTIONS.md section 28.3.",
+            "type": "string"
+          },
+          "image": {
+            "description": "See CONVENTIONS.md section 28.3.",
+            "type": "string"
+          },
+          "kind": {
+            "description": "See CONVENTIONS.md section 28.3.",
+            "type": "string"
+          },
+          "order": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/null"
+              },
+              {
+                "type": "integer"
+              }
+            ],
+            "description": "See CONVENTIONS.md section 28.3."
+          },
+          "symbol": {
+            "description": "See CONVENTIONS.md section 28.3.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "class",
+          "id",
+          "kind",
+          "order",
+          "symbol"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema": {
+      "const": "point-group-atlas/double/lattice/1",
+      "description": "See CONVENTIONS.md section 28.3."
+    }
+  },
+  "required": [
+    "aliases",
+    "counts",
+    "edges",
+    "family_rules",
+    "nodes",
+    "schema"
+  ],
+  "title": "Point Group Atlas lattice of the closed subgroups of Pin-(3)",
+  "type": "object"
+}

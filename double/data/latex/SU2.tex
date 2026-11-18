@@ -1,0 +1,819 @@
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=-1
+\documentclass[10pt,a4paper]{article}
+\usepackage{cmap}
+\usepackage[margin=1.8cm,headheight=14pt,headsep=10pt]{geometry}
+\usepackage[leqno]{amsmath}
+\usepackage{amssymb,booktabs,longtable,array,ragged2e,multicol,multirow,xcolor,fancyhdr,tikz}
+\definecolor{linkblue}{rgb}{0.08,0.33,0.58}
+\usepackage[colorlinks=true,linkcolor=linkblue,urlcolor=linkblue,citecolor=linkblue,
+  filecolor=linkblue,linktoc=all,pdfborder={0 0 0},bookmarksnumbered=true]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\setcounter{secnumdepth}{2}\setcounter{tocdepth}{2}
+\definecolor{partshade}{gray}{0.9}
+\usepackage{nicefrac}
+\definecolor{parttitle}{HTML}{295A2C}
+\definecolor{parttitlelight}{HTML}{6C9F6D}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}{-3ex plus -1ex minus -.2ex}%
+  {1.2ex plus .2ex}{\normalfont\large\sffamily\bfseries\color{parttitle}}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}{-2.5ex plus -1ex minus -.2ex}%
+  {.8ex plus .2ex}{\normalfont\sffamily\bfseries\color{parttitle}}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}{-2ex plus -1ex minus -.2ex}%
+  {.6ex plus .2ex}{\normalfont\small\sffamily\bfseries\color{parttitle}}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}{1.5ex plus .5ex minus .2ex}{-1em}%
+  {\normalfont\small\sffamily\bfseries\color{parttitle}}}
+\renewcommand\tagform@[1]{\maketag@@@{\textsf{\bfseries\footnotesize (#1)}}}
+\renewcommand*\l@part[2]{\par\addvspace{1.6ex}\noindent{\sffamily\bfseries #1}\hfill
+  {\sffamily\bfseries #2}\par\nobreak}
+\newcommand\tocnumber{1.8em}
+\newcommand\tocline[4]{\par{\rightskip \tocnumber plus 1fil\relax\parfillskip -\rightskip
+  \noindent\hangindent\dimexpr#1+#2\relax\hspace*{#1}%
+  \@tempdima #2{\sffamily\small #3}\nobreak\leaders\hbox{$\m@th\mkern 4.5mu\hbox{.}%
+  \mkern 4.5mu$}\hfill\nobreak\hbox to \tocnumber{\hfil\sffamily\small #4}\par}}
+\renewcommand*\l@section[2]{\tocline{0em}{2.2em}{#1}{#2}}
+\renewcommand*\l@subsection[2]{\tocline{2.2em}{2.6em}{#1}{#2}}
+\newcommand\contentspage{{\setlength{\columnsep}{24pt}\begin{multicols}{2}\@starttoc{toc}%
+  \end{multicols}}}
+\newcounter{docpart}\@addtoreset{section}{docpart}
+\renewcommand\thesection{\ifnum\value{docpart}>0 \arabic{docpart}.\fi\arabic{section}}
+\renewcommand\theHsection{\arabic{docpart}.\arabic{section}}
+\newcommand\partnumber[1]{#1\enspace}
+\pdfstringdefDisableCommands{\def\partnumber#1{#1 }}
+\newcommand{\partbox}[1]{\par\addvspace{12pt}\refstepcounter{docpart}\phantomsection
+  \addcontentsline{toc}{part}{\protect\partnumber{\thedocpart}#1}%
+  \noindent\colorbox{partshade}{\makebox[%
+  \dimexpr\textwidth-2\fboxsep\relax]{\rule[-6pt]{0pt}{20pt}\Large\sffamily\bfseries%
+  \textcolor{parttitle}{\thedocpart\quad #1}}}\par\nobreak\@nobreaktrue\addvspace{2pt}}
+\newmarks\LTstartmarks\newcount\LTstartcount
+\let\LT@startplain\LT@start
+\def\LT@start{\global\advance\LTstartcount\@ne\LT@startplain
+  \marks\LTstartmarks{\the\LTstartcount}}
+\newmarks\LTgroupmarks
+\newcount\LTspacebreak\LTspacebreak=-1
+\newcount\LTrulebreak\LTrulebreak=-2
+\def\grouprule#1#2{\noalign{\marks\LTgroupmarks{\the\belowrulesep}\nobreak\vskip#1%
+  \vskip\aboverulesep}\multispan\LT@cols\unskip{\leaders\hrule\@height#2\hfill\kern\z@}\cr
+  \noalign{\penalty\LTrulebreak\vskip\belowrulesep\global\@lastruleclass\z@}}
+\def\groupspace#1{\noalign{\marks\LTgroupmarks{\the\dimexpr#1\relax}\penalty\LTspacebreak
+  \vskip#1\global\@lastruleclass\z@}}
+\def\LT@unskips{\unskip\unpenalty\unskip\unpenalty\unskip\unpenalty\unskip\unpenalty}
+\def\LT@groupcut{\ifnum\outputpenalty=\LTrulebreak
+  \setbox\@cclv\vbox{\unvbox\@cclv\setbox\z@\lastbox\LT@unskips}\fi}
+\def\LT@groupjoin{\ifnum\outputpenalty=\LTspacebreak\vskip-\botmarks\LTgroupmarks\relax\fi
+  \ifnum\outputpenalty=\LTrulebreak\vskip-\botmarks\LTgroupmarks\relax\fi}
+\let\LT@outputplain\LT@output
+\def\LT@output{\ifnum\outputpenalty<-\@Mi\LT@outputplain\else
+  \edef\LT@marka{\botmarks\LTstartmarks}\edef\LT@markb{\the\LTstartcount}%
+  \ifx\LT@marka\LT@markb\LT@groupcut\LT@outputplain\LT@groupjoin
+  \else\setbox\LT@head\box\voidb@x\LT@outputplain\fi\fi}
+\makeatother
+\newcommand{\needspace}[1]{\par\penalty-100\begingroup\dimen0=#1\relax\dimen2=\pagegoal
+  \advance\dimen2-\pagetotal\ifdim\dimen0>\dimen2\relax\ifdim\dimen2>0pt\vfil\break\fi\fi
+  \endgroup}
+\numberwithin{equation}{section}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace #1}}
+\renewcommand{\subsectionmark}[1]{}
+\fancyhead[R]{\small\textsc{\rightmark}\quad\thepage}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small\thepage}}
+\definecolor{atlasI}{HTML}{991A1A}\definecolor{atlasIl}{HTML}{EC6B60}
+\definecolor{atlasII}{HTML}{295A2C}\definecolor{atlasIIl}{HTML}{6C9F6D}
+\definecolor{atlasIII}{HTML}{7A1466}\definecolor{atlasIIIl}{HTML}{D66EBC}
+\definecolor{atlasIV}{HTML}{9B690B}\definecolor{atlasIVl}{HTML}{F2A618}
+\makeatletter
+\newcommand\atlas@full{%
+\fill[atlasIII] (0.0394,0.0163) -- (0.3978,0.0163) arc[start angle=0.668, end angle=13.836, radius=1.3979] -- cycle;
+\fill[atlasI] (-0.0163,0.0394) -- (-0.0163,0.3978) arc[start angle=90.668, end angle=103.836, radius=1.3979] -- cycle;
+\fill[atlasIV] (-0.0394,-0.0163) -- (-0.3978,-0.0163) arc[start angle=-179.332, end angle=-166.164, radius=1.3979] -- cycle;
+\fill[atlasII] (0.0163,-0.0394) -- (0.0163,-0.3978) arc[start angle=-89.332, end angle=-76.164, radius=1.3979] -- cycle;
+\fill[atlasIIIl] (0.0163,0.0394) -- (0.3343,0.3573) arc[start angle=76.164, end angle=89.332, radius=1.3979] -- cycle;
+\fill[atlasIl] (-0.0394,0.0163) -- (-0.3573,0.3343) arc[start angle=166.164, end angle=179.332, radius=1.3979] -- cycle;
+\fill[atlasIVl] (-0.0163,-0.0394) -- (-0.3343,-0.3573) arc[start angle=-103.836, end angle=-90.668, radius=1.3979] -- cycle;
+\fill[atlasIIl] (0.0394,-0.0163) -- (0.3573,-0.3343) arc[start angle=-13.836, end angle=-0.668, radius=1.3979] -- cycle;
+\fill[atlasIIIl] (0.4304,0.0163) -- (0.9598,0.0163) arc[start angle=46.637, end angle=73.849, radius=1.3979] arc[start angle=13.862, end angle=0.653, radius=1.4305] -- cycle;
+\fill[atlasIl] (-0.0163,0.4304) -- (-0.0163,0.9598) arc[start angle=136.637, end angle=163.849, radius=1.3979] arc[start angle=103.862, end angle=90.653, radius=1.4305] -- cycle;
+\fill[atlasIVl] (-0.4304,-0.0163) -- (-0.9598,-0.0163) arc[start angle=-133.363, end angle=-106.151, radius=1.3979] arc[start angle=-166.138, end angle=-179.347, radius=1.4305] -- cycle;
+\fill[atlasIIl] (0.0163,-0.4304) -- (0.0163,-0.9598) arc[start angle=-43.363, end angle=-16.151, radius=1.3979] arc[start angle=-76.138, end angle=-89.347, radius=1.4305] -- cycle;
+\fill[atlasIII] (0.0163,0.4304) arc[start angle=89.347, end angle=76.138, radius=1.4305] arc[start angle=16.151, end angle=43.363, radius=1.3979] -- cycle;
+\fill[atlasI] (-0.4304,0.0163) arc[start angle=179.347, end angle=166.138, radius=1.4305] arc[start angle=106.151, end angle=133.363, radius=1.3979] -- cycle;
+\fill[atlasIV] (-0.0163,-0.4304) arc[start angle=-90.653, end angle=-103.862, radius=1.4305] arc[start angle=-163.849, end angle=-136.637, radius=1.3979] -- cycle;
+\fill[atlasII] (0.4304,-0.0163) arc[start angle=-0.653, end angle=-13.862, radius=1.4305] arc[start angle=-73.849, end angle=-46.637, radius=1.3979] -- cycle;
+\fill[atlasIII] (0.9997,0.0232) arc[start angle=1.329, end angle=44.066, radius=1] -- (0.3973,0.3742) arc[start angle=73.875, end angle=45.664, radius=1.4305] -- cycle;
+\fill[atlasI] (-0.0232,0.9997) arc[start angle=91.329, end angle=134.066, radius=1] -- (-0.3742,0.3973) arc[start angle=163.875, end angle=135.664, radius=1.4305] -- cycle;
+\fill[atlasIV] (-0.9997,-0.0232) arc[start angle=-178.671, end angle=-135.934, radius=1] -- (-0.3973,-0.3742) arc[start angle=-106.125, end angle=-134.336, radius=1.4305] -- cycle;
+\fill[atlasII] (0.0232,-0.9997) arc[start angle=-88.671, end angle=-45.934, radius=1] -- (0.3742,-0.3973) arc[start angle=-16.125, end angle=-44.336, radius=1.4305] -- cycle;
+\fill[atlasIIIl] (0.0232,0.9997) arc[start angle=44.336, end angle=16.125, radius=1.4305] -- (0.6955,0.7185) arc[start angle=45.934, end angle=88.671, radius=1] -- cycle;
+\fill[atlasIl] (-0.9997,0.0232) arc[start angle=134.336, end angle=106.125, radius=1.4305] -- (-0.7185,0.6955) arc[start angle=135.934, end angle=178.671, radius=1] -- cycle;
+\fill[atlasIVl] (-0.0232,-0.9997) arc[start angle=-135.664, end angle=-163.875, radius=1.4305] -- (-0.6955,-0.7185) arc[start angle=-134.066, end angle=-91.329, radius=1] -- cycle;
+\fill[atlasIIl] (0.9997,-0.0232) arc[start angle=-45.664, end angle=-73.875, radius=1.4305] -- (0.7185,-0.6955) arc[start angle=-44.066, end angle=-1.329, radius=1] -- cycle;
+}
+\newcommand\atlas@draw[2]{\begin{tikzpicture}[x=\dimexpr(#1)/2\relax,y=\dimexpr(#1)/2\relax]
+\useasboundingbox (-1,-1) rectangle (1,1);#2\end{tikzpicture}}
+\newcommand\atlas@volume[1]{{%
+\colorlet{atlasI}{parttitle}\colorlet{atlasIl}{parttitlelight}%
+\colorlet{atlasII}{parttitle}\colorlet{atlasIIl}{parttitlelight}%
+\colorlet{atlasIII}{parttitle}\colorlet{atlasIIIl}{parttitlelight}%
+\colorlet{atlasIV}{parttitle}\colorlet{atlasIVl}{parttitlelight}%
+#1}}
+\newcommand\atlasmark[1]{\atlas@draw{#1}{\atlas@full}}
+\newcommand\volumemark[1]{\atlas@volume{\atlasmark{#1}}}
+\makeatother
+\fancypagestyle{opening}{\fancyhf{}\fancyfoot[C]{\small\thepage}%
+  \fancyhead[L]{\smash{\raisebox{-9.5mm}{\volumemark{12mm}}}}}
+\hypersetup{pdftitle={SU2: Point Group Atlas, volume II: double point groups}, pdfauthor={Victor V. Albert}, pdfsubject={Point Group Atlas double record SU2, schema point-group-atlas/double/group-continuous/1}}
+\fancyhead[L]{\small $\grp{SU(2)}$}
+\DeclareMathAlphabet{\mathelt}{OT1}{cmss}{m}{sl}
+\DeclareSymbolFont{eltgreek}{OML}{cmssm}{m}{it}
+\DeclareMathSymbol{\eltsigma}{\mathord}{eltgreek}{"1B}
+\DeclareSymbolFont{eltletters}{OT1}{cmss}{m}{sl}
+\DeclareMathSymbol{g}{\mathalpha}{eltletters}{`g}
+\DeclareMathSymbol{h}{\mathalpha}{eltletters}{`h}
+\DeclareMathSymbol{Q}{\mathalpha}{eltletters}{`Q}
+\DeclareMathSymbol{R}{\mathalpha}{eltletters}{`R}
+\DeclareMathSymbol{\xi}{\mathord}{eltgreek}{"18}
+\newcommand{\eltfont}[1]{{\let\sigma\eltsigma\mathelt{#1}}}
+\newcommand{\grp}[1]{\mathsf{#1}}
+\newcommand{\irr}[1]{\text{\normalfont\scshape #1}}
+\newcommand{\conjpair}[1]{{}^{#1}}
+\newcommand{\detbox}[1]{{\setlength{\fboxsep}{1pt}\fbox{#1}}}
+\newcommand{\cls}[1]{\eltfont{#1}}
+\newcommand{\comp}[1]{\eltfont{#1}}
+\newcommand{\elt}[1]{\eltfont{#1}}
+\newcommand{\hmname}[1]{#1}
+\newcommand{\conwayname}[1]{#1}
+\newcommand{\ptag}[1]{\mathrm{#1}}
+\newcommand{\orbital}[1]{\mathrm{#1}}
+\newcommand{\dirprod}{\times}
+\newcommand{\sdprod}{\rtimes}
+\newcommand{\samecls}{\cong}
+\newcommand{\nconj}[1]{{\scriptsize$\times#1$}}
+\newcommand{\clsletter}[1]{\,{\scriptsize\color{black!55}#1}}
+\newcommand{\Cyc}[1]{\grp{Z_{#1}}}
+\newcommand{\Sym}[1]{\grp{Sym_{#1}}}
+\newcommand{\dirvec}[3]{(#1, #2, #3)}
+\newcommand{\grpindex}[2]{[#1 : #2]}
+\newcommand{\iverson}[1]{[#1]}
+\newcommand{\restr}[2]{#1\!\downarrow#2}
+\newcommand{\Ind}[2]{\operatorname{Ind}_{#1}^{#2}}
+\newcommand{\genidx}[2]{#1^{[\mathrm{#2}]}}
+\newcommand{\pointr}{\mathbf{r}}
+\newcommand{\unitaxis}{\hat{\mathbf{v}}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\iunit}{\mathrm{i}}
+\newcommand{\expe}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\goldenratio}{\varphi}
+\newcommand{\rootunity}[1]{\zeta_{#1}}
+\newcommand{\irrJ}[1]{D^{(#1)}}
+\newcommand{\irrJp}[2]{D^{(#1,#2)}}
+\newcommand{\repD}[1]{D^{#1}}
+\newcommand{\wignerD}[1]{D^{#1}}
+\newcommand{\wignerd}[1]{d^{#1}}
+\newcommand{\irchar}[1]{\chi_{#1}}
+\newcommand{\chiA}{\chi_{\grp{A}}}
+\newcommand{\fsind}{\nu_{\mathrm{FS}}}
+\newcommand{\conj}[1]{{#1}^{*}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\irrprod}{\otimes}
+\newcommand{\mult}{\kappa}
+\newcommand{\intx}{\mu}
+\newcommand{\cgnorm}{\mathcal{N}}
+\newcommand{\jm}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
+\newcommand{\cgket}[3]{\bigl\lvert{}^{#1}_{\,#2};#3\bigr\rangle}
+\newcommand{\irket}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
+\newcommand{\prodket}[2]{\lvert {#1}\,{#2}\rangle}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\cgc}[6]{\bigl\langle{}^{#1}_{\,#2}\,{}^{#3}_{\,#4}\bigm\vert{}^{#5}_{\,#6}\bigr\rangle}
+\newcommand{\cgck}[7]{\bigl\langle{}^{#1}_{\,#2}\,{}^{#3}_{\,#4}\bigm\vert{}^{#5}_{\,#6};#7\bigr\rangle}
+\newcommand{\cgcone}[3]{\langle #1\,#2\mid #3\rangle}
+\newcommand{\irrangle}{\text{--}}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\fcell}{\mathcal{D}}
+\newcommand{\fdomain}{\mathcal{F}}
+\newcommand{\lensspace}[2]{\mathsf{L}(#1, #2)}
+\newcommand{\twosphere}{\mathsf{S}^{2}}
+\newcommand{\projplane}{\mathbb{R}\mathsf{P}^{2}}
+\newcommand{\term}[2]{{}^{#1}#2}
+\newcommand{\barred}[1]{\bar{#1}}
+\newcommand{\Quat}[1]{\grp{Q_{#1}}}
+\newcommand{\SL}[1]{\grp{SL}(2,#1)}
+\newcommand{\secondclass}{\mathrm{b}}
+\newcommand{\dmark}{{}^{d}}
+\newcommand{\lift}[1]{\tilde{#1}}
+\newcommand{\pauli}[1]{\sigma_{#1}}
+\newcommand{\paulivec}{\vec{\sigma}}
+\newcommand{\hairsp}{\mkern1mu}
+\newenvironment{romanlist}{\begin{enumerate}%
+\renewcommand{\labelenumi}{(\roman{enumi})}}%
+  {\end{enumerate}}
+\makeatletter
+\newenvironment{irmatrix}[1]{\null\,\vcenter\bgroup\Let@\restore@math@cr\default@tag
+  \baselineskip8\ex@ \lineskip3\ex@ \lineskiplimit\lineskip
+  \ialign\bgroup\hfil$\m@th\scriptstyle##$\hfil&&\hskip#1\hfil$\m@th\scriptstyle##$\hfil\crcr}%
+  {\crcr\egroup\egroup\,}
+\makeatother
+\newlength{\fillwidth}\newlength{\cellwidth}\newlength{\colwidth}
+\newcommand{\cellmax}[1]{\settowidth{\cellwidth}{#1}%
+  \ifdim\cellwidth>\colwidth\setlength{\colwidth}{\cellwidth}\fi}
+\newcommand{\fillcap}{\ifdim\colwidth<\fillwidth\setlength{\fillwidth}{\colwidth}\fi}
+\newcommand{\signbreak}{\penalty100\relax}
+\begin{document}
+\thispagestyle{opening}
+\begin{center}
+{\LARGE\sffamily\bfseries\color{parttitle}The $\grp{SU(2)}$ subgroup of $\grp{Pin^{-}(3)}$}
+\end{center}
+\contentspage
+\needspace{194pt}
+\partbox{The group}
+\section{Names and structure}\label{s:identification}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.0.1}{0.1}, \href{../../../rotation/CONVENTIONS.pdf\#conv.2}{2}, \href{../../CONVENTIONS.pdf\#conv.20}{20} and \href{../../CONVENTIONS.pdf\#conv.29}{29}.
+{\small\begin{longtable}{@{}ll@{}}\toprule
+\texttt{symbol} & \href{SU2.pdf}{$\grp{SU(2)}$}\\
+\texttt{cover\symbol{95}of} & \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}\\
+\grouprule{0pt}{\lightrulewidth}
+\texttt{abstract\symbol{95}type} & $\grp{SU(2)}$\\
+\grouprule{0pt}{\lightrulewidth}
+\texttt{su2\symbol{95}subgroup} & \href{SU2.pdf}{$\grp{SU(2)}$}, index 1\\
+\texttt{normalizer} & \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$}, index 2\\
+\texttt{centralizer} & \href{2S2.pdf}{$\grp{2C_{i}}$}\\
+\texttt{product\symbol{95}form} & indecomposable (no form with both factors non-trivial)\\
+\texttt{center} & \href{2C1.pdf}{$\grp{2C_{1}}$}, order 2\\
+\texttt{commutator\symbol{95}subgroup} & \href{SU2.pdf}{$\grp{SU(2)}$}, index 1\\
+\grouprule{0pt}{\lightrulewidth}
+\texttt{alternative\symbol{95}names} & \href{SU2.pdf}{$\grp{2K}$}, $\grp{Spin(3)}$\\
+\texttt{hermann\symbol{95}mauguin} & $\dmark\hmname{\infty \infty }$\\
+\bottomrule\end{longtable}}
+\leavevmode\label{n:group.preimage}$\grp{SU(2)}$ is the preimage in $\grp{Pin^{-}(3)}$ of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}, whose document holds the fields of $\grp{SO(3)}$ that this table does not repeat (\texttt{cover\symbol{95}of}): its type, names and geometry; in this table, \texttt{su2\symbol{95}subgroup} is $\grp{SU(2)} \cap \grp{SU(2)}$; \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{Pin^{-}(3)}$. The group is continuous: its order and its GAP identifier are not defined.
+\needspace{103pt}
+\section{Fundamental domain}\label{s:fundamental_domain}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.17}{17} and \href{../../CONVENTIONS.pdf\#conv.21.3}{21.3}.
+\leavevmode\label{n:operator.cosets}An object with symmetry $\grp{SU(2)}$ placed by $\lift{Q} \in \grp{Pin^{-}(3)}$ is the same when placed by $g\lift{Q}$ with $g \in \grp{SU(2)}$: its orientations are the cosets $\grp{SU(2)}\lift{Q} = \{g\lift{Q} : g \in \grp{SU(2)}\}$, the points of the space $\grp{SU(2)}\backslash\grp{Pin^{-}(3)}$. \label{n:operator.volume}Volumes are those of the metric that the covering map carries to that of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.17}{17}), so that $\vol\grp{SU(2)} = 16\pi^2$ and $\vol\grp{Pin^{-}(3)} = 32\pi^2$, twice those of $\grp{SO(3)}$ and $\grp{O(3)}$.
+\leavevmode\label{n:set.cell}\label{n:set.fundamental}As $\grp{SU(2)}$ holds $\elt{\barred{E}}$, a coset $\grp{SU(2)}\lift{Q}$ holds both lifts of every element of a coset of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$} in $\grp{O(3)}$, and $\grp{SU(2)}\backslash\grp{Pin^{-}(3)}$ is $\grp{SO(3)}\backslash\grp{O(3)}$, two points: the cell $\fcell$, each of its rotations by its canonical lift (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.21.1}{21.1}), and the fundamental domain $\fdomain$ are those of the document of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}, in its section Fundamental domain; $\grp{SU(2)}$ covers \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$} twice. Hence
+\begin{equation}\label{e:volume}\vol\fdomain = 2,\qquad \vol\grp{SU(2)}\cdot\vol\fdomain = 16\pi^2\cdot 2 = 32\pi^2 = \vol\grp{Pin^{-}(3)}.\end{equation}
+\needspace{220pt}
+\partbox{Class space and representations}
+\section{Class space}\label{s:class_space}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.21}{21} and \href{../../CONVENTIONS.pdf\#conv.29.1}{29.1}.
+\leavevmode\label{n:angle.omega}\label{n:head.component}\label{n:head.coset}\label{n:head.element}A row is a component of the class space of $\grp{SU(2)}$, an arc of classes; coset tells whether its elements cover proper or improper elements of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}, element gives the element of $\grp{Pin^{-}(3)}$ at its angle: the lift $\lift{R}_z(\omega) = \cos\tfrac{\omega}{2} - \iunit\sin\tfrac{\omega}{2}\,\pauli{z}$, $0 \le \omega < 4\pi$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.29.1}{29.1}).
+\begin{center}\begin{tabular}{@{}lll@{}}\toprule
+component & coset & element\\\midrule
+$\comp{\lift{C}(\omega)}$ & proper & $\elt{\lift{C}}(\omega)$\\
+\bottomrule\end{tabular}\end{center}
+On an arc, $\elt{\lift{R}_z}(\omega)$ is conjugate to $\elt{\lift{R}_z}(4\pi - \omega)$, so the classes run over $0 \le \omega \le 2\pi$, from $\cls{E}$ through the half turns to $\cls{\barred{E}}$.
+The distinguished points are $\cls{E}$ at $\omega = 0$, $\cls{C_2}$ at $\omega = \pi$, $\cls{\barred{E}}$ at $\omega = 2\pi$.
+\leavevmode\label{n:local.haar.h}The Haar measure, of total mass 1: $\diff h = (1 - \cos\omega)\,\diff\omega/(2\pi)$ on $\comp{\lift{C}(\omega)}$, of mass $1$.
+The vector irreps of $\grp{SU(2)}$ are the families of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}, read on these classes through the covering map: a point $\omega$ of an arc covers the rotation angle $\phi = \omega$ modulo $2\pi$ (\texttt{vector\symbol{95}families}). The spinor families, on which $\elt{\barred{E}}$ is $-1$, follow.
+\needspace{103pt}
+\section{Spinor irreps}\label{s:continuous_irreps}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.7}{7}, \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.23}{23} and \href{../../CONVENTIONS.pdf\#conv.29.2}{29.2}.
+\leavevmode\label{n:head.family.irreps}\label{n:index.dimension}\label{n:index.frobenius}\label{n:head.index.family}\label{n:head.kernel}\label{n:head.image}A row is a family of spinor irreps, one for every half-integer $J = \tfrac{1}{2}, \tfrac{3}{2}, \dots$: its dimension $d$, its Frobenius--Schur indicator $\fsind$, index the range of $J$, kernel the subgroup $\ker\Gamma$ of the elements that the irrep $\Gamma$ of the family maps to the identity, image the group that its matrices form, isomorphic to $\grp{SU(2)}/\ker\Gamma$ (here $\grp{SU(2)}$), and its character on each component, in the angle $\omega$ of the lift.
+{\small\begin{longtable}{@{}lllllll@{}}\toprule
+family & $d$ & $\fsind$ & index & kernel & image & $\comp{\lift{C}(\omega)}$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irrJ{J}$ & $2J+1$ & $-1$ & $J \ge \tfrac{1}{2}$ & \href{C1.pdf}{$\grp{C_{1}}$} & \href{SU2.pdf}{$\grp{SU(2)}$} & $\sum_{m=-J}^{J}\cos(m\omega)$\\
+\bottomrule\end{longtable}}
+The irreps $\irrJ{J}$ at half-integer $J$ are the quaternionic irreps of the spin-$J$ particle.
+The records list the instances up to $J = \tfrac{19}{2}$, with their characters at the distinguished points (\texttt{instances}).
+\needspace{128pt}
+\subsection{The irreps of dimension \texorpdfstring{$2J+1$}{2J+1}}
+\leavevmode\label{n:local.spinor.uv}In the basis $\jm{J}{m}$, $m = J, J-1, \dots, -J$, partner $\intx = J - m + 1$: the states of angular momentum $J$, which the polynomials $u^{J+m}v^{J-m}/\sqrt{(J+m)!\,(J-m)!}$ in the kets $u = \jm{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ and $v = \jm{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ realize, as the spherical harmonics do at integer $J$. An element $U$ acts on them by $\wignerD{J}(U)^{\dagger}$, $U$ its $\grp{SU(2)}$ part, the transpose of its \texttt{matrix} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.21.2}{21.2} and \href{../../CONVENTIONS.pdf\#conv.26.1}{26.1}).
+{\small\begin{longtable}{@{}ll@{}}\toprule
+$g$ & $\irrJ{J}(g)$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\comp{\lift{C}(\omega)}$ & $\diag\bigl(\expe^{\iunit J\omega}, \expe^{\iunit (J-1)\omega}, \dots, \expe^{-\iunit J\omega}\bigr)$\\
+\bottomrule\end{longtable}}
+\needspace{103pt}
+\subsection{Matrices of a general element}\label{s:general}
+\leavevmode\label{n:angle.euler.alpha}\label{n:angle.euler.beta}\label{n:angle.euler.gamma}\label{n:matrix.irrep.entry}With $\alpha$, $\beta$, $\gamma$ the Euler angles of $U = \lift{R}_z(\alpha)\,\lift{R}_y(\beta)\,\lift{R}_z(\gamma)$, the lifts of \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.21.1}{21.1}, multiplied as matrices of $\grp{SU(2)}$, the matrix of $g$ in the basis $\jm{J}{m}$, rows $m'$ and columns $m = J, J-1, \dots, -J$, is
+\begin{equation}\label{e:euler}D_{m',m}(g) = \expe^{\iunit m\alpha}\,\wignerd{J}_{m,m'}(\beta)\,\expe^{\iunit m'\gamma} = (-1)^{m-m'}\,\expe^{\iunit m\alpha}\,\wignerd{J}_{m',m}(\beta)\,\expe^{\iunit m'\gamma},\end{equation}
+\leavevmode\label{n:matrix.wigner}that is, $D(g) = \wignerD{J}(U)^\dagger$ with $\wignerD{J}_{m',m}(U) = \expe^{-\iunit m'\alpha}\,\wignerd{J}_{m',m}(\beta)\,\expe^{-\iunit m\gamma}$ (\texttt{general\symbol{95}element}). \label{n:matrix.wigner.small}\label{n:index.halfangle}\label{n:local.sum.wigner}The Wigner matrix [\href{../../../REFERENCES.pdf\#ref.VMK88}{VMK88}, section 4.3] is
+\begin{equation}\label{e:wigner}\begin{aligned}\wignerd{J}_{m',m}(\beta) &= \sum_\sigma (-1)^{m'-m+\sigma}\,\frac{\sqrt{(J+m')!\,(J-m')!\,(J+m)!\,(J-m)!}}{(J+m-\sigma)!\,\sigma!\,(m'-m+\sigma)!\,(J-m'-\sigma)!}\,c_\beta^{2J+m-m'-2\sigma}s_\beta^{m'-m+2\sigma},\end{aligned}\end{equation}
+$c_\beta = \cos\tfrac{\beta}{2}$, $s_\beta = \sin\tfrac{\beta}{2}$, the sum over the $\sigma$ for which every factorial argument is $\ge 0$. \label{n:index.cayleyklein}\label{n:local.sum.cayleyklein}In the entries of $U = \bigl(\begin{smallmatrix} a & b\\ -\conj{b} & \conj{a}\end{smallmatrix}\bigr)$,
+\begin{equation}\label{e:entries}\begin{aligned}\wignerD{J}_{m',m}(U) &= \sqrt{(J+m')!\,(J-m')!\,(J+m)!\,(J-m)!}\\ &\quad\times\sum_k\frac{a^{k}\,b^{J+m'-k}\,(-\conj{b})^{J+m-k}\,(\conj{a})^{k-m-m'}}{k!\,(J+m'-k)!\,(J+m-k)!\,(k-m-m')!},\end{aligned}\end{equation}
+the sum over the $k$ for which every factorial argument is $\ge 0$. It is the matrix of $U$ on the polynomials of the kets $\jm{J}{m}$ when $U$ sends $u$ to $au - \conj{b}v$ and $v$ to $bu + \conj{a}v$, so that $\wignerD{\nicefrac{1}{2}}(U) = U$. \label{n:vector.unitaxis}\label{n:vector.axis.components}For the lift $U = \lift{R}_{\vv}(\phi)$ by $\phi$ about the unit axis $\unitaxis = (\hat{v}_x, \hat{v}_y, \hat{v}_z)$, $a = \cos\tfrac{\phi}{2} - \iunit\hat{v}_z\sin\tfrac{\phi}{2}$ and $b = -(\hat{v}_y + \iunit\hat{v}_x)\sin\tfrac{\phi}{2}$.
+\par The tables give $\wignerd{J}(\beta)$ for $J = \nicefrac{1}{2}, \nicefrac{3}{2}, \nicefrac{5}{2}$, a row per $m'$ and a column per $m$, as polynomials in $c_\beta$ and $s_\beta$; the record holds $J \le \nicefrac{19}{2}$ (\texttt{wigner\symbol{95}d}).
+\begin{center}\small\begin{tabular}{@{}rll@{}}\toprule
+\multicolumn{3}{@{}c@{}}{$\wignerd{\nicefrac{1}{2}}(\beta)$}\\
+$m'$ & $m = \nicefrac{1}{2}$ & $m = -\nicefrac{1}{2}$\\\midrule
+$\nicefrac{1}{2}$ & $c_{\beta}$ & $-s_{\beta}$\\
+$-\nicefrac{1}{2}$ & $s_{\beta}$ & $c_{\beta}$\\
+\bottomrule\end{tabular}\end{center}
+\begin{center}\small\begin{tabular}{@{}rllll@{}}\toprule
+\multicolumn{5}{@{}c@{}}{$\wignerd{\nicefrac{3}{2}}(\beta)$}\\
+$m'$ & $m = \nicefrac{3}{2}$ & $m = \nicefrac{1}{2}$ & $m = -\nicefrac{1}{2}$ & $m = -\nicefrac{3}{2}$\\\midrule
+$\nicefrac{3}{2}$ & $c_{\beta}^{3}$ & $-\sqrt{3}\,c_{\beta}^{2}s_{\beta}$ & $\sqrt{3}\,c_{\beta}s_{\beta}^{2}$ & $-s_{\beta}^{3}$\\
+$\nicefrac{1}{2}$ & $\sqrt{3}\,c_{\beta}^{2}s_{\beta}$ & $c_{\beta}^{3} - 2c_{\beta}s_{\beta}^{2}$ & $-2c_{\beta}^{2}s_{\beta} + s_{\beta}^{3}$ & $\sqrt{3}\,c_{\beta}s_{\beta}^{2}$\\
+$-\nicefrac{1}{2}$ & $\sqrt{3}\,c_{\beta}s_{\beta}^{2}$ & $2c_{\beta}^{2}s_{\beta} - s_{\beta}^{3}$ & $c_{\beta}^{3} - 2c_{\beta}s_{\beta}^{2}$ & $-\sqrt{3}\,c_{\beta}^{2}s_{\beta}$\\
+$-\nicefrac{3}{2}$ & $s_{\beta}^{3}$ & $\sqrt{3}\,c_{\beta}s_{\beta}^{2}$ & $\sqrt{3}\,c_{\beta}^{2}s_{\beta}$ & $c_{\beta}^{3}$\\
+\bottomrule\end{tabular}\end{center}
+\begin{center}\small\begin{tabular}{@{}rlll@{}}\toprule
+\multicolumn{4}{@{}c@{}}{$\wignerd{\nicefrac{5}{2}}(\beta)$}\\
+$m'$ & $m = \nicefrac{5}{2}$ & $m = \nicefrac{3}{2}$ & $m = \nicefrac{1}{2}$\\\midrule
+$\nicefrac{5}{2}$ & $c_{\beta}^{5}$ & $-\sqrt{5}\,c_{\beta}^{4}s_{\beta}$ & $\sqrt{10}\,c_{\beta}^{3}s_{\beta}^{2}$\\
+$\nicefrac{3}{2}$ & $\sqrt{5}\,c_{\beta}^{4}s_{\beta}$ & $c_{\beta}^{5} - 4c_{\beta}^{3}s_{\beta}^{2}$ & $-2\sqrt{2}\,c_{\beta}^{4}s_{\beta} + 3\sqrt{2}\,c_{\beta}^{2}s_{\beta}^{3}$\\
+$\nicefrac{1}{2}$ & $\sqrt{10}\,c_{\beta}^{3}s_{\beta}^{2}$ & $2\sqrt{2}\,c_{\beta}^{4}s_{\beta} - 3\sqrt{2}\,c_{\beta}^{2}s_{\beta}^{3}$ & $c_{\beta}^{5} - 6c_{\beta}^{3}s_{\beta}^{2} + 3c_{\beta}s_{\beta}^{4}$\\
+$-\nicefrac{1}{2}$ & $\sqrt{10}\,c_{\beta}^{2}s_{\beta}^{3}$ & $3\sqrt{2}\,c_{\beta}^{3}s_{\beta}^{2} - 2\sqrt{2}\,c_{\beta}s_{\beta}^{4}$ & $3c_{\beta}^{4}s_{\beta} - 6c_{\beta}^{2}s_{\beta}^{3} + s_{\beta}^{5}$\\
+$-\nicefrac{3}{2}$ & $\sqrt{5}\,c_{\beta}s_{\beta}^{4}$ & $4c_{\beta}^{2}s_{\beta}^{3} - s_{\beta}^{5}$ & $3\sqrt{2}\,c_{\beta}^{3}s_{\beta}^{2} - 2\sqrt{2}\,c_{\beta}s_{\beta}^{4}$\\
+$-\nicefrac{5}{2}$ & $s_{\beta}^{5}$ & $\sqrt{5}\,c_{\beta}s_{\beta}^{4}$ & $\sqrt{10}\,c_{\beta}^{2}s_{\beta}^{3}$\\
+\bottomrule\end{tabular}\end{center}
+\begin{center}\small\begin{tabular}{@{}rlll@{}}\toprule
+\multicolumn{4}{@{}c@{}}{$\wignerd{\nicefrac{5}{2}}(\beta)$}\\
+$m'$ & $m = -\nicefrac{1}{2}$ & $m = -\nicefrac{3}{2}$ & $m = -\nicefrac{5}{2}$\\\midrule
+$\nicefrac{5}{2}$ & $-\sqrt{10}\,c_{\beta}^{2}s_{\beta}^{3}$ & $\sqrt{5}\,c_{\beta}s_{\beta}^{4}$ & $-s_{\beta}^{5}$\\
+$\nicefrac{3}{2}$ & $3\sqrt{2}\,c_{\beta}^{3}s_{\beta}^{2} - 2\sqrt{2}\,c_{\beta}s_{\beta}^{4}$ & $-4c_{\beta}^{2}s_{\beta}^{3} + s_{\beta}^{5}$ & $\sqrt{5}\,c_{\beta}s_{\beta}^{4}$\\
+$\nicefrac{1}{2}$ & $-3c_{\beta}^{4}s_{\beta} + 6c_{\beta}^{2}s_{\beta}^{3} - s_{\beta}^{5}$ & $3\sqrt{2}\,c_{\beta}^{3}s_{\beta}^{2} - 2\sqrt{2}\,c_{\beta}s_{\beta}^{4}$ & $-\sqrt{10}\,c_{\beta}^{2}s_{\beta}^{3}$\\
+$-\nicefrac{1}{2}$ & $c_{\beta}^{5} - 6c_{\beta}^{3}s_{\beta}^{2} + 3c_{\beta}s_{\beta}^{4}$ & $-2\sqrt{2}\,c_{\beta}^{4}s_{\beta} + 3\sqrt{2}\,c_{\beta}^{2}s_{\beta}^{3}$ & $\sqrt{10}\,c_{\beta}^{3}s_{\beta}^{2}$\\
+$-\nicefrac{3}{2}$ & $2\sqrt{2}\,c_{\beta}^{4}s_{\beta} - 3\sqrt{2}\,c_{\beta}^{2}s_{\beta}^{3}$ & $c_{\beta}^{5} - 4c_{\beta}^{3}s_{\beta}^{2}$ & $-\sqrt{5}\,c_{\beta}^{4}s_{\beta}$\\
+$-\nicefrac{5}{2}$ & $\sqrt{10}\,c_{\beta}^{3}s_{\beta}^{2}$ & $\sqrt{5}\,c_{\beta}^{4}s_{\beta}$ & $c_{\beta}^{5}$\\
+\bottomrule\end{tabular}\end{center}
+\needspace{103pt}
+\section{Direct products of irreps}\label{s:fusion}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.2}{10.2} and \href{../../CONVENTIONS.pdf\#conv.29.3}{29.3}.
+\leavevmode\label{n:index.J12}The record has a rule for every pair of families with a spinor factor (\texttt{rules}), and they are one rule, $J_1$ and $J_2$ the indices of the factors, an integer for a vector family and a half-integer for a spinor family; then the square of a spinor irrep, with the antisymmetric part in braces (\texttt{squares}). The products of two vector families are those of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$} (\texttt{vector\symbol{95}rules}).
+\begin{align}\irrJ{J_1}\irrprod \irrJ{J_2} &= \bigoplus_{J=\lvert J_1-J_2\rvert}^{J_1+J_2} \irrJ{J},\\\irrJ{J}\irrprod \irrJ{J} &= \bigoplus_{K=1,3,\dots,2J} \irrJ{K}\oplus\Bigl\{\bigoplus_{K=0,2,\dots,2J-1} \irrJ{K}\Bigr\}.\end{align}
+\needspace{103pt}
+\section{Clebsch--Gordan coefficients}\label{s:clebsch_gordan}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.3}{10.3} and \href{../../CONVENTIONS.pdf\#conv.29.3}{29.3}.
+\leavevmode\label{n:function.cg}\label{n:index.m12}\label{n:index.projection.M}\label{n:matrix.cg.stored}\label{n:index.cg}\label{n:local.sum.racah}The coupling rules:
+\begin{romanlist}\raggedright
+\item Every irrep in the product of two irreps (section~\ref{s:fusion}) occurs once: $\grp{SU(2)}$ is simply reducible.
+\item $\cgc{J_1}{m_1}{J_2}{m_2}{J}{M}$ in the Condon--Shortley convention [\href{../../../REFERENCES.pdf\#ref.VMK88}{VMK88}, section 8.1.1]: real, zero unless $M = m_1 + m_2$, and $\cgc{J_1}{J_1}{J_2}{J-J_1}{J}{J} > 0$.
+\item $C[(\intx_1,\intx_2),\intx] = \cgc{J_1}{m_1}{J_2}{m_2}{J}{M}$ with $\intx_1 = J_1 - m_1 + 1$, $\intx_2 = J_2 - m_2 + 1$, $\intx = J - M + 1$ ($m$ descending), on the kets $\jm{J}{m}$ of $\irrJp{J}{+1}$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.26.1}{26.1}).
+\item The closed form of van der Waerden and Racah [\href{../../../REFERENCES.pdf\#ref.VMK88}{VMK88}, section 8.2.1, eq.~3], at integer and half-integer $J$, the sum over the $z$ for which every factorial argument is $\ge 0$: \begin{equation}\begin{aligned}&\cgc{J_1}{m_1}{J_2}{m_2}{J}{M} = \delta_{M,m_1+m_2}\sqrt{\frac{(2J+1)\,(J_1+J_2-J)!\,(J_1-J_2+J)!\,(-J_1+J_2+J)!}{(J_1+J_2+J+1)!}}\\ &\qquad\times\sqrt{(J_1+m_1)!\,(J_1-m_1)!\,(J_2+m_2)!\,(J_2-m_2)!\,(J+M)!\,(J-M)!}\\ &\qquad\times\sum_z\frac{(-1)^z}{z!\,(J_1+J_2-J-z)!\,(J_1-m_1-z)!\,(J_2+m_2-z)!\,(J-J_2+m_1+z)!\,(J-J_1-m_2+z)!}.\end{aligned}\end{equation}
+\item Symmetries [\href{../../../REFERENCES.pdf\#ref.VMK88}{VMK88}, section 8.4]: $\cgc{J_1}{m_1}{J_2}{m_2}{J}{M} = (-1)^{J_1+J_2-J}\cgc{J_2}{m_2}{J_1}{m_1}{J}{M} = (-1)^{J_1+J_2-J}\cgc{J_1}{{-m_1}}{J_2}{{-m_2}}{J}{{-M}}$.
+\item The products with $J_1 \le J_2 \le 10$ and $J_1$ or $J_2$ half-integer are in one file per $2J_1$, \texttt{data/clebsch\symbol{95}gordan/SU2/<NN>.json} with \texttt{NN} $= 2J_1$ in two digits, 00 to 19 (\texttt{files}); those of two integer $J$ are those of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$} (\texttt{vector\symbol{95}products}).
+\end{romanlist}
+\leavevmode\label{n:vector.ket.product}\label{n:index.normalisation}For $J_1 \le J_2 \le \nicefrac{5}{2}$ with $J_1$ or $J_2$ half-integer (the files hold $J_1 \le J_2 \le 10$) the table gives, for every block ${\irrJ{J_1}\irrprod\irrJ{J_2}\to\irrJ{J}}$, the coupled kets
+\begin{equation}\label{e:cg}\jm{J}{M} = \sum_{m_1+m_2=M}\cgc{J_1}{m_1}{J_2}{m_2}{J}{M}\;\jm{J_1}{m_1}\jm{J_2}{m_2},\end{equation}
+row $M$ listing the nonzero terms, each coefficient written as the root of a fraction ($-\sqrt{\tfrac{3}{14}}$), with $\prodket{m_1}{m_2}$ for $\jm{J_1}{m_1}\jm{J_2}{m_2}$. The files hold the same coefficients at $\intx_1 = J_1 - m_1 + 1$, $\intx_2 = J_2 - m_2 + 1$, $\intx = J - M + 1$, with $\cgnorm = 1$.
+{\small\setlength{\tabcolsep}{3pt}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-8pt}\setlength{\colwidth}{0pt}\cellmax{$-\nicefrac{1}{2}$}\cellmax{$-\nicefrac{3}{2}$}\cellmax{$-\nicefrac{5}{2}$}\cellmax{$-\nicefrac{7}{2}$}\cellmax{$-\nicefrac{9}{2}$}\cellmax{$\nicefrac{1}{2}$}\cellmax{$\nicefrac{3}{2}$}\cellmax{$\nicefrac{5}{2}$}\cellmax{$\nicefrac{7}{2}$}\cellmax{$\nicefrac{9}{2}$}\cellmax{$-1$}\cellmax{$-2$}\cellmax{$-3$}\cellmax{$-4$}\cellmax{$-5$}\cellmax{$0$}\cellmax{$1$}\cellmax{$2$}\cellmax{$3$}\cellmax{$4$}\cellmax{$5$}\cellmax{$M$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\sqrt{\tfrac{1}{252}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{25}{252}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{25}{63}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{25}{63}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{25}{252}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{252}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{5}{36}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{49}{180}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{4}{45}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{4}{45}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{49}{180}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{36}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{25}{84}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{1}{84}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{4}{21}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{4}{21}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{84}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{25}{84}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{9}{70}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{70}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{70}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{9}{70}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{28}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{9}{28}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{9}{28}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{28}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{6}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{1}{6}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{6}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{6}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{6}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{6}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{42}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{21}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{21}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{42}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{3}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{1}{30}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{4}{15}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{30}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{3}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{42}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{21}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{21}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{42}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{8}{35}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{9}{35}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{8}{35}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{3}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{30}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{4}{15}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{30}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{3}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{8}{35}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{9}{35}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{8}{35}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{4}{63}}\,\prodket{2}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{121}{315}}\,\prodket{1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{4}{105}}\,\prodket{0}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{14}{45}}\,\prodket{-1}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{64}{315}}\,\prodket{-2}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{126}}\,\prodket{2}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{10}{63}}\,\prodket{1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{0}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{20}{63}}\,\prodket{-1}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{126}}\,\prodket{-2}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{64}{315}}\,\prodket{2}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{14}{45}}\,\prodket{1}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{4}{105}}\,\prodket{0}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{121}{315}}\,\prodket{-1}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{4}{63}}\,\prodket{-2}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{8}{21}}\,\prodket{2}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{2}{105}}\,\prodket{1}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{35}}\,\prodket{0}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{21}}\,\prodket{-1}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{32}{105}}\,\prodket{-2}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{32}{105}}\,\prodket{2}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{21}}\,\prodket{1}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{2}{35}}\,\prodket{0}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{2}{105}}\,\prodket{-1}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{8}{21}}\,\prodket{-2}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{5}{126}}\,\prodket{2}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{20}{63}}\,\prodket{1}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{0}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{10}{63}}\,\prodket{-1}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{126}}\,\prodket{-2}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{12}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{12}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{12}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{12}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{5}{12}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{1}{12}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{12}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{12}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{5}{28}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{9}{28}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{9}{28}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{5}{28}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{9}{28}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{28}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{28}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{9}{28}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{3}}\,\prodket{2}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{4}{15}}\,\prodket{1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{0}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{2}{15}}\,\prodket{-1}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{15}}\,\prodket{-2}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{56}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{15}{56}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{15}{28}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{28}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{8}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{49}{120}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{60}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{9}{20}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{1}{42}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{25}{84}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{9}{28}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{15}}\,\prodket{2}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{15}}\,\prodket{1}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{0}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{4}{15}}\,\prodket{-1}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{3}}\,\prodket{-2}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{20}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{9}{20}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{9}{20}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{20}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{3}{10}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{20}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{20}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{9}{20}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{20}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{20}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{9}{20}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{5}{28}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{15}{28}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{15}{56}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{56}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{9}{20}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{60}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{49}{120}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{8}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{9}{28}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{25}{84}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{42}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{12}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{12}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{12}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{12}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{14}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{7}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{7}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{14}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{20}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{3}{20}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{10}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{3}{10}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{10}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{3}{10}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{3}{10}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{3}{7}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{14}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{14}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{7}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{5}{12}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{12}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{12}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{12}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{5}{28}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{9}{28}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{9}{28}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{28}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{9}{28}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{28}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{5}{28}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{9}{28}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{21}}\,\prodket{1}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{0}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{-1}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{42}}\,\prodket{-2}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{35}}\,\prodket{\nicefrac{3}{2}}{-2}$ $+$ $\sqrt{\tfrac{12}{35}}\,\prodket{\nicefrac{1}{2}}{-1}$ $+$ $\sqrt{\tfrac{18}{35}}\,\prodket{-\nicefrac{1}{2}}{0}$ $+$ $\sqrt{\tfrac{4}{35}}\,\prodket{-\nicefrac{3}{2}}{1}$}\cellmax{$\sqrt{\tfrac{2}{7}}\,\prodket{1}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{12}{35}}\,\prodket{0}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{9}{35}}\,\prodket{-1}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{4}{35}}\,\prodket{-2}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{3}{14}}\,\prodket{2}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{6}{35}}\,\prodket{1}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{8}{35}}\,\prodket{0}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{27}{70}}\,\prodket{-2}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{3}{7}}\,\prodket{1}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{1}{70}}\,\prodket{0}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{6}{35}}\,\prodket{-1}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{27}{70}}\,\prodket{-2}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{5}{21}}\,\prodket{1}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{2}{7}}\,\prodket{0}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{21}}\,\prodket{-1}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{8}{21}}\,\prodket{-2}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{6}{35}}\,\prodket{\nicefrac{3}{2}}{-2}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{1}{2}}{-1}$ $-\sqrt{\tfrac{3}{35}}\,\prodket{-\nicefrac{1}{2}}{0}$ $-\sqrt{\tfrac{27}{70}}\,\prodket{-\nicefrac{3}{2}}{1}$}\cellmax{$\tfrac{1}{2}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\tfrac{1}{2}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\tfrac{1}{2}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\tfrac{1}{2}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$}\cellmax{$\tfrac{1}{2}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $-\tfrac{1}{2}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\tfrac{1}{2}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\tfrac{1}{2}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{27}{70}}\,\prodket{2}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{8}{35}}\,\prodket{0}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{6}{35}}\,\prodket{-1}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{14}}\,\prodket{-2}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{27}{70}}\,\prodket{\nicefrac{3}{2}}{-1}$ $+$ $\sqrt{\tfrac{3}{35}}\,\prodket{\nicefrac{1}{2}}{0}$ $-\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{1}{2}}{1}$ $-\sqrt{\tfrac{6}{35}}\,\prodket{-\nicefrac{3}{2}}{2}$}\cellmax{$\sqrt{\tfrac{4}{35}}\,\prodket{\nicefrac{3}{2}}{-1}$ $+$ $\sqrt{\tfrac{18}{35}}\,\prodket{\nicefrac{1}{2}}{0}$ $+$ $\sqrt{\tfrac{12}{35}}\,\prodket{-\nicefrac{1}{2}}{1}$ $+$ $\sqrt{\tfrac{1}{35}}\,\prodket{-\nicefrac{3}{2}}{2}$}\cellmax{$\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{3}{2}}{-2}$ $-\sqrt{\tfrac{3}{10}}\,\prodket{\nicefrac{1}{2}}{-1}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{1}{2}}{0}$ $-\sqrt{\tfrac{1}{10}}\,\prodket{-\nicefrac{3}{2}}{1}$}\cellmax{$\sqrt{\tfrac{5}{42}}\,\prodket{2}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{1}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{0}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{21}}\,\prodket{-1}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{10}}\,\prodket{\nicefrac{3}{2}}{-1}$ $-\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{1}{2}}{0}$ $+$ $\sqrt{\tfrac{3}{10}}\,\prodket{-\nicefrac{1}{2}}{1}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{3}{2}}{2}$}\cellmax{$\sqrt{\tfrac{27}{70}}\,\prodket{2}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{6}{35}}\,\prodket{1}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{70}}\,\prodket{0}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{7}}\,\prodket{-1}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{3}{28}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{15}{28}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{4}{35}}\,\prodket{2}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{9}{35}}\,\prodket{1}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{12}{35}}\,\prodket{0}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{7}}\,\prodket{-1}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{8}{21}}\,\prodket{2}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{2}{21}}\,\prodket{1}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{2}{7}}\,\prodket{0}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{21}}\,\prodket{-1}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{10}{21}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{8}{21}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{5}{12}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{1}{12}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{5}{18}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $-\tfrac{2}{3}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{18}}\,\prodket{-\nicefrac{5}{2}}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{2}{9}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{9}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{2}{9}}\,\prodket{-\nicefrac{5}{2}}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{3}{10}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{10}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{5}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{3}{10}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{10}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{15}{28}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{28}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{12}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{12}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{8}{21}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{10}{21}}\,\prodket{0}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{1}{63}}\,\prodket{-1}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{32}{63}}\,\prodket{-2}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{5}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{16}{35}}\,\prodket{\nicefrac{1}{2}}{-2}$ $+$ $\sqrt{\tfrac{1}{35}}\,\prodket{-\nicefrac{1}{2}}{-1}$ $-\sqrt{\tfrac{18}{35}}\,\prodket{-\nicefrac{3}{2}}{0}$}\cellmax{$\sqrt{\tfrac{1}{21}}\,\prodket{1}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{0}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{-1}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{5}{14}}\,\prodket{0}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{3}{7}}\,\prodket{-1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{14}}\,\prodket{-2}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{5}{18}}\,\prodket{\nicefrac{5}{2}}{\nicefrac{1}{2}}$ $-\tfrac{2}{3}\,\prodket{\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{18}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{16}{35}}\,\prodket{1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{35}}\,\prodket{0}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{18}{35}}\,\prodket{-1}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{6}}\,\prodket{0}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{9}}\,\prodket{-1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{18}}\,\prodket{-2}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{2}{3}}\,\prodket{1}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{4}{15}}\,\prodket{0}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{15}}\,\prodket{-1}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{2}{7}}\,\prodket{1}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{9}{35}}\,\prodket{0}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{16}{35}}\,\prodket{-1}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{2}{9}}\,\prodket{\nicefrac{5}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{9}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{2}{9}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{18}{35}}\,\prodket{1}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{35}}\,\prodket{0}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{16}{35}}\,\prodket{-1}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{10}}\,\prodket{1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{5}}\,\prodket{0}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{10}}\,\prodket{-1}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{2}{5}}\,\prodket{1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{15}}\,\prodket{0}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{8}{15}}\,\prodket{-1}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{10}{21}}\,\prodket{1}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{0}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{21}}\,\prodket{-1}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{18}{35}}\,\prodket{\nicefrac{3}{2}}{0}$ $-\sqrt{\tfrac{1}{35}}\,\prodket{\nicefrac{1}{2}}{1}$ $-\sqrt{\tfrac{16}{35}}\,\prodket{-\nicefrac{1}{2}}{2}$}\cellmax{$\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{1}{2}}{-2}$ $+$ $\sqrt{\tfrac{4}{7}}\,\prodket{-\nicefrac{1}{2}}{-1}$ $+$ $\sqrt{\tfrac{2}{7}}\,\prodket{-\nicefrac{3}{2}}{0}$}\cellmax{$\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{1}{2}}{-2}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{1}{2}}{-1}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{3}{2}}{0}$}\cellmax{$\sqrt{\tfrac{3}{10}}\,\prodket{1}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{5}}\,\prodket{0}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{10}}\,\prodket{-1}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{8}{15}}\,\prodket{1}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{15}}\,\prodket{0}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{-1}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{16}{35}}\,\prodket{1}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{9}{35}}\,\prodket{0}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{7}}\,\prodket{-1}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{15}}\,\prodket{1}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{4}{15}}\,\prodket{0}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{2}{3}}\,\prodket{-1}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{1}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{3}}\,\prodket{0}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{6}}\,\prodket{-1}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{7}}\,\prodket{1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{4}{7}}\,\prodket{0}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{2}{7}}\,\prodket{-1}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{2}{5}}\,\prodket{1}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{0}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{-1}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{3}{2}}{-2}$ $-\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{1}{2}}{0}$ $+$ $\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{3}{2}}{1}$}\cellmax{$\sqrt{\tfrac{32}{63}}\,\prodket{2}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{63}}\,\prodket{1}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{10}{21}}\,\prodket{0}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{5}}\,\prodket{1}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{0}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{2}{5}}\,\prodket{-1}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{6}}\,\prodket{1}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{3}}\,\prodket{0}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{2}}\,\prodket{-1}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{3}{2}}{-1}$ $-\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{1}{2}}{0}$ $+$ $\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{3}{2}}{2}$}\cellmax{$\sqrt{\tfrac{2}{7}}\,\prodket{1}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{4}{7}}\,\prodket{0}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{-1}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{3}{14}}\,\prodket{2}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{3}{7}}\,\prodket{1}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{0}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{3}{2}}{0}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{1}{2}}{1}$ $+$ $\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{1}{2}}{2}$}\cellmax{$\sqrt{\tfrac{2}{7}}\,\prodket{\nicefrac{3}{2}}{0}$ $+$ $\sqrt{\tfrac{4}{7}}\,\prodket{\nicefrac{1}{2}}{1}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{1}{2}}{2}$}\cellmax{$\sqrt{\tfrac{5}{18}}\,\prodket{2}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{9}}\,\prodket{1}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{6}}\,\prodket{0}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{5}{2}}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{5}{2}}{-\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{5}{2}}{-\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{3}{8}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{8}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{5}{8}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{3}{8}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{3}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{2}{3}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{6}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{6}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{2}{3}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{3}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{5}{6}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{1}{6}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{3}{4}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\tfrac{1}{2}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$}\cellmax{$\tfrac{1}{2}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{4}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{1}{3}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{2}{3}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{6}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{6}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{2}{3}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{3}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{5}{6}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{6}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{5}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{5}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{5}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{3}{4}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\tfrac{1}{2}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{3}{7}}\,\prodket{-\nicefrac{1}{2}}{-2}$ $+$ $\sqrt{\tfrac{4}{7}}\,\prodket{-\nicefrac{3}{2}}{-1}$}\cellmax{$\sqrt{\tfrac{3}{8}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{8}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{4}{7}}\,\prodket{-\nicefrac{1}{2}}{-2}$ $-\sqrt{\tfrac{3}{7}}\,\prodket{-\nicefrac{3}{2}}{-1}$}\cellmax{$\sqrt{\tfrac{5}{8}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{8}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$\tfrac{1}{2}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{3}{4}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{1}{2}}{-2}$ $+$ $\sqrt{\tfrac{4}{5}}\,\prodket{-\nicefrac{1}{2}}{-1}$}\cellmax{$\sqrt{\tfrac{2}{5}}\,\prodket{0}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{5}}\,\prodket{-1}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{2}{7}}\,\prodket{0}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{7}}\,\prodket{-1}{-\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{3}{5}}\,\prodket{0}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{-1}{-\nicefrac{1}{2}}$}\cellmax{$\sqrt{\tfrac{4}{5}}\,\prodket{\nicefrac{1}{2}}{-2}$ $-\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{1}{2}}{-1}$}\cellmax{$\sqrt{\tfrac{5}{7}}\,\prodket{0}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{2}{7}}\,\prodket{-1}{-\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{5}{9}}\,\prodket{-1}{-\nicefrac{5}{2}}$ $-\tfrac{2}{3}\,\prodket{-2}{-\nicefrac{3}{2}}$}\cellmax{$\tfrac{2}{3}\,\prodket{-1}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{9}}\,\prodket{-2}{-\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{1}{3}}\,\prodket{\nicefrac{1}{2}}{-1}$ $+$ $\sqrt{\tfrac{2}{3}}\,\prodket{-\nicefrac{1}{2}}{0}$}\cellmax{$\sqrt{\tfrac{2}{3}}\,\prodket{\nicefrac{1}{2}}{-1}$ $-\sqrt{\tfrac{1}{3}}\,\prodket{-\nicefrac{1}{2}}{0}$}\cellmax{$\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{1}{2}}{-1}$ $+$ $\sqrt{\tfrac{3}{5}}\,\prodket{-\nicefrac{1}{2}}{0}$}\cellmax{$\sqrt{\tfrac{3}{5}}\,\prodket{\nicefrac{1}{2}}{-1}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{1}{2}}{0}$}\cellmax{$\sqrt{\tfrac{1}{3}}\,\prodket{\nicefrac{1}{2}}{0}$ $-\sqrt{\tfrac{2}{3}}\,\prodket{-\nicefrac{1}{2}}{1}$}\cellmax{$\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{1}{2}}{1}$ $-\sqrt{\tfrac{4}{5}}\,\prodket{-\nicefrac{1}{2}}{2}$}\cellmax{$\sqrt{\tfrac{2}{3}}\,\prodket{\nicefrac{1}{2}}{0}$ $+$ $\sqrt{\tfrac{1}{3}}\,\prodket{-\nicefrac{1}{2}}{1}$}\cellmax{$\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{1}{2}}{0}$ $-\sqrt{\tfrac{3}{5}}\,\prodket{-\nicefrac{1}{2}}{1}$}\cellmax{$\sqrt{\tfrac{3}{5}}\,\prodket{\nicefrac{1}{2}}{0}$ $+$ $\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{1}{2}}{1}$}\cellmax{$\sqrt{\tfrac{4}{5}}\,\prodket{\nicefrac{1}{2}}{1}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{1}{2}}{2}$}\cellmax{$\sqrt{\tfrac{2}{5}}\,\prodket{1}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{3}{5}}\,\prodket{0}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{2}{7}}\,\prodket{1}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{7}}\,\prodket{0}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{3}{5}}\,\prodket{1}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{2}{5}}\,\prodket{0}{\nicefrac{3}{2}}$}\cellmax{$\sqrt{\tfrac{3}{7}}\,\prodket{\nicefrac{3}{2}}{1}$ $-\sqrt{\tfrac{4}{7}}\,\prodket{\nicefrac{1}{2}}{2}$}\cellmax{$\sqrt{\tfrac{4}{7}}\,\prodket{\nicefrac{3}{2}}{1}$ $+$ $\sqrt{\tfrac{3}{7}}\,\prodket{\nicefrac{1}{2}}{2}$}\cellmax{$\sqrt{\tfrac{5}{7}}\,\prodket{1}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{2}{7}}\,\prodket{0}{\nicefrac{5}{2}}$}\cellmax{$\sqrt{\tfrac{5}{9}}\,\prodket{2}{\nicefrac{3}{2}}$ $+$ $\tfrac{2}{3}\,\prodket{1}{\nicefrac{5}{2}}$}\cellmax{$\tfrac{2}{3}\,\prodket{2}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{9}}\,\prodket{1}{\nicefrac{5}{2}}$}\cellmax{$1\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$}\cellmax{$1\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$}\cellmax{$1\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{5}{2}}$}\cellmax{$1\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{3}{2}}$}\cellmax{$1\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{5}{2}}$}\cellmax{$1\,\prodket{-\nicefrac{5}{2}}{-\nicefrac{5}{2}}$}\cellmax{$1\,\prodket{-1}{-\nicefrac{3}{2}}$}\cellmax{$1\,\prodket{-1}{-\nicefrac{5}{2}}$}\cellmax{$1\,\prodket{-2}{-\nicefrac{5}{2}}$}\cellmax{$1\,\prodket{-\nicefrac{1}{2}}{-1}$}\cellmax{$1\,\prodket{-\nicefrac{1}{2}}{-2}$}\cellmax{$1\,\prodket{-\nicefrac{3}{2}}{-2}$}\cellmax{$1\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$}\cellmax{$1\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$}\cellmax{$1\,\prodket{\nicefrac{1}{2}}{\nicefrac{5}{2}}$}\cellmax{$1\,\prodket{\nicefrac{3}{2}}{\nicefrac{3}{2}}$}\cellmax{$1\,\prodket{\nicefrac{3}{2}}{\nicefrac{5}{2}}$}\cellmax{$1\,\prodket{\nicefrac{5}{2}}{\nicefrac{5}{2}}$}\cellmax{$1\,\prodket{0}{-\nicefrac{1}{2}}$}\cellmax{$1\,\prodket{0}{-\nicefrac{3}{2}}$}\cellmax{$1\,\prodket{0}{-\nicefrac{5}{2}}$}\cellmax{$1\,\prodket{0}{\nicefrac{1}{2}}$}\cellmax{$1\,\prodket{0}{\nicefrac{3}{2}}$}\cellmax{$1\,\prodket{0}{\nicefrac{5}{2}}$}\cellmax{$1\,\prodket{1}{\nicefrac{3}{2}}$}\cellmax{$1\,\prodket{1}{\nicefrac{5}{2}}$}\cellmax{$1\,\prodket{2}{\nicefrac{5}{2}}$}\cellmax{$1\,\prodket{\nicefrac{1}{2}}{1}$}\cellmax{$1\,\prodket{\nicefrac{1}{2}}{2}$}\cellmax{$1\,\prodket{\nicefrac{3}{2}}{2}$}\cellmax{$\jm{J}{M}$}\fillcap\begin{longtable}{@{}r@{\hspace{8pt}}p{\fillwidth}@{}}\toprule
+$M$ & $\jm{J}{M}$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\multicolumn{2}{@{}c@{}}{$\irrJ{0}\irrprod \irrJ{\nicefrac{1}{2}} \to \irrJ{\nicefrac{1}{2}}$}\\*
+$\nicefrac{1}{2}$ & $1\,\prodket{0}{\nicefrac{1}{2}}$\\*
+$-\nicefrac{1}{2}$ & $1\,\prodket{0}{-\nicefrac{1}{2}}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irrJ{0}\irrprod \irrJ{\nicefrac{3}{2}} \to \irrJ{\nicefrac{3}{2}}$}\\*
+$\nicefrac{3}{2}$ & $1\,\prodket{0}{\nicefrac{3}{2}}$\\*
+$\nicefrac{1}{2}$ & $1\,\prodket{0}{\nicefrac{1}{2}}$\\*
+$-\nicefrac{1}{2}$ & $1\,\prodket{0}{-\nicefrac{1}{2}}$\\*
+$-\nicefrac{3}{2}$ & $1\,\prodket{0}{-\nicefrac{3}{2}}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irrJ{0}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{\nicefrac{5}{2}}$}\\*
+$\nicefrac{5}{2}$ & $1\,\prodket{0}{\nicefrac{5}{2}}$\\*
+$\nicefrac{3}{2}$ & $1\,\prodket{0}{\nicefrac{3}{2}}$\\*
+$\nicefrac{1}{2}$ & $1\,\prodket{0}{\nicefrac{1}{2}}$\\*
+$-\nicefrac{1}{2}$ & $1\,\prodket{0}{-\nicefrac{1}{2}}$\\*
+$-\nicefrac{3}{2}$ & $1\,\prodket{0}{-\nicefrac{3}{2}}$\\*
+$-\nicefrac{5}{2}$ & $1\,\prodket{0}{-\nicefrac{5}{2}}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{1}{2}}\irrprod \irrJ{\nicefrac{1}{2}} \to \irrJ{0}$}\\*
+$0$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{1}{2}}\irrprod \irrJ{\nicefrac{1}{2}} \to \irrJ{1}$}\\*
+$1$ & $1\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$\\*
+$0$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$\\*
+$-1$ & $1\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{1}{2}}\irrprod \irrJ{1} \to \irrJ{\nicefrac{1}{2}}$}\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{1}{3}}\,\prodket{\nicefrac{1}{2}}{0}$ $-\sqrt{\tfrac{2}{3}}\,\prodket{-\nicefrac{1}{2}}{1}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{2}{3}}\,\prodket{\nicefrac{1}{2}}{-1}$ $-\sqrt{\tfrac{1}{3}}\,\prodket{-\nicefrac{1}{2}}{0}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{1}{2}}\irrprod \irrJ{1} \to \irrJ{\nicefrac{3}{2}}$}\\*
+$\nicefrac{3}{2}$ & $1\,\prodket{\nicefrac{1}{2}}{1}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{2}{3}}\,\prodket{\nicefrac{1}{2}}{0}$ $+$ $\sqrt{\tfrac{1}{3}}\,\prodket{-\nicefrac{1}{2}}{1}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{1}{3}}\,\prodket{\nicefrac{1}{2}}{-1}$ $+$ $\sqrt{\tfrac{2}{3}}\,\prodket{-\nicefrac{1}{2}}{0}$\\*
+$-\nicefrac{3}{2}$ & $1\,\prodket{-\nicefrac{1}{2}}{-1}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{1}{2}}\irrprod \irrJ{\nicefrac{3}{2}} \to \irrJ{1}$}\\*
+$1$ & $\tfrac{1}{2}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{3}{4}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$\\*
+$0$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{3}{4}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\tfrac{1}{2}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{1}{2}}\irrprod \irrJ{\nicefrac{3}{2}} \to \irrJ{2}$}\\*
+$2$ & $1\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$\\*
+$1$ & $\sqrt{\tfrac{3}{4}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\tfrac{1}{2}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$\\*
+$0$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$\\*
+$-1$ & $\tfrac{1}{2}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{4}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$\\*
+$-2$ & $1\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{1}{2}}\irrprod \irrJ{2} \to \irrJ{\nicefrac{3}{2}}$}\\*
+$\nicefrac{3}{2}$ & $\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{1}{2}}{1}$ $-\sqrt{\tfrac{4}{5}}\,\prodket{-\nicefrac{1}{2}}{2}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{1}{2}}{0}$ $-\sqrt{\tfrac{3}{5}}\,\prodket{-\nicefrac{1}{2}}{1}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{3}{5}}\,\prodket{\nicefrac{1}{2}}{-1}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{1}{2}}{0}$\\*
+$-\nicefrac{3}{2}$ & $\sqrt{\tfrac{4}{5}}\,\prodket{\nicefrac{1}{2}}{-2}$ $-\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{1}{2}}{-1}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{1}{2}}\irrprod \irrJ{2} \to \irrJ{\nicefrac{5}{2}}$}\\*
+$\nicefrac{5}{2}$ & $1\,\prodket{\nicefrac{1}{2}}{2}$\\*
+$\nicefrac{3}{2}$ & $\sqrt{\tfrac{4}{5}}\,\prodket{\nicefrac{1}{2}}{1}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{1}{2}}{2}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{3}{5}}\,\prodket{\nicefrac{1}{2}}{0}$ $+$ $\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{1}{2}}{1}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{1}{2}}{-1}$ $+$ $\sqrt{\tfrac{3}{5}}\,\prodket{-\nicefrac{1}{2}}{0}$\\*
+$-\nicefrac{3}{2}$ & $\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{1}{2}}{-2}$ $+$ $\sqrt{\tfrac{4}{5}}\,\prodket{-\nicefrac{1}{2}}{-1}$\\*
+$-\nicefrac{5}{2}$ & $1\,\prodket{-\nicefrac{1}{2}}{-2}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{1}{2}}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{2}$}\\*
+$2$ & $\sqrt{\tfrac{1}{6}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{6}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$1$ & $\sqrt{\tfrac{1}{3}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{2}{3}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$\\*
+$0$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{2}{3}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{3}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$\\*
+$-2$ & $\sqrt{\tfrac{5}{6}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{1}{6}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{1}{2}}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{3}$}\\*
+$3$ & $1\,\prodket{\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$2$ & $\sqrt{\tfrac{5}{6}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{6}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$1$ & $\sqrt{\tfrac{2}{3}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{3}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$\\*
+$0$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{1}{3}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{2}{3}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$\\*
+$-2$ & $\sqrt{\tfrac{1}{6}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{6}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$\\*
+$-3$ & $1\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{5}{2}}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irrJ{1}\irrprod \irrJ{\nicefrac{3}{2}} \to \irrJ{\nicefrac{1}{2}}$}\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{1}{6}}\,\prodket{1}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{3}}\,\prodket{0}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{2}}\,\prodket{-1}{\nicefrac{3}{2}}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{1}{2}}\,\prodket{1}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{3}}\,\prodket{0}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{6}}\,\prodket{-1}{\nicefrac{1}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{1}\irrprod \irrJ{\nicefrac{3}{2}} \to \irrJ{\nicefrac{3}{2}}$}\\*
+$\nicefrac{3}{2}$ & $\sqrt{\tfrac{2}{5}}\,\prodket{1}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{3}{5}}\,\prodket{0}{\nicefrac{3}{2}}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{8}{15}}\,\prodket{1}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{15}}\,\prodket{0}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{-1}{\nicefrac{3}{2}}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{2}{5}}\,\prodket{1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{15}}\,\prodket{0}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{8}{15}}\,\prodket{-1}{\nicefrac{1}{2}}$\\*
+$-\nicefrac{3}{2}$ & $\sqrt{\tfrac{3}{5}}\,\prodket{0}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{-1}{-\nicefrac{1}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{1}\irrprod \irrJ{\nicefrac{3}{2}} \to \irrJ{\nicefrac{5}{2}}$}\\*
+$\nicefrac{5}{2}$ & $1\,\prodket{1}{\nicefrac{3}{2}}$\\*
+$\nicefrac{3}{2}$ & $\sqrt{\tfrac{3}{5}}\,\prodket{1}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{2}{5}}\,\prodket{0}{\nicefrac{3}{2}}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{3}{10}}\,\prodket{1}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{5}}\,\prodket{0}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{10}}\,\prodket{-1}{\nicefrac{3}{2}}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{1}{10}}\,\prodket{1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{5}}\,\prodket{0}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{10}}\,\prodket{-1}{\nicefrac{1}{2}}$\\*
+$-\nicefrac{3}{2}$ & $\sqrt{\tfrac{2}{5}}\,\prodket{0}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{5}}\,\prodket{-1}{-\nicefrac{1}{2}}$\\*
+$-\nicefrac{5}{2}$ & $1\,\prodket{-1}{-\nicefrac{3}{2}}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irrJ{1}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{\nicefrac{3}{2}}$}\\*
+$\nicefrac{3}{2}$ & $\sqrt{\tfrac{1}{15}}\,\prodket{1}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{4}{15}}\,\prodket{0}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{2}{3}}\,\prodket{-1}{\nicefrac{5}{2}}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{1}{5}}\,\prodket{1}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{0}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{2}{5}}\,\prodket{-1}{\nicefrac{3}{2}}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{2}{5}}\,\prodket{1}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{0}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{-1}{\nicefrac{1}{2}}$\\*
+$-\nicefrac{3}{2}$ & $\sqrt{\tfrac{2}{3}}\,\prodket{1}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{4}{15}}\,\prodket{0}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{15}}\,\prodket{-1}{-\nicefrac{1}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{1}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{\nicefrac{5}{2}}$}\\*
+$\nicefrac{5}{2}$ & $\sqrt{\tfrac{2}{7}}\,\prodket{1}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{7}}\,\prodket{0}{\nicefrac{5}{2}}$\\*
+$\nicefrac{3}{2}$ & $\sqrt{\tfrac{16}{35}}\,\prodket{1}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{9}{35}}\,\prodket{0}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{7}}\,\prodket{-1}{\nicefrac{5}{2}}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{18}{35}}\,\prodket{1}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{35}}\,\prodket{0}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{16}{35}}\,\prodket{-1}{\nicefrac{3}{2}}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{16}{35}}\,\prodket{1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{35}}\,\prodket{0}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{18}{35}}\,\prodket{-1}{\nicefrac{1}{2}}$\\*
+$-\nicefrac{3}{2}$ & $\sqrt{\tfrac{2}{7}}\,\prodket{1}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{9}{35}}\,\prodket{0}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{16}{35}}\,\prodket{-1}{-\nicefrac{1}{2}}$\\*
+$-\nicefrac{5}{2}$ & $\sqrt{\tfrac{5}{7}}\,\prodket{0}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{2}{7}}\,\prodket{-1}{-\nicefrac{3}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{1}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{\nicefrac{7}{2}}$}\\*
+$\nicefrac{7}{2}$ & $1\,\prodket{1}{\nicefrac{5}{2}}$\\*
+$\nicefrac{5}{2}$ & $\sqrt{\tfrac{5}{7}}\,\prodket{1}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{2}{7}}\,\prodket{0}{\nicefrac{5}{2}}$\\*
+$\nicefrac{3}{2}$ & $\sqrt{\tfrac{10}{21}}\,\prodket{1}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{0}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{21}}\,\prodket{-1}{\nicefrac{5}{2}}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{2}{7}}\,\prodket{1}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{4}{7}}\,\prodket{0}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{-1}{\nicefrac{3}{2}}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{1}{7}}\,\prodket{1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{4}{7}}\,\prodket{0}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{2}{7}}\,\prodket{-1}{\nicefrac{1}{2}}$\\*
+$-\nicefrac{3}{2}$ & $\sqrt{\tfrac{1}{21}}\,\prodket{1}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{0}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{-1}{-\nicefrac{1}{2}}$\\*
+$-\nicefrac{5}{2}$ & $\sqrt{\tfrac{2}{7}}\,\prodket{0}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{7}}\,\prodket{-1}{-\nicefrac{3}{2}}$\\*
+$-\nicefrac{7}{2}$ & $1\,\prodket{-1}{-\nicefrac{5}{2}}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{3}{2}}\irrprod \irrJ{\nicefrac{3}{2}} \to \irrJ{0}$}\\*
+$0$ & $\tfrac{1}{2}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $-\tfrac{1}{2}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\tfrac{1}{2}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\tfrac{1}{2}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{3}{2}}\irrprod \irrJ{\nicefrac{3}{2}} \to \irrJ{1}$}\\*
+$1$ & $\sqrt{\tfrac{3}{10}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{10}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$\\*
+$0$ & $\sqrt{\tfrac{9}{20}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{20}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{20}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{9}{20}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{3}{10}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{10}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{3}{2}}\irrprod \irrJ{\nicefrac{3}{2}} \to \irrJ{2}$}\\*
+$2$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$\\*
+$1$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$\\*
+$0$ & $\tfrac{1}{2}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\tfrac{1}{2}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\tfrac{1}{2}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\tfrac{1}{2}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$\\*
+$-2$ & $\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{3}{2}}\irrprod \irrJ{\nicefrac{3}{2}} \to \irrJ{3}$}\\*
+$3$ & $1\,\prodket{\nicefrac{3}{2}}{\nicefrac{3}{2}}$\\*
+$2$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$\\*
+$1$ & $\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{5}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$\\*
+$0$ & $\sqrt{\tfrac{1}{20}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{9}{20}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{9}{20}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{20}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{5}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$\\*
+$-2$ & $\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$\\*
+$-3$ & $1\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{3}{2}}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{3}{2}}\irrprod \irrJ{2} \to \irrJ{\nicefrac{1}{2}}$}\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{1}{10}}\,\prodket{\nicefrac{3}{2}}{-1}$ $-\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{1}{2}}{0}$ $+$ $\sqrt{\tfrac{3}{10}}\,\prodket{-\nicefrac{1}{2}}{1}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{3}{2}}{2}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{3}{2}}{-2}$ $-\sqrt{\tfrac{3}{10}}\,\prodket{\nicefrac{1}{2}}{-1}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{1}{2}}{0}$ $-\sqrt{\tfrac{1}{10}}\,\prodket{-\nicefrac{3}{2}}{1}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{3}{2}}\irrprod \irrJ{2} \to \irrJ{\nicefrac{3}{2}}$}\\*
+$\nicefrac{3}{2}$ & $\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{3}{2}}{0}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{1}{2}}{1}$ $+$ $\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{1}{2}}{2}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{3}{2}}{-1}$ $-\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{1}{2}}{0}$ $+$ $\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{3}{2}}{2}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{3}{2}}{-2}$ $-\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{1}{2}}{0}$ $+$ $\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{3}{2}}{1}$\\*
+$-\nicefrac{3}{2}$ & $\sqrt{\tfrac{2}{5}}\,\prodket{\nicefrac{1}{2}}{-2}$ $-\sqrt{\tfrac{2}{5}}\,\prodket{-\nicefrac{1}{2}}{-1}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{3}{2}}{0}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{3}{2}}\irrprod \irrJ{2} \to \irrJ{\nicefrac{5}{2}}$}\\*
+$\nicefrac{5}{2}$ & $\sqrt{\tfrac{3}{7}}\,\prodket{\nicefrac{3}{2}}{1}$ $-\sqrt{\tfrac{4}{7}}\,\prodket{\nicefrac{1}{2}}{2}$\\*
+$\nicefrac{3}{2}$ & $\sqrt{\tfrac{18}{35}}\,\prodket{\nicefrac{3}{2}}{0}$ $-\sqrt{\tfrac{1}{35}}\,\prodket{\nicefrac{1}{2}}{1}$ $-\sqrt{\tfrac{16}{35}}\,\prodket{-\nicefrac{1}{2}}{2}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{27}{70}}\,\prodket{\nicefrac{3}{2}}{-1}$ $+$ $\sqrt{\tfrac{3}{35}}\,\prodket{\nicefrac{1}{2}}{0}$ $-\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{1}{2}}{1}$ $-\sqrt{\tfrac{6}{35}}\,\prodket{-\nicefrac{3}{2}}{2}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{6}{35}}\,\prodket{\nicefrac{3}{2}}{-2}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{1}{2}}{-1}$ $-\sqrt{\tfrac{3}{35}}\,\prodket{-\nicefrac{1}{2}}{0}$ $-\sqrt{\tfrac{27}{70}}\,\prodket{-\nicefrac{3}{2}}{1}$\\*
+$-\nicefrac{3}{2}$ & $\sqrt{\tfrac{16}{35}}\,\prodket{\nicefrac{1}{2}}{-2}$ $+$ $\sqrt{\tfrac{1}{35}}\,\prodket{-\nicefrac{1}{2}}{-1}$ $-\sqrt{\tfrac{18}{35}}\,\prodket{-\nicefrac{3}{2}}{0}$\\*
+$-\nicefrac{5}{2}$ & $\sqrt{\tfrac{4}{7}}\,\prodket{-\nicefrac{1}{2}}{-2}$ $-\sqrt{\tfrac{3}{7}}\,\prodket{-\nicefrac{3}{2}}{-1}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{3}{2}}\irrprod \irrJ{2} \to \irrJ{\nicefrac{7}{2}}$}\\*
+$\nicefrac{7}{2}$ & $1\,\prodket{\nicefrac{3}{2}}{2}$\\*
+$\nicefrac{5}{2}$ & $\sqrt{\tfrac{4}{7}}\,\prodket{\nicefrac{3}{2}}{1}$ $+$ $\sqrt{\tfrac{3}{7}}\,\prodket{\nicefrac{1}{2}}{2}$\\*
+$\nicefrac{3}{2}$ & $\sqrt{\tfrac{2}{7}}\,\prodket{\nicefrac{3}{2}}{0}$ $+$ $\sqrt{\tfrac{4}{7}}\,\prodket{\nicefrac{1}{2}}{1}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{1}{2}}{2}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{4}{35}}\,\prodket{\nicefrac{3}{2}}{-1}$ $+$ $\sqrt{\tfrac{18}{35}}\,\prodket{\nicefrac{1}{2}}{0}$ $+$ $\sqrt{\tfrac{12}{35}}\,\prodket{-\nicefrac{1}{2}}{1}$ $+$ $\sqrt{\tfrac{1}{35}}\,\prodket{-\nicefrac{3}{2}}{2}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{1}{35}}\,\prodket{\nicefrac{3}{2}}{-2}$ $+$ $\sqrt{\tfrac{12}{35}}\,\prodket{\nicefrac{1}{2}}{-1}$ $+$ $\sqrt{\tfrac{18}{35}}\,\prodket{-\nicefrac{1}{2}}{0}$ $+$ $\sqrt{\tfrac{4}{35}}\,\prodket{-\nicefrac{3}{2}}{1}$\\*
+$-\nicefrac{3}{2}$ & $\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{1}{2}}{-2}$ $+$ $\sqrt{\tfrac{4}{7}}\,\prodket{-\nicefrac{1}{2}}{-1}$ $+$ $\sqrt{\tfrac{2}{7}}\,\prodket{-\nicefrac{3}{2}}{0}$\\*
+$-\nicefrac{5}{2}$ & $\sqrt{\tfrac{3}{7}}\,\prodket{-\nicefrac{1}{2}}{-2}$ $+$ $\sqrt{\tfrac{4}{7}}\,\prodket{-\nicefrac{3}{2}}{-1}$\\*
+$-\nicefrac{7}{2}$ & $1\,\prodket{-\nicefrac{3}{2}}{-2}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{3}{2}}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{1}$}\\*
+$1$ & $\sqrt{\tfrac{1}{20}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{3}{20}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{10}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$\\*
+$0$ & $\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{3}{10}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{10}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{3}{10}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{20}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{20}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{3}{2}}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{2}$}\\*
+$2$ & $\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{8}{21}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$1$ & $\sqrt{\tfrac{9}{28}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{25}{84}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{42}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$\\*
+$0$ & $\sqrt{\tfrac{3}{7}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{14}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{14}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{7}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{1}{42}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{25}{84}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{9}{28}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$\\*
+$-2$ & $\sqrt{\tfrac{10}{21}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{8}{21}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{3}{2}}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{3}$}\\*
+$3$ & $\sqrt{\tfrac{3}{8}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{8}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$2$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{12}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{12}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$1$ & $\sqrt{\tfrac{9}{20}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{60}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{49}{120}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{8}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$\\*
+$0$ & $\sqrt{\tfrac{3}{10}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{5}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{3}{10}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{1}{8}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{49}{120}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{60}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{9}{20}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$\\*
+$-2$ & $\sqrt{\tfrac{5}{12}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{1}{12}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$\\*
+$-3$ & $\sqrt{\tfrac{5}{8}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{3}{8}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{3}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{3}{2}}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{4}$}\\*
+$4$ & $1\,\prodket{\nicefrac{3}{2}}{\nicefrac{5}{2}}$\\*
+$3$ & $\sqrt{\tfrac{5}{8}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{8}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$2$ & $\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{15}{28}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{28}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$1$ & $\sqrt{\tfrac{5}{28}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{15}{28}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{15}{56}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{56}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$\\*
+$0$ & $\sqrt{\tfrac{1}{14}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{7}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{3}{7}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{14}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{1}{56}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{15}{56}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{15}{28}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{28}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$\\*
+$-2$ & $\sqrt{\tfrac{3}{28}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{15}{28}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$\\*
+$-3$ & $\sqrt{\tfrac{3}{8}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{8}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{3}{2}}$\\*
+$-4$ & $1\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{5}{2}}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irrJ{2}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{\nicefrac{1}{2}}$}\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{1}{15}}\,\prodket{2}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{15}}\,\prodket{1}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{0}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{4}{15}}\,\prodket{-1}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{3}}\,\prodket{-2}{\nicefrac{5}{2}}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{1}{3}}\,\prodket{2}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{4}{15}}\,\prodket{1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{5}}\,\prodket{0}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{2}{15}}\,\prodket{-1}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{15}}\,\prodket{-2}{\nicefrac{3}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{2}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{\nicefrac{3}{2}}$}\\*
+$\nicefrac{3}{2}$ & $\sqrt{\tfrac{4}{35}}\,\prodket{2}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{9}{35}}\,\prodket{1}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{12}{35}}\,\prodket{0}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{7}}\,\prodket{-1}{\nicefrac{5}{2}}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{32}{105}}\,\prodket{2}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{21}}\,\prodket{1}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{2}{35}}\,\prodket{0}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{2}{105}}\,\prodket{-1}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{8}{21}}\,\prodket{-2}{\nicefrac{5}{2}}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{8}{21}}\,\prodket{2}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{2}{105}}\,\prodket{1}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{35}}\,\prodket{0}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{21}}\,\prodket{-1}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{32}{105}}\,\prodket{-2}{\nicefrac{3}{2}}$\\*
+$-\nicefrac{3}{2}$ & $\sqrt{\tfrac{2}{7}}\,\prodket{1}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{12}{35}}\,\prodket{0}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{9}{35}}\,\prodket{-1}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{4}{35}}\,\prodket{-2}{\nicefrac{1}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{2}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{\nicefrac{5}{2}}$}\\*
+$\nicefrac{5}{2}$ & $\sqrt{\tfrac{3}{14}}\,\prodket{2}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{3}{7}}\,\prodket{1}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{0}{\nicefrac{5}{2}}$\\*
+$\nicefrac{3}{2}$ & $\sqrt{\tfrac{27}{70}}\,\prodket{2}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{6}{35}}\,\prodket{1}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{70}}\,\prodket{0}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{7}}\,\prodket{-1}{\nicefrac{5}{2}}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{27}{70}}\,\prodket{2}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{8}{35}}\,\prodket{0}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{6}{35}}\,\prodket{-1}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{14}}\,\prodket{-2}{\nicefrac{5}{2}}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{3}{14}}\,\prodket{2}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{6}{35}}\,\prodket{1}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{8}{35}}\,\prodket{0}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{27}{70}}\,\prodket{-2}{\nicefrac{3}{2}}$\\*
+$-\nicefrac{3}{2}$ & $\sqrt{\tfrac{3}{7}}\,\prodket{1}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{1}{70}}\,\prodket{0}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{6}{35}}\,\prodket{-1}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{27}{70}}\,\prodket{-2}{\nicefrac{1}{2}}$\\*
+$-\nicefrac{5}{2}$ & $\sqrt{\tfrac{5}{14}}\,\prodket{0}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{3}{7}}\,\prodket{-1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{3}{14}}\,\prodket{-2}{-\nicefrac{1}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{2}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{\nicefrac{7}{2}}$}\\*
+$\nicefrac{7}{2}$ & $\tfrac{2}{3}\,\prodket{2}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{9}}\,\prodket{1}{\nicefrac{5}{2}}$\\*
+$\nicefrac{5}{2}$ & $\sqrt{\tfrac{32}{63}}\,\prodket{2}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{63}}\,\prodket{1}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{10}{21}}\,\prodket{0}{\nicefrac{5}{2}}$\\*
+$\nicefrac{3}{2}$ & $\sqrt{\tfrac{8}{21}}\,\prodket{2}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{2}{21}}\,\prodket{1}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{2}{7}}\,\prodket{0}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{21}}\,\prodket{-1}{\nicefrac{5}{2}}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{64}{315}}\,\prodket{2}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{14}{45}}\,\prodket{1}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{4}{105}}\,\prodket{0}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{121}{315}}\,\prodket{-1}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{4}{63}}\,\prodket{-2}{\nicefrac{5}{2}}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{4}{63}}\,\prodket{2}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{121}{315}}\,\prodket{1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{4}{105}}\,\prodket{0}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{14}{45}}\,\prodket{-1}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{64}{315}}\,\prodket{-2}{\nicefrac{3}{2}}$\\*
+$-\nicefrac{3}{2}$ & $\sqrt{\tfrac{5}{21}}\,\prodket{1}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{2}{7}}\,\prodket{0}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{2}{21}}\,\prodket{-1}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{8}{21}}\,\prodket{-2}{\nicefrac{1}{2}}$\\*
+$-\nicefrac{5}{2}$ & $\sqrt{\tfrac{10}{21}}\,\prodket{0}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{1}{63}}\,\prodket{-1}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{32}{63}}\,\prodket{-2}{-\nicefrac{1}{2}}$\\*
+$-\nicefrac{7}{2}$ & $\sqrt{\tfrac{5}{9}}\,\prodket{-1}{-\nicefrac{5}{2}}$ $-\tfrac{2}{3}\,\prodket{-2}{-\nicefrac{3}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{2}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{\nicefrac{9}{2}}$}\\*
+$\nicefrac{9}{2}$ & $1\,\prodket{2}{\nicefrac{5}{2}}$\\*
+$\nicefrac{7}{2}$ & $\sqrt{\tfrac{5}{9}}\,\prodket{2}{\nicefrac{3}{2}}$ $+$ $\tfrac{2}{3}\,\prodket{1}{\nicefrac{5}{2}}$\\*
+$\nicefrac{5}{2}$ & $\sqrt{\tfrac{5}{18}}\,\prodket{2}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{9}}\,\prodket{1}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{6}}\,\prodket{0}{\nicefrac{5}{2}}$\\*
+$\nicefrac{3}{2}$ & $\sqrt{\tfrac{5}{42}}\,\prodket{2}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{1}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{0}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{21}}\,\prodket{-1}{\nicefrac{5}{2}}$\\*
+$\nicefrac{1}{2}$ & $\sqrt{\tfrac{5}{126}}\,\prodket{2}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{20}{63}}\,\prodket{1}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{0}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{10}{63}}\,\prodket{-1}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{126}}\,\prodket{-2}{\nicefrac{5}{2}}$\\*
+$-\nicefrac{1}{2}$ & $\sqrt{\tfrac{1}{126}}\,\prodket{2}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{10}{63}}\,\prodket{1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{0}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{20}{63}}\,\prodket{-1}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{126}}\,\prodket{-2}{\nicefrac{3}{2}}$\\*
+$-\nicefrac{3}{2}$ & $\sqrt{\tfrac{1}{21}}\,\prodket{1}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{0}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{-1}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{42}}\,\prodket{-2}{\nicefrac{1}{2}}$\\*
+$-\nicefrac{5}{2}$ & $\sqrt{\tfrac{1}{6}}\,\prodket{0}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{9}}\,\prodket{-1}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{18}}\,\prodket{-2}{-\nicefrac{1}{2}}$\\*
+$-\nicefrac{7}{2}$ & $\tfrac{2}{3}\,\prodket{-1}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{9}}\,\prodket{-2}{-\nicefrac{3}{2}}$\\*
+$-\nicefrac{9}{2}$ & $1\,\prodket{-2}{-\nicefrac{5}{2}}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{5}{2}}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{0}$}\\*
+$0$ & $\sqrt{\tfrac{1}{6}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{1}{6}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{6}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{6}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{6}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{6}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{5}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{5}{2}}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{1}$}\\*
+$1$ & $\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{8}{35}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{9}{35}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{8}{35}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$\\*
+$0$ & $\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{9}{70}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{70}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{70}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{9}{70}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{5}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{8}{35}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{9}{35}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{8}{35}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{3}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{5}{2}}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{2}$}\\*
+$2$ & $\sqrt{\tfrac{5}{28}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{9}{28}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{9}{28}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{28}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$1$ & $\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$\\*
+$0$ & $\sqrt{\tfrac{25}{84}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{1}{84}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{4}{21}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{4}{21}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{84}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{25}{84}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{5}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{3}{2}}$\\*
+$-2$ & $\sqrt{\tfrac{5}{28}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{9}{28}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{9}{28}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{5}{28}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{1}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{5}{2}}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{3}$}\\*
+$3$ & $\sqrt{\tfrac{5}{18}}\,\prodket{\nicefrac{5}{2}}{\nicefrac{1}{2}}$ $-\tfrac{2}{3}\,\prodket{\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{18}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$2$ & $\sqrt{\tfrac{5}{12}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{12}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{12}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{12}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$1$ & $\sqrt{\tfrac{1}{3}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{30}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{4}{15}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{30}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{3}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$\\*
+$0$ & $\sqrt{\tfrac{5}{36}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{49}{180}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{4}{45}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{4}{45}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{49}{180}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{36}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{5}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{1}{3}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{1}{30}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{4}{15}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{30}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{3}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{3}{2}}$\\*
+$-2$ & $\sqrt{\tfrac{5}{12}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{1}{12}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{12}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{12}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{1}{2}}$\\*
+$-3$ & $\sqrt{\tfrac{5}{18}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $-\tfrac{2}{3}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{18}}\,\prodket{-\nicefrac{5}{2}}{-\nicefrac{1}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{5}{2}}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{4}$}\\*
+$4$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{5}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{5}{2}}$\\*
+$3$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{5}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$2$ & $\sqrt{\tfrac{9}{28}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{28}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{5}{28}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{9}{28}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$1$ & $\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$\\*
+$0$ & $\sqrt{\tfrac{1}{28}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{9}{28}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{9}{28}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $-\sqrt{\tfrac{1}{28}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{5}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{1}{7}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{14}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{14}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $-\sqrt{\tfrac{1}{7}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{3}{2}}$\\*
+$-2$ & $\sqrt{\tfrac{9}{28}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{28}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $-\sqrt{\tfrac{5}{28}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $-\sqrt{\tfrac{9}{28}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{1}{2}}$\\*
+$-3$ & $\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{5}{2}}{-\nicefrac{1}{2}}$\\*
+$-4$ & $\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $-\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{5}{2}}{-\nicefrac{3}{2}}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\irrJ{\nicefrac{5}{2}}\irrprod \irrJ{\nicefrac{5}{2}} \to \irrJ{5}$}\\*
+$5$ & $1\,\prodket{\nicefrac{5}{2}}{\nicefrac{5}{2}}$\\*
+$4$ & $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{5}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{2}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{5}{2}}$\\*
+$3$ & $\sqrt{\tfrac{2}{9}}\,\prodket{\nicefrac{5}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{9}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{2}{9}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$2$ & $\sqrt{\tfrac{1}{12}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{12}}\,\prodket{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{12}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{12}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{5}{2}}$\\*
+$1$ & $\sqrt{\tfrac{1}{42}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{21}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{21}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{42}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{5}{2}}$\\*
+$0$ & $\sqrt{\tfrac{1}{252}}\,\prodket{\nicefrac{5}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{25}{252}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{25}{63}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{25}{63}}\,\prodket{-\nicefrac{1}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{25}{252}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{1}{252}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{5}{2}}$\\*
+$-1$ & $\sqrt{\tfrac{1}{42}}\,\prodket{\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{21}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{10}{21}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{5}{21}}\,\prodket{-\nicefrac{3}{2}}{\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{42}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{3}{2}}$\\*
+$-2$ & $\sqrt{\tfrac{1}{12}}\,\prodket{\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{12}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{5}{12}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ $+$ $\sqrt{\tfrac{1}{12}}\,\prodket{-\nicefrac{5}{2}}{\nicefrac{1}{2}}$\\*
+$-3$ & $\sqrt{\tfrac{2}{9}}\,\prodket{-\nicefrac{1}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{5}{9}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ $+$ $\sqrt{\tfrac{2}{9}}\,\prodket{-\nicefrac{5}{2}}{-\nicefrac{1}{2}}$\\*
+$-4$ & $\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{3}{2}}{-\nicefrac{5}{2}}$ $+$ $\sqrt{\tfrac{1}{2}}\,\prodket{-\nicefrac{5}{2}}{-\nicefrac{3}{2}}$\\*
+$-5$ & $1\,\prodket{-\nicefrac{5}{2}}{-\nicefrac{5}{2}}$\\*
+\addlinespace[2pt]
+\bottomrule\end{longtable}}
+\needspace{171pt}
+\partbox{Subgroups}
+\section{Closed subgroups}\label{s:subgroups}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.16.1}{16.1} and \href{../../CONVENTIONS.pdf\#conv.29.5}{29.5}.
+The closed subgroups of $\grp{SU(2)}$ up to conjugacy, other than $\grp{SU(2)}$ itself: the preimages of the closed subgroups of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$} and the cyclic groups of odd order, the sections $\grp{C_{\mathnormal{N}}}$; normalizer and centralizer in $\grp{SU(2)}$.
+\leavevmode\label{n:head.subgroup}\label{n:head.order}\label{n:head.conjugates}\label{n:head.normal}\label{n:head.normalizer}\label{n:head.centralizer}\label{n:index.family.N}A row is a class of subgroups (subgrp), with its order, the number of subgroups conjugate to it (conjugates), whether it is normal, and its normalizer and its centralizer: the continuous subgroups, then per family its preimages and its sections, a row whose symbol holds $N$ standing for every $N$ of its range, its entries functions of $N$, then the exceptional preimages. The record lists the members with $N \le 12$ (\texttt{subgroup\symbol{95}classes}).
+{\small\begin{longtable}{@{}lrrlll@{}}\toprule
+subgrp & order & conjugates & normal & normalizer & centralizer\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\href{2Cinf.pdf}{$\grp{2C_{\infty }}$} & $\infty$ & $\infty$ & no & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$} & \href{2Cinf.pdf}{$\grp{2C_{\infty }}$}\\*
+\href{2Dinf.pdf}{$\grp{2D_{\infty }}$} & $\infty$ & $\infty$ & no & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$} & \href{2C1.pdf}{$\grp{2C_{1}}$}\\*
+\grouprule{0pt}{\lightrulewidth}
+\href{2C1.pdf}{$\grp{2C_{1}}$} & 2 & 1 & yes & \href{SU2.pdf}{$\grp{SU(2)}$} & \href{SU2.pdf}{$\grp{SU(2)}$}\\*
+$\grp{2C_{\mathnormal{N}}}$, $N \ge 2$ & $2N$ & $\infty$ & no & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$} & \href{2Cinf.pdf}{$\grp{2C_{\infty }}$}\\*
+\href{C1.pdf}{$\grp{C_{1}}$} & 1 & 1 & yes & \href{SU2.pdf}{$\grp{SU(2)}$} & \href{SU2.pdf}{$\grp{SU(2)}$}\\*
+$\grp{C_{\mathnormal{N}}}$, $N \ge 3$ odd & $N$ & $\infty$ & no & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$} & \href{2Cinf.pdf}{$\grp{2C_{\infty }}$}\\*
+\grouprule{0pt}{\lightrulewidth}
+\href{2D2.pdf}{$\grp{2D_{2}}$} & 8 & $\infty$ & no & \href{2O.pdf}{$\grp{2O}$} & \href{2C1.pdf}{$\grp{2C_{1}}$}\\*
+$\grp{2D_{\mathnormal{N}}}$, $N \ge 3$ & $4N$ & $\infty$ & no & $\grp{2D_{2\mathnormal{N}}}$ & \href{2C1.pdf}{$\grp{2C_{1}}$}\\*
+\grouprule{0pt}{\lightrulewidth}
+\href{2T.pdf}{$\grp{2T}$} & 24 & $\infty$ & no & \href{2O.pdf}{$\grp{2O}$} & \href{2C1.pdf}{$\grp{2C_{1}}$}\\*
+\href{2O.pdf}{$\grp{2O}$} & 48 & $\infty$ & no & \href{2O.pdf}{$\grp{2O}$} & \href{2C1.pdf}{$\grp{2C_{1}}$}\\*
+\href{2I.pdf}{$\grp{2I}$} & 120 & $\infty$ & no & \href{2I.pdf}{$\grp{2I}$} & \href{2C1.pdf}{$\grp{2C_{1}}$}\\
+\bottomrule\end{longtable}}
+\needspace{103pt}
+\section{Descent of symmetry}\label{s:subduction}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.16.1}{16.1} and \href{../../CONVENTIONS.pdf\#conv.29.5}{29.5}.
+\leavevmode\label{n:irrep.Gamma.subgroup}\label{n:index.residue}The restriction of $\irrJ{J}$ at half-integer $J$ to each closed subgroup (section~\ref{s:subgroups}) for every $J$ (\texttt{subduction\symbol{95}rules}); at integer $J$ it is that of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}. For an axial subgroup it is the direct sum over the kets $\jm{J}{m}$ (for \href{2Dinf.pdf}{$\grp{2D_{\infty }}$} and $\grp{2D_{\mathnormal{N}}}$ over the pairs $\jm{J}{\pm m}$) of the terms of the case of its rule that holds, $q = m \bmod N$. A section $\grp{C_{\mathnormal{N}}}$ ($N$ odd) is restricted as its preimage $\grp{2C_{\mathnormal{N}}}$, each spinor irrep renamed by the section's record (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.27}{27}). \label{n:function.multiplicity}\label{n:index.generating.variable}\label{n:function.generating}\label{n:function.generating.numerator}\label{n:irrep.Delta}The multiplicity $b_\Lambda(J)$ of an irrep $\Lambda$ of a subgroup is the coefficient of $t^{2J}$ in its generating function $H_\Lambda(t) = \sum_{J\ge1/2} b_\Lambda(J)\,t^{2J}$; for \href{2T.pdf}{$\grp{2T}$}, \href{2O.pdf}{$\grp{2O}$}, \href{2I.pdf}{$\grp{2I}$} it is the generating function of their documents, in their sections Multiplicities and allowed $m$.
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$H_\Lambda(t)$}\cellmax{$\irrJ{J}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\irr{e}_{k}$ ($0 < k < N/2$), $t^{N}$ for $\conjpair{1}\irr{e}_{N/2}$ and $\conjpair{2}\irr{e}_{N/2}$ ($N$ odd)}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2q} + t^{2N-2q}$ for $\conjpair{1}\irr{e}_{q}$ and $\conjpair{2}\irr{e}_{q}$ ($0 < q < N/2$), $2t^{N}$ for $\irr{a}_{N/2}$ ($N$ odd)}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,N-q)}$ if $q \ne N/2$, $\conjpair{1}\irr{e}_{N/2}\oplus \conjpair{2}\irr{e}_{N/2}$ if $q = N/2$; $q = m \bmod N$}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{q}$ if $0 < q < N/2$, $\irr{a}_{N/2}$ if $q = N/2$, $\conjpair{2}\irr{e}_{N-q}$ if $N/2 < q < N$; $q = m \bmod N$}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{m}$ if $m > 0$, $\conjpair{2}\irr{e}_{-m}$ if $m < 0$}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{m}$ if $m > 0$}\cellmax{$t^{2n}/(1-t^{2})$ for $\conjpair{1}\irr{e}_{n}$ and $\conjpair{2}\irr{e}_{n}$}\cellmax{$t^{2n}/(1-t^{2})$ for $\irr{e}_{n}$}\fillcap\begin{longtable}{@{}l>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{\href{2Cinf.pdf}{$\grp{2C_{\infty }}$}}\\*
+$\irrJ{J}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{m}$ if $m > 0$, $\conjpair{2}\irr{e}_{-m}$ if $m < 0$\\*
+$H_\Lambda(t)$ & $t^{2n}/(1-t^{2})$ for $\conjpair{1}\irr{e}_{n}$ and $\conjpair{2}\irr{e}_{n}$\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{\href{2Dinf.pdf}{$\grp{2D_{\infty }}$}}\\*
+$\irrJ{J}$ & $\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{m}$ if $m > 0$\\*
+$H_\Lambda(t)$ & $t^{2n}/(1-t^{2})$ for $\irr{e}_{n}$\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\grp{2C_{\mathnormal{N}}}$, every $N$}\\*
+$\irrJ{J}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{q}$ if $0 < q < N/2$, $\irr{a}_{N/2}$ if $q = N/2$, $\conjpair{2}\irr{e}_{N-q}$ if $N/2 < q < N$; $q = m \bmod N$\\*
+$H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2q} + t^{2N-2q}$ for $\conjpair{1}\irr{e}_{q}$ and $\conjpair{2}\irr{e}_{q}$ ($0 < q < N/2$), $2t^{N}$ for $\irr{a}_{N/2}$ ($N$ odd)\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\grp{2D_{\mathnormal{N}}}$, $N \ge 2$}\\*
+$\irrJ{J}$ & $\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,N-q)}$ if $q \ne N/2$, $\conjpair{1}\irr{e}_{N/2}\oplus \conjpair{2}\irr{e}_{N/2}$ if $q = N/2$; $q = m \bmod N$\\*
+$H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\irr{e}_{k}$ ($0 < k < N/2$), $t^{N}$ for $\conjpair{1}\irr{e}_{N/2}$ and $\conjpair{2}\irr{e}_{N/2}$ ($N$ odd)\\
+\bottomrule\end{longtable}}
+\needspace{177pt}
+\partbox{Angular momentum}
+\section{Subduction from \texorpdfstring{$\grp{Pin^{-}(3)}$}{Pin\unichar{8315}(3)}}\label{s:subduction_parent}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.11}{11}, \href{../../CONVENTIONS.pdf\#conv.25.1}{25.1} and \href{../../CONVENTIONS.pdf\#conv.29.4}{29.4}.
+\leavevmode\label{n:irrep.o3}\label{n:index.J}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{Pin^{-}(3)}$ at half-integer $J$ restricted to $\grp{SU(2)}$ (\texttt{rule}):
+\begin{equation}\label{e:parent}\restr{\irrJp{J}{p}}{\grp{SU(2)}} = \irrJ{J},\end{equation}
+for either $p$; at integer $J$, the subduction of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$} (\texttt{integer\symbol{95}J}).
+\needspace{110pt}
+\section{Multiplicities and allowed \texorpdfstring{$m$}{m}}\label{s:multiplicities}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.14}{14}, \href{../../CONVENTIONS.pdf\#conv.26.2}{26.2} and \href{../../CONVENTIONS.pdf\#conv.29.4}{29.4}.
+$b_\Gamma(J)$ is the number of blocks of $\Gamma$ at $J$, and
+\begin{equation}\label{e:gf}H_\Gamma(t) = \sum_{J\ge1/2} b_\Gamma(J)\,t^{2J},\end{equation}
+its generating function, for the member of index $J$ of each family, which can only have a block at the angular momentum $J$, and $m$ is the $m$ of the kets of $\Gamma$.
+\begin{center}\small\begin{tabular}{@{}llll@{}}\toprule
+family & $H_\Gamma(t)$ & $b_\Gamma(J)$ & $m$\\\midrule
+$\irrJ{J}$ & $t^{2J}$ & $1$ & $J, J-1, \dots, -J$\\
+\bottomrule\end{tabular}\end{center}
+\needspace{110pt}
+\section{Symmetry-adapted bases}\label{s:bases}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.14}{14}, \href{../../CONVENTIONS.pdf\#conv.26.2}{26.2} and \href{../../CONVENTIONS.pdf\#conv.29.4}{29.4}.
+\leavevmode\label{n:index.m}\label{n:vector.ket}\label{n:index.ketcoefficient}\label{n:vector.basis.symmetry}\label{n:index.ketweight}\label{n:index.total}The kets $\jm{J}{m}$ at half-integer $J$ are the states of section~\ref{s:continuous_irreps} ($\elt{\barred{E}}$ acts as $-1$), and a vector is listed by its coefficients $e_m$:
+\begin{equation}\label{e:ket}v = \frac{1}{\sqrt{\mathrm{tot}}}\sum_m e_m\sqrt{F_m}\;\jm{J}{m},\qquad F_m = (J+m)!\,(J-m)!,\qquad \mathrm{tot} = \sum_m |e_m|^2F_m,\end{equation}
+so a vector here is a single ket, $e_m = 1$, of amplitude 1; the block of $J$ holds all the $2J+1$ kets $\jm{J}{m}$.
+$\restr{\irrJp{J}{p}}{\grp{SU(2)}}$ is irreducible for every half-integer $J$, so one block holds every ket at $J$: $\jm{J}{m}$ is the partner $\intx = J - m + 1$, $m = J, J-1, \dots, -J$, and the block's irrep is $\irrJ{J}$. Blocks are ordered by $J$. \label{n:head.case}\label{n:head.partners}The table gives each case of block, its dimension $d$ and its partners, in order.
+\begin{center}\begin{tabular}{@{}lrl@{}}\toprule
+case & $d$ & partners\\\midrule
+every $J$ & $2J+1$ & $\jm{J}{J}, \jm{J}{J-1}, \dots, \jm{J}{-J}$\\
+\bottomrule\end{tabular}\end{center}
+\label{n:index.copy}\label{n:head.irrep}11 blocks, 132 vectors, $J = \nicefrac{1}{2}, \nicefrac{3}{2}, \dots, \nicefrac{21}{2}$; a row gives a block at $J$: its irrep, its copy index $\mult$, its dimension $d$ and its partners.
+{\small\setlength{\tabcolsep}{3pt}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-\dimexpr 6\tabcolsep+6pt\relax}\setlength{\colwidth}{0pt}\cellmax{$\nicefrac{11}{2}$}\cellmax{$\nicefrac{13}{2}$}\cellmax{$\nicefrac{15}{2}$}\cellmax{$\nicefrac{17}{2}$}\cellmax{$\nicefrac{19}{2}$}\cellmax{$\nicefrac{21}{2}$}\cellmax{$\nicefrac{1}{2}$}\cellmax{$\nicefrac{3}{2}$}\cellmax{$\nicefrac{5}{2}$}\cellmax{$\nicefrac{7}{2}$}\cellmax{$\nicefrac{9}{2}$}\cellmax{$J$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\irrJ{\nicefrac{11}{2}}$}\cellmax{$\irrJ{\nicefrac{13}{2}}$}\cellmax{$\irrJ{\nicefrac{15}{2}}$}\cellmax{$\irrJ{\nicefrac{17}{2}}$}\cellmax{$\irrJ{\nicefrac{19}{2}}$}\cellmax{$\irrJ{\nicefrac{21}{2}}$}\cellmax{$\irrJ{\nicefrac{1}{2}}$}\cellmax{$\irrJ{\nicefrac{3}{2}}$}\cellmax{$\irrJ{\nicefrac{5}{2}}$}\cellmax{$\irrJ{\nicefrac{7}{2}}$}\cellmax{$\irrJ{\nicefrac{9}{2}}$}\cellmax{irrep}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\mult$}\cellmax{1}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{10}\cellmax{12}\cellmax{14}\cellmax{16}\cellmax{18}\cellmax{20}\cellmax{22}\cellmax{$d$}\cellmax{2}\cellmax{4}\cellmax{6}\cellmax{8}\addtolength{\fillwidth}{-\colwidth}\begin{longtable}{@{}rlrr@{\hspace{6pt}}>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
+$J$ & irrep & $\mult$ & $d$ & partners $\intx = 1, 2, \dots, d$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\nicefrac{1}{2}$ & $\irrJ{\nicefrac{1}{2}}$ & 1 & 2 & $\jm{\nicefrac{1}{2}}{\nicefrac{1}{2}}$, $\jm{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$\\*
+$\nicefrac{3}{2}$ & $\irrJ{\nicefrac{3}{2}}$ & 1 & 4 & $\jm{\nicefrac{3}{2}}{\nicefrac{3}{2}}$, $\jm{\nicefrac{3}{2}}{\nicefrac{1}{2}}$, $\jm{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$, $\jm{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$\\
+$\nicefrac{5}{2}$ & $\irrJ{\nicefrac{5}{2}}$ & 1 & 6 & $\jm{\nicefrac{5}{2}}{\nicefrac{5}{2}}$, $\jm{\nicefrac{5}{2}}{\nicefrac{3}{2}}$, $\jm{\nicefrac{5}{2}}{\nicefrac{1}{2}}$, $\jm{\nicefrac{5}{2}}{-\nicefrac{1}{2}}$, $\jm{\nicefrac{5}{2}}{-\nicefrac{3}{2}}$, $\jm{\nicefrac{5}{2}}{-\nicefrac{5}{2}}$\\
+$\nicefrac{7}{2}$ & $\irrJ{\nicefrac{7}{2}}$ & 1 & 8 & $\jm{\nicefrac{7}{2}}{\nicefrac{7}{2}}$, $\jm{\nicefrac{7}{2}}{\nicefrac{5}{2}}$, $\jm{\nicefrac{7}{2}}{\nicefrac{3}{2}}$, $\jm{\nicefrac{7}{2}}{\nicefrac{1}{2}}$, $\jm{\nicefrac{7}{2}}{-\nicefrac{1}{2}}$, $\jm{\nicefrac{7}{2}}{-\nicefrac{3}{2}}$, $\jm{\nicefrac{7}{2}}{-\nicefrac{5}{2}}$, $\jm{\nicefrac{7}{2}}{-\nicefrac{7}{2}}$\\
+$\nicefrac{9}{2}$ & $\irrJ{\nicefrac{9}{2}}$ & 1 & 10 & $\jm{\nicefrac{9}{2}}{\nicefrac{9}{2}}$, $\jm{\nicefrac{9}{2}}{\nicefrac{7}{2}}$, $\jm{\nicefrac{9}{2}}{\nicefrac{5}{2}}$, $\jm{\nicefrac{9}{2}}{\nicefrac{3}{2}}$, $\jm{\nicefrac{9}{2}}{\nicefrac{1}{2}}$, $\jm{\nicefrac{9}{2}}{-\nicefrac{1}{2}}$, $\jm{\nicefrac{9}{2}}{-\nicefrac{3}{2}}$, $\jm{\nicefrac{9}{2}}{-\nicefrac{5}{2}}$, $\jm{\nicefrac{9}{2}}{-\nicefrac{7}{2}}$, $\jm{\nicefrac{9}{2}}{-\nicefrac{9}{2}}$\\
+$\nicefrac{11}{2}$ & $\irrJ{\nicefrac{11}{2}}$ & 1 & 12 & $\jm{\nicefrac{11}{2}}{\nicefrac{11}{2}}$, $\jm{\nicefrac{11}{2}}{\nicefrac{9}{2}}$, $\jm{\nicefrac{11}{2}}{\nicefrac{7}{2}}$, $\jm{\nicefrac{11}{2}}{\nicefrac{5}{2}}$, $\jm{\nicefrac{11}{2}}{\nicefrac{3}{2}}$, $\jm{\nicefrac{11}{2}}{\nicefrac{1}{2}}$, $\jm{\nicefrac{11}{2}}{-\nicefrac{1}{2}}$, $\jm{\nicefrac{11}{2}}{-\nicefrac{3}{2}}$, $\jm{\nicefrac{11}{2}}{-\nicefrac{5}{2}}$, $\jm{\nicefrac{11}{2}}{-\nicefrac{7}{2}}$, $\jm{\nicefrac{11}{2}}{-\nicefrac{9}{2}}$, $\jm{\nicefrac{11}{2}}{-\nicefrac{11}{2}}$\\
+$\nicefrac{13}{2}$ & $\irrJ{\nicefrac{13}{2}}$ & 1 & 14 & $\jm{\nicefrac{13}{2}}{\nicefrac{13}{2}}$, $\jm{\nicefrac{13}{2}}{\nicefrac{11}{2}}$, $\jm{\nicefrac{13}{2}}{\nicefrac{9}{2}}$, $\jm{\nicefrac{13}{2}}{\nicefrac{7}{2}}$, $\jm{\nicefrac{13}{2}}{\nicefrac{5}{2}}$, $\jm{\nicefrac{13}{2}}{\nicefrac{3}{2}}$, $\jm{\nicefrac{13}{2}}{\nicefrac{1}{2}}$, $\jm{\nicefrac{13}{2}}{-\nicefrac{1}{2}}$, $\jm{\nicefrac{13}{2}}{-\nicefrac{3}{2}}$, $\jm{\nicefrac{13}{2}}{-\nicefrac{5}{2}}$, $\jm{\nicefrac{13}{2}}{-\nicefrac{7}{2}}$, $\jm{\nicefrac{13}{2}}{-\nicefrac{9}{2}}$, $\jm{\nicefrac{13}{2}}{-\nicefrac{11}{2}}$, $\jm{\nicefrac{13}{2}}{-\nicefrac{13}{2}}$\\
+$\nicefrac{15}{2}$ & $\irrJ{\nicefrac{15}{2}}$ & 1 & 16 & $\jm{\nicefrac{15}{2}}{\nicefrac{15}{2}}$, $\jm{\nicefrac{15}{2}}{\nicefrac{13}{2}}$, $\jm{\nicefrac{15}{2}}{\nicefrac{11}{2}}$, $\jm{\nicefrac{15}{2}}{\nicefrac{9}{2}}$, $\jm{\nicefrac{15}{2}}{\nicefrac{7}{2}}$, $\jm{\nicefrac{15}{2}}{\nicefrac{5}{2}}$, $\jm{\nicefrac{15}{2}}{\nicefrac{3}{2}}$, $\jm{\nicefrac{15}{2}}{\nicefrac{1}{2}}$, $\jm{\nicefrac{15}{2}}{-\nicefrac{1}{2}}$, $\jm{\nicefrac{15}{2}}{-\nicefrac{3}{2}}$, $\jm{\nicefrac{15}{2}}{-\nicefrac{5}{2}}$, $\jm{\nicefrac{15}{2}}{-\nicefrac{7}{2}}$, $\jm{\nicefrac{15}{2}}{-\nicefrac{9}{2}}$, $\jm{\nicefrac{15}{2}}{-\nicefrac{11}{2}}$, $\jm{\nicefrac{15}{2}}{-\nicefrac{13}{2}}$, $\jm{\nicefrac{15}{2}}{-\nicefrac{15}{2}}$\\
+$\nicefrac{17}{2}$ & $\irrJ{\nicefrac{17}{2}}$ & 1 & 18 & $\jm{\nicefrac{17}{2}}{\nicefrac{17}{2}}$, $\jm{\nicefrac{17}{2}}{\nicefrac{15}{2}}$, $\jm{\nicefrac{17}{2}}{\nicefrac{13}{2}}$, $\jm{\nicefrac{17}{2}}{\nicefrac{11}{2}}$, $\jm{\nicefrac{17}{2}}{\nicefrac{9}{2}}$, $\jm{\nicefrac{17}{2}}{\nicefrac{7}{2}}$, $\jm{\nicefrac{17}{2}}{\nicefrac{5}{2}}$, $\jm{\nicefrac{17}{2}}{\nicefrac{3}{2}}$, $\jm{\nicefrac{17}{2}}{\nicefrac{1}{2}}$, $\jm{\nicefrac{17}{2}}{-\nicefrac{1}{2}}$, $\jm{\nicefrac{17}{2}}{-\nicefrac{3}{2}}$, $\jm{\nicefrac{17}{2}}{-\nicefrac{5}{2}}$, $\jm{\nicefrac{17}{2}}{-\nicefrac{7}{2}}$, $\jm{\nicefrac{17}{2}}{-\nicefrac{9}{2}}$, $\jm{\nicefrac{17}{2}}{-\nicefrac{11}{2}}$, $\jm{\nicefrac{17}{2}}{-\nicefrac{13}{2}}$, $\jm{\nicefrac{17}{2}}{-\nicefrac{15}{2}}$, $\jm{\nicefrac{17}{2}}{-\nicefrac{17}{2}}$\\
+$\nicefrac{19}{2}$ & $\irrJ{\nicefrac{19}{2}}$ & 1 & 20 & $\jm{\nicefrac{19}{2}}{\nicefrac{19}{2}}$, $\jm{\nicefrac{19}{2}}{\nicefrac{17}{2}}$, $\jm{\nicefrac{19}{2}}{\nicefrac{15}{2}}$, $\jm{\nicefrac{19}{2}}{\nicefrac{13}{2}}$, $\jm{\nicefrac{19}{2}}{\nicefrac{11}{2}}$, $\jm{\nicefrac{19}{2}}{\nicefrac{9}{2}}$, $\jm{\nicefrac{19}{2}}{\nicefrac{7}{2}}$, $\jm{\nicefrac{19}{2}}{\nicefrac{5}{2}}$, $\jm{\nicefrac{19}{2}}{\nicefrac{3}{2}}$, $\jm{\nicefrac{19}{2}}{\nicefrac{1}{2}}$, $\jm{\nicefrac{19}{2}}{-\nicefrac{1}{2}}$, $\jm{\nicefrac{19}{2}}{-\nicefrac{3}{2}}$, $\jm{\nicefrac{19}{2}}{-\nicefrac{5}{2}}$, $\jm{\nicefrac{19}{2}}{-\nicefrac{7}{2}}$, $\jm{\nicefrac{19}{2}}{-\nicefrac{9}{2}}$, $\jm{\nicefrac{19}{2}}{-\nicefrac{11}{2}}$, $\jm{\nicefrac{19}{2}}{-\nicefrac{13}{2}}$, $\jm{\nicefrac{19}{2}}{-\nicefrac{15}{2}}$, $\jm{\nicefrac{19}{2}}{-\nicefrac{17}{2}}$, $\jm{\nicefrac{19}{2}}{-\nicefrac{19}{2}}$\\*
+$\nicefrac{21}{2}$ & $\irrJ{\nicefrac{21}{2}}$ & 1 & 22 & $\jm{\nicefrac{21}{2}}{\nicefrac{21}{2}}$, $\jm{\nicefrac{21}{2}}{\nicefrac{19}{2}}$, $\jm{\nicefrac{21}{2}}{\nicefrac{17}{2}}$, $\jm{\nicefrac{21}{2}}{\nicefrac{15}{2}}$, $\jm{\nicefrac{21}{2}}{\nicefrac{13}{2}}$, $\jm{\nicefrac{21}{2}}{\nicefrac{11}{2}}$, $\jm{\nicefrac{21}{2}}{\nicefrac{9}{2}}$, $\jm{\nicefrac{21}{2}}{\nicefrac{7}{2}}$, $\jm{\nicefrac{21}{2}}{\nicefrac{5}{2}}$, $\jm{\nicefrac{21}{2}}{\nicefrac{3}{2}}$, $\jm{\nicefrac{21}{2}}{\nicefrac{1}{2}}$, $\jm{\nicefrac{21}{2}}{-\nicefrac{1}{2}}$, $\jm{\nicefrac{21}{2}}{-\nicefrac{3}{2}}$, $\jm{\nicefrac{21}{2}}{-\nicefrac{5}{2}}$, $\jm{\nicefrac{21}{2}}{-\nicefrac{7}{2}}$, $\jm{\nicefrac{21}{2}}{-\nicefrac{9}{2}}$, $\jm{\nicefrac{21}{2}}{-\nicefrac{11}{2}}$, $\jm{\nicefrac{21}{2}}{-\nicefrac{13}{2}}$, $\jm{\nicefrac{21}{2}}{-\nicefrac{15}{2}}$, $\jm{\nicefrac{21}{2}}{-\nicefrac{17}{2}}$, $\jm{\nicefrac{21}{2}}{-\nicefrac{19}{2}}$, $\jm{\nicefrac{21}{2}}{-\nicefrac{21}{2}}$\\
+\bottomrule\end{longtable}}
+\needspace{171pt}
+\partbox{Spinors and tensors}
+\section{Spin--orbitals}\label{s:spin_orbitals}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.25.4}{25.4}.
+\leavevmode\label{n:index.orbital.l}\label{n:local.function.f}\label{n:head.subshell}\label{n:head.state}The states $\lvert l\,J\,m\rangle = \sum \langle l\,m_l\,\nicefrac{1}{2}\,m_s \vert J\,m\rangle\,\lvert l\,m_l\rangle\lvert \nicefrac{1}{2}\,m_s\rangle$ of an electron of orbital angular momentum $l$ and spin $\nicefrac{1}{2}$ in the subshells $J = l \mp \nicefrac{1}{2}$, with the coefficients of section~\ref{s:clebsch_gordan} (whose tables put the spin first: $\langle l\,m_l\,\nicefrac{1}{2}\,m_s \vert J\,m\rangle = (-1)^{l+1/2-J}\langle \nicefrac{1}{2}\,m_s\,l\,m_l \vert J\,m\rangle$) and the kets $\lvert l\,m_l\rangle$ of the spherical harmonics (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.4}{4}), written in the functions $f$ of the $\orbital{s}$, $\orbital{p}$ and $\orbital{d}$ shells of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.13}{13}) times the spin kets $u = \jm{1/2}{1/2}$ and $v = \jm{1/2}{-1/2}$, each up to a positive factor; the record holds the $\orbital{f}$ shell as well (\texttt{spin\symbol{95}orbitals}). A row gives the subshell, $m$ and the state.
+{\small\begin{longtable}{@{}lrl@{}}\toprule
+subshell & $m$ & state\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\orbital{s}_{\nicefrac{1}{2}}$ & $\nicefrac{1}{2}$ & $\orbital{s}u$\\*
+ & $-\nicefrac{1}{2}$ & $\orbital{s}v$\\
+\groupspace{2pt}
+$\orbital{p}_{\nicefrac{1}{2}}$ & $\nicefrac{1}{2}$ & $-\orbital{p}_{z}u-\left(\orbital{p}_{x} + \iunit{}\,\orbital{p}_{y}\right)v$\\*
+ & $-\nicefrac{1}{2}$ & $\left(-\orbital{p}_{x} + \iunit{}\,\orbital{p}_{y}\right)u+\orbital{p}_{z}v$\\
+\groupspace{2pt}
+$\orbital{p}_{\nicefrac{3}{2}}$ & $\nicefrac{3}{2}$ & $-\left(\orbital{p}_{x} + \iunit{}\,\orbital{p}_{y}\right)u$\\*
+ & $\nicefrac{1}{2}$ & $2\orbital{p}_{z}u-\left(\orbital{p}_{x} + \iunit{}\,\orbital{p}_{y}\right)v$\\*
+ & $-\nicefrac{1}{2}$ & $\left(\orbital{p}_{x} - \iunit{}\,\orbital{p}_{y}\right)u+2\orbital{p}_{z}v$\\*
+ & $-\nicefrac{3}{2}$ & $\left(\orbital{p}_{x} - \iunit{}\,\orbital{p}_{y}\right)v$\\
+\groupspace{2pt}
+$\orbital{d}_{\nicefrac{3}{2}}$ & $\nicefrac{3}{2}$ & $\left(\iunit{}\,\orbital{d}_{yz} + \orbital{d}_{zx}\right)u+\left(\orbital{d}_{x^2-y^2} + 2\iunit{}\,\orbital{d}_{xy}\right)v$\\*
+ & $\nicefrac{1}{2}$ & $-\orbital{d}_{z^2}u-\left(3\iunit{}\,\orbital{d}_{yz} + 3\orbital{d}_{zx}\right)v$\\*
+ & $-\nicefrac{1}{2}$ & $\left(3\iunit{}\,\orbital{d}_{yz} - 3\orbital{d}_{zx}\right)u+\orbital{d}_{z^2}v$\\*
+ & $-\nicefrac{3}{2}$ & $\left(-\orbital{d}_{x^2-y^2} + 2\iunit{}\,\orbital{d}_{xy}\right)u+\left(-\iunit{}\,\orbital{d}_{yz} + \orbital{d}_{zx}\right)v$\\
+\groupspace{2pt}
+$\orbital{d}_{\nicefrac{5}{2}}$ & $\nicefrac{5}{2}$ & $\left(\orbital{d}_{x^2-y^2} + 2\iunit{}\,\orbital{d}_{xy}\right)u$\\*
+ & $\nicefrac{3}{2}$ & $-\left(4\iunit{}\,\orbital{d}_{yz} + 4\orbital{d}_{zx}\right)u+\left(\orbital{d}_{x^2-y^2} + 2\iunit{}\,\orbital{d}_{xy}\right)v$\\*
+ & $\nicefrac{1}{2}$ & $\orbital{d}_{z^2}u-\left(2\iunit{}\,\orbital{d}_{yz} + 2\orbital{d}_{zx}\right)v$\\*
+ & $-\nicefrac{1}{2}$ & $\left(-2\iunit{}\,\orbital{d}_{yz} + 2\orbital{d}_{zx}\right)u+\orbital{d}_{z^2}v$\\*
+ & $-\nicefrac{3}{2}$ & $\left(\orbital{d}_{x^2-y^2} - 2\iunit{}\,\orbital{d}_{xy}\right)u+\left(-4\iunit{}\,\orbital{d}_{yz} + 4\orbital{d}_{zx}\right)v$\\*
+ & $-\nicefrac{5}{2}$ & $\left(\orbital{d}_{x^2-y^2} - 2\iunit{}\,\orbital{d}_{xy}\right)v$\\
+\addlinespace[2pt]
+\bottomrule\end{longtable}}
+\needspace{103pt}
+\section{Invariant polynomials}\label{s:invariants}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.26.4}{26.4}.
+\leavevmode\label{n:local.binary.form}A binary form $f = \sum_i c_i\, u^i v^{n-i}$ of degree $n$ in the spin kets $u = \jm{1/2}{1/2}$ and $v = \jm{1/2}{-1/2}$ is invariant when every element leaves it unchanged, the elements acting at the parity $+1$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.26.4}{26.4}). The matrices of the elements on $u$, $v$ are $\grp{SU(2)}$: no form of positive degree is invariant, the forms of each degree carrying one irrep of $\grp{SU(2)}$ [\href{../../../REFERENCES.pdf\#ref.Vil68}{Vil68}, chapter III, section 2.3].
+\leavevmode\label{n:function.hilbert}The number of independent invariant polynomials of degree $n$ in the components of a ket of $\irrJ{J}$, the invariants of the binary form of degree $2J$, is the coefficient of $t^n$ in its Molien series $H_J(t)$ [\href{../../../REFERENCES.pdf\#ref.Mol97}{Mol97}]: the number of choices of $n$ values of $m = -J, \dots, J$, repetitions allowed, of sum 0, less the number of sum 1 [\href{../../../REFERENCES.pdf\#ref.Syl78}{Syl78}]. As $\elt{\barred{E}}$ acts as $-1$, every invariant has even degree. Over the denominator of the rule of the levels (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.19}{19} and \href{../../CONVENTIONS.pdf\#conv.26.4}{26.4}) with $2J - 2$ factors for $J \ge \nicefrac{3}{2}$ and none for $J = \nicefrac{1}{2}$, the dimension of the ring, each $1 - t^{a}$ of even $a$, the table gives $H_J(t)$ for $2J \le 7$; the record stores none of them.
+{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\nicefrac{1}{2}$}\cellmax{$\nicefrac{3}{2}$}\cellmax{$\nicefrac{5}{2}$}\cellmax{$\nicefrac{7}{2}$}\cellmax{$J$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$(1 + t^{8} + 5t^{12} + 4t^{14} + 3t^{16} + 9t^{18} + 4t^{20} + 5t^{22} + 8t^{24} + 4t^{26} + 4t^{28} + 8t^{30} + 5t^{32} + 4t^{34} + 9t^{36} + 3t^{38} + 4t^{40} + 5t^{42} + t^{46} + t^{54})/((1-t^{4})(1-t^{8})^{2}(1-t^{12})(1-t^{30}))$}\cellmax{$(1 + t^{18})/((1-t^{4})(1-t^{8})(1-t^{12}))$}\cellmax{$1/(1-t^{4})$}\cellmax{$H_J(t)$}\cellmax{$1$}\fillcap\begin{longtable}{@{}l>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
+$J$ & $H_J(t)$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\nicefrac{1}{2}$ & $1$\\*
+$\nicefrac{3}{2}$ & $1/(1-t^{4})$\\
+$\nicefrac{5}{2}$ & $(1 + t^{18})/((1-t^{4})(1-t^{8})(1-t^{12}))$\\*
+$\nicefrac{7}{2}$ & $(1 + t^{8} + 5t^{12} + 4t^{14} + 3t^{16} + 9t^{18} + 4t^{20} + 5t^{22} + 8t^{24} + 4t^{26} + 4t^{28} + 8t^{30} + 5t^{32} + 4t^{34} + 9t^{36} + 3t^{38} + 4t^{40} + 5t^{42} + t^{46} + t^{54})/((1-t^{4})(1-t^{8})^{2}(1-t^{12})(1-t^{30}))$\\
+\bottomrule\end{longtable}}
+\needspace{171pt}
+\partbox{Electronic levels}
+\section{\texorpdfstring{$jj$}{jj} configurations}\label{s:jj}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.19}{19} and \href{../../CONVENTIONS.pdf\#conv.25.3}{25.3}.
+In $jj$ coupling an electron of an atomic subshell $\orbital{p}$, $\orbital{d}$ or $\orbital{f}$ has the angular momentum $J$ of one of its two subshells $\orbital{p}_{1/2}$, $\orbital{p}_{3/2}$, $\orbital{d}_{3/2}$, $\orbital{d}_{5/2}$, $\orbital{f}_{5/2}$, $\orbital{f}_{7/2}$. $n$ electrons in the subshell $J$ fill the level $\irrJ{J}$, a Kramers level: their levels are $\Lambda^{n}\irrJ{J}$, $n = 0, \dots, 2J + 1$, vector irreps at even $n$ and spinor irreps at odd $n$, and $n$ and $2J + 1 - n$ electrons have the same levels. A configuration in both subshells of $\orbital{p}$, $\orbital{d}$ or $\orbital{f}$ has the products of their powers (section~\ref{s:fusion}), the levels into which the electronic terms of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$} split. The record holds every $n$ (\texttt{jj\symbol{95}configurations}).
+{\small\begin{longtable}{@{}rl@{}}\toprule
+$n$ & $\Lambda^{n}\irrJ{J}$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\multicolumn{2}{@{}c@{}}{$\orbital{p}_{1/2}^{n}$, $J = \nicefrac{1}{2}$}\\*
+0 & $\irrJ{0}$\\
+1 & $\irrJ{\nicefrac{1}{2}}$\\
+2 & $\irrJ{0}$\\
+\grouprule{0pt}{\lightrulewidth}\multicolumn{2}{@{}c@{}}{$\orbital{p}_{3/2}^{n}$ and $\orbital{d}_{3/2}^{n}$, $J = \nicefrac{3}{2}$}\\*
+0 & $\irrJ{0}$\\
+1 & $\irrJ{\nicefrac{3}{2}}$\\
+2 & $\irrJ{0}\oplus \irrJ{2}$\\
+3 & $\irrJ{\nicefrac{3}{2}}$\\
+4 & $\irrJ{0}$\\
+\grouprule{0pt}{\lightrulewidth}\multicolumn{2}{@{}c@{}}{$\orbital{d}_{5/2}^{n}$ and $\orbital{f}_{5/2}^{n}$, $J = \nicefrac{5}{2}$}\\*
+0 & $\irrJ{0}$\\
+1 & $\irrJ{\nicefrac{5}{2}}$\\
+2 & $\irrJ{0}\oplus \irrJ{2}\oplus \irrJ{4}$\\
+3 & $\irrJ{\nicefrac{3}{2}}\oplus \irrJ{\nicefrac{5}{2}}\oplus \irrJ{\nicefrac{9}{2}}$\\
+4 & $\irrJ{0}\oplus \irrJ{2}\oplus \irrJ{4}$\\
+5 & $\irrJ{\nicefrac{5}{2}}$\\
+6 & $\irrJ{0}$\\
+\grouprule{0pt}{\lightrulewidth}\multicolumn{2}{@{}c@{}}{$\orbital{f}_{7/2}^{n}$, $J = \nicefrac{7}{2}$}\\*
+0 & $\irrJ{0}$\\
+1 & $\irrJ{\nicefrac{7}{2}}$\\
+2 & $\irrJ{0}\oplus \irrJ{2}\oplus \irrJ{4}\oplus \irrJ{6}$\\
+3 & $\irrJ{\nicefrac{3}{2}}\oplus \irrJ{\nicefrac{5}{2}}\oplus \irrJ{\nicefrac{7}{2}}\oplus \irrJ{\nicefrac{9}{2}}\oplus \irrJ{\nicefrac{11}{2}}\oplus \irrJ{\nicefrac{15}{2}}$\\
+4 & $\irrJ{0}\oplus 2\,\irrJ{2}\oplus 2\,\irrJ{4}\oplus \irrJ{5}\oplus \irrJ{6}\oplus \irrJ{8}$\\
+5 & $\irrJ{\nicefrac{3}{2}}\oplus \irrJ{\nicefrac{5}{2}}\oplus \irrJ{\nicefrac{7}{2}}\oplus \irrJ{\nicefrac{9}{2}}\oplus \irrJ{\nicefrac{11}{2}}\oplus \irrJ{\nicefrac{15}{2}}$\\
+6 & $\irrJ{0}\oplus \irrJ{2}\oplus \irrJ{4}\oplus \irrJ{6}$\\
+7 & $\irrJ{\nicefrac{7}{2}}$\\*
+8 & $\irrJ{0}$\\
+\bottomrule\end{longtable}}
+\end{document}

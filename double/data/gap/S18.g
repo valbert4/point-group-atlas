@@ -1,0 +1,429 @@
+# S18 (S_18): data/json/S18.json as a GAP record.
+o3d := rec(
+  ("elements") := rec(
+    ("count") := 18,
+    ("lift_bits") := [ 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0 ]
+  ),
+  ("group") := rec(
+    ("alternative_names") := [],
+    ("altmann_T") := 20,
+    ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+    ("conway_smith") := rec( ("reason") := "not-in-source", ("value") := fail ),
+    ("hermann_mauguin") := "-9",
+    ("image") := "rotation/S18#",
+    ("normalizer") := rec(
+      ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+      ("symbol") := "2D_infh"
+    ),
+    ("order") := 18,
+    ("section_of") := "double/2S18#",
+    ("symbol") := "S_18"
+  ),
+  ("schema") := "point-group-atlas/double/section/1",
+  ("subgroup_lattice") := rec(
+    ("counts") := rec(
+      ("double_classes") := 6,
+      ("double_classes_by_order") := rec( ("1") := 1, ("18") := 1, ("2") := 1, ("3") := 1, ("6") := 1, ("9") := 1 ),
+      ("g_classes") := 6,
+      ("g_classes_by_order") := rec( ("1") := 1, ("18") := 1, ("2") := 1, ("3") := 1, ("6") := 1, ("9") := 1 ),
+      ("subgroups") := 6
+    ),
+    ("edges") := [
+      rec(
+        ("embeddings_in_upper") := 1,
+        ("index") := 2,
+        ("lower") := "n00",
+        ("upper") := "n01",
+        ("witness") := rec(
+          ("conjugator") := 0,
+          ("conjugator_symbol") := "E",
+          ("lower_elements") := [ 0 ],
+          ("lower_poles") := [ rec( ("kind") := "none" ) ],
+          ("lower_symbols") := [ "E" ],
+          ("upper_elements") := [ 0, 9 ]
+        )
+      ),
+      rec(
+        ("embeddings_in_upper") := 1,
+        ("index") := 3,
+        ("lower") := "n00",
+        ("upper") := "n02",
+        ("witness") := rec(
+          ("conjugator") := 0,
+          ("conjugator_symbol") := "E",
+          ("lower_elements") := [ 0 ],
+          ("lower_poles") := [ rec( ("kind") := "none" ) ],
+          ("lower_symbols") := [ "E" ],
+          ("upper_elements") := [ 0, 3, 6 ]
+        )
+      ),
+      rec(
+        ("embeddings_in_upper") := 1,
+        ("index") := 3,
+        ("lower") := "n01",
+        ("upper") := "n03",
+        ("witness") := rec(
+          ("conjugator") := 0,
+          ("conjugator_symbol") := "E",
+          ("lower_elements") := [ 0, 9 ],
+          ("lower_poles") := [ rec( ("kind") := "none" ), rec( ("kind") := "none" ) ],
+          ("lower_symbols") := [ "E", "i" ],
+          ("upper_elements") := [ 0, 3, 6, 9, 11, 16 ]
+        )
+      ),
+      rec(
+        ("embeddings_in_upper") := 1,
+        ("index") := 2,
+        ("lower") := "n02",
+        ("upper") := "n03",
+        ("witness") := rec(
+          ("conjugator") := 0,
+          ("conjugator_symbol") := "E",
+          ("lower_elements") := [ 0, 3, 6 ],
+          ("lower_poles") := [
+            rec( ("kind") := "none" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" )
+          ],
+          ("lower_symbols") := [ "E", "C_3", "C_3^2" ],
+          ("upper_elements") := [ 0, 3, 6, 9, 11, 16 ]
+        )
+      ),
+      rec(
+        ("embeddings_in_upper") := 1,
+        ("index") := 3,
+        ("lower") := "n02",
+        ("upper") := "n04",
+        ("witness") := rec(
+          ("conjugator") := 0,
+          ("conjugator_symbol") := "E",
+          ("lower_elements") := [ 0, 3, 6 ],
+          ("lower_poles") := [
+            rec( ("kind") := "none" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" )
+          ],
+          ("lower_symbols") := [ "E", "C_3", "C_3^2" ],
+          ("upper_elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ]
+        )
+      ),
+      rec(
+        ("embeddings_in_upper") := 1,
+        ("index") := 3,
+        ("lower") := "n03",
+        ("upper") := "n05",
+        ("witness") := rec(
+          ("conjugator") := 0,
+          ("conjugator_symbol") := "E",
+          ("lower_elements") := [ 0, 3, 6, 9, 11, 16 ],
+          ("lower_poles") := [
+            rec( ("kind") := "none" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+            rec( ("kind") := "none" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" )
+          ],
+          ("lower_symbols") := [ "E", "C_3", "C_3^2", "i", "S_6", "S_6^5" ],
+          ("upper_elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
+        )
+      ),
+      rec(
+        ("embeddings_in_upper") := 1,
+        ("index") := 2,
+        ("lower") := "n04",
+        ("upper") := "n05",
+        ("witness") := rec(
+          ("conjugator") := 0,
+          ("conjugator_symbol") := "E",
+          ("lower_elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
+          ("lower_poles") := [
+            rec( ("kind") := "none" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+            rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" )
+          ],
+          ("lower_symbols") := [ "E", "C_9", "C_9^2", "C_3", "C_9^4", "C_9^5", "C_3^2", "C_9^7", "C_9^8" ],
+          ("upper_elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
+        )
+      )
+    ],
+    ("nodes") := [
+      rec(
+        ("centralizer") := rec(
+          ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          ("node") := "n05"
+        ),
+        ("class_size") := 1,
+        ("double_class") := "C1",
+        ("double_symbol") := "C_1",
+        ("embedding") := rec(
+          ("kind") := "G-conjugacy class of subgroups",
+          ("members") := [
+            rec( ("conjugator") := 0, ("conjugator_symbol") := "E", ("elements") := [ 0 ] )
+          ],
+          ("representative") := rec(
+            ("class_ids") := [ "E" ],
+            ("elements") := [ 0 ],
+            ("poles") := [ rec( ("kind") := "none" ) ],
+            ("symbols") := [ "E" ]
+          )
+        ),
+        ("id") := "n00",
+        ("index") := 18,
+        ("normal") := true,
+        ("normalizer") := rec(
+          ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          ("node") := "n05"
+        ),
+        ("normalizer_order") := 18,
+        ("order") := 1
+      ),
+      rec(
+        ("centralizer") := rec(
+          ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          ("node") := "n05"
+        ),
+        ("class_size") := 1,
+        ("double_class") := "S2",
+        ("double_symbol") := "C_i",
+        ("embedding") := rec(
+          ("kind") := "G-conjugacy class of subgroups",
+          ("members") := [
+            rec( ("conjugator") := 0, ("conjugator_symbol") := "E", ("elements") := [ 0, 9 ] )
+          ],
+          ("representative") := rec(
+            ("class_ids") := [ "E", "i" ],
+            ("elements") := [ 0, 9 ],
+            ("poles") := [ rec( ("kind") := "none" ), rec( ("kind") := "none" ) ],
+            ("symbols") := [ "E", "i" ]
+          )
+        ),
+        ("id") := "n01",
+        ("index") := 9,
+        ("normal") := true,
+        ("normalizer") := rec(
+          ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          ("node") := "n05"
+        ),
+        ("normalizer_order") := 18,
+        ("order") := 2
+      ),
+      rec(
+        ("centralizer") := rec(
+          ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          ("node") := "n05"
+        ),
+        ("class_size") := 1,
+        ("double_class") := "C3",
+        ("double_symbol") := "C_3",
+        ("embedding") := rec(
+          ("kind") := "G-conjugacy class of subgroups",
+          ("members") := [
+            rec( ("conjugator") := 0, ("conjugator_symbol") := "E", ("elements") := [ 0, 3, 6 ] )
+          ],
+          ("representative") := rec(
+            ("class_ids") := [ "C3", "C32", "E" ],
+            ("elements") := [ 0, 3, 6 ],
+            ("poles") := [
+              rec( ("kind") := "none" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" )
+            ],
+            ("symbols") := [ "E", "C_3", "C_3^2" ]
+          )
+        ),
+        ("id") := "n02",
+        ("index") := 6,
+        ("normal") := true,
+        ("normalizer") := rec(
+          ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          ("node") := "n05"
+        ),
+        ("normalizer_order") := 18,
+        ("order") := 3
+      ),
+      rec(
+        ("centralizer") := rec(
+          ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          ("node") := "n05"
+        ),
+        ("class_size") := 1,
+        ("double_class") := "S6",
+        ("double_symbol") := "S_6",
+        ("embedding") := rec(
+          ("kind") := "G-conjugacy class of subgroups",
+          ("members") := [
+            rec(
+              ("conjugator") := 0,
+              ("conjugator_symbol") := "E",
+              ("elements") := [ 0, 3, 6, 9, 11, 16 ]
+            )
+          ],
+          ("representative") := rec(
+            ("class_ids") := [ "C3", "C32", "E", "S6", "S65", "i" ],
+            ("elements") := [ 0, 3, 6, 9, 11, 16 ],
+            ("poles") := [
+              rec( ("kind") := "none" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("kind") := "none" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" )
+            ],
+            ("symbols") := [ "E", "C_3", "C_3^2", "i", "S_6", "S_6^5" ]
+          )
+        ),
+        ("id") := "n03",
+        ("index") := 3,
+        ("normal") := true,
+        ("normalizer") := rec(
+          ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          ("node") := "n05"
+        ),
+        ("normalizer_order") := 18,
+        ("order") := 6
+      ),
+      rec(
+        ("centralizer") := rec(
+          ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          ("node") := "n05"
+        ),
+        ("class_size") := 1,
+        ("double_class") := "C9",
+        ("double_symbol") := "C_9",
+        ("embedding") := rec(
+          ("kind") := "G-conjugacy class of subgroups",
+          ("members") := [
+            rec(
+              ("conjugator") := 0,
+              ("conjugator_symbol") := "E",
+              ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ]
+            )
+          ],
+          ("representative") := rec(
+            ("class_ids") := [ "C3", "C32", "C9", "C92", "C94", "C95", "C97", "C98", "E" ],
+            ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
+            ("poles") := [
+              rec( ("kind") := "none" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" )
+            ],
+            ("symbols") := [ "E", "C_9", "C_9^2", "C_3", "C_9^4", "C_9^5", "C_3^2", "C_9^7", "C_9^8" ]
+          )
+        ),
+        ("id") := "n04",
+        ("index") := 2,
+        ("normal") := true,
+        ("normalizer") := rec(
+          ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          ("node") := "n05"
+        ),
+        ("normalizer_order") := 18,
+        ("order") := 9
+      ),
+      rec(
+        ("centralizer") := rec(
+          ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          ("node") := "n05"
+        ),
+        ("class_size") := 1,
+        ("double_class") := "S18",
+        ("double_symbol") := "S_18",
+        ("embedding") := rec(
+          ("kind") := "G-conjugacy class of subgroups",
+          ("members") := [
+            rec(
+              ("conjugator") := 0,
+              ("conjugator_symbol") := "E",
+              ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
+            )
+          ],
+          ("representative") := rec(
+            ("class_ids") := [
+              "C3",
+              "C32",
+              "C9",
+              "C92",
+              "C94",
+              "C95",
+              "C97",
+              "C98",
+              "E",
+              "S18",
+              "S1811",
+              "S1813",
+              "S1817",
+              "S185",
+              "S187",
+              "S6",
+              "S65",
+              "i"
+            ],
+            ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+            ("poles") := [
+              rec( ("kind") := "none" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("kind") := "none" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
+              rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" )
+            ],
+            ("symbols") := [
+              "E",
+              "C_9",
+              "C_9^2",
+              "C_3",
+              "C_9^4",
+              "C_9^5",
+              "C_3^2",
+              "C_9^7",
+              "C_9^8",
+              "i",
+              "S_18",
+              "S_6",
+              "S_18^5",
+              "S_18^7",
+              "S_18^11",
+              "S_18^13",
+              "S_6^5",
+              "S_18^17"
+            ]
+          )
+        ),
+        ("id") := "n05",
+        ("index") := 1,
+        ("normal") := true,
+        ("normalizer") := rec(
+          ("elements") := [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          ("node") := "n05"
+        ),
+        ("normalizer_order") := 18,
+        ("order") := 18
+      )
+    ]
+  )
+);

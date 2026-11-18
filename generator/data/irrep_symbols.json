@@ -1,0 +1,1868 @@
+{
+ "double": {
+  "2C1": {
+   "bethe": {
+    "A1h": "Gamma_2"
+   },
+   "bilbao": {
+    "A1h": "bar Gamma_2"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2C1h": {
+   "bethe": {
+    "E1hp": "Gamma_3",
+    "E1hpp": "Gamma_4"
+   },
+   "bilbao": {
+    "E1hp": "bar Gamma_4",
+    "E1hpp": "bar Gamma_3"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_3",
+      "Gamma_4"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_3",
+      "bar Gamma_4"
+     ]
+    ]
+   }
+  },
+  "2C1v": {
+   "bethe": {
+    "1E1h": "Gamma_3",
+    "2E1h": "Gamma_4"
+   },
+   "bilbao": {
+    "1E1h": "bar Gamma_4",
+    "2E1h": "bar Gamma_3"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_3",
+      "Gamma_4"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_3",
+      "bar Gamma_4"
+     ]
+    ]
+   }
+  },
+  "2C2": {
+   "bethe": {
+    "1E1h": "Gamma_3",
+    "2E1h": "Gamma_4"
+   },
+   "bilbao": {
+    "1E1h": "bar Gamma_4",
+    "2E1h": "bar Gamma_3"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_3",
+      "Gamma_4"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_3",
+      "bar Gamma_4"
+     ]
+    ]
+   }
+  },
+  "2C2h": {
+   "bethe": {
+    "1E1hg": "Gamma_3^+",
+    "1E1hu": "Gamma_3^-",
+    "2E1hg": "Gamma_4^+",
+    "2E1hu": "Gamma_4^-"
+   },
+   "bilbao": {
+    "1E1hg": "bar Gamma_4",
+    "1E1hu": "bar Gamma_6",
+    "2E1hg": "bar Gamma_3",
+    "2E1hu": "bar Gamma_5"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_3^+",
+      "Gamma_4^+"
+     ],
+     [
+      "Gamma_3^-",
+      "Gamma_4^-"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_3",
+      "bar Gamma_4"
+     ],
+     [
+      "bar Gamma_5",
+      "bar Gamma_6"
+     ]
+    ]
+   }
+  },
+  "2C2v": {
+   "bethe": {
+    "E1h": "Gamma_5"
+   },
+   "bilbao": {
+    "E1h": "bar Gamma_5"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2C3": {
+   "bethe": {
+    "1E1h": "Gamma_4",
+    "2E1h": "Gamma_5",
+    "A3h": "Gamma_6"
+   },
+   "bilbao": {
+    "1E1h": "bar Gamma_6",
+    "2E1h": "bar Gamma_5",
+    "A3h": "bar Gamma_4"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_4",
+      "Gamma_5"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_5",
+      "bar Gamma_6"
+     ]
+    ]
+   }
+  },
+  "2C3h": {
+   "bethe": {
+    "E1hp": "Gamma_7",
+    "E1hpp": "Gamma_8",
+    "E3hp": "Gamma_11",
+    "E3hpp": "Gamma_12",
+    "E5hp": "Gamma_10",
+    "E5hpp": "Gamma_9"
+   },
+   "bilbao": {
+    "E1hp": "bar Gamma_11",
+    "E1hpp": "bar Gamma_10",
+    "E3hp": "bar Gamma_7",
+    "E3hpp": "bar Gamma_8",
+    "E5hp": "bar Gamma_9",
+    "E5hpp": "bar Gamma_12"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_7",
+      "Gamma_8"
+     ],
+     [
+      "Gamma_10",
+      "Gamma_9"
+     ],
+     [
+      "Gamma_11",
+      "Gamma_12"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_7",
+      "bar Gamma_8"
+     ],
+     [
+      "bar Gamma_12",
+      "bar Gamma_9"
+     ],
+     [
+      "bar Gamma_10",
+      "bar Gamma_11"
+     ]
+    ]
+   }
+  },
+  "2C3v": {
+   "bethe": {
+    "1E3h": "Gamma_5",
+    "2E3h": "Gamma_6",
+    "E1h": "Gamma_4"
+   },
+   "bilbao": {
+    "1E3h": "bar Gamma_5",
+    "2E3h": "bar Gamma_4",
+    "E1h": "bar Gamma_6"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_5",
+      "Gamma_6"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_4",
+      "bar Gamma_5"
+     ]
+    ]
+   }
+  },
+  "2C4": {
+   "bethe": {
+    "1E1h": "Gamma_5",
+    "1E3h": "Gamma_8",
+    "2E1h": "Gamma_6",
+    "2E3h": "Gamma_7"
+   },
+   "bilbao": {
+    "1E1h": "bar Gamma_8",
+    "1E3h": "bar Gamma_5",
+    "2E1h": "bar Gamma_6",
+    "2E3h": "bar Gamma_7"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_5",
+      "Gamma_6"
+     ],
+     [
+      "Gamma_7",
+      "Gamma_8"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_5",
+      "bar Gamma_7"
+     ],
+     [
+      "bar Gamma_6",
+      "bar Gamma_8"
+     ]
+    ]
+   }
+  },
+  "2C4h": {
+   "bethe": {
+    "1E1hg": "Gamma_5^+",
+    "1E1hu": "Gamma_5^-",
+    "1E3hg": "Gamma_8^+",
+    "1E3hu": "Gamma_8^-",
+    "2E1hg": "Gamma_6^+",
+    "2E1hu": "Gamma_6^-",
+    "2E3hg": "Gamma_7^+",
+    "2E3hu": "Gamma_7^-"
+   },
+   "bilbao": {
+    "1E1hg": "bar Gamma_8",
+    "1E1hu": "bar Gamma_12",
+    "1E3hg": "bar Gamma_5",
+    "1E3hu": "bar Gamma_9",
+    "2E1hg": "bar Gamma_6",
+    "2E1hu": "bar Gamma_10",
+    "2E3hg": "bar Gamma_7",
+    "2E3hu": "bar Gamma_11"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_5^+",
+      "Gamma_6^+"
+     ],
+     [
+      "Gamma_7^+",
+      "Gamma_8^+"
+     ],
+     [
+      "Gamma_5^-",
+      "Gamma_6^-"
+     ],
+     [
+      "Gamma_7^-",
+      "Gamma_8^-"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_5",
+      "bar Gamma_7"
+     ],
+     [
+      "bar Gamma_6",
+      "bar Gamma_8"
+     ],
+     [
+      "bar Gamma_11",
+      "bar Gamma_9"
+     ],
+     [
+      "bar Gamma_10",
+      "bar Gamma_12"
+     ]
+    ]
+   }
+  },
+  "2C4v": {
+   "bethe": {
+    "E1h": "Gamma_6",
+    "E3h": "Gamma_7"
+   },
+   "bilbao": {
+    "E1h": "bar Gamma_7",
+    "E3h": "bar Gamma_6"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2C6": {
+   "bethe": {
+    "1E1h": "Gamma_7",
+    "1E3h": "Gamma_12",
+    "1E5h": "Gamma_10",
+    "2E1h": "Gamma_8",
+    "2E3h": "Gamma_11",
+    "2E5h": "Gamma_9"
+   },
+   "bilbao": {
+    "1E1h": "bar Gamma_11",
+    "1E3h": "bar Gamma_8",
+    "1E5h": "bar Gamma_9",
+    "2E1h": "bar Gamma_10",
+    "2E3h": "bar Gamma_7",
+    "2E5h": "bar Gamma_12"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_7",
+      "Gamma_8"
+     ],
+     [
+      "Gamma_10",
+      "Gamma_9"
+     ],
+     [
+      "Gamma_11",
+      "Gamma_12"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_7",
+      "bar Gamma_8"
+     ],
+     [
+      "bar Gamma_12",
+      "bar Gamma_9"
+     ],
+     [
+      "bar Gamma_10",
+      "bar Gamma_11"
+     ]
+    ]
+   }
+  },
+  "2C6h": {
+   "bethe": {
+    "1E1hg": "Gamma_7^+",
+    "1E1hu": "Gamma_7^-",
+    "1E3hg": "Gamma_12^+",
+    "1E3hu": "Gamma_12^-",
+    "1E5hg": "Gamma_10^+",
+    "1E5hu": "Gamma_10^-",
+    "2E1hg": "Gamma_8^+",
+    "2E1hu": "Gamma_8^-",
+    "2E3hg": "Gamma_11^+",
+    "2E3hu": "Gamma_11^-",
+    "2E5hg": "Gamma_9^+",
+    "2E5hu": "Gamma_9^-"
+   },
+   "bilbao": {
+    "1E1hg": "bar Gamma_11",
+    "1E1hu": "bar Gamma_17",
+    "1E3hg": "bar Gamma_8",
+    "1E3hu": "bar Gamma_14",
+    "1E5hg": "bar Gamma_9",
+    "1E5hu": "bar Gamma_15",
+    "2E1hg": "bar Gamma_10",
+    "2E1hu": "bar Gamma_16",
+    "2E3hg": "bar Gamma_7",
+    "2E3hu": "bar Gamma_13",
+    "2E5hg": "bar Gamma_12",
+    "2E5hu": "bar Gamma_18"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_7^+",
+      "Gamma_8^+"
+     ],
+     [
+      "Gamma_7^-",
+      "Gamma_8^-"
+     ],
+     [
+      "Gamma_10^+",
+      "Gamma_9^+"
+     ],
+     [
+      "Gamma_10^-",
+      "Gamma_9^-"
+     ],
+     [
+      "Gamma_11^+",
+      "Gamma_12^+"
+     ],
+     [
+      "Gamma_11^-",
+      "Gamma_12^-"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_7",
+      "bar Gamma_8"
+     ],
+     [
+      "bar Gamma_12",
+      "bar Gamma_9"
+     ],
+     [
+      "bar Gamma_10",
+      "bar Gamma_11"
+     ],
+     [
+      "bar Gamma_13",
+      "bar Gamma_14"
+     ],
+     [
+      "bar Gamma_15",
+      "bar Gamma_18"
+     ],
+     [
+      "bar Gamma_16",
+      "bar Gamma_17"
+     ]
+    ]
+   }
+  },
+  "2C6v": {
+   "bethe": {
+    "E1h": "Gamma_7",
+    "E3h": "Gamma_9",
+    "E5h": "Gamma_8"
+   },
+   "bilbao": {
+    "E1h": "bar Gamma_9",
+    "E3h": "bar Gamma_7",
+    "E5h": "bar Gamma_8"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2D1": {
+   "bethe": {
+    "1E1h": "Gamma_3",
+    "2E1h": "Gamma_4"
+   },
+   "bilbao": {
+    "1E1h": "bar Gamma_4",
+    "2E1h": "bar Gamma_3"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_3",
+      "Gamma_4"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_3",
+      "bar Gamma_4"
+     ]
+    ]
+   }
+  },
+  "2D1d": {
+   "bethe": {
+    "1E1hg": "Gamma_3^+",
+    "1E1hu": "Gamma_3^-",
+    "2E1hg": "Gamma_4^+",
+    "2E1hu": "Gamma_4^-"
+   },
+   "bilbao": {
+    "1E1hg": "bar Gamma_4",
+    "1E1hu": "bar Gamma_6",
+    "2E1hg": "bar Gamma_3",
+    "2E1hu": "bar Gamma_5"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_3^+",
+      "Gamma_4^+"
+     ],
+     [
+      "Gamma_3^-",
+      "Gamma_4^-"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_3",
+      "bar Gamma_4"
+     ],
+     [
+      "bar Gamma_5",
+      "bar Gamma_6"
+     ]
+    ]
+   }
+  },
+  "2D1h": {
+   "bethe": {
+    "E1h": "Gamma_5"
+   },
+   "bilbao": {
+    "E1h": "bar Gamma_5"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2D2": {
+   "bethe": {
+    "E1h": "Gamma_5"
+   },
+   "bilbao": {
+    "E1h": "bar Gamma_5"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2D2d": {
+   "bethe": {
+    "E1h": "Gamma_6",
+    "E3h": "Gamma_7"
+   },
+   "bilbao": {
+    "E1h": "bar Gamma_7",
+    "E3h": "bar Gamma_6"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2D2h": {
+   "bethe": {
+    "E1hg": "Gamma_5^+",
+    "E1hu": "Gamma_5^-"
+   },
+   "bilbao": {
+    "E1hg": "bar Gamma_5",
+    "E1hu": "bar Gamma_6"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2D3": {
+   "bethe": {
+    "1E3h": "Gamma_5",
+    "2E3h": "Gamma_6",
+    "E1h": "Gamma_4"
+   },
+   "bilbao": {
+    "1E3h": "bar Gamma_5",
+    "2E3h": "bar Gamma_4",
+    "E1h": "bar Gamma_6"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_5",
+      "Gamma_6"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_4",
+      "bar Gamma_5"
+     ]
+    ]
+   }
+  },
+  "2D3d": {
+   "bethe": {
+    "1E3hg": "Gamma_5^+",
+    "1E3hu": "Gamma_5^-",
+    "2E3hg": "Gamma_6^+",
+    "2E3hu": "Gamma_6^-",
+    "E1hg": "Gamma_4^+",
+    "E1hu": "Gamma_4^-"
+   },
+   "bilbao": {
+    "1E3hg": "bar Gamma_5",
+    "1E3hu": "bar Gamma_7",
+    "2E3hg": "bar Gamma_4",
+    "2E3hu": "bar Gamma_6",
+    "E1hg": "bar Gamma_8",
+    "E1hu": "bar Gamma_9"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_5^+",
+      "Gamma_6^+"
+     ],
+     [
+      "Gamma_5^-",
+      "Gamma_6^-"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_4",
+      "bar Gamma_5"
+     ],
+     [
+      "bar Gamma_6",
+      "bar Gamma_7"
+     ]
+    ]
+   }
+  },
+  "2D3h": {
+   "bethe": {
+    "E1h": "Gamma_7",
+    "E3h": "Gamma_9",
+    "E5h": "Gamma_8"
+   },
+   "bilbao": {
+    "E1h": "bar Gamma_9",
+    "E3h": "bar Gamma_7",
+    "E5h": "bar Gamma_8"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2D4": {
+   "bethe": {
+    "E1h": "Gamma_6",
+    "E3h": "Gamma_7"
+   },
+   "bilbao": {
+    "E1h": "bar Gamma_7",
+    "E3h": "bar Gamma_6"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2D4h": {
+   "bethe": {
+    "E1hg": "Gamma_6^+",
+    "E1hu": "Gamma_6^-",
+    "E3hg": "Gamma_7^+",
+    "E3hu": "Gamma_7^-"
+   },
+   "bilbao": {
+    "E1hg": "bar Gamma_7",
+    "E1hu": "bar Gamma_9",
+    "E3hg": "bar Gamma_6",
+    "E3hu": "bar Gamma_8"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2D6": {
+   "bethe": {
+    "E1h": "Gamma_7",
+    "E3h": "Gamma_9",
+    "E5h": "Gamma_8"
+   },
+   "bilbao": {
+    "E1h": "bar Gamma_9",
+    "E3h": "bar Gamma_7",
+    "E5h": "bar Gamma_8"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2D6h": {
+   "bethe": {
+    "E1hg": "Gamma_7^+",
+    "E1hu": "Gamma_7^-",
+    "E3hg": "Gamma_9^+",
+    "E3hu": "Gamma_9^-",
+    "E5hg": "Gamma_8^+",
+    "E5hu": "Gamma_8^-"
+   },
+   "bilbao": {
+    "E1hg": "bar Gamma_9",
+    "E1hu": "bar Gamma_12",
+    "E3hg": "bar Gamma_7",
+    "E3hu": "bar Gamma_10",
+    "E5hg": "bar Gamma_8",
+    "E5hu": "bar Gamma_11"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2O": {
+   "bethe": {
+    "E1h": "Gamma_6",
+    "E5h": "Gamma_7",
+    "G3h": "Gamma_8"
+   },
+   "bilbao": {
+    "E1h": "bar Gamma_6",
+    "E5h": "bar Gamma_7",
+    "G3h": "bar Gamma_8"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2Oh": {
+   "bethe": {
+    "E1hg": "Gamma_6^+",
+    "E1hu": "Gamma_6^-",
+    "E5hg": "Gamma_7^+",
+    "E5hu": "Gamma_7^-",
+    "G3hg": "Gamma_8^+",
+    "G3hu": "Gamma_8^-"
+   },
+   "bilbao": {
+    "E1hg": "bar Gamma_6",
+    "E1hu": "bar Gamma_8",
+    "E5hg": "bar Gamma_7",
+    "E5hu": "bar Gamma_9",
+    "G3hg": "bar Gamma_10",
+    "G3hu": "bar Gamma_11"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2S2": {
+   "bethe": {
+    "A1hg": "Gamma_2^+",
+    "A1hu": "Gamma_2^-"
+   },
+   "bilbao": {
+    "A1hg": "bar Gamma_3",
+    "A1hu": "bar Gamma_2"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2S4": {
+   "bethe": {
+    "1E1h": "Gamma_5",
+    "1E3h": "Gamma_7",
+    "2E1h": "Gamma_6",
+    "2E3h": "Gamma_8"
+   },
+   "bilbao": {
+    "1E1h": "bar Gamma_8",
+    "1E3h": "bar Gamma_7",
+    "2E1h": "bar Gamma_6",
+    "2E3h": "bar Gamma_5"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_5",
+      "Gamma_6"
+     ],
+     [
+      "Gamma_7",
+      "Gamma_8"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_5",
+      "bar Gamma_7"
+     ],
+     [
+      "bar Gamma_6",
+      "bar Gamma_8"
+     ]
+    ]
+   }
+  },
+  "2S6": {
+   "bethe": {
+    "1E1hg": "Gamma_4^+",
+    "1E1hu": "Gamma_4^-",
+    "2E1hg": "Gamma_5^+",
+    "2E1hu": "Gamma_5^-",
+    "A3hg": "Gamma_6^+",
+    "A3hu": "Gamma_6^-"
+   },
+   "bilbao": {
+    "1E1hg": "bar Gamma_6",
+    "1E1hu": "bar Gamma_9",
+    "2E1hg": "bar Gamma_5",
+    "2E1hu": "bar Gamma_8",
+    "A3hg": "bar Gamma_4",
+    "A3hu": "bar Gamma_7"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_4^+",
+      "Gamma_5^+"
+     ],
+     [
+      "Gamma_4^-",
+      "Gamma_5^-"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_5",
+      "bar Gamma_6"
+     ],
+     [
+      "bar Gamma_8",
+      "bar Gamma_9"
+     ]
+    ]
+   }
+  },
+  "2T": {
+   "bethe": {
+    "1G3h": "Gamma_6",
+    "2G3h": "Gamma_7",
+    "E1h": "Gamma_5"
+   },
+   "bilbao": {
+    "1G3h": "bar Gamma_6",
+    "2G3h": "bar Gamma_7",
+    "E1h": "bar Gamma_5"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_6",
+      "Gamma_7"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_6",
+      "bar Gamma_7"
+     ]
+    ]
+   }
+  },
+  "2Td": {
+   "bethe": {
+    "E1h": "Gamma_6",
+    "E5h": "Gamma_7",
+    "G3h": "Gamma_8"
+   },
+   "bilbao": {
+    "E1h": "bar Gamma_6",
+    "E5h": "bar Gamma_7",
+    "G3h": "bar Gamma_8"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "2Th": {
+   "bethe": {
+    "1G3hg": "Gamma_6^+",
+    "1G3hu": "Gamma_6^-",
+    "2G3hg": "Gamma_7^+",
+    "2G3hu": "Gamma_7^-",
+    "E1hg": "Gamma_5^+",
+    "E1hu": "Gamma_5^-"
+   },
+   "bilbao": {
+    "1G3hg": "bar Gamma_6",
+    "1G3hu": "bar Gamma_9",
+    "2G3hg": "bar Gamma_7",
+    "2G3hu": "bar Gamma_10",
+    "E1hg": "bar Gamma_5",
+    "E1hu": "bar Gamma_8"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_6^+",
+      "Gamma_7^+"
+     ],
+     [
+      "Gamma_6^-",
+      "Gamma_7^-"
+     ]
+    ],
+    "bilbao": [
+     [
+      "bar Gamma_6",
+      "bar Gamma_7"
+     ],
+     [
+      "bar Gamma_10",
+      "bar Gamma_9"
+     ]
+    ]
+   }
+  }
+ },
+ "rotation": {
+  "C1": {
+   "bethe": {
+    "A": "Gamma_1"
+   },
+   "bilbao": {
+    "A": "Gamma_1"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "C1h": {
+   "bethe": {
+    "Ap": "Gamma_1",
+    "App": "Gamma_2"
+   },
+   "bilbao": {
+    "Ap": "Gamma_1",
+    "App": "Gamma_2"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "C1v": {
+   "bethe": {
+    "Ap": "Gamma_1",
+    "App": "Gamma_2"
+   },
+   "bilbao": {
+    "Ap": "Gamma_1",
+    "App": "Gamma_2"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "C2": {
+   "bethe": {
+    "A": "Gamma_1",
+    "B": "Gamma_2"
+   },
+   "bilbao": {
+    "A": "Gamma_1",
+    "B": "Gamma_2"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "C2h": {
+   "bethe": {
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-",
+    "Bg": "Gamma_2^+",
+    "Bu": "Gamma_2^-"
+   },
+   "bilbao": {
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-",
+    "Bg": "Gamma_2^+",
+    "Bu": "Gamma_2^-"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "C2v": {
+   "bethe": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_3",
+    "B1": "Gamma_2",
+    "B2": "Gamma_4"
+   },
+   "bilbao": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "B1": "Gamma_4",
+    "B2": "Gamma_3"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "C3": {
+   "bethe": {
+    "1E1": "Gamma_2",
+    "2E1": "Gamma_3",
+    "A": "Gamma_1"
+   },
+   "bilbao": {
+    "1E1": "Gamma_2",
+    "2E1": "Gamma_3",
+    "A": "Gamma_1"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_2",
+      "Gamma_3"
+     ]
+    ],
+    "bilbao": [
+     [
+      "Gamma_2",
+      "Gamma_3"
+     ]
+    ]
+   }
+  },
+  "C3h": {
+   "bethe": {
+    "1E1p": "Gamma_2",
+    "1E1pp": "Gamma_5",
+    "2E1p": "Gamma_3",
+    "2E1pp": "Gamma_6",
+    "Ap": "Gamma_1",
+    "App": "Gamma_4"
+   },
+   "bilbao": {
+    "1E1p": "Gamma_3",
+    "1E1pp": "Gamma_4",
+    "2E1p": "Gamma_5",
+    "2E1pp": "Gamma_6",
+    "Ap": "Gamma_1",
+    "App": "Gamma_2"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_2",
+      "Gamma_3"
+     ],
+     [
+      "Gamma_5",
+      "Gamma_6"
+     ]
+    ],
+    "bilbao": [
+     [
+      "Gamma_3",
+      "Gamma_5"
+     ],
+     [
+      "Gamma_4",
+      "Gamma_6"
+     ]
+    ]
+   }
+  },
+  "C3v": {
+   "bethe": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "E1": "Gamma_3"
+   },
+   "bilbao": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "E1": "Gamma_3"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "C4": {
+   "bethe": {
+    "1E1": "Gamma_3",
+    "2E1": "Gamma_4",
+    "A": "Gamma_1",
+    "B": "Gamma_2"
+   },
+   "bilbao": {
+    "1E1": "Gamma_3",
+    "2E1": "Gamma_4",
+    "A": "Gamma_1",
+    "B": "Gamma_2"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_3",
+      "Gamma_4"
+     ]
+    ],
+    "bilbao": [
+     [
+      "Gamma_3",
+      "Gamma_4"
+     ]
+    ]
+   }
+  },
+  "C4h": {
+   "bethe": {
+    "1E1g": "Gamma_3^+",
+    "1E1u": "Gamma_3^-",
+    "2E1g": "Gamma_4^+",
+    "2E1u": "Gamma_4^-",
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-",
+    "Bg": "Gamma_2^+",
+    "Bu": "Gamma_2^-"
+   },
+   "bilbao": {
+    "1E1g": "Gamma_3^+",
+    "1E1u": "Gamma_3^-",
+    "2E1g": "Gamma_4^+",
+    "2E1u": "Gamma_4^-",
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-",
+    "Bg": "Gamma_2^+",
+    "Bu": "Gamma_2^-"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_3^+",
+      "Gamma_4^+"
+     ],
+     [
+      "Gamma_3^-",
+      "Gamma_4^-"
+     ]
+    ],
+    "bilbao": [
+     [
+      "Gamma_3^+",
+      "Gamma_4^+"
+     ],
+     [
+      "Gamma_3^-",
+      "Gamma_4^-"
+     ]
+    ]
+   }
+  },
+  "C4v": {
+   "bethe": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "B1": "Gamma_3",
+    "B2": "Gamma_4",
+    "E1": "Gamma_5"
+   },
+   "bilbao": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_4",
+    "B1": "Gamma_2",
+    "B2": "Gamma_3",
+    "E1": "Gamma_5"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "C6": {
+   "bethe": {
+    "1E1": "Gamma_5",
+    "1E2": "Gamma_3",
+    "2E1": "Gamma_6",
+    "2E2": "Gamma_2",
+    "A": "Gamma_1",
+    "B": "Gamma_4"
+   },
+   "bilbao": {
+    "1E1": "Gamma_4",
+    "1E2": "Gamma_5",
+    "2E1": "Gamma_6",
+    "2E2": "Gamma_3",
+    "A": "Gamma_1",
+    "B": "Gamma_2"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_2",
+      "Gamma_3"
+     ],
+     [
+      "Gamma_5",
+      "Gamma_6"
+     ]
+    ],
+    "bilbao": [
+     [
+      "Gamma_3",
+      "Gamma_5"
+     ],
+     [
+      "Gamma_4",
+      "Gamma_6"
+     ]
+    ]
+   }
+  },
+  "C6h": {
+   "bethe": {
+    "1E1g": "Gamma_5^+",
+    "1E1u": "Gamma_5^-",
+    "1E2g": "Gamma_3^+",
+    "1E2u": "Gamma_3^-",
+    "2E1g": "Gamma_6^+",
+    "2E1u": "Gamma_6^-",
+    "2E2g": "Gamma_2^+",
+    "2E2u": "Gamma_2^-",
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-",
+    "Bg": "Gamma_4^+",
+    "Bu": "Gamma_4^-"
+   },
+   "bilbao": {
+    "1E1g": "Gamma_4^+",
+    "1E1u": "Gamma_4^-",
+    "1E2g": "Gamma_5^+",
+    "1E2u": "Gamma_5^-",
+    "2E1g": "Gamma_6^+",
+    "2E1u": "Gamma_6^-",
+    "2E2g": "Gamma_3^+",
+    "2E2u": "Gamma_3^-",
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-",
+    "Bg": "Gamma_2^+",
+    "Bu": "Gamma_2^-"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_2^+",
+      "Gamma_3^+"
+     ],
+     [
+      "Gamma_2^-",
+      "Gamma_3^-"
+     ],
+     [
+      "Gamma_5^+",
+      "Gamma_6^+"
+     ],
+     [
+      "Gamma_5^-",
+      "Gamma_6^-"
+     ]
+    ],
+    "bilbao": [
+     [
+      "Gamma_3^+",
+      "Gamma_5^+"
+     ],
+     [
+      "Gamma_3^-",
+      "Gamma_5^-"
+     ],
+     [
+      "Gamma_4^+",
+      "Gamma_6^+"
+     ],
+     [
+      "Gamma_4^-",
+      "Gamma_6^-"
+     ]
+    ]
+   }
+  },
+  "C6v": {
+   "bethe": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "B1": "Gamma_3",
+    "B2": "Gamma_4",
+    "E1": "Gamma_5",
+    "E2": "Gamma_6"
+   },
+   "bilbao": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "B1": "Gamma_3",
+    "B2": "Gamma_4",
+    "E1": "Gamma_6",
+    "E2": "Gamma_5"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "D1": {
+   "bethe": {
+    "A": "Gamma_1",
+    "B": "Gamma_2"
+   },
+   "bilbao": {
+    "A": "Gamma_1",
+    "B": "Gamma_2"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "D1d": {
+   "bethe": {
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-",
+    "Bg": "Gamma_2^+",
+    "Bu": "Gamma_2^-"
+   },
+   "bilbao": {
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-",
+    "Bg": "Gamma_2^+",
+    "Bu": "Gamma_2^-"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "D1h": {
+   "bethe": {
+    "A1p": "Gamma_1",
+    "A1pp": "Gamma_3",
+    "A2p": "Gamma_2",
+    "A2pp": "Gamma_4"
+   },
+   "bilbao": {
+    "A1p": "Gamma_1",
+    "A1pp": "Gamma_2",
+    "A2p": "Gamma_4",
+    "A2pp": "Gamma_3"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "D2": {
+   "bethe": {
+    "A": "Gamma_1",
+    "B1": "Gamma_3",
+    "B2": "Gamma_2",
+    "B3": "Gamma_4"
+   },
+   "bilbao": {
+    "A": "Gamma_1",
+    "B1": "Gamma_2",
+    "B2": "Gamma_4",
+    "B3": "Gamma_3"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "D2d": {
+   "bethe": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "B1": "Gamma_3",
+    "B2": "Gamma_4",
+    "E1": "Gamma_5"
+   },
+   "bilbao": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_4",
+    "B1": "Gamma_2",
+    "B2": "Gamma_3",
+    "E1": "Gamma_5"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "D2h": {
+   "bethe": {
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-",
+    "B1g": "Gamma_3^+",
+    "B1u": "Gamma_3^-",
+    "B2g": "Gamma_2^+",
+    "B2u": "Gamma_2^-",
+    "B3g": "Gamma_4^+",
+    "B3u": "Gamma_4^-"
+   },
+   "bilbao": {
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-",
+    "B1g": "Gamma_2^+",
+    "B1u": "Gamma_2^-",
+    "B2g": "Gamma_4^+",
+    "B2u": "Gamma_4^-",
+    "B3g": "Gamma_3^+",
+    "B3u": "Gamma_3^-"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "D3": {
+   "bethe": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "E1": "Gamma_3"
+   },
+   "bilbao": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "E1": "Gamma_3"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "D3d": {
+   "bethe": {
+    "A1g": "Gamma_1^+",
+    "A1u": "Gamma_1^-",
+    "A2g": "Gamma_2^+",
+    "A2u": "Gamma_2^-",
+    "E1g": "Gamma_3^+",
+    "E1u": "Gamma_3^-"
+   },
+   "bilbao": {
+    "A1g": "Gamma_1^+",
+    "A1u": "Gamma_1^-",
+    "A2g": "Gamma_2^+",
+    "A2u": "Gamma_2^-",
+    "E1g": "Gamma_3^+",
+    "E1u": "Gamma_3^-"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "D3h": {
+   "bethe": {
+    "A1p": "Gamma_1",
+    "A1pp": "Gamma_3",
+    "A2p": "Gamma_2",
+    "A2pp": "Gamma_4",
+    "E1p": "Gamma_6",
+    "E1pp": "Gamma_5"
+   },
+   "bilbao": {
+    "A1p": "Gamma_1",
+    "A1pp": "Gamma_2",
+    "A2p": "Gamma_4",
+    "A2pp": "Gamma_3",
+    "E1p": "Gamma_5",
+    "E1pp": "Gamma_6"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "D4": {
+   "bethe": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "B1": "Gamma_3",
+    "B2": "Gamma_4",
+    "E1": "Gamma_5"
+   },
+   "bilbao": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_3",
+    "B1": "Gamma_2",
+    "B2": "Gamma_4",
+    "E1": "Gamma_5"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "D4h": {
+   "bethe": {
+    "A1g": "Gamma_1^+",
+    "A1u": "Gamma_1^-",
+    "A2g": "Gamma_2^+",
+    "A2u": "Gamma_2^-",
+    "B1g": "Gamma_3^+",
+    "B1u": "Gamma_3^-",
+    "B2g": "Gamma_4^+",
+    "B2u": "Gamma_4^-",
+    "E1g": "Gamma_5^+",
+    "E1u": "Gamma_5^-"
+   },
+   "bilbao": {
+    "A1g": "Gamma_1^+",
+    "A1u": "Gamma_1^-",
+    "A2g": "Gamma_3^+",
+    "A2u": "Gamma_3^-",
+    "B1g": "Gamma_2^+",
+    "B1u": "Gamma_2^-",
+    "B2g": "Gamma_4^+",
+    "B2u": "Gamma_4^-",
+    "E1g": "Gamma_5^+",
+    "E1u": "Gamma_5^-"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "D6": {
+   "bethe": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "B1": "Gamma_4",
+    "B2": "Gamma_3",
+    "E1": "Gamma_5",
+    "E2": "Gamma_6"
+   },
+   "bilbao": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "B1": "Gamma_3",
+    "B2": "Gamma_4",
+    "E1": "Gamma_6",
+    "E2": "Gamma_5"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "D6h": {
+   "bethe": {
+    "A1g": "Gamma_1^+",
+    "A1u": "Gamma_1^-",
+    "A2g": "Gamma_2^+",
+    "A2u": "Gamma_2^-",
+    "B1g": "Gamma_4^+",
+    "B1u": "Gamma_4^-",
+    "B2g": "Gamma_3^+",
+    "B2u": "Gamma_3^-",
+    "E1g": "Gamma_5^+",
+    "E1u": "Gamma_5^-",
+    "E2g": "Gamma_6^+",
+    "E2u": "Gamma_6^-"
+   },
+   "bilbao": {
+    "A1g": "Gamma_1^+",
+    "A1u": "Gamma_1^-",
+    "A2g": "Gamma_2^+",
+    "A2u": "Gamma_2^-",
+    "B1g": "Gamma_3^+",
+    "B1u": "Gamma_3^-",
+    "B2g": "Gamma_4^+",
+    "B2u": "Gamma_4^-",
+    "E1g": "Gamma_6^+",
+    "E1u": "Gamma_6^-",
+    "E2g": "Gamma_5^+",
+    "E2u": "Gamma_5^-"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "O": {
+   "bethe": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "E": "Gamma_3",
+    "T1": "Gamma_4",
+    "T2": "Gamma_5"
+   },
+   "bilbao": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "E": "Gamma_3",
+    "T1": "Gamma_4",
+    "T2": "Gamma_5"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "Oh": {
+   "bethe": {
+    "A1g": "Gamma_1^+",
+    "A1u": "Gamma_1^-",
+    "A2g": "Gamma_2^+",
+    "A2u": "Gamma_2^-",
+    "Eg": "Gamma_3^+",
+    "Eu": "Gamma_3^-",
+    "T1g": "Gamma_4^+",
+    "T1u": "Gamma_4^-",
+    "T2g": "Gamma_5^+",
+    "T2u": "Gamma_5^-"
+   },
+   "bilbao": {
+    "A1g": "Gamma_1^+",
+    "A1u": "Gamma_1^-",
+    "A2g": "Gamma_2^+",
+    "A2u": "Gamma_2^-",
+    "Eg": "Gamma_3^+",
+    "Eu": "Gamma_3^-",
+    "T1g": "Gamma_4^+",
+    "T1u": "Gamma_4^-",
+    "T2g": "Gamma_5^+",
+    "T2u": "Gamma_5^-"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "S2": {
+   "bethe": {
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-"
+   },
+   "bilbao": {
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "S4": {
+   "bethe": {
+    "1E1": "Gamma_4",
+    "2E1": "Gamma_3",
+    "A": "Gamma_1",
+    "B": "Gamma_2"
+   },
+   "bilbao": {
+    "1E1": "Gamma_4",
+    "2E1": "Gamma_3",
+    "A": "Gamma_1",
+    "B": "Gamma_2"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_3",
+      "Gamma_4"
+     ]
+    ],
+    "bilbao": [
+     [
+      "Gamma_3",
+      "Gamma_4"
+     ]
+    ]
+   }
+  },
+  "S6": {
+   "bethe": {
+    "1E1g": "Gamma_2^+",
+    "1E1u": "Gamma_2^-",
+    "2E1g": "Gamma_3^+",
+    "2E1u": "Gamma_3^-",
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-"
+   },
+   "bilbao": {
+    "1E1g": "Gamma_2^+",
+    "1E1u": "Gamma_2^-",
+    "2E1g": "Gamma_3^+",
+    "2E1u": "Gamma_3^-",
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_2^+",
+      "Gamma_3^+"
+     ],
+     [
+      "Gamma_2^-",
+      "Gamma_3^-"
+     ]
+    ],
+    "bilbao": [
+     [
+      "Gamma_2^+",
+      "Gamma_3^+"
+     ],
+     [
+      "Gamma_2^-",
+      "Gamma_3^-"
+     ]
+    ]
+   }
+  },
+  "T": {
+   "bethe": {
+    "1E": "Gamma_2",
+    "2E": "Gamma_3",
+    "A": "Gamma_1",
+    "T": "Gamma_4"
+   },
+   "bilbao": {
+    "1E": "Gamma_2",
+    "2E": "Gamma_3",
+    "A": "Gamma_1",
+    "T": "Gamma_4"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_2",
+      "Gamma_3"
+     ]
+    ],
+    "bilbao": [
+     [
+      "Gamma_2",
+      "Gamma_3"
+     ]
+    ]
+   }
+  },
+  "Td": {
+   "bethe": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "E": "Gamma_3",
+    "T1": "Gamma_4",
+    "T2": "Gamma_5"
+   },
+   "bilbao": {
+    "A1": "Gamma_1",
+    "A2": "Gamma_2",
+    "E": "Gamma_3",
+    "T1": "Gamma_5",
+    "T2": "Gamma_4"
+   },
+   "pairs": {
+    "bethe": [],
+    "bilbao": []
+   }
+  },
+  "Th": {
+   "bethe": {
+    "1Eg": "Gamma_2^+",
+    "1Eu": "Gamma_2^-",
+    "2Eg": "Gamma_3^+",
+    "2Eu": "Gamma_3^-",
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-",
+    "Tg": "Gamma_4^+",
+    "Tu": "Gamma_4^-"
+   },
+   "bilbao": {
+    "1Eg": "Gamma_2^+",
+    "1Eu": "Gamma_2^-",
+    "2Eg": "Gamma_3^+",
+    "2Eu": "Gamma_3^-",
+    "Ag": "Gamma_1^+",
+    "Au": "Gamma_1^-",
+    "Tg": "Gamma_4^+",
+    "Tu": "Gamma_4^-"
+   },
+   "pairs": {
+    "bethe": [
+     [
+      "Gamma_2^+",
+      "Gamma_3^+"
+     ],
+     [
+      "Gamma_2^-",
+      "Gamma_3^-"
+     ]
+    ],
+    "bilbao": [
+     [
+      "Gamma_2^+",
+      "Gamma_3^+"
+     ],
+     [
+      "Gamma_2^-",
+      "Gamma_3^-"
+     ]
+    ]
+   }
+  }
+ }
+}

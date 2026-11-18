@@ -1,0 +1,21167 @@
+(* D8d (D_8d): data/json/D8d.json as a Wolfram Language association. *)
+o3t = <|
+  "cartesian_tensors" -> <|
+    "functions" -> {
+      <|
+        "J" -> 0,
+        "irreps" -> {"A1"},
+        "kind" -> "polar",
+        "name" -> "s",
+        "poly" -> <|"0,0,0" -> 1|>,
+        "set" -> "s",
+        "single_irrep" -> True,
+        "space" -> "polar-0"
+      |>,
+      <|
+        "J" -> 1,
+        "irreps" -> {"E1"},
+        "kind" -> "polar",
+        "name" -> "p_x",
+        "poly" -> <|"1,0,0" -> 1|>,
+        "set" -> "p",
+        "single_irrep" -> True,
+        "space" -> "polar-1"
+      |>,
+      <|
+        "J" -> 1,
+        "irreps" -> {"E1"},
+        "kind" -> "polar",
+        "name" -> "p_y",
+        "poly" -> <|"0,1,0" -> 1|>,
+        "set" -> "p",
+        "single_irrep" -> True,
+        "space" -> "polar-1"
+      |>,
+      <|
+        "J" -> 1,
+        "irreps" -> {"B2"},
+        "kind" -> "polar",
+        "name" -> "p_z",
+        "poly" -> <|"0,0,1" -> 1|>,
+        "set" -> "p",
+        "single_irrep" -> True,
+        "space" -> "polar-1"
+      |>,
+      <|
+        "J" -> 2,
+        "irreps" -> {"A1"},
+        "kind" -> "polar",
+        "name" -> "d_z2",
+        "poly" -> <|"0,0,2" -> 2, "0,2,0" -> -1, "2,0,0" -> -1|>,
+        "set" -> "d",
+        "single_irrep" -> True,
+        "space" -> "polar-2"
+      |>,
+      <|
+        "J" -> 2,
+        "irreps" -> {"E2"},
+        "kind" -> "polar",
+        "name" -> "d_x2-y2",
+        "poly" -> <|"0,2,0" -> -1, "2,0,0" -> 1|>,
+        "set" -> "d",
+        "single_irrep" -> True,
+        "space" -> "polar-2"
+      |>,
+      <|
+        "J" -> 2,
+        "irreps" -> {"E2"},
+        "kind" -> "polar",
+        "name" -> "d_xy",
+        "poly" -> <|"1,1,0" -> 1|>,
+        "set" -> "d",
+        "single_irrep" -> True,
+        "space" -> "polar-2"
+      |>,
+      <|
+        "J" -> 2,
+        "irreps" -> {"E7"},
+        "kind" -> "polar",
+        "name" -> "d_yz",
+        "poly" -> <|"0,1,1" -> 1|>,
+        "set" -> "d",
+        "single_irrep" -> True,
+        "space" -> "polar-2"
+      |>,
+      <|
+        "J" -> 2,
+        "irreps" -> {"E7"},
+        "kind" -> "polar",
+        "name" -> "d_zx",
+        "poly" -> <|"1,0,1" -> 1|>,
+        "set" -> "d",
+        "single_irrep" -> True,
+        "space" -> "polar-2"
+      |>,
+      <|
+        "J" -> 3,
+        "irreps" -> {"B2"},
+        "kind" -> "polar",
+        "name" -> "f_z3",
+        "poly" -> <|"0,0,3" -> 2, "0,2,1" -> -3, "2,0,1" -> -3|>,
+        "set" -> "f",
+        "single_irrep" -> True,
+        "space" -> "polar-3"
+      |>,
+      <|
+        "J" -> 3,
+        "irreps" -> {"E1"},
+        "kind" -> "polar",
+        "name" -> "f_xz2",
+        "poly" -> <|"1,0,2" -> 4, "1,2,0" -> -1, "3,0,0" -> -1|>,
+        "set" -> "f",
+        "single_irrep" -> True,
+        "space" -> "polar-3"
+      |>,
+      <|
+        "J" -> 3,
+        "irreps" -> {"E1"},
+        "kind" -> "polar",
+        "name" -> "f_yz2",
+        "poly" -> <|"0,1,2" -> 4, "0,3,0" -> -1, "2,1,0" -> -1|>,
+        "set" -> "f",
+        "single_irrep" -> True,
+        "space" -> "polar-3"
+      |>,
+      <|
+        "J" -> 3,
+        "irreps" -> {"E6"},
+        "kind" -> "polar",
+        "name" -> "f_z(x2-y2)",
+        "poly" -> <|"0,2,1" -> -1, "2,0,1" -> 1|>,
+        "set" -> "f",
+        "single_irrep" -> True,
+        "space" -> "polar-3"
+      |>,
+      <|
+        "J" -> 3,
+        "irreps" -> {"E6"},
+        "kind" -> "polar",
+        "name" -> "f_xyz",
+        "poly" -> <|"1,1,1" -> 1|>,
+        "set" -> "f",
+        "single_irrep" -> True,
+        "space" -> "polar-3"
+      |>,
+      <|
+        "J" -> 3,
+        "irreps" -> {"E3"},
+        "kind" -> "polar",
+        "name" -> "f_x(x2-3y2)",
+        "poly" -> <|"1,2,0" -> -3, "3,0,0" -> 1|>,
+        "set" -> "f",
+        "single_irrep" -> True,
+        "space" -> "polar-3"
+      |>,
+      <|
+        "J" -> 3,
+        "irreps" -> {"E3"},
+        "kind" -> "polar",
+        "name" -> "f_y(3x2-y2)",
+        "poly" -> <|"0,3,0" -> -1, "2,1,0" -> 3|>,
+        "set" -> "f",
+        "single_irrep" -> True,
+        "space" -> "polar-3"
+      |>,
+      <|
+        "J" -> 1,
+        "irreps" -> {"E7"},
+        "kind" -> "axial",
+        "name" -> "R_x",
+        "poly" -> <|"1,0,0" -> 1|>,
+        "set" -> "axial",
+        "single_irrep" -> True,
+        "space" -> "axial-1"
+      |>,
+      <|
+        "J" -> 1,
+        "irreps" -> {"E7"},
+        "kind" -> "axial",
+        "name" -> "R_y",
+        "poly" -> <|"0,1,0" -> 1|>,
+        "set" -> "axial",
+        "single_irrep" -> True,
+        "space" -> "axial-1"
+      |>,
+      <|
+        "J" -> 1,
+        "irreps" -> {"A2"},
+        "kind" -> "axial",
+        "name" -> "R_z",
+        "poly" -> <|"0,0,1" -> 1|>,
+        "set" -> "axial",
+        "single_irrep" -> True,
+        "space" -> "axial-1"
+      |>
+    },
+    "spaces" -> {
+      <|
+        "blocks" -> {
+          <|
+            "basis" -> {<|"0,0,0" -> 1|>},
+            "dim" -> 1,
+            "field" -> "Q",
+            "irrep" -> "A1",
+            "multiplicity" -> 1
+          |>
+        },
+        "dim" -> 1,
+        "harmonic_dim" -> 1,
+        "id" -> "polar-0",
+        "kind" -> "polar",
+        "multiplicities" -> <|"A1" -> 1|>,
+        "rank" -> 0
+      |>,
+      <|
+        "blocks" -> {
+          <|
+            "basis" -> {<|"0,0,1" -> 1|>},
+            "dim" -> 1,
+            "field" -> "Q",
+            "irrep" -> "B2",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {<|"1,0,0" -> 1|>, <|"0,1,0" -> 1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E1",
+            "multiplicity" -> 1
+          |>
+        },
+        "dim" -> 3,
+        "harmonic_dim" -> 3,
+        "id" -> "polar-1",
+        "kind" -> "polar",
+        "multiplicities" -> <|"B2" -> 1, "E1" -> 1|>,
+        "rank" -> 1
+      |>,
+      <|
+        "blocks" -> {
+          <|
+            "basis" -> {<|"0,2,0" -> 1, "2,0,0" -> 1|>, <|"0,0,2" -> 1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "A1",
+            "multiplicity" -> 2
+          |>,
+          <|
+            "basis" -> {<|"0,2,0" -> -1, "2,0,0" -> 1|>, <|"1,1,0" -> 1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E2",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {<|"1,0,1" -> 1|>, <|"0,1,1" -> 1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E7",
+            "multiplicity" -> 1
+          |>
+        },
+        "dim" -> 6,
+        "harmonic_dim" -> 5,
+        "id" -> "polar-2",
+        "kind" -> "polar",
+        "multiplicities" -> <|"A1" -> 2, "E2" -> 1, "E7" -> 1|>,
+        "rank" -> 2
+      |>,
+      <|
+        "blocks" -> {
+          <|
+            "basis" -> {<|"0,2,1" -> 1, "2,0,1" -> 1|>, <|"0,0,3" -> 1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "B2",
+            "multiplicity" -> 2
+          |>,
+          <|
+            "basis" -> {
+              <|"1,2,0" -> 1, "3,0,0" -> 1|>,
+              <|"0,3,0" -> 1, "2,1,0" -> 1|>,
+              <|"1,0,2" -> 1|>,
+              <|"0,1,2" -> 1|>
+            },
+            "dim" -> 4,
+            "field" -> "Q",
+            "irrep" -> "E1",
+            "multiplicity" -> 2
+          |>,
+          <|
+            "basis" -> {<|"1,2,0" -> -3, "3,0,0" -> 1|>, <|"0,3,0" -> -1, "2,1,0" -> 3|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E3",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {<|"0,2,1" -> -1, "2,0,1" -> 1|>, <|"1,1,1" -> 1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E6",
+            "multiplicity" -> 1
+          |>
+        },
+        "dim" -> 10,
+        "harmonic_dim" -> 7,
+        "id" -> "polar-3",
+        "kind" -> "polar",
+        "multiplicities" -> <|"B2" -> 2, "E1" -> 2, "E3" -> 1, "E6" -> 1|>,
+        "rank" -> 3
+      |>,
+      <|
+        "blocks" -> {
+          <|
+            "basis" -> {
+              <|"0,4,0" -> 1, "2,2,0" -> 2, "4,0,0" -> 1|>,
+              <|"0,2,2" -> 1, "2,0,2" -> 1|>,
+              <|"0,0,4" -> 1|>
+            },
+            "dim" -> 3,
+            "field" -> "Q",
+            "irrep" -> "A1",
+            "multiplicity" -> 3
+          |>,
+          <|
+            "basis" -> {
+              <|"0,4,0" -> -1, "4,0,0" -> 1|>,
+              <|"1,3,0" -> 1, "3,1,0" -> 1|>,
+              <|"0,2,2" -> -1, "2,0,2" -> 1|>,
+              <|"1,1,2" -> 1|>
+            },
+            "dim" -> 4,
+            "field" -> "Q",
+            "irrep" -> "E2",
+            "multiplicity" -> 2
+          |>,
+          <|
+            "basis" -> {<|"0,4,0" -> 1, "2,2,0" -> -6, "4,0,0" -> 1|>, <|"1,3,0" -> -1, "3,1,0" -> 1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E4",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {<|"1,2,1" -> -3, "3,0,1" -> 1|>, <|"0,3,1" -> -1, "2,1,1" -> 3|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E5",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {
+              <|"1,2,1" -> 1, "3,0,1" -> 1|>,
+              <|"0,3,1" -> 1, "2,1,1" -> 1|>,
+              <|"1,0,3" -> 1|>,
+              <|"0,1,3" -> 1|>
+            },
+            "dim" -> 4,
+            "field" -> "Q",
+            "irrep" -> "E7",
+            "multiplicity" -> 2
+          |>
+        },
+        "dim" -> 15,
+        "harmonic_dim" -> 9,
+        "id" -> "polar-4",
+        "kind" -> "polar",
+        "multiplicities" -> <|"A1" -> 3, "E2" -> 2, "E4" -> 1, "E5" -> 1, "E7" -> 2|>,
+        "rank" -> 4
+      |>,
+      <|
+        "blocks" -> {
+          <|
+            "basis" -> {<|"0,0,1" -> 1|>},
+            "dim" -> 1,
+            "field" -> "Q",
+            "irrep" -> "A2",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {<|"1,0,0" -> 1|>, <|"0,1,0" -> 1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E7",
+            "multiplicity" -> 1
+          |>
+        },
+        "dim" -> 3,
+        "harmonic_dim" -> 3,
+        "id" -> "axial-1",
+        "kind" -> "axial",
+        "multiplicities" -> <|"A2" -> 1, "E7" -> 1|>,
+        "rank" -> 1
+      |>,
+      <|
+        "blocks" -> {
+          <|
+            "basis" -> {<|"0,2,0" -> 1, "2,0,0" -> 1|>, <|"0,0,2" -> 1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "B1",
+            "multiplicity" -> 2
+          |>,
+          <|
+            "basis" -> {<|"1,0,1" -> 1|>, <|"0,1,1" -> 1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E1",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {<|"0,2,0" -> -1, "2,0,0" -> 1|>, <|"1,1,0" -> 1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E6",
+            "multiplicity" -> 1
+          |>
+        },
+        "dim" -> 6,
+        "harmonic_dim" -> 5,
+        "id" -> "axial-2",
+        "kind" -> "axial",
+        "multiplicities" -> <|"B1" -> 2, "E1" -> 1, "E6" -> 1|>,
+        "rank" -> 2
+      |>,
+      <|
+        "blocks" -> {
+          <|
+            "basis" -> {<|"0,2,1" -> 1, "2,0,1" -> 1|>, <|"0,0,3" -> 1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "A2",
+            "multiplicity" -> 2
+          |>,
+          <|
+            "basis" -> {<|"0,2,1" -> -1, "2,0,1" -> 1|>, <|"1,1,1" -> 1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E2",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {<|"1,2,0" -> -3, "3,0,0" -> 1|>, <|"0,3,0" -> -1, "2,1,0" -> 3|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E5",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {
+              <|"1,2,0" -> 1, "3,0,0" -> 1|>,
+              <|"0,3,0" -> 1, "2,1,0" -> 1|>,
+              <|"1,0,2" -> 1|>,
+              <|"0,1,2" -> 1|>
+            },
+            "dim" -> 4,
+            "field" -> "Q",
+            "irrep" -> "E7",
+            "multiplicity" -> 2
+          |>
+        },
+        "dim" -> 10,
+        "harmonic_dim" -> 7,
+        "id" -> "axial-3",
+        "kind" -> "axial",
+        "multiplicities" -> <|"A2" -> 2, "E2" -> 1, "E5" -> 1, "E7" -> 2|>,
+        "rank" -> 3
+      |>,
+      <|
+        "blocks" -> {
+          <|
+            "basis" -> {
+              <|"11" -> 2, "22" -> 2, "66" -> 1|>,
+              <|"12" -> 2, "66" -> -1|>,
+              <|"13" -> 1, "23" -> 1|>,
+              <|"33" -> 1|>,
+              <|"44" -> 1, "55" -> 1|>
+            },
+            "dim" -> 5,
+            "field" -> "Q",
+            "irrep" -> "A1",
+            "multiplicity" -> 5
+          |>,
+          <|
+            "basis" -> {
+              <|"11" -> 1, "22" -> -1|>,
+              <|"13" -> 1, "23" -> -1|>,
+              <|"16" -> 1, "26" -> 1|>,
+              <|"36" -> 1|>,
+              <|"44" -> 1, "55" -> -1|>,
+              <|"45" -> 1|>
+            },
+            "dim" -> 6,
+            "field" -> "Q",
+            "irrep" -> "E2",
+            "multiplicity" -> 3
+          |>,
+          <|
+            "basis" -> {<|"11" -> 1, "12" -> -1, "22" -> 1, "66" -> -1|>, <|"16" -> 1, "26" -> -1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E4",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {<|"14" -> 1, "24" -> -1, "56" -> 1|>, <|"15" -> 1, "25" -> -1, "46" -> -1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E5",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {
+              <|"14" -> 2, "56" -> -1|>,
+              <|"15" -> 2, "46" -> 1|>,
+              <|"24" -> 2, "56" -> 1|>,
+              <|"25" -> 2, "46" -> -1|>,
+              <|"34" -> 1|>,
+              <|"35" -> 1|>
+            },
+            "dim" -> 6,
+            "field" -> "Q",
+            "irrep" -> "E7",
+            "multiplicity" -> 3
+          |>
+        },
+        "dim" -> 21,
+        "id" -> "elastic",
+        "kind" -> "polar",
+        "multiplicities" -> <|"A1" -> 5, "E2" -> 3, "E4" -> 1, "E5" -> 1, "E7" -> 3|>,
+        "rank" -> 4
+      |>,
+      <|
+        "blocks" -> {
+          <|
+            "basis" -> {<|"14" -> 1, "25" -> -1|>},
+            "dim" -> 1,
+            "field" -> "Q",
+            "irrep" -> "B1",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {<|"15" -> 1, "24" -> 1|>, <|"31" -> 1, "32" -> 1|>, <|"33" -> 1|>},
+            "dim" -> 3,
+            "field" -> "Q",
+            "irrep" -> "B2",
+            "multiplicity" -> 3
+          |>,
+          <|
+            "basis" -> {
+              <|"11" -> 1, "26" -> 1|>,
+              <|"12" -> 1, "26" -> -1|>,
+              <|"13" -> 1|>,
+              <|"16" -> 1, "22" -> 1|>,
+              <|"21" -> 1, "22" -> 1|>,
+              <|"23" -> 1|>,
+              <|"34" -> 1|>,
+              <|"35" -> 1|>
+            },
+            "dim" -> 8,
+            "field" -> "Q",
+            "irrep" -> "E1",
+            "multiplicity" -> 4
+          |>,
+          <|
+            "basis" -> {<|"11" -> 1, "12" -> -1, "26" -> -2|>, <|"16" -> 2, "21" -> 1, "22" -> -1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E3",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {
+              <|"14" -> 1, "25" -> 1|>,
+              <|"15" -> 1, "24" -> -1|>,
+              <|"31" -> 1, "32" -> -1|>,
+              <|"36" -> 1|>
+            },
+            "dim" -> 4,
+            "field" -> "Q",
+            "irrep" -> "E6",
+            "multiplicity" -> 2
+          |>
+        },
+        "dim" -> 18,
+        "id" -> "piezoelectric",
+        "kind" -> "polar",
+        "multiplicities" -> <|"B1" -> 1, "B2" -> 3, "E1" -> 4, "E3" -> 1, "E6" -> 2|>,
+        "rank" -> 3
+      |>,
+      <|
+        "blocks" -> {
+          <|
+            "basis" -> {<|"41" -> 1, "52" -> -1|>},
+            "dim" -> 1,
+            "field" -> "Q",
+            "irrep" -> "A1",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {<|"13" -> 1, "23" -> 1|>, <|"33" -> 1|>, <|"42" -> 1, "51" -> 1|>},
+            "dim" -> 3,
+            "field" -> "Q",
+            "irrep" -> "A2",
+            "multiplicity" -> 3
+          |>,
+          <|
+            "basis" -> {
+              <|"13" -> 1, "23" -> -1|>,
+              <|"41" -> 1, "52" -> 1|>,
+              <|"42" -> 1, "51" -> -1|>,
+              <|"63" -> 1|>
+            },
+            "dim" -> 4,
+            "field" -> "Q",
+            "irrep" -> "E2",
+            "multiplicity" -> 2
+          |>,
+          <|
+            "basis" -> {<|"11" -> 1, "21" -> -1, "62" -> -2|>, <|"12" -> 1, "22" -> -1, "61" -> 2|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E5",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {
+              <|"11" -> 1, "62" -> 1|>,
+              <|"12" -> 1, "61" -> -1|>,
+              <|"21" -> 1, "62" -> -1|>,
+              <|"22" -> 1, "61" -> 1|>,
+              <|"31" -> 1|>,
+              <|"32" -> 1|>,
+              <|"43" -> 1|>,
+              <|"53" -> 1|>
+            },
+            "dim" -> 8,
+            "field" -> "Q",
+            "irrep" -> "E7",
+            "multiplicity" -> 4
+          |>
+        },
+        "dim" -> 18,
+        "id" -> "electrogyration",
+        "kind" -> "axial",
+        "multiplicities" -> <|"A1" -> 1, "A2" -> 3, "E2" -> 2, "E5" -> 1, "E7" -> 4|>,
+        "rank" -> 3
+      |>,
+      <|
+        "blocks" -> {
+          <|
+            "basis" -> {
+              <|"11" -> 2, "22" -> 2, "66" -> 1|>,
+              <|"12" -> 2, "21" -> 2, "66" -> -1|>,
+              <|"13" -> 1, "23" -> 1|>,
+              <|"31" -> 1, "32" -> 1|>,
+              <|"33" -> 1|>,
+              <|"44" -> 1, "55" -> 1|>
+            },
+            "dim" -> 6,
+            "field" -> "Q",
+            "irrep" -> "A1",
+            "multiplicity" -> 6
+          |>,
+          <|
+            "basis" -> {<|"16" -> 1, "26" -> -1, "61" -> -1, "62" -> 1|>, <|"45" -> 1, "54" -> -1|>},
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "A2",
+            "multiplicity" -> 2
+          |>,
+          <|
+            "basis" -> {
+              <|"11" -> 1, "22" -> -1|>,
+              <|"12" -> 1, "21" -> -1|>,
+              <|"13" -> 1, "23" -> -1|>,
+              <|"16" -> 1, "26" -> 1|>,
+              <|"31" -> 1, "32" -> -1|>,
+              <|"36" -> 1|>,
+              <|"44" -> 1, "55" -> -1|>,
+              <|"45" -> 1, "54" -> 1|>,
+              <|"61" -> 1, "62" -> 1|>,
+              <|"63" -> 1|>
+            },
+            "dim" -> 10,
+            "field" -> "Q",
+            "irrep" -> "E2",
+            "multiplicity" -> 5
+          |>,
+          <|
+            "basis" -> {
+              <|"11" -> 1, "12" -> -1, "21" -> -1, "22" -> 1, "66" -> -1|>,
+              <|"16" -> 1, "26" -> -1, "61" -> 1, "62" -> -1|>
+            },
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E4",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {
+              <|"14" -> 1, "24" -> -1, "65" -> 1|>,
+              <|"15" -> 1, "25" -> -1, "64" -> -1|>,
+              <|"41" -> 1, "42" -> -1, "56" -> 1|>,
+              <|"46" -> 1, "51" -> -1, "52" -> 1|>
+            },
+            "dim" -> 4,
+            "field" -> "Q",
+            "irrep" -> "E5",
+            "multiplicity" -> 2
+          |>,
+          <|
+            "basis" -> {
+              <|"14" -> 2, "65" -> -1|>,
+              <|"15" -> 2, "64" -> 1|>,
+              <|"24" -> 2, "65" -> 1|>,
+              <|"25" -> 2, "64" -> -1|>,
+              <|"34" -> 1|>,
+              <|"35" -> 1|>,
+              <|"41" -> 2, "56" -> -1|>,
+              <|"42" -> 2, "56" -> 1|>,
+              <|"43" -> 1|>,
+              <|"46" -> 1, "52" -> -2|>,
+              <|"51" -> 1, "52" -> 1|>,
+              <|"53" -> 1|>
+            },
+            "dim" -> 12,
+            "field" -> "Q",
+            "irrep" -> "E7",
+            "multiplicity" -> 6
+          |>
+        },
+        "dim" -> 36,
+        "id" -> "photoelastic",
+        "kind" -> "polar",
+        "multiplicities" -> <|"A1" -> 6, "A2" -> 2, "E2" -> 5, "E4" -> 1, "E5" -> 2, "E7" -> 6|>,
+        "rank" -> 4
+      |>,
+      <|
+        "blocks" -> {
+          <|
+            "basis" -> {
+              <|"1111" -> 3, "1122" -> 1, "2112" -> 1, "2222" -> 3|>,
+              <|"1133" -> 1, "2233" -> 1|>,
+              <|"3113" -> 1, "3223" -> 1|>,
+              <|"3333" -> 1|>
+            },
+            "dim" -> 4,
+            "field" -> "Q",
+            "irrep" -> "A1",
+            "multiplicity" -> 4
+          |>,
+          <|
+            "basis" -> {
+              <|"1112" -> 1, "1222" -> 3, "2111" -> -3, "2122" -> -1|>,
+              <|"1233" -> 1, "2133" -> -1|>
+            },
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "A2",
+            "multiplicity" -> 2
+          |>,
+          <|
+            "basis" -> {
+              <|"1111" -> 1, "2222" -> -1|>,
+              <|"1112" -> 1, "2122" -> 1|>,
+              <|"1122" -> 1, "2112" -> -1|>,
+              <|"1133" -> 1, "2233" -> -1|>,
+              <|"1222" -> 1, "2111" -> 1|>,
+              <|"1233" -> 1, "2133" -> 1|>,
+              <|"3113" -> 1, "3223" -> -1|>,
+              <|"3123" -> 1|>
+            },
+            "dim" -> 8,
+            "field" -> "Q",
+            "irrep" -> "E2",
+            "multiplicity" -> 4
+          |>,
+          <|
+            "basis" -> {
+              <|"1111" -> 1, "1122" -> -1, "2112" -> -1, "2222" -> 1|>,
+              <|"1112" -> 1, "1222" -> -1, "2111" -> 1, "2122" -> -1|>
+            },
+            "dim" -> 2,
+            "field" -> "Q",
+            "irrep" -> "E4",
+            "multiplicity" -> 1
+          |>,
+          <|
+            "basis" -> {
+              <|"1113" -> 1, "1223" -> -1, "2123" -> -1|>,
+              <|"1123" -> 1, "2113" -> 1, "2223" -> -1|>,
+              <|"3111" -> 1, "3122" -> -1|>,
+              <|"3112" -> 1, "3222" -> -1|>
+            },
+            "dim" -> 4,
+            "field" -> "Q",
+            "irrep" -> "E5",
+            "multiplicity" -> 2
+          |>,
+          <|
+            "basis" -> {
+              <|"1113" -> 2, "2123" -> 1|>,
+              <|"1123" -> 1, "2223" -> 2|>,
+              <|"1223" -> 2, "2123" -> -1|>,
+              <|"1333" -> 1|>,
+              <|"2113" -> 1, "2223" -> 1|>,
+              <|"2333" -> 1|>,
+              <|"3111" -> 3, "3122" -> 1|>,
+              <|"3112" -> 1, "3222" -> 3|>,
+              <|"3133" -> 1|>,
+              <|"3233" -> 1|>
+            },
+            "dim" -> 10,
+            "field" -> "Q",
+            "irrep" -> "E7",
+            "multiplicity" -> 5
+          |>
+        },
+        "dim" -> 30,
+        "id" -> "third-harmonic",
+        "kind" -> "polar",
+        "multiplicities" -> <|"A1" -> 4, "A2" -> 2, "E2" -> 4, "E4" -> 1, "E5" -> 2, "E7" -> 5|>,
+        "rank" -> 4
+      |>,
+      <|
+        "dim" -> 81,
+        "id" -> "general-4",
+        "kind" -> "polar",
+        "multiplicities" -> <|"A1" -> 10, "A2" -> 9, "E2" -> 10, "E4" -> 1, "E5" -> 4, "E7" -> 16|>,
+        "rank" -> 4
+      |>
+    }
+  |>,
+  "character_table" -> <|
+    "class_count" -> 11,
+    "classes" -> {
+      <|
+        "ambivalent" -> True,
+        "angle" -> {0, 1},
+        "axis_order_n" -> 1,
+        "axis_type" -> "identity",
+        "det" -> 1,
+        "display" -> "E",
+        "element_order" -> 1,
+        "id" -> "E",
+        "inverse_class" -> "E",
+        "label" -> "E",
+        "pole" -> <|"kind" -> "none"|>,
+        "power_map" -> "E",
+        "size" -> 1
+      |>,
+      <|
+        "ambivalent" -> True,
+        "angle" -> {1, 8},
+        "axis_order_n" -> 8,
+        "axis_type" -> "principal",
+        "det" -> 1,
+        "display" -> "2C_{8}",
+        "element_order" -> 8,
+        "id" -> "C8",
+        "inverse_class" -> "C8",
+        "label" -> "2C_8",
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "power_map" -> "C4",
+        "size" -> 2
+      |>,
+      <|
+        "ambivalent" -> True,
+        "angle" -> {1, 4},
+        "axis_order_n" -> 4,
+        "axis_type" -> "principal",
+        "det" -> 1,
+        "display" -> "2C_{4}",
+        "element_order" -> 4,
+        "id" -> "C4",
+        "inverse_class" -> "C4",
+        "label" -> "2C_4",
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "power_map" -> "C2",
+        "size" -> 2
+      |>,
+      <|
+        "ambivalent" -> True,
+        "angle" -> {3, 8},
+        "axis_order_n" -> 8,
+        "axis_type" -> "principal",
+        "det" -> 1,
+        "display" -> "2C_{8}^{3}",
+        "element_order" -> 8,
+        "id" -> "C83",
+        "inverse_class" -> "C83",
+        "label" -> "2C_8^3",
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "power_map" -> "C4",
+        "size" -> 2
+      |>,
+      <|
+        "ambivalent" -> True,
+        "angle" -> {1, 2},
+        "axis_order_n" -> 2,
+        "axis_type" -> "principal",
+        "det" -> 1,
+        "display" -> "C_{2}",
+        "element_order" -> 2,
+        "id" -> "C2",
+        "inverse_class" -> "C2",
+        "label" -> "C_2",
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "power_map" -> "E",
+        "size" -> 1
+      |>,
+      <|
+        "ambivalent" -> True,
+        "angle" -> {1, 2},
+        "axis_order_n" -> 2,
+        "axis_type" -> "perpendicular",
+        "det" -> 1,
+        "display" -> "8C_{2}'",
+        "element_order" -> 2,
+        "id" -> "C2p",
+        "inverse_class" -> "C2p",
+        "label" -> "8C_2'",
+        "pole" -> <|"azimuth_turn" -> {0, 1}, "kind" -> "axis"|>,
+        "power_map" -> "E",
+        "size" -> 8
+      |>,
+      <|
+        "ambivalent" -> True,
+        "angle" -> {1, 16},
+        "axis_order_n" -> 16,
+        "axis_type" -> "principal",
+        "det" -> -1,
+        "display" -> "2S_{16}",
+        "element_order" -> 16,
+        "id" -> "S16",
+        "inverse_class" -> "S16",
+        "label" -> "2S_16",
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "power_map" -> "C8",
+        "size" -> 2
+      |>,
+      <|
+        "ambivalent" -> True,
+        "angle" -> {3, 16},
+        "axis_order_n" -> 16,
+        "axis_type" -> "principal",
+        "det" -> -1,
+        "display" -> "2S_{16}^{3}",
+        "element_order" -> 16,
+        "id" -> "S163",
+        "inverse_class" -> "S163",
+        "label" -> "2S_16^3",
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "power_map" -> "C83",
+        "size" -> 2
+      |>,
+      <|
+        "ambivalent" -> True,
+        "angle" -> {5, 16},
+        "axis_order_n" -> 16,
+        "axis_type" -> "principal",
+        "det" -> -1,
+        "display" -> "2S_{16}^{5}",
+        "element_order" -> 16,
+        "id" -> "S165",
+        "inverse_class" -> "S165",
+        "label" -> "2S_16^5",
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "power_map" -> "C83",
+        "size" -> 2
+      |>,
+      <|
+        "ambivalent" -> True,
+        "angle" -> {7, 16},
+        "axis_order_n" -> 16,
+        "axis_type" -> "principal",
+        "det" -> -1,
+        "display" -> "2S_{16}^{7}",
+        "element_order" -> 16,
+        "id" -> "S167",
+        "inverse_class" -> "S167",
+        "label" -> "2S_16^7",
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "power_map" -> "C8",
+        "size" -> 2
+      |>,
+      <|
+        "ambivalent" -> True,
+        "angle" -> {0, 1},
+        "axis_order_n" -> 2,
+        "axis_type" -> "vertical-mirror",
+        "det" -> -1,
+        "display" -> "8\\sigma_{d}",
+        "element_order" -> 2,
+        "id" -> "sd",
+        "inverse_class" -> "sd",
+        "label" -> "8sigma_d",
+        "pole" -> <|"azimuth_turn" -> {1, 32}, "kind" -> "plane_normal_in_xy"|>,
+        "power_map" -> "E",
+        "size" -> 8
+      |>
+    },
+    "irreps" -> {
+      <|
+        "bethe" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "bilbao" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "chi" -> {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+        "conjugate_of" -> Null,
+        "dim" -> 1,
+        "display" -> "A_{1}",
+        "frobenius_schur" -> 1,
+        "id" -> "A1",
+        "image" -> "C_1",
+        "kernel" -> "n13",
+        "label" -> "A_1",
+        "matrices" -> <|
+          "by_element" -> {
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}}
+          },
+          "construction" -> <|"method" -> "linear", "note" -> "D(g) = [chi(g)]"|>,
+          "dim" -> 1,
+          "unitary" -> True
+        |>,
+        "mulliken" -> "A_1",
+        "pair_label" -> Null
+      |>,
+      <|
+        "bethe" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "bilbao" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "chi" -> {1, 1, 1, 1, 1, -1, 1, 1, 1, 1, -1},
+        "conjugate_of" -> Null,
+        "dim" -> 1,
+        "display" -> "A_{2}",
+        "frobenius_schur" -> 1,
+        "id" -> "A2",
+        "image" -> "C_2",
+        "kernel" -> "n11",
+        "label" -> "A_2",
+        "matrices" -> <|
+          "by_element" -> {
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}}
+          },
+          "construction" -> <|"method" -> "linear", "note" -> "D(g) = [chi(g)]"|>,
+          "dim" -> 1,
+          "unitary" -> True
+        |>,
+        "mulliken" -> "A_2",
+        "pair_label" -> Null
+      |>,
+      <|
+        "bethe" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "bilbao" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "chi" -> {1, 1, 1, 1, 1, 1, -1, -1, -1, -1, -1},
+        "conjugate_of" -> Null,
+        "dim" -> 1,
+        "display" -> "B_{1}",
+        "frobenius_schur" -> 1,
+        "id" -> "B1",
+        "image" -> "C_2",
+        "kernel" -> "n10",
+        "label" -> "B_1",
+        "matrices" -> <|
+          "by_element" -> {
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}}
+          },
+          "construction" -> <|"method" -> "linear", "note" -> "D(g) = [chi(g)]"|>,
+          "dim" -> 1,
+          "unitary" -> True
+        |>,
+        "mulliken" -> "B_1",
+        "pair_label" -> Null
+      |>,
+      <|
+        "bethe" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "bilbao" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "chi" -> {1, 1, 1, 1, 1, -1, -1, -1, -1, -1, 1},
+        "conjugate_of" -> Null,
+        "dim" -> 1,
+        "display" -> "B_{2}",
+        "frobenius_schur" -> 1,
+        "id" -> "B2",
+        "image" -> "C_2",
+        "kernel" -> "n12",
+        "label" -> "B_2",
+        "matrices" -> <|
+          "by_element" -> {
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{-1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}},
+            {{1}}
+          },
+          "construction" -> <|"method" -> "linear", "note" -> "D(g) = [chi(g)]"|>,
+          "dim" -> 1,
+          "unitary" -> True
+        |>,
+        "mulliken" -> "B_2",
+        "pair_label" -> Null
+      |>,
+      <|
+        "bethe" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "bilbao" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "chi" -> {
+          2,
+          (Exp[2 Pi I/8] + -1 Exp[2 Pi I 3/8]),
+          0,
+          (-1 Exp[2 Pi I/8] + Exp[2 Pi I 3/8]),
+          -2,
+          0,
+          (Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+          (Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16]),
+          (-1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16]),
+          (-1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+          0
+        },
+        "conjugate_of" -> Null,
+        "dim" -> 2,
+        "display" -> "E_{1}",
+        "frobenius_schur" -> 1,
+        "id" -> "E1",
+        "image" -> "C_16v",
+        "kernel" -> "n00",
+        "label" -> "E_1",
+        "matrices" -> <|
+          "by_element" -> {
+            {{1, 0}, {0, 1}},
+            {{-1 Exp[2 Pi I 3/8], 0}, {0, Exp[2 Pi I/8]}},
+            {{Exp[2 Pi I/8], 0}, {0, -1 Exp[2 Pi I 3/8]}},
+            {{-1 Exp[2 Pi I/4], 0}, {0, Exp[2 Pi I/4]}},
+            {{Exp[2 Pi I/4], 0}, {0, -1 Exp[2 Pi I/4]}},
+            {{-1 Exp[2 Pi I/8], 0}, {0, Exp[2 Pi I 3/8]}},
+            {{Exp[2 Pi I 3/8], 0}, {0, -1 Exp[2 Pi I/8]}},
+            {{-1, 0}, {0, -1}},
+            {{0, 1}, {1, 0}},
+            {{0, Exp[2 Pi I/8]}, {-1 Exp[2 Pi I 3/8], 0}},
+            {{0, Exp[2 Pi I/4]}, {-1 Exp[2 Pi I/4], 0}},
+            {{0, Exp[2 Pi I 3/8]}, {-1 Exp[2 Pi I/8], 0}},
+            {{0, -1}, {-1, 0}},
+            {{0, -1 Exp[2 Pi I/8]}, {Exp[2 Pi I 3/8], 0}},
+            {{0, -1 Exp[2 Pi I/4]}, {Exp[2 Pi I/4], 0}},
+            {{0, -1 Exp[2 Pi I 3/8]}, {Exp[2 Pi I/8], 0}},
+            {{-1 Exp[2 Pi I 7/16], 0}, {0, Exp[2 Pi I/16]}},
+            {{Exp[2 Pi I/16], 0}, {0, -1 Exp[2 Pi I 7/16]}},
+            {{-1 Exp[2 Pi I 5/16], 0}, {0, Exp[2 Pi I 3/16]}},
+            {{Exp[2 Pi I 3/16], 0}, {0, -1 Exp[2 Pi I 5/16]}},
+            {{-1 Exp[2 Pi I 3/16], 0}, {0, Exp[2 Pi I 5/16]}},
+            {{Exp[2 Pi I 5/16], 0}, {0, -1 Exp[2 Pi I 3/16]}},
+            {{-1 Exp[2 Pi I/16], 0}, {0, Exp[2 Pi I 7/16]}},
+            {{Exp[2 Pi I 7/16], 0}, {0, -1 Exp[2 Pi I/16]}},
+            {{0, Exp[2 Pi I/16]}, {-1 Exp[2 Pi I 7/16], 0}},
+            {{0, Exp[2 Pi I 3/16]}, {-1 Exp[2 Pi I 5/16], 0}},
+            {{0, Exp[2 Pi I 5/16]}, {-1 Exp[2 Pi I 3/16], 0}},
+            {{0, Exp[2 Pi I 7/16]}, {-1 Exp[2 Pi I/16], 0}},
+            {{0, -1 Exp[2 Pi I/16]}, {Exp[2 Pi I 7/16], 0}},
+            {{0, -1 Exp[2 Pi I 3/16]}, {Exp[2 Pi I 5/16], 0}},
+            {{0, -1 Exp[2 Pi I 5/16]}, {Exp[2 Pi I 3/16], 0}},
+            {{0, -1 Exp[2 Pi I 7/16]}, {Exp[2 Pi I/16], 0}}
+          },
+          "construction" -> <|
+            "basis" -> "{(x-iy)^k z^a, (x+iy)^k z^a}",
+            "harmonic_k" -> 1,
+            "method" -> "axial-monomial",
+            "note" -> "D = s^a * diag(conj w^k, w^k) when A(g) is a rotation and s^a * [[0, w^k],[conj w^k, 0]] when A(g) is a reflection, w = P11 + i P12, s = P33",
+            "z_parity_exponent" -> 0
+          |>,
+          "dim" -> 2,
+          "unitary" -> True
+        |>,
+        "mulliken" -> "E_1",
+        "pair_label" -> Null
+      |>,
+      <|
+        "bethe" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "bilbao" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "chi" -> {
+          2,
+          0,
+          -2,
+          0,
+          2,
+          0,
+          (Exp[2 Pi I/8] + -1 Exp[2 Pi I 3/8]),
+          (-1 Exp[2 Pi I/8] + Exp[2 Pi I 3/8]),
+          (-1 Exp[2 Pi I/8] + Exp[2 Pi I 3/8]),
+          (Exp[2 Pi I/8] + -1 Exp[2 Pi I 3/8]),
+          0
+        },
+        "conjugate_of" -> Null,
+        "dim" -> 2,
+        "display" -> "E_{2}",
+        "frobenius_schur" -> 1,
+        "id" -> "E2",
+        "image" -> "C_8v",
+        "kernel" -> "n01",
+        "label" -> "E_2",
+        "matrices" -> <|
+          "by_element" -> {
+            {{1, 0}, {0, 1}},
+            {{-1 Exp[2 Pi I/4], 0}, {0, Exp[2 Pi I/4]}},
+            {{Exp[2 Pi I/4], 0}, {0, -1 Exp[2 Pi I/4]}},
+            {{-1, 0}, {0, -1}},
+            {{-1, 0}, {0, -1}},
+            {{Exp[2 Pi I/4], 0}, {0, -1 Exp[2 Pi I/4]}},
+            {{-1 Exp[2 Pi I/4], 0}, {0, Exp[2 Pi I/4]}},
+            {{1, 0}, {0, 1}},
+            {{0, 1}, {1, 0}},
+            {{0, Exp[2 Pi I/4]}, {-1 Exp[2 Pi I/4], 0}},
+            {{0, -1}, {-1, 0}},
+            {{0, -1 Exp[2 Pi I/4]}, {Exp[2 Pi I/4], 0}},
+            {{0, 1}, {1, 0}},
+            {{0, Exp[2 Pi I/4]}, {-1 Exp[2 Pi I/4], 0}},
+            {{0, -1}, {-1, 0}},
+            {{0, -1 Exp[2 Pi I/4]}, {Exp[2 Pi I/4], 0}},
+            {{-1 Exp[2 Pi I 3/8], 0}, {0, Exp[2 Pi I/8]}},
+            {{Exp[2 Pi I/8], 0}, {0, -1 Exp[2 Pi I 3/8]}},
+            {{-1 Exp[2 Pi I/8], 0}, {0, Exp[2 Pi I 3/8]}},
+            {{Exp[2 Pi I 3/8], 0}, {0, -1 Exp[2 Pi I/8]}},
+            {{Exp[2 Pi I 3/8], 0}, {0, -1 Exp[2 Pi I/8]}},
+            {{-1 Exp[2 Pi I/8], 0}, {0, Exp[2 Pi I 3/8]}},
+            {{Exp[2 Pi I/8], 0}, {0, -1 Exp[2 Pi I 3/8]}},
+            {{-1 Exp[2 Pi I 3/8], 0}, {0, Exp[2 Pi I/8]}},
+            {{0, Exp[2 Pi I/8]}, {-1 Exp[2 Pi I 3/8], 0}},
+            {{0, Exp[2 Pi I 3/8]}, {-1 Exp[2 Pi I/8], 0}},
+            {{0, -1 Exp[2 Pi I/8]}, {Exp[2 Pi I 3/8], 0}},
+            {{0, -1 Exp[2 Pi I 3/8]}, {Exp[2 Pi I/8], 0}},
+            {{0, Exp[2 Pi I/8]}, {-1 Exp[2 Pi I 3/8], 0}},
+            {{0, Exp[2 Pi I 3/8]}, {-1 Exp[2 Pi I/8], 0}},
+            {{0, -1 Exp[2 Pi I/8]}, {Exp[2 Pi I 3/8], 0}},
+            {{0, -1 Exp[2 Pi I 3/8]}, {Exp[2 Pi I/8], 0}}
+          },
+          "construction" -> <|
+            "basis" -> "{(x-iy)^k z^a, (x+iy)^k z^a}",
+            "harmonic_k" -> 2,
+            "method" -> "axial-monomial",
+            "note" -> "D = s^a * diag(conj w^k, w^k) when A(g) is a rotation and s^a * [[0, w^k],[conj w^k, 0]] when A(g) is a reflection, w = P11 + i P12, s = P33",
+            "z_parity_exponent" -> 0
+          |>,
+          "dim" -> 2,
+          "unitary" -> True
+        |>,
+        "mulliken" -> "E_2",
+        "pair_label" -> Null
+      |>,
+      <|
+        "bethe" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "bilbao" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "chi" -> {
+          2,
+          (-1 Exp[2 Pi I/8] + Exp[2 Pi I 3/8]),
+          0,
+          (Exp[2 Pi I/8] + -1 Exp[2 Pi I 3/8]),
+          -2,
+          0,
+          (Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16]),
+          (-1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+          (Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+          (-1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16]),
+          0
+        },
+        "conjugate_of" -> Null,
+        "dim" -> 2,
+        "display" -> "E_{3}",
+        "frobenius_schur" -> 1,
+        "id" -> "E3",
+        "image" -> "C_16v",
+        "kernel" -> "n00",
+        "label" -> "E_3",
+        "matrices" -> <|
+          "by_element" -> {
+            {{1, 0}, {0, 1}},
+            {{-1 Exp[2 Pi I/8], 0}, {0, Exp[2 Pi I 3/8]}},
+            {{Exp[2 Pi I 3/8], 0}, {0, -1 Exp[2 Pi I/8]}},
+            {{Exp[2 Pi I/4], 0}, {0, -1 Exp[2 Pi I/4]}},
+            {{-1 Exp[2 Pi I/4], 0}, {0, Exp[2 Pi I/4]}},
+            {{-1 Exp[2 Pi I 3/8], 0}, {0, Exp[2 Pi I/8]}},
+            {{Exp[2 Pi I/8], 0}, {0, -1 Exp[2 Pi I 3/8]}},
+            {{-1, 0}, {0, -1}},
+            {{0, 1}, {1, 0}},
+            {{0, Exp[2 Pi I 3/8]}, {-1 Exp[2 Pi I/8], 0}},
+            {{0, -1 Exp[2 Pi I/4]}, {Exp[2 Pi I/4], 0}},
+            {{0, Exp[2 Pi I/8]}, {-1 Exp[2 Pi I 3/8], 0}},
+            {{0, -1}, {-1, 0}},
+            {{0, -1 Exp[2 Pi I 3/8]}, {Exp[2 Pi I/8], 0}},
+            {{0, Exp[2 Pi I/4]}, {-1 Exp[2 Pi I/4], 0}},
+            {{0, -1 Exp[2 Pi I/8]}, {Exp[2 Pi I 3/8], 0}},
+            {{-1 Exp[2 Pi I 5/16], 0}, {0, Exp[2 Pi I 3/16]}},
+            {{Exp[2 Pi I 3/16], 0}, {0, -1 Exp[2 Pi I 5/16]}},
+            {{Exp[2 Pi I 7/16], 0}, {0, -1 Exp[2 Pi I/16]}},
+            {{-1 Exp[2 Pi I/16], 0}, {0, Exp[2 Pi I 7/16]}},
+            {{Exp[2 Pi I/16], 0}, {0, -1 Exp[2 Pi I 7/16]}},
+            {{-1 Exp[2 Pi I 7/16], 0}, {0, Exp[2 Pi I/16]}},
+            {{-1 Exp[2 Pi I 3/16], 0}, {0, Exp[2 Pi I 5/16]}},
+            {{Exp[2 Pi I 5/16], 0}, {0, -1 Exp[2 Pi I 3/16]}},
+            {{0, Exp[2 Pi I 3/16]}, {-1 Exp[2 Pi I 5/16], 0}},
+            {{0, -1 Exp[2 Pi I/16]}, {Exp[2 Pi I 7/16], 0}},
+            {{0, -1 Exp[2 Pi I 7/16]}, {Exp[2 Pi I/16], 0}},
+            {{0, Exp[2 Pi I 5/16]}, {-1 Exp[2 Pi I 3/16], 0}},
+            {{0, -1 Exp[2 Pi I 3/16]}, {Exp[2 Pi I 5/16], 0}},
+            {{0, Exp[2 Pi I/16]}, {-1 Exp[2 Pi I 7/16], 0}},
+            {{0, Exp[2 Pi I 7/16]}, {-1 Exp[2 Pi I/16], 0}},
+            {{0, -1 Exp[2 Pi I 5/16]}, {Exp[2 Pi I 3/16], 0}}
+          },
+          "construction" -> <|
+            "basis" -> "{(x-iy)^k z^a, (x+iy)^k z^a}",
+            "harmonic_k" -> 3,
+            "method" -> "axial-monomial",
+            "note" -> "D = s^a * diag(conj w^k, w^k) when A(g) is a rotation and s^a * [[0, w^k],[conj w^k, 0]] when A(g) is a reflection, w = P11 + i P12, s = P33",
+            "z_parity_exponent" -> 0
+          |>,
+          "dim" -> 2,
+          "unitary" -> True
+        |>,
+        "mulliken" -> "E_3",
+        "pair_label" -> Null
+      |>,
+      <|
+        "bethe" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "bilbao" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "chi" -> {2, -2, 2, -2, 2, 0, 0, 0, 0, 0, 0},
+        "conjugate_of" -> Null,
+        "dim" -> 2,
+        "display" -> "E_{4}",
+        "frobenius_schur" -> 1,
+        "id" -> "E4",
+        "image" -> "C_4v",
+        "kernel" -> "n04",
+        "label" -> "E_4",
+        "matrices" -> <|
+          "by_element" -> {
+            {{1, 0}, {0, 1}},
+            {{-1, 0}, {0, -1}},
+            {{-1, 0}, {0, -1}},
+            {{1, 0}, {0, 1}},
+            {{1, 0}, {0, 1}},
+            {{-1, 0}, {0, -1}},
+            {{-1, 0}, {0, -1}},
+            {{1, 0}, {0, 1}},
+            {{0, 1}, {1, 0}},
+            {{0, -1}, {-1, 0}},
+            {{0, 1}, {1, 0}},
+            {{0, -1}, {-1, 0}},
+            {{0, 1}, {1, 0}},
+            {{0, -1}, {-1, 0}},
+            {{0, 1}, {1, 0}},
+            {{0, -1}, {-1, 0}},
+            {{-1 Exp[2 Pi I/4], 0}, {0, Exp[2 Pi I/4]}},
+            {{Exp[2 Pi I/4], 0}, {0, -1 Exp[2 Pi I/4]}},
+            {{Exp[2 Pi I/4], 0}, {0, -1 Exp[2 Pi I/4]}},
+            {{-1 Exp[2 Pi I/4], 0}, {0, Exp[2 Pi I/4]}},
+            {{-1 Exp[2 Pi I/4], 0}, {0, Exp[2 Pi I/4]}},
+            {{Exp[2 Pi I/4], 0}, {0, -1 Exp[2 Pi I/4]}},
+            {{Exp[2 Pi I/4], 0}, {0, -1 Exp[2 Pi I/4]}},
+            {{-1 Exp[2 Pi I/4], 0}, {0, Exp[2 Pi I/4]}},
+            {{0, Exp[2 Pi I/4]}, {-1 Exp[2 Pi I/4], 0}},
+            {{0, -1 Exp[2 Pi I/4]}, {Exp[2 Pi I/4], 0}},
+            {{0, Exp[2 Pi I/4]}, {-1 Exp[2 Pi I/4], 0}},
+            {{0, -1 Exp[2 Pi I/4]}, {Exp[2 Pi I/4], 0}},
+            {{0, Exp[2 Pi I/4]}, {-1 Exp[2 Pi I/4], 0}},
+            {{0, -1 Exp[2 Pi I/4]}, {Exp[2 Pi I/4], 0}},
+            {{0, Exp[2 Pi I/4]}, {-1 Exp[2 Pi I/4], 0}},
+            {{0, -1 Exp[2 Pi I/4]}, {Exp[2 Pi I/4], 0}}
+          },
+          "construction" -> <|
+            "basis" -> "{(x-iy)^k z^a, (x+iy)^k z^a}",
+            "harmonic_k" -> 4,
+            "method" -> "axial-monomial",
+            "note" -> "D = s^a * diag(conj w^k, w^k) when A(g) is a rotation and s^a * [[0, w^k],[conj w^k, 0]] when A(g) is a reflection, w = P11 + i P12, s = P33",
+            "z_parity_exponent" -> 0
+          |>,
+          "dim" -> 2,
+          "unitary" -> True
+        |>,
+        "mulliken" -> "E_4",
+        "pair_label" -> Null
+      |>,
+      <|
+        "bethe" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "bilbao" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "chi" -> {
+          2,
+          (-1 Exp[2 Pi I/8] + Exp[2 Pi I 3/8]),
+          0,
+          (Exp[2 Pi I/8] + -1 Exp[2 Pi I 3/8]),
+          -2,
+          0,
+          (-1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16]),
+          (Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+          (-1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+          (Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16]),
+          0
+        },
+        "conjugate_of" -> Null,
+        "dim" -> 2,
+        "display" -> "E_{5}",
+        "frobenius_schur" -> 1,
+        "id" -> "E5",
+        "image" -> "C_16v",
+        "kernel" -> "n00",
+        "label" -> "E_5",
+        "matrices" -> <|
+          "by_element" -> {
+            {{1, 0}, {0, 1}},
+            {{-1 Exp[2 Pi I/8], 0}, {0, Exp[2 Pi I 3/8]}},
+            {{Exp[2 Pi I 3/8], 0}, {0, -1 Exp[2 Pi I/8]}},
+            {{Exp[2 Pi I/4], 0}, {0, -1 Exp[2 Pi I/4]}},
+            {{-1 Exp[2 Pi I/4], 0}, {0, Exp[2 Pi I/4]}},
+            {{-1 Exp[2 Pi I 3/8], 0}, {0, Exp[2 Pi I/8]}},
+            {{Exp[2 Pi I/8], 0}, {0, -1 Exp[2 Pi I 3/8]}},
+            {{-1, 0}, {0, -1}},
+            {{0, -1}, {-1, 0}},
+            {{0, -1 Exp[2 Pi I 3/8]}, {Exp[2 Pi I/8], 0}},
+            {{0, Exp[2 Pi I/4]}, {-1 Exp[2 Pi I/4], 0}},
+            {{0, -1 Exp[2 Pi I/8]}, {Exp[2 Pi I 3/8], 0}},
+            {{0, 1}, {1, 0}},
+            {{0, Exp[2 Pi I 3/8]}, {-1 Exp[2 Pi I/8], 0}},
+            {{0, -1 Exp[2 Pi I/4]}, {Exp[2 Pi I/4], 0}},
+            {{0, Exp[2 Pi I/8]}, {-1 Exp[2 Pi I 3/8], 0}},
+            {{Exp[2 Pi I 5/16], 0}, {0, -1 Exp[2 Pi I 3/16]}},
+            {{-1 Exp[2 Pi I 3/16], 0}, {0, Exp[2 Pi I 5/16]}},
+            {{-1 Exp[2 Pi I 7/16], 0}, {0, Exp[2 Pi I/16]}},
+            {{Exp[2 Pi I/16], 0}, {0, -1 Exp[2 Pi I 7/16]}},
+            {{-1 Exp[2 Pi I/16], 0}, {0, Exp[2 Pi I 7/16]}},
+            {{Exp[2 Pi I 7/16], 0}, {0, -1 Exp[2 Pi I/16]}},
+            {{Exp[2 Pi I 3/16], 0}, {0, -1 Exp[2 Pi I 5/16]}},
+            {{-1 Exp[2 Pi I 5/16], 0}, {0, Exp[2 Pi I 3/16]}},
+            {{0, Exp[2 Pi I 3/16]}, {-1 Exp[2 Pi I 5/16], 0}},
+            {{0, -1 Exp[2 Pi I/16]}, {Exp[2 Pi I 7/16], 0}},
+            {{0, -1 Exp[2 Pi I 7/16]}, {Exp[2 Pi I/16], 0}},
+            {{0, Exp[2 Pi I 5/16]}, {-1 Exp[2 Pi I 3/16], 0}},
+            {{0, -1 Exp[2 Pi I 3/16]}, {Exp[2 Pi I 5/16], 0}},
+            {{0, Exp[2 Pi I/16]}, {-1 Exp[2 Pi I 7/16], 0}},
+            {{0, Exp[2 Pi I 7/16]}, {-1 Exp[2 Pi I/16], 0}},
+            {{0, -1 Exp[2 Pi I 5/16]}, {Exp[2 Pi I 3/16], 0}}
+          },
+          "construction" -> <|
+            "basis" -> "{(x-iy)^k z^a, (x+iy)^k z^a}",
+            "harmonic_k" -> 3,
+            "method" -> "axial-monomial",
+            "note" -> "D = s^a * diag(conj w^k, w^k) when A(g) is a rotation and s^a * [[0, w^k],[conj w^k, 0]] when A(g) is a reflection, w = P11 + i P12, s = P33",
+            "z_parity_exponent" -> 1
+          |>,
+          "dim" -> 2,
+          "unitary" -> True
+        |>,
+        "mulliken" -> "E_5",
+        "pair_label" -> Null
+      |>,
+      <|
+        "bethe" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "bilbao" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "chi" -> {
+          2,
+          0,
+          -2,
+          0,
+          2,
+          0,
+          (-1 Exp[2 Pi I/8] + Exp[2 Pi I 3/8]),
+          (Exp[2 Pi I/8] + -1 Exp[2 Pi I 3/8]),
+          (Exp[2 Pi I/8] + -1 Exp[2 Pi I 3/8]),
+          (-1 Exp[2 Pi I/8] + Exp[2 Pi I 3/8]),
+          0
+        },
+        "conjugate_of" -> Null,
+        "dim" -> 2,
+        "display" -> "E_{6}",
+        "frobenius_schur" -> 1,
+        "id" -> "E6",
+        "image" -> "C_8v",
+        "kernel" -> "n01",
+        "label" -> "E_6",
+        "matrices" -> <|
+          "by_element" -> {
+            {{1, 0}, {0, 1}},
+            {{-1 Exp[2 Pi I/4], 0}, {0, Exp[2 Pi I/4]}},
+            {{Exp[2 Pi I/4], 0}, {0, -1 Exp[2 Pi I/4]}},
+            {{-1, 0}, {0, -1}},
+            {{-1, 0}, {0, -1}},
+            {{Exp[2 Pi I/4], 0}, {0, -1 Exp[2 Pi I/4]}},
+            {{-1 Exp[2 Pi I/4], 0}, {0, Exp[2 Pi I/4]}},
+            {{1, 0}, {0, 1}},
+            {{0, -1}, {-1, 0}},
+            {{0, -1 Exp[2 Pi I/4]}, {Exp[2 Pi I/4], 0}},
+            {{0, 1}, {1, 0}},
+            {{0, Exp[2 Pi I/4]}, {-1 Exp[2 Pi I/4], 0}},
+            {{0, -1}, {-1, 0}},
+            {{0, -1 Exp[2 Pi I/4]}, {Exp[2 Pi I/4], 0}},
+            {{0, 1}, {1, 0}},
+            {{0, Exp[2 Pi I/4]}, {-1 Exp[2 Pi I/4], 0}},
+            {{Exp[2 Pi I 3/8], 0}, {0, -1 Exp[2 Pi I/8]}},
+            {{-1 Exp[2 Pi I/8], 0}, {0, Exp[2 Pi I 3/8]}},
+            {{Exp[2 Pi I/8], 0}, {0, -1 Exp[2 Pi I 3/8]}},
+            {{-1 Exp[2 Pi I 3/8], 0}, {0, Exp[2 Pi I/8]}},
+            {{-1 Exp[2 Pi I 3/8], 0}, {0, Exp[2 Pi I/8]}},
+            {{Exp[2 Pi I/8], 0}, {0, -1 Exp[2 Pi I 3/8]}},
+            {{-1 Exp[2 Pi I/8], 0}, {0, Exp[2 Pi I 3/8]}},
+            {{Exp[2 Pi I 3/8], 0}, {0, -1 Exp[2 Pi I/8]}},
+            {{0, Exp[2 Pi I/8]}, {-1 Exp[2 Pi I 3/8], 0}},
+            {{0, Exp[2 Pi I 3/8]}, {-1 Exp[2 Pi I/8], 0}},
+            {{0, -1 Exp[2 Pi I/8]}, {Exp[2 Pi I 3/8], 0}},
+            {{0, -1 Exp[2 Pi I 3/8]}, {Exp[2 Pi I/8], 0}},
+            {{0, Exp[2 Pi I/8]}, {-1 Exp[2 Pi I 3/8], 0}},
+            {{0, Exp[2 Pi I 3/8]}, {-1 Exp[2 Pi I/8], 0}},
+            {{0, -1 Exp[2 Pi I/8]}, {Exp[2 Pi I 3/8], 0}},
+            {{0, -1 Exp[2 Pi I 3/8]}, {Exp[2 Pi I/8], 0}}
+          },
+          "construction" -> <|
+            "basis" -> "{(x-iy)^k z^a, (x+iy)^k z^a}",
+            "harmonic_k" -> 2,
+            "method" -> "axial-monomial",
+            "note" -> "D = s^a * diag(conj w^k, w^k) when A(g) is a rotation and s^a * [[0, w^k],[conj w^k, 0]] when A(g) is a reflection, w = P11 + i P12, s = P33",
+            "z_parity_exponent" -> 1
+          |>,
+          "dim" -> 2,
+          "unitary" -> True
+        |>,
+        "mulliken" -> "E_6",
+        "pair_label" -> Null
+      |>,
+      <|
+        "bethe" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "bilbao" -> <|"reason" -> "not-in-source", "value" -> Null|>,
+        "chi" -> {
+          2,
+          (Exp[2 Pi I/8] + -1 Exp[2 Pi I 3/8]),
+          0,
+          (-1 Exp[2 Pi I/8] + Exp[2 Pi I 3/8]),
+          -2,
+          0,
+          (-1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+          (-1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16]),
+          (Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16]),
+          (Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+          0
+        },
+        "conjugate_of" -> Null,
+        "dim" -> 2,
+        "display" -> "E_{7}",
+        "frobenius_schur" -> 1,
+        "id" -> "E7",
+        "image" -> "C_16v",
+        "kernel" -> "n00",
+        "label" -> "E_7",
+        "matrices" -> <|
+          "by_element" -> {
+            {{1, 0}, {0, 1}},
+            {{-1 Exp[2 Pi I 3/8], 0}, {0, Exp[2 Pi I/8]}},
+            {{Exp[2 Pi I/8], 0}, {0, -1 Exp[2 Pi I 3/8]}},
+            {{-1 Exp[2 Pi I/4], 0}, {0, Exp[2 Pi I/4]}},
+            {{Exp[2 Pi I/4], 0}, {0, -1 Exp[2 Pi I/4]}},
+            {{-1 Exp[2 Pi I/8], 0}, {0, Exp[2 Pi I 3/8]}},
+            {{Exp[2 Pi I 3/8], 0}, {0, -1 Exp[2 Pi I/8]}},
+            {{-1, 0}, {0, -1}},
+            {{0, -1}, {-1, 0}},
+            {{0, -1 Exp[2 Pi I/8]}, {Exp[2 Pi I 3/8], 0}},
+            {{0, -1 Exp[2 Pi I/4]}, {Exp[2 Pi I/4], 0}},
+            {{0, -1 Exp[2 Pi I 3/8]}, {Exp[2 Pi I/8], 0}},
+            {{0, 1}, {1, 0}},
+            {{0, Exp[2 Pi I/8]}, {-1 Exp[2 Pi I 3/8], 0}},
+            {{0, Exp[2 Pi I/4]}, {-1 Exp[2 Pi I/4], 0}},
+            {{0, Exp[2 Pi I 3/8]}, {-1 Exp[2 Pi I/8], 0}},
+            {{Exp[2 Pi I 7/16], 0}, {0, -1 Exp[2 Pi I/16]}},
+            {{-1 Exp[2 Pi I/16], 0}, {0, Exp[2 Pi I 7/16]}},
+            {{Exp[2 Pi I 5/16], 0}, {0, -1 Exp[2 Pi I 3/16]}},
+            {{-1 Exp[2 Pi I 3/16], 0}, {0, Exp[2 Pi I 5/16]}},
+            {{Exp[2 Pi I 3/16], 0}, {0, -1 Exp[2 Pi I 5/16]}},
+            {{-1 Exp[2 Pi I 5/16], 0}, {0, Exp[2 Pi I 3/16]}},
+            {{Exp[2 Pi I/16], 0}, {0, -1 Exp[2 Pi I 7/16]}},
+            {{-1 Exp[2 Pi I 7/16], 0}, {0, Exp[2 Pi I/16]}},
+            {{0, Exp[2 Pi I/16]}, {-1 Exp[2 Pi I 7/16], 0}},
+            {{0, Exp[2 Pi I 3/16]}, {-1 Exp[2 Pi I 5/16], 0}},
+            {{0, Exp[2 Pi I 5/16]}, {-1 Exp[2 Pi I 3/16], 0}},
+            {{0, Exp[2 Pi I 7/16]}, {-1 Exp[2 Pi I/16], 0}},
+            {{0, -1 Exp[2 Pi I/16]}, {Exp[2 Pi I 7/16], 0}},
+            {{0, -1 Exp[2 Pi I 3/16]}, {Exp[2 Pi I 5/16], 0}},
+            {{0, -1 Exp[2 Pi I 5/16]}, {Exp[2 Pi I 3/16], 0}},
+            {{0, -1 Exp[2 Pi I 7/16]}, {Exp[2 Pi I/16], 0}}
+          },
+          "construction" -> <|
+            "basis" -> "{(x-iy)^k z^a, (x+iy)^k z^a}",
+            "harmonic_k" -> 1,
+            "method" -> "axial-monomial",
+            "note" -> "D = s^a * diag(conj w^k, w^k) when A(g) is a rotation and s^a * [[0, w^k],[conj w^k, 0]] when A(g) is a reflection, w = P11 + i P12, s = P33",
+            "z_parity_exponent" -> 1
+          |>,
+          "dim" -> 2,
+          "unitary" -> True
+        |>,
+        "mulliken" -> "E_7",
+        "pair_label" -> Null
+      |>
+    }
+  |>,
+  "clebsch_gordan" -> <|
+    "irreps" -> {"A1", "A2", "B1", "B2", "E1", "E2", "E3", "E4", "E5", "E6", "E7"},
+    "kind" -> "table",
+    "products" -> {
+      <|
+        "a" -> "A1",
+        "b" -> "A1",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "A1",
+            "kappa" -> 1,
+            "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>},
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "A2",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "A2",
+            "kappa" -> 1,
+            "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>},
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "B1",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "B1",
+            "kappa" -> 1,
+            "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>},
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "B2",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "B2",
+            "kappa" -> 1,
+            "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>},
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "E1",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "E2",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "E3",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E3",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "E4",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E4",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "E5",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E5",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "E6",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E6",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "E7",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E7",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "A2",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "A1",
+            "kappa" -> 1,
+            "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>},
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "B1",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "B2",
+            "kappa" -> 1,
+            "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>},
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "B2",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "B1",
+            "kappa" -> 1,
+            "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>},
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "E1",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "E2",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "E3",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E3",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "E4",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E4",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "E5",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E5",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "E6",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E6",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "E7",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E7",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "B1",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "A1",
+            "kappa" -> 1,
+            "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>},
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "B2",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "A2",
+            "kappa" -> 1,
+            "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>},
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "E1",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E7",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "E2",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E6",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "E3",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E5",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "E4",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E4",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "E5",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E3",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "E6",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "E7",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "B2",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "A1",
+            "kappa" -> 1,
+            "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>},
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "E1",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E7",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "E2",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E6",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "E3",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E5",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "E4",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E4",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "E5",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E3",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "E6",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "E7",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1",
+        "b" -> "E1",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "A1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> 1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "A2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1",
+        "b" -> "E2",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E3",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1",
+        "b" -> "E3",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E4",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1",
+        "b" -> "E4",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E3",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E5",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1",
+        "b" -> "E5",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E4",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E6",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1",
+        "b" -> "E6",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E5",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E7",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1",
+        "b" -> "E7",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "B1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "B2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> 1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E6",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E2",
+        "b" -> "E2",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "A1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> 1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "A2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E4",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E2",
+        "b" -> "E3",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E5",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E2",
+        "b" -> "E4",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E6",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E2",
+        "b" -> "E5",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E3",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E7",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E2",
+        "b" -> "E6",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "B1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "B2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> 1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E4",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E2",
+        "b" -> "E7",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E5",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E7",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E3",
+        "b" -> "E3",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "A1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> 1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "A2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E6",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E3",
+        "b" -> "E4",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E7",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E3",
+        "b" -> "E5",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "B1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "B2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> 1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E3",
+        "b" -> "E6",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E3",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E7",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E3",
+        "b" -> "E7",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E4",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E6",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E4",
+        "b" -> "E4",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "A1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> 1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "A2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "B1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>, <|"e" -> 1, "i" -> 2, "k" -> 2|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "B2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>, <|"e" -> -1, "i" -> 2, "k" -> 2|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E4",
+        "b" -> "E5",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E7",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E4",
+        "b" -> "E6",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E6",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E4",
+        "b" -> "E7",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E3",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E5",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E5",
+        "b" -> "E5",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "A1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> 1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "A2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E6",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E5",
+        "b" -> "E6",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E5",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E5",
+        "b" -> "E7",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E4",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E6",
+        "b" -> "E6",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "A1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> 1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "A2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E4",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E6",
+        "b" -> "E7",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "E1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E3",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E7",
+        "b" -> "E7",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "A1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> 1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "A2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "E2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>
+    }
+  |>,
+  "elements" -> <|
+    "count" -> 32,
+    "identity_index" -> 0,
+    "items" -> {
+      <|
+        "angle" -> {0, 1},
+        "class_id" -> "E",
+        "class_label" -> "E",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {0, 1}|>
+        |>,
+        "index" -> 0,
+        "inverse" -> 0,
+        "matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}},
+        "operation" -> <|
+          "axis_count" -> 0,
+          "axis_index" -> Null,
+          "name" -> "E",
+          "root" -> "E",
+          "sense" -> Null
+        |>,
+        "order" -> 1,
+        "pole" -> <|"kind" -> "none"|>,
+        "symbol" -> "E"
+      |>,
+      <|
+        "angle" -> {1, 8},
+        "class_id" -> "C8",
+        "class_label" -> "2C_8",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {1, 8}|>
+        |>,
+        "index" -> 1,
+        "inverse" -> 2,
+        "matrix" -> {
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {0, 0, 1}
+        },
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "C_8^+",
+          "root" -> "C_8",
+          "sense" -> "+"
+        |>,
+        "order" -> 8,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "C_8"
+      |>,
+      <|
+        "angle" -> {7, 8},
+        "class_id" -> "C8",
+        "class_label" -> "2C_8",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {-1, 8}|>
+        |>,
+        "index" -> 2,
+        "inverse" -> 1,
+        "matrix" -> {
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {0, 0, 1}
+        },
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "C_8^-",
+          "root" -> "C_8",
+          "sense" -> "-"
+        |>,
+        "order" -> 8,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "C_8^7"
+      |>,
+      <|
+        "angle" -> {1, 4},
+        "class_id" -> "C4",
+        "class_label" -> "2C_4",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {1, 4}|>
+        |>,
+        "index" -> 3,
+        "inverse" -> 4,
+        "matrix" -> {{0, 1, 0}, {-1, 0, 0}, {0, 0, 1}},
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "C_4^+",
+          "root" -> "C_4",
+          "sense" -> "+"
+        |>,
+        "order" -> 4,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "C_4"
+      |>,
+      <|
+        "angle" -> {3, 4},
+        "class_id" -> "C4",
+        "class_label" -> "2C_4",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {-1, 4}|>
+        |>,
+        "index" -> 4,
+        "inverse" -> 3,
+        "matrix" -> {{0, -1, 0}, {1, 0, 0}, {0, 0, 1}},
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "C_4^-",
+          "root" -> "C_4",
+          "sense" -> "-"
+        |>,
+        "order" -> 4,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "C_4^3"
+      |>,
+      <|
+        "angle" -> {3, 8},
+        "class_id" -> "C83",
+        "class_label" -> "2C_8^3",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {3, 8}|>
+        |>,
+        "index" -> 5,
+        "inverse" -> 6,
+        "matrix" -> {
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {0, 0, 1}
+        },
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "C_8^3+",
+          "root" -> "C_8^3",
+          "sense" -> "+"
+        |>,
+        "order" -> 8,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "C_8^3"
+      |>,
+      <|
+        "angle" -> {5, 8},
+        "class_id" -> "C83",
+        "class_label" -> "2C_8^3",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {-3, 8}|>
+        |>,
+        "index" -> 6,
+        "inverse" -> 5,
+        "matrix" -> {
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {0, 0, 1}
+        },
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "C_8^3-",
+          "root" -> "C_8^3",
+          "sense" -> "-"
+        |>,
+        "order" -> 8,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "C_8^5"
+      |>,
+      <|
+        "angle" -> {1, 2},
+        "class_id" -> "C2",
+        "class_label" -> "C_2",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {1, 2}|>
+        |>,
+        "index" -> 7,
+        "inverse" -> 7,
+        "matrix" -> {{-1, 0, 0}, {0, -1, 0}, {0, 0, 1}},
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "C_2",
+          "root" -> "C_2",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "C_2"
+      |>,
+      <|
+        "angle" -> {1, 2},
+        "class_id" -> "C2p",
+        "class_label" -> "8C_2'",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {1, 2}|>
+        |>,
+        "index" -> 8,
+        "inverse" -> 8,
+        "matrix" -> {{1, 0, 0}, {0, -1, 0}, {0, 0, -1}},
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 1,
+          "name" -> "C_2'(1)",
+          "root" -> "C_2'",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|"cartesian" -> {1, 0, 0}, "kind" -> "axis"|>,
+        "symbol" -> "C_2"
+      |>,
+      <|
+        "angle" -> {1, 2},
+        "class_id" -> "C2p",
+        "class_label" -> "8C_2'",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {-3, 8}|>
+        |>,
+        "index" -> 9,
+        "inverse" -> 9,
+        "matrix" -> {
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {0, 0, -1}
+        },
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 2,
+          "name" -> "C_2'(2)",
+          "root" -> "C_2'",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|
+          "cartesian" -> {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          "kind" -> "axis"
+        |>,
+        "symbol" -> "C_2"
+      |>,
+      <|
+        "angle" -> {1, 2},
+        "class_id" -> "C2p",
+        "class_label" -> "8C_2'",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {-1, 4}|>
+        |>,
+        "index" -> 10,
+        "inverse" -> 10,
+        "matrix" -> {{0, 1, 0}, {1, 0, 0}, {0, 0, -1}},
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 3,
+          "name" -> "C_2'(3)",
+          "root" -> "C_2'",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|
+          "cartesian" -> {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          "kind" -> "axis"
+        |>,
+        "symbol" -> "C_2"
+      |>,
+      <|
+        "angle" -> {1, 2},
+        "class_id" -> "C2p",
+        "class_label" -> "8C_2'",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {-1, 8}|>
+        |>,
+        "index" -> 11,
+        "inverse" -> 11,
+        "matrix" -> {
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {0, 0, -1}
+        },
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 4,
+          "name" -> "C_2'(4)",
+          "root" -> "C_2'",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|
+          "cartesian" -> {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          "kind" -> "axis"
+        |>,
+        "symbol" -> "C_2"
+      |>,
+      <|
+        "angle" -> {1, 2},
+        "class_id" -> "C2p",
+        "class_label" -> "8C_2'",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {0, 1}|>
+        |>,
+        "index" -> 12,
+        "inverse" -> 12,
+        "matrix" -> {{-1, 0, 0}, {0, 1, 0}, {0, 0, -1}},
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 5,
+          "name" -> "C_2'(5)",
+          "root" -> "C_2'",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|"cartesian" -> {0, 1, 0}, "kind" -> "axis"|>,
+        "symbol" -> "C_2"
+      |>,
+      <|
+        "angle" -> {1, 2},
+        "class_id" -> "C2p",
+        "class_label" -> "8C_2'",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {1, 8}|>
+        |>,
+        "index" -> 13,
+        "inverse" -> 13,
+        "matrix" -> {
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {0, 0, -1}
+        },
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 6,
+          "name" -> "C_2'(6)",
+          "root" -> "C_2'",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|
+          "cartesian" -> {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          "kind" -> "axis"
+        |>,
+        "symbol" -> "C_2"
+      |>,
+      <|
+        "angle" -> {1, 2},
+        "class_id" -> "C2p",
+        "class_label" -> "8C_2'",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {1, 4}|>
+        |>,
+        "index" -> 14,
+        "inverse" -> 14,
+        "matrix" -> {{0, -1, 0}, {-1, 0, 0}, {0, 0, -1}},
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 7,
+          "name" -> "C_2'(7)",
+          "root" -> "C_2'",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|
+          "cartesian" -> {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          "kind" -> "axis"
+        |>,
+        "symbol" -> "C_2"
+      |>,
+      <|
+        "angle" -> {1, 2},
+        "class_id" -> "C2p",
+        "class_label" -> "8C_2'",
+        "det" -> 1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {3, 8}|>
+        |>,
+        "index" -> 15,
+        "inverse" -> 15,
+        "matrix" -> {
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {0, 0, -1}
+        },
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 8,
+          "name" -> "C_2'(8)",
+          "root" -> "C_2'",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|
+          "cartesian" -> {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          "kind" -> "axis"
+        |>,
+        "symbol" -> "C_2"
+      |>,
+      <|
+        "angle" -> {1, 16},
+        "class_id" -> "S16",
+        "class_label" -> "2S_16",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {-7, 16}|>
+        |>,
+        "index" -> 16,
+        "inverse" -> 17,
+        "matrix" -> {
+          {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {0, 0, -1}
+        },
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "S_16^+",
+          "root" -> "S_16",
+          "sense" -> "+"
+        |>,
+        "order" -> 16,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "S_16"
+      |>,
+      <|
+        "angle" -> {15, 16},
+        "class_id" -> "S16",
+        "class_label" -> "2S_16",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {7, 16}|>
+        |>,
+        "index" -> 17,
+        "inverse" -> 16,
+        "matrix" -> {
+          {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {0, 0, -1}
+        },
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "S_16^-",
+          "root" -> "S_16",
+          "sense" -> "-"
+        |>,
+        "order" -> 16,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "S_16^15"
+      |>,
+      <|
+        "angle" -> {3, 16},
+        "class_id" -> "S163",
+        "class_label" -> "2S_16^3",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {-5, 16}|>
+        |>,
+        "index" -> 18,
+        "inverse" -> 19,
+        "matrix" -> {
+          {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {0, 0, -1}
+        },
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "S_16^3+",
+          "root" -> "S_16^3",
+          "sense" -> "+"
+        |>,
+        "order" -> 16,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "S_16^3"
+      |>,
+      <|
+        "angle" -> {13, 16},
+        "class_id" -> "S163",
+        "class_label" -> "2S_16^3",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {5, 16}|>
+        |>,
+        "index" -> 19,
+        "inverse" -> 18,
+        "matrix" -> {
+          {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {0, 0, -1}
+        },
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "S_16^3-",
+          "root" -> "S_16^3",
+          "sense" -> "-"
+        |>,
+        "order" -> 16,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "S_16^13"
+      |>,
+      <|
+        "angle" -> {5, 16},
+        "class_id" -> "S165",
+        "class_label" -> "2S_16^5",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {-3, 16}|>
+        |>,
+        "index" -> 20,
+        "inverse" -> 21,
+        "matrix" -> {
+          {
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {0, 0, -1}
+        },
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "S_16^5+",
+          "root" -> "S_16^5",
+          "sense" -> "+"
+        |>,
+        "order" -> 16,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "S_16^5"
+      |>,
+      <|
+        "angle" -> {11, 16},
+        "class_id" -> "S165",
+        "class_label" -> "2S_16^5",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {3, 16}|>
+        |>,
+        "index" -> 21,
+        "inverse" -> 20,
+        "matrix" -> {
+          {
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {0, 0, -1}
+        },
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "S_16^5-",
+          "root" -> "S_16^5",
+          "sense" -> "-"
+        |>,
+        "order" -> 16,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "S_16^11"
+      |>,
+      <|
+        "angle" -> {7, 16},
+        "class_id" -> "S167",
+        "class_label" -> "2S_16^7",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {-1, 16}|>
+        |>,
+        "index" -> 22,
+        "inverse" -> 23,
+        "matrix" -> {
+          {
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {0, 0, -1}
+        },
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "S_16^7+",
+          "root" -> "S_16^7",
+          "sense" -> "+"
+        |>,
+        "order" -> 16,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "S_16^7"
+      |>,
+      <|
+        "angle" -> {9, 16},
+        "class_id" -> "S167",
+        "class_label" -> "2S_16^7",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {0, 1}|>,
+          "gamma" -> <|"turn" -> {1, 16}|>
+        |>,
+        "index" -> 23,
+        "inverse" -> 22,
+        "matrix" -> {
+          {
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {0, 0, -1}
+        },
+        "operation" -> <|
+          "axis_count" -> 1,
+          "axis_index" -> 1,
+          "name" -> "S_16^7-",
+          "root" -> "S_16^7",
+          "sense" -> "-"
+        |>,
+        "order" -> 16,
+        "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+        "symbol" -> "S_16^9"
+      |>,
+      <|
+        "angle" -> {0, 1},
+        "class_id" -> "sd",
+        "class_label" -> "8sigma_d",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {1, 16}|>
+        |>,
+        "index" -> 24,
+        "inverse" -> 24,
+        "matrix" -> {
+          {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {0, 0, 1}
+        },
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 1,
+          "name" -> "sigma_d(1)",
+          "root" -> "sigma_d",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|
+          "cartesian" -> {
+            (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+            (-1/2 Exp[2 Pi I/32] + 1/2 Exp[2 Pi I 15/32]),
+            0
+          },
+          "kind" -> "plane_normal"
+        |>,
+        "symbol" -> "sigma_d"
+      |>,
+      <|
+        "angle" -> {0, 1},
+        "class_id" -> "sd",
+        "class_label" -> "8sigma_d",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {3, 16}|>
+        |>,
+        "index" -> 25,
+        "inverse" -> 25,
+        "matrix" -> {
+          {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {0, 0, 1}
+        },
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 2,
+          "name" -> "sigma_d(2)",
+          "root" -> "sigma_d",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|
+          "cartesian" -> {
+            (1/2 Exp[2 Pi I 5/32] + -1/2 Exp[2 Pi I 11/32]),
+            (-1/2 Exp[2 Pi I 3/32] + 1/2 Exp[2 Pi I 13/32]),
+            0
+          },
+          "kind" -> "plane_normal"
+        |>,
+        "symbol" -> "sigma_d"
+      |>,
+      <|
+        "angle" -> {0, 1},
+        "class_id" -> "sd",
+        "class_label" -> "8sigma_d",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {5, 16}|>
+        |>,
+        "index" -> 26,
+        "inverse" -> 26,
+        "matrix" -> {
+          {
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {0, 0, 1}
+        },
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 3,
+          "name" -> "sigma_d(3)",
+          "root" -> "sigma_d",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|
+          "cartesian" -> {
+            (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+            (-1/2 Exp[2 Pi I 5/32] + 1/2 Exp[2 Pi I 11/32]),
+            0
+          },
+          "kind" -> "plane_normal"
+        |>,
+        "symbol" -> "sigma_d"
+      |>,
+      <|
+        "angle" -> {0, 1},
+        "class_id" -> "sd",
+        "class_label" -> "8sigma_d",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {7, 16}|>
+        |>,
+        "index" -> 27,
+        "inverse" -> 27,
+        "matrix" -> {
+          {
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {0, 0, 1}
+        },
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 4,
+          "name" -> "sigma_d(4)",
+          "root" -> "sigma_d",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|
+          "cartesian" -> {
+            (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+            (-1/2 Exp[2 Pi I 7/32] + 1/2 Exp[2 Pi I 9/32]),
+            0
+          },
+          "kind" -> "plane_normal"
+        |>,
+        "symbol" -> "sigma_d"
+      |>,
+      <|
+        "angle" -> {0, 1},
+        "class_id" -> "sd",
+        "class_label" -> "8sigma_d",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {-7, 16}|>
+        |>,
+        "index" -> 28,
+        "inverse" -> 28,
+        "matrix" -> {
+          {
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {0, 0, 1}
+        },
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 5,
+          "name" -> "sigma_d(5)",
+          "root" -> "sigma_d",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|
+          "cartesian" -> {
+            (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+            (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+            0
+          },
+          "kind" -> "plane_normal"
+        |>,
+        "symbol" -> "sigma_d"
+      |>,
+      <|
+        "angle" -> {0, 1},
+        "class_id" -> "sd",
+        "class_label" -> "8sigma_d",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {-5, 16}|>
+        |>,
+        "index" -> 29,
+        "inverse" -> 29,
+        "matrix" -> {
+          {
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {0, 0, 1}
+        },
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 6,
+          "name" -> "sigma_d(6)",
+          "root" -> "sigma_d",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|
+          "cartesian" -> {
+            (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+            (1/2 Exp[2 Pi I 5/32] + -1/2 Exp[2 Pi I 11/32]),
+            0
+          },
+          "kind" -> "plane_normal"
+        |>,
+        "symbol" -> "sigma_d"
+      |>,
+      <|
+        "angle" -> {0, 1},
+        "class_id" -> "sd",
+        "class_label" -> "8sigma_d",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {-3, 16}|>
+        |>,
+        "index" -> 30,
+        "inverse" -> 30,
+        "matrix" -> {
+          {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {0, 0, 1}
+        },
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 7,
+          "name" -> "sigma_d(7)",
+          "root" -> "sigma_d",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|
+          "cartesian" -> {
+            (1/2 Exp[2 Pi I 5/32] + -1/2 Exp[2 Pi I 11/32]),
+            (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+            0
+          },
+          "kind" -> "plane_normal"
+        |>,
+        "symbol" -> "sigma_d"
+      |>,
+      <|
+        "angle" -> {0, 1},
+        "class_id" -> "sd",
+        "class_label" -> "8sigma_d",
+        "det" -> -1,
+        "euler" -> <|
+          "alpha" -> <|"turn" -> {0, 1}|>,
+          "beta" -> <|"turn" -> {1, 2}|>,
+          "gamma" -> <|"turn" -> {-1, 16}|>
+        |>,
+        "index" -> 31,
+        "inverse" -> 31,
+        "matrix" -> {
+          {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {0, 0, 1}
+        },
+        "operation" -> <|
+          "axis_count" -> 8,
+          "axis_index" -> 8,
+          "name" -> "sigma_d(8)",
+          "root" -> "sigma_d",
+          "sense" -> Null
+        |>,
+        "order" -> 2,
+        "pole" -> <|
+          "cartesian" -> {
+            (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+            (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+            0
+          },
+          "kind" -> "plane_normal"
+        |>,
+        "symbol" -> "sigma_d"
+      |>
+    },
+    "multiplication_table" -> {
+      {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+      {1, 3, 0, 5, 2, 7, 4, 6, 15, 8, 9, 10, 11, 12, 13, 14, 18, 16, 20, 17, 22, 19, 23, 21, 31, 24, 25, 26, 27, 28, 29, 30},
+      {2, 0, 4, 1, 6, 3, 7, 5, 9, 10, 11, 12, 13, 14, 15, 8, 17, 19, 16, 21, 18, 23, 20, 22, 25, 26, 27, 28, 29, 30, 31, 24},
+      {3, 5, 1, 7, 0, 6, 2, 4, 14, 15, 8, 9, 10, 11, 12, 13, 20, 18, 22, 16, 23, 17, 21, 19, 30, 31, 24, 25, 26, 27, 28, 29},
+      {4, 2, 6, 0, 7, 1, 5, 3, 10, 11, 12, 13, 14, 15, 8, 9, 19, 21, 17, 23, 16, 22, 18, 20, 26, 27, 28, 29, 30, 31, 24, 25},
+      {5, 7, 3, 6, 1, 4, 0, 2, 13, 14, 15, 8, 9, 10, 11, 12, 22, 20, 23, 18, 21, 16, 19, 17, 29, 30, 31, 24, 25, 26, 27, 28},
+      {6, 4, 7, 2, 5, 0, 3, 1, 11, 12, 13, 14, 15, 8, 9, 10, 21, 23, 19, 22, 17, 20, 16, 18, 27, 28, 29, 30, 31, 24, 25, 26},
+      {7, 6, 5, 4, 3, 2, 1, 0, 12, 13, 14, 15, 8, 9, 10, 11, 23, 22, 21, 20, 19, 18, 17, 16, 28, 29, 30, 31, 24, 25, 26, 27},
+      {8, 9, 15, 10, 14, 11, 13, 12, 0, 1, 3, 5, 7, 6, 4, 2, 24, 31, 25, 30, 26, 29, 27, 28, 16, 18, 20, 22, 23, 21, 19, 17},
+      {9, 10, 8, 11, 15, 12, 14, 13, 2, 0, 1, 3, 5, 7, 6, 4, 25, 24, 26, 31, 27, 30, 28, 29, 17, 16, 18, 20, 22, 23, 21, 19},
+      {10, 11, 9, 12, 8, 13, 15, 14, 4, 2, 0, 1, 3, 5, 7, 6, 26, 25, 27, 24, 28, 31, 29, 30, 19, 17, 16, 18, 20, 22, 23, 21},
+      {11, 12, 10, 13, 9, 14, 8, 15, 6, 4, 2, 0, 1, 3, 5, 7, 27, 26, 28, 25, 29, 24, 30, 31, 21, 19, 17, 16, 18, 20, 22, 23},
+      {12, 13, 11, 14, 10, 15, 9, 8, 7, 6, 4, 2, 0, 1, 3, 5, 28, 27, 29, 26, 30, 25, 31, 24, 23, 21, 19, 17, 16, 18, 20, 22},
+      {13, 14, 12, 15, 11, 8, 10, 9, 5, 7, 6, 4, 2, 0, 1, 3, 29, 28, 30, 27, 31, 26, 24, 25, 22, 23, 21, 19, 17, 16, 18, 20},
+      {14, 15, 13, 8, 12, 9, 11, 10, 3, 5, 7, 6, 4, 2, 0, 1, 30, 29, 31, 28, 24, 27, 25, 26, 20, 22, 23, 21, 19, 17, 16, 18},
+      {15, 8, 14, 9, 13, 10, 12, 11, 1, 3, 5, 7, 6, 4, 2, 0, 31, 30, 24, 29, 25, 28, 26, 27, 18, 20, 22, 23, 21, 19, 17, 16},
+      {16, 18, 17, 20, 19, 22, 21, 23, 31, 24, 25, 26, 27, 28, 29, 30, 1, 0, 3, 2, 5, 4, 7, 6, 8, 9, 10, 11, 12, 13, 14, 15},
+      {17, 16, 19, 18, 21, 20, 23, 22, 24, 25, 26, 27, 28, 29, 30, 31, 0, 2, 1, 4, 3, 6, 5, 7, 9, 10, 11, 12, 13, 14, 15, 8},
+      {18, 20, 16, 22, 17, 23, 19, 21, 30, 31, 24, 25, 26, 27, 28, 29, 3, 1, 5, 0, 7, 2, 6, 4, 15, 8, 9, 10, 11, 12, 13, 14},
+      {19, 17, 21, 16, 23, 18, 22, 20, 25, 26, 27, 28, 29, 30, 31, 24, 2, 4, 0, 6, 1, 7, 3, 5, 10, 11, 12, 13, 14, 15, 8, 9},
+      {20, 22, 18, 23, 16, 21, 17, 19, 29, 30, 31, 24, 25, 26, 27, 28, 5, 3, 7, 1, 6, 0, 4, 2, 14, 15, 8, 9, 10, 11, 12, 13},
+      {21, 19, 23, 17, 22, 16, 20, 18, 26, 27, 28, 29, 30, 31, 24, 25, 4, 6, 2, 7, 0, 5, 1, 3, 11, 12, 13, 14, 15, 8, 9, 10},
+      {22, 23, 20, 21, 18, 19, 16, 17, 28, 29, 30, 31, 24, 25, 26, 27, 7, 5, 6, 3, 4, 1, 2, 0, 13, 14, 15, 8, 9, 10, 11, 12},
+      {23, 21, 22, 19, 20, 17, 18, 16, 27, 28, 29, 30, 31, 24, 25, 26, 6, 7, 4, 5, 2, 3, 0, 1, 12, 13, 14, 15, 8, 9, 10, 11},
+      {24, 25, 31, 26, 30, 27, 29, 28, 17, 16, 18, 20, 22, 23, 21, 19, 9, 8, 10, 15, 11, 14, 12, 13, 0, 1, 3, 5, 7, 6, 4, 2},
+      {25, 26, 24, 27, 31, 28, 30, 29, 19, 17, 16, 18, 20, 22, 23, 21, 10, 9, 11, 8, 12, 15, 13, 14, 2, 0, 1, 3, 5, 7, 6, 4},
+      {26, 27, 25, 28, 24, 29, 31, 30, 21, 19, 17, 16, 18, 20, 22, 23, 11, 10, 12, 9, 13, 8, 14, 15, 4, 2, 0, 1, 3, 5, 7, 6},
+      {27, 28, 26, 29, 25, 30, 24, 31, 23, 21, 19, 17, 16, 18, 20, 22, 12, 11, 13, 10, 14, 9, 15, 8, 6, 4, 2, 0, 1, 3, 5, 7},
+      {28, 29, 27, 30, 26, 31, 25, 24, 22, 23, 21, 19, 17, 16, 18, 20, 13, 12, 14, 11, 15, 10, 8, 9, 7, 6, 4, 2, 0, 1, 3, 5},
+      {29, 30, 28, 31, 27, 24, 26, 25, 20, 22, 23, 21, 19, 17, 16, 18, 14, 13, 15, 12, 8, 11, 9, 10, 5, 7, 6, 4, 2, 0, 1, 3},
+      {30, 31, 29, 24, 28, 25, 27, 26, 18, 20, 22, 23, 21, 19, 17, 16, 15, 14, 8, 13, 9, 12, 10, 11, 3, 5, 7, 6, 4, 2, 0, 1},
+      {31, 24, 30, 25, 29, 26, 28, 27, 16, 18, 20, 22, 23, 21, 19, 17, 8, 15, 9, 14, 10, 13, 11, 12, 1, 3, 5, 7, 6, 4, 2, 0}
+    }
+  |>,
+  "fundamental_domain" -> <|
+    "cell" -> <|
+      "facets" -> {
+        <|
+          "angle" -> {1, 8},
+          "distance" -> (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          "element" -> 1,
+          "inverse" -> 2,
+          "unit_axis" -> {0, 0, 1}
+        |>,
+        <|
+          "angle" -> {1, 2},
+          "distance" -> 1,
+          "element" -> 8,
+          "inverse" -> 8,
+          "unit_axis" -> {1, 0, 0}
+        |>,
+        <|
+          "angle" -> {1, 2},
+          "distance" -> 1,
+          "element" -> 9,
+          "inverse" -> 9,
+          "unit_axis" -> {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          }
+        |>,
+        <|
+          "angle" -> {1, 2},
+          "distance" -> 1,
+          "element" -> 10,
+          "inverse" -> 10,
+          "unit_axis" -> {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          }
+        |>,
+        <|
+          "angle" -> {1, 2},
+          "distance" -> 1,
+          "element" -> 11,
+          "inverse" -> 11,
+          "unit_axis" -> {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          }
+        |>,
+        <|
+          "angle" -> {1, 2},
+          "distance" -> 1,
+          "element" -> 12,
+          "inverse" -> 12,
+          "unit_axis" -> {0, 1, 0}
+        |>,
+        <|
+          "angle" -> {1, 2},
+          "distance" -> 1,
+          "element" -> 13,
+          "inverse" -> 13,
+          "unit_axis" -> {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          }
+        |>,
+        <|
+          "angle" -> {1, 2},
+          "distance" -> 1,
+          "element" -> 14,
+          "inverse" -> 14,
+          "unit_axis" -> {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          }
+        |>,
+        <|
+          "angle" -> {1, 2},
+          "distance" -> 1,
+          "element" -> 15,
+          "inverse" -> 15,
+          "unit_axis" -> {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          }
+        |>
+      },
+      "shape" -> "prism",
+      "vertices" -> {
+        {
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          1,
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          1,
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          1,
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          -1,
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          1,
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          -1,
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          -1,
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          -1,
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16])
+        },
+        {
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          1,
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          1,
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          1,
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          -1,
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          1,
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          -1,
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          (-1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          -1,
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        },
+        {
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+          -1,
+          (1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16])
+        }
+      }
+    |>,
+    "components" -> {"proper"},
+    "space" -> <|
+      "lens" -> <|"reason" -> "not-defined-for-family", "value" -> Null|>,
+      "name" -> "prism space"
+    |>,
+    "volumes" -> <|
+      "cell" -> <|"coefficient" -> {1, 2}, "dimension" -> 3, "pi_power" -> 2|>,
+      "domain" -> <|"coefficient" -> {1, 2}, "dimension" -> 3, "pi_power" -> 2|>,
+      "group" -> <|"coefficient" -> {32, 1}, "dimension" -> 0, "pi_power" -> 0|>,
+      "o3" -> <|"coefficient" -> {16, 1}, "dimension" -> 3, "pi_power" -> 2|>
+    |>
+  |>,
+  "fusion" -> <|
+    "identity" -> "A1",
+    "irreps" -> {"A1", "A2", "B1", "B2", "E1", "E2", "E3", "E4", "E5", "E6", "E7"},
+    "kind" -> "table",
+    "n_irreps" -> 11,
+    "products" -> {
+      <|
+        "a" -> "A1",
+        "antisymmetric" -> {},
+        "b" -> "A1",
+        "diagonal" -> True,
+        "display" -> "A_1",
+        "symmetric" -> {<|"irrep" -> "A1", "mult" -> 1|>},
+        "terms" -> {<|"irrep" -> "A1", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "A2",
+        "diagonal" -> False,
+        "display" -> "A_2",
+        "terms" -> {<|"irrep" -> "A2", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "B1",
+        "diagonal" -> False,
+        "display" -> "B_1",
+        "terms" -> {<|"irrep" -> "B1", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "B2",
+        "diagonal" -> False,
+        "display" -> "B_2",
+        "terms" -> {<|"irrep" -> "B2", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "E1",
+        "diagonal" -> False,
+        "display" -> "E_1",
+        "terms" -> {<|"irrep" -> "E1", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "E2",
+        "diagonal" -> False,
+        "display" -> "E_2",
+        "terms" -> {<|"irrep" -> "E2", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "E3",
+        "diagonal" -> False,
+        "display" -> "E_3",
+        "terms" -> {<|"irrep" -> "E3", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "E4",
+        "diagonal" -> False,
+        "display" -> "E_4",
+        "terms" -> {<|"irrep" -> "E4", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "E5",
+        "diagonal" -> False,
+        "display" -> "E_5",
+        "terms" -> {<|"irrep" -> "E5", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "E6",
+        "diagonal" -> False,
+        "display" -> "E_6",
+        "terms" -> {<|"irrep" -> "E6", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1",
+        "b" -> "E7",
+        "diagonal" -> False,
+        "display" -> "E_7",
+        "terms" -> {<|"irrep" -> "E7", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2",
+        "antisymmetric" -> {},
+        "b" -> "A2",
+        "diagonal" -> True,
+        "display" -> "A_1",
+        "symmetric" -> {<|"irrep" -> "A1", "mult" -> 1|>},
+        "terms" -> {<|"irrep" -> "A1", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "B1",
+        "diagonal" -> False,
+        "display" -> "B_2",
+        "terms" -> {<|"irrep" -> "B2", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "B2",
+        "diagonal" -> False,
+        "display" -> "B_1",
+        "terms" -> {<|"irrep" -> "B1", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "E1",
+        "diagonal" -> False,
+        "display" -> "E_1",
+        "terms" -> {<|"irrep" -> "E1", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "E2",
+        "diagonal" -> False,
+        "display" -> "E_2",
+        "terms" -> {<|"irrep" -> "E2", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "E3",
+        "diagonal" -> False,
+        "display" -> "E_3",
+        "terms" -> {<|"irrep" -> "E3", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "E4",
+        "diagonal" -> False,
+        "display" -> "E_4",
+        "terms" -> {<|"irrep" -> "E4", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "E5",
+        "diagonal" -> False,
+        "display" -> "E_5",
+        "terms" -> {<|"irrep" -> "E5", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "E6",
+        "diagonal" -> False,
+        "display" -> "E_6",
+        "terms" -> {<|"irrep" -> "E6", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2",
+        "b" -> "E7",
+        "diagonal" -> False,
+        "display" -> "E_7",
+        "terms" -> {<|"irrep" -> "E7", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B1",
+        "antisymmetric" -> {},
+        "b" -> "B1",
+        "diagonal" -> True,
+        "display" -> "A_1",
+        "symmetric" -> {<|"irrep" -> "A1", "mult" -> 1|>},
+        "terms" -> {<|"irrep" -> "A1", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "B2",
+        "diagonal" -> False,
+        "display" -> "A_2",
+        "terms" -> {<|"irrep" -> "A2", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "E1",
+        "diagonal" -> False,
+        "display" -> "E_7",
+        "terms" -> {<|"irrep" -> "E7", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "E2",
+        "diagonal" -> False,
+        "display" -> "E_6",
+        "terms" -> {<|"irrep" -> "E6", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "E3",
+        "diagonal" -> False,
+        "display" -> "E_5",
+        "terms" -> {<|"irrep" -> "E5", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "E4",
+        "diagonal" -> False,
+        "display" -> "E_4",
+        "terms" -> {<|"irrep" -> "E4", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "E5",
+        "diagonal" -> False,
+        "display" -> "E_3",
+        "terms" -> {<|"irrep" -> "E3", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "E6",
+        "diagonal" -> False,
+        "display" -> "E_2",
+        "terms" -> {<|"irrep" -> "E2", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "E7",
+        "diagonal" -> False,
+        "display" -> "E_1",
+        "terms" -> {<|"irrep" -> "E1", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B2",
+        "antisymmetric" -> {},
+        "b" -> "B2",
+        "diagonal" -> True,
+        "display" -> "A_1",
+        "symmetric" -> {<|"irrep" -> "A1", "mult" -> 1|>},
+        "terms" -> {<|"irrep" -> "A1", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "E1",
+        "diagonal" -> False,
+        "display" -> "E_7",
+        "terms" -> {<|"irrep" -> "E7", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "E2",
+        "diagonal" -> False,
+        "display" -> "E_6",
+        "terms" -> {<|"irrep" -> "E6", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "E3",
+        "diagonal" -> False,
+        "display" -> "E_5",
+        "terms" -> {<|"irrep" -> "E5", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "E4",
+        "diagonal" -> False,
+        "display" -> "E_4",
+        "terms" -> {<|"irrep" -> "E4", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "E5",
+        "diagonal" -> False,
+        "display" -> "E_3",
+        "terms" -> {<|"irrep" -> "E3", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "E6",
+        "diagonal" -> False,
+        "display" -> "E_2",
+        "terms" -> {<|"irrep" -> "E2", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "E7",
+        "diagonal" -> False,
+        "display" -> "E_1",
+        "terms" -> {<|"irrep" -> "E1", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E1",
+        "antisymmetric" -> {<|"irrep" -> "A2", "mult" -> 1|>},
+        "b" -> "E1",
+        "diagonal" -> True,
+        "display" -> "A_1 + {A_2} + E_2",
+        "symmetric" -> {<|"irrep" -> "A1", "mult" -> 1|>, <|"irrep" -> "E2", "mult" -> 1|>},
+        "terms" -> {
+          <|"irrep" -> "A1", "mult" -> 1|>,
+          <|"irrep" -> "A2", "mult" -> 1|>,
+          <|"irrep" -> "E2", "mult" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E1",
+        "b" -> "E2",
+        "diagonal" -> False,
+        "display" -> "E_1 + E_3",
+        "terms" -> {<|"irrep" -> "E1", "mult" -> 1|>, <|"irrep" -> "E3", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E1",
+        "b" -> "E3",
+        "diagonal" -> False,
+        "display" -> "E_2 + E_4",
+        "terms" -> {<|"irrep" -> "E2", "mult" -> 1|>, <|"irrep" -> "E4", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E1",
+        "b" -> "E4",
+        "diagonal" -> False,
+        "display" -> "E_3 + E_5",
+        "terms" -> {<|"irrep" -> "E3", "mult" -> 1|>, <|"irrep" -> "E5", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E1",
+        "b" -> "E5",
+        "diagonal" -> False,
+        "display" -> "E_4 + E_6",
+        "terms" -> {<|"irrep" -> "E4", "mult" -> 1|>, <|"irrep" -> "E6", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E1",
+        "b" -> "E6",
+        "diagonal" -> False,
+        "display" -> "E_5 + E_7",
+        "terms" -> {<|"irrep" -> "E5", "mult" -> 1|>, <|"irrep" -> "E7", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E1",
+        "b" -> "E7",
+        "diagonal" -> False,
+        "display" -> "B_1 + B_2 + E_6",
+        "terms" -> {
+          <|"irrep" -> "B1", "mult" -> 1|>,
+          <|"irrep" -> "B2", "mult" -> 1|>,
+          <|"irrep" -> "E6", "mult" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E2",
+        "antisymmetric" -> {<|"irrep" -> "A2", "mult" -> 1|>},
+        "b" -> "E2",
+        "diagonal" -> True,
+        "display" -> "A_1 + {A_2} + E_4",
+        "symmetric" -> {<|"irrep" -> "A1", "mult" -> 1|>, <|"irrep" -> "E4", "mult" -> 1|>},
+        "terms" -> {
+          <|"irrep" -> "A1", "mult" -> 1|>,
+          <|"irrep" -> "A2", "mult" -> 1|>,
+          <|"irrep" -> "E4", "mult" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E2",
+        "b" -> "E3",
+        "diagonal" -> False,
+        "display" -> "E_1 + E_5",
+        "terms" -> {<|"irrep" -> "E1", "mult" -> 1|>, <|"irrep" -> "E5", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E2",
+        "b" -> "E4",
+        "diagonal" -> False,
+        "display" -> "E_2 + E_6",
+        "terms" -> {<|"irrep" -> "E2", "mult" -> 1|>, <|"irrep" -> "E6", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E2",
+        "b" -> "E5",
+        "diagonal" -> False,
+        "display" -> "E_3 + E_7",
+        "terms" -> {<|"irrep" -> "E3", "mult" -> 1|>, <|"irrep" -> "E7", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E2",
+        "b" -> "E6",
+        "diagonal" -> False,
+        "display" -> "B_1 + B_2 + E_4",
+        "terms" -> {
+          <|"irrep" -> "B1", "mult" -> 1|>,
+          <|"irrep" -> "B2", "mult" -> 1|>,
+          <|"irrep" -> "E4", "mult" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E2",
+        "b" -> "E7",
+        "diagonal" -> False,
+        "display" -> "E_5 + E_7",
+        "terms" -> {<|"irrep" -> "E5", "mult" -> 1|>, <|"irrep" -> "E7", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E3",
+        "antisymmetric" -> {<|"irrep" -> "A2", "mult" -> 1|>},
+        "b" -> "E3",
+        "diagonal" -> True,
+        "display" -> "A_1 + {A_2} + E_6",
+        "symmetric" -> {<|"irrep" -> "A1", "mult" -> 1|>, <|"irrep" -> "E6", "mult" -> 1|>},
+        "terms" -> {
+          <|"irrep" -> "A1", "mult" -> 1|>,
+          <|"irrep" -> "A2", "mult" -> 1|>,
+          <|"irrep" -> "E6", "mult" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E3",
+        "b" -> "E4",
+        "diagonal" -> False,
+        "display" -> "E_1 + E_7",
+        "terms" -> {<|"irrep" -> "E1", "mult" -> 1|>, <|"irrep" -> "E7", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E3",
+        "b" -> "E5",
+        "diagonal" -> False,
+        "display" -> "B_1 + B_2 + E_2",
+        "terms" -> {
+          <|"irrep" -> "B1", "mult" -> 1|>,
+          <|"irrep" -> "B2", "mult" -> 1|>,
+          <|"irrep" -> "E2", "mult" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E3",
+        "b" -> "E6",
+        "diagonal" -> False,
+        "display" -> "E_3 + E_7",
+        "terms" -> {<|"irrep" -> "E3", "mult" -> 1|>, <|"irrep" -> "E7", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E3",
+        "b" -> "E7",
+        "diagonal" -> False,
+        "display" -> "E_4 + E_6",
+        "terms" -> {<|"irrep" -> "E4", "mult" -> 1|>, <|"irrep" -> "E6", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E4",
+        "antisymmetric" -> {<|"irrep" -> "A2", "mult" -> 1|>},
+        "b" -> "E4",
+        "diagonal" -> True,
+        "display" -> "A_1 + {A_2} + B_1 + B_2",
+        "symmetric" -> {
+          <|"irrep" -> "A1", "mult" -> 1|>,
+          <|"irrep" -> "B1", "mult" -> 1|>,
+          <|"irrep" -> "B2", "mult" -> 1|>
+        },
+        "terms" -> {
+          <|"irrep" -> "A1", "mult" -> 1|>,
+          <|"irrep" -> "A2", "mult" -> 1|>,
+          <|"irrep" -> "B1", "mult" -> 1|>,
+          <|"irrep" -> "B2", "mult" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E4",
+        "b" -> "E5",
+        "diagonal" -> False,
+        "display" -> "E_1 + E_7",
+        "terms" -> {<|"irrep" -> "E1", "mult" -> 1|>, <|"irrep" -> "E7", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E4",
+        "b" -> "E6",
+        "diagonal" -> False,
+        "display" -> "E_2 + E_6",
+        "terms" -> {<|"irrep" -> "E2", "mult" -> 1|>, <|"irrep" -> "E6", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E4",
+        "b" -> "E7",
+        "diagonal" -> False,
+        "display" -> "E_3 + E_5",
+        "terms" -> {<|"irrep" -> "E3", "mult" -> 1|>, <|"irrep" -> "E5", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E5",
+        "antisymmetric" -> {<|"irrep" -> "A2", "mult" -> 1|>},
+        "b" -> "E5",
+        "diagonal" -> True,
+        "display" -> "A_1 + {A_2} + E_6",
+        "symmetric" -> {<|"irrep" -> "A1", "mult" -> 1|>, <|"irrep" -> "E6", "mult" -> 1|>},
+        "terms" -> {
+          <|"irrep" -> "A1", "mult" -> 1|>,
+          <|"irrep" -> "A2", "mult" -> 1|>,
+          <|"irrep" -> "E6", "mult" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E5",
+        "b" -> "E6",
+        "diagonal" -> False,
+        "display" -> "E_1 + E_5",
+        "terms" -> {<|"irrep" -> "E1", "mult" -> 1|>, <|"irrep" -> "E5", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E5",
+        "b" -> "E7",
+        "diagonal" -> False,
+        "display" -> "E_2 + E_4",
+        "terms" -> {<|"irrep" -> "E2", "mult" -> 1|>, <|"irrep" -> "E4", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E6",
+        "antisymmetric" -> {<|"irrep" -> "A2", "mult" -> 1|>},
+        "b" -> "E6",
+        "diagonal" -> True,
+        "display" -> "A_1 + {A_2} + E_4",
+        "symmetric" -> {<|"irrep" -> "A1", "mult" -> 1|>, <|"irrep" -> "E4", "mult" -> 1|>},
+        "terms" -> {
+          <|"irrep" -> "A1", "mult" -> 1|>,
+          <|"irrep" -> "A2", "mult" -> 1|>,
+          <|"irrep" -> "E4", "mult" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E6",
+        "b" -> "E7",
+        "diagonal" -> False,
+        "display" -> "E_1 + E_3",
+        "terms" -> {<|"irrep" -> "E1", "mult" -> 1|>, <|"irrep" -> "E3", "mult" -> 1|>}
+      |>,
+      <|
+        "a" -> "E7",
+        "antisymmetric" -> {<|"irrep" -> "A2", "mult" -> 1|>},
+        "b" -> "E7",
+        "diagonal" -> True,
+        "display" -> "A_1 + {A_2} + E_2",
+        "symmetric" -> {<|"irrep" -> "A1", "mult" -> 1|>, <|"irrep" -> "E2", "mult" -> 1|>},
+        "terms" -> {
+          <|"irrep" -> "A1", "mult" -> 1|>,
+          <|"irrep" -> "A2", "mult" -> 1|>,
+          <|"irrep" -> "E2", "mult" -> 1|>
+        }
+      |>
+    }
+  |>,
+  "group" -> <|
+    "abstract_type" -> "Dih(32)",
+    "allowed_properties" -> {
+      <|
+        "jahn" -> "e[V2]V",
+        "properties" -> {"electrogyration", "second-harmonic generation by a magnetic dipole"},
+        "spaces" -> {"electrogyration"}
+      |>
+    },
+    "alternative_names" -> {},
+    "altmann_T" -> 47,
+    "center" -> <|
+      "index" -> 16,
+      "node" -> "n01",
+      "o3_class" -> "C2",
+      "order" -> 2,
+      "schoenflies" -> "C_2"
+    |>,
+    "centralizer" -> <|"normalizer_index" -> 16, "schoenflies" -> "C_2h"|>,
+    "commutator_subgroup" -> <|
+      "index" -> 4,
+      "node" -> "n07",
+      "o3_class" -> "C8",
+      "order" -> 8,
+      "schoenflies" -> "C_8"
+    |>,
+    "contains_inversion" -> False,
+    "contains_sigma_h" -> False,
+    "conway_smith" -> "DD(16)",
+    "crystal_family" -> <|"reason" -> "not-defined-for-family", "value" -> Null|>,
+    "crystal_system" -> <|"reason" -> "not-defined-for-family", "value" -> Null|>,
+    "crystallographic" -> False,
+    "determinant_character" -> "B1",
+    "family" -> <|"N" -> 8, "name" -> "Dnd"|>,
+    "gap_smallgroup_id" -> {32, 18},
+    "hermann_mauguin" -> "-162m",
+    "hk" -> <|"H" -> "D_16", "K" -> "D_8"|>,
+    "ihrig_golubitsky" -> "D_16^d",
+    "lattices" -> <|"reason" -> "not-defined-for-family", "value" -> Null|>,
+    "laue_class" -> <|"index" -> 2, "schoenflies" -> "D_16h"|>,
+    "normalizer" -> <|"index" -> 2, "schoenflies" -> "D_16h"|>,
+    "o3_conjugates" -> {},
+    "olive" -> "D_16^h",
+    "orbifold" -> "2*8",
+    "order" -> 32,
+    "polar" -> False,
+    "principal_axis" -> {0, 0, 1},
+    "product_form" -> <|
+      "count" -> <|"direct" -> 0, "semidirect" -> 4|>,
+      "decomposable" -> True,
+      "direct" -> {},
+      "rotation_subgroup" -> <|
+        "improper_complements" -> {
+          <|
+            "kind" -> "semidirect",
+            "node" -> "n03",
+            "o3_class" -> "C1v",
+            "schoenflies" -> "C_s"
+          |>
+        },
+        "index" -> 2,
+        "node" -> "n10",
+        "o3_class" -> "D8",
+        "schoenflies" -> "D_8"
+      |>,
+      "semidirect" -> {
+        <|
+          "H" -> <|
+            "class_ids" -> {"C2", "C2p", "C4", "C8", "C83", "E"},
+            "class_size" -> 1,
+            "node" -> "n10",
+            "o3_class" -> "D8",
+            "order" -> 16,
+            "schoenflies" -> "D_8"
+          |>,
+          "K" -> <|
+            "class_ids" -> {"E", "sd"},
+            "class_size" -> 8,
+            "node" -> "n03",
+            "o3_class" -> "C1v",
+            "order" -> 2,
+            "schoenflies" -> "C_s"
+          |>,
+          "symbol" -> "D_8 : C_s"
+        |>,
+        <|
+          "H" -> <|
+            "class_ids" -> {"C2", "C4", "C8", "C83", "E", "S16", "S163", "S165", "S167"},
+            "class_size" -> 1,
+            "node" -> "n11",
+            "o3_class" -> "S16",
+            "order" -> 16,
+            "schoenflies" -> "S_16"
+          |>,
+          "K" -> <|
+            "class_ids" -> {"C2p", "E"},
+            "class_size" -> 8,
+            "node" -> "n02",
+            "o3_class" -> "C2",
+            "order" -> 2,
+            "schoenflies" -> "C_2"
+          |>,
+          "symbol" -> "S_16 : C_2"
+        |>,
+        <|
+          "H" -> <|
+            "class_ids" -> {"C2", "C4", "C8", "C83", "E", "S16", "S163", "S165", "S167"},
+            "class_size" -> 1,
+            "node" -> "n11",
+            "o3_class" -> "S16",
+            "order" -> 16,
+            "schoenflies" -> "S_16"
+          |>,
+          "K" -> <|
+            "class_ids" -> {"E", "sd"},
+            "class_size" -> 8,
+            "node" -> "n03",
+            "o3_class" -> "C1v",
+            "order" -> 2,
+            "schoenflies" -> "C_s"
+          |>,
+          "symbol" -> "S_16 : C_s"
+        |>,
+        <|
+          "H" -> <|
+            "class_ids" -> {"C2", "C4", "C8", "C83", "E", "sd"},
+            "class_size" -> 1,
+            "node" -> "n12",
+            "o3_class" -> "C8v",
+            "order" -> 16,
+            "schoenflies" -> "C_8v"
+          |>,
+          "K" -> <|
+            "class_ids" -> {"C2p", "E"},
+            "class_size" -> 8,
+            "node" -> "n02",
+            "o3_class" -> "C2",
+            "order" -> 2,
+            "schoenflies" -> "C_2"
+          |>,
+          "symbol" -> "C_8v : C_2"
+        |>
+      }
+    |>,
+    "rotation_subgroup" -> "D_8",
+    "schoenflies" -> "D_8d",
+    "type" -> "III"
+  |>,
+  "invariants" -> <|
+    "hilbert_series" -> <|"denominator" -> {2, 2, 16}, "numerator" -> {1, 0, 0, 0, 0, 0, 0, 0, 0, 1}|>,
+    "polynomial_ring" -> False,
+    "polynomials" -> {
+      <|
+        "degree" -> 2,
+        "generator" -> True,
+        "poly" -> <|"0,0,2" -> 1, "0,2,0" -> 1, "2,0,0" -> 1|>,
+        "primary" -> True
+      |>,
+      <|
+        "degree" -> 2,
+        "generator" -> True,
+        "poly" -> <|"0,0,2" -> -2, "0,2,0" -> 1, "2,0,0" -> 1|>,
+        "primary" -> True
+      |>,
+      <|
+        "degree" -> 9,
+        "generator" -> True,
+        "poly" -> <|"1,7,1" -> -1, "3,5,1" -> 7, "5,3,1" -> -7, "7,1,1" -> 1|>,
+        "primary" -> False
+      |>,
+      <|
+        "degree" -> 16,
+        "generator" -> True,
+        "poly" -> <|
+          "0,16,0" -> 1,
+          "10,6,0" -> -8008,
+          "12,4,0" -> 1820,
+          "14,2,0" -> -120,
+          "16,0,0" -> 1,
+          "2,14,0" -> -120,
+          "4,12,0" -> 1820,
+          "6,10,0" -> -8008,
+          "8,8,0" -> 12870
+        |>,
+        "primary" -> True
+      |>
+    }
+  |>,
+  "permutation_representations" -> <|
+    "actions" -> {
+      <|
+        "class_cycle_types" -> {
+          {{1, 32}},
+          {{8, 4}},
+          {{4, 8}},
+          {{8, 4}},
+          {{2, 16}},
+          {{2, 16}},
+          {{16, 2}},
+          {{16, 2}},
+          {{16, 2}},
+          {{16, 2}},
+          {{2, 16}}
+        },
+        "cosets" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+        "degree" -> 32,
+        "fixed_dimension" -> 3,
+        "images" -> {
+          {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+          {1, 3, 0, 5, 2, 7, 4, 6, 9, 10, 11, 12, 13, 14, 15, 8, 18, 16, 20, 17, 22, 19, 23, 21, 25, 26, 27, 28, 29, 30, 31, 24},
+          {2, 0, 4, 1, 6, 3, 7, 5, 15, 8, 9, 10, 11, 12, 13, 14, 17, 19, 16, 21, 18, 23, 20, 22, 31, 24, 25, 26, 27, 28, 29, 30},
+          {3, 5, 1, 7, 0, 6, 2, 4, 10, 11, 12, 13, 14, 15, 8, 9, 20, 18, 22, 16, 23, 17, 21, 19, 26, 27, 28, 29, 30, 31, 24, 25},
+          {4, 2, 6, 0, 7, 1, 5, 3, 14, 15, 8, 9, 10, 11, 12, 13, 19, 21, 17, 23, 16, 22, 18, 20, 30, 31, 24, 25, 26, 27, 28, 29},
+          {5, 7, 3, 6, 1, 4, 0, 2, 11, 12, 13, 14, 15, 8, 9, 10, 22, 20, 23, 18, 21, 16, 19, 17, 27, 28, 29, 30, 31, 24, 25, 26},
+          {6, 4, 7, 2, 5, 0, 3, 1, 13, 14, 15, 8, 9, 10, 11, 12, 21, 23, 19, 22, 17, 20, 16, 18, 29, 30, 31, 24, 25, 26, 27, 28},
+          {7, 6, 5, 4, 3, 2, 1, 0, 12, 13, 14, 15, 8, 9, 10, 11, 23, 22, 21, 20, 19, 18, 17, 16, 28, 29, 30, 31, 24, 25, 26, 27},
+          {8, 15, 9, 14, 10, 13, 11, 12, 0, 2, 4, 6, 7, 5, 3, 1, 31, 24, 30, 25, 29, 26, 28, 27, 17, 19, 21, 23, 22, 20, 18, 16},
+          {9, 8, 10, 15, 11, 14, 12, 13, 1, 0, 2, 4, 6, 7, 5, 3, 24, 25, 31, 26, 30, 27, 29, 28, 16, 17, 19, 21, 23, 22, 20, 18},
+          {10, 9, 11, 8, 12, 15, 13, 14, 3, 1, 0, 2, 4, 6, 7, 5, 25, 26, 24, 27, 31, 28, 30, 29, 18, 16, 17, 19, 21, 23, 22, 20},
+          {11, 10, 12, 9, 13, 8, 14, 15, 5, 3, 1, 0, 2, 4, 6, 7, 26, 27, 25, 28, 24, 29, 31, 30, 20, 18, 16, 17, 19, 21, 23, 22},
+          {12, 11, 13, 10, 14, 9, 15, 8, 7, 5, 3, 1, 0, 2, 4, 6, 27, 28, 26, 29, 25, 30, 24, 31, 22, 20, 18, 16, 17, 19, 21, 23},
+          {13, 12, 14, 11, 15, 10, 8, 9, 6, 7, 5, 3, 1, 0, 2, 4, 28, 29, 27, 30, 26, 31, 25, 24, 23, 22, 20, 18, 16, 17, 19, 21},
+          {14, 13, 15, 12, 8, 11, 9, 10, 4, 6, 7, 5, 3, 1, 0, 2, 29, 30, 28, 31, 27, 24, 26, 25, 21, 23, 22, 20, 18, 16, 17, 19},
+          {15, 14, 8, 13, 9, 12, 10, 11, 2, 4, 6, 7, 5, 3, 1, 0, 30, 31, 29, 24, 28, 25, 27, 26, 19, 21, 23, 22, 20, 18, 16, 17},
+          {16, 18, 17, 20, 19, 22, 21, 23, 24, 25, 26, 27, 28, 29, 30, 31, 1, 0, 3, 2, 5, 4, 7, 6, 9, 10, 11, 12, 13, 14, 15, 8},
+          {17, 16, 19, 18, 21, 20, 23, 22, 31, 24, 25, 26, 27, 28, 29, 30, 0, 2, 1, 4, 3, 6, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+          {18, 20, 16, 22, 17, 23, 19, 21, 25, 26, 27, 28, 29, 30, 31, 24, 3, 1, 5, 0, 7, 2, 6, 4, 10, 11, 12, 13, 14, 15, 8, 9},
+          {19, 17, 21, 16, 23, 18, 22, 20, 30, 31, 24, 25, 26, 27, 28, 29, 2, 4, 0, 6, 1, 7, 3, 5, 15, 8, 9, 10, 11, 12, 13, 14},
+          {20, 22, 18, 23, 16, 21, 17, 19, 26, 27, 28, 29, 30, 31, 24, 25, 5, 3, 7, 1, 6, 0, 4, 2, 11, 12, 13, 14, 15, 8, 9, 10},
+          {21, 19, 23, 17, 22, 16, 20, 18, 29, 30, 31, 24, 25, 26, 27, 28, 4, 6, 2, 7, 0, 5, 1, 3, 14, 15, 8, 9, 10, 11, 12, 13},
+          {22, 23, 20, 21, 18, 19, 16, 17, 27, 28, 29, 30, 31, 24, 25, 26, 7, 5, 6, 3, 4, 1, 2, 0, 12, 13, 14, 15, 8, 9, 10, 11},
+          {23, 21, 22, 19, 20, 17, 18, 16, 28, 29, 30, 31, 24, 25, 26, 27, 6, 7, 4, 5, 2, 3, 0, 1, 13, 14, 15, 8, 9, 10, 11, 12},
+          {24, 31, 25, 30, 26, 29, 27, 28, 16, 17, 19, 21, 23, 22, 20, 18, 8, 9, 15, 10, 14, 11, 13, 12, 0, 2, 4, 6, 7, 5, 3, 1},
+          {25, 24, 26, 31, 27, 30, 28, 29, 18, 16, 17, 19, 21, 23, 22, 20, 9, 10, 8, 11, 15, 12, 14, 13, 1, 0, 2, 4, 6, 7, 5, 3},
+          {26, 25, 27, 24, 28, 31, 29, 30, 20, 18, 16, 17, 19, 21, 23, 22, 10, 11, 9, 12, 8, 13, 15, 14, 3, 1, 0, 2, 4, 6, 7, 5},
+          {27, 26, 28, 25, 29, 24, 30, 31, 22, 20, 18, 16, 17, 19, 21, 23, 11, 12, 10, 13, 9, 14, 8, 15, 5, 3, 1, 0, 2, 4, 6, 7},
+          {28, 27, 29, 26, 30, 25, 31, 24, 23, 22, 20, 18, 16, 17, 19, 21, 12, 13, 11, 14, 10, 15, 9, 8, 7, 5, 3, 1, 0, 2, 4, 6},
+          {29, 28, 30, 27, 31, 26, 24, 25, 21, 23, 22, 20, 18, 16, 17, 19, 13, 14, 12, 15, 11, 8, 10, 9, 6, 7, 5, 3, 1, 0, 2, 4},
+          {30, 29, 31, 28, 24, 27, 25, 26, 19, 21, 23, 22, 20, 18, 16, 17, 14, 15, 13, 8, 12, 9, 11, 10, 4, 6, 7, 5, 3, 1, 0, 2},
+          {31, 30, 24, 29, 25, 28, 26, 27, 17, 19, 21, 23, 22, 20, 18, 16, 15, 8, 14, 9, 13, 10, 12, 11, 2, 4, 6, 7, 5, 3, 1, 0}
+        },
+        "seed" -> {1, 2, 4},
+        "shape" -> <|"reason" -> "depends-on-the-point", "value" -> Null|>,
+        "subgroup_node" -> "n00",
+        "uniform_shapes" -> {"regular polygon", "prism"}
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 16}},
+          {{8, 2}},
+          {{4, 4}},
+          {{8, 2}},
+          {{2, 8}},
+          {{1, 2}, {2, 7}},
+          {{16, 1}},
+          {{16, 1}},
+          {{16, 1}},
+          {{16, 1}},
+          {{2, 8}}
+        },
+        "cosets" -> {0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20, 21, 22, 23},
+        "degree" -> 16,
+        "fixed_dimension" -> 1,
+        "images" -> {
+          {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+          {1, 3, 0, 5, 2, 7, 4, 6, 10, 8, 12, 9, 14, 11, 15, 13},
+          {2, 0, 4, 1, 6, 3, 7, 5, 9, 11, 8, 13, 10, 15, 12, 14},
+          {3, 5, 1, 7, 0, 6, 2, 4, 12, 10, 14, 8, 15, 9, 13, 11},
+          {4, 2, 6, 0, 7, 1, 5, 3, 11, 13, 9, 15, 8, 14, 10, 12},
+          {5, 7, 3, 6, 1, 4, 0, 2, 14, 12, 15, 10, 13, 8, 11, 9},
+          {6, 4, 7, 2, 5, 0, 3, 1, 13, 15, 11, 14, 9, 12, 8, 10},
+          {7, 6, 5, 4, 3, 2, 1, 0, 15, 14, 13, 12, 11, 10, 9, 8},
+          {0, 2, 1, 4, 3, 6, 5, 7, 9, 8, 11, 10, 13, 12, 15, 14},
+          {1, 0, 3, 2, 5, 4, 7, 6, 8, 10, 9, 12, 11, 14, 13, 15},
+          {3, 1, 5, 0, 7, 2, 6, 4, 10, 12, 8, 14, 9, 15, 11, 13},
+          {5, 3, 7, 1, 6, 0, 4, 2, 12, 14, 10, 15, 8, 13, 9, 11},
+          {7, 5, 6, 3, 4, 1, 2, 0, 14, 15, 12, 13, 10, 11, 8, 9},
+          {6, 7, 4, 5, 2, 3, 0, 1, 15, 13, 14, 11, 12, 9, 10, 8},
+          {4, 6, 2, 7, 0, 5, 1, 3, 13, 11, 15, 9, 14, 8, 12, 10},
+          {2, 4, 0, 6, 1, 7, 3, 5, 11, 9, 13, 8, 15, 10, 14, 12},
+          {8, 10, 9, 12, 11, 14, 13, 15, 1, 0, 3, 2, 5, 4, 7, 6},
+          {9, 8, 11, 10, 13, 12, 15, 14, 0, 2, 1, 4, 3, 6, 5, 7},
+          {10, 12, 8, 14, 9, 15, 11, 13, 3, 1, 5, 0, 7, 2, 6, 4},
+          {11, 9, 13, 8, 15, 10, 14, 12, 2, 4, 0, 6, 1, 7, 3, 5},
+          {12, 14, 10, 15, 8, 13, 9, 11, 5, 3, 7, 1, 6, 0, 4, 2},
+          {13, 11, 15, 9, 14, 8, 12, 10, 4, 6, 2, 7, 0, 5, 1, 3},
+          {14, 15, 12, 13, 10, 11, 8, 9, 7, 5, 6, 3, 4, 1, 2, 0},
+          {15, 13, 14, 11, 12, 9, 10, 8, 6, 7, 4, 5, 2, 3, 0, 1},
+          {8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7},
+          {10, 8, 12, 9, 14, 11, 15, 13, 1, 3, 0, 5, 2, 7, 4, 6},
+          {12, 10, 14, 8, 15, 9, 13, 11, 3, 5, 1, 7, 0, 6, 2, 4},
+          {14, 12, 15, 10, 13, 8, 11, 9, 5, 7, 3, 6, 1, 4, 0, 2},
+          {15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0},
+          {13, 15, 11, 14, 9, 12, 8, 10, 6, 4, 7, 2, 5, 0, 3, 1},
+          {11, 13, 9, 15, 8, 14, 10, 12, 4, 2, 6, 0, 7, 1, 5, 3},
+          {9, 11, 8, 13, 10, 15, 12, 14, 2, 0, 4, 1, 6, 3, 7, 5}
+        },
+        "seed" -> {1, 0, 0},
+        "shape" -> "regular polygon",
+        "subgroup_node" -> "n02",
+        "uniform_shapes" -> {"regular polygon"}
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 16}},
+          {{8, 2}},
+          {{4, 4}},
+          {{8, 2}},
+          {{2, 8}},
+          {{2, 8}},
+          {{16, 1}},
+          {{16, 1}},
+          {{16, 1}},
+          {{16, 1}},
+          {{1, 2}, {2, 7}}
+        },
+        "cosets" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+        "degree" -> 16,
+        "fixed_dimension" -> 2,
+        "images" -> {
+          {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+          {1, 3, 0, 5, 2, 7, 4, 6, 9, 10, 11, 12, 13, 14, 15, 8},
+          {2, 0, 4, 1, 6, 3, 7, 5, 15, 8, 9, 10, 11, 12, 13, 14},
+          {3, 5, 1, 7, 0, 6, 2, 4, 10, 11, 12, 13, 14, 15, 8, 9},
+          {4, 2, 6, 0, 7, 1, 5, 3, 14, 15, 8, 9, 10, 11, 12, 13},
+          {5, 7, 3, 6, 1, 4, 0, 2, 11, 12, 13, 14, 15, 8, 9, 10},
+          {6, 4, 7, 2, 5, 0, 3, 1, 13, 14, 15, 8, 9, 10, 11, 12},
+          {7, 6, 5, 4, 3, 2, 1, 0, 12, 13, 14, 15, 8, 9, 10, 11},
+          {8, 15, 9, 14, 10, 13, 11, 12, 0, 2, 4, 6, 7, 5, 3, 1},
+          {9, 8, 10, 15, 11, 14, 12, 13, 1, 0, 2, 4, 6, 7, 5, 3},
+          {10, 9, 11, 8, 12, 15, 13, 14, 3, 1, 0, 2, 4, 6, 7, 5},
+          {11, 10, 12, 9, 13, 8, 14, 15, 5, 3, 1, 0, 2, 4, 6, 7},
+          {12, 11, 13, 10, 14, 9, 15, 8, 7, 5, 3, 1, 0, 2, 4, 6},
+          {13, 12, 14, 11, 15, 10, 8, 9, 6, 7, 5, 3, 1, 0, 2, 4},
+          {14, 13, 15, 12, 8, 11, 9, 10, 4, 6, 7, 5, 3, 1, 0, 2},
+          {15, 14, 8, 13, 9, 12, 10, 11, 2, 4, 6, 7, 5, 3, 1, 0},
+          {9, 10, 8, 11, 15, 12, 14, 13, 0, 1, 3, 5, 7, 6, 4, 2},
+          {8, 9, 15, 10, 14, 11, 13, 12, 2, 0, 1, 3, 5, 7, 6, 4},
+          {10, 11, 9, 12, 8, 13, 15, 14, 1, 3, 5, 7, 6, 4, 2, 0},
+          {15, 8, 14, 9, 13, 10, 12, 11, 4, 2, 0, 1, 3, 5, 7, 6},
+          {11, 12, 10, 13, 9, 14, 8, 15, 3, 5, 7, 6, 4, 2, 0, 1},
+          {14, 15, 13, 8, 12, 9, 11, 10, 6, 4, 2, 0, 1, 3, 5, 7},
+          {12, 13, 11, 14, 10, 15, 9, 8, 5, 7, 6, 4, 2, 0, 1, 3},
+          {13, 14, 12, 15, 11, 8, 10, 9, 7, 6, 4, 2, 0, 1, 3, 5},
+          {0, 2, 1, 4, 3, 6, 5, 7, 9, 8, 15, 14, 13, 12, 11, 10},
+          {1, 0, 3, 2, 5, 4, 7, 6, 10, 9, 8, 15, 14, 13, 12, 11},
+          {3, 1, 5, 0, 7, 2, 6, 4, 11, 10, 9, 8, 15, 14, 13, 12},
+          {5, 3, 7, 1, 6, 0, 4, 2, 12, 11, 10, 9, 8, 15, 14, 13},
+          {7, 5, 6, 3, 4, 1, 2, 0, 13, 12, 11, 10, 9, 8, 15, 14},
+          {6, 7, 4, 5, 2, 3, 0, 1, 14, 13, 12, 11, 10, 9, 8, 15},
+          {4, 6, 2, 7, 0, 5, 1, 3, 15, 14, 13, 12, 11, 10, 9, 8},
+          {2, 4, 0, 6, 1, 7, 3, 5, 8, 15, 14, 13, 12, 11, 10, 9}
+        },
+        "seed" -> {
+          (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+          1,
+          2
+        },
+        "shape" -> <|"reason" -> "depends-on-the-point", "value" -> Null|>,
+        "subgroup_node" -> "n03",
+        "uniform_shapes" -> {"regular polygon", "antiprism"}
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{2, 1}},
+          {{2, 1}},
+          {{2, 1}},
+          {{2, 1}},
+          {{2, 1}},
+          {{1, 2}}
+        },
+        "cosets" -> {0, 8},
+        "degree" -> 2,
+        "fixed_dimension" -> 1,
+        "images" -> {
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1}
+        },
+        "seed" -> {0, 0, 1},
+        "shape" -> "segment",
+        "subgroup_node" -> "n12",
+        "uniform_shapes" -> {}
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}}
+        },
+        "cosets" -> {0},
+        "degree" -> 1,
+        "fixed_dimension" -> 0,
+        "images" -> {
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0}
+        },
+        "seed" -> {0, 0, 0},
+        "shape" -> "point",
+        "subgroup_node" -> "n13",
+        "uniform_shapes" -> {}
+      |>
+    },
+    "figures" -> {
+      <|
+        "class_cycle_types" -> {
+          {{1, 32}},
+          {{8, 4}},
+          {{4, 8}},
+          {{8, 4}},
+          {{2, 16}},
+          {{2, 16}},
+          {{16, 2}},
+          {{16, 2}},
+          {{16, 2}},
+          {{16, 2}},
+          {{2, 16}}
+        },
+        "compound" -> <|"reason" -> "not-a-regular-compound", "value" -> Null|>,
+        "copies" -> {
+          {0},
+          {1},
+          {2},
+          {3},
+          {4},
+          {5},
+          {6},
+          {7},
+          {8},
+          {9},
+          {10},
+          {11},
+          {12},
+          {13},
+          {14},
+          {15},
+          {16},
+          {17},
+          {18},
+          {19},
+          {20},
+          {21},
+          {22},
+          {23},
+          {24},
+          {25},
+          {26},
+          {27},
+          {28},
+          {29},
+          {30},
+          {31}
+        },
+        "copies_per_vertex" -> 1,
+        "cosets" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+        "degree" -> 32,
+        "figure" -> <|"kind" -> "point", "orbit" -> 0, "vector" -> {1, 2, 4}|>,
+        "hands" -> {
+          {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+          {16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31}
+        },
+        "images" -> {
+          {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+          {1, 3, 0, 5, 2, 7, 4, 6, 9, 10, 11, 12, 13, 14, 15, 8, 18, 16, 20, 17, 22, 19, 23, 21, 25, 26, 27, 28, 29, 30, 31, 24},
+          {2, 0, 4, 1, 6, 3, 7, 5, 15, 8, 9, 10, 11, 12, 13, 14, 17, 19, 16, 21, 18, 23, 20, 22, 31, 24, 25, 26, 27, 28, 29, 30},
+          {3, 5, 1, 7, 0, 6, 2, 4, 10, 11, 12, 13, 14, 15, 8, 9, 20, 18, 22, 16, 23, 17, 21, 19, 26, 27, 28, 29, 30, 31, 24, 25},
+          {4, 2, 6, 0, 7, 1, 5, 3, 14, 15, 8, 9, 10, 11, 12, 13, 19, 21, 17, 23, 16, 22, 18, 20, 30, 31, 24, 25, 26, 27, 28, 29},
+          {5, 7, 3, 6, 1, 4, 0, 2, 11, 12, 13, 14, 15, 8, 9, 10, 22, 20, 23, 18, 21, 16, 19, 17, 27, 28, 29, 30, 31, 24, 25, 26},
+          {6, 4, 7, 2, 5, 0, 3, 1, 13, 14, 15, 8, 9, 10, 11, 12, 21, 23, 19, 22, 17, 20, 16, 18, 29, 30, 31, 24, 25, 26, 27, 28},
+          {7, 6, 5, 4, 3, 2, 1, 0, 12, 13, 14, 15, 8, 9, 10, 11, 23, 22, 21, 20, 19, 18, 17, 16, 28, 29, 30, 31, 24, 25, 26, 27},
+          {8, 15, 9, 14, 10, 13, 11, 12, 0, 2, 4, 6, 7, 5, 3, 1, 31, 24, 30, 25, 29, 26, 28, 27, 17, 19, 21, 23, 22, 20, 18, 16},
+          {9, 8, 10, 15, 11, 14, 12, 13, 1, 0, 2, 4, 6, 7, 5, 3, 24, 25, 31, 26, 30, 27, 29, 28, 16, 17, 19, 21, 23, 22, 20, 18},
+          {10, 9, 11, 8, 12, 15, 13, 14, 3, 1, 0, 2, 4, 6, 7, 5, 25, 26, 24, 27, 31, 28, 30, 29, 18, 16, 17, 19, 21, 23, 22, 20},
+          {11, 10, 12, 9, 13, 8, 14, 15, 5, 3, 1, 0, 2, 4, 6, 7, 26, 27, 25, 28, 24, 29, 31, 30, 20, 18, 16, 17, 19, 21, 23, 22},
+          {12, 11, 13, 10, 14, 9, 15, 8, 7, 5, 3, 1, 0, 2, 4, 6, 27, 28, 26, 29, 25, 30, 24, 31, 22, 20, 18, 16, 17, 19, 21, 23},
+          {13, 12, 14, 11, 15, 10, 8, 9, 6, 7, 5, 3, 1, 0, 2, 4, 28, 29, 27, 30, 26, 31, 25, 24, 23, 22, 20, 18, 16, 17, 19, 21},
+          {14, 13, 15, 12, 8, 11, 9, 10, 4, 6, 7, 5, 3, 1, 0, 2, 29, 30, 28, 31, 27, 24, 26, 25, 21, 23, 22, 20, 18, 16, 17, 19},
+          {15, 14, 8, 13, 9, 12, 10, 11, 2, 4, 6, 7, 5, 3, 1, 0, 30, 31, 29, 24, 28, 25, 27, 26, 19, 21, 23, 22, 20, 18, 16, 17},
+          {16, 18, 17, 20, 19, 22, 21, 23, 24, 25, 26, 27, 28, 29, 30, 31, 1, 0, 3, 2, 5, 4, 7, 6, 9, 10, 11, 12, 13, 14, 15, 8},
+          {17, 16, 19, 18, 21, 20, 23, 22, 31, 24, 25, 26, 27, 28, 29, 30, 0, 2, 1, 4, 3, 6, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+          {18, 20, 16, 22, 17, 23, 19, 21, 25, 26, 27, 28, 29, 30, 31, 24, 3, 1, 5, 0, 7, 2, 6, 4, 10, 11, 12, 13, 14, 15, 8, 9},
+          {19, 17, 21, 16, 23, 18, 22, 20, 30, 31, 24, 25, 26, 27, 28, 29, 2, 4, 0, 6, 1, 7, 3, 5, 15, 8, 9, 10, 11, 12, 13, 14},
+          {20, 22, 18, 23, 16, 21, 17, 19, 26, 27, 28, 29, 30, 31, 24, 25, 5, 3, 7, 1, 6, 0, 4, 2, 11, 12, 13, 14, 15, 8, 9, 10},
+          {21, 19, 23, 17, 22, 16, 20, 18, 29, 30, 31, 24, 25, 26, 27, 28, 4, 6, 2, 7, 0, 5, 1, 3, 14, 15, 8, 9, 10, 11, 12, 13},
+          {22, 23, 20, 21, 18, 19, 16, 17, 27, 28, 29, 30, 31, 24, 25, 26, 7, 5, 6, 3, 4, 1, 2, 0, 12, 13, 14, 15, 8, 9, 10, 11},
+          {23, 21, 22, 19, 20, 17, 18, 16, 28, 29, 30, 31, 24, 25, 26, 27, 6, 7, 4, 5, 2, 3, 0, 1, 13, 14, 15, 8, 9, 10, 11, 12},
+          {24, 31, 25, 30, 26, 29, 27, 28, 16, 17, 19, 21, 23, 22, 20, 18, 8, 9, 15, 10, 14, 11, 13, 12, 0, 2, 4, 6, 7, 5, 3, 1},
+          {25, 24, 26, 31, 27, 30, 28, 29, 18, 16, 17, 19, 21, 23, 22, 20, 9, 10, 8, 11, 15, 12, 14, 13, 1, 0, 2, 4, 6, 7, 5, 3},
+          {26, 25, 27, 24, 28, 31, 29, 30, 20, 18, 16, 17, 19, 21, 23, 22, 10, 11, 9, 12, 8, 13, 15, 14, 3, 1, 0, 2, 4, 6, 7, 5},
+          {27, 26, 28, 25, 29, 24, 30, 31, 22, 20, 18, 16, 17, 19, 21, 23, 11, 12, 10, 13, 9, 14, 8, 15, 5, 3, 1, 0, 2, 4, 6, 7},
+          {28, 27, 29, 26, 30, 25, 31, 24, 23, 22, 20, 18, 16, 17, 19, 21, 12, 13, 11, 14, 10, 15, 9, 8, 7, 5, 3, 1, 0, 2, 4, 6},
+          {29, 28, 30, 27, 31, 26, 24, 25, 21, 23, 22, 20, 18, 16, 17, 19, 13, 14, 12, 15, 11, 8, 10, 9, 6, 7, 5, 3, 1, 0, 2, 4},
+          {30, 29, 31, 28, 24, 27, 25, 26, 19, 21, 23, 22, 20, 18, 16, 17, 14, 15, 13, 8, 12, 9, 11, 10, 4, 6, 7, 5, 3, 1, 0, 2},
+          {31, 30, 24, 29, 25, 28, 26, 27, 17, 19, 21, 23, 22, 20, 18, 16, 15, 8, 14, 9, 13, 10, 12, 11, 2, 4, 6, 7, 5, 3, 1, 0}
+        },
+        "pair_classes" -> {
+          <|"copy" -> 0, "cos" -> 1, "size" -> 1|>,
+          <|
+            "copy" -> 1,
+            "cos" -> (16/21 + 5/42 Exp[2 Pi I/8] + -5/42 Exp[2 Pi I 3/8]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 2,
+            "cos" -> (16/21 + 5/42 Exp[2 Pi I/8] + -5/42 Exp[2 Pi I 3/8]),
+            "size" -> 1
+          |>,
+          <|"copy" -> 3, "cos" -> (16/21), "size" -> 1|>,
+          <|"copy" -> 4, "cos" -> (16/21), "size" -> 1|>,
+          <|
+            "copy" -> 5,
+            "cos" -> (16/21 + -5/42 Exp[2 Pi I/8] + 5/42 Exp[2 Pi I 3/8]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 6,
+            "cos" -> (16/21 + -5/42 Exp[2 Pi I/8] + 5/42 Exp[2 Pi I 3/8]),
+            "size" -> 1
+          |>,
+          <|"copy" -> 7, "cos" -> (11/21), "size" -> 1|>,
+          <|"copy" -> 8, "cos" -> (-19/21), "size" -> 1|>,
+          <|
+            "copy" -> 9,
+            "cos" -> (-16/21 + 1/42 Exp[2 Pi I/8] + -1/42 Exp[2 Pi I 3/8]),
+            "size" -> 1
+          |>,
+          <|"copy" -> 10, "cos" -> (-4/7), "size" -> 1|>,
+          <|
+            "copy" -> 11,
+            "cos" -> (-16/21 + 1/6 Exp[2 Pi I/8] + -1/6 Exp[2 Pi I 3/8]),
+            "size" -> 1
+          |>,
+          <|"copy" -> 12, "cos" -> (-13/21), "size" -> 1|>,
+          <|
+            "copy" -> 13,
+            "cos" -> (-16/21 + -1/42 Exp[2 Pi I/8] + 1/42 Exp[2 Pi I 3/8]),
+            "size" -> 1
+          |>,
+          <|"copy" -> 14, "cos" -> (-20/21), "size" -> 1|>,
+          <|
+            "copy" -> 15,
+            "cos" -> (-16/21 + -1/6 Exp[2 Pi I/8] + 1/6 Exp[2 Pi I 3/8]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 16,
+            "cos" -> (-16/21 + 5/42 Exp[2 Pi I/16] + -5/42 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 17,
+            "cos" -> (-16/21 + 5/42 Exp[2 Pi I/16] + -5/42 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 18,
+            "cos" -> (-16/21 + 5/42 Exp[2 Pi I 3/16] + -5/42 Exp[2 Pi I 5/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 19,
+            "cos" -> (-16/21 + 5/42 Exp[2 Pi I 3/16] + -5/42 Exp[2 Pi I 5/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 20,
+            "cos" -> (-16/21 + -5/42 Exp[2 Pi I 3/16] + 5/42 Exp[2 Pi I 5/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 21,
+            "cos" -> (-16/21 + -5/42 Exp[2 Pi I 3/16] + 5/42 Exp[2 Pi I 5/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 22,
+            "cos" -> (-16/21 + -5/42 Exp[2 Pi I/16] + 5/42 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 23,
+            "cos" -> (-16/21 + -5/42 Exp[2 Pi I/16] + 5/42 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 24,
+            "cos" -> (16/21 + -1/14 Exp[2 Pi I/16] + 2/21 Exp[2 Pi I 3/16] + -2/21 Exp[2 Pi I 5/16] + 1/14 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 25,
+            "cos" -> (16/21 + 2/21 Exp[2 Pi I/16] + -1/14 Exp[2 Pi I 3/16] + 1/14 Exp[2 Pi I 5/16] + -2/21 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 26,
+            "cos" -> (16/21 + 2/21 Exp[2 Pi I/16] + 1/14 Exp[2 Pi I 3/16] + -1/14 Exp[2 Pi I 5/16] + -2/21 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 27,
+            "cos" -> (16/21 + 1/14 Exp[2 Pi I/16] + 2/21 Exp[2 Pi I 3/16] + -2/21 Exp[2 Pi I 5/16] + -1/14 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 28,
+            "cos" -> (16/21 + 1/14 Exp[2 Pi I/16] + -2/21 Exp[2 Pi I 3/16] + 2/21 Exp[2 Pi I 5/16] + -1/14 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 29,
+            "cos" -> (16/21 + -2/21 Exp[2 Pi I/16] + 1/14 Exp[2 Pi I 3/16] + -1/14 Exp[2 Pi I 5/16] + 2/21 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 30,
+            "cos" -> (16/21 + -2/21 Exp[2 Pi I/16] + -1/14 Exp[2 Pi I 3/16] + 1/14 Exp[2 Pi I 5/16] + 2/21 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 31,
+            "cos" -> (16/21 + -1/14 Exp[2 Pi I/16] + -2/21 Exp[2 Pi I 3/16] + 2/21 Exp[2 Pi I 5/16] + 1/14 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>
+        },
+        "rank" -> 32,
+        "site_node" -> "n00",
+        "subgroup_node" -> "n00",
+        "vertex_shape" -> <|"reason" -> "not-a-named-shape", "value" -> Null|>,
+        "vertices" -> {
+          {1, 2, 4},
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (3/2 Exp[2 Pi I/8] + -3/2 Exp[2 Pi I 3/8]),
+            4
+          },
+          {
+            (3/2 Exp[2 Pi I/8] + -3/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            4
+          },
+          {-2, 1, 4},
+          {2, -1, 4},
+          {
+            (-3/2 Exp[2 Pi I/8] + 3/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            4
+          },
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (-3/2 Exp[2 Pi I/8] + 3/2 Exp[2 Pi I 3/8]),
+            4
+          },
+          {-1, -2, 4},
+          {1, -2, -4},
+          {
+            (3/2 Exp[2 Pi I/8] + -3/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            -4
+          },
+          {2, 1, -4},
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (3/2 Exp[2 Pi I/8] + -3/2 Exp[2 Pi I 3/8]),
+            -4
+          },
+          {-1, 2, -4},
+          {
+            (-3/2 Exp[2 Pi I/8] + 3/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            -4
+          },
+          {-2, -1, -4},
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (-3/2 Exp[2 Pi I/8] + 3/2 Exp[2 Pi I 3/8]),
+            -4
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            (Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            -4
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            (Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            -4
+          },
+          {
+            (-1 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            -4
+          },
+          {
+            (Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            -4
+          },
+          {
+            (-1 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            -4
+          },
+          {
+            (Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            -4
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            (-1 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            -4
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            (-1 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            -4
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            4
+          },
+          {
+            (Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            4
+          },
+          {
+            (Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            4
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            (Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            4
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            (Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            4
+          },
+          {
+            (-1 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            4
+          },
+          {
+            (-1 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            4
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            4
+          }
+        }
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 16}},
+          {{4, 4}},
+          {{2, 8}},
+          {{4, 4}},
+          {{1, 16}},
+          {{2, 8}},
+          {{8, 2}},
+          {{8, 2}},
+          {{8, 2}},
+          {{8, 2}},
+          {{2, 8}}
+        },
+        "compound" -> <|"reason" -> "not-a-regular-compound", "value" -> Null|>,
+        "copies" -> {
+          {0, 1},
+          {2, 3},
+          {4, 5},
+          {6, 7},
+          {8, 9},
+          {10, 11},
+          {12, 13},
+          {14, 15},
+          {16, 17},
+          {18, 19},
+          {20, 21},
+          {22, 23},
+          {24, 25},
+          {26, 27},
+          {28, 29},
+          {30, 31}
+        },
+        "copies_per_vertex" -> 1,
+        "cosets" -> {0, 1, 2, 3, 8, 9, 10, 11, 16, 17, 18, 19, 24, 25, 26, 27},
+        "degree" -> 16,
+        "figure" -> <|"kind" -> "line", "vector" -> {1, 2, 0}|>,
+        "hands" -> {{0, 1, 2, 3, 4, 5, 6, 7}, {8, 9, 10, 11, 12, 13, 14, 15}},
+        "images" -> {
+          {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+          {1, 3, 0, 2, 5, 6, 7, 4, 10, 8, 11, 9, 13, 14, 15, 12},
+          {2, 0, 3, 1, 7, 4, 5, 6, 9, 11, 8, 10, 15, 12, 13, 14},
+          {3, 2, 1, 0, 6, 7, 4, 5, 11, 10, 9, 8, 14, 15, 12, 13},
+          {3, 2, 1, 0, 6, 7, 4, 5, 11, 10, 9, 8, 14, 15, 12, 13},
+          {2, 0, 3, 1, 7, 4, 5, 6, 9, 11, 8, 10, 15, 12, 13, 14},
+          {1, 3, 0, 2, 5, 6, 7, 4, 10, 8, 11, 9, 13, 14, 15, 12},
+          {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+          {4, 7, 5, 6, 0, 2, 3, 1, 15, 12, 14, 13, 9, 11, 10, 8},
+          {5, 4, 6, 7, 1, 0, 2, 3, 12, 13, 15, 14, 8, 9, 11, 10},
+          {6, 5, 7, 4, 3, 1, 0, 2, 13, 14, 12, 15, 10, 8, 9, 11},
+          {7, 6, 4, 5, 2, 3, 1, 0, 14, 15, 13, 12, 11, 10, 8, 9},
+          {4, 7, 5, 6, 0, 2, 3, 1, 15, 12, 14, 13, 9, 11, 10, 8},
+          {5, 4, 6, 7, 1, 0, 2, 3, 12, 13, 15, 14, 8, 9, 11, 10},
+          {6, 5, 7, 4, 3, 1, 0, 2, 13, 14, 12, 15, 10, 8, 9, 11},
+          {7, 6, 4, 5, 2, 3, 1, 0, 14, 15, 13, 12, 11, 10, 8, 9},
+          {8, 10, 9, 11, 12, 13, 14, 15, 1, 0, 3, 2, 5, 6, 7, 4},
+          {9, 8, 11, 10, 15, 12, 13, 14, 0, 2, 1, 3, 4, 5, 6, 7},
+          {10, 11, 8, 9, 13, 14, 15, 12, 3, 1, 2, 0, 6, 7, 4, 5},
+          {11, 9, 10, 8, 14, 15, 12, 13, 2, 3, 0, 1, 7, 4, 5, 6},
+          {11, 9, 10, 8, 14, 15, 12, 13, 2, 3, 0, 1, 7, 4, 5, 6},
+          {10, 11, 8, 9, 13, 14, 15, 12, 3, 1, 2, 0, 6, 7, 4, 5},
+          {9, 8, 11, 10, 15, 12, 13, 14, 0, 2, 1, 3, 4, 5, 6, 7},
+          {8, 10, 9, 11, 12, 13, 14, 15, 1, 0, 3, 2, 5, 6, 7, 4},
+          {12, 15, 13, 14, 8, 9, 11, 10, 4, 5, 7, 6, 0, 2, 3, 1},
+          {13, 12, 14, 15, 10, 8, 9, 11, 5, 6, 4, 7, 1, 0, 2, 3},
+          {14, 13, 15, 12, 11, 10, 8, 9, 6, 7, 5, 4, 3, 1, 0, 2},
+          {15, 14, 12, 13, 9, 11, 10, 8, 7, 4, 6, 5, 2, 3, 1, 0},
+          {12, 15, 13, 14, 8, 9, 11, 10, 4, 5, 7, 6, 0, 2, 3, 1},
+          {13, 12, 14, 15, 10, 8, 9, 11, 5, 6, 4, 7, 1, 0, 2, 3},
+          {14, 13, 15, 12, 11, 10, 8, 9, 6, 7, 5, 4, 3, 1, 0, 2},
+          {15, 14, 12, 13, 9, 11, 10, 8, 7, 4, 6, 5, 2, 3, 1, 0}
+        },
+        "pair_classes" -> {
+          <|"copy" -> 0, "cos" -> 1, "size" -> 1|>,
+          <|"copy" -> 1, "cos" -> (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]), "size" -> 1|>,
+          <|"copy" -> 2, "cos" -> (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]), "size" -> 1|>,
+          <|"copy" -> 3, "cos" -> 0, "size" -> 1|>,
+          <|"copy" -> 4, "cos" -> (3/5), "size" -> 1|>,
+          <|"copy" -> 5, "cos" -> (1/10 Exp[2 Pi I/8] + -1/10 Exp[2 Pi I 3/8]), "size" -> 1|>,
+          <|"copy" -> 6, "cos" -> (4/5), "size" -> 1|>,
+          <|"copy" -> 7, "cos" -> (7/10 Exp[2 Pi I/8] + -7/10 Exp[2 Pi I 3/8]), "size" -> 1|>,
+          <|"copy" -> 8, "cos" -> (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]), "size" -> 1|>,
+          <|"copy" -> 9, "cos" -> (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]), "size" -> 1|>,
+          <|
+            "copy" -> 10,
+            "cos" -> (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 11,
+            "cos" -> (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 12,
+            "cos" -> (3/10 Exp[2 Pi I/16] + -2/5 Exp[2 Pi I 3/16] + 2/5 Exp[2 Pi I 5/16] + -3/10 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 13,
+            "cos" -> (2/5 Exp[2 Pi I/16] + -3/10 Exp[2 Pi I 3/16] + 3/10 Exp[2 Pi I 5/16] + -2/5 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 14,
+            "cos" -> (2/5 Exp[2 Pi I/16] + 3/10 Exp[2 Pi I 3/16] + -3/10 Exp[2 Pi I 5/16] + -2/5 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 15,
+            "cos" -> (3/10 Exp[2 Pi I/16] + 2/5 Exp[2 Pi I 3/16] + -2/5 Exp[2 Pi I 5/16] + -3/10 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>
+        },
+        "rank" -> 16,
+        "site_node" -> "n00",
+        "subgroup_node" -> "n01",
+        "vertex_shape" -> <|"reason" -> "not-a-named-shape", "value" -> Null|>,
+        "vertices" -> {
+          {1, 2, 0},
+          {-1, -2, 0},
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (3/2 Exp[2 Pi I/8] + -3/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (-3/2 Exp[2 Pi I/8] + 3/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (3/2 Exp[2 Pi I/8] + -3/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-3/2 Exp[2 Pi I/8] + 3/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {-2, 1, 0},
+          {2, -1, 0},
+          {1, -2, 0},
+          {-1, 2, 0},
+          {
+            (3/2 Exp[2 Pi I/8] + -3/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-3/2 Exp[2 Pi I/8] + 3/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {2, 1, 0},
+          {-2, -1, 0},
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (3/2 Exp[2 Pi I/8] + -3/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (-3/2 Exp[2 Pi I/8] + 3/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            (Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            (-1 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            (Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            (-1 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            (Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            (Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            0
+          }
+        }
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 16}},
+          {{8, 2}},
+          {{4, 4}},
+          {{8, 2}},
+          {{2, 8}},
+          {{1, 2}, {2, 7}},
+          {{16, 1}},
+          {{16, 1}},
+          {{16, 1}},
+          {{16, 1}},
+          {{2, 8}}
+        },
+        "compound" -> <|"reason" -> "not-a-regular-compound", "value" -> Null|>,
+        "copies" -> {{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}, {13}, {14}, {15}},
+        "copies_per_vertex" -> 1,
+        "cosets" -> {0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20, 21, 22, 23},
+        "degree" -> 16,
+        "figure" -> <|"kind" -> "point", "orbit" -> 1, "vector" -> {1, 0, 0}|>,
+        "hands" -> {{0, 1, 2, 3, 4, 5, 6, 7}, {8, 9, 10, 11, 12, 13, 14, 15}},
+        "images" -> {
+          {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+          {1, 3, 0, 5, 2, 7, 4, 6, 10, 8, 12, 9, 14, 11, 15, 13},
+          {2, 0, 4, 1, 6, 3, 7, 5, 9, 11, 8, 13, 10, 15, 12, 14},
+          {3, 5, 1, 7, 0, 6, 2, 4, 12, 10, 14, 8, 15, 9, 13, 11},
+          {4, 2, 6, 0, 7, 1, 5, 3, 11, 13, 9, 15, 8, 14, 10, 12},
+          {5, 7, 3, 6, 1, 4, 0, 2, 14, 12, 15, 10, 13, 8, 11, 9},
+          {6, 4, 7, 2, 5, 0, 3, 1, 13, 15, 11, 14, 9, 12, 8, 10},
+          {7, 6, 5, 4, 3, 2, 1, 0, 15, 14, 13, 12, 11, 10, 9, 8},
+          {0, 2, 1, 4, 3, 6, 5, 7, 9, 8, 11, 10, 13, 12, 15, 14},
+          {1, 0, 3, 2, 5, 4, 7, 6, 8, 10, 9, 12, 11, 14, 13, 15},
+          {3, 1, 5, 0, 7, 2, 6, 4, 10, 12, 8, 14, 9, 15, 11, 13},
+          {5, 3, 7, 1, 6, 0, 4, 2, 12, 14, 10, 15, 8, 13, 9, 11},
+          {7, 5, 6, 3, 4, 1, 2, 0, 14, 15, 12, 13, 10, 11, 8, 9},
+          {6, 7, 4, 5, 2, 3, 0, 1, 15, 13, 14, 11, 12, 9, 10, 8},
+          {4, 6, 2, 7, 0, 5, 1, 3, 13, 11, 15, 9, 14, 8, 12, 10},
+          {2, 4, 0, 6, 1, 7, 3, 5, 11, 9, 13, 8, 15, 10, 14, 12},
+          {8, 10, 9, 12, 11, 14, 13, 15, 1, 0, 3, 2, 5, 4, 7, 6},
+          {9, 8, 11, 10, 13, 12, 15, 14, 0, 2, 1, 4, 3, 6, 5, 7},
+          {10, 12, 8, 14, 9, 15, 11, 13, 3, 1, 5, 0, 7, 2, 6, 4},
+          {11, 9, 13, 8, 15, 10, 14, 12, 2, 4, 0, 6, 1, 7, 3, 5},
+          {12, 14, 10, 15, 8, 13, 9, 11, 5, 3, 7, 1, 6, 0, 4, 2},
+          {13, 11, 15, 9, 14, 8, 12, 10, 4, 6, 2, 7, 0, 5, 1, 3},
+          {14, 15, 12, 13, 10, 11, 8, 9, 7, 5, 6, 3, 4, 1, 2, 0},
+          {15, 13, 14, 11, 12, 9, 10, 8, 6, 7, 4, 5, 2, 3, 0, 1},
+          {8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7},
+          {10, 8, 12, 9, 14, 11, 15, 13, 1, 3, 0, 5, 2, 7, 4, 6},
+          {12, 10, 14, 8, 15, 9, 13, 11, 3, 5, 1, 7, 0, 6, 2, 4},
+          {14, 12, 15, 10, 13, 8, 11, 9, 5, 7, 3, 6, 1, 4, 0, 2},
+          {15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0},
+          {13, 15, 11, 14, 9, 12, 8, 10, 6, 4, 7, 2, 5, 0, 3, 1},
+          {11, 13, 9, 15, 8, 14, 10, 12, 4, 2, 6, 0, 7, 1, 5, 3},
+          {9, 11, 8, 13, 10, 15, 12, 14, 2, 0, 4, 1, 6, 3, 7, 5}
+        },
+        "pair_classes" -> {
+          <|"copy" -> 0, "cos" -> 1, "size" -> 1|>,
+          <|"copy" -> 1, "cos" -> (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]), "size" -> 2|>,
+          <|"copy" -> 3, "cos" -> 0, "size" -> 2|>,
+          <|"copy" -> 5, "cos" -> (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]), "size" -> 2|>,
+          <|"copy" -> 7, "cos" -> -1, "size" -> 1|>,
+          <|"copy" -> 8, "cos" -> (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]), "size" -> 2|>,
+          <|
+            "copy" -> 10,
+            "cos" -> (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            "size" -> 2
+          |>,
+          <|
+            "copy" -> 12,
+            "cos" -> (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            "size" -> 2
+          |>,
+          <|"copy" -> 14, "cos" -> (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]), "size" -> 2|>
+        },
+        "rank" -> 9,
+        "site_node" -> "n02",
+        "subgroup_node" -> "n02",
+        "vertex_shape" -> "regular polygon",
+        "vertices" -> {
+          {1, 0, 0},
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {0, 1, 0},
+          {0, -1, 0},
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {-1, 0, 0},
+          {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          }
+        }
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 16}},
+          {{8, 2}},
+          {{4, 4}},
+          {{8, 2}},
+          {{2, 8}},
+          {{2, 8}},
+          {{16, 1}},
+          {{16, 1}},
+          {{16, 1}},
+          {{16, 1}},
+          {{1, 2}, {2, 7}}
+        },
+        "compound" -> <|"reason" -> "not-a-regular-compound", "value" -> Null|>,
+        "copies" -> {{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}, {13}, {14}, {15}},
+        "copies_per_vertex" -> 1,
+        "cosets" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+        "degree" -> 16,
+        "figure" -> <|
+          "kind" -> "point",
+          "orbit" -> 2,
+          "vector" -> {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            1,
+            2
+          }
+        |>,
+        "hands" -> <|"reason" -> "one-class-under-the-rotations", "value" -> Null|>,
+        "images" -> {
+          {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+          {1, 3, 0, 5, 2, 7, 4, 6, 9, 10, 11, 12, 13, 14, 15, 8},
+          {2, 0, 4, 1, 6, 3, 7, 5, 15, 8, 9, 10, 11, 12, 13, 14},
+          {3, 5, 1, 7, 0, 6, 2, 4, 10, 11, 12, 13, 14, 15, 8, 9},
+          {4, 2, 6, 0, 7, 1, 5, 3, 14, 15, 8, 9, 10, 11, 12, 13},
+          {5, 7, 3, 6, 1, 4, 0, 2, 11, 12, 13, 14, 15, 8, 9, 10},
+          {6, 4, 7, 2, 5, 0, 3, 1, 13, 14, 15, 8, 9, 10, 11, 12},
+          {7, 6, 5, 4, 3, 2, 1, 0, 12, 13, 14, 15, 8, 9, 10, 11},
+          {8, 15, 9, 14, 10, 13, 11, 12, 0, 2, 4, 6, 7, 5, 3, 1},
+          {9, 8, 10, 15, 11, 14, 12, 13, 1, 0, 2, 4, 6, 7, 5, 3},
+          {10, 9, 11, 8, 12, 15, 13, 14, 3, 1, 0, 2, 4, 6, 7, 5},
+          {11, 10, 12, 9, 13, 8, 14, 15, 5, 3, 1, 0, 2, 4, 6, 7},
+          {12, 11, 13, 10, 14, 9, 15, 8, 7, 5, 3, 1, 0, 2, 4, 6},
+          {13, 12, 14, 11, 15, 10, 8, 9, 6, 7, 5, 3, 1, 0, 2, 4},
+          {14, 13, 15, 12, 8, 11, 9, 10, 4, 6, 7, 5, 3, 1, 0, 2},
+          {15, 14, 8, 13, 9, 12, 10, 11, 2, 4, 6, 7, 5, 3, 1, 0},
+          {9, 10, 8, 11, 15, 12, 14, 13, 0, 1, 3, 5, 7, 6, 4, 2},
+          {8, 9, 15, 10, 14, 11, 13, 12, 2, 0, 1, 3, 5, 7, 6, 4},
+          {10, 11, 9, 12, 8, 13, 15, 14, 1, 3, 5, 7, 6, 4, 2, 0},
+          {15, 8, 14, 9, 13, 10, 12, 11, 4, 2, 0, 1, 3, 5, 7, 6},
+          {11, 12, 10, 13, 9, 14, 8, 15, 3, 5, 7, 6, 4, 2, 0, 1},
+          {14, 15, 13, 8, 12, 9, 11, 10, 6, 4, 2, 0, 1, 3, 5, 7},
+          {12, 13, 11, 14, 10, 15, 9, 8, 5, 7, 6, 4, 2, 0, 1, 3},
+          {13, 14, 12, 15, 11, 8, 10, 9, 7, 6, 4, 2, 0, 1, 3, 5},
+          {0, 2, 1, 4, 3, 6, 5, 7, 9, 8, 15, 14, 13, 12, 11, 10},
+          {1, 0, 3, 2, 5, 4, 7, 6, 10, 9, 8, 15, 14, 13, 12, 11},
+          {3, 1, 5, 0, 7, 2, 6, 4, 11, 10, 9, 8, 15, 14, 13, 12},
+          {5, 3, 7, 1, 6, 0, 4, 2, 12, 11, 10, 9, 8, 15, 14, 13},
+          {7, 5, 6, 3, 4, 1, 2, 0, 13, 12, 11, 10, 9, 8, 15, 14},
+          {6, 7, 4, 5, 2, 3, 0, 1, 14, 13, 12, 11, 10, 9, 8, 15},
+          {4, 6, 2, 7, 0, 5, 1, 3, 15, 14, 13, 12, 11, 10, 9, 8},
+          {2, 4, 0, 6, 1, 7, 3, 5, 8, 15, 14, 13, 12, 11, 10, 9}
+        },
+        "pair_classes" -> {
+          <|"copy" -> 0, "cos" -> 1, "size" -> 1|>,
+          <|
+            "copy" -> 1,
+            "cos" -> (29/47 + -7/94 Exp[2 Pi I/16] + 15/94 Exp[2 Pi I 2/16] + 5/94 Exp[2 Pi I 3/16] + -5/94 Exp[2 Pi I 5/16] + -15/94 Exp[2 Pi I 6/16] + 7/94 Exp[2 Pi I 7/16]),
+            "size" -> 2
+          |>,
+          <|
+            "copy" -> 3,
+            "cos" -> (26/47 + -8/47 Exp[2 Pi I/16] + -3/47 Exp[2 Pi I 2/16] + -1/47 Exp[2 Pi I 3/16] + 1/47 Exp[2 Pi I 5/16] + 3/47 Exp[2 Pi I 6/16] + 8/47 Exp[2 Pi I 7/16]),
+            "size" -> 2
+          |>,
+          <|
+            "copy" -> 5,
+            "cos" -> (23/47 + -25/94 Exp[2 Pi I/16] + -27/94 Exp[2 Pi I 2/16] + -9/94 Exp[2 Pi I 3/16] + 9/94 Exp[2 Pi I 5/16] + 27/94 Exp[2 Pi I 6/16] + 25/94 Exp[2 Pi I 7/16]),
+            "size" -> 2
+          |>,
+          <|
+            "copy" -> 7,
+            "cos" -> (5/47 + -16/47 Exp[2 Pi I/16] + -6/47 Exp[2 Pi I 2/16] + -2/47 Exp[2 Pi I 3/16] + 2/47 Exp[2 Pi I 5/16] + 6/47 Exp[2 Pi I 6/16] + 16/47 Exp[2 Pi I 7/16]),
+            "size" -> 1
+          |>,
+          <|
+            "copy" -> 8,
+            "cos" -> (-18/47 + 20/47 Exp[2 Pi I/16] + 15/94 Exp[2 Pi I 2/16] + 5/94 Exp[2 Pi I 3/16] + -5/94 Exp[2 Pi I 5/16] + -15/94 Exp[2 Pi I 6/16] + -20/47 Exp[2 Pi I 7/16]),
+            "size" -> 2
+          |>,
+          <|
+            "copy" -> 10,
+            "cos" -> (-25/47 + 19/94 Exp[2 Pi I/16] + 13/94 Exp[2 Pi I 2/16] + 10/47 Exp[2 Pi I 3/16] + -10/47 Exp[2 Pi I 5/16] + -13/94 Exp[2 Pi I 6/16] + -19/94 Exp[2 Pi I 7/16]),
+            "size" -> 2
+          |>,
+          <|
+            "copy" -> 11,
+            "cos" -> (-27/47 + 13/94 Exp[2 Pi I/16] + -1/94 Exp[2 Pi I 2/16] + -8/47 Exp[2 Pi I 3/16] + 8/47 Exp[2 Pi I 5/16] + 1/94 Exp[2 Pi I 6/16] + -13/94 Exp[2 Pi I 7/16]),
+            "size" -> 2
+          |>,
+          <|
+            "copy" -> 12,
+            "cos" -> (-34/47 + -4/47 Exp[2 Pi I/16] + -3/94 Exp[2 Pi I 2/16] + -1/94 Exp[2 Pi I 3/16] + 1/94 Exp[2 Pi I 5/16] + 3/94 Exp[2 Pi I 6/16] + 4/47 Exp[2 Pi I 7/16]),
+            "size" -> 2
+          |>
+        },
+        "rank" -> 9,
+        "site_node" -> "n03",
+        "subgroup_node" -> "n03",
+        "vertex_shape" -> <|"reason" -> "not-a-named-shape", "value" -> Null|>,
+        "vertices" -> {
+          {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            1,
+            2
+          },
+          {
+            (1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            2
+          },
+          {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            (-1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+            2
+          },
+          {
+            -1,
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            2
+          },
+          {
+            1,
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            2
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            (1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+            2
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            2
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            -1,
+            2
+          },
+          {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            -1,
+            -2
+          },
+          {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            (1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+            -2
+          },
+          {
+            1,
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            -2
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            -2
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            1,
+            -2
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            (-1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+            -2
+          },
+          {
+            -1,
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            -2
+          },
+          {
+            (1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            -2
+          }
+        }
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 8}},
+          {{2, 4}},
+          {{1, 8}},
+          {{2, 4}},
+          {{1, 8}},
+          {{2, 4}},
+          {{4, 2}},
+          {{4, 2}},
+          {{4, 2}},
+          {{4, 2}},
+          {{2, 4}}
+        },
+        "compound" -> <|"reason" -> "not-a-regular-compound", "value" -> Null|>,
+        "copies" -> {
+          {0, 1, 2, 3},
+          {4, 5, 6, 7},
+          {8, 9, 10, 11},
+          {12, 13, 14, 15},
+          {16, 17, 18, 19},
+          {20, 21, 22, 23},
+          {24, 25, 26, 27},
+          {28, 29, 30, 31}
+        },
+        "copies_per_vertex" -> 1,
+        "cosets" -> {0, 1, 8, 9, 16, 17, 24, 25},
+        "degree" -> 8,
+        "figure" -> <|
+          "kind" -> "polygon",
+          "points" -> {{1, 2, 0}, {-2, 1, 0}, {2, -1, 0}, {-1, -2, 0}},
+          "shape" -> "regular polygon",
+          "vector" -> {1, 2, 0}
+        |>,
+        "hands" -> {{0, 1, 2, 3}, {4, 5, 6, 7}},
+        "images" -> {
+          {0, 1, 2, 3, 4, 5, 6, 7},
+          {1, 0, 3, 2, 5, 4, 7, 6},
+          {1, 0, 3, 2, 5, 4, 7, 6},
+          {0, 1, 2, 3, 4, 5, 6, 7},
+          {0, 1, 2, 3, 4, 5, 6, 7},
+          {1, 0, 3, 2, 5, 4, 7, 6},
+          {1, 0, 3, 2, 5, 4, 7, 6},
+          {0, 1, 2, 3, 4, 5, 6, 7},
+          {2, 3, 0, 1, 7, 6, 5, 4},
+          {3, 2, 1, 0, 6, 7, 4, 5},
+          {2, 3, 0, 1, 7, 6, 5, 4},
+          {3, 2, 1, 0, 6, 7, 4, 5},
+          {2, 3, 0, 1, 7, 6, 5, 4},
+          {3, 2, 1, 0, 6, 7, 4, 5},
+          {2, 3, 0, 1, 7, 6, 5, 4},
+          {3, 2, 1, 0, 6, 7, 4, 5},
+          {4, 5, 6, 7, 1, 0, 3, 2},
+          {5, 4, 7, 6, 0, 1, 2, 3},
+          {5, 4, 7, 6, 0, 1, 2, 3},
+          {4, 5, 6, 7, 1, 0, 3, 2},
+          {4, 5, 6, 7, 1, 0, 3, 2},
+          {5, 4, 7, 6, 0, 1, 2, 3},
+          {5, 4, 7, 6, 0, 1, 2, 3},
+          {4, 5, 6, 7, 1, 0, 3, 2},
+          {6, 7, 4, 5, 2, 3, 0, 1},
+          {7, 6, 5, 4, 3, 2, 1, 0},
+          {6, 7, 4, 5, 2, 3, 0, 1},
+          {7, 6, 5, 4, 3, 2, 1, 0},
+          {6, 7, 4, 5, 2, 3, 0, 1},
+          {7, 6, 5, 4, 3, 2, 1, 0},
+          {6, 7, 4, 5, 2, 3, 0, 1},
+          {7, 6, 5, 4, 3, 2, 1, 0}
+        },
+        "pair_classes" -> {
+          <|"copy" -> 0, "shared_vertices" -> 4, "size" -> 1|>,
+          <|"copy" -> 1, "shared_vertices" -> 0, "size" -> 1|>,
+          <|"copy" -> 2, "shared_vertices" -> 0, "size" -> 1|>,
+          <|"copy" -> 3, "shared_vertices" -> 0, "size" -> 1|>,
+          <|"copy" -> 4, "shared_vertices" -> 0, "size" -> 1|>,
+          <|"copy" -> 5, "shared_vertices" -> 0, "size" -> 1|>,
+          <|"copy" -> 6, "shared_vertices" -> 0, "size" -> 1|>,
+          <|"copy" -> 7, "shared_vertices" -> 0, "size" -> 1|>
+        },
+        "rank" -> 8,
+        "site_node" -> "n00",
+        "subgroup_node" -> "n04",
+        "vertex_shape" -> <|"reason" -> "not-a-named-shape", "value" -> Null|>,
+        "vertices" -> {
+          {1, 2, 0},
+          {-2, 1, 0},
+          {2, -1, 0},
+          {-1, -2, 0},
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (3/2 Exp[2 Pi I/8] + -3/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-3/2 Exp[2 Pi I/8] + 3/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (3/2 Exp[2 Pi I/8] + -3/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (-3/2 Exp[2 Pi I/8] + 3/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {1, -2, 0},
+          {-2, -1, 0},
+          {2, 1, 0},
+          {-1, 2, 0},
+          {
+            (3/2 Exp[2 Pi I/8] + -3/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (-3/2 Exp[2 Pi I/8] + 3/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (3/2 Exp[2 Pi I/8] + -3/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-3/2 Exp[2 Pi I/8] + 3/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            (Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            (-1 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            (Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            (-1 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            (Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            (Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16] + Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          }
+        }
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 8}},
+          {{4, 2}},
+          {{2, 4}},
+          {{4, 2}},
+          {{1, 8}},
+          {{1, 2}, {2, 3}},
+          {{8, 1}},
+          {{8, 1}},
+          {{8, 1}},
+          {{8, 1}},
+          {{2, 4}}
+        },
+        "compound" -> <|"reason" -> "not-a-regular-compound", "value" -> Null|>,
+        "copies" -> {{0, 1}, {2, 3}, {4, 5}, {6, 7}, {8, 9}, {10, 11}, {12, 13}, {14, 15}},
+        "copies_per_vertex" -> 1,
+        "cosets" -> {0, 1, 2, 3, 16, 17, 18, 19},
+        "degree" -> 8,
+        "figure" -> <|"kind" -> "line", "vector" -> {1, 0, 0}|>,
+        "hands" -> {{0, 1, 2, 3}, {4, 5, 6, 7}},
+        "images" -> {
+          {0, 1, 2, 3, 4, 5, 6, 7},
+          {1, 3, 0, 2, 6, 4, 7, 5},
+          {2, 0, 3, 1, 5, 7, 4, 6},
+          {3, 2, 1, 0, 7, 6, 5, 4},
+          {3, 2, 1, 0, 7, 6, 5, 4},
+          {2, 0, 3, 1, 5, 7, 4, 6},
+          {1, 3, 0, 2, 6, 4, 7, 5},
+          {0, 1, 2, 3, 4, 5, 6, 7},
+          {0, 2, 1, 3, 5, 4, 7, 6},
+          {1, 0, 3, 2, 4, 6, 5, 7},
+          {3, 1, 2, 0, 6, 7, 4, 5},
+          {2, 3, 0, 1, 7, 5, 6, 4},
+          {0, 2, 1, 3, 5, 4, 7, 6},
+          {1, 0, 3, 2, 4, 6, 5, 7},
+          {3, 1, 2, 0, 6, 7, 4, 5},
+          {2, 3, 0, 1, 7, 5, 6, 4},
+          {4, 6, 5, 7, 1, 0, 3, 2},
+          {5, 4, 7, 6, 0, 2, 1, 3},
+          {6, 7, 4, 5, 3, 1, 2, 0},
+          {7, 5, 6, 4, 2, 3, 0, 1},
+          {7, 5, 6, 4, 2, 3, 0, 1},
+          {6, 7, 4, 5, 3, 1, 2, 0},
+          {5, 4, 7, 6, 0, 2, 1, 3},
+          {4, 6, 5, 7, 1, 0, 3, 2},
+          {4, 5, 6, 7, 0, 1, 2, 3},
+          {6, 4, 7, 5, 1, 3, 0, 2},
+          {7, 6, 5, 4, 3, 2, 1, 0},
+          {5, 7, 4, 6, 2, 0, 3, 1},
+          {4, 5, 6, 7, 0, 1, 2, 3},
+          {6, 4, 7, 5, 1, 3, 0, 2},
+          {7, 6, 5, 4, 3, 2, 1, 0},
+          {5, 7, 4, 6, 2, 0, 3, 1}
+        },
+        "pair_classes" -> {
+          <|"copy" -> 0, "cos" -> 1, "size" -> 1|>,
+          <|"copy" -> 1, "cos" -> (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]), "size" -> 2|>,
+          <|"copy" -> 3, "cos" -> 0, "size" -> 1|>,
+          <|"copy" -> 4, "cos" -> (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]), "size" -> 2|>,
+          <|"copy" -> 6, "cos" -> (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]), "size" -> 2|>
+        },
+        "rank" -> 5,
+        "site_node" -> "n02",
+        "subgroup_node" -> "n05",
+        "vertex_shape" -> "regular polygon",
+        "vertices" -> {
+          {1, 0, 0},
+          {-1, 0, 0},
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {0, 1, 0},
+          {0, -1, 0},
+          {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          }
+        }
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 8}},
+          {{4, 2}},
+          {{2, 4}},
+          {{4, 2}},
+          {{1, 8}},
+          {{2, 4}},
+          {{8, 1}},
+          {{8, 1}},
+          {{8, 1}},
+          {{8, 1}},
+          {{1, 2}, {2, 3}}
+        },
+        "compound" -> <|"reason" -> "not-a-regular-compound", "value" -> Null|>,
+        "copies" -> {{0, 1}, {2, 3}, {4, 5}, {6, 7}, {8, 9}, {10, 11}, {12, 13}, {14, 15}},
+        "copies_per_vertex" -> 1,
+        "cosets" -> {0, 1, 2, 3, 8, 9, 10, 11},
+        "degree" -> 8,
+        "figure" -> <|
+          "kind" -> "line",
+          "vector" -> {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            1,
+            0
+          }
+        |>,
+        "hands" -> <|"reason" -> "one-class-under-the-rotations", "value" -> Null|>,
+        "images" -> {
+          {0, 1, 2, 3, 4, 5, 6, 7},
+          {1, 3, 0, 2, 5, 6, 7, 4},
+          {2, 0, 3, 1, 7, 4, 5, 6},
+          {3, 2, 1, 0, 6, 7, 4, 5},
+          {3, 2, 1, 0, 6, 7, 4, 5},
+          {2, 0, 3, 1, 7, 4, 5, 6},
+          {1, 3, 0, 2, 5, 6, 7, 4},
+          {0, 1, 2, 3, 4, 5, 6, 7},
+          {4, 7, 5, 6, 0, 2, 3, 1},
+          {5, 4, 6, 7, 1, 0, 2, 3},
+          {6, 5, 7, 4, 3, 1, 0, 2},
+          {7, 6, 4, 5, 2, 3, 1, 0},
+          {4, 7, 5, 6, 0, 2, 3, 1},
+          {5, 4, 6, 7, 1, 0, 2, 3},
+          {6, 5, 7, 4, 3, 1, 0, 2},
+          {7, 6, 4, 5, 2, 3, 1, 0},
+          {5, 6, 4, 7, 0, 1, 3, 2},
+          {4, 5, 7, 6, 2, 0, 1, 3},
+          {6, 7, 5, 4, 1, 3, 2, 0},
+          {7, 4, 6, 5, 3, 2, 0, 1},
+          {7, 4, 6, 5, 3, 2, 0, 1},
+          {6, 7, 5, 4, 1, 3, 2, 0},
+          {4, 5, 7, 6, 2, 0, 1, 3},
+          {5, 6, 4, 7, 0, 1, 3, 2},
+          {0, 2, 1, 3, 5, 4, 7, 6},
+          {1, 0, 3, 2, 6, 5, 4, 7},
+          {3, 1, 2, 0, 7, 6, 5, 4},
+          {2, 3, 0, 1, 4, 7, 6, 5},
+          {0, 2, 1, 3, 5, 4, 7, 6},
+          {1, 0, 3, 2, 6, 5, 4, 7},
+          {3, 1, 2, 0, 7, 6, 5, 4},
+          {2, 3, 0, 1, 4, 7, 6, 5}
+        },
+        "pair_classes" -> {
+          <|"copy" -> 0, "cos" -> 1, "size" -> 1|>,
+          <|"copy" -> 1, "cos" -> (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]), "size" -> 2|>,
+          <|"copy" -> 3, "cos" -> 0, "size" -> 1|>,
+          <|"copy" -> 4, "cos" -> (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]), "size" -> 2|>,
+          <|"copy" -> 6, "cos" -> (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]), "size" -> 2|>
+        },
+        "rank" -> 5,
+        "site_node" -> "n03",
+        "subgroup_node" -> "n06",
+        "vertex_shape" -> "regular polygon",
+        "vertices" -> {
+          {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            1,
+            0
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            -1,
+            0
+          },
+          {
+            (1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            (-1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            (1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            -1,
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            1,
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            -1,
+            0
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            1,
+            0
+          },
+          {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            (1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            (-1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            1,
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            -1,
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            0
+          }
+        }
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 4}},
+          {{1, 4}},
+          {{1, 4}},
+          {{1, 4}},
+          {{1, 4}},
+          {{2, 2}},
+          {{2, 2}},
+          {{2, 2}},
+          {{2, 2}},
+          {{2, 2}},
+          {{2, 2}}
+        },
+        "compound" -> <|"reason" -> "not-a-regular-compound", "value" -> Null|>,
+        "copies" -> {{0}, {1}, {1}, {0}},
+        "copies_per_vertex" -> 2,
+        "cosets" -> {0, 8, 16, 24},
+        "degree" -> 4,
+        "figure" -> <|"kind" -> "spinning arrow", "vector" -> {0, 0, 1}|>,
+        "hands" -> {{0, 1}, {2, 3}},
+        "images" -> {
+          {0, 1, 2, 3},
+          {0, 1, 2, 3},
+          {0, 1, 2, 3},
+          {0, 1, 2, 3},
+          {0, 1, 2, 3},
+          {0, 1, 2, 3},
+          {0, 1, 2, 3},
+          {0, 1, 2, 3},
+          {1, 0, 3, 2},
+          {1, 0, 3, 2},
+          {1, 0, 3, 2},
+          {1, 0, 3, 2},
+          {1, 0, 3, 2},
+          {1, 0, 3, 2},
+          {1, 0, 3, 2},
+          {1, 0, 3, 2},
+          {2, 3, 0, 1},
+          {2, 3, 0, 1},
+          {2, 3, 0, 1},
+          {2, 3, 0, 1},
+          {2, 3, 0, 1},
+          {2, 3, 0, 1},
+          {2, 3, 0, 1},
+          {2, 3, 0, 1},
+          {3, 2, 1, 0},
+          {3, 2, 1, 0},
+          {3, 2, 1, 0},
+          {3, 2, 1, 0},
+          {3, 2, 1, 0},
+          {3, 2, 1, 0},
+          {3, 2, 1, 0},
+          {3, 2, 1, 0}
+        },
+        "pair_classes" -> {
+          <|"copy" -> 0, "cos" -> 1, "same_hand" -> True, "size" -> 1|>,
+          <|"copy" -> 1, "cos" -> -1, "same_hand" -> True, "size" -> 1|>,
+          <|"copy" -> 2, "cos" -> -1, "same_hand" -> False, "size" -> 1|>,
+          <|"copy" -> 3, "cos" -> 1, "same_hand" -> False, "size" -> 1|>
+        },
+        "rank" -> 4,
+        "site_node" -> "n12",
+        "subgroup_node" -> "n07",
+        "vertex_shape" -> "segment",
+        "vertices" -> {{0, 0, 1}, {0, 0, -1}}
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 4}},
+          {{2, 2}},
+          {{1, 4}},
+          {{2, 2}},
+          {{1, 4}},
+          {{1, 2}, {2, 1}},
+          {{4, 1}},
+          {{4, 1}},
+          {{4, 1}},
+          {{4, 1}},
+          {{2, 2}}
+        },
+        "compound" -> <|"reason" -> "not-a-regular-compound", "value" -> Null|>,
+        "copies" -> {{0, 1, 2, 3}, {4, 5, 6, 7}, {8, 9, 10, 11}, {12, 13, 14, 15}},
+        "copies_per_vertex" -> 1,
+        "cosets" -> {0, 1, 16, 17},
+        "degree" -> 4,
+        "figure" -> <|
+          "kind" -> "polygon",
+          "points" -> {{1, 0, 0}, {0, 1, 0}, {0, -1, 0}, {-1, 0, 0}},
+          "shape" -> "regular polygon",
+          "vector" -> {1, 0, 0}
+        |>,
+        "hands" -> {{0, 1}, {2, 3}},
+        "images" -> {
+          {0, 1, 2, 3},
+          {1, 0, 3, 2},
+          {1, 0, 3, 2},
+          {0, 1, 2, 3},
+          {0, 1, 2, 3},
+          {1, 0, 3, 2},
+          {1, 0, 3, 2},
+          {0, 1, 2, 3},
+          {0, 1, 3, 2},
+          {1, 0, 2, 3},
+          {0, 1, 3, 2},
+          {1, 0, 2, 3},
+          {0, 1, 3, 2},
+          {1, 0, 2, 3},
+          {0, 1, 3, 2},
+          {1, 0, 2, 3},
+          {2, 3, 1, 0},
+          {3, 2, 0, 1},
+          {3, 2, 0, 1},
+          {2, 3, 1, 0},
+          {2, 3, 1, 0},
+          {3, 2, 0, 1},
+          {3, 2, 0, 1},
+          {2, 3, 1, 0},
+          {2, 3, 0, 1},
+          {3, 2, 1, 0},
+          {2, 3, 0, 1},
+          {3, 2, 1, 0},
+          {2, 3, 0, 1},
+          {3, 2, 1, 0},
+          {2, 3, 0, 1},
+          {3, 2, 1, 0}
+        },
+        "pair_classes" -> {
+          <|"copy" -> 0, "shared_vertices" -> 4, "size" -> 1|>,
+          <|"copy" -> 1, "shared_vertices" -> 0, "size" -> 1|>,
+          <|"copy" -> 2, "shared_vertices" -> 0, "size" -> 2|>
+        },
+        "rank" -> 3,
+        "site_node" -> "n02",
+        "subgroup_node" -> "n08",
+        "vertex_shape" -> "regular polygon",
+        "vertices" -> {
+          {1, 0, 0},
+          {0, 1, 0},
+          {0, -1, 0},
+          {-1, 0, 0},
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            0
+          },
+          {
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            0
+          },
+          {
+            (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+            (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+            0
+          }
+        }
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 4}},
+          {{2, 2}},
+          {{1, 4}},
+          {{2, 2}},
+          {{1, 4}},
+          {{2, 2}},
+          {{4, 1}},
+          {{4, 1}},
+          {{4, 1}},
+          {{4, 1}},
+          {{1, 2}, {2, 1}}
+        },
+        "compound" -> <|"reason" -> "not-a-regular-compound", "value" -> Null|>,
+        "copies" -> {{0, 1, 2, 3}, {4, 5, 6, 7}, {8, 9, 10, 11}, {12, 13, 14, 15}},
+        "copies_per_vertex" -> 1,
+        "cosets" -> {0, 1, 8, 9},
+        "degree" -> 4,
+        "figure" -> <|
+          "kind" -> "polygon",
+          "points" -> {
+            {
+              (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+              1,
+              2
+            },
+            {
+              -1,
+              (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+              2
+            },
+            {
+              1,
+              (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+              2
+            },
+            {
+              (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+              -1,
+              2
+            }
+          },
+          "shape" -> "regular polygon",
+          "vector" -> {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            1,
+            2
+          }
+        |>,
+        "hands" -> <|"reason" -> "one-class-under-the-rotations", "value" -> Null|>,
+        "images" -> {
+          {0, 1, 2, 3},
+          {1, 0, 3, 2},
+          {1, 0, 3, 2},
+          {0, 1, 2, 3},
+          {0, 1, 2, 3},
+          {1, 0, 3, 2},
+          {1, 0, 3, 2},
+          {0, 1, 2, 3},
+          {2, 3, 0, 1},
+          {3, 2, 1, 0},
+          {2, 3, 0, 1},
+          {3, 2, 1, 0},
+          {2, 3, 0, 1},
+          {3, 2, 1, 0},
+          {2, 3, 0, 1},
+          {3, 2, 1, 0},
+          {3, 2, 0, 1},
+          {2, 3, 1, 0},
+          {2, 3, 1, 0},
+          {3, 2, 0, 1},
+          {3, 2, 0, 1},
+          {2, 3, 1, 0},
+          {2, 3, 1, 0},
+          {3, 2, 0, 1},
+          {0, 1, 3, 2},
+          {1, 0, 2, 3},
+          {0, 1, 3, 2},
+          {1, 0, 2, 3},
+          {0, 1, 3, 2},
+          {1, 0, 2, 3},
+          {0, 1, 3, 2},
+          {1, 0, 2, 3}
+        },
+        "pair_classes" -> {
+          <|"copy" -> 0, "shared_vertices" -> 4, "size" -> 1|>,
+          <|"copy" -> 1, "shared_vertices" -> 0, "size" -> 1|>,
+          <|"copy" -> 2, "shared_vertices" -> 0, "size" -> 2|>
+        },
+        "rank" -> 3,
+        "site_node" -> "n03",
+        "subgroup_node" -> "n09",
+        "vertex_shape" -> <|"reason" -> "not-a-named-shape", "value" -> Null|>,
+        "vertices" -> {
+          {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            1,
+            2
+          },
+          {
+            -1,
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            2
+          },
+          {
+            1,
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            2
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            -1,
+            2
+          },
+          {
+            (1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            2
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            (1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+            2
+          },
+          {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            (-1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+            2
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            2
+          },
+          {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            -1,
+            -2
+          },
+          {
+            -1,
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            -2
+          },
+          {
+            1,
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + Exp[2 Pi I 3/16] + -1 Exp[2 Pi I 5/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            -2
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 3/16] + Exp[2 Pi I 5/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            1,
+            -2
+          },
+          {
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            (1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+            -2
+          },
+          {
+            (1 + Exp[2 Pi I/16] + -1 Exp[2 Pi I 7/16]),
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            -2
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+            (1 + Exp[2 Pi I/16] + Exp[2 Pi I 2/16] + -1 Exp[2 Pi I 6/16] + -1 Exp[2 Pi I 7/16]),
+            -2
+          },
+          {
+            (-1 + -1 Exp[2 Pi I/16] + -1 Exp[2 Pi I 2/16] + Exp[2 Pi I 6/16] + Exp[2 Pi I 7/16]),
+            (-1 + -1 Exp[2 Pi I/16] + Exp[2 Pi I 7/16]),
+            -2
+          }
+        }
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{2, 1}},
+          {{2, 1}},
+          {{2, 1}},
+          {{2, 1}},
+          {{2, 1}}
+        },
+        "compound" -> <|"reason" -> "not-a-regular-compound", "value" -> Null|>,
+        "copies" -> {{0, 1}, {0, 1}},
+        "copies_per_vertex" -> 2,
+        "cosets" -> {0, 16},
+        "degree" -> 2,
+        "figure" -> <|"kind" -> "helix", "vector" -> {0, 0, 1}|>,
+        "hands" -> {{0}, {1}},
+        "images" -> {
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0}
+        },
+        "pair_classes" -> {
+          <|"copy" -> 0, "cos" -> 1, "same_hand" -> True, "size" -> 1|>,
+          <|"copy" -> 1, "cos" -> 1, "same_hand" -> False, "size" -> 1|>
+        },
+        "rank" -> 2,
+        "site_node" -> "n12",
+        "subgroup_node" -> "n10",
+        "vertex_shape" -> "segment",
+        "vertices" -> {{0, 0, 1}, {0, 0, -1}}
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{2, 1}},
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{2, 1}}
+        },
+        "compound" -> <|"reason" -> "not-a-regular-compound", "value" -> Null|>,
+        "copies" -> {{0}, {1}},
+        "copies_per_vertex" -> 1,
+        "cosets" -> {0, 8},
+        "degree" -> 2,
+        "figure" -> <|"kind" -> "spin", "vector" -> {0, 0, 1}|>,
+        "hands" -> <|"reason" -> "one-class-under-the-rotations", "value" -> Null|>,
+        "images" -> {
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0}
+        },
+        "pair_classes" -> {
+          <|"copy" -> 0, "cos" -> 1, "size" -> 1|>,
+          <|"copy" -> 1, "cos" -> -1, "size" -> 1|>
+        },
+        "rank" -> 2,
+        "site_node" -> "n12",
+        "subgroup_node" -> "n11",
+        "vertex_shape" -> "segment",
+        "vertices" -> {{0, 0, 1}, {0, 0, -1}}
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{1, 2}},
+          {{2, 1}},
+          {{2, 1}},
+          {{2, 1}},
+          {{2, 1}},
+          {{2, 1}},
+          {{1, 2}}
+        },
+        "compound" -> <|"reason" -> "not-a-regular-compound", "value" -> Null|>,
+        "copies" -> {{0}, {1}},
+        "copies_per_vertex" -> 1,
+        "cosets" -> {0, 8},
+        "degree" -> 2,
+        "figure" -> <|"kind" -> "point", "orbit" -> 3, "vector" -> {0, 0, 1}|>,
+        "hands" -> <|"reason" -> "one-class-under-the-rotations", "value" -> Null|>,
+        "images" -> {
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {1, 0},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1},
+          {0, 1}
+        },
+        "pair_classes" -> {
+          <|"copy" -> 0, "cos" -> 1, "size" -> 1|>,
+          <|"copy" -> 1, "cos" -> -1, "size" -> 1|>
+        },
+        "rank" -> 2,
+        "site_node" -> "n12",
+        "subgroup_node" -> "n12",
+        "vertex_shape" -> "segment",
+        "vertices" -> {{0, 0, 1}, {0, 0, -1}}
+      |>,
+      <|
+        "class_cycle_types" -> {
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}},
+          {{1, 1}}
+        },
+        "compound" -> <|"reason" -> "not-a-regular-compound", "value" -> Null|>,
+        "copies" -> {{0}},
+        "copies_per_vertex" -> 1,
+        "cosets" -> {0},
+        "degree" -> 1,
+        "figure" -> <|"kind" -> "point", "orbit" -> 4, "vector" -> {0, 0, 0}|>,
+        "hands" -> <|"reason" -> "one-class-under-the-rotations", "value" -> Null|>,
+        "images" -> {
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0},
+          {0}
+        },
+        "pair_classes" -> {<|"copy" -> 0, "size" -> 1|>},
+        "rank" -> 1,
+        "site_node" -> "n13",
+        "subgroup_node" -> "n13",
+        "vertex_shape" -> <|"reason" -> "not-a-named-shape", "value" -> Null|>,
+        "vertices" -> {{0, 0, 0}}
+      |>
+    },
+    "marks" -> <|
+      "columns" -> {"n00", "n01", "n02", "n03", "n04", "n05", "n06", "n07", "n08", "n09", "n10", "n11", "n12", "n13"},
+      "rows" -> {
+        {32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {16, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {16, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {16, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {8, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {8, 8, 2, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0},
+        {8, 8, 0, 2, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0},
+        {4, 4, 0, 0, 4, 0, 0, 4, 0, 0, 0, 0, 0, 0},
+        {4, 4, 2, 0, 4, 2, 0, 0, 2, 0, 0, 0, 0, 0},
+        {4, 4, 0, 2, 4, 0, 2, 0, 0, 2, 0, 0, 0, 0},
+        {2, 2, 2, 0, 2, 2, 0, 2, 2, 0, 2, 0, 0, 0},
+        {2, 2, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0},
+        {2, 2, 0, 2, 2, 0, 2, 2, 0, 2, 0, 0, 2, 0},
+        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+      }
+    |>
+  |>,
+  "schema" -> "point-group-atlas/group/1",
+  "subduction_basis" -> <|
+    "allowed_m" -> <|
+      "modulus" -> 16,
+      "residues" -> {
+        <|"even" -> {0}, "irrep" -> "A_1", "irrep_id" -> "A1", "odd" -> {8}|>,
+        <|"even" -> {0}, "irrep" -> "A_2", "irrep_id" -> "A2", "odd" -> {8}|>,
+        <|"even" -> {8}, "irrep" -> "B_1", "irrep_id" -> "B1", "odd" -> {0}|>,
+        <|"even" -> {8}, "irrep" -> "B_2", "irrep_id" -> "B2", "odd" -> {0}|>,
+        <|"even" -> {7, 9}, "irrep" -> "E_1", "irrep_id" -> "E1", "odd" -> {1, 15}|>,
+        <|"even" -> {2, 14}, "irrep" -> "E_2", "irrep_id" -> "E2", "odd" -> {6, 10}|>,
+        <|"even" -> {5, 11}, "irrep" -> "E_3", "irrep_id" -> "E3", "odd" -> {3, 13}|>,
+        <|"even" -> {4, 12}, "irrep" -> "E_4", "irrep_id" -> "E4", "odd" -> {4, 12}|>,
+        <|"even" -> {3, 13}, "irrep" -> "E_5", "irrep_id" -> "E5", "odd" -> {5, 11}|>,
+        <|"even" -> {6, 10}, "irrep" -> "E_6", "irrep_id" -> "E6", "odd" -> {2, 14}|>,
+        <|"even" -> {1, 15}, "irrep" -> "E_7", "irrep_id" -> "E7", "odd" -> {7, 9}|>
+      }
+    |>,
+    "closed_form" -> <|
+      "abelian_index" -> 2,
+      "abelian_part" -> "S_2N",
+      "cases" -> {
+        <|
+          "case" -> "G abelian (there is no flip)",
+          "dim" -> 1,
+          "kind" -> "single_ket",
+          "vectors" -> "|J,m>"
+        |>,
+        <|
+          "case" -> "chi_m != chi_-m",
+          "dim" -> 2,
+          "kind" -> "partner_pair",
+          "vectors" -> "mu = 1: |J,m_1>; mu = 2: c |J,-m_1>, c = +1 or -1 (CONVENTIONS.md section 14.1)"
+        |>,
+        <|
+          "case" -> "chi_m = chi_-m, m > 0",
+          "dim" -> 1,
+          "kind" -> "pm_pair",
+          "vectors" -> "|J,m> + s |J,-m>, s = +1 and s = -1"
+        |>,
+        <|"case" -> "m = 0", "dim" -> 1, "kind" -> "single_ket", "vectors" -> "|J,0>"|>
+      },
+      "flip" -> "C_2x",
+      "multiplicity" -> {
+        <|
+          "even" -> "floor(J/16) + 1",
+          "irrep" -> "A_1",
+          "irrep_id" -> "A1",
+          "odd" -> "floor((J+8)/16)"
+        |>,
+        <|
+          "even" -> "floor(J/16)",
+          "irrep" -> "A_2",
+          "irrep_id" -> "A2",
+          "odd" -> "floor((J+8)/16)"
+        |>,
+        <|
+          "even" -> "floor((J+8)/16)",
+          "irrep" -> "B_1",
+          "irrep_id" -> "B1",
+          "odd" -> "floor(J/16)"
+        |>,
+        <|
+          "even" -> "floor((J+8)/16)",
+          "irrep" -> "B_2",
+          "irrep_id" -> "B2",
+          "odd" -> "floor(J/16) + 1"
+        |>,
+        <|"even" -> "n_16(J,7)", "irrep" -> "E_1", "irrep_id" -> "E1", "odd" -> "n_16(J,1)"|>,
+        <|"even" -> "n_16(J,2)", "irrep" -> "E_2", "irrep_id" -> "E2", "odd" -> "n_16(J,6)"|>,
+        <|"even" -> "n_16(J,5)", "irrep" -> "E_3", "irrep_id" -> "E3", "odd" -> "n_16(J,3)"|>,
+        <|"even" -> "n_16(J,4)", "irrep" -> "E_4", "irrep_id" -> "E4", "odd" -> "n_16(J,4)"|>,
+        <|"even" -> "n_16(J,3)", "irrep" -> "E_5", "irrep_id" -> "E5", "odd" -> "n_16(J,5)"|>,
+        <|"even" -> "n_16(J,6)", "irrep" -> "E_6", "irrep_id" -> "E6", "odd" -> "n_16(J,2)"|>,
+        <|"even" -> "n_16(J,1)", "irrep" -> "E_7", "irrep_id" -> "E7", "odd" -> "n_16(J,7)"|>
+      },
+      "parity_label_map" -> <|
+        "A_1" -> "B_1",
+        "A_2" -> "B_2",
+        "B_1" -> "A_1",
+        "B_2" -> "A_2",
+        "E_1" -> "E_7",
+        "E_2" -> "E_6",
+        "E_3" -> "E_5",
+        "E_4" -> "E_4",
+        "E_5" -> "E_3",
+        "E_6" -> "E_2",
+        "E_7" -> "E_1"
+      |>,
+      "parity_rule" -> "D^(J,-(-1)^J)|G = (D^(J,(-1)^J)|G) (x) det_G: at the other parity a block keeps its kets and its label is multiplied by det_G (parity_label_map); inside a 2-D block the partner order and the sign of mu = 2 are set by rule 4 at that parity (CONVENTIONS.md section 14.1)",
+      "self_conjugacy_condition" -> "m = 0 (mod N)",
+      "structure_theorem" -> "A = G n C_infh acts diagonally on |J,m>; either G = A (abelian) or [G:A] = 2 with the coset generated by one flip (the field flip, C_2x or sigma_v(xz)) sending m -> -m"
+    |>,
+    "enumerated" -> <|
+      "J_max" -> 10,
+      "J_min" -> 0,
+      "block_count" -> 69,
+      "blocks" -> {
+        <|
+          "J" -> 0,
+          "dim" -> 1,
+          "irrep" -> "A_1",
+          "irrep_id" -> "A1",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 0,
+          "seed_sign" -> 1,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 0|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 1,
+          "dim" -> 1,
+          "irrep" -> "B_2",
+          "irrep_id" -> "B2",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 0,
+          "seed_sign" -> 1,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 0|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 1,
+          "dim" -> 2,
+          "irrep" -> "E_1",
+          "irrep_id" -> "E1",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -1|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 1|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 2,
+          "dim" -> 1,
+          "irrep" -> "A_1",
+          "irrep_id" -> "A1",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 0,
+          "seed_sign" -> 1,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 0|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 2,
+          "dim" -> 2,
+          "irrep" -> "E_7",
+          "irrep_id" -> "E7",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -1|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 1|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 2,
+          "dim" -> 2,
+          "irrep" -> "E_2",
+          "irrep_id" -> "E2",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 2,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -2|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 2|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 3,
+          "dim" -> 1,
+          "irrep" -> "B_2",
+          "irrep_id" -> "B2",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 0,
+          "seed_sign" -> 1,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 0|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 3,
+          "dim" -> 2,
+          "irrep" -> "E_1",
+          "irrep_id" -> "E1",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -1|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 1|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 3,
+          "dim" -> 2,
+          "irrep" -> "E_6",
+          "irrep_id" -> "E6",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 2,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -2|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 2|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 3,
+          "dim" -> 2,
+          "irrep" -> "E_3",
+          "irrep_id" -> "E3",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 3,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -3|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 3|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 4,
+          "dim" -> 1,
+          "irrep" -> "A_1",
+          "irrep_id" -> "A1",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 0,
+          "seed_sign" -> 1,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 0|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 4,
+          "dim" -> 2,
+          "irrep" -> "E_7",
+          "irrep_id" -> "E7",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -1|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 1|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 4,
+          "dim" -> 2,
+          "irrep" -> "E_2",
+          "irrep_id" -> "E2",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 2,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -2|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 2|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 4,
+          "dim" -> 2,
+          "irrep" -> "E_5",
+          "irrep_id" -> "E5",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 3,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -3|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 3|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 4,
+          "dim" -> 2,
+          "irrep" -> "E_4",
+          "irrep_id" -> "E4",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 4,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -4|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 4|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 5,
+          "dim" -> 1,
+          "irrep" -> "B_2",
+          "irrep_id" -> "B2",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 0,
+          "seed_sign" -> 1,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 0|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 5,
+          "dim" -> 2,
+          "irrep" -> "E_1",
+          "irrep_id" -> "E1",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -1|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 1|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 5,
+          "dim" -> 2,
+          "irrep" -> "E_6",
+          "irrep_id" -> "E6",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 2,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -2|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 2|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 5,
+          "dim" -> 2,
+          "irrep" -> "E_3",
+          "irrep_id" -> "E3",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 3,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -3|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 3|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 5,
+          "dim" -> 2,
+          "irrep" -> "E_4",
+          "irrep_id" -> "E4",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 4,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 4|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> -4|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 5,
+          "dim" -> 2,
+          "irrep" -> "E_5",
+          "irrep_id" -> "E5",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 5,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 5|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> -5|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 6,
+          "dim" -> 1,
+          "irrep" -> "A_1",
+          "irrep_id" -> "A1",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 0,
+          "seed_sign" -> 1,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 0|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 6,
+          "dim" -> 2,
+          "irrep" -> "E_7",
+          "irrep_id" -> "E7",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -1|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 1|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 6,
+          "dim" -> 2,
+          "irrep" -> "E_2",
+          "irrep_id" -> "E2",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 2,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -2|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 2|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 6,
+          "dim" -> 2,
+          "irrep" -> "E_5",
+          "irrep_id" -> "E5",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 3,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -3|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 3|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 6,
+          "dim" -> 2,
+          "irrep" -> "E_4",
+          "irrep_id" -> "E4",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 4,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -4|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 4|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 6,
+          "dim" -> 2,
+          "irrep" -> "E_3",
+          "irrep_id" -> "E3",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 5,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 5|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> -5|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 6,
+          "dim" -> 2,
+          "irrep" -> "E_6",
+          "irrep_id" -> "E6",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 6,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 6|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> -6|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 7,
+          "dim" -> 1,
+          "irrep" -> "B_2",
+          "irrep_id" -> "B2",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 0,
+          "seed_sign" -> 1,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 0|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 7,
+          "dim" -> 2,
+          "irrep" -> "E_1",
+          "irrep_id" -> "E1",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -1|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 1|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 7,
+          "dim" -> 2,
+          "irrep" -> "E_6",
+          "irrep_id" -> "E6",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 2,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -2|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 2|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 7,
+          "dim" -> 2,
+          "irrep" -> "E_3",
+          "irrep_id" -> "E3",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 3,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -3|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 3|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 7,
+          "dim" -> 2,
+          "irrep" -> "E_4",
+          "irrep_id" -> "E4",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 4,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 4|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> -4|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 7,
+          "dim" -> 2,
+          "irrep" -> "E_5",
+          "irrep_id" -> "E5",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 5,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 5|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> -5|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 7,
+          "dim" -> 2,
+          "irrep" -> "E_2",
+          "irrep_id" -> "E2",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 6,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 6|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> -6|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 7,
+          "dim" -> 2,
+          "irrep" -> "E_7",
+          "irrep_id" -> "E7",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 7,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 7|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> -7|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 1,
+          "irrep" -> "A_1",
+          "irrep_id" -> "A1",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 0,
+          "seed_sign" -> 1,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 0|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 2,
+          "irrep" -> "E_7",
+          "irrep_id" -> "E7",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -1|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 1|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 2,
+          "irrep" -> "E_2",
+          "irrep_id" -> "E2",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 2,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -2|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 2|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 2,
+          "irrep" -> "E_5",
+          "irrep_id" -> "E5",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 3,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -3|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 3|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 2,
+          "irrep" -> "E_4",
+          "irrep_id" -> "E4",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 4,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -4|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 4|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 2,
+          "irrep" -> "E_3",
+          "irrep_id" -> "E3",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 5,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 5|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> -5|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 2,
+          "irrep" -> "E_6",
+          "irrep_id" -> "E6",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 6,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 6|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> -6|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 2,
+          "irrep" -> "E_1",
+          "irrep_id" -> "E1",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 7,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 7|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> -7|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 1,
+          "irrep" -> "B_1",
+          "irrep_id" -> "B1",
+          "kappa" -> 1,
+          "kind" -> "pm_pair",
+          "seed_m" -> 8,
+          "seed_sign" -> 1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 8|>, <|"e" -> 1, "m" -> -8|>}, "mu" -> 1|>
+          }
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 1,
+          "irrep" -> "B_2",
+          "irrep_id" -> "B2",
+          "kappa" -> 1,
+          "kind" -> "pm_pair",
+          "seed_m" -> 8,
+          "seed_sign" -> -1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 8|>, <|"e" -> -1, "m" -> -8|>}, "mu" -> 1|>
+          }
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
+          "irrep" -> "B_2",
+          "irrep_id" -> "B2",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 0,
+          "seed_sign" -> 1,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 0|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 2,
+          "irrep" -> "E_1",
+          "irrep_id" -> "E1",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -1|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 1|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 2,
+          "irrep" -> "E_6",
+          "irrep_id" -> "E6",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 2,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -2|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 2|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 2,
+          "irrep" -> "E_3",
+          "irrep_id" -> "E3",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 3,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -3|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 3|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 2,
+          "irrep" -> "E_4",
+          "irrep_id" -> "E4",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 4,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 4|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> -4|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 2,
+          "irrep" -> "E_5",
+          "irrep_id" -> "E5",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 5,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 5|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> -5|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 2,
+          "irrep" -> "E_2",
+          "irrep_id" -> "E2",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 6,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 6|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> -6|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 2,
+          "irrep" -> "E_7",
+          "irrep_id" -> "E7",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 7,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 7|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> -7|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
+          "irrep" -> "A_2",
+          "irrep_id" -> "A2",
+          "kappa" -> 1,
+          "kind" -> "pm_pair",
+          "seed_m" -> 8,
+          "seed_sign" -> 1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 8|>, <|"e" -> 1, "m" -> -8|>}, "mu" -> 1|>
+          }
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
+          "irrep" -> "A_1",
+          "irrep_id" -> "A1",
+          "kappa" -> 1,
+          "kind" -> "pm_pair",
+          "seed_m" -> 8,
+          "seed_sign" -> -1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 8|>, <|"e" -> -1, "m" -> -8|>}, "mu" -> 1|>
+          }
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 2,
+          "irrep" -> "E_7",
+          "irrep_id" -> "E7",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_m" -> 9,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -9|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 9|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "A_1",
+          "irrep_id" -> "A1",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 0,
+          "seed_sign" -> 1,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 0|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 2,
+          "irrep" -> "E_7",
+          "irrep_id" -> "E7",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -1|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 1|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 2,
+          "irrep" -> "E_2",
+          "irrep_id" -> "E2",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 2,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -2|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 2|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 2,
+          "irrep" -> "E_5",
+          "irrep_id" -> "E5",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 3,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -3|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 3|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 2,
+          "irrep" -> "E_4",
+          "irrep_id" -> "E4",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 4,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -4|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 4|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 2,
+          "irrep" -> "E_3",
+          "irrep_id" -> "E3",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 5,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 5|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> -5|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 2,
+          "irrep" -> "E_6",
+          "irrep_id" -> "E6",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 6,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 6|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> -6|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 2,
+          "irrep" -> "E_1",
+          "irrep_id" -> "E1",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_m" -> 7,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 7|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> -7|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "B_1",
+          "irrep_id" -> "B1",
+          "kappa" -> 1,
+          "kind" -> "pm_pair",
+          "seed_m" -> 8,
+          "seed_sign" -> 1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 8|>, <|"e" -> 1, "m" -> -8|>}, "mu" -> 1|>
+          }
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "B_2",
+          "irrep_id" -> "B2",
+          "kappa" -> 1,
+          "kind" -> "pm_pair",
+          "seed_m" -> 8,
+          "seed_sign" -> -1,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> 8|>, <|"e" -> -1, "m" -> -8|>}, "mu" -> 1|>
+          }
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 2,
+          "irrep" -> "E_1",
+          "irrep_id" -> "E1",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_m" -> 9,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -9|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "m" -> 9|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 2,
+          "irrep" -> "E_6",
+          "irrep_id" -> "E6",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_m" -> 10,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "m" -> -10|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "m" -> 10|>}, "mu" -> 2|>
+          }
+        |>
+      },
+      "vector_count" -> 121
+    |>,
+    "generating_function" -> <|
+      "denominator" -> {2, 16},
+      "numerators" -> {
+        <|
+          "coefficients" -> {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+          "irrep" -> "A_1",
+          "irrep_id" -> "A1"
+        |>,
+        <|
+          "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1},
+          "irrep" -> "A_2",
+          "irrep_id" -> "A2"
+        |>,
+        <|
+          "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+          "irrep" -> "B_1",
+          "irrep_id" -> "B1"
+        |>,
+        <|
+          "coefficients" -> {0, 1, 0, 0, 0, 0, 0, 0, 1},
+          "irrep" -> "B_2",
+          "irrep_id" -> "B2"
+        |>,
+        <|
+          "coefficients" -> {0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1},
+          "irrep" -> "E_1",
+          "irrep_id" -> "E1"
+        |>,
+        <|
+          "coefficients" -> {0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1},
+          "irrep" -> "E_2",
+          "irrep_id" -> "E2"
+        |>,
+        <|
+          "coefficients" -> {0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1},
+          "irrep" -> "E_3",
+          "irrep_id" -> "E3"
+        |>,
+        <|
+          "coefficients" -> {0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1},
+          "irrep" -> "E_4",
+          "irrep_id" -> "E4"
+        |>,
+        <|
+          "coefficients" -> {0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1},
+          "irrep" -> "E_5",
+          "irrep_id" -> "E5"
+        |>,
+        <|
+          "coefficients" -> {0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1},
+          "irrep" -> "E_6",
+          "irrep_id" -> "E6"
+        |>,
+        <|
+          "coefficients" -> {0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1},
+          "irrep" -> "E_7",
+          "irrep_id" -> "E7"
+        |>
+      }
+    |>,
+    "status" -> "closed-form"
+  |>,
+  "subduction_embeddings" -> <|
+    "alternative_table_count" -> 2,
+    "count" -> 14,
+    "embeddings" -> {
+      <|
+        "class_size" -> 1,
+        "elements" -> {0},
+        "id" -> "n00",
+        "monomorphism" -> <|
+          "count" -> 1,
+          "determined" -> True,
+          "distinct_subductions" -> 1,
+          "map" -> {0},
+          "setting" -> {}
+        |>,
+        "normal" -> True,
+        "normalizer_order" -> 32,
+        "subduction" -> {
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A1",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A2",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B1",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B2",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E1",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E2",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E3",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E4",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E5",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E6",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E7",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 2|>}
+          |>
+        },
+        "subgroup" -> <|"index" -> 32, "o3_class" -> "C1", "order" -> 1, "schoenflies" -> "C_1"|>,
+        "transversal" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31}
+      |>,
+      <|
+        "class_size" -> 1,
+        "elements" -> {0, 7},
+        "id" -> "n01",
+        "monomorphism" -> <|
+          "count" -> 1,
+          "determined" -> True,
+          "distinct_subductions" -> 1,
+          "map" -> {0, 7},
+          "setting" -> {
+            <|
+              "g_class" -> "C2",
+              "g_index" -> 7,
+              "g_symbol" -> "C_2",
+              "h_index" -> 1,
+              "h_symbol" -> "C_2"
+            |>
+          }
+        |>,
+        "normal" -> True,
+        "normalizer_order" -> 32,
+        "subduction" -> {
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A1",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A2",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B1",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B2",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E1",
+            "terms" -> {<|"irrep" -> "B", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E2",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E3",
+            "terms" -> {<|"irrep" -> "B", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E4",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E5",
+            "terms" -> {<|"irrep" -> "B", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E6",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E7",
+            "terms" -> {<|"irrep" -> "B", "multiplicity" -> 2|>}
+          |>
+        },
+        "subgroup" -> <|"index" -> 16, "o3_class" -> "C2", "order" -> 2, "schoenflies" -> "C_2"|>,
+        "transversal" -> {0, 1, 2, 3, 8, 9, 10, 11, 16, 17, 18, 19, 24, 25, 26, 27}
+      |>,
+      <|
+        "class_size" -> 8,
+        "elements" -> {0, 8},
+        "id" -> "n02",
+        "monomorphism" -> <|
+          "count" -> 1,
+          "determined" -> True,
+          "distinct_subductions" -> 1,
+          "map" -> {0, 8},
+          "setting" -> {
+            <|
+              "g_class" -> "C2p",
+              "g_index" -> 8,
+              "g_symbol" -> "C_2",
+              "h_index" -> 1,
+              "h_symbol" -> "C_2"
+            |>
+          }
+        |>,
+        "normal" -> False,
+        "normalizer_order" -> 4,
+        "subduction" -> {
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A1",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A2",
+            "terms" -> {<|"irrep" -> "B", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B1",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B2",
+            "terms" -> {<|"irrep" -> "B", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E1",
+            "terms" -> {
+              <|"irrep" -> "A", "multiplicity" -> 1|>,
+              <|"irrep" -> "B", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E2",
+            "terms" -> {
+              <|"irrep" -> "A", "multiplicity" -> 1|>,
+              <|"irrep" -> "B", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E3",
+            "terms" -> {
+              <|"irrep" -> "A", "multiplicity" -> 1|>,
+              <|"irrep" -> "B", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E4",
+            "terms" -> {
+              <|"irrep" -> "A", "multiplicity" -> 1|>,
+              <|"irrep" -> "B", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E5",
+            "terms" -> {
+              <|"irrep" -> "A", "multiplicity" -> 1|>,
+              <|"irrep" -> "B", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E6",
+            "terms" -> {
+              <|"irrep" -> "A", "multiplicity" -> 1|>,
+              <|"irrep" -> "B", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E7",
+            "terms" -> {
+              <|"irrep" -> "A", "multiplicity" -> 1|>,
+              <|"irrep" -> "B", "multiplicity" -> 1|>
+            }
+          |>
+        },
+        "subgroup" -> <|"index" -> 16, "o3_class" -> "C2", "order" -> 2, "schoenflies" -> "C_2"|>,
+        "transversal" -> {0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20, 21, 22, 23}
+      |>,
+      <|
+        "class_size" -> 8,
+        "elements" -> {0, 24},
+        "id" -> "n03",
+        "monomorphism" -> <|
+          "count" -> 1,
+          "determined" -> True,
+          "distinct_subductions" -> 1,
+          "map" -> {0, 24},
+          "setting" -> {
+            <|
+              "g_class" -> "sd",
+              "g_index" -> 24,
+              "g_symbol" -> "sigma_d",
+              "h_index" -> 1,
+              "h_symbol" -> "sigma_v"
+            |>
+          }
+        |>,
+        "normal" -> False,
+        "normalizer_order" -> 4,
+        "subduction" -> {
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "Ap",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A1",
+            "terms" -> {<|"irrep" -> "Ap", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "App",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A2",
+            "terms" -> {<|"irrep" -> "App", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "App",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B1",
+            "terms" -> {<|"irrep" -> "App", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "Ap",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B2",
+            "terms" -> {<|"irrep" -> "Ap", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "Ap",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I 7/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "App",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I 7/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E1",
+            "terms" -> {
+              <|"irrep" -> "Ap", "multiplicity" -> 1|>,
+              <|"irrep" -> "App", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "Ap",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I 3/8], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "App",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I 3/8], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E2",
+            "terms" -> {
+              <|"irrep" -> "Ap", "multiplicity" -> 1|>,
+              <|"irrep" -> "App", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "Ap",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I 5/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "App",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I 5/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E3",
+            "terms" -> {
+              <|"irrep" -> "Ap", "multiplicity" -> 1|>,
+              <|"irrep" -> "App", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "Ap",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "App",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I/4], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E4",
+            "terms" -> {
+              <|"irrep" -> "Ap", "multiplicity" -> 1|>,
+              <|"irrep" -> "App", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "Ap",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I 5/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "App",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I 5/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E5",
+            "terms" -> {
+              <|"irrep" -> "Ap", "multiplicity" -> 1|>,
+              <|"irrep" -> "App", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "Ap",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I 3/8], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "App",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I 3/8], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E6",
+            "terms" -> {
+              <|"irrep" -> "Ap", "multiplicity" -> 1|>,
+              <|"irrep" -> "App", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "Ap",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I 7/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "App",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I 7/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E7",
+            "terms" -> {
+              <|"irrep" -> "Ap", "multiplicity" -> 1|>,
+              <|"irrep" -> "App", "multiplicity" -> 1|>
+            }
+          |>
+        },
+        "subgroup" -> <|"index" -> 16, "o3_class" -> "C1v", "order" -> 2, "schoenflies" -> "C_1v"|>,
+        "transversal" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+      |>,
+      <|
+        "class_size" -> 1,
+        "elements" -> {0, 3, 4, 7},
+        "id" -> "n04",
+        "monomorphism" -> <|
+          "count" -> 2,
+          "determined" -> True,
+          "distinct_subductions" -> 1,
+          "map" -> {0, 3, 7, 4},
+          "setting" -> {
+            <|
+              "g_class" -> "C4",
+              "g_index" -> 3,
+              "g_symbol" -> "C_4",
+              "h_index" -> 1,
+              "h_symbol" -> "C_4"
+            |>
+          }
+        |>,
+        "normal" -> True,
+        "normalizer_order" -> 32,
+        "subduction" -> {
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A1",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A2",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B1",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B2",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E1",
+            "terms" -> {
+              <|"irrep" -> "1E1", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E1", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E2",
+            "terms" -> {<|"irrep" -> "B", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E3",
+            "terms" -> {
+              <|"irrep" -> "1E1", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E1", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E4",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E5",
+            "terms" -> {
+              <|"irrep" -> "1E1", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E1", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E6",
+            "terms" -> {<|"irrep" -> "B", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E7",
+            "terms" -> {
+              <|"irrep" -> "1E1", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E1", "multiplicity" -> 1|>
+            }
+          |>
+        },
+        "subgroup" -> <|"index" -> 8, "o3_class" -> "C4", "order" -> 4, "schoenflies" -> "C_4"|>,
+        "transversal" -> {0, 1, 8, 9, 16, 17, 24, 25}
+      |>,
+      <|
+        "alternative_settings" -> {
+          <|
+            "map" -> {0, 8, 7, 12},
+            "setting" -> {
+              <|
+                "g_class" -> "C2p",
+                "g_index" -> 8,
+                "g_symbol" -> "C_2",
+                "h_index" -> 1,
+                "h_symbol" -> "C_2"
+              |>,
+              <|
+                "g_class" -> "C2",
+                "g_index" -> 7,
+                "g_symbol" -> "C_2",
+                "h_index" -> 2,
+                "h_symbol" -> "C_2"
+              |>
+            },
+            "subduction" -> {
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 1,
+                    "irrep" -> "A",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 1,
+                "irrep" -> "A1",
+                "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 1,
+                    "irrep" -> "B3",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 1,
+                "irrep" -> "A2",
+                "terms" -> {<|"irrep" -> "B3", "multiplicity" -> 1|>}
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 1,
+                    "irrep" -> "A",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 1,
+                "irrep" -> "B1",
+                "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 1,
+                    "irrep" -> "B3",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 1,
+                "irrep" -> "B2",
+                "terms" -> {<|"irrep" -> "B3", "multiplicity" -> 1|>}
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B1",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>,
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B2",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 2,
+                "irrep" -> "E1",
+                "terms" -> {
+                  <|"irrep" -> "B1", "multiplicity" -> 1|>,
+                  <|"irrep" -> "B2", "multiplicity" -> 1|>
+                }
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "A",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>,
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B3",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 2,
+                "irrep" -> "E2",
+                "terms" -> {
+                  <|"irrep" -> "A", "multiplicity" -> 1|>,
+                  <|"irrep" -> "B3", "multiplicity" -> 1|>
+                }
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B1",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>,
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B2",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 2,
+                "irrep" -> "E3",
+                "terms" -> {
+                  <|"irrep" -> "B1", "multiplicity" -> 1|>,
+                  <|"irrep" -> "B2", "multiplicity" -> 1|>
+                }
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "A",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>,
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B3",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 2,
+                "irrep" -> "E4",
+                "terms" -> {
+                  <|"irrep" -> "A", "multiplicity" -> 1|>,
+                  <|"irrep" -> "B3", "multiplicity" -> 1|>
+                }
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B1",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>,
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B2",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 2,
+                "irrep" -> "E5",
+                "terms" -> {
+                  <|"irrep" -> "B1", "multiplicity" -> 1|>,
+                  <|"irrep" -> "B2", "multiplicity" -> 1|>
+                }
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "A",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>,
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B3",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 2,
+                "irrep" -> "E6",
+                "terms" -> {
+                  <|"irrep" -> "A", "multiplicity" -> 1|>,
+                  <|"irrep" -> "B3", "multiplicity" -> 1|>
+                }
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B1",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>,
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B2",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 2,
+                "irrep" -> "E7",
+                "terms" -> {
+                  <|"irrep" -> "B1", "multiplicity" -> 1|>,
+                  <|"irrep" -> "B2", "multiplicity" -> 1|>
+                }
+              |>
+            }
+          |>,
+          <|
+            "map" -> {0, 8, 12, 7},
+            "setting" -> {
+              <|
+                "g_class" -> "C2p",
+                "g_index" -> 8,
+                "g_symbol" -> "C_2",
+                "h_index" -> 1,
+                "h_symbol" -> "C_2"
+              |>,
+              <|
+                "g_class" -> "C2p",
+                "g_index" -> 12,
+                "g_symbol" -> "C_2",
+                "h_index" -> 2,
+                "h_symbol" -> "C_2"
+              |>
+            },
+            "subduction" -> {
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 1,
+                    "irrep" -> "A",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 1,
+                "irrep" -> "A1",
+                "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 1,
+                    "irrep" -> "B2",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 1,
+                "irrep" -> "A2",
+                "terms" -> {<|"irrep" -> "B2", "multiplicity" -> 1|>}
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 1,
+                    "irrep" -> "A",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 1,
+                "irrep" -> "B1",
+                "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 1,
+                    "irrep" -> "B2",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 1,
+                "irrep" -> "B2",
+                "terms" -> {<|"irrep" -> "B2", "multiplicity" -> 1|>}
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B1",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>,
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B3",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 2,
+                "irrep" -> "E1",
+                "terms" -> {
+                  <|"irrep" -> "B1", "multiplicity" -> 1|>,
+                  <|"irrep" -> "B3", "multiplicity" -> 1|>
+                }
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "A",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>,
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B2",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 2,
+                "irrep" -> "E2",
+                "terms" -> {
+                  <|"irrep" -> "A", "multiplicity" -> 1|>,
+                  <|"irrep" -> "B2", "multiplicity" -> 1|>
+                }
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B1",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>,
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B3",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 2,
+                "irrep" -> "E3",
+                "terms" -> {
+                  <|"irrep" -> "B1", "multiplicity" -> 1|>,
+                  <|"irrep" -> "B3", "multiplicity" -> 1|>
+                }
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "A",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>,
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B2",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 2,
+                "irrep" -> "E4",
+                "terms" -> {
+                  <|"irrep" -> "A", "multiplicity" -> 1|>,
+                  <|"irrep" -> "B2", "multiplicity" -> 1|>
+                }
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B1",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>,
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B3",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 2,
+                "irrep" -> "E5",
+                "terms" -> {
+                  <|"irrep" -> "B1", "multiplicity" -> 1|>,
+                  <|"irrep" -> "B3", "multiplicity" -> 1|>
+                }
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "A",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>,
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B2",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 2,
+                "irrep" -> "E6",
+                "terms" -> {
+                  <|"irrep" -> "A", "multiplicity" -> 1|>,
+                  <|"irrep" -> "B2", "multiplicity" -> 1|>
+                }
+              |>,
+              <|
+                "blocks" -> {
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B1",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>,
+                  <|
+                    "N" -> 2,
+                    "irrep" -> "B3",
+                    "kappa" -> 1,
+                    "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                    "separation" -> "unique"
+                  |>
+                },
+                "dim" -> 2,
+                "irrep" -> "E7",
+                "terms" -> {
+                  <|"irrep" -> "B1", "multiplicity" -> 1|>,
+                  <|"irrep" -> "B3", "multiplicity" -> 1|>
+                }
+              |>
+            }
+          |>
+        },
+        "class_size" -> 4,
+        "elements" -> {0, 7, 8, 12},
+        "id" -> "n05",
+        "monomorphism" -> <|
+          "count" -> 6,
+          "determined" -> False,
+          "distinct_subductions" -> 3,
+          "map" -> {0, 7, 8, 12},
+          "setting" -> {
+            <|
+              "g_class" -> "C2",
+              "g_index" -> 7,
+              "g_symbol" -> "C_2",
+              "h_index" -> 1,
+              "h_symbol" -> "C_2"
+            |>,
+            <|
+              "g_class" -> "C2p",
+              "g_index" -> 8,
+              "g_symbol" -> "C_2",
+              "h_index" -> 2,
+              "h_symbol" -> "C_2"
+            |>
+          }
+        |>,
+        "normal" -> False,
+        "normalizer_order" -> 8,
+        "subduction" -> {
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A1",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A2",
+            "terms" -> {<|"irrep" -> "B1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B1",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B2",
+            "terms" -> {<|"irrep" -> "B1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B3",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E1",
+            "terms" -> {
+              <|"irrep" -> "B2", "multiplicity" -> 1|>,
+              <|"irrep" -> "B3", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E2",
+            "terms" -> {
+              <|"irrep" -> "A", "multiplicity" -> 1|>,
+              <|"irrep" -> "B1", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B3",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E3",
+            "terms" -> {
+              <|"irrep" -> "B2", "multiplicity" -> 1|>,
+              <|"irrep" -> "B3", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E4",
+            "terms" -> {
+              <|"irrep" -> "A", "multiplicity" -> 1|>,
+              <|"irrep" -> "B1", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B3",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E5",
+            "terms" -> {
+              <|"irrep" -> "B2", "multiplicity" -> 1|>,
+              <|"irrep" -> "B3", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E6",
+            "terms" -> {
+              <|"irrep" -> "A", "multiplicity" -> 1|>,
+              <|"irrep" -> "B1", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B3",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E7",
+            "terms" -> {
+              <|"irrep" -> "B2", "multiplicity" -> 1|>,
+              <|"irrep" -> "B3", "multiplicity" -> 1|>
+            }
+          |>
+        },
+        "subgroup" -> <|"index" -> 8, "o3_class" -> "D2", "order" -> 4, "schoenflies" -> "D_2"|>,
+        "transversal" -> {0, 1, 2, 3, 16, 17, 18, 19}
+      |>,
+      <|
+        "class_size" -> 4,
+        "elements" -> {0, 7, 24, 28},
+        "id" -> "n06",
+        "monomorphism" -> <|
+          "count" -> 2,
+          "determined" -> True,
+          "distinct_subductions" -> 1,
+          "map" -> {0, 7, 24, 28},
+          "setting" -> {
+            <|
+              "g_class" -> "C2",
+              "g_index" -> 7,
+              "g_symbol" -> "C_2",
+              "h_index" -> 1,
+              "h_symbol" -> "C_2"
+            |>,
+            <|
+              "g_class" -> "sd",
+              "g_index" -> 24,
+              "g_symbol" -> "sigma_d",
+              "h_index" -> 2,
+              "h_symbol" -> "sigma_v"
+            |>
+          }
+        |>,
+        "normal" -> False,
+        "normalizer_order" -> 8,
+        "subduction" -> {
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A1",
+            "terms" -> {<|"irrep" -> "A1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A2",
+            "terms" -> {<|"irrep" -> "A2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B1",
+            "terms" -> {<|"irrep" -> "A2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B2",
+            "terms" -> {<|"irrep" -> "A1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I 7/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I 7/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E1",
+            "terms" -> {
+              <|"irrep" -> "B1", "multiplicity" -> 1|>,
+              <|"irrep" -> "B2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I 3/8], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I 3/8], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E2",
+            "terms" -> {
+              <|"irrep" -> "A1", "multiplicity" -> 1|>,
+              <|"irrep" -> "A2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I 5/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I 5/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E3",
+            "terms" -> {
+              <|"irrep" -> "B1", "multiplicity" -> 1|>,
+              <|"irrep" -> "B2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I/4], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E4",
+            "terms" -> {
+              <|"irrep" -> "A1", "multiplicity" -> 1|>,
+              <|"irrep" -> "A2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I 5/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I 5/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E5",
+            "terms" -> {
+              <|"irrep" -> "B1", "multiplicity" -> 1|>,
+              <|"irrep" -> "B2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I 3/8], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I 3/8], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E6",
+            "terms" -> {
+              <|"irrep" -> "A1", "multiplicity" -> 1|>,
+              <|"irrep" -> "A2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I 7/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I 7/16], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E7",
+            "terms" -> {
+              <|"irrep" -> "B1", "multiplicity" -> 1|>,
+              <|"irrep" -> "B2", "multiplicity" -> 1|>
+            }
+          |>
+        },
+        "subgroup" -> <|"index" -> 8, "o3_class" -> "C2v", "order" -> 4, "schoenflies" -> "C_2v"|>,
+        "transversal" -> {0, 1, 2, 3, 8, 9, 10, 11}
+      |>,
+      <|
+        "class_size" -> 1,
+        "elements" -> {0, 1, 2, 3, 4, 5, 6, 7},
+        "id" -> "n07",
+        "monomorphism" -> <|
+          "count" -> 2,
+          "determined" -> True,
+          "distinct_subductions" -> 1,
+          "map" -> {0, 1, 3, 5, 7, 6, 4, 2},
+          "setting" -> {
+            <|
+              "g_class" -> "C8",
+              "g_index" -> 1,
+              "g_symbol" -> "C_8",
+              "h_index" -> 1,
+              "h_symbol" -> "C_8"
+            |>
+          }
+        |>,
+        "normal" -> True,
+        "normalizer_order" -> 32,
+        "subduction" -> {
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A1",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A2",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B1",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B2",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E1",
+            "terms" -> {
+              <|"irrep" -> "1E1", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E1", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E2",
+            "terms" -> {
+              <|"irrep" -> "1E2", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E3",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E3",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E3",
+            "terms" -> {
+              <|"irrep" -> "1E3", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E3", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "projection"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 2,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "projection"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E4",
+            "terms" -> {<|"irrep" -> "B", "multiplicity" -> 2|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E3",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E3",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E5",
+            "terms" -> {
+              <|"irrep" -> "1E3", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E3", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E6",
+            "terms" -> {
+              <|"irrep" -> "1E2", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E7",
+            "terms" -> {
+              <|"irrep" -> "1E1", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E1", "multiplicity" -> 1|>
+            }
+          |>
+        },
+        "subgroup" -> <|"index" -> 4, "o3_class" -> "C8", "order" -> 8, "schoenflies" -> "C_8"|>,
+        "transversal" -> {0, 8, 16, 24}
+      |>,
+      <|
+        "class_size" -> 2,
+        "elements" -> {0, 3, 4, 7, 8, 10, 12, 14},
+        "id" -> "n08",
+        "monomorphism" -> <|
+          "count" -> 8,
+          "determined" -> True,
+          "distinct_subductions" -> 1,
+          "map" -> {0, 3, 4, 7, 8, 12, 10, 14},
+          "setting" -> {
+            <|
+              "g_class" -> "C4",
+              "g_index" -> 3,
+              "g_symbol" -> "C_4",
+              "h_index" -> 1,
+              "h_symbol" -> "C_4"
+            |>,
+            <|
+              "g_class" -> "C2p",
+              "g_index" -> 8,
+              "g_symbol" -> "C_2",
+              "h_index" -> 4,
+              "h_symbol" -> "C_2"
+            |>
+          }
+        |>,
+        "normal" -> False,
+        "normalizer_order" -> 16,
+        "subduction" -> {
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A1",
+            "terms" -> {<|"irrep" -> "A1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A2",
+            "terms" -> {<|"irrep" -> "A2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B1",
+            "terms" -> {<|"irrep" -> "A1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B2",
+            "terms" -> {<|"irrep" -> "A2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E1",
+            "terms" -> {<|"irrep" -> "E1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E2",
+            "terms" -> {
+              <|"irrep" -> "B1", "multiplicity" -> 1|>,
+              <|"irrep" -> "B2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E3",
+            "terms" -> {<|"irrep" -> "E1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E4",
+            "terms" -> {
+              <|"irrep" -> "A1", "multiplicity" -> 1|>,
+              <|"irrep" -> "A2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E5",
+            "terms" -> {<|"irrep" -> "E1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E6",
+            "terms" -> {
+              <|"irrep" -> "B1", "multiplicity" -> 1|>,
+              <|"irrep" -> "B2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E7",
+            "terms" -> {<|"irrep" -> "E1", "multiplicity" -> 1|>}
+          |>
+        },
+        "subgroup" -> <|"index" -> 4, "o3_class" -> "D4", "order" -> 8, "schoenflies" -> "D_4"|>,
+        "transversal" -> {0, 1, 16, 17}
+      |>,
+      <|
+        "class_size" -> 2,
+        "elements" -> {0, 3, 4, 7, 24, 26, 28, 30},
+        "id" -> "n09",
+        "monomorphism" -> <|
+          "count" -> 8,
+          "determined" -> True,
+          "distinct_subductions" -> 1,
+          "map" -> {0, 3, 4, 7, 24, 28, 26, 30},
+          "setting" -> {
+            <|
+              "g_class" -> "C4",
+              "g_index" -> 3,
+              "g_symbol" -> "C_4",
+              "h_index" -> 1,
+              "h_symbol" -> "C_4"
+            |>,
+            <|
+              "g_class" -> "sd",
+              "g_index" -> 24,
+              "g_symbol" -> "sigma_d",
+              "h_index" -> 4,
+              "h_symbol" -> "sigma_v"
+            |>
+          }
+        |>,
+        "normal" -> False,
+        "normalizer_order" -> 16,
+        "subduction" -> {
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A1",
+            "terms" -> {<|"irrep" -> "A1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A2",
+            "terms" -> {<|"irrep" -> "A2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B1",
+            "terms" -> {<|"irrep" -> "A2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B2",
+            "terms" -> {<|"irrep" -> "A1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I 7/16], "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E1",
+            "terms" -> {<|"irrep" -> "E1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I 3/8], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I 3/8], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E2",
+            "terms" -> {
+              <|"irrep" -> "B1", "multiplicity" -> 1|>,
+              <|"irrep" -> "B2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> Exp[2 Pi I 3/16], "i" -> 1|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E3",
+            "terms" -> {<|"irrep" -> "E1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I/4], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E4",
+            "terms" -> {
+              <|"irrep" -> "A1", "multiplicity" -> 1|>,
+              <|"irrep" -> "A2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> Exp[2 Pi I 3/16], "i" -> 1|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E5",
+            "terms" -> {<|"irrep" -> "E1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I 3/8], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I 3/8], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E6",
+            "terms" -> {
+              <|"irrep" -> "B1", "multiplicity" -> 1|>,
+              <|"irrep" -> "B2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I 7/16], "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E7",
+            "terms" -> {<|"irrep" -> "E1", "multiplicity" -> 1|>}
+          |>
+        },
+        "subgroup" -> <|"index" -> 4, "o3_class" -> "C4v", "order" -> 8, "schoenflies" -> "C_4v"|>,
+        "transversal" -> {0, 1, 8, 9}
+      |>,
+      <|
+        "class_size" -> 1,
+        "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+        "id" -> "n10",
+        "monomorphism" -> <|
+          "count" -> 16,
+          "determined" -> True,
+          "distinct_subductions" -> 1,
+          "map" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 9, 11, 13, 15},
+          "setting" -> {
+            <|
+              "g_class" -> "C8",
+              "g_index" -> 1,
+              "g_symbol" -> "C_8",
+              "h_index" -> 1,
+              "h_symbol" -> "C_8"
+            |>,
+            <|
+              "g_class" -> "C2p",
+              "g_index" -> 8,
+              "g_symbol" -> "C_2",
+              "h_index" -> 8,
+              "h_symbol" -> "C_2"
+            |>
+          }
+        |>,
+        "normal" -> True,
+        "normalizer_order" -> 32,
+        "subduction" -> {
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A1",
+            "terms" -> {<|"irrep" -> "A1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A2",
+            "terms" -> {<|"irrep" -> "A2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B1",
+            "terms" -> {<|"irrep" -> "A1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B2",
+            "terms" -> {<|"irrep" -> "A2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E1",
+            "terms" -> {<|"irrep" -> "E1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E2",
+            "terms" -> {<|"irrep" -> "E2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E3",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E3",
+            "terms" -> {<|"irrep" -> "E3", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E4",
+            "terms" -> {
+              <|"irrep" -> "B1", "multiplicity" -> 1|>,
+              <|"irrep" -> "B2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E3",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E5",
+            "terms" -> {<|"irrep" -> "E3", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E6",
+            "terms" -> {<|"irrep" -> "E2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E7",
+            "terms" -> {<|"irrep" -> "E1", "multiplicity" -> 1|>}
+          |>
+        },
+        "subgroup" -> <|"index" -> 2, "o3_class" -> "D8", "order" -> 16, "schoenflies" -> "D_8"|>,
+        "transversal" -> {0, 16}
+      |>,
+      <|
+        "class_size" -> 1,
+        "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20, 21, 22, 23},
+        "id" -> "n11",
+        "monomorphism" -> <|
+          "count" -> 2,
+          "determined" -> True,
+          "distinct_subductions" -> 1,
+          "map" -> {0, 1, 3, 5, 7, 6, 4, 2, 16, 18, 20, 22, 23, 21, 19, 17},
+          "setting" -> {
+            <|
+              "g_class" -> "C8",
+              "g_index" -> 1,
+              "g_symbol" -> "C_8",
+              "h_index" -> 1,
+              "h_symbol" -> "C_8"
+            |>,
+            <|
+              "g_class" -> "S16",
+              "g_index" -> 16,
+              "g_symbol" -> "S_16",
+              "h_index" -> 8,
+              "h_symbol" -> "S_16"
+            |>
+          }
+        |>,
+        "normal" -> True,
+        "normalizer_order" -> 32,
+        "subduction" -> {
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A1",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A2",
+            "terms" -> {<|"irrep" -> "A", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B1",
+            "terms" -> {<|"irrep" -> "B", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B2",
+            "terms" -> {<|"irrep" -> "B", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E1",
+            "terms" -> {
+              <|"irrep" -> "1E1", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E1", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E2",
+            "terms" -> {
+              <|"irrep" -> "1E2", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E3",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E3",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E3",
+            "terms" -> {
+              <|"irrep" -> "1E3", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E3", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E4",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E4",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E4",
+            "terms" -> {
+              <|"irrep" -> "1E4", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E4", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E5",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E5",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E5",
+            "terms" -> {
+              <|"irrep" -> "1E5", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E5", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E6",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E6",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E6",
+            "terms" -> {
+              <|"irrep" -> "1E6", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E6", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "1E7",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 1,
+                "irrep" -> "2E7",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E7",
+            "terms" -> {
+              <|"irrep" -> "1E7", "multiplicity" -> 1|>,
+              <|"irrep" -> "2E7", "multiplicity" -> 1|>
+            }
+          |>
+        },
+        "subgroup" -> <|"index" -> 2, "o3_class" -> "S16", "order" -> 16, "schoenflies" -> "S_16"|>,
+        "transversal" -> {0, 8}
+      |>,
+      <|
+        "class_size" -> 1,
+        "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 24, 25, 26, 27, 28, 29, 30, 31},
+        "id" -> "n12",
+        "monomorphism" -> <|
+          "count" -> 16,
+          "determined" -> True,
+          "distinct_subductions" -> 1,
+          "map" -> {0, 1, 2, 3, 4, 5, 6, 7, 24, 26, 28, 30, 25, 27, 29, 31},
+          "setting" -> {
+            <|
+              "g_class" -> "C8",
+              "g_index" -> 1,
+              "g_symbol" -> "C_8",
+              "h_index" -> 1,
+              "h_symbol" -> "C_8"
+            |>,
+            <|
+              "g_class" -> "sd",
+              "g_index" -> 24,
+              "g_symbol" -> "sigma_d",
+              "h_index" -> 8,
+              "h_symbol" -> "sigma_v"
+            |>
+          }
+        |>,
+        "normal" -> True,
+        "normalizer_order" -> 32,
+        "subduction" -> {
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A1",
+            "terms" -> {<|"irrep" -> "A1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A2",
+            "terms" -> {<|"irrep" -> "A2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B1",
+            "terms" -> {<|"irrep" -> "A2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B2",
+            "terms" -> {<|"irrep" -> "A1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I 7/16], "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E1",
+            "terms" -> {<|"irrep" -> "E1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I 3/8], "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E2",
+            "terms" -> {<|"irrep" -> "E2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E3",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I 5/16], "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E3",
+            "terms" -> {<|"irrep" -> "E3", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 2,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>,
+              <|
+                "N" -> 2,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|
+                    "mu" -> 1,
+                    "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I/4], "i" -> 2|>}
+                  |>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E4",
+            "terms" -> {
+              <|"irrep" -> "B1", "multiplicity" -> 1|>,
+              <|"irrep" -> "B2", "multiplicity" -> 1|>
+            }
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E3",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I 5/16], "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E5",
+            "terms" -> {<|"irrep" -> "E3", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I 3/8], "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E6",
+            "terms" -> {<|"irrep" -> "E2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I 7/16], "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E7",
+            "terms" -> {<|"irrep" -> "E1", "multiplicity" -> 1|>}
+          |>
+        },
+        "subgroup" -> <|"index" -> 2, "o3_class" -> "C8v", "order" -> 16, "schoenflies" -> "C_8v"|>,
+        "transversal" -> {0, 8}
+      |>,
+      <|
+        "class_size" -> 1,
+        "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+        "id" -> "n13",
+        "monomorphism" -> <|
+          "count" -> 16,
+          "determined" -> True,
+          "distinct_subductions" -> 1,
+          "map" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+          "setting" -> {
+            <|
+              "g_class" -> "C8",
+              "g_index" -> 1,
+              "g_symbol" -> "C_8",
+              "h_index" -> 1,
+              "h_symbol" -> "C_8"
+            |>,
+            <|
+              "g_class" -> "C2p",
+              "g_index" -> 8,
+              "g_symbol" -> "C_2",
+              "h_index" -> 8,
+              "h_symbol" -> "C_2"
+            |>,
+            <|
+              "g_class" -> "S16",
+              "g_index" -> 16,
+              "g_symbol" -> "S_16",
+              "h_index" -> 16,
+              "h_symbol" -> "S_16"
+            |>
+          }
+        |>,
+        "normal" -> True,
+        "normalizer_order" -> 32,
+        "subduction" -> {
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A1",
+            "terms" -> {<|"irrep" -> "A1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "A2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "A2",
+            "terms" -> {<|"irrep" -> "A2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B1",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B1",
+            "terms" -> {<|"irrep" -> "B1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "B2",
+                "kappa" -> 1,
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 1,
+            "irrep" -> "B2",
+            "terms" -> {<|"irrep" -> "B2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E1",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E1",
+            "terms" -> {<|"irrep" -> "E1", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E2",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E2",
+            "terms" -> {<|"irrep" -> "E2", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E3",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E3",
+            "terms" -> {<|"irrep" -> "E3", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E4",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E4",
+            "terms" -> {<|"irrep" -> "E4", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E5",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E5",
+            "terms" -> {<|"irrep" -> "E5", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E6",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E6",
+            "terms" -> {<|"irrep" -> "E6", "multiplicity" -> 1|>}
+          |>,
+          <|
+            "blocks" -> {
+              <|
+                "N" -> 1,
+                "irrep" -> "E7",
+                "kappa" -> 1,
+                "partners" -> {
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>
+                },
+                "separation" -> "unique"
+              |>
+            },
+            "dim" -> 2,
+            "irrep" -> "E7",
+            "terms" -> {<|"irrep" -> "E7", "multiplicity" -> 1|>}
+          |>
+        },
+        "subgroup" -> <|"index" -> 1, "o3_class" -> "D8d", "order" -> 32, "schoenflies" -> "D_8d"|>,
+        "transversal" -> {0}
+      |>
+    },
+    "embeddings_with_alternative_settings" -> 1
+  |>,
+  "subduction_o3" -> <|
+    "J_max_tabulated" -> 20,
+    "domain" -> "integer J",
+    "embedding" -> <|"id" -> "D_8d/standard"|>,
+    "parities" -> <|
+      "g" -> <|
+        "increment" -> <|
+          "A1" -> 1,
+          "A2" -> 1,
+          "B1" -> 1,
+          "B2" -> 1,
+          "E1" -> 2,
+          "E2" -> 2,
+          "E3" -> 2,
+          "E4" -> 2,
+          "E5" -> 2,
+          "E6" -> 2,
+          "E7" -> 2
+        |>,
+        "residues" -> {
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 0,
+            "E3" -> 0,
+            "E4" -> 0,
+            "E5" -> 0,
+            "E6" -> 0,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 0,
+            "E3" -> 0,
+            "E4" -> 0,
+            "E5" -> 0,
+            "E6" -> 0,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 1,
+            "E3" -> 0,
+            "E4" -> 0,
+            "E5" -> 0,
+            "E6" -> 0,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 1,
+            "E3" -> 0,
+            "E4" -> 0,
+            "E5" -> 1,
+            "E6" -> 0,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 1,
+            "E3" -> 0,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 0,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 0,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 2,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 1,
+            "E3" -> 2,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 2,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 1,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 1,
+            "E6" -> 2,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 1,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 2
+          |>
+        },
+        "table" -> {
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 0,
+            "E3" -> 0,
+            "E4" -> 0,
+            "E5" -> 0,
+            "E6" -> 0,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 0,
+            "E3" -> 0,
+            "E4" -> 0,
+            "E5" -> 0,
+            "E6" -> 0,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 1,
+            "E3" -> 0,
+            "E4" -> 0,
+            "E5" -> 0,
+            "E6" -> 0,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 1,
+            "E3" -> 0,
+            "E4" -> 0,
+            "E5" -> 1,
+            "E6" -> 0,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 1,
+            "E3" -> 0,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 0,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 0,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 2,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 1,
+            "E3" -> 2,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 2,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 1,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 1,
+            "E6" -> 2,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 1,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 2,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 2,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 3
+          |>,
+          <|
+            "A1" -> 2,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 3,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 3
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 2,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 3,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 3,
+            "E6" -> 2,
+            "E7" -> 3
+          |>,
+          <|
+            "A1" -> 2,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 3,
+            "E3" -> 2,
+            "E4" -> 3,
+            "E5" -> 3,
+            "E6" -> 2,
+            "E7" -> 3
+          |>
+        }
+      |>,
+      "u" -> <|
+        "increment" -> <|
+          "A1" -> 1,
+          "A2" -> 1,
+          "B1" -> 1,
+          "B2" -> 1,
+          "E1" -> 2,
+          "E2" -> 2,
+          "E3" -> 2,
+          "E4" -> 2,
+          "E5" -> 2,
+          "E6" -> 2,
+          "E7" -> 2
+        |>,
+        "residues" -> {
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 0,
+            "E3" -> 0,
+            "E4" -> 0,
+            "E5" -> 0,
+            "E6" -> 0,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 0,
+            "E3" -> 0,
+            "E4" -> 0,
+            "E5" -> 0,
+            "E6" -> 0,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 0,
+            "E3" -> 0,
+            "E4" -> 0,
+            "E5" -> 0,
+            "E6" -> 1,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 0,
+            "E3" -> 1,
+            "E4" -> 0,
+            "E5" -> 0,
+            "E6" -> 1,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 0,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 0,
+            "E6" -> 1,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 0,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 2,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 2,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 2,
+            "E6" -> 1,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 2,
+            "E3" -> 1,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 1,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 1,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 2
+          |>
+        },
+        "table" -> {
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 0,
+            "E2" -> 0,
+            "E3" -> 0,
+            "E4" -> 0,
+            "E5" -> 0,
+            "E6" -> 0,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 0,
+            "E3" -> 0,
+            "E4" -> 0,
+            "E5" -> 0,
+            "E6" -> 0,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 0,
+            "E3" -> 0,
+            "E4" -> 0,
+            "E5" -> 0,
+            "E6" -> 1,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 0,
+            "E3" -> 1,
+            "E4" -> 0,
+            "E5" -> 0,
+            "E6" -> 1,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 0,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 0,
+            "E6" -> 1,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 0,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 0
+          |>,
+          <|
+            "A1" -> 0,
+            "A2" -> 0,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 1
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 1,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 2,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 1,
+            "E6" -> 1,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 2,
+            "E3" -> 1,
+            "E4" -> 1,
+            "E5" -> 2,
+            "E6" -> 1,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 2,
+            "E3" -> 1,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 1,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 1,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 1,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 0,
+            "E1" -> 1,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 0,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 2,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 2,
+            "E1" -> 3,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 2,
+            "B2" -> 1,
+            "E1" -> 3,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 3,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 2,
+            "E1" -> 3,
+            "E2" -> 2,
+            "E3" -> 3,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 3,
+            "E7" -> 2
+          |>,
+          <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 2,
+            "B2" -> 1,
+            "E1" -> 3,
+            "E2" -> 2,
+            "E3" -> 3,
+            "E4" -> 3,
+            "E5" -> 2,
+            "E6" -> 3,
+            "E7" -> 2
+          |>
+        }
+      |>
+    |>,
+    "period" -> 16
+  |>,
+  "subduction_unitary" -> <|
+    "levels" -> {
+      <|
+        "chain" -> <|
+          "image" -> "C_16v",
+          "kind" -> "U(2) > O(2) > image",
+          "rule" -> "Sym^v = sum over l of r^(v-l) H_l; H_l = E_l of C_infv (l > 0), A_1 (l = 0), restricted to the image"
+        |>,
+        "dim" -> 2,
+        "irrep" -> "E_1",
+        "irrep_id" -> "E1",
+        "partner_functions" -> {"x-iy", "x+iy"},
+        "symmetric" -> <|
+          "bases" -> <|
+            "blocks" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 0,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {0, 0}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_1",
+                "irrep_id" -> "E1",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 1}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 2,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 2}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 2,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {1, 1}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_3",
+                "irrep_id" -> "E3",
+                "kappa" -> 1,
+                "l" -> 3,
+                "v" -> 3,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_1",
+                "irrep_id" -> "E1",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 3,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 2}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 4,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {4, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 4}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 4,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 4,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {2, 2}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_5",
+                "irrep_id" -> "E5",
+                "kappa" -> 1,
+                "l" -> 5,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 5}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {5, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_3",
+                "irrep_id" -> "E3",
+                "kappa" -> 1,
+                "l" -> 3,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {4, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 4}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_1",
+                "irrep_id" -> "E1",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 2}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "l" -> 6,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 6}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {6, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {5, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 5}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {4, 2}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 4}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 6,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {3, 3}|>}, "mu" -> 1|>}
+              |>
+            },
+            "v_max" -> 6
+          |>,
+          "generating_function" -> <|
+            "denominator" -> {2, 16},
+            "numerators" -> {
+              <|"coefficients" -> {1}, "irrep" -> "A_1", "irrep_id" -> "A1"|>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "B_1",
+                "irrep_id" -> "B1"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "B_2",
+                "irrep_id" -> "B2"
+              |>,
+              <|
+                "coefficients" -> {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_1",
+                "irrep_id" -> "E1"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_3",
+                "irrep_id" -> "E3"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_5",
+                "irrep_id" -> "E5"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1},
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 1, 0, 1},
+                "irrep" -> "E_7",
+                "irrep_id" -> "E7"
+              |>
+            }
+          |>,
+          "harmonic" -> <|
+            "l_max_tabulated" -> 12,
+            "table" -> {
+              <|
+                "A1" -> 1,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 1,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 1,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 1,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 1,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 1,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 1
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 1,
+                "B2" -> 1,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 1
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 1,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 1,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>
+            }
+          |>,
+          "increment" -> <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 2
+          |>,
+          "period" -> 16,
+          "table" -> {
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 2
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 2,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 2,
+              "E6" -> 0,
+              "E7" -> 2
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 2,
+              "E5" -> 0,
+              "E6" -> 2,
+              "E7" -> 0
+            |>
+          },
+          "v_max_tabulated" -> 12
+        |>,
+        "two_column" -> {
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {<|"components" -> {<|"determinant" -> {}, "e" -> 1|>}, "mu" -> 1|>}
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 0,
+            "partition" -> {},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_1",
+                "irrep_id" -> "E1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}}, "e" -> 1|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"determinant" -> {{2, 1}}, "e" -> 1|>}, "mu" -> 2|>
+                }
+              |>
+            },
+            "dim" -> 2,
+            "n" -> 1,
+            "partition" -> {1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 1
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {
+                      <|"determinant" -> {{1, 1}, {2, -1}}, "e" -> 1|>,
+                      <|"determinant" -> {{1, -1}, {2, 1}}, "e" -> -1|>
+                    },
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}, {1, -1}}, "e" -> 1|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"determinant" -> {{2, 1}, {2, -1}}, "e" -> 1|>}, "mu" -> 2|>
+                }
+              |>
+            },
+            "dim" -> 3,
+            "n" -> 2,
+            "partition" -> {2},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}, {2, 1}}, "e" -> 1|>}, "mu" -> 1|>
+                }
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 2,
+            "partition" -> {1, 1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 1,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 2
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_1",
+                "irrep_id" -> "E1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {1, -1}, {2, 1}}, "e" -> 1|>},
+                    "mu" -> 1
+                  |>,
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {2, 1}, {2, -1}}, "e" -> 1|>},
+                    "mu" -> 2
+                  |>
+                }
+              |>
+            },
+            "dim" -> 2,
+            "n" -> 3,
+            "partition" -> {2, 1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 1
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {1, -1}, {2, 1}, {2, -1}}, "e" -> 1|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 4,
+            "partition" -> {2, 2},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>
+        }
+      |>,
+      <|
+        "chain" -> <|
+          "image" -> "C_8v",
+          "kind" -> "U(2) > O(2) > image",
+          "rule" -> "Sym^v = sum over l of r^(v-l) H_l; H_l = E_l of C_infv (l > 0), A_1 (l = 0), restricted to the image"
+        |>,
+        "dim" -> 2,
+        "irrep" -> "E_2",
+        "irrep_id" -> "E2",
+        "partner_functions" -> {"(x-iy)^2", "(x+iy)^2"},
+        "symmetric" -> <|
+          "bases" -> <|
+            "blocks" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 0,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {0, 0}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 1}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 2,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 2}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 2,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {1, 1}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "l" -> 3,
+                "v" -> 3,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 3}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {3, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 3,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 2}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_1",
+                "irrep_id" -> "B1",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 4,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {4, 0}|>, <|"e" -> 1, "quanta" -> {0, 4}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_2",
+                "irrep_id" -> "B2",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 4,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {4, 0}|>, <|"e" -> -1, "quanta" -> {0, 4}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 4,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 4,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {2, 2}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "l" -> 5,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {5, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {0, 5}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "l" -> 3,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 4}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {4, 1}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 2}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 6,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 6}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {6, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_1",
+                "irrep_id" -> "B1",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 6,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {5, 1}|>, <|"e" -> 1, "quanta" -> {1, 5}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_2",
+                "irrep_id" -> "B2",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 6,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {5, 1}|>, <|"e" -> -1, "quanta" -> {1, 5}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {4, 2}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 4}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 6,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {3, 3}|>}, "mu" -> 1|>}
+              |>
+            },
+            "v_max" -> 6
+          |>,
+          "generating_function" -> <|
+            "denominator" -> {2, 8},
+            "numerators" -> {
+              <|"coefficients" -> {1}, "irrep" -> "A_1", "irrep_id" -> "A1"|>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2"
+              |>,
+              <|"coefficients" -> {0, 0, 0, 0, 1}, "irrep" -> "B_1", "irrep_id" -> "B1"|>,
+              <|"coefficients" -> {0, 0, 0, 0, 1}, "irrep" -> "B_2", "irrep_id" -> "B2"|>,
+              <|"coefficients" -> {0}, "irrep" -> "E_1", "irrep_id" -> "E1"|>,
+              <|"coefficients" -> {0, 1, 0, 0, 0, 0, 0, 1}, "irrep" -> "E_2", "irrep_id" -> "E2"|>,
+              <|"coefficients" -> {0}, "irrep" -> "E_3", "irrep_id" -> "E3"|>,
+              <|"coefficients" -> {0, 0, 1, 0, 0, 0, 1}, "irrep" -> "E_4", "irrep_id" -> "E4"|>,
+              <|"coefficients" -> {0}, "irrep" -> "E_5", "irrep_id" -> "E5"|>,
+              <|"coefficients" -> {0, 0, 0, 1, 0, 1}, "irrep" -> "E_6", "irrep_id" -> "E6"|>,
+              <|"coefficients" -> {0}, "irrep" -> "E_7", "irrep_id" -> "E7"|>
+            }
+          |>,
+          "harmonic" -> <|
+            "l_max_tabulated" -> 12,
+            "table" -> {
+              <|
+                "A1" -> 1,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 1,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 1,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 1,
+                "B2" -> 1,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 1,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 1,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 1,
+                "A2" -> 1,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 1,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 1,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 1,
+                "B2" -> 1,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>
+            }
+          |>,
+          "increment" -> <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 0,
+            "E2" -> 2,
+            "E3" -> 0,
+            "E4" -> 2,
+            "E5" -> 0,
+            "E6" -> 2,
+            "E7" -> 0
+          |>,
+          "period" -> 8,
+          "table" -> {
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 2,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 2,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 2,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 2,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 2,
+              "A2" -> 1,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 2,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 3,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 2,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 2,
+              "A2" -> 1,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 3,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 3,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 3,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 2,
+              "A2" -> 1,
+              "B1" -> 2,
+              "B2" -> 2,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 3,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>
+          },
+          "v_max_tabulated" -> 12
+        |>,
+        "two_column" -> {
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {<|"components" -> {<|"determinant" -> {}, "e" -> 1|>}, "mu" -> 1|>}
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 0,
+            "partition" -> {},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}}, "e" -> 1|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"determinant" -> {{2, 1}}, "e" -> 1|>}, "mu" -> 2|>
+                }
+              |>
+            },
+            "dim" -> 2,
+            "n" -> 1,
+            "partition" -> {1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 1
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {
+                      <|"determinant" -> {{1, 1}, {2, -1}}, "e" -> 1|>,
+                      <|"determinant" -> {{1, -1}, {2, 1}}, "e" -> -1|>
+                    },
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}, {1, -1}}, "e" -> 1|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"determinant" -> {{2, 1}, {2, -1}}, "e" -> 1|>}, "mu" -> 2|>
+                }
+              |>
+            },
+            "dim" -> 3,
+            "n" -> 2,
+            "partition" -> {2},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}, {2, 1}}, "e" -> 1|>}, "mu" -> 1|>
+                }
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 2,
+            "partition" -> {1, 1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 1,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 2
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {1, -1}, {2, 1}}, "e" -> 1|>},
+                    "mu" -> 1
+                  |>,
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {2, 1}, {2, -1}}, "e" -> 1|>},
+                    "mu" -> 2
+                  |>
+                }
+              |>
+            },
+            "dim" -> 2,
+            "n" -> 3,
+            "partition" -> {2, 1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 1
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {1, -1}, {2, 1}, {2, -1}}, "e" -> 1|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 4,
+            "partition" -> {2, 2},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>
+        }
+      |>,
+      <|
+        "chain" -> <|
+          "image" -> "C_16v",
+          "kind" -> "U(2) > O(2) > image",
+          "rule" -> "Sym^v = sum over l of r^(v-l) H_l; H_l = E_l of C_infv (l > 0), A_1 (l = 0), restricted to the image"
+        |>,
+        "dim" -> 2,
+        "irrep" -> "E_3",
+        "irrep_id" -> "E3",
+        "partner_functions" -> {"(x-iy)^3", "(x+iy)^3"},
+        "symmetric" -> <|
+          "bases" -> <|
+            "blocks" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 0,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {0, 0}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_3",
+                "irrep_id" -> "E3",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 1}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 2,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 2}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {2, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 2,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {1, 1}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_7",
+                "irrep_id" -> "E7",
+                "kappa" -> 1,
+                "l" -> 3,
+                "v" -> 3,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {0, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_3",
+                "irrep_id" -> "E3",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 3,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 2}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 4,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 4}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {4, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 4,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 3}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {3, 1}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 4,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {2, 2}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_1",
+                "irrep_id" -> "E1",
+                "kappa" -> 1,
+                "l" -> 5,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 5}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {5, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_7",
+                "irrep_id" -> "E7",
+                "kappa" -> 1,
+                "l" -> 3,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {4, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {1, 4}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_3",
+                "irrep_id" -> "E3",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 2}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "l" -> 6,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {6, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 6}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 5}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {5, 1}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 4}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {4, 2}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 6,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {3, 3}|>}, "mu" -> 1|>}
+              |>
+            },
+            "v_max" -> 6
+          |>,
+          "generating_function" -> <|
+            "denominator" -> {2, 16},
+            "numerators" -> {
+              <|"coefficients" -> {1}, "irrep" -> "A_1", "irrep_id" -> "A1"|>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "B_1",
+                "irrep_id" -> "B1"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "B_2",
+                "irrep_id" -> "B2"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_1",
+                "irrep_id" -> "E1"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1},
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2"
+              |>,
+              <|
+                "coefficients" -> {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_3",
+                "irrep_id" -> "E3"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 1, 0, 1},
+                "irrep" -> "E_5",
+                "irrep_id" -> "E5"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_7",
+                "irrep_id" -> "E7"
+              |>
+            }
+          |>,
+          "harmonic" -> <|
+            "l_max_tabulated" -> 12,
+            "table" -> {
+              <|
+                "A1" -> 1,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 1,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 1,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 1
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 1,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 1,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 1,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 1,
+                "B2" -> 1,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 1,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 1,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 1,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>
+            }
+          |>,
+          "increment" -> <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 2
+          |>,
+          "period" -> 16,
+          "table" -> {
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 2,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 2,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 2,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 2,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 2,
+              "E3" -> 0,
+              "E4" -> 2,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>
+          },
+          "v_max_tabulated" -> 12
+        |>,
+        "two_column" -> {
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {<|"components" -> {<|"determinant" -> {}, "e" -> 1|>}, "mu" -> 1|>}
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 0,
+            "partition" -> {},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_3",
+                "irrep_id" -> "E3",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}}, "e" -> 1|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"determinant" -> {{2, 1}}, "e" -> 1|>}, "mu" -> 2|>
+                }
+              |>
+            },
+            "dim" -> 2,
+            "n" -> 1,
+            "partition" -> {1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 1
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {
+                      <|"determinant" -> {{1, 1}, {2, -1}}, "e" -> 1|>,
+                      <|"determinant" -> {{1, -1}, {2, 1}}, "e" -> -1|>
+                    },
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{2, 1}, {2, -1}}, "e" -> 1|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"determinant" -> {{1, 1}, {1, -1}}, "e" -> -1|>}, "mu" -> 2|>
+                }
+              |>
+            },
+            "dim" -> 3,
+            "n" -> 2,
+            "partition" -> {2},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}, {2, 1}}, "e" -> 1|>}, "mu" -> 1|>
+                }
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 2,
+            "partition" -> {1, 1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 1,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 2
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_3",
+                "irrep_id" -> "E3",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {1, -1}, {2, 1}}, "e" -> 1|>},
+                    "mu" -> 1
+                  |>,
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {2, 1}, {2, -1}}, "e" -> 1|>},
+                    "mu" -> 2
+                  |>
+                }
+              |>
+            },
+            "dim" -> 2,
+            "n" -> 3,
+            "partition" -> {2, 1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 1
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {1, -1}, {2, 1}, {2, -1}}, "e" -> 1|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 4,
+            "partition" -> {2, 2},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>
+        }
+      |>,
+      <|
+        "chain" -> <|
+          "image" -> "C_4v",
+          "kind" -> "U(2) > O(2) > image",
+          "rule" -> "Sym^v = sum over l of r^(v-l) H_l; H_l = E_l of C_infv (l > 0), A_1 (l = 0), restricted to the image"
+        |>,
+        "dim" -> 2,
+        "irrep" -> "E_4",
+        "irrep_id" -> "E4",
+        "partner_functions" -> {"(x-iy)^4", "(x+iy)^4"},
+        "symmetric" -> <|
+          "bases" -> <|
+            "blocks" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 0,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {0, 0}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 1}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_1",
+                "irrep_id" -> "B1",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 2,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {2, 0}|>, <|"e" -> 1, "quanta" -> {0, 2}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_2",
+                "irrep_id" -> "B2",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 2,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {2, 0}|>, <|"e" -> -1, "quanta" -> {0, 2}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 2,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {1, 1}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 3,
+                "v" -> 3,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 3}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 3,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 2}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 4,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {4, 0}|>, <|"e" -> 1, "quanta" -> {0, 4}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 4,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {4, 0}|>, <|"e" -> -1, "quanta" -> {0, 4}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_1",
+                "irrep_id" -> "B1",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 4,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {3, 1}|>, <|"e" -> 1, "quanta" -> {1, 3}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_2",
+                "irrep_id" -> "B2",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 4,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {3, 1}|>, <|"e" -> -1, "quanta" -> {1, 3}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 4,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {2, 2}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 5,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {5, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 5}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 3,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 4}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {4, 1}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 2}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_1",
+                "irrep_id" -> "B1",
+                "kappa" -> 1,
+                "l" -> 6,
+                "v" -> 6,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {6, 0}|>, <|"e" -> 1, "quanta" -> {0, 6}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_2",
+                "irrep_id" -> "B2",
+                "kappa" -> 1,
+                "l" -> 6,
+                "v" -> 6,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {6, 0}|>, <|"e" -> -1, "quanta" -> {0, 6}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 6,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {5, 1}|>, <|"e" -> 1, "quanta" -> {1, 5}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 6,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {5, 1}|>, <|"e" -> -1, "quanta" -> {1, 5}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_1",
+                "irrep_id" -> "B1",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 6,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {4, 2}|>, <|"e" -> 1, "quanta" -> {2, 4}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_2",
+                "irrep_id" -> "B2",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 6,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {4, 2}|>, <|"e" -> -1, "quanta" -> {2, 4}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 6,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {3, 3}|>}, "mu" -> 1|>}
+              |>
+            },
+            "v_max" -> 6
+          |>,
+          "generating_function" -> <|
+            "denominator" -> {2, 4},
+            "numerators" -> {
+              <|"coefficients" -> {1}, "irrep" -> "A_1", "irrep_id" -> "A1"|>,
+              <|"coefficients" -> {0, 0, 0, 0, 1}, "irrep" -> "A_2", "irrep_id" -> "A2"|>,
+              <|"coefficients" -> {0, 0, 1}, "irrep" -> "B_1", "irrep_id" -> "B1"|>,
+              <|"coefficients" -> {0, 0, 1}, "irrep" -> "B_2", "irrep_id" -> "B2"|>,
+              <|"coefficients" -> {0}, "irrep" -> "E_1", "irrep_id" -> "E1"|>,
+              <|"coefficients" -> {0}, "irrep" -> "E_2", "irrep_id" -> "E2"|>,
+              <|"coefficients" -> {0}, "irrep" -> "E_3", "irrep_id" -> "E3"|>,
+              <|"coefficients" -> {0, 1, 0, 1}, "irrep" -> "E_4", "irrep_id" -> "E4"|>,
+              <|"coefficients" -> {0}, "irrep" -> "E_5", "irrep_id" -> "E5"|>,
+              <|"coefficients" -> {0}, "irrep" -> "E_6", "irrep_id" -> "E6"|>,
+              <|"coefficients" -> {0}, "irrep" -> "E_7", "irrep_id" -> "E7"|>
+            }
+          |>,
+          "harmonic" -> <|
+            "l_max_tabulated" -> 12,
+            "table" -> {
+              <|
+                "A1" -> 1,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 1,
+                "B2" -> 1,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 1,
+                "A2" -> 1,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 1,
+                "B2" -> 1,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 1,
+                "A2" -> 1,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 1,
+                "B2" -> 1,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 1,
+                "A2" -> 1,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>
+            }
+          |>,
+          "increment" -> <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 0,
+            "E2" -> 0,
+            "E3" -> 0,
+            "E4" -> 2,
+            "E5" -> 0,
+            "E6" -> 0,
+            "E7" -> 0
+          |>,
+          "period" -> 4,
+          "table" -> {
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 2,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 2,
+              "A2" -> 1,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 3,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 2,
+              "A2" -> 1,
+              "B1" -> 2,
+              "B2" -> 2,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 4,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 3,
+              "A2" -> 2,
+              "B1" -> 2,
+              "B2" -> 2,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 5,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 3,
+              "A2" -> 2,
+              "B1" -> 3,
+              "B2" -> 3,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 6,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 4,
+              "A2" -> 3,
+              "B1" -> 3,
+              "B2" -> 3,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>
+          },
+          "v_max_tabulated" -> 12
+        |>,
+        "two_column" -> {
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {<|"components" -> {<|"determinant" -> {}, "e" -> 1|>}, "mu" -> 1|>}
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 0,
+            "partition" -> {},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}}, "e" -> 1|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"determinant" -> {{2, 1}}, "e" -> 1|>}, "mu" -> 2|>
+                }
+              |>
+            },
+            "dim" -> 2,
+            "n" -> 1,
+            "partition" -> {1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 1
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {
+                      <|"determinant" -> {{1, 1}, {2, -1}}, "e" -> 1|>,
+                      <|"determinant" -> {{1, -1}, {2, 1}}, "e" -> -1|>
+                    },
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_1",
+                "irrep_id" -> "B1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {
+                      <|"determinant" -> {{1, 1}, {1, -1}}, "e" -> 1|>,
+                      <|"determinant" -> {{2, 1}, {2, -1}}, "e" -> 1|>
+                    },
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_2",
+                "irrep_id" -> "B2",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {
+                      <|"determinant" -> {{1, 1}, {1, -1}}, "e" -> 1|>,
+                      <|"determinant" -> {{2, 1}, {2, -1}}, "e" -> -1|>
+                    },
+                    "mu" -> 1
+                  |>
+                }
+              |>
+            },
+            "dim" -> 3,
+            "n" -> 2,
+            "partition" -> {2},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}, {2, 1}}, "e" -> 1|>}, "mu" -> 1|>
+                }
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 2,
+            "partition" -> {1, 1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 1,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 2
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {1, -1}, {2, 1}}, "e" -> 1|>},
+                    "mu" -> 1
+                  |>,
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {2, 1}, {2, -1}}, "e" -> 1|>},
+                    "mu" -> 2
+                  |>
+                }
+              |>
+            },
+            "dim" -> 2,
+            "n" -> 3,
+            "partition" -> {2, 1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 1
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {1, -1}, {2, 1}, {2, -1}}, "e" -> 1|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 4,
+            "partition" -> {2, 2},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>
+        }
+      |>,
+      <|
+        "chain" -> <|
+          "image" -> "C_16v",
+          "kind" -> "U(2) > O(2) > image",
+          "rule" -> "Sym^v = sum over l of r^(v-l) H_l; H_l = E_l of C_infv (l > 0), A_1 (l = 0), restricted to the image"
+        |>,
+        "dim" -> 2,
+        "irrep" -> "E_5",
+        "irrep_id" -> "E5",
+        "partner_functions" -> {"(x-iy)^3 z", "(x+iy)^3 z"},
+        "symmetric" -> <|
+          "bases" -> <|
+            "blocks" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 0,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {0, 0}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_5",
+                "irrep_id" -> "E5",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 1}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 2,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 2}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {2, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 2,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {1, 1}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_1",
+                "irrep_id" -> "E1",
+                "kappa" -> 1,
+                "l" -> 3,
+                "v" -> 3,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {0, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_5",
+                "irrep_id" -> "E5",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 3,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 2}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 4,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 4}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {4, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 4,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 3}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {3, 1}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 4,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {2, 2}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_7",
+                "irrep_id" -> "E7",
+                "kappa" -> 1,
+                "l" -> 5,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 5}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {5, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_1",
+                "irrep_id" -> "E1",
+                "kappa" -> 1,
+                "l" -> 3,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {4, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {1, 4}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_5",
+                "irrep_id" -> "E5",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 2}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "l" -> 6,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {6, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 6}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 5}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {5, 1}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 4}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {4, 2}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 6,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {3, 3}|>}, "mu" -> 1|>}
+              |>
+            },
+            "v_max" -> 6
+          |>,
+          "generating_function" -> <|
+            "denominator" -> {2, 16},
+            "numerators" -> {
+              <|"coefficients" -> {1}, "irrep" -> "A_1", "irrep_id" -> "A1"|>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "B_1",
+                "irrep_id" -> "B1"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "B_2",
+                "irrep_id" -> "B2"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_1",
+                "irrep_id" -> "E1"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1},
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 1, 0, 1},
+                "irrep" -> "E_3",
+                "irrep_id" -> "E3"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4"
+              |>,
+              <|
+                "coefficients" -> {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_5",
+                "irrep_id" -> "E5"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_7",
+                "irrep_id" -> "E7"
+              |>
+            }
+          |>,
+          "harmonic" -> <|
+            "l_max_tabulated" -> 12,
+            "table" -> {
+              <|
+                "A1" -> 1,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 1,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 1,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 1,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 1
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 1,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 1,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 1,
+                "B2" -> 1,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 1,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 1,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 1
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>
+            }
+          |>,
+          "increment" -> <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 2
+          |>,
+          "period" -> 16,
+          "table" -> {
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 2,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 2,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 2,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 2
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 2,
+              "E3" -> 0,
+              "E4" -> 2,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>
+          },
+          "v_max_tabulated" -> 12
+        |>,
+        "two_column" -> {
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {<|"components" -> {<|"determinant" -> {}, "e" -> 1|>}, "mu" -> 1|>}
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 0,
+            "partition" -> {},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_5",
+                "irrep_id" -> "E5",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}}, "e" -> 1|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"determinant" -> {{2, 1}}, "e" -> 1|>}, "mu" -> 2|>
+                }
+              |>
+            },
+            "dim" -> 2,
+            "n" -> 1,
+            "partition" -> {1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 1
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {
+                      <|"determinant" -> {{1, 1}, {2, -1}}, "e" -> 1|>,
+                      <|"determinant" -> {{1, -1}, {2, 1}}, "e" -> -1|>
+                    },
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{2, 1}, {2, -1}}, "e" -> 1|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"determinant" -> {{1, 1}, {1, -1}}, "e" -> -1|>}, "mu" -> 2|>
+                }
+              |>
+            },
+            "dim" -> 3,
+            "n" -> 2,
+            "partition" -> {2},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}, {2, 1}}, "e" -> 1|>}, "mu" -> 1|>
+                }
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 2,
+            "partition" -> {1, 1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 1,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 2
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_5",
+                "irrep_id" -> "E5",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {1, -1}, {2, 1}}, "e" -> 1|>},
+                    "mu" -> 1
+                  |>,
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {2, 1}, {2, -1}}, "e" -> 1|>},
+                    "mu" -> 2
+                  |>
+                }
+              |>
+            },
+            "dim" -> 2,
+            "n" -> 3,
+            "partition" -> {2, 1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 1
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {1, -1}, {2, 1}, {2, -1}}, "e" -> 1|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 4,
+            "partition" -> {2, 2},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>
+        }
+      |>,
+      <|
+        "chain" -> <|
+          "image" -> "C_8v",
+          "kind" -> "U(2) > O(2) > image",
+          "rule" -> "Sym^v = sum over l of r^(v-l) H_l; H_l = E_l of C_infv (l > 0), A_1 (l = 0), restricted to the image"
+        |>,
+        "dim" -> 2,
+        "irrep" -> "E_6",
+        "irrep_id" -> "E6",
+        "partner_functions" -> {"(x-iy)^2 z", "(x+iy)^2 z"},
+        "symmetric" -> <|
+          "bases" -> <|
+            "blocks" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 0,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {0, 0}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 1}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 2,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 2}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 2,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {1, 1}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "l" -> 3,
+                "v" -> 3,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 3}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {3, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 3,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 2}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_1",
+                "irrep_id" -> "B1",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 4,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {4, 0}|>, <|"e" -> 1, "quanta" -> {0, 4}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_2",
+                "irrep_id" -> "B2",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 4,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {4, 0}|>, <|"e" -> -1, "quanta" -> {0, 4}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 4,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 4,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {2, 2}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "l" -> 5,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {5, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {0, 5}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "l" -> 3,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 4}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {4, 1}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 2}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 6,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 6}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {6, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_1",
+                "irrep_id" -> "B1",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 6,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {5, 1}|>, <|"e" -> 1, "quanta" -> {1, 5}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "B_2",
+                "irrep_id" -> "B2",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 6,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"e" -> 1, "quanta" -> {5, 1}|>, <|"e" -> -1, "quanta" -> {1, 5}|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {4, 2}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 4}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 6,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {3, 3}|>}, "mu" -> 1|>}
+              |>
+            },
+            "v_max" -> 6
+          |>,
+          "generating_function" -> <|
+            "denominator" -> {2, 8},
+            "numerators" -> {
+              <|"coefficients" -> {1}, "irrep" -> "A_1", "irrep_id" -> "A1"|>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2"
+              |>,
+              <|"coefficients" -> {0, 0, 0, 0, 1}, "irrep" -> "B_1", "irrep_id" -> "B1"|>,
+              <|"coefficients" -> {0, 0, 0, 0, 1}, "irrep" -> "B_2", "irrep_id" -> "B2"|>,
+              <|"coefficients" -> {0}, "irrep" -> "E_1", "irrep_id" -> "E1"|>,
+              <|"coefficients" -> {0, 0, 0, 1, 0, 1}, "irrep" -> "E_2", "irrep_id" -> "E2"|>,
+              <|"coefficients" -> {0}, "irrep" -> "E_3", "irrep_id" -> "E3"|>,
+              <|"coefficients" -> {0, 0, 1, 0, 0, 0, 1}, "irrep" -> "E_4", "irrep_id" -> "E4"|>,
+              <|"coefficients" -> {0}, "irrep" -> "E_5", "irrep_id" -> "E5"|>,
+              <|"coefficients" -> {0, 1, 0, 0, 0, 0, 0, 1}, "irrep" -> "E_6", "irrep_id" -> "E6"|>,
+              <|"coefficients" -> {0}, "irrep" -> "E_7", "irrep_id" -> "E7"|>
+            }
+          |>,
+          "harmonic" -> <|
+            "l_max_tabulated" -> 12,
+            "table" -> {
+              <|
+                "A1" -> 1,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 1,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 1,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 1,
+                "B2" -> 1,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 1,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 1,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 1,
+                "A2" -> 1,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 1,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 1,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 1,
+                "B2" -> 1,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>
+            }
+          |>,
+          "increment" -> <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 0,
+            "E2" -> 2,
+            "E3" -> 0,
+            "E4" -> 2,
+            "E5" -> 0,
+            "E6" -> 2,
+            "E7" -> 0
+          |>,
+          "period" -> 8,
+          "table" -> {
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 2,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 2,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 2,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 2,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 2,
+              "A2" -> 1,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 2,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 2,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 3,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 2,
+              "A2" -> 1,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 3,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 3,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 3,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 2,
+              "A2" -> 1,
+              "B1" -> 2,
+              "B2" -> 2,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 3,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>
+          },
+          "v_max_tabulated" -> 12
+        |>,
+        "two_column" -> {
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {<|"components" -> {<|"determinant" -> {}, "e" -> 1|>}, "mu" -> 1|>}
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 0,
+            "partition" -> {},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}}, "e" -> 1|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"determinant" -> {{2, 1}}, "e" -> 1|>}, "mu" -> 2|>
+                }
+              |>
+            },
+            "dim" -> 2,
+            "n" -> 1,
+            "partition" -> {1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            "twoS" -> 1
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {
+                      <|"determinant" -> {{1, 1}, {2, -1}}, "e" -> 1|>,
+                      <|"determinant" -> {{1, -1}, {2, 1}}, "e" -> -1|>
+                    },
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}, {1, -1}}, "e" -> 1|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"determinant" -> {{2, 1}, {2, -1}}, "e" -> 1|>}, "mu" -> 2|>
+                }
+              |>
+            },
+            "dim" -> 3,
+            "n" -> 2,
+            "partition" -> {2},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}, {2, 1}}, "e" -> 1|>}, "mu" -> 1|>
+                }
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 2,
+            "partition" -> {1, 1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 1,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 2
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {1, -1}, {2, 1}}, "e" -> 1|>},
+                    "mu" -> 1
+                  |>,
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {2, 1}, {2, -1}}, "e" -> 1|>},
+                    "mu" -> 2
+                  |>
+                }
+              |>
+            },
+            "dim" -> 2,
+            "n" -> 3,
+            "partition" -> {2, 1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            "twoS" -> 1
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {1, -1}, {2, 1}, {2, -1}}, "e" -> 1|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 4,
+            "partition" -> {2, 2},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>
+        }
+      |>,
+      <|
+        "chain" -> <|
+          "image" -> "C_16v",
+          "kind" -> "U(2) > O(2) > image",
+          "rule" -> "Sym^v = sum over l of r^(v-l) H_l; H_l = E_l of C_infv (l > 0), A_1 (l = 0), restricted to the image"
+        |>,
+        "dim" -> 2,
+        "irrep" -> "E_7",
+        "irrep_id" -> "E7",
+        "partner_functions" -> {"(x-iy) z", "(x+iy) z"},
+        "symmetric" -> <|
+          "bases" -> <|
+            "blocks" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 0,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {0, 0}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_7",
+                "irrep_id" -> "E7",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 1}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 2,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 2}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 2,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {1, 1}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_5",
+                "irrep_id" -> "E5",
+                "kappa" -> 1,
+                "l" -> 3,
+                "v" -> 3,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_7",
+                "irrep_id" -> "E7",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 3,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 2}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 4,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {4, 0}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 4}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 4,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 4,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {2, 2}|>}, "mu" -> 1|>}
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_3",
+                "irrep_id" -> "E3",
+                "kappa" -> 1,
+                "l" -> 5,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 5}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {5, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_5",
+                "irrep_id" -> "E5",
+                "kappa" -> 1,
+                "l" -> 3,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {4, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 4}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_7",
+                "irrep_id" -> "E7",
+                "kappa" -> 1,
+                "l" -> 1,
+                "v" -> 5,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {3, 2}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 3}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6",
+                "kappa" -> 1,
+                "l" -> 6,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {0, 6}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> -1, "quanta" -> {6, 0}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4",
+                "kappa" -> 1,
+                "l" -> 4,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {5, 1}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {1, 5}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "l" -> 2,
+                "v" -> 6,
+                "vectors" -> {
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {4, 2}|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"e" -> 1, "quanta" -> {2, 4}|>}, "mu" -> 2|>
+                }
+              |>,
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "l" -> 0,
+                "v" -> 6,
+                "vectors" -> {<|"components" -> {<|"e" -> 1, "quanta" -> {3, 3}|>}, "mu" -> 1|>}
+              |>
+            },
+            "v_max" -> 6
+          |>,
+          "generating_function" -> <|
+            "denominator" -> {2, 16},
+            "numerators" -> {
+              <|"coefficients" -> {1}, "irrep" -> "A_1", "irrep_id" -> "A1"|>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "B_1",
+                "irrep_id" -> "B1"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "B_2",
+                "irrep_id" -> "B2"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 0, 1, 0, 1},
+                "irrep" -> "E_1",
+                "irrep_id" -> "E1"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_3",
+                "irrep_id" -> "E3"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_4",
+                "irrep_id" -> "E4"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_5",
+                "irrep_id" -> "E5"
+              |>,
+              <|
+                "coefficients" -> {0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1},
+                "irrep" -> "E_6",
+                "irrep_id" -> "E6"
+              |>,
+              <|
+                "coefficients" -> {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                "irrep" -> "E_7",
+                "irrep_id" -> "E7"
+              |>
+            }
+          |>,
+          "harmonic" -> <|
+            "l_max_tabulated" -> 12,
+            "table" -> {
+              <|
+                "A1" -> 1,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 1
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 1,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 1,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 1,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 1,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 1,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 1,
+                "B2" -> 1,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 1,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 1,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 1,
+                "E4" -> 0,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>,
+              <|
+                "A1" -> 0,
+                "A2" -> 0,
+                "B1" -> 0,
+                "B2" -> 0,
+                "E1" -> 0,
+                "E2" -> 0,
+                "E3" -> 0,
+                "E4" -> 1,
+                "E5" -> 0,
+                "E6" -> 0,
+                "E7" -> 0
+              |>
+            }
+          |>,
+          "increment" -> <|
+            "A1" -> 1,
+            "A2" -> 1,
+            "B1" -> 1,
+            "B2" -> 1,
+            "E1" -> 2,
+            "E2" -> 2,
+            "E3" -> 2,
+            "E4" -> 2,
+            "E5" -> 2,
+            "E6" -> 2,
+            "E7" -> 2
+          |>,
+          "period" -> 16,
+          "table" -> {
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 1,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 1,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 2,
+              "E2" -> 0,
+              "E3" -> 1,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 1,
+              "E5" -> 0,
+              "E6" -> 2,
+              "E7" -> 0
+            |>,
+            <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 2,
+              "E2" -> 0,
+              "E3" -> 2,
+              "E4" -> 0,
+              "E5" -> 1,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 1,
+              "B2" -> 1,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 2,
+              "E5" -> 0,
+              "E6" -> 2,
+              "E7" -> 0
+            |>
+          },
+          "v_max_tabulated" -> 12
+        |>,
+        "two_column" -> {
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {<|"components" -> {<|"determinant" -> {}, "e" -> 1|>}, "mu" -> 1|>}
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 0,
+            "partition" -> {},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_7",
+                "irrep_id" -> "E7",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}}, "e" -> 1|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"determinant" -> {{2, 1}}, "e" -> 1|>}, "mu" -> 2|>
+                }
+              |>
+            },
+            "dim" -> 2,
+            "n" -> 1,
+            "partition" -> {1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            "twoS" -> 1
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {
+                      <|"determinant" -> {{1, 1}, {2, -1}}, "e" -> 1|>,
+                      <|"determinant" -> {{1, -1}, {2, 1}}, "e" -> -1|>
+                    },
+                    "mu" -> 1
+                  |>
+                }
+              |>,
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_2",
+                "irrep_id" -> "E2",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}, {1, -1}}, "e" -> 1|>}, "mu" -> 1|>,
+                  <|"components" -> {<|"determinant" -> {{2, 1}, {2, -1}}, "e" -> 1|>}, "mu" -> 2|>
+                }
+              |>
+            },
+            "dim" -> 3,
+            "n" -> 2,
+            "partition" -> {2},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 1,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_2",
+                "irrep_id" -> "A2",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|"components" -> {<|"determinant" -> {{1, 1}, {2, 1}}, "e" -> 1|>}, "mu" -> 1|>
+                }
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 2,
+            "partition" -> {1, 1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 1,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 2
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 2,
+                "irrep" -> "E_7",
+                "irrep_id" -> "E7",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {1, -1}, {2, 1}}, "e" -> 1|>},
+                    "mu" -> 1
+                  |>,
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {2, 1}, {2, -1}}, "e" -> 1|>},
+                    "mu" -> 2
+                  |>
+                }
+              |>
+            },
+            "dim" -> 2,
+            "n" -> 3,
+            "partition" -> {2, 1},
+            "table" -> <|
+              "A1" -> 0,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 1
+            |>,
+            "twoS" -> 1
+          |>,
+          <|
+            "bases" -> {
+              <|
+                "dim" -> 1,
+                "irrep" -> "A_1",
+                "irrep_id" -> "A1",
+                "kappa" -> 1,
+                "vectors" -> {
+                  <|
+                    "components" -> {<|"determinant" -> {{1, 1}, {1, -1}, {2, 1}, {2, -1}}, "e" -> 1|>},
+                    "mu" -> 1
+                  |>
+                }
+              |>
+            },
+            "dim" -> 1,
+            "n" -> 4,
+            "partition" -> {2, 2},
+            "table" -> <|
+              "A1" -> 1,
+              "A2" -> 0,
+              "B1" -> 0,
+              "B2" -> 0,
+              "E1" -> 0,
+              "E2" -> 0,
+              "E3" -> 0,
+              "E4" -> 0,
+              "E5" -> 0,
+              "E6" -> 0,
+              "E7" -> 0
+            |>,
+            "twoS" -> 0
+          |>
+        }
+      |>
+    }
+  |>,
+  "subgroup_lattice" -> <|
+    "counts" -> <|
+      "g_classes" -> 14,
+      "g_classes_by_order" -> <|"1" -> 1, "16" -> 3, "2" -> 3, "32" -> 1, "4" -> 3, "8" -> 3|>,
+      "o3_classes" -> 13,
+      "o3_classes_by_order" -> <|"1" -> 1, "16" -> 3, "2" -> 2, "32" -> 1, "4" -> 3, "8" -> 3|>,
+      "subgroups" -> 36
+    |>,
+    "edges" -> {
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n00",
+        "upper" -> "n01",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0},
+          "lower_poles" -> {<|"kind" -> "none"|>},
+          "lower_symbols" -> {"E"},
+          "upper_elements" -> {0, 7}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n00",
+        "upper" -> "n02",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0},
+          "lower_poles" -> {<|"kind" -> "none"|>},
+          "lower_symbols" -> {"E"},
+          "upper_elements" -> {0, 8}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n00",
+        "upper" -> "n03",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0},
+          "lower_poles" -> {<|"kind" -> "none"|>},
+          "lower_symbols" -> {"E"},
+          "upper_elements" -> {0, 24}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n01",
+        "upper" -> "n04",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 7},
+          "lower_poles" -> {<|"kind" -> "none"|>, <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>},
+          "lower_symbols" -> {"E", "C_2"},
+          "upper_elements" -> {0, 3, 4, 7}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n01",
+        "upper" -> "n05",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 7},
+          "lower_poles" -> {<|"kind" -> "none"|>, <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>},
+          "lower_symbols" -> {"E", "C_2"},
+          "upper_elements" -> {0, 7, 8, 12}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n01",
+        "upper" -> "n06",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 7},
+          "lower_poles" -> {<|"kind" -> "none"|>, <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>},
+          "lower_symbols" -> {"E", "C_2"},
+          "upper_elements" -> {0, 7, 24, 28}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 2,
+        "index" -> 2,
+        "lower" -> "n02",
+        "upper" -> "n05",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 8},
+          "lower_poles" -> {<|"kind" -> "none"|>, <|"cartesian" -> {1, 0, 0}, "kind" -> "axis"|>},
+          "lower_symbols" -> {"E", "C_2"},
+          "upper_elements" -> {0, 7, 8, 12}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 2,
+        "index" -> 2,
+        "lower" -> "n03",
+        "upper" -> "n06",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 24},
+          "lower_poles" -> {
+            <|"kind" -> "none"|>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                (-1/2 Exp[2 Pi I/32] + 1/2 Exp[2 Pi I 15/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>
+          },
+          "lower_symbols" -> {"E", "sigma_d"},
+          "upper_elements" -> {0, 7, 24, 28}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n04",
+        "upper" -> "n07",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 3, 4, 7},
+          "lower_poles" -> {
+            <|"kind" -> "none"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>
+          },
+          "lower_symbols" -> {"E", "C_4", "C_4^3", "C_2"},
+          "upper_elements" -> {0, 1, 2, 3, 4, 5, 6, 7}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n04",
+        "upper" -> "n08",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 3, 4, 7},
+          "lower_poles" -> {
+            <|"kind" -> "none"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>
+          },
+          "lower_symbols" -> {"E", "C_4", "C_4^3", "C_2"},
+          "upper_elements" -> {0, 3, 4, 7, 8, 10, 12, 14}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n04",
+        "upper" -> "n09",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 3, 4, 7},
+          "lower_poles" -> {
+            <|"kind" -> "none"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>
+          },
+          "lower_symbols" -> {"E", "C_4", "C_4^3", "C_2"},
+          "upper_elements" -> {0, 3, 4, 7, 24, 26, 28, 30}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 2,
+        "index" -> 2,
+        "lower" -> "n05",
+        "upper" -> "n08",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 7, 8, 12},
+          "lower_poles" -> {
+            <|"kind" -> "none"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {1, 0, 0}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 1, 0}, "kind" -> "axis"|>
+          },
+          "lower_symbols" -> {"E", "C_2", "C_2", "C_2"},
+          "upper_elements" -> {0, 3, 4, 7, 8, 10, 12, 14}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 2,
+        "index" -> 2,
+        "lower" -> "n06",
+        "upper" -> "n09",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 7, 24, 28},
+          "lower_poles" -> {
+            <|"kind" -> "none"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                (-1/2 Exp[2 Pi I/32] + 1/2 Exp[2 Pi I 15/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+                (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>
+          },
+          "lower_symbols" -> {"E", "C_2", "sigma_d", "sigma_d"},
+          "upper_elements" -> {0, 3, 4, 7, 24, 26, 28, 30}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n07",
+        "upper" -> "n10",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 1, 2, 3, 4, 5, 6, 7},
+          "lower_poles" -> {
+            <|"kind" -> "none"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>
+          },
+          "lower_symbols" -> {"E", "C_8", "C_8^7", "C_4", "C_4^3", "C_8^3", "C_8^5", "C_2"},
+          "upper_elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n07",
+        "upper" -> "n11",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 1, 2, 3, 4, 5, 6, 7},
+          "lower_poles" -> {
+            <|"kind" -> "none"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>
+          },
+          "lower_symbols" -> {"E", "C_8", "C_8^7", "C_4", "C_4^3", "C_8^3", "C_8^5", "C_2"},
+          "upper_elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20, 21, 22, 23}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n07",
+        "upper" -> "n12",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 1, 2, 3, 4, 5, 6, 7},
+          "lower_poles" -> {
+            <|"kind" -> "none"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>
+          },
+          "lower_symbols" -> {"E", "C_8", "C_8^7", "C_4", "C_4^3", "C_8^3", "C_8^5", "C_2"},
+          "upper_elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 24, 25, 26, 27, 28, 29, 30, 31}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 2,
+        "index" -> 2,
+        "lower" -> "n08",
+        "upper" -> "n10",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 3, 4, 7, 8, 10, 12, 14},
+          "lower_poles" -> {
+            <|"kind" -> "none"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {1, 0, 0}, "kind" -> "axis"|>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                0
+              },
+              "kind" -> "axis"
+            |>,
+            <|"cartesian" -> {0, 1, 0}, "kind" -> "axis"|>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+                0
+              },
+              "kind" -> "axis"
+            |>
+          },
+          "lower_symbols" -> {"E", "C_4", "C_4^3", "C_2", "C_2", "C_2", "C_2", "C_2"},
+          "upper_elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 2,
+        "index" -> 2,
+        "lower" -> "n09",
+        "upper" -> "n12",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 3, 4, 7, 24, 26, 28, 30},
+          "lower_poles" -> {
+            <|"kind" -> "none"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                (-1/2 Exp[2 Pi I/32] + 1/2 Exp[2 Pi I 15/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+                (-1/2 Exp[2 Pi I 5/32] + 1/2 Exp[2 Pi I 11/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+                (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I 5/32] + -1/2 Exp[2 Pi I 11/32]),
+                (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>
+          },
+          "lower_symbols" -> {"E", "C_4", "C_4^3", "C_2", "sigma_d", "sigma_d", "sigma_d", "sigma_d"},
+          "upper_elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 24, 25, 26, 27, 28, 29, 30, 31}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n10",
+        "upper" -> "n13",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+          "lower_poles" -> {
+            <|"kind" -> "none"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {1, 0, 0}, "kind" -> "axis"|>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+                (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+                0
+              },
+              "kind" -> "axis"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                0
+              },
+              "kind" -> "axis"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+                (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+                0
+              },
+              "kind" -> "axis"
+            |>,
+            <|"cartesian" -> {0, 1, 0}, "kind" -> "axis"|>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+                (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+                0
+              },
+              "kind" -> "axis"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+                0
+              },
+              "kind" -> "axis"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+                (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+                0
+              },
+              "kind" -> "axis"
+            |>
+          },
+          "lower_symbols" -> {
+            "E",
+            "C_8",
+            "C_8^7",
+            "C_4",
+            "C_4^3",
+            "C_8^3",
+            "C_8^5",
+            "C_2",
+            "C_2",
+            "C_2",
+            "C_2",
+            "C_2",
+            "C_2",
+            "C_2",
+            "C_2",
+            "C_2"
+          },
+          "upper_elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n11",
+        "upper" -> "n13",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20, 21, 22, 23},
+          "lower_poles" -> {
+            <|"kind" -> "none"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>
+          },
+          "lower_symbols" -> {
+            "E",
+            "C_8",
+            "C_8^7",
+            "C_4",
+            "C_4^3",
+            "C_8^3",
+            "C_8^5",
+            "C_2",
+            "S_16",
+            "S_16^15",
+            "S_16^3",
+            "S_16^13",
+            "S_16^5",
+            "S_16^11",
+            "S_16^7",
+            "S_16^9"
+          },
+          "upper_elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31}
+        |>
+      |>,
+      <|
+        "embeddings_in_upper" -> 1,
+        "index" -> 2,
+        "lower" -> "n12",
+        "upper" -> "n13",
+        "witness" -> <|
+          "conjugator" -> 0,
+          "conjugator_symbol" -> "E",
+          "lower_elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 24, 25, 26, 27, 28, 29, 30, 31},
+          "lower_poles" -> {
+            <|"kind" -> "none"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                (-1/2 Exp[2 Pi I/32] + 1/2 Exp[2 Pi I 15/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I 5/32] + -1/2 Exp[2 Pi I 11/32]),
+                (-1/2 Exp[2 Pi I 3/32] + 1/2 Exp[2 Pi I 13/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+                (-1/2 Exp[2 Pi I 5/32] + 1/2 Exp[2 Pi I 11/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+                (-1/2 Exp[2 Pi I 7/32] + 1/2 Exp[2 Pi I 9/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+                (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+                (1/2 Exp[2 Pi I 5/32] + -1/2 Exp[2 Pi I 11/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I 5/32] + -1/2 Exp[2 Pi I 11/32]),
+                (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>,
+            <|
+              "cartesian" -> {
+                (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+                0
+              },
+              "kind" -> "plane_normal"
+            |>
+          },
+          "lower_symbols" -> {
+            "E",
+            "C_8",
+            "C_8^7",
+            "C_4",
+            "C_4^3",
+            "C_8^3",
+            "C_8^5",
+            "C_2",
+            "sigma_d",
+            "sigma_d",
+            "sigma_d",
+            "sigma_d",
+            "sigma_d",
+            "sigma_d",
+            "sigma_d",
+            "sigma_d"
+          },
+          "upper_elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31}
+        |>
+      |>
+    },
+    "nodes" -> {
+      <|
+        "centralizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+          "node" -> "n13"
+        |>,
+        "class_size" -> 1,
+        "embedding" -> <|
+          "kind" -> "G-conjugacy class of subgroups",
+          "members" -> {<|"conjugator" -> 0, "conjugator_symbol" -> "E", "elements" -> {0}|>},
+          "representative" -> <|
+            "class_ids" -> {"E"},
+            "elements" -> {0},
+            "poles" -> {<|"kind" -> "none"|>},
+            "symbols" -> {"E"}
+          |>
+        |>,
+        "id" -> "n00",
+        "index" -> 32,
+        "normal" -> True,
+        "normalizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+          "node" -> "n13"
+        |>,
+        "normalizer_order" -> 32,
+        "o3_class" -> "C1",
+        "o3_schoenflies" -> "C_1",
+        "order" -> 1
+      |>,
+      <|
+        "centralizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+          "node" -> "n13"
+        |>,
+        "class_size" -> 1,
+        "embedding" -> <|
+          "kind" -> "G-conjugacy class of subgroups",
+          "members" -> {<|"conjugator" -> 0, "conjugator_symbol" -> "E", "elements" -> {0, 7}|>},
+          "representative" -> <|
+            "class_ids" -> {"C2", "E"},
+            "elements" -> {0, 7},
+            "poles" -> {<|"kind" -> "none"|>, <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>},
+            "symbols" -> {"E", "C_2"}
+          |>
+        |>,
+        "id" -> "n01",
+        "index" -> 16,
+        "normal" -> True,
+        "normalizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+          "node" -> "n13"
+        |>,
+        "normalizer_order" -> 32,
+        "o3_class" -> "C2",
+        "o3_schoenflies" -> "C_2",
+        "order" -> 2
+      |>,
+      <|
+        "centralizer" -> <|"elements" -> {0, 7, 8, 12}, "node" -> "n05"|>,
+        "class_size" -> 8,
+        "embedding" -> <|
+          "kind" -> "G-conjugacy class of subgroups",
+          "members" -> {
+            <|"conjugator" -> 0, "conjugator_symbol" -> "E", "elements" -> {0, 8}|>,
+            <|"conjugator" -> 16, "conjugator_symbol" -> "S_16", "elements" -> {0, 9}|>,
+            <|"conjugator" -> 1, "conjugator_symbol" -> "C_8", "elements" -> {0, 10}|>,
+            <|"conjugator" -> 18, "conjugator_symbol" -> "S_16^3", "elements" -> {0, 11}|>,
+            <|"conjugator" -> 3, "conjugator_symbol" -> "C_4", "elements" -> {0, 12}|>,
+            <|"conjugator" -> 19, "conjugator_symbol" -> "S_16^13", "elements" -> {0, 13}|>,
+            <|"conjugator" -> 2, "conjugator_symbol" -> "C_8^7", "elements" -> {0, 14}|>,
+            <|"conjugator" -> 17, "conjugator_symbol" -> "S_16^15", "elements" -> {0, 15}|>
+          },
+          "representative" -> <|
+            "class_ids" -> {"C2p", "E"},
+            "elements" -> {0, 8},
+            "poles" -> {<|"kind" -> "none"|>, <|"cartesian" -> {1, 0, 0}, "kind" -> "axis"|>},
+            "symbols" -> {"E", "C_2"}
+          |>
+        |>,
+        "id" -> "n02",
+        "index" -> 16,
+        "normal" -> False,
+        "normalizer" -> <|"elements" -> {0, 7, 8, 12}, "node" -> "n05"|>,
+        "normalizer_order" -> 4,
+        "o3_class" -> "C2",
+        "o3_schoenflies" -> "C_2",
+        "order" -> 2
+      |>,
+      <|
+        "centralizer" -> <|"elements" -> {0, 7, 24, 28}, "node" -> "n06"|>,
+        "class_size" -> 8,
+        "embedding" -> <|
+          "kind" -> "G-conjugacy class of subgroups",
+          "members" -> {
+            <|"conjugator" -> 0, "conjugator_symbol" -> "E", "elements" -> {0, 24}|>,
+            <|"conjugator" -> 9, "conjugator_symbol" -> "C_2", "elements" -> {0, 25}|>,
+            <|"conjugator" -> 1, "conjugator_symbol" -> "C_8", "elements" -> {0, 26}|>,
+            <|"conjugator" -> 10, "conjugator_symbol" -> "C_2", "elements" -> {0, 27}|>,
+            <|"conjugator" -> 3, "conjugator_symbol" -> "C_4", "elements" -> {0, 28}|>,
+            <|"conjugator" -> 11, "conjugator_symbol" -> "C_2", "elements" -> {0, 29}|>,
+            <|"conjugator" -> 2, "conjugator_symbol" -> "C_8^7", "elements" -> {0, 30}|>,
+            <|"conjugator" -> 8, "conjugator_symbol" -> "C_2", "elements" -> {0, 31}|>
+          },
+          "representative" -> <|
+            "class_ids" -> {"E", "sd"},
+            "elements" -> {0, 24},
+            "poles" -> {
+              <|"kind" -> "none"|>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                  (-1/2 Exp[2 Pi I/32] + 1/2 Exp[2 Pi I 15/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>
+            },
+            "symbols" -> {"E", "sigma_d"}
+          |>
+        |>,
+        "id" -> "n03",
+        "index" -> 16,
+        "normal" -> False,
+        "normalizer" -> <|"elements" -> {0, 7, 24, 28}, "node" -> "n06"|>,
+        "normalizer_order" -> 4,
+        "o3_class" -> "C1v",
+        "o3_schoenflies" -> "C_s",
+        "order" -> 2
+      |>,
+      <|
+        "centralizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20, 21, 22, 23},
+          "node" -> "n11"
+        |>,
+        "class_size" -> 1,
+        "embedding" -> <|
+          "kind" -> "G-conjugacy class of subgroups",
+          "members" -> {<|"conjugator" -> 0, "conjugator_symbol" -> "E", "elements" -> {0, 3, 4, 7}|>},
+          "representative" -> <|
+            "class_ids" -> {"C2", "C4", "E"},
+            "elements" -> {0, 3, 4, 7},
+            "poles" -> {
+              <|"kind" -> "none"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>
+            },
+            "symbols" -> {"E", "C_4", "C_4^3", "C_2"}
+          |>
+        |>,
+        "id" -> "n04",
+        "index" -> 8,
+        "normal" -> True,
+        "normalizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+          "node" -> "n13"
+        |>,
+        "normalizer_order" -> 32,
+        "o3_class" -> "C4",
+        "o3_schoenflies" -> "C_4",
+        "order" -> 4
+      |>,
+      <|
+        "centralizer" -> <|"elements" -> {0, 7, 8, 12}, "node" -> "n05"|>,
+        "class_size" -> 4,
+        "embedding" -> <|
+          "kind" -> "G-conjugacy class of subgroups",
+          "members" -> {
+            <|"conjugator" -> 0, "conjugator_symbol" -> "E", "elements" -> {0, 7, 8, 12}|>,
+            <|"conjugator" -> 16, "conjugator_symbol" -> "S_16", "elements" -> {0, 7, 9, 13}|>,
+            <|"conjugator" -> 1, "conjugator_symbol" -> "C_8", "elements" -> {0, 7, 10, 14}|>,
+            <|
+              "conjugator" -> 17,
+              "conjugator_symbol" -> "S_16^15",
+              "elements" -> {0, 7, 11, 15}
+            |>
+          },
+          "representative" -> <|
+            "class_ids" -> {"C2", "C2p", "E"},
+            "elements" -> {0, 7, 8, 12},
+            "poles" -> {
+              <|"kind" -> "none"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {1, 0, 0}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 1, 0}, "kind" -> "axis"|>
+            },
+            "symbols" -> {"E", "C_2", "C_2", "C_2"}
+          |>
+        |>,
+        "id" -> "n05",
+        "index" -> 8,
+        "normal" -> False,
+        "normalizer" -> <|"elements" -> {0, 3, 4, 7, 8, 10, 12, 14}, "node" -> "n08"|>,
+        "normalizer_order" -> 8,
+        "o3_class" -> "D2",
+        "o3_schoenflies" -> "D_2",
+        "order" -> 4
+      |>,
+      <|
+        "centralizer" -> <|"elements" -> {0, 7, 24, 28}, "node" -> "n06"|>,
+        "class_size" -> 4,
+        "embedding" -> <|
+          "kind" -> "G-conjugacy class of subgroups",
+          "members" -> {
+            <|"conjugator" -> 0, "conjugator_symbol" -> "E", "elements" -> {0, 7, 24, 28}|>,
+            <|"conjugator" -> 9, "conjugator_symbol" -> "C_2", "elements" -> {0, 7, 25, 29}|>,
+            <|"conjugator" -> 1, "conjugator_symbol" -> "C_8", "elements" -> {0, 7, 26, 30}|>,
+            <|"conjugator" -> 8, "conjugator_symbol" -> "C_2", "elements" -> {0, 7, 27, 31}|>
+          },
+          "representative" -> <|
+            "class_ids" -> {"C2", "E", "sd"},
+            "elements" -> {0, 7, 24, 28},
+            "poles" -> {
+              <|"kind" -> "none"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                  (-1/2 Exp[2 Pi I/32] + 1/2 Exp[2 Pi I 15/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+                  (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>
+            },
+            "symbols" -> {"E", "C_2", "sigma_d", "sigma_d"}
+          |>
+        |>,
+        "id" -> "n06",
+        "index" -> 8,
+        "normal" -> False,
+        "normalizer" -> <|"elements" -> {0, 3, 4, 7, 24, 26, 28, 30}, "node" -> "n09"|>,
+        "normalizer_order" -> 8,
+        "o3_class" -> "C2v",
+        "o3_schoenflies" -> "C_2v",
+        "order" -> 4
+      |>,
+      <|
+        "centralizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20, 21, 22, 23},
+          "node" -> "n11"
+        |>,
+        "class_size" -> 1,
+        "embedding" -> <|
+          "kind" -> "G-conjugacy class of subgroups",
+          "members" -> {
+            <|
+              "conjugator" -> 0,
+              "conjugator_symbol" -> "E",
+              "elements" -> {0, 1, 2, 3, 4, 5, 6, 7}
+            |>
+          },
+          "representative" -> <|
+            "class_ids" -> {"C2", "C4", "C8", "C83", "E"},
+            "elements" -> {0, 1, 2, 3, 4, 5, 6, 7},
+            "poles" -> {
+              <|"kind" -> "none"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>
+            },
+            "symbols" -> {"E", "C_8", "C_8^7", "C_4", "C_4^3", "C_8^3", "C_8^5", "C_2"}
+          |>
+        |>,
+        "id" -> "n07",
+        "index" -> 4,
+        "normal" -> True,
+        "normalizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+          "node" -> "n13"
+        |>,
+        "normalizer_order" -> 32,
+        "o3_class" -> "C8",
+        "o3_schoenflies" -> "C_8",
+        "order" -> 8
+      |>,
+      <|
+        "centralizer" -> <|"elements" -> {0, 7}, "node" -> "n01"|>,
+        "class_size" -> 2,
+        "embedding" -> <|
+          "kind" -> "G-conjugacy class of subgroups",
+          "members" -> {
+            <|
+              "conjugator" -> 0,
+              "conjugator_symbol" -> "E",
+              "elements" -> {0, 3, 4, 7, 8, 10, 12, 14}
+            |>,
+            <|
+              "conjugator" -> 16,
+              "conjugator_symbol" -> "S_16",
+              "elements" -> {0, 3, 4, 7, 9, 11, 13, 15}
+            |>
+          },
+          "representative" -> <|
+            "class_ids" -> {"C2", "C2p", "C4", "E"},
+            "elements" -> {0, 3, 4, 7, 8, 10, 12, 14},
+            "poles" -> {
+              <|"kind" -> "none"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {1, 0, 0}, "kind" -> "axis"|>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                  (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                  0
+                },
+                "kind" -> "axis"
+              |>,
+              <|"cartesian" -> {0, 1, 0}, "kind" -> "axis"|>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                  (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+                  0
+                },
+                "kind" -> "axis"
+              |>
+            },
+            "symbols" -> {"E", "C_4", "C_4^3", "C_2", "C_2", "C_2", "C_2", "C_2"}
+          |>
+        |>,
+        "id" -> "n08",
+        "index" -> 4,
+        "normal" -> False,
+        "normalizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+          "node" -> "n10"
+        |>,
+        "normalizer_order" -> 16,
+        "o3_class" -> "D4",
+        "o3_schoenflies" -> "D_4",
+        "order" -> 8
+      |>,
+      <|
+        "centralizer" -> <|"elements" -> {0, 7}, "node" -> "n01"|>,
+        "class_size" -> 2,
+        "embedding" -> <|
+          "kind" -> "G-conjugacy class of subgroups",
+          "members" -> {
+            <|
+              "conjugator" -> 0,
+              "conjugator_symbol" -> "E",
+              "elements" -> {0, 3, 4, 7, 24, 26, 28, 30}
+            |>,
+            <|
+              "conjugator" -> 8,
+              "conjugator_symbol" -> "C_2",
+              "elements" -> {0, 3, 4, 7, 25, 27, 29, 31}
+            |>
+          },
+          "representative" -> <|
+            "class_ids" -> {"C2", "C4", "E", "sd"},
+            "elements" -> {0, 3, 4, 7, 24, 26, 28, 30},
+            "poles" -> {
+              <|"kind" -> "none"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                  (-1/2 Exp[2 Pi I/32] + 1/2 Exp[2 Pi I 15/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+                  (-1/2 Exp[2 Pi I 5/32] + 1/2 Exp[2 Pi I 11/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+                  (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 5/32] + -1/2 Exp[2 Pi I 11/32]),
+                  (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>
+            },
+            "symbols" -> {"E", "C_4", "C_4^3", "C_2", "sigma_d", "sigma_d", "sigma_d", "sigma_d"}
+          |>
+        |>,
+        "id" -> "n09",
+        "index" -> 4,
+        "normal" -> False,
+        "normalizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 24, 25, 26, 27, 28, 29, 30, 31},
+          "node" -> "n12"
+        |>,
+        "normalizer_order" -> 16,
+        "o3_class" -> "C4v",
+        "o3_schoenflies" -> "C_4v",
+        "order" -> 8
+      |>,
+      <|
+        "centralizer" -> <|"elements" -> {0, 7}, "node" -> "n01"|>,
+        "class_size" -> 1,
+        "embedding" -> <|
+          "kind" -> "G-conjugacy class of subgroups",
+          "members" -> {
+            <|
+              "conjugator" -> 0,
+              "conjugator_symbol" -> "E",
+              "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+            |>
+          },
+          "representative" -> <|
+            "class_ids" -> {"C2", "C2p", "C4", "C8", "C83", "E"},
+            "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+            "poles" -> {
+              <|"kind" -> "none"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {1, 0, 0}, "kind" -> "axis"|>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+                  (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+                  0
+                },
+                "kind" -> "axis"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                  (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                  0
+                },
+                "kind" -> "axis"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+                  (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+                  0
+                },
+                "kind" -> "axis"
+              |>,
+              <|"cartesian" -> {0, 1, 0}, "kind" -> "axis"|>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+                  (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+                  0
+                },
+                "kind" -> "axis"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                  (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+                  0
+                },
+                "kind" -> "axis"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+                  (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+                  0
+                },
+                "kind" -> "axis"
+              |>
+            },
+            "symbols" -> {
+              "E",
+              "C_8",
+              "C_8^7",
+              "C_4",
+              "C_4^3",
+              "C_8^3",
+              "C_8^5",
+              "C_2",
+              "C_2",
+              "C_2",
+              "C_2",
+              "C_2",
+              "C_2",
+              "C_2",
+              "C_2",
+              "C_2"
+            }
+          |>
+        |>,
+        "id" -> "n10",
+        "index" -> 2,
+        "normal" -> True,
+        "normalizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+          "node" -> "n13"
+        |>,
+        "normalizer_order" -> 32,
+        "o3_class" -> "D8",
+        "o3_schoenflies" -> "D_8",
+        "order" -> 16
+      |>,
+      <|
+        "centralizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20, 21, 22, 23},
+          "node" -> "n11"
+        |>,
+        "class_size" -> 1,
+        "embedding" -> <|
+          "kind" -> "G-conjugacy class of subgroups",
+          "members" -> {
+            <|
+              "conjugator" -> 0,
+              "conjugator_symbol" -> "E",
+              "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20, 21, 22, 23}
+            |>
+          },
+          "representative" -> <|
+            "class_ids" -> {"C2", "C4", "C8", "C83", "E", "S16", "S163", "S165", "S167"},
+            "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20, 21, 22, 23},
+            "poles" -> {
+              <|"kind" -> "none"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>
+            },
+            "symbols" -> {
+              "E",
+              "C_8",
+              "C_8^7",
+              "C_4",
+              "C_4^3",
+              "C_8^3",
+              "C_8^5",
+              "C_2",
+              "S_16",
+              "S_16^15",
+              "S_16^3",
+              "S_16^13",
+              "S_16^5",
+              "S_16^11",
+              "S_16^7",
+              "S_16^9"
+            }
+          |>
+        |>,
+        "id" -> "n11",
+        "index" -> 2,
+        "normal" -> True,
+        "normalizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+          "node" -> "n13"
+        |>,
+        "normalizer_order" -> 32,
+        "o3_class" -> "S16",
+        "o3_schoenflies" -> "S_16",
+        "order" -> 16
+      |>,
+      <|
+        "centralizer" -> <|"elements" -> {0, 7}, "node" -> "n01"|>,
+        "class_size" -> 1,
+        "embedding" -> <|
+          "kind" -> "G-conjugacy class of subgroups",
+          "members" -> {
+            <|
+              "conjugator" -> 0,
+              "conjugator_symbol" -> "E",
+              "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 24, 25, 26, 27, 28, 29, 30, 31}
+            |>
+          },
+          "representative" -> <|
+            "class_ids" -> {"C2", "C4", "C8", "C83", "E", "sd"},
+            "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 24, 25, 26, 27, 28, 29, 30, 31},
+            "poles" -> {
+              <|"kind" -> "none"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                  (-1/2 Exp[2 Pi I/32] + 1/2 Exp[2 Pi I 15/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 5/32] + -1/2 Exp[2 Pi I 11/32]),
+                  (-1/2 Exp[2 Pi I 3/32] + 1/2 Exp[2 Pi I 13/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+                  (-1/2 Exp[2 Pi I 5/32] + 1/2 Exp[2 Pi I 11/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+                  (-1/2 Exp[2 Pi I 7/32] + 1/2 Exp[2 Pi I 9/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+                  (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+                  (1/2 Exp[2 Pi I 5/32] + -1/2 Exp[2 Pi I 11/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 5/32] + -1/2 Exp[2 Pi I 11/32]),
+                  (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                  (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>
+            },
+            "symbols" -> {
+              "E",
+              "C_8",
+              "C_8^7",
+              "C_4",
+              "C_4^3",
+              "C_8^3",
+              "C_8^5",
+              "C_2",
+              "sigma_d",
+              "sigma_d",
+              "sigma_d",
+              "sigma_d",
+              "sigma_d",
+              "sigma_d",
+              "sigma_d",
+              "sigma_d"
+            }
+          |>
+        |>,
+        "id" -> "n12",
+        "index" -> 2,
+        "normal" -> True,
+        "normalizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+          "node" -> "n13"
+        |>,
+        "normalizer_order" -> 32,
+        "o3_class" -> "C8v",
+        "o3_schoenflies" -> "C_8v",
+        "order" -> 16
+      |>,
+      <|
+        "centralizer" -> <|"elements" -> {0, 7}, "node" -> "n01"|>,
+        "class_size" -> 1,
+        "embedding" -> <|
+          "kind" -> "G-conjugacy class of subgroups",
+          "members" -> {
+            <|
+              "conjugator" -> 0,
+              "conjugator_symbol" -> "E",
+              "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31}
+            |>
+          },
+          "representative" -> <|
+            "class_ids" -> {"C2", "C2p", "C4", "C8", "C83", "E", "S16", "S163", "S165", "S167", "sd"},
+            "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+            "poles" -> {
+              <|"kind" -> "none"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {1, 0, 0}, "kind" -> "axis"|>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+                  (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+                  0
+                },
+                "kind" -> "axis"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                  (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                  0
+                },
+                "kind" -> "axis"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+                  (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+                  0
+                },
+                "kind" -> "axis"
+              |>,
+              <|"cartesian" -> {0, 1, 0}, "kind" -> "axis"|>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 3/16] + -1/2 Exp[2 Pi I 5/16]),
+                  (-1/2 Exp[2 Pi I/16] + 1/2 Exp[2 Pi I 7/16]),
+                  0
+                },
+                "kind" -> "axis"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+                  (-1/2 Exp[2 Pi I/8] + 1/2 Exp[2 Pi I 3/8]),
+                  0
+                },
+                "kind" -> "axis"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/16] + -1/2 Exp[2 Pi I 7/16]),
+                  (-1/2 Exp[2 Pi I 3/16] + 1/2 Exp[2 Pi I 5/16]),
+                  0
+                },
+                "kind" -> "axis"
+              |>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                  (-1/2 Exp[2 Pi I/32] + 1/2 Exp[2 Pi I 15/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 5/32] + -1/2 Exp[2 Pi I 11/32]),
+                  (-1/2 Exp[2 Pi I 3/32] + 1/2 Exp[2 Pi I 13/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+                  (-1/2 Exp[2 Pi I 5/32] + 1/2 Exp[2 Pi I 11/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+                  (-1/2 Exp[2 Pi I 7/32] + 1/2 Exp[2 Pi I 9/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+                  (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+                  (1/2 Exp[2 Pi I 5/32] + -1/2 Exp[2 Pi I 11/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 5/32] + -1/2 Exp[2 Pi I 11/32]),
+                  (1/2 Exp[2 Pi I 3/32] + -1/2 Exp[2 Pi I 13/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>,
+              <|
+                "cartesian" -> {
+                  (1/2 Exp[2 Pi I 7/32] + -1/2 Exp[2 Pi I 9/32]),
+                  (1/2 Exp[2 Pi I/32] + -1/2 Exp[2 Pi I 15/32]),
+                  0
+                },
+                "kind" -> "plane_normal"
+              |>
+            },
+            "symbols" -> {
+              "E",
+              "C_8",
+              "C_8^7",
+              "C_4",
+              "C_4^3",
+              "C_8^3",
+              "C_8^5",
+              "C_2",
+              "C_2",
+              "C_2",
+              "C_2",
+              "C_2",
+              "C_2",
+              "C_2",
+              "C_2",
+              "C_2",
+              "S_16",
+              "S_16^15",
+              "S_16^3",
+              "S_16^13",
+              "S_16^5",
+              "S_16^11",
+              "S_16^7",
+              "S_16^9",
+              "sigma_d",
+              "sigma_d",
+              "sigma_d",
+              "sigma_d",
+              "sigma_d",
+              "sigma_d",
+              "sigma_d",
+              "sigma_d"
+            }
+          |>
+        |>,
+        "id" -> "n13",
+        "index" -> 1,
+        "normal" -> True,
+        "normalizer" -> <|
+          "elements" -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+          "node" -> "n13"
+        |>,
+        "normalizer_order" -> 32,
+        "o3_class" -> "D8d",
+        "o3_schoenflies" -> "D_8d",
+        "order" -> 32
+      |>
+    }
+  |>
+|>;
