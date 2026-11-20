@@ -5,7 +5,14 @@ corrections, and suggestions are welcome through GitHub Issues.
 Please do not submit pull requests or substantial replacement
 text or code at this stage.
 
-This project is not currently offered under an open-source or
-open-content license. No license is granted to reproduce, modify,
-distribute, or otherwise use the contents of this repository,
-except as permitted by applicable law or the GitHub Terms of Service.
+Permission is granted to download the files of this repository,
+including those served on its website, to keep copies of them, and
+to use them to test or compare software, tables, or calculations.
+Tests may read the files, or quote individual values from them,
+provided that they cite the Point Group Atlas and the commit used.
+The results of such tests may be published.
+
+No other license is granted. This project is not currently offered
+under an open-source or open-content license, and its contents may
+not otherwise be reproduced, modified, distributed, or used, except
+as permitted by applicable law or the GitHub Terms of Service.

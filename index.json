@@ -83,10 +83,10 @@
   ],
   "files": [
     {
-      "bytes": 14743,
+      "bytes": 15147,
       "format": "markdown",
       "path": "README.md",
-      "sha256": "807853cf246b9459e8268c95145fe73b29dcb17ac934463a1e8aa1a7702b37ca"
+      "sha256": "f243a95355c4cf146cdb4c485dc4a52be9e7e0126304eaa5c7ed6246f1278120"
     },
     {
       "bytes": 26245,
@@ -107,10 +107,10 @@
       "sha256": "f54e68d66faa81c613d46ed2109ee7ed34cff976824d4547d62db9eba64573c5"
     },
     {
-      "bytes": 535,
+      "bytes": 913,
       "format": "text",
       "path": "LICENSE",
-      "sha256": "d8a1b9ed5a5e3005610465b73c276cd04ce0e6a15c375e1003eae94659833ceb"
+      "sha256": "5321aca9eee531283717ef7949bfd7390df6336ca6964bfde51d605fb399c7ff"
     }
   ],
   "records": [

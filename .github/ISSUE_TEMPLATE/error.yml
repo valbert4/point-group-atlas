@@ -1,0 +1,33 @@
+name: Report an error
+description: A wrong value, symbol or statement in the tables, the conventions, the PDFs or the site.
+title: "Error: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One error per report, please. The site's "Report an error" link fills in the address and the version.
+  - type: input
+    id: address
+    attributes:
+      label: Where
+      description: The address on the site, or the PDF and its section, table or equation number.
+      placeholder: https://valbert4.github.io/point-group-atlas/rotation/C3v/character_table/
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: What is wrong
+      description: The entry as it stands, and what it should be.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: How you know
+      description: A reference (with its table or equation) or a computation.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The site's link fills this in; for a volume PDF, the commit on its title sheet.

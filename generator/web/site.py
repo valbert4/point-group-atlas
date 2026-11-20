@@ -23,6 +23,7 @@ import posixpath
 import re
 import subprocess
 import unicodedata
+import urllib.parse
 
 from .. import names
 from ..formats import conventions, latex, lint, notation, style, volume
@@ -201,10 +202,36 @@ def digest_of(name):
     return _DIGESTS[name]
 
 
+# The foot's "Report an error" opens GitHub's form for a new issue (.github/ISSUE_TEMPLATE/error.yml)
+# with the file's address on the site (ADDRESS, the site's home on github.io), the commit the site
+# is built from and the file's place filled in.
+ADDRESS = "https://valbert4.github.io/point-group-atlas/"
+ERROR_FORM = "error.yml"
+_BUILT_FROM = []
+
+
+def report_url(here, title):
+    """The new issue of an error on the file at `here` whose <title> is `title`: its title is the
+    file's place, most general first ("2Cinfv, 2.2 Representation matrices: "), its fields
+    address and version the file's address and the commit."""
+    if not _BUILT_FROM:
+        _BUILT_FROM.append(data.commit())
+    query = [("template", ERROR_FORM)]
+    parts = title.split(" · ")
+    if parts[-1] == style.TITLE:
+        parts.pop()
+    if parts:
+        query.append(("title", ", ".join(reversed(parts)) + ": "))
+    query += [("address", ADDRESS + (here or "")), ("version", _BUILT_FROM[0])]
+    return "%s/issues/new?%s" % (volume.REPOSITORY,
+                                 urllib.parse.urlencode(query, quote_via=urllib.parse.quote))
+
+
 def frame(here, title, body, catalogue=None, crumbs=(), tabs="", pager=""):
     """A file of the site at `here`: the tab icon, the bar (the mark and the atlas, the volume,
     the repository, and the day and night button of site.js), the breadcrumbs (pairs of (site
-    path or None, html)), the tabs, the body and the pager.  The files of a volume carry its
+    path or None, html)), the tabs, the body, the pager and the foot (the repository and its form
+    for reporting an error, report_url).  The files of a volume carry its
     class volume-<catalogue> and its icon; those of the atlas itself (the home, the references)
     the class volume-home and the icon of the four colors."""
     root = rel(here, "") if here else ""
@@ -227,7 +254,9 @@ def frame(here, title, body, catalogue=None, crumbs=(), tabs="", pager=""):
         "volume_link": volume_link, "crumbs": trail,
         "tabs": tabs, "body": body, "pager": pager, "css": digest_of("site.css"),
         "js": digest_of("site.js"),
-        "foot": '%s &middot; <a href="%s">GitHub</a>' % (esc(style.TITLE), volume.REPOSITORY)}
+        "foot": '%s &middot; <a href="%s">GitHub</a> &middot; <a class="report" href="%s" '
+                'target="_blank" rel="noopener">Report an error</a>' % (
+                    esc(style.TITLE), volume.REPOSITORY, attr(report_url(here, title)))}
 
 
 # ---------------------------------------------------------------- the site

@@ -196,6 +196,11 @@ references.bib.
 
 ## License
 
-All rights reserved (`LICENSE`). The repository is shared for community review: comments,
-corrections and suggestions are welcome through GitHub Issues. `generator/web/OFL.txt` is the SIL
+All rights reserved (`LICENSE`), with one permission: anyone may download the files, keep copies
+and test software, tables or calculations against them; a test may read the files or quote
+individual values from them, citing the atlas and the commit. The repository is shared for
+community review: comments, corrections and suggestions are welcome through GitHub Issues, and an
+error has its own form
+([Report an error](https://github.com/valbert4/point-group-atlas/issues/new?template=error.yml),
+linked at the foot of the site with the address filled in). `generator/web/OFL.txt` is the SIL
 Open Font License 1.1 of the STIX Two fonts, which the site serves beside them.

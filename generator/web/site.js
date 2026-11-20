@@ -67,3 +67,22 @@
     });
   });
 })();
+
+/* The foot's "Report an error" (a.report) opens GitHub's form with the file's address in the
+   field address; when the address bar has a fragment (a display, a row of the notation), the
+   field gets it too, so that the report names the place the reader came to. */
+(function () {
+  function place() {
+    var link = document.querySelector("a.report");
+    if (!link || !window.URL) return;
+    try {
+      var url = new URL(link.href);
+      var address = url.searchParams.get("address");
+      if (!address) return;
+      url.searchParams.set("address", address.split("#")[0] + window.location.hash);
+      link.href = url.toString();
+    } catch (e) { /* the link as the site wrote it */ }
+  }
+  place();
+  window.addEventListener("hashchange", place);
+})();
