@@ -4,7 +4,9 @@ restricted to 2G, the spin even under the inversion.  A finite preimage has them
 of its record (with the covered group's vector products) and the multiplicities of D^(S,+1): at
 half-integer S its subduction from Pin-(3), at integer S the covered group's subduction from O(3).
 A continuous preimage has them for the vector instances of index at most 3 from the characters
-(continuous.spin_orbit), its terms named by their labels (and the id of a spinor instance)."""
+(continuous.spin_orbit), its terms named by their labels (and the id of a spinor instance): in SU2
+and Pinminus3 the levels D^(J) (D^(J,p)), J = |L - S|, ..., L + S, of the orbital level D^(L)
+(D^(L,p))."""
 
 TWOS_MAX = 7                 # S <= 7/2, every spin of a d or f configuration
 
@@ -39,7 +41,7 @@ def finite_block(doc, covered):
 
 
 def continuous_block(base):
-    """spin_orbit_levels of an axial continuous preimage, from continuous.spin_orbit."""
+    """spin_orbit_levels of a continuous preimage, from continuous.spin_orbit."""
     from . import continuous as K
     ids = {}
     for f in K.families(base):

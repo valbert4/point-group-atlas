@@ -372,6 +372,18 @@ o3d := rec(
     ("vector_products") := "rotation/Dinf#/clebsch_gordan"
   ),
   ("domain") := "continuous",
+  ("fundamental_domain") := rec(
+    ("image") := "rotation/Dinf#/fundamental_domain",
+    ("space") := rec(
+      ("lens") := rec( ("reason") := "not-defined-for-family", ("value") := fail ),
+      ("name") := "projective plane"
+    ),
+    ("volumes") := rec(
+      ("domain") := rec( ("coefficient") := [ 4, 1 ], ("dimension") := 2, ("pi_power") := 1 ),
+      ("group") := rec( ("coefficient") := [ 8, 1 ], ("dimension") := 1, ("pi_power") := 1 ),
+      ("pin_minus_3") := rec( ("coefficient") := [ 32, 1 ], ("dimension") := 3, ("pi_power") := 2 )
+    )
+  ),
   ("fusion") := rec(
     ("condition_grammar") := [ "always", "m == n", "m != n", "m > n", "m < n" ],
     ("families") := [ "A1", "A2", "E", "Eh" ],
@@ -489,6 +501,17 @@ o3d := rec(
       ("hilbert_series") := rec( ("denominator") := [ 4 ], ("numerator") := [ 1 ] ),
       ("image") := "N(U(1))",
       ("relation") := fail
+    ),
+    ("molien") := rec(
+      ("families") := [
+        rec(
+          ("dim") := 2,
+          ("family") := "Eh",
+          ("hilbert_series") := rec( ("denominator") := [ 4 ], ("numerator") := [ 1 ] ),
+          ("label_template") := "E_n"
+        )
+      ],
+      ("levels") := []
     )
   ),
   ("jj_configurations") := rec(
@@ -2561,6 +2584,9 @@ o3d := rec(
           ("symbol") := "2C_inf"
         ),
         ("class_ids") := [ "Cphi" ],
+        ("class_size") := 1,
+        ("index") := 2,
+        ("normal") := true,
         ("normalizer") := rec(
           ("order") := rec( ("reason") := "continuous-group", ("value") := fail ),
           ("symbol") := "2D_inf"
@@ -8412,6 +8438,7 @@ o3d := rec(
           )
         ]
       )
-    ]
+    ],
+    ("vector_rules") := "rotation/Dinf#/subduction_subgroups/rules"
   )
 );

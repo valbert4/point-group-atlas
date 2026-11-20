@@ -309948,6 +309948,945 @@ o3t := rec(
     ],
     ("rule") := "D^(J,p) | O(3) = D^(J,p)"
   ),
+  ("subduction_rules") := rec(
+    ("continuous") := [
+      rec(
+        ("cases") := [
+          rec( ("if") := "m = 0", ("terms") := [ "A" ] ),
+          rec( ("if") := "m > 0", ("terms") := [ "1E_{m}" ] ),
+          rec( ("if") := "m < 0", ("terms") := [ "2E_{-m}" ] )
+        ],
+        ("generating_function") := rec(
+          ("families") := [
+            rec(
+              ("denominator") := [ 1 ],
+              ("family") := "A",
+              ("label_template") := "A",
+              ("numerator") := "1"
+            ),
+            rec(
+              ("denominator") := [ 1 ],
+              ("family") := "1E",
+              ("label_template") := "1E_n",
+              ("numerator") := "t^n"
+            ),
+            rec(
+              ("denominator") := [ 1 ],
+              ("family") := "2E",
+              ("label_template") := "2E_n",
+              ("numerator") := "t^n"
+            )
+          ]
+        ),
+        ("subgroup") := rec( ("o3_class") := "Cinf", ("schoenflies") := "C_inf" ),
+        ("sum") := rec( ("from") := "-J", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | C_inf = A + sum_{n=1..J} (1E_n + 2E_n) for both p"
+      ),
+      rec(
+        ("cases") := [
+          rec( ("if") := "m = 0", ("terms") := [ "A" ] ),
+          rec( ("if") := "m > 0", ("terms") := [ "1E_{m}" ] ),
+          rec( ("if") := "m < 0", ("terms") := [ "2E_{-m}" ] )
+        ],
+        ("generating_function") := rec(
+          ("families") := [
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "Ag",
+              ("label_template") := "A_g",
+              ("numerator") := "1"
+            ),
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "1Eg",
+              ("label_template") := "1E_ng",
+              ("numerator") := "t^(2*ceil(n/2))"
+            ),
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "2Eg",
+              ("label_template") := "2E_ng",
+              ("numerator") := "t^(2*ceil(n/2))"
+            ),
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "Au",
+              ("label_template") := "A_u",
+              ("numerator") := "t"
+            ),
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "1Eu",
+              ("label_template") := "1E_nu",
+              ("numerator") := "t^(2*floor(n/2)+1)"
+            ),
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "2Eu",
+              ("label_template") := "2E_nu",
+              ("numerator") := "t^(2*floor(n/2)+1)"
+            )
+          ]
+        ),
+        ("subgroup") := rec( ("o3_class") := "Cinfh", ("schoenflies") := "C_infh" ),
+        ("sum") := rec( ("from") := "-J", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p", ("minus") := "u", ("plus") := "g" ),
+        ("text") := "D^(J,p) | C_infh = A_x + sum_{n=1..J} (1E_nx + 2E_nx), x = g if p = +1, u if p = -1"
+      ),
+      rec(
+        ("cases") := [
+          rec( ("if") := "m = 0 and p(-1)^J = +1", ("terms") := [ "A_1" ] ),
+          rec( ("if") := "m = 0 and p(-1)^J = -1", ("terms") := [ "A_2" ] ),
+          rec( ("if") := "otherwise", ("terms") := [ "E_{m}" ] )
+        ],
+        ("generating_function") := rec(
+          ("families") := [
+            rec(
+              ("denominator") := [ 1 ],
+              ("family") := "A1",
+              ("label_template") := "A_1",
+              ("numerator") := "1"
+            ),
+            rec(
+              ("denominator") := [],
+              ("family") := "A2",
+              ("label_template") := "A_2",
+              ("numerator") := "0"
+            ),
+            rec(
+              ("denominator") := [ 1 ],
+              ("family") := "E",
+              ("label_template") := "E_n",
+              ("numerator") := "t^n"
+            )
+          ]
+        ),
+        ("subgroup") := rec( ("o3_class") := "Cinfv", ("schoenflies") := "C_infv" ),
+        ("sum") := rec( ("from") := "0", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | C_infv = [A_1 if p (-1)^J = +1 else A_2] + sum_{n=1..J} E_n"
+      ),
+      rec(
+        ("cases") := [
+          rec( ("if") := "m = 0 and J even", ("terms") := [ "A_1" ] ),
+          rec( ("if") := "m = 0 and J odd", ("terms") := [ "A_2" ] ),
+          rec( ("if") := "otherwise", ("terms") := [ "E_{m}" ] )
+        ],
+        ("generating_function") := rec(
+          ("families") := [
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "A1",
+              ("label_template") := "A_1",
+              ("numerator") := "1"
+            ),
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "A2",
+              ("label_template") := "A_2",
+              ("numerator") := "t"
+            ),
+            rec(
+              ("denominator") := [ 1 ],
+              ("family") := "E",
+              ("label_template") := "E_n",
+              ("numerator") := "t^n"
+            )
+          ]
+        ),
+        ("subgroup") := rec( ("o3_class") := "Dinf", ("schoenflies") := "D_inf" ),
+        ("sum") := rec( ("from") := "0", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | D_inf = [A_1 if J even else A_2] + sum_{n=1..J} E_n for both p"
+      ),
+      rec(
+        ("cases") := [
+          rec( ("if") := "m = 0 and J even", ("terms") := [ "A_1" ] ),
+          rec( ("if") := "m = 0 and J odd", ("terms") := [ "A_2" ] ),
+          rec( ("if") := "otherwise", ("terms") := [ "E_{m}" ] )
+        ],
+        ("generating_function") := rec(
+          ("families") := [
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "A1g",
+              ("label_template") := "A_1g",
+              ("numerator") := "1"
+            ),
+            rec(
+              ("denominator") := [],
+              ("family") := "A2g",
+              ("label_template") := "A_2g",
+              ("numerator") := "0"
+            ),
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "Eg",
+              ("label_template") := "E_ng",
+              ("numerator") := "t^(2*ceil(n/2))"
+            ),
+            rec(
+              ("denominator") := [],
+              ("family") := "A1u",
+              ("label_template") := "A_1u",
+              ("numerator") := "0"
+            ),
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "A2u",
+              ("label_template") := "A_2u",
+              ("numerator") := "t"
+            ),
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "Eu",
+              ("label_template") := "E_nu",
+              ("numerator") := "t^(2*floor(n/2)+1)"
+            )
+          ]
+        ),
+        ("subgroup") := rec( ("o3_class") := "Dinfh", ("schoenflies") := "D_infh" ),
+        ("sum") := rec( ("from") := "0", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p", ("minus") := "u", ("plus") := "g" ),
+        ("text") := "D^(J,p) | D_infh = [A_1x if J even else A_2x] + sum_{n=1..J} E_nx, x = g if p = +1, u if p = -1"
+      ),
+      rec(
+        ("subgroup") := rec( ("o3_class") := "SO3", ("schoenflies") := "SO(3)" ),
+        ("terms") := [ "D^(J)" ],
+        ("text") := "D^(J,p) | SO(3) = D^(J) for both p"
+      )
+    ],
+    ("count") := rec( ("continuous") := 6, ("exceptional") := 7, ("families") := 11 ),
+    ("exceptional") := [
+      rec(
+        ("generating_function") := rec(
+          ("denominator") := [ 3, 4 ],
+          ("numerators") := [
+            rec(
+              ("coefficients") := [ 1, 0, 0, 0, 0, 0, 1 ],
+              ("irrep") := "A",
+              ("irrep_id") := "A"
+            ),
+            rec( ("coefficients") := [ 0, 0, 1, 0, 1 ], ("irrep") := "1E", ("irrep_id") := "1E" ),
+            rec( ("coefficients") := [ 0, 0, 1, 0, 1 ], ("irrep") := "2E", ("irrep_id") := "2E" ),
+            rec( ("coefficients") := [ 0, 1, 1, 2, 1, 1 ], ("irrep") := "T", ("irrep_id") := "T" )
+          ]
+        ),
+        ("subgroup") := rec( ("o3_class") := "T", ("order") := 12, ("schoenflies") := "T" )
+      ),
+      rec(
+        ("generating_function") := rec(
+          ("denominator") := [ 4, 6 ],
+          ("numerators") := [
+            rec(
+              ("coefficients") := [ 1, 0, 0, 0, 0, 0, 1 ],
+              ("irrep") := "A_g",
+              ("irrep_id") := "Ag"
+            ),
+            rec( ("coefficients") := [ 0, 0, 1, 0, 1 ], ("irrep") := "1E_g", ("irrep_id") := "1Eg" ),
+            rec( ("coefficients") := [ 0, 0, 1, 0, 1 ], ("irrep") := "2E_g", ("irrep_id") := "2Eg" ),
+            rec(
+              ("coefficients") := [ 0, 0, 1, 0, 2, 0, 2, 0, 1 ],
+              ("irrep") := "T_g",
+              ("irrep_id") := "Tg"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 1, 0, 0, 0, 0, 0, 1 ],
+              ("irrep") := "A_u",
+              ("irrep_id") := "Au"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 0, 0, 1, 0, 1 ],
+              ("irrep") := "1E_u",
+              ("irrep_id") := "1Eu"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 0, 0, 1, 0, 1 ],
+              ("irrep") := "2E_u",
+              ("irrep_id") := "2Eu"
+            ),
+            rec(
+              ("coefficients") := [ 0, 1, 0, 2, 0, 2, 0, 1 ],
+              ("irrep") := "T_u",
+              ("irrep_id") := "Tu"
+            )
+          ]
+        ),
+        ("subgroup") := rec( ("o3_class") := "Th", ("order") := 24, ("schoenflies") := "T_h" )
+      ),
+      rec(
+        ("generating_function") := rec(
+          ("denominator") := [ 3, 4 ],
+          ("numerators") := [
+            rec( ("coefficients") := [ 1 ], ("irrep") := "A_1", ("irrep_id") := "A1" ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 0, 0, 0, 1 ],
+              ("irrep") := "A_2",
+              ("irrep_id") := "A2"
+            ),
+            rec( ("coefficients") := [ 0, 0, 1, 0, 1 ], ("irrep") := "E", ("irrep_id") := "E" ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 1, 1, 1 ],
+              ("irrep") := "T_1",
+              ("irrep_id") := "T1"
+            ),
+            rec( ("coefficients") := [ 0, 1, 1, 1 ], ("irrep") := "T_2", ("irrep_id") := "T2" )
+          ]
+        ),
+        ("subgroup") := rec( ("o3_class") := "Td", ("order") := 24, ("schoenflies") := "T_d" )
+      ),
+      rec(
+        ("generating_function") := rec(
+          ("denominator") := [ 4, 6 ],
+          ("numerators") := [
+            rec(
+              ("coefficients") := [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 ],
+              ("irrep") := "A_1",
+              ("irrep_id") := "A1"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 1, 0, 0, 1 ],
+              ("irrep") := "A_2",
+              ("irrep_id") := "A2"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 1, 0, 1, 1, 0, 1 ],
+              ("irrep") := "E",
+              ("irrep_id") := "E"
+            ),
+            rec(
+              ("coefficients") := [ 0, 1, 0, 1, 1, 1, 1, 0, 1 ],
+              ("irrep") := "T_1",
+              ("irrep_id") := "T1"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 1, 1, 1, 1, 1, 1 ],
+              ("irrep") := "T_2",
+              ("irrep_id") := "T2"
+            )
+          ]
+        ),
+        ("subgroup") := rec( ("o3_class") := "O", ("order") := 24, ("schoenflies") := "O" )
+      ),
+      rec(
+        ("generating_function") := rec(
+          ("denominator") := [ 4, 6 ],
+          ("numerators") := [
+            rec( ("coefficients") := [ 1 ], ("irrep") := "A_1g", ("irrep_id") := "A1g" ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 0, 0, 0, 1 ],
+              ("irrep") := "A_2g",
+              ("irrep_id") := "A2g"
+            ),
+            rec( ("coefficients") := [ 0, 0, 1, 0, 1 ], ("irrep") := "E_g", ("irrep_id") := "Eg" ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 0, 1, 0, 1, 0, 1 ],
+              ("irrep") := "T_1g",
+              ("irrep_id") := "T1g"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 1, 0, 1, 0, 1 ],
+              ("irrep") := "T_2g",
+              ("irrep_id") := "T2g"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ],
+              ("irrep") := "A_1u",
+              ("irrep_id") := "A1u"
+            ),
+            rec( ("coefficients") := [ 0, 0, 0, 1 ], ("irrep") := "A_2u", ("irrep_id") := "A2u" ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 0, 0, 1, 0, 1 ],
+              ("irrep") := "E_u",
+              ("irrep_id") := "Eu"
+            ),
+            rec(
+              ("coefficients") := [ 0, 1, 0, 1, 0, 1 ],
+              ("irrep") := "T_1u",
+              ("irrep_id") := "T1u"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 1, 0, 1, 0, 1 ],
+              ("irrep") := "T_2u",
+              ("irrep_id") := "T2u"
+            )
+          ]
+        ),
+        ("subgroup") := rec( ("o3_class") := "Oh", ("order") := 48, ("schoenflies") := "O_h" )
+      ),
+      rec(
+        ("generating_function") := rec(
+          ("denominator") := [ 6, 10 ],
+          ("numerators") := [
+            rec(
+              ("coefficients") := [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ],
+              ("irrep") := "A",
+              ("irrep_id") := "A1"
+            ),
+            rec(
+              ("coefficients") := [ 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1 ],
+              ("irrep") := "T_1",
+              ("irrep_id") := "T1"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1 ],
+              ("irrep") := "T_2",
+              ("irrep_id") := "T2"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1 ],
+              ("irrep") := "G",
+              ("irrep_id") := "G"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1 ],
+              ("irrep") := "H",
+              ("irrep_id") := "H"
+            )
+          ]
+        ),
+        ("subgroup") := rec( ("o3_class") := "I", ("order") := 60, ("schoenflies") := "I" )
+      ),
+      rec(
+        ("generating_function") := rec(
+          ("denominator") := [ 6, 10 ],
+          ("numerators") := [
+            rec( ("coefficients") := [ 1 ], ("irrep") := "A_g", ("irrep_id") := "A1g" ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1 ],
+              ("irrep") := "T_1g",
+              ("irrep_id") := "T1g"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1 ],
+              ("irrep") := "T_2g",
+              ("irrep_id") := "T2g"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1 ],
+              ("irrep") := "G_g",
+              ("irrep_id") := "Gg"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1 ],
+              ("irrep") := "H_g",
+              ("irrep_id") := "Hg"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ],
+              ("irrep") := "A_u",
+              ("irrep_id") := "A1u"
+            ),
+            rec(
+              ("coefficients") := [ 0, 1, 0, 0, 0, 1, 0, 0, 0, 1 ],
+              ("irrep") := "T_1u",
+              ("irrep_id") := "T1u"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 1, 0, 1, 0, 1 ],
+              ("irrep") := "T_2u",
+              ("irrep_id") := "T2u"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1 ],
+              ("irrep") := "G_u",
+              ("irrep_id") := "Gu"
+            ),
+            rec(
+              ("coefficients") := [ 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1 ],
+              ("irrep") := "H_u",
+              ("irrep_id") := "Hu"
+            )
+          ]
+        ),
+        ("subgroup") := rec( ("o3_class") := "Ih", ("order") := 120, ("schoenflies") := "I_h" )
+      )
+    ],
+    ("families") := [
+      rec(
+        ("N") := "every",
+        ("N_min") := 1,
+        ("cases") := [
+          rec( ("if") := "q = 0", ("terms") := [ "A" ] ),
+          rec( ("if") := "q = N/2", ("terms") := [ "B" ] ),
+          rec( ("if") := "0 < q < N/2", ("terms") := [ "1E_{q}" ] ),
+          rec( ("if") := "N/2 < q < N", ("terms") := [ "2E_{N-q}" ] )
+        ],
+        ("family") := "Cn",
+        ("generating_function") := rec(
+          ("denominator") := [ "1", "N" ],
+          ("numerators") := [
+            rec( ("if") := "always", ("irrep") := "A", ("numerator") := "1 + t^N" ),
+            rec( ("if") := "N even", ("irrep") := "B", ("numerator") := "2*t^(N/2)" ),
+            rec( ("if") := "0 < k < N/2", ("irrep") := "1E_{k}", ("numerator") := "t^k + t^(N-k)" ),
+            rec( ("if") := "0 < k < N/2", ("irrep") := "2E_{k}", ("numerator") := "t^k + t^(N-k)" )
+          ],
+          ("parity") := "(-1)^J",
+          ("variable") := "t^J"
+        ),
+        ("q") := "m mod N",
+        ("renamed") := [],
+        ("sum") := rec( ("from") := "-J", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | C_N = SO(3)'s rule for both p"
+      ),
+      rec(
+        ("N") := "odd",
+        ("N_min") := 1,
+        ("cases") := [
+          rec( ("if") := "q = 0", ("terms") := [ "A" ] ),
+          rec( ("if") := "0 < q < N/2", ("terms") := [ "1E_{q}" ] ),
+          rec( ("if") := "N/2 < q < N", ("terms") := [ "2E_{N-q}" ] )
+        ],
+        ("family") := "S2n",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "2N" ],
+          ("numerators") := [
+            rec( ("if") := "always", ("irrep") := "A_g", ("numerator") := "1 + 2*t^(N+1) + t^(2N)" ),
+            rec( ("if") := "always", ("irrep") := "A_u", ("numerator") := "t + 2*t^N + t^(2N+1)" ),
+            rec(
+              ("if") := "0 < k < N/2 and k even",
+              ("irrep") := "1E_{k}g",
+              ("numerator") := "t^k + t^(N-k+1) + t^(N+k+1) + t^(2N-k)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k even",
+              ("irrep") := "2E_{k}g",
+              ("numerator") := "t^k + t^(N-k+1) + t^(N+k+1) + t^(2N-k)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k odd",
+              ("irrep") := "1E_{k}g",
+              ("numerator") := "t^(k+1) + t^(N-k) + t^(N+k) + t^(2N-k+1)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k odd",
+              ("irrep") := "2E_{k}g",
+              ("numerator") := "t^(k+1) + t^(N-k) + t^(N+k) + t^(2N-k+1)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k even",
+              ("irrep") := "1E_{k}u",
+              ("numerator") := "t^(k+1) + t^(N-k) + t^(N+k) + t^(2N-k+1)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k even",
+              ("irrep") := "2E_{k}u",
+              ("numerator") := "t^(k+1) + t^(N-k) + t^(N+k) + t^(2N-k+1)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k odd",
+              ("irrep") := "1E_{k}u",
+              ("numerator") := "t^k + t^(N-k+1) + t^(N+k+1) + t^(2N-k)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k odd",
+              ("irrep") := "2E_{k}u",
+              ("numerator") := "t^k + t^(N-k+1) + t^(N+k+1) + t^(2N-k)"
+            )
+          ],
+          ("parity") := "(-1)^J",
+          ("variable") := "t^J"
+        ),
+        ("q") := "m mod N",
+        ("renamed") := [],
+        ("sum") := rec( ("from") := "-J", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p", ("minus") := "u", ("plus") := "g" ),
+        ("text") := "D^(J,p) | S_2N (N odd) = sum_{m=-J..J} G(q)x, q = m mod N, G(q) as for C_N, x = g if p = +1, u if p = -1"
+      ),
+      rec(
+        ("N") := "even",
+        ("N_min") := 2,
+        ("cases") := [
+          rec( ("if") := "q = 0", ("terms") := [ "A" ] ),
+          rec( ("if") := "q = N", ("terms") := [ "B" ] ),
+          rec( ("if") := "0 < q < N", ("terms") := [ "1E_{q}" ] ),
+          rec( ("if") := "N < q < 2N", ("terms") := [ "2E_{2N-q}" ] )
+        ],
+        ("family") := "S2n",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "2N" ],
+          ("numerators") := [
+            rec( ("if") := "always", ("irrep") := "A", ("numerator") := "1 + 2*t^(N+1) + t^(2N)" ),
+            rec( ("if") := "always", ("irrep") := "B", ("numerator") := "t + 2*t^N + t^(2N+1)" ),
+            rec(
+              ("if") := "0 < k < N",
+              ("irrep") := "1E_{k}",
+              ("numerator") := "t^k + t^(N-k+1) + t^(N+k+1) + t^(2N-k)"
+            ),
+            rec(
+              ("if") := "0 < k < N",
+              ("irrep") := "2E_{k}",
+              ("numerator") := "t^k + t^(N-k+1) + t^(N+k+1) + t^(2N-k)"
+            )
+          ],
+          ("parity") := "(-1)^J",
+          ("variable") := "t^J"
+        ),
+        ("q") := "(N+1)m + N[p = -1] mod 2N",
+        ("renamed") := [],
+        ("sum") := rec( ("from") := "-J", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | S_2N (N even) = sum_{m=-J..J} G(q), q = (N+1)m + N[p = -1] mod 2N; G(q) = A if q = 0, B if q = N, 1E_q if 0 < q < N, 2E_{2N-q} if N < q < 2N"
+      ),
+      rec(
+        ("N") := "odd",
+        ("N_min") := 1,
+        ("cases") := [
+          rec( ("if") := "q = 0", ("terms") := [ "A" ] ),
+          rec( ("if") := "0 < q < N/2", ("terms") := [ "1E_{q}" ] ),
+          rec( ("if") := "N/2 < q < N", ("terms") := [ "2E_{N-q}" ] )
+        ],
+        ("family") := "Cnh",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "N" ],
+          ("numerators") := [
+            rec( ("if") := "always", ("irrep") := "A'", ("numerator") := "1 + t^N" ),
+            rec( ("if") := "always", ("irrep") := "A''", ("numerator") := "t + t^(N+1)" ),
+            rec( ("if") := "0 < k < N/2", ("irrep") := "1E_{k}'", ("numerator") := "t^k + t^(N-k)" ),
+            rec( ("if") := "0 < k < N/2", ("irrep") := "2E_{k}'", ("numerator") := "t^k + t^(N-k)" ),
+            rec(
+              ("if") := "0 < k < N/2",
+              ("irrep") := "1E_{k}''",
+              ("numerator") := "t^(k+1) + t^(N-k+1)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2",
+              ("irrep") := "2E_{k}''",
+              ("numerator") := "t^(k+1) + t^(N-k+1)"
+            )
+          ],
+          ("parity") := "(-1)^J",
+          ("variable") := "t^J"
+        ),
+        ("q") := "m mod N",
+        ("renamed") := [],
+        ("sum") := rec( ("from") := "-J", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p(-1)^m", ("minus") := "''", ("plus") := "'" ),
+        ("text") := "D^(J,p) | C_Nh (N odd) = sum_{m=-J..J} G(q)x, q = m mod N, G(q) as for C_N, x = ' if p (-1)^m = +1, '' if p (-1)^m = -1"
+      ),
+      rec(
+        ("N") := "even",
+        ("N_min") := 2,
+        ("cases") := [
+          rec( ("if") := "q = 0", ("terms") := [ "A" ] ),
+          rec( ("if") := "q = N/2", ("terms") := [ "B" ] ),
+          rec( ("if") := "0 < q < N/2", ("terms") := [ "1E_{q}" ] ),
+          rec( ("if") := "N/2 < q < N", ("terms") := [ "2E_{N-q}" ] )
+        ],
+        ("family") := "Cnh",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "N" ],
+          ("numerators") := [
+            rec( ("if") := "always", ("irrep") := "A_g", ("numerator") := "1 + t^N" ),
+            rec( ("if") := "always", ("irrep") := "A_u", ("numerator") := "t + t^(N+1)" ),
+            rec( ("if") := "N/2 even", ("irrep") := "B_g", ("numerator") := "2*t^(N/2)" ),
+            rec( ("if") := "N/2 odd", ("irrep") := "B_g", ("numerator") := "2*t^(N/2+1)" ),
+            rec( ("if") := "N/2 even", ("irrep") := "B_u", ("numerator") := "2*t^(N/2+1)" ),
+            rec( ("if") := "N/2 odd", ("irrep") := "B_u", ("numerator") := "2*t^(N/2)" ),
+            rec(
+              ("if") := "0 < k < N/2 and k even",
+              ("irrep") := "1E_{k}g",
+              ("numerator") := "t^k + t^(N-k)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k even",
+              ("irrep") := "2E_{k}g",
+              ("numerator") := "t^k + t^(N-k)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k odd",
+              ("irrep") := "1E_{k}g",
+              ("numerator") := "t^(k+1) + t^(N-k+1)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k odd",
+              ("irrep") := "2E_{k}g",
+              ("numerator") := "t^(k+1) + t^(N-k+1)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k even",
+              ("irrep") := "1E_{k}u",
+              ("numerator") := "t^(k+1) + t^(N-k+1)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k even",
+              ("irrep") := "2E_{k}u",
+              ("numerator") := "t^(k+1) + t^(N-k+1)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k odd",
+              ("irrep") := "1E_{k}u",
+              ("numerator") := "t^k + t^(N-k)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k odd",
+              ("irrep") := "2E_{k}u",
+              ("numerator") := "t^k + t^(N-k)"
+            )
+          ],
+          ("parity") := "(-1)^J",
+          ("variable") := "t^J"
+        ),
+        ("q") := "m mod N",
+        ("renamed") := [],
+        ("sum") := rec( ("from") := "-J", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p", ("minus") := "u", ("plus") := "g" ),
+        ("text") := "D^(J,p) | C_Nh (N even) = sum_{m=-J..J} G(q)x, q = m mod N, G(q) as for C_N, x = g if p = +1, u if p = -1"
+      ),
+      rec(
+        ("N") := "every",
+        ("N_min") := 1,
+        ("cases") := [
+          rec( ("if") := "m = 0 and p(-1)^J = +1", ("terms") := [ "A_1" ] ),
+          rec( ("if") := "m = 0 and p(-1)^J = -1", ("terms") := [ "A_2" ] ),
+          rec( ("if") := "q = 0", ("terms") := [ "A_1", "A_2" ] ),
+          rec( ("if") := "q = N/2", ("terms") := [ "B_1", "B_2" ] ),
+          rec( ("if") := "otherwise", ("terms") := [ "E_{min(q, N-q)}" ] )
+        ],
+        ("family") := "Cnv",
+        ("generating_function") := rec(
+          ("denominator") := [ "1", "N" ],
+          ("numerators") := [
+            rec( ("if") := "always", ("irrep") := "A_1", ("numerator") := "1" ),
+            rec( ("if") := "always", ("irrep") := "A_2", ("numerator") := "t^N" ),
+            rec( ("if") := "N even", ("irrep") := "B_1", ("numerator") := "t^(N/2)" ),
+            rec( ("if") := "N even", ("irrep") := "B_2", ("numerator") := "t^(N/2)" ),
+            rec( ("if") := "0 < k < N/2", ("irrep") := "E_{k}", ("numerator") := "t^k + t^(N-k)" )
+          ],
+          ("parity") := "(-1)^J",
+          ("variable") := "t^J"
+        ),
+        ("q") := "m mod N",
+        ("renamed") := [ rec( ("N") := 1, ("names") := rec( ("A_1") := "A'", ("A_2") := "A''" ) ) ],
+        ("sum") := rec( ("from") := "0", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | C_Nv = [A_1 if p (-1)^J = +1 else A_2] + sum_{m=1..J} G(q), q = m mod N; G(q) = A_1 + A_2 if q = 0, B_1 + B_2 if q = N/2, E_{min(q,N-q)} otherwise"
+      ),
+      rec(
+        ("N") := "every",
+        ("N_min") := 2,
+        ("cases") := [
+          rec( ("if") := "m = 0 and J even", ("terms") := [ "A_1" ] ),
+          rec( ("if") := "m = 0 and J odd", ("terms") := [ "A_2" ] ),
+          rec( ("if") := "q = 0", ("terms") := [ "A_1", "A_2" ] ),
+          rec( ("if") := "q = N/2", ("terms") := [ "B_1", "B_2" ] ),
+          rec( ("if") := "otherwise", ("terms") := [ "E_{min(q, N-q)}" ] )
+        ],
+        ("family") := "Dn",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "N" ],
+          ("numerators") := [
+            rec( ("if") := "always", ("irrep") := "A_1", ("numerator") := "1 + t^(N+1)" ),
+            rec( ("if") := "always", ("irrep") := "A_2", ("numerator") := "t + t^N" ),
+            rec( ("if") := "N even", ("irrep") := "B_1", ("numerator") := "t^(N/2) + t^(N/2+1)" ),
+            rec( ("if") := "N even", ("irrep") := "B_2", ("numerator") := "t^(N/2) + t^(N/2+1)" ),
+            rec(
+              ("if") := "0 < k < N/2",
+              ("irrep") := "E_{k}",
+              ("numerator") := "t^k + t^(k+1) + t^(N-k) + t^(N-k+1)"
+            )
+          ],
+          ("parity") := "(-1)^J",
+          ("variable") := "t^J"
+        ),
+        ("q") := "m mod N",
+        ("renamed") := [
+          rec(
+            ("N") := 2,
+            ("names") := rec( ("A_1") := "A", ("A_2") := "B_1", ("B_1") := "B_3", ("B_2") := "B_2" )
+          )
+        ],
+        ("sum") := rec( ("from") := "0", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | D_N = SO(3)'s rule for both p"
+      ),
+      rec(
+        ("N") := "odd",
+        ("N_min") := 1,
+        ("cases") := [
+          rec( ("if") := "m = 0 and J even", ("terms") := [ "A_1" ] ),
+          rec( ("if") := "m = 0 and J odd", ("terms") := [ "A_2" ] ),
+          rec( ("if") := "q = 0", ("terms") := [ "A_1", "A_2" ] ),
+          rec( ("if") := "otherwise", ("terms") := [ "E_{min(q, N-q)}" ] )
+        ],
+        ("family") := "Dnh",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "N" ],
+          ("numerators") := [
+            rec( ("if") := "always", ("irrep") := "A_1'", ("numerator") := "1" ),
+            rec( ("if") := "always", ("irrep") := "A_2'", ("numerator") := "t^N" ),
+            rec( ("if") := "always", ("irrep") := "A_1''", ("numerator") := "t^(N+1)" ),
+            rec( ("if") := "always", ("irrep") := "A_2''", ("numerator") := "t" ),
+            rec( ("if") := "0 < k < N/2", ("irrep") := "E_{k}'", ("numerator") := "t^k + t^(N-k)" ),
+            rec(
+              ("if") := "0 < k < N/2",
+              ("irrep") := "E_{k}''",
+              ("numerator") := "t^(k+1) + t^(N-k+1)"
+            )
+          ],
+          ("parity") := "(-1)^J",
+          ("variable") := "t^J"
+        ),
+        ("q") := "m mod N",
+        ("renamed") := [],
+        ("sum") := rec( ("from") := "0", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p(-1)^m", ("minus") := "''", ("plus") := "'" ),
+        ("text") := "D^(J,p) | D_Nh (N odd) = D_N's terms, each with ' where p (-1)^m = +1 and '' where it is -1"
+      ),
+      rec(
+        ("N") := "even",
+        ("N_min") := 2,
+        ("cases") := [
+          rec( ("if") := "m = 0 and J even", ("terms") := [ "A_1" ] ),
+          rec( ("if") := "m = 0 and J odd", ("terms") := [ "A_2" ] ),
+          rec( ("if") := "q = 0", ("terms") := [ "A_1", "A_2" ] ),
+          rec( ("if") := "q = N/2", ("terms") := [ "B_1", "B_2" ] ),
+          rec( ("if") := "otherwise", ("terms") := [ "E_{min(q, N-q)}" ] )
+        ],
+        ("family") := "Dnh",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "N" ],
+          ("numerators") := [
+            rec( ("if") := "always", ("irrep") := "A_1g", ("numerator") := "1" ),
+            rec( ("if") := "always", ("irrep") := "A_2g", ("numerator") := "t^N" ),
+            rec( ("if") := "always", ("irrep") := "A_1u", ("numerator") := "t^(N+1)" ),
+            rec( ("if") := "always", ("irrep") := "A_2u", ("numerator") := "t" ),
+            rec( ("if") := "N/2 even", ("irrep") := "B_1g", ("numerator") := "t^(N/2)" ),
+            rec( ("if") := "N/2 even", ("irrep") := "B_2g", ("numerator") := "t^(N/2)" ),
+            rec( ("if") := "N/2 odd", ("irrep") := "B_1g", ("numerator") := "t^(N/2+1)" ),
+            rec( ("if") := "N/2 odd", ("irrep") := "B_2g", ("numerator") := "t^(N/2+1)" ),
+            rec( ("if") := "N/2 even", ("irrep") := "B_1u", ("numerator") := "t^(N/2+1)" ),
+            rec( ("if") := "N/2 even", ("irrep") := "B_2u", ("numerator") := "t^(N/2+1)" ),
+            rec( ("if") := "N/2 odd", ("irrep") := "B_1u", ("numerator") := "t^(N/2)" ),
+            rec( ("if") := "N/2 odd", ("irrep") := "B_2u", ("numerator") := "t^(N/2)" ),
+            rec(
+              ("if") := "0 < k < N/2 and k even",
+              ("irrep") := "E_{k}g",
+              ("numerator") := "t^k + t^(N-k)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k odd",
+              ("irrep") := "E_{k}g",
+              ("numerator") := "t^(k+1) + t^(N-k+1)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k even",
+              ("irrep") := "E_{k}u",
+              ("numerator") := "t^(k+1) + t^(N-k+1)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k odd",
+              ("irrep") := "E_{k}u",
+              ("numerator") := "t^k + t^(N-k)"
+            )
+          ],
+          ("parity") := "(-1)^J",
+          ("variable") := "t^J"
+        ),
+        ("q") := "m mod N",
+        ("renamed") := [
+          rec(
+            ("N") := 2,
+            ("names") := rec(
+              ("A_1g") := "A_g",
+              ("A_1u") := "A_u",
+              ("A_2g") := "B_1g",
+              ("A_2u") := "B_1u",
+              ("B_1g") := "B_3g",
+              ("B_1u") := "B_3u",
+              ("B_2g") := "B_2g",
+              ("B_2u") := "B_2u"
+            )
+          )
+        ],
+        ("sum") := rec( ("from") := "0", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p", ("minus") := "u", ("plus") := "g" ),
+        ("text") := "D^(J,p) | D_Nh (N even) = D_N's terms, each with g if p = +1, u if p = -1"
+      ),
+      rec(
+        ("N") := "odd",
+        ("N_min") := 1,
+        ("cases") := [
+          rec( ("if") := "m = 0 and J even", ("terms") := [ "A_1" ] ),
+          rec( ("if") := "m = 0 and J odd", ("terms") := [ "A_2" ] ),
+          rec( ("if") := "q = 0", ("terms") := [ "A_1", "A_2" ] ),
+          rec( ("if") := "otherwise", ("terms") := [ "E_{min(q, N-q)}" ] )
+        ],
+        ("family") := "Dnd",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "2N" ],
+          ("numerators") := [
+            rec( ("if") := "always", ("irrep") := "A_1g", ("numerator") := "1 + t^(N+1)" ),
+            rec( ("if") := "always", ("irrep") := "A_2g", ("numerator") := "t^(N+1) + t^(2N)" ),
+            rec( ("if") := "always", ("irrep") := "A_1u", ("numerator") := "t^N + t^(2N+1)" ),
+            rec( ("if") := "always", ("irrep") := "A_2u", ("numerator") := "t + t^N" ),
+            rec(
+              ("if") := "0 < k < N/2 and k even",
+              ("irrep") := "E_{k}g",
+              ("numerator") := "t^k + t^(N-k+1) + t^(N+k+1) + t^(2N-k)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k odd",
+              ("irrep") := "E_{k}g",
+              ("numerator") := "t^(k+1) + t^(N-k) + t^(N+k) + t^(2N-k+1)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k even",
+              ("irrep") := "E_{k}u",
+              ("numerator") := "t^(k+1) + t^(N-k) + t^(N+k) + t^(2N-k+1)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2 and k odd",
+              ("irrep") := "E_{k}u",
+              ("numerator") := "t^k + t^(N-k+1) + t^(N+k+1) + t^(2N-k)"
+            )
+          ],
+          ("parity") := "(-1)^J",
+          ("variable") := "t^J"
+        ),
+        ("q") := "m mod N",
+        ("renamed") := [
+          rec(
+            ("N") := 1,
+            ("names") := rec( ("A_1g") := "A_g", ("A_1u") := "A_u", ("A_2g") := "B_g", ("A_2u") := "B_u" )
+          )
+        ],
+        ("sum") := rec( ("from") := "0", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p", ("minus") := "u", ("plus") := "g" ),
+        ("text") := "D^(J,p) | D_Nd (N odd) = D_N's terms, each with g if p = +1, u if p = -1"
+      ),
+      rec(
+        ("N") := "even",
+        ("N_min") := 2,
+        ("cases") := [
+          rec( ("if") := "m = 0 and p = +1 and J even", ("terms") := [ "A_1" ] ),
+          rec( ("if") := "m = 0 and p = +1 and J odd", ("terms") := [ "A_2" ] ),
+          rec( ("if") := "m = 0 and p = -1 and J even", ("terms") := [ "B_1" ] ),
+          rec( ("if") := "m = 0 and p = -1 and J odd", ("terms") := [ "B_2" ] ),
+          rec( ("if") := "q = 0", ("terms") := [ "A_1", "A_2" ] ),
+          rec( ("if") := "q = N", ("terms") := [ "B_1", "B_2" ] ),
+          rec( ("if") := "otherwise", ("terms") := [ "E_{min(q, 2N-q)}" ] )
+        ],
+        ("family") := "Dnd",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "2N" ],
+          ("numerators") := [
+            rec( ("if") := "always", ("irrep") := "A_1", ("numerator") := "1 + t^(N+1)" ),
+            rec( ("if") := "always", ("irrep") := "A_2", ("numerator") := "t^(N+1) + t^(2N)" ),
+            rec( ("if") := "always", ("irrep") := "B_1", ("numerator") := "t^N + t^(2N+1)" ),
+            rec( ("if") := "always", ("irrep") := "B_2", ("numerator") := "t + t^N" ),
+            rec(
+              ("if") := "0 < k < N",
+              ("irrep") := "E_{k}",
+              ("numerator") := "t^k + t^(N-k+1) + t^(N+k+1) + t^(2N-k)"
+            )
+          ],
+          ("parity") := "(-1)^J",
+          ("variable") := "t^J"
+        ),
+        ("q") := "(N+1)m + N[p = -1] mod 2N",
+        ("renamed") := [],
+        ("sum") := rec( ("from") := "0", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | D_Nd (N even) = [A_1, A_2, B_1, B_2 by p and J] + sum_{m=1..J} G(q), q = (N+1)m + N[p = -1] mod 2N; G(q) = A_1 + A_2 if q = 0, B_1 + B_2 if q = N, E_{min(q,2N-q)} otherwise"
+      )
+    ],
+    ("parity") := "the generating functions count the blocks at the parity (-1)^J, as the members' records; at the other parity the multiplicity of L is that of L (x) det, det the determinant character of the subgroup"
+  ),
   ("subduction_unitary") := rec(
     ("levels") := [
       rec(
@@ -319196,6 +320135,1222 @@ o3t := rec(
               ]
             )
           ]
+        )
+      )
+    ]
+  ),
+  ("subgroup_classes") := rec(
+    ("continuous") := [
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := fail,
+          ("family") := fail,
+          ("o3_class") := "Cinf",
+          ("order") := fail,
+          ("schoenflies") := "C_inf"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := fail,
+          ("family") := fail,
+          ("o3_class") := "Cinfh",
+          ("order") := fail,
+          ("schoenflies") := "C_infh"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := fail,
+          ("family") := fail,
+          ("o3_class") := "Cinfv",
+          ("order") := fail,
+          ("schoenflies") := "C_infv"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := fail,
+          ("family") := fail,
+          ("o3_class") := "Dinf",
+          ("order") := fail,
+          ("schoenflies") := "D_inf"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := fail,
+          ("family") := fail,
+          ("o3_class") := "Dinfh",
+          ("order") := fail,
+          ("schoenflies") := "D_infh"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_i" ),
+        ("class_size") := 1,
+        ("normal") := true,
+        ("normalizer") := rec( ("schoenflies") := "O(3)" ),
+        ("subgroup") := rec(
+          ("N") := fail,
+          ("family") := fail,
+          ("o3_class") := "SO3",
+          ("order") := fail,
+          ("schoenflies") := "SO(3)"
+        )
+      )
+    ],
+    ("count") := rec( ("continuous") := 6, ("finite") := 87 ),
+    ("finite") := [
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "O(3)" ),
+        ("class_size") := 1,
+        ("normal") := true,
+        ("normalizer") := rec( ("schoenflies") := "O(3)" ),
+        ("subgroup") := rec(
+          ("N") := 1,
+          ("family") := "Cn",
+          ("o3_class") := "C1",
+          ("order") := 1,
+          ("schoenflies") := "C_1"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "D_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 2,
+          ("family") := "Cn",
+          ("o3_class") := "C2",
+          ("order") := 2,
+          ("schoenflies") := "C_2"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("family") := "Cn",
+          ("o3_class") := "C3",
+          ("order") := 3,
+          ("schoenflies") := "C_3"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 4,
+          ("family") := "Cn",
+          ("o3_class") := "C4",
+          ("order") := 4,
+          ("schoenflies") := "C_4"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("family") := "Cn",
+          ("o3_class") := "C5",
+          ("order") := 5,
+          ("schoenflies") := "C_5"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 6,
+          ("family") := "Cn",
+          ("o3_class") := "C6",
+          ("order") := 6,
+          ("schoenflies") := "C_6"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("family") := "Cn",
+          ("o3_class") := "C7",
+          ("order") := 7,
+          ("schoenflies") := "C_7"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 8,
+          ("family") := "Cn",
+          ("o3_class") := "C8",
+          ("order") := 8,
+          ("schoenflies") := "C_8"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("family") := "Cn",
+          ("o3_class") := "C9",
+          ("order") := 9,
+          ("schoenflies") := "C_9"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 10,
+          ("family") := "Cn",
+          ("o3_class") := "C10",
+          ("order") := 10,
+          ("schoenflies") := "C_10"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("family") := "Cn",
+          ("o3_class") := "C11",
+          ("order") := 11,
+          ("schoenflies") := "C_11"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 12,
+          ("family") := "Cn",
+          ("o3_class") := "C12",
+          ("order") := 12,
+          ("schoenflies") := "C_12"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "O(3)" ),
+        ("class_size") := 1,
+        ("normal") := true,
+        ("normalizer") := rec( ("schoenflies") := "O(3)" ),
+        ("subgroup") := rec(
+          ("N") := 1,
+          ("family") := "S2n",
+          ("o3_class") := "S2",
+          ("order") := 2,
+          ("schoenflies") := "S_2"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 2,
+          ("family") := "S2n",
+          ("o3_class") := "S4",
+          ("order") := 4,
+          ("schoenflies") := "S_4"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("family") := "S2n",
+          ("o3_class") := "S6",
+          ("order") := 6,
+          ("schoenflies") := "S_6"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 4,
+          ("family") := "S2n",
+          ("o3_class") := "S8",
+          ("order") := 8,
+          ("schoenflies") := "S_8"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("family") := "S2n",
+          ("o3_class") := "S10",
+          ("order") := 10,
+          ("schoenflies") := "S_10"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 6,
+          ("family") := "S2n",
+          ("o3_class") := "S12",
+          ("order") := 12,
+          ("schoenflies") := "S_12"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("family") := "S2n",
+          ("o3_class") := "S14",
+          ("order") := 14,
+          ("schoenflies") := "S_14"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 8,
+          ("family") := "S2n",
+          ("o3_class") := "S16",
+          ("order") := 16,
+          ("schoenflies") := "S_16"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("family") := "S2n",
+          ("o3_class") := "S18",
+          ("order") := 18,
+          ("schoenflies") := "S_18"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 10,
+          ("family") := "S2n",
+          ("o3_class") := "S20",
+          ("order") := 20,
+          ("schoenflies") := "S_20"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("family") := "S2n",
+          ("o3_class") := "S22",
+          ("order") := 22,
+          ("schoenflies") := "S_22"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 12,
+          ("family") := "S2n",
+          ("o3_class") := "S24",
+          ("order") := 24,
+          ("schoenflies") := "S_24"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "D_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 2,
+          ("family") := "Cnh",
+          ("o3_class") := "C2h",
+          ("order") := 4,
+          ("schoenflies") := "C_2h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("family") := "Cnh",
+          ("o3_class") := "C3h",
+          ("order") := 6,
+          ("schoenflies") := "C_3h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 4,
+          ("family") := "Cnh",
+          ("o3_class") := "C4h",
+          ("order") := 8,
+          ("schoenflies") := "C_4h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("family") := "Cnh",
+          ("o3_class") := "C5h",
+          ("order") := 10,
+          ("schoenflies") := "C_5h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 6,
+          ("family") := "Cnh",
+          ("o3_class") := "C6h",
+          ("order") := 12,
+          ("schoenflies") := "C_6h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("family") := "Cnh",
+          ("o3_class") := "C7h",
+          ("order") := 14,
+          ("schoenflies") := "C_7h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 8,
+          ("family") := "Cnh",
+          ("o3_class") := "C8h",
+          ("order") := 16,
+          ("schoenflies") := "C_8h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("family") := "Cnh",
+          ("o3_class") := "C9h",
+          ("order") := 18,
+          ("schoenflies") := "C_9h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 10,
+          ("family") := "Cnh",
+          ("o3_class") := "C10h",
+          ("order") := 20,
+          ("schoenflies") := "C_10h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("family") := "Cnh",
+          ("o3_class") := "C11h",
+          ("order") := 22,
+          ("schoenflies") := "C_11h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 12,
+          ("family") := "Cnh",
+          ("o3_class") := "C12h",
+          ("order") := 24,
+          ("schoenflies") := "C_12h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "D_infh" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_infh" ),
+        ("subgroup") := rec(
+          ("N") := 1,
+          ("family") := "Cnv",
+          ("o3_class") := "C1v",
+          ("order") := 2,
+          ("schoenflies") := "C_1v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "D_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_4h" ),
+        ("subgroup") := rec(
+          ("N") := 2,
+          ("family") := "Cnv",
+          ("o3_class") := "C2v",
+          ("order") := 4,
+          ("schoenflies") := "C_2v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_6h" ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("family") := "Cnv",
+          ("o3_class") := "C3v",
+          ("order") := 6,
+          ("schoenflies") := "C_3v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_8h" ),
+        ("subgroup") := rec(
+          ("N") := 4,
+          ("family") := "Cnv",
+          ("o3_class") := "C4v",
+          ("order") := 8,
+          ("schoenflies") := "C_4v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_10h" ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("family") := "Cnv",
+          ("o3_class") := "C5v",
+          ("order") := 10,
+          ("schoenflies") := "C_5v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_12h" ),
+        ("subgroup") := rec(
+          ("N") := 6,
+          ("family") := "Cnv",
+          ("o3_class") := "C6v",
+          ("order") := 12,
+          ("schoenflies") := "C_6v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_14h" ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("family") := "Cnv",
+          ("o3_class") := "C7v",
+          ("order") := 14,
+          ("schoenflies") := "C_7v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_16h" ),
+        ("subgroup") := rec(
+          ("N") := 8,
+          ("family") := "Cnv",
+          ("o3_class") := "C8v",
+          ("order") := 16,
+          ("schoenflies") := "C_8v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_18h" ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("family") := "Cnv",
+          ("o3_class") := "C9v",
+          ("order") := 18,
+          ("schoenflies") := "C_9v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_20h" ),
+        ("subgroup") := rec(
+          ("N") := 10,
+          ("family") := "Cnv",
+          ("o3_class") := "C10v",
+          ("order") := 20,
+          ("schoenflies") := "C_10v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_22h" ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("family") := "Cnv",
+          ("o3_class") := "C11v",
+          ("order") := 22,
+          ("schoenflies") := "C_11v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_24h" ),
+        ("subgroup") := rec(
+          ("N") := 12,
+          ("family") := "Cnv",
+          ("o3_class") := "C12v",
+          ("order") := 24,
+          ("schoenflies") := "C_12v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "D_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "O_h" ),
+        ("subgroup") := rec(
+          ("N") := 2,
+          ("family") := "Dn",
+          ("o3_class") := "D2",
+          ("order") := 4,
+          ("schoenflies") := "D_2"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_6h" ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("family") := "Dn",
+          ("o3_class") := "D3",
+          ("order") := 6,
+          ("schoenflies") := "D_3"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_8h" ),
+        ("subgroup") := rec(
+          ("N") := 4,
+          ("family") := "Dn",
+          ("o3_class") := "D4",
+          ("order") := 8,
+          ("schoenflies") := "D_4"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_10h" ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("family") := "Dn",
+          ("o3_class") := "D5",
+          ("order") := 10,
+          ("schoenflies") := "D_5"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_12h" ),
+        ("subgroup") := rec(
+          ("N") := 6,
+          ("family") := "Dn",
+          ("o3_class") := "D6",
+          ("order") := 12,
+          ("schoenflies") := "D_6"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_14h" ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("family") := "Dn",
+          ("o3_class") := "D7",
+          ("order") := 14,
+          ("schoenflies") := "D_7"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_16h" ),
+        ("subgroup") := rec(
+          ("N") := 8,
+          ("family") := "Dn",
+          ("o3_class") := "D8",
+          ("order") := 16,
+          ("schoenflies") := "D_8"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_18h" ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("family") := "Dn",
+          ("o3_class") := "D9",
+          ("order") := 18,
+          ("schoenflies") := "D_9"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_20h" ),
+        ("subgroup") := rec(
+          ("N") := 10,
+          ("family") := "Dn",
+          ("o3_class") := "D10",
+          ("order") := 20,
+          ("schoenflies") := "D_10"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_22h" ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("family") := "Dn",
+          ("o3_class") := "D11",
+          ("order") := 22,
+          ("schoenflies") := "D_11"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_24h" ),
+        ("subgroup") := rec(
+          ("N") := 12,
+          ("family") := "Dn",
+          ("o3_class") := "D12",
+          ("order") := 24,
+          ("schoenflies") := "D_12"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "D_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "O_h" ),
+        ("subgroup") := rec(
+          ("N") := 2,
+          ("family") := "Dnh",
+          ("o3_class") := "D2h",
+          ("order") := 8,
+          ("schoenflies") := "D_2h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_6h" ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("family") := "Dnh",
+          ("o3_class") := "D3h",
+          ("order") := 12,
+          ("schoenflies") := "D_3h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_8h" ),
+        ("subgroup") := rec(
+          ("N") := 4,
+          ("family") := "Dnh",
+          ("o3_class") := "D4h",
+          ("order") := 16,
+          ("schoenflies") := "D_4h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_10h" ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("family") := "Dnh",
+          ("o3_class") := "D5h",
+          ("order") := 20,
+          ("schoenflies") := "D_5h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_12h" ),
+        ("subgroup") := rec(
+          ("N") := 6,
+          ("family") := "Dnh",
+          ("o3_class") := "D6h",
+          ("order") := 24,
+          ("schoenflies") := "D_6h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_14h" ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("family") := "Dnh",
+          ("o3_class") := "D7h",
+          ("order") := 28,
+          ("schoenflies") := "D_7h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_16h" ),
+        ("subgroup") := rec(
+          ("N") := 8,
+          ("family") := "Dnh",
+          ("o3_class") := "D8h",
+          ("order") := 32,
+          ("schoenflies") := "D_8h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_18h" ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("family") := "Dnh",
+          ("o3_class") := "D9h",
+          ("order") := 36,
+          ("schoenflies") := "D_9h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_20h" ),
+        ("subgroup") := rec(
+          ("N") := 10,
+          ("family") := "Dnh",
+          ("o3_class") := "D10h",
+          ("order") := 40,
+          ("schoenflies") := "D_10h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_22h" ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("family") := "Dnh",
+          ("o3_class") := "D11h",
+          ("order") := 44,
+          ("schoenflies") := "D_11h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_24h" ),
+        ("subgroup") := rec(
+          ("N") := 12,
+          ("family") := "Dnh",
+          ("o3_class") := "D12h",
+          ("order") := 48,
+          ("schoenflies") := "D_12h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_4h" ),
+        ("subgroup") := rec(
+          ("N") := 2,
+          ("family") := "Dnd",
+          ("o3_class") := "D2d",
+          ("order") := 8,
+          ("schoenflies") := "D_2d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_6h" ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("family") := "Dnd",
+          ("o3_class") := "D3d",
+          ("order") := 12,
+          ("schoenflies") := "D_3d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_8h" ),
+        ("subgroup") := rec(
+          ("N") := 4,
+          ("family") := "Dnd",
+          ("o3_class") := "D4d",
+          ("order") := 16,
+          ("schoenflies") := "D_4d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_10h" ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("family") := "Dnd",
+          ("o3_class") := "D5d",
+          ("order") := 20,
+          ("schoenflies") := "D_5d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_12h" ),
+        ("subgroup") := rec(
+          ("N") := 6,
+          ("family") := "Dnd",
+          ("o3_class") := "D6d",
+          ("order") := 24,
+          ("schoenflies") := "D_6d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_14h" ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("family") := "Dnd",
+          ("o3_class") := "D7d",
+          ("order") := 28,
+          ("schoenflies") := "D_7d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_16h" ),
+        ("subgroup") := rec(
+          ("N") := 8,
+          ("family") := "Dnd",
+          ("o3_class") := "D8d",
+          ("order") := 32,
+          ("schoenflies") := "D_8d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_18h" ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("family") := "Dnd",
+          ("o3_class") := "D9d",
+          ("order") := 36,
+          ("schoenflies") := "D_9d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_20h" ),
+        ("subgroup") := rec(
+          ("N") := 10,
+          ("family") := "Dnd",
+          ("o3_class") := "D10d",
+          ("order") := 40,
+          ("schoenflies") := "D_10d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_22h" ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("family") := "Dnd",
+          ("o3_class") := "D11d",
+          ("order") := 44,
+          ("schoenflies") := "D_11d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_2h" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "D_24h" ),
+        ("subgroup") := rec(
+          ("N") := 12,
+          ("family") := "Dnd",
+          ("o3_class") := "D12d",
+          ("order") := 48,
+          ("schoenflies") := "D_12d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_i" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "O_h" ),
+        ("subgroup") := rec(
+          ("N") := fail,
+          ("family") := fail,
+          ("o3_class") := "T",
+          ("order") := 12,
+          ("schoenflies") := "T"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_i" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "O_h" ),
+        ("subgroup") := rec(
+          ("N") := fail,
+          ("family") := fail,
+          ("o3_class") := "Th",
+          ("order") := 24,
+          ("schoenflies") := "T_h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_i" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "O_h" ),
+        ("subgroup") := rec(
+          ("N") := fail,
+          ("family") := fail,
+          ("o3_class") := "Td",
+          ("order") := 24,
+          ("schoenflies") := "T_d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_i" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "O_h" ),
+        ("subgroup") := rec(
+          ("N") := fail,
+          ("family") := fail,
+          ("o3_class") := "O",
+          ("order") := 24,
+          ("schoenflies") := "O"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_i" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "O_h" ),
+        ("subgroup") := rec(
+          ("N") := fail,
+          ("family") := fail,
+          ("o3_class") := "Oh",
+          ("order") := 48,
+          ("schoenflies") := "O_h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_i" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "I_h" ),
+        ("subgroup") := rec(
+          ("N") := fail,
+          ("family") := fail,
+          ("o3_class") := "I",
+          ("order") := 60,
+          ("schoenflies") := "I"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("schoenflies") := "C_i" ),
+        ("class_size") := fail,
+        ("normal") := false,
+        ("normalizer") := rec( ("schoenflies") := "I_h" ),
+        ("subgroup") := rec(
+          ("N") := fail,
+          ("family") := fail,
+          ("o3_class") := "Ih",
+          ("order") := 120,
+          ("schoenflies") := "I_h"
         )
       )
     ]

@@ -352,6 +352,18 @@ o3d = {
         'vector_products': 'rotation/Dinf#/clebsch_gordan'
     },
     'domain': 'continuous',
+    'fundamental_domain': {
+        'image': 'rotation/Dinf#/fundamental_domain',
+        'space': {
+            'lens': {'reason': 'not-defined-for-family', 'value': None},
+            'name': 'projective plane'
+        },
+        'volumes': {
+            'domain': {'coefficient': [4, 1], 'dimension': 2, 'pi_power': 1},
+            'group': {'coefficient': [8, 1], 'dimension': 1, 'pi_power': 1},
+            'pin_minus_3': {'coefficient': [32, 1], 'dimension': 3, 'pi_power': 2}
+        }
+    },
     'fusion': {
         'condition_grammar': ['always', 'm == n', 'm != n', 'm > n', 'm < n'],
         'families': ['A1', 'A2', 'E', 'Eh'],
@@ -461,6 +473,17 @@ o3d = {
             'hilbert_series': {'denominator': [4], 'numerator': [1]},
             'image': 'N(U(1))',
             'relation': None
+        },
+        'molien': {
+            'families': [
+                {
+                    'dim': 2,
+                    'family': 'Eh',
+                    'hilbert_series': {'denominator': [4], 'numerator': [1]},
+                    'label_template': 'E_n'
+                }
+            ],
+            'levels': []
         }
     },
     'jj_configurations': {
@@ -2507,6 +2530,9 @@ o3d = {
             {
                 'centralizer': {'order': {'reason': 'continuous-group', 'value': None}, 'symbol': '2C_inf'},
                 'class_ids': ['Cphi'],
+                'class_size': 1,
+                'index': 2,
+                'normal': True,
                 'normalizer': {'order': {'reason': 'continuous-group', 'value': None}, 'symbol': '2D_inf'},
                 'subduction': [
                     {
@@ -7443,6 +7469,7 @@ o3d = {
                     }
                 ]
             }
-        ]
+        ],
+        'vector_rules': 'rotation/Dinf#/subduction_subgroups/rules'
     }
 }

@@ -854,6 +854,42 @@
     "vector_products": "rotation/Dinf#/clebsch_gordan"
   },
   "domain": "continuous",
+  "fundamental_domain": {
+    "image": "rotation/Dinf#/fundamental_domain",
+    "space": {
+      "lens": {
+        "reason": "not-defined-for-family",
+        "value": null
+      },
+      "name": "projective plane"
+    },
+    "volumes": {
+      "domain": {
+        "coefficient": [
+          4,
+          1
+        ],
+        "dimension": 2,
+        "pi_power": 1
+      },
+      "group": {
+        "coefficient": [
+          8,
+          1
+        ],
+        "dimension": 1,
+        "pi_power": 1
+      },
+      "pin_minus_3": {
+        "coefficient": [
+          32,
+          1
+        ],
+        "dimension": 3,
+        "pi_power": 2
+      }
+    }
+  },
   "fusion": {
     "condition_grammar": [
       "always",
@@ -1127,6 +1163,24 @@
       },
       "image": "N(U(1))",
       "relation": null
+    },
+    "molien": {
+      "families": [
+        {
+          "dim": 2,
+          "family": "Eh",
+          "hilbert_series": {
+            "denominator": [
+              4
+            ],
+            "numerator": [
+              1
+            ]
+          },
+          "label_template": "E_n"
+        }
+      ],
+      "levels": []
     }
   },
   "jj_configurations": {
@@ -7149,6 +7203,9 @@
         "class_ids": [
           "Cphi"
         ],
+        "class_size": 1,
+        "index": 2,
+        "normal": true,
         "normalizer": {
           "order": {
             "reason": "continuous-group",
@@ -26698,6 +26755,7 @@
           }
         ]
       }
-    ]
+    ],
+    "vector_rules": "rotation/Dinf#/subduction_subgroups/rules"
   }
 }

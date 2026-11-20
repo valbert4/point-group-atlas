@@ -490,6 +490,15 @@ o3d = {
         'vector_products': 'rotation/Cinf#/clebsch_gordan'
     },
     'domain': 'continuous',
+    'fundamental_domain': {
+        'image': 'rotation/Cinf#/fundamental_domain',
+        'space': {'lens': {'reason': 'not-defined-for-family', 'value': None}, 'name': 'sphere'},
+        'volumes': {
+            'domain': {'coefficient': [8, 1], 'dimension': 2, 'pi_power': 1},
+            'group': {'coefficient': [4, 1], 'dimension': 1, 'pi_power': 1},
+            'pin_minus_3': {'coefficient': [32, 1], 'dimension': 3, 'pi_power': 2}
+        }
+    },
     'fusion': {
         'condition_grammar': ['always', 'm == n', 'm != n', 'm > n', 'm < n'],
         'families': ['A', '1E', '2E', '1Eh', '2Eh'],
@@ -649,6 +658,30 @@ o3d = {
             'hilbert_series': {'denominator': [2], 'numerator': [1]},
             'image': 'U(1)',
             'relation': None
+        },
+        'molien': {
+            'families': [
+                {
+                    'dim': 1,
+                    'family': '1Eh',
+                    'hilbert_series': {'denominator': [], 'numerator': [1]},
+                    'label_template': '1E_n'
+                },
+                {
+                    'dim': 1,
+                    'family': '2Eh',
+                    'hilbert_series': {'denominator': [], 'numerator': [1]},
+                    'label_template': '2E_n'
+                }
+            ],
+            'levels': [
+                {
+                    'dim': 2,
+                    'hilbert_series': {'denominator': [2], 'numerator': [1]},
+                    'kind': 'complex pair',
+                    'members': ['1Eh', '2Eh']
+                }
+            ]
         }
     },
     'jj_configurations': {
@@ -8736,6 +8769,7 @@ o3d = {
                     }
                 ]
             }
-        ]
+        ],
+        'vector_rules': 'rotation/Cinf#/subduction_subgroups/rules'
     }
 }

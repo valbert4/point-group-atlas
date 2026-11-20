@@ -266,6 +266,37 @@ def so3_subgroup_classes():
             "count": {"continuous": len(continuous), "finite": len(finite)}}
 
 
+O3_FAMILIES = ("Cn", "S2n", "Cnh", "Cnv", "Dn", "Dnh", "Dnd")
+O3_EXCEPTIONAL = ("T", "Th", "Td", "O", "Oh", "I", "Ih")
+
+
+def o3_subgroup_classes():
+    """The closed subgroups of O(3) up to conjugacy, other than O(3): the classes of
+    data/point_groups.json (an N = 1 member that shares its class with another record is that
+    record's row), each with the normalizer and the centralizer in O(3) of its record's group
+    block; the continuous ones, then the families O3_FAMILIES, then O3_EXCEPTIONAL."""
+    lattice = serialize.read_json(names.point_groups_lattice_path())
+
+    def entry(g):
+        rec = serialize.read_json(names.record_path(g))["group"]
+        fam = names.family_of(g)
+        order = rec["order"]
+        normal = rec["normalizer"]["schoenflies"] == "O(3)"
+        return {"subgroup": {"schoenflies": rec["schoenflies"], "o3_class": g,
+                             "family": fam[0] if fam else None, "N": fam[1] if fam else None,
+                             "order": order if isinstance(order, int) else None},
+                "normal": normal, "class_size": 1 if normal else None,
+                "normalizer": {"schoenflies": rec["normalizer"]["schoenflies"]},
+                "centralizer": {"schoenflies": rec["centralizer"]["schoenflies"]}}
+    ids = [n["id"] for n in lattice["nodes"] if n["id"] != "O3"]
+    continuous = [entry(g) for g in ids if names.kind_of(g) == "continuous"]
+    finite = [entry(g) for f in O3_FAMILIES for g in ids
+              if (names.family_of(g) or ("",))[0] == f]
+    finite += [entry(g) for g in O3_EXCEPTIONAL]
+    return {"continuous": continuous, "finite": finite,
+            "count": {"continuous": len(continuous), "finite": len(finite)}}
+
+
 # The restriction of D^(J) of SO(3) to its closed subgroups (CONVENTIONS.md section 16.1), by
 # rules: for the axial subgroups a direct sum over the kets |J, m> (for D_inf and D_N over |J, 0>
 # and the pairs |J, +-m>, m > 0) of the terms of the first case that holds, the irrep of a member of
@@ -540,6 +571,374 @@ def so3_subduction_rules():
                                          "order": b["order"]},
                             "generating_function": gf})
     return {"continuous": continuous, "families": families, "exceptional": exceptional,
+            "count": {"continuous": len(continuous), "families": len(families),
+                      "exceptional": len(exceptional)}}
+
+
+# The restriction of D^(J,p) of O(3) to its closed subgroups (CONVENTIONS.md section 16.1), by
+# rules as SO(3)'s, the cases also by the parity p: a direct sum over the kets |J, m> (over |J, 0>
+# and the pairs |J, +-m>, m > 0, for the groups with a binary axis or a vertical mirror) of the
+# terms of the first case that holds.  A tag of a rule labels its terms by p ("p": g at p = +1, u
+# at p = -1, the group holding i) or by the sign of sigma_h on the kets ("p(-1)^m": ' where
+# p (-1)^m = +1, '' where it is -1); q is m mod N, or, where the rotoreflection S_2N labels the
+# irreps (S_2N and D_Nd for N even, CONVENTIONS.md section 6.1), (N+1) m mod 2N at p = +1 and
+# (N+1) m + N mod 2N at p = -1.  The generating functions are those of the multiplicities at the
+# parity (-1)^J of the members' records (bases_summary), in t^J; at the other parity the
+# multiplicity of L is that of L (x) det.  O3_RULE_RENAME: the members whose irreps take the
+# names of CONVENTIONS.md section 6.3.
+O3_KETS = {"symbol": "m", "from": "-J", "to": "J"}
+O3_PAIRS = {"symbol": "m", "from": "0", "to": "J"}
+O3_TAGS = {"p": {"by": "p", "plus": "g", "minus": "u"},
+           "p(-1)^m": {"by": "p(-1)^m", "plus": "'", "minus": "''"}}
+O3_Q = {"m mod N": "m mod N", "S2N": "(N+1)m + N[p = -1] mod 2N"}
+_O3_CN = [("q = 0", ["A"]), ("q = N/2", ["B"]), ("0 < q < N/2", ["1E_{q}"]),
+          ("N/2 < q < N", ["2E_{N-q}"])]
+_O3_DN = [("m = 0 and J even", ["A_1"]), ("m = 0 and J odd", ["A_2"]), ("q = 0", ["A_1", "A_2"]),
+          ("q = N/2", ["B_1", "B_2"]), ("otherwise", ["E_{min(q, N-q)}"])]
+# the rules of the odd members, without the case q = N/2 that none of them meets
+_O3_CN_ODD = [c for c in _O3_CN if c[0] != "q = N/2"]
+_O3_DN_ODD = [c for c in _O3_DN if c[0] != "q = N/2"]
+O3_RULES_CONTINUOUS = [
+    ("Cinf", O3_KETS, [("m = 0", ["A"]), ("m > 0", ["1E_{m}"]), ("m < 0", ["2E_{-m}"])], None,
+     "D^(J,p) | C_inf = A + sum_{n=1..J} (1E_n + 2E_n) for both p"),
+    ("Cinfh", O3_KETS, [("m = 0", ["A"]), ("m > 0", ["1E_{m}"]), ("m < 0", ["2E_{-m}"])], "p",
+     "D^(J,p) | C_infh = A_x + sum_{n=1..J} (1E_nx + 2E_nx), x = g if p = +1, u if p = -1"),
+    ("Cinfv", O3_PAIRS, [("m = 0 and p(-1)^J = +1", ["A_1"]), ("m = 0 and p(-1)^J = -1", ["A_2"]),
+                         ("otherwise", ["E_{m}"])], None,
+     "D^(J,p) | C_infv = [A_1 if p (-1)^J = +1 else A_2] + sum_{n=1..J} E_n"),
+    ("Dinf", O3_PAIRS, [("m = 0 and J even", ["A_1"]), ("m = 0 and J odd", ["A_2"]),
+                        ("otherwise", ["E_{m}"])], None,
+     "D^(J,p) | D_inf = [A_1 if J even else A_2] + sum_{n=1..J} E_n for both p"),
+    ("Dinfh", O3_PAIRS, [("m = 0 and J even", ["A_1"]), ("m = 0 and J odd", ["A_2"]),
+                         ("otherwise", ["E_{m}"])], "p",
+     "D^(J,p) | D_infh = [A_1x if J even else A_2x] + sum_{n=1..J} E_nx, x = g if p = +1, u if "
+     "p = -1"),
+]
+O3_RULES_FAMILIES = [
+    ("Cn", "every", 1, O3_KETS, "m mod N", _O3_CN, None,
+     "D^(J,p) | C_N = SO(3)'s rule for both p"),
+    ("S2n", "odd", 1, O3_KETS, "m mod N", _O3_CN_ODD, "p",
+     "D^(J,p) | S_2N (N odd) = sum_{m=-J..J} G(q)x, q = m mod N, G(q) as for C_N, x = g if p = +1, "
+     "u if p = -1"),
+    ("S2n", "even", 2, O3_KETS, "S2N",
+     [("q = 0", ["A"]), ("q = N", ["B"]), ("0 < q < N", ["1E_{q}"]), ("N < q < 2N", ["2E_{2N-q}"])],
+     None, "D^(J,p) | S_2N (N even) = sum_{m=-J..J} G(q), q = (N+1)m + N[p = -1] mod 2N; G(q) = A "
+     "if q = 0, B if q = N, 1E_q if 0 < q < N, 2E_{2N-q} if N < q < 2N"),
+    ("Cnh", "odd", 1, O3_KETS, "m mod N", _O3_CN_ODD, "p(-1)^m",
+     "D^(J,p) | C_Nh (N odd) = sum_{m=-J..J} G(q)x, q = m mod N, G(q) as for C_N, x = ' if "
+     "p (-1)^m = +1, '' if p (-1)^m = -1"),
+    ("Cnh", "even", 2, O3_KETS, "m mod N", _O3_CN, "p",
+     "D^(J,p) | C_Nh (N even) = sum_{m=-J..J} G(q)x, q = m mod N, G(q) as for C_N, x = g if "
+     "p = +1, u if p = -1"),
+    ("Cnv", "every", 1, O3_PAIRS, "m mod N",
+     [("m = 0 and p(-1)^J = +1", ["A_1"]), ("m = 0 and p(-1)^J = -1", ["A_2"]),
+      ("q = 0", ["A_1", "A_2"]), ("q = N/2", ["B_1", "B_2"]), ("otherwise", ["E_{min(q, N-q)}"])],
+     None, "D^(J,p) | C_Nv = [A_1 if p (-1)^J = +1 else A_2] + sum_{m=1..J} G(q), q = m mod N; "
+     "G(q) = A_1 + A_2 if q = 0, B_1 + B_2 if q = N/2, E_{min(q,N-q)} otherwise"),
+    ("Dn", "every", 2, O3_PAIRS, "m mod N", _O3_DN, None,
+     "D^(J,p) | D_N = SO(3)'s rule for both p"),
+    ("Dnh", "odd", 1, O3_PAIRS, "m mod N", _O3_DN_ODD, "p(-1)^m",
+     "D^(J,p) | D_Nh (N odd) = D_N's terms, each with ' where p (-1)^m = +1 and '' where it is -1"),
+    ("Dnh", "even", 2, O3_PAIRS, "m mod N", _O3_DN, "p",
+     "D^(J,p) | D_Nh (N even) = D_N's terms, each with g if p = +1, u if p = -1"),
+    ("Dnd", "odd", 1, O3_PAIRS, "m mod N", _O3_DN_ODD, "p",
+     "D^(J,p) | D_Nd (N odd) = D_N's terms, each with g if p = +1, u if p = -1"),
+    ("Dnd", "even", 2, O3_PAIRS, "S2N",
+     [("m = 0 and p = +1 and J even", ["A_1"]), ("m = 0 and p = +1 and J odd", ["A_2"]),
+      ("m = 0 and p = -1 and J even", ["B_1"]), ("m = 0 and p = -1 and J odd", ["B_2"]),
+      ("q = 0", ["A_1", "A_2"]), ("q = N", ["B_1", "B_2"]), ("otherwise", ["E_{min(q, 2N-q)}"])],
+     None, "D^(J,p) | D_Nd (N even) = [A_1, A_2, B_1, B_2 by p and J] + sum_{m=1..J} G(q), "
+     "q = (N+1)m + N[p = -1] mod 2N; G(q) = A_1 + A_2 if q = 0, B_1 + B_2 if q = N, "
+     "E_{min(q,2N-q)} otherwise"),
+]
+O3_RULE_RENAME = {("Cnv", 1): {"A_1": "A'", "A_2": "A''"},
+                  ("Dn", 2): {"A_1": "A", "A_2": "B_1", "B_1": "B_3", "B_2": "B_2"},
+                  ("Dnh", 2): {"A_1g": "A_g", "A_2g": "B_1g", "B_1g": "B_3g", "B_2g": "B_2g",
+                               "A_1u": "A_u", "A_2u": "B_1u", "B_1u": "B_3u", "B_2u": "B_2u"},
+                  ("Dnd", 1): {"A_1g": "A_g", "A_2g": "B_g", "A_1u": "A_u", "A_2u": "B_u"}}
+# The numerators of the generating functions, as SO3_GF_FAMILIES, over (1 - t^a)(1 - t^b): per
+# irrep of a member (its subscript k), a condition on k and N, and the terms (coefficient,
+# exponent); the conditions join by "and".
+_E_EVEN = [(1, "k"), (1, "N-k")]
+_E_ODD = [(1, "k+1"), (1, "N-k+1")]
+_E4_EVEN = [(1, "k"), (1, "N-k+1"), (1, "N+k+1"), (1, "N+N-k")]
+_E4_ODD = [(1, "k+1"), (1, "N-k"), (1, "N+k"), (1, "N+N-k+1")]
+
+
+def _pair(labels, cond, terms):
+    return [(lab, cond, terms) for lab in labels]
+
+
+O3_GF_FAMILIES = {
+    ("Cn", "every"): (("1", "N"), SO3_GF_FAMILIES["Cn"][1]),
+    ("S2n", "odd"): (("2", "N+N"), [
+        ("A_g", "always", [(1, "0"), (2, "N+1"), (1, "N+N")]),
+        ("A_u", "always", [(1, "1"), (2, "N"), (1, "N+N+1")])]
+        + _pair(("1E_{k}g", "2E_{k}g"), "0 < k < N/2 and k even", _E4_EVEN)
+        + _pair(("1E_{k}g", "2E_{k}g"), "0 < k < N/2 and k odd", _E4_ODD)
+        + _pair(("1E_{k}u", "2E_{k}u"), "0 < k < N/2 and k even", _E4_ODD)
+        + _pair(("1E_{k}u", "2E_{k}u"), "0 < k < N/2 and k odd", _E4_EVEN)),
+    ("S2n", "even"): (("2", "N+N"), [
+        ("A", "always", [(1, "0"), (2, "N+1"), (1, "N+N")]),
+        ("B", "always", [(1, "1"), (2, "N"), (1, "N+N+1")])]
+        + _pair(("1E_{k}", "2E_{k}"), "0 < k < N", _E4_EVEN)),
+    ("Cnh", "odd"): (("2", "N"), [
+        ("A'", "always", [(1, "0"), (1, "N")]), ("A''", "always", [(1, "1"), (1, "N+1")])]
+        + _pair(("1E_{k}'", "2E_{k}'"), "0 < k < N/2", _E_EVEN)
+        + _pair(("1E_{k}''", "2E_{k}''"), "0 < k < N/2", _E_ODD)),
+    ("Cnh", "even"): (("2", "N"), [
+        ("A_g", "always", [(1, "0"), (1, "N")]), ("A_u", "always", [(1, "1"), (1, "N+1")]),
+        ("B_g", "N/2 even", [(2, "N/2")]), ("B_g", "N/2 odd", [(2, "N/2+1")]),
+        ("B_u", "N/2 even", [(2, "N/2+1")]), ("B_u", "N/2 odd", [(2, "N/2")])]
+        + _pair(("1E_{k}g", "2E_{k}g"), "0 < k < N/2 and k even", _E_EVEN)
+        + _pair(("1E_{k}g", "2E_{k}g"), "0 < k < N/2 and k odd", _E_ODD)
+        + _pair(("1E_{k}u", "2E_{k}u"), "0 < k < N/2 and k even", _E_ODD)
+        + _pair(("1E_{k}u", "2E_{k}u"), "0 < k < N/2 and k odd", _E_EVEN)),
+    ("Cnv", "every"): (("1", "N"), [
+        ("A_1", "always", [(1, "0")]), ("A_2", "always", [(1, "N")]),
+        ("B_1", "N even", [(1, "N/2")]), ("B_2", "N even", [(1, "N/2")]),
+        ("E_{k}", "0 < k < N/2", _E_EVEN)]),
+    ("Dn", "every"): (("2", "N"), SO3_GF_FAMILIES["Dn"][1]),
+    ("Dnh", "odd"): (("2", "N"), [
+        ("A_1'", "always", [(1, "0")]), ("A_2'", "always", [(1, "N")]),
+        ("A_1''", "always", [(1, "N+1")]), ("A_2''", "always", [(1, "1")]),
+        ("E_{k}'", "0 < k < N/2", _E_EVEN), ("E_{k}''", "0 < k < N/2", _E_ODD)]),
+    ("Dnh", "even"): (("2", "N"), [
+        ("A_1g", "always", [(1, "0")]), ("A_2g", "always", [(1, "N")]),
+        ("A_1u", "always", [(1, "N+1")]), ("A_2u", "always", [(1, "1")])]
+        + _pair(("B_1g", "B_2g"), "N/2 even", [(1, "N/2")])
+        + _pair(("B_1g", "B_2g"), "N/2 odd", [(1, "N/2+1")])
+        + _pair(("B_1u", "B_2u"), "N/2 even", [(1, "N/2+1")])
+        + _pair(("B_1u", "B_2u"), "N/2 odd", [(1, "N/2")])
+        + [("E_{k}g", "0 < k < N/2 and k even", _E_EVEN),
+           ("E_{k}g", "0 < k < N/2 and k odd", _E_ODD),
+           ("E_{k}u", "0 < k < N/2 and k even", _E_ODD),
+           ("E_{k}u", "0 < k < N/2 and k odd", _E_EVEN)]),
+    ("Dnd", "odd"): (("2", "N+N"), [
+        ("A_1g", "always", [(1, "0"), (1, "N+1")]), ("A_2g", "always", [(1, "N+1"), (1, "N+N")]),
+        ("A_1u", "always", [(1, "N"), (1, "N+N+1")]), ("A_2u", "always", [(1, "1"), (1, "N")]),
+        ("E_{k}g", "0 < k < N/2 and k even", _E4_EVEN),
+        ("E_{k}g", "0 < k < N/2 and k odd", _E4_ODD),
+        ("E_{k}u", "0 < k < N/2 and k even", _E4_ODD),
+        ("E_{k}u", "0 < k < N/2 and k odd", _E4_EVEN)]),
+    ("Dnd", "even"): (("2", "N+N"), [
+        ("A_1", "always", [(1, "0"), (1, "N+1")]), ("A_2", "always", [(1, "N+1"), (1, "N+N")]),
+        ("B_1", "always", [(1, "N"), (1, "N+N+1")]), ("B_2", "always", [(1, "1"), (1, "N")]),
+        ("E_{k}", "0 < k < N", _E4_EVEN)]),
+}
+O3_RULES_CHECK_JMAX = 40
+O3_EXCEPTIONAL_ORDER = ("T", "Th", "Td", "O", "Oh", "I", "Ih")
+# The conditions of the rules of O(3), of the ket m at J and the parity p, with q of the rule.
+O3_RULE_TESTS = dict(RULE_TESTS, **{
+    "p = +1": lambda m, J, q, N, p: p == 1, "p = -1": lambda m, J, q, N, p: p == -1,
+    "p(-1)^J = +1": lambda m, J, q, N, p: p * (-1) ** J == 1,
+    "p(-1)^J = -1": lambda m, J, q, N, p: p * (-1) ** J == -1,
+    "q = N": lambda m, J, q, N, p: q == N, "0 < q < N": lambda m, J, q, N, p: 0 < q < N,
+    "N < q < 2N": lambda m, J, q, N, p: N < q < 2 * N})
+
+
+def _o3_holds(cond, m, J, q, N, p):
+    def test(part):
+        f = O3_RULE_TESTS[part]
+        return f(m, J, q, N, p) if part in O3_RULE_TESTS and part not in RULE_TESTS else f(
+            m, J, q, N)
+    return all(test(part) for part in cond.split(" and "))
+
+
+def _o3_tagged(label, tag, value):
+    """A label with its tag: A, g -> A_g; B_1, g -> B_1g; 1E_2, ' -> 1E_2'."""
+    if tag is None:
+        return label
+    if value in ("g", "u"):
+        return label + value if "_" in label else label + "_" + value
+    return label + value
+
+
+def _o3_terms(spec, m, J, N, p):
+    """The labels of the ket m (or the pair +-m) at J and p by the rule spec (family, ..., cases,
+    tag)."""
+    qexpr, cases, tag = spec
+    if N is None:
+        q = None
+    elif qexpr == "S2N":
+        q = ((N + 1) * m + (N if p == -1 else 0)) % (2 * N)
+    else:
+        q = m % N
+    for cond, terms in cases:
+        if _o3_holds(cond, m, J, q, N or 1, p):
+            out = []
+            for t in terms:
+                for key, value in (("{min(q, N-q)}", min(q, N - q) if N else 0),
+                                   ("{min(q, 2N-q)}", min(q, 2 * N - q) if N else 0),
+                                   ("{2N-q}", 2 * N - q if N else 0),
+                                   ("{N-q}", N - q if N else 0), ("{-m}", -m), ("{m}", m),
+                                   ("{q}", q)):
+                    t = t.replace(key, str(value))
+                x = None
+                if tag == "p":
+                    x = "g" if p == 1 else "u"
+                elif tag == "p(-1)^m":
+                    x = "'" if p * (-1) ** m == 1 else "''"
+                out.append(_o3_tagged(t, tag, x))
+            return out
+    raise ValueError("O(3): no case of the rule holds for m = %d, J = %d, p = %d" % (m, J, p))
+
+
+def _o3_restriction(spec, sumspec, J, N, p):
+    lo = -J if sumspec["from"] == "-J" else 0
+    got = {}
+    for m in range(lo, J + 1):
+        for t in _o3_terms(spec, m, J, N, p):
+            got[t] = got.get(t, 0) + 1
+    return got
+
+
+def _o3_member(name):
+    """({(irrep id, J, p): multiplicity} for J <= O3_RULES_CHECK_JMAX, the subduction block) of
+    D^(J,p) restricted to the finite group `name`, from its character table."""
+    b = TB.character_table(name)
+    irreps = [(TB.ident(ir["mulliken"]), ir["dim"], ir["chi"]) for ir in b["irreps"]]
+    emb = subduction_o3.embedding_from_tables(
+        names.schoenflies_of(name), b["order"],
+        [(r["id"], r["size"], r["det"], r["turn"]) for r in b["classes"]], irreps)
+    so3 = subduction_o3.subduction_block(emb, jmax=J_MAX_SUBDUCTION)
+    P = so3["period"]
+    out = {}
+    for J in range(O3_RULES_CHECK_JMAX + 1):
+        for p, par in ((1, "g"), (-1, "u")):
+            t = so3["parities"].get(par) or so3["parities"]["g"]
+            for i, _d, _c in irreps:
+                out[(i, J, p)] = t["residues"][J % P][i] + t["increment"][i] * (J // P)
+    return out, so3, [i for i, _d, _c in irreps]
+
+
+def _o3_gf_holds(cond, N, k):
+    tests = {"always": True, "N even": N % 2 == 0, "N/2 even": N % 4 == 0, "N/2 odd": N % 4 == 2,
+             "0 < k < N/2": 0 < 2 * k < N, "0 < k < N": 0 < k < N, "k even": k % 2 == 0,
+             "k odd": k % 2 == 1}
+    return all(tests[part] for part in cond.split(" and "))
+
+
+def _o3_check_family_gf(key, N, rename, natural):
+    """The numerators of O3_GF_FAMILIES[key] at the member N: one per irrep of the member, whose
+    series over the family's denominator is the multiplicity at J = 0, ..., O3_RULES_CHECK_JMAX
+    at the parity (-1)^J (`natural`, {irrep id: [b(J)]}), else a ValueError."""
+    (da, db), numerators = O3_GF_FAMILIES[key]
+    den = [_gf_exponent(da, N=N), _gf_exponent(db, N=N)]
+    got = {}
+    for label, cond, terms in numerators:
+        ks = range(1, N) if "{k}" in label else [0]
+        for k in ks:
+            if not _o3_gf_holds(cond, N, k):
+                continue
+            lab = label.replace("{k}", str(k))
+            i = TB.ident(rename.get(lab, lab))
+            if i in got:
+                raise ValueError("O(3) to %s: two numerators for %s" % (key, i))
+            got[i] = _gf_coefficients(terms, N=N, k=k)
+    if set(got) != set(natural):
+        raise ValueError("O(3) to %s N = %d: numerators for %s, irreps %s"
+                         % (key, N, sorted(got), sorted(natural)))
+    for i, c in got.items():
+        if _gf_series(c, den, O3_RULES_CHECK_JMAX) != natural[i]:
+            raise ValueError("O(3) to %s N = %d: the generating function of %s is wrong"
+                             % (key, N, i))
+
+
+def _o3_check_kets(family, N, sumspec, spec, rename):
+    """Each block of the enumerated bases of the member's record (at p = (-1)^J): the irrep that
+    the rule gives its ket, or its pair of kets."""
+    rec = serialize.read_json(names.record_path(names.name_of(family, N)))
+    want, got = {}, {}
+    for b in rec["subduction_basis"]["enumerated"]["blocks"]:
+        key = (b["J"], b["seed_m"] if sumspec["from"] == "-J" else abs(b["seed_m"]))
+        want.setdefault(key, {}).setdefault(b["irrep_id"], 0)
+        want[key][b["irrep_id"]] += 1
+    for (J, m) in want:
+        got[(J, m)] = {}
+        for t in _o3_terms(spec, m, J, N, (-1) ** J):
+            i = TB.ident(rename.get(t, t))
+            got[(J, m)][i] = got[(J, m)].get(i, 0) + 1
+    if got != want:
+        bad = sorted(k for k in want if got[k] != want[k])[:3]
+        raise ValueError("O(3) to %s: the rule gives the kets %s other irreps than the bases"
+                         % (names.name_of(family, N), bad))
+
+
+def o3_subduction_rules():
+    """The subduction_rules block of O(3): the rules of O3_RULES_CONTINUOUS and O3_RULES_FAMILIES
+    must give the restriction of D^(J,p) to every member N <= N_MAX at both parities for J <=
+    O3_RULES_CHECK_JMAX, and the irreps of each block of the members' bases; the generating
+    functions of O3_GF_FAMILIES the multiplicities at the parity (-1)^J; the continuous
+    subgroups' rules their groups' subduction from O(3), and their generating functions are those
+    of their records; else a ValueError."""
+    continuous = []
+    for h, sumspec, cases, tag, text in O3_RULES_CONTINUOUS:
+        g = CT.ContinuousGroup(h)
+        spec = ("m mod N", cases, tag)
+        for J in range(CONT_JMAX + 1):
+            for p in (1, -1):
+                want = {lab: k for lab, k in g.subduce_o3(J, p)}
+                if _o3_restriction(spec, sumspec, J, None, p) != want:
+                    raise ValueError("O(3) to %s, J = %d, p = %d: the rule differs from the "
+                                     "group's subduction" % (h, J, p))
+        gf = serialize.read_json(names.record_path(h))["subduction_basis"]["generating_function"]
+        continuous.append({"subgroup": {"o3_class": h, "schoenflies": names.schoenflies_of(h)},
+                           "sum": sumspec, "cases": [{"if": c, "terms": t} for c, t in cases],
+                           **({"tag": O3_TAGS[tag]} if tag else {}), "text": text,
+                           "generating_function": gf})
+    continuous.append({"subgroup": {"o3_class": "SO3", "schoenflies": "SO(3)"},
+                       "terms": ["D^(J)"], "text": "D^(J,p) | SO(3) = D^(J) for both p"})
+    families = []
+    for family, ncls, start, sumspec, qexpr, cases, tag, text in O3_RULES_FAMILIES:
+        spec = (qexpr, cases, tag)
+        for N in range(start, names.N_MAX + 1):
+            if (ncls == "odd" and N % 2 == 0) or (ncls == "even" and N % 2):
+                continue
+            name = names.name_of(family, N)
+            want, _so3, ids = _o3_member(name)
+            rename = O3_RULE_RENAME.get((family, N), {})
+            for J in range(O3_RULES_CHECK_JMAX + 1):
+                for p in (1, -1):
+                    got = {}
+                    for t, k in _o3_restriction(spec, sumspec, J, N, p).items():
+                        i = TB.ident(rename.get(t, t))
+                        got[i] = got.get(i, 0) + k
+                    if set(got) - set(ids) or any(got.get(i, 0) != want[(i, J, p)] for i in ids):
+                        raise ValueError("O(3) to %s, J = %d, p = %d: the rule gives %s"
+                                         % (name, J, p, got))
+            _o3_check_kets(family, N, sumspec, spec, rename)
+            natural = {i: [want[(i, J, (-1) ** J)] for J in range(O3_RULES_CHECK_JMAX + 1)]
+                       for i in ids}
+            _o3_check_family_gf((family, ncls), N, rename, natural)
+        (da, db), numerators = O3_GF_FAMILIES[(family, ncls)]
+        families.append({"family": family, "N": ncls, "N_min": start, "sum": sumspec,
+                         "q": O3_Q[qexpr], "cases": [{"if": c, "terms": t} for c, t in cases],
+                         **({"tag": O3_TAGS[tag]} if tag else {}), "text": text,
+                         "renamed": [{"N": N, "names": dict(r)} for (f, N), r
+                                     in sorted(O3_RULE_RENAME.items()) if f == family
+                                     and (ncls == "every" or N % 2 == (ncls == "odd"))],
+                         "generating_function": {
+                             "variable": "t^J", "parity": "(-1)^J",
+                             "denominator": [da, db.replace("N+N", "2N")], "numerators": [
+                                 {"irrep": label, "if": cond,
+                                  "numerator": _gf_numerator_text(terms).replace("N+N", "2N")}
+                                 for label, cond, terms in numerators]}})
+    exceptional = []
+    for h in O3_EXCEPTIONAL_ORDER:
+        b = TB.character_table(h)
+        irreps = [{"id": TB.ident(ir["mulliken"]), "label": ir["label"]} for ir in b["irreps"]]
+        _want, so3, _ids = _o3_member(h)
+        gf = bases_summary.generating_function(
+            {"subduction_o3": so3, "character_table": {"irreps": irreps},
+             "group": {"schoenflies": names.schoenflies_of(h)}})
+        exceptional.append({"subgroup": {"o3_class": h, "schoenflies": names.schoenflies_of(h),
+                                         "order": b["order"]},
+                            "generating_function": gf})
+    return {"continuous": continuous, "families": families, "exceptional": exceptional,
+            "parity": "the generating functions count the blocks at the parity (-1)^J, as the "
+                      "members' records; at the other parity the multiplicity of L is that of "
+                      "L (x) det, det the determinant character of the subgroup",
             "count": {"continuous": len(continuous), "families": len(families),
                       "exceptional": len(exceptional)}}
 
@@ -1181,6 +1580,9 @@ def continuous_record(name):
     if name == "SO3":
         doc["subgroup_classes"] = so3_subgroup_classes()
         doc["subduction_rules"] = so3_subduction_rules()
+    if name == "O3":
+        doc["subgroup_classes"] = o3_subgroup_classes()
+        doc["subduction_rules"] = o3_subduction_rules()
     unitary_continuous.attach(doc, name)
     kernels.attach_families(doc, name)
     return doc

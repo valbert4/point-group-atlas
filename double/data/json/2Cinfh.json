@@ -5286,6 +5286,42 @@
     "vector_products": "rotation/Cinfh#/clebsch_gordan"
   },
   "domain": "continuous",
+  "fundamental_domain": {
+    "image": "rotation/Cinfh#/fundamental_domain",
+    "space": {
+      "lens": {
+        "reason": "not-defined-for-family",
+        "value": null
+      },
+      "name": "sphere"
+    },
+    "volumes": {
+      "domain": {
+        "coefficient": [
+          4,
+          1
+        ],
+        "dimension": 2,
+        "pi_power": 1
+      },
+      "group": {
+        "coefficient": [
+          8,
+          1
+        ],
+        "dimension": 1,
+        "pi_power": 1
+      },
+      "pin_minus_3": {
+        "coefficient": [
+          32,
+          1
+        ],
+        "dimension": 3,
+        "pi_power": 2
+      }
+    }
+  },
   "fusion": {
     "condition_grammar": [
       "always",
@@ -6494,6 +6530,88 @@
       },
       "image": "U(1)",
       "relation": null
+    },
+    "molien": {
+      "families": [
+        {
+          "dim": 1,
+          "family": "1Ehg",
+          "hilbert_series": {
+            "denominator": [],
+            "numerator": [
+              1
+            ]
+          },
+          "label_template": "1E_n,g"
+        },
+        {
+          "dim": 1,
+          "family": "2Ehg",
+          "hilbert_series": {
+            "denominator": [],
+            "numerator": [
+              1
+            ]
+          },
+          "label_template": "2E_n,g"
+        },
+        {
+          "dim": 1,
+          "family": "1Ehu",
+          "hilbert_series": {
+            "denominator": [],
+            "numerator": [
+              1
+            ]
+          },
+          "label_template": "1E_n,u"
+        },
+        {
+          "dim": 1,
+          "family": "2Ehu",
+          "hilbert_series": {
+            "denominator": [],
+            "numerator": [
+              1
+            ]
+          },
+          "label_template": "2E_n,u"
+        }
+      ],
+      "levels": [
+        {
+          "dim": 2,
+          "hilbert_series": {
+            "denominator": [
+              2
+            ],
+            "numerator": [
+              1
+            ]
+          },
+          "kind": "complex pair",
+          "members": [
+            "1Ehg",
+            "2Ehg"
+          ]
+        },
+        {
+          "dim": 2,
+          "hilbert_series": {
+            "denominator": [
+              2
+            ],
+            "numerator": [
+              1
+            ]
+          },
+          "kind": "complex pair",
+          "members": [
+            "1Ehu",
+            "2Ehu"
+          ]
+        }
+      ]
     }
   },
   "jj_configurations": {
@@ -11037,21 +11155,25 @@
         {
           "family": "1Ehg",
           "label_template": "1E_n,g",
+          "parity": 1,
           "twoM": "2n"
         },
         {
           "family": "2Ehg",
           "label_template": "2E_n,g",
+          "parity": 1,
           "twoM": "-2n"
         },
         {
           "family": "1Ehu",
           "label_template": "1E_n,u",
+          "parity": -1,
           "twoM": "2n"
         },
         {
           "family": "2Ehu",
           "label_template": "2E_n,u",
+          "parity": -1,
           "twoM": "-2n"
         }
       ]
@@ -11069,22 +11191,22 @@
         {
           "family": "1Ehg",
           "label_template": "1E_n,g",
-          "multiplicity": "[n <= J]"
+          "multiplicity": "[n <= J] at p = +1, 0 at p = -1"
         },
         {
           "family": "2Ehg",
           "label_template": "2E_n,g",
-          "multiplicity": "[n <= J]"
+          "multiplicity": "[n <= J] at p = +1, 0 at p = -1"
         },
         {
           "family": "1Ehu",
           "label_template": "1E_n,u",
-          "multiplicity": "[n <= J]"
+          "multiplicity": "0 at p = +1, [n <= J] at p = -1"
         },
         {
           "family": "2Ehu",
           "label_template": "2E_n,u",
-          "multiplicity": "[n <= J]"
+          "multiplicity": "0 at p = +1, [n <= J] at p = -1"
         }
       ],
       "parity_rule": "D^(J,-1)|2G = (D^(J,+1)|2G) (x) det: at parity -1 a block keeps its kets and partners, its label g becomes u",
@@ -14538,7 +14660,8 @@
           ],
           "family": "1Ehg",
           "label_template": "1E_n,g",
-          "numerator": "t^(2n)"
+          "numerator": "t^(2n)",
+          "parity": 1
         },
         {
           "denominator": [
@@ -14546,7 +14669,8 @@
           ],
           "family": "2Ehg",
           "label_template": "2E_n,g",
-          "numerator": "t^(2n)"
+          "numerator": "t^(2n)",
+          "parity": 1
         },
         {
           "denominator": [
@@ -14554,7 +14678,8 @@
           ],
           "family": "1Ehu",
           "label_template": "1E_n,u",
-          "numerator": "t^(2n)"
+          "numerator": "t^(2n)",
+          "parity": -1
         },
         {
           "denominator": [
@@ -14562,7 +14687,8 @@
           ],
           "family": "2Ehu",
           "label_template": "2E_n,u",
-          "numerator": "t^(2n)"
+          "numerator": "t^(2n)",
+          "parity": -1
         }
       ]
     },
@@ -16569,6 +16695,9 @@
         "class_ids": [
           "Cphi"
         ],
+        "class_size": 1,
+        "index": 2,
+        "normal": true,
         "normalizer": {
           "order": {
             "reason": "continuous-group",
@@ -145379,6 +145508,7 @@
           }
         ]
       }
-    ]
+    ],
+    "vector_rules": "rotation/Cinfh#/subduction_subgroups/rules"
   }
 }

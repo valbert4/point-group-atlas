@@ -635,7 +635,7 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../
 \leavevmode\label{n:index.family.N}\label{n:head.family.groups}\label{n:head.documents}The closed subgroups of $\grp{O(3)}$ are, up to conjugacy in \href{O3.pdf}{$\grp{O(3)}$}, $\grp{O(3)}$, \href{Cinf.pdf}{$\grp{C_{\infty}}$}, \href{Cinfh.pdf}{$\grp{C_{\infty h}}$}, \href{Cinfv.pdf}{$\grp{C_{\infty v}}$}, \href{Dinf.pdf}{$\grp{D_{\infty}}$}, \href{Dinfh.pdf}{$\grp{D_{\infty h}}$}, \href{SO3.pdf}{$\grp{SO(3)}$}, the exceptional groups of the last row of the table and, for every $N \ge 1$, the finite groups of the families in the table (family), each number or symbol under documents a link to the document of that group.
 For $N = 1$: \href{S2.pdf}{$\grp{S_{2}}$} $\samecls$ \href{S2.pdf}{$\grp{C_{i}}$}, \href{C1h.pdf}{$\grp{C_{1h}}$} $\samecls$ \href{C1v.pdf}{$\grp{C_{s}}$}, \href{C1v.pdf}{$\grp{C_{1v}}$} $\samecls$ \href{C1v.pdf}{$\grp{C_{s}}$}, \href{D1.pdf}{$\grp{D_{1}}$} $\samecls$ \href{C2.pdf}{$\grp{C_{2}}$}, \href{D1h.pdf}{$\grp{D_{1h}}$} $\samecls$ \href{C2v.pdf}{$\grp{C_{2v}}$}, \href{D1d.pdf}{$\grp{D_{1d}}$} $\samecls$ \href{C2h.pdf}{$\grp{C_{2h}}$}.
 In the diagram, where each group links to its document, a line joins a group to a maximal closed subgroup among the groups of the diagram.
-The document of each of these groups except the members with $N > 12$ gives the restriction of $\irrJp{J}{p}$ to it $J$ by $J$, in its section Subduction from $\grp{O(3)}$.
+Section~\ref{s:subduction} gives the restriction of $\irrJp{J}{p}$ to each of these groups; the document of each group except the members with $N > 12$ lists it $J$ by $J$, in its section Subduction from $\grp{O(3)}$.
 \begin{center}\begin{tikzpicture}[x=1cm, y=1cm, every node/.style={fill=white, font=\small, inner sep=2pt}]
 \draw[black!50, line width=0.4pt] (0,0) -- (-2.4,1.4);
 \draw[black!50, line width=0.4pt] (0,0) -- (0,1.4);
@@ -707,6 +707,141 @@ $\grp{D_{\mathnormal{N}d}}$, $N \ge 2$ & $4N$ & $\infty$ & no & $\grp{D_{2\mathn
 \href{I.pdf}{$\grp{I}$} & 60 & $\infty$ & no & \href{Ih.pdf}{$\grp{I_{h}}$} & \href{S2.pdf}{$\grp{C_{i}}$}\\*
 \href{Ih.pdf}{$\grp{I_{h}}$} & 120 & $\infty$ & no & \href{Ih.pdf}{$\grp{I_{h}}$} & \href{S2.pdf}{$\grp{C_{i}}$}\\
 \bottomrule\end{longtable}}
+\needspace{103pt}
+\section{Descent of symmetry}\label{s:subduction}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.16.1}{16.1}.
+This section gives the restriction of $\irrJp{J}{p}$ to each closed subgroup $\grp{H}$ of $\grp{O(3)}$ (section~\ref{s:subgroups}) for every $J$ and both parities (\texttt{subduction\symbol{95}rules}). \label{n:irrep.Gamma.subgroup}For an axial $\grp{H}$ it is the direct sum over the kets $\jm{J}{m}$ (for \href{Cinfv.pdf}{$\grp{C_{\infty v}}$}, \href{Dinf.pdf}{$\grp{D_{\infty}}$}, \href{Dinfh.pdf}{$\grp{D_{\infty h}}$} and the families $\grp{C_{\mathnormal{N}v}}$, $\grp{D_{\mathnormal{N}}}$, $\grp{D_{\mathnormal{N}h}}$ and $\grp{D_{\mathnormal{N}d}}$ over $\jm{J}{0}$ and the pairs $\jm{J}{\pm m}$, \mbox{$m > 0$}) of the terms of the first case of the rule that holds. \label{n:index.residue}\label{n:constant.root}There $q = m \bmod N$, $\rootunity{N}^{q}$ being the character of $\jm{J}{m}$ on the rotation by $2\pi/N$ about $z$, $\rootunity{N} = \expe^{2\pi\iunit/N}$, but in $\grp{S_{2\mathnormal{N}}}$ and $\grp{D_{\mathnormal{N}d}}$ with $N$ even, whose irreps the rotoreflection $\elt{\sigma_h C_\infty}(\pi/N)$ labels, $\rootunity{2N}^{q}$ is the character of $\jm{J}{m}$ on it; a term is an irrep of the member labeled by \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.6.1}{6.1}, with the names of \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.6.3}{6.3}, for $N \le 2$. The terms of a rule whose subgroup holds $\elt{i}$ are written at $p = +1$, $\elt{i}$ acting on $\irrJp{J}{p}$ as $p$; in $\grp{C_{\mathnormal{N}h}}$ and $\grp{D_{\mathnormal{N}h}}$ with $N$ odd $\elt{\sigma_h}$ acts on $\jm{J}{m}$ as $p(-1)^m$, and the terms are written where it is $+1$. \label{n:function.multiplicity}\label{n:irrep.Delta}\label{n:index.generating.variable}\label{n:function.generating}\label{n:function.generating.numerator}The multiplicity $b_\Lambda(J)$ of an irrep $\Lambda$ of $\grp{H}$ at the parity $(-1)^J$ is the coefficient of $t^J$ in its generating function $H_\Lambda(t) = \sum_{J\ge0} b_\Lambda(J)\, t^J$, as in the documents of the subgroups (section Multiplicities and allowed $m$), $k$ the subscript of an irrep $\irr{e}_{k}$ and $n$ the index of a family of irreps of a continuous subgroup, \label{n:delimiter.floor}\label{n:local.floor.x}\label{n:delimiter.ceiling}$\lfloor x\rfloor$ the greatest integer $\le x$ and $\lceil x\rceil$ the least integer $\ge x$; at the other parity the multiplicity of $\Lambda$ is that of $\Lambda$ times the determinant character of $\grp{H}$. The documents of the subgroups that have one ($N \le 12$) list the restrictions $J$ by $J$ at both parities, in their section Subduction from \href{O3.pdf}{$\grp{O(3)}$}.
+\needspace{95pt}
+\paragraph{Continuous subgroups.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\bigoplus_{m=0}^{J}\Lambda_m$, $\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}: $\irr{a}_{1\ptag{g}}$ if $m = 0$ and $J$ even, $\irr{a}_{2\ptag{g}}$ if $m = 0$ and $J$ odd, $\irr{e}_{m,\ptag{g}}$ otherwise; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$}\cellmax{$\bigoplus_{m=0}^{J}\Lambda_m$, $\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}: $\irr{a}_{1}$ if $m = 0$ and $J$ even, $\irr{a}_{2}$ if $m = 0$ and $J$ odd, $\irr{e}_{m}$ otherwise; independent of $p$}\cellmax{$1/(1-t^{2})$ for $\irr{a}_{1\ptag{g}}$, $0$ for $\irr{a}_{2\ptag{g}}$, $t^{2\lceil n/2\rceil}/(1-t^{2})$ for $\irr{e}_{n,\ptag{g}}$, $0$ for $\irr{a}_{1\ptag{u}}$, $t/(1-t^{2})$ for $\irr{a}_{2\ptag{u}}$, $t^{2\lfloor n/2\rfloor+1}/(1-t^{2})$ for $\irr{e}_{n,\ptag{u}}$}\cellmax{$1/(1-t^{2})$ for $\irr{a}_{\ptag{g}}$, $t^{2\lceil n/2\rceil}/(1-t^{2})$ for $\conjpair{1}\irr{e}_{n,\ptag{g}}$ and $\conjpair{2}\irr{e}_{n,\ptag{g}}$, $t/(1-t^{2})$ for $\irr{a}_{\ptag{u}}$, $t^{2\lfloor n/2\rfloor+1}/(1-t^{2})$ for $\conjpair{1}\irr{e}_{n,\ptag{u}}$ and $\conjpair{2}\irr{e}_{n,\ptag{u}}$}\cellmax{$\bigoplus_{m=0}^{J}\Lambda_m$, $\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}: $\irr{a}_{1}$ if $m = 0$ and $p(-1)^J = +1$, $\irr{a}_{2}$ if $m = 0$ and $p(-1)^J = -1$, $\irr{e}_{m}$ otherwise}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\irr{a}_{\ptag{g}}$ if $m = 0$, $\conjpair{1}\irr{e}_{m,\ptag{g}}$ if $m > 0$, $\conjpair{2}\irr{e}_{-m,\ptag{g}}$ if $m < 0$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\irr{a}$ if $m = 0$, $\conjpair{1}\irr{e}_{m}$ if $m > 0$, $\conjpair{2}\irr{e}_{-m}$ if $m < 0$; independent of $p$}\cellmax{$1/(1-t^{2})$ for $\irr{a}_{1}$, $t/(1-t^{2})$ for $\irr{a}_{2}$, $t^{n}/(1-t)$ for $\irr{e}_{n}$}\cellmax{$1/(1-t)$ for $\irr{a}_{1}$, $0$ for $\irr{a}_{2}$, $t^{n}/(1-t)$ for $\irr{e}_{n}$}\cellmax{$1/(1-t)$ for $\irr{a}$, $t^{n}/(1-t)$ for $\conjpair{1}\irr{e}_{n}$ and $\conjpair{2}\irr{e}_{n}$}\cellmax{$\irrJ{J}$ for both $p$}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{\href{Cinf.pdf}{$\grp{C_{\infty}}$}}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\irr{a}$ if $m = 0$, $\conjpair{1}\irr{e}_{m}$ if $m > 0$, $\conjpair{2}\irr{e}_{-m}$ if $m < 0$; independent of $p$\\*
+$H_\Lambda(t)$ & $1/(1-t)$ for $\irr{a}$, $t^{n}/(1-t)$ for $\conjpair{1}\irr{e}_{n}$ and $\conjpair{2}\irr{e}_{n}$\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{\href{Cinfh.pdf}{$\grp{C_{\infty h}}$}}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\irr{a}_{\ptag{g}}$ if $m = 0$, $\conjpair{1}\irr{e}_{m,\ptag{g}}$ if $m > 0$, $\conjpair{2}\irr{e}_{-m,\ptag{g}}$ if $m < 0$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$\\*
+$H_\Lambda(t)$ & $1/(1-t^{2})$ for $\irr{a}_{\ptag{g}}$, $t^{2\lceil n/2\rceil}/(1-t^{2})$ for $\conjpair{1}\irr{e}_{n,\ptag{g}}$ and $\conjpair{2}\irr{e}_{n,\ptag{g}}$, $t/(1-t^{2})$ for $\irr{a}_{\ptag{u}}$, $t^{2\lfloor n/2\rfloor+1}/(1-t^{2})$ for $\conjpair{1}\irr{e}_{n,\ptag{u}}$ and $\conjpair{2}\irr{e}_{n,\ptag{u}}$\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{\href{Cinfv.pdf}{$\grp{C_{\infty v}}$}}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=0}^{J}\Lambda_m$, $\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}: $\irr{a}_{1}$ if $m = 0$ and $p(-1)^J = +1$, $\irr{a}_{2}$ if $m = 0$ and $p(-1)^J = -1$, $\irr{e}_{m}$ otherwise\\*
+$H_\Lambda(t)$ & $1/(1-t)$ for $\irr{a}_{1}$, $0$ for $\irr{a}_{2}$, $t^{n}/(1-t)$ for $\irr{e}_{n}$\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{\href{Dinf.pdf}{$\grp{D_{\infty}}$}}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=0}^{J}\Lambda_m$, $\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}: $\irr{a}_{1}$ if $m = 0$ and $J$ even, $\irr{a}_{2}$ if $m = 0$ and $J$ odd, $\irr{e}_{m}$ otherwise; independent of $p$\\*
+$H_\Lambda(t)$ & $1/(1-t^{2})$ for $\irr{a}_{1}$, $t/(1-t^{2})$ for $\irr{a}_{2}$, $t^{n}/(1-t)$ for $\irr{e}_{n}$\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{\href{Dinfh.pdf}{$\grp{D_{\infty h}}$}}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=0}^{J}\Lambda_m$, $\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}: $\irr{a}_{1\ptag{g}}$ if $m = 0$ and $J$ even, $\irr{a}_{2\ptag{g}}$ if $m = 0$ and $J$ odd, $\irr{e}_{m,\ptag{g}}$ otherwise; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$\\*
+$H_\Lambda(t)$ & $1/(1-t^{2})$ for $\irr{a}_{1\ptag{g}}$, $0$ for $\irr{a}_{2\ptag{g}}$, $t^{2\lceil n/2\rceil}/(1-t^{2})$ for $\irr{e}_{n,\ptag{g}}$, $0$ for $\irr{a}_{1\ptag{u}}$, $t/(1-t^{2})$ for $\irr{a}_{2\ptag{u}}$, $t^{2\lfloor n/2\rfloor+1}/(1-t^{2})$ for $\irr{e}_{n,\ptag{u}}$\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{\href{SO3.pdf}{$\grp{SO(3)}$}}\\*
+$\irrJp{J}{p}$ & $\irrJ{J}$ for both $p$\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Subduction to the $\grp{C_{\mathnormal{N}}}$ family.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\irr{a}$ if $q = 0$, $\irr{b}$ if $q = N/2$, $\conjpair{1}\irr{e}_{q}$ if $0 < q < N/2$, $\conjpair{2}\irr{e}_{N-q}$ if $N/2 < q < N$; $q = m \bmod N$; independent of $p$}\cellmax{$P_\Lambda(t)/((1-t)(1-t^{N}))$, $P_\Lambda(t)$: $1 + t^{N}$ for $\irr{a}$, $2t^{N/2}$ for $\irr{b}$ ($N$ even), $t^{k} + t^{N-k}$ for $\conjpair{1}\irr{e}_{k}$ and $\conjpair{2}\irr{e}_{k}$ ($0 < k < N/2$)}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{every $N$}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\irr{a}$ if $q = 0$, $\irr{b}$ if $q = N/2$, $\conjpair{1}\irr{e}_{q}$ if $0 < q < N/2$, $\conjpair{2}\irr{e}_{N-q}$ if $N/2 < q < N$; $q = m \bmod N$; independent of $p$\\*
+$H_\Lambda(t)$ & $P_\Lambda(t)/((1-t)(1-t^{N}))$, $P_\Lambda(t)$: $1 + t^{N}$ for $\irr{a}$, $2t^{N/2}$ for $\irr{b}$ ($N$ even), $t^{k} + t^{N-k}$ for $\conjpair{1}\irr{e}_{k}$ and $\conjpair{2}\irr{e}_{k}$ ($0 < k < N/2$)\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Subduction to the $\grp{S_{2\mathnormal{N}}}$ family.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{odd $N$}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\irr{a}_{\ptag{g}}$ if $q = 0$, $\conjpair{1}\irr{e}_{q,\ptag{g}}$ if $0 < q < N/2$, $\conjpair{2}\irr{e}_{N-q,\ptag{g}}$ if $N/2 < q < N$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$\\*
+$H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $1 + 2t^{N+1} + t^{2N}$ for $\irr{a}_{\ptag{g}}$, $t + 2t^{N} + t^{2N+1}$ for $\irr{a}_{\ptag{u}}$, $t^{k} + t^{N-k+1} + t^{N+k+1} + t^{2N-k}$ for $\conjpair{1}\irr{e}_{k,\ptag{g}}$ and $\conjpair{2}\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$, $k$ even), $t^{k+1} + t^{N-k} + t^{N+k} + t^{2N-k+1}$ for $\conjpair{1}\irr{e}_{k,\ptag{g}}$ and $\conjpair{2}\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$, $k$ odd), $t^{k+1} + t^{N-k} + t^{N+k} + t^{2N-k+1}$ for $\conjpair{1}\irr{e}_{k,\ptag{u}}$ and $\conjpair{2}\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$, $k$ even), $t^{k} + t^{N-k+1} + t^{N+k+1} + t^{2N-k}$ for $\conjpair{1}\irr{e}_{k,\ptag{u}}$ and $\conjpair{2}\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$, $k$ odd)\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{even $N$}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\irr{a}$ if $q = 0$, $\irr{b}$ if $q = N$, $\conjpair{1}\irr{e}_{q}$ if $0 < q < N$, $\conjpair{2}\irr{e}_{2N-q}$ if $N < q < 2N$; $q = (N+1)m \bmod 2N$ at $p = +1$ and $(N+1)m + N \bmod 2N$ at $p = -1$\\*
+$H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $1 + 2t^{N+1} + t^{2N}$ for $\irr{a}$, $t + 2t^{N} + t^{2N+1}$ for $\irr{b}$, $t^{k} + t^{N-k+1} + t^{N+k+1} + t^{2N-k}$ for $\conjpair{1}\irr{e}_{k}$ and $\conjpair{2}\irr{e}_{k}$ ($0 < k < N$)\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Subduction to the $\grp{C_{\mathnormal{N}h}}$ family.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{odd $N$}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\irr{a}'$ if $q = 0$, $\conjpair{1}\irr{e}_{q}'$ if $0 < q < N/2$, $\conjpair{2}\irr{e}_{N-q}'$ if $N/2 < q < N$; with $''$ for $'$ on the kets where $p(-1)^m = -1$; $q = m \bmod N$\\*
+$H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{N}))$, $P_\Lambda(t)$: $1 + t^{N}$ for $\irr{a}'$, $t + t^{N+1}$ for $\irr{a}''$, $t^{k} + t^{N-k}$ for $\conjpair{1}\irr{e}_{k}'$ and $\conjpair{2}\irr{e}_{k}'$ ($0 < k < N/2$), $t^{k+1} + t^{N-k+1}$ for $\conjpair{1}\irr{e}_{k}''$ and $\conjpair{2}\irr{e}_{k}''$ ($0 < k < N/2$)\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{even $N$}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\irr{a}_{\ptag{g}}$ if $q = 0$, $\irr{b}_{\ptag{g}}$ if $q = N/2$, $\conjpair{1}\irr{e}_{q,\ptag{g}}$ if $0 < q < N/2$, $\conjpair{2}\irr{e}_{N-q,\ptag{g}}$ if $N/2 < q < N$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$\\*
+$H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{N}))$, $P_\Lambda(t)$: $1 + t^{N}$ for $\irr{a}_{\ptag{g}}$, $t + t^{N+1}$ for $\irr{a}_{\ptag{u}}$, $2t^{N/2}$ for $\irr{b}_{\ptag{g}}$ ($N/2$ even), $2t^{N/2+1}$ for $\irr{b}_{\ptag{g}}$ ($N/2$ odd), $2t^{N/2+1}$ for $\irr{b}_{\ptag{u}}$ ($N/2$ even), $2t^{N/2}$ for $\irr{b}_{\ptag{u}}$ ($N/2$ odd), $t^{k} + t^{N-k}$ for $\conjpair{1}\irr{e}_{k,\ptag{g}}$ and $\conjpair{2}\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$, $k$ even), $t^{k+1} + t^{N-k+1}$ for $\conjpair{1}\irr{e}_{k,\ptag{g}}$ and $\conjpair{2}\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$, $k$ odd), $t^{k+1} + t^{N-k+1}$ for $\conjpair{1}\irr{e}_{k,\ptag{u}}$ and $\conjpair{2}\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$, $k$ even), $t^{k} + t^{N-k}$ for $\conjpair{1}\irr{e}_{k,\ptag{u}}$ and $\conjpair{2}\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$, $k$ odd)\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Subduction to the $\grp{C_{\mathnormal{N}v}}$ family.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\bigoplus_{m=0}^{J}\Lambda_m$, $\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}: $\irr{a}_{1}$ if $m = 0$ and $p(-1)^J = +1$, $\irr{a}_{2}$ if $m = 0$ and $p(-1)^J = -1$, $\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{b}_{1}\oplus \irr{b}_{2}$ if $q = N/2$, $\irr{e}_{\min(q, N-q)}$ otherwise; $q = m \bmod N$}\cellmax{$P_\Lambda(t)/((1-t)(1-t^{N}))$, $P_\Lambda(t)$: $1$ for $\irr{a}_{1}$, $t^{N}$ for $\irr{a}_{2}$, $t^{N/2}$ for $\irr{b}_{1}$ and $\irr{b}_{2}$ ($N$ even), $t^{k} + t^{N-k}$ for $\irr{e}_{k}$ ($0 < k < N/2$)}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{every $N$}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=0}^{J}\Lambda_m$, $\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}: $\irr{a}_{1}$ if $m = 0$ and $p(-1)^J = +1$, $\irr{a}_{2}$ if $m = 0$ and $p(-1)^J = -1$, $\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{b}_{1}\oplus \irr{b}_{2}$ if $q = N/2$, $\irr{e}_{\min(q, N-q)}$ otherwise; $q = m \bmod N$\\*
+$H_\Lambda(t)$ & $P_\Lambda(t)/((1-t)(1-t^{N}))$, $P_\Lambda(t)$: $1$ for $\irr{a}_{1}$, $t^{N}$ for $\irr{a}_{2}$, $t^{N/2}$ for $\irr{b}_{1}$ and $\irr{b}_{2}$ ($N$ even), $t^{k} + t^{N-k}$ for $\irr{e}_{k}$ ($0 < k < N/2$)\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Subduction to the $\grp{D_{\mathnormal{N}}}$ family.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{every $N \ge 2$}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=0}^{J}\Lambda_m$, $\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}: $\irr{a}_{1}$ if $m = 0$ and $J$ even, $\irr{a}_{2}$ if $m = 0$ and $J$ odd, $\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{b}_{1}\oplus \irr{b}_{2}$ if $q = N/2$, $\irr{e}_{\min(q, N-q)}$ otherwise; $q = m \bmod N$; independent of $p$\\*
+$H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{N}))$, $P_\Lambda(t)$: $1 + t^{N+1}$ for $\irr{a}_{1}$, $t + t^{N}$ for $\irr{a}_{2}$, $t^{N/2} + t^{N/2+1}$ for $\irr{b}_{1}$ and $\irr{b}_{2}$ ($N$ even), $t^{k} + t^{k+1} + t^{N-k} + t^{N-k+1}$ for $\irr{e}_{k}$ ($0 < k < N/2$)\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Subduction to the $\grp{D_{\mathnormal{N}h}}$ family.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{odd $N$}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=0}^{J}\Lambda_m$, $\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}: $\irr{a}_{1}'$ if $m = 0$ and $J$ even, $\irr{a}_{2}'$ if $m = 0$ and $J$ odd, $\irr{a}_{1}'\oplus \irr{a}_{2}'$ if $q = 0$, $\irr{e}_{\min(q, N-q)}'$ otherwise; with $''$ for $'$ on the kets where $p(-1)^m = -1$; $q = m \bmod N$\\*
+$H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{N}))$, $P_\Lambda(t)$: $1$ for $\irr{a}_{1}'$, $t^{N}$ for $\irr{a}_{2}'$, $t^{N+1}$ for $\irr{a}_{1}''$, $t$ for $\irr{a}_{2}''$, $t^{k} + t^{N-k}$ for $\irr{e}_{k}'$ ($0 < k < N/2$), $t^{k+1} + t^{N-k+1}$ for $\irr{e}_{k}''$ ($0 < k < N/2$)\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{even $N$}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=0}^{J}\Lambda_m$, $\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}: $\irr{a}_{1\ptag{g}}$ if $m = 0$ and $J$ even, $\irr{a}_{2\ptag{g}}$ if $m = 0$ and $J$ odd, $\irr{a}_{1\ptag{g}}\oplus \irr{a}_{2\ptag{g}}$ if $q = 0$, $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$ if $q = N/2$, $\irr{e}_{\min(q, N-q),\ptag{g}}$ otherwise; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$\\*
+$H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{N}))$, $P_\Lambda(t)$: $1$ for $\irr{a}_{1\ptag{g}}$, $t^{N}$ for $\irr{a}_{2\ptag{g}}$, $t^{N+1}$ for $\irr{a}_{1\ptag{u}}$, $t$ for $\irr{a}_{2\ptag{u}}$, $t^{N/2}$ for $\irr{b}_{1\ptag{g}}$ and $\irr{b}_{2\ptag{g}}$ ($N/2$ even), $t^{N/2+1}$ for $\irr{b}_{1\ptag{g}}$ and $\irr{b}_{2\ptag{g}}$ ($N/2$ odd), $t^{N/2+1}$ for $\irr{b}_{1\ptag{u}}$ and $\irr{b}_{2\ptag{u}}$ ($N/2$ even), $t^{N/2}$ for $\irr{b}_{1\ptag{u}}$ and $\irr{b}_{2\ptag{u}}$ ($N/2$ odd), $t^{k} + t^{N-k}$ for $\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$, $k$ even), $t^{k+1} + t^{N-k+1}$ for $\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$, $k$ odd), $t^{k+1} + t^{N-k+1}$ for $\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$, $k$ even), $t^{k} + t^{N-k}$ for $\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$, $k$ odd)\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Subduction to the $\grp{D_{\mathnormal{N}d}}$ family.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{odd $N$}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=0}^{J}\Lambda_m$, $\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}: $\irr{a}_{1\ptag{g}}$ if $m = 0$ and $J$ even, $\irr{a}_{2\ptag{g}}$ if $m = 0$ and $J$ odd, $\irr{a}_{1\ptag{g}}\oplus \irr{a}_{2\ptag{g}}$ if $q = 0$, $\irr{e}_{\min(q, N-q),\ptag{g}}$ otherwise; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$\\*
+$H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $1 + t^{N+1}$ for $\irr{a}_{1\ptag{g}}$, $t^{N+1} + t^{2N}$ for $\irr{a}_{2\ptag{g}}$, $t^{N} + t^{2N+1}$ for $\irr{a}_{1\ptag{u}}$, $t + t^{N}$ for $\irr{a}_{2\ptag{u}}$, $t^{k} + t^{N-k+1} + t^{N+k+1} + t^{2N-k}$ for $\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$, $k$ even), $t^{k+1} + t^{N-k} + t^{N+k} + t^{2N-k+1}$ for $\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$, $k$ odd), $t^{k+1} + t^{N-k} + t^{N+k} + t^{2N-k+1}$ for $\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$, $k$ even), $t^{k} + t^{N-k+1} + t^{N+k+1} + t^{2N-k}$ for $\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$, $k$ odd)\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{even $N$}\\*
+$\irrJp{J}{p}$ & $\bigoplus_{m=0}^{J}\Lambda_m$, $\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}: $\irr{a}_{1}$ if $m = 0$ and $p = +1$ and $J$ even, $\irr{a}_{2}$ if $m = 0$ and $p = +1$ and $J$ odd, $\irr{b}_{1}$ if $m = 0$ and $p = -1$ and $J$ even, $\irr{b}_{2}$ if $m = 0$ and $p = -1$ and $J$ odd, $\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{b}_{1}\oplus \irr{b}_{2}$ if $q = N$, $\irr{e}_{\min(q, 2N-q)}$ otherwise; $q = (N+1)m \bmod 2N$ at $p = +1$ and $(N+1)m + N \bmod 2N$ at $p = -1$\\*
+$H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $1 + t^{N+1}$ for $\irr{a}_{1}$, $t^{N+1} + t^{2N}$ for $\irr{a}_{2}$, $t^{N} + t^{2N+1}$ for $\irr{b}_{1}$, $t + t^{N}$ for $\irr{b}_{2}$, $t^{k} + t^{N-k+1} + t^{N+k+1} + t^{2N-k}$ for $\irr{e}_{k}$ ($0 < k < N$)\\
+\bottomrule\end{longtable}}
+\needspace{180pt}
+\paragraph{Subduction to the exceptional groups.} The generating functions are $H_\Lambda(t) = P_\Lambda(t)/((1-t^{a})(1-t^{b}))$, with $(a, b)$ $(3, 4)$ for $\grp{T}$, $(4, 6)$ for $\grp{T_{h}}$, $(3, 4)$ for $\grp{T_{d}}$, $(4, 6)$ for $\grp{O}$, $(4, 6)$ for $\grp{O_{h}}$, $(6, 10)$ for $\grp{I}$, $(6, 10)$ for $\grp{I_{h}}$.
+{\small\begin{longtable}{@{}ll@{\hspace{18pt}}ll@{}}\toprule
+$\Lambda$ & $P_\Lambda(t)$ & $\Lambda$ & $P_\Lambda(t)$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\multicolumn{2}{@{}c@{\hspace{18pt}}}{\href{T.pdf}{$\grp{T}$}} & \multicolumn{2}{@{}c@{}}{\href{Th.pdf}{$\grp{T_{h}}$}}\\*
+$\irr{a}$ & $1 + t^{6}$ & $\irr{a}_{\ptag{g}}$ & $1 + t^{6}$\\*
+$\conjpair{1}\irr{e}$ & $t^{2} + t^{4}$ & $\conjpair{1}\irr{e}_{\ptag{g}}$ & $t^{2} + t^{4}$\\*
+$\conjpair{2}\irr{e}$ & $t^{2} + t^{4}$ & $\conjpair{2}\irr{e}_{\ptag{g}}$ & $t^{2} + t^{4}$\\*
+$\irr{t}$ & $t + t^{2} + 2t^{3} + t^{4} + t^{5}$ & $\irr{t}_{\ptag{g}}$ & $t^{2} + 2t^{4} + 2t^{6} + t^{8}$\\*
+ &  & $\irr{a}_{\ptag{u}}$ & $t^{3} + t^{9}$\\*
+ &  & $\conjpair{1}\irr{e}_{\ptag{u}}$ & $t^{5} + t^{7}$\\*
+ &  & $\conjpair{2}\irr{e}_{\ptag{u}}$ & $t^{5} + t^{7}$\\*
+ &  & $\irr{t}_{\ptag{u}}$ & $t + 2t^{3} + 2t^{5} + t^{7}$\\
+\grouprule{0pt}{\heavyrulewidth}
+\multicolumn{2}{@{}c@{\hspace{18pt}}}{\href{Td.pdf}{$\grp{T_{d}}$}} & \multicolumn{2}{@{}c@{}}{\href{Oh.pdf}{$\grp{O_{h}}$}}\\*
+$\irr{a}_{1}$ & $1$ & $\irr{a}_{1\ptag{g}}$ & $1$\\*
+$\irr{a}_{2}$ & $t^{6}$ & $\irr{a}_{2\ptag{g}}$ & $t^{6}$\\*
+$\irr{e}$ & $t^{2} + t^{4}$ & $\irr{e}_{\ptag{g}}$ & $t^{2} + t^{4}$\\*
+$\irr{t}_{1}$ & $t^{3} + t^{4} + t^{5}$ & $\irr{t}_{1\ptag{g}}$ & $t^{4} + t^{6} + t^{8}$\\*
+$\irr{t}_{2}$ & $t + t^{2} + t^{3}$ & $\irr{t}_{2\ptag{g}}$ & $t^{2} + t^{4} + t^{6}$\\*\noalign{\vskip 1.5pt}\multispan{2}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{2}\\*\noalign{\vskip 1.5pt}
+\multicolumn{2}{@{}c@{\hspace{18pt}}}{\href{O.pdf}{$\grp{O}$}} & $\irr{a}_{1\ptag{u}}$ & $t^{9}$\\*
+$\irr{a}_{1}$ & $1 + t^{9}$ & $\irr{a}_{2\ptag{u}}$ & $t^{3}$\\*
+$\irr{a}_{2}$ & $t^{3} + t^{6}$ & $\irr{e}_{\ptag{u}}$ & $t^{5} + t^{7}$\\*
+$\irr{e}$ & $t^{2} + t^{4} + t^{5} + t^{7}$ & $\irr{t}_{1\ptag{u}}$ & $t + t^{3} + t^{5}$\\*
+$\irr{t}_{1}$ & $t + t^{3} + t^{4} + t^{5} + t^{6} + t^{8}$ & $\irr{t}_{2\ptag{u}}$ & $t^{3} + t^{5} + t^{7}$\\*
+$\irr{t}_{2}$ & $t^{2} + t^{3} + t^{4} + t^{5} + t^{6} + t^{7}$ &  & \\
+\grouprule{0pt}{\heavyrulewidth}
+\multicolumn{2}{@{}c@{\hspace{18pt}}}{\href{I.pdf}{$\grp{I}$}} & \multicolumn{2}{@{}c@{}}{\href{Ih.pdf}{$\grp{I_{h}}$}}\\*
+$\irr{a}$ & $1 + t^{15}$ & $\irr{a}_{\ptag{g}}$ & $1$\\*
+$\irr{t}_{1}$ & $t + t^{5} + t^{6} + t^{9} + t^{10} + t^{14}$ & $\irr{t}_{1\ptag{g}}$ & $t^{6} + t^{10} + t^{14}$\\*
+$\irr{t}_{2}$ & $t^{3} + t^{5} + t^{7} + t^{8} + t^{10} + t^{12}$ & $\irr{t}_{2\ptag{g}}$ & $t^{8} + t^{10} + t^{12}$\\*
+$\irr{g}$ & $t^{3} + t^{4} + t^{6} + t^{7} + t^{8} + t^{9} + t^{11} + t^{12}$ & $\irr{g}_{\ptag{g}}$ & $t^{4} + t^{6} + t^{8} + t^{12}$\\*
+$\irr{h}$ & $t^{2} + t^{4} + t^{5} + t^{6} + t^{7} + t^{8} + t^{9} + t^{10} + t^{11} + t^{13}$ & $\irr{h}_{\ptag{g}}$ & $t^{2} + t^{4} + t^{6} + t^{8} + t^{10}$\\*
+ &  & $\irr{a}_{\ptag{u}}$ & $t^{15}$\\*
+ &  & $\irr{t}_{1\ptag{u}}$ & $t + t^{5} + t^{9}$\\*
+ &  & $\irr{t}_{2\ptag{u}}$ & $t^{3} + t^{5} + t^{7}$\\*
+ &  & $\irr{g}_{\ptag{u}}$ & $t^{3} + t^{7} + t^{9} + t^{11}$\\*
+ &  & $\irr{h}_{\ptag{u}}$ & $t^{5} + t^{7} + t^{9} + t^{11} + t^{13}$\\
+\bottomrule\end{longtable}}
 \needspace{177pt}
 \partbox{Angular momentum}
 \section{Subduction from \texorpdfstring{$\grp{O(3)}$}{O(3)}}\label{s:subduction_o3}
@@ -717,7 +852,7 @@ The record also lists the restrictions for $J \le 12$ (\texttt{subduction\symbol
 \needspace{110pt}
 \section{Multiplicities and allowed \texorpdfstring{$m$}{m}}\label{s:multiplicities}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.14}{14}.
-\leavevmode\label{n:function.generating}\label{n:index.generating.variable}$b_\Gamma(J)$ is the number of blocks of $\Gamma$ at $J$, and
+$b_\Gamma(J)$ is the number of blocks of $\Gamma$ at $J$, and
 \begin{equation}\label{e:gf}H_\Gamma(t) = \sum_{J\ge0} b_\Gamma(J)\,t^J,\end{equation}
 \leavevmode\label{n:head.parity}its generating function, for the member of index $J$ of each family, which can only have a block at the angular momentum $J$; $\iverson{J\text{ even}}$ and $\iverson{J\text{ odd}}$ are 1 when $J$ is even, respectively odd, and 0 otherwise, and $m$ is the $m$ of the kets of $\Gamma$.
 \begin{center}\small\begin{tabular}{@{}lllll@{}}\toprule

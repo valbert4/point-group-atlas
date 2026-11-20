@@ -3575,7 +3575,8 @@ def continuous_subgroups(D):
     D.part("Subgroups")
     D.section("Closed subgroups", "section 15.2")
     linked = "".join(", " + r"\href{%s.pdf}{$%s$}" % (g, symbol(g)) for g in continuous)
-    tabled = "subduction_subgroups" in D.rec or "subgroup_classes" in D.rec
+    # O(3) keeps the table of its families' documents above the stored classes
+    tabled = ("subduction_subgroups" in D.rec or "subgroup_classes" in D.rec) and node != "O3"
     if tabled:
         D.w(D.define("index.family.N")
             + r"The closed subgroups of $\grp{G}$ are, up to conjugacy in "
@@ -3606,9 +3607,9 @@ def continuous_subgroups(D):
             r"groups; the document of each group except the members with $N > 12$ lists it $J$ "
             r"by $J$, in its section Subduction from $\grp{O(3)}$.")
     if node == "O3":
-        D.w(r"The document of each of these groups except the members with $N > 12$ gives the "
-            r"restriction of $\irrJp{J}{p}$ to it $J$ by $J$, in its section Subduction from "
-            r"$\grp{O(3)}$.")
+        D.w(r"Section~\ref{s:subduction} gives the restriction of $\irrJp{J}{p}$ to each of "
+            r"these groups; the document of each group except the members with $N > 12$ lists "
+            r"it $J$ by $J$, in its section Subduction from $\grp{O(3)}$.")
     D.w(r"\begin{center}\begin{tikzpicture}[x=1cm, y=1cm, every node/.style={fill=white, "
         r"font=\small, inner sep=2pt}]")
     for edge in lattice["edges"]:
@@ -3633,29 +3634,7 @@ def continuous_subgroups(D):
             r"\href{%s.pdf}{$%s$}" % (g, symbol(g)) for g in exceptional))
     D.w(r"\bottomrule\end{longtable}}")
     if node == "O3":
-        subgroup_rows(D, o3_subgroup_entries(lattice, families, exceptional))
-
-
-def o3_subgroup_entries(lattice, families, exceptional):
-    """The closed subgroups of O(3) up to conjugacy, other than O(3), as the entries of
-    subgroup_rows: the classes of data/point_groups.json with the normalizer and the centralizer in
-    O(3) of their records' group blocks; the continuous ones, then the families in the order of
-    the section, then the exceptional groups."""
-    def entry(g):
-        rec = serialize.read_json(names.record_path(g))["group"]
-        fam = names.family_of(g)
-        order = rec["order"]
-        normal = rec["normalizer"]["schoenflies"] == "O(3)"
-        return {"subgroup": {"schoenflies": rec["schoenflies"], "o3_class": g,
-                             "family": fam[0] if fam else None, "N": fam[1] if fam else None,
-                             "order": order if isinstance(order, int) else None},
-                "normal": normal, "class_size": 1 if normal else None,
-                "normalizer": {"schoenflies": rec["normalizer"]["schoenflies"]},
-                "centralizer": {"schoenflies": rec["centralizer"]["schoenflies"]}}
-    ids = [n["id"] for n in lattice["nodes"] if n["id"] != "O3"]
-    cont = [entry(g) for g in ids if names.kind_of(g) == "continuous"]
-    finite = [entry(g) for f in families for g in ids if (names.family_of(g) or ("",))[0] == f]
-    return {"continuous": cont, "finite": finite + [entry(g) for g in exceptional]}
+        subgroup_rows(D, D.rec["subgroup_classes"])
 
 
 def families_apart(families, example=True):
@@ -3709,7 +3688,7 @@ def subgroup_rows(D, derived=None):
     table of a finite group: the continuous subgroups, then per family the members with small N
     and one row for every larger N, its entries functions of N, from the first N on which every
     member up to N_MAX has them, then the exceptional groups (SO(3)); `derived`, the entries of
-    O(3) from the records (o3_subgroup_entries)."""
+    O(3), its stored subgroup_classes."""
     axial = derived is None and "subduction_subgroups" in D.rec
     sb = derived or (D.rec["subduction_subgroups"] if axial else D.rec["subgroup_classes"])
     entries = sb["continuous"] + sb["finite"]
@@ -4224,7 +4203,178 @@ def section_subduction_rules(D):
     D.w(r"\bottomrule\end{longtable}}")
 
 
+def o3_label_tex(label):
+    """An irrep of a rule of O(3) with its tag: A_g, 1E_{k}g, A_1'', E_{k}' as TeX."""
+    for tag in ("''", "'"):
+        if label.endswith(tag):
+            return rule_label(label[:-len(tag)], tag)
+    m = re.fullmatch(r"(.*?)_?([gu])", label)
+    if m and m.group(1):
+        return rule_label(m.group(1), m.group(2))
+    return rule_label(label)
+
+
+def o3_cond_tex(cond):
+    """A condition of a generating function of O(3): 0 < k < N/2 and k even -> $0 < k < N/2$,
+    $k$ even; N/2 odd -> $N/2$ odd."""
+    parts = []
+    for part in cond.split(" and "):
+        m = re.fullmatch(r"(k|N|N/2) (even|odd)", part)
+        parts.append("$%s$ %s" % m.groups() if m else "$%s$" % part)
+    return ", ".join(parts)
+
+
+def o3_rule_tex(rule):
+    """A rule of O(3) (subduction_rules) as TeX: the direct sum over the kets, the cases with
+    their terms at p = +1 (or where p (-1)^m = +1, by the tag), the change of the tag at the
+    other sign, and q."""
+    if "terms" in rule:
+        return r"$%s$ for both $p$" % r"\oplus ".join(irrep_label(t) for t in rule["terms"])
+    pairs = rule["sum"]["from"] == "0"
+    tag = rule.get("tag")
+    cases = []
+    for cs in rule["cases"]:
+        terms = r"\oplus ".join(rule_label(t.replace("min", r"\min"), tag["plus"] if tag else "")
+                                for t in cs["terms"])
+        cases.append("$%s$%s" % (terms, " otherwise" if cs["if"] == "otherwise"
+                                 else " if " + so3_cond_tex(cs["if"])))
+    out = r"$\bigoplus_{m=%s}^{J}\Lambda_m$, %s: %s" % (
+        "0" if pairs else "-J",
+        r"$\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}"
+        if pairs else r"$\Lambda_m$ on $\jm{J}{m}$", ", ".join(cases))
+    if tag and tag["by"] == "p":
+        out += r"; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$"
+    elif tag:
+        out += r"; with $''$ for $'$ on the kets where $p(-1)^m = -1$"
+    if rule.get("q") == "m mod N":
+        out += r"; $q = m \bmod N$"
+    elif rule.get("q"):
+        out += r"; $q = (N+1)m \bmod 2N$ at $p = +1$ and $(N+1)m + N \bmod 2N$ at $p = -1$"
+    if rule.get("text", "").endswith("for both p"):
+        out += r"; independent of $p$"
+    return out
+
+
+def o3_gf_tex(gf):
+    """The generating functions of a rule of O(3) at the parity (-1)^J: per family of irreps of a
+    continuous subgroup numerator/denominator, for a family of finite subgroups P/(the stored
+    denominator) and the P of each irrep, the irreps with the same P and condition together."""
+    def den(ds):
+        return "".join("(1-t)" if str(d) == "1" else "(1-t^{%s})" % d for d in ds)
+    if "families" in gf:
+        return so3_gf_list([("%s/%s" % (family_numerator(f["numerator"]), den(f["denominator"]))
+                             if f["denominator"] else family_numerator(f["numerator"]),
+                             "always", irrep_label(f["label_template"])) for f in gf["families"]])
+    groups = []
+    for x in gf["numerators"]:
+        value = so3_power_tex(x["numerator"])
+        if groups and groups[-1][0] == value and groups[-1][1] == x["if"]:
+            groups[-1][2].append(o3_label_tex(x["irrep"]))
+        else:
+            groups.append((value, x["if"], [o3_label_tex(x["irrep"])]))
+    return r"$P_\Lambda(t)/(%s)$, $P_\Lambda(t)$: %s" % (den(gf["denominator"]), ", ".join(
+        "$%s$ for %s%s" % (value, " and ".join("$%s$" % lab for lab in labels),
+                           "" if cond == "always" else " (%s)" % o3_cond_tex(cond))
+        for value, cond, labels in groups))
+
+
+def section_subduction_rules_o3(D):
+    """O(3): the restriction of D^(J,p) to its closed subgroups, by the rules of the record's
+    subduction_rules, and the generating functions of the multiplicities at the parity (-1)^J;
+    no tables of instances."""
+    sr = D.rec["subduction_rules"]
+    D.section("Descent of symmetry", "section 16.1")
+    D.w(r"This section gives the restriction of $\irrJp{J}{p}$ to each closed "
+        r"subgroup $\grp{H}$ of $\grp{G}$ (section~\ref{s:subgroups}) for every $J$ and both "
+        r"parities (\texttt{subduction\symbol{95}rules}). " + D.define("irrep.Gamma.subgroup")
+        + r"For an axial $\grp{H}$ it is the direct sum over the kets $\jm{J}{m}$ (for "
+        r"$\grp{C_{\infty v}}$, $\grp{D_{\infty}}$, $\grp{D_{\infty h}}$ and the families "
+        r"$\grp{C_{\mathnormal{N}v}}$, $\grp{D_{\mathnormal{N}}}$, $\grp{D_{\mathnormal{N}h}}$ "
+        r"and $\grp{D_{\mathnormal{N}d}}$ over $\jm{J}{0}$ and the pairs $\jm{J}{\pm m}$, "
+        r"\mbox{$m > 0$}) of the terms of the first case of the rule that holds. "
+        + D.define("index.residue", "constant.root")
+        + r"There $q = m \bmod N$, $\rootunity{N}^{q}$ being the character of $\jm{J}{m}$ on the "
+        r"rotation by $2\pi/N$ about $z$, $\rootunity{N} = \expe^{2\pi\iunit/N}$, but in "
+        r"$\grp{S_{2\mathnormal{N}}}$ and $\grp{D_{\mathnormal{N}d}}$ with $N$ even, whose irreps "
+        r"the rotoreflection $\elt{\sigma_h C_\infty}(\pi/N)$ labels, $\rootunity{2N}^{q}$ is the "
+        r"character of $\jm{J}{m}$ on it; a term is an irrep of the member labeled by "
+        r"CONVENTIONS.pdf, section 6.1, with the names of CONVENTIONS.pdf, section 6.3, for "
+        r"$N \le 2$. The terms of a rule whose subgroup holds $\elt{i}$ are written at $p = +1$, "
+        r"$\elt{i}$ acting on $\irrJp{J}{p}$ as $p$; in $\grp{C_{\mathnormal{N}h}}$ and "
+        r"$\grp{D_{\mathnormal{N}h}}$ with $N$ odd $\elt{\sigma_h}$ acts on $\jm{J}{m}$ as "
+        r"$p(-1)^m$, and the terms are written where it is $+1$. "
+        + D.define("function.multiplicity", "irrep.Delta", "index.generating.variable",
+                   "function.generating", "function.generating.numerator")
+        + r"The multiplicity $b_\Lambda(J)$ of an irrep $\Lambda$ of $\grp{H}$ at the parity "
+        r"$(-1)^J$ is the coefficient of $t^J$ in its generating function "
+        r"$H_\Lambda(t) = \sum_{J\ge0} b_\Lambda(J)\, t^J$, as in the documents of the subgroups "
+        r"(section Multiplicities and allowed $m$), $k$ the subscript of an irrep "
+        r"$\irr{e}_{k}$ and $n$ the index of a family of irreps of a continuous subgroup, "
+        + D.define("delimiter.floor", "local.floor.x", "delimiter.ceiling")
+        + r"$\lfloor x\rfloor$ the greatest integer $\le x$ and $\lceil x\rceil$ the least "
+        r"integer $\ge x$; at the "
+        r"other parity the multiplicity of $\Lambda$ is that of $\Lambda$ times the determinant "
+        r"character of $\grp{H}$. The documents of the subgroups that have one ($N \le 12$) list "
+        r"the restrictions $J$ by $J$ at both parities, in their section Subduction from %s."
+        % O3_LINK)
+    label = r"$\irrJp{J}{p}$"
+
+    def table(rules):
+        cells = [[label, o3_rule_tex(r)] for r in rules] + [
+            [r"$H_\Lambda(t)$", o3_gf_tex(r["generating_function"])] for r in rules
+            if "generating_function" in r]
+        return (r"{\small\renewcommand{\arraystretch}{1.6}%s\begin{longtable}{@{}l>{\raggedright"
+                r"\arraybackslash}p{\fillwidth}@{}}\toprule" % fill_width(cells, 1))
+
+    def rows(r):
+        if "generating_function" not in r:
+            D.w(r"%s & %s\\" % (label, o3_rule_tex(r)))
+            return
+        D.w(r"%s & %s\\*" % (label, o3_rule_tex(r)))
+        D.w(r"$H_\Lambda(t)$ & %s\\" % o3_gf_tex(r["generating_function"]))
+    D.w(r"\paragraph{Continuous subgroups.}")
+    D.w(table(sr["continuous"]))
+    for k, r in enumerate(sr["continuous"]):
+        if k:
+            D.w(r"\midrule")
+        D.w(r"\multicolumn{2}{@{}c@{}}{%s}\\*" % linked_group(r["subgroup"]["schoenflies"],
+                                                            r["subgroup"]["o3_class"]))
+        rows(r)
+    D.w(r"\bottomrule\end{longtable}}")
+    for family in dict.fromkeys(r["family"] for r in sr["families"]):
+        group = [r for r in sr["families"] if r["family"] == family]
+        D.w(r"\paragraph{Subduction to the $%s$ family.}" % family_symbol(family))
+        D.w(table(group))
+        for k, r in enumerate(group):
+            if k:
+                D.w(r"\midrule")
+            D.w(r"\multicolumn{2}{@{}c@{}}{%s}\\*" % (
+                {"odd": "odd $N$", "even": "even $N$"}.get(r["N"]) or (
+                    "every $N$" if r["N_min"] == 1 else r"every $N \ge %d$" % r["N_min"])))
+            rows(r)
+        D.w(r"\bottomrule\end{longtable}}")
+    D.w(r"\paragraph{Subduction to the exceptional groups.} The generating functions are "
+        r"$H_\Lambda(t) = P_\Lambda(t)/((1-t^{a})(1-t^{b}))$, with $(a, b)$ %s." % ", ".join(
+            r"$(%d, %d)$ for $%s$" % (tuple(r["generating_function"]["denominator"])
+                                     + (grp(r["subgroup"]["schoenflies"]),))
+            for r in sr["exceptional"]))
+    D.w(r"{\small%s\begin{longtable}{@{}ll@{}}\toprule" % snake_mark())
+    D.w(r"$\Lambda$ & $P_\Lambda(t)$\\\midrule\endhead")
+    for k, r in enumerate(sr["exceptional"]):
+        gf = r["generating_function"]
+        if k:
+            D.w(r"\midrule")
+        D.w(r"\multicolumn{2}{@{}c@{}}{%s}\\*" % linked_group(r["subgroup"]["schoenflies"],
+                                                            r["subgroup"]["o3_class"]))
+        for i, x in enumerate(gf["numerators"]):
+            D.w(r"$%s$ & $%s$\\%s" % (irrep_label(x["irrep"]), polynomial_in_t(x["coefficients"]),
+                                     "*" if i < len(gf["numerators"]) - 1 else ""))
+    D.w(r"\bottomrule\end{longtable}}")
+
+
 def section_subduction(D):
+    if "subduction_rules" in D.rec and D.name == "O3":
+        return section_subduction_rules_o3(D)
     if "subduction_rules" in D.rec:
         return section_subduction_rules(D)
     if "subduction_subgroups" in D.rec:

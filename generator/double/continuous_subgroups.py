@@ -336,9 +336,12 @@ def continuous_entry(base, g, fams, sub, rot_entry, rot_index):
                            "terms": [{"family": h.id, "index": "n", "multiplicity": 1}
                                      for h in terms],
                            "blocks": _continuous_blocks(f, terms, hcomps)})
+    # the index, the normality and the conjugates of the preimage are those of its image
+    normal = rot_entry["normal"]
     return {"subgroup": {"double_class": K.stem_of(sub), "symbol": K.symbol(K.stem_of(sub))},
             "vector_entry": K.rot(base, "/subduction_subgroups/continuous/%d" % rot_index),
-            "class_ids": hcomps,
+            "class_ids": hcomps, "index": rot_entry["index"], "normal": normal,
+            "class_size": 1 if normal else K._null("continuous-group"),
             "normalizer": _preimage_symbol(rot_entry["normalizer"]),
             "centralizer": continuous_centralizer(base, sub),
             "subduction": subduction}
@@ -521,6 +524,7 @@ def block(base):
     continuous = [continuous_entry(base, g, fams, sub, rss["continuous"][i], i)
                   for i, sub in enumerate(RB.CONTINUOUS_SUBGROUPS[base])]
     return {"continuous": continuous, "finite": finite, "rules": rules(base, fams, by_member),
+            "vector_rules": K.rot(base, "/subduction_subgroups/rules"),
             "count": {"continuous": len(continuous), "finite": len(finite),
                       "sections": sum(1 for e in finite if "preimage_entry" in e),
                       "alternative_tables": sum(len(e.get("alternative_settings", []))

@@ -1856,6 +1856,18 @@ o3d := rec(
     ("vector_products") := "rotation/O3#/clebsch_gordan/products"
   ),
   ("domain") := "continuous",
+  ("fundamental_domain") := rec(
+    ("image") := "rotation/O3#/fundamental_domain",
+    ("space") := rec(
+      ("lens") := rec( ("reason") := "not-defined-for-family", ("value") := fail ),
+      ("name") := "point"
+    ),
+    ("volumes") := rec(
+      ("domain") := rec( ("coefficient") := [ 1, 1 ], ("dimension") := 0, ("pi_power") := 0 ),
+      ("group") := rec( ("coefficient") := [ 32, 1 ], ("dimension") := 3, ("pi_power") := 2 ),
+      ("pin_minus_3") := rec( ("coefficient") := [ 32, 1 ], ("dimension") := 3, ("pi_power") := 2 )
+    )
+  ),
   ("fusion") := rec(
     ("condition_grammar") := [ "always" ],
     ("families") := [ "Dg", "Du", "Dhalfg", "Dhalfu" ],
@@ -2092,6 +2104,80 @@ o3d := rec(
       ("hilbert_series") := rec( ("denominator") := [], ("numerator") := [ 1 ] ),
       ("image") := "SU(2)",
       ("relation") := fail
+    ),
+    ("molien") := rec(
+      ("instances") := [
+        rec(
+          ("dim") := 2,
+          ("hilbert_series") := rec( ("denominator") := [], ("numerator") := [ 1 ] ),
+          ("irrep") := "D^(1/2,+)",
+          ("irrep_id") := "D1hg",
+          ("twoJ") := 1
+        ),
+        rec(
+          ("dim") := 2,
+          ("hilbert_series") := rec( ("denominator") := [], ("numerator") := [ 1 ] ),
+          ("irrep") := "D^(1/2,-)",
+          ("irrep_id") := "D1hu",
+          ("twoJ") := 1
+        ),
+        rec(
+          ("dim") := 4,
+          ("hilbert_series") := rec( ("denominator") := [ 4 ], ("numerator") := [ 1 ] ),
+          ("irrep") := "D^(3/2,+)",
+          ("irrep_id") := "D3hg",
+          ("twoJ") := 3
+        ),
+        rec(
+          ("dim") := 4,
+          ("hilbert_series") := rec( ("denominator") := [ 4 ], ("numerator") := [ 1 ] ),
+          ("irrep") := "D^(3/2,-)",
+          ("irrep_id") := "D3hu",
+          ("twoJ") := 3
+        ),
+        rec(
+          ("dim") := 6,
+          ("hilbert_series") := rec(
+            ("denominator") := [ 4, 8, 12 ],
+            ("numerator") := [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ]
+          ),
+          ("irrep") := "D^(5/2,+)",
+          ("irrep_id") := "D5hg",
+          ("twoJ") := 5
+        ),
+        rec(
+          ("dim") := 6,
+          ("hilbert_series") := rec(
+            ("denominator") := [ 4, 8, 12 ],
+            ("numerator") := [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ]
+          ),
+          ("irrep") := "D^(5/2,-)",
+          ("irrep_id") := "D5hu",
+          ("twoJ") := 5
+        ),
+        rec(
+          ("dim") := 8,
+          ("hilbert_series") := rec(
+            ("denominator") := [ 4, 8, 8, 12, 30 ],
+            ("numerator") := [ 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 5, 0, 4, 0, 3, 0, 9, 0, 4, 0, 5, 0, 8, 0, 4, 0, 4, 0, 8, 0, 5, 0, 4, 0, 9, 0, 3, 0, 4, 0, 5, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1 ]
+          ),
+          ("irrep") := "D^(7/2,+)",
+          ("irrep_id") := "D7hg",
+          ("twoJ") := 7
+        ),
+        rec(
+          ("dim") := 8,
+          ("hilbert_series") := rec(
+            ("denominator") := [ 4, 8, 8, 12, 30 ],
+            ("numerator") := [ 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 5, 0, 4, 0, 3, 0, 9, 0, 4, 0, 5, 0, 8, 0, 4, 0, 4, 0, 8, 0, 5, 0, 4, 0, 9, 0, 3, 0, 4, 0, 5, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1 ]
+          ),
+          ("irrep") := "D^(7/2,-)",
+          ("irrep_id") := "D7hu",
+          ("twoJ") := 7
+        )
+      ],
+      ("levels") := [],
+      ("twoJ_max") := 7
     )
   ),
   ("jj_configurations") := rec(
@@ -2440,6 +2526,515 @@ o3d := rec(
     ("rule") := "Lambda^n of the spinor level L, n = 0, ..., dim L: chi = e_n(g), n e_n = sum_{k=1}^{n} (-1)^(k-1) e_(n-k) chi_L(g^k); Lambda^(d-n)(L) = Lambda^n(L) (x) Lambda^d(L)"
   ),
   ("schema") := "point-group-atlas/double/group-continuous/1",
+  ("spin_orbit_levels") := rec(
+    ("levels") := [
+      rec(
+        ("orbital") := "D^(0,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1/2,+)", ("irrep_id") := "D1hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 1
+      ),
+      rec(
+        ("orbital") := "D^(0,+)",
+        ("terms") := [ rec( ("irrep") := "D^(1,+)", ("multiplicity") := 1 ) ],
+        ("twoS") := 2
+      ),
+      rec(
+        ("orbital") := "D^(0,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(3/2,+)", ("irrep_id") := "D3hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 3
+      ),
+      rec(
+        ("orbital") := "D^(0,+)",
+        ("terms") := [ rec( ("irrep") := "D^(2,+)", ("multiplicity") := 1 ) ],
+        ("twoS") := 4
+      ),
+      rec(
+        ("orbital") := "D^(0,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(5/2,+)", ("irrep_id") := "D5hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 5
+      ),
+      rec(
+        ("orbital") := "D^(0,+)",
+        ("terms") := [ rec( ("irrep") := "D^(3,+)", ("multiplicity") := 1 ) ],
+        ("twoS") := 6
+      ),
+      rec(
+        ("orbital") := "D^(0,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(7/2,+)", ("irrep_id") := "D7hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 7
+      ),
+      rec(
+        ("orbital") := "D^(1,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1/2,+)", ("irrep_id") := "D1hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3/2,+)", ("irrep_id") := "D3hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 1
+      ),
+      rec(
+        ("orbital") := "D^(1,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(0,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(1,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(2,+)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 2
+      ),
+      rec(
+        ("orbital") := "D^(1,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1/2,+)", ("irrep_id") := "D1hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3/2,+)", ("irrep_id") := "D3hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,+)", ("irrep_id") := "D5hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 3
+      ),
+      rec(
+        ("orbital") := "D^(1,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(2,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,+)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 4
+      ),
+      rec(
+        ("orbital") := "D^(1,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(3/2,+)", ("irrep_id") := "D3hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,+)", ("irrep_id") := "D5hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,+)", ("irrep_id") := "D7hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 5
+      ),
+      rec(
+        ("orbital") := "D^(1,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(2,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(4,+)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 6
+      ),
+      rec(
+        ("orbital") := "D^(1,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(5/2,+)", ("irrep_id") := "D5hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,+)", ("irrep_id") := "D7hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(9/2,+)", ("irrep_id") := "D9hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 7
+      ),
+      rec(
+        ("orbital") := "D^(2,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(3/2,+)", ("irrep_id") := "D3hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,+)", ("irrep_id") := "D5hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 1
+      ),
+      rec(
+        ("orbital") := "D^(2,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(2,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,+)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 2
+      ),
+      rec(
+        ("orbital") := "D^(2,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1/2,+)", ("irrep_id") := "D1hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3/2,+)", ("irrep_id") := "D3hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,+)", ("irrep_id") := "D5hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,+)", ("irrep_id") := "D7hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 3
+      ),
+      rec(
+        ("orbital") := "D^(2,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(0,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(1,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(2,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(4,+)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 4
+      ),
+      rec(
+        ("orbital") := "D^(2,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1/2,+)", ("irrep_id") := "D1hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3/2,+)", ("irrep_id") := "D3hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,+)", ("irrep_id") := "D5hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,+)", ("irrep_id") := "D7hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(9/2,+)", ("irrep_id") := "D9hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 5
+      ),
+      rec(
+        ("orbital") := "D^(2,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(2,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(4,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5,+)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 6
+      ),
+      rec(
+        ("orbital") := "D^(2,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(3/2,+)", ("irrep_id") := "D3hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,+)", ("irrep_id") := "D5hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,+)", ("irrep_id") := "D7hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(9/2,+)", ("irrep_id") := "D9hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(11/2,+)", ("irrep_id") := "D11hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 7
+      ),
+      rec(
+        ("orbital") := "D^(3,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(5/2,+)", ("irrep_id") := "D5hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,+)", ("irrep_id") := "D7hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 1
+      ),
+      rec(
+        ("orbital") := "D^(3,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(2,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(4,+)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 2
+      ),
+      rec(
+        ("orbital") := "D^(3,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(3/2,+)", ("irrep_id") := "D3hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,+)", ("irrep_id") := "D5hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,+)", ("irrep_id") := "D7hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(9/2,+)", ("irrep_id") := "D9hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 3
+      ),
+      rec(
+        ("orbital") := "D^(3,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(2,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(4,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5,+)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 4
+      ),
+      rec(
+        ("orbital") := "D^(3,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1/2,+)", ("irrep_id") := "D1hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3/2,+)", ("irrep_id") := "D3hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,+)", ("irrep_id") := "D5hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,+)", ("irrep_id") := "D7hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(9/2,+)", ("irrep_id") := "D9hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(11/2,+)", ("irrep_id") := "D11hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 5
+      ),
+      rec(
+        ("orbital") := "D^(3,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(0,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(1,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(2,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(4,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5,+)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(6,+)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 6
+      ),
+      rec(
+        ("orbital") := "D^(3,+)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1/2,+)", ("irrep_id") := "D1hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3/2,+)", ("irrep_id") := "D3hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,+)", ("irrep_id") := "D5hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,+)", ("irrep_id") := "D7hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(9/2,+)", ("irrep_id") := "D9hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(11/2,+)", ("irrep_id") := "D11hg", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(13/2,+)", ("irrep_id") := "D13hg", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 7
+      ),
+      rec(
+        ("orbital") := "D^(0,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1/2,-)", ("irrep_id") := "D1hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 1
+      ),
+      rec(
+        ("orbital") := "D^(0,-)",
+        ("terms") := [ rec( ("irrep") := "D^(1,-)", ("multiplicity") := 1 ) ],
+        ("twoS") := 2
+      ),
+      rec(
+        ("orbital") := "D^(0,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(3/2,-)", ("irrep_id") := "D3hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 3
+      ),
+      rec(
+        ("orbital") := "D^(0,-)",
+        ("terms") := [ rec( ("irrep") := "D^(2,-)", ("multiplicity") := 1 ) ],
+        ("twoS") := 4
+      ),
+      rec(
+        ("orbital") := "D^(0,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(5/2,-)", ("irrep_id") := "D5hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 5
+      ),
+      rec(
+        ("orbital") := "D^(0,-)",
+        ("terms") := [ rec( ("irrep") := "D^(3,-)", ("multiplicity") := 1 ) ],
+        ("twoS") := 6
+      ),
+      rec(
+        ("orbital") := "D^(0,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(7/2,-)", ("irrep_id") := "D7hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 7
+      ),
+      rec(
+        ("orbital") := "D^(1,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1/2,-)", ("irrep_id") := "D1hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3/2,-)", ("irrep_id") := "D3hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 1
+      ),
+      rec(
+        ("orbital") := "D^(1,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(0,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(1,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(2,-)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 2
+      ),
+      rec(
+        ("orbital") := "D^(1,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1/2,-)", ("irrep_id") := "D1hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3/2,-)", ("irrep_id") := "D3hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,-)", ("irrep_id") := "D5hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 3
+      ),
+      rec(
+        ("orbital") := "D^(1,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(2,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,-)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 4
+      ),
+      rec(
+        ("orbital") := "D^(1,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(3/2,-)", ("irrep_id") := "D3hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,-)", ("irrep_id") := "D5hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,-)", ("irrep_id") := "D7hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 5
+      ),
+      rec(
+        ("orbital") := "D^(1,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(2,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(4,-)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 6
+      ),
+      rec(
+        ("orbital") := "D^(1,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(5/2,-)", ("irrep_id") := "D5hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,-)", ("irrep_id") := "D7hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(9/2,-)", ("irrep_id") := "D9hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 7
+      ),
+      rec(
+        ("orbital") := "D^(2,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(3/2,-)", ("irrep_id") := "D3hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,-)", ("irrep_id") := "D5hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 1
+      ),
+      rec(
+        ("orbital") := "D^(2,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(2,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,-)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 2
+      ),
+      rec(
+        ("orbital") := "D^(2,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1/2,-)", ("irrep_id") := "D1hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3/2,-)", ("irrep_id") := "D3hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,-)", ("irrep_id") := "D5hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,-)", ("irrep_id") := "D7hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 3
+      ),
+      rec(
+        ("orbital") := "D^(2,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(0,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(1,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(2,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(4,-)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 4
+      ),
+      rec(
+        ("orbital") := "D^(2,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1/2,-)", ("irrep_id") := "D1hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3/2,-)", ("irrep_id") := "D3hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,-)", ("irrep_id") := "D5hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,-)", ("irrep_id") := "D7hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(9/2,-)", ("irrep_id") := "D9hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 5
+      ),
+      rec(
+        ("orbital") := "D^(2,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(2,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(4,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5,-)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 6
+      ),
+      rec(
+        ("orbital") := "D^(2,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(3/2,-)", ("irrep_id") := "D3hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,-)", ("irrep_id") := "D5hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,-)", ("irrep_id") := "D7hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(9/2,-)", ("irrep_id") := "D9hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(11/2,-)", ("irrep_id") := "D11hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 7
+      ),
+      rec(
+        ("orbital") := "D^(3,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(5/2,-)", ("irrep_id") := "D5hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,-)", ("irrep_id") := "D7hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 1
+      ),
+      rec(
+        ("orbital") := "D^(3,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(2,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(4,-)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 2
+      ),
+      rec(
+        ("orbital") := "D^(3,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(3/2,-)", ("irrep_id") := "D3hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,-)", ("irrep_id") := "D5hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,-)", ("irrep_id") := "D7hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(9/2,-)", ("irrep_id") := "D9hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 3
+      ),
+      rec(
+        ("orbital") := "D^(3,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(2,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(4,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5,-)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 4
+      ),
+      rec(
+        ("orbital") := "D^(3,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1/2,-)", ("irrep_id") := "D1hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3/2,-)", ("irrep_id") := "D3hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,-)", ("irrep_id") := "D5hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,-)", ("irrep_id") := "D7hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(9/2,-)", ("irrep_id") := "D9hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(11/2,-)", ("irrep_id") := "D11hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 5
+      ),
+      rec(
+        ("orbital") := "D^(3,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(0,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(1,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(2,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(4,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5,-)", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(6,-)", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 6
+      ),
+      rec(
+        ("orbital") := "D^(3,-)",
+        ("terms") := [
+          rec( ("irrep") := "D^(1/2,-)", ("irrep_id") := "D1hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(3/2,-)", ("irrep_id") := "D3hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(5/2,-)", ("irrep_id") := "D5hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(7/2,-)", ("irrep_id") := "D7hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(9/2,-)", ("irrep_id") := "D9hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(11/2,-)", ("irrep_id") := "D11hu", ("multiplicity") := 1 ),
+          rec( ("irrep") := "D^(13/2,-)", ("irrep_id") := "D13hu", ("multiplicity") := 1 )
+        ],
+        ("twoS") := 7
+      )
+    ],
+    ("twoS_range") := [ 1, 7 ]
+  ),
   ("spin_orbitals") := rec(
     ("form") := "jj",
     ("parity_rule") := "the states of SU2's spin_orbitals: |l j m> carries D^(j,(-1)^l) of Pin^-(3), the parity of the orbital",
@@ -2451,11 +3046,13 @@ o3d := rec(
         rec(
           ("family") := "Dhalfg",
           ("label_template") := "D^(j,+)",
+          ("parity") := 1,
           ("twoM") := "2j, 2j-2, ..., -2j"
         ),
         rec(
           ("family") := "Dhalfu",
           ("label_template") := "D^(j,-)",
+          ("parity") := -1,
           ("twoM") := "2j, 2j-2, ..., -2j"
         )
       ]
@@ -2470,7 +3067,11 @@ o3d := rec(
         )
       ],
       ("multiplicity") := [
-        rec( ("family") := "Dhalfg", ("label_template") := "D^(j,+)", ("multiplicity") := "1" ),
+        rec(
+          ("family") := "Dhalfg",
+          ("label_template") := "D^(j,+)",
+          ("multiplicity") := "1 at p = +1, 0 at p = -1"
+        ),
         rec(
           ("family") := "Dhalfu",
           ("label_template") := "D^(j,-)",
@@ -2736,13 +3337,15 @@ o3d := rec(
           ("denominator") := [],
           ("family") := "Dhalfg",
           ("label_template") := "D^(j,+)",
-          ("numerator") := "t^(2j)"
+          ("numerator") := "t^(2j)",
+          ("parity") := 1
         ),
         rec(
           ("denominator") := [],
           ("family") := "Dhalfu",
           ("label_template") := "D^(j,-)",
-          ("numerator") := "t^(2j)"
+          ("numerator") := "t^(2j)",
+          ("parity") := -1
         )
       ]
     ),
@@ -2938,5 +3541,2055 @@ o3d := rec(
     ("integer_J") := "rotation/O3#/subduction_o3",
     ("rule") := "D^(J,p) | Pin^-(3) = D^(J,p)",
     ("twoJ_range") := [ 1, 25 ]
+  ),
+  ("subduction_rules") := rec(
+    ("continuous") := [
+      rec(
+        ("cases") := [
+          rec( ("if") := "m > 0", ("terms") := [ "1E_{m}" ] ),
+          rec( ("if") := "m < 0", ("terms") := [ "2E_{-m}" ] )
+        ],
+        ("generating_function") := rec(
+          ("families") := [
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "1Eh",
+              ("label_template") := "1E_n",
+              ("numerator") := "t^(2n)"
+            ),
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "2Eh",
+              ("label_template") := "2E_n",
+              ("numerator") := "t^(2n)"
+            )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("subgroup") := rec( ("double_class") := "2Cinf", ("symbol") := "2C_inf" ),
+        ("sum") := rec( ("from") := "-J", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | 2C_inf = sum_{n=1/2..J} (1E_n + 2E_n) for both p"
+      ),
+      rec(
+        ("cases") := [
+          rec( ("if") := "m > 0", ("terms") := [ "1E_{m}" ] ),
+          rec( ("if") := "m < 0", ("terms") := [ "2E_{-m}" ] )
+        ],
+        ("generating_function") := rec(
+          ("families") := [
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "1Ehg",
+              ("label_template") := "1E_n,g",
+              ("numerator") := "t^(2n)"
+            ),
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "2Ehg",
+              ("label_template") := "2E_n,g",
+              ("numerator") := "t^(2n)"
+            ),
+            rec(
+              ("denominator") := [],
+              ("family") := "1Ehu",
+              ("label_template") := "1E_n,u",
+              ("numerator") := "0"
+            ),
+            rec(
+              ("denominator") := [],
+              ("family") := "2Ehu",
+              ("label_template") := "2E_n,u",
+              ("numerator") := "0"
+            )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("subgroup") := rec( ("double_class") := "2Cinfh", ("symbol") := "2C_infh" ),
+        ("sum") := rec( ("from") := "-J", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p", ("minus") := "u", ("plus") := "g" ),
+        ("text") := "D^(J,p) | 2C_infh = sum_{n=1/2..J} (1E_n,x + 2E_n,x), x = g if p = +1, u if p = -1"
+      ),
+      rec(
+        ("cases") := [ rec( ("if") := "m > 0", ("terms") := [ "E_{m}" ] ) ],
+        ("generating_function") := rec(
+          ("families") := [
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "Eh",
+              ("label_template") := "E_n",
+              ("numerator") := "t^(2n)"
+            )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("subgroup") := rec( ("double_class") := "2Cinfv", ("symbol") := "2C_infv" ),
+        ("sum") := rec( ("from") := "1/2", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | 2C_infv = sum_{n=1/2..J} E_n for both p"
+      ),
+      rec(
+        ("cases") := [ rec( ("if") := "m > 0", ("terms") := [ "E_{m}" ] ) ],
+        ("generating_function") := rec(
+          ("families") := [
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "Eh",
+              ("label_template") := "E_n",
+              ("numerator") := "t^(2n)"
+            )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("subgroup") := rec( ("double_class") := "2Dinf", ("symbol") := "2D_inf" ),
+        ("sum") := rec( ("from") := "1/2", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | 2D_inf = sum_{n=1/2..J} E_n for both p"
+      ),
+      rec(
+        ("cases") := [ rec( ("if") := "m > 0", ("terms") := [ "E_{m}" ] ) ],
+        ("generating_function") := rec(
+          ("families") := [
+            rec(
+              ("denominator") := [ 2 ],
+              ("family") := "Ehg",
+              ("label_template") := "E_n,g",
+              ("numerator") := "t^(2n)"
+            ),
+            rec(
+              ("denominator") := [],
+              ("family") := "Ehu",
+              ("label_template") := "E_n,u",
+              ("numerator") := "0"
+            )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("subgroup") := rec( ("double_class") := "2Dinfh", ("symbol") := "2D_infh" ),
+        ("sum") := rec( ("from") := "1/2", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p", ("minus") := "u", ("plus") := "g" ),
+        ("text") := "D^(J,p) | 2D_infh = sum_{n=1/2..J} E_n,x, x = g if p = +1, u if p = -1"
+      ),
+      rec(
+        ("subgroup") := rec( ("double_class") := "SU2", ("symbol") := "SU(2)" ),
+        ("terms") := [ "D^(J)" ],
+        ("text") := "D^(J,p) | SU(2) = D^(J) for both p"
+      )
+    ],
+    ("count") := rec( ("continuous") := 6, ("exceptional") := 7, ("families") := 11 ),
+    ("exceptional") := [
+      rec(
+        ("generating_function") := "double/2T#/subduction_basis/generating_function",
+        ("subgroup") := rec( ("double_class") := "2T", ("order") := 24, ("symbol") := "2T" )
+      ),
+      rec(
+        ("generating_function") := "double/2Th#/subduction_basis/generating_function",
+        ("subgroup") := rec( ("double_class") := "2Th", ("order") := 48, ("symbol") := "2T_h" )
+      ),
+      rec(
+        ("generating_function") := "double/2Td#/subduction_basis/generating_function",
+        ("subgroup") := rec( ("double_class") := "2Td", ("order") := 48, ("symbol") := "2T_d" )
+      ),
+      rec(
+        ("generating_function") := "double/2O#/subduction_basis/generating_function",
+        ("subgroup") := rec( ("double_class") := "2O", ("order") := 48, ("symbol") := "2O" )
+      ),
+      rec(
+        ("generating_function") := "double/2Oh#/subduction_basis/generating_function",
+        ("subgroup") := rec( ("double_class") := "2Oh", ("order") := 96, ("symbol") := "2O_h" )
+      ),
+      rec(
+        ("generating_function") := "double/2I#/subduction_basis/generating_function",
+        ("subgroup") := rec( ("double_class") := "2I", ("order") := 120, ("symbol") := "2I" )
+      ),
+      rec(
+        ("generating_function") := "double/2Ih#/subduction_basis/generating_function",
+        ("subgroup") := rec( ("double_class") := "2Ih", ("order") := 240, ("symbol") := "2I_h" )
+      )
+    ],
+    ("families") := [
+      rec(
+        ("N") := "every",
+        ("N_min") := 1,
+        ("cases") := [
+          rec( ("if") := "0 < q < N/2", ("terms") := [ "1E_{q}" ] ),
+          rec( ("if") := "q = N/2", ("terms") := [ "A_{N/2}" ] ),
+          rec( ("if") := "N/2 < q < N", ("terms") := [ "2E_{N-q}" ] )
+        ],
+        ("family") := "Cn",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "2N" ],
+          ("numerators") := [
+            rec(
+              ("if") := "0 < k < N/2",
+              ("irrep") := "1E_{k}",
+              ("numerator") := "t^(2k) + t^(2N-2k)"
+            ),
+            rec( ("if") := "N odd", ("irrep") := "A_{N/2}", ("numerator") := "2*t^N" ),
+            rec(
+              ("if") := "0 < k < N/2",
+              ("irrep") := "2E_{k}",
+              ("numerator") := "t^(2k) + t^(2N-2k)"
+            )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("q") := "m mod N",
+        ("sum") := rec( ("from") := "-J", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | 2C_N = SU(2)'s rule for both p"
+      ),
+      rec(
+        ("N") := "odd",
+        ("N_min") := 1,
+        ("cases") := [
+          rec( ("if") := "0 < q < N/2", ("terms") := [ "1E_{q}" ] ),
+          rec( ("if") := "q = N/2", ("terms") := [ "A_{N/2}" ] ),
+          rec( ("if") := "N/2 < q < N", ("terms") := [ "2E_{N-q}" ] )
+        ],
+        ("family") := "S2n",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "2N" ],
+          ("numerators") := [
+            rec(
+              ("if") := "0 < k < N/2",
+              ("irrep") := "1E_{k},g",
+              ("numerator") := "t^(2k) + t^(2N-2k)"
+            ),
+            rec( ("if") := "N odd", ("irrep") := "A_{N/2},g", ("numerator") := "2*t^N" ),
+            rec(
+              ("if") := "0 < k < N/2",
+              ("irrep") := "2E_{k},g",
+              ("numerator") := "t^(2k) + t^(2N-2k)"
+            ),
+            rec( ("if") := "0 < k < N/2", ("irrep") := "1E_{k},u", ("numerator") := "0" ),
+            rec( ("if") := "N odd", ("irrep") := "A_{N/2},u", ("numerator") := "0" ),
+            rec( ("if") := "0 < k < N/2", ("irrep") := "2E_{k},u", ("numerator") := "0" )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("q") := "m mod N",
+        ("sum") := rec( ("from") := "-J", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p", ("minus") := "u", ("plus") := "g" ),
+        ("text") := "D^(J,p) | 2S_2N (N odd) = sum_{m=-J..J} G(q),x, q = m mod N, G(q) as for 2C_N, x = g if p = +1, u if p = -1"
+      ),
+      rec(
+        ("N") := "even",
+        ("N_min") := 2,
+        ("cases") := [
+          rec( ("if") := "q mod N < N/2", ("terms") := [ "1E_{min(q, 2N-q)}" ] ),
+          rec( ("if") := "q mod N > N/2", ("terms") := [ "2E_{min(q, 2N-q)}" ] )
+        ],
+        ("family") := "S2n",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "4N" ],
+          ("numerators") := [
+            rec(
+              ("if") := "0 < k < N",
+              ("irrep") := "1E_{k}",
+              ("numerator") := "t^(2k) + t^(4N-2k)"
+            ),
+            rec(
+              ("if") := "0 < k < N",
+              ("irrep") := "2E_{k}",
+              ("numerator") := "t^(2k) + t^(4N-2k)"
+            )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("q") := "m + N[p = -1] mod 2N",
+        ("sum") := rec( ("from") := "-J", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | 2S_2N (N even) = sum_{m=-J..J} G, q = m + N[p = -1] mod 2N; G = 1E_{min(q,2N-q)} if q mod N < N/2, 2E_{min(q,2N-q)} if q mod N > N/2"
+      ),
+      rec(
+        ("N") := "odd",
+        ("N_min") := 1,
+        ("cases") := [ rec( ("if") := "always", ("terms") := [ "E_{min(q, 2N-q)}" ] ) ],
+        ("family") := "Cnh",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "4N" ],
+          ("numerators") := [
+            rec(
+              ("if") := "0 < k < N",
+              ("irrep") := "E_{k}'",
+              ("numerator") := "t^(2k) + t^(4N-2k)"
+            ),
+            rec(
+              ("if") := "0 < k < N",
+              ("irrep") := "E_{k}''",
+              ("numerator") := "t^(2k) + t^(4N-2k)"
+            )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("q") := "m + N[p = -1] mod 2N",
+        ("sum") := rec( ("from") := "-J", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p(-1)^(m-1/2)", ("minus") := "''", ("plus") := "'" ),
+        ("text") := "D^(J,p) | 2C_Nh (N odd) = sum_{m=-J..J} E_{min(q,2N-q)}x, q = m + N[p = -1] mod 2N, x = ' if p (-1)^(m-1/2) = +1, '' if it is -1"
+      ),
+      rec(
+        ("N") := "even",
+        ("N_min") := 2,
+        ("cases") := [
+          rec( ("if") := "0 < q < N/2", ("terms") := [ "1E_{q}" ] ),
+          rec( ("if") := "N/2 < q < N", ("terms") := [ "2E_{N-q}" ] )
+        ],
+        ("family") := "Cnh",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "2N" ],
+          ("numerators") := [
+            rec(
+              ("if") := "0 < k < N/2",
+              ("irrep") := "1E_{k},g",
+              ("numerator") := "t^(2k) + t^(2N-2k)"
+            ),
+            rec(
+              ("if") := "0 < k < N/2",
+              ("irrep") := "2E_{k},g",
+              ("numerator") := "t^(2k) + t^(2N-2k)"
+            ),
+            rec( ("if") := "0 < k < N/2", ("irrep") := "1E_{k},u", ("numerator") := "0" ),
+            rec( ("if") := "0 < k < N/2", ("irrep") := "2E_{k},u", ("numerator") := "0" )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("q") := "m mod N",
+        ("sum") := rec( ("from") := "-J", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p", ("minus") := "u", ("plus") := "g" ),
+        ("text") := "D^(J,p) | 2C_Nh (N even) = sum_{m=-J..J} G(q),x, q = m mod N, G(q) as for 2C_N, x = g if p = +1, u if p = -1"
+      ),
+      rec(
+        ("N") := "every",
+        ("N_min") := 1,
+        ("cases") := [
+          rec( ("if") := "q != N/2", ("terms") := [ "E_{min(q, N-q)}" ] ),
+          rec( ("if") := "q = N/2", ("terms") := [ "1E_{N/2}", "2E_{N/2}" ] )
+        ],
+        ("family") := "Cnv",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "2N" ],
+          ("numerators") := [
+            rec(
+              ("if") := "0 < k < N/2",
+              ("irrep") := "E_{k}",
+              ("numerator") := "t^(2k) + t^(2N-2k)"
+            ),
+            rec( ("if") := "N odd", ("irrep") := "1E_{N/2}", ("numerator") := "t^N" ),
+            rec( ("if") := "N odd", ("irrep") := "2E_{N/2}", ("numerator") := "t^N" )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("q") := "m mod N",
+        ("sum") := rec( ("from") := "1/2", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | 2C_Nv = sum_{m=1/2..J} G(q), q = m mod N, G(q) as for 2D_N, for both p"
+      ),
+      rec(
+        ("N") := "every",
+        ("N_min") := 2,
+        ("cases") := [
+          rec( ("if") := "q != N/2", ("terms") := [ "E_{min(q, N-q)}" ] ),
+          rec( ("if") := "q = N/2", ("terms") := [ "1E_{N/2}", "2E_{N/2}" ] )
+        ],
+        ("family") := "Dn",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "2N" ],
+          ("numerators") := [
+            rec(
+              ("if") := "0 < k < N/2",
+              ("irrep") := "E_{k}",
+              ("numerator") := "t^(2k) + t^(2N-2k)"
+            ),
+            rec( ("if") := "N odd", ("irrep") := "1E_{N/2}", ("numerator") := "t^N" ),
+            rec( ("if") := "N odd", ("irrep") := "2E_{N/2}", ("numerator") := "t^N" )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("q") := "m mod N",
+        ("sum") := rec( ("from") := "1/2", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | 2D_N = SU(2)'s rule for both p"
+      ),
+      rec(
+        ("N") := "odd",
+        ("N_min") := 1,
+        ("cases") := [ rec( ("if") := "always", ("terms") := [ "E_{min(q, 2N-q)}" ] ) ],
+        ("family") := "Dnh",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "4N" ],
+          ("numerators") := [
+            rec(
+              ("if") := "0 < k < N",
+              ("irrep") := "E_{k}",
+              ("numerator") := "t^(2k) + t^(4N-2k)"
+            )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("q") := "m + N[p = -1] mod 2N",
+        ("sum") := rec( ("from") := "1/2", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | 2D_Nh (N odd) = sum_{m=1/2..J} E_{min(q,2N-q)}, q = m + N[p = -1] mod 2N"
+      ),
+      rec(
+        ("N") := "even",
+        ("N_min") := 2,
+        ("cases") := [ rec( ("if") := "always", ("terms") := [ "E_{min(q, N-q)}" ] ) ],
+        ("family") := "Dnh",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "2N" ],
+          ("numerators") := [
+            rec(
+              ("if") := "0 < k < N/2",
+              ("irrep") := "E_{k},g",
+              ("numerator") := "t^(2k) + t^(2N-2k)"
+            ),
+            rec( ("if") := "0 < k < N/2", ("irrep") := "E_{k},u", ("numerator") := "0" )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("q") := "m mod N",
+        ("sum") := rec( ("from") := "1/2", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p", ("minus") := "u", ("plus") := "g" ),
+        ("text") := "D^(J,p) | 2D_Nh (N even) = 2D_N's terms, each with ,g if p = +1, ,u if p = -1"
+      ),
+      rec(
+        ("N") := "odd",
+        ("N_min") := 1,
+        ("cases") := [
+          rec( ("if") := "q != N/2", ("terms") := [ "E_{min(q, N-q)}" ] ),
+          rec( ("if") := "q = N/2", ("terms") := [ "1E_{N/2}", "2E_{N/2}" ] )
+        ],
+        ("family") := "Dnd",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "2N" ],
+          ("numerators") := [
+            rec(
+              ("if") := "0 < k < N/2",
+              ("irrep") := "E_{k},g",
+              ("numerator") := "t^(2k) + t^(2N-2k)"
+            ),
+            rec( ("if") := "N odd", ("irrep") := "1E_{N/2},g", ("numerator") := "t^N" ),
+            rec( ("if") := "N odd", ("irrep") := "2E_{N/2},g", ("numerator") := "t^N" ),
+            rec( ("if") := "0 < k < N/2", ("irrep") := "E_{k},u", ("numerator") := "0" ),
+            rec( ("if") := "N odd", ("irrep") := "1E_{N/2},u", ("numerator") := "0" ),
+            rec( ("if") := "N odd", ("irrep") := "2E_{N/2},u", ("numerator") := "0" )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("q") := "m mod N",
+        ("sum") := rec( ("from") := "1/2", ("symbol") := "m", ("to") := "J" ),
+        ("tag") := rec( ("by") := "p", ("minus") := "u", ("plus") := "g" ),
+        ("text") := "D^(J,p) | 2D_Nd (N odd) = 2D_N's terms, each with ,g if p = +1, ,u if p = -1"
+      ),
+      rec(
+        ("N") := "even",
+        ("N_min") := 2,
+        ("cases") := [ rec( ("if") := "always", ("terms") := [ "E_{min(q, 2N-q)}" ] ) ],
+        ("family") := "Dnd",
+        ("generating_function") := rec(
+          ("denominator") := [ "2", "4N" ],
+          ("numerators") := [
+            rec(
+              ("if") := "0 < k < N",
+              ("irrep") := "E_{k}",
+              ("numerator") := "t^(2k) + t^(4N-2k)"
+            )
+          ],
+          ("parity") := "+1",
+          ("variable") := "t^(2J)"
+        ),
+        ("q") := "m + N[p = -1] mod 2N",
+        ("sum") := rec( ("from") := "1/2", ("symbol") := "m", ("to") := "J" ),
+        ("text") := "D^(J,p) | 2D_Nd (N even) = sum_{m=1/2..J} E_{min(q,2N-q)}, q = m + N[p = -1] mod 2N"
+      )
+    ],
+    ("integer_J") := "rotation/O3#/subduction_rules",
+    ("parity") := "the generating functions count the blocks at p = +1, as the members' records; at p = -1 the multiplicity of L is that of L (x) det, det the determinant character of the subgroup",
+    ("sections") := "a section over C_N or S_2N (N odd) is restricted as its preimage, each spinor irrep renamed by the section's record (double/CONVENTIONS.md section 27)"
+  ),
+  ("subgroup_classes") := rec(
+    ("aliases") := [
+      rec( ("alias") := "2C1h", ("class") := "2C1v", ("symbol") := "2C_s" ),
+      rec( ("alias") := "2D1", ("class") := "2C2", ("symbol") := "2C_2" ),
+      rec( ("alias") := "2D1d", ("class") := "2C2h", ("symbol") := "2C_2h" ),
+      rec( ("alias") := "2D1h", ("class") := "2C2v", ("symbol") := "2C_2v" )
+    ],
+    ("continuous") := [
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_infh" ),
+        ("subgroup") := rec(
+          ("double_class") := "2Cinf",
+          ("order") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2C_inf"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_infh" ),
+        ("subgroup") := rec(
+          ("double_class") := "2Cinfh",
+          ("order") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2C_infh"
+        )
+      ),
+      rec(
+        ("centralizer") := rec(
+          ("normalizer_index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2C_i"
+        ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_infh" ),
+        ("subgroup") := rec(
+          ("double_class") := "2Cinfv",
+          ("order") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2C_infv"
+        )
+      ),
+      rec(
+        ("centralizer") := rec(
+          ("normalizer_index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2C_i"
+        ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_infh" ),
+        ("subgroup") := rec(
+          ("double_class") := "2Dinf",
+          ("order") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_inf"
+        )
+      ),
+      rec(
+        ("centralizer") := rec(
+          ("normalizer_index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2C_i"
+        ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 1, ("symbol") := "2D_infh" ),
+        ("subgroup") := rec(
+          ("double_class") := "2Dinfh",
+          ("order") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        )
+      ),
+      rec(
+        ("centralizer") := rec(
+          ("normalizer_index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2C_i"
+        ),
+        ("class_size") := 1,
+        ("normal") := true,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "Pin^-(3)" ),
+        ("subgroup") := rec(
+          ("double_class") := "SU2",
+          ("order") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "SU(2)"
+        )
+      )
+    ],
+    ("count") := rec( ("continuous") := 6, ("finite") := 105 ),
+    ("finite") := [
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 1, ("symbol") := "Pin^-(3)" ),
+        ("class_size") := 1,
+        ("normal") := true,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "Pin^-(3)"
+        ),
+        ("subgroup") := rec(
+          ("N") := 1,
+          ("double_class") := "2C1",
+          ("family") := "Cn",
+          ("order") := 2,
+          ("symbol") := "2C_1"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 2,
+          ("double_class") := "2C2",
+          ("family") := "Cn",
+          ("order") := 4,
+          ("symbol") := "2C_2"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("double_class") := "2C3",
+          ("family") := "Cn",
+          ("order") := 6,
+          ("symbol") := "2C_3"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 4,
+          ("double_class") := "2C4",
+          ("family") := "Cn",
+          ("order") := 8,
+          ("symbol") := "2C_4"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("double_class") := "2C5",
+          ("family") := "Cn",
+          ("order") := 10,
+          ("symbol") := "2C_5"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 6,
+          ("double_class") := "2C6",
+          ("family") := "Cn",
+          ("order") := 12,
+          ("symbol") := "2C_6"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("double_class") := "2C7",
+          ("family") := "Cn",
+          ("order") := 14,
+          ("symbol") := "2C_7"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 8,
+          ("double_class") := "2C8",
+          ("family") := "Cn",
+          ("order") := 16,
+          ("symbol") := "2C_8"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("double_class") := "2C9",
+          ("family") := "Cn",
+          ("order") := 18,
+          ("symbol") := "2C_9"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 10,
+          ("double_class") := "2C10",
+          ("family") := "Cn",
+          ("order") := 20,
+          ("symbol") := "2C_10"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("double_class") := "2C11",
+          ("family") := "Cn",
+          ("order") := 22,
+          ("symbol") := "2C_11"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 12,
+          ("double_class") := "2C12",
+          ("family") := "Cn",
+          ("order") := 24,
+          ("symbol") := "2C_12"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 1, ("symbol") := "Pin^-(3)" ),
+        ("class_size") := 1,
+        ("normal") := true,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "Pin^-(3)"
+        ),
+        ("subgroup") := rec(
+          ("N") := 1,
+          ("double_class") := "C1",
+          ("family") := "Cn",
+          ("order") := 1,
+          ("symbol") := "C_1"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("double_class") := "C3",
+          ("family") := "Cn",
+          ("order") := 3,
+          ("symbol") := "C_3"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("double_class") := "C5",
+          ("family") := "Cn",
+          ("order") := 5,
+          ("symbol") := "C_5"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("double_class") := "C7",
+          ("family") := "Cn",
+          ("order") := 7,
+          ("symbol") := "C_7"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("double_class") := "C9",
+          ("family") := "Cn",
+          ("order") := 9,
+          ("symbol") := "C_9"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("double_class") := "C11",
+          ("family") := "Cn",
+          ("order") := 11,
+          ("symbol") := "C_11"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 1, ("symbol") := "Pin^-(3)" ),
+        ("class_size") := 1,
+        ("normal") := true,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "Pin^-(3)"
+        ),
+        ("subgroup") := rec(
+          ("N") := 1,
+          ("double_class") := "2S2",
+          ("family") := "S2n",
+          ("order") := 4,
+          ("symbol") := "2C_i"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 2,
+          ("double_class") := "2S4",
+          ("family") := "S2n",
+          ("order") := 8,
+          ("symbol") := "2S_4"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("double_class") := "2S6",
+          ("family") := "S2n",
+          ("order") := 12,
+          ("symbol") := "2S_6"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 4,
+          ("double_class") := "2S8",
+          ("family") := "S2n",
+          ("order") := 16,
+          ("symbol") := "2S_8"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("double_class") := "2S10",
+          ("family") := "S2n",
+          ("order") := 20,
+          ("symbol") := "2S_10"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 6,
+          ("double_class") := "2S12",
+          ("family") := "S2n",
+          ("order") := 24,
+          ("symbol") := "2S_12"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("double_class") := "2S14",
+          ("family") := "S2n",
+          ("order") := 28,
+          ("symbol") := "2S_14"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 8,
+          ("double_class") := "2S16",
+          ("family") := "S2n",
+          ("order") := 32,
+          ("symbol") := "2S_16"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("double_class") := "2S18",
+          ("family") := "S2n",
+          ("order") := 36,
+          ("symbol") := "2S_18"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 10,
+          ("double_class") := "2S20",
+          ("family") := "S2n",
+          ("order") := 40,
+          ("symbol") := "2S_20"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("double_class") := "2S22",
+          ("family") := "S2n",
+          ("order") := 44,
+          ("symbol") := "2S_22"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 12,
+          ("double_class") := "2S24",
+          ("family") := "S2n",
+          ("order") := 48,
+          ("symbol") := "2S_24"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 1, ("symbol") := "Pin^-(3)" ),
+        ("class_size") := 1,
+        ("normal") := true,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "Pin^-(3)"
+        ),
+        ("subgroup") := rec(
+          ("N") := 1,
+          ("double_class") := "S2",
+          ("family") := "S2n",
+          ("order") := 2,
+          ("symbol") := "C_i"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("double_class") := "S6",
+          ("family") := "S2n",
+          ("order") := 6,
+          ("symbol") := "S_6"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("double_class") := "S10",
+          ("family") := "S2n",
+          ("order") := 10,
+          ("symbol") := "S_10"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("double_class") := "S14",
+          ("family") := "S2n",
+          ("order") := 14,
+          ("symbol") := "S_14"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("double_class") := "S18",
+          ("family") := "S2n",
+          ("order") := 18,
+          ("symbol") := "S_18"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("double_class") := "S22",
+          ("family") := "S2n",
+          ("order") := 22,
+          ("symbol") := "S_22"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 1, ("symbol") := "Pin^-(3)" ),
+        ("class_size") := 1,
+        ("normal") := true,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "Pin^-(3)"
+        ),
+        ("subgroup") := rec(
+          ("N") := 1,
+          ("double_class") := "S2b",
+          ("family") := "S2n",
+          ("order") := 2,
+          ("symbol") := "C_ib"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("double_class") := "S6b",
+          ("family") := "S2n",
+          ("order") := 6,
+          ("symbol") := "S_6b"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("double_class") := "S10b",
+          ("family") := "S2n",
+          ("order") := 10,
+          ("symbol") := "S_10b"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("double_class") := "S14b",
+          ("family") := "S2n",
+          ("order") := 14,
+          ("symbol") := "S_14b"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("double_class") := "S18b",
+          ("family") := "S2n",
+          ("order") := 18,
+          ("symbol") := "S_18b"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("double_class") := "S22b",
+          ("family") := "S2n",
+          ("order") := 22,
+          ("symbol") := "S_22b"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 2,
+          ("double_class") := "2C2h",
+          ("family") := "Cnh",
+          ("order") := 8,
+          ("symbol") := "2C_2h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("double_class") := "2C3h",
+          ("family") := "Cnh",
+          ("order") := 12,
+          ("symbol") := "2C_3h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 4,
+          ("double_class") := "2C4h",
+          ("family") := "Cnh",
+          ("order") := 16,
+          ("symbol") := "2C_4h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("double_class") := "2C5h",
+          ("family") := "Cnh",
+          ("order") := 20,
+          ("symbol") := "2C_5h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 6,
+          ("double_class") := "2C6h",
+          ("family") := "Cnh",
+          ("order") := 24,
+          ("symbol") := "2C_6h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("double_class") := "2C7h",
+          ("family") := "Cnh",
+          ("order") := 28,
+          ("symbol") := "2C_7h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 8,
+          ("double_class") := "2C8h",
+          ("family") := "Cnh",
+          ("order") := 32,
+          ("symbol") := "2C_8h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("double_class") := "2C9h",
+          ("family") := "Cnh",
+          ("order") := 36,
+          ("symbol") := "2C_9h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 10,
+          ("double_class") := "2C10h",
+          ("family") := "Cnh",
+          ("order") := 40,
+          ("symbol") := "2C_10h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("double_class") := "2C11h",
+          ("family") := "Cnh",
+          ("order") := 44,
+          ("symbol") := "2C_11h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 12,
+          ("double_class") := "2C12h",
+          ("family") := "Cnh",
+          ("order") := 48,
+          ("symbol") := "2C_12h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec(
+          ("index") := rec( ("reason") := "continuous-group", ("value") := fail ),
+          ("symbol") := "2D_infh"
+        ),
+        ("subgroup") := rec(
+          ("N") := 1,
+          ("double_class") := "2C1v",
+          ("family") := "Cnv",
+          ("order") := 4,
+          ("symbol") := "2C_s"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 8, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_4h" ),
+        ("subgroup") := rec(
+          ("N") := 2,
+          ("double_class") := "2C2v",
+          ("family") := "Cnv",
+          ("order") := 8,
+          ("symbol") := "2C_2v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 12, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_6h" ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("double_class") := "2C3v",
+          ("family") := "Cnv",
+          ("order") := 12,
+          ("symbol") := "2C_3v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 16, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_8h" ),
+        ("subgroup") := rec(
+          ("N") := 4,
+          ("double_class") := "2C4v",
+          ("family") := "Cnv",
+          ("order") := 16,
+          ("symbol") := "2C_4v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 20, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_10h" ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("double_class") := "2C5v",
+          ("family") := "Cnv",
+          ("order") := 20,
+          ("symbol") := "2C_5v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 24, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_12h" ),
+        ("subgroup") := rec(
+          ("N") := 6,
+          ("double_class") := "2C6v",
+          ("family") := "Cnv",
+          ("order") := 24,
+          ("symbol") := "2C_6v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 28, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_14h" ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("double_class") := "2C7v",
+          ("family") := "Cnv",
+          ("order") := 28,
+          ("symbol") := "2C_7v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 32, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_16h" ),
+        ("subgroup") := rec(
+          ("N") := 8,
+          ("double_class") := "2C8v",
+          ("family") := "Cnv",
+          ("order") := 32,
+          ("symbol") := "2C_8v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 36, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_18h" ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("double_class") := "2C9v",
+          ("family") := "Cnv",
+          ("order") := 36,
+          ("symbol") := "2C_9v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 40, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_20h" ),
+        ("subgroup") := rec(
+          ("N") := 10,
+          ("double_class") := "2C10v",
+          ("family") := "Cnv",
+          ("order") := 40,
+          ("symbol") := "2C_10v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 44, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_22h" ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("double_class") := "2C11v",
+          ("family") := "Cnv",
+          ("order") := 44,
+          ("symbol") := "2C_11v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 48, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_24h" ),
+        ("subgroup") := rec(
+          ("N") := 12,
+          ("double_class") := "2C12v",
+          ("family") := "Cnv",
+          ("order") := 48,
+          ("symbol") := "2C_12v"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 24, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 12, ("symbol") := "2O_h" ),
+        ("subgroup") := rec(
+          ("N") := 2,
+          ("double_class") := "2D2",
+          ("family") := "Dn",
+          ("order") := 8,
+          ("symbol") := "2D_2"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 12, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_6h" ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("double_class") := "2D3",
+          ("family") := "Dn",
+          ("order") := 12,
+          ("symbol") := "2D_3"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 16, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_8h" ),
+        ("subgroup") := rec(
+          ("N") := 4,
+          ("double_class") := "2D4",
+          ("family") := "Dn",
+          ("order") := 16,
+          ("symbol") := "2D_4"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 20, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_10h" ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("double_class") := "2D5",
+          ("family") := "Dn",
+          ("order") := 20,
+          ("symbol") := "2D_5"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 24, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_12h" ),
+        ("subgroup") := rec(
+          ("N") := 6,
+          ("double_class") := "2D6",
+          ("family") := "Dn",
+          ("order") := 24,
+          ("symbol") := "2D_6"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 28, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_14h" ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("double_class") := "2D7",
+          ("family") := "Dn",
+          ("order") := 28,
+          ("symbol") := "2D_7"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 32, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_16h" ),
+        ("subgroup") := rec(
+          ("N") := 8,
+          ("double_class") := "2D8",
+          ("family") := "Dn",
+          ("order") := 32,
+          ("symbol") := "2D_8"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 36, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_18h" ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("double_class") := "2D9",
+          ("family") := "Dn",
+          ("order") := 36,
+          ("symbol") := "2D_9"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 40, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_20h" ),
+        ("subgroup") := rec(
+          ("N") := 10,
+          ("double_class") := "2D10",
+          ("family") := "Dn",
+          ("order") := 40,
+          ("symbol") := "2D_10"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 44, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_22h" ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("double_class") := "2D11",
+          ("family") := "Dn",
+          ("order") := 44,
+          ("symbol") := "2D_11"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 48, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2D_24h" ),
+        ("subgroup") := rec(
+          ("N") := 12,
+          ("double_class") := "2D12",
+          ("family") := "Dn",
+          ("order") := 48,
+          ("symbol") := "2D_12"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 24, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 6, ("symbol") := "2O_h" ),
+        ("subgroup") := rec(
+          ("N") := 2,
+          ("double_class") := "2D2h",
+          ("family") := "Dnh",
+          ("order") := 16,
+          ("symbol") := "2D_2h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 12, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_6h" ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("double_class") := "2D3h",
+          ("family") := "Dnh",
+          ("order") := 24,
+          ("symbol") := "2D_3h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 16, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_8h" ),
+        ("subgroup") := rec(
+          ("N") := 4,
+          ("double_class") := "2D4h",
+          ("family") := "Dnh",
+          ("order") := 32,
+          ("symbol") := "2D_4h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 20, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_10h" ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("double_class") := "2D5h",
+          ("family") := "Dnh",
+          ("order") := 40,
+          ("symbol") := "2D_5h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 24, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_12h" ),
+        ("subgroup") := rec(
+          ("N") := 6,
+          ("double_class") := "2D6h",
+          ("family") := "Dnh",
+          ("order") := 48,
+          ("symbol") := "2D_6h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 28, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_14h" ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("double_class") := "2D7h",
+          ("family") := "Dnh",
+          ("order") := 56,
+          ("symbol") := "2D_7h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 32, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_16h" ),
+        ("subgroup") := rec(
+          ("N") := 8,
+          ("double_class") := "2D8h",
+          ("family") := "Dnh",
+          ("order") := 64,
+          ("symbol") := "2D_8h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 36, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_18h" ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("double_class") := "2D9h",
+          ("family") := "Dnh",
+          ("order") := 72,
+          ("symbol") := "2D_9h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 40, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_20h" ),
+        ("subgroup") := rec(
+          ("N") := 10,
+          ("double_class") := "2D10h",
+          ("family") := "Dnh",
+          ("order") := 80,
+          ("symbol") := "2D_10h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 44, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_22h" ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("double_class") := "2D11h",
+          ("family") := "Dnh",
+          ("order") := 88,
+          ("symbol") := "2D_11h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 48, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_24h" ),
+        ("subgroup") := rec(
+          ("N") := 12,
+          ("double_class") := "2D12h",
+          ("family") := "Dnh",
+          ("order") := 96,
+          ("symbol") := "2D_12h"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 8, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_4h" ),
+        ("subgroup") := rec(
+          ("N") := 2,
+          ("double_class") := "2D2d",
+          ("family") := "Dnd",
+          ("order") := 16,
+          ("symbol") := "2D_2d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 12, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_6h" ),
+        ("subgroup") := rec(
+          ("N") := 3,
+          ("double_class") := "2D3d",
+          ("family") := "Dnd",
+          ("order") := 24,
+          ("symbol") := "2D_3d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 16, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_8h" ),
+        ("subgroup") := rec(
+          ("N") := 4,
+          ("double_class") := "2D4d",
+          ("family") := "Dnd",
+          ("order") := 32,
+          ("symbol") := "2D_4d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 20, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_10h" ),
+        ("subgroup") := rec(
+          ("N") := 5,
+          ("double_class") := "2D5d",
+          ("family") := "Dnd",
+          ("order") := 40,
+          ("symbol") := "2D_5d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 24, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_12h" ),
+        ("subgroup") := rec(
+          ("N") := 6,
+          ("double_class") := "2D6d",
+          ("family") := "Dnd",
+          ("order") := 48,
+          ("symbol") := "2D_6d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 28, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_14h" ),
+        ("subgroup") := rec(
+          ("N") := 7,
+          ("double_class") := "2D7d",
+          ("family") := "Dnd",
+          ("order") := 56,
+          ("symbol") := "2D_7d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 32, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_16h" ),
+        ("subgroup") := rec(
+          ("N") := 8,
+          ("double_class") := "2D8d",
+          ("family") := "Dnd",
+          ("order") := 64,
+          ("symbol") := "2D_8d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 36, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_18h" ),
+        ("subgroup") := rec(
+          ("N") := 9,
+          ("double_class") := "2D9d",
+          ("family") := "Dnd",
+          ("order") := 72,
+          ("symbol") := "2D_9d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 40, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_20h" ),
+        ("subgroup") := rec(
+          ("N") := 10,
+          ("double_class") := "2D10d",
+          ("family") := "Dnd",
+          ("order") := 80,
+          ("symbol") := "2D_10d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 44, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_22h" ),
+        ("subgroup") := rec(
+          ("N") := 11,
+          ("double_class") := "2D11d",
+          ("family") := "Dnd",
+          ("order") := 88,
+          ("symbol") := "2D_11d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 48, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2D_24h" ),
+        ("subgroup") := rec(
+          ("N") := 12,
+          ("double_class") := "2D12d",
+          ("family") := "Dnd",
+          ("order") := 96,
+          ("symbol") := "2D_12d"
+        )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 24, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 4, ("symbol") := "2O_h" ),
+        ("subgroup") := rec( ("double_class") := "2T", ("order") := 24, ("symbol") := "2T" )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 24, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2O_h" ),
+        ("subgroup") := rec( ("double_class") := "2Th", ("order") := 48, ("symbol") := "2T_h" )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 24, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2O_h" ),
+        ("subgroup") := rec( ("double_class") := "2Td", ("order") := 48, ("symbol") := "2T_d" )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 24, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2O_h" ),
+        ("subgroup") := rec( ("double_class") := "2O", ("order") := 48, ("symbol") := "2O" )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 24, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 1, ("symbol") := "2O_h" ),
+        ("subgroup") := rec( ("double_class") := "2Oh", ("order") := 96, ("symbol") := "2O_h" )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 60, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 2, ("symbol") := "2I_h" ),
+        ("subgroup") := rec( ("double_class") := "2I", ("order") := 120, ("symbol") := "2I" )
+      ),
+      rec(
+        ("centralizer") := rec( ("normalizer_index") := 60, ("symbol") := "2C_i" ),
+        ("class_size") := rec( ("reason") := "continuous-group", ("value") := fail ),
+        ("normal") := false,
+        ("normalizer") := rec( ("index") := 1, ("symbol") := "2I_h" ),
+        ("subgroup") := rec( ("double_class") := "2Ih", ("order") := 240, ("symbol") := "2I_h" )
+      )
+    ]
   )
 );

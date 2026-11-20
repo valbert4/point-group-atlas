@@ -350,8 +350,9 @@ The preimages of the seven continuous groups are `2Cinf`, `2Cinfh`, `2Cinfv`, `2
 `Pinminus3` (of `O3`), with `schema` `"point-group-atlas/double/group-continuous/1"` and `domain` `"continuous"`. A record holds what
 section 16 gives for a continuous group, for the spinor families only: the vector families, their products, Clebsch–Gordan
 coefficients, subduction and bases are those of $`\mathsf{G}`$ (`vector_families`, `vector_rules`, `vector_products`, `integer_J`,
-`vector_entry`). `SU2` holds besides the Wigner matrices and the Clebsch–Gordan coefficients at half-integer $`J`$, and the
-closed subgroups of $`\mathsf{SU(2)}`$ with their subduction rules.
+`vector_entry`), the kernel of a vector family the preimage of its kernel in $`\mathsf{G}`$; the documents print them with the
+spinor families. `SU2` holds besides the Wigner matrices and the Clebsch–Gordan coefficients at half-integer $`J`$, and `SU2` and
+`Pinminus3` the closed subgroups of $`\mathsf{SU(2)}`$ and $`\mathsf{Pin^{-}(3)}`$ with their subduction rules.
 
 ### 29.1 The class space
 
@@ -367,6 +368,8 @@ carrying one lift of a mirror or of a binary rotation to the other. The Haar mea
 per $`\mathrm{d}t`$ on an arc, and on the arcs of `SU2` and `Pinminus3` the Weyl density $`1 - \cos\omega`$ (times $`\tfrac{1}{2}`$ in
 `Pinminus3`). The squares of the elements of an atom are $`\bar{\mathsfit{E}}`$ (`square`: `Cphi` at $`t = 1`$). A vector family of $`\mathsf{G}`$ has
 on the point $`t`$ of an arc its character at $`\phi = \omega`$ modulo $`2\pi`$, and on an atom its value on $`\mathsf{G}`$'s atom (`covering_map`).
+`fundamental_domain` points to $`\mathsf{G}`$'s (`image`, `space`) and gives the volumes of section 21.3: the group's, twice
+$`\mathsf{G}`$'s, the domain's, $`\mathsf{G}`$'s, and that of $`\mathsf{Pin^{-}(3)}`$, $`32\pi^2`$ (`volumes`).
 
 ### 29.2 Spinor families
 
@@ -402,14 +405,17 @@ the parity rule $`p = p_1 p_2`$.
 
 ### 29.4 Subduction, spin–orbit levels and bases
 
-`subduction_parent` gives $`D^{(J,p)}`$ restricted to the group for half-integer $`J`$ up to $`\tfrac{25}{2}`$ (`instances`, `rule`). The
-axial preimages give the spin–orbit levels of section 25.2 for the vector instances of index at most 3 (`spin_orbit_levels`,
+`subduction_parent` gives $`D^{(J,p)}`$ restricted to the group for half-integer $`J`$ up to $`\tfrac{25}{2}`$ (`instances`, `rule`). Every
+preimage gives the spin–orbit levels of section 25.2 for the vector instances of index at most 3 (`spin_orbit_levels`,
 their terms named by their labels, and a spinor instance by its `irrep_id` too); in a
-linear molecule these are the levels $`\Omega = \lvert\Lambda + \Sigma\rvert`$ of Hund's case (a). In `SU2` and `Pinminus3` they are
-the products of section 29.3. `subduction_basis` gives the bases at half-integer $`J`$ and $`p = +1`$: in `2Cinf` and
+linear molecule these are the levels $`\Omega = \lvert\Lambda + \Sigma\rvert`$ of Hund's case (a), in an atom (`SU2`, `Pinminus3`) the levels
+$`J = \lvert J_1 - S\rvert, \dots, J_1 + S`$ of a term of an orbital level of angular momentum $`J_1`$. `subduction_basis` gives the bases at half-integer $`J`$ and $`p = +1`$: in `2Cinf` and
 `2Cinfh` each ket is a block, in `2Cinfv`, `2Dinf` and `2Dinfh` the block `E_n` has the partners $`\lvert{}^{J}_{\,-n}\rangle`$ and
 $`(-1)^{J-n}\lvert{}^{J}_{\,n}\rangle`$, and in `SU2` and `Pinminus3` the $`2J+1`$ kets are the partners of one block; the blocks for
-$`2J \le 21`$ are listed (`enumerated`).
+$`2J \le 21`$ are listed (`enumerated`). The multiplicity of a `g` or `u` family names both parities, and its generating function and
+allowed $`2m`$ are those at the parity that carries it (`parity`). `invariants` holds the binary forms of section 26.4 and the
+Molien series of the spinor irreps (`molien`): per family of an axial preimage, with the complex-conjugate pairs of
+`2Cinf` and `2Cinfh` (`levels`), and per instance with $`2J \le 7`$ in `SU2` and `Pinminus3`.
 
 ### 29.5 Closed subgroups of the axial preimages
 
@@ -422,8 +428,9 @@ The restriction of a spinor family depends on $`n`$ only through $`n`$ modulo th
 of $`n`$ and $`n + P`$ agree on the subgroup; the table lists $`n = \tfrac{1}{2}, \tfrac{3}{2}, \dots, P - \tfrac{1}{2}`$ with the intertwiners
 (`blocks`), and the settings as section 16.1. A section's entry names that of its preimage (`preimage_entry`); its rows are
 those, renamed (section 27). A continuous subgroup's index, normality and transversal are those of its image (`vector_entry`), read as the lifts at the
-same points. `rules` give the restriction to every member of the families $`\mathsf{C_{\mathnormal{N}}}`$, $`\mathsf{C_{\mathnormal{N}v}}`$ and $`\mathsf{D_{\mathnormal{N}}}`$,
-by $`q = n \bmod N`$, and reproduce the tables.
+same points, and stored (`index`, `normal`, `class_size`). `rules` give the restriction to every member of the families $`\mathsf{C_{\mathnormal{N}}}`$, $`\mathsf{C_{\mathnormal{N}v}}`$ and $`\mathsf{D_{\mathnormal{N}}}`$,
+by $`q = n \bmod N`$, and reproduce the tables. `vector_rules` points to the rules of $`\mathsf{G}`$ for its families, which the documents
+print with the rows of each `vector_entry`, under the preimages.
 
 ### 29.6 SU2 and Pinminus3
 
@@ -432,6 +439,13 @@ by $`q = n \bmod N`$, and reproduce the tables.
 $`\mathsf{SO(3)}`$ and the cyclic groups of odd order (sections $`\mathsf{C_{\mathnormal{N}}}`$), with their normalizers and centralizers in $`\mathsf{SU(2)}`$.
 `subduction_rules` gives $`D^{(J)}`$ at half-integer $`J`$ restricted to them: by rules for $`\mathsf{2C_{\mathnormal{N}}}`$ (each ket $`\lvert{}^{J}_{\,m}\rangle`$ spans the
 irrep of $`q = m \bmod N`$) and $`\mathsf{2D_{\mathnormal{N}}}`$ (the pair $`\lvert{}^{J}_{\,\pm m}\rangle`$), with their generating functions in $`t^{2J}`$, for the
-continuous subgroups, and for $`\mathsf{2T}`$, $`\mathsf{2O}`$, $`\mathsf{2I}`$ by the generating functions of their records. The document of `Pinminus3`
-lists the closed subgroups of $`\mathsf{Pin^{-}(3)}`$ other than itself: the members $`N \le 12`$ from `data/double_groups.json` (section 28.3)
-with the normalizers and centralizers of their records (section 20.4), and a row for the larger $`N`$ of each family.
+continuous subgroups, and for $`\mathsf{2T}`$, $`\mathsf{2O}`$, $`\mathsf{2I}`$ by the generating functions of their records. `Pinminus3` holds both
+alike for $`D^{(J,p)}`$. `subgroup_classes` lists the classes of `data/double_groups.json` other than $`\mathsf{Pin^{-}(3)}`$ (section 28.3), the members
+$`N \le 12`$ with the normalizers and centralizers of their records (section 20.4), and the aliases of the lattice (`aliases`).
+`subduction_rules` has the rules of `O3`'s (Rotation's CONVENTIONS, section 16.1) at both parities: rules for the continuous
+subgroups, `terms` for $`\mathsf{SU(2)}`$, and rules for the seven families, each irrep named by the least $`J`$ at which it occurs (section 23.2);
+`q` is `m mod N`, or `m + N[p = -1] mod 2N` in the preimages that $`(U, \varepsilon) \mapsto U`$ carries onto $`\mathsf{2C_{2\mathnormal{N}}}`$ or $`\mathsf{2D_{2\mathnormal{N}}}`$,
+and the `tag` `p(-1)^(m-1/2)` primes the irreps of $`\mathsf{2C_{\mathnormal{N}h}}`$, $`N`$ odd. The generating functions count the blocks at $`p = +1`$, as the
+members' records do; the exceptional preimages point to their records' (`generating_function`), a section is restricted as its
+preimage (`sections`), and at integer $`J`$ the rules are `O3`'s (`integer_J`). The rules give the restrictions of the members
+$`N \le 12`$ for $`2J \le 41`$ at both parities and the irreps of the blocks of their bases.

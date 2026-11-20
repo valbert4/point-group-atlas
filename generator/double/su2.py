@@ -14,6 +14,7 @@ factorial argument is an integer.  The products j1 <= j2 <= 10 with j1 or j2 hal
 in two digits (00 to 19), the layout of SO3's table in each.  The products of two integer j are
 SO3's.
 """
+import re
 from fractions import Fraction as F
 from math import factorial
 
@@ -373,3 +374,312 @@ def check_subduction_rules():
                 if got != want:
                     raise AssertionError("2%s 2J = %d: the rule gives %s, the record %s"
                                          % (H, twoJ, got, want))
+
+
+# ---------------------------------------------------------------- Pin-(3)
+# D^(J,p) of Pin-(3) at half-integer J restricted to its closed subgroups, by rules as SU(2)'s,
+# the cases also by the parity p: a direct sum over the kets |J, m> (over the pairs |J, +-m>,
+# m > 0, for the preimages with a binary axis or a vertical mirror) of the terms of the case that
+# holds.  An irrep is named by the least J at which it occurs in D^(J,+1) (section 23.2): a
+# subgroup that holds i~ has the irreps of its rotation part tagged by p ("p": g at p = +1, u at
+# p = -1); 2C_Nh with N odd tags them by the sign of sigma~_h on the kets ("p(-1)^(m-1/2)": ' where
+# it is +1, '' where -1); in 2S_2N and 2D_Nd with N even and in 2C_Nh and 2D_Nh with N odd, which
+# the map (U, eps) -> U carries onto 2C_2N or 2D_2N, q = m mod 2N at p = +1 and m + N mod 2N at
+# p = -1, and in 2S_2N the prefix of a complex irrep follows q mod N = m mod N.  The generating
+# functions, in t^(2J), are those of the multiplicities at p = +1 of the members' records; at
+# p = -1 the multiplicity of L is that of L (x) det.
+PIN_KETS = {"symbol": "m", "from": "-J", "to": "J"}
+PIN_PAIRS = {"symbol": "m", "from": "1/2", "to": "J"}
+PIN_TAGS = {"p": {"by": "p", "plus": "g", "minus": "u"},
+            "p(-1)^(m-1/2)": {"by": "p(-1)^(m-1/2)", "plus": "'", "minus": "''"}}
+PIN_Q = {"m mod N": "m mod N", "2N": "m + N[p = -1] mod 2N"}
+_PIN_CN = [("0 < q < N/2", ["1E_{q}"]), ("q = N/2", ["A_{N/2}"]), ("N/2 < q < N", ["2E_{N-q}"])]
+_PIN_DN = [("q != N/2", ["E_{min(q, N-q)}"]), ("q = N/2", ["1E_{N/2}", "2E_{N/2}"])]
+# the rules of the even members, without the case q = N/2 that none of them meets (q is a
+# half-integer)
+_PIN_CN_EVEN = [c for c in _PIN_CN if c[0] != "q = N/2"]
+_PIN_DN_EVEN = [("always", ["E_{min(q, N-q)}"])]
+PIN_RULES_CONTINUOUS = [
+    ("2Cinf", PIN_KETS, [("m > 0", ["1E_{m}"]), ("m < 0", ["2E_{-m}"])], None,
+     "D^(J,p) | 2C_inf = sum_{n=1/2..J} (1E_n + 2E_n) for both p"),
+    ("2Cinfh", PIN_KETS, [("m > 0", ["1E_{m}"]), ("m < 0", ["2E_{-m}"])], "p",
+     "D^(J,p) | 2C_infh = sum_{n=1/2..J} (1E_n,x + 2E_n,x), x = g if p = +1, u if p = -1"),
+    ("2Cinfv", PIN_PAIRS, [("m > 0", ["E_{m}"])], None,
+     "D^(J,p) | 2C_infv = sum_{n=1/2..J} E_n for both p"),
+    ("2Dinf", PIN_PAIRS, [("m > 0", ["E_{m}"])], None,
+     "D^(J,p) | 2D_inf = sum_{n=1/2..J} E_n for both p"),
+    ("2Dinfh", PIN_PAIRS, [("m > 0", ["E_{m}"])], "p",
+     "D^(J,p) | 2D_infh = sum_{n=1/2..J} E_n,x, x = g if p = +1, u if p = -1"),
+]
+PIN_RULES_FAMILIES = [
+    ("Cn", "every", 1, PIN_KETS, "m mod N", _PIN_CN, None,
+     "D^(J,p) | 2C_N = SU(2)'s rule for both p"),
+    ("S2n", "odd", 1, PIN_KETS, "m mod N", _PIN_CN, "p",
+     "D^(J,p) | 2S_2N (N odd) = sum_{m=-J..J} G(q),x, q = m mod N, G(q) as for 2C_N, x = g if "
+     "p = +1, u if p = -1"),
+    ("S2n", "even", 2, PIN_KETS, "2N",
+     [("q mod N < N/2", ["1E_{min(q, 2N-q)}"]), ("q mod N > N/2", ["2E_{min(q, 2N-q)}"])],
+     None, "D^(J,p) | 2S_2N (N even) = sum_{m=-J..J} G, q = m + N[p = -1] mod 2N; G = "
+     "1E_{min(q,2N-q)} if q mod N < N/2, 2E_{min(q,2N-q)} if q mod N > N/2"),
+    ("Cnh", "odd", 1, PIN_KETS, "2N", [("always", ["E_{min(q, 2N-q)}"])], "p(-1)^(m-1/2)",
+     "D^(J,p) | 2C_Nh (N odd) = sum_{m=-J..J} E_{min(q,2N-q)}x, q = m + N[p = -1] mod 2N, x = ' "
+     "if p (-1)^(m-1/2) = +1, '' if it is -1"),
+    ("Cnh", "even", 2, PIN_KETS, "m mod N", _PIN_CN_EVEN, "p",
+     "D^(J,p) | 2C_Nh (N even) = sum_{m=-J..J} G(q),x, q = m mod N, G(q) as for 2C_N, x = g if "
+     "p = +1, u if p = -1"),
+    ("Cnv", "every", 1, PIN_PAIRS, "m mod N", _PIN_DN, None,
+     "D^(J,p) | 2C_Nv = sum_{m=1/2..J} G(q), q = m mod N, G(q) as for 2D_N, for both p"),
+    ("Dn", "every", 2, PIN_PAIRS, "m mod N", _PIN_DN, None,
+     "D^(J,p) | 2D_N = SU(2)'s rule for both p"),
+    ("Dnh", "odd", 1, PIN_PAIRS, "2N", [("always", ["E_{min(q, 2N-q)}"])], None,
+     "D^(J,p) | 2D_Nh (N odd) = sum_{m=1/2..J} E_{min(q,2N-q)}, q = m + N[p = -1] mod 2N"),
+    ("Dnh", "even", 2, PIN_PAIRS, "m mod N", _PIN_DN_EVEN, "p",
+     "D^(J,p) | 2D_Nh (N even) = 2D_N's terms, each with ,g if p = +1, ,u if p = -1"),
+    ("Dnd", "odd", 1, PIN_PAIRS, "m mod N", _PIN_DN, "p",
+     "D^(J,p) | 2D_Nd (N odd) = 2D_N's terms, each with ,g if p = +1, ,u if p = -1"),
+    ("Dnd", "even", 2, PIN_PAIRS, "2N", [("always", ["E_{min(q, 2N-q)}"])], None,
+     "D^(J,p) | 2D_Nd (N even) = sum_{m=1/2..J} E_{min(q,2N-q)}, q = m + N[p = -1] mod 2N"),
+]
+# The numerators at p = +1, over (1 - t^2)(1 - t^b): per irrep of a member (its subscript k, a
+# half-integer), a condition and the terms (coefficient, (a, b, c)), the exponent a N + b 2k + c.
+_PIN_PAIR2 = [(1, (0, 1, 0)), (1, (2, -1, 0))]
+_PIN_PAIR4 = [(1, (0, 1, 0)), (1, (4, -1, 0))]
+
+
+def _pin_gf(den, entries):
+    return den, entries
+
+
+PIN_GF_FAMILIES = {
+    ("Cn", "every"): _pin_gf(2, [
+        ("1E_{k}", "0 < k < N/2", _PIN_PAIR2), ("A_{N/2}", "N odd", [(2, (1, 0, 0))]),
+        ("2E_{k}", "0 < k < N/2", _PIN_PAIR2)]),
+    ("S2n", "odd"): _pin_gf(2, [
+        ("1E_{k},g", "0 < k < N/2", _PIN_PAIR2), ("A_{N/2},g", "N odd", [(2, (1, 0, 0))]),
+        ("2E_{k},g", "0 < k < N/2", _PIN_PAIR2), ("1E_{k},u", "0 < k < N/2", []),
+        ("A_{N/2},u", "N odd", []), ("2E_{k},u", "0 < k < N/2", [])]),
+    ("S2n", "even"): _pin_gf(4, [
+        ("1E_{k}", "0 < k < N", _PIN_PAIR4), ("2E_{k}", "0 < k < N", _PIN_PAIR4)]),
+    ("Cnh", "odd"): _pin_gf(4, [
+        ("E_{k}'", "0 < k < N", _PIN_PAIR4), ("E_{k}''", "0 < k < N", _PIN_PAIR4)]),
+    ("Cnh", "even"): _pin_gf(2, [
+        ("1E_{k},g", "0 < k < N/2", _PIN_PAIR2), ("2E_{k},g", "0 < k < N/2", _PIN_PAIR2),
+        ("1E_{k},u", "0 < k < N/2", []), ("2E_{k},u", "0 < k < N/2", [])]),
+    ("Cnv", "every"): _pin_gf(2, [
+        ("E_{k}", "0 < k < N/2", _PIN_PAIR2), ("1E_{N/2}", "N odd", [(1, (1, 0, 0))]),
+        ("2E_{N/2}", "N odd", [(1, (1, 0, 0))])]),
+    ("Dn", "every"): _pin_gf(2, [
+        ("E_{k}", "0 < k < N/2", _PIN_PAIR2), ("1E_{N/2}", "N odd", [(1, (1, 0, 0))]),
+        ("2E_{N/2}", "N odd", [(1, (1, 0, 0))])]),
+    ("Dnh", "odd"): _pin_gf(4, [("E_{k}", "0 < k < N", _PIN_PAIR4)]),
+    ("Dnh", "even"): _pin_gf(2, [
+        ("E_{k},g", "0 < k < N/2", _PIN_PAIR2), ("E_{k},u", "0 < k < N/2", [])]),
+    ("Dnd", "odd"): _pin_gf(2, [
+        ("E_{k},g", "0 < k < N/2", _PIN_PAIR2), ("1E_{N/2},g", "N odd", [(1, (1, 0, 0))]),
+        ("2E_{N/2},g", "N odd", [(1, (1, 0, 0))]), ("E_{k},u", "0 < k < N/2", []),
+        ("1E_{N/2},u", "N odd", []), ("2E_{N/2},u", "N odd", [])]),
+    ("Dnd", "even"): _pin_gf(4, [("E_{k}", "0 < k < N", _PIN_PAIR4)]),
+}
+PIN_EXCEPTIONAL = ("2T", "2Th", "2Td", "2O", "2Oh", "2I", "2Ih")
+PIN_CHECK_TWOJ = 41
+
+
+def _pin_half(x):
+    x = F(x)
+    return "%d/%d" % (x.numerator, x.denominator) if x.denominator == 2 else str(x.numerator)
+
+
+def _pin_holds(cond, c):
+    tests = {"always": True, "m > 0": c["m"] > 0, "m < 0": c["m"] < 0,
+             "q = N/2": c["N"] is not None and 2 * c["q"] == c["N"],
+             "q != N/2": c["N"] is not None and 2 * c["q"] != c["N"],
+             "0 < q < N/2": c["N"] is not None and 0 < 2 * c["q"] < c["N"],
+             "N/2 < q < N": c["N"] is not None and c["N"] < 2 * c["q"] < 2 * c["N"],
+             "q mod N < N/2": c["N"] is not None and 2 * (c["q"] % c["N"]) < c["N"],
+             "q mod N > N/2": c["N"] is not None and 2 * (c["q"] % c["N"]) > c["N"]}
+    return all(tests[part] for part in cond.split(" and "))
+
+
+def _pin_terms(qexpr, cases, tag, m, N, p):
+    """The labels of the ket m (or the pair +-m) at the parity p."""
+    if N is None:
+        q = r = None
+    elif qexpr == "2N":
+        q, r = (m + (N if p == -1 else 0)) % (2 * N), m % N
+    else:
+        q, r = m % N, m % N
+    c = {"m": m, "N": N, "q": q, "r": r}
+    for cond, terms in cases:
+        if _pin_holds(cond, c):
+            out = []
+            for t in terms:
+                if N is not None:
+                    for key, value in (("{min(q, N-q)}", min(q, N - q)),
+                                       ("{min(q, 2N-q)}", min(q, 2 * N - q)),
+                                       ("{N-q}", N - q), ("{N/2}", F(N, 2)), ("{q}", q)):
+                        t = t.replace(key, _pin_half(value))
+                t = t.replace("{-m}", _pin_half(-m)).replace("{m}", _pin_half(m))
+                if tag == "p":
+                    t += ",g" if p == 1 else ",u"
+                elif tag == "p(-1)^(m-1/2)":
+                    t += "'" if p * (-1) ** int(m - F(1, 2)) == 1 else "''"
+                out.append(t)
+            return out
+    raise ValueError("Pin-(3): no case of the rule holds for m = %s, p = %d" % (m, p))
+
+
+def _pin_kets(sumspec, twoJ):
+    J = F(twoJ, 2)
+    m = -J if sumspec["from"] == "-J" else F(1, 2)
+    while m <= J:
+        yield m
+        m += 1
+
+
+def _pin_ident(label):
+    """The id of a label of the catalogue: 1E_1/2,g -> 1E1hg, E_3/2'' -> E3hpp."""
+    return re.sub(r"(\d+)/2", r"\1h", label).replace("_", "").replace(",", "").replace("'", "p")
+
+
+def _pin_numerator_text(terms):
+    def expo(a, b, c):
+        s = ""
+        for coef, atom in ((a, "N"), (b, "k")):
+            if coef:
+                s += ("+" if s and coef > 0 else "") + ("-" if coef < 0 else "") + (
+                    ("%d" % abs(coef) if abs(coef) != 1 else "") + atom
+                    if atom == "N" else ("%d" % (2 * abs(coef))) + atom)
+        if c:
+            s += ("%+d" % c) if s else str(c)
+        return s or "0"
+    if not terms:
+        return "0"
+    out = []
+    for coef, (a, b, c) in terms:
+        e = expo(a, b, c)
+        mono = "t^%s" % e if re.fullmatch(r"\d+|[A-Za-z]", e) else "t^(%s)" % e
+        out.append(mono if coef == 1 else "%d*%s" % (coef, mono))
+    return " + ".join(out)
+
+
+def pin_subduction_rules():
+    """The subduction_rules block of Pinminus3: the rules of PIN_RULES_CONTINUOUS and
+    PIN_RULES_FAMILIES must give the restriction of D^(J,p) at half-integer J to every member
+    N <= N_MAX at both parities, 2J <= PIN_CHECK_TWOJ (the records' subduction_parent), and the
+    irreps of each block of the members' bases (p = +1); the generating functions of
+    PIN_GF_FAMILIES the members' at p = +1; the continuous subgroups' rules their records'
+    instances; else an AssertionError.  At integer J, O3's rules; the exceptional preimages by
+    their records' generating functions; a section as its preimage, renamed."""
+    import json
+    from . import continuous as K
+    continuous = []
+    for stem, sumspec, cases, tag, text in PIN_RULES_CONTINUOUS:
+        rec = json.load(open(names.record_path(stem)))
+        for inst in rec["subduction_parent"]["instances"]:
+            got = {}
+            for m in _pin_kets(sumspec, inst["twoJ"]):
+                for t in _pin_terms("m mod N", cases, tag, m, None, inst["parity"]):
+                    got[t] = got.get(t, 0) + 1
+            want = {t["irrep"]: t["multiplicity"] for t in inst["terms"]}
+            if got != want:
+                raise AssertionError("Pin-(3) to %s, 2J = %d, p = %d: the rule gives %s, the "
+                                     "record %s" % (stem, inst["twoJ"], inst["parity"], got, want))
+        fams = [{"family": f["family"], "label_template": f["label_template"],
+                 "numerator": f["numerator"] if f.get("parity", 1) == 1 else "0",
+                 "denominator": f["denominator"] if f.get("parity", 1) == 1 else []}
+                for f in rec["subduction_basis"]["generating_function"]["families"]]
+        continuous.append({"subgroup": {"double_class": stem, "symbol": K.symbol(stem)},
+                           "sum": sumspec, "cases": [{"if": c, "terms": t} for c, t in cases],
+                           **({"tag": PIN_TAGS[tag]} if tag else {}), "text": text,
+                           "generating_function": {"variable": "t^(2J)", "parity": "+1",
+                                                   "families": fams}})
+    continuous.append({"subgroup": {"double_class": "SU2", "symbol": "SU(2)"},
+                       "terms": ["D^(J)"], "text": "D^(J,p) | SU(2) = D^(J) for both p"})
+    families = []
+    for family, ncls, start, sumspec, qexpr, cases, tag, text in PIN_RULES_FAMILIES:
+        b, numerators = PIN_GF_FAMILIES[(family, ncls)]
+        for N in range(start, names.N_MAX + 1):
+            if (ncls == "odd" and N % 2 == 0) or (ncls == "even" and N % 2):
+                continue
+            stem = "2" + names.name_of(family, N)
+            rec = json.load(open(names.record_path(stem)))
+            ids = [ir["id"] for ir in rec["character_table"]["irreps"]]
+            sp = rec["subduction_parent"]["parities"]
+            for p, par in ((1, "g"), (-1, "u")):
+                table = (sp.get(par) or sp["g"])["table"]
+                for k, row in enumerate(table[:(PIN_CHECK_TWOJ + 1) // 2]):
+                    got = {}
+                    for m in _pin_kets(sumspec, 2 * k + 1):
+                        for t in _pin_terms(qexpr, cases, tag, m, N, p):
+                            got[_pin_ident(t)] = got.get(_pin_ident(t), 0) + 1
+                    if set(got) - set(ids) or any(got.get(i, 0) != row[i] for i in ids):
+                        raise AssertionError("Pin-(3) to %s, 2J = %d, p = %d: the rule gives %s"
+                                             % (stem, 2 * k + 1, p, got))
+            want, got = {}, {}
+            for blk in rec["subduction_basis"]["enumerated"]["blocks"]:
+                m = F(blk["seed_twoM"], 2)
+                key = (blk["twoJ"], m if sumspec["from"] == "-J" else abs(m))
+                want.setdefault(key, {}).setdefault(blk["irrep_id"], 0)
+                want[key][blk["irrep_id"]] += 1
+            for key in want:
+                got[key] = {}
+                for t in _pin_terms(qexpr, cases, tag, key[1], N, 1):
+                    got[key][_pin_ident(t)] = got[key].get(_pin_ident(t), 0) + 1
+            if got != want:
+                raise AssertionError("Pin-(3) to %s: the rule gives other irreps than the bases"
+                                     % stem)
+            # the numerators at p = +1 against the member's generating function
+            gf = rec["subduction_basis"]["generating_function"]
+            top = 6 * sum(gf["denominator"]) + 41
+
+            def series(c, den):
+                s = list(c[:top + 1]) + [0] * (top + 1 - len(c))
+                for d in den:
+                    for i in range(d, top + 1):
+                        s[i] += s[i - d]
+                return s
+            stored = {x["irrep_id"]: series(x["coefficients"], gf["denominator"])
+                      for x in gf["numerators"]}
+            mine = {}
+            for label, cond, terms in numerators:
+                ks = ([F(N, 2)] if "{N/2}" in label else
+                      [F(j, 2) for j in range(1, 4 * N, 2)] if "{k}" in label else [None])
+                for kk in ks:
+                    ok = {"always": True, "N odd": N % 2 == 1,
+                          "0 < k < N/2": kk is not None and 0 < 2 * kk < N,
+                          "0 < k < N": kk is not None and 0 < kk < N}[cond]
+                    if not ok:
+                        continue
+                    lab = label.replace("{k}", _pin_half(kk) if kk is not None else "").replace(
+                        "{N/2}", _pin_half(F(N, 2)))
+                    c = [0] * (6 * N + 4)
+                    for coef, (a, bb, cc) in terms:
+                        c[a * N + bb * int(2 * (kk if kk is not None else F(N, 2))) + cc] += coef
+                    mine[_pin_ident(lab)] = series(c, [2, b * N])
+            if mine != stored:
+                raise AssertionError("Pin-(3) to %s: the generating functions differ from the "
+                                     "record's" % stem)
+        families.append({"family": family, "N": ncls, "N_min": start, "sum": sumspec,
+                         "q": PIN_Q[qexpr],
+                         "cases": [{"if": c, "terms": t} for c, t in cases],
+                         **({"tag": PIN_TAGS[tag]} if tag else {}), "text": text,
+                         "generating_function": {
+                             "variable": "t^(2J)", "parity": "+1",
+                             "denominator": ["2", "%dN" % b], "numerators": [
+                                 {"if": cond, "irrep": label,
+                                  "numerator": _pin_numerator_text(terms)}
+                                 for label, cond, terms in numerators]}})
+    exceptional = [{"subgroup": {"double_class": s, "symbol": s.replace("h", "_h").replace(
+        "d", "_d"), "order": json.load(open(names.record_path(s)))["group"]["order"]},
+        "generating_function": dbl(s, "/subduction_basis/generating_function")}
+        for s in PIN_EXCEPTIONAL]
+    return {"families": families, "continuous": continuous, "exceptional": exceptional,
+            "sections": "a section over C_N or S_2N (N odd) is restricted as its preimage, each "
+                        "spinor irrep renamed by the section's record (double/CONVENTIONS.md "
+                        "section 27)",
+            "parity": "the generating functions count the blocks at p = +1, as the members' "
+                      "records; at p = -1 the multiplicity of L is that of L (x) det, det the "
+                      "determinant character of the subgroup",
+            "integer_J": rot("O3", "/subduction_rules"),
+            "count": {"families": len(families), "continuous": len(continuous),
+                      "exceptional": len(exceptional)}}

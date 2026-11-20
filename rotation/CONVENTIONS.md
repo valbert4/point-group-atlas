@@ -214,8 +214,8 @@ irreps, sections 6, 7, 9), `fusion` and `clebsch_gordan` (section 10), `subducti
 (section 14), `subgroup_lattice` (section 15.1), `fundamental_domain` (section 17) and, when the group has a level (a
 real irrep of dimension at least 2), `subduction_unitary` (section 19). A continuous record has `domain` = `"continuous"` and holds `group`,
 `character_functions` (section 16), `fusion`, `clebsch_gordan`, `subduction_o3`, `cartesian_tensors`, `invariants`,
-`subduction_basis` and `fundamental_domain`, those of the five axial continuous groups `subduction_subgroups` and that of $`\mathsf{SO(3)}`$
-`subgroup_classes` and `subduction_rules` (section 16.1), and those of $`\mathsf{C_{\infty v}}`$, $`\mathsf{D_{\infty}}`$, $`\mathsf{D_{\infty h}}`$, $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$, which have a level,
+`subduction_basis` and `fundamental_domain`, those of the five axial continuous groups `subduction_subgroups` and those of $`\mathsf{SO(3)}`$
+and $`\mathsf{O(3)}`$ `subgroup_classes` and `subduction_rules` (section 16.1), and those of $`\mathsf{C_{\infty v}}`$, $`\mathsf{D_{\infty}}`$, $`\mathsf{D_{\infty h}}`$, $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$, which have a level,
 `subduction_unitary` (section 19). The records of $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$ also hold the Clebsch–Gordan coefficients (section 10.6) and
 the Wigner $`d`$ matrices (section 9) of their irreps for $`J \le 10`$.
 
@@ -1954,6 +1954,19 @@ $`\mathsf{O}`$, $`\mathsf{I}`$): `subgroup` (`o3_class`, `schoenflies`, `order`)
 `continuous`, `families`, `exceptional`. The rules of `families[]` give the restrictions of the members $`N \le 12`$ for
 $`J \le 40`$, and their generating functions the `generating_function` of section 14 in each member's record.
 
+The record of $`\mathsf{O(3)}`$ holds both blocks alike for $`D^{(J,p)}`$. `subgroup_classes` lists the classes of
+`data/point_groups.json` other than $`\mathsf{O(3)}`$ (section 15.2), each with the normalizer and the centralizer in $`\mathsf{O(3)}`$ of its
+record. `subduction_rules` has rules for $`\mathsf{C_{\infty}}`$, $`\mathsf{C_{\infty h}}`$, $`\mathsf{C_{\infty v}}`$, $`\mathsf{D_{\infty}}`$ and $`\mathsf{D_{\infty h}}`$, `terms` for $`\mathsf{SO(3)}`$ ($`D^{(J)}`$), and
+rules for the families `Cn`, `S2n`, `Cnh`, `Cnv`, `Dn`, `Dnh` and `Dnd`, `N` `"every"`, `"odd"` or `"even"`. A condition may also
+test $`p`$ (`p = +1`, `p(-1)^J = +1`, and their negatives); a `tag` labels the terms by $`p`$ (`by` `p`: `plus` `g` at $`p = +1`$,
+`minus` `u`) or by the sign $`p(-1)^m`$ of $`\mathsfit{\sigma_{h}}`$ on the ket (`by` `p(-1)^m`: `'` and `''`); in `S2n` and `Dnd` with $`N`$ even
+`q` is `(N+1)m + N[p = -1] mod 2N`, the exponent of the character $`\zeta_{2N}^q`$ of the ket on $`\mathsfit{\sigma_{h}C_{\infty}}(\pi/N)`$; `renamed`
+gives the names of section 6.3 of the members $`N \le 2`$. The generating functions count the blocks at the parity $`(-1)^J`$,
+as the members' records do (section 14), with conditions also on the parity of `k` and of $`N/2`$; at the other parity
+the multiplicity of $`\Lambda`$ is that of $`\Lambda`$ times the determinant character (`parity`). `exceptional[]` holds
+$`\mathsf{T}`$, $`\mathsf{T_{h}}`$, $`\mathsf{T_{d}}`$, $`\mathsf{O}`$, $`\mathsf{O_{h}}`$, $`\mathsf{I}`$ and $`\mathsf{I_{h}}`$. The rules give the restrictions of the members $`N \le 12`$ for $`J \le 40`$ at both
+parities and the irreps of the blocks of their bases.
+
 ## 17. Fundamental domains
 
 The block `fundamental_domain` gives a fundamental domain of the orientations of a molecule with symmetry $`\mathsf{G}`$, and the volumes of $`\mathsf{G}`$, of the domain and of $`\mathsf{O(3)}`$.
@@ -2151,7 +2164,7 @@ continuous subgroups, then per family its members of small $`N`$ and one row for
 functions of $`N`$, the members up to $`N = 12`$ all have; a member whose class has other names has a row of its own. For these five the section Descent of symmetry holds the
 restriction to the continuous subgroups and, per family of finite subgroups, the rules of section 16.1 and tables for
 $`N \le 12`$ and $`n \le 6`$, the settings as in the finite documents with an image as an element at its angle; for
-$`\mathsf{SO(3)}`$ it holds the rules of `subduction_rules` (section 16.1), each with the generating functions of its multiplicities,
+$`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$ it holds the rules of `subduction_rules` (section 16.1), each with the generating functions of its multiplicities,
 and no tables of members. $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$ give their
 subduction from $`\mathsf{O(3)}`$ (section 11) as its rule, without the tables of `subduction_o3.instances`.
 

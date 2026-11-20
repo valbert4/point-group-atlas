@@ -4,16 +4,16 @@
       "catalogue": "rotation",
       "files": [
         {
-          "bytes": 285966,
+          "bytes": 287691,
           "format": "markdown",
           "path": "rotation/CONVENTIONS.md",
-          "sha256": "31812b1af0674952f50d19c2eb36bad0de10c82bfe79396b15046bc0b24a5da0"
+          "sha256": "ab1f47c769ea9cc596a564468b58855977cea13abf7ad44db5bdc3808b7b5e68"
         },
         {
-          "bytes": 758560,
+          "bytes": 759823,
           "format": "pdf",
           "path": "rotation/CONVENTIONS.pdf",
-          "sha256": "2c63278c3eaa4f5c6b99cd0a9e2bcc794d48f4319b58c3ae7ca011c5c56d8cc6"
+          "sha256": "3dfefb3c87485c8e7f4dcfc9f4bfc755a874415d28872c7dd07d1cb14adf01f4"
         },
         {
           "bytes": 156100,
@@ -28,10 +28,10 @@
           "sha256": "8e93c1ece67c829afad11672637a9745fe8cf42c28288f7a684c902def63c911"
         },
         {
-          "bytes": 228693,
+          "bytes": 233089,
           "format": "json",
           "path": "rotation/schema/group-continuous.schema.json",
-          "sha256": "de96930f6126d189c9c3a9bb87ff00239c64a63d262f86163a5b8b638ee8ed01"
+          "sha256": "ee461c95e5014f3417d86b2e21cd14b3f0da7d556a3053feb8f9107be6ffc970"
         }
       ],
       "parent": "O(3)",
@@ -41,16 +41,16 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 42073,
+          "bytes": 44176,
           "format": "markdown",
           "path": "double/CONVENTIONS.md",
-          "sha256": "c7c90222ecede98c503039a262d6a4250b94577d7b278043f596fd846eb03709"
+          "sha256": "8d4307d63888052f58e2ae5d86a681dd736b838ba31ff59e75260525104af2c2"
         },
         {
-          "bytes": 320372,
+          "bytes": 322179,
           "format": "pdf",
           "path": "double/CONVENTIONS.pdf",
-          "sha256": "f382d400d2ee9b3d09cabf2c4c15cb78c3d32cf57ea3ff668909e506e4a678d8"
+          "sha256": "2a9e0dd8a7551f936b2e57c905ecb17bd71bf6fcd9726a3baa36a70eccc66648"
         },
         {
           "bytes": 85739,
@@ -71,10 +71,10 @@
           "sha256": "7b96874eb9f0212c15dfccb9f3c809fbbe93b0242ef11cd722ca67a85b6c96f6"
         },
         {
-          "bytes": 166585,
+          "bytes": 183398,
           "format": "json",
           "path": "double/schema/group-continuous.schema.json",
-          "sha256": "abc3a9660d2c1214ab34540046f624853ab54f7e4d2659adb473d53c3d5f7a3c"
+          "sha256": "302cfec8816c9545a0690239d0359466fdd1ddff5509af68a8c5fb360a7e4b6f"
         }
       ],
       "parent": "Pin^-(3)",
@@ -4998,40 +4998,40 @@
       "catalogue": "rotation",
       "files": [
         {
-          "bytes": 29150925,
+          "bytes": 29235652,
           "format": "json",
           "path": "rotation/data/json/O3.json",
-          "sha256": "fb4ad4fbadb514a0c9bced765dc5d7759df5b2d6b5eb28994617e9f9f8a2641f"
+          "sha256": "ea65bd2285094e9e4fc698fbe61a0584c3ba87cd8acb517907eb2d5522475459"
         },
         {
-          "bytes": 14755550,
+          "bytes": 14830103,
           "format": "gap",
           "path": "rotation/data/gap/O3.g",
-          "sha256": "418c50c4619bffc0e3758ab0a3bbf5f5a70371612b3b2ba565275133071ddf1b"
+          "sha256": "10c178e39e0d6ddbb6913cac85390db15573fd6d7866ac7d4cd5587f23410bb5"
         },
         {
-          "bytes": 7596991,
+          "bytes": 7663468,
           "format": "wolfram",
           "path": "rotation/data/wolfram/O3.wl",
-          "sha256": "4b49f5b7e43ce07d3d659950d867d3a1939ea9fd5ce5b928230f84a1b25118c7"
+          "sha256": "5d2768e08ff31e7be2621ce80a4a59b7dfda42433078fc3f46d648e1512d9a37"
         },
         {
-          "bytes": 10521208,
+          "bytes": 10588899,
           "format": "sympy",
           "path": "rotation/data/sympy/O3.py",
-          "sha256": "ea66ba03881bdc2786efe2f67022355df2b066cfd60647b8393ec85893855852"
+          "sha256": "b46b72aa5e30e329ac218fcf4a3a5e4b290e6abf4810b79adbfa595144f4b9f7"
         },
         {
-          "bytes": 150407,
+          "bytes": 175641,
           "format": "latex",
           "path": "rotation/data/latex/O3.tex",
-          "sha256": "445d1cab45c9d30239ba68ace40af1329768997bc702dbaf3f1d2daad142eb99"
+          "sha256": "2e4410025fee913c7e3b54d20b30028be93b1dc03452740b0d7adb2d83be21f0"
         },
         {
-          "bytes": 480980,
+          "bytes": 505079,
           "format": "pdf",
           "path": "rotation/data/pdf/O3.pdf",
-          "sha256": "fb46746642325d3d7bb5e56ffaa2340bbb64fdbce3e1306aae43afc38dd46a57"
+          "sha256": "4380bddb33984ade437e4ab53508108b3c50547fec038df9233c52e96badd51e"
         },
         {
           "bytes": 270430,
@@ -10655,40 +10655,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 727349,
+          "bytes": 728911,
           "format": "json",
           "path": "double/data/json/2Cinf.json",
-          "sha256": "89a44cd2cabece263b72b111d1bf746860cd4d4f002eaeb5453996f676c07835"
+          "sha256": "f834e709b73f4d33b9ce6e4f39c8fe286a4ac323aead6881c6eaaf47ed98ab9d"
         },
         {
-          "bytes": 362313,
+          "bytes": 363649,
           "format": "gap",
           "path": "double/data/gap/2Cinf.g",
-          "sha256": "87e84d2c25429d50ff50751fd6fa7411c1a2621ea6a41c5e8b666fd6cb8dc743"
+          "sha256": "b79bab72fcc48d8f9ad8af03e9eaad237301ef89b535e1f3ecd964896483c46a"
         },
         {
-          "bytes": 327346,
+          "bytes": 328554,
           "format": "wolfram",
           "path": "double/data/wolfram/2Cinf.wl",
-          "sha256": "df9226e7950954176de3b0dbba959730e242b796cee21cd381cbdfdd21a57cd1"
+          "sha256": "49e6f4845c4ecd8a98581b60dc5fa3f69641d96f24fa74599d690a8d445c9e47"
         },
         {
-          "bytes": 441737,
+          "bytes": 443057,
           "format": "sympy",
           "path": "double/data/sympy/2Cinf.py",
-          "sha256": "465d81a7d01c5a3d24bce8105c974f96ee34bfef619173282a3a5f57be27637b"
+          "sha256": "4f1dc846a9d35f478bb66ccdf0c5f709c493657806b0209717e3cc5481096a39"
         },
         {
-          "bytes": 62762,
+          "bytes": 79961,
           "format": "latex",
           "path": "double/data/latex/2Cinf.tex",
-          "sha256": "d7557394a94920647e160446a53045cda92f9bc175bcd23a328d3040804d529d"
+          "sha256": "273901eeb515707d9ef2730aef58c1d13bcf2f674dd5f80a1613b2191970eb0e"
         },
         {
-          "bytes": 355054,
+          "bytes": 373612,
           "format": "pdf",
           "path": "double/data/pdf/2Cinf.pdf",
-          "sha256": "75aef519cb94a131b21205e807891edbca4f6a966c27badf661b37a217db34a9"
+          "sha256": "62d6465c2b5c7583c468d57694901ea76b2b843f702310945fdbb0cbde977d42"
         }
       ],
       "requires": [
@@ -10702,40 +10702,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 4068883,
+          "bytes": 4071587,
           "format": "json",
           "path": "double/data/json/2Cinfh.json",
-          "sha256": "ee1578a16ed542917a7abc35b7370561608dc2ad771c6e831034ff7fd42a1684"
+          "sha256": "4ab2660dc3d4bd5f9ce448fa5cee809553067a5373fae1721372c11477bfa382"
         },
         {
-          "bytes": 1761196,
+          "bytes": 1763720,
           "format": "gap",
           "path": "double/data/gap/2Cinfh.g",
-          "sha256": "0ff4784969e0e6d9f914b4fca1aa7b9e930ebbbb47e0509bbf2210cbb8982bad"
+          "sha256": "7148637993a2d73807a6c4e815b915a222ef9140461dbce8595d24a4c52cf886"
         },
         {
-          "bytes": 1605585,
+          "bytes": 1607869,
           "format": "wolfram",
           "path": "double/data/wolfram/2Cinfh.wl",
-          "sha256": "2ad094ac7721d256e75e7a0787407ed1f4feadff61dd8cb5353341365b807cb7"
+          "sha256": "ed40f60ab99472b8728054cc15358c603063b22d15bcb1b1806b6a2a5a5c2ede"
         },
         {
-          "bytes": 2305646,
+          "bytes": 2308356,
           "format": "sympy",
           "path": "double/data/sympy/2Cinfh.py",
-          "sha256": "1ef841476fd048f8e641aea87adefd33b48ed89ae313368d5ef751bb4fb9cdac"
+          "sha256": "781b6cf5f27a9522b5488e23fda3e6dd95910ad42040e45ecaf6efb93b796c24"
         },
         {
-          "bytes": 139289,
+          "bytes": 228268,
           "format": "latex",
           "path": "double/data/latex/2Cinfh.tex",
-          "sha256": "0569d0a2de2ca73eb33afe2fd28ae3b03673695d7858706e114ef6c8c22e863d"
+          "sha256": "f4b94f8bd3d844b60ae5c91f287df857c346865c4da58f8e212ec79b3078dac3"
         },
         {
-          "bytes": 383457,
+          "bytes": 420093,
           "format": "pdf",
           "path": "double/data/pdf/2Cinfh.pdf",
-          "sha256": "f221a1e91247b40f0907420a08dc4538ca77b984943504b879a8fe1e28554069"
+          "sha256": "963bda0c06dd1e94ffb6c9adb52b31756082138435277bf5687be243212e667c"
         }
       ],
       "requires": [
@@ -10749,40 +10749,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 604839,
+          "bytes": 605952,
           "format": "json",
           "path": "double/data/json/2Cinfv.json",
-          "sha256": "27d2debde59ae773f0daf3d4ab86194d055ed859cc807cd2cd1319b0b370ff08"
+          "sha256": "0f0c12be0b40d2fbc9eb743e0fd2f1821923cd2b3a33d3a3d5157f19129b51b2"
         },
         {
-          "bytes": 301085,
+          "bytes": 302078,
           "format": "gap",
           "path": "double/data/gap/2Cinfv.g",
-          "sha256": "228f0245a9018df8056365fc65318172fbcd054f8e6fe3d5e784a021d6d0aacf"
+          "sha256": "06f354707534d6f8b68cfb721db0f8ce94288d3502386ccfa38d55d3d625cf62"
         },
         {
-          "bytes": 268401,
+          "bytes": 269298,
           "format": "wolfram",
           "path": "double/data/wolfram/2Cinfv.wl",
-          "sha256": "258b9a15b294d2335d98b85b40252442ea1b5116b93522077e76cb8bb9df4216"
+          "sha256": "f37896e974c20f624df9d0ab77a5ec55ecaad245f9093ce41f978e2534526b1f"
         },
         {
-          "bytes": 345396,
+          "bytes": 346337,
           "format": "sympy",
           "path": "double/data/sympy/2Cinfv.py",
-          "sha256": "831ab6e24767fcec3dabdb2635ec95b759beb8cbb113b225c9033c64e3162d1d"
+          "sha256": "a6f07b9ce4f306ca533cbdb553eb296a235771d235b002caed66a78697fafc88"
         },
         {
-          "bytes": 54351,
+          "bytes": 68738,
           "format": "latex",
           "path": "double/data/latex/2Cinfv.tex",
-          "sha256": "abe3251b76e60dae86430035e0fce7fb78f27150043ab5b883f01b5e4b5b3dd5"
+          "sha256": "06c016f9762ca9b6390c638f5e5abebab5c5353c44fa6cc87bd18f0cc7ce5a38"
         },
         {
-          "bytes": 386625,
+          "bytes": 402229,
           "format": "pdf",
           "path": "double/data/pdf/2Cinfv.pdf",
-          "sha256": "b18655b3cfaf4bea921045538314b9743a57e4f4696b807bf477728b5f934e41"
+          "sha256": "5d8cc063b850494ec24192c00baf9281d50f0d93f798f596c2fd836d20638ec5"
         }
       ],
       "requires": [
@@ -10796,40 +10796,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 672183,
+          "bytes": 673304,
           "format": "json",
           "path": "double/data/json/2Dinf.json",
-          "sha256": "f0dd8a45e20c941dd0b44bf7e764480be1ee385ca1325bd84ee2592f53d590a1"
+          "sha256": "73e9bab5634f009165a6f002d8f1daee1de42a754e1dbc7255983aea19768c9c"
         },
         {
-          "bytes": 327633,
+          "bytes": 328634,
           "format": "gap",
           "path": "double/data/gap/2Dinf.g",
-          "sha256": "79cb4e5229603bc7e46dfa83167c0b825890054ff04734fab3f37f0eff99a168"
+          "sha256": "d4760221203bd9600f3f1ff83ea837246b531f9482d33d6ed1b7fa7f6eb6faee"
         },
         {
-          "bytes": 289722,
+          "bytes": 290627,
           "format": "wolfram",
           "path": "double/data/wolfram/2Dinf.wl",
-          "sha256": "3b51f3f1510eccd13375a59ee3c1e0ce277da195e648a12ee35ada25e286f1aa"
+          "sha256": "926060b3cdb43a2ac694912b2a07918526ffc60856c7dd32aa8de0bcf41f123a"
         },
         {
-          "bytes": 375963,
+          "bytes": 376946,
           "format": "sympy",
           "path": "double/data/sympy/2Dinf.py",
-          "sha256": "fd3a1ac06b63de65ea3ffbe6ccf3a92933bbab8c3e3efc8deafb9b38bffe0e7f"
+          "sha256": "f88103a0bc03947efabffdd572921e987256eb0b4b317e9d190c8276745e1dbd"
         },
         {
-          "bytes": 55783,
+          "bytes": 71122,
           "format": "latex",
           "path": "double/data/latex/2Dinf.tex",
-          "sha256": "cc0026fda8d08b4bbe0ba97543c8abf0b7b959063918b73d0a9698c08166db3c"
+          "sha256": "c72677136292ef08188f302b3162895472e9947543d7c93570aab31e7e1419db"
         },
         {
-          "bytes": 375271,
+          "bytes": 392482,
           "format": "pdf",
           "path": "double/data/pdf/2Dinf.pdf",
-          "sha256": "006889cb8af0264ad6a3fcfcd06f0f2f89906ecade17c65e0b9d86b08b3b864e"
+          "sha256": "865785740e0746f85f25b7cca89d1bce301176907e52890d303de7591b689fa0"
         }
       ],
       "requires": [
@@ -10843,40 +10843,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 3928202,
+          "bytes": 3929940,
           "format": "json",
           "path": "double/data/json/2Dinfh.json",
-          "sha256": "b75a237eef3fc9dead8bf90da955ba26674e896bcd3b3aeff33ee9cc8c8e79e1"
+          "sha256": "c3b7a00a818d144b0f65a5d642c64816e4d314cd4360ef29544f601575b63328"
         },
         {
-          "bytes": 1720295,
+          "bytes": 1721985,
           "format": "gap",
           "path": "double/data/gap/2Dinfh.g",
-          "sha256": "071178e111ffbf84e3a240c8e77bd94d53a911b9c1bb9faf15891baa28aba6a3"
+          "sha256": "3844ad41df2bbceeca47a0a1a92f3cdd701324aa092d2202d372baeec6dc02b0"
         },
         {
-          "bytes": 1536594,
+          "bytes": 1538126,
           "format": "wolfram",
           "path": "double/data/wolfram/2Dinfh.wl",
-          "sha256": "e5d8df8ac3dc3f975cc85fcd0ee2632e44c07bec45d9d318948d8f08522588e0"
+          "sha256": "767b450529b9595aaba027c80e705dc372a1719702c9c5ebc85ca7c9847aade1"
         },
         {
-          "bytes": 2082201,
+          "bytes": 2083993,
           "format": "sympy",
           "path": "double/data/sympy/2Dinfh.py",
-          "sha256": "ad767950d09d69ec7e556a9b07f2411aae34d592ce7029b51e241d9510472f8a"
+          "sha256": "2b8a895fd3b8fe74602d1aa275dd1d563ffc37332a1760c0a1f4320e63d548d3"
         },
         {
-          "bytes": 159410,
+          "bytes": 239263,
           "format": "latex",
           "path": "double/data/latex/2Dinfh.tex",
-          "sha256": "665dfad875aac2b0fddf0221789739f0f77ebdda8707892627b0b639960be999"
+          "sha256": "1432ea1ef3f7880e4254ea77f2f76700ff655cafa077799009ee4b4db3bde60e"
         },
         {
-          "bytes": 417093,
+          "bytes": 460815,
           "format": "pdf",
           "path": "double/data/pdf/2Dinfh.pdf",
-          "sha256": "d9b1c0a6f12752c391285a2280347f3986dc5f7ee8ce7c36e9cafae165fe0cd4"
+          "sha256": "66ad83184b6276884764ce6f31f1f65b7ea8d5fbda5a3485e2aacf2590f714c6"
         }
       ],
       "requires": [
@@ -10890,40 +10890,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 1647687,
+          "bytes": 1662823,
           "format": "json",
           "path": "double/data/json/SU2.json",
-          "sha256": "54604117ef5a673485ed0c724859badf8f5e0707004b20093554c023297ef76b"
+          "sha256": "194928632765e5ae56d6acb9e3ecd2e4ede6f5c46c5f2295cd572dbea7394ddf"
         },
         {
-          "bytes": 996691,
+          "bytes": 1008368,
           "format": "gap",
           "path": "double/data/gap/SU2.g",
-          "sha256": "e62fc6088aa7ebd404ad55bc8289b11a70d2241f345a0afe0819754fad222780"
+          "sha256": "265507ed628dfa5fba4c9914c4c8a6d4b6f647a59b5dc47538aa9e1f207e7f5a"
         },
         {
-          "bytes": 510023,
+          "bytes": 520599,
           "format": "wolfram",
           "path": "double/data/wolfram/SU2.wl",
-          "sha256": "05fb91e1c0398d2772c26066bf3f23c2a4a3a18ada93ce815a16d45c21dbbdc6"
+          "sha256": "81eea71a84dc0cfd1a0e07b915e79be89b82fdcf932a0597c282826573c4e212"
         },
         {
-          "bytes": 683472,
+          "bytes": 695260,
           "format": "sympy",
           "path": "double/data/sympy/SU2.py",
-          "sha256": "e0291ab3a0eb404c07604c448700bed6a12dfb1fd67687f0d4ced21dc05c01fa"
+          "sha256": "eeb5cd8c7ef310c544a99a98f185b8dc4b7a830420dc4d7e2a23ec4abcceefc1"
         },
         {
-          "bytes": 142473,
+          "bytes": 149003,
           "format": "latex",
           "path": "double/data/latex/SU2.tex",
-          "sha256": "29112ee70657828cfe898cf2c2b45533edf273c6dbac04051c90a2067c1d252f"
+          "sha256": "9321bb80060d34550ece83652f45a2896c77809c805c9476b254101543b124c6"
         },
         {
-          "bytes": 424271,
+          "bytes": 429752,
           "format": "pdf",
           "path": "double/data/pdf/SU2.pdf",
-          "sha256": "7fab2a6fa1b625dd563100c979ed4594a28d908ea1667218eddc4d28a41bd994"
+          "sha256": "d8f0b397d00a326bc64e34ffb91194fa4a67a06c8ec4499ad9152a527b6e74c5"
         },
         {
           "bytes": 42526,
@@ -11066,43 +11066,50 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 248530,
+          "bytes": 358402,
           "format": "json",
           "path": "double/data/json/Pinminus3.json",
-          "sha256": "9d9fa81741ba52196b2bfd5c38262d302ecccf37d80911ee57f40c86508fa177"
+          "sha256": "11c2c3640ab70d0f806e1380c8e1af06df88e30fafdab2bdf779ccabff3f9168"
         },
         {
-          "bytes": 112849,
+          "bytes": 213179,
           "format": "gap",
           "path": "double/data/gap/Pinminus3.g",
-          "sha256": "6553e3820b1eb0211b711345c72f7ac4d2f79385764f157235e53e036a299b5d"
+          "sha256": "9a8362696b34321a24fa10895a7244ddae7ccfc12554b47ebded0655979f3274"
         },
         {
-          "bytes": 83907,
+          "bytes": 173849,
           "format": "wolfram",
           "path": "double/data/wolfram/Pinminus3.wl",
-          "sha256": "f85b1169881b7b37e230b1e51716aa9d9f02ddf4b19c77b041e3bc5dace2eab8"
+          "sha256": "448867e450176a00442f7a9e4aefa385dd7e58a03c40576a1240bbf1bcc8e095"
         },
         {
-          "bytes": 144296,
+          "bytes": 233220,
           "format": "sympy",
           "path": "double/data/sympy/Pinminus3.py",
-          "sha256": "f5587f78265470791bf25a0e5648c8dbb18d35ad4aa3cc297ffd58b1d727d154"
+          "sha256": "9bab01550e54003782a908cf424b6ce38b731292e3426c612acfda87cc0752bd"
         },
         {
-          "bytes": 53218,
+          "bytes": 80635,
           "format": "latex",
           "path": "double/data/latex/Pinminus3.tex",
-          "sha256": "8734757bbad093b98bf3489c08ce644d3fde60effb74557773577f98fafa8bef"
+          "sha256": "80f6f690dc7122649f08ef6909bb1f4a4014e91baba050190c3c0af270667538"
         },
         {
-          "bytes": 371004,
+          "bytes": 417302,
           "format": "pdf",
           "path": "double/data/pdf/Pinminus3.pdf",
-          "sha256": "ddfc06b8f8150ee26b648b78b9cfee3b1a82d60b9aacc127985662237cd9e44a"
+          "sha256": "0c3bf62f830a437c0b0ec335d1751a74638fcd228753e68a42d337b6599a18b8"
         }
       ],
       "requires": [
+        "double/2I",
+        "double/2Ih",
+        "double/2O",
+        "double/2Oh",
+        "double/2T",
+        "double/2Td",
+        "double/2Th",
         "double/SU2",
         "rotation/O3"
       ],

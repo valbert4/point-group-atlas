@@ -6370,6 +6370,42 @@
     "vector_products": "rotation/O3#/clebsch_gordan/products"
   },
   "domain": "continuous",
+  "fundamental_domain": {
+    "image": "rotation/O3#/fundamental_domain",
+    "space": {
+      "lens": {
+        "reason": "not-defined-for-family",
+        "value": null
+      },
+      "name": "point"
+    },
+    "volumes": {
+      "domain": {
+        "coefficient": [
+          1,
+          1
+        ],
+        "dimension": 0,
+        "pi_power": 0
+      },
+      "group": {
+        "coefficient": [
+          32,
+          1
+        ],
+        "dimension": 3,
+        "pi_power": 2
+      },
+      "pin_minus_3": {
+        "coefficient": [
+          32,
+          1
+        ],
+        "dimension": 3,
+        "pi_power": 2
+      }
+    }
+  },
   "fusion": {
     "condition_grammar": [
       "always"
@@ -6796,6 +6832,276 @@
       },
       "image": "SU(2)",
       "relation": null
+    },
+    "molien": {
+      "instances": [
+        {
+          "dim": 2,
+          "hilbert_series": {
+            "denominator": [],
+            "numerator": [
+              1
+            ]
+          },
+          "irrep": "D^(1/2,+)",
+          "irrep_id": "D1hg",
+          "twoJ": 1
+        },
+        {
+          "dim": 2,
+          "hilbert_series": {
+            "denominator": [],
+            "numerator": [
+              1
+            ]
+          },
+          "irrep": "D^(1/2,-)",
+          "irrep_id": "D1hu",
+          "twoJ": 1
+        },
+        {
+          "dim": 4,
+          "hilbert_series": {
+            "denominator": [
+              4
+            ],
+            "numerator": [
+              1
+            ]
+          },
+          "irrep": "D^(3/2,+)",
+          "irrep_id": "D3hg",
+          "twoJ": 3
+        },
+        {
+          "dim": 4,
+          "hilbert_series": {
+            "denominator": [
+              4
+            ],
+            "numerator": [
+              1
+            ]
+          },
+          "irrep": "D^(3/2,-)",
+          "irrep_id": "D3hu",
+          "twoJ": 3
+        },
+        {
+          "dim": 6,
+          "hilbert_series": {
+            "denominator": [
+              4,
+              8,
+              12
+            ],
+            "numerator": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "irrep": "D^(5/2,+)",
+          "irrep_id": "D5hg",
+          "twoJ": 5
+        },
+        {
+          "dim": 6,
+          "hilbert_series": {
+            "denominator": [
+              4,
+              8,
+              12
+            ],
+            "numerator": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "irrep": "D^(5/2,-)",
+          "irrep_id": "D5hu",
+          "twoJ": 5
+        },
+        {
+          "dim": 8,
+          "hilbert_series": {
+            "denominator": [
+              4,
+              8,
+              8,
+              12,
+              30
+            ],
+            "numerator": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              5,
+              0,
+              4,
+              0,
+              3,
+              0,
+              9,
+              0,
+              4,
+              0,
+              5,
+              0,
+              8,
+              0,
+              4,
+              0,
+              4,
+              0,
+              8,
+              0,
+              5,
+              0,
+              4,
+              0,
+              9,
+              0,
+              3,
+              0,
+              4,
+              0,
+              5,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "irrep": "D^(7/2,+)",
+          "irrep_id": "D7hg",
+          "twoJ": 7
+        },
+        {
+          "dim": 8,
+          "hilbert_series": {
+            "denominator": [
+              4,
+              8,
+              8,
+              12,
+              30
+            ],
+            "numerator": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              5,
+              0,
+              4,
+              0,
+              3,
+              0,
+              9,
+              0,
+              4,
+              0,
+              5,
+              0,
+              8,
+              0,
+              4,
+              0,
+              4,
+              0,
+              8,
+              0,
+              5,
+              0,
+              4,
+              0,
+              9,
+              0,
+              3,
+              0,
+              4,
+              0,
+              5,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "irrep": "D^(7/2,-)",
+          "irrep_id": "D7hu",
+          "twoJ": 7
+        }
+      ],
+      "levels": [],
+      "twoJ_max": 7
     }
   },
   "jj_configurations": {
@@ -7532,6 +7838,1170 @@
     "rule": "Lambda^n of the spinor level L, n = 0, ..., dim L: chi = e_n(g), n e_n = sum_{k=1}^{n} (-1)^(k-1) e_(n-k) chi_L(g^k); Lambda^(d-n)(L) = Lambda^n(L) (x) Lambda^d(L)"
   },
   "schema": "point-group-atlas/double/group-continuous/1",
+  "spin_orbit_levels": {
+    "levels": [
+      {
+        "orbital": "D^(0,+)",
+        "terms": [
+          {
+            "irrep": "D^(1/2,+)",
+            "irrep_id": "D1hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 1
+      },
+      {
+        "orbital": "D^(0,+)",
+        "terms": [
+          {
+            "irrep": "D^(1,+)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 2
+      },
+      {
+        "orbital": "D^(0,+)",
+        "terms": [
+          {
+            "irrep": "D^(3/2,+)",
+            "irrep_id": "D3hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 3
+      },
+      {
+        "orbital": "D^(0,+)",
+        "terms": [
+          {
+            "irrep": "D^(2,+)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 4
+      },
+      {
+        "orbital": "D^(0,+)",
+        "terms": [
+          {
+            "irrep": "D^(5/2,+)",
+            "irrep_id": "D5hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 5
+      },
+      {
+        "orbital": "D^(0,+)",
+        "terms": [
+          {
+            "irrep": "D^(3,+)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 6
+      },
+      {
+        "orbital": "D^(0,+)",
+        "terms": [
+          {
+            "irrep": "D^(7/2,+)",
+            "irrep_id": "D7hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 7
+      },
+      {
+        "orbital": "D^(1,+)",
+        "terms": [
+          {
+            "irrep": "D^(1/2,+)",
+            "irrep_id": "D1hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3/2,+)",
+            "irrep_id": "D3hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 1
+      },
+      {
+        "orbital": "D^(1,+)",
+        "terms": [
+          {
+            "irrep": "D^(0,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(1,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(2,+)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 2
+      },
+      {
+        "orbital": "D^(1,+)",
+        "terms": [
+          {
+            "irrep": "D^(1/2,+)",
+            "irrep_id": "D1hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3/2,+)",
+            "irrep_id": "D3hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,+)",
+            "irrep_id": "D5hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 3
+      },
+      {
+        "orbital": "D^(1,+)",
+        "terms": [
+          {
+            "irrep": "D^(1,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(2,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,+)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 4
+      },
+      {
+        "orbital": "D^(1,+)",
+        "terms": [
+          {
+            "irrep": "D^(3/2,+)",
+            "irrep_id": "D3hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,+)",
+            "irrep_id": "D5hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,+)",
+            "irrep_id": "D7hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 5
+      },
+      {
+        "orbital": "D^(1,+)",
+        "terms": [
+          {
+            "irrep": "D^(2,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(4,+)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 6
+      },
+      {
+        "orbital": "D^(1,+)",
+        "terms": [
+          {
+            "irrep": "D^(5/2,+)",
+            "irrep_id": "D5hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,+)",
+            "irrep_id": "D7hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(9/2,+)",
+            "irrep_id": "D9hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 7
+      },
+      {
+        "orbital": "D^(2,+)",
+        "terms": [
+          {
+            "irrep": "D^(3/2,+)",
+            "irrep_id": "D3hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,+)",
+            "irrep_id": "D5hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 1
+      },
+      {
+        "orbital": "D^(2,+)",
+        "terms": [
+          {
+            "irrep": "D^(1,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(2,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,+)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 2
+      },
+      {
+        "orbital": "D^(2,+)",
+        "terms": [
+          {
+            "irrep": "D^(1/2,+)",
+            "irrep_id": "D1hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3/2,+)",
+            "irrep_id": "D3hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,+)",
+            "irrep_id": "D5hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,+)",
+            "irrep_id": "D7hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 3
+      },
+      {
+        "orbital": "D^(2,+)",
+        "terms": [
+          {
+            "irrep": "D^(0,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(1,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(2,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(4,+)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 4
+      },
+      {
+        "orbital": "D^(2,+)",
+        "terms": [
+          {
+            "irrep": "D^(1/2,+)",
+            "irrep_id": "D1hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3/2,+)",
+            "irrep_id": "D3hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,+)",
+            "irrep_id": "D5hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,+)",
+            "irrep_id": "D7hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(9/2,+)",
+            "irrep_id": "D9hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 5
+      },
+      {
+        "orbital": "D^(2,+)",
+        "terms": [
+          {
+            "irrep": "D^(1,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(2,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(4,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5,+)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 6
+      },
+      {
+        "orbital": "D^(2,+)",
+        "terms": [
+          {
+            "irrep": "D^(3/2,+)",
+            "irrep_id": "D3hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,+)",
+            "irrep_id": "D5hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,+)",
+            "irrep_id": "D7hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(9/2,+)",
+            "irrep_id": "D9hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(11/2,+)",
+            "irrep_id": "D11hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 7
+      },
+      {
+        "orbital": "D^(3,+)",
+        "terms": [
+          {
+            "irrep": "D^(5/2,+)",
+            "irrep_id": "D5hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,+)",
+            "irrep_id": "D7hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 1
+      },
+      {
+        "orbital": "D^(3,+)",
+        "terms": [
+          {
+            "irrep": "D^(2,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(4,+)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 2
+      },
+      {
+        "orbital": "D^(3,+)",
+        "terms": [
+          {
+            "irrep": "D^(3/2,+)",
+            "irrep_id": "D3hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,+)",
+            "irrep_id": "D5hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,+)",
+            "irrep_id": "D7hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(9/2,+)",
+            "irrep_id": "D9hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 3
+      },
+      {
+        "orbital": "D^(3,+)",
+        "terms": [
+          {
+            "irrep": "D^(1,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(2,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(4,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5,+)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 4
+      },
+      {
+        "orbital": "D^(3,+)",
+        "terms": [
+          {
+            "irrep": "D^(1/2,+)",
+            "irrep_id": "D1hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3/2,+)",
+            "irrep_id": "D3hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,+)",
+            "irrep_id": "D5hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,+)",
+            "irrep_id": "D7hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(9/2,+)",
+            "irrep_id": "D9hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(11/2,+)",
+            "irrep_id": "D11hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 5
+      },
+      {
+        "orbital": "D^(3,+)",
+        "terms": [
+          {
+            "irrep": "D^(0,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(1,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(2,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(4,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5,+)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(6,+)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 6
+      },
+      {
+        "orbital": "D^(3,+)",
+        "terms": [
+          {
+            "irrep": "D^(1/2,+)",
+            "irrep_id": "D1hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3/2,+)",
+            "irrep_id": "D3hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,+)",
+            "irrep_id": "D5hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,+)",
+            "irrep_id": "D7hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(9/2,+)",
+            "irrep_id": "D9hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(11/2,+)",
+            "irrep_id": "D11hg",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(13/2,+)",
+            "irrep_id": "D13hg",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 7
+      },
+      {
+        "orbital": "D^(0,-)",
+        "terms": [
+          {
+            "irrep": "D^(1/2,-)",
+            "irrep_id": "D1hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 1
+      },
+      {
+        "orbital": "D^(0,-)",
+        "terms": [
+          {
+            "irrep": "D^(1,-)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 2
+      },
+      {
+        "orbital": "D^(0,-)",
+        "terms": [
+          {
+            "irrep": "D^(3/2,-)",
+            "irrep_id": "D3hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 3
+      },
+      {
+        "orbital": "D^(0,-)",
+        "terms": [
+          {
+            "irrep": "D^(2,-)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 4
+      },
+      {
+        "orbital": "D^(0,-)",
+        "terms": [
+          {
+            "irrep": "D^(5/2,-)",
+            "irrep_id": "D5hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 5
+      },
+      {
+        "orbital": "D^(0,-)",
+        "terms": [
+          {
+            "irrep": "D^(3,-)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 6
+      },
+      {
+        "orbital": "D^(0,-)",
+        "terms": [
+          {
+            "irrep": "D^(7/2,-)",
+            "irrep_id": "D7hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 7
+      },
+      {
+        "orbital": "D^(1,-)",
+        "terms": [
+          {
+            "irrep": "D^(1/2,-)",
+            "irrep_id": "D1hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3/2,-)",
+            "irrep_id": "D3hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 1
+      },
+      {
+        "orbital": "D^(1,-)",
+        "terms": [
+          {
+            "irrep": "D^(0,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(1,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(2,-)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 2
+      },
+      {
+        "orbital": "D^(1,-)",
+        "terms": [
+          {
+            "irrep": "D^(1/2,-)",
+            "irrep_id": "D1hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3/2,-)",
+            "irrep_id": "D3hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,-)",
+            "irrep_id": "D5hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 3
+      },
+      {
+        "orbital": "D^(1,-)",
+        "terms": [
+          {
+            "irrep": "D^(1,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(2,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,-)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 4
+      },
+      {
+        "orbital": "D^(1,-)",
+        "terms": [
+          {
+            "irrep": "D^(3/2,-)",
+            "irrep_id": "D3hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,-)",
+            "irrep_id": "D5hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,-)",
+            "irrep_id": "D7hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 5
+      },
+      {
+        "orbital": "D^(1,-)",
+        "terms": [
+          {
+            "irrep": "D^(2,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(4,-)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 6
+      },
+      {
+        "orbital": "D^(1,-)",
+        "terms": [
+          {
+            "irrep": "D^(5/2,-)",
+            "irrep_id": "D5hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,-)",
+            "irrep_id": "D7hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(9/2,-)",
+            "irrep_id": "D9hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 7
+      },
+      {
+        "orbital": "D^(2,-)",
+        "terms": [
+          {
+            "irrep": "D^(3/2,-)",
+            "irrep_id": "D3hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,-)",
+            "irrep_id": "D5hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 1
+      },
+      {
+        "orbital": "D^(2,-)",
+        "terms": [
+          {
+            "irrep": "D^(1,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(2,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,-)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 2
+      },
+      {
+        "orbital": "D^(2,-)",
+        "terms": [
+          {
+            "irrep": "D^(1/2,-)",
+            "irrep_id": "D1hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3/2,-)",
+            "irrep_id": "D3hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,-)",
+            "irrep_id": "D5hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,-)",
+            "irrep_id": "D7hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 3
+      },
+      {
+        "orbital": "D^(2,-)",
+        "terms": [
+          {
+            "irrep": "D^(0,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(1,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(2,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(4,-)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 4
+      },
+      {
+        "orbital": "D^(2,-)",
+        "terms": [
+          {
+            "irrep": "D^(1/2,-)",
+            "irrep_id": "D1hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3/2,-)",
+            "irrep_id": "D3hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,-)",
+            "irrep_id": "D5hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,-)",
+            "irrep_id": "D7hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(9/2,-)",
+            "irrep_id": "D9hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 5
+      },
+      {
+        "orbital": "D^(2,-)",
+        "terms": [
+          {
+            "irrep": "D^(1,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(2,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(4,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5,-)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 6
+      },
+      {
+        "orbital": "D^(2,-)",
+        "terms": [
+          {
+            "irrep": "D^(3/2,-)",
+            "irrep_id": "D3hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,-)",
+            "irrep_id": "D5hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,-)",
+            "irrep_id": "D7hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(9/2,-)",
+            "irrep_id": "D9hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(11/2,-)",
+            "irrep_id": "D11hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 7
+      },
+      {
+        "orbital": "D^(3,-)",
+        "terms": [
+          {
+            "irrep": "D^(5/2,-)",
+            "irrep_id": "D5hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,-)",
+            "irrep_id": "D7hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 1
+      },
+      {
+        "orbital": "D^(3,-)",
+        "terms": [
+          {
+            "irrep": "D^(2,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(4,-)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 2
+      },
+      {
+        "orbital": "D^(3,-)",
+        "terms": [
+          {
+            "irrep": "D^(3/2,-)",
+            "irrep_id": "D3hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,-)",
+            "irrep_id": "D5hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,-)",
+            "irrep_id": "D7hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(9/2,-)",
+            "irrep_id": "D9hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 3
+      },
+      {
+        "orbital": "D^(3,-)",
+        "terms": [
+          {
+            "irrep": "D^(1,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(2,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(4,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5,-)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 4
+      },
+      {
+        "orbital": "D^(3,-)",
+        "terms": [
+          {
+            "irrep": "D^(1/2,-)",
+            "irrep_id": "D1hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3/2,-)",
+            "irrep_id": "D3hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,-)",
+            "irrep_id": "D5hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,-)",
+            "irrep_id": "D7hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(9/2,-)",
+            "irrep_id": "D9hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(11/2,-)",
+            "irrep_id": "D11hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 5
+      },
+      {
+        "orbital": "D^(3,-)",
+        "terms": [
+          {
+            "irrep": "D^(0,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(1,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(2,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(4,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5,-)",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(6,-)",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 6
+      },
+      {
+        "orbital": "D^(3,-)",
+        "terms": [
+          {
+            "irrep": "D^(1/2,-)",
+            "irrep_id": "D1hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(3/2,-)",
+            "irrep_id": "D3hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(5/2,-)",
+            "irrep_id": "D5hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(7/2,-)",
+            "irrep_id": "D7hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(9/2,-)",
+            "irrep_id": "D9hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(11/2,-)",
+            "irrep_id": "D11hu",
+            "multiplicity": 1
+          },
+          {
+            "irrep": "D^(13/2,-)",
+            "irrep_id": "D13hu",
+            "multiplicity": 1
+          }
+        ],
+        "twoS": 7
+      }
+    ],
+    "twoS_range": [
+      1,
+      7
+    ]
+  },
   "spin_orbitals": {
     "form": "jj",
     "parity_rule": "the states of SU2's spin_orbitals: |l j m> carries D^(j,(-1)^l) of Pin^-(3), the parity of the orbital",
@@ -7543,11 +9013,13 @@
         {
           "family": "Dhalfg",
           "label_template": "D^(j,+)",
+          "parity": 1,
           "twoM": "2j, 2j-2, ..., -2j"
         },
         {
           "family": "Dhalfu",
           "label_template": "D^(j,-)",
+          "parity": -1,
           "twoM": "2j, 2j-2, ..., -2j"
         }
       ]
@@ -7565,7 +9037,7 @@
         {
           "family": "Dhalfg",
           "label_template": "D^(j,+)",
-          "multiplicity": "1"
+          "multiplicity": "1 at p = +1, 0 at p = -1"
         },
         {
           "family": "Dhalfu",
@@ -9680,13 +11152,15 @@
           "denominator": [],
           "family": "Dhalfg",
           "label_template": "D^(j,+)",
-          "numerator": "t^(2j)"
+          "numerator": "t^(2j)",
+          "parity": 1
         },
         {
           "denominator": [],
           "family": "Dhalfu",
           "label_template": "D^(j,-)",
-          "numerator": "t^(2j)"
+          "numerator": "t^(2j)",
+          "parity": -1
         }
       ]
     },
@@ -9988,6 +11462,3513 @@
     "twoJ_range": [
       1,
       25
+    ]
+  },
+  "subduction_rules": {
+    "continuous": [
+      {
+        "cases": [
+          {
+            "if": "m > 0",
+            "terms": [
+              "1E_{m}"
+            ]
+          },
+          {
+            "if": "m < 0",
+            "terms": [
+              "2E_{-m}"
+            ]
+          }
+        ],
+        "generating_function": {
+          "families": [
+            {
+              "denominator": [
+                2
+              ],
+              "family": "1Eh",
+              "label_template": "1E_n",
+              "numerator": "t^(2n)"
+            },
+            {
+              "denominator": [
+                2
+              ],
+              "family": "2Eh",
+              "label_template": "2E_n",
+              "numerator": "t^(2n)"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "subgroup": {
+          "double_class": "2Cinf",
+          "symbol": "2C_inf"
+        },
+        "sum": {
+          "from": "-J",
+          "symbol": "m",
+          "to": "J"
+        },
+        "text": "D^(J,p) | 2C_inf = sum_{n=1/2..J} (1E_n + 2E_n) for both p"
+      },
+      {
+        "cases": [
+          {
+            "if": "m > 0",
+            "terms": [
+              "1E_{m}"
+            ]
+          },
+          {
+            "if": "m < 0",
+            "terms": [
+              "2E_{-m}"
+            ]
+          }
+        ],
+        "generating_function": {
+          "families": [
+            {
+              "denominator": [
+                2
+              ],
+              "family": "1Ehg",
+              "label_template": "1E_n,g",
+              "numerator": "t^(2n)"
+            },
+            {
+              "denominator": [
+                2
+              ],
+              "family": "2Ehg",
+              "label_template": "2E_n,g",
+              "numerator": "t^(2n)"
+            },
+            {
+              "denominator": [],
+              "family": "1Ehu",
+              "label_template": "1E_n,u",
+              "numerator": "0"
+            },
+            {
+              "denominator": [],
+              "family": "2Ehu",
+              "label_template": "2E_n,u",
+              "numerator": "0"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "subgroup": {
+          "double_class": "2Cinfh",
+          "symbol": "2C_infh"
+        },
+        "sum": {
+          "from": "-J",
+          "symbol": "m",
+          "to": "J"
+        },
+        "tag": {
+          "by": "p",
+          "minus": "u",
+          "plus": "g"
+        },
+        "text": "D^(J,p) | 2C_infh = sum_{n=1/2..J} (1E_n,x + 2E_n,x), x = g if p = +1, u if p = -1"
+      },
+      {
+        "cases": [
+          {
+            "if": "m > 0",
+            "terms": [
+              "E_{m}"
+            ]
+          }
+        ],
+        "generating_function": {
+          "families": [
+            {
+              "denominator": [
+                2
+              ],
+              "family": "Eh",
+              "label_template": "E_n",
+              "numerator": "t^(2n)"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "subgroup": {
+          "double_class": "2Cinfv",
+          "symbol": "2C_infv"
+        },
+        "sum": {
+          "from": "1/2",
+          "symbol": "m",
+          "to": "J"
+        },
+        "text": "D^(J,p) | 2C_infv = sum_{n=1/2..J} E_n for both p"
+      },
+      {
+        "cases": [
+          {
+            "if": "m > 0",
+            "terms": [
+              "E_{m}"
+            ]
+          }
+        ],
+        "generating_function": {
+          "families": [
+            {
+              "denominator": [
+                2
+              ],
+              "family": "Eh",
+              "label_template": "E_n",
+              "numerator": "t^(2n)"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "subgroup": {
+          "double_class": "2Dinf",
+          "symbol": "2D_inf"
+        },
+        "sum": {
+          "from": "1/2",
+          "symbol": "m",
+          "to": "J"
+        },
+        "text": "D^(J,p) | 2D_inf = sum_{n=1/2..J} E_n for both p"
+      },
+      {
+        "cases": [
+          {
+            "if": "m > 0",
+            "terms": [
+              "E_{m}"
+            ]
+          }
+        ],
+        "generating_function": {
+          "families": [
+            {
+              "denominator": [
+                2
+              ],
+              "family": "Ehg",
+              "label_template": "E_n,g",
+              "numerator": "t^(2n)"
+            },
+            {
+              "denominator": [],
+              "family": "Ehu",
+              "label_template": "E_n,u",
+              "numerator": "0"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "subgroup": {
+          "double_class": "2Dinfh",
+          "symbol": "2D_infh"
+        },
+        "sum": {
+          "from": "1/2",
+          "symbol": "m",
+          "to": "J"
+        },
+        "tag": {
+          "by": "p",
+          "minus": "u",
+          "plus": "g"
+        },
+        "text": "D^(J,p) | 2D_infh = sum_{n=1/2..J} E_n,x, x = g if p = +1, u if p = -1"
+      },
+      {
+        "subgroup": {
+          "double_class": "SU2",
+          "symbol": "SU(2)"
+        },
+        "terms": [
+          "D^(J)"
+        ],
+        "text": "D^(J,p) | SU(2) = D^(J) for both p"
+      }
+    ],
+    "count": {
+      "continuous": 6,
+      "exceptional": 7,
+      "families": 11
+    },
+    "exceptional": [
+      {
+        "generating_function": "double/2T#/subduction_basis/generating_function",
+        "subgroup": {
+          "double_class": "2T",
+          "order": 24,
+          "symbol": "2T"
+        }
+      },
+      {
+        "generating_function": "double/2Th#/subduction_basis/generating_function",
+        "subgroup": {
+          "double_class": "2Th",
+          "order": 48,
+          "symbol": "2T_h"
+        }
+      },
+      {
+        "generating_function": "double/2Td#/subduction_basis/generating_function",
+        "subgroup": {
+          "double_class": "2Td",
+          "order": 48,
+          "symbol": "2T_d"
+        }
+      },
+      {
+        "generating_function": "double/2O#/subduction_basis/generating_function",
+        "subgroup": {
+          "double_class": "2O",
+          "order": 48,
+          "symbol": "2O"
+        }
+      },
+      {
+        "generating_function": "double/2Oh#/subduction_basis/generating_function",
+        "subgroup": {
+          "double_class": "2Oh",
+          "order": 96,
+          "symbol": "2O_h"
+        }
+      },
+      {
+        "generating_function": "double/2I#/subduction_basis/generating_function",
+        "subgroup": {
+          "double_class": "2I",
+          "order": 120,
+          "symbol": "2I"
+        }
+      },
+      {
+        "generating_function": "double/2Ih#/subduction_basis/generating_function",
+        "subgroup": {
+          "double_class": "2Ih",
+          "order": 240,
+          "symbol": "2I_h"
+        }
+      }
+    ],
+    "families": [
+      {
+        "N": "every",
+        "N_min": 1,
+        "cases": [
+          {
+            "if": "0 < q < N/2",
+            "terms": [
+              "1E_{q}"
+            ]
+          },
+          {
+            "if": "q = N/2",
+            "terms": [
+              "A_{N/2}"
+            ]
+          },
+          {
+            "if": "N/2 < q < N",
+            "terms": [
+              "2E_{N-q}"
+            ]
+          }
+        ],
+        "family": "Cn",
+        "generating_function": {
+          "denominator": [
+            "2",
+            "2N"
+          ],
+          "numerators": [
+            {
+              "if": "0 < k < N/2",
+              "irrep": "1E_{k}",
+              "numerator": "t^(2k) + t^(2N-2k)"
+            },
+            {
+              "if": "N odd",
+              "irrep": "A_{N/2}",
+              "numerator": "2*t^N"
+            },
+            {
+              "if": "0 < k < N/2",
+              "irrep": "2E_{k}",
+              "numerator": "t^(2k) + t^(2N-2k)"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "q": "m mod N",
+        "sum": {
+          "from": "-J",
+          "symbol": "m",
+          "to": "J"
+        },
+        "text": "D^(J,p) | 2C_N = SU(2)'s rule for both p"
+      },
+      {
+        "N": "odd",
+        "N_min": 1,
+        "cases": [
+          {
+            "if": "0 < q < N/2",
+            "terms": [
+              "1E_{q}"
+            ]
+          },
+          {
+            "if": "q = N/2",
+            "terms": [
+              "A_{N/2}"
+            ]
+          },
+          {
+            "if": "N/2 < q < N",
+            "terms": [
+              "2E_{N-q}"
+            ]
+          }
+        ],
+        "family": "S2n",
+        "generating_function": {
+          "denominator": [
+            "2",
+            "2N"
+          ],
+          "numerators": [
+            {
+              "if": "0 < k < N/2",
+              "irrep": "1E_{k},g",
+              "numerator": "t^(2k) + t^(2N-2k)"
+            },
+            {
+              "if": "N odd",
+              "irrep": "A_{N/2},g",
+              "numerator": "2*t^N"
+            },
+            {
+              "if": "0 < k < N/2",
+              "irrep": "2E_{k},g",
+              "numerator": "t^(2k) + t^(2N-2k)"
+            },
+            {
+              "if": "0 < k < N/2",
+              "irrep": "1E_{k},u",
+              "numerator": "0"
+            },
+            {
+              "if": "N odd",
+              "irrep": "A_{N/2},u",
+              "numerator": "0"
+            },
+            {
+              "if": "0 < k < N/2",
+              "irrep": "2E_{k},u",
+              "numerator": "0"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "q": "m mod N",
+        "sum": {
+          "from": "-J",
+          "symbol": "m",
+          "to": "J"
+        },
+        "tag": {
+          "by": "p",
+          "minus": "u",
+          "plus": "g"
+        },
+        "text": "D^(J,p) | 2S_2N (N odd) = sum_{m=-J..J} G(q),x, q = m mod N, G(q) as for 2C_N, x = g if p = +1, u if p = -1"
+      },
+      {
+        "N": "even",
+        "N_min": 2,
+        "cases": [
+          {
+            "if": "q mod N < N/2",
+            "terms": [
+              "1E_{min(q, 2N-q)}"
+            ]
+          },
+          {
+            "if": "q mod N > N/2",
+            "terms": [
+              "2E_{min(q, 2N-q)}"
+            ]
+          }
+        ],
+        "family": "S2n",
+        "generating_function": {
+          "denominator": [
+            "2",
+            "4N"
+          ],
+          "numerators": [
+            {
+              "if": "0 < k < N",
+              "irrep": "1E_{k}",
+              "numerator": "t^(2k) + t^(4N-2k)"
+            },
+            {
+              "if": "0 < k < N",
+              "irrep": "2E_{k}",
+              "numerator": "t^(2k) + t^(4N-2k)"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "q": "m + N[p = -1] mod 2N",
+        "sum": {
+          "from": "-J",
+          "symbol": "m",
+          "to": "J"
+        },
+        "text": "D^(J,p) | 2S_2N (N even) = sum_{m=-J..J} G, q = m + N[p = -1] mod 2N; G = 1E_{min(q,2N-q)} if q mod N < N/2, 2E_{min(q,2N-q)} if q mod N > N/2"
+      },
+      {
+        "N": "odd",
+        "N_min": 1,
+        "cases": [
+          {
+            "if": "always",
+            "terms": [
+              "E_{min(q, 2N-q)}"
+            ]
+          }
+        ],
+        "family": "Cnh",
+        "generating_function": {
+          "denominator": [
+            "2",
+            "4N"
+          ],
+          "numerators": [
+            {
+              "if": "0 < k < N",
+              "irrep": "E_{k}'",
+              "numerator": "t^(2k) + t^(4N-2k)"
+            },
+            {
+              "if": "0 < k < N",
+              "irrep": "E_{k}''",
+              "numerator": "t^(2k) + t^(4N-2k)"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "q": "m + N[p = -1] mod 2N",
+        "sum": {
+          "from": "-J",
+          "symbol": "m",
+          "to": "J"
+        },
+        "tag": {
+          "by": "p(-1)^(m-1/2)",
+          "minus": "''",
+          "plus": "'"
+        },
+        "text": "D^(J,p) | 2C_Nh (N odd) = sum_{m=-J..J} E_{min(q,2N-q)}x, q = m + N[p = -1] mod 2N, x = ' if p (-1)^(m-1/2) = +1, '' if it is -1"
+      },
+      {
+        "N": "even",
+        "N_min": 2,
+        "cases": [
+          {
+            "if": "0 < q < N/2",
+            "terms": [
+              "1E_{q}"
+            ]
+          },
+          {
+            "if": "N/2 < q < N",
+            "terms": [
+              "2E_{N-q}"
+            ]
+          }
+        ],
+        "family": "Cnh",
+        "generating_function": {
+          "denominator": [
+            "2",
+            "2N"
+          ],
+          "numerators": [
+            {
+              "if": "0 < k < N/2",
+              "irrep": "1E_{k},g",
+              "numerator": "t^(2k) + t^(2N-2k)"
+            },
+            {
+              "if": "0 < k < N/2",
+              "irrep": "2E_{k},g",
+              "numerator": "t^(2k) + t^(2N-2k)"
+            },
+            {
+              "if": "0 < k < N/2",
+              "irrep": "1E_{k},u",
+              "numerator": "0"
+            },
+            {
+              "if": "0 < k < N/2",
+              "irrep": "2E_{k},u",
+              "numerator": "0"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "q": "m mod N",
+        "sum": {
+          "from": "-J",
+          "symbol": "m",
+          "to": "J"
+        },
+        "tag": {
+          "by": "p",
+          "minus": "u",
+          "plus": "g"
+        },
+        "text": "D^(J,p) | 2C_Nh (N even) = sum_{m=-J..J} G(q),x, q = m mod N, G(q) as for 2C_N, x = g if p = +1, u if p = -1"
+      },
+      {
+        "N": "every",
+        "N_min": 1,
+        "cases": [
+          {
+            "if": "q != N/2",
+            "terms": [
+              "E_{min(q, N-q)}"
+            ]
+          },
+          {
+            "if": "q = N/2",
+            "terms": [
+              "1E_{N/2}",
+              "2E_{N/2}"
+            ]
+          }
+        ],
+        "family": "Cnv",
+        "generating_function": {
+          "denominator": [
+            "2",
+            "2N"
+          ],
+          "numerators": [
+            {
+              "if": "0 < k < N/2",
+              "irrep": "E_{k}",
+              "numerator": "t^(2k) + t^(2N-2k)"
+            },
+            {
+              "if": "N odd",
+              "irrep": "1E_{N/2}",
+              "numerator": "t^N"
+            },
+            {
+              "if": "N odd",
+              "irrep": "2E_{N/2}",
+              "numerator": "t^N"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "q": "m mod N",
+        "sum": {
+          "from": "1/2",
+          "symbol": "m",
+          "to": "J"
+        },
+        "text": "D^(J,p) | 2C_Nv = sum_{m=1/2..J} G(q), q = m mod N, G(q) as for 2D_N, for both p"
+      },
+      {
+        "N": "every",
+        "N_min": 2,
+        "cases": [
+          {
+            "if": "q != N/2",
+            "terms": [
+              "E_{min(q, N-q)}"
+            ]
+          },
+          {
+            "if": "q = N/2",
+            "terms": [
+              "1E_{N/2}",
+              "2E_{N/2}"
+            ]
+          }
+        ],
+        "family": "Dn",
+        "generating_function": {
+          "denominator": [
+            "2",
+            "2N"
+          ],
+          "numerators": [
+            {
+              "if": "0 < k < N/2",
+              "irrep": "E_{k}",
+              "numerator": "t^(2k) + t^(2N-2k)"
+            },
+            {
+              "if": "N odd",
+              "irrep": "1E_{N/2}",
+              "numerator": "t^N"
+            },
+            {
+              "if": "N odd",
+              "irrep": "2E_{N/2}",
+              "numerator": "t^N"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "q": "m mod N",
+        "sum": {
+          "from": "1/2",
+          "symbol": "m",
+          "to": "J"
+        },
+        "text": "D^(J,p) | 2D_N = SU(2)'s rule for both p"
+      },
+      {
+        "N": "odd",
+        "N_min": 1,
+        "cases": [
+          {
+            "if": "always",
+            "terms": [
+              "E_{min(q, 2N-q)}"
+            ]
+          }
+        ],
+        "family": "Dnh",
+        "generating_function": {
+          "denominator": [
+            "2",
+            "4N"
+          ],
+          "numerators": [
+            {
+              "if": "0 < k < N",
+              "irrep": "E_{k}",
+              "numerator": "t^(2k) + t^(4N-2k)"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "q": "m + N[p = -1] mod 2N",
+        "sum": {
+          "from": "1/2",
+          "symbol": "m",
+          "to": "J"
+        },
+        "text": "D^(J,p) | 2D_Nh (N odd) = sum_{m=1/2..J} E_{min(q,2N-q)}, q = m + N[p = -1] mod 2N"
+      },
+      {
+        "N": "even",
+        "N_min": 2,
+        "cases": [
+          {
+            "if": "always",
+            "terms": [
+              "E_{min(q, N-q)}"
+            ]
+          }
+        ],
+        "family": "Dnh",
+        "generating_function": {
+          "denominator": [
+            "2",
+            "2N"
+          ],
+          "numerators": [
+            {
+              "if": "0 < k < N/2",
+              "irrep": "E_{k},g",
+              "numerator": "t^(2k) + t^(2N-2k)"
+            },
+            {
+              "if": "0 < k < N/2",
+              "irrep": "E_{k},u",
+              "numerator": "0"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "q": "m mod N",
+        "sum": {
+          "from": "1/2",
+          "symbol": "m",
+          "to": "J"
+        },
+        "tag": {
+          "by": "p",
+          "minus": "u",
+          "plus": "g"
+        },
+        "text": "D^(J,p) | 2D_Nh (N even) = 2D_N's terms, each with ,g if p = +1, ,u if p = -1"
+      },
+      {
+        "N": "odd",
+        "N_min": 1,
+        "cases": [
+          {
+            "if": "q != N/2",
+            "terms": [
+              "E_{min(q, N-q)}"
+            ]
+          },
+          {
+            "if": "q = N/2",
+            "terms": [
+              "1E_{N/2}",
+              "2E_{N/2}"
+            ]
+          }
+        ],
+        "family": "Dnd",
+        "generating_function": {
+          "denominator": [
+            "2",
+            "2N"
+          ],
+          "numerators": [
+            {
+              "if": "0 < k < N/2",
+              "irrep": "E_{k},g",
+              "numerator": "t^(2k) + t^(2N-2k)"
+            },
+            {
+              "if": "N odd",
+              "irrep": "1E_{N/2},g",
+              "numerator": "t^N"
+            },
+            {
+              "if": "N odd",
+              "irrep": "2E_{N/2},g",
+              "numerator": "t^N"
+            },
+            {
+              "if": "0 < k < N/2",
+              "irrep": "E_{k},u",
+              "numerator": "0"
+            },
+            {
+              "if": "N odd",
+              "irrep": "1E_{N/2},u",
+              "numerator": "0"
+            },
+            {
+              "if": "N odd",
+              "irrep": "2E_{N/2},u",
+              "numerator": "0"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "q": "m mod N",
+        "sum": {
+          "from": "1/2",
+          "symbol": "m",
+          "to": "J"
+        },
+        "tag": {
+          "by": "p",
+          "minus": "u",
+          "plus": "g"
+        },
+        "text": "D^(J,p) | 2D_Nd (N odd) = 2D_N's terms, each with ,g if p = +1, ,u if p = -1"
+      },
+      {
+        "N": "even",
+        "N_min": 2,
+        "cases": [
+          {
+            "if": "always",
+            "terms": [
+              "E_{min(q, 2N-q)}"
+            ]
+          }
+        ],
+        "family": "Dnd",
+        "generating_function": {
+          "denominator": [
+            "2",
+            "4N"
+          ],
+          "numerators": [
+            {
+              "if": "0 < k < N",
+              "irrep": "E_{k}",
+              "numerator": "t^(2k) + t^(4N-2k)"
+            }
+          ],
+          "parity": "+1",
+          "variable": "t^(2J)"
+        },
+        "q": "m + N[p = -1] mod 2N",
+        "sum": {
+          "from": "1/2",
+          "symbol": "m",
+          "to": "J"
+        },
+        "text": "D^(J,p) | 2D_Nd (N even) = sum_{m=1/2..J} E_{min(q,2N-q)}, q = m + N[p = -1] mod 2N"
+      }
+    ],
+    "integer_J": "rotation/O3#/subduction_rules",
+    "parity": "the generating functions count the blocks at p = +1, as the members' records; at p = -1 the multiplicity of L is that of L (x) det, det the determinant character of the subgroup",
+    "sections": "a section over C_N or S_2N (N odd) is restricted as its preimage, each spinor irrep renamed by the section's record (double/CONVENTIONS.md section 27)"
+  },
+  "subgroup_classes": {
+    "aliases": [
+      {
+        "alias": "2C1h",
+        "class": "2C1v",
+        "symbol": "2C_s"
+      },
+      {
+        "alias": "2D1",
+        "class": "2C2",
+        "symbol": "2C_2"
+      },
+      {
+        "alias": "2D1d",
+        "class": "2C2h",
+        "symbol": "2C_2h"
+      },
+      {
+        "alias": "2D1h",
+        "class": "2C2v",
+        "symbol": "2C_2v"
+      }
+    ],
+    "continuous": [
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "double_class": "2Cinf",
+          "order": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2C_inf"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "double_class": "2Cinfh",
+          "order": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2C_infh"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "double_class": "2Cinfv",
+          "order": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2C_infv"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "double_class": "2Dinf",
+          "order": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_inf"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 1,
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "double_class": "2Dinfh",
+          "order": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2C_i"
+        },
+        "class_size": 1,
+        "normal": true,
+        "normalizer": {
+          "index": 2,
+          "symbol": "Pin^-(3)"
+        },
+        "subgroup": {
+          "double_class": "SU2",
+          "order": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "SU(2)"
+        }
+      }
+    ],
+    "count": {
+      "continuous": 6,
+      "finite": 105
+    },
+    "finite": [
+      {
+        "centralizer": {
+          "normalizer_index": 1,
+          "symbol": "Pin^-(3)"
+        },
+        "class_size": 1,
+        "normal": true,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "Pin^-(3)"
+        },
+        "subgroup": {
+          "N": 1,
+          "double_class": "2C1",
+          "family": "Cn",
+          "order": 2,
+          "symbol": "2C_1"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 2,
+          "double_class": "2C2",
+          "family": "Cn",
+          "order": 4,
+          "symbol": "2C_2"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 3,
+          "double_class": "2C3",
+          "family": "Cn",
+          "order": 6,
+          "symbol": "2C_3"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 4,
+          "double_class": "2C4",
+          "family": "Cn",
+          "order": 8,
+          "symbol": "2C_4"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 5,
+          "double_class": "2C5",
+          "family": "Cn",
+          "order": 10,
+          "symbol": "2C_5"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 6,
+          "double_class": "2C6",
+          "family": "Cn",
+          "order": 12,
+          "symbol": "2C_6"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 7,
+          "double_class": "2C7",
+          "family": "Cn",
+          "order": 14,
+          "symbol": "2C_7"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 8,
+          "double_class": "2C8",
+          "family": "Cn",
+          "order": 16,
+          "symbol": "2C_8"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 9,
+          "double_class": "2C9",
+          "family": "Cn",
+          "order": 18,
+          "symbol": "2C_9"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 10,
+          "double_class": "2C10",
+          "family": "Cn",
+          "order": 20,
+          "symbol": "2C_10"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 11,
+          "double_class": "2C11",
+          "family": "Cn",
+          "order": 22,
+          "symbol": "2C_11"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 12,
+          "double_class": "2C12",
+          "family": "Cn",
+          "order": 24,
+          "symbol": "2C_12"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 1,
+          "symbol": "Pin^-(3)"
+        },
+        "class_size": 1,
+        "normal": true,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "Pin^-(3)"
+        },
+        "subgroup": {
+          "N": 1,
+          "double_class": "C1",
+          "family": "Cn",
+          "order": 1,
+          "symbol": "C_1"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 3,
+          "double_class": "C3",
+          "family": "Cn",
+          "order": 3,
+          "symbol": "C_3"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 5,
+          "double_class": "C5",
+          "family": "Cn",
+          "order": 5,
+          "symbol": "C_5"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 7,
+          "double_class": "C7",
+          "family": "Cn",
+          "order": 7,
+          "symbol": "C_7"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 9,
+          "double_class": "C9",
+          "family": "Cn",
+          "order": 9,
+          "symbol": "C_9"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 11,
+          "double_class": "C11",
+          "family": "Cn",
+          "order": 11,
+          "symbol": "C_11"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 1,
+          "symbol": "Pin^-(3)"
+        },
+        "class_size": 1,
+        "normal": true,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "Pin^-(3)"
+        },
+        "subgroup": {
+          "N": 1,
+          "double_class": "2S2",
+          "family": "S2n",
+          "order": 4,
+          "symbol": "2C_i"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 2,
+          "double_class": "2S4",
+          "family": "S2n",
+          "order": 8,
+          "symbol": "2S_4"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 3,
+          "double_class": "2S6",
+          "family": "S2n",
+          "order": 12,
+          "symbol": "2S_6"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 4,
+          "double_class": "2S8",
+          "family": "S2n",
+          "order": 16,
+          "symbol": "2S_8"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 5,
+          "double_class": "2S10",
+          "family": "S2n",
+          "order": 20,
+          "symbol": "2S_10"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 6,
+          "double_class": "2S12",
+          "family": "S2n",
+          "order": 24,
+          "symbol": "2S_12"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 7,
+          "double_class": "2S14",
+          "family": "S2n",
+          "order": 28,
+          "symbol": "2S_14"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 8,
+          "double_class": "2S16",
+          "family": "S2n",
+          "order": 32,
+          "symbol": "2S_16"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 9,
+          "double_class": "2S18",
+          "family": "S2n",
+          "order": 36,
+          "symbol": "2S_18"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 10,
+          "double_class": "2S20",
+          "family": "S2n",
+          "order": 40,
+          "symbol": "2S_20"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 11,
+          "double_class": "2S22",
+          "family": "S2n",
+          "order": 44,
+          "symbol": "2S_22"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 12,
+          "double_class": "2S24",
+          "family": "S2n",
+          "order": 48,
+          "symbol": "2S_24"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 1,
+          "symbol": "Pin^-(3)"
+        },
+        "class_size": 1,
+        "normal": true,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "Pin^-(3)"
+        },
+        "subgroup": {
+          "N": 1,
+          "double_class": "S2",
+          "family": "S2n",
+          "order": 2,
+          "symbol": "C_i"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 3,
+          "double_class": "S6",
+          "family": "S2n",
+          "order": 6,
+          "symbol": "S_6"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 5,
+          "double_class": "S10",
+          "family": "S2n",
+          "order": 10,
+          "symbol": "S_10"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 7,
+          "double_class": "S14",
+          "family": "S2n",
+          "order": 14,
+          "symbol": "S_14"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 9,
+          "double_class": "S18",
+          "family": "S2n",
+          "order": 18,
+          "symbol": "S_18"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 11,
+          "double_class": "S22",
+          "family": "S2n",
+          "order": 22,
+          "symbol": "S_22"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 1,
+          "symbol": "Pin^-(3)"
+        },
+        "class_size": 1,
+        "normal": true,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "Pin^-(3)"
+        },
+        "subgroup": {
+          "N": 1,
+          "double_class": "S2b",
+          "family": "S2n",
+          "order": 2,
+          "symbol": "C_ib"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 3,
+          "double_class": "S6b",
+          "family": "S2n",
+          "order": 6,
+          "symbol": "S_6b"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 5,
+          "double_class": "S10b",
+          "family": "S2n",
+          "order": 10,
+          "symbol": "S_10b"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 7,
+          "double_class": "S14b",
+          "family": "S2n",
+          "order": 14,
+          "symbol": "S_14b"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 9,
+          "double_class": "S18b",
+          "family": "S2n",
+          "order": 18,
+          "symbol": "S_18b"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 11,
+          "double_class": "S22b",
+          "family": "S2n",
+          "order": 22,
+          "symbol": "S_22b"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 2,
+          "double_class": "2C2h",
+          "family": "Cnh",
+          "order": 8,
+          "symbol": "2C_2h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 3,
+          "double_class": "2C3h",
+          "family": "Cnh",
+          "order": 12,
+          "symbol": "2C_3h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 4,
+          "double_class": "2C4h",
+          "family": "Cnh",
+          "order": 16,
+          "symbol": "2C_4h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 5,
+          "double_class": "2C5h",
+          "family": "Cnh",
+          "order": 20,
+          "symbol": "2C_5h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 6,
+          "double_class": "2C6h",
+          "family": "Cnh",
+          "order": 24,
+          "symbol": "2C_6h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 7,
+          "double_class": "2C7h",
+          "family": "Cnh",
+          "order": 28,
+          "symbol": "2C_7h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 8,
+          "double_class": "2C8h",
+          "family": "Cnh",
+          "order": 32,
+          "symbol": "2C_8h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 9,
+          "double_class": "2C9h",
+          "family": "Cnh",
+          "order": 36,
+          "symbol": "2C_9h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 10,
+          "double_class": "2C10h",
+          "family": "Cnh",
+          "order": 40,
+          "symbol": "2C_10h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 11,
+          "double_class": "2C11h",
+          "family": "Cnh",
+          "order": 44,
+          "symbol": "2C_11h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 12,
+          "double_class": "2C12h",
+          "family": "Cnh",
+          "order": 48,
+          "symbol": "2C_12h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 2,
+          "symbol": "2C_infh"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": {
+            "reason": "continuous-group",
+            "value": null
+          },
+          "symbol": "2D_infh"
+        },
+        "subgroup": {
+          "N": 1,
+          "double_class": "2C1v",
+          "family": "Cnv",
+          "order": 4,
+          "symbol": "2C_s"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 8,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_4h"
+        },
+        "subgroup": {
+          "N": 2,
+          "double_class": "2C2v",
+          "family": "Cnv",
+          "order": 8,
+          "symbol": "2C_2v"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 12,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_6h"
+        },
+        "subgroup": {
+          "N": 3,
+          "double_class": "2C3v",
+          "family": "Cnv",
+          "order": 12,
+          "symbol": "2C_3v"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 16,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_8h"
+        },
+        "subgroup": {
+          "N": 4,
+          "double_class": "2C4v",
+          "family": "Cnv",
+          "order": 16,
+          "symbol": "2C_4v"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 20,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_10h"
+        },
+        "subgroup": {
+          "N": 5,
+          "double_class": "2C5v",
+          "family": "Cnv",
+          "order": 20,
+          "symbol": "2C_5v"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 24,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_12h"
+        },
+        "subgroup": {
+          "N": 6,
+          "double_class": "2C6v",
+          "family": "Cnv",
+          "order": 24,
+          "symbol": "2C_6v"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 28,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_14h"
+        },
+        "subgroup": {
+          "N": 7,
+          "double_class": "2C7v",
+          "family": "Cnv",
+          "order": 28,
+          "symbol": "2C_7v"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 32,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_16h"
+        },
+        "subgroup": {
+          "N": 8,
+          "double_class": "2C8v",
+          "family": "Cnv",
+          "order": 32,
+          "symbol": "2C_8v"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 36,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_18h"
+        },
+        "subgroup": {
+          "N": 9,
+          "double_class": "2C9v",
+          "family": "Cnv",
+          "order": 36,
+          "symbol": "2C_9v"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 40,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_20h"
+        },
+        "subgroup": {
+          "N": 10,
+          "double_class": "2C10v",
+          "family": "Cnv",
+          "order": 40,
+          "symbol": "2C_10v"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 44,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_22h"
+        },
+        "subgroup": {
+          "N": 11,
+          "double_class": "2C11v",
+          "family": "Cnv",
+          "order": 44,
+          "symbol": "2C_11v"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 48,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_24h"
+        },
+        "subgroup": {
+          "N": 12,
+          "double_class": "2C12v",
+          "family": "Cnv",
+          "order": 48,
+          "symbol": "2C_12v"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 24,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 12,
+          "symbol": "2O_h"
+        },
+        "subgroup": {
+          "N": 2,
+          "double_class": "2D2",
+          "family": "Dn",
+          "order": 8,
+          "symbol": "2D_2"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 12,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_6h"
+        },
+        "subgroup": {
+          "N": 3,
+          "double_class": "2D3",
+          "family": "Dn",
+          "order": 12,
+          "symbol": "2D_3"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 16,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_8h"
+        },
+        "subgroup": {
+          "N": 4,
+          "double_class": "2D4",
+          "family": "Dn",
+          "order": 16,
+          "symbol": "2D_4"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 20,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_10h"
+        },
+        "subgroup": {
+          "N": 5,
+          "double_class": "2D5",
+          "family": "Dn",
+          "order": 20,
+          "symbol": "2D_5"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 24,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_12h"
+        },
+        "subgroup": {
+          "N": 6,
+          "double_class": "2D6",
+          "family": "Dn",
+          "order": 24,
+          "symbol": "2D_6"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 28,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_14h"
+        },
+        "subgroup": {
+          "N": 7,
+          "double_class": "2D7",
+          "family": "Dn",
+          "order": 28,
+          "symbol": "2D_7"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 32,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_16h"
+        },
+        "subgroup": {
+          "N": 8,
+          "double_class": "2D8",
+          "family": "Dn",
+          "order": 32,
+          "symbol": "2D_8"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 36,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_18h"
+        },
+        "subgroup": {
+          "N": 9,
+          "double_class": "2D9",
+          "family": "Dn",
+          "order": 36,
+          "symbol": "2D_9"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 40,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_20h"
+        },
+        "subgroup": {
+          "N": 10,
+          "double_class": "2D10",
+          "family": "Dn",
+          "order": 40,
+          "symbol": "2D_10"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 44,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_22h"
+        },
+        "subgroup": {
+          "N": 11,
+          "double_class": "2D11",
+          "family": "Dn",
+          "order": 44,
+          "symbol": "2D_11"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 48,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2D_24h"
+        },
+        "subgroup": {
+          "N": 12,
+          "double_class": "2D12",
+          "family": "Dn",
+          "order": 48,
+          "symbol": "2D_12"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 24,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 6,
+          "symbol": "2O_h"
+        },
+        "subgroup": {
+          "N": 2,
+          "double_class": "2D2h",
+          "family": "Dnh",
+          "order": 16,
+          "symbol": "2D_2h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 12,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_6h"
+        },
+        "subgroup": {
+          "N": 3,
+          "double_class": "2D3h",
+          "family": "Dnh",
+          "order": 24,
+          "symbol": "2D_3h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 16,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_8h"
+        },
+        "subgroup": {
+          "N": 4,
+          "double_class": "2D4h",
+          "family": "Dnh",
+          "order": 32,
+          "symbol": "2D_4h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 20,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_10h"
+        },
+        "subgroup": {
+          "N": 5,
+          "double_class": "2D5h",
+          "family": "Dnh",
+          "order": 40,
+          "symbol": "2D_5h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 24,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_12h"
+        },
+        "subgroup": {
+          "N": 6,
+          "double_class": "2D6h",
+          "family": "Dnh",
+          "order": 48,
+          "symbol": "2D_6h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 28,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_14h"
+        },
+        "subgroup": {
+          "N": 7,
+          "double_class": "2D7h",
+          "family": "Dnh",
+          "order": 56,
+          "symbol": "2D_7h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 32,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_16h"
+        },
+        "subgroup": {
+          "N": 8,
+          "double_class": "2D8h",
+          "family": "Dnh",
+          "order": 64,
+          "symbol": "2D_8h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 36,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_18h"
+        },
+        "subgroup": {
+          "N": 9,
+          "double_class": "2D9h",
+          "family": "Dnh",
+          "order": 72,
+          "symbol": "2D_9h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 40,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_20h"
+        },
+        "subgroup": {
+          "N": 10,
+          "double_class": "2D10h",
+          "family": "Dnh",
+          "order": 80,
+          "symbol": "2D_10h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 44,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_22h"
+        },
+        "subgroup": {
+          "N": 11,
+          "double_class": "2D11h",
+          "family": "Dnh",
+          "order": 88,
+          "symbol": "2D_11h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 48,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_24h"
+        },
+        "subgroup": {
+          "N": 12,
+          "double_class": "2D12h",
+          "family": "Dnh",
+          "order": 96,
+          "symbol": "2D_12h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 8,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_4h"
+        },
+        "subgroup": {
+          "N": 2,
+          "double_class": "2D2d",
+          "family": "Dnd",
+          "order": 16,
+          "symbol": "2D_2d"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 12,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_6h"
+        },
+        "subgroup": {
+          "N": 3,
+          "double_class": "2D3d",
+          "family": "Dnd",
+          "order": 24,
+          "symbol": "2D_3d"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 16,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_8h"
+        },
+        "subgroup": {
+          "N": 4,
+          "double_class": "2D4d",
+          "family": "Dnd",
+          "order": 32,
+          "symbol": "2D_4d"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 20,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_10h"
+        },
+        "subgroup": {
+          "N": 5,
+          "double_class": "2D5d",
+          "family": "Dnd",
+          "order": 40,
+          "symbol": "2D_5d"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 24,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_12h"
+        },
+        "subgroup": {
+          "N": 6,
+          "double_class": "2D6d",
+          "family": "Dnd",
+          "order": 48,
+          "symbol": "2D_6d"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 28,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_14h"
+        },
+        "subgroup": {
+          "N": 7,
+          "double_class": "2D7d",
+          "family": "Dnd",
+          "order": 56,
+          "symbol": "2D_7d"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 32,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_16h"
+        },
+        "subgroup": {
+          "N": 8,
+          "double_class": "2D8d",
+          "family": "Dnd",
+          "order": 64,
+          "symbol": "2D_8d"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 36,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_18h"
+        },
+        "subgroup": {
+          "N": 9,
+          "double_class": "2D9d",
+          "family": "Dnd",
+          "order": 72,
+          "symbol": "2D_9d"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 40,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_20h"
+        },
+        "subgroup": {
+          "N": 10,
+          "double_class": "2D10d",
+          "family": "Dnd",
+          "order": 80,
+          "symbol": "2D_10d"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 44,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_22h"
+        },
+        "subgroup": {
+          "N": 11,
+          "double_class": "2D11d",
+          "family": "Dnd",
+          "order": 88,
+          "symbol": "2D_11d"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 48,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2D_24h"
+        },
+        "subgroup": {
+          "N": 12,
+          "double_class": "2D12d",
+          "family": "Dnd",
+          "order": 96,
+          "symbol": "2D_12d"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 24,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 4,
+          "symbol": "2O_h"
+        },
+        "subgroup": {
+          "double_class": "2T",
+          "order": 24,
+          "symbol": "2T"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 24,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2O_h"
+        },
+        "subgroup": {
+          "double_class": "2Th",
+          "order": 48,
+          "symbol": "2T_h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 24,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2O_h"
+        },
+        "subgroup": {
+          "double_class": "2Td",
+          "order": 48,
+          "symbol": "2T_d"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 24,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2O_h"
+        },
+        "subgroup": {
+          "double_class": "2O",
+          "order": 48,
+          "symbol": "2O"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 24,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 1,
+          "symbol": "2O_h"
+        },
+        "subgroup": {
+          "double_class": "2Oh",
+          "order": 96,
+          "symbol": "2O_h"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 60,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 2,
+          "symbol": "2I_h"
+        },
+        "subgroup": {
+          "double_class": "2I",
+          "order": 120,
+          "symbol": "2I"
+        }
+      },
+      {
+        "centralizer": {
+          "normalizer_index": 60,
+          "symbol": "2C_i"
+        },
+        "class_size": {
+          "reason": "continuous-group",
+          "value": null
+        },
+        "normal": false,
+        "normalizer": {
+          "index": 1,
+          "symbol": "2I_h"
+        },
+        "subgroup": {
+          "double_class": "2Ih",
+          "order": 240,
+          "symbol": "2I_h"
+        }
+      }
     ]
   }
 }

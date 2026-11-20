@@ -609,13 +609,107 @@ CONTINUOUS = {"Cinf": ("U(1)", 2), "Cinfh": ("U(1)", 2), "Cinfv": ("N(U(1))", 4)
 
 
 def continuous_block(base):
-    """`invariants` of a continuous preimage: the binary forms."""
+    """`invariants` of a continuous preimage: the binary forms, and the Molien series of its
+    spinor irreps (continuous_molien)."""
     image, d = CONTINUOUS[base]
     gens = [] if d is None else [{"degree": d, "poly": {str(d // 2): ONE.to_json()}}]
     return {"binary": {"image": image, "generators": gens,
                        "hilbert_series": {"numerator": [1],
                                           "denominator": [] if d is None else [d]},
-                       "relation": None}}
+                       "relation": None},
+            "molien": continuous_molien(base)}
+
+
+# The Molien series of the spinor irreps of a continuous preimage (section 26.4), as the finite
+# records give theirs (molien), each {numerator, denominator}: P(t)/prod (1 - t^a).  An axial
+# preimage has them for every member of a family: 1 for a one-dimensional spinor irrep of 2C_inf or
+# 2C_infh, whose values on the lifts of the rotations about z fill U(1), and 1/(1 - t^2) for a
+# level of two of them, a complex-conjugate pair (the polynomials in xy); 1/(1 - t^4) for a
+# spinor irrep of 2C_infv, 2D_inf or 2D_infh, the lifts of the rotations about z multiplying its
+# partners by inverse phases and the other elements exchanging them with factors of product -1
+# (they square to Ebar): the polynomials in (xy)^2.  SU2's D^(J) and Pinminus3's D^(J,p), whose
+# series do not depend on p, have H_J(t) for 2J <= MOLIEN_TWOJ (molien_su2): as a series in t^2
+# (every invariant has even degree, Ebar acting as -1), over the denominator of the rule of the
+# levels (CONVENTIONS.md sections 19 and 26.4) with max(2J - 2, 0) factors, the dimension of the
+# ring (that of the forms of degree 2J less that of SU(2)), each 1 - t^a of even a: the least
+# product, then the lexicographically least, for which the numerator has nonnegative integer
+# coefficients, of degree sum(a) - 2J - 1 (the ring is Gorenstein), the identity holding to
+# degree 2 sum(a) + 2J.  2J = 5 gives (1 + t^18)/((1 - t^4)(1 - t^8)(1 - t^12)), the invariants
+# of degrees 4, 8, 12 and 18 of the binary quintic.
+MOLIEN_TWOJ = 7
+MOLIEN_TOP = 200
+MOLIEN_EARLY = 40
+
+
+def invariant_counts(twoJ, top):
+    """[the number of independent invariant polynomials of degree n of SU(2)'s D^(J), n = 0..top]:
+    the multisets of n values of m = -J, ..., J of sum 0 less those of sum 1 (Sylvester's count;
+    m + J in 0..2J, the sums nJ and nJ + 1), from the number of multisets of each size and sum."""
+    width = twoJ * top
+    count = [[0] * (width + 2) for _ in range(top + 1)]
+    count[0][0] = 1
+    for k in range(twoJ + 1):                  # the values m + J = k, each any number of times
+        for n in range(1, top + 1):
+            row, prev = count[n], count[n - 1]
+            for w in range(k, width + 2):
+                row[w] += prev[w - k]
+    return [0 if n * twoJ % 2 else count[n][n * twoJ // 2] - count[n][n * twoJ // 2 + 1]
+            for n in range(top + 1)]
+
+
+def molien_su2(twoJ):
+    """{"numerator", "denominator"} of H_J(t) by the rule above, the series computed to degree
+    MOLIEN_TOP: a denominator is tried on the first MOLIEN_EARLY coefficients, where most fail,
+    then on all; the build stops when one that passes needs the series further."""
+    d = max(twoJ - 2, 0)
+    known = invariant_counts(twoJ, MOLIEN_TOP)
+    if d == 0:
+        if any(known[1:]):
+            raise ValueError("D^(1/2) of SU(2) has an invariant of positive degree")
+        return {"numerator": [1], "denominator": []}
+
+    def numerator(den, n):
+        c = known[:n + 1]
+        for a in den:
+            c = [c[k] - (c[k - a] if k >= a else 0) for k in range(len(c))]
+        return c
+    p = 1
+    while True:
+        for f in UN.factorizations(p, d, 1, p):
+            den = [2 * a for a in f]
+            if min(numerator(den, MOLIEN_EARLY)) < 0:
+                continue
+            deg, top = sum(den) - twoJ - 1, 2 * sum(den) + twoJ
+            c = numerator(den, min(top, MOLIEN_TOP))
+            if deg < 0 or min(c) < 0 or any(c[deg + 1:]):
+                continue
+            if top > MOLIEN_TOP:
+                raise ValueError("H_J(t) of 2J = %d needs the series past degree %d"
+                                 % (twoJ, MOLIEN_TOP))
+            return {"numerator": c[:deg + 1], "denominator": den}
+        p += 1
+
+
+def continuous_molien(base):
+    """`molien` of a continuous preimage: per family (axial) or per instance with 2J <=
+    MOLIEN_TWOJ (SU2, Pinminus3), and the complex-conjugate pairs of 2C_inf and 2C_infh."""
+    from . import continuous as K
+    fams = K.families(base)
+    if base in K.SPHERICAL_COVERS:
+        return {"twoJ_max": MOLIEN_TWOJ, "instances": [
+            {"irrep": f.label(x), "irrep_id": K.instance_id(f, x), "twoJ": int(2 * x),
+             "dim": int(2 * x) + 1, "hilbert_series": molien_su2(int(2 * x))}
+            for twoJ in range(1, MOLIEN_TWOJ + 1, 2) for f in fams
+            for x in [Fraction(twoJ, 2)]], "levels": []}
+    one = CONTINUOUS[base][1] == 2
+    series = {"numerator": [1], "denominator": [] if one else [4]}
+    out = {"families": [{"family": f.id, "label_template": f.template, "dim": 1 if one else 2,
+                         "hilbert_series": series} for f in fams], "levels": []}
+    if one:
+        out["levels"] = [{"kind": "complex pair", "members": [f.id, f.conj], "dim": 2,
+                          "hilbert_series": {"numerator": [1], "denominator": [2]}}
+                         for f in fams if f.id.startswith("1")]
+    return out
 
 
 HIGHER_PARENT = {"O": "O", "Td": "O", "Oh": "O", "I": "I", "Ih": "I"}

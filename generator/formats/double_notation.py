@@ -55,7 +55,7 @@ DROP_UNUSED = (
     "relation.subset", "relation.exchange", "relation.iff",
     "operator.tangent", "operator.minimum", "operator.dimension",
     "operator.sign", "operator.lcm", "operator.imaginary", "operator.hom", "set.cyclotomic",
-    "mark.prime", "local.hk.template", "group.Hprime", "group.conjugate",
+    "local.hk.template", "group.Hprime", "group.conjugate",
     "group.center", "group.Gprime", "group.schoenflies.cs", "group.schoenflies.sinf",
     "group.schoenflies.k", "group.schoenflies.kh", "element.rotation.z", "class.rotation.angle",
     "element.rotoreflection.coordinate", "element.rotoreflection.axis",
@@ -180,9 +180,10 @@ REPLACE = {
     "group.su2": {"meaning": r"the unitary $2\times2$ matrices of determinant 1, the double "
                              r"cover of $\grp{SO(3)}$",
                   "defined": ("part:cover", "conv:20", "conv:19")},
-    # the index of a spinor family is half-odd (section 29.2)
+    # the index of a vector family is an integer, of a spinor family half-odd (section 29.2)
     "head.index.family": {"meaning": r"the range of the index of the irreps of a family, as "
-                                     r"$n \ge \tfrac{1}{2}$, half-odd",
+                                     r"$n \ge 1$, half-odd for a spinor family, as "
+                                     r"$n \ge \tfrac{1}{2}$",
                           "defined": ("part:families", "part:continuous_irreps", "conv:29.2")},
     # the image of a spinor irrep is no point group (section 23.1)
     "head.image": {"meaning": r"the image of an irrep, the group of its matrices, isomorphic to "
@@ -391,6 +392,8 @@ CONVENTIONS_ONLY = (
 # the term 2S+1 Gamma of section 19, which the spin-orbit levels read (section 25.2).
 EXTEND = {
     "head.degree": {"defined": ("part:invariants",)},
+    # the continuous documents box the determinant character among their families
+    "mark.determinant": {"defined": ("part:continuous_irreps",)},
     "local.spin": {"scope": ("finite|spin_orbit|", "conventions|conv:25.2|"),
                    "defined": ("part:spin_orbit", "conv:25.2")},
     "symbol.term": {"defined": ("part:spin_orbit", "conv:25.2")},

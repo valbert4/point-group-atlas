@@ -724,6 +724,18 @@ o3d = <|
     "vector_products" -> "rotation/Dinfh#/clebsch_gordan"
   |>,
   "domain" -> "continuous",
+  "fundamental_domain" -> <|
+    "image" -> "rotation/Dinfh#/fundamental_domain",
+    "space" -> <|
+      "lens" -> <|"reason" -> "not-defined-for-family", "value" -> Null|>,
+      "name" -> "projective plane"
+    |>,
+    "volumes" -> <|
+      "domain" -> <|"coefficient" -> {2, 1}, "dimension" -> 2, "pi_power" -> 1|>,
+      "group" -> <|"coefficient" -> {16, 1}, "dimension" -> 1, "pi_power" -> 1|>,
+      "pin_minus_3" -> <|"coefficient" -> {32, 1}, "dimension" -> 3, "pi_power" -> 2|>
+    |>
+  |>,
   "fusion" -> <|
     "condition_grammar" -> {"always", "m == n", "m != n", "m > n", "m < n"},
     "families" -> {"A1g", "A2g", "Eg", "A1u", "A2u", "Eu", "Ehg", "Ehu"},
@@ -1050,6 +1062,23 @@ o3d = <|
       "hilbert_series" -> <|"denominator" -> {4}, "numerator" -> {1}|>,
       "image" -> "N(U(1))",
       "relation" -> Null
+    |>,
+    "molien" -> <|
+      "families" -> {
+        <|
+          "dim" -> 2,
+          "family" -> "Ehg",
+          "hilbert_series" -> <|"denominator" -> {4}, "numerator" -> {1}|>,
+          "label_template" -> "E_n,g"
+        |>,
+        <|
+          "dim" -> 2,
+          "family" -> "Ehu",
+          "hilbert_series" -> <|"denominator" -> {4}, "numerator" -> {1}|>,
+          "label_template" -> "E_n,u"
+        |>
+      },
+      "levels" -> {}
     |>
   |>,
   "jj_configurations" -> <|
@@ -2235,8 +2264,8 @@ o3d = <|
   "subduction_basis" -> <|
     "allowed_m" -> <|
       "families" -> {
-        <|"family" -> "Ehg", "label_template" -> "E_n,g", "twoM" -> "2n, -2n"|>,
-        <|"family" -> "Ehu", "label_template" -> "E_n,u", "twoM" -> "2n, -2n"|>
+        <|"family" -> "Ehg", "label_template" -> "E_n,g", "parity" -> 1, "twoM" -> "2n, -2n"|>,
+        <|"family" -> "Ehu", "label_template" -> "E_n,u", "parity" -> -1, "twoM" -> "2n, -2n"|>
       }
     |>,
     "closed_form" -> <|
@@ -2249,8 +2278,16 @@ o3d = <|
         |>
       },
       "multiplicity" -> {
-        <|"family" -> "Ehg", "label_template" -> "E_n,g", "multiplicity" -> "[n <= J]"|>,
-        <|"family" -> "Ehu", "label_template" -> "E_n,u", "multiplicity" -> "[n <= J]"|>
+        <|
+          "family" -> "Ehg",
+          "label_template" -> "E_n,g",
+          "multiplicity" -> "[n <= J] at p = +1, 0 at p = -1"
+        |>,
+        <|
+          "family" -> "Ehu",
+          "label_template" -> "E_n,u",
+          "multiplicity" -> "0 at p = +1, [n <= J] at p = -1"
+        |>
       },
       "parity_rule" -> "D^(J,-1)|2G = (D^(J,+1)|2G) (x) det: at parity -1 a block keeps its kets and partners, its label g becomes u",
       "structure_theorem" -> "A = 2G n 2C_infh acts diagonally on |j,m>: 2Cinf and 2Cinfh are abelian, and each ket is a block; in 2Cinfv, 2Dinf and 2Dinfh the flip (sigma~_v(0) or C~_2'(0)) sends |j,m> to a multiple of |j,-m>, and the kets |j,-n>, |j,n> are the partners of one block of E_n"
@@ -3127,13 +3164,15 @@ o3d = <|
           "denominator" -> {2},
           "family" -> "Ehg",
           "label_template" -> "E_n,g",
-          "numerator" -> "t^(2n)"
+          "numerator" -> "t^(2n)",
+          "parity" -> 1
         |>,
         <|
           "denominator" -> {2},
           "family" -> "Ehu",
           "label_template" -> "E_n,u",
-          "numerator" -> "t^(2n)"
+          "numerator" -> "t^(2n)",
+          "parity" -> -1
         |>
       }
     |>,
@@ -3490,6 +3529,9 @@ o3d = <|
           "symbol" -> "2C_infh"
         |>,
         "class_ids" -> {"Cphi"},
+        "class_size" -> 1,
+        "index" -> 4,
+        "normal" -> True,
         "normalizer" -> <|
           "order" -> <|"reason" -> "continuous-group", "value" -> Null|>,
           "symbol" -> "2D_infh"
@@ -3557,6 +3599,9 @@ o3d = <|
           "symbol" -> "2C_infh"
         |>,
         "class_ids" -> {"Cphi", "iCphi"},
+        "class_size" -> 1,
+        "index" -> 2,
+        "normal" -> True,
         "normalizer" -> <|
           "order" -> <|"reason" -> "continuous-group", "value" -> Null|>,
           "symbol" -> "2D_infh"
@@ -3621,6 +3666,9 @@ o3d = <|
       <|
         "centralizer" -> <|"order" -> 4, "symbol" -> "2C_i"|>,
         "class_ids" -> {"Cphi", "sv"},
+        "class_size" -> 1,
+        "index" -> 2,
+        "normal" -> True,
         "normalizer" -> <|
           "order" -> <|"reason" -> "continuous-group", "value" -> Null|>,
           "symbol" -> "2D_infh"
@@ -3669,6 +3717,9 @@ o3d = <|
       <|
         "centralizer" -> <|"order" -> 4, "symbol" -> "2C_i"|>,
         "class_ids" -> {"Cphi", "c2p"},
+        "class_size" -> 1,
+        "index" -> 2,
+        "normal" -> True,
         "normalizer" -> <|
           "order" -> <|"reason" -> "continuous-group", "value" -> Null|>,
           "symbol" -> "2D_infh"
@@ -41898,6 +41949,7 @@ o3d = <|
           |>
         }
       |>
-    }
+    },
+    "vector_rules" -> "rotation/Dinfh#/subduction_subgroups/rules"
   |>
 |>;

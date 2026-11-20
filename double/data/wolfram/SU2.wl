@@ -374,6 +374,18 @@ o3d = <|
     "vector_products" -> "rotation/SO3#/clebsch_gordan/products"
   |>,
   "domain" -> "continuous",
+  "fundamental_domain" -> <|
+    "image" -> "rotation/SO3#/fundamental_domain",
+    "space" -> <|
+      "lens" -> <|"reason" -> "not-defined-for-family", "value" -> Null|>,
+      "name" -> "point"
+    |>,
+    "volumes" -> <|
+      "domain" -> <|"coefficient" -> {2, 1}, "dimension" -> 0, "pi_power" -> 0|>,
+      "group" -> <|"coefficient" -> {16, 1}, "dimension" -> 3, "pi_power" -> 2|>,
+      "pin_minus_3" -> <|"coefficient" -> {32, 1}, "dimension" -> 3, "pi_power" -> 2|>
+    |>
+  |>,
   "fusion" -> <|
     "condition_grammar" -> {"always"},
     "families" -> {"D", "Dhalf"},
@@ -484,6 +496,46 @@ o3d = <|
       "hilbert_series" -> <|"denominator" -> {}, "numerator" -> {1}|>,
       "image" -> "SU(2)",
       "relation" -> Null
+    |>,
+    "molien" -> <|
+      "instances" -> {
+        <|
+          "dim" -> 2,
+          "hilbert_series" -> <|"denominator" -> {}, "numerator" -> {1}|>,
+          "irrep" -> "D^(1/2)",
+          "irrep_id" -> "D1h",
+          "twoJ" -> 1
+        |>,
+        <|
+          "dim" -> 4,
+          "hilbert_series" -> <|"denominator" -> {4}, "numerator" -> {1}|>,
+          "irrep" -> "D^(3/2)",
+          "irrep_id" -> "D3h",
+          "twoJ" -> 3
+        |>,
+        <|
+          "dim" -> 6,
+          "hilbert_series" -> <|
+            "denominator" -> {4, 8, 12},
+            "numerator" -> {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}
+          |>,
+          "irrep" -> "D^(5/2)",
+          "irrep_id" -> "D5h",
+          "twoJ" -> 5
+        |>,
+        <|
+          "dim" -> 8,
+          "hilbert_series" -> <|
+            "denominator" -> {4, 8, 8, 12, 30},
+            "numerator" -> {1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 5, 0, 4, 0, 3, 0, 9, 0, 4, 0, 5, 0, 8, 0, 4, 0, 4, 0, 8, 0, 5, 0, 4, 0, 9, 0, 3, 0, 4, 0, 5, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1}
+          |>,
+          "irrep" -> "D^(7/2)",
+          "irrep_id" -> "D7h",
+          "twoJ" -> 7
+        |>
+      },
+      "levels" -> {},
+      "twoJ_max" -> 7
     |>
   |>,
   "jj_configurations" -> <|
@@ -617,6 +669,255 @@ o3d = <|
     "rule" -> "Lambda^n of the spinor level L, n = 0, ..., dim L: chi = e_n(g), n e_n = sum_{k=1}^{n} (-1)^(k-1) e_(n-k) chi_L(g^k); Lambda^(d-n)(L) = Lambda^n(L) (x) Lambda^d(L)"
   |>,
   "schema" -> "point-group-atlas/double/group-continuous/1",
+  "spin_orbit_levels" -> <|
+    "levels" -> {
+      <|
+        "orbital" -> "D^(0)",
+        "terms" -> {<|"irrep" -> "D^(1/2)", "irrep_id" -> "D1h", "multiplicity" -> 1|>},
+        "twoS" -> 1
+      |>,
+      <|
+        "orbital" -> "D^(0)",
+        "terms" -> {<|"irrep" -> "D^(1)", "multiplicity" -> 1|>},
+        "twoS" -> 2
+      |>,
+      <|
+        "orbital" -> "D^(0)",
+        "terms" -> {<|"irrep" -> "D^(3/2)", "irrep_id" -> "D3h", "multiplicity" -> 1|>},
+        "twoS" -> 3
+      |>,
+      <|
+        "orbital" -> "D^(0)",
+        "terms" -> {<|"irrep" -> "D^(2)", "multiplicity" -> 1|>},
+        "twoS" -> 4
+      |>,
+      <|
+        "orbital" -> "D^(0)",
+        "terms" -> {<|"irrep" -> "D^(5/2)", "irrep_id" -> "D5h", "multiplicity" -> 1|>},
+        "twoS" -> 5
+      |>,
+      <|
+        "orbital" -> "D^(0)",
+        "terms" -> {<|"irrep" -> "D^(3)", "multiplicity" -> 1|>},
+        "twoS" -> 6
+      |>,
+      <|
+        "orbital" -> "D^(0)",
+        "terms" -> {<|"irrep" -> "D^(7/2)", "irrep_id" -> "D7h", "multiplicity" -> 1|>},
+        "twoS" -> 7
+      |>,
+      <|
+        "orbital" -> "D^(1)",
+        "terms" -> {
+          <|"irrep" -> "D^(1/2)", "irrep_id" -> "D1h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(3/2)", "irrep_id" -> "D3h", "multiplicity" -> 1|>
+        },
+        "twoS" -> 1
+      |>,
+      <|
+        "orbital" -> "D^(1)",
+        "terms" -> {
+          <|"irrep" -> "D^(0)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(1)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(2)", "multiplicity" -> 1|>
+        },
+        "twoS" -> 2
+      |>,
+      <|
+        "orbital" -> "D^(1)",
+        "terms" -> {
+          <|"irrep" -> "D^(1/2)", "irrep_id" -> "D1h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(3/2)", "irrep_id" -> "D3h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(5/2)", "irrep_id" -> "D5h", "multiplicity" -> 1|>
+        },
+        "twoS" -> 3
+      |>,
+      <|
+        "orbital" -> "D^(1)",
+        "terms" -> {
+          <|"irrep" -> "D^(1)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(2)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(3)", "multiplicity" -> 1|>
+        },
+        "twoS" -> 4
+      |>,
+      <|
+        "orbital" -> "D^(1)",
+        "terms" -> {
+          <|"irrep" -> "D^(3/2)", "irrep_id" -> "D3h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(5/2)", "irrep_id" -> "D5h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(7/2)", "irrep_id" -> "D7h", "multiplicity" -> 1|>
+        },
+        "twoS" -> 5
+      |>,
+      <|
+        "orbital" -> "D^(1)",
+        "terms" -> {
+          <|"irrep" -> "D^(2)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(3)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(4)", "multiplicity" -> 1|>
+        },
+        "twoS" -> 6
+      |>,
+      <|
+        "orbital" -> "D^(1)",
+        "terms" -> {
+          <|"irrep" -> "D^(5/2)", "irrep_id" -> "D5h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(7/2)", "irrep_id" -> "D7h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(9/2)", "irrep_id" -> "D9h", "multiplicity" -> 1|>
+        },
+        "twoS" -> 7
+      |>,
+      <|
+        "orbital" -> "D^(2)",
+        "terms" -> {
+          <|"irrep" -> "D^(3/2)", "irrep_id" -> "D3h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(5/2)", "irrep_id" -> "D5h", "multiplicity" -> 1|>
+        },
+        "twoS" -> 1
+      |>,
+      <|
+        "orbital" -> "D^(2)",
+        "terms" -> {
+          <|"irrep" -> "D^(1)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(2)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(3)", "multiplicity" -> 1|>
+        },
+        "twoS" -> 2
+      |>,
+      <|
+        "orbital" -> "D^(2)",
+        "terms" -> {
+          <|"irrep" -> "D^(1/2)", "irrep_id" -> "D1h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(3/2)", "irrep_id" -> "D3h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(5/2)", "irrep_id" -> "D5h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(7/2)", "irrep_id" -> "D7h", "multiplicity" -> 1|>
+        },
+        "twoS" -> 3
+      |>,
+      <|
+        "orbital" -> "D^(2)",
+        "terms" -> {
+          <|"irrep" -> "D^(0)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(1)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(2)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(3)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(4)", "multiplicity" -> 1|>
+        },
+        "twoS" -> 4
+      |>,
+      <|
+        "orbital" -> "D^(2)",
+        "terms" -> {
+          <|"irrep" -> "D^(1/2)", "irrep_id" -> "D1h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(3/2)", "irrep_id" -> "D3h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(5/2)", "irrep_id" -> "D5h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(7/2)", "irrep_id" -> "D7h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(9/2)", "irrep_id" -> "D9h", "multiplicity" -> 1|>
+        },
+        "twoS" -> 5
+      |>,
+      <|
+        "orbital" -> "D^(2)",
+        "terms" -> {
+          <|"irrep" -> "D^(1)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(2)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(3)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(4)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(5)", "multiplicity" -> 1|>
+        },
+        "twoS" -> 6
+      |>,
+      <|
+        "orbital" -> "D^(2)",
+        "terms" -> {
+          <|"irrep" -> "D^(3/2)", "irrep_id" -> "D3h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(5/2)", "irrep_id" -> "D5h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(7/2)", "irrep_id" -> "D7h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(9/2)", "irrep_id" -> "D9h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(11/2)", "irrep_id" -> "D11h", "multiplicity" -> 1|>
+        },
+        "twoS" -> 7
+      |>,
+      <|
+        "orbital" -> "D^(3)",
+        "terms" -> {
+          <|"irrep" -> "D^(5/2)", "irrep_id" -> "D5h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(7/2)", "irrep_id" -> "D7h", "multiplicity" -> 1|>
+        },
+        "twoS" -> 1
+      |>,
+      <|
+        "orbital" -> "D^(3)",
+        "terms" -> {
+          <|"irrep" -> "D^(2)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(3)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(4)", "multiplicity" -> 1|>
+        },
+        "twoS" -> 2
+      |>,
+      <|
+        "orbital" -> "D^(3)",
+        "terms" -> {
+          <|"irrep" -> "D^(3/2)", "irrep_id" -> "D3h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(5/2)", "irrep_id" -> "D5h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(7/2)", "irrep_id" -> "D7h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(9/2)", "irrep_id" -> "D9h", "multiplicity" -> 1|>
+        },
+        "twoS" -> 3
+      |>,
+      <|
+        "orbital" -> "D^(3)",
+        "terms" -> {
+          <|"irrep" -> "D^(1)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(2)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(3)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(4)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(5)", "multiplicity" -> 1|>
+        },
+        "twoS" -> 4
+      |>,
+      <|
+        "orbital" -> "D^(3)",
+        "terms" -> {
+          <|"irrep" -> "D^(1/2)", "irrep_id" -> "D1h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(3/2)", "irrep_id" -> "D3h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(5/2)", "irrep_id" -> "D5h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(7/2)", "irrep_id" -> "D7h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(9/2)", "irrep_id" -> "D9h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(11/2)", "irrep_id" -> "D11h", "multiplicity" -> 1|>
+        },
+        "twoS" -> 5
+      |>,
+      <|
+        "orbital" -> "D^(3)",
+        "terms" -> {
+          <|"irrep" -> "D^(0)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(1)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(2)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(3)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(4)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(5)", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(6)", "multiplicity" -> 1|>
+        },
+        "twoS" -> 6
+      |>,
+      <|
+        "orbital" -> "D^(3)",
+        "terms" -> {
+          <|"irrep" -> "D^(1/2)", "irrep_id" -> "D1h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(3/2)", "irrep_id" -> "D3h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(5/2)", "irrep_id" -> "D5h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(7/2)", "irrep_id" -> "D7h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(9/2)", "irrep_id" -> "D9h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(11/2)", "irrep_id" -> "D11h", "multiplicity" -> 1|>,
+          <|"irrep" -> "D^(13/2)", "irrep_id" -> "D13h", "multiplicity" -> 1|>
+        },
+        "twoS" -> 7
+      |>
+    },
+    "twoS_range" -> {1, 7}
+  |>,
   "spin_orbitals" -> <|
     "form" -> "jj",
     "shells" -> {

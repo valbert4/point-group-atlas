@@ -440,6 +440,18 @@ o3d := rec(
     ("vector_products") := "rotation/Cinf#/clebsch_gordan"
   ),
   ("domain") := "continuous",
+  ("fundamental_domain") := rec(
+    ("image") := "rotation/Cinf#/fundamental_domain",
+    ("space") := rec(
+      ("lens") := rec( ("reason") := "not-defined-for-family", ("value") := fail ),
+      ("name") := "sphere"
+    ),
+    ("volumes") := rec(
+      ("domain") := rec( ("coefficient") := [ 8, 1 ], ("dimension") := 2, ("pi_power") := 1 ),
+      ("group") := rec( ("coefficient") := [ 4, 1 ], ("dimension") := 1, ("pi_power") := 1 ),
+      ("pin_minus_3") := rec( ("coefficient") := [ 32, 1 ], ("dimension") := 3, ("pi_power") := 2 )
+    )
+  ),
   ("fusion") := rec(
     ("condition_grammar") := [ "always", "m == n", "m != n", "m > n", "m < n" ],
     ("families") := [ "A", "1E", "2E", "1Eh", "2Eh" ],
@@ -610,6 +622,30 @@ o3d := rec(
       ("hilbert_series") := rec( ("denominator") := [ 2 ], ("numerator") := [ 1 ] ),
       ("image") := "U(1)",
       ("relation") := fail
+    ),
+    ("molien") := rec(
+      ("families") := [
+        rec(
+          ("dim") := 1,
+          ("family") := "1Eh",
+          ("hilbert_series") := rec( ("denominator") := [], ("numerator") := [ 1 ] ),
+          ("label_template") := "1E_n"
+        ),
+        rec(
+          ("dim") := 1,
+          ("family") := "2Eh",
+          ("hilbert_series") := rec( ("denominator") := [], ("numerator") := [ 1 ] ),
+          ("label_template") := "2E_n"
+        )
+      ],
+      ("levels") := [
+        rec(
+          ("dim") := 2,
+          ("hilbert_series") := rec( ("denominator") := [ 2 ], ("numerator") := [ 1 ] ),
+          ("kind") := "complex pair",
+          ("members") := [ "1Eh", "2Eh" ]
+        )
+      ]
     )
   ),
   ("jj_configurations") := rec(
@@ -9172,6 +9208,7 @@ o3d := rec(
           )
         ]
       )
-    ]
+    ],
+    ("vector_rules") := "rotation/Cinf#/subduction_subgroups/rules"
   )
 );

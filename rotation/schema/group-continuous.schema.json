@@ -3543,16 +3543,45 @@
                 ],
                 "type": "object"
               },
+              "tag": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 16.1.",
+                "properties": {
+                  "by": {
+                    "description": "See CONVENTIONS.md section 16.1.",
+                    "type": "string"
+                  },
+                  "minus": {
+                    "description": "See CONVENTIONS.md section 16.1.",
+                    "type": "string"
+                  },
+                  "plus": {
+                    "description": "See CONVENTIONS.md section 16.1.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "by",
+                  "minus",
+                  "plus"
+                ],
+                "type": "object"
+              },
+              "terms": {
+                "description": "See CONVENTIONS.md section 16.1.",
+                "items": {
+                  "description": "See CONVENTIONS.md section 16.1.",
+                  "type": "string"
+                },
+                "type": "array"
+              },
               "text": {
                 "description": "See CONVENTIONS.md section 16.1.",
                 "type": "string"
               }
             },
             "required": [
-              "cases",
-              "generating_function",
               "subgroup",
-              "sum",
               "text"
             ],
             "type": "object"
@@ -3757,6 +3786,14 @@
                       "type": "object"
                     },
                     "type": "array"
+                  },
+                  "parity": {
+                    "description": "See CONVENTIONS.md section 16.1.",
+                    "type": "string"
+                  },
+                  "variable": {
+                    "description": "See CONVENTIONS.md section 16.1.",
+                    "type": "string"
                   }
                 },
                 "required": [
@@ -3768,6 +3805,33 @@
               "q": {
                 "description": "See CONVENTIONS.md section 16.1.",
                 "type": "string"
+              },
+              "renamed": {
+                "description": "See CONVENTIONS.md section 16.1.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 16.1.",
+                  "properties": {
+                    "N": {
+                      "description": "See CONVENTIONS.md section 16.1.",
+                      "type": "integer"
+                    },
+                    "names": {
+                      "additionalProperties": {
+                        "description": "See CONVENTIONS.md section 16.1.",
+                        "type": "string"
+                      },
+                      "description": "See CONVENTIONS.md section 16.1.",
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "N",
+                    "names"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
               },
               "sum": {
                 "additionalProperties": false,
@@ -3793,6 +3857,30 @@
                 ],
                 "type": "object"
               },
+              "tag": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 16.1.",
+                "properties": {
+                  "by": {
+                    "description": "See CONVENTIONS.md section 16.1.",
+                    "type": "string"
+                  },
+                  "minus": {
+                    "description": "See CONVENTIONS.md section 16.1.",
+                    "type": "string"
+                  },
+                  "plus": {
+                    "description": "See CONVENTIONS.md section 16.1.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "by",
+                  "minus",
+                  "plus"
+                ],
+                "type": "object"
+              },
               "text": {
                 "description": "See CONVENTIONS.md section 16.1.",
                 "type": "string"
@@ -3811,6 +3899,10 @@
             "type": "object"
           },
           "type": "array"
+        },
+        "parity": {
+          "description": "See CONVENTIONS.md section 16.1.",
+          "type": "string"
         }
       },
       "required": [
@@ -5779,13 +5871,22 @@
                   }
                 },
                 "required": [
-                  "order",
                   "schoenflies"
                 ],
                 "type": "object"
               },
               "class_size": {
-                "$ref": "#/$defs/null",
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/null"
+                  },
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "integer"
+                  }
+                ],
                 "description": "See CONVENTIONS.md section 16.1."
               },
               "normal": {
@@ -5806,7 +5907,6 @@
                   }
                 },
                 "required": [
-                  "order",
                   "schoenflies"
                 ],
                 "type": "object"
@@ -5815,9 +5915,21 @@
                 "additionalProperties": false,
                 "description": "See CONVENTIONS.md section 16.1.",
                 "properties": {
+                  "N": {
+                    "description": "See CONVENTIONS.md section 16.1.",
+                    "type": "null"
+                  },
+                  "family": {
+                    "description": "See CONVENTIONS.md section 16.1.",
+                    "type": "null"
+                  },
                   "o3_class": {
                     "description": "See CONVENTIONS.md section 16.1.",
                     "type": "string"
+                  },
+                  "order": {
+                    "description": "See CONVENTIONS.md section 16.1.",
+                    "type": "null"
                   },
                   "schoenflies": {
                     "description": "See CONVENTIONS.md section 16.1.",
@@ -5888,7 +6000,6 @@
                   }
                 },
                 "required": [
-                  "order",
                   "schoenflies"
                 ],
                 "type": "object"
@@ -5897,6 +6008,9 @@
                 "anyOf": [
                   {
                     "$ref": "#/$defs/null"
+                  },
+                  {
+                    "type": "null"
                   },
                   {
                     "type": "integer"
@@ -5929,7 +6043,6 @@
                   }
                 },
                 "required": [
-                  "order",
                   "schoenflies"
                 ],
                 "type": "object"
@@ -5939,12 +6052,26 @@
                 "description": "See CONVENTIONS.md section 16.1.",
                 "properties": {
                   "N": {
-                    "description": "See CONVENTIONS.md section 16.1.",
-                    "type": "integer"
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "integer"
+                      }
+                    ],
+                    "description": "See CONVENTIONS.md section 16.1."
                   },
                   "family": {
-                    "description": "See CONVENTIONS.md section 16.1.",
-                    "type": "string"
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ],
+                    "description": "See CONVENTIONS.md section 16.1."
                   },
                   "o3_class": {
                     "description": "See CONVENTIONS.md section 16.1.",

@@ -265,18 +265,20 @@ $\comp{\lift{C}(\omega)}$ & proper & $\elt{\lift{C}}(\omega)$\\
 On an arc, $\elt{\lift{R}_z}(\omega)$ is conjugate to $\elt{\lift{R}_z}(4\pi - \omega)$, so the classes run over $0 \le \omega \le 2\pi$, from $\cls{E}$ through the half turns to $\cls{\barred{E}}$.
 The distinguished points are $\cls{E}$ at $\omega = 0$, $\cls{C_2}$ at $\omega = \pi$, $\cls{\barred{E}}$ at $\omega = 2\pi$.
 \leavevmode\label{n:local.haar.h}The Haar measure, of total mass 1: $\diff h = (1 - \cos\omega)\,\diff\omega/(2\pi)$ on $\comp{\lift{C}(\omega)}$, of mass $1$.
-The vector irreps of $\grp{SU(2)}$ are the families of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}, read on these classes through the covering map: a point $\omega$ of an arc covers the rotation angle $\phi = \omega$ modulo $2\pi$ (\texttt{vector\symbol{95}families}). The spinor families, on which $\elt{\barred{E}}$ is $-1$, follow.
 \needspace{103pt}
-\section{Spinor irreps}\label{s:continuous_irreps}
+\section{Families of irreps}\label{s:continuous_irreps}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.7}{7}, \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.23}{23} and \href{../../CONVENTIONS.pdf\#conv.29.2}{29.2}.
-\leavevmode\label{n:head.family.irreps}\label{n:index.dimension}\label{n:index.frobenius}\label{n:head.index.family}\label{n:head.kernel}\label{n:head.image}A row is a family of spinor irreps, one for every half-integer $J = \tfrac{1}{2}, \tfrac{3}{2}, \dots$: its dimension $d$, its Frobenius--Schur indicator $\fsind$, index the range of $J$, kernel the subgroup $\ker\Gamma$ of the elements that the irrep $\Gamma$ of the family maps to the identity, image the group that its matrices form, isomorphic to $\grp{SU(2)}/\ker\Gamma$ (here $\grp{SU(2)}$), and its character on each component, in the angle $\omega$ of the lift.
+\leavevmode\label{n:head.family.irreps}\label{n:index.dimension}\label{n:index.frobenius}\label{n:head.index.family}\label{n:head.kernel}\label{n:head.image}A row is a family of irreps, by its label: its dimension $d$, its Frobenius--Schur indicator $\fsind$, index the range of the index of its instances, kernel the subgroup $\ker\Gamma$ of the elements that an irrep $\Gamma$ of the family maps to the identity, image the group that its matrices form, isomorphic to $\grp{SU(2)}/\ker\Gamma$, and its character on each component, in the angle $\omega$ of the lift. The vector families, on which $\elt{\barred{E}}$ is the identity, are those of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}, read on these classes through the covering map: a point $\omega$ of an arc covers the rotation angle $\phi = \omega$ modulo $2\pi$ (\texttt{vector\symbol{95}families}); the kernel of one is the preimage of its kernel there, its image and its matrices are those of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}. The spinor families, on which $\elt{\barred{E}}$ is $-1$, follow below the rule, one for every half-integer $J = \tfrac{1}{2}, \tfrac{3}{2}, \dots$; the image of one is $\grp{SU(2)}$. The determinant character of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}, whose character is $\det g$ on the elements that cover $g$, is $\irrJ{0}$, the instance $J = 0$ of $\irrJ{J}$.
 {\small\begin{longtable}{@{}lllllll@{}}\toprule
 family & $d$ & $\fsind$ & index & kernel & image & $\comp{\lift{C}(\omega)}$\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
+\multirow{2}{*}{$\irrJ{J}$} & \multirow{2}{*}{$2J+1$} & \multirow{2}{*}{$+1$} & \multirow{2}{*}{$J \ge 0$} & \href{SU2.pdf}{$\grp{SU(2)}$}, $J = 0$ & \href{../../../rotation/data/pdf/C1.pdf}{$\grp{C_{1}}$}, $J = 0$ & \multirow{2}{*}{$1+2\sum_{k=1}^{J}\cos(k\omega)$}\\*
+ &  &  &  & \href{2C1.pdf}{$\grp{2C_{1}}$}, $J \ge 1$ & \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}, $J \ge 1$ & \\*
+\grouprule{0pt}{\lightrulewidth}
 $\irrJ{J}$ & $2J+1$ & $-1$ & $J \ge \tfrac{1}{2}$ & \href{C1.pdf}{$\grp{C_{1}}$} & \href{SU2.pdf}{$\grp{SU(2)}$} & $\sum_{m=-J}^{J}\cos(m\omega)$\\
 \bottomrule\end{longtable}}
 The irreps $\irrJ{J}$ at half-integer $J$ are the quaternionic irreps of the spin-$J$ particle.
-The records list the instances up to $J = \tfrac{19}{2}$, with their characters at the distinguished points (\texttt{instances}).
+The records list the spinor instances up to $J = \tfrac{19}{2}$, with their characters at the distinguished points (\texttt{instances}).
 \needspace{128pt}
 \subsection{The irreps of dimension \texorpdfstring{$2J+1$}{2J+1}}
 \leavevmode\label{n:local.spinor.uv}In the basis $\jm{J}{m}$, $m = J, J-1, \dots, -J$, partner $\intx = J - m + 1$: the states of angular momentum $J$, which the polynomials $u^{J+m}v^{J-m}/\sqrt{(J+m)!\,(J-m)!}$ in the kets $u = \jm{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ and $v = \jm{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ realize, as the spherical harmonics do at integer $J$. An element $U$ acts on them by $\wignerD{J}(U)^{\dagger}$, $U$ its $\grp{SU(2)}$ part, the transpose of its \texttt{matrix} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.21.2}{21.2} and \href{../../CONVENTIONS.pdf\#conv.26.1}{26.1}).
@@ -651,6 +653,25 @@ $-5$ & $1\,\prodket{-\nicefrac{5}{2}}{-\nicefrac{5}{2}}$\\*
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.16.1}{16.1} and \href{../../CONVENTIONS.pdf\#conv.29.5}{29.5}.
 The closed subgroups of $\grp{SU(2)}$ up to conjugacy, other than $\grp{SU(2)}$ itself: the preimages of the closed subgroups of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$} and the cyclic groups of odd order, the sections $\grp{C_{\mathnormal{N}}}$; normalizer and centralizer in $\grp{SU(2)}$.
 \leavevmode\label{n:head.subgroup}\label{n:head.order}\label{n:head.conjugates}\label{n:head.normal}\label{n:head.normalizer}\label{n:head.centralizer}\label{n:index.family.N}A row is a class of subgroups (subgrp), with its order, the number of subgroups conjugate to it (conjugates), whether it is normal, and its normalizer and its centralizer: the continuous subgroups, then per family its preimages and its sections, a row whose symbol holds $N$ standing for every $N$ of its range, its entries functions of $N$, then the exceptional preimages. The record lists the members with $N \le 12$ (\texttt{subgroup\symbol{95}classes}).
+In the diagram, where each group links to its document, a line joins a group to a maximal closed subgroup among the groups of the diagram; the groups that do not lie in $\grp{SU(2)}$ are gray.
+\begin{center}\begin{tikzpicture}[x=1cm, y=1cm, every node/.style={fill=white, font=\small, inner sep=2pt}]
+\draw[black!25, line width=0.4pt] (0,0) -- (-2.4,1.4);
+\draw[black!25, line width=0.4pt] (0,0) -- (0,1.4);
+\draw[black!50, line width=0.4pt] (0,0) -- (2.4,1.4);
+\draw[black!25, line width=0.4pt] (-2.4,1.4) -- (0,2.8);
+\draw[black!25, line width=0.4pt] (0,1.4) -- (0,2.8);
+\draw[black!25, line width=0.4pt] (2.4,1.4) -- (0,2.8);
+\draw[black!50, line width=0.4pt] (2.4,1.4) -- (2.4,2.8);
+\draw[black!25, line width=0.4pt] (0,2.8) -- (1.2,4.2);
+\draw[black!25, line width=0.4pt] (2.4,2.8) -- (1.2,4.2);
+\node at (0,0) {\href{2Cinf.pdf}{\textcolor{black}{$\grp{2C_{\infty }}$}}};
+\node at (-2.4,1.4) {\href{2Cinfh.pdf}{\textcolor{black!40}{$\grp{2C_{\infty h}}$}}};
+\node at (0,1.4) {\href{2Cinfv.pdf}{\textcolor{black!40}{$\grp{2C_{\infty v}}$}}};
+\node at (2.4,1.4) {\href{2Dinf.pdf}{\textcolor{black}{$\grp{2D_{\infty }}$}}};
+\node at (0,2.8) {\href{2Dinfh.pdf}{\textcolor{black!40}{$\grp{2D_{\infty h}}$}}};
+\node at (2.4,2.8) {\href{SU2.pdf}{\textcolor{black}{$\grp{SU(2)}$}}};
+\node at (1.2,4.2) {\href{Pinminus3.pdf}{\textcolor{black!40}{$\grp{Pin^{-}(3)}$}}};
+\end{tikzpicture}\end{center}
 {\small\begin{longtable}{@{}lrrlll@{}}\toprule
 subgrp & order & conjugates & normal & normalizer & centralizer\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
@@ -702,11 +723,11 @@ for either $p$; at integer $J$, the subduction of \href{../../../rotation/data/p
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.14}{14}, \href{../../CONVENTIONS.pdf\#conv.26.2}{26.2} and \href{../../CONVENTIONS.pdf\#conv.29.4}{29.4}.
 $b_\Gamma(J)$ is the number of blocks of $\Gamma$ at $J$, and
 \begin{equation}\label{e:gf}H_\Gamma(t) = \sum_{J\ge1/2} b_\Gamma(J)\,t^{2J},\end{equation}
-its generating function, for the member of index $J$ of each family, which can only have a block at the angular momentum $J$, and $m$ is the $m$ of the kets of $\Gamma$.
-\begin{center}\small\begin{tabular}{@{}llll@{}}\toprule
+its generating function, for the member of index $J$ of each family, which can only have a block at the angular momentum $J$, and $m$ is the $m$ of the kets of $\Gamma$ (\texttt{generating\symbol{95}function}, \texttt{allowed\symbol{95}m}).
+\begin{center}\small{\renewcommand{\arraystretch}{1.3}\begin{tabular}{@{}llll@{}}\toprule
 family & $H_\Gamma(t)$ & $b_\Gamma(J)$ & $m$\\\midrule
 $\irrJ{J}$ & $t^{2J}$ & $1$ & $J, J-1, \dots, -J$\\
-\bottomrule\end{tabular}\end{center}
+\bottomrule\end{tabular}}\end{center}
 \needspace{110pt}
 \section{Symmetry-adapted bases}\label{s:bases}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.14}{14}, \href{../../CONVENTIONS.pdf\#conv.26.2}{26.2} and \href{../../CONVENTIONS.pdf\#conv.29.4}{29.4}.
@@ -770,7 +791,7 @@ $\orbital{d}_{\nicefrac{5}{2}}$ & $\nicefrac{5}{2}$ & $\left(\orbital{d}_{x^2-y^
 \section{Invariant polynomials}\label{s:invariants}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.26.4}{26.4}.
 \leavevmode\label{n:local.binary.form}A binary form $f = \sum_i c_i\, u^i v^{n-i}$ of degree $n$ in the spin kets $u = \jm{1/2}{1/2}$ and $v = \jm{1/2}{-1/2}$ is invariant when every element leaves it unchanged, the elements acting at the parity $+1$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.26.4}{26.4}). The matrices of the elements on $u$, $v$ are $\grp{SU(2)}$: no form of positive degree is invariant, the forms of each degree carrying one irrep of $\grp{SU(2)}$ [\href{../../../REFERENCES.pdf\#ref.Vil68}{Vil68}, chapter III, section 2.3].
-\leavevmode\label{n:function.hilbert}The number of independent invariant polynomials of degree $n$ in the components of a ket of $\irrJ{J}$, the invariants of the binary form of degree $2J$, is the coefficient of $t^n$ in its Molien series $H_J(t)$ [\href{../../../REFERENCES.pdf\#ref.Mol97}{Mol97}]: the number of choices of $n$ values of $m = -J, \dots, J$, repetitions allowed, of sum 0, less the number of sum 1 [\href{../../../REFERENCES.pdf\#ref.Syl78}{Syl78}]. As $\elt{\barred{E}}$ acts as $-1$, every invariant has even degree. Over the denominator of the rule of the levels (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.19}{19} and \href{../../CONVENTIONS.pdf\#conv.26.4}{26.4}) with $2J - 2$ factors for $J \ge \nicefrac{3}{2}$ and none for $J = \nicefrac{1}{2}$, the dimension of the ring, each $1 - t^{a}$ of even $a$, the table gives $H_J(t)$ for $2J \le 7$; the record stores none of them.
+\leavevmode\label{n:function.hilbert}The number of independent invariant polynomials of degree $n$ in the components of a ket of $\irrJ{J}$, the invariants of the binary form of degree $2J$, is the coefficient of $t^n$ in its Molien series $H_J(t)$ [\href{../../../REFERENCES.pdf\#ref.Mol97}{Mol97}]: the number of choices of $n$ values of $m = -J, \dots, J$, repetitions allowed, of sum 0, less the number of sum 1 [\href{../../../REFERENCES.pdf\#ref.Syl78}{Syl78}]. As $\elt{\barred{E}}$ acts as $-1$, every invariant has even degree. Over the denominator of the rule of the levels (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.19}{19} and \href{../../CONVENTIONS.pdf\#conv.26.4}{26.4}) with $2J - 2$ factors for $J \ge \nicefrac{3}{2}$ and none for $J = \nicefrac{1}{2}$, the dimension of the ring, each $1 - t^{a}$ of even $a$, the table gives $H_J(t)$ for $2J \le 7$ (\texttt{invariants.molien}).
 {\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\nicefrac{1}{2}$}\cellmax{$\nicefrac{3}{2}$}\cellmax{$\nicefrac{5}{2}$}\cellmax{$\nicefrac{7}{2}$}\cellmax{$J$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$(1 + t^{8} + 5t^{12} + 4t^{14} + 3t^{16} + 9t^{18} + 4t^{20} + 5t^{22} + 8t^{24} + 4t^{26} + 4t^{28} + 8t^{30} + 5t^{32} + 4t^{34} + 9t^{36} + 3t^{38} + 4t^{40} + 5t^{42} + t^{46} + t^{54})/((1-t^{4})(1-t^{8})^{2}(1-t^{12})(1-t^{30}))$}\cellmax{$(1 + t^{18})/((1-t^{4})(1-t^{8})(1-t^{12}))$}\cellmax{$1/(1-t^{4})$}\cellmax{$H_J(t)$}\cellmax{$1$}\fillcap\begin{longtable}{@{}l>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
 $J$ & $H_J(t)$\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
@@ -779,8 +800,30 @@ $\nicefrac{3}{2}$ & $1/(1-t^{4})$\\
 $\nicefrac{5}{2}$ & $(1 + t^{18})/((1-t^{4})(1-t^{8})(1-t^{12}))$\\*
 $\nicefrac{7}{2}$ & $(1 + t^{8} + 5t^{12} + 4t^{14} + 3t^{16} + 9t^{18} + 4t^{20} + 5t^{22} + 8t^{24} + 4t^{26} + 4t^{28} + 8t^{30} + 5t^{32} + 4t^{34} + 9t^{36} + 3t^{38} + 4t^{40} + 5t^{42} + t^{46} + t^{54})/((1-t^{4})(1-t^{8})^{2}(1-t^{12})(1-t^{30}))$\\
 \bottomrule\end{longtable}}
-\needspace{171pt}
+\needspace{177pt}
 \partbox{Electronic levels}
+\section{Spin--orbit levels}\label{s:spin_orbit}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.19}{19}, \href{../../CONVENTIONS.pdf\#conv.25.2}{25.2} and \href{../../CONVENTIONS.pdf\#conv.29.4}{29.4}.
+\leavevmode\label{n:local.spin}\label{n:symbol.term}A term $\term{2S+1}{\Gamma}$, the orbital level $\Gamma$ with the spin $S$, splits under spin--orbit coupling into the irreps of $\grp{SU(2)}$ in
+\begin{equation}\label{e:spinorbit}\restr{(\Gamma \irrprod \irrJp{S}{+1})}{\grp{SU(2)}},\end{equation}
+the spin being even under the inversion: spinor irreps at half-integer $S$, vector irreps at integer $S$ (in an atom, the levels $J = \lvert J_1 - S\rvert, \dots, J_1 + S$ of the term $\term{2S+1}{\Gamma}$ of an orbital level $\Gamma$ of angular momentum $J_1$, the products of section~\ref{s:fusion}). Row $\Gamma$, column $2S + 1$ of a table gives the levels of $\term{2S+1}{\Gamma}$, as the grid of electronic terms of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$} gives the terms, for the vector irreps of index at most 3 and $S \le \nicefrac{7}{2}$; the record holds them (\texttt{spin\symbol{95}orbit\symbol{95}levels}). For an orbital level of the shells of section~\ref{s:spin_orbitals}, column $2S + 1 = 2$ gives the levels of one electron, whose states that section writes out.
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}l>{\RaggedRight\arraybackslash}p{\dimexpr(\textwidth-67pt)*15/140\relax}>{\RaggedRight\arraybackslash}p{\dimexpr(\textwidth-67pt)*29/140\relax}>{\RaggedRight\arraybackslash}p{\dimexpr(\textwidth-67pt)*44/140\relax}>{\RaggedRight\arraybackslash}p{\dimexpr(\textwidth-67pt)*52/140\relax}@{}}\toprule
+$\Gamma$ & $2S + 1 = 2$ & $4$ & $6$ & $8$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irrJ{0}$ & $\irrJ{\nicefrac{1}{2}}$ & $\irrJ{\nicefrac{3}{2}}$ & $\irrJ{\nicefrac{5}{2}}$ & $\irrJ{\nicefrac{7}{2}}$\\*
+$\irrJ{1}$ & $\irrJ{\nicefrac{1}{2}}\oplus \irrJ{\nicefrac{3}{2}}$ & $\irrJ{\nicefrac{1}{2}}\oplus \irrJ{\nicefrac{3}{2}}\oplus \irrJ{\nicefrac{5}{2}}$ & $\irrJ{\nicefrac{3}{2}}\oplus \irrJ{\nicefrac{5}{2}}\oplus \irrJ{\nicefrac{7}{2}}$ & $\irrJ{\nicefrac{5}{2}}\oplus \irrJ{\nicefrac{7}{2}}\oplus \irrJ{\nicefrac{9}{2}}$\\
+$\irrJ{2}$ & $\irrJ{\nicefrac{3}{2}}\oplus \irrJ{\nicefrac{5}{2}}$ & $\irrJ{\nicefrac{1}{2}}\oplus \irrJ{\nicefrac{3}{2}}\oplus \irrJ{\nicefrac{5}{2}}\oplus \irrJ{\nicefrac{7}{2}}$ & $\irrJ{\nicefrac{1}{2}}\oplus \irrJ{\nicefrac{3}{2}}\oplus \irrJ{\nicefrac{5}{2}}\oplus \irrJ{\nicefrac{7}{2}}\oplus \irrJ{\nicefrac{9}{2}}$ & $\irrJ{\nicefrac{3}{2}}\oplus \irrJ{\nicefrac{5}{2}}\oplus \irrJ{\nicefrac{7}{2}}\oplus \irrJ{\nicefrac{9}{2}}\oplus \irrJ{\nicefrac{11}{2}}$\\*
+$\irrJ{3}$ & $\irrJ{\nicefrac{5}{2}}\oplus \irrJ{\nicefrac{7}{2}}$ & $\irrJ{\nicefrac{3}{2}}\oplus \irrJ{\nicefrac{5}{2}}\oplus \irrJ{\nicefrac{7}{2}}\oplus \irrJ{\nicefrac{9}{2}}$ & $\irrJ{\nicefrac{1}{2}}\oplus \irrJ{\nicefrac{3}{2}}\oplus \irrJ{\nicefrac{5}{2}}\oplus \irrJ{\nicefrac{7}{2}}\oplus \irrJ{\nicefrac{9}{2}}\oplus \irrJ{\nicefrac{11}{2}}$ & $\irrJ{\nicefrac{1}{2}}\oplus \irrJ{\nicefrac{3}{2}}\oplus \irrJ{\nicefrac{5}{2}}\oplus \irrJ{\nicefrac{7}{2}}\oplus \irrJ{\nicefrac{9}{2}}\oplus \irrJ{\nicefrac{11}{2}}\oplus \irrJ{\nicefrac{13}{2}}$\\
+\bottomrule\end{longtable}}
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}llll@{}}\toprule
+$\Gamma$ & $2S + 1 = 3$ & $5$ & $7$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irrJ{0}$ & $\irrJ{1}$ & $\irrJ{2}$ & $\irrJ{3}$\\*
+$\irrJ{1}$ & $\irrJ{0}\oplus \irrJ{1}\oplus \irrJ{2}$ & $\irrJ{1}\oplus \irrJ{2}\oplus \irrJ{3}$ & $\irrJ{2}\oplus \irrJ{3}\oplus \irrJ{4}$\\*
+$\irrJ{2}$ & $\irrJ{1}\oplus \irrJ{2}\oplus \irrJ{3}$ & $\irrJ{0}\oplus \irrJ{1}\oplus \irrJ{2}\oplus \irrJ{3}\oplus \irrJ{4}$ & $\irrJ{1}\oplus \irrJ{2}\oplus \irrJ{3}\oplus \irrJ{4}\oplus \irrJ{5}$\\*
+$\irrJ{3}$ & $\irrJ{2}\oplus \irrJ{3}\oplus \irrJ{4}$ & $\irrJ{1}\oplus \irrJ{2}\oplus \irrJ{3}\oplus \irrJ{4}\oplus \irrJ{5}$ & $\irrJ{0}\oplus \irrJ{1}\oplus \irrJ{2}\oplus \irrJ{3}\oplus \irrJ{4}\oplus \irrJ{5}\oplus \irrJ{6}$\\
+\bottomrule\end{longtable}}
+\needspace{103pt}
 \section{\texorpdfstring{$jj$}{jj} configurations}\label{s:jj}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.19}{19} and \href{../../CONVENTIONS.pdf\#conv.25.3}{25.3}.
 In $jj$ coupling an electron of an atomic subshell $\orbital{p}$, $\orbital{d}$ or $\orbital{f}$ has the angular momentum $J$ of one of its two subshells $\orbital{p}_{1/2}$, $\orbital{p}_{3/2}$, $\orbital{d}_{3/2}$, $\orbital{d}_{5/2}$, $\orbital{f}_{5/2}$, $\orbital{f}_{7/2}$. $n$ electrons in the subshell $J$ fill the level $\irrJ{J}$, a Kramers level: their levels are $\Lambda^{n}\irrJ{J}$, $n = 0, \dots, 2J + 1$, vector irreps at even $n$ and spinor irreps at odd $n$, and $n$ and $2J + 1 - n$ electrons have the same levels. A configuration in both subshells of $\orbital{p}$, $\orbital{d}$ or $\orbital{f}$ has the products of their powers (section~\ref{s:fusion}), the levels into which the electronic terms of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$} split. The record holds every $n$ (\texttt{jj\symbol{95}configurations}).

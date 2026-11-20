@@ -269,25 +269,58 @@ Here $p$ is the parity of the family, $+1$ for $\ptag{g}$ and $-1$ for $\ptag{u}
 On an arc, $\elt{\lift{R}_z}(\omega)$ is conjugate to $\elt{\lift{R}_z}(4\pi - \omega)$, so the classes run over $0 \le \omega \le 2\pi$, from $\cls{E}$ through the half turns to $\cls{\barred{E}}$; an atom is one class: conjugation by $\elt{\lift{R}_z}(\pi)$ carries a lift of a mirror or of a binary rotation to the other lift.
 The distinguished points are $\cls{E}$ at $\omega = 0$, $\cls{C_2}$ at $\omega = \pi$, $\cls{\barred{E}}$ at $\omega = 2\pi$, $\cls{\lift{i}}$ at $\omega = 0$, $\cls{\sigma_h}$ at $\omega = \pi$, $\cls{\barred{\lift{i}}}$ at $\omega = 2\pi$.
 \leavevmode\label{n:local.haar.h}The Haar measure, of total mass 1: $\diff h = \tfrac{1}{4}\,\diff\omega/(2\pi)$ on $\comp{\lift{C}(\omega)}$, of mass $\tfrac{1}{4}$; the atom $\comp{\infty\lift{C}_2'}$ has mass $\tfrac{1}{4}$; $\diff h = \tfrac{1}{4}\,\diff\omega/(2\pi)$ on $\comp{\lift{i}\,\lift{C}(\omega)}$, of mass $\tfrac{1}{4}$; the atom $\comp{\infty\lift{\sigma}_v}$ has mass $\tfrac{1}{4}$.
-The vector irreps of $\grp{2D_{\infty h}}$ are the families of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$}, read on these classes through the covering map: a point $\omega$ of an arc covers the rotation angle $\phi = \omega$ modulo $2\pi$, an atom the atom of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$} (\texttt{vector\symbol{95}families}). The spinor families, on which $\elt{\barred{E}}$ is $-1$, follow.
 \needspace{103pt}
-\section{Spinor irreps}\label{s:continuous_irreps}
+\section{Families of irreps}\label{s:continuous_irreps}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.7}{7}, \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.23}{23} and \href{../../CONVENTIONS.pdf\#conv.29.2}{29.2}.
-\leavevmode\label{n:head.family.irreps}\label{n:index.dimension}\label{n:index.frobenius}\label{n:head.index.family}\label{n:head.kernel}\label{n:head.image}A row is a family of spinor irreps, one for every half-integer $n = \tfrac{1}{2}, \tfrac{3}{2}, \dots$: its dimension $d$, its Frobenius--Schur indicator $\fsind$, index the range of $n$, kernel the subgroup $\ker\Gamma$ of the elements that the irrep $\Gamma$ of the family maps to the identity, image the group that its matrices form, isomorphic to $\grp{2D_{\infty h}}/\ker\Gamma$ (for $d = 2$ the preimage in $\grp{SU(2)}$ that the matrices form, \href{2Dinf.pdf}{$\grp{2D_{\infty }}$}), and its character on each component, in the angle $\omega$ of the lift; the class space (section~\ref{s:class_space}) gives the matrices of the families of dimension 2. As $2n$ is odd, the kernel of the instance $n$ is a section (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.27}{27}).
-{\small\begin{longtable}{@{}llllllllll@{}}\toprule
+\leavevmode\label{n:head.family.irreps}\label{n:index.dimension}\label{n:index.frobenius}\label{n:head.index.family}\label{n:head.kernel}\label{n:head.image}\label{n:mark.determinant}A row is a family of irreps, by its label: its dimension $d$, its Frobenius--Schur indicator $\fsind$, index the range of the index of its instances, kernel the subgroup $\ker\Gamma$ of the elements that an irrep $\Gamma$ of the family maps to the identity, image the group that its matrices form, isomorphic to $\grp{2D_{\infty h}}/\ker\Gamma$, and its character on each component, in the angle $\omega$ of the lift. The vector families, on which $\elt{\barred{E}}$ is the identity, are those of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$}, read on these classes through the covering map: a point $\omega$ of an arc covers the rotation angle $\phi = \omega$ modulo $2\pi$, an atom the atom of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$} (\texttt{vector\symbol{95}families}); the kernel of one is the preimage of its kernel there, its image and its matrices are those of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$}. The spinor families, on which $\elt{\barred{E}}$ is $-1$, follow below the rule, one for every half-integer $n = \tfrac{1}{2}, \tfrac{3}{2}, \dots$; the image of one is the preimage in $\grp{SU(2)}$ that its matrices form, \href{2Dinf.pdf}{$\grp{2D_{\infty }}$}; the class space (section~\ref{s:class_space}) gives the matrices of those of dimension 2. As $2n$ is odd, the kernel of a spinor instance $n$ is a section (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.27}{27}). The boxed family, of one irrep, is the determinant character of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$}, whose character is $\det g$ on the elements that cover $g$.
+{\small\renewcommand{\arraystretch}{1.25}\begin{longtable}{@{}llllllllll@{}}\toprule
 family & $d$ & $\fsind$ & index & kernel & image & $\comp{\lift{C}(\omega)}$ & $\comp{\infty\lift{C}_2'}$ & $\comp{\lift{i}\,\lift{C}(\omega)}$ & $\comp{\infty\lift{\sigma}_v}$\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & 1 & $+1$ & --- & \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} & \href{../../../rotation/data/pdf/C1.pdf}{$\grp{C_{1}}$} & $1$ & $1$ & $1$ & $1$\\*
+$\irr{a}_{2\ptag{g}}$ & 1 & $+1$ & --- & \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$} & \href{../../../rotation/data/pdf/C2.pdf}{$\grp{C_{2}}$} & $1$ & $-1$ & $1$ & $-1$\\*
+\multirow{2}{*}{$\irr{e}_{n,\ptag{g}}$} & \multirow{2}{*}{2} & \multirow{2}{*}{$+1$} & \multirow{2}{*}{$n \ge 1$} & $\grp{2C_{\mathnormal{n}h}}$, $n$ even & \multirow{2}{*}{\href{../../../rotation/data/pdf/Cinfv.pdf}{$\grp{C_{\infty v}}$}} & \multirow{2}{*}{$2\cos(n\omega)$} & \multirow{2}{*}{$0$} & \multirow{2}{*}{$2\cos(n\omega)$} & \multirow{2}{*}{$0$}\\*
+ &  &  &  & $\grp{2S_{2\mathnormal{n}}}$, $n$ odd &  &  &  &  & \\*
+\detbox{$\irr{a}_{1\ptag{u}}$} & 1 & $+1$ & --- & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$} & \href{../../../rotation/data/pdf/C2.pdf}{$\grp{C_{2}}$} & $1$ & $1$ & $-1$ & $-1$\\*
+$\irr{a}_{2\ptag{u}}$ & 1 & $+1$ & --- & \href{2Cinfv.pdf}{$\grp{2C_{\infty v}}$} & \href{../../../rotation/data/pdf/C2.pdf}{$\grp{C_{2}}$} & $1$ & $-1$ & $-1$ & $1$\\*
+\multirow{2}{*}{$\irr{e}_{n,\ptag{u}}$} & \multirow{2}{*}{2} & \multirow{2}{*}{$+1$} & \multirow{2}{*}{$n \ge 1$} & $\grp{2S_{2\mathnormal{n}}}$, $n$ even & \multirow{2}{*}{\href{../../../rotation/data/pdf/Cinfv.pdf}{$\grp{C_{\infty v}}$}} & \multirow{2}{*}{$2\cos(n\omega)$} & \multirow{2}{*}{$0$} & \multirow{2}{*}{$-2\cos(n\omega)$} & \multirow{2}{*}{$0$}\\*
+ &  &  &  & $\grp{2C_{\mathnormal{n}h}}$, $n$ odd &  &  &  &  & \\*
+\grouprule{0pt}{\lightrulewidth}
 $\irr{e}_{n,\ptag{g}}$ & 2 & $-1$ & $n \ge \tfrac{1}{2}$ & $\grp{S_{4\mathnormal{n}}}$ & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$} & $2\cos(n\omega)$ & $0$ & $2\cos(n\omega)$ & $0$\\*
 $\irr{e}_{n,\ptag{u}}$ & 2 & $-1$ & $n \ge \tfrac{1}{2}$ & $\grp{S_{4\mathnormal{n}}}\secondclass$ & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$} & $2\cos(n\omega)$ & $0$ & $-2\cos(n\omega)$ & $0$\\
 \bottomrule\end{longtable}}
-The records list the instances up to $n = 13/2$, with their characters at the distinguished points (\texttt{instances}).
+The records list the spinor instances up to $n = 13/2$, with their characters at the distinguished points (\texttt{instances}).
 \needspace{91pt}
 \section{Direct products of irreps}\label{s:fusion}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.2}{10.2} and \href{../../CONVENTIONS.pdf\#conv.29.3}{29.3}.
-\leavevmode\label{n:index.family}A rule for every pair of families with a spinor factor, $n$ and $n'$ their indices, a vector index an integer and a spinor index a half-integer; the squares of the spinor families follow, with the antisymmetric part in braces; the products of two vector families are those of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$} (\texttt{vector\symbol{95}rules}).
+\leavevmode\label{n:index.family}A rule for every pair of families, $n$ and $n'$ their indices, a vector index an integer and a spinor index a half-integer, by the kinds of the factors; the squares of the families follow, with the antisymmetric part in braces. The rules with two vector factors are those of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$} (\texttt{vector\symbol{95}rules}).
 \needspace{95pt}
 \paragraph{Products.}
 {\small\begin{longtable}{@{}l@{${}={}$}ll@{}}\toprule
+\multicolumn{3}{@{}l@{}}{\emph{two vector factors}}\\*
+$\irr{a}_{1\ptag{g}}\irrprod \irr{a}_{1\ptag{g}}$ & $\irr{a}_{1\ptag{g}}$ & \\
+$\irr{a}_{1\ptag{g}}\irrprod \irr{a}_{2\ptag{g}}$ & $\irr{a}_{2\ptag{g}}$ & \\
+$\irr{a}_{1\ptag{g}}\irrprod \irr{e}_{n,\ptag{g}}$ & $\irr{e}_{n,\ptag{g}}$ & \\
+$\irr{a}_{1\ptag{g}}\irrprod \irr{a}_{1\ptag{u}}$ & $\irr{a}_{1\ptag{u}}$ & \\
+$\irr{a}_{1\ptag{g}}\irrprod \irr{a}_{2\ptag{u}}$ & $\irr{a}_{2\ptag{u}}$ & \\
+$\irr{a}_{1\ptag{g}}\irrprod \irr{e}_{n,\ptag{u}}$ & $\irr{e}_{n,\ptag{u}}$ & \\
+$\irr{a}_{2\ptag{g}}\irrprod \irr{a}_{2\ptag{g}}$ & $\irr{a}_{1\ptag{g}}$ & \\
+$\irr{a}_{2\ptag{g}}\irrprod \irr{e}_{n,\ptag{g}}$ & $\irr{e}_{n,\ptag{g}}$ & \\
+$\irr{a}_{2\ptag{g}}\irrprod \irr{a}_{1\ptag{u}}$ & $\irr{a}_{2\ptag{u}}$ & \\
+$\irr{a}_{2\ptag{g}}\irrprod \irr{a}_{2\ptag{u}}$ & $\irr{a}_{1\ptag{u}}$ & \\
+$\irr{a}_{2\ptag{g}}\irrprod \irr{e}_{n,\ptag{u}}$ & $\irr{e}_{n,\ptag{u}}$ & \\
+$\irr{e}_{n,\ptag{g}}\irrprod \irr{e}_{n',\ptag{g}}$ & $\irr{e}_{n+n',\ptag{g}}\oplus \irr{e}_{\lvert n-n'\rvert,\ptag{g}}$ & $n \ne n'$\\
+$\irr{e}_{n,\ptag{g}}\irrprod \irr{e}_{n',\ptag{g}}$ & $\irr{a}_{1\ptag{g}}\oplus \irr{a}_{2\ptag{g}}\oplus \irr{e}_{2n',\ptag{g}}$ & $n = n'$\\
+$\irr{e}_{n,\ptag{g}}\irrprod \irr{a}_{1\ptag{u}}$ & $\irr{e}_{n,\ptag{u}}$ & \\
+$\irr{e}_{n,\ptag{g}}\irrprod \irr{a}_{2\ptag{u}}$ & $\irr{e}_{n,\ptag{u}}$ & \\
+$\irr{e}_{n,\ptag{g}}\irrprod \irr{e}_{n',\ptag{u}}$ & $\irr{e}_{n+n',\ptag{u}}\oplus \irr{e}_{\lvert n-n'\rvert,\ptag{u}}$ & $n \ne n'$\\
+$\irr{e}_{n,\ptag{g}}\irrprod \irr{e}_{n',\ptag{u}}$ & $\irr{a}_{1\ptag{u}}\oplus \irr{a}_{2\ptag{u}}\oplus \irr{e}_{2n',\ptag{u}}$ & $n = n'$\\
+$\irr{a}_{1\ptag{u}}\irrprod \irr{a}_{1\ptag{u}}$ & $\irr{a}_{1\ptag{g}}$ & \\
+$\irr{a}_{1\ptag{u}}\irrprod \irr{a}_{2\ptag{u}}$ & $\irr{a}_{2\ptag{g}}$ & \\
+$\irr{a}_{1\ptag{u}}\irrprod \irr{e}_{n,\ptag{u}}$ & $\irr{e}_{n,\ptag{g}}$ & \\
+$\irr{a}_{2\ptag{u}}\irrprod \irr{a}_{2\ptag{u}}$ & $\irr{a}_{1\ptag{g}}$ & \\
+$\irr{a}_{2\ptag{u}}\irrprod \irr{e}_{n,\ptag{u}}$ & $\irr{e}_{n,\ptag{g}}$ & \\
+$\irr{e}_{n,\ptag{u}}\irrprod \irr{e}_{n',\ptag{u}}$ & $\irr{e}_{n+n',\ptag{g}}\oplus \irr{e}_{\lvert n-n'\rvert,\ptag{g}}$ & $n \ne n'$\\
+$\irr{e}_{n,\ptag{u}}\irrprod \irr{e}_{n',\ptag{u}}$ & $\irr{a}_{1\ptag{g}}\oplus \irr{a}_{2\ptag{g}}\oplus \irr{e}_{2n',\ptag{g}}$ & $n = n'$\\
 \multicolumn{3}{@{}l@{}}{\emph{a vector and a spinor factor}}\\*
 $\irr{a}_{1\ptag{g}}\irrprod \irr{e}_{n,\ptag{g}}$ & $\irr{e}_{n,\ptag{g}}$ & \\
 $\irr{a}_{1\ptag{g}}\irrprod \irr{e}_{n,\ptag{u}}$ & $\irr{e}_{n,\ptag{u}}$ & \\
@@ -312,6 +345,14 @@ $\irr{e}_{n,\ptag{u}}\irrprod \irr{e}_{n',\ptag{u}}$ & $\irr{a}_{1\ptag{g}}\oplu
 \needspace{95pt}
 \paragraph{Squares.}
 {\small\begin{longtable}{@{}l@{${}={}$}ll@{}}\toprule
+\multicolumn{3}{@{}l@{}}{\emph{a vector family}}\\*
+$\irr{a}_{1\ptag{g}}\irrprod \irr{a}_{1\ptag{g}}$ & $\irr{a}_{1\ptag{g}}$ & \\
+$\irr{a}_{2\ptag{g}}\irrprod \irr{a}_{2\ptag{g}}$ & $\irr{a}_{1\ptag{g}}$ & \\
+$\irr{e}_{n,\ptag{g}}\irrprod \irr{e}_{n,\ptag{g}}$ & $\irr{a}_{1\ptag{g}}\oplus \irr{e}_{2n,\ptag{g}}\oplus \{\irr{a}_{2\ptag{g}}\}$ & \\
+$\irr{a}_{1\ptag{u}}\irrprod \irr{a}_{1\ptag{u}}$ & $\irr{a}_{1\ptag{g}}$ & \\
+$\irr{a}_{2\ptag{u}}\irrprod \irr{a}_{2\ptag{u}}$ & $\irr{a}_{1\ptag{g}}$ & \\
+$\irr{e}_{n,\ptag{u}}\irrprod \irr{e}_{n,\ptag{u}}$ & $\irr{a}_{1\ptag{g}}\oplus \irr{e}_{2n,\ptag{g}}\oplus \{\irr{a}_{2\ptag{g}}\}$ & \\
+\multicolumn{3}{@{}l@{}}{\emph{a spinor family}}\\*
 $\irr{e}_{n,\ptag{g}}\irrprod \irr{e}_{n,\ptag{g}}$ & $\irr{a}_{2\ptag{g}}\oplus \irr{e}_{2n,\ptag{g}}\oplus \{\irr{a}_{1\ptag{g}}\}$ & \\
 $\irr{e}_{n,\ptag{u}}\irrprod \irr{e}_{n,\ptag{u}}$ & $\irr{a}_{2\ptag{g}}\oplus \irr{e}_{2n,\ptag{g}}\oplus \{\irr{a}_{1\ptag{g}}\}$ & \\
 \bottomrule\end{longtable}}
@@ -332,6 +373,25 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.16.1}{16.1} and \href{../../CONVENTIONS.pdf\#conv.29.5}{29.5}.
 The closed subgroups of $\grp{2D_{\infty h}}$ up to conjugacy in it: the preimages of the closed subgroups of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$} (its section on closed subgroups) and the sections; normalizer and centralizer in $\grp{2D_{\infty h}}$.
 \leavevmode\label{n:head.subgroup}\label{n:head.order}\label{n:head.conjugates}\label{n:head.normal}\label{n:head.normalizer}\label{n:head.centralizer}\label{n:index.family.N}A row is a class of subgroups (subgrp), with its order, the number of subgroups conjugate to it (conjugates), whether it is normal, and its normalizer and its centralizer: the continuous subgroups, then per family its preimages and its sections, a row whose symbol holds $N$ standing for every $N$ of its range, its entries functions of $N$. The record lists the members with $N \le 12$ (\texttt{subduction\symbol{95}subgroups}).
+In the diagram, where each group links to its document, a line joins a group to a maximal closed subgroup among the groups of the diagram; the groups that do not lie in $\grp{2D_{\infty h}}$ are gray.
+\begin{center}\begin{tikzpicture}[x=1cm, y=1cm, every node/.style={fill=white, font=\small, inner sep=2pt}]
+\draw[black!50, line width=0.4pt] (0,0) -- (-2.4,1.4);
+\draw[black!50, line width=0.4pt] (0,0) -- (0,1.4);
+\draw[black!50, line width=0.4pt] (0,0) -- (2.4,1.4);
+\draw[black!50, line width=0.4pt] (-2.4,1.4) -- (0,2.8);
+\draw[black!50, line width=0.4pt] (0,1.4) -- (0,2.8);
+\draw[black!50, line width=0.4pt] (2.4,1.4) -- (0,2.8);
+\draw[black!25, line width=0.4pt] (2.4,1.4) -- (2.4,2.8);
+\draw[black!25, line width=0.4pt] (0,2.8) -- (1.2,4.2);
+\draw[black!25, line width=0.4pt] (2.4,2.8) -- (1.2,4.2);
+\node at (0,0) {\href{2Cinf.pdf}{\textcolor{black}{$\grp{2C_{\infty }}$}}};
+\node at (-2.4,1.4) {\href{2Cinfh.pdf}{\textcolor{black}{$\grp{2C_{\infty h}}$}}};
+\node at (0,1.4) {\href{2Cinfv.pdf}{\textcolor{black}{$\grp{2C_{\infty v}}$}}};
+\node at (2.4,1.4) {\href{2Dinf.pdf}{\textcolor{black}{$\grp{2D_{\infty }}$}}};
+\node at (0,2.8) {\href{2Dinfh.pdf}{\textcolor{black}{$\grp{2D_{\infty h}}$}}};
+\node at (2.4,2.8) {\href{SU2.pdf}{\textcolor{black!40}{$\grp{SU(2)}$}}};
+\node at (1.2,4.2) {\href{Pinminus3.pdf}{\textcolor{black!40}{$\grp{Pin^{-}(3)}$}}};
+\end{tikzpicture}\end{center}
 {\small\begin{longtable}{@{}lrrlll@{}}\toprule
 subgrp & order & conjugates & normal & normalizer & centralizer\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
@@ -365,10 +425,437 @@ $\grp{2D_{\mathnormal{N}h}}$, $N \ge 1$ & $8N$ & $\infty$ & no & $\grp{2D_{2\mat
 \href{2D1d.pdf}{$\grp{2D_{1d}}$} & 8 & $\infty$ & no & \href{2D2h.pdf}{$\grp{2D_{2h}}$} & \href{2C2h.pdf}{$\grp{2C_{2h}}$}\\*
 $\grp{2D_{\mathnormal{N}d}}$, $N \ge 2$ & $8N$ & $\infty$ & no & $\grp{2D_{2\mathnormal{N}h}}$ & \href{2S2.pdf}{$\grp{2C_{i}}$}\\
 \bottomrule\end{longtable}}
-\needspace{140pt}
+\needspace{203pt}
 \section{Descent of symmetry}\label{s:subduction}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.16.1}{16.1} and \href{../../CONVENTIONS.pdf\#conv.29.5}{29.5}.
-\leavevmode\label{n:index.residue}The restriction of the spinor families to each closed subgroup. For the preimages $\grp{2C_{\mathnormal{N}}}$, $\grp{2C_{\mathnormal{N}v}}$ and $\grp{2D_{\mathnormal{N}}}$, every $N$, the rules give it by $q$, $0 < q < N$:
+\needspace{149pt}
+\paragraph{Vector families.} \label{n:irrep.Gamma.subgroup}The entry of row $\Gamma$ is $\restr{\Gamma}{\grp{H}}$: the vector families of $\grp{2D_{\infty h}}$, those of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$}, restrict to the preimage $\grp{2H}$ of a closed subgroup $\grp{H}$ of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$} as \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$} restricts them to $\grp{H}$, whose irreps are the vector irreps of $\grp{2H}$, and to a section as to its preimage (\texttt{vector\symbol{95}entry}, \texttt{vector\symbol{95}rules}). The tables are those of the section Descent of symmetry of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$}, headed by the preimages, with its settings and the images of their generators at the points of the class space (section~\ref{s:class_space}).
+{\small\begin{longtable}{@{}lcccc@{}}\toprule
+subgrp & \href{2Cinf.pdf}{$\grp{2C_{\infty }}$} & \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$} & \href{2Cinfv.pdf}{$\grp{2C_{\infty v}}$} & \href{2Dinf.pdf}{$\grp{2D_{\infty }}$}\\
+index & 4 & 2 & 2 & 2\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$\\*
+$\irr{e}_{n,\ptag{g}}$ & $\conjpair{1}\irr{e}_{n}\oplus \conjpair{2}\irr{e}_{n}$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}\oplus \conjpair{2}\irr{e}_{n,\ptag{g}}$ & $\irr{e}_{n}$ & $\irr{e}_{n}$\\*
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}_{2}$ & $\irr{a}_{1}$\\*
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}_{1}$ & $\irr{a}_{2}$\\*
+$\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{n}\oplus \conjpair{2}\irr{e}_{n}$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}\oplus \conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\irr{e}_{n}$ & $\irr{e}_{n}$\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Vector families, the $\grp{2C_{\mathnormal{N}}}$ family.}
+{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irr{e}_{n,\ptag{g}}$}\cellmax{$\irr{e}_{n,\ptag{u}}$}\cellmax{$\irr{a}_{1\ptag{g}}$}\cellmax{$\irr{a}_{1\ptag{u}}$}\cellmax{$\irr{a}_{2\ptag{g}}$}\cellmax{$\irr{a}_{2\ptag{u}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$2\,\irr{a}$ if $q = 0$, $2\,\irr{b}$ if $q = N/2$, $\conjpair{1}\irr{e}_{\min(q, N-q)}\oplus \conjpair{2}\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$}\cellmax{$\irr{a}$}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{every $N$}\\*
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}$\\*
+$\irr{e}_{n,\ptag{g}}$ & $2\,\irr{a}$ if $q = 0$, $2\,\irr{b}$ if $q = N/2$, $\conjpair{1}\irr{e}_{\min(q, N-q)}\oplus \conjpair{2}\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$\\*
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}$\\*
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}$\\*
+$\irr{e}_{n,\ptag{u}}$ & $2\,\irr{a}$ if $q = 0$, $2\,\irr{b}$ if $q = N/2$, $\conjpair{1}\irr{e}_{\min(q, N-q)}\oplus \conjpair{2}\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lcccccccc@{}}\toprule
+subgrp & \href{2C2.pdf}{$\grp{2C_{2}}$} & \href{2C3.pdf}{$\grp{2C_{3}}$} & \href{2C4.pdf}{$\grp{2C_{4}}$} & \href{2C5.pdf}{$\grp{2C_{5}}$} & \href{2C6.pdf}{$\grp{2C_{6}}$} & \href{2C7.pdf}{$\grp{2C_{7}}$} & \href{2C8.pdf}{$\grp{2C_{8}}$} & \href{2C9.pdf}{$\grp{2C_{9}}$}\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$\\
+$\irr{e}_{1\ptag{g}}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$\\
+$\irr{e}_{2\ptag{g}}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$\\
+$\irr{e}_{3\ptag{g}}$ & $2\,\irr{b}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$\\
+$\irr{e}_{4\ptag{g}}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$\\
+$\irr{e}_{5\ptag{g}}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$\\
+$\irr{e}_{6\ptag{g}}$ & $2\,\irr{a}$ & $2\,\irr{a}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$\\
+$\irr{e}_{1\ptag{u}}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$\\
+$\irr{e}_{2\ptag{u}}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$\\
+$\irr{e}_{3\ptag{u}}$ & $2\,\irr{b}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$\\
+$\irr{e}_{4\ptag{u}}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$\\
+$\irr{e}_{5\ptag{u}}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$\\*
+$\irr{e}_{6\ptag{u}}$ & $2\,\irr{a}$ & $2\,\irr{a}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lccc@{}}\toprule
+subgrp & \href{2C10.pdf}{$\grp{2C_{10}}$} & \href{2C11.pdf}{$\grp{2C_{11}}$} & \href{2C12.pdf}{$\grp{2C_{12}}$}\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$\\
+$\irr{e}_{1\ptag{g}}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$\\
+$\irr{e}_{2\ptag{g}}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$\\
+$\irr{e}_{3\ptag{g}}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$\\
+$\irr{e}_{4\ptag{g}}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$\\
+$\irr{e}_{5\ptag{g}}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}_{5}\oplus \conjpair{2}\irr{e}_{5}$ & $\conjpair{1}\irr{e}_{5}\oplus \conjpair{2}\irr{e}_{5}$\\
+$\irr{e}_{6\ptag{g}}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$ & $\conjpair{1}\irr{e}_{5}\oplus \conjpair{2}\irr{e}_{5}$ & $2\,\irr{b}$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$\\
+$\irr{e}_{1\ptag{u}}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$\\
+$\irr{e}_{2\ptag{u}}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$\\
+$\irr{e}_{3\ptag{u}}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$\\
+$\irr{e}_{4\ptag{u}}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$\\
+$\irr{e}_{5\ptag{u}}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}_{5}\oplus \conjpair{2}\irr{e}_{5}$ & $\conjpair{1}\irr{e}_{5}\oplus \conjpair{2}\irr{e}_{5}$\\*
+$\irr{e}_{6\ptag{u}}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$ & $\conjpair{1}\irr{e}_{5}\oplus \conjpair{2}\irr{e}_{5}$ & $2\,\irr{b}$\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Vector families, the $\grp{2S_{2\mathnormal{N}}}$ family.}
+{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irr{e}_{n,\ptag{g}}$}\cellmax{$\irr{e}_{n,\ptag{u}}$}\cellmax{$\irr{a}_{1\ptag{g}}$}\cellmax{$\irr{a}_{1\ptag{u}}$}\cellmax{$\irr{a}_{2\ptag{g}}$}\cellmax{$\irr{a}_{2\ptag{u}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$2\,\irr{a}$ if $q = 0$, $2\,\irr{b}$ if $q = N$, $\conjpair{1}\irr{e}_{\min(q, 2N-q)}\oplus \conjpair{2}\irr{e}_{\min(q, 2N-q)}$ otherwise; $q = ((N+1)n + N) \bmod 2N$}\cellmax{$2\,\irr{a}$ if $q = 0$, $2\,\irr{b}$ if $q = N$, $\conjpair{1}\irr{e}_{\min(q, 2N-q)}\oplus \conjpair{2}\irr{e}_{\min(q, 2N-q)}$ otherwise; $q = (N+1)n \bmod 2N$}\cellmax{$2\,\irr{a}_{\ptag{g}}$ if $q = 0$, $\conjpair{1}\irr{e}_{\min(q, N-q),\ptag{g}}\oplus \conjpair{2}\irr{e}_{\min(q, N-q),\ptag{g}}$ otherwise; $q = n \bmod N$}\cellmax{$2\,\irr{a}_{\ptag{u}}$ if $q = 0$, $\conjpair{1}\irr{e}_{\min(q, N-q),\ptag{u}}\oplus \conjpair{2}\irr{e}_{\min(q, N-q),\ptag{u}}$ otherwise; $q = n \bmod N$}\cellmax{$\irr{a}_{\ptag{g}}$}\cellmax{$\irr{a}_{\ptag{u}}$}\cellmax{$\irr{a}$}\cellmax{$\irr{b}$}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{odd $N$}\\*
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{\ptag{g}}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{\ptag{g}}$\\*
+$\irr{e}_{n,\ptag{g}}$ & $2\,\irr{a}_{\ptag{g}}$ if $q = 0$, $\conjpair{1}\irr{e}_{\min(q, N-q),\ptag{g}}\oplus \conjpair{2}\irr{e}_{\min(q, N-q),\ptag{g}}$ otherwise; $q = n \bmod N$\\*
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{\ptag{u}}$\\*
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}_{\ptag{u}}$\\*
+$\irr{e}_{n,\ptag{u}}$ & $2\,\irr{a}_{\ptag{u}}$ if $q = 0$, $\conjpair{1}\irr{e}_{\min(q, N-q),\ptag{u}}\oplus \conjpair{2}\irr{e}_{\min(q, N-q),\ptag{u}}$ otherwise; $q = n \bmod N$\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{even $N$}\\*
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}$\\*
+$\irr{e}_{n,\ptag{g}}$ & $2\,\irr{a}$ if $q = 0$, $2\,\irr{b}$ if $q = N$, $\conjpair{1}\irr{e}_{\min(q, 2N-q)}\oplus \conjpair{2}\irr{e}_{\min(q, 2N-q)}$ otherwise; $q = (N+1)n \bmod 2N$\\*
+$\irr{a}_{1\ptag{u}}$ & $\irr{b}$\\*
+$\irr{a}_{2\ptag{u}}$ & $\irr{b}$\\*
+$\irr{e}_{n,\ptag{u}}$ & $2\,\irr{a}$ if $q = 0$, $2\,\irr{b}$ if $q = N$, $\conjpair{1}\irr{e}_{\min(q, 2N-q)}\oplus \conjpair{2}\irr{e}_{\min(q, 2N-q)}$ otherwise; $q = ((N+1)n + N) \bmod 2N$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lccccccc@{}}\toprule
+subgrp & \href{2S2.pdf}{$\grp{2S_{2}}$} & \href{2S4.pdf}{$\grp{2S_{4}}$} & \href{2S6.pdf}{$\grp{2S_{6}}$} & \href{2S8.pdf}{$\grp{2S_{8}}$} & \href{2S10.pdf}{$\grp{2S_{10}}$} & \href{2S12.pdf}{$\grp{2S_{12}}$} & \href{2S14.pdf}{$\grp{2S_{14}}$}\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}$ & $\irr{a}_{\ptag{g}}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}$ & $\irr{a}_{\ptag{g}}$\\
+$\irr{e}_{1\ptag{g}}$ & $2\,\irr{a}_{\ptag{g}}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $\conjpair{1}\irr{e}_{\ptag{g}}\oplus \conjpair{2}\irr{e}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{1\ptag{g}}\oplus \conjpair{2}\irr{e}_{1\ptag{g}}$ & $\conjpair{1}\irr{e}_{5}\oplus \conjpair{2}\irr{e}_{5}$ & $\conjpair{1}\irr{e}_{1\ptag{g}}\oplus \conjpair{2}\irr{e}_{1\ptag{g}}$\\
+$\irr{e}_{2\ptag{g}}$ & $2\,\irr{a}_{\ptag{g}}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}_{\ptag{g}}\oplus \conjpair{2}\irr{e}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2\ptag{g}}\oplus \conjpair{2}\irr{e}_{2\ptag{g}}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2\ptag{g}}\oplus \conjpair{2}\irr{e}_{2\ptag{g}}$\\
+$\irr{e}_{3\ptag{g}}$ & $2\,\irr{a}_{\ptag{g}}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $2\,\irr{a}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{2\ptag{g}}\oplus \conjpair{2}\irr{e}_{2\ptag{g}}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{3\ptag{g}}\oplus \conjpair{2}\irr{e}_{3\ptag{g}}$\\
+$\irr{e}_{4\ptag{g}}$ & $2\,\irr{a}_{\ptag{g}}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}_{\ptag{g}}\oplus \conjpair{2}\irr{e}_{\ptag{g}}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}_{1\ptag{g}}\oplus \conjpair{2}\irr{e}_{1\ptag{g}}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$ & $\conjpair{1}\irr{e}_{3\ptag{g}}\oplus \conjpair{2}\irr{e}_{3\ptag{g}}$\\
+$\irr{e}_{5\ptag{g}}$ & $2\,\irr{a}_{\ptag{g}}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $\conjpair{1}\irr{e}_{\ptag{g}}\oplus \conjpair{2}\irr{e}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $2\,\irr{a}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{2\ptag{g}}\oplus \conjpair{2}\irr{e}_{2\ptag{g}}$\\
+$\irr{e}_{6\ptag{g}}$ & $2\,\irr{a}_{\ptag{g}}$ & $2\,\irr{b}$ & $2\,\irr{a}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{1\ptag{g}}\oplus \conjpair{2}\irr{e}_{1\ptag{g}}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}_{1\ptag{g}}\oplus \conjpair{2}\irr{e}_{1\ptag{g}}$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & $\irr{b}$ & $\irr{a}_{\ptag{u}}$ & $\irr{b}$ & $\irr{a}_{\ptag{u}}$ & $\irr{b}$ & $\irr{a}_{\ptag{u}}$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & $\irr{b}$ & $\irr{a}_{\ptag{u}}$ & $\irr{b}$ & $\irr{a}_{\ptag{u}}$ & $\irr{b}$ & $\irr{a}_{\ptag{u}}$\\
+$\irr{e}_{1\ptag{u}}$ & $2\,\irr{a}_{\ptag{u}}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $\conjpair{1}\irr{e}_{\ptag{u}}\oplus \conjpair{2}\irr{e}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1\ptag{u}}\oplus \conjpair{2}\irr{e}_{1\ptag{u}}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1\ptag{u}}\oplus \conjpair{2}\irr{e}_{1\ptag{u}}$\\
+$\irr{e}_{2\ptag{u}}$ & $2\,\irr{a}_{\ptag{u}}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}_{\ptag{u}}\oplus \conjpair{2}\irr{e}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2\ptag{u}}\oplus \conjpair{2}\irr{e}_{2\ptag{u}}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$ & $\conjpair{1}\irr{e}_{2\ptag{u}}\oplus \conjpair{2}\irr{e}_{2\ptag{u}}$\\
+$\irr{e}_{3\ptag{u}}$ & $2\,\irr{a}_{\ptag{u}}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $2\,\irr{a}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{2\ptag{u}}\oplus \conjpair{2}\irr{e}_{2\ptag{u}}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{3\ptag{u}}\oplus \conjpair{2}\irr{e}_{3\ptag{u}}$\\
+$\irr{e}_{4\ptag{u}}$ & $2\,\irr{a}_{\ptag{u}}$ & $2\,\irr{b}$ & $\conjpair{1}\irr{e}_{\ptag{u}}\oplus \conjpair{2}\irr{e}_{\ptag{u}}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}_{1\ptag{u}}\oplus \conjpair{2}\irr{e}_{1\ptag{u}}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{3\ptag{u}}\oplus \conjpair{2}\irr{e}_{3\ptag{u}}$\\
+$\irr{e}_{5\ptag{u}}$ & $2\,\irr{a}_{\ptag{u}}$ & $\conjpair{1}\irr{e}\oplus \conjpair{2}\irr{e}$ & $\conjpair{1}\irr{e}_{\ptag{u}}\oplus \conjpair{2}\irr{e}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $2\,\irr{a}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{5}\oplus \conjpair{2}\irr{e}_{5}$ & $\conjpair{1}\irr{e}_{2\ptag{u}}\oplus \conjpair{2}\irr{e}_{2\ptag{u}}$\\*
+$\irr{e}_{6\ptag{u}}$ & $2\,\irr{a}_{\ptag{u}}$ & $2\,\irr{a}$ & $2\,\irr{a}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{1\ptag{u}}\oplus \conjpair{2}\irr{e}_{1\ptag{u}}$ & $2\,\irr{a}$ & $\conjpair{1}\irr{e}_{1\ptag{u}}\oplus \conjpair{2}\irr{e}_{1\ptag{u}}$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lccccc@{}}\toprule
+subgrp & \href{2S16.pdf}{$\grp{2S_{16}}$} & \href{2S18.pdf}{$\grp{2S_{18}}$} & \href{2S20.pdf}{$\grp{2S_{20}}$} & \href{2S22.pdf}{$\grp{2S_{22}}$} & \href{2S24.pdf}{$\grp{2S_{24}}$}\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}$\\
+$\irr{e}_{1\ptag{g}}$ & $\conjpair{1}\irr{e}_{7}\oplus \conjpair{2}\irr{e}_{7}$ & $\conjpair{1}\irr{e}_{1\ptag{g}}\oplus \conjpair{2}\irr{e}_{1\ptag{g}}$ & $\conjpair{1}\irr{e}_{9}\oplus \conjpair{2}\irr{e}_{9}$ & $\conjpair{1}\irr{e}_{1\ptag{g}}\oplus \conjpair{2}\irr{e}_{1\ptag{g}}$ & $\conjpair{1}\irr{e}_{11}\oplus \conjpair{2}\irr{e}_{11}$\\
+$\irr{e}_{2\ptag{g}}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2\ptag{g}}\oplus \conjpair{2}\irr{e}_{2\ptag{g}}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{2\ptag{g}}\oplus \conjpair{2}\irr{e}_{2\ptag{g}}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$\\
+$\irr{e}_{3\ptag{g}}$ & $\conjpair{1}\irr{e}_{5}\oplus \conjpair{2}\irr{e}_{5}$ & $\conjpair{1}\irr{e}_{3\ptag{g}}\oplus \conjpair{2}\irr{e}_{3\ptag{g}}$ & $\conjpair{1}\irr{e}_{7}\oplus \conjpair{2}\irr{e}_{7}$ & $\conjpair{1}\irr{e}_{3\ptag{g}}\oplus \conjpair{2}\irr{e}_{3\ptag{g}}$ & $\conjpair{1}\irr{e}_{9}\oplus \conjpair{2}\irr{e}_{9}$\\
+$\irr{e}_{4\ptag{g}}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$ & $\conjpair{1}\irr{e}_{4\ptag{g}}\oplus \conjpair{2}\irr{e}_{4\ptag{g}}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$ & $\conjpair{1}\irr{e}_{4\ptag{g}}\oplus \conjpair{2}\irr{e}_{4\ptag{g}}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$\\
+$\irr{e}_{5\ptag{g}}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{4\ptag{g}}\oplus \conjpair{2}\irr{e}_{4\ptag{g}}$ & $\conjpair{1}\irr{e}_{5}\oplus \conjpair{2}\irr{e}_{5}$ & $\conjpair{1}\irr{e}_{5\ptag{g}}\oplus \conjpair{2}\irr{e}_{5\ptag{g}}$ & $\conjpair{1}\irr{e}_{7}\oplus \conjpair{2}\irr{e}_{7}$\\
+$\irr{e}_{6\ptag{g}}$ & $\conjpair{1}\irr{e}_{6}\oplus \conjpair{2}\irr{e}_{6}$ & $\conjpair{1}\irr{e}_{3\ptag{g}}\oplus \conjpair{2}\irr{e}_{3\ptag{g}}$ & $\conjpair{1}\irr{e}_{6}\oplus \conjpair{2}\irr{e}_{6}$ & $\conjpair{1}\irr{e}_{5\ptag{g}}\oplus \conjpair{2}\irr{e}_{5\ptag{g}}$ & $\conjpair{1}\irr{e}_{6}\oplus \conjpair{2}\irr{e}_{6}$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{b}$ & $\irr{a}_{\ptag{u}}$ & $\irr{b}$ & $\irr{a}_{\ptag{u}}$ & $\irr{b}$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{b}$ & $\irr{a}_{\ptag{u}}$ & $\irr{b}$ & $\irr{a}_{\ptag{u}}$ & $\irr{b}$\\
+$\irr{e}_{1\ptag{u}}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1\ptag{u}}\oplus \conjpair{2}\irr{e}_{1\ptag{u}}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1\ptag{u}}\oplus \conjpair{2}\irr{e}_{1\ptag{u}}$ & $\conjpair{1}\irr{e}_{1}\oplus \conjpair{2}\irr{e}_{1}$\\
+$\irr{e}_{2\ptag{u}}$ & $\conjpair{1}\irr{e}_{6}\oplus \conjpair{2}\irr{e}_{6}$ & $\conjpair{1}\irr{e}_{2\ptag{u}}\oplus \conjpair{2}\irr{e}_{2\ptag{u}}$ & $\conjpair{1}\irr{e}_{8}\oplus \conjpair{2}\irr{e}_{8}$ & $\conjpair{1}\irr{e}_{2\ptag{u}}\oplus \conjpair{2}\irr{e}_{2\ptag{u}}$ & $\conjpair{1}\irr{e}_{10}\oplus \conjpair{2}\irr{e}_{10}$\\
+$\irr{e}_{3\ptag{u}}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{3\ptag{u}}\oplus \conjpair{2}\irr{e}_{3\ptag{u}}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$ & $\conjpair{1}\irr{e}_{3\ptag{u}}\oplus \conjpair{2}\irr{e}_{3\ptag{u}}$ & $\conjpair{1}\irr{e}_{3}\oplus \conjpair{2}\irr{e}_{3}$\\
+$\irr{e}_{4\ptag{u}}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$ & $\conjpair{1}\irr{e}_{4\ptag{u}}\oplus \conjpair{2}\irr{e}_{4\ptag{u}}$ & $\conjpair{1}\irr{e}_{6}\oplus \conjpair{2}\irr{e}_{6}$ & $\conjpair{1}\irr{e}_{4\ptag{u}}\oplus \conjpair{2}\irr{e}_{4\ptag{u}}$ & $\conjpair{1}\irr{e}_{8}\oplus \conjpair{2}\irr{e}_{8}$\\
+$\irr{e}_{5\ptag{u}}$ & $\conjpair{1}\irr{e}_{5}\oplus \conjpair{2}\irr{e}_{5}$ & $\conjpair{1}\irr{e}_{4\ptag{u}}\oplus \conjpair{2}\irr{e}_{4\ptag{u}}$ & $\conjpair{1}\irr{e}_{5}\oplus \conjpair{2}\irr{e}_{5}$ & $\conjpair{1}\irr{e}_{5\ptag{u}}\oplus \conjpair{2}\irr{e}_{5\ptag{u}}$ & $\conjpair{1}\irr{e}_{5}\oplus \conjpair{2}\irr{e}_{5}$\\*
+$\irr{e}_{6\ptag{u}}$ & $\conjpair{1}\irr{e}_{2}\oplus \conjpair{2}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{3\ptag{u}}\oplus \conjpair{2}\irr{e}_{3\ptag{u}}$ & $\conjpair{1}\irr{e}_{4}\oplus \conjpair{2}\irr{e}_{4}$ & $\conjpair{1}\irr{e}_{5\ptag{u}}\oplus \conjpair{2}\irr{e}_{5\ptag{u}}$ & $\conjpair{1}\irr{e}_{6}\oplus \conjpair{2}\irr{e}_{6}$\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Vector families, the $\grp{2C_{\mathnormal{N}h}}$ family.}
+{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irr{e}_{n,\ptag{g}}$}\cellmax{$\irr{e}_{n,\ptag{u}}$}\cellmax{$\irr{a}_{1\ptag{g}}$}\cellmax{$\irr{a}_{1\ptag{u}}$}\cellmax{$\irr{a}_{2\ptag{g}}$}\cellmax{$\irr{a}_{2\ptag{u}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$2\,\irr{a}$ if $q = 0$, $\conjpair{1}\irr{e}_{\min(q, N-q)}\oplus \conjpair{2}\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$; the labels take $'$ for $n$ even and $''$ for $n$ odd}\cellmax{$2\,\irr{a}$ if $q = 0$, $\conjpair{1}\irr{e}_{\min(q, N-q)}\oplus \conjpair{2}\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$; the labels take $''$ for $n$ even and $'$ for $n$ odd}\cellmax{$2\,\irr{a}_{\ptag{g}}$ if $q = 0$, $2\,\irr{b}_{\ptag{g}}$ if $q = N/2$, $\conjpair{1}\irr{e}_{\min(q, N-q),\ptag{g}}\oplus \conjpair{2}\irr{e}_{\min(q, N-q),\ptag{g}}$ otherwise; $q = n \bmod N$}\cellmax{$2\,\irr{a}_{\ptag{u}}$ if $q = 0$, $2\,\irr{b}_{\ptag{u}}$ if $q = N/2$, $\conjpair{1}\irr{e}_{\min(q, N-q),\ptag{u}}\oplus \conjpair{2}\irr{e}_{\min(q, N-q),\ptag{u}}$ otherwise; $q = n \bmod N$}\cellmax{$\irr{a}''$}\cellmax{$\irr{a}'$}\cellmax{$\irr{a}_{\ptag{g}}$}\cellmax{$\irr{a}_{\ptag{u}}$}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{odd $N$}\\*
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}'$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}'$\\*
+$\irr{e}_{n,\ptag{g}}$ & $2\,\irr{a}$ if $q = 0$, $\conjpair{1}\irr{e}_{\min(q, N-q)}\oplus \conjpair{2}\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$; the labels take $'$ for $n$ even and $''$ for $n$ odd\\*
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}''$\\*
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}''$\\*
+$\irr{e}_{n,\ptag{u}}$ & $2\,\irr{a}$ if $q = 0$, $\conjpair{1}\irr{e}_{\min(q, N-q)}\oplus \conjpair{2}\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$; the labels take $''$ for $n$ even and $'$ for $n$ odd\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{even $N$}\\*
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{\ptag{g}}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{\ptag{g}}$\\*
+$\irr{e}_{n,\ptag{g}}$ & $2\,\irr{a}_{\ptag{g}}$ if $q = 0$, $2\,\irr{b}_{\ptag{g}}$ if $q = N/2$, $\conjpair{1}\irr{e}_{\min(q, N-q),\ptag{g}}\oplus \conjpair{2}\irr{e}_{\min(q, N-q),\ptag{g}}$ otherwise; $q = n \bmod N$\\*
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{\ptag{u}}$\\*
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}_{\ptag{u}}$\\*
+$\irr{e}_{n,\ptag{u}}$ & $2\,\irr{a}_{\ptag{u}}$ if $q = 0$, $2\,\irr{b}_{\ptag{u}}$ if $q = N/2$, $\conjpair{1}\irr{e}_{\min(q, N-q),\ptag{u}}\oplus \conjpair{2}\irr{e}_{\min(q, N-q),\ptag{u}}$ otherwise; $q = n \bmod N$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lccccccc@{}}\toprule
+subgrp & \href{2C1h.pdf}{$\grp{2C_{1h}}$} & \href{2C2h.pdf}{$\grp{2C_{2h}}$} & \href{2C3h.pdf}{$\grp{2C_{3h}}$} & \href{2C4h.pdf}{$\grp{2C_{4h}}$} & \href{2C5h.pdf}{$\grp{2C_{5h}}$} & \href{2C6h.pdf}{$\grp{2C_{6h}}$} & \href{2C7h.pdf}{$\grp{2C_{7h}}$}\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}'$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}'$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}'$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}'$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}'$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}'$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}'$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}'$\\
+$\irr{e}_{1\ptag{g}}$ & $2\,\irr{a}''$ & $2\,\irr{b}_{\ptag{g}}$ & $\conjpair{1}\irr{e}''\oplus \conjpair{2}\irr{e}''$ & $\conjpair{1}\irr{e}_{\ptag{g}}\oplus \conjpair{2}\irr{e}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{1}''\oplus \conjpair{2}\irr{e}_{1}''$ & $\conjpair{1}\irr{e}_{1\ptag{g}}\oplus \conjpair{2}\irr{e}_{1\ptag{g}}$ & $\conjpair{1}\irr{e}_{1}''\oplus \conjpair{2}\irr{e}_{1}''$\\
+$\irr{e}_{2\ptag{g}}$ & $2\,\irr{a}'$ & $2\,\irr{a}_{\ptag{g}}$ & $\conjpair{1}\irr{e}'\oplus \conjpair{2}\irr{e}'$ & $2\,\irr{b}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{2}'\oplus \conjpair{2}\irr{e}_{2}'$ & $\conjpair{1}\irr{e}_{2\ptag{g}}\oplus \conjpair{2}\irr{e}_{2\ptag{g}}$ & $\conjpair{1}\irr{e}_{2}'\oplus \conjpair{2}\irr{e}_{2}'$\\
+$\irr{e}_{3\ptag{g}}$ & $2\,\irr{a}''$ & $2\,\irr{b}_{\ptag{g}}$ & $2\,\irr{a}''$ & $\conjpair{1}\irr{e}_{\ptag{g}}\oplus \conjpair{2}\irr{e}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{2}''\oplus \conjpair{2}\irr{e}_{2}''$ & $2\,\irr{b}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{3}''\oplus \conjpair{2}\irr{e}_{3}''$\\
+$\irr{e}_{4\ptag{g}}$ & $2\,\irr{a}'$ & $2\,\irr{a}_{\ptag{g}}$ & $\conjpair{1}\irr{e}'\oplus \conjpair{2}\irr{e}'$ & $2\,\irr{a}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{1}'\oplus \conjpair{2}\irr{e}_{1}'$ & $\conjpair{1}\irr{e}_{2\ptag{g}}\oplus \conjpair{2}\irr{e}_{2\ptag{g}}$ & $\conjpair{1}\irr{e}_{3}'\oplus \conjpair{2}\irr{e}_{3}'$\\
+$\irr{e}_{5\ptag{g}}$ & $2\,\irr{a}''$ & $2\,\irr{b}_{\ptag{g}}$ & $\conjpair{1}\irr{e}''\oplus \conjpair{2}\irr{e}''$ & $\conjpair{1}\irr{e}_{\ptag{g}}\oplus \conjpair{2}\irr{e}_{\ptag{g}}$ & $2\,\irr{a}''$ & $\conjpair{1}\irr{e}_{1\ptag{g}}\oplus \conjpair{2}\irr{e}_{1\ptag{g}}$ & $\conjpair{1}\irr{e}_{2}''\oplus \conjpair{2}\irr{e}_{2}''$\\
+$\irr{e}_{6\ptag{g}}$ & $2\,\irr{a}'$ & $2\,\irr{a}_{\ptag{g}}$ & $2\,\irr{a}'$ & $2\,\irr{b}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{1}'\oplus \conjpair{2}\irr{e}_{1}'$ & $2\,\irr{a}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{1}'\oplus \conjpair{2}\irr{e}_{1}'$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}''$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}''$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}''$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}''$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}''$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}''$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}''$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}''$\\
+$\irr{e}_{1\ptag{u}}$ & $2\,\irr{a}'$ & $2\,\irr{b}_{\ptag{u}}$ & $\conjpair{1}\irr{e}'\oplus \conjpair{2}\irr{e}'$ & $\conjpair{1}\irr{e}_{\ptag{u}}\oplus \conjpair{2}\irr{e}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{1}'\oplus \conjpair{2}\irr{e}_{1}'$ & $\conjpair{1}\irr{e}_{1\ptag{u}}\oplus \conjpair{2}\irr{e}_{1\ptag{u}}$ & $\conjpair{1}\irr{e}_{1}'\oplus \conjpair{2}\irr{e}_{1}'$\\
+$\irr{e}_{2\ptag{u}}$ & $2\,\irr{a}''$ & $2\,\irr{a}_{\ptag{u}}$ & $\conjpair{1}\irr{e}''\oplus \conjpair{2}\irr{e}''$ & $2\,\irr{b}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{2}''\oplus \conjpair{2}\irr{e}_{2}''$ & $\conjpair{1}\irr{e}_{2\ptag{u}}\oplus \conjpair{2}\irr{e}_{2\ptag{u}}$ & $\conjpair{1}\irr{e}_{2}''\oplus \conjpair{2}\irr{e}_{2}''$\\
+$\irr{e}_{3\ptag{u}}$ & $2\,\irr{a}'$ & $2\,\irr{b}_{\ptag{u}}$ & $2\,\irr{a}'$ & $\conjpair{1}\irr{e}_{\ptag{u}}\oplus \conjpair{2}\irr{e}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{2}'\oplus \conjpair{2}\irr{e}_{2}'$ & $2\,\irr{b}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{3}'\oplus \conjpair{2}\irr{e}_{3}'$\\
+$\irr{e}_{4\ptag{u}}$ & $2\,\irr{a}''$ & $2\,\irr{a}_{\ptag{u}}$ & $\conjpair{1}\irr{e}''\oplus \conjpair{2}\irr{e}''$ & $2\,\irr{a}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{1}''\oplus \conjpair{2}\irr{e}_{1}''$ & $\conjpair{1}\irr{e}_{2\ptag{u}}\oplus \conjpair{2}\irr{e}_{2\ptag{u}}$ & $\conjpair{1}\irr{e}_{3}''\oplus \conjpair{2}\irr{e}_{3}''$\\
+$\irr{e}_{5\ptag{u}}$ & $2\,\irr{a}'$ & $2\,\irr{b}_{\ptag{u}}$ & $\conjpair{1}\irr{e}'\oplus \conjpair{2}\irr{e}'$ & $\conjpair{1}\irr{e}_{\ptag{u}}\oplus \conjpair{2}\irr{e}_{\ptag{u}}$ & $2\,\irr{a}'$ & $\conjpair{1}\irr{e}_{1\ptag{u}}\oplus \conjpair{2}\irr{e}_{1\ptag{u}}$ & $\conjpair{1}\irr{e}_{2}'\oplus \conjpair{2}\irr{e}_{2}'$\\*
+$\irr{e}_{6\ptag{u}}$ & $2\,\irr{a}''$ & $2\,\irr{a}_{\ptag{u}}$ & $2\,\irr{a}''$ & $2\,\irr{b}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{1}''\oplus \conjpair{2}\irr{e}_{1}''$ & $2\,\irr{a}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{1}''\oplus \conjpair{2}\irr{e}_{1}''$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lccccc@{}}\toprule
+subgrp & \href{2C8h.pdf}{$\grp{2C_{8h}}$} & \href{2C9h.pdf}{$\grp{2C_{9h}}$} & \href{2C10h.pdf}{$\grp{2C_{10h}}$} & \href{2C11h.pdf}{$\grp{2C_{11h}}$} & \href{2C12h.pdf}{$\grp{2C_{12h}}$}\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}'$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}'$ & $\irr{a}_{\ptag{g}}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}'$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}'$ & $\irr{a}_{\ptag{g}}$\\
+$\irr{e}_{1\ptag{g}}$ & $\conjpair{1}\irr{e}_{1\ptag{g}}\oplus \conjpair{2}\irr{e}_{1\ptag{g}}$ & $\conjpair{1}\irr{e}_{1}''\oplus \conjpair{2}\irr{e}_{1}''$ & $\conjpair{1}\irr{e}_{1\ptag{g}}\oplus \conjpair{2}\irr{e}_{1\ptag{g}}$ & $\conjpair{1}\irr{e}_{1}''\oplus \conjpair{2}\irr{e}_{1}''$ & $\conjpair{1}\irr{e}_{1\ptag{g}}\oplus \conjpair{2}\irr{e}_{1\ptag{g}}$\\
+$\irr{e}_{2\ptag{g}}$ & $\conjpair{1}\irr{e}_{2\ptag{g}}\oplus \conjpair{2}\irr{e}_{2\ptag{g}}$ & $\conjpair{1}\irr{e}_{2}'\oplus \conjpair{2}\irr{e}_{2}'$ & $\conjpair{1}\irr{e}_{2\ptag{g}}\oplus \conjpair{2}\irr{e}_{2\ptag{g}}$ & $\conjpair{1}\irr{e}_{2}'\oplus \conjpair{2}\irr{e}_{2}'$ & $\conjpair{1}\irr{e}_{2\ptag{g}}\oplus \conjpair{2}\irr{e}_{2\ptag{g}}$\\
+$\irr{e}_{3\ptag{g}}$ & $\conjpair{1}\irr{e}_{3\ptag{g}}\oplus \conjpair{2}\irr{e}_{3\ptag{g}}$ & $\conjpair{1}\irr{e}_{3}''\oplus \conjpair{2}\irr{e}_{3}''$ & $\conjpair{1}\irr{e}_{3\ptag{g}}\oplus \conjpair{2}\irr{e}_{3\ptag{g}}$ & $\conjpair{1}\irr{e}_{3}''\oplus \conjpair{2}\irr{e}_{3}''$ & $\conjpair{1}\irr{e}_{3\ptag{g}}\oplus \conjpair{2}\irr{e}_{3\ptag{g}}$\\
+$\irr{e}_{4\ptag{g}}$ & $2\,\irr{b}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{4}'\oplus \conjpair{2}\irr{e}_{4}'$ & $\conjpair{1}\irr{e}_{4\ptag{g}}\oplus \conjpair{2}\irr{e}_{4\ptag{g}}$ & $\conjpair{1}\irr{e}_{4}'\oplus \conjpair{2}\irr{e}_{4}'$ & $\conjpair{1}\irr{e}_{4\ptag{g}}\oplus \conjpair{2}\irr{e}_{4\ptag{g}}$\\
+$\irr{e}_{5\ptag{g}}$ & $\conjpair{1}\irr{e}_{3\ptag{g}}\oplus \conjpair{2}\irr{e}_{3\ptag{g}}$ & $\conjpair{1}\irr{e}_{4}''\oplus \conjpair{2}\irr{e}_{4}''$ & $2\,\irr{b}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{5}''\oplus \conjpair{2}\irr{e}_{5}''$ & $\conjpair{1}\irr{e}_{5\ptag{g}}\oplus \conjpair{2}\irr{e}_{5\ptag{g}}$\\
+$\irr{e}_{6\ptag{g}}$ & $\conjpair{1}\irr{e}_{2\ptag{g}}\oplus \conjpair{2}\irr{e}_{2\ptag{g}}$ & $\conjpair{1}\irr{e}_{3}'\oplus \conjpair{2}\irr{e}_{3}'$ & $\conjpair{1}\irr{e}_{4\ptag{g}}\oplus \conjpair{2}\irr{e}_{4\ptag{g}}$ & $\conjpair{1}\irr{e}_{5}'\oplus \conjpair{2}\irr{e}_{5}'$ & $2\,\irr{b}_{\ptag{g}}$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}''$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}''$ & $\irr{a}_{\ptag{u}}$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}''$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}''$ & $\irr{a}_{\ptag{u}}$\\
+$\irr{e}_{1\ptag{u}}$ & $\conjpair{1}\irr{e}_{1\ptag{u}}\oplus \conjpair{2}\irr{e}_{1\ptag{u}}$ & $\conjpair{1}\irr{e}_{1}'\oplus \conjpair{2}\irr{e}_{1}'$ & $\conjpair{1}\irr{e}_{1\ptag{u}}\oplus \conjpair{2}\irr{e}_{1\ptag{u}}$ & $\conjpair{1}\irr{e}_{1}'\oplus \conjpair{2}\irr{e}_{1}'$ & $\conjpair{1}\irr{e}_{1\ptag{u}}\oplus \conjpair{2}\irr{e}_{1\ptag{u}}$\\
+$\irr{e}_{2\ptag{u}}$ & $\conjpair{1}\irr{e}_{2\ptag{u}}\oplus \conjpair{2}\irr{e}_{2\ptag{u}}$ & $\conjpair{1}\irr{e}_{2}''\oplus \conjpair{2}\irr{e}_{2}''$ & $\conjpair{1}\irr{e}_{2\ptag{u}}\oplus \conjpair{2}\irr{e}_{2\ptag{u}}$ & $\conjpair{1}\irr{e}_{2}''\oplus \conjpair{2}\irr{e}_{2}''$ & $\conjpair{1}\irr{e}_{2\ptag{u}}\oplus \conjpair{2}\irr{e}_{2\ptag{u}}$\\
+$\irr{e}_{3\ptag{u}}$ & $\conjpair{1}\irr{e}_{3\ptag{u}}\oplus \conjpair{2}\irr{e}_{3\ptag{u}}$ & $\conjpair{1}\irr{e}_{3}'\oplus \conjpair{2}\irr{e}_{3}'$ & $\conjpair{1}\irr{e}_{3\ptag{u}}\oplus \conjpair{2}\irr{e}_{3\ptag{u}}$ & $\conjpair{1}\irr{e}_{3}'\oplus \conjpair{2}\irr{e}_{3}'$ & $\conjpair{1}\irr{e}_{3\ptag{u}}\oplus \conjpair{2}\irr{e}_{3\ptag{u}}$\\
+$\irr{e}_{4\ptag{u}}$ & $2\,\irr{b}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{4}''\oplus \conjpair{2}\irr{e}_{4}''$ & $\conjpair{1}\irr{e}_{4\ptag{u}}\oplus \conjpair{2}\irr{e}_{4\ptag{u}}$ & $\conjpair{1}\irr{e}_{4}''\oplus \conjpair{2}\irr{e}_{4}''$ & $\conjpair{1}\irr{e}_{4\ptag{u}}\oplus \conjpair{2}\irr{e}_{4\ptag{u}}$\\
+$\irr{e}_{5\ptag{u}}$ & $\conjpair{1}\irr{e}_{3\ptag{u}}\oplus \conjpair{2}\irr{e}_{3\ptag{u}}$ & $\conjpair{1}\irr{e}_{4}'\oplus \conjpair{2}\irr{e}_{4}'$ & $2\,\irr{b}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{5}'\oplus \conjpair{2}\irr{e}_{5}'$ & $\conjpair{1}\irr{e}_{5\ptag{u}}\oplus \conjpair{2}\irr{e}_{5\ptag{u}}$\\*
+$\irr{e}_{6\ptag{u}}$ & $\conjpair{1}\irr{e}_{2\ptag{u}}\oplus \conjpair{2}\irr{e}_{2\ptag{u}}$ & $\conjpair{1}\irr{e}_{3}''\oplus \conjpair{2}\irr{e}_{3}''$ & $\conjpair{1}\irr{e}_{4\ptag{u}}\oplus \conjpair{2}\irr{e}_{4\ptag{u}}$ & $\conjpair{1}\irr{e}_{5}''\oplus \conjpair{2}\irr{e}_{5}''$ & $2\,\irr{b}_{\ptag{u}}$\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Vector families, the $\grp{2C_{\mathnormal{N}v}}$ family.}
+{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irr{e}_{n,\ptag{g}}$}\cellmax{$\irr{e}_{n,\ptag{u}}$}\cellmax{$\irr{a}_{1\ptag{g}}$}\cellmax{$\irr{a}_{1\ptag{u}}$}\cellmax{$\irr{a}_{2\ptag{g}}$}\cellmax{$\irr{a}_{2\ptag{u}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{b}_{1}\oplus \irr{b}_{2}$ if $q = N/2$, $\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$}\cellmax{$\irr{a}_{1}$}\cellmax{$\irr{a}_{2}$}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{every $N$}\\*
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}$\\*
+$\irr{e}_{n,\ptag{g}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{b}_{1}\oplus \irr{b}_{2}$ if $q = N/2$, $\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$\\*
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{2}$\\*
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}_{1}$\\*
+$\irr{e}_{n,\ptag{u}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{b}_{1}\oplus \irr{b}_{2}$ if $q = N/2$, $\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lccccccccc@{}}\toprule
+subgrp & \href{2C1v.pdf}{$\grp{2C_{1v}}$} & \href{2C2v.pdf}{$\grp{2C_{2v}}$} & \href{2C3v.pdf}{$\grp{2C_{3v}}$} & \href{2C4v.pdf}{$\grp{2C_{4v}}$} & \href{2C5v.pdf}{$\grp{2C_{5v}}$} & \href{2C6v.pdf}{$\grp{2C_{6v}}$} & \href{2C7v.pdf}{$\grp{2C_{7v}}$} & \href{2C8v.pdf}{$\grp{2C_{8v}}$} & \href{2C9v.pdf}{$\grp{2C_{9v}}$}\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}'$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}''$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$\\
+$\irr{e}_{1\ptag{g}}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}$ & $\irr{e}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$\\
+$\irr{e}_{2\ptag{g}}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$\\
+$\irr{e}_{3\ptag{g}}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}$ & $\irr{e}_{2}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$\\
+$\irr{e}_{4\ptag{g}}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{1}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{4}$\\
+$\irr{e}_{5\ptag{g}}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}$ & $\irr{e}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{1}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$ & $\irr{e}_{4}$\\
+$\irr{e}_{6\ptag{g}}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{1}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{1}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}''$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}'$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$\\
+$\irr{e}_{1\ptag{u}}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}$ & $\irr{e}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$\\
+$\irr{e}_{2\ptag{u}}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$\\
+$\irr{e}_{3\ptag{u}}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}$ & $\irr{e}_{2}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$\\
+$\irr{e}_{4\ptag{u}}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{1}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{4}$\\
+$\irr{e}_{5\ptag{u}}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}$ & $\irr{e}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{1}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$ & $\irr{e}_{4}$\\*
+$\irr{e}_{6\ptag{u}}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{1}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{1}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lccc@{}}\toprule
+subgrp & \href{2C10v.pdf}{$\grp{2C_{10v}}$} & \href{2C11v.pdf}{$\grp{2C_{11v}}$} & \href{2C12v.pdf}{$\grp{2C_{12v}}$}\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$\\
+$\irr{e}_{1\ptag{g}}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$\\
+$\irr{e}_{2\ptag{g}}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$\\
+$\irr{e}_{3\ptag{g}}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$\\
+$\irr{e}_{4\ptag{g}}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$\\
+$\irr{e}_{5\ptag{g}}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{5}$ & $\irr{e}_{5}$\\
+$\irr{e}_{6\ptag{g}}$ & $\irr{e}_{4}$ & $\irr{e}_{5}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$\\
+$\irr{e}_{1\ptag{u}}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$\\
+$\irr{e}_{2\ptag{u}}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$\\
+$\irr{e}_{3\ptag{u}}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$\\
+$\irr{e}_{4\ptag{u}}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$\\
+$\irr{e}_{5\ptag{u}}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{5}$ & $\irr{e}_{5}$\\*
+$\irr{e}_{6\ptag{u}}$ & $\irr{e}_{4}$ & $\irr{e}_{5}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Vector families, the $\grp{2D_{\mathnormal{N}}}$ family.}
+{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irr{e}_{n,\ptag{g}}$}\cellmax{$\irr{e}_{n,\ptag{u}}$}\cellmax{$\irr{a}_{1\ptag{g}}$}\cellmax{$\irr{a}_{1\ptag{u}}$}\cellmax{$\irr{a}_{2\ptag{g}}$}\cellmax{$\irr{a}_{2\ptag{u}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{b}_{1}\oplus \irr{b}_{2}$ if $q = N/2$, $\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$}\cellmax{$\irr{a}_{1}$}\cellmax{$\irr{a}_{2}$}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{every $N$}\\*
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}$\\*
+$\irr{e}_{n,\ptag{g}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{b}_{1}\oplus \irr{b}_{2}$ if $q = N/2$, $\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$\\*
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{1}$\\*
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}_{2}$\\*
+$\irr{e}_{n,\ptag{u}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{b}_{1}\oplus \irr{b}_{2}$ if $q = N/2$, $\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lccccccc@{}}\toprule
+subgrp & \href{2D1.pdf}{$\grp{2D_{1}}$} & \multicolumn{3}{c}{\href{2D2.pdf}{$\grp{2D_{2}}$}} & \href{2D3.pdf}{$\grp{2D_{3}}$} & \href{2D4.pdf}{$\grp{2D_{4}}$} & \href{2D5.pdf}{$\grp{2D_{5}}$}\\\cmidrule(lr){3-5}
+setting &  & 1 & 2 & 3 &  &  & \\
+images &  & {\scriptsize\begin{tabular}[t]{@{}c@{}}$\cls{\genidx{C_{2}}{1}} \mapsto \elt{\lift{C}}(\pi)$\\$\cls{\genidx{C_{2}}{2}} \mapsto \elt{\lift{C}_2'}(0)$\end{tabular}} & {\scriptsize\begin{tabular}[t]{@{}c@{}}$\cls{\genidx{C_{2}}{1}} \mapsto \elt{\lift{C}_2'}(0)$\\$\cls{\genidx{C_{2}}{2}} \mapsto \elt{\lift{C}}(\pi)$\end{tabular}} & {\scriptsize\begin{tabular}[t]{@{}c@{}}$\cls{\genidx{C_{2}}{1}} \mapsto \elt{\lift{C}_2'}(0)$\\$\cls{\genidx{C_{2}}{2}} \mapsto \elt{\lift{C}_2'}(\pi/2)$\end{tabular}} &  &  & \\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{b}$ & $\irr{b}_{1}$ & $\irr{b}_{3}$ & $\irr{b}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$\\
+$\irr{e}_{1\ptag{g}}$ & $\irr{a}\oplus \irr{b}$ & $\irr{b}_{2}\oplus \irr{b}_{3}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{b}_{1}\oplus \irr{b}_{3}$ & $\irr{e}$ & $\irr{e}$ & $\irr{e}_{1}$\\
+$\irr{e}_{2\ptag{g}}$ & $\irr{a}\oplus \irr{b}$ & $\irr{a}\oplus \irr{b}_{1}$ & $\irr{a}\oplus \irr{b}_{3}$ & $\irr{a}\oplus \irr{b}_{2}$ & $\irr{e}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{2}$\\
+$\irr{e}_{3\ptag{g}}$ & $\irr{a}\oplus \irr{b}$ & $\irr{b}_{2}\oplus \irr{b}_{3}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{b}_{1}\oplus \irr{b}_{3}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}$ & $\irr{e}_{2}$\\
+$\irr{e}_{4\ptag{g}}$ & $\irr{a}\oplus \irr{b}$ & $\irr{a}\oplus \irr{b}_{1}$ & $\irr{a}\oplus \irr{b}_{3}$ & $\irr{a}\oplus \irr{b}_{2}$ & $\irr{e}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{1}$\\
+$\irr{e}_{5\ptag{g}}$ & $\irr{a}\oplus \irr{b}$ & $\irr{b}_{2}\oplus \irr{b}_{3}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{b}_{1}\oplus \irr{b}_{3}$ & $\irr{e}$ & $\irr{e}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$\\
+$\irr{e}_{6\ptag{g}}$ & $\irr{a}\oplus \irr{b}$ & $\irr{a}\oplus \irr{b}_{1}$ & $\irr{a}\oplus \irr{b}_{3}$ & $\irr{a}\oplus \irr{b}_{2}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{1}$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{b}$ & $\irr{b}_{1}$ & $\irr{b}_{3}$ & $\irr{b}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$\\
+$\irr{e}_{1\ptag{u}}$ & $\irr{a}\oplus \irr{b}$ & $\irr{b}_{2}\oplus \irr{b}_{3}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{b}_{1}\oplus \irr{b}_{3}$ & $\irr{e}$ & $\irr{e}$ & $\irr{e}_{1}$\\
+$\irr{e}_{2\ptag{u}}$ & $\irr{a}\oplus \irr{b}$ & $\irr{a}\oplus \irr{b}_{1}$ & $\irr{a}\oplus \irr{b}_{3}$ & $\irr{a}\oplus \irr{b}_{2}$ & $\irr{e}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{2}$\\
+$\irr{e}_{3\ptag{u}}$ & $\irr{a}\oplus \irr{b}$ & $\irr{b}_{2}\oplus \irr{b}_{3}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{b}_{1}\oplus \irr{b}_{3}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}$ & $\irr{e}_{2}$\\
+$\irr{e}_{4\ptag{u}}$ & $\irr{a}\oplus \irr{b}$ & $\irr{a}\oplus \irr{b}_{1}$ & $\irr{a}\oplus \irr{b}_{3}$ & $\irr{a}\oplus \irr{b}_{2}$ & $\irr{e}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{1}$\\
+$\irr{e}_{5\ptag{u}}$ & $\irr{a}\oplus \irr{b}$ & $\irr{b}_{2}\oplus \irr{b}_{3}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{b}_{1}\oplus \irr{b}_{3}$ & $\irr{e}$ & $\irr{e}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$\\*
+$\irr{e}_{6\ptag{u}}$ & $\irr{a}\oplus \irr{b}$ & $\irr{a}\oplus \irr{b}_{1}$ & $\irr{a}\oplus \irr{b}_{3}$ & $\irr{a}\oplus \irr{b}_{2}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{1}$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lccccccc@{}}\toprule
+subgrp & \href{2D6.pdf}{$\grp{2D_{6}}$} & \href{2D7.pdf}{$\grp{2D_{7}}$} & \href{2D8.pdf}{$\grp{2D_{8}}$} & \href{2D9.pdf}{$\grp{2D_{9}}$} & \href{2D10.pdf}{$\grp{2D_{10}}$} & \href{2D11.pdf}{$\grp{2D_{11}}$} & \href{2D12.pdf}{$\grp{2D_{12}}$}\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$\\
+$\irr{e}_{1\ptag{g}}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$\\
+$\irr{e}_{2\ptag{g}}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$\\
+$\irr{e}_{3\ptag{g}}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$\\
+$\irr{e}_{4\ptag{g}}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$\\
+$\irr{e}_{5\ptag{g}}$ & $\irr{e}_{1}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$ & $\irr{e}_{4}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{5}$ & $\irr{e}_{5}$\\
+$\irr{e}_{6\ptag{g}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{1}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$ & $\irr{e}_{4}$ & $\irr{e}_{5}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$\\
+$\irr{e}_{1\ptag{u}}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$\\
+$\irr{e}_{2\ptag{u}}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$\\
+$\irr{e}_{3\ptag{u}}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$\\
+$\irr{e}_{4\ptag{u}}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$\\
+$\irr{e}_{5\ptag{u}}$ & $\irr{e}_{1}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$ & $\irr{e}_{4}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{5}$ & $\irr{e}_{5}$\\*
+$\irr{e}_{6\ptag{u}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{1}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$ & $\irr{e}_{4}$ & $\irr{e}_{5}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Vector families, the $\grp{2D_{\mathnormal{N}h}}$ family.}
+{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irr{e}_{n,\ptag{g}}$}\cellmax{$\irr{e}_{n,\ptag{u}}$}\cellmax{$\irr{a}_{1\ptag{g}}$}\cellmax{$\irr{a}_{1\ptag{u}}$}\cellmax{$\irr{a}_{2\ptag{g}}$}\cellmax{$\irr{a}_{2\ptag{u}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$; the labels take $'$ for $n$ even and $''$ for $n$ odd}\cellmax{$\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$; the labels take $''$ for $n$ even and $'$ for $n$ odd}\cellmax{$\irr{a}_{1\ptag{g}}\oplus \irr{a}_{2\ptag{g}}$ if $q = 0$, $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$ if $q = N/2$, $\irr{e}_{\min(q, N-q),\ptag{g}}$ otherwise; $q = n \bmod N$}\cellmax{$\irr{a}_{1\ptag{u}}\oplus \irr{a}_{2\ptag{u}}$ if $q = 0$, $\irr{b}_{1\ptag{u}}\oplus \irr{b}_{2\ptag{u}}$ if $q = N/2$, $\irr{e}_{\min(q, N-q),\ptag{u}}$ otherwise; $q = n \bmod N$}\cellmax{$\irr{a}_{1}''$}\cellmax{$\irr{a}_{2}''$}\cellmax{$\irr{a}_{1\ptag{g}}$}\cellmax{$\irr{a}_{1\ptag{u}}$}\cellmax{$\irr{a}_{1}'$}\cellmax{$\irr{a}_{2\ptag{g}}$}\cellmax{$\irr{a}_{2\ptag{u}}$}\cellmax{$\irr{a}_{2}'$}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{odd $N$}\\*
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}'$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}'$\\*
+$\irr{e}_{n,\ptag{g}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$; the labels take $'$ for $n$ even and $''$ for $n$ odd\\*
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{1}''$\\*
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}_{2}''$\\*
+$\irr{e}_{n,\ptag{u}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{e}_{\min(q, N-q)}$ otherwise; $q = n \bmod N$; the labels take $''$ for $n$ even and $'$ for $n$ odd\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{even $N$}\\*
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1\ptag{g}}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2\ptag{g}}$\\*
+$\irr{e}_{n,\ptag{g}}$ & $\irr{a}_{1\ptag{g}}\oplus \irr{a}_{2\ptag{g}}$ if $q = 0$, $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$ if $q = N/2$, $\irr{e}_{\min(q, N-q),\ptag{g}}$ otherwise; $q = n \bmod N$\\*
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{1\ptag{u}}$\\*
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}_{2\ptag{u}}$\\*
+$\irr{e}_{n,\ptag{u}}$ & $\irr{a}_{1\ptag{u}}\oplus \irr{a}_{2\ptag{u}}$ if $q = 0$, $\irr{b}_{1\ptag{u}}\oplus \irr{b}_{2\ptag{u}}$ if $q = N/2$, $\irr{e}_{\min(q, N-q),\ptag{u}}$ otherwise; $q = n \bmod N$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lccccc@{}}\toprule
+subgrp & \multicolumn{2}{c}{\href{2D1h.pdf}{$\grp{2D_{1h}}$}} & \multicolumn{3}{c}{\href{2D2h.pdf}{$\grp{2D_{2h}}$}}\\\cmidrule(lr){2-3}\cmidrule(lr){4-6}
+setting & 1 & 2 & 1 & 2 & 3\\
+images & {\scriptsize $\cls{\sigma_{h}} \mapsto \elt{\lift{i}\,\lift{C}}(\pi)$} & {\scriptsize $\cls{\sigma_{h}} \mapsto \elt{\lift{\sigma}_v}(0)$} & {\scriptsize\begin{tabular}[t]{@{}c@{}}$\cls{\genidx{C_{2}}{1}} \mapsto \elt{\lift{C}}(\pi)$\\$\cls{\genidx{C_{2}}{2}} \mapsto \elt{\lift{C}_2'}(0)$\end{tabular}} & {\scriptsize\begin{tabular}[t]{@{}c@{}}$\cls{\genidx{C_{2}}{1}} \mapsto \elt{\lift{C}_2'}(0)$\\$\cls{\genidx{C_{2}}{2}} \mapsto \elt{\lift{C}}(\pi)$\end{tabular}} & {\scriptsize\begin{tabular}[t]{@{}c@{}}$\cls{\genidx{C_{2}}{1}} \mapsto \elt{\lift{C}_2'}(0)$\\$\cls{\genidx{C_{2}}{2}} \mapsto \elt{\lift{C}_2'}(\pi/2)$\end{tabular}}\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}'$ & $\irr{a}_{1}'$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}'$ & $\irr{a}_{2}''$ & $\irr{b}_{1\ptag{g}}$ & $\irr{b}_{3\ptag{g}}$ & $\irr{b}_{2\ptag{g}}$\\
+$\irr{e}_{1\ptag{g}}$ & $\irr{a}_{1}''\oplus \irr{a}_{2}''$ & $\irr{a}_{2}'\oplus \irr{a}_{1}''$ & $\irr{b}_{2\ptag{g}}\oplus \irr{b}_{3\ptag{g}}$ & $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$ & $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{3\ptag{g}}$\\
+$\irr{e}_{2\ptag{g}}$ & $\irr{a}_{1}'\oplus \irr{a}_{2}'$ & $\irr{a}_{1}'\oplus \irr{a}_{2}''$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{1\ptag{g}}$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{3\ptag{g}}$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$\\
+$\irr{e}_{3\ptag{g}}$ & $\irr{a}_{1}''\oplus \irr{a}_{2}''$ & $\irr{a}_{2}'\oplus \irr{a}_{1}''$ & $\irr{b}_{2\ptag{g}}\oplus \irr{b}_{3\ptag{g}}$ & $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$ & $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{3\ptag{g}}$\\
+$\irr{e}_{4\ptag{g}}$ & $\irr{a}_{1}'\oplus \irr{a}_{2}'$ & $\irr{a}_{1}'\oplus \irr{a}_{2}''$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{1\ptag{g}}$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{3\ptag{g}}$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$\\
+$\irr{e}_{5\ptag{g}}$ & $\irr{a}_{1}''\oplus \irr{a}_{2}''$ & $\irr{a}_{2}'\oplus \irr{a}_{1}''$ & $\irr{b}_{2\ptag{g}}\oplus \irr{b}_{3\ptag{g}}$ & $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$ & $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{3\ptag{g}}$\\
+$\irr{e}_{6\ptag{g}}$ & $\irr{a}_{1}'\oplus \irr{a}_{2}'$ & $\irr{a}_{1}'\oplus \irr{a}_{2}''$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{1\ptag{g}}$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{3\ptag{g}}$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{1}''$ & $\irr{a}_{1}''$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{u}}$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}_{2}''$ & $\irr{a}_{2}'$ & $\irr{b}_{1\ptag{u}}$ & $\irr{b}_{3\ptag{u}}$ & $\irr{b}_{2\ptag{u}}$\\
+$\irr{e}_{1\ptag{u}}$ & $\irr{a}_{1}'\oplus \irr{a}_{2}'$ & $\irr{a}_{1}'\oplus \irr{a}_{2}''$ & $\irr{b}_{2\ptag{u}}\oplus \irr{b}_{3\ptag{u}}$ & $\irr{b}_{1\ptag{u}}\oplus \irr{b}_{2\ptag{u}}$ & $\irr{b}_{1\ptag{u}}\oplus \irr{b}_{3\ptag{u}}$\\
+$\irr{e}_{2\ptag{u}}$ & $\irr{a}_{1}''\oplus \irr{a}_{2}''$ & $\irr{a}_{2}'\oplus \irr{a}_{1}''$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{1\ptag{u}}$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{3\ptag{u}}$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{2\ptag{u}}$\\
+$\irr{e}_{3\ptag{u}}$ & $\irr{a}_{1}'\oplus \irr{a}_{2}'$ & $\irr{a}_{1}'\oplus \irr{a}_{2}''$ & $\irr{b}_{2\ptag{u}}\oplus \irr{b}_{3\ptag{u}}$ & $\irr{b}_{1\ptag{u}}\oplus \irr{b}_{2\ptag{u}}$ & $\irr{b}_{1\ptag{u}}\oplus \irr{b}_{3\ptag{u}}$\\
+$\irr{e}_{4\ptag{u}}$ & $\irr{a}_{1}''\oplus \irr{a}_{2}''$ & $\irr{a}_{2}'\oplus \irr{a}_{1}''$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{1\ptag{u}}$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{3\ptag{u}}$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{2\ptag{u}}$\\
+$\irr{e}_{5\ptag{u}}$ & $\irr{a}_{1}'\oplus \irr{a}_{2}'$ & $\irr{a}_{1}'\oplus \irr{a}_{2}''$ & $\irr{b}_{2\ptag{u}}\oplus \irr{b}_{3\ptag{u}}$ & $\irr{b}_{1\ptag{u}}\oplus \irr{b}_{2\ptag{u}}$ & $\irr{b}_{1\ptag{u}}\oplus \irr{b}_{3\ptag{u}}$\\*
+$\irr{e}_{6\ptag{u}}$ & $\irr{a}_{1}''\oplus \irr{a}_{2}''$ & $\irr{a}_{2}'\oplus \irr{a}_{1}''$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{1\ptag{u}}$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{3\ptag{u}}$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{2\ptag{u}}$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lccccccc@{}}\toprule
+subgrp & \href{2D3h.pdf}{$\grp{2D_{3h}}$} & \href{2D4h.pdf}{$\grp{2D_{4h}}$} & \href{2D5h.pdf}{$\grp{2D_{5h}}$} & \href{2D6h.pdf}{$\grp{2D_{6h}}$} & \href{2D7h.pdf}{$\grp{2D_{7h}}$} & \href{2D8h.pdf}{$\grp{2D_{8h}}$} & \href{2D9h.pdf}{$\grp{2D_{9h}}$}\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}'$ & $\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}'$ & $\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}'$ & $\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}'$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}'$ & $\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}'$ & $\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}'$ & $\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}'$\\
+$\irr{e}_{1\ptag{g}}$ & $\irr{e}''$ & $\irr{e}_{\ptag{g}}$ & $\irr{e}_{1}''$ & $\irr{e}_{1\ptag{g}}$ & $\irr{e}_{1}''$ & $\irr{e}_{1\ptag{g}}$ & $\irr{e}_{1}''$\\
+$\irr{e}_{2\ptag{g}}$ & $\irr{e}'$ & $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$ & $\irr{e}_{2}'$ & $\irr{e}_{2\ptag{g}}$ & $\irr{e}_{2}'$ & $\irr{e}_{2\ptag{g}}$ & $\irr{e}_{2}'$\\
+$\irr{e}_{3\ptag{g}}$ & $\irr{a}_{1}''\oplus \irr{a}_{2}''$ & $\irr{e}_{\ptag{g}}$ & $\irr{e}_{2}''$ & $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$ & $\irr{e}_{3}''$ & $\irr{e}_{3\ptag{g}}$ & $\irr{e}_{3}''$\\
+$\irr{e}_{4\ptag{g}}$ & $\irr{e}'$ & $\irr{a}_{1\ptag{g}}\oplus \irr{a}_{2\ptag{g}}$ & $\irr{e}_{1}'$ & $\irr{e}_{2\ptag{g}}$ & $\irr{e}_{3}'$ & $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$ & $\irr{e}_{4}'$\\
+$\irr{e}_{5\ptag{g}}$ & $\irr{e}''$ & $\irr{e}_{\ptag{g}}$ & $\irr{a}_{1}''\oplus \irr{a}_{2}''$ & $\irr{e}_{1\ptag{g}}$ & $\irr{e}_{2}''$ & $\irr{e}_{3\ptag{g}}$ & $\irr{e}_{4}''$\\
+$\irr{e}_{6\ptag{g}}$ & $\irr{a}_{1}'\oplus \irr{a}_{2}'$ & $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$ & $\irr{e}_{1}'$ & $\irr{a}_{1\ptag{g}}\oplus \irr{a}_{2\ptag{g}}$ & $\irr{e}_{1}'$ & $\irr{e}_{2\ptag{g}}$ & $\irr{e}_{3}'$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{1}''$ & $\irr{a}_{1\ptag{u}}$ & $\irr{a}_{1}''$ & $\irr{a}_{1\ptag{u}}$ & $\irr{a}_{1}''$ & $\irr{a}_{1\ptag{u}}$ & $\irr{a}_{1}''$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}_{2}''$ & $\irr{a}_{2\ptag{u}}$ & $\irr{a}_{2}''$ & $\irr{a}_{2\ptag{u}}$ & $\irr{a}_{2}''$ & $\irr{a}_{2\ptag{u}}$ & $\irr{a}_{2}''$\\
+$\irr{e}_{1\ptag{u}}$ & $\irr{e}'$ & $\irr{e}_{\ptag{u}}$ & $\irr{e}_{1}'$ & $\irr{e}_{1\ptag{u}}$ & $\irr{e}_{1}'$ & $\irr{e}_{1\ptag{u}}$ & $\irr{e}_{1}'$\\
+$\irr{e}_{2\ptag{u}}$ & $\irr{e}''$ & $\irr{b}_{1\ptag{u}}\oplus \irr{b}_{2\ptag{u}}$ & $\irr{e}_{2}''$ & $\irr{e}_{2\ptag{u}}$ & $\irr{e}_{2}''$ & $\irr{e}_{2\ptag{u}}$ & $\irr{e}_{2}''$\\
+$\irr{e}_{3\ptag{u}}$ & $\irr{a}_{1}'\oplus \irr{a}_{2}'$ & $\irr{e}_{\ptag{u}}$ & $\irr{e}_{2}'$ & $\irr{b}_{1\ptag{u}}\oplus \irr{b}_{2\ptag{u}}$ & $\irr{e}_{3}'$ & $\irr{e}_{3\ptag{u}}$ & $\irr{e}_{3}'$\\
+$\irr{e}_{4\ptag{u}}$ & $\irr{e}''$ & $\irr{a}_{1\ptag{u}}\oplus \irr{a}_{2\ptag{u}}$ & $\irr{e}_{1}''$ & $\irr{e}_{2\ptag{u}}$ & $\irr{e}_{3}''$ & $\irr{b}_{1\ptag{u}}\oplus \irr{b}_{2\ptag{u}}$ & $\irr{e}_{4}''$\\
+$\irr{e}_{5\ptag{u}}$ & $\irr{e}'$ & $\irr{e}_{\ptag{u}}$ & $\irr{a}_{1}'\oplus \irr{a}_{2}'$ & $\irr{e}_{1\ptag{u}}$ & $\irr{e}_{2}'$ & $\irr{e}_{3\ptag{u}}$ & $\irr{e}_{4}'$\\*
+$\irr{e}_{6\ptag{u}}$ & $\irr{a}_{1}''\oplus \irr{a}_{2}''$ & $\irr{b}_{1\ptag{u}}\oplus \irr{b}_{2\ptag{u}}$ & $\irr{e}_{1}''$ & $\irr{a}_{1\ptag{u}}\oplus \irr{a}_{2\ptag{u}}$ & $\irr{e}_{1}''$ & $\irr{e}_{2\ptag{u}}$ & $\irr{e}_{3}''$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lccc@{}}\toprule
+subgrp & \href{2D10h.pdf}{$\grp{2D_{10h}}$} & \href{2D11h.pdf}{$\grp{2D_{11h}}$} & \href{2D12h.pdf}{$\grp{2D_{12h}}$}\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}'$ & $\irr{a}_{1\ptag{g}}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}'$ & $\irr{a}_{2\ptag{g}}$\\
+$\irr{e}_{1\ptag{g}}$ & $\irr{e}_{1\ptag{g}}$ & $\irr{e}_{1}''$ & $\irr{e}_{1\ptag{g}}$\\
+$\irr{e}_{2\ptag{g}}$ & $\irr{e}_{2\ptag{g}}$ & $\irr{e}_{2}'$ & $\irr{e}_{2\ptag{g}}$\\
+$\irr{e}_{3\ptag{g}}$ & $\irr{e}_{3\ptag{g}}$ & $\irr{e}_{3}''$ & $\irr{e}_{3\ptag{g}}$\\
+$\irr{e}_{4\ptag{g}}$ & $\irr{e}_{4\ptag{g}}$ & $\irr{e}_{4}'$ & $\irr{e}_{4\ptag{g}}$\\
+$\irr{e}_{5\ptag{g}}$ & $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$ & $\irr{e}_{5}''$ & $\irr{e}_{5\ptag{g}}$\\
+$\irr{e}_{6\ptag{g}}$ & $\irr{e}_{4\ptag{g}}$ & $\irr{e}_{5}'$ & $\irr{b}_{1\ptag{g}}\oplus \irr{b}_{2\ptag{g}}$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{1\ptag{u}}$ & $\irr{a}_{1}''$ & $\irr{a}_{1\ptag{u}}$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}_{2\ptag{u}}$ & $\irr{a}_{2}''$ & $\irr{a}_{2\ptag{u}}$\\
+$\irr{e}_{1\ptag{u}}$ & $\irr{e}_{1\ptag{u}}$ & $\irr{e}_{1}'$ & $\irr{e}_{1\ptag{u}}$\\
+$\irr{e}_{2\ptag{u}}$ & $\irr{e}_{2\ptag{u}}$ & $\irr{e}_{2}''$ & $\irr{e}_{2\ptag{u}}$\\
+$\irr{e}_{3\ptag{u}}$ & $\irr{e}_{3\ptag{u}}$ & $\irr{e}_{3}'$ & $\irr{e}_{3\ptag{u}}$\\
+$\irr{e}_{4\ptag{u}}$ & $\irr{e}_{4\ptag{u}}$ & $\irr{e}_{4}''$ & $\irr{e}_{4\ptag{u}}$\\
+$\irr{e}_{5\ptag{u}}$ & $\irr{b}_{1\ptag{u}}\oplus \irr{b}_{2\ptag{u}}$ & $\irr{e}_{5}'$ & $\irr{e}_{5\ptag{u}}$\\*
+$\irr{e}_{6\ptag{u}}$ & $\irr{e}_{4\ptag{u}}$ & $\irr{e}_{5}''$ & $\irr{b}_{1\ptag{u}}\oplus \irr{b}_{2\ptag{u}}$\\
+\bottomrule\end{longtable}}
+\needspace{95pt}
+\paragraph{Vector families, the $\grp{2D_{\mathnormal{N}d}}$ family.}
+{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irr{e}_{n,\ptag{g}}$}\cellmax{$\irr{e}_{n,\ptag{u}}$}\cellmax{$\irr{a}_{1\ptag{g}}$}\cellmax{$\irr{a}_{1\ptag{u}}$}\cellmax{$\irr{a}_{2\ptag{g}}$}\cellmax{$\irr{a}_{2\ptag{u}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{b}_{1}\oplus \irr{b}_{2}$ if $q = N$, $\irr{e}_{\min(q, 2N-q)}$ otherwise; $q = ((N+1)n + N) \bmod 2N$}\cellmax{$\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{b}_{1}\oplus \irr{b}_{2}$ if $q = N$, $\irr{e}_{\min(q, 2N-q)}$ otherwise; $q = (N+1)n \bmod 2N$}\cellmax{$\irr{a}_{1\ptag{g}}\oplus \irr{a}_{2\ptag{g}}$ if $q = 0$, $\irr{e}_{\min(q, N-q),\ptag{g}}$ otherwise; $q = n \bmod N$}\cellmax{$\irr{a}_{1\ptag{u}}\oplus \irr{a}_{2\ptag{u}}$ if $q = 0$, $\irr{e}_{\min(q, N-q),\ptag{u}}$ otherwise; $q = n \bmod N$}\cellmax{$\irr{a}_{1\ptag{g}}$}\cellmax{$\irr{a}_{1\ptag{u}}$}\cellmax{$\irr{a}_{2\ptag{g}}$}\cellmax{$\irr{a}_{2\ptag{u}}$}\cellmax{$\irr{a}_{1}$}\cellmax{$\irr{a}_{2}$}\cellmax{$\irr{b}_{1}$}\cellmax{$\irr{b}_{2}$}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{odd $N$}\\*
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1\ptag{g}}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2\ptag{g}}$\\*
+$\irr{e}_{n,\ptag{g}}$ & $\irr{a}_{1\ptag{g}}\oplus \irr{a}_{2\ptag{g}}$ if $q = 0$, $\irr{e}_{\min(q, N-q),\ptag{g}}$ otherwise; $q = n \bmod N$\\*
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{1\ptag{u}}$\\*
+$\irr{a}_{2\ptag{u}}$ & $\irr{a}_{2\ptag{u}}$\\*
+$\irr{e}_{n,\ptag{u}}$ & $\irr{a}_{1\ptag{u}}\oplus \irr{a}_{2\ptag{u}}$ if $q = 0$, $\irr{e}_{\min(q, N-q),\ptag{u}}$ otherwise; $q = n \bmod N$\\
+\grouprule{0pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{even $N$}\\*
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}$\\*
+$\irr{e}_{n,\ptag{g}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{b}_{1}\oplus \irr{b}_{2}$ if $q = N$, $\irr{e}_{\min(q, 2N-q)}$ otherwise; $q = (N+1)n \bmod 2N$\\*
+$\irr{a}_{1\ptag{u}}$ & $\irr{b}_{1}$\\*
+$\irr{a}_{2\ptag{u}}$ & $\irr{b}_{2}$\\*
+$\irr{e}_{n,\ptag{u}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ if $q = 0$, $\irr{b}_{1}\oplus \irr{b}_{2}$ if $q = N$, $\irr{e}_{\min(q, 2N-q)}$ otherwise; $q = ((N+1)n + N) \bmod 2N$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lccccccccc@{}}\toprule
+subgrp & \href{2D1d.pdf}{$\grp{2D_{1d}}$} & \href{2D2d.pdf}{$\grp{2D_{2d}}$} & \href{2D3d.pdf}{$\grp{2D_{3d}}$} & \href{2D4d.pdf}{$\grp{2D_{4d}}$} & \href{2D5d.pdf}{$\grp{2D_{5d}}$} & \href{2D6d.pdf}{$\grp{2D_{6d}}$} & \href{2D7d.pdf}{$\grp{2D_{7d}}$} & \href{2D8d.pdf}{$\grp{2D_{8d}}$} & \href{2D9d.pdf}{$\grp{2D_{9d}}$}\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}_{1}$ & $\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}$ & $\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}$ & $\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}$ & $\irr{a}_{1\ptag{g}}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{b}_{\ptag{g}}$ & $\irr{a}_{2}$ & $\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}$ & $\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}$ & $\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}$ & $\irr{a}_{2\ptag{g}}$\\
+$\irr{e}_{1\ptag{g}}$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{\ptag{g}}$ & $\irr{e}$ & $\irr{e}_{\ptag{g}}$ & $\irr{e}_{3}$ & $\irr{e}_{1\ptag{g}}$ & $\irr{e}_{5}$ & $\irr{e}_{1\ptag{g}}$ & $\irr{e}_{7}$ & $\irr{e}_{1\ptag{g}}$\\
+$\irr{e}_{2\ptag{g}}$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{\ptag{g}}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{\ptag{g}}$ & $\irr{e}_{2}$ & $\irr{e}_{2\ptag{g}}$ & $\irr{e}_{2}$ & $\irr{e}_{2\ptag{g}}$ & $\irr{e}_{2}$ & $\irr{e}_{2\ptag{g}}$\\
+$\irr{e}_{3\ptag{g}}$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{\ptag{g}}$ & $\irr{e}$ & $\irr{a}_{1\ptag{g}}\oplus \irr{a}_{2\ptag{g}}$ & $\irr{e}_{1}$ & $\irr{e}_{2\ptag{g}}$ & $\irr{e}_{3}$ & $\irr{e}_{3\ptag{g}}$ & $\irr{e}_{5}$ & $\irr{e}_{3\ptag{g}}$\\
+$\irr{e}_{4\ptag{g}}$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{\ptag{g}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{\ptag{g}}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{1\ptag{g}}$ & $\irr{e}_{4}$ & $\irr{e}_{3\ptag{g}}$ & $\irr{e}_{4}$ & $\irr{e}_{4\ptag{g}}$\\
+$\irr{e}_{5\ptag{g}}$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{\ptag{g}}$ & $\irr{e}$ & $\irr{e}_{\ptag{g}}$ & $\irr{e}_{1}$ & $\irr{a}_{1\ptag{g}}\oplus \irr{a}_{2\ptag{g}}$ & $\irr{e}_{1}$ & $\irr{e}_{2\ptag{g}}$ & $\irr{e}_{3}$ & $\irr{e}_{4\ptag{g}}$\\
+$\irr{e}_{6\ptag{g}}$ & $\irr{a}_{\ptag{g}}\oplus \irr{b}_{\ptag{g}}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{a}_{1\ptag{g}}\oplus \irr{a}_{2\ptag{g}}$ & $\irr{e}_{2}$ & $\irr{e}_{1\ptag{g}}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{1\ptag{g}}$ & $\irr{e}_{6}$ & $\irr{e}_{3\ptag{g}}$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & $\irr{b}_{1}$ & $\irr{a}_{1\ptag{u}}$ & $\irr{b}_{1}$ & $\irr{a}_{1\ptag{u}}$ & $\irr{b}_{1}$ & $\irr{a}_{1\ptag{u}}$ & $\irr{b}_{1}$ & $\irr{a}_{1\ptag{u}}$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{b}_{\ptag{u}}$ & $\irr{b}_{2}$ & $\irr{a}_{2\ptag{u}}$ & $\irr{b}_{2}$ & $\irr{a}_{2\ptag{u}}$ & $\irr{b}_{2}$ & $\irr{a}_{2\ptag{u}}$ & $\irr{b}_{2}$ & $\irr{a}_{2\ptag{u}}$\\
+$\irr{e}_{1\ptag{u}}$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{\ptag{u}}$ & $\irr{e}$ & $\irr{e}_{\ptag{u}}$ & $\irr{e}_{1}$ & $\irr{e}_{1\ptag{u}}$ & $\irr{e}_{1}$ & $\irr{e}_{1\ptag{u}}$ & $\irr{e}_{1}$ & $\irr{e}_{1\ptag{u}}$\\
+$\irr{e}_{2\ptag{u}}$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{\ptag{u}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{\ptag{u}}$ & $\irr{e}_{2}$ & $\irr{e}_{2\ptag{u}}$ & $\irr{e}_{4}$ & $\irr{e}_{2\ptag{u}}$ & $\irr{e}_{6}$ & $\irr{e}_{2\ptag{u}}$\\
+$\irr{e}_{3\ptag{u}}$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{\ptag{u}}$ & $\irr{e}$ & $\irr{a}_{1\ptag{u}}\oplus \irr{a}_{2\ptag{u}}$ & $\irr{e}_{3}$ & $\irr{e}_{2\ptag{u}}$ & $\irr{e}_{3}$ & $\irr{e}_{3\ptag{u}}$ & $\irr{e}_{3}$ & $\irr{e}_{3\ptag{u}}$\\
+$\irr{e}_{4\ptag{u}}$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{\ptag{u}}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{\ptag{u}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{1\ptag{u}}$ & $\irr{e}_{2}$ & $\irr{e}_{3\ptag{u}}$ & $\irr{e}_{4}$ & $\irr{e}_{4\ptag{u}}$\\
+$\irr{e}_{5\ptag{u}}$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{\ptag{u}}$ & $\irr{e}$ & $\irr{e}_{\ptag{u}}$ & $\irr{e}_{3}$ & $\irr{a}_{1\ptag{u}}\oplus \irr{a}_{2\ptag{u}}$ & $\irr{e}_{5}$ & $\irr{e}_{2\ptag{u}}$ & $\irr{e}_{5}$ & $\irr{e}_{4\ptag{u}}$\\*
+$\irr{e}_{6\ptag{u}}$ & $\irr{a}_{\ptag{u}}\oplus \irr{b}_{\ptag{u}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{a}_{1\ptag{u}}\oplus \irr{a}_{2\ptag{u}}$ & $\irr{e}_{2}$ & $\irr{e}_{1\ptag{u}}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{1\ptag{u}}$ & $\irr{e}_{2}$ & $\irr{e}_{3\ptag{u}}$\\
+\bottomrule\end{longtable}}
+{\small\begin{longtable}{@{}lccc@{}}\toprule
+subgrp & \href{2D10d.pdf}{$\grp{2D_{10d}}$} & \href{2D11d.pdf}{$\grp{2D_{11d}}$} & \href{2D12d.pdf}{$\grp{2D_{12d}}$}\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}$ & $\irr{a}_{1\ptag{g}}$ & $\irr{a}_{1}$\\*
+$\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}$ & $\irr{a}_{2\ptag{g}}$ & $\irr{a}_{2}$\\
+$\irr{e}_{1\ptag{g}}$ & $\irr{e}_{9}$ & $\irr{e}_{1\ptag{g}}$ & $\irr{e}_{11}$\\
+$\irr{e}_{2\ptag{g}}$ & $\irr{e}_{2}$ & $\irr{e}_{2\ptag{g}}$ & $\irr{e}_{2}$\\
+$\irr{e}_{3\ptag{g}}$ & $\irr{e}_{7}$ & $\irr{e}_{3\ptag{g}}$ & $\irr{e}_{9}$\\
+$\irr{e}_{4\ptag{g}}$ & $\irr{e}_{4}$ & $\irr{e}_{4\ptag{g}}$ & $\irr{e}_{4}$\\
+$\irr{e}_{5\ptag{g}}$ & $\irr{e}_{5}$ & $\irr{e}_{5\ptag{g}}$ & $\irr{e}_{7}$\\
+$\irr{e}_{6\ptag{g}}$ & $\irr{e}_{6}$ & $\irr{e}_{5\ptag{g}}$ & $\irr{e}_{6}$\\
+$\irr{a}_{1\ptag{u}}$ & $\irr{b}_{1}$ & $\irr{a}_{1\ptag{u}}$ & $\irr{b}_{1}$\\
+$\irr{a}_{2\ptag{u}}$ & $\irr{b}_{2}$ & $\irr{a}_{2\ptag{u}}$ & $\irr{b}_{2}$\\
+$\irr{e}_{1\ptag{u}}$ & $\irr{e}_{1}$ & $\irr{e}_{1\ptag{u}}$ & $\irr{e}_{1}$\\
+$\irr{e}_{2\ptag{u}}$ & $\irr{e}_{8}$ & $\irr{e}_{2\ptag{u}}$ & $\irr{e}_{10}$\\
+$\irr{e}_{3\ptag{u}}$ & $\irr{e}_{3}$ & $\irr{e}_{3\ptag{u}}$ & $\irr{e}_{3}$\\
+$\irr{e}_{4\ptag{u}}$ & $\irr{e}_{6}$ & $\irr{e}_{4\ptag{u}}$ & $\irr{e}_{8}$\\
+$\irr{e}_{5\ptag{u}}$ & $\irr{e}_{5}$ & $\irr{e}_{5\ptag{u}}$ & $\irr{e}_{5}$\\*
+$\irr{e}_{6\ptag{u}}$ & $\irr{e}_{4}$ & $\irr{e}_{5\ptag{u}}$ & $\irr{e}_{6}$\\
+\bottomrule\end{longtable}}
+\needspace{82pt}
+\paragraph{Spinor families.} \label{n:index.residue}The restriction of the spinor families to each closed subgroup. For the preimages $\grp{2C_{\mathnormal{N}}}$, $\grp{2C_{\mathnormal{N}v}}$ and $\grp{2D_{\mathnormal{N}}}$, every $N$, the rules give it by $q$, $0 < q < N$:
 {\small\begin{longtable}{@{}ll>{\RaggedRight\arraybackslash}p{0.7\textwidth}@{}}\toprule
 subgrp & family & irreps\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
@@ -559,6 +1046,17 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \leavevmode\label{n:irrep.o3}\label{n:index.J}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{Pin^{-}(3)}$ at half-integer $J$ restricted to $\grp{2D_{\infty h}}$ (\texttt{rule}):
 \begin{equation}\label{e:parent}\restr{\irrJp{J}{+1}}{\grp{2D_{\infty h}}} = \bigoplus_{n=1/2}^{J}\irr{e}_{n,\ptag{g}},\end{equation}
 and $\irrJp{J}{-1}$ restricts to the same irreps with $\ptag{u}$ for $\ptag{g}$, the sum over $n = \tfrac{1}{2}, \tfrac{3}{2}, \dots, J$; at integer $J$, the subduction of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$} (\texttt{integer\symbol{95}J}).
+\needspace{110pt}
+\section{Multiplicities and allowed \texorpdfstring{$m$}{m}}\label{s:multiplicities}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.14}{14}, \href{../../CONVENTIONS.pdf\#conv.26.2}{26.2} and \href{../../CONVENTIONS.pdf\#conv.29.4}{29.4}.
+\leavevmode\label{n:function.generating}\label{n:index.generating.variable}$b_\Gamma(J)$ is the number of blocks of $\Gamma$ at $J$, and
+\begin{equation}\label{e:gf}H_\Gamma(t) = \sum_{J\ge1/2} b_\Gamma(J)\,t^{2J},\end{equation}
+its generating function, for the member of index $n$ of each family, at the parity $p$ of $\irrJp{J}{p}$ that the kets carry; $\iverson{n\le J}$ is 1 when $n \le J$ and 0 otherwise, and $m$ is the $m$ of the kets of $\Gamma$ (\texttt{generating\symbol{95}function}, \texttt{allowed\symbol{95}m}).
+\begin{center}\small{\renewcommand{\arraystretch}{1.3}\begin{tabular}{@{}lllll@{}}\toprule
+family & $H_\Gamma(t)$ & $b_\Gamma(J)$, $p = +1$ & $p = -1$ & $m$\\\midrule
+$\irr{e}_{n,\ptag{g}}$ & $\dfrac{t^{2n}}{1-t^{2}}$ & $\iverson{n\le J}$ & $0$ & $n, -n$\\
+$\irr{e}_{n,\ptag{u}}$ & $\dfrac{t^{2n}}{1-t^{2}}$ & $0$ & $\iverson{n\le J}$ & $n, -n$\\
+\bottomrule\end{tabular}}\end{center}
 \needspace{91pt}
 \section{Symmetry-adapted bases}\label{s:bases}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.14}{14}, \href{../../CONVENTIONS.pdf\#conv.26.2}{26.2} and \href{../../CONVENTIONS.pdf\#conv.29.4}{29.4}.
@@ -587,7 +1085,7 @@ $\irr{e}_{1\ptag{u}}$ & $\irr{e}_{1/2,\ptag{u}}$ & 1 & $\left(\orbital{p}_{x} - 
 \section{Invariant polynomials}\label{s:invariants}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.26.4}{26.4}.
 \leavevmode\label{n:local.binary.form}A binary form $f = \sum_i c_i\, u^i v^{n-i}$ of degree $n$ in the spin kets $u = \jm{1/2}{1/2}$ and $v = \jm{1/2}{-1/2}$ is invariant when every element leaves it unchanged, the elements acting at the parity $+1$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.26.4}{26.4}); at the parity $-1$ the invariant forms are the same, all of even degree. The matrices of the elements on $u$, $v$ are the diagonal matrices of $\grp{SU(2)}$ and the lifts of the half-turns about the axes of the $xy$ plane, which exchange $u$ and $v$ up to factors and send $uv$ to $-uv$: the invariant forms are the polynomials in $(uv)^{2}$, $(uv)^J$ being $J!$ times the ket $\jm{J}{0}$, whose diagonal matrix element is a Legendre polynomial [\href{../../../REFERENCES.pdf\#ref.VK91}{VK91}, section 6.3.11].
-\leavevmode\label{n:function.hilbert}\label{n:local.partner.x}Every spinor irrep $V$ of $\grp{2D_{\infty h}}$ has dimension 2: the lifts of the rotations about $z$, and their products with the lift of the inversion, multiply its partners $x$ and $y$ by inverse phases, and the other elements exchange them with factors whose product is $-1$, as they square to $\elt{\barred{E}}$; the number of independent invariant polynomials of degree $n$ in its partners, the multiplicity of the trivial irrep in the $n$-th symmetric power of $V$, is the coefficient of $t^n$ in its Molien series $H_V(t)$ [\href{../../../REFERENCES.pdf\#ref.Mol97}{Mol97}], and the invariants are the polynomials in $(xy)^{2}$: $H_V(t) = 1/(1 - t^{4})$. The record stores none of these series.
+\leavevmode\label{n:function.hilbert}\label{n:local.partner.x}Every spinor irrep $V$ of $\grp{2D_{\infty h}}$ has dimension 2: the lifts of the rotations about $z$, and their products with the lift of the inversion, multiply its partners $x$ and $y$ by inverse phases, and the other elements exchange them with factors whose product is $-1$, as they square to $\elt{\barred{E}}$; the number of independent invariant polynomials of degree $n$ in its partners, the multiplicity of the trivial irrep in the $n$-th symmetric power of $V$, is the coefficient of $t^n$ in its Molien series $H_V(t)$ [\href{../../../REFERENCES.pdf\#ref.Mol97}{Mol97}], and the invariants are the polynomials in $(xy)^{2}$: $H_V(t) = 1/(1 - t^{4})$ (\texttt{invariants.molien}).
 \needspace{177pt}
 \partbox{Electronic levels}
 \section{Spin--orbit levels}\label{s:spin_orbit}

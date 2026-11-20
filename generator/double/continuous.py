@@ -1129,14 +1129,21 @@ def bases_block(base, fams):
                          vectors=[dict(_ket(-k), mu=1), dict(_ket(k, c), mu=2)])
             blocks.append(b)
     check_bases(base, fams, blocks)
+    # a g or u family has its blocks at one parity of the kets: its multiplicity names both
+    # parities, and its generating function and allowed 2m are those at that parity (parity)
     fam_rows = [{"family": f.id, "label_template": f.template} for f in fams]
+    tagged = [dict(r, parity=f.parity) if f.parity is not None else r
+              for r, f in zip(fam_rows, fams)]
+
+    def at_parity(f, value):
+        return {None: value, 1: "%s at p = +1, 0 at p = -1" % value,
+                -1: "0 at p = +1, %s at p = -1" % value}[f.parity]
     if spherical:
         cases = [{"case": "every J", "dim": "2J+1", "kind": "all_kets",
                   "vectors": "mu = J - m + 1: |J,m>, m = J, J-1, ..., -J"}]
-        mult = [dict(r, multiplicity="1" if f.parity in (None, 1) else "0 at p = +1, 1 at p = -1")
-                for r, f in zip(fam_rows, fams)]
-        gf = [dict(r, numerator="t^(2j)", denominator=[]) for r in fam_rows]
-        allowed = [dict(r, twoM="2j, 2j-2, ..., -2j") for r in fam_rows]
+        mult = [dict(r, multiplicity=at_parity(f, "1")) for r, f in zip(fam_rows, fams)]
+        gf = [dict(r, numerator="t^(2j)", denominator=[]) for r in tagged]
+        allowed = [dict(r, twoM="2j, 2j-2, ..., -2j") for r in tagged]
         structure = SPHERICAL_STRUCTURE
     else:
         if abelian:
@@ -1145,10 +1152,10 @@ def bases_block(base, fams):
         else:
             cases = [{"case": "every J and 1/2 <= n <= J", "dim": 2, "kind": "partner_pair",
                       "vectors": "mu = 1: |J,-n>; mu = 2: (-1)^(J-n) |J,n>"}]
-        mult = [dict(r, multiplicity="[n <= J]") for r in fam_rows]
-        gf = [dict(r, numerator="t^(2n)", denominator=[2]) for r in fam_rows]
+        mult = [dict(r, multiplicity=at_parity(f, "[n <= J]")) for r, f in zip(fam_rows, fams)]
+        gf = [dict(r, numerator="t^(2n)", denominator=[2]) for r in tagged]
         allowed = [dict(r, twoM=("2n" if f.id.startswith("1") else "-2n") if abelian
-                        else "2n, -2n") for r, f in zip(fam_rows, fams)]
+                        else "2n, -2n") for r, f in zip(tagged, fams)]
         structure = AXIAL_STRUCTURE
     closed = {"structure_theorem": structure, "cases": cases, "multiplicity": mult}
     if any(f.parity is not None for f in fams):
@@ -1291,7 +1298,8 @@ def record(base):
     else:
         doc["spin_orbitals"] = linear_spin_orbitals(
             base, doc["character_functions"]["irrep_families"])
-        doc["spin_orbit_levels"] = spin_orbit_levels.continuous_block(base)
+    doc["spin_orbit_levels"] = spin_orbit_levels.continuous_block(base)
+    doc["fundamental_domain"] = fundamental_domain_block(base)
     sub = CS.block(base)
     if sub is not None:
         doc["subduction_subgroups"] = sub
@@ -1299,7 +1307,79 @@ def record(base):
         doc["wigner_d"] = su2.wigner_d_block(SPHERICAL_TWO_JMAX)
         doc["subgroup_classes"] = su2.subgroup_classes()
         doc["subduction_rules"] = su2.subduction_rules()
+    if base == "O3":
+        doc["subgroup_classes"] = pin_subgroup_classes()
+        doc["subduction_rules"] = su2.pin_subduction_rules()
     return doc
+
+
+# ---------------------------------------------------------------- the fundamental domain
+def fundamental_domain_block(base):
+    """fundamental_domain of a continuous preimage (section 21.3): the cosets of 2G in Pin-(3)
+    are those of G in O(3), its cell and domain G's (image), and the volumes, of the metric that
+    the covering map carries to O(3)'s: the group twice G's, the domain G's, Pin-(3) 32 pi^2."""
+    rot_fd = serialize.read_json(names.catalogue_path(
+        "rotation", "%s/%s.json" % (names.RECORDS_DIR, base)))["fundamental_domain"]
+    vols = rot_fd["volumes"]
+    group = dict(vols["group"], coefficient=[2 * vols["group"]["coefficient"][0],
+                                             vols["group"]["coefficient"][1]])
+    pin = dict(vols["o3"], coefficient=[2 * vols["o3"]["coefficient"][0],
+                                         vols["o3"]["coefficient"][1]])
+    g, d, t = (F(*v["coefficient"]) for v in (group, vols["domain"], pin))
+    if g * d != t or group["pi_power"] + vols["domain"]["pi_power"] != pin["pi_power"]:
+        raise AssertionError("2%s: vol 2G vol F is not vol Pin-(3)" % base)
+    return {"image": rot(base, "/fundamental_domain"), "space": rot_fd["space"],
+            "volumes": {"group": group, "domain": vols["domain"], "pin_minus_3": pin}}
+
+
+# ---------------------------------------------------------------- the subgroups of Pin-(3)
+def pin_symbol(node):
+    """The symbol of a class of data/double_groups.json as the tables of subgroups write it, with
+    C_s for C_1v and C_i for S_2: 2C_s, C_ib, S_6b."""
+    if node["kind"] == "continuous":
+        return node["symbol"]
+    if node["class"] == "preimage":
+        return "2" + names.display_schoenflies(node["covers"])
+    return names.display_schoenflies(node["image"]) + ("b" if node["id"].endswith("b") else "")
+
+
+def pin_subgroup_classes():
+    """subgroup_classes of Pinminus3: the closed subgroups of Pin-(3) up to conjugacy, other than
+    itself, the classes of data/double_groups.json, each with the normalizer and the centralizer
+    of its record's group block and the family and N of its image; the continuous ones, then per
+    family its preimages and its sections, then the exceptional preimages; with the aliases of the
+    lattice, the N = 1 members that are another class (alias, class, symbol)."""
+    lattice = serialize.read_json(names.path("data/double_groups.json"))
+    nodes = {node["id"]: node for node in lattice["nodes"]}
+    cont, families, exceptional = [], {}, []
+    for node in lattice["nodes"]:
+        if node["id"] == "Pinminus3":
+            continue
+        g = serialize.read_json(names.record_path(node["id"]))["group"]
+        # normal when its normalizer in Pin-(3) is the whole group; else, Pin-(3) being SU(2)
+        # times the central {E, i~}, its conjugates by SU(2) are infinitely many
+        normal = g["normalizer"]["symbol"] == "Pin^-(3)"
+        e = {"subgroup": {"symbol": pin_symbol(node), "double_class": node["id"],
+                          "order": g["order"]},
+             "normal": normal, "class_size": 1 if normal else _null("continuous-group"),
+             "normalizer": g["normalizer"], "centralizer": g["centralizer"]}
+        image = node["covers"] if node["class"] == "preimage" else node["image"]
+        fam = names.family_of(image)
+        if node["kind"] == "continuous":
+            cont.append(e)
+        elif fam:
+            e["subgroup"].update(family=fam[0], N=fam[1])
+            families.setdefault(fam[0], []).append(e)
+        else:
+            exceptional.append(e)
+    finite = [e for members in families.values()
+              for e in sorted(members, key=lambda e: (not e["subgroup"]["symbol"].startswith("2"),
+                                                      e["subgroup"]["symbol"].endswith("b"),
+                                                      e["subgroup"]["N"]))]
+    aliases = [{"alias": a, "class": c, "symbol": pin_symbol(nodes[c])}
+               for a, c in sorted(lattice["aliases"]["finite"].items())]
+    return {"continuous": cont, "finite": finite + exceptional, "aliases": aliases,
+            "count": {"continuous": len(cont), "finite": len(finite) + len(exceptional)}}
 
 
 # ---------------------------------------------------------------- spin-orbit levels
