@@ -23,6 +23,7 @@ families, by the pointer vector_families); the records hold the spinor families,
 -1.  Their index is a half-odd integer: the |m| of the kets |j, +-m> for the axial preimages, the
 angular momentum j for SU2 and Pinminus3.
 """
+import re
 from fractions import Fraction as F
 
 from .. import names, serialize
@@ -106,6 +107,46 @@ def element(cid, t):
     return U, EPS[cid]
 
 
+# The matrix M(g) of the element of a component at its angle: the transpose of its SU(2) part, as
+# the finite preimages store theirs (section 21.2), in the variable x of section 29.2 (omega/2 on
+# an arc, psi on an atom).
+ELEMENT_MATRIX = {
+    "Cphi": [["exp(-i x)", "0"], ["0", "exp(+i x)"]],
+    "iCphi": [["exp(-i x)", "0"], ["0", "exp(+i x)"]],
+    "sv": [["0", "exp(+i x)"], ["-exp(-i x)", "0"]],
+    "c2p": [["0", "-i exp(+i x)"], ["-i exp(-i x)", "0"]],
+}
+ELEMENT_ENTRY = re.compile(r"(-?)(i )?exp\(([+-])i x\)")
+
+
+def element_entry(text, cid, t):
+    """The exact value of an entry of ELEMENT_MATRIX at the parameter t: x = pi t on an arc,
+    2 pi t on an atom."""
+    if text == "0":
+        return Cyc.zero()
+    m = ELEMENT_ENTRY.fullmatch(text)
+    if not m:
+        raise ValueError("an entry of an element matrix: %r" % text)
+    u = F(t) / 2 if cid in ("Cphi", "iCphi") else F(t)
+    v = expi_turn(u if m.group(3) == "+" else -u)
+    if m.group(2):
+        v = Cyc.zeta(4, 1) * v
+    return -v if m.group(1) else v
+
+
+def check_element_matrices(comps):
+    """Each component's matrix is the transpose of the SU(2) part of its element (element) at
+    sample points."""
+    for c in comps:
+        for t in (F(0), F(1, 7), F(3, 10), F(1, 2), F(5, 6), F(1), F(13, 9)):
+            U = element(c.id, t)[0]
+            got = [[element_entry(x, c.id, t) for x in row] for row in ELEMENT_MATRIX[c.id]]
+            if any((got[i][j] - U[j][i]).minimal() != Cyc.zero()
+                   for i in range(2) for j in range(2)):
+                raise AssertionError("the matrix of the component %s is not the transpose of "
+                                     "its element at t = %s" % (c.id, t))
+
+
 def ket_action(U, eps, twoJ, p=1):
     """hat D^j(U, eps) = p^[eps = -1] D^j(U)^dagger, rows and columns m = j, ..., -j (section
     26.1)."""
@@ -163,7 +204,8 @@ class Component:
                 else _null("continuous-group"))
         d = {"id": self.id, "kind": self.kind, "coset": self.coset, "element": self.element,
              "label": self.label, "display": self.display, "class_size": size,
-             "covers": self.id, "haar_mass": [self.mass().numerator, self.mass().denominator]}
+             "covers": self.id, "haar_mass": [self.mass().numerator, self.mass().denominator],
+             "matrix": ELEMENT_MATRIX[self.id]}
         if self.kind == "arc":
             d["coordinate"] = {"symbol": "t", "unit": "turn", "omega": "omega = 2*pi*t",
                                "psi": "psi = pi*t", "t0": [0, 1],
@@ -1261,6 +1303,7 @@ def record(base):
     from . import continuous_subgroups as CS
     from . import su2
     comps, fams = space(base), families(base)
+    check_element_matrices(comps)
     check_matrices(base, fams)
     check_orthonormal(base, comps, fams)
     check_subduction(base, comps, fams)

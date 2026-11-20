@@ -41,16 +41,16 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 44176,
+          "bytes": 44345,
           "format": "markdown",
           "path": "double/CONVENTIONS.md",
-          "sha256": "8d4307d63888052f58e2ae5d86a681dd736b838ba31ff59e75260525104af2c2"
+          "sha256": "782e901e7c9b7c20d821d19f782d1fec0e64ba058ffdca5df846fc47d97c92a8"
         },
         {
-          "bytes": 322179,
+          "bytes": 322329,
           "format": "pdf",
           "path": "double/CONVENTIONS.pdf",
-          "sha256": "2a9e0dd8a7551f936b2e57c905ecb17bd71bf6fcd9726a3baa36a70eccc66648"
+          "sha256": "01fb9196badbe2e89056744b7269b7f85353cc03d25b5fb7bdab62c52c8dcfcf"
         },
         {
           "bytes": 85739,
@@ -71,10 +71,10 @@
           "sha256": "7b96874eb9f0212c15dfccb9f3c809fbbe93b0242ef11cd722ca67a85b6c96f6"
         },
         {
-          "bytes": 183398,
+          "bytes": 183923,
           "format": "json",
           "path": "double/schema/group-continuous.schema.json",
-          "sha256": "302cfec8816c9545a0690239d0359466fdd1ddff5509af68a8c5fb360a7e4b6f"
+          "sha256": "d503b1f4a80ab470bb7833e7360a758409ada90e1e64b947be4b58d0424840dd"
         }
       ],
       "parent": "Pin^-(3)",
@@ -5073,10 +5073,10 @@
           "sha256": "41f04c086c7786b0cd1569285c4608e3680fd1b74ca5aeb9a7432a46feda46ac"
         },
         {
-          "bytes": 62619,
+          "bytes": 62658,
           "format": "latex",
           "path": "double/data/latex/2C1.tex",
-          "sha256": "765ae0c6122559e6d7806a04a36ceda84bebacc7882f311942089f3342a5ba32"
+          "sha256": "c93ef72815287d51cd24be31d7a45edc6e84231f284f142cff0c5bcf229a35c7"
         },
         {
           "bytes": 402845,
@@ -5120,10 +5120,10 @@
           "sha256": "fe8887fbe90f6f10c4312822db8808ccec22abad0aaf8ad46f72c44fabf2d74e"
         },
         {
-          "bytes": 70273,
+          "bytes": 70312,
           "format": "latex",
           "path": "double/data/latex/2C2.tex",
-          "sha256": "db25bcd5c4bb2f01b10c771498ced97416d48a6493208c293f152a48cbf41abf"
+          "sha256": "eb6cfa3a7984328ad7308d372f0c939f2f702d6fc70fdd4d6dbe7944e02e03c8"
         },
         {
           "bytes": 410816,
@@ -5167,10 +5167,10 @@
           "sha256": "501f1552015fcd4fd08911f91d1de186165f74de58ad1fca4b4fcdd2049f59e7"
         },
         {
-          "bytes": 74810,
+          "bytes": 74849,
           "format": "latex",
           "path": "double/data/latex/2C3.tex",
-          "sha256": "e2914e97d23701a6cdc74faaaeb985358a494c97b1a6c161f11b853de237f7f1"
+          "sha256": "68a9668d6d5c5f8e55ff2b01052001d858f505bd77727ea5b26bed5ef0651886"
         },
         {
           "bytes": 415810,
@@ -5214,10 +5214,10 @@
           "sha256": "5f553e5d73a0f9487efae3efe9543b02f333414296b2063c1bc5182f9415d83d"
         },
         {
-          "bytes": 81523,
+          "bytes": 81562,
           "format": "latex",
           "path": "double/data/latex/2C4.tex",
-          "sha256": "91c02921b261621af32a58d5545194d4eaa46af1aadbdc55ee30111f87ca4436"
+          "sha256": "56b830fc6e11d85477c757562df12f3eeeb80146e957341873b7884e60233252"
         },
         {
           "bytes": 420673,
@@ -5261,10 +5261,10 @@
           "sha256": "0d4869e8b818ffa0a9d8b6315d4987ad603e05663a36212ac0282a057afbe459"
         },
         {
-          "bytes": 83744,
+          "bytes": 83783,
           "format": "latex",
           "path": "double/data/latex/2C5.tex",
-          "sha256": "8c57121a663f219da50d0658e0c78173c13e1c85adf56f0360715ff014eb0f72"
+          "sha256": "f1afaf12cee955fb04fcac5411a31d1d4b328e96db83eedd911fc7d3fe3d6b64"
         },
         {
           "bytes": 419916,
@@ -5308,10 +5308,10 @@
           "sha256": "ad1dfd95b03347a292167446f5485b15de436d2f3f65a5777d2069cc96e326db"
         },
         {
-          "bytes": 93289,
+          "bytes": 93328,
           "format": "latex",
           "path": "double/data/latex/2C6.tex",
-          "sha256": "eb79db3039dc1d380560ab017e5b713d457511d881ec155f13e39a28e894f53e"
+          "sha256": "edca23e1553987a5c8fd6884edcef79ec76aa6b31d1b913486af796c5ccffcc1"
         },
         {
           "bytes": 424919,
@@ -5355,10 +5355,10 @@
           "sha256": "93a48982034533c75a14c5008a697d33073a89d939e2a5158573668358421f45"
         },
         {
-          "bytes": 94062,
+          "bytes": 94101,
           "format": "latex",
           "path": "double/data/latex/2C7.tex",
-          "sha256": "b2f10e61a23ae98e52b8d7ea32ba596efd0bbd865e177fa8161cbaa3cd41217f"
+          "sha256": "d5e2aded1e7cb813c01b88d9647f171bd190fd164a3d2af17274deca8fb6231b"
         },
         {
           "bytes": 421765,
@@ -5402,10 +5402,10 @@
           "sha256": "8b46242c656ce83e46238f88cb93faa2893cb0c7978b254e00d27a28d626f31e"
         },
         {
-          "bytes": 102788,
+          "bytes": 102827,
           "format": "latex",
           "path": "double/data/latex/2C8.tex",
-          "sha256": "5fe22402a37c7c89155514a2cd87dc30074a44418a254e6a01fc19084ea7c8ea"
+          "sha256": "ad2aa64b9213e864bac925d2480aab6763f71eb4031c92fcba521c165a00bf28"
         },
         {
           "bytes": 428092,
@@ -5449,10 +5449,10 @@
           "sha256": "55043bf5a5f911beefb39e30d206fa6ecb5a1f227eac6ba92e1862347f236c0e"
         },
         {
-          "bytes": 109727,
+          "bytes": 109766,
           "format": "latex",
           "path": "double/data/latex/2C9.tex",
-          "sha256": "250a1ed74902e0afc992d2283f1175e72a85959a8d927e61e490e87508c9082d"
+          "sha256": "eea3582004c0ea7205e306ae1508a29aeddc893543d0499e0757b75a50730381"
         },
         {
           "bytes": 430078,
@@ -5496,10 +5496,10 @@
           "sha256": "e9e24bdca436ccf87c3a9842aa51849408e5e1db59279b075b18caa4cc94421d"
         },
         {
-          "bytes": 117345,
+          "bytes": 117384,
           "format": "latex",
           "path": "double/data/latex/2C10.tex",
-          "sha256": "e09f437c285a84f73f40f25d7ad98a5cb1426c06be08807d915cec7cfafa5469"
+          "sha256": "d1996480d2b1963fbdbf93c34e4adccdbb92c96d04d31cdb4e22b673855d3a18"
         },
         {
           "bytes": 433016,
@@ -5543,10 +5543,10 @@
           "sha256": "ce41b17545e090d00c22129e3d4e90f948381f108a5541a4021cf191efd9657c"
         },
         {
-          "bytes": 121326,
+          "bytes": 121365,
           "format": "latex",
           "path": "double/data/latex/2C11.tex",
-          "sha256": "f389eae91de3f3b1accb490f80c7d10d48f7872769f75d5bf2fc823d5fd4d684"
+          "sha256": "cd67e9fbdcdd33a420cce97107b6ff861c07def8e91a1beee6e8dbb00096af5f"
         },
         {
           "bytes": 430947,
@@ -5590,10 +5590,10 @@
           "sha256": "0c40e0da6044c5af24ebe6e964922dd0925d7cbe8423941d020e8ebba505f437"
         },
         {
-          "bytes": 135286,
+          "bytes": 135325,
           "format": "latex",
           "path": "double/data/latex/2C12.tex",
-          "sha256": "c93491ef6005fa3853320aaa58f8190454aa7db3ce6dcf867bdff55e0bc21692"
+          "sha256": "c14edca65e258026dad778c28204bb4351e2c9899ea62dadce39162fcc377c98"
         },
         {
           "bytes": 439787,
@@ -5637,10 +5637,10 @@
           "sha256": "57bbf5a712c0d45df3bc89a469300a0004868e4688148ee9a7a7a0fcf6c9b0e8"
         },
         {
-          "bytes": 71243,
+          "bytes": 71282,
           "format": "latex",
           "path": "double/data/latex/2S2.tex",
-          "sha256": "87053343af0cb9c0008501de5df35e0b870417826731e95ebbe96b7b1060b1a2"
+          "sha256": "b3c6727918ee9b1b3dddcb1693d46d4be7022c8c586a5a2f7ee7e37e308dc478"
         },
         {
           "bytes": 418886,
@@ -5684,10 +5684,10 @@
           "sha256": "b169e74b2dd98aa6cf2eba14a1879b5a6c458f177816d7f795c1d94e2ef0b8da"
         },
         {
-          "bytes": 83783,
+          "bytes": 83822,
           "format": "latex",
           "path": "double/data/latex/2S4.tex",
-          "sha256": "ed24e16a0b0299a0a36c7aab839a723300fbfaf0db119342f7ecf9264a2cba8a"
+          "sha256": "607d7d8a68ddd7b67a7e426fc3e6977ab6664d739168bf67c5e1f3b838d6e347"
         },
         {
           "bytes": 424234,
@@ -5731,10 +5731,10 @@
           "sha256": "8dade35c17ec2daad760ee27d34b79cd35a1ff9dbc3bd9aac29b5b8e18312854"
         },
         {
-          "bytes": 100199,
+          "bytes": 100238,
           "format": "latex",
           "path": "double/data/latex/2S6.tex",
-          "sha256": "f57641a1aa2629450266326b598e5a92cf4941de31c598bb7b9ee9feb170c760"
+          "sha256": "dba99ddd7a6780fdce41d387c9dfcf7fd720ce66ac228dadf5b62da37207d3cb"
         },
         {
           "bytes": 437429,
@@ -5778,10 +5778,10 @@
           "sha256": "c8df1df4908061ae8844daf1ca8854d91d25729044c1e821a21ae22b5c7c8be9"
         },
         {
-          "bytes": 105501,
+          "bytes": 105540,
           "format": "latex",
           "path": "double/data/latex/2S8.tex",
-          "sha256": "5e3fac24caec92b10fbc8bf7adfa547ceb3f7c02ae4e0cc53abbd4aa9450fa24"
+          "sha256": "be52ed6f7ba6d3cc96f114448b2dbac72345ef384d2514928ff1989f52af00dc"
         },
         {
           "bytes": 431473,
@@ -5825,10 +5825,10 @@
           "sha256": "fc7ade0cf65b99ac8b42fb46076cf844355a5053dffec95cee20ef94f7b8f9a8"
         },
         {
-          "bytes": 129784,
+          "bytes": 129823,
           "format": "latex",
           "path": "double/data/latex/2S10.tex",
-          "sha256": "fe57502be59d1b831484942f2f62731331d102b9169b7c75243b8470a191d105"
+          "sha256": "8cdecb9c8ac7a58ec13a229600487dddd825b6e091052fe55bb7a087825a7eaf"
         },
         {
           "bytes": 444893,
@@ -5872,10 +5872,10 @@
           "sha256": "0f384110f6eb2a6872383d5cef126258e310de9215d85f65f94922c2c98dc9ff"
         },
         {
-          "bytes": 138921,
+          "bytes": 138960,
           "format": "latex",
           "path": "double/data/latex/2S12.tex",
-          "sha256": "cc53369faf3537bc7dfc83486f3b18e6383f71a514418505107486d515cdd756"
+          "sha256": "dbca524a3c38536556ac82679f5bab815ac88b4fa31d4d447043dbf3464eea6e"
         },
         {
           "bytes": 442966,
@@ -5919,10 +5919,10 @@
           "sha256": "59cc16390848a0b6c4d30970946a0821f8d4d8312d86338c6679388fc26acccd"
         },
         {
-          "bytes": 165548,
+          "bytes": 165587,
           "format": "latex",
           "path": "double/data/latex/2S14.tex",
-          "sha256": "b9aff211763d02f8d153a25bb51773273b35a4ca5fee6754df912758f9ff0a93"
+          "sha256": "36ff18c0bb636aa1ce6c8576b3c7e5709276f48975b4739d1e9563738b449de2"
         },
         {
           "bytes": 453133,
@@ -5966,10 +5966,10 @@
           "sha256": "2ce0005a9508d081ca07513953eb33adc9a06e0572fc13b2af8315e2e10c62d6"
         },
         {
-          "bytes": 172479,
+          "bytes": 172518,
           "format": "latex",
           "path": "double/data/latex/2S16.tex",
-          "sha256": "5949066fc40244b8d48a7e9a3bb43992f257ee08df9f69fa8d35672a4b8561c5"
+          "sha256": "8ba0059b377a74b923b97db547ea4d44ef601b0580ab3ce389562e99de5a2b8f"
         },
         {
           "bytes": 451272,
@@ -6013,10 +6013,10 @@
           "sha256": "b6bfd63453eaa6e73a57e4be579624a25e7c387ca2c1c264cd48431906d927ad"
         },
         {
-          "bytes": 218627,
+          "bytes": 218666,
           "format": "latex",
           "path": "double/data/latex/2S18.tex",
-          "sha256": "f811ac5008c8f88a97b2ce766137192222e95ad4e78edd85eb448de8f868aa88"
+          "sha256": "1effca6e7645b63faab3069219e477e24b51e148d5e6b371303f2387218bb38a"
         },
         {
           "bytes": 466930,
@@ -6060,10 +6060,10 @@
           "sha256": "c03a61320c9b38793de5ed3dac5a8f3f372824ad46dfc5f01ee3a8115e6a7670"
         },
         {
-          "bytes": 218391,
+          "bytes": 218430,
           "format": "latex",
           "path": "double/data/latex/2S20.tex",
-          "sha256": "8429ef5059e4fb2dd806b3b91397aaf1c4b2c9429f4ed924b461aeddcae14f87"
+          "sha256": "ecdf19e71f22549813538321953d803d4a1e5b236e848a97ddae1c1035275506"
         },
         {
           "bytes": 463099,
@@ -6107,10 +6107,10 @@
           "sha256": "725368a0be09f0a27560363038ef8fc43dcac63c821ee8795a261456385a81b1"
         },
         {
-          "bytes": 260857,
+          "bytes": 260896,
           "format": "latex",
           "path": "double/data/latex/2S22.tex",
-          "sha256": "ccd8b348174a83d50ae3d88ebe0e4fbe41dc1eaa877417c21ddf55167e808c0b"
+          "sha256": "72498dc48ac57f19a4c2c696ba723631df18aa64db8a69a1762962af4efe0442"
         },
         {
           "bytes": 479454,
@@ -6154,10 +6154,10 @@
           "sha256": "59a0597306758e2b596552b8be37845ecf146c8305faa3bc8408529d73ea09e5"
         },
         {
-          "bytes": 273125,
+          "bytes": 273164,
           "format": "latex",
           "path": "double/data/latex/2S24.tex",
-          "sha256": "06dbfd8f65acf9e19905f0a72b511797e4e8fc01bb6fa9eb14cb17b768dd6e4c"
+          "sha256": "c337e67478dd3a7b649ee07a69b23514c1e6d1ac7bf8a84a5ce4d8a69a459d98"
         },
         {
           "bytes": 476390,
@@ -6201,10 +6201,10 @@
           "sha256": "c1b17f7f181ff462a14124ca631e65ba32cd06418dc7a99286f62be93bcf413b"
         },
         {
-          "bytes": 68812,
+          "bytes": 68851,
           "format": "latex",
           "path": "double/data/latex/2C1h.tex",
-          "sha256": "b4601db2c268ef8fd795f0f0f3f1422f4683b198748b537680a446a78936aada"
+          "sha256": "cb54c9d64c5160bf8ce3eaa3c94aa957bce3dbaf2946faba05618c9094314d95"
         },
         {
           "bytes": 425985,
@@ -6248,10 +6248,10 @@
           "sha256": "32d364dae329ae33c25a1aae6f66012452c2aba35cebea751d378d1d2c06d37a"
         },
         {
-          "bytes": 86051,
+          "bytes": 86090,
           "format": "latex",
           "path": "double/data/latex/2C2h.tex",
-          "sha256": "48c7d005d6029289de959c57eeb70f6f412b3e07e34cdb07f89c9caf05ee1d84"
+          "sha256": "5b328a08d2288e179e1fd27c87baf8a2e523f210f3847a1b0094150306340928"
         },
         {
           "bytes": 449917,
@@ -6295,10 +6295,10 @@
           "sha256": "8347ad502418bba181c032ec5ebd222f89a7171846ef249b1f7d8210861bfc00"
         },
         {
-          "bytes": 91160,
+          "bytes": 91199,
           "format": "latex",
           "path": "double/data/latex/2C3h.tex",
-          "sha256": "178ec0d1a9585086e2787c108cf81f83f4fff5067f4380cdf8e19a8949afddfb"
+          "sha256": "645fe334f817b074a17f27cd0aa70f3bd6475d3a2680a868cf5431f6a29557bc"
         },
         {
           "bytes": 448651,
@@ -6342,10 +6342,10 @@
           "sha256": "457e5af91ba761d6bdb798e0d45d4ec9b7c2459572ebf4156bdc930b006b24cc"
         },
         {
-          "bytes": 115093,
+          "bytes": 115132,
           "format": "latex",
           "path": "double/data/latex/2C4h.tex",
-          "sha256": "1314fa7703707aa6418faef0a3e8ff03357647b6d67456eba815fd78b6623fa7"
+          "sha256": "eae725c3a200801c4c94dd63fff2447747e404d07fbffd2486654baa74b37b10"
         },
         {
           "bytes": 463880,
@@ -6389,10 +6389,10 @@
           "sha256": "b3adb7cd80df55de0a72c16ffb65a608e9535f5b652ada54f651fb8ea1d975ac"
         },
         {
-          "bytes": 114729,
+          "bytes": 114768,
           "format": "latex",
           "path": "double/data/latex/2C5h.tex",
-          "sha256": "9dbcfae31dae40f5d6aa26236c299c5691d5584402c8615d8dd4cd4d8bae65e2"
+          "sha256": "724c0025d6d433177999b55d0ea06f9d57328f2a1ad8a9d34d26cbd4c3eb5b05"
         },
         {
           "bytes": 457950,
@@ -6436,10 +6436,10 @@
           "sha256": "763deb28283129ab593895795ed2e92aa63b52749adafe357075ecc344d99805"
         },
         {
-          "bytes": 158581,
+          "bytes": 158620,
           "format": "latex",
           "path": "double/data/latex/2C6h.tex",
-          "sha256": "712793a3c2a9cf51870322ceccc933f37253a41c244c07fffb8e0f2b61709564"
+          "sha256": "444568e3bc5489f15d6c7458a3f2f9bc5ec10bbc457fb84502536ffdc5ff1fa9"
         },
         {
           "bytes": 475869,
@@ -6483,10 +6483,10 @@
           "sha256": "790a1e6d87b6ca4276d7e3bcc7b8e5ccf800b1a3482f1eb0dbbbeeecba9e006c"
         },
         {
-          "bytes": 145390,
+          "bytes": 145429,
           "format": "latex",
           "path": "double/data/latex/2C7h.tex",
-          "sha256": "781ece4475befb8cf6a8f6dcab66ef18db1ec244446f371a80ec195f2c8e34b6"
+          "sha256": "7cc5fa25726806a22d3c3f936f158c6c9bb40c5646887c27c26ba44cfab2d19a"
         },
         {
           "bytes": 467694,
@@ -6530,10 +6530,10 @@
           "sha256": "b8653af86dd985e1f9281b1eb331264b98bb0e8f8afa7e1dfab98b2bc942b89a"
         },
         {
-          "bytes": 195821,
+          "bytes": 195860,
           "format": "latex",
           "path": "double/data/latex/2C8h.tex",
-          "sha256": "dc143cd3c0f6594c3db6a086db1437850491473b786e1e2e2c0df509ffea8f6f"
+          "sha256": "d12f337d0b2dccc31a3bc563e272512bc4579105d5de38adb03f1a22eab43585"
         },
         {
           "bytes": 481900,
@@ -6577,10 +6577,10 @@
           "sha256": "ae8c2966fcb13eb047d13362240f748a63fa66fd2cabcfae5042ed47cc00f111"
         },
         {
-          "bytes": 186289,
+          "bytes": 186328,
           "format": "latex",
           "path": "double/data/latex/2C9h.tex",
-          "sha256": "0480ccc855b02d0b3edaf4a6b70ecb98c0cbdbc512f05324f3fba3f6dd7eac46"
+          "sha256": "083b56964e8d9b84ee3aaf75583a96c6239dced738503ba8e6bb32cae4aa07bc"
         },
         {
           "bytes": 480696,
@@ -6624,10 +6624,10 @@
           "sha256": "bc34a79a238e5fc8891ae0a10141cea08e40b0021ad14eb320b1744ed43d1152"
         },
         {
-          "bytes": 250138,
+          "bytes": 250177,
           "format": "latex",
           "path": "double/data/latex/2C10h.tex",
-          "sha256": "5bf682da6dafe7367139ded75bfbd3cc692b8328465b96687b09d768f719becb"
+          "sha256": "bc632b2d1ca3bc904df9dc998e5bf927eb11f39ea19b7561acacd2e7a8f0adb2"
         },
         {
           "bytes": 494965,
@@ -6671,10 +6671,10 @@
           "sha256": "17a99b71da24255737571a63e39ce0fc1b01a0362831ac9afeef82035d55ba06"
         },
         {
-          "bytes": 225732,
+          "bytes": 225771,
           "format": "latex",
           "path": "double/data/latex/2C11h.tex",
-          "sha256": "aa468065eb1ba7aa9f1f3e78f40cb563dc3a7f92e65620e2e189e02c3da3229d"
+          "sha256": "ea63c1d7a168c3c2b3121e511595bf74f67b091f0201a99abd760b93c2f238b7"
         },
         {
           "bytes": 502853,
@@ -6718,10 +6718,10 @@
           "sha256": "94d595d31f2800ee7e5049e8a09ea5d94c522b9a7d1170c91c43c93c1559afe2"
         },
         {
-          "bytes": 325877,
+          "bytes": 325916,
           "format": "latex",
           "path": "double/data/latex/2C12h.tex",
-          "sha256": "9901404e61b043f12a79ee7c5cee694014b4f71f5ee41dd84f6e44c961307d98"
+          "sha256": "a39c287240fb58037aa42f9c8ae7ba7c699afc7ec6a5ab8bc48458402b559aa4"
         },
         {
           "bytes": 512330,
@@ -6765,10 +6765,10 @@
           "sha256": "fe45475db5d04f952f6dbbbb0e01c4c72e8d169fdc83399d58f85cfd123e15ae"
         },
         {
-          "bytes": 79702,
+          "bytes": 79741,
           "format": "latex",
           "path": "double/data/latex/2C1v.tex",
-          "sha256": "f1096cb644dd3ca7978dffb5f9bf44ff5e7e1b465c529c8111cbe05e03ac54e2"
+          "sha256": "5409d1a64405324a1d3b3635018495683da35a02b9322724f8ff573c13f79a28"
         },
         {
           "bytes": 429141,
@@ -6812,10 +6812,10 @@
           "sha256": "2c1d502d8275c839636a6b0be4ede929fbaab2d65715de75e9be7cc9590c6e5c"
         },
         {
-          "bytes": 78366,
+          "bytes": 78405,
           "format": "latex",
           "path": "double/data/latex/2C2v.tex",
-          "sha256": "a46ca754bbc64f96601e8cddbf724ad1fdff5c4e67687b6a610f407d5e5909ec"
+          "sha256": "f60a7624a0ef5f01b36b529a783fc020196962f5d003bd98748c4fb2be53ada1"
         },
         {
           "bytes": 440795,
@@ -6859,10 +6859,10 @@
           "sha256": "24a2a2a2e8a176bb3042e2b8230afb26c09bf4bc74c5d2c154c7c5b1df0be191"
         },
         {
-          "bytes": 91395,
+          "bytes": 91434,
           "format": "latex",
           "path": "double/data/latex/2C3v.tex",
-          "sha256": "647a854560b7752aa154a97fd3e52ab628daa7372b811d086ab209cc72e23b16"
+          "sha256": "b7e844436c4dcaf3d9cd1a8fdfbabc571d26361805dd23e6f8b6efaadfaa2ef0"
         },
         {
           "bytes": 457238,
@@ -6906,10 +6906,10 @@
           "sha256": "f45c7f58aceae3a56c460f036b5429fd291628536a239849343ceb2e259b578c"
         },
         {
-          "bytes": 91276,
+          "bytes": 91315,
           "format": "latex",
           "path": "double/data/latex/2C4v.tex",
-          "sha256": "34e97623303b3a634a4f41add7602ca0569801bb4bf64c194e7f7ee772dc07c8"
+          "sha256": "45d2dd66f2516db92209d2b8c6cbfd13a832c30b92a31da4ae817ceeba018d13"
         },
         {
           "bytes": 449557,
@@ -6953,10 +6953,10 @@
           "sha256": "d7cb112636dd2782c532e1d7fcbb36aa98687d82051cbf4d60b8f88b816cb3f0"
         },
         {
-          "bytes": 102408,
+          "bytes": 102447,
           "format": "latex",
           "path": "double/data/latex/2C5v.tex",
-          "sha256": "a4c4fd0a51822fbfc9ab5fffc79269c9d0eb54871da721e4d5004909f1e06cd4"
+          "sha256": "e8f875a8ce9caea6c3e516db877945b05e000d5f8af796612fa484268071bf9d"
         },
         {
           "bytes": 462406,
@@ -7000,10 +7000,10 @@
           "sha256": "2b7f083ee24e18025ea6bec2aadd50571ede42af58a0541ccc7b01fb08fafe3a"
         },
         {
-          "bytes": 109508,
+          "bytes": 109547,
           "format": "latex",
           "path": "double/data/latex/2C6v.tex",
-          "sha256": "af2954a81c96099e0e32ddbd1b6284f3bf4ec163b07514b073ed29a66a2d473b"
+          "sha256": "f31caac91385d4dd7fade3e6f273795bdcf942acadd836d93f6995da3531f01b"
         },
         {
           "bytes": 464599,
@@ -7047,10 +7047,10 @@
           "sha256": "68458c569b576292bc32b8417c242566b1d519a083d2ef75b13e22c8a8497180"
         },
         {
-          "bytes": 118001,
+          "bytes": 118040,
           "format": "latex",
           "path": "double/data/latex/2C7v.tex",
-          "sha256": "de856c26719a6e3d35d3e189f2a5d0db4ab8050a28d7ec78943de51867f0e8e8"
+          "sha256": "032d7590cbd61f28c73ff70ce21088f4d9bd38d76f1b2f2311085940ca8e4bca"
         },
         {
           "bytes": 466402,
@@ -7094,10 +7094,10 @@
           "sha256": "32e2da9d11a30ed2ec29ead854e23731bc0c45a063ae0affa100bfe9cea0b5fa"
         },
         {
-          "bytes": 123750,
+          "bytes": 123789,
           "format": "latex",
           "path": "double/data/latex/2C8v.tex",
-          "sha256": "90752e41dfb1f098274df31218cf8130a06f84747f85e78de839492d8018bb63"
+          "sha256": "316a79b1eb0b62e2ae612123ae66469a392973a6d2f5608ed2e71738d3b23126"
         },
         {
           "bytes": 461748,
@@ -7141,10 +7141,10 @@
           "sha256": "43caa341bb56e02f400366a407e970750ff6a9af4de69ee6c8134870f161bdb5"
         },
         {
-          "bytes": 138314,
+          "bytes": 138353,
           "format": "latex",
           "path": "double/data/latex/2C9v.tex",
-          "sha256": "c1f6d9049c89f3f31187d2f654d3af0f076129beb3d4fe58ac473bbe39579275"
+          "sha256": "120880c7731a1355858915059c5711564343daf60c741c953142683c7376410b"
         },
         {
           "bytes": 474849,
@@ -7188,10 +7188,10 @@
           "sha256": "a0be7a8d72646d94d845dc6c02074123e7bf32e815111a045388e99df32bf2b8"
         },
         {
-          "bytes": 147253,
+          "bytes": 147292,
           "format": "latex",
           "path": "double/data/latex/2C10v.tex",
-          "sha256": "186f581a6d734ff5805cff86624d3cf24b33f4301c83e88e58775aacbf930b78"
+          "sha256": "648d52f2ce261eb3415fed9a8d4c98d9f79500c387273e335912c600de31b723"
         },
         {
           "bytes": 475362,
@@ -7235,10 +7235,10 @@
           "sha256": "01424ede087d53958b7ff4420971c60bb74da5530a8aa5a8369c42e0f98fc2c1"
         },
         {
-          "bytes": 161532,
+          "bytes": 161571,
           "format": "latex",
           "path": "double/data/latex/2C11v.tex",
-          "sha256": "3e6f708c5c2d604727d1061afee649267d86ef50f96470ea0461e9992ada0d87"
+          "sha256": "899092058ffd6b1646a63a5459d8a80396db82c064547f23106b59d9fda54dcc"
         },
         {
           "bytes": 496819,
@@ -7282,10 +7282,10 @@
           "sha256": "3b067b156e7d2970fa06b1e00026fb18c6e7c8647bcae683db923dee3265b8b1"
         },
         {
-          "bytes": 175056,
+          "bytes": 175095,
           "format": "latex",
           "path": "double/data/latex/2C12v.tex",
-          "sha256": "ccbf134603fff78f59aaf7c2fc98a273416ff3f384392785b7758ce115e28384"
+          "sha256": "27a90e28ea1c3b29974d952450b9cca51c5209de72ac6d03d82c1b6777e4c606"
         },
         {
           "bytes": 487710,
@@ -7329,10 +7329,10 @@
           "sha256": "3a1d90029a264a59f0dd699f501749c2472e691260d04647a650a9e82ce5e6b3"
         },
         {
-          "bytes": 77240,
+          "bytes": 77279,
           "format": "latex",
           "path": "double/data/latex/2D1.tex",
-          "sha256": "a428b1fcb4ce137e2a294e61cd4dc4d351d8f9e468777d3ec6ac8acf52a272ef"
+          "sha256": "ae5fdcc26ac83cbdac77946ee1f8e45608dd80d53abbe40ed857611c56664f0b"
         },
         {
           "bytes": 413782,
@@ -7376,10 +7376,10 @@
           "sha256": "1256bd45083f352bd2ec1b71b6b48c2206f6330f91941a64dbbb6b2f9a961a2d"
         },
         {
-          "bytes": 77530,
+          "bytes": 77569,
           "format": "latex",
           "path": "double/data/latex/2D2.tex",
-          "sha256": "1aa7d48b6e8d9a8a557e4f1c30afdff79bcb32045630a4b11ae9671b48f0efa8"
+          "sha256": "280dd246fca78cf1078aea77e6bf1401aa8285e57dd09d6c91fcf80d21c86f41"
         },
         {
           "bytes": 425223,
@@ -7423,10 +7423,10 @@
           "sha256": "13703493476581229da0fc9cfed2b73916bdb292f11d7ead50bad67e12c4ca42"
         },
         {
-          "bytes": 89897,
+          "bytes": 89936,
           "format": "latex",
           "path": "double/data/latex/2D3.tex",
-          "sha256": "fa6fe13de6e8df5ed39f5fe2adeb4a9dc4f9d0c344ae11aa9047490c177c5a13"
+          "sha256": "239e05d445a4861090cce83a522681cce576218efe9ab54b3b2d36ac794fd14f"
         },
         {
           "bytes": 435317,
@@ -7470,10 +7470,10 @@
           "sha256": "f95a46e02b46a423977c7543fd669fadcec3fec1b0ca6e6909e1ebb81d8bbb4e"
         },
         {
-          "bytes": 93998,
+          "bytes": 94037,
           "format": "latex",
           "path": "double/data/latex/2D4.tex",
-          "sha256": "e0b6c7e51f2f35966b019b3e2341fa140b639321beae8a61c524bd455254d992"
+          "sha256": "e045536a7d0972348066b2d7a0fa76b90f26886c9ecd5ed9ab52584e45d41c4b"
         },
         {
           "bytes": 437063,
@@ -7517,10 +7517,10 @@
           "sha256": "45c6ec43898a7c85f9ceb299e74bfce6510bdfcd68216287b0343a0905e04093"
         },
         {
-          "bytes": 101040,
+          "bytes": 101079,
           "format": "latex",
           "path": "double/data/latex/2D5.tex",
-          "sha256": "c7b23adba22c361ca6c487d139f55af6ab5d994e6c271472b0b4059e096352a1"
+          "sha256": "b73b34a8cc10293915c05158e1d154bf2d3ae10f35a6125d951b6f8532241258"
         },
         {
           "bytes": 440495,
@@ -7564,10 +7564,10 @@
           "sha256": "b83e2d25a5d7b6f9e14b04d503ed55000c84fd038175b73a11d2e9b70a071fc0"
         },
         {
-          "bytes": 110514,
+          "bytes": 110553,
           "format": "latex",
           "path": "double/data/latex/2D6.tex",
-          "sha256": "aa2b68d923645eb83d127cb86354be9ff3ad89d80de664d04389181520bfbe4c"
+          "sha256": "7cf4d543a7fc53ff8cc2dcf2e2ea5916b31795acf6cde6744f9e04f9751996a5"
         },
         {
           "bytes": 445357,
@@ -7611,10 +7611,10 @@
           "sha256": "c527be3fd9cd64a4feac578107416227615d1a2b08be8fe6df30c73b928d333e"
         },
         {
-          "bytes": 116649,
+          "bytes": 116688,
           "format": "latex",
           "path": "double/data/latex/2D7.tex",
-          "sha256": "e74c921ffca046b2ba1b67887dbb76df4fe14bd69da36f74667ee8ced83e7ce3"
+          "sha256": "cfec84a4122b56db275bcea1cae94b8fa1c54f5ed9105c1e9388a6f560f18bc1"
         },
         {
           "bytes": 446023,
@@ -7658,10 +7658,10 @@
           "sha256": "e28535369a43d450f709eec17df07c0a313a341f60af0503bbd58eba471d80f2"
         },
         {
-          "bytes": 127086,
+          "bytes": 127125,
           "format": "latex",
           "path": "double/data/latex/2D8.tex",
-          "sha256": "08a52466816c2c741ad11c28e60ca527f53996d5329ed8e96cb99ecb92aeba4a"
+          "sha256": "bf885ca69489676c389a86111832eebb268bb61ab7cfab068c8fb682ffecd452"
         },
         {
           "bytes": 449267,
@@ -7705,10 +7705,10 @@
           "sha256": "5d1148b95f1b3df32c5ba6d1322673fdb8cae347956dd0b603d4d429b7f670c9"
         },
         {
-          "bytes": 136967,
+          "bytes": 137006,
           "format": "latex",
           "path": "double/data/latex/2D9.tex",
-          "sha256": "2f4228773809a3abbff20d5db4cd87b66a1f79edcaaca0558e5bcdd2c38ec161"
+          "sha256": "4ebc4941bfea2656ef304bc67cae9888317367e70077c199dd3b7deea23afbae"
         },
         {
           "bytes": 453538,
@@ -7752,10 +7752,10 @@
           "sha256": "979b8cc2d7f47105a464183c4921bd7c4ae45cb7445dd42664750792fa89ab0c"
         },
         {
-          "bytes": 148656,
+          "bytes": 148695,
           "format": "latex",
           "path": "double/data/latex/2D10.tex",
-          "sha256": "9d1b26220ae468203acdf9161eb89927d232fdb77e115771779eb482d1898132"
+          "sha256": "1e6896c71791106849865969d8cdb196d0790cd3548cf1f656042a61c5587352"
         },
         {
           "bytes": 455252,
@@ -7799,10 +7799,10 @@
           "sha256": "2c32cb67357045300e9292c2df49a191aa519a3c44c450ec8d260a9bcac7a540"
         },
         {
-          "bytes": 160094,
+          "bytes": 160133,
           "format": "latex",
           "path": "double/data/latex/2D11.tex",
-          "sha256": "debe35f27bb9d0c6b21098b9b25b78fb04d7def5f64fb2725451444e1b3e1052"
+          "sha256": "5ab9e133f0530a1e5f3166ba4a979d4863ac1369678523ae717483f0a3c5281e"
         },
         {
           "bytes": 475111,
@@ -7846,10 +7846,10 @@
           "sha256": "908a70e40d242542fb18000949b021dba8d484dfd2977c4b24411c909dd0b1b0"
         },
         {
-          "bytes": 176769,
+          "bytes": 176808,
           "format": "latex",
           "path": "double/data/latex/2D12.tex",
-          "sha256": "c69009c4d81a54a1f2b24cec23f7f066d7ea5ecd5d47cec90fe0cc7a0b208c9d"
+          "sha256": "2a1305e193d4d238739313fed67e4b858f3f1cd8daaa9a474b837971cfbebceb"
         },
         {
           "bytes": 466075,
@@ -7893,10 +7893,10 @@
           "sha256": "fb0c62445515c7f1c8ba5451badbc82a85e04b70806eb61655882275aab16471"
         },
         {
-          "bytes": 78449,
+          "bytes": 78488,
           "format": "latex",
           "path": "double/data/latex/2D1h.tex",
-          "sha256": "300c18dd6d02aee71a08fc63b632082a73de4382d330e3b4b61d2a34afd3eb10"
+          "sha256": "eeccbb05d4925029b664d73c368be1b9ea039fa58f4c32f3581a15632b963296"
         },
         {
           "bytes": 440958,
@@ -7940,10 +7940,10 @@
           "sha256": "607a8da1d27054cfdc3a6d4c5383abce66620b536d3b31dc1528cf2b50fbe93a"
         },
         {
-          "bytes": 117244,
+          "bytes": 117283,
           "format": "latex",
           "path": "double/data/latex/2D2h.tex",
-          "sha256": "e639820b32b758a2bc30ffb585cd17919cc94730b83f53ca1ce10c30d505382a"
+          "sha256": "2ba341c9125dc13b3495018cce71ec3b5cd5a0ead5cc248e013e1a3505ff90a1"
         },
         {
           "bytes": 470203,
@@ -7987,10 +7987,10 @@
           "sha256": "15f8710a8701deb63b64ef1dfea0ea974e640e99a43dfb86404bbfd91dd1ec38"
         },
         {
-          "bytes": 111032,
+          "bytes": 111071,
           "format": "latex",
           "path": "double/data/latex/2D3h.tex",
-          "sha256": "c2f2e68b217a758a403348179b27f651c278b0720acf1d6bc990edefa1f31c5f"
+          "sha256": "20615664dfd33a841fcfe0546f6ad1fa95c4ce925bc07ed2418c1c5a3f4f3703"
         },
         {
           "bytes": 467025,
@@ -8034,10 +8034,10 @@
           "sha256": "eabf24d210fa83b9249733ab2633e8075acb8bc44cf382dd0a19ac861fab7b53"
         },
         {
-          "bytes": 170079,
+          "bytes": 170118,
           "format": "latex",
           "path": "double/data/latex/2D4h.tex",
-          "sha256": "1249d570c5d52e90822db19ca55fda68fde0bca9923e5e98055736deebb8458d"
+          "sha256": "b37a320b546a7d71cfd1b1d356040fd1d3bce76523e5e31f0c56c97cab9b3fa2"
         },
         {
           "bytes": 494258,
@@ -8081,10 +8081,10 @@
           "sha256": "a8061e0cadab336f2b91edda2fb49aaa95cc8f1fdc2cd659de51059af86ceacf"
         },
         {
-          "bytes": 149360,
+          "bytes": 149399,
           "format": "latex",
           "path": "double/data/latex/2D5h.tex",
-          "sha256": "4e7c61817630602e25ab4bf1aa9362a653fe6ac989ecf09ca2801d424a999383"
+          "sha256": "052270a893edfbfdfdddab77be2699e2d50ac8b349f29fe6bb5b42c0b71108ed"
         },
         {
           "bytes": 478188,
@@ -8128,10 +8128,10 @@
           "sha256": "fcd6529332f429b1ff04caa6ff6b44eaec5ca44daa94b748ac55a1d8f8d69895"
         },
         {
-          "bytes": 239262,
+          "bytes": 239301,
           "format": "latex",
           "path": "double/data/latex/2D6h.tex",
-          "sha256": "c92e48762b95d0869fce9fada74b681951a9adc2f01d246cfafb1715d1868edc"
+          "sha256": "20f5fb3bbb94665ddaa07c79d170fde044413fdc599a661fe535151dd100ee9e"
         },
         {
           "bytes": 513773,
@@ -8175,10 +8175,10 @@
           "sha256": "cb5e777ddbb1383d8a90a33af0a711c17b961434a6ff7d69ca0380532cedb3f7"
         },
         {
-          "bytes": 201252,
+          "bytes": 201291,
           "format": "latex",
           "path": "double/data/latex/2D7h.tex",
-          "sha256": "b8ec94d9d7e592b5c61850eda46d3495d16bb5f520c8a363292cb73dad32a753"
+          "sha256": "ae625f59f2e5f00bb525bc42834fa1eaf3b6e1db97adfb89c2872c4fd5b82784"
         },
         {
           "bytes": 495880,
@@ -8222,10 +8222,10 @@
           "sha256": "e7cee0e6fa9b93a6870944bd4015618defeb2dd3d68a864d478bdfa77ad3c10e"
         },
         {
-          "bytes": 290200,
+          "bytes": 290239,
           "format": "latex",
           "path": "double/data/latex/2D8h.tex",
-          "sha256": "61c1ec97dccd4426475b6dd6cbd7ebc39e664a13234cc3a0e99a3d780d91ac49"
+          "sha256": "c0f4bb3923a4e12e68c7fcdeac3e68a9debec3edbb7aae093c69454e7e5d2c7a"
         },
         {
           "bytes": 525700,
@@ -8269,10 +8269,10 @@
           "sha256": "a5d0751b70c9def205f130607254563dd7571db30b3d3504a39b0230b17756ff"
         },
         {
-          "bytes": 245885,
+          "bytes": 245924,
           "format": "latex",
           "path": "double/data/latex/2D9h.tex",
-          "sha256": "33bca41f0b34b67582383b1eea12cb88626a2ea6892fd3d4f908a4f8095ce7ea"
+          "sha256": "f185ddd91b994abd8872ef2377add8685c3fb52993221ed20cbc8e713681fbe9"
         },
         {
           "bytes": 510629,
@@ -8316,10 +8316,10 @@
           "sha256": "4b0a6ca648069c8de91b315de7ee5b82b88c186369b1dd17e363da049c06131a"
         },
         {
-          "bytes": 369389,
+          "bytes": 369428,
           "format": "latex",
           "path": "double/data/latex/2D10h.tex",
-          "sha256": "17c1033696ec31ec00ef16f138a63fa408f91d7b25a686a47b67a05fa9e2068e"
+          "sha256": "2bdbda6c4eeaa0a281ffb9d317ab28a7c4ab446204626ce93fbf8dd1c7b09d6e"
         },
         {
           "bytes": 542194,
@@ -8363,10 +8363,10 @@
           "sha256": "82e44a6e5cd20392b7812298fac05f9fe569e4d21d3c5b86b40889d296b7047f"
         },
         {
-          "bytes": 308977,
+          "bytes": 309016,
           "format": "latex",
           "path": "double/data/latex/2D11h.tex",
-          "sha256": "1c046203dab797621fc60ce03002685bf2ca1a42a82bb368eb671edb35d285a4"
+          "sha256": "4f49c8cf11d79e196d5c14559a70b54206a5a38fe7e990d741091bc083d4ab04"
         },
         {
           "bytes": 520873,
@@ -8410,10 +8410,10 @@
           "sha256": "171d5ae5d5168d97059e420ebf6ff1662a2cf47a7601d149d9696905149e243c"
         },
         {
-          "bytes": 490163,
+          "bytes": 490202,
           "format": "latex",
           "path": "double/data/latex/2D12h.tex",
-          "sha256": "62b539a08f5391781bb7ebd64250439d4b15bd0b517041f181b749f52ed098d5"
+          "sha256": "ca77b1b0179d9828efb7345eba927e138619faeb070d1a44bf04a618d6135e0d"
         },
         {
           "bytes": 576241,
@@ -8457,10 +8457,10 @@
           "sha256": "3f56fe29c71104022b17c04769473070c70f7fa837dab306859a98f27f0b9f4f"
         },
         {
-          "bytes": 93021,
+          "bytes": 93060,
           "format": "latex",
           "path": "double/data/latex/2D1d.tex",
-          "sha256": "037d1f52adab0b9e9aca842efe41e63e56e58f984a0aa0f8e33f2c682eaf8c5d"
+          "sha256": "50e7b0a6965c75eed9baa026ae62a210843d5ca7fdeefd7ff68bc461fab82a36"
         },
         {
           "bytes": 452873,
@@ -8504,10 +8504,10 @@
           "sha256": "f788021db717fe45b1fa0553a7740dc133d269964b00971e7274c63c2d8922f7"
         },
         {
-          "bytes": 95095,
+          "bytes": 95134,
           "format": "latex",
           "path": "double/data/latex/2D2d.tex",
-          "sha256": "1d62bd77c5155baa1377970a5acd8f39ca480eb10b608c0832d52569dea47886"
+          "sha256": "c5ae007d1e365603f32b91db99098bb08899a3ed83606ebb36fa1422757f2082"
         },
         {
           "bytes": 454757,
@@ -8551,10 +8551,10 @@
           "sha256": "5e262fb50ac77a3c3a81285f3c3bc79f97c6786fdeaf659820c2e5647fb7054e"
         },
         {
-          "bytes": 138620,
+          "bytes": 138659,
           "format": "latex",
           "path": "double/data/latex/2D3d.tex",
-          "sha256": "c1be76a6e1cdc81e44e172b1c77014e4d26f3ec5eef6d19237ac9475945eb2ea"
+          "sha256": "ff093f371ec992fc6c119d833841ecea0fb372001098315a8265801d06308531"
         },
         {
           "bytes": 483343,
@@ -8598,10 +8598,10 @@
           "sha256": "84e51ff27cbd6c3287f8ab252f93b2039c559d295b32ec40082e79630072f185"
         },
         {
-          "bytes": 127958,
+          "bytes": 127997,
           "format": "latex",
           "path": "double/data/latex/2D4d.tex",
-          "sha256": "1c2656d47a7c715cedd1cd264d267da45d1bd92adf0ded785cf976b549199245"
+          "sha256": "b34265869bdb8912b2e893c292c4ed51457009e23ac9ce2ccb16dd5ae3b77531"
         },
         {
           "bytes": 466288,
@@ -8645,10 +8645,10 @@
           "sha256": "85e7762c44db4b441a22eec552c91c9e7344bb1d5a48e5dc2f608b9138586b51"
         },
         {
-          "bytes": 187533,
+          "bytes": 187572,
           "format": "latex",
           "path": "double/data/latex/2D5d.tex",
-          "sha256": "7894773be43c74b2201c056335497e05986985e7c62d4482f46b04412c03c879"
+          "sha256": "848a28687adee69de3f9f194ecce0aea6b92f73fcefa6ae5402adfba08a147c1"
         },
         {
           "bytes": 497620,
@@ -8692,10 +8692,10 @@
           "sha256": "c6395851b3cfce3b0af9a8a7897fc8e1c0ec0530fbdbb49618cacfce7315b992"
         },
         {
-          "bytes": 176924,
+          "bytes": 176963,
           "format": "latex",
           "path": "double/data/latex/2D6d.tex",
-          "sha256": "8d1684c69db8a1da8f9b4adca5c859adec378e53fda81e17c9eabc8260dcf688"
+          "sha256": "dfe71e9959f92a3e8858f5b4aa732ca98caaea58cf98e29212fca7234e2b67b5"
         },
         {
           "bytes": 483384,
@@ -8739,10 +8739,10 @@
           "sha256": "86acb7397644439f60dbf35e7340b19d14e08bf9f2bcc1f544899d2564ad79fe"
         },
         {
-          "bytes": 253360,
+          "bytes": 253399,
           "format": "latex",
           "path": "double/data/latex/2D7d.tex",
-          "sha256": "611db1a70009ca8c2ad38a34981a98921a3690fd0f55bd8d68e41c5043268f98"
+          "sha256": "8b9b6e480c7e995fc24f3cc53a7ea7971fde93592eb1021ef3e8a1e980b7fc08"
         },
         {
           "bytes": 512221,
@@ -8786,10 +8786,10 @@
           "sha256": "681a9d4c32bf158aa257b9920ae9cf89e0ea72359e6b130fb0e067efa7e63c3e"
         },
         {
-          "bytes": 213091,
+          "bytes": 213130,
           "format": "latex",
           "path": "double/data/latex/2D8d.tex",
-          "sha256": "28b64e71e3e9d34bc017821c48fdcdd249568be2d9320fedb82be35322535df4"
+          "sha256": "9201957f330a540098a2008c942994e5a1b7efd1452cedec1cfdef7b33ea86ea"
         },
         {
           "bytes": 494393,
@@ -8833,10 +8833,10 @@
           "sha256": "9a9370479bb3951a1500972eea66891809beb2055698657dd82f49a1fd54c55b"
         },
         {
-          "bytes": 318987,
+          "bytes": 319026,
           "format": "latex",
           "path": "double/data/latex/2D9d.tex",
-          "sha256": "c4c283c503e5c54532b540959e2b91df9657c08b9fc1fca070e660c50d861a01"
+          "sha256": "a5aaf90a9ee3146d30666c7463f62908d7696b60f384c10dfe6418513af0d078"
         },
         {
           "bytes": 531832,
@@ -8880,10 +8880,10 @@
           "sha256": "5ab337502bf953e49222a19aed707794962fac47051443635dfec3efb9a478de"
         },
         {
-          "bytes": 277187,
+          "bytes": 277226,
           "format": "latex",
           "path": "double/data/latex/2D10d.tex",
-          "sha256": "99ea8cc53c31a9f962af39d98b1ee10d510ae1aff8675a36ecc0f23157fed587"
+          "sha256": "fe27d04090d979370d2565a43437c3e51b134e2eb9946bdd9566d4817159b686"
         },
         {
           "bytes": 509302,
@@ -8927,10 +8927,10 @@
           "sha256": "f4a61da15b930ced54e413df711082940608b3b6ded9ac5b2c027735bd3e8985"
         },
         {
-          "bytes": 391252,
+          "bytes": 391291,
           "format": "latex",
           "path": "double/data/latex/2D11d.tex",
-          "sha256": "13165ae834e2fa96bdac683075b2b96c8ea40d19f32ad3ab1af257513b857f4a"
+          "sha256": "a4c6240063b1a272cc1c58739e4c0957a425c082dc3d0113e33703a2126b20dc"
         },
         {
           "bytes": 544995,
@@ -8974,10 +8974,10 @@
           "sha256": "260152db25cb05adfd30688c40d7029d8c045232735a013d7fcc7ae766f7f4e3"
         },
         {
-          "bytes": 354631,
+          "bytes": 354670,
           "format": "latex",
           "path": "double/data/latex/2D12d.tex",
-          "sha256": "03660803935f65d0102ce9a7f81b87b3e82fd2a1b85dee42947e8d4c16b51b71"
+          "sha256": "3b3fd4d4a48cf58ba2e05a04adb28862d98c723ef3684f9f02eb949fb0addf1a"
         },
         {
           "bytes": 531546,
@@ -9021,10 +9021,10 @@
           "sha256": "684222ff01f4cd75c35abd9a382260da8711c13a2f49ede1a850b182ea7a9489"
         },
         {
-          "bytes": 142846,
+          "bytes": 142885,
           "format": "latex",
           "path": "double/data/latex/2T.tex",
-          "sha256": "f809c3e7ca87e36c9b70d86125ad91ef7941cb9e9981f1fe107707330b525380"
+          "sha256": "43f132bbd063a9c291e82105e18262398dbd8e1a68498a50109fd2d2eb278afd"
         },
         {
           "bytes": 456267,
@@ -9134,10 +9134,10 @@
           "sha256": "a8e7d26d6f9c132bf296c32d4f3fb67c49b266939498ee22366bd7c0acbb375c"
         },
         {
-          "bytes": 247706,
+          "bytes": 247745,
           "format": "latex",
           "path": "double/data/latex/2Th.tex",
-          "sha256": "c09067f1b3eac565868ae00a4c826a7d0daddf2c9a6627f8e60259cadd842a37"
+          "sha256": "5460cd0bbff26fa4a0556bc41ae8723c5cb59bad5828671616e662f1ffbae542"
         },
         {
           "bytes": 515638,
@@ -9247,10 +9247,10 @@
           "sha256": "1e863067b104e23635ae793d24d5f951b358fde2b41e0cab8a85933043915fab"
         },
         {
-          "bytes": 187988,
+          "bytes": 188027,
           "format": "latex",
           "path": "double/data/latex/2Td.tex",
-          "sha256": "a932578a99033f96004ba8e40a376afb4232527f6555c9179f395253a6caabf5"
+          "sha256": "d3f7221e6fd8781b750747536ec445e6008e4d4cfd0ba374b6c3fa8036585391"
         },
         {
           "bytes": 496641,
@@ -9361,10 +9361,10 @@
           "sha256": "aace97cb420e9839ef303c86b3c7890c3c644e58e23207bb969a1cb44787fe0e"
         },
         {
-          "bytes": 189168,
+          "bytes": 189207,
           "format": "latex",
           "path": "double/data/latex/2O.tex",
-          "sha256": "42b943555dc17ec949d5957521ad1efb301a659571592bd9294b565a86f3801a"
+          "sha256": "f1d37d799c13b2b17d32e8f46d370500a96bf8f5dd8561d665ff6d02b24e81d9"
         },
         {
           "bytes": 481500,
@@ -9474,10 +9474,10 @@
           "sha256": "4300936df98da7ffd22ab2b15b7236fd9d2158999f37a255d4ec09202395caa6"
         },
         {
-          "bytes": 363441,
+          "bytes": 363480,
           "format": "latex",
           "path": "double/data/latex/2Oh.tex",
-          "sha256": "a1fa07866576c3a310c81fafaaf7b5348e9c12f92447d568f3d6f4716aaab290"
+          "sha256": "f937238b61e686bcc42c03be25e293ac38098e20b8b8b3be3b112f7e496432bb"
         },
         {
           "bytes": 593665,
@@ -9588,10 +9588,10 @@
           "sha256": "b76914354189b3d931387344befed2b1773f3916e6a2a69594cf1bd13b560c41"
         },
         {
-          "bytes": 359346,
+          "bytes": 359385,
           "format": "latex",
           "path": "double/data/latex/2I.tex",
-          "sha256": "22b50dca03912dff363ed220e3768ad01cdd4f8c3654f9535405a5622c002a2c"
+          "sha256": "8255420a44ebf64af41e8dcdd13bd8963f0742a0907305992cd4e43a51245f78"
         },
         {
           "bytes": 563441,
@@ -9701,10 +9701,10 @@
           "sha256": "1ad63343685c623858b0a7c43c88ffc1aabebd407b4009002f8a33328b5b5c49"
         },
         {
-          "bytes": 1029547,
+          "bytes": 1029586,
           "format": "latex",
           "path": "double/data/latex/2Ih.tex",
-          "sha256": "df8cb180c5bc43a8611487ed019a2fb8029f00717be0cb94537c3d1d6517f018"
+          "sha256": "513332c6f6bf3ac0eca05c51af354d619755aa5103fda1db430fa45b37e8a09b"
         },
         {
           "bytes": 894656,
@@ -9815,10 +9815,10 @@
           "sha256": "8cf5ca897b72e78cce911e28f7aeabddc84b94632ca8ae62c300878ba453ee65"
         },
         {
-          "bytes": 29015,
+          "bytes": 29054,
           "format": "latex",
           "path": "double/data/latex/C1.tex",
-          "sha256": "cbc9f9bd7199d11e450b3cd00c680d75e18e6cdf5a0ef14dc0b094e41c6f6463"
+          "sha256": "95a5eb8c1e48f543ece94a90e3f693872e6aceedbe697454c8f85db5e621a2e4"
         },
         {
           "bytes": 293110,
@@ -9863,10 +9863,10 @@
           "sha256": "4878a0451308afc2848b5712b21d9c2673f74684291f8dd5372c3997f879a8b0"
         },
         {
-          "bytes": 31918,
+          "bytes": 31957,
           "format": "latex",
           "path": "double/data/latex/C3.tex",
-          "sha256": "1b25ad8d3e1f949189569a2438495d7a160972416f2105d2ef3c53eac0b60e7d"
+          "sha256": "0f78e0c32b7d7bb15d1236a56ba2aeed34978a14bda33972f635b31d951eed1e"
         },
         {
           "bytes": 322940,
@@ -9911,10 +9911,10 @@
           "sha256": "dc1107afdb14e5508dfd9a7deb0609b6829abf92f9e9ea2b1e2d655f3dc90c5a"
         },
         {
-          "bytes": 33553,
+          "bytes": 33592,
           "format": "latex",
           "path": "double/data/latex/C5.tex",
-          "sha256": "fb5f38e2a4f3de008fd70a2a560a76a34b59f35f942eb8e4a05542045acf15ea"
+          "sha256": "a8214f3d706d22e2735ea8868925a7110b32c98e0c4a1853087f0e6de32d95b8"
         },
         {
           "bytes": 327468,
@@ -9959,10 +9959,10 @@
           "sha256": "ffbb857ae789eec1423cb927cb653b0c24613343ae5b48e47ecdf90909fcf7cd"
         },
         {
-          "bytes": 35324,
+          "bytes": 35363,
           "format": "latex",
           "path": "double/data/latex/C7.tex",
-          "sha256": "a99d1efc072cae46515a0a3899a5f66cf8c62c848aba0874137efce10d3d707d"
+          "sha256": "23a91acf12e26ddae5d8c6f1ec63a99e5f5dce64e71b945e5350a810f8fce7b2"
         },
         {
           "bytes": 329326,
@@ -10007,10 +10007,10 @@
           "sha256": "b1f94170daf76affd16b5ad1a9720096ac0df56ec577298ddf5cd4e9c4dc4434"
         },
         {
-          "bytes": 37555,
+          "bytes": 37594,
           "format": "latex",
           "path": "double/data/latex/C9.tex",
-          "sha256": "8579fcfaf64952d6496fd46f5e632e707db4a373fb45f4d0575a3c42b9bd05a2"
+          "sha256": "85eadbc82d0dba4eea8f9dd02523267ae747285e8ad764429366b1f98a9475d8"
         },
         {
           "bytes": 331534,
@@ -10055,10 +10055,10 @@
           "sha256": "069f01dcb4c1caa44d7a5ff66536b5675067ad71307babb7fdd68beca3cf4124"
         },
         {
-          "bytes": 39823,
+          "bytes": 39862,
           "format": "latex",
           "path": "double/data/latex/C11.tex",
-          "sha256": "2632f98f1b988f939411cbd39e97a56a8595d7cbc08ba8a928859faf7291b8b1"
+          "sha256": "fbb5047c2dab6e8c260ad8e181df820af8921e2acb9fd24c4ae2bdcd0e20ba3b"
         },
         {
           "bytes": 331936,
@@ -10103,10 +10103,10 @@
           "sha256": "dc014d2eceda5d8ed317d44871f3f996b8b62bda2460b7e3a8ee7187a81c1bc6"
         },
         {
-          "bytes": 29880,
+          "bytes": 29919,
           "format": "latex",
           "path": "double/data/latex/S2.tex",
-          "sha256": "fca20a7de7b5e1721e01e5bd68fa3878c051d24e459be4659902a7d7ba629c3f"
+          "sha256": "c924023c9a159d0d142544d38c1ee91f3ee175db6a1d22693c4f5a5157da6bed"
         },
         {
           "bytes": 302112,
@@ -10151,10 +10151,10 @@
           "sha256": "0b4896a03c326f6bcb230321eb6cf45ebff4c78ec775c63db7f20f5c52132036"
         },
         {
-          "bytes": 30509,
+          "bytes": 30548,
           "format": "latex",
           "path": "double/data/latex/S2b.tex",
-          "sha256": "86a963e9603a2a132b26f9a2d56c6c9ed50dfb6dc7e70e2f58d2b4fbfe20f93a"
+          "sha256": "27350d791ae5451f1454b274b535ebb80f2394ddabbc143194a8e0e945ab27f8"
         },
         {
           "bytes": 312151,
@@ -10199,10 +10199,10 @@
           "sha256": "131e5c4a6d1aede4ff3c9b3110774c3ee2a1ab3c2fe61014f250541e26d8fbdc"
         },
         {
-          "bytes": 34911,
+          "bytes": 34950,
           "format": "latex",
           "path": "double/data/latex/S6.tex",
-          "sha256": "ffb9dfb7e25f2b4495c1c950278a7a676765a3abd699d7f79985cba0fe86d9b1"
+          "sha256": "f5a584cc9adc430a6ed259d0ad9191fe08e16c5eb8d8fb6f82b53edb7fc1afcf"
         },
         {
           "bytes": 329328,
@@ -10247,10 +10247,10 @@
           "sha256": "7c640e86873b13eef2830c5861bc81d447aeaa77ba56a4af3ac802d46994bd5c"
         },
         {
-          "bytes": 35241,
+          "bytes": 35280,
           "format": "latex",
           "path": "double/data/latex/S6b.tex",
-          "sha256": "9d859712bdef94c6498da3a54606d5dd123739c9a1af18ce5ca8ed47f417e35c"
+          "sha256": "d7259b0f32d8f49dac155461a39e4075d0cd0dcb0eb14e238a839a98ff68bda4"
         },
         {
           "bytes": 337380,
@@ -10295,10 +10295,10 @@
           "sha256": "d52c0e03e6a01c69b16c74f4684ddd8f69c6b4afa77942e41d7b7a3104ee038f"
         },
         {
-          "bytes": 39188,
+          "bytes": 39227,
           "format": "latex",
           "path": "double/data/latex/S10.tex",
-          "sha256": "9f526eadf3602b2ed67c47719714ba6d43b7d98d748d6d09137d3e8b8ef6765e"
+          "sha256": "b7aa9da940a0b2daefcdc6e188f4af21b72baa9d01dceb494567df2b790aa808"
         },
         {
           "bytes": 334302,
@@ -10343,10 +10343,10 @@
           "sha256": "1dacdafe62345cb28ea3c33a67fc55f394b4e9bcacdf503c357fd4bd5859cdaa"
         },
         {
-          "bytes": 39554,
+          "bytes": 39593,
           "format": "latex",
           "path": "double/data/latex/S10b.tex",
-          "sha256": "58a56906eb4197b859c0559316dd4f07ca23ee6e5115722b629680ffe9b6a1fe"
+          "sha256": "1f756dc4a8231972641ce983d3067366d48a9ca2caaddc4a47a078e7568f9014"
         },
         {
           "bytes": 342315,
@@ -10391,10 +10391,10 @@
           "sha256": "b69a189006e09c7a054e4396abc0647ddfb01233ba9b39d2a0e661210a8de321"
         },
         {
-          "bytes": 43683,
+          "bytes": 43722,
           "format": "latex",
           "path": "double/data/latex/S14.tex",
-          "sha256": "75813cd03e21a1a118f259ba795090a8e135a5236143571ce61d3be919acb35d"
+          "sha256": "995c85754f76cec1e86d0ac1f9ac0776ebac7871fa21596910a9e7b115d6ba14"
         },
         {
           "bytes": 336193,
@@ -10439,10 +10439,10 @@
           "sha256": "5b8d5bb20171a4013623b7d146319f9634d300f371f6b78a03623674d43dc737"
         },
         {
-          "bytes": 44079,
+          "bytes": 44118,
           "format": "latex",
           "path": "double/data/latex/S14b.tex",
-          "sha256": "4e7e106a5bfec72d712aa4c76102332ba697a3b183f92b969b0fe2939881a587"
+          "sha256": "3588411feec68f77a2e98fcb2cb3b7be668d7289eea28ec1d0250c6bb4ebbf6f"
         },
         {
           "bytes": 344198,
@@ -10487,10 +10487,10 @@
           "sha256": "6c916a63d41b2ad487cfa92761dc5af6f695adad3cd416de863ba37b5baf0f15"
         },
         {
-          "bytes": 49512,
+          "bytes": 49551,
           "format": "latex",
           "path": "double/data/latex/S18.tex",
-          "sha256": "19b78420b793d68987cf4ef9638d6d6eeb7b3e05783d53765e85ca62a6303898"
+          "sha256": "97121e756b0f27c8d166da0b9965c31035d2a699a6a6b431b3b562a576d760e8"
         },
         {
           "bytes": 339350,
@@ -10535,10 +10535,10 @@
           "sha256": "d8fd32c2a59cc8dc5c8eee15c2a81adac3e3f88cafcfccc49acce6bd75ad1843"
         },
         {
-          "bytes": 50031,
+          "bytes": 50070,
           "format": "latex",
           "path": "double/data/latex/S18b.tex",
-          "sha256": "c9f70f853a1826f8738a9caced6d6429f33d123aa119d3cd022f8862f75b4e80"
+          "sha256": "6c28926515fcebafb35280d0079dec08cd9d9f83fbab253db1335e4d6bdf1616"
         },
         {
           "bytes": 347361,
@@ -10583,10 +10583,10 @@
           "sha256": "031f9fcd6a486a2f40599e86acc40c2e0785ce2c67077fd5fbe2c6cb0da63e3a"
         },
         {
-          "bytes": 56919,
+          "bytes": 56958,
           "format": "latex",
           "path": "double/data/latex/S22.tex",
-          "sha256": "55876c6c1b212dee7e0a699d75101a86e1d40460358dededea4c161f710f7e06"
+          "sha256": "f44d8b8341d9372913aa45449590a887bcd58b89e26415225a434595a3d623ab"
         },
         {
           "bytes": 340555,
@@ -10631,10 +10631,10 @@
           "sha256": "b976eafb8de68224a0498ac3db0ec931e6de7aea7c6463b926f08ab9f3cba578"
         },
         {
-          "bytes": 57379,
+          "bytes": 57418,
           "format": "latex",
           "path": "double/data/latex/S22b.tex",
-          "sha256": "68ba75d1a3620c704de0602eb7db8f2b2c11a2087bceb2fdbeacda072b035f40"
+          "sha256": "0a6477c2c0a04e1d36961115f0745b2f9f675e2be51b1e472bd49bd726263dc9"
         },
         {
           "bytes": 348485,
@@ -10655,40 +10655,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 728911,
+          "bytes": 729093,
           "format": "json",
           "path": "double/data/json/2Cinf.json",
-          "sha256": "f834e709b73f4d33b9ce6e4f39c8fe286a4ac323aead6881c6eaaf47ed98ab9d"
+          "sha256": "d4b49603ed693ba92aeaa37ae4cbe36e5a731fac6110ac1df368483ca7af638b"
         },
         {
-          "bytes": 363649,
+          "bytes": 363721,
           "format": "gap",
           "path": "double/data/gap/2Cinf.g",
-          "sha256": "b79bab72fcc48d8f9ad8af03e9eaad237301ef89b535e1f3ecd964896483c46a"
+          "sha256": "27968922911fee476e1e03986c4dd3d1bc7109df1557f004cc72ec5376a0ddae"
         },
         {
-          "bytes": 328554,
+          "bytes": 328618,
           "format": "wolfram",
           "path": "double/data/wolfram/2Cinf.wl",
-          "sha256": "49e6f4845c4ecd8a98581b60dc5fa3f69641d96f24fa74599d690a8d445c9e47"
+          "sha256": "568f317d5f1990b736afa9d8732d9f55f82a06153d47c36a822c1d4b09168e45"
         },
         {
-          "bytes": 443057,
+          "bytes": 443129,
           "format": "sympy",
           "path": "double/data/sympy/2Cinf.py",
-          "sha256": "4f1dc846a9d35f478bb66ccdf0c5f709c493657806b0209717e3cc5481096a39"
+          "sha256": "fac60f0119750490348e5e2d97472188ac2a864ed0aa86afa0c8202c23b737b4"
         },
         {
-          "bytes": 79961,
+          "bytes": 81839,
           "format": "latex",
           "path": "double/data/latex/2Cinf.tex",
-          "sha256": "273901eeb515707d9ef2730aef58c1d13bcf2f674dd5f80a1613b2191970eb0e"
+          "sha256": "c4af994e30bb1ba6a2ba25917ac2729b0a28396d2c710615bcf4f5916e8fb056"
         },
         {
-          "bytes": 373612,
+          "bytes": 384562,
           "format": "pdf",
           "path": "double/data/pdf/2Cinf.pdf",
-          "sha256": "62d6465c2b5c7583c468d57694901ea76b2b843f702310945fdbb0cbde977d42"
+          "sha256": "a8766eae8b44908d1befa6039f1c310d5d16fed1d70b80c9e86178b59d185e6a"
         }
       ],
       "requires": [
@@ -10702,40 +10702,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 4071587,
+          "bytes": 4071951,
           "format": "json",
           "path": "double/data/json/2Cinfh.json",
-          "sha256": "4ab2660dc3d4bd5f9ce448fa5cee809553067a5373fae1721372c11477bfa382"
+          "sha256": "a708887ea814dac5412cef9a36291bf37b0d621a223bd3b19f57617f8d265de0"
         },
         {
-          "bytes": 1763720,
+          "bytes": 1763864,
           "format": "gap",
           "path": "double/data/gap/2Cinfh.g",
-          "sha256": "7148637993a2d73807a6c4e815b915a222ef9140461dbce8595d24a4c52cf886"
+          "sha256": "3b4f5d9b5bde25b727aef92261a0e9800ff69b36d9687d3cac153ca83ed129a4"
         },
         {
-          "bytes": 1607869,
+          "bytes": 1607997,
           "format": "wolfram",
           "path": "double/data/wolfram/2Cinfh.wl",
-          "sha256": "ed40f60ab99472b8728054cc15358c603063b22d15bcb1b1806b6a2a5a5c2ede"
+          "sha256": "67e38cad630688d80a871a6c8b2e6da05d60d2f8e9cc3440f7bc85e13fe84fa0"
         },
         {
-          "bytes": 2308356,
+          "bytes": 2308500,
           "format": "sympy",
           "path": "double/data/sympy/2Cinfh.py",
-          "sha256": "781b6cf5f27a9522b5488e23fda3e6dd95910ad42040e45ecaf6efb93b796c24"
+          "sha256": "8abdbb40200b1f03148f280efd7ff9304d988696c8c6784aab088cf093082ab9"
         },
         {
-          "bytes": 228268,
+          "bytes": 230608,
           "format": "latex",
           "path": "double/data/latex/2Cinfh.tex",
-          "sha256": "f4b94f8bd3d844b60ae5c91f287df857c346865c4da58f8e212ec79b3078dac3"
+          "sha256": "5856c6021ff062fdd028ab46f739cb2fdb6463f569d6532d1f6eaefad10909c6"
         },
         {
-          "bytes": 420093,
+          "bytes": 433561,
           "format": "pdf",
           "path": "double/data/pdf/2Cinfh.pdf",
-          "sha256": "963bda0c06dd1e94ffb6c9adb52b31756082138435277bf5687be243212e667c"
+          "sha256": "a4e8c70ca06e730a40f963ff2d52c964b95119907d542e138e986e90541a7f72"
         }
       ],
       "requires": [
@@ -10749,40 +10749,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 605952,
+          "bytes": 606317,
           "format": "json",
           "path": "double/data/json/2Cinfv.json",
-          "sha256": "0f0c12be0b40d2fbc9eb743e0fd2f1821923cd2b3a33d3a3d5157f19129b51b2"
+          "sha256": "6bb1ffb35e4ed6f99c5793c5d0efc9bd7afa34e2ff6d121fec025c75674cfaac"
         },
         {
-          "bytes": 302078,
+          "bytes": 302223,
           "format": "gap",
           "path": "double/data/gap/2Cinfv.g",
-          "sha256": "06f354707534d6f8b68cfb721db0f8ce94288d3502386ccfa38d55d3d625cf62"
+          "sha256": "b8e0b4822b3d0970f718748fd00da524bb2ba5ca8a273f452e36e84543529815"
         },
         {
-          "bytes": 269298,
+          "bytes": 269427,
           "format": "wolfram",
           "path": "double/data/wolfram/2Cinfv.wl",
-          "sha256": "f37896e974c20f624df9d0ab77a5ec55ecaad245f9093ce41f978e2534526b1f"
+          "sha256": "406d9d13d5771e20174f41ee1a187d1da05edb61d0698086371e74b4c89cb5d1"
         },
         {
-          "bytes": 346337,
+          "bytes": 346482,
           "format": "sympy",
           "path": "double/data/sympy/2Cinfv.py",
-          "sha256": "a6f07b9ce4f306ca533cbdb553eb296a235771d235b002caed66a78697fafc88"
+          "sha256": "d95369402c93c16731b7b133ec7462ffeac525900c5d6febf70e0b47926212c9"
         },
         {
-          "bytes": 68738,
+          "bytes": 70810,
           "format": "latex",
           "path": "double/data/latex/2Cinfv.tex",
-          "sha256": "06c016f9762ca9b6390c638f5e5abebab5c5353c44fa6cc87bd18f0cc7ce5a38"
+          "sha256": "9f35957786a682dd81f07db476f0772e808fab078b0bee296124ee0f0aa5e824"
         },
         {
-          "bytes": 402229,
+          "bytes": 406383,
           "format": "pdf",
           "path": "double/data/pdf/2Cinfv.pdf",
-          "sha256": "5d8cc063b850494ec24192c00baf9281d50f0d93f798f596c2fd836d20638ec5"
+          "sha256": "a00442803c0dc018be037a70719ca978224d1d90ddb0bde6fedb46ead2395dcd"
         }
       ],
       "requires": [
@@ -10796,40 +10796,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 673304,
+          "bytes": 673674,
           "format": "json",
           "path": "double/data/json/2Dinf.json",
-          "sha256": "73e9bab5634f009165a6f002d8f1daee1de42a754e1dbc7255983aea19768c9c"
+          "sha256": "6ea4d6a4e5d7e03197398352769da10fbc0890ac8bbd2a6f28d28496af3d9b43"
         },
         {
-          "bytes": 328634,
+          "bytes": 328784,
           "format": "gap",
           "path": "double/data/gap/2Dinf.g",
-          "sha256": "d4760221203bd9600f3f1ff83ea837246b531f9482d33d6ed1b7fa7f6eb6faee"
+          "sha256": "66071883f2938a69baae2116cb87169025b8b4951a559e3130fbbff3059a07b2"
         },
         {
-          "bytes": 290627,
+          "bytes": 290761,
           "format": "wolfram",
           "path": "double/data/wolfram/2Dinf.wl",
-          "sha256": "926060b3cdb43a2ac694912b2a07918526ffc60856c7dd32aa8de0bcf41f123a"
+          "sha256": "abd424a22d28cb554e9277b43230e09df07b722cb00ec9944872251d37f0af6d"
         },
         {
-          "bytes": 376946,
+          "bytes": 377096,
           "format": "sympy",
           "path": "double/data/sympy/2Dinf.py",
-          "sha256": "f88103a0bc03947efabffdd572921e987256eb0b4b317e9d190c8276745e1dbd"
+          "sha256": "079f4202ff0ebcf2261bcf4cb7d610814185b5d782b384dd8d38f528fec41bfa"
         },
         {
-          "bytes": 71122,
+          "bytes": 73197,
           "format": "latex",
           "path": "double/data/latex/2Dinf.tex",
-          "sha256": "c72677136292ef08188f302b3162895472e9947543d7c93570aab31e7e1419db"
+          "sha256": "ba5d48df0ac20b174e7c50746f9680f3ae676e29ebce83d34eca768baaf62d3b"
         },
         {
-          "bytes": 392482,
+          "bytes": 396719,
           "format": "pdf",
           "path": "double/data/pdf/2Dinf.pdf",
-          "sha256": "865785740e0746f85f25b7cca89d1bce301176907e52890d303de7591b689fa0"
+          "sha256": "bd354fe869bbe105ebf7d6758a48f64262337b49811e8242f65ef20cacc80e41"
         }
       ],
       "requires": [
@@ -10843,40 +10843,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 3929940,
+          "bytes": 3930675,
           "format": "json",
           "path": "double/data/json/2Dinfh.json",
-          "sha256": "c3b7a00a818d144b0f65a5d642c64816e4d314cd4360ef29544f601575b63328"
+          "sha256": "49670ed7963216e2b16a1467c15a10679ccb71aeb7ebd7a7fa3498ec18800347"
         },
         {
-          "bytes": 1721985,
+          "bytes": 1722280,
           "format": "gap",
           "path": "double/data/gap/2Dinfh.g",
-          "sha256": "3844ad41df2bbceeca47a0a1a92f3cdd701324aa092d2202d372baeec6dc02b0"
+          "sha256": "94c69c205e75a4a0cd5ca336faf7c96aa4b66ee5245ce256fbff9b5f16937124"
         },
         {
-          "bytes": 1538126,
+          "bytes": 1538389,
           "format": "wolfram",
           "path": "double/data/wolfram/2Dinfh.wl",
-          "sha256": "767b450529b9595aaba027c80e705dc372a1719702c9c5ebc85ca7c9847aade1"
+          "sha256": "785c2e499b4afbaaf96aca9390167674c64fe62b4a203f9c2afbfc3dcdc1ed35"
         },
         {
-          "bytes": 2083993,
+          "bytes": 2084288,
           "format": "sympy",
           "path": "double/data/sympy/2Dinfh.py",
-          "sha256": "2b8a895fd3b8fe74602d1aa275dd1d563ffc37332a1760c0a1f4320e63d548d3"
+          "sha256": "0aac46c3750371061b1414b8cf6043773c300506d51e50a216c04e85043b581f"
         },
         {
-          "bytes": 239263,
+          "bytes": 241610,
           "format": "latex",
           "path": "double/data/latex/2Dinfh.tex",
-          "sha256": "1432ea1ef3f7880e4254ea77f2f76700ff655cafa077799009ee4b4db3bde60e"
+          "sha256": "3f56aec6e223cfabb5f91549ac5d8d773be4838a7dae5938447d1a46f79d2f38"
         },
         {
-          "bytes": 460815,
+          "bytes": 466863,
           "format": "pdf",
           "path": "double/data/pdf/2Dinfh.pdf",
-          "sha256": "66ad83184b6276884764ce6f31f1f65b7ea8d5fbda5a3485e2aacf2590f714c6"
+          "sha256": "bd9ef9199d65241ed8ead368072fd805a7c7641636f62cefe8f0c477b2c232cc"
         }
       ],
       "requires": [
@@ -10890,40 +10890,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 1662823,
+          "bytes": 1663005,
           "format": "json",
           "path": "double/data/json/SU2.json",
-          "sha256": "194928632765e5ae56d6acb9e3ecd2e4ede6f5c46c5f2295cd572dbea7394ddf"
+          "sha256": "e9d3bafa195640236462d3053c9c7fe5723a4b30c76f43d0e2242db98acb8c9d"
         },
         {
-          "bytes": 1008368,
+          "bytes": 1008440,
           "format": "gap",
           "path": "double/data/gap/SU2.g",
-          "sha256": "265507ed628dfa5fba4c9914c4c8a6d4b6f647a59b5dc47538aa9e1f207e7f5a"
+          "sha256": "c0250f2636070678be2efb01240998f86556329822630885d5cb152841321257"
         },
         {
-          "bytes": 520599,
+          "bytes": 520663,
           "format": "wolfram",
           "path": "double/data/wolfram/SU2.wl",
-          "sha256": "81eea71a84dc0cfd1a0e07b915e79be89b82fdcf932a0597c282826573c4e212"
+          "sha256": "f926c150dc799756428ca71481423a1f2245a6a3c2037a59a0b7e119a2424cca"
         },
         {
-          "bytes": 695260,
+          "bytes": 695332,
           "format": "sympy",
           "path": "double/data/sympy/SU2.py",
-          "sha256": "eeb5cd8c7ef310c544a99a98f185b8dc4b7a830420dc4d7e2a23ec4abcceefc1"
+          "sha256": "c1c44c9760d0e0e6b07614da59ed46ff40406117302a57372ec398c4358a2cde"
         },
         {
-          "bytes": 149003,
+          "bytes": 150865,
           "format": "latex",
           "path": "double/data/latex/SU2.tex",
-          "sha256": "9321bb80060d34550ece83652f45a2896c77809c805c9476b254101543b124c6"
+          "sha256": "42aa8af2265ecbec1d6039d820e3ff3f4df3a3278eefd61deec766eb9b518583"
         },
         {
-          "bytes": 429752,
+          "bytes": 441143,
           "format": "pdf",
           "path": "double/data/pdf/SU2.pdf",
-          "sha256": "d8f0b397d00a326bc64e34ffb91194fa4a67a06c8ec4499ad9152a527b6e74c5"
+          "sha256": "5a41306bce829fac390c8b0f87fccfaa390327f1234adeab2e5104eedd49b759"
         },
         {
           "bytes": 42526,
@@ -11066,40 +11066,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 358402,
+          "bytes": 358766,
           "format": "json",
           "path": "double/data/json/Pinminus3.json",
-          "sha256": "11c2c3640ab70d0f806e1380c8e1af06df88e30fafdab2bdf779ccabff3f9168"
+          "sha256": "baa992fb5705af0e24a5829b135038e132eb2c519dcc6ece94b60fc3f571d77a"
         },
         {
-          "bytes": 213179,
+          "bytes": 213323,
           "format": "gap",
           "path": "double/data/gap/Pinminus3.g",
-          "sha256": "9a8362696b34321a24fa10895a7244ddae7ccfc12554b47ebded0655979f3274"
+          "sha256": "0ac3972bb756d7b54a072f4f2781480209bede300c4c9ebb87544a15f128a947"
         },
         {
-          "bytes": 173849,
+          "bytes": 173977,
           "format": "wolfram",
           "path": "double/data/wolfram/Pinminus3.wl",
-          "sha256": "448867e450176a00442f7a9e4aefa385dd7e58a03c40576a1240bbf1bcc8e095"
+          "sha256": "01aa19cb7a8b3670c87cf075ed81296d850c9d9b57ca646c8cc1eaa3f5da897a"
         },
         {
-          "bytes": 233220,
+          "bytes": 233364,
           "format": "sympy",
           "path": "double/data/sympy/Pinminus3.py",
-          "sha256": "9bab01550e54003782a908cf424b6ce38b731292e3426c612acfda87cc0752bd"
+          "sha256": "bfaca3bb0d2c38e6c1273f3cd1579df8a6782174207fb19ffbb2120ae0a63d21"
         },
         {
-          "bytes": 80635,
+          "bytes": 82639,
           "format": "latex",
           "path": "double/data/latex/Pinminus3.tex",
-          "sha256": "80f6f690dc7122649f08ef6909bb1f4a4014e91baba050190c3c0af270667538"
+          "sha256": "308280254e8f2973f0895df904c7266e5c45c634311772ec300b83cbbeacb86a"
         },
         {
-          "bytes": 417302,
+          "bytes": 423556,
           "format": "pdf",
           "path": "double/data/pdf/Pinminus3.pdf",
-          "sha256": "0c3bf62f830a437c0b0ec335d1751a74638fcd228753e68a42d337b6599a18b8"
+          "sha256": "518ae478dd0fed95f7ef3d66771eb60d1d874fb1ff8cb881bec284389b3f8949"
         }
       ],
       "requires": [

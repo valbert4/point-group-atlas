@@ -48,7 +48,7 @@ DROP = (
 DROP_UNUSED = (
     "irrep.alias.point",
     "typography.spectroscopic", "mark.classes", "group.abstract.dihedral", "head.level",
-    "group.abstract.alternating", "accent.conjugate.star", "operator.trace", "operator.degree",
+    "group.abstract.alternating", "accent.conjugate.star", "operator.degree",
     "index.period", "function.matrixelement", "function.cg.parity",
     "abbreviation.parent", "delimiter.ceiling", "delimiter.norm",
     "arithmetic.union", "relation.congruent", "relation.notin",
@@ -302,7 +302,7 @@ DOUBLE = (
     S("matrix.element.pin", "matrix", "M(k)",
       r"the stored $2\times2$ matrix of the element of index $k$, the transpose of its "
       r"$\grp{SU(2)}$ part, so that $M(k)\,M(k') = M(kk')$", "M(.)",
-      defined=("conv:21", "part:elements")),
+      defined=("conv:21", "part:elements", "part:class_space")),
     S("angle.su2.turn", "index", r"\tau",
       r"the turn $\omega/2\pi \in [0, 2)$ of the lift $\tilde{R}_{\mathbf{v}}(\omega)$ of an "
       r"element's rotation part (the field `su2_turn`)", r"\tau",
@@ -393,7 +393,7 @@ CONVENTIONS_ONLY = (
 EXTEND = {
     "head.degree": {"defined": ("part:invariants",)},
     # the continuous documents box the determinant character among their families
-    "mark.determinant": {"defined": ("part:continuous_irreps",)},
+    "mark.determinant": {"defined": ("part:families",)},
     "local.spin": {"scope": ("finite|spin_orbit|", "conventions|conv:25.2|"),
                    "defined": ("part:spin_orbit", "conv:25.2")},
     "symbol.term": {"defined": ("part:spin_orbit", "conv:25.2")},

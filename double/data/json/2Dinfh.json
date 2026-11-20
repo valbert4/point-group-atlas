@@ -61,6 +61,16 @@
           "id": "Cphi",
           "kind": "arc",
           "label": "C~(omega)",
+          "matrix": [
+            [
+              "exp(-i x)",
+              "0"
+            ],
+            [
+              "0",
+              "exp(+i x)"
+            ]
+          ],
           "measure": {
             "density_dt": [
               1,
@@ -89,6 +99,16 @@
           "id": "c2p",
           "kind": "atom",
           "label": "C~_2'",
+          "matrix": [
+            [
+              "0",
+              "-i exp(+i x)"
+            ],
+            [
+              "-i exp(-i x)",
+              "0"
+            ]
+          ],
           "measure": {
             "kind": "atom",
             "mass": [
@@ -163,6 +183,16 @@
           "id": "iCphi",
           "kind": "arc",
           "label": "i C~(omega)",
+          "matrix": [
+            [
+              "exp(-i x)",
+              "0"
+            ],
+            [
+              "0",
+              "exp(+i x)"
+            ]
+          ],
           "measure": {
             "density_dt": [
               1,
@@ -191,6 +221,16 @@
           "id": "sv",
           "kind": "atom",
           "label": "sigma~_v",
+          "matrix": [
+            [
+              "0",
+              "exp(+i x)"
+            ],
+            [
+              "-exp(-i x)",
+              "0"
+            ]
+          ],
           "measure": {
             "kind": "atom",
             "mass": [

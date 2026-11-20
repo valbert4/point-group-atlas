@@ -45,6 +45,7 @@ o3d = <|
           "id" -> "Cphi",
           "kind" -> "arc",
           "label" -> "C~(omega)",
+          "matrix" -> {{"exp(-i x)", "0"}, {"0", "exp(+i x)"}},
           "measure" -> <|"density_dt" -> {1, 4}, "kind" -> "absolutely_continuous"|>,
           "square" -> <|"component" -> "Cphi", "t_multiplier" -> 2|>
         |>,
@@ -90,6 +91,7 @@ o3d = <|
           "id" -> "iCphi",
           "kind" -> "arc",
           "label" -> "i C~(omega)",
+          "matrix" -> {{"exp(-i x)", "0"}, {"0", "exp(+i x)"}},
           "measure" -> <|"density_dt" -> {1, 4}, "kind" -> "absolutely_continuous"|>,
           "square" -> <|"component" -> "Cphi", "t_multiplier" -> 2|>
         |>

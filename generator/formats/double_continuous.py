@@ -2,10 +2,10 @@ r"""A continuous record of the Double catalogue as a LaTeX document: 2Cinf, 2Cin
 2Dinfh, SU2 and Pinminus3 (double/CONVENTIONS.md section 29).
 
 The parts mirror Rotation's documents of the continuous groups (latex.py, whose section keys they
-take, so that the registry's defining places hold): The group (Names and structure), Class space and
-representations (the class space of the cover, the vector families of the covered group and the
-spinor families with their characters, the spinor families' matrices, their products and
-Clebsch-Gordan coefficients), Subgroups (the closed subgroups with their diagram, and the
+take, so that the registry's defining places hold): The group (Names and structure, the class space
+of the cover with the matrix of each element, the fundamental domain), Representations (the vector
+families of the covered group and the spinor families with their characters, the spinor families'
+matrices, their products and Clebsch-Gordan coefficients), Subgroups (the closed subgroups with their diagram, and the
 restriction of the vector and the spinor families to them, by rules in SU(2) and Pin-(3)), Angular
 momentum (subduction from Pin-(3), the multiplicities and the bases),
 Spinors and tensors (the spin-orbitals, the invariant polynomials with the Molien series) and
@@ -111,6 +111,21 @@ def chi_tex(D, t, sym="n"):
     for p in parts[1:]:
         out += p if p.startswith("-") else "+" + p
     return out
+
+
+def one_dimensional_tex(D, t, sym="n"):
+    r"""A character of dimension 1 of the record (a trig in psi) as latex.one_dimensional_value
+    writes Rotation's: \pm e^{\pm i n omega} when it is one, else as chi_tex writes it."""
+    terms = t["terms"]
+    if len(terms) == 1 and "sum" not in terms[0]["harmonic"]:
+        u, h = terms[0], terms[0]["harmonic"]
+        arg = harmonic_tex(h["coefficient"], h["constant"], h.get("index_symbol", sym))
+        c, s = complex(L.to_float(u["cos"])), complex(L.to_float(u["sin"]))
+        for sign in (1, -1):
+            if arg and abs(abs(c) - 1) < 1e-12 and c.imag == 0 and abs(s - sign * 1j * c) < 1e-12:
+                return r"%s\expe^{%s\iunit %s}" % ("" if c.real > 0 else "-",
+                                                    "" if sign > 0 else "-", arg)
+    return chi_tex(D, t, sym)
 
 
 def affine_J(a):
@@ -258,22 +273,22 @@ def section_fundamental_domain(D):
 
 
 # ---------------------------------------------------------------- Class space
-def class_space_matrices(D):
-    """The matrices of the spinor families of dimension 2 on the components, as the class space
-    shows them (Rotation's documents show there the matrix P of each element): ({component id:
-    matrix}, the families' labels, the notes on p and i^(2n)); None for SU(2) and Pin-(3), whose
-    irreps have their own subsections, and when every spinor family has dimension 1.  The families
-    of dimension 2 of one preimage differ only by the parity p."""
+def spinor_matrix_cells(D):
+    """The matrices of the spinor families of dimension 2 on the components, as
+    section_continuous_irreps shows them: ({component id: matrix}, the families' labels, the notes
+    on p and i^(2n)); None for SU(2) and Pin-(3), whose irreps have subsections of their own
+    (spherical_matrices), and when every spinor family has dimension 1.  The families of dimension
+    2 of one preimage differ only by the parity p."""
     two = [f for f in D.fams if f["matrices"]["dim"] == 2]
     if D.spherical or not two:
         return None
     cells = {}
     for cid, e in two[0]["matrices"]["entries"].items():
         if e["form"] == "diagonal":
-            body = r"%s & 0\\ 0 & %s" % tuple(_arc_entry(x) for x in e["diag"])
+            body = r"%s & 0\\0 & %s" % tuple(_arc_entry(x) for x in e["diag"])
         else:
-            body = r"0 & %s\\ %s & 0" % tuple(_atom_entry(x) for x in e["antidiag"])
-        cells[cid] = r"\left(\begin{smallmatrix}%s\end{smallmatrix}\right)" % body
+            body = r"0 & %s\\%s & 0" % tuple(_atom_entry(x) for x in e["antidiag"])
+        cells[cid] = r"\left(\begin{irmatrix}{%s}%s\end{irmatrix}\right)" % (L.NORMAL_GAP, body)
     notes = []
     if any(f["label_template"].endswith(("g", "u")) for f in two):
         notes.append(r"$p$ is the parity of the family, $+1$ for $\ptag{g}$ and $-1$ for "
@@ -282,6 +297,26 @@ def class_space_matrices(D):
         notes.append(r"$\iunit^{2n}$ is $\iunit$ for $n = \tfrac{1}{2}, \tfrac{5}{2}, \dots$ and "
                      r"$-\iunit$ for $n = \tfrac{3}{2}, \tfrac{7}{2}, \dots$")
     return cells, [label_tex(f["label_template"]) for f in two], notes
+
+
+ELEMENT_ENTRY = re.compile(r"(-?)(i )?exp\(([+-])i x\)")
+
+
+def element_matrix_tex(cid, matrix):
+    """The matrix M(g) of a component's element, as the record stores it (the transpose of its
+    SU(2) part, in x = omega/2 on an arc and x = psi on an atom: continuous.ELEMENT_MATRIX)."""
+    angle = r"\omega/2" if cid in ("Cphi", "iCphi") else r"\psi"
+
+    def entry(x):
+        if x == "0":
+            return "0"
+        m = ELEMENT_ENTRY.fullmatch(x)
+        if not m:
+            raise ValueError("an entry of an element matrix: %r" % x)
+        return r"%s%s\expe^{%s\iunit%s}" % (m.group(1), r"\iunit" if m.group(2) else "",
+                                            "-" if m.group(3) == "-" else "", angle)
+    return r"\left(\begin{smallmatrix}%s\end{smallmatrix}\right)" % r"\\ ".join(
+        " & ".join(entry(x) for x in row) for row in matrix)
 
 
 def section_class_space(D):
@@ -298,33 +333,22 @@ def section_class_space(D):
                              if k in ids)
     if atoms:
         lifts.append(r"the lifts of the %s at the azimuth $\psi$, $0 \le \psi < 2\pi$" % reflected)
-    column = class_space_matrices(D)
     D.w(D.define("angle.omega", *(["angle.psi"] if atoms else []), "head.component",
-                 "head.coset", "head.element")
+                 "head.coset", "head.element", "matrix.element.pin")
         + r"A row is a component of the class space of $\grp{G}$, %s; coset tells whether its "
           r"elements cover proper or improper elements of %s, element gives the element of $%s$ "
-          r"at its angle: %s (CONVENTIONS.pdf, section 29.1)%s." % (
+          r"at its angle: %s (CONVENTIONS.pdf, section 29.1), and $M(g)$ is the matrix of that "
+          r"element, the transpose of its $\grp{SU(2)}$ part, so that the matrices compose as the "
+          r"matrices $P(g)$ of the elements of %s do (CONVENTIONS.pdf, section 21.2)." % (
               "an arc of classes or an atom, a single class" if atoms else "an arc of classes",
-              DL.rotation_linked(D.cover), D.P, L.listed(lifts),
-              r", and $%s$ the matrix of that element in the spinor %s "
-              r"(section~\ref{s:continuous_irreps}), on the kets $\jm{n}{-n}$, $\jm{n}{n}$ of "
-              r"%s" % (", ".join(column[1]), "irrep $%s$" % column[1][0]
-                       if len(column[1]) == 1 else "irreps " + L.listed(
-                           ["$%s$" % x for x in column[1]]),
-                       r"$\irrJp{n}{p}$, $p$ the parity of the irrep"
-                       if any(r"\ptag{u}" in x for x in column[1]) else r"$\irrJp{n}{+1}$")
-              if column else ""))
-    D.w(r"\begin{center}\begin{tabular}{@{}lll%s@{}}\toprule" % ("l" if column else ""))
-    D.w(r"component & coset & element%s\\\midrule" % (" & $%s$" % ", ".join(column[1])
-                                                         if column else ""))
+              DL.rotation_linked(D.cover), D.P, L.listed(lifts), DL.rotation_linked(D.cover)))
+    D.w(r"\begin{center}\begin{tabular}{@{}llll@{}}\toprule")
+    D.w(r"component & coset & element & $M(g)$\\\midrule")
     for k, c in enumerate(comps):
-        D.w(r"$%s$ & %s & $%s$%s%s" % (
+        D.w(r"$%s$ & %s & $%s$ & $%s$%s" % (
             COMPONENT_DISPLAY[c["id"]], c["coset"], COMPONENT_ELEMENT[c["id"]],
-            " & $%s$" % column[0][c["id"]] if column else "",
-            L.row_end(k, len(comps)) if column else r"\\"))
+            element_matrix_tex(c["id"], c["matrix"]), L.row_end(k, len(comps))))
     D.w(r"\bottomrule\end{tabular}\end{center}")
-    if column and column[2]:
-        D.w("Here " + ", and ".join(column[2]) + ".")
     arcs = [c for c in comps if c["kind"] == "arc"]
     folded = arcs[0]["coordinate"]["t1"] == [1, 1]
     if folded:
@@ -443,7 +467,7 @@ def determinant_sentence(D, vector):
         label_tex(fam["label_template"]))
 
 
-def section_continuous_irreps(D):
+def section_families(D):
     """The families of irreps: the vector families, those of G read through the covering map,
     then below a rule the spinor families of the record, as the finite documents list the vector
     and the spinor irreps."""
@@ -472,9 +496,7 @@ def section_continuous_irreps(D):
           r"$\elt{\barred{E}}$ is $-1$, follow below the rule, one for every half-integer "
           r"$%s = \tfrac{1}{2}, \tfrac{3}{2}, \dots$; %s%s.%s%s" % (
               cover, ", an atom the atom of %s" % cover if atoms else "", cover, sym,
-              family_image_rules(D),
-              r"; the class space (section~\ref{s:class_space}) gives the matrices of those of "
-              r"dimension 2" if class_space_matrices(D) else "",
+              family_image_rules(D), "",
               "" if D.spherical else
               r" As $2n$ is odd, the kernel of a spinor instance $n$ is a section "
               r"(CONVENTIONS.pdf, section 27).", determinant_sentence(D, vector)))
@@ -530,7 +552,6 @@ def section_continuous_irreps(D):
                                                          .split(",")[0]
                                                          if not D.spherical else
                                                          frac_tex(F(*insts[-1]["index"]["v"]))))
-    matrices(D)
 
 
 def entry_tex(x):
@@ -544,15 +565,75 @@ def entry_tex(x):
     return t
 
 
-def matrices(D):
-    """The matrices of the spinor families: those of SU(2) and Pin-(3) in subsections, of a family
-    of dimension 2 of an axial group in the class space (class_space_matrices), of a family of
-    dimension 1 its character."""
+def section_continuous_irreps(D):
+    """Representation matrices, as Rotation's documents of the continuous groups give them
+    (latex.section_continuous_irreps) and the finite preimages those of their spinor irreps
+    (double_latex.section_irrep_matrices): the vector families' are those of G on the elements
+    that cover its elements; a row of a table holds the matrices of the spinor families on a
+    component of the class space, as a function of its angle; SU(2) and Pin-(3) add the matrices
+    of a general element (spherical_matrices)."""
+    cover = DL.rotation_linked(D.cover)
+    parity = any(f["label_template"].endswith(("g", "u")) for f in D.fams)
+    D.section("Representation matrices", "sections 9, 16, 23.3 and 29.2")
+    D.w(D.define("vector.ket.partner", "index.partner", "matrix.irrep")
+        + r"A basis $(\irket{\Gamma}{1}, \dots, \irket{\Gamma}{d})$ of the irrep $\Gamma$ obeys")
+    D.equation("partner", r"g\irket{\Gamma}{\intx} = \sum_\nu \irket{\Gamma}{\nu}\, "
+                          r"\repD{\Gamma}_{\nu,\intx}(g);")
+    if D.spherical:
+        D.w(D.define("index.J")
+            + r"the matrices of a vector family are those of %s, on the elements that cover its "
+              r"elements; the spinor irreps form families, here the irreps %s at half-integer "
+              r"$J$, and a row of a table holds $\repD{\Gamma}(g)$ for the elements about $z$ of "
+              r"a component of the class space (section~\ref{s:class_space}), as a function of "
+              r"their angle; section~\ref{s:general} gives the matrices of every element." % (
+                  cover, r"$\irrJp{J}{p}$ of parity $p$" if len(D.fams) > 1 else r"$\irrJ{J}$"))
+    else:
+        D.w(r"the matrices of a vector family are those of %s, on the elements that cover its "
+            r"elements; the spinor irreps form families, and a row of a table holds "
+            r"$\repD{\Gamma}(g)$ of a spinor family for the elements of a component of the class "
+            r"space (section~\ref{s:class_space}), as a function of their angle." % cover)
+    if any(f["matrices"]["dim"] != 1 for f in D.fams):
+        D.w(D.define("function.character")
+            + r"The character is the trace, $\irchar{\Gamma}(g) = \trace\repD{\Gamma}(g)$; "
+              r"section~\ref{s:families} gives it on each component "
+              r"(\texttt{character\symbol{95}functions.\allowbreak irrep\symbol{95}families[]."
+              r"\allowbreak chi}).")
     if D.spherical:
         return spherical_matrices(D)
-    if any(f["matrices"]["dim"] == 1 for f in D.fams):
-        D.w(r"A spinor family of dimension 1 is its character, on the ket $\jm{n}{n}$ "
-            r"($\conjpair{1}$) or $\jm{n}{-n}$ ($\conjpair{2}$).")
+    comps = [c["id"] for c in D.rec["character_functions"]["class_space"]["components"]]
+    ones = [f for f in D.fams if f["matrices"]["dim"] == 1]
+    if ones:
+        # 2Cinf and 2Cinfh: every spinor family has dimension 1
+        D.w(D.define("function.character")
+            + r"$\repD{\Gamma}(g) = \irchar{\Gamma}(g)$, on the ket $\jm{n}{n}$ of a family "
+              r"$\conjpair{1}\irr{e}$ and $\jm{n}{-n}$ of a family $\conjpair{2}\irr{e}$, of %s."
+            % (r"$\irrJp{n}{p}$, $p$ the parity of the family" if parity
+               else r"$\irrJp{n}{+1}$"))
+        D.w(r"{\small\setlength{\tabcolsep}{4pt}")
+        D.w(r"\begin{longtable}{@{}l%s@{}}\toprule" % ("l" * len(ones)))
+        D.w(r"$g$ & " + " & ".join("$%s$" % label_tex(f["label_template"]) for f in ones)
+            + r"\\\midrule\endhead")
+        for cid in comps:
+            D.w(r"$%s$ & %s\\" % (COMPONENT_ELEMENT[cid], " & ".join(
+                "$%s$" % one_dimensional_tex(D, f["chi"][cid]) for f in ones)))
+        D.w(r"\bottomrule\end{longtable}}")
+    cells = spinor_matrix_cells(D)
+    if cells:
+        D.w(r"$\repD{\Gamma}(g)$ is the action of $g$ on the kets ($\jm{n}{-n}$, $\jm{n}{n}$) of "
+            r"%s (section~\ref{s:bases}): $\repD{\Gamma}_{\nu,\intx}(g)$ is the coefficient of "
+            r"ket $\nu$ in $g$ applied to ket $\intx$." % (
+                r"$\irrJp{n}{p}$, $p$ the parity of the family" if parity
+                else r"$\irrJp{n}{+1}$"))
+        D.w(r"{\small\setlength{\tabcolsep}{4pt}")
+        D.w(r"\begin{longtable}{@{}ll@{}}\toprule")
+        D.w(r"$g$ & $%s$\\\midrule\endhead" % ", ".join(
+            r"\repD{%s}(g)" % x for x in cells[1]))
+        for k, cid in enumerate(comps):
+            D.w(r"$%s$ & $%s$%s" % (COMPONENT_ELEMENT[cid], cells[0][cid],
+                                    L.row_end(k, len(comps))))
+        D.w(r"\bottomrule\end{longtable}}")
+        if cells[2]:
+            D.w("Here " + ", and ".join(cells[2]) + ".")
 
 
 def _arc_entry(x):
@@ -2112,11 +2193,12 @@ def spherical_bases_section(D):
 
 PARTS = (
     ("The group", (("identification", section_identification),
+                   ("class_space", section_class_space),
                    ("fundamental_domain", section_fundamental_domain))),
-    ("Class space and representations", (("class_space", section_class_space),
-                                         ("continuous_irreps", section_continuous_irreps),
-                                         ("fusion", section_fusion),
-                                         ("clebsch_gordan", section_clebsch_gordan))),
+    ("Representations", (("families", section_families),
+                         ("continuous_irreps", section_continuous_irreps),
+                         ("fusion", section_fusion),
+                         ("clebsch_gordan", section_clebsch_gordan))),
     ("Subgroups", (("subgroups", section_subgroups), ("subduction", section_subduction))),
     ("Angular momentum", (("subduction_parent", section_subduction_parent),
                           ("multiplicities", section_multiplicities),

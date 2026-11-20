@@ -35,6 +35,7 @@ o3d = {
                     'id': 'Cphi',
                     'kind': 'arc',
                     'label': 'C~(omega)',
+                    'matrix': [['exp(-i x)', '0'], ['0', 'exp(+i x)']],
                     'measure': {'density_dt': [1, 2], 'kind': 'absolutely_continuous'},
                     'square': {'component': 'Cphi', 't_multiplier': 2}
                 }

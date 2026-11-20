@@ -364,7 +364,8 @@ On an arc the coordinate $`t`$ (`coordinate`) gives the angle $`\omega = 2\pi t`
 functions of the half-angle $`\omega/2 = \pi t`$ (`"var": "psi"`, integer harmonics of $`\omega/2`$; the documents write them in $`\omega`$). In `2Cinf` and `2Cinfh` every element
 is a class and $`t`$ runs over $`[0, 2)`$; in the others $`\tilde{R}_{z}(\omega)`$ is conjugate to $`\tilde{R}_{z}(4\pi - \omega)`$, $`t`$ runs over $`[0, 1]`$, from $`\mathsfit{E}`$
 through the half turns ($`t = \tfrac{1}{2}`$, `C2`) to $`\bar{\mathsfit{E}}`$ (`bE`), and each atom is one class, conjugation by $`\tilde{R}_{z}(\pi)`$
-carrying one lift of a mirror or of a binary rotation to the other. The Haar measure has total mass 1, a rational density
+carrying one lift of a mirror or of a binary rotation to the other. `matrix` is the matrix $`M(g)`$ of the element $`g`$ at its angle, the
+transpose of its $`\mathsf{SU(2)}`$ part as in section 21.2, in the variable `x` of section 29.2. The Haar measure has total mass 1, a rational density
 per $`\mathrm{d}t`$ on an arc, and on the arcs of `SU2` and `Pinminus3` the Weyl density $`1 - \cos\omega`$ (times $`\tfrac{1}{2}`$ in
 `Pinminus3`). The squares of the elements of an atom are $`\bar{\mathsfit{E}}`$ (`square`: `Cphi` at $`t = 1`$). A vector family of $`\mathsf{G}`$ has
 on the point $`t`$ of an arc its character at $`\phi = \omega`$ modulo $`2\pi`$, and on an atom its value on $`\mathsf{G}`$'s atom (`covering_map`).

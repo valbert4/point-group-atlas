@@ -38,6 +38,7 @@ o3d = <|
           "id" -> "Cphi",
           "kind" -> "arc",
           "label" -> "C~(omega)",
+          "matrix" -> {{"exp(-i x)", "0"}, {"0", "exp(+i x)"}},
           "measure" -> <|"density_dt" -> {1, 2}, "kind" -> "absolutely_continuous"|>,
           "square" -> <|"component" -> "Cphi", "t_multiplier" -> 2|>
         |>,
@@ -51,6 +52,7 @@ o3d = <|
           "id" -> "sv",
           "kind" -> "atom",
           "label" -> "sigma~_v",
+          "matrix" -> {{"0", "exp(+i x)"}, {"-exp(-i x)", "0"}},
           "measure" -> <|"kind" -> "atom", "mass" -> {1, 2}|>,
           "square" -> <|"component" -> "Cphi", "turn" -> {1, 1}|>
         |>

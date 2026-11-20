@@ -177,6 +177,7 @@
 \newcommand{\fsind}{\nu_{\mathrm{FS}}}
 \newcommand{\conj}[1]{{#1}^{*}}
 \newcommand{\diag}{\operatorname{diag}}
+\newcommand{\trace}{\operatorname{tr}}
 \newcommand{\irrprod}{\otimes}
 \newcommand{\mult}{\kappa}
 \newcommand{\intx}{\mu}
@@ -248,26 +249,26 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \bottomrule\end{longtable}}
 \leavevmode\label{n:group.preimage}$\grp{2C_{\infty h}}$ is the preimage in $\grp{Pin^{-}(3)}$ of \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$}, whose document holds the fields of $\grp{C_{\infty h}}$ that this table does not repeat (\texttt{cover\symbol{95}of}): its type, names and geometry; in this table, \texttt{su2\symbol{95}subgroup} is $\grp{2C_{\infty h}} \cap \grp{SU(2)}$; \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{Pin^{-}(3)}$. The group is continuous: its order and its GAP identifier are not defined.
 \needspace{103pt}
-\section{Fundamental domain}\label{s:fundamental_domain}
-Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.17}{17} and \href{../../CONVENTIONS.pdf\#conv.21.3}{21.3}.
-\leavevmode\label{n:operator.cosets}An object with symmetry $\grp{2C_{\infty h}}$ placed by $\lift{Q} \in \grp{Pin^{-}(3)}$ is the same when placed by $g\lift{Q}$ with $g \in \grp{2C_{\infty h}}$: its orientations are the cosets $\grp{2C_{\infty h}}\lift{Q} = \{g\lift{Q} : g \in \grp{2C_{\infty h}}\}$, the points of the space $\grp{2C_{\infty h}}\backslash\grp{Pin^{-}(3)}$. \label{n:operator.volume}Volumes are those of the metric that the covering map carries to that of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.17}{17}), so that $\vol\grp{SU(2)} = 16\pi^2$ and $\vol\grp{Pin^{-}(3)} = 32\pi^2$, twice those of $\grp{SO(3)}$ and $\grp{O(3)}$.
-\leavevmode\label{n:set.cell}\label{n:set.fundamental}\label{n:set.sphere}As $\grp{2C_{\infty h}}$ holds $\elt{\barred{E}}$, a coset $\grp{2C_{\infty h}}\lift{Q}$ holds both lifts of every element of a coset of \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$} in $\grp{O(3)}$, and $\grp{2C_{\infty h}}\backslash\grp{Pin^{-}(3)}$ is $\grp{C_{\infty h}}\backslash\grp{O(3)}$, $\grp{C_{\infty}}\backslash\grp{SO(3)}$, the sphere $\twosphere$: the cell $\fcell$, each of its rotations by its canonical lift (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.21.1}{21.1}), and the fundamental domain $\fdomain$ are those of the document of \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$}, in its section Fundamental domain; $\grp{2C_{\infty h}}$ covers \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$} twice, the circles of its components being of length $4\pi$. Hence
-\begin{equation}\label{e:volume}\vol\fdomain = 4\pi,\qquad \vol\grp{2C_{\infty h}}\cdot\vol\fdomain = 8\pi\cdot 4\pi = 32\pi^2 = \vol\grp{Pin^{-}(3)}.\end{equation}
-\needspace{232pt}
-\partbox{Class space and representations}
 \section{Class space}\label{s:class_space}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.21}{21} and \href{../../CONVENTIONS.pdf\#conv.29.1}{29.1}.
-\leavevmode\label{n:angle.omega}\label{n:head.component}\label{n:head.coset}\label{n:head.element}A row is a component of the class space of $\grp{2C_{\infty h}}$, an arc of classes; coset tells whether its elements cover proper or improper elements of \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$}, element gives the element of $\grp{Pin^{-}(3)}$ at its angle: the lift $\lift{R}_z(\omega) = \cos\tfrac{\omega}{2} - \iunit\sin\tfrac{\omega}{2}\,\pauli{z}$, $0 \le \omega < 4\pi$ and the lift of the inversion $\elt{\lift{i}}$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.29.1}{29.1}).
-\begin{center}\begin{tabular}{@{}lll@{}}\toprule
-component & coset & element\\\midrule
-$\comp{\lift{C}(\omega)}$ & proper & $\elt{\lift{C}}(\omega)$\\
-$\comp{\lift{i}\,\lift{C}(\omega)}$ & improper & $\elt{\lift{i}\,\lift{C}}(\omega)$\\
+\leavevmode\label{n:angle.omega}\label{n:head.component}\label{n:head.coset}\label{n:head.element}\label{n:matrix.element.pin}A row is a component of the class space of $\grp{2C_{\infty h}}$, an arc of classes; coset tells whether its elements cover proper or improper elements of \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$}, element gives the element of $\grp{Pin^{-}(3)}$ at its angle: the lift $\lift{R}_z(\omega) = \cos\tfrac{\omega}{2} - \iunit\sin\tfrac{\omega}{2}\,\pauli{z}$, $0 \le \omega < 4\pi$ and the lift of the inversion $\elt{\lift{i}}$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.29.1}{29.1}), and $M(g)$ is the matrix of that element, the transpose of its $\grp{SU(2)}$ part, so that the matrices compose as the matrices $P(g)$ of the elements of \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$} do (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.21.2}{21.2}).
+\begin{center}\begin{tabular}{@{}llll@{}}\toprule
+component & coset & element & $M(g)$\\\midrule
+$\comp{\lift{C}(\omega)}$ & proper & $\elt{\lift{C}}(\omega)$ & $\left(\begin{smallmatrix}\expe^{-\iunit\omega/2} & 0\\ 0 & \expe^{\iunit\omega/2}\end{smallmatrix}\right)$\\\addlinespace[6pt]
+$\comp{\lift{i}\,\lift{C}(\omega)}$ & improper & $\elt{\lift{i}\,\lift{C}}(\omega)$ & $\left(\begin{smallmatrix}\expe^{-\iunit\omega/2} & 0\\ 0 & \expe^{\iunit\omega/2}\end{smallmatrix}\right)$\\
 \bottomrule\end{tabular}\end{center}
 $\grp{2C_{\infty h}}$ is abelian: every element is a class, and the arcs run over $0 \le \omega < 4\pi$, the two lifts $\omega$ and $\omega + 2\pi$ of a rotation apart.
 The distinguished points are $\cls{E}$ at $\omega = 0$, $\cls{C_2}$ at $\omega = \pi$, $\cls{\barred{E}}$ at $\omega = 2\pi$, $\cls{\barred{C}_2}$ at $\omega = 3\pi$, $\cls{\lift{i}}$ at $\omega = 0$, $\cls{\sigma_h}$ at $\omega = \pi$, $\cls{\barred{\lift{i}}}$ at $\omega = 2\pi$, $\cls{\barred{\sigma}_h}$ at $\omega = 3\pi$.
 \leavevmode\label{n:local.haar.h}The Haar measure, of total mass 1: $\diff h = \tfrac{1}{2}\,\diff\omega/(4\pi)$ on $\comp{\lift{C}(\omega)}$, of mass $\tfrac{1}{2}$; $\diff h = \tfrac{1}{2}\,\diff\omega/(4\pi)$ on $\comp{\lift{i}\,\lift{C}(\omega)}$, of mass $\tfrac{1}{2}$.
 \needspace{103pt}
-\section{Families of irreps}\label{s:continuous_irreps}
+\section{Fundamental domain}\label{s:fundamental_domain}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.17}{17} and \href{../../CONVENTIONS.pdf\#conv.21.3}{21.3}.
+\leavevmode\label{n:operator.cosets}An object with symmetry $\grp{2C_{\infty h}}$ placed by $\lift{Q} \in \grp{Pin^{-}(3)}$ is the same when placed by $g\lift{Q}$ with $g \in \grp{2C_{\infty h}}$: its orientations are the cosets $\grp{2C_{\infty h}}\lift{Q} = \{g\lift{Q} : g \in \grp{2C_{\infty h}}\}$, the points of the space $\grp{2C_{\infty h}}\backslash\grp{Pin^{-}(3)}$. \label{n:operator.volume}Volumes are those of the metric that the covering map carries to that of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.17}{17}), so that $\vol\grp{SU(2)} = 16\pi^2$ and $\vol\grp{Pin^{-}(3)} = 32\pi^2$, twice those of $\grp{SO(3)}$ and $\grp{O(3)}$.
+\leavevmode\label{n:set.cell}\label{n:set.fundamental}\label{n:set.sphere}As $\grp{2C_{\infty h}}$ holds $\elt{\barred{E}}$, a coset $\grp{2C_{\infty h}}\lift{Q}$ holds both lifts of every element of a coset of \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$} in $\grp{O(3)}$, and $\grp{2C_{\infty h}}\backslash\grp{Pin^{-}(3)}$ is $\grp{C_{\infty h}}\backslash\grp{O(3)}$, $\grp{C_{\infty}}\backslash\grp{SO(3)}$, the sphere $\twosphere$: the cell $\fcell$, each of its rotations by its canonical lift (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.21.1}{21.1}), and the fundamental domain $\fdomain$ are those of the document of \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$}, in its section Fundamental domain; $\grp{2C_{\infty h}}$ covers \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$} twice, the circles of its components being of length $4\pi$. Hence
+\begin{equation}\label{e:volume}\vol\fdomain = 4\pi,\qquad \vol\grp{2C_{\infty h}}\cdot\vol\fdomain = 8\pi\cdot 4\pi = 32\pi^2 = \vol\grp{Pin^{-}(3)}.\end{equation}
+\needspace{171pt}
+\partbox{Representations}
+\section{Families of irreps}\label{s:families}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.7}{7}, \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.23}{23} and \href{../../CONVENTIONS.pdf\#conv.29.2}{29.2}.
 \leavevmode\label{n:head.family.irreps}\label{n:index.dimension}\label{n:index.frobenius}\label{n:head.index.family}\label{n:head.kernel}\label{n:head.image}\label{n:mark.determinant}A row is a family of irreps, by its label: its dimension $d$, its Frobenius--Schur indicator $\fsind$, index the range of the index of its instances, kernel the subgroup $\ker\Gamma$ of the elements that an irrep $\Gamma$ of the family maps to the identity, image the group that its matrices form, isomorphic to $\grp{2C_{\infty h}}/\ker\Gamma$, and its character on each component, in the angle $\omega$ of the lift. The vector families, on which $\elt{\barred{E}}$ is the identity, are those of \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$}, read on these classes through the covering map: a point $\omega$ of an arc covers the rotation angle $\phi = \omega$ modulo $2\pi$ (\texttt{vector\symbol{95}families}); the kernel of one is the preimage of its kernel there, its image and its matrices are those of \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$}. The spinor families, on which $\elt{\barred{E}}$ is $-1$, follow below the rule, one for every half-integer $n = \tfrac{1}{2}, \tfrac{3}{2}, \dots$; the image of one is the group of its characters, turning the complex plane, \href{../../../rotation/data/pdf/Cinf.pdf}{$\grp{C_{\infty}}$}. As $2n$ is odd, the kernel of a spinor instance $n$ is a section (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.27}{27}). The boxed family, of one irrep, is the determinant character of \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$}, whose character is $\det g$ on the elements that cover $g$.
 {\small\renewcommand{\arraystretch}{1.25}\begin{longtable}{@{}llllllll@{}}\toprule
@@ -291,7 +292,20 @@ $\conjpair{2}\irr{e}_{n,\ptag{u}}$ & 1 & $0$ & $n \ge \tfrac{1}{2}$ & $\grp{S_{4
 \bottomrule\end{longtable}}
 The complex families come in conjugate pairs, vector and spinor alike: $\conjpair{1}\irr{e}_{n,\ptag{g}}$ and $\conjpair{2}\irr{e}_{n,\ptag{g}}$; $\conjpair{1}\irr{e}_{n,\ptag{u}}$ and $\conjpair{2}\irr{e}_{n,\ptag{u}}$.
 The records list the spinor instances up to $n = 13/2$, with their characters at the distinguished points (\texttt{instances}).
-A spinor family of dimension 1 is its character, on the ket $\jm{n}{n}$ ($\conjpair{1}$) or $\jm{n}{-n}$ ($\conjpair{2}$).
+\needspace{110pt}
+\section{Representation matrices}\label{s:continuous_irreps}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.9}{9}, \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.23.3}{23.3} and \href{../../CONVENTIONS.pdf\#conv.29.2}{29.2}.
+\leavevmode\label{n:vector.ket.partner}\label{n:index.partner}\label{n:matrix.irrep}A basis $(\irket{\Gamma}{1}, \dots, \irket{\Gamma}{d})$ of the irrep $\Gamma$ obeys
+\begin{equation}\label{e:partner}g\irket{\Gamma}{\intx} = \sum_\nu \irket{\Gamma}{\nu}\, \repD{\Gamma}_{\nu,\intx}(g);\end{equation}
+the matrices of a vector family are those of \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$}, on the elements that cover its elements; the spinor irreps form families, and a row of a table holds $\repD{\Gamma}(g)$ of a spinor family for the elements of a component of the class space (section~\ref{s:class_space}), as a function of their angle.
+\leavevmode\label{n:function.character}$\repD{\Gamma}(g) = \irchar{\Gamma}(g)$, on the ket $\jm{n}{n}$ of a family $\conjpair{1}\irr{e}$ and $\jm{n}{-n}$ of a family $\conjpair{2}\irr{e}$, of $\irrJp{n}{p}$, $p$ the parity of the family.
+{\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}lllll@{}}\toprule
+$g$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}$ & $\conjpair{2}\irr{e}_{n,\ptag{g}}$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}$ & $\conjpair{2}\irr{e}_{n,\ptag{u}}$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\elt{\lift{C}}(\omega)$ & $\expe^{\iunit n\omega}$ & $\expe^{-\iunit n\omega}$ & $\expe^{\iunit n\omega}$ & $\expe^{-\iunit n\omega}$\\*
+$\elt{\lift{i}\,\lift{C}}(\omega)$ & $\expe^{\iunit n\omega}$ & $\expe^{-\iunit n\omega}$ & $-\expe^{\iunit n\omega}$ & $-\expe^{-\iunit n\omega}$\\
+\bottomrule\end{longtable}}
 \needspace{91pt}
 \section{Direct products of irreps}\label{s:fusion}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.2}{10.2} and \href{../../CONVENTIONS.pdf\#conv.29.3}{29.3}.

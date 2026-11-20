@@ -177,6 +177,7 @@
 \newcommand{\fsind}{\nu_{\mathrm{FS}}}
 \newcommand{\conj}[1]{{#1}^{*}}
 \newcommand{\diag}{\operatorname{diag}}
+\newcommand{\trace}{\operatorname{tr}}
 \newcommand{\irrprod}{\otimes}
 \newcommand{\mult}{\kappa}
 \newcommand{\intx}{\mu}
@@ -248,26 +249,26 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \bottomrule\end{longtable}}
 \leavevmode\label{n:group.preimage}$\grp{Pin^{-}(3)}$ is the preimage in $\grp{Pin^{-}(3)}$ of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, whose document holds the fields of $\grp{O(3)}$ that this table does not repeat (\texttt{cover\symbol{95}of}): its type, names and geometry; in this table, \texttt{su2\symbol{95}subgroup} is $\grp{Pin^{-}(3)} \cap \grp{SU(2)}$; \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{Pin^{-}(3)}$. The group is continuous: its order and its GAP identifier are not defined.
 \needspace{103pt}
-\section{Fundamental domain}\label{s:fundamental_domain}
-Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.17}{17} and \href{../../CONVENTIONS.pdf\#conv.21.3}{21.3}.
-\leavevmode\label{n:operator.cosets}An object with symmetry $\grp{Pin^{-}(3)}$ placed by $\lift{Q} \in \grp{Pin^{-}(3)}$ is the same when placed by $g\lift{Q}$ with $g \in \grp{Pin^{-}(3)}$: its orientations are the cosets $\grp{Pin^{-}(3)}\lift{Q} = \{g\lift{Q} : g \in \grp{Pin^{-}(3)}\}$, the points of the space $\grp{Pin^{-}(3)}\backslash\grp{Pin^{-}(3)}$. \label{n:operator.volume}Volumes are those of the metric that the covering map carries to that of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.17}{17}), so that $\vol\grp{SU(2)} = 16\pi^2$ and $\vol\grp{Pin^{-}(3)} = 32\pi^2$, twice those of $\grp{SO(3)}$ and $\grp{O(3)}$.
-\leavevmode\label{n:set.cell}\label{n:set.fundamental}As $\grp{Pin^{-}(3)}$ holds $\elt{\barred{E}}$, a coset $\grp{Pin^{-}(3)}\lift{Q}$ holds both lifts of every element of a coset of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} in $\grp{O(3)}$, and $\grp{Pin^{-}(3)}\backslash\grp{Pin^{-}(3)}$ is $\grp{O(3)}\backslash\grp{O(3)}$, a point: the cell $\fcell$, each of its rotations by its canonical lift (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.21.1}{21.1}), and the fundamental domain $\fdomain$ are those of the document of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, in its section Fundamental domain; $\grp{Pin^{-}(3)}$ covers \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} twice. Hence
-\begin{equation}\label{e:volume}\vol\fdomain = 1,\qquad \vol\grp{Pin^{-}(3)}\cdot\vol\fdomain = 32\pi^2\cdot 1 = 32\pi^2 = \vol\grp{Pin^{-}(3)}.\end{equation}
-\needspace{232pt}
-\partbox{Class space and representations}
 \section{Class space}\label{s:class_space}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.21}{21} and \href{../../CONVENTIONS.pdf\#conv.29.1}{29.1}.
-\leavevmode\label{n:angle.omega}\label{n:head.component}\label{n:head.coset}\label{n:head.element}A row is a component of the class space of $\grp{Pin^{-}(3)}$, an arc of classes; coset tells whether its elements cover proper or improper elements of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, element gives the element of $\grp{Pin^{-}(3)}$ at its angle: the lift $\lift{R}_z(\omega) = \cos\tfrac{\omega}{2} - \iunit\sin\tfrac{\omega}{2}\,\pauli{z}$, $0 \le \omega < 4\pi$ and the lift of the inversion $\elt{\lift{i}}$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.29.1}{29.1}).
-\begin{center}\begin{tabular}{@{}lll@{}}\toprule
-component & coset & element\\\midrule
-$\comp{\lift{C}(\omega)}$ & proper & $\elt{\lift{C}}(\omega)$\\
-$\comp{\lift{i}\,\lift{C}(\omega)}$ & improper & $\elt{\lift{i}\,\lift{C}}(\omega)$\\
+\leavevmode\label{n:angle.omega}\label{n:head.component}\label{n:head.coset}\label{n:head.element}\label{n:matrix.element.pin}A row is a component of the class space of $\grp{Pin^{-}(3)}$, an arc of classes; coset tells whether its elements cover proper or improper elements of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, element gives the element of $\grp{Pin^{-}(3)}$ at its angle: the lift $\lift{R}_z(\omega) = \cos\tfrac{\omega}{2} - \iunit\sin\tfrac{\omega}{2}\,\pauli{z}$, $0 \le \omega < 4\pi$ and the lift of the inversion $\elt{\lift{i}}$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.29.1}{29.1}), and $M(g)$ is the matrix of that element, the transpose of its $\grp{SU(2)}$ part, so that the matrices compose as the matrices $P(g)$ of the elements of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} do (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.21.2}{21.2}).
+\begin{center}\begin{tabular}{@{}llll@{}}\toprule
+component & coset & element & $M(g)$\\\midrule
+$\comp{\lift{C}(\omega)}$ & proper & $\elt{\lift{C}}(\omega)$ & $\left(\begin{smallmatrix}\expe^{-\iunit\omega/2} & 0\\ 0 & \expe^{\iunit\omega/2}\end{smallmatrix}\right)$\\\addlinespace[6pt]
+$\comp{\lift{i}\,\lift{C}(\omega)}$ & improper & $\elt{\lift{i}\,\lift{C}}(\omega)$ & $\left(\begin{smallmatrix}\expe^{-\iunit\omega/2} & 0\\ 0 & \expe^{\iunit\omega/2}\end{smallmatrix}\right)$\\
 \bottomrule\end{tabular}\end{center}
 On an arc, $\elt{\lift{R}_z}(\omega)$ is conjugate to $\elt{\lift{R}_z}(4\pi - \omega)$, so the classes run over $0 \le \omega \le 2\pi$, from $\cls{E}$ through the half turns to $\cls{\barred{E}}$.
 The distinguished points are $\cls{E}$ at $\omega = 0$, $\cls{C_2}$ at $\omega = \pi$, $\cls{\barred{E}}$ at $\omega = 2\pi$, $\cls{\lift{i}}$ at $\omega = 0$, $\cls{\sigma_h}$ at $\omega = \pi$, $\cls{\barred{\lift{i}}}$ at $\omega = 2\pi$.
 \leavevmode\label{n:local.haar.h}The Haar measure, of total mass 1: $\diff h = \tfrac{1}{2}(1 - \cos\omega)\,\diff\omega/(2\pi)$ on $\comp{\lift{C}(\omega)}$, of mass $\tfrac{1}{2}$; $\diff h = \tfrac{1}{2}(1 - \cos\omega)\,\diff\omega/(2\pi)$ on $\comp{\lift{i}\,\lift{C}(\omega)}$, of mass $\tfrac{1}{2}$.
 \needspace{103pt}
-\section{Families of irreps}\label{s:continuous_irreps}
+\section{Fundamental domain}\label{s:fundamental_domain}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.17}{17} and \href{../../CONVENTIONS.pdf\#conv.21.3}{21.3}.
+\leavevmode\label{n:operator.cosets}An object with symmetry $\grp{Pin^{-}(3)}$ placed by $\lift{Q} \in \grp{Pin^{-}(3)}$ is the same when placed by $g\lift{Q}$ with $g \in \grp{Pin^{-}(3)}$: its orientations are the cosets $\grp{Pin^{-}(3)}\lift{Q} = \{g\lift{Q} : g \in \grp{Pin^{-}(3)}\}$, the points of the space $\grp{Pin^{-}(3)}\backslash\grp{Pin^{-}(3)}$. \label{n:operator.volume}Volumes are those of the metric that the covering map carries to that of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.17}{17}), so that $\vol\grp{SU(2)} = 16\pi^2$ and $\vol\grp{Pin^{-}(3)} = 32\pi^2$, twice those of $\grp{SO(3)}$ and $\grp{O(3)}$.
+\leavevmode\label{n:set.cell}\label{n:set.fundamental}As $\grp{Pin^{-}(3)}$ holds $\elt{\barred{E}}$, a coset $\grp{Pin^{-}(3)}\lift{Q}$ holds both lifts of every element of a coset of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} in $\grp{O(3)}$, and $\grp{Pin^{-}(3)}\backslash\grp{Pin^{-}(3)}$ is $\grp{O(3)}\backslash\grp{O(3)}$, a point: the cell $\fcell$, each of its rotations by its canonical lift (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.21.1}{21.1}), and the fundamental domain $\fdomain$ are those of the document of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, in its section Fundamental domain; $\grp{Pin^{-}(3)}$ covers \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} twice. Hence
+\begin{equation}\label{e:volume}\vol\fdomain = 1,\qquad \vol\grp{Pin^{-}(3)}\cdot\vol\fdomain = 32\pi^2\cdot 1 = 32\pi^2 = \vol\grp{Pin^{-}(3)}.\end{equation}
+\needspace{171pt}
+\partbox{Representations}
+\section{Families of irreps}\label{s:families}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.7}{7}, \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.23}{23} and \href{../../CONVENTIONS.pdf\#conv.29.2}{29.2}.
 \leavevmode\label{n:head.family.irreps}\label{n:index.dimension}\label{n:index.frobenius}\label{n:head.index.family}\label{n:head.kernel}\label{n:head.image}A row is a family of irreps, by its label: its dimension $d$, its Frobenius--Schur indicator $\fsind$, index the range of the index of its instances, kernel the subgroup $\ker\Gamma$ of the elements that an irrep $\Gamma$ of the family maps to the identity, image the group that its matrices form, isomorphic to $\grp{Pin^{-}(3)}/\ker\Gamma$, and its character on each component, in the angle $\omega$ of the lift. The vector families, on which $\elt{\barred{E}}$ is the identity, are those of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, read on these classes through the covering map: a point $\omega$ of an arc covers the rotation angle $\phi = \omega$ modulo $2\pi$ (\texttt{vector\symbol{95}families}); the kernel of one is the preimage of its kernel there, its image and its matrices are those of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}. The spinor families, on which $\elt{\barred{E}}$ is $-1$, follow below the rule, one for every half-integer $J = \tfrac{1}{2}, \tfrac{3}{2}, \dots$; the image of one is $\grp{SU(2)}$. The determinant character of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, whose character is $\det g$ on the elements that cover $g$, is $\irrJp{0}{-}$, the instance $J = 0$ of $\irrJp{J}{-}$.
 {\small\begin{longtable}{@{}llllllll@{}}\toprule
@@ -283,6 +284,13 @@ $\irrJp{J}{-}$ & $2J+1$ & $-1$ & $J \ge \tfrac{1}{2}$ & \href{S2b.pdf}{$\grp{C_{
 \bottomrule\end{longtable}}
 The irreps $\irrJp{J}{+}$ and $\irrJp{J}{-}$ at half-integer $J$, which differ by their sign on the lifts of the inversion, are the spinor irreps of $\grp{Pin^{-}(3)}$; both restrict to the irrep $\irrJ{J}$ of $\grp{SU(2)}$, the quaternionic irrep of the spin-$J$ particle.
 The records list the spinor instances up to $J = \tfrac{19}{2}$, with their characters at the distinguished points (\texttt{instances}).
+\needspace{110pt}
+\section{Representation matrices}\label{s:continuous_irreps}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.9}{9}, \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.23.3}{23.3} and \href{../../CONVENTIONS.pdf\#conv.29.2}{29.2}.
+\leavevmode\label{n:vector.ket.partner}\label{n:index.partner}\label{n:matrix.irrep}A basis $(\irket{\Gamma}{1}, \dots, \irket{\Gamma}{d})$ of the irrep $\Gamma$ obeys
+\begin{equation}\label{e:partner}g\irket{\Gamma}{\intx} = \sum_\nu \irket{\Gamma}{\nu}\, \repD{\Gamma}_{\nu,\intx}(g);\end{equation}
+\leavevmode\label{n:index.J}the matrices of a vector family are those of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, on the elements that cover its elements; the spinor irreps form families, here the irreps $\irrJp{J}{p}$ of parity $p$ at half-integer $J$, and a row of a table holds $\repD{\Gamma}(g)$ for the elements about $z$ of a component of the class space (section~\ref{s:class_space}), as a function of their angle; section~\ref{s:general} gives the matrices of every element.
+\leavevmode\label{n:function.character}The character is the trace, $\irchar{\Gamma}(g) = \trace\repD{\Gamma}(g)$; section~\ref{s:families} gives it on each component (\texttt{character\symbol{95}functions.\allowbreak irrep\symbol{95}families[].\allowbreak chi}).
 \needspace{153pt}
 \subsection{The irreps of dimension \texorpdfstring{$2J+1$}{2J+1}}
 \leavevmode\label{n:local.spinor.uv}In the basis $\jm{J}{m}$, $m = J, J-1, \dots, -J$, partner $\intx = J - m + 1$: the states of angular momentum $J$, which the polynomials $u^{J+m}v^{J-m}/\sqrt{(J+m)!\,(J-m)!}$ in the kets $u = \jm{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ and $v = \jm{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ realize, as the spherical harmonics do at integer $J$. An element $(U, \varepsilon)$ acts on them by $\wignerD{J}(U)^{\dagger}$, times $p$ when $\varepsilon = -1$, $U$ its $\grp{SU(2)}$ part, the transpose of its \texttt{matrix} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.21.2}{21.2} and \href{../../CONVENTIONS.pdf\#conv.26.1}{26.1}).
@@ -489,7 +497,7 @@ $H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{4N}))$, $P_\Lambda(t)$: $t^{2k} +
 \partbox{Angular momentum}
 \section{Subduction from \texorpdfstring{$\grp{Pin^{-}(3)}$}{Pin\unichar{8315}(3)}}\label{s:subduction_parent}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.11}{11}, \href{../../CONVENTIONS.pdf\#conv.25.1}{25.1} and \href{../../CONVENTIONS.pdf\#conv.29.4}{29.4}.
-\leavevmode\label{n:irrep.o3}\label{n:index.J}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{Pin^{-}(3)}$ at half-integer $J$ restricted to $\grp{Pin^{-}(3)}$ (\texttt{rule}):
+\leavevmode\label{n:irrep.o3}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{Pin^{-}(3)}$ at half-integer $J$ restricted to $\grp{Pin^{-}(3)}$ (\texttt{rule}):
 \begin{equation}\label{e:parent}\restr{\irrJp{J}{p}}{\grp{Pin^{-}(3)}} = \irrJp{J}{p},\end{equation}
 for either $p$; at integer $J$, the subduction of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} (\texttt{integer\symbol{95}J}).
 \needspace{110pt}

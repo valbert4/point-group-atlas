@@ -286,6 +286,18 @@
                     "description": "See CONVENTIONS.md section 29.1.",
                     "type": "string"
                   },
+                  "matrix": {
+                    "description": "See CONVENTIONS.md section 29.1.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 29.1.",
+                      "items": {
+                        "description": "See CONVENTIONS.md section 29.1.",
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    "type": "array"
+                  },
                   "measure": {
                     "additionalProperties": false,
                     "description": "See CONVENTIONS.md section 29.1.",
@@ -419,6 +431,7 @@
                   "id",
                   "kind",
                   "label",
+                  "matrix",
                   "measure",
                   "square"
                 ],

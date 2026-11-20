@@ -38,6 +38,7 @@ o3d = <|
           "id" -> "Cphi",
           "kind" -> "arc",
           "label" -> "C~(omega)",
+          "matrix" -> {{"exp(-i x)", "0"}, {"0", "exp(+i x)"}},
           "measure" -> <|
             "density_dt" -> <|
               "f" -> "trig",
@@ -90,6 +91,7 @@ o3d = <|
           "id" -> "iCphi",
           "kind" -> "arc",
           "label" -> "i C~(omega)",
+          "matrix" -> {{"exp(-i x)", "0"}, {"0", "exp(+i x)"}},
           "measure" -> <|
             "density_dt" -> <|
               "f" -> "trig",
