@@ -124,6 +124,19 @@ TEMPLATE = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>%(title)s</title>
+<meta name="description" content="%(description)s">
+<link rel="canonical" href="%(address)s">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="%(atlas)s">
+<meta property="og:title" content="%(title_attr)s">
+<meta property="og:description" content="%(description)s">
+<meta property="og:url" content="%(address)s">
+<meta property="og:image" content="%(card)s">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="%(card_alt)s">
+<meta name="twitter:card" content="summary_large_image">
 <script>
 try { var t = localStorage.getItem("atlas-theme");
       if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
@@ -162,7 +175,15 @@ LOGO = os.path.join(names.ROOT, "logo")
 WORDMARK = "wordmark.svg"
 FAVICONS = ("favicon.svg",) + tuple("favicon-%s.svg" % c for c in
                                     ("rotation", "double", "magnetic", "magnetic-double"))
-LOGO_FILES = FAVICONS + (WORDMARK,)
+# The link preview of every file (Open Graph and its Twitter form, which LinkedIn, X, Bluesky and
+# Mastodon read): the file's title and address, one description of the atlas, and logo/social.png
+# (1200 x 630), the mark and the title on their grid above a line on the contents.
+DESCRIPTION = ("Exact tables of the 98 point groups and their 116 double groups: characters, irrep "
+               "matrices, Clebsch–Gordan coefficients, descent of symmetry and symmetry-adapted "
+               "bases, with JSON, GAP, SymPy and Wolfram Language records.")
+CARD = "social.png"
+CARD_ALT = "The mark and the title of the Point Group Atlas"
+LOGO_FILES = FAVICONS + (WORDMARK, CARD)
 _MARKS = {}
 
 
@@ -228,7 +249,8 @@ def report_url(here, title):
 
 
 def frame(here, title, body, catalogue=None, crumbs=(), tabs="", pager=""):
-    """A file of the site at `here`: the tab icon, the bar (the mark and the atlas, the volume,
+    """A file of the site at `here`: the tab icon, the link preview (DESCRIPTION, CARD), the bar
+    (the mark and the atlas, the volume,
     the repository, and the day and night button of site.js), the breadcrumbs (pairs of (site
     path or None, html)), the tabs, the body, the pager and the foot (the repository and its form
     for reporting an error, report_url).  The files of a volume carry its
@@ -248,7 +270,9 @@ def frame(here, title, body, catalogue=None, crumbs=(), tabs="", pager=""):
             '<a href="%s">%s</a>' % (rel(here, p), h) if p is not None else
             '<span>%s</span>' % h for p, h in crumbs)
     return TEMPLATE % {
-        "title": esc(title), "root": root, "volume": "volume-" + (catalogue or "home"),
+        "title": esc(title), "title_attr": attr(title), "description": attr(DESCRIPTION),
+        "address": attr(ADDRESS + (here or "")), "card": attr(ADDRESS + "static/" + CARD),
+        "card_alt": attr(CARD_ALT), "root": root, "volume": "volume-" + (catalogue or "home"),
         "favicon": "favicon-%s.svg" % catalogue if catalogue else "favicon.svg",
         "mark": mark("small"), "atlas": esc(style.TITLE), "wordmark": wordmark_size(),
         "volume_link": volume_link, "crumbs": trail,
