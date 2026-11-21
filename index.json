@@ -4,16 +4,16 @@
       "catalogue": "rotation",
       "files": [
         {
-          "bytes": 287691,
+          "bytes": 296615,
           "format": "markdown",
           "path": "rotation/CONVENTIONS.md",
-          "sha256": "ab1f47c769ea9cc596a564468b58855977cea13abf7ad44db5bdc3808b7b5e68"
+          "sha256": "f0c42fb60f34bd148a9974047b3b09d17e77d76efbca5ff2bfd3b822842cada4"
         },
         {
-          "bytes": 759823,
+          "bytes": 770404,
           "format": "pdf",
           "path": "rotation/CONVENTIONS.pdf",
-          "sha256": "3dfefb3c87485c8e7f4dcfc9f4bfc755a874415d28872c7dd07d1cb14adf01f4"
+          "sha256": "f13024cf8ced1f4b2e79c97d1621a3ead43f213f404cfede44bc84cb991d5b0e"
         },
         {
           "bytes": 156100,
@@ -41,16 +41,16 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 44345,
+          "bytes": 47335,
           "format": "markdown",
           "path": "double/CONVENTIONS.md",
-          "sha256": "782e901e7c9b7c20d821d19f782d1fec0e64ba058ffdca5df846fc47d97c92a8"
+          "sha256": "2ff036e6a35018492c14e40a5c00838b8b83afc99c0042ab6688736083010ff1"
         },
         {
-          "bytes": 322329,
+          "bytes": 326546,
           "format": "pdf",
           "path": "double/CONVENTIONS.pdf",
-          "sha256": "01fb9196badbe2e89056744b7269b7f85353cc03d25b5fb7bdab62c52c8dcfcf"
+          "sha256": "bc1ae3a50047cba4f5bf7aca2e9ce514db57515900e39ad81638bc4621fba527"
         },
         {
           "bytes": 85739,
