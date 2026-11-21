@@ -177,7 +177,9 @@ FAVICONS = ("favicon.svg",) + tuple("favicon-%s.svg" % c for c in
                                     ("rotation", "double", "magnetic", "magnetic-double"))
 # The link preview of every file (Open Graph and its Twitter form, which LinkedIn, X, Bluesky and
 # Mastodon read): the file's title and address, one description of the atlas, and logo/social.png
-# (1200 x 630), the mark and the title on their grid above a line on the contents.
+# (1200 x 630), the mark beside the title on its grid, as on the home. The image's address carries
+# the first digits of its SHA-256, so that a site that keeps a copy of a preview fetches the image
+# again when it changes.
 DESCRIPTION = ("Exact tables of the 98 point groups and their 116 double groups: characters, irrep "
                "matrices, Clebsch–Gordan coefficients, descent of symmetry and symmetry-adapted "
                "bases, with JSON, GAP, SymPy and Wolfram Language records.")
@@ -214,13 +216,15 @@ def wordmark_size():
     return _MARKS[WORDMARK]
 
 
-def digest_of(name):
-    """The first digits of the SHA-256 of a file of static/ (site.css, site.js), which its link
-    carries, so that a browser fetches the file again when it changes."""
-    if name not in _DIGESTS:
-        with open(os.path.join(HERE, name), "rb") as fh:
-            _DIGESTS[name] = hashlib.sha256(fh.read()).hexdigest()[:10]
-    return _DIGESTS[name]
+def digest_of(name, folder=HERE):
+    """The first digits of the SHA-256 of a file of static/ (site.css, site.js from this folder,
+    the image of the link preview from logo/), which its link carries, so that a browser fetches
+    the file again when it changes."""
+    path = os.path.join(folder, name)
+    if path not in _DIGESTS:
+        with open(path, "rb") as fh:
+            _DIGESTS[path] = hashlib.sha256(fh.read()).hexdigest()[:10]
+    return _DIGESTS[path]
 
 
 # The foot's "Report an error" opens GitHub's form for a new issue (.github/ISSUE_TEMPLATE/error.yml)
@@ -271,7 +275,8 @@ def frame(here, title, body, catalogue=None, crumbs=(), tabs="", pager=""):
             '<span>%s</span>' % h for p, h in crumbs)
     return TEMPLATE % {
         "title": esc(title), "title_attr": attr(title), "description": attr(DESCRIPTION),
-        "address": attr(ADDRESS + (here or "")), "card": attr(ADDRESS + "static/" + CARD),
+        "address": attr(ADDRESS + (here or "")),
+        "card": attr("%sstatic/%s?v=%s" % (ADDRESS, CARD, digest_of(CARD, LOGO))),
         "card_alt": attr(CARD_ALT), "root": root, "volume": "volume-" + (catalogue or "home"),
         "favicon": "favicon-%s.svg" % catalogue if catalogue else "favicon.svg",
         "mark": mark("small"), "atlas": esc(style.TITLE), "wordmark": wordmark_size(),
