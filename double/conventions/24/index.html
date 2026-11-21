@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>24. Fusion and Clebsch–Gordan coefficients · Conventions · Point Group Atlas</title>
+<meta name="description" content="Exact tables of the 98 point groups and their 116 double groups: characters, irrep matrices, Clebsch–Gordan coefficients, descent of symmetry and symmetry-adapted bases, with JSON, GAP, SymPy and Wolfram Language records.">
+<link rel="canonical" href="https://valbert4.github.io/point-group-atlas/double/conventions/24/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Point Group Atlas">
+<meta property="og:title" content="24. Fusion and Clebsch–Gordan coefficients · Conventions · Point Group Atlas">
+<meta property="og:description" content="Exact tables of the 98 point groups and their 116 double groups: characters, irrep matrices, Clebsch–Gordan coefficients, descent of symmetry and symmetry-adapted bases, with JSON, GAP, SymPy and Wolfram Language records.">
+<meta property="og:url" content="https://valbert4.github.io/point-group-atlas/double/conventions/24/">
+<meta property="og:image" content="https://valbert4.github.io/point-group-atlas/static/social.png?v=f43cd83b17">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The mark and the title of the Point Group Atlas">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+try { var t = localStorage.getItem("atlas-theme");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+} catch (e) {}
+</script>
+<link rel="icon" type="image/svg+xml" href="../../../static/favicon-double.svg">
+<link rel="stylesheet" href="../../../static/site.css?v=19bb7fc046">
+<script src="../../../static/site.js?v=333a2d9dca" defer></script>
+</head>
+<body class="volume-double">
+<header class="bar"><a class="atlas" href="../../../"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path class="c2" d="M55.55 47.7L95.94 47.7A46 46 0 0 0 84.11 19.14L55.55 47.7Z"/><path class="c0" d="M47.7 44.45L47.7 4.06A46 46 0 0 0 19.14 15.89L47.7 44.45Z"/><path class="c3" d="M44.45 52.3L4.06 52.3A46 46 0 0 0 15.89 80.86L44.45 52.3Z"/><path class="c1" d="M52.3 55.55L52.3 95.94A46 46 0 0 0 80.86 84.11L52.3 55.55Z"/><path class="c2 l" d="M52.3 44.45L80.86 15.89A46 46 0 0 0 52.3 4.06L52.3 44.45Z"/><path class="c0 l" d="M44.45 47.7L15.89 19.14A46 46 0 0 0 4.06 47.7L44.45 47.7Z"/><path class="c3 l" d="M47.7 55.55L19.14 84.11A46 46 0 0 0 47.7 95.94L47.7 55.55Z"/><path class="c1 l" d="M55.55 52.3L84.11 80.86A46 46 0 0 0 95.94 52.3L55.55 52.3Z"/></svg><img class="wordmark"
+ src="../../../static/wordmark.svg" alt="Point Group Atlas" width="816" height="91"></a><a class="volume" href="../../">Volume II: double point groups</a>
+<span class="tools"><button type="button" class="daynight" title="Day or night"
+ aria-label="Switch between day and night">&#x1F312;</button></span></header>
+<nav class="crumbs" aria-label="breadcrumbs"><a href="../../../">Point Group Atlas</a> › <a href="../../">Volume II</a> › <a href="../">Conventions</a></nav>
+<nav class="tabs conv" aria-label="sections"><ul class="parts"><li><a href="../20/" title="The parent and the records"><span class="no">20</span> <span class="t">The parent and the records</span></a></li><li><a href="../21/" title="Elements"><span class="no">21</span> <span class="t">Elements</span></a></li><li><a href="../22/" title="Conjugacy classes"><span class="no">22</span> <span class="t">Conjugacy classes</span></a></li><li><a href="../23/" title="Spinor irreps"><span class="no">23</span> <span class="t">Spinor irreps</span></a></li><li class="on"><a href="./" title="Fusion and Clebsch–Gordan coefficients"><span class="no">24</span> <span class="t">Fusion and Clebsch–Gordan coefficients</span></a></li><li><a href="../25/" title="Subduction"><span class="no">25</span> <span class="t">Subduction</span></a></li><li><a href="../26/" title="Kets and symmetry-adapted bases"><span class="no">26</span> <span class="t">Kets and symmetry-adapted bases</span></a></li><li><a href="../27/" title="Sections"><span class="no">27</span> <span class="t">Sections</span></a></li><li><a href="../28/" title="Subgroup lattices"><span class="no">28</span> <span class="t">Subgroup lattices</span></a></li><li><a href="../29/" title="Continuous groups"><span class="no">29</span> <span class="t">Continuous groups</span></a></li><li><a href="../notation/" title="Index of notation">Index of notation</a></li></ul></nav>
+<main>
+<h1 id="conv.24"><span class="no">24</span> Fusion and Clebsch–Gordan coefficients <a class="mark-link" href="#conv.24" aria-label="link to this heading">¶</a></h1>
+<p><code>fusion</code> and <code>clebsch_gordan</code> hold every product with a spinor factor, by sections 10.1, 10.3 and 10.4 with the irreps
+of the preimage; the products of two vector irreps are those of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝖦</mi></mrow><annotation encoding="application/x-tex">\mathsf{G}</annotation></semantics></math> (<code>vector_products</code>).</p>
+<p>The copies of an irrep <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Γ</mi></mrow><annotation encoding="application/x-tex">\Gamma</annotation></semantics></math> that occurs more than once in <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Γ</mi><mn>1</mn></msub><mo>⊗</mo><msub><mi mathvariant="normal">Γ</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\Gamma_1 \otimes \Gamma_2</annotation></semantics></math> are separated by exchange, then crossing (section
+10.4). A class of several copies, or all of them when neither rule splits them, is ordered by SU(2) parentage. Each factor
+occurs once in a <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>D</mi><mrow><mo stretchy="false">(</mo><mi>J</mi><mo separator="true">,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">D^{(J,p)}</annotation></semantics></math> at its least <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi></mrow><annotation encoding="application/x-tex">J</annotation></semantics></math> (then <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mo lspace="0em" rspace="0em">+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">p = +1</annotation></semantics></math> before <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>), its parent, as a block of section 26.3; a copy then lies in
+the product of the parents, a sum of components of total angular momentum. The first copy is the one in the components
+of least total angular momentum, and each next one, orthogonal to those before, in the least that admits one; <code>parent_twoJ</code>
+is twice that angular momentum, and <code>separation</code> is <code>su2-parent</code> when parentage alone separates the copies. A document
+lists the blocks of a product when each row of their coefficients fills at most four lines, and names the others.</p>
+</main>
+<nav class="pager"><a class="prev" href="../23/">← 23. Spinor irreps</a><a class="next" href="../25/">25. Subduction →</a></nav>
+<footer class="foot">Point Group Atlas &middot; <a href="https://github.com/valbert4/point-group-atlas">GitHub</a> &middot; <a class="report" href="https://github.com/valbert4/point-group-atlas/issues/new?template=error.yml&amp;title=Conventions%2C%2024.%20Fusion%20and%20Clebsch%E2%80%93Gordan%20coefficients%3A%20&amp;address=https%3A%2F%2Fvalbert4.github.io%2Fpoint-group-atlas%2Fdouble%2Fconventions%2F24%2F&amp;version=7e83da235326c6258f6cdafa751e78d7addf6aef" target="_blank" rel="noopener">Report an error</a></footer>
+</body>
+</html>

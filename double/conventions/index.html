@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conventions · Conventions · Point Group Atlas</title>
+<meta name="description" content="Exact tables of the 98 point groups and their 116 double groups: characters, irrep matrices, Clebsch–Gordan coefficients, descent of symmetry and symmetry-adapted bases, with JSON, GAP, SymPy and Wolfram Language records.">
+<link rel="canonical" href="https://valbert4.github.io/point-group-atlas/double/conventions/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Point Group Atlas">
+<meta property="og:title" content="Conventions · Conventions · Point Group Atlas">
+<meta property="og:description" content="Exact tables of the 98 point groups and their 116 double groups: characters, irrep matrices, Clebsch–Gordan coefficients, descent of symmetry and symmetry-adapted bases, with JSON, GAP, SymPy and Wolfram Language records.">
+<meta property="og:url" content="https://valbert4.github.io/point-group-atlas/double/conventions/">
+<meta property="og:image" content="https://valbert4.github.io/point-group-atlas/static/social.png?v=f43cd83b17">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The mark and the title of the Point Group Atlas">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+try { var t = localStorage.getItem("atlas-theme");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+} catch (e) {}
+</script>
+<link rel="icon" type="image/svg+xml" href="../../static/favicon-double.svg">
+<link rel="stylesheet" href="../../static/site.css?v=19bb7fc046">
+<script src="../../static/site.js?v=333a2d9dca" defer></script>
+</head>
+<body class="volume-double">
+<header class="bar"><a class="atlas" href="../../"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path class="c2" d="M55.55 47.7L95.94 47.7A46 46 0 0 0 84.11 19.14L55.55 47.7Z"/><path class="c0" d="M47.7 44.45L47.7 4.06A46 46 0 0 0 19.14 15.89L47.7 44.45Z"/><path class="c3" d="M44.45 52.3L4.06 52.3A46 46 0 0 0 15.89 80.86L44.45 52.3Z"/><path class="c1" d="M52.3 55.55L52.3 95.94A46 46 0 0 0 80.86 84.11L52.3 55.55Z"/><path class="c2 l" d="M52.3 44.45L80.86 15.89A46 46 0 0 0 52.3 4.06L52.3 44.45Z"/><path class="c0 l" d="M44.45 47.7L15.89 19.14A46 46 0 0 0 4.06 47.7L44.45 47.7Z"/><path class="c3 l" d="M47.7 55.55L19.14 84.11A46 46 0 0 0 47.7 95.94L47.7 55.55Z"/><path class="c1 l" d="M55.55 52.3L84.11 80.86A46 46 0 0 0 95.94 52.3L55.55 52.3Z"/></svg><img class="wordmark"
+ src="../../static/wordmark.svg" alt="Point Group Atlas" width="816" height="91"></a><a class="volume" href="../">Volume II: double point groups</a>
+<span class="tools"><button type="button" class="daynight" title="Day or night"
+ aria-label="Switch between day and night">&#x1F312;</button></span></header>
+<nav class="crumbs" aria-label="breadcrumbs"><a href="../../">Point Group Atlas</a> › <a href="../">Volume II</a> › <span>Conventions</span></nav>
+<nav class="tabs conv" aria-label="sections"><ul class="parts"><li><a href="20/" title="The parent and the records"><span class="no">20</span> <span class="t">The parent and the records</span></a></li><li><a href="21/" title="Elements"><span class="no">21</span> <span class="t">Elements</span></a></li><li><a href="22/" title="Conjugacy classes"><span class="no">22</span> <span class="t">Conjugacy classes</span></a></li><li><a href="23/" title="Spinor irreps"><span class="no">23</span> <span class="t">Spinor irreps</span></a></li><li><a href="24/" title="Fusion and Clebsch–Gordan coefficients"><span class="no">24</span> <span class="t">Fusion and Clebsch–Gordan coefficients</span></a></li><li><a href="25/" title="Subduction"><span class="no">25</span> <span class="t">Subduction</span></a></li><li><a href="26/" title="Kets and symmetry-adapted bases"><span class="no">26</span> <span class="t">Kets and symmetry-adapted bases</span></a></li><li><a href="27/" title="Sections"><span class="no">27</span> <span class="t">Sections</span></a></li><li><a href="28/" title="Subgroup lattices"><span class="no">28</span> <span class="t">Subgroup lattices</span></a></li><li><a href="29/" title="Continuous groups"><span class="no">29</span> <span class="t">Continuous groups</span></a></li><li><a href="notation/" title="Index of notation">Index of notation</a></li></ul></nav>
+<main>
+<h1 class="title">Conventions</h1>
+<p>This document defines the fields of the records of the double point groups, the closed subgroups of
+<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝖯</mi><mi>𝗂</mi><msup><mi>𝗇</mi><mo lspace="0em" rspace="0em">−</mo></msup><mo stretchy="false">(</mo><mn>𝟥</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{Pin^{-}(3)}</annotation></semantics></math> up to conjugacy. It is the second of the files of conventions, which are numbered as one: sections
+0 to 19 are those of the point groups (<code>rotation/CONVENTIONS.md</code>), whose notation this document uses, with half-integer
+<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi></mrow><annotation encoding="application/x-tex">J</annotation></semantics></math> (section 25.1) and the tags of the spinor irreps (section 23.2), and whose sections it cites by number, and sections 20
+to 29 are this document's. A record of this catalogue holds only what no record of the point groups holds (section 20.3),
+but for its subgroup lattice, which it stores whole (section 28.1).</p>
+<ol class="contents conv"><li><a href="20/">20. The parent and the records</a><ol><li><a href="20/#conv.20.1"><span class="no">20.1</span> The parent</a></li><li><a href="20/#conv.20.2"><span class="no">20.2</span> Names</a></li><li><a href="20/#conv.20.3"><span class="no">20.3</span> Pointers</a></li><li><a href="20/#conv.20.4"><span class="no">20.4</span> The <code>group</code> block</a></li><li><a href="20/#conv.20.5"><span class="no">20.5</span> Files</a></li></ol></li><li><a href="21/">21. Elements</a><ol><li><a href="21/#conv.21.1"><span class="no">21.1</span> Lifts</a></li><li><a href="21/#conv.21.2"><span class="no">21.2</span> The elements of a preimage</a></li><li><a href="21/#conv.21.3"><span class="no">21.3</span> Fundamental domains</a></li></ol></li><li><a href="22/">22. Conjugacy classes</a></li><li><a href="23/">23. Spinor irreps</a><ol><li><a href="23/#conv.23.1"><span class="no">23.1</span> Characters</a></li><li><a href="23/#conv.23.2"><span class="no">23.2</span> Labels and ids</a></li><li><a href="23/#conv.23.3"><span class="no">23.3</span> Matrices</a></li><li><a href="23/#conv.23.4"><span class="no">23.4</span> <code>bethe</code> and <code>bilbao</code></a></li></ol></li><li><a href="24/">24. Fusion and Clebsch–Gordan coefficients</a></li><li><a href="25/">25. Subduction</a><ol><li><a href="25/#conv.25.1"><span class="no">25.1</span> Subduction from the parent</a></li><li><a href="25/#conv.25.2"><span class="no">25.2</span> Spin–orbit levels</a></li><li><a href="25/#conv.25.3"><span class="no">25.3</span> jj configurations</a></li><li><a href="25/#conv.25.4"><span class="no">25.4</span> Spin–orbitals</a></li></ol></li><li><a href="26/">26. Kets and symmetry-adapted bases</a><ol><li><a href="26/#conv.26.1"><span class="no">26.1</span> The action on kets</a></li><li><a href="26/#conv.26.2"><span class="no">26.2</span> Bases</a></li><li><a href="26/#conv.26.3"><span class="no">26.3</span> The exceptional preimages</a></li><li><a href="26/#conv.26.4"><span class="no">26.4</span> Invariant polynomials</a></li></ol></li><li><a href="27/">27. Sections</a></li><li><a href="28/">28. Subgroup lattices</a><ol><li><a href="28/#conv.28.1"><span class="no">28.1</span> The lattice</a></li><li><a href="28/#conv.28.2"><span class="no">28.2</span> Subduction along embeddings</a></li><li><a href="28/#conv.28.3"><span class="no">28.3</span> The lattice of the catalogue</a></li></ol></li><li><a href="29/">29. Continuous groups</a><ol><li><a href="29/#conv.29.1"><span class="no">29.1</span> The class space</a></li><li><a href="29/#conv.29.2"><span class="no">29.2</span> Spinor families</a></li><li><a href="29/#conv.29.3"><span class="no">29.3</span> Fusion and Clebsch–Gordan coefficients</a></li><li><a href="29/#conv.29.4"><span class="no">29.4</span> Subduction, spin–orbit levels and bases</a></li><li><a href="29/#conv.29.5"><span class="no">29.5</span> Closed subgroups of the axial preimages</a></li><li><a href="29/#conv.29.6"><span class="no">29.6</span> SU2 and Pinminus3</a></li></ol></li><li><a href="notation/">Index of notation</a></li></ol>
+</main>
+<footer class="foot">Point Group Atlas &middot; <a href="https://github.com/valbert4/point-group-atlas">GitHub</a> &middot; <a class="report" href="https://github.com/valbert4/point-group-atlas/issues/new?template=error.yml&amp;title=Conventions%2C%20Conventions%3A%20&amp;address=https%3A%2F%2Fvalbert4.github.io%2Fpoint-group-atlas%2Fdouble%2Fconventions%2F&amp;version=7e83da235326c6258f6cdafa751e78d7addf6aef" target="_blank" rel="noopener">Report an error</a></footer>
+</body>
+</html>
