@@ -177,7 +177,7 @@ COMMAND_RECORDS = (
       "the member 1 or 2 of a complex-conjugate pair of irreps, as a left superscript",
       command=r"\conjpair[1]{{}^{#1}}", defined="conv:6", pattern=r"\conjpair{<label:1>}\irr{e}"),
     C("mark.determinant", "mark", r"{\setlength{\fboxsep}{1pt}\fbox{#1}}",
-      r"a boxed irrep: the determinant character, whose character is $\det g$", "\\detbox",
+      r"a boxed irrep: the determinant character, of value $\det g$", "\\detbox",
       command=r"\detbox[1]{{\setlength{\fboxsep}{1pt}\fbox{#1}}}", arguments="t",
       context="text", defined=("part:irreps", "part:families", "conv:0.1"),
       pattern=r"\boxed{<irrep:\Gamma>}"),
@@ -193,7 +193,7 @@ COMMAND_RECORDS = (
     C("typography.element", "typography", r"\eltfont{#1}",
       "an element named in a sentence or a formula (role), in the element font",
       command=r"\elt[1]{\eltfont{#1}}", defined="conv:0.2", md=ELEMENT_MD),
-    C("typography.hm", "typography", "#1", "a Hermann--Mauguin symbol (role)",
+    C("typography.hm", "typography", "#1", "a Hermann–Mauguin symbol (role)",
       command=r"\hmname[1]{#1}", data_field="group.hermann_mauguin", defined="conv:2"),
     C("typography.orbifold", "typography", "#1", "an orbifold symbol (role)",
       command=r"\orbname[1]{#1}", data_field="group.orbifold", defined="conv:2"),
@@ -234,14 +234,14 @@ COMMAND_RECORDS = (
       r"another name of the same class of subgroups of $\grp{O(3)}$", command=r"\samecls{\cong}",
       defined="conv:2", variants="="),
     C("mark.conjugates", "mark", r"{\scriptsize$\times#1$}",
-      r"the number $c > 1$ of subgroups of $\grp{G}$ conjugate to $\grp{H}$; ${\times}\infty$: "
-      "infinitely many",
+      r"the number $c > 1$ of subgroups of $\grp{G}$ conjugate to $\grp{H}$, with "
+      r"${\times}\infty$ for infinitely many",
       command=r"\nconj[1]{{\scriptsize$\times#1$}}", context="text",
       raw=r"\{\\scriptsize ?\$\\times\d+\$\}",
       defined=("part:subgroups", "part:identification", "conv:0.1"), sort="hc",
       pattern=r"<group:\grp{H}>\,{\scriptstyle{\times}<integer:c>}"),
     C("mark.letter", "mark", r"\,{\scriptsize\color{black!55}#1}",
-      r"the small letter, gray in the documents, that tells apart classes of subgroups of "
+      r"the small letter, gray in the documents, that distinguishes classes of subgroups of "
       r"$\grp{G}$ with the same symbol as $\grp{H}$",
       command=r"\clsletter[1]{\,{\scriptsize\color{black!55}#1}}", context="text",
       raw=r"\\scriptsize\\color\{black!55\}",
@@ -269,8 +269,8 @@ COMMAND_RECORDS = (
       command=r"\Sym[1]{\grp{Sym_{#1}}}", defined="conv:2", data_field="group.abstract_type",
       pattern=r"\Sym{<integer:\mathnormal{n}>}"),
     C("vector.pole", "vector", r"(#1, #2, #3)",
-      r"a direction (an axis or the normal of a mirror) as a triple of numbers, as $(0, 0, 1)$ "
-      "for $z$",
+      r"a direction (an axis or the normal of a mirror) as a triple of numbers, such as "
+      r"$(0, 0, 1)$ for $z$",
       command=r"\dirvec[3]{(#1, #2, #3)}",
       defined=("conv:4", "conv:5", "conv:3", "part:elements"),
       data_field="elements.items[].pole", pattern=r"\dirvec{0}{0}{1}"),
@@ -330,8 +330,8 @@ COMMAND_RECORDS = (
       r"the irrep of $\grp{SO(3)}$ of angular momentum $J$",
       command=r"\irrJ[1]{D^{(#1)}}", defined="conv:11", pattern=r"\irrJ{<integer:J>}"),
     C("irrep.o3", "irrep", r"D^{(#1,#2)}",
-      r"the irrep of $\grp{O(3)}$ of angular momentum $J$ and parity $p$, as $D^{(J,+)}$, "
-      "$D^{(J,-)}$", command=r"\irrJp[2]{D^{(#1,#2)}}",
+      r"the irrep of $\grp{O(3)}$ of angular momentum $J$ and parity $p$, such as $D^{(J,+)}$ "
+      "or $D^{(J,-)}$", command=r"\irrJp[2]{D^{(#1,#2)}}",
       defined="conv:11", pattern=r"\irrJp{<integer:J>}{<integer:p>}"),
     C("matrix.irrep", "matrix", r"D^{#1}",
       r"the matrix of the irrep $\Gamma$ at the element $g$",
@@ -411,14 +411,15 @@ COMMAND_RECORDS = (
       "the product "
       r"$\bigl\lvert{}^{\Gamma_1}_{\,\mu_1}\bigr\rangle\bigl\lvert{}^{\Gamma_2}_{\,\mu_2}"
       r"\bigr\rangle$ "
-      r"of two partners; in $\grp{SO(3)}$ and $\grp{O(3)}$, "
-      r"$\bigl\lvert{}^{J_1}_{\,m_1}\bigr\rangle\bigl\lvert{}^{J_2}_{\,m_2}\bigr\rangle$",
+      r"of two partners, or "
+      r"$\bigl\lvert{}^{J_1}_{\,m_1}\bigr\rangle\bigl\lvert{}^{J_2}_{\,m_2}\bigr\rangle$ of two "
+      r"kets",
       command=r"\prodket[2]{\lvert {#1}\,{#2}\rangle}",
       defined=("part:clebsch_gordan", "conv:0.1"),
       pattern=r"\prodket{<index:\mu_1>}{<index:\mu_2>}"),
     C("vector.ket.one", "vector", r"\lvert #1\rangle",
-      r"the partner of a one-dimensional irrep $\Gamma$; a numbered partner, $\lvert 1\rangle$; a "
-      r"basis vector, $\lvert e_j\rangle$",
+      r"the partner of a one-dimensional irrep $\Gamma$, or a numbered partner $\lvert 1\rangle$, "
+      r"or a basis vector $\lvert e_j\rangle$",
       command=r"\ket[1]{\lvert #1\rangle}",
       defined=("part:irrep_matrices", "part:continuous_irreps", "part:clebsch_gordan", "conv:0.1"),
       pattern=r"\ket{<label:\Gamma>}"),
@@ -473,11 +474,11 @@ S = entry
 COMMON = (
     # the separation tags of two copies of an irrep (a Clebsch-Gordan block), words of the text
     S("abbreviation.exchange", "abbreviation", "exch. sym., exch. anti.",
-      "symmetric and antisymmetric under the exchange of the two factors: the rule that tells "
-      "apart two copies of an irrep in a square", r"exch.\ sym.", r"exch.\ anti.",
+      "symmetric and antisymmetric under the exchange of the two factors: the rule that "
+      "distinguishes two copies of an irrep in a square", r"exch.\ sym.", r"exch.\ anti.",
       defined=("conv:0.1", "conv:10", "part:clebsch_gordan")),
     S("abbreviation.crossing", "abbreviation", "cross. sym., cross. anti.",
-      "symmetric and antisymmetric under the crossing: the rule that tells apart two copies of "
+      "symmetric and antisymmetric under the crossing: the rule that distinguishes two copies of "
       "an irrep in a product", r"cross.\ sym.", r"cross.\ anti.",
       defined=("conv:0.1", "conv:10", "part:clebsch_gordan")),
     S("abbreviation.parent", "abbreviation", "lowest parent, complement",
@@ -486,19 +487,22 @@ COMMON = (
       defined=("conv:0.1", "conv:10", "part:clebsch_gordan")),
     S("number", "number", "123", "an integer", "#", defined="standard"),
     S("delimiter.parenthesis", "delimiter", "( )",
-      "parentheses: grouping, an argument, a tuple, a matrix; the open end of an interval",
+      "parentheses: grouping, an argument, a tuple or a matrix, or the open end of an interval",
       "(", ")", defined="standard"),
     S("delimiter.bracket", "delimiter", "[ ]",
-      r"brackets: an interval; a stored array or an entry of one, as $C[(\mu_1,\mu_2),\mu]$", "[",
-      "]", defined="standard"),
+      r"brackets: an interval, or a stored array or an entry of one, such as "
+      r"$C[(\mu_1,\mu_2),\mu]$", "[", "]", defined="standard"),
     S("delimiter.brace", "delimiter", r"\{ \}",
-      r"braces: a set; the antisymmetric part of a square $\Gamma \otimes \Gamma$", r"\{*", r"\}",
+      r"braces: a set, or the antisymmetric part of a square $\Gamma \otimes \Gamma$", r"\{*",
+      r"\}",
       defined="standard"),
     S("delimiter.bar", "delimiter", "|",
-      r"the absolute value of $x$; the order $\lvert \grp{G}\rvert$ of a group $\grp{G}$", "|",
+      r"the absolute value of $x$, or the order $\lvert \grp{G}\rvert$ of a group $\grp{G}$",
+      "|",
       defined="standard", pattern=r"\lvert <number:x>\rvert"),
     S("delimiter.lvert", "delimiter", r"\lvert",
-      "the bar of a ket or of a bracket; a bar of an absolute value or of the order of a group",
+      "the bar of a ket or of a bracket, or a bar of an absolute value or of the order of a "
+      "group",
       r"\lvert", r"\rvert", r"\rvert^{*}", r"\vert", defined="standard", index=False),
     S("delimiter.angle", "delimiter", r"\langle \rangle", "the angle brackets of a bra, a ket or "
       "a bracket", r"\langle", r"\rangle", defined="standard", index=False),
@@ -514,24 +518,25 @@ COMMON = (
     S("punctuation.comma", "mark", ",", "a comma: the separator of a list or a tuple", ",",
       defined="standard"),
     S("punctuation.semicolon", "mark", ";",
-      r"the separator before the copy index $\kappa$ in a ket or a bracket; the end of a display",
+      r"the separator before the copy index $\kappa$ in a ket or a bracket, or the end of a "
+      "display",
       ";", defined="standard"),
     S("punctuation.period", "mark", ".", "a period, the end of a display or a decimal point",
       ".", defined="standard"),
     S("punctuation.colon", "mark", ":",
-      r"such that, in a set; between the groups of an index $[\grp{G} : \grp{H}]$, or a field and "
-      "its value", ":", r"\colon", defined="standard"),
-    S("arithmetic.plus", "operator", "+", "plus; a positive sign", "+", defined="standard"),
-    S("arithmetic.minus", "operator", "-", "minus; a negative sign", "-", defined="standard"),
+      r"such that, in a set, or between the groups of an index $[\grp{G} : \grp{H}]$ or between "
+      "a field and its value", ":", r"\colon", defined="standard"),
+    S("arithmetic.plus", "operator", "+", "plus, or a positive sign", "+", defined="standard"),
+    S("arithmetic.minus", "operator", "-", "minus, or a negative sign", "-", defined="standard"),
     S("arithmetic.plusminus", "operator", r"\pm", "plus or minus", r"\pm", r"\mp",
       defined="standard"),
     S("arithmetic.times", "operator", r"\times",
-      "multiplication; the size of a matrix of $m$ rows and $n$ columns",
+      "multiplication, or the size of a matrix of $m$ rows and $n$ columns",
       r"\times", defined="standard", pattern=r"<integer:m> \times <integer:n>"),
-    S("arithmetic.dot", "operator", r"\cdot", "multiplication; the scalar product of two vectors",
-      r"\cdot*", defined="standard"),
+    S("arithmetic.dot", "operator", r"\cdot",
+      "multiplication, or the scalar product of two vectors", r"\cdot*", defined="standard"),
     S("arithmetic.solidus", "operator", "/",
-      "division; the quotient of a group by a subgroup, the space of its cosets", "/",
+      "division, or the quotient of a group by a subgroup, the space of its cosets", "/",
       defined="standard"),
     S("arithmetic.factorial", "operator", "n!", "the factorial", "!", defined="standard"),
     S("arithmetic.fraction", "operator", r"\frac{a}{b}", "a fraction", r"\frac*", r"\tfrac*",
@@ -550,8 +555,8 @@ COMMON = (
       defined="standard"),
     S("relation.equal", "relation", "=", "equal", "=", defined="standard"),
     S("relation.less", "relation", "<", "less than", "<", defined="standard"),
-    S("relation.lessequal", "relation", r"\le", "less than or equal to; of irreps, in their "
-      "order; of classes of subgroups, by inclusion", r"\le", defined="standard"),
+    S("relation.lessequal", "relation", r"\le", "less than or equal to, also of irreps in their "
+      "order and of classes of subgroups by inclusion", r"\le", defined="standard"),
     S("relation.greater", "relation", ">", "greater than", ">", defined="standard"),
     S("relation.greaterequal", "relation", r"\ge", "greater than or equal to", r"\ge",
       defined="standard"),
@@ -568,9 +573,9 @@ COMMON = (
     S("relation.notin", "relation", r"\notin", "not an element of", r"\notin",
       defined="standard"),
     S("relation.subset", "relation", r"\subset",
-      "a subset of; a subgroup of", r"\subset",
+      "a subset of, or a subgroup of", r"\subset",
       defined="standard"),
-    S("relation.supset", "relation", r"\supset", "a superset of; containing as a subgroup",
+    S("relation.supset", "relation", r"\supset", "a superset of, or containing as a subgroup",
       r"\supset", defined="standard"),
     S("operator.kernel", "operator", r"\ker",
       r"the kernel of a representation, the elements that it maps to the identity", r"\ker",
@@ -580,8 +585,8 @@ COMMON = (
       defined="standard"),
     S("operator.union", "operator", r"\cup", "the union", r"\cup", defined="standard"),
     S("relation.to", "relation", r"\to",
-      r"a product coupled to an irrep, as in $\Gamma_1 \otimes \Gamma_2 \to \Gamma$; a limit; a "
-      "map; a rename",
+      r"a product coupled to an irrep (as in $\Gamma_1 \otimes \Gamma_2 \to \Gamma$), a limit, a "
+      "map or a rename",
       r"\to", defined="standard"),
     S("relation.mapsto", "relation", r"\mapsto", "maps to", r"\mapsto", defined="standard"),
     S("relation.exchange", "relation", r"\leftrightarrow",
@@ -625,7 +630,7 @@ COMMON = (
     S("mark.adjoint", "mark", r"^{\dagger}", "the conjugate transpose", r"\dagger",
       defined="standard", pattern=r"<matrix:U>^{\dagger}"),
     S("mark.prime", "mark", "'",
-      r"a prime; on an irrep label, symmetric ($'$) or antisymmetric ($''$) under "
+      r"a prime, or on an irrep label, symmetric ($'$) or antisymmetric ($''$) under "
       r"$\elt{\sigma_h}$ ($\elt{\sigma_v}(0)$ in `C1v`)", "'", defined="standard"),
     S("matrix.display", "mark",
       r"\left(\begin{smallmatrix} 0 & -1 \\ 1 & 0 \end{smallmatrix}\right)",
@@ -645,8 +650,9 @@ COMMON = (
 
 # ---------------------------------------------------------------- groups
 GROUPS = (
-    S("group.G", "group", r"\grp{G}", "a group of the catalogue (a document names its own group)",
-      r"\grp{G}", defined=("conv:0.1",)),
+    S("group.G", "group", r"\grp{G}",
+      "a group of this catalogue (a document names its own group)", r"\grp{G}",
+      defined=("conv:0.1",)),
     S("group.W", "group", r"\grp{W}",
       r"the subgroup whose right cosets $\grp{G}$ permutes in the `perm-dft` construction of an "
       "irrep",
@@ -756,13 +762,13 @@ GROUPS = (
       r"$\grp{D_{\infty}}$ with the horizontal mirror", r"\grp{D_{\infty h}}",
       defined=("conv:3", "conv:1")),
     S("group.so3", "group", r"\grp{SO(3)}",
-      r"the group of all rotations; $\grp{SO(2)}$, the rotations about one axis; "
-      r"$\grp{SO(\mathnormal{N})}$, "
-      r"those of $N$ dimensions", r"\grp{SO(*)}",
+      r"the group of all rotations, with $\grp{SO(2)}$ the rotations about one axis and "
+      r"$\grp{SO(\mathnormal{N})}$ "
+      r"the rotations of $N$ dimensions", r"\grp{SO(*)}",
       defined=("conv:3", "conv:1")),
     S("group.o3", "group", r"\grp{O(3)}",
-      r"the orthogonal group, $\grp{SO(3)} \cup \elt{i}\,\grp{SO(3)}$; $\grp{O(2)}$, that of the "
-      r"plane; $\grp{O(\mathnormal{N})}$, that of $N$ dimensions",
+      r"the orthogonal group, $\grp{SO(3)} \cup \elt{i}\,\grp{SO(3)}$, with $\grp{O(2)}$ the "
+      r"orthogonal group of the plane and $\grp{O(\mathnormal{N})}$ that of $N$ dimensions",
       r"\grp{O(*)}",
       defined=("conv:3", "conv:1")),
     S("group.schoenflies.k", "group", r"\grp{K}",
@@ -775,11 +781,11 @@ GROUPS = (
     # conway_smith are orders (its D_{2n} is the Schoenflies D_n); ihrig_golubitsky and olive
     # write the product with the central inversion as a sum
     S("cs.plus", "group", "+",
-      "a group of rotations in a `conway_smith` name (with `type` I)", "+", context="cs",
+      "a group of type I in a `conway_smith` name (with `type` I)", "+", context="cs",
       defined="conv:2", pattern=r"+<group:\grp{G}>"),
     S("cs.plusminus", "group", r"\pm",
-      r"a group of rotations and their products with $\elt{i}$ in a `conway_smith` name (with "
-      "`type` II)",
+      r"the elements of a group of type I and their products with $\elt{i}$ in a `conway_smith` "
+      "name (with `type` II)",
       r"\pm", context="cs", defined="conv:2", pattern=r"\pm<group:\grp{G}>"),
     S("cs.cyclic", "group", r"\grp{C_{n}}",
       r"the cyclic group of order $n$ in a `conway_smith` name (with $\grp{C_{\mathnormal{n}}}$)",
@@ -838,8 +844,8 @@ ELEMENTS = (
     S("element.inversion", "element", r"\elt{i}", "the inversion", "i",
       defined=("conv:5", "conv:0.1", "part:identification", "conv:3", "conv:16")),
     S("class.size", "class", "n",
-      r"the number of elements of a class, before its symbol, as the 8 of $\elt{8C_3}$", "#",
-      context="cls", defined="conv:5"),
+      r"the number of elements of a class, before its symbol, such as the 8 of $\elt{8C_3}$",
+      "#", context="cls", defined="conv:5"),
     S("element.inversion.class", "element", r"\cls{i}",
       r"the inversion, or its class $\{\elt{i}\}$", "i", context="cls",
       defined=("conv:5", "conv:3", "conv:16"), index=False),
@@ -860,8 +866,8 @@ ELEMENTS = (
     # an element written by its axis and its angle is in the element font up to the angle
     S("element.rotation.axis", "element", r"\elt{R_{\vv}}(\omega)",
       r"the rotation by $\omega$ about the axis $\mathbf{v}$, counterclockwise as seen from its "
-      r"tip ($\elt{R_z}$ and $\elt{R_y}$ for $\mathbf{v}$ along $z$ and $y$); an element, with "
-      r"matrix $P(\elt{R_{\mathbf{v}}}(\omega))$",
+      r"tip ($\elt{R_z}$ and $\elt{R_y}$ for $\mathbf{v}$ along $z$ and $y$), or the element "
+      r"with matrix $P(\elt{R_{\mathbf{v}}}(\omega))$",
       r"R_{\vv}(.)", r"R_{\mathbf{v}}(.)", "R_{z}(.)", "R_{y}(.)",
       defined=("part:elements", "part:continuous_irreps", "conv:4", "conv:3")),
     S("element.rotation.z", "element", r"\elt{C_{\infty}}(\phi)",
@@ -873,8 +879,8 @@ ELEMENTS = (
       r"$\psi = 0$)", "C'_{#}(.)", "C_{#}(.)",
       defined=("conv:16", "conv:0.2")),
     S("class.rotation.angle", "class", r"\elt{C}(\phi)",
-      r"the rotation by $\phi$ about $z$; in $\grp{SO(3)}$, $\grp{O(3)}$ its class, the rotations "
-      r"by $\phi$ about any axis",
+      r"the rotation by $\phi$ about $z$, or its class in $\grp{SO(3)}$ and $\grp{O(3)}$, the "
+      r"rotations by $\phi$ about any axis",
       "C(.)", defined=("conv:16", "conv:0.2")),
     S("element.rotoreflection", "element", r"\elt{S_{\mathnormal{n}}^{\mathnormal{k}}}",
       r"the rotoreflection: $\elt{C_{\mathnormal{n}}^{\mathnormal{k}}}$ and the reflection in the "
@@ -882,7 +888,7 @@ ELEMENTS = (
       "S_{#}", "S_{#}^{#}", "S_{#N}", "S_{n}^{k}", r"S_{\mathnormal{n}}",
       r"S_{\mathnormal{n}}^{\mathnormal{k}}", r"S_{#\mathnormal{N}}", defined="conv:5"),
     S("element.rotoreflection.coordinate", "element", r"\elt{S_{4z}}",
-      r"the rotoreflection $\elt{S_{\mathnormal{n}}}$ about a coordinate axis, as "
+      r"the rotoreflection $\elt{S_{\mathnormal{n}}}$ about a coordinate axis, such as "
       r"$\elt{S_{4z}} = \elt{\sigma_h} \elt{R_z}(\pi/2)$",
       "S_{#z}", defined="conv:3"),
     S("element.rotoreflection.axis", "element", r"\elt{S_{\vv}}(\omega)",
@@ -893,15 +899,15 @@ ELEMENTS = (
       r"the rotoreflection by $\pi$ about $z$, which is the inversion $\elt{i}$", "S_{z}(.)",
       defined=("part:classes", "conv:5")),
     S("element.mirror.h", "element", r"\elt{\sigma_h}",
-      r"the horizontal mirror, in the $xy$ plane; in $\grp{T_{h}}$, $\grp{O_{h}}$, a mirror in a "
-      "coordinate plane", r"\sigma_{h}",
+      r"the horizontal mirror, in the $xy$ plane, or a mirror in a coordinate plane in "
+      r"$\grp{T_{h}}$ and $\grp{O_{h}}$", r"\sigma_{h}",
       defined=("conv:5", "conv:3", "conv:16")),
     S("element.mirror.v", "element", r"\elt{\sigma_v}",
       r"a vertical mirror, in the class of $\elt{\sigma_v}(0)$", r"\sigma_{v}",
       defined=("conv:5", "conv:3")),
     S("element.mirror.d", "element", r"\elt{\sigma_d}",
-      r"a vertical mirror outside the class of $\elt{\sigma_v}(0)$; a diagonal mirror of "
-      r"$\grp{T_{d}}$, $\grp{O_{h}}$", r"\sigma_{d}",
+      r"a vertical mirror outside the class of $\elt{\sigma_v}(0)$, or a diagonal mirror of "
+      r"$\grp{T_{d}}$ and $\grp{O_{h}}$", r"\sigma_{d}",
       defined="conv:5"),
     S("element.mirror.z", "element", r"\elt{\sigma_z}",
       r"the reflection $z \mapsto -z$ in the $xy$ plane", r"\sigma_{z}",
@@ -922,7 +928,7 @@ ELEMENTS = (
       pattern=r"\comp{\infty<element:\sigma_v>}"),
     S("element.g", "element", "g", "an element of the group", "g", "g(.)",
       defined=("part:elements", "conv:4", "conv:0.1")),
-    S("element.h", "element", "h", "a second element; an element of a subgroup", "h",
+    S("element.h", "element", "h", "a second element, or an element of a subgroup", "h",
       defined=("part:elements", "part:subduction", "conv:0.1")),
     S("element.inverse", "element", "g^{-1}",
       "the inverse of $g$", "g^{-#}", "h^{-#}",
@@ -946,7 +952,7 @@ ELEMENTS = (
       r"least index", r"\xi_{j}", r"\xi_{j'}", r"\xi_{#}",
       defined=("part:irrep_matrices", "part:permutation", "conv:9", "conv:12.5")),
     S("local.coset.image", "local", "j'",
-      "the coset that contains xi_j g; the point to which g moves the point j", "j'",
+      "the coset that contains xi_j g, or the point to which g moves the point j", "j'",
       scope=("O,Td,Oh,I,Ih|irrep_matrices|", "finite|permutation|", "finite|cycle_types|",
              "conventions|conv:9|", "conventions|conv:12.5|"),
       defined=("part:irrep_matrices", "part:permutation", "conv:9", "conv:12.5")),
@@ -1012,8 +1018,8 @@ ELEMENTS = (
     S("angle.theta", "index", r"\theta", "the phase of a character", r"\theta",
       defined="conv:6"),
     S("vector.coordinates", "vector", "x, y, z",
-      "the coordinates of a point, and the coordinate axes; the variables of the polynomials", "x",
-      "y", "z", "x^{#}", "y^{#}", "z^{#}", "z^{*}", "x(.)", "y(.)", "z(.)",
+      "the coordinates of a point and the coordinate axes, or the variables of the polynomials",
+      "x", "y", "z", "x^{#}", "y^{#}", "z^{#}", "z^{*}", "x(.)", "y(.)", "z(.)",
       defined=("part:elements", "conv:4")),
     S("vector.coordinate.index", "vector", "x_i",
       "a coordinate: $x_1 = x$, $x_2 = y$, $x_3 = z$",
@@ -1029,15 +1035,16 @@ ELEMENTS = (
     S("angle.omega.min", "index", r"\omega_{\min}", "the smallest rotation angle of the members "
       "of a class", r"\omega_{\min}", defined="conv:5"),
     S("component.angle", "index", "x",
-      r"the angle of a class-space component as the data write it: $\phi$ on an arc, $\psi$ on an "
-      "atom",
+      r"the angle of a class-space component as the records write it: $\phi$ on an arc, $\psi$ "
+      "on an atom",
       r"\mathrm{turn}", defined="conv:16"),
     S("matrix.rotation", "element", "R",
-      r"the rotation $(\det g)\,g$ of an element $g$", "R", "R^{*}",
+      r"the rotation part $(\det g)\,g$ of an element $g$", "R", "R^{*}",
       defined=("part:continuous_irreps", "conv:4")),
     S("matrix.operator", "matrix", "U(R)",
       r"the rotation operator $\mathrm{e}^{-\mathrm{i}\gamma J_z}\mathrm{e}^{-\mathrm{i}\beta "
-      r"J_y}\mathrm{e}^{-\mathrm{i}\alpha J_z}$ of $R$; $R$ acts on the kets as $U(R^{-1})$",
+      r"J_y}\mathrm{e}^{-\mathrm{i}\alpha J_z}$ of $R$, with $R$ acting on the kets as "
+      r"$U(R^{-1})$",
       "U(.)",
       defined=("conv:9", "part:continuous_irreps", "conv:4")),
     S("matrix.action", "matrix", "T(g)", "the action of an element on polynomials", "T(.)",
@@ -1048,14 +1055,15 @@ ELEMENTS = (
 # ---------------------------------------------------------------- irreps and matrices
 IRREPS = (
     S("irrep.letter.a", "irrep", r"\irr{a}",
-      r"a one-dimensional irrep; in an axial group, one with $\chi(g_p) = +1$", r"\irr{a}*",
+      r"a one-dimensional irrep, with $\chi(g_p) = +1$ in an axial group", r"\irr{a}*",
       defined="conv:6"),
     S("irrep.letter.b", "irrep", r"\irr{b}",
-      r"a one-dimensional irrep of an axial group with $\chi(g_p) = -1$, small-$N$ renames aside",
+      r"a one-dimensional irrep of an axial group with $\chi(g_p) = -1$, except for the "
+      r"small-$N$ renames",
       r"\irr{b}*", defined="conv:6"),
     S("irrep.letter.e", "irrep", r"\irr{e}",
-      r"a two-dimensional irrep; ${}^1\irr{e}$, ${}^2\irr{e}$: the one-dimensional irreps of a "
-      r"complex-conjugate pair, which together form the irrep $\irr{e}$ over $\mathbb{R}$",
+      r"a two-dimensional irrep, with ${}^1\irr{e}$ and ${}^2\irr{e}$ the one-dimensional irreps "
+      r"of a complex-conjugate pair, which together form the irrep $\irr{e}$ over $\mathbb{R}$",
       r"\irr{e}*", defined="conv:6"),
     S("irrep.letter.t", "irrep", r"\irr{t}", "a three-dimensional irrep", r"\irr{t}*",
       defined="conv:6"),
@@ -1064,8 +1072,8 @@ IRREPS = (
     S("irrep.letter.h", "irrep", r"\irr{h}", "a five-dimensional irrep", r"\irr{h}*",
       defined="conv:6"),
     S("irrep.Gamma", "irrep", r"\Gamma",
-      r"an irrep of $\grp{G}$; $\Gamma'$, an irrep of the parent $\grp{T}$, $\grp{O}$ or $\grp{I}$ "
-      "whose bases a derived record relabels",
+      r"an irrep of $\grp{G}$, with $\Gamma'$ an irrep of the parent record $\grp{T}$, $\grp{O}$ "
+      r"or $\grp{I}$ whose bases a derived record relabels",
       r"\Gamma", r"\Gamma'", defined=("part:irreps", "part:families", "conv:6")),
     S("irrep.Gamma.subgroup", "irrep", r"\Lambda_m",
       r"the irrep, or sum of two, of a subgroup on the ket $\bigl\lvert{}^{J}_{\,m}\bigr\rangle$ "
@@ -1087,8 +1095,8 @@ IRREPS = (
       defined=("part:families", "conv:16"),
       data_field="character_functions.irrep_families[].greek_alias", index=False),
     S("irrep.alias.gamma", "irrep", r"\Gamma_n",
-      r"the symbol of an irrep in an outside numbering (`bethe`, `bilbao`, section 6.5); "
-      r"$\bar{\Gamma}_n$, of a spinor irrep (`bilbao`)", r"\Gamma_{n}", r"\Gamma_{#}",
+      r"the symbol of an irrep in an outside numbering (`bethe`, `bilbao`, section 6.5), with "
+      r"$\bar{\Gamma}_n$ that of a spinor irrep (`bilbao`)", r"\Gamma_{n}", r"\Gamma_{#}",
       r"\Gamma_{#}^{+}", r"\Gamma_{#}^{-}", r"\Gamma_{#}'", r"\bar{\Gamma}_{n}",
       r"\bar{\Gamma}_{#}",
       scope=("finite|character_table|", "finite|irreps|", "conventions|conv:6.5|",
@@ -1114,7 +1122,7 @@ IRREPS = (
       r"the unitary matrix from the rotation-diagonal to the real basis, $D_{\mathrm{real}} = U D "
       r"U^\dagger$", "U", "U^{\\dagger}", defined=("part:continuous_irreps", "conv:9")),
     S("matrix.intertwiner", "matrix", "S",
-      r"the intertwiner from a parent's block to an irrep of a derived record, $w_\mu = \sum_\nu "
+      r"the intertwiner from a parent block to an irrep of a derived record, $w_\mu = \sum_\nu "
       r"S_{\nu,\mu} v_\nu$", "S", "S_{*}", "S^{\\dagger}", defined=("part:bases", "conv:14")),
     S("function.character.plain", "function", r"\chi(g)",
       "the character of the irrep in question at the element $g$", r"\chi(.)", r"\chi",
@@ -1131,14 +1139,15 @@ IRREPS = (
       r"the rotation-diagonal basis $\lvert f_1\rangle$, $\lvert f_2\rangle$ of the second factor "
       "of a product", "f_{#}", defined=("part:clebsch_gordan", "conv:10")),
     S("vector.basis.e", "vector", "e_j",
-      r"the vector $\lvert e_j\rangle$ of the coset $j$; the rotation-diagonal basis $\lvert "
-      r"e_1\rangle$, $\lvert e_2\rangle$; a unit column",
+      r"the vector $\lvert e_j\rangle$ of the coset $j$, or the rotation-diagonal basis $\lvert "
+      r"e_1\rangle$, $\lvert e_2\rangle$, or a unit column",
       "e_{j}", "e_{j'}", "e_{#}",
       defined=("part:irrep_matrices", "part:continuous_irreps", "conv:9", "conv:10",
                "conv:12.5")),
     S("index.coset", "index", "j",
-      r"the index of a right coset $\grp{W}\xi_j$ or $\grp{H}\xi_j$, and of the point of an orbit "
-      r"that it holds; of a left coset $g_j\grp{H}'$ in an induced representation", "j",
+      r"the index of a right coset $\grp{W}\xi_j$ or $\grp{H}\xi_j$ and of the point "
+      r"$\pointr_0\,P(\xi_j)$ of an orbit, or of a left coset $g_j\grp{H}'$ in an induced "
+      r"representation", "j",
       defined=("part:irrep_matrices", "part:permutation", "conv:9", "conv:12.5")),
     S("index.planar.phase", "index", "w",
       r"the phase $P_{11} + \mathrm{i}P_{12}$ of the planar block of an element", "w",
@@ -1176,24 +1185,25 @@ PRODUCTS = (
       r"\mathcal{E} = \mathcal{N}\,1$", r"\mathcal{E}", r"\mathcal{E}^{\dagger}",
       defined=("conv:10", "conv:8")),
     S("index.J12", "index", "J_1, J_2",
-      "the angular momenta of the two factors of a product; the indices of their families", "J_{#}",
+      "the angular momenta of the two factors of a product, or the indices of their families",
+      "J_{#}",
       defined=("part:fusion", "part:clebsch_gordan", "conv:10")),
     S("index.m12", "index", "m_1, m_2",
       "the $z$ components of the kets of the two factors of a product", "m_{#}", "m_{*}",
       defined=("part:clebsch_gordan", "conv:10")),
     S("index.family", "index", "n",
-      "the index of a family of irreps; $n$ and $n'$, those of the two factors of a product", "n",
-      "n'",
+      "the index of a family of irreps, with $n$ and $n'$ the indices of the two factors of a "
+      "product", "n", "n'",
       defined=("part:families", "part:fusion", "conv:16")),
     S("index.residue", "index", "q",
-      r"the exponent in $\chi(g_p) = \zeta_{N_p}^q$, a least residue modulo $N_p$; the residue "
-      "modulo $K$ in $n_K(J, q)$", "q",
+      r"the exponent in $\chi(g_p) = \zeta_{N_p}^q$ (a least residue modulo $N_p$), or the "
+      "residue modulo $K$ in $n_K(J, q)$", "q",
       defined=("part:subduction", "e:count", "conv:6", "conv:14")),
     S("index.multiplicity.copies", "index", "q_m", "the integer coefficients of a vector "
       "stored with a common factor", "q_{m}", "q_{*}", defined=("conv:14", "part:bases", "conv:8")),
     S("function.multiplicity", "function", r"b_\Gamma(J)",
-      r"the multiplicity of $\Gamma$ in $D^{(J,(-1)^J)}$ restricted to the group; $b_\Gamma(J, "
-      "p)$, in $D^{(J,p)}$",
+      r"the multiplicity of $\Gamma$ in $D^{(J,(-1)^J)}$ restricted to the group, with "
+      r"$b_\Gamma(J, p)$ the multiplicity in $D^{(J,p)}$",
       r"b_{*}(.)", defined=("part:subduction_o3", "part:subduction", "conv:11")),
     S("function.multiplicity.subgroup", "function", r"b_\Lambda",
       r"the multiplicity of the irrep $\Lambda$ of a subgroup in $\Gamma\!\downarrow \grp{H}$",
@@ -1220,8 +1230,8 @@ PRODUCTS = (
     S("index.residue.r", "index", "r",
       "a residue of $J$ modulo `period`", "r", defined="conv:11"),
     S("matrix.projector", "matrix", r"P^\Gamma_{1,1}",
-      r"the map, up to a factor, from partner 1 to partner $\mu$ of each copy of $\Gamma$; at $\mu "
-      "= 1$, a multiple of the projector on the first partners", r"P^{\Gamma}_{*}",
+      r"the map, up to a factor, from partner 1 to partner $\mu$ of each copy of $\Gamma$, which "
+      r"at $\mu = 1$ is a multiple of the projector on the first partners", r"P^{\Gamma}_{*}",
       r"P^{\Lambda}_{*}",
       defined=("e:projector", "conv:12", "conv:14"), pattern=r"P^{<irrep:\Gamma>}_{<index:\mu>,1}"),
     S("index.ketcoefficient", "index", "e_m",
@@ -1235,12 +1245,12 @@ PRODUCTS = (
       r"the normalization $\sum_m \lvert e_m\rvert^2 F_m$ of a basis vector",
       r"\mathrm{tot}*", defined=("e:ket", "conv:14")),
     S("vector.basis.symmetry", "vector", "v",
-      r"a symmetry-adapted vector, a combination of kets $\bigl\lvert{}^{J}_{\,m}\bigr\rangle$; "
-      r"$v_\mu$, the partner $\mu$ of a block",
+      r"a symmetry-adapted vector, a combination of kets $\bigl\lvert{}^{J}_{\,m}\bigr\rangle$, "
+      r"with $v_\mu$ the partner $\mu$ of a block",
       "v", "v_{*}", "v^{*}", "v'", defined=("conv:14", "e:ket", "conv:6")),
     S("vector.basis.derived", "vector", r"w_\mu",
-      r"the partners $w_\mu = \sum_\nu S_{\nu,\mu} v_\nu$ of a derived record's irrep, $v_\nu$ "
-      "those of the parent", "w_{*}",
+      r"the partners $w_\mu = \sum_\nu S_{\nu,\mu} v_\nu$ of a derived record's irrep, with "
+      r"$v_\nu$ those of the parent record", "w_{*}",
       defined=("part:bases", "conv:14")),
     S("index.pair.sign", "index", "s",
       r"the sign of the second ket of a pair $\bigl\lvert{}^{J}_{\,m}\bigr\rangle + "
@@ -1265,10 +1275,10 @@ PRODUCTS = (
     S("local.sum.wigner", "local", r"\sigma", "the summation index of the Wigner d formula",
       r"\sigma", scope=("SO3,O3|families|", "SO3,O3|continuous_irreps|", "conventions|conv:9|"),
       defined=("e:wigner", "conv:9")),
-    S("local.sum.cayleyklein", "local", "k", "the summation index of the Cayley--Klein form",
+    S("local.sum.cayleyklein", "local", "k", "the summation index of the Cayley–Klein form",
       "k", scope=("SO3,O3|families|", "SO3,O3|continuous_irreps|"), defined="e:angleaxis"),
     S("local.sum.racah", "local", "z", "the summation index of the closed form of a "
-      "Clebsch--Gordan coefficient", "z", scope="SO3,O3|clebsch_gordan|",
+      "Clebsch–Gordan coefficient", "z", scope="SO3,O3|clebsch_gordan|",
       defined="part:clebsch_gordan"),
 )
 
@@ -1341,8 +1351,8 @@ TENSORS = (
       scope=("*|orbitals|", "*|tensor_spaces|", "*|isotypic|", "*|invariant_polynomials|",
              "conventions|conv:13|"), pattern=r"p_{<index:I><index:J>}"),
     S("matrix.susceptibility", "matrix", r"\chi^{(3)}_{ijkl}",
-      r"a component $\chi^{(3)}_{ijkl}$, $j \le k \le l$, of the third-harmonic susceptibility; "
-      r"in a basis, the tensor with that component 1 and every other 0",
+      r"a component $\chi^{(3)}_{ijkl}$, $j \le k \le l$, of the third-harmonic susceptibility, "
+      r"or in a basis the tensor with that component 1 and every other 0",
       r"\chi^{(#)}_{#}", r"\chi^{(#)}_{ijkl}", defined=("part:isotypic", "conv:13"),
       scope=("*|orbitals|", "*|tensor_spaces|", "*|isotypic|", "*|invariant_polynomials|",
              "conventions|conv:13|"),
@@ -1365,7 +1375,7 @@ TENSORS = (
 
 # ---------------------------------------------------------------- marks of the role wrappers
 WRAPPED = (
-    S("hm.order", "number", "n", "an axis order in a Hermann--Mauguin symbol", "#",
+    S("hm.order", "number", "n", "an axis order in a Hermann–Mauguin symbol", "#",
       context="hm", defined="conv:2"),
     S("hm.slash", "mark", "/",
       r"an axis with a mirror perpendicular to it, $n/m$, in a `hermann_mauguin` symbol, as in "
@@ -1417,7 +1427,7 @@ CONVENTIONS_LETTERS = (
     S("local.irrep.V", "local", "V", "the three-dimensional irrep of the rotations (the "
       "trace character)", "V", scope="conventions|conv:10|", defined="conv:10"),
     S("local.coefficients.f", "local", "f^J_m", "the coefficients of a function on the sphere in "
-      "the spherical harmonics, f^J those of degree J", "f^{*}", "f^{*}_{*}",
+      "the spherical harmonics, with f^J those of degree J", "f^{*}", "f^{*}_{*}",
       scope="conventions|conv:10|", defined="conv:10"),
     S("local.bispectrum.B", "local", "B_{J_1,J_2,J}", "the bispectrum of a function on the sphere",
       "B_{*}", "B_{*}(.)", scope="conventions|conv:10|", defined="conv:10"),
@@ -1460,7 +1470,7 @@ MEANINGS = (
       defined=("part:subgroups", "part:identification")),
     S("index.gf.ab", "index", "a_1, a_2",
       "the exponents of the denominator $(1 - t^{a_1})(1 - t^{a_2})$ of a generating function, "
-      r"$a_1 \le a_2$", "a_{#}", defined="conv:14"),
+      r"$a_1 \le a_2$", "a_{#}", defined=("part:subduction", "conv:14")),
     S("index.root.order", "index", "n", "the order of a root of unity", "n",
       scope=("*|*|e:constants", "conventions|conv:0|"), defined=("e:constants", "conv:0.2")),
     S("local.floor.x", "local", "x", "a real number, the argument of the floor", "x",
@@ -1493,7 +1503,7 @@ H = entry
 HEADS = (
     H("head.sym", "head", "sym", "the symbol of an element", "sym",
       defined=("part:elements", "conv:0.1")),
-    H("head.class", "head", "class", "the class of an element; a class", "class",
+    H("head.class", "head", "class", "the class of an element, or a class", "class",
       defined=("part:classes", "part:elements", "conv:0.1")),
     H("head.ord", "head", "ord", "the order of an element, or of the elements of a class",
       "ord", defined=("part:elements", "conv:0.1")),
@@ -1515,9 +1525,9 @@ HEADS = (
       "the complex conjugate of a complex irrep or of a family of complex irreps", "conjugate",
       defined=("part:irreps", "part:families", "conv:0.1")),
     H("head.over.real", "head", r"over $\mathbb{R}$",
-      r"the irrep over $\mathbb{R}$ in which an irrep lies: the irrep itself when it is real, "
-      r"the irrep over $\mathbb{R}$ of its complex-conjugate pair when it is complex; for a "
-      "family, the family of these irreps", "over",
+      r"the irrep over $\mathbb{R}$ in which an irrep lies: itself when real or pseudoreal and the "
+      r"irrep over $\mathbb{R}$ of its complex-conjugate pair when complex, or for a family the "
+      "family of these irreps", "over",
       defined=("part:irreps", "part:families", "conv:0.1")),
     H("head.subgroup", "head", "subgrp", "a subgroup, the representative of its class",
       "subgrp", defined=("part:subgroups", "conv:0.1")),
@@ -1541,7 +1551,7 @@ HEADS = (
       "the images of the generators of a subgroup under a setting",
       "images", defined=("part:subduction", "conv:0.1")),
     H("head.index.family", "head", "index",
-      r"the range of the index of the irreps of a family, as $n \ge 1$",
+      r"the range of the index of the irreps of a family, such as $n \ge 1$",
       "index", defined=("part:families", "part:continuous_irreps", "conv:0.1")),
     H("head.index.subgroup", "head", "index",
       r"the index $[\grp{G} : \grp{H}]$ of a continuous subgroup $\grp{H}$", "index",
@@ -1589,11 +1599,12 @@ HEADS = (
       "the number of classes of pairs of copies of a figure, a copy with itself one of them",
       "rank", defined=("part:permutation", "conv:0.1")),
     H("head.cos", "head", "cos",
-      "the cosines of the angles between two copies of a figure, one per class of pairs",
+      "the cosines of the angles between two copies of a figure, one for each class of pairs "
+      "other than that of a copy with itself",
       "cos", defined=("part:permutation", "conv:0.1")),
     H("head.hand", "head", "hand",
       "2 when the rotations leave the copies of a figure in two classes, mirror images of each "
-      "other", "hand", defined=("part:permutation", "conv:0.1")),
+      "other, and blank otherwise", "hand", defined=("part:permutation", "conv:0.1")),
     H("head.multiplicity", "head", "mult.", "the multiplicity of an irrep in a space", "mult.",
       defined=("part:isotypic", "conv:0.1")),
     H("head.coefficients", "head", "coefficients", "the field of the coefficients of a basis",
@@ -1631,7 +1642,7 @@ HEADS = (
 # the spaces of cosets (CONVENTIONS.md section 17; the documents' section Fundamental domain).
 DOMAINS = (
     S("element.placement", "element", "Q",
-      r"an element of $\grp{O(3)}$, the placement of a molecule; $\grp{G}Q$, its coset", "Q",
+      r"an element of $\grp{O(3)}$, the placement of a molecule, with $\grp{G}Q$ its coset", "Q",
       defined=("part:fundamental_domain", "conv:17")),
     S("operator.cosets", "operator", r"\backslash",
       r"the space of the cosets $\grp{G}Q = \{gQ : g \in \grp{G}\}$ of $\grp{O(3)}$",
@@ -1655,7 +1666,8 @@ DOMAINS = (
       md=r"\mathcal{D}", defined=("part:fundamental_domain", "conv:17")),
     C("set.fundamental", "set", r"\mathcal{F}",
       r"a fundamental domain of $\grp{G}\backslash\grp{O(3)}$, one element of every coset "
-      r"$\grp{G}Q$ (more only on its boundary): $\mathcal{D}$ or $\mathcal{D} \cup i\,\mathcal{D}$",
+      r"$\grp{G}Q$ (more only on its boundary): $\mathcal{D}$ or "
+      r"$\mathcal{D} \cup \elt{i}\,\mathcal{D}$",
       command=r"\fdomain{\mathcal{F}}", md=r"\mathcal{F}",
       defined=("part:fundamental_domain", "conv:17")),
     C("set.lens", "set", r"\mathsf{L}(#1, #2)",
@@ -1699,8 +1711,8 @@ LEVELS = (
       scope=LEVEL_PARTS, defined=("part:unitary", "conv:19")),
     C("irrep.schur", "irrep", r"\mathbb{S}_{#1}",
       r"the irrep of $\grp{U(\mathnormal{N})}$ of highest weight $\lambda$, a partition of at "
-      r"most $N$ rows; "
-      r"$\mathbb{S}_{\lambda}\Gamma$, restricted along the matrices of the level $\Gamma$",
+      r"most $N$ rows, with "
+      r"$\mathbb{S}_{\lambda}\Gamma$ the irrep restricted along the matrices of the level $\Gamma$",
       command=r"\schur[1]{\mathbb{S}_{#1}}", defined=("part:unitary", "conv:19"),
       pattern=r"\schur{<label:\lambda>}"),
     C("shape.partition", "label", "[#1]",
@@ -1711,8 +1723,8 @@ LEVELS = (
       command=r"\shape[1]{[#1]}", defined=("part:unitary", "conv:19"),
       pattern=r"\shape{<label:\lambda_1, \lambda_2>}"),
     S("local.partition", "local", r"\lambda",
-      r"a partition, the highest weight of an irrep of $\grp{U(\mathnormal{N})}$; $\lambda_k$ its "
-      r"parts",
+      r"a partition, the highest weight of an irrep of $\grp{U(\mathnormal{N})}$, with $\lambda_k$ "
+      r"its parts",
       r"\lambda", r"\lambda_{#}", r"\lambda_{*}",
       scope=("finite|unitary|", "finite|terms|", "finite|term_states|", "conventions|conv:19|"),
       defined=("part:unitary", "conv:19")),
@@ -1723,7 +1735,7 @@ LEVELS = (
       defined=("part:unitary", "conv:19")),
     S("function.multiplicity.unitary", "function", r"b_\Lambda(\lambda)",
       r"the multiplicity of the irrep $\Lambda$ of the group in $\mathbb{S}_{\lambda}$ "
-      r"restricted along a level; $b_\Lambda(v) = b_\Lambda([v])$",
+      r"restricted along a level, with $b_\Lambda(v) = b_\Lambda([v])$",
       r"b_{\Lambda}(.)", scope=LEVEL_PARTS, defined=("part:unitary", "conv:19"), index=True),
     S("index.quanta", "index", "v", "the number of quanta of a degenerate mode", "v",
       scope=("finite|unitary|", "finite|overtones|", "finite|overtone_states|",
@@ -1748,7 +1760,7 @@ LEVELS = (
       scope="conventions|conv:19|", defined="conv:19"),
     S("index.constituent", "index", "J'",
       r"the $J'$ of a constituent $D^{(J')}$ of a power of a level $D^{(J)}$ of $\grp{SO(3)}$ or "
-      r"$\grp{O(3)}$, or of a term of an atomic subshell", "J'",
+      r"$\grp{O(3)}$, or of a term of an atomic shell", "J'",
       scope=CONTINUOUS_LEVEL_PARTS, defined=("part:unitary", "conv:19")),
     S("local.so4.angles", "local", r"\theta_{1}, \theta_{2}",
       r"the angles by which a matrix of $\grp{SO(4)}$ turns two orthogonal planes", r"\theta_{#}",
@@ -1780,8 +1792,8 @@ LEVELS = (
                                   "conventions|conv:19|"),
       defined=("part:overtones", "conv:19"), index=True),
     S("index.harmonic.degree", "index", r"\ell",
-      r"the harmonic degree of a state of $v$ quanta of a level, $\ell = v, v - 2, \dots$; for a "
-      "level of dimension 2, its vibrational angular momentum",
+      r"the harmonic degree of a state of $v$ quanta of a level, $\ell = v, v - 2, \dots$, which "
+      "for a level of dimension 2 is its vibrational angular momentum",
       r"\ell", scope=("finite|unitary|", "finite|overtones|", "finite|overtone_states|",
                       "conventions|conv:19|"),
       defined=("part:unitary", "part:overtones", "conv:19")),
@@ -1820,7 +1832,7 @@ LEVELS = (
              "conventions|conv:19|"), defined=("part:terms", "conv:19")),
     C("symbol.term", "label", "{}^{#1}#2",
       r"a term of a configuration $\Gamma^{n}$: its spin multiplicity $2S + 1$ and its "
-      r"species $\Lambda$, the orbital states of the irrep $\Lambda$ with spin $S$",
+      r"irrep $\Lambda$, the orbital states of the irrep $\Lambda$ with spin $S$",
       command=r"\term[2]{{}^{#1}#2}", defined=("part:terms", "conv:19"),
       pattern=r"\term{<integer:2S+1>}{<irrep:\Lambda>}"),
     C("vector.occupation", "vector", r"\lvert #1\rangle",
@@ -1828,8 +1840,8 @@ LEVELS = (
       command=r"\occ[1]{\lvert #1\rangle}", defined=("part:overtone_states", "conv:19"),
       md=r"\lvert #1\rangle", pattern=r"\occ{<label:v_1, v_2>}"),
     C("vector.determinant", "vector", r"\lvert #1\rvert",
-      r"the Slater determinant of the spin-orbitals in it, $1$ and $\bar{1}$ partner 1 of a "
-      r"level with spin up and down, in the order $1, \bar{1}, 2, \bar{2}, \dots$",
+      r"the Slater determinant of the spin–orbitals in it, in the order $1, \bar{1}, 2, \bar{2}, "
+      r"\dots$, where $1$ and $\bar{1}$ are partner 1 of a level with spin up and down",
       command=r"\sdet[1]{\lvert #1\rvert}", defined=("part:terms", "part:term_states", "conv:19"),
       md=r"\lvert #1\rvert", pattern=r"\sdet{<label:1\,\bar{2}>}"),
     S("index.spin.down", "local", r"\bar{\mu}",
@@ -1849,7 +1861,7 @@ LEVELS = (
       "M_{S}", scope=("finite|terms|", "finite|term_states|", "conventions|conv:19|"),
       defined=("part:terms", "part:term_states", "conv:19")),
     S("local.shell.l", "local", "l",
-      r"the angular momentum of an atomic subshell, whose orbitals carry $D^{(l)}$", "l",
+      r"the angular momentum of an atomic shell, whose orbitals carry $D^{(l)}$", "l",
       scope=("SO3,O3|terms|", "SO3,O3|term_states|",
              "conventions|conv:19|"), defined=("part:terms", "conv:19")),
     S("local.orbital.projection", "local", "M_L",
@@ -1860,14 +1872,15 @@ LEVELS = (
       r"a level of the group: a real irrep of dimension $N \ge 2$", "level",
       defined=("part:unitary", "conv:0.1")),
     H("head.kernel", "head", "kernel",
-      r"the kernel $\ker\Gamma$ of an irrep, the normal subgroup of the elements that it maps to "
-      r"the identity; of a permutation representation, of the elements that fix every point",
+      r"the kernel $\ker\Gamma$ of an irrep (the normal subgroup of the elements that it maps to "
+      r"the identity), or of a permutation representation (the normal subgroup of the elements "
+      r"that fix every point)",
       "kernel",
       defined=("part:irreps", "part:families", "part:continuous_irreps", "part:decompositions",
                "conv:0.1")),
     H("head.image", "head", "image",
       r"the image of an irrep, the group of its matrices, isomorphic to $\grp{G}/\ker\Gamma$ and "
-      r"named by a group of the catalogue", "image",
+      r"named by a point group", "image",
       defined=("part:irreps", "part:families", "part:continuous_irreps", "conv:0.1")),
     H("head.chain", "head", "chain",
       r"the subgroups through which $\grp{U(\mathnormal{N})}$ restricts to the group along a "
@@ -2207,14 +2220,14 @@ def common_markdown(records=None):
                         if r.id in ELEMENTARY and r.id not in ELEMENTARY_WORDS),
                        key=lambda r: ELEMENTARY.index(r.id))
         listed = " ".join(displayed(r) for r in signs)
-    out = ["", "The symbols of this section have one meaning in every document of the catalogue; "
-           "a document defines each of its other symbols where it first uses it. The elementary "
-           "signs have their usual meaning: %s, as do parentheses for grouping, the punctuation "
-           "of a formula and words in a formula. Element indices count from 0; partner indices "
-           "$`\\mu`$, copy indices $`\\kappa`$ and Clebsch–Gordan indices $`\\mu_1`$, $`\\mu_2`$ "
-           "count from 1. A *turn* is an angle in units of $`2\\pi`$, and "
-           "$`\\mathsf{G} \\cap \\mathsf{SO}(3)`$ is the subgroup of the elements with "
-           "$`\\det = +1`$." % listed]
+    out = ["", "The symbols of this section have one meaning in every document of this "
+           "catalogue, and a document defines each of its other symbols where it first uses it. "
+           "The elementary signs are %s. These signs have their usual meaning, as do parentheses "
+           "for grouping, the punctuation of a formula and words in a formula. Element indices "
+           "count from 0, and partner indices $`\\mu`$, copy indices $`\\kappa`$ and "
+           "Clebsch–Gordan indices $`\\mu_1`$, $`\\mu_2`$ count from 1. A *turn* is an angle in "
+           "units of $`2\\pi`$, and $`\\mathsf{G} \\cap \\mathsf{SO(3)}`$ is the subgroup of the "
+           "elements with $`\\det = +1`$." % listed]
     for word, rows in common_rows(records):
         if rows:
             out += ["", "**%s.**" % word, "", "| Notation | Meaning |", "|---|---|"]
@@ -2237,10 +2250,10 @@ def doubled(records=None):
 
 def index_markdown(records=None):
     """The block of the index of notation under its heading, to the end of the file."""
-    out = ["", "The common notation of the documents and selected symbols of their sections, each "
-           "with its meaning and the section of the conventions that defines it (0.1 for the "
-           "common notation); the symbols that are no letter first, then by letter, a Greek "
-           "letter under its Latin name.", "",
+    out = ["", "This index lists the common notation of the documents and selected symbols of "
+           "their sections, each with its meaning and the section of the conventions that defines "
+           "it (0.1 for the common notation). The symbols that are not letters come first, then "
+           "the others by letter, a Greek letter under its Latin name.", "",
            "| Notation | Meaning | Defined |", "|---|---|---|"]
     out += ["| %s | %s | %s |" % (_cell(n), _cell(m), s) for _, n, m, s in index_rows(records)]
     return "\n".join(out) + "\n"

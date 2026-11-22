@@ -13,9 +13,9 @@ last part of CONVENTIONS.md, a document of its own in the volume).  The contents
 the conventions, the references and the index as lines, and the groups family by family in rows
 of FIGURE_COLUMNS cells, each cell a group's figure (solids.py, read from a file of its own
 beside volume.tex, FIGURES) over a line with its symbol and the number of its first sheet, the
-figure and the line each a link to that sheet.  The groups come family by family, C_N, S_2N,
-D_N, D_Nh, D_Nd, C_Nv and C_Nh (FAMILIES), each by increasing N and closed by its continuous
-group where it has one (CLOSES), then T, Th, Td, O, Oh, I and Ih, then SO(3) and O(3).
+figure and the line each a link to that sheet.  The groups come as the site lists them: the
+families C_N, S_2N, C_Nh, C_Nv, D_N, D_Nh and D_Nd (names.FAMILIES), each by increasing N, then
+T, Th, Td, O, Oh, I and Ih, then the seven continuous groups (names.CONTINUOUS).
 
 Each document is set from the same LaTeX as its own PDF (latex.body, conventions.body,
 conventions.references_body), from a fresh sheet: its title, its contents list (the references
@@ -39,25 +39,21 @@ from .. import names, serialize
 from . import conventions, latex, lint, notation, pdf, solids, style
 
 TITLE, AUTHOR = style.TITLE, style.AUTHOR
-SUBJECT = ("Point Group Atlas, volume I: the conventions, the documents of the 98 groups, the "
-           "references and the index of notation")
+SUBJECT = ("Point Group Atlas, volume I: the conventions, the documents of the 98 point groups, "
+           "the references and the index of notation")
 REPOSITORY = "https://github.com/valbert4/point-group-atlas"
 OUT = "point-group-atlas.pdf"
 MAX_RUNS = 6
 
-# The axial families in the order of the volume, and the continuous group that closes a family.
-FAMILIES = ("Cn", "S2n", "Dn", "Dnh", "Dnd", "Cnv", "Cnh")
-CLOSES = {"Cn": "Cinf", "Dn": "Dinf", "Dnh": "Dinfh", "Cnv": "Cinfv", "Cnh": "Cinfh"}
-# The blocks of the contents with their labels: the families, then T, Th, ..., then SO(3) and
-# O(3); the cells per row and the height of a figure's box.
-BLOCKS = {"Cn": r"The $\grp{C_{\mathnormal{N}}}$ family",
-          "S2n": r"The $\grp{S_{2\mathnormal{N}}}$ family",
-          "Dn": r"The $\grp{D_{\mathnormal{N}}}$ family",
-          "Dnh": r"The $\grp{D_{\mathnormal{N}h}}$ family",
-          "Dnd": r"The $\grp{D_{\mathnormal{N}d}}$ family",
-          "Cnv": r"The $\grp{C_{\mathnormal{N}v}}$ family",
-          "Cnh": r"The $\grp{C_{\mathnormal{N}h}}$ family",
-          "exceptional": "The exceptional groups", "spherical": "The spherical groups"}
+# The axial families in the order of the volume, the site's (names.FAMILIES).
+FAMILIES = names.FAMILIES
+# The blocks of the contents with their labels, in the site's order and words: the families,
+# then T, Th, ..., then the continuous groups; the cells per row and the height of a figure's box.
+FAMILY_TEX = {"Cn": r"C_{\mathnormal{N}}", "S2n": r"S_{2\mathnormal{N}}",
+              "Cnh": r"C_{\mathnormal{N}h}", "Cnv": r"C_{\mathnormal{N}v}",
+              "Dn": r"D_{\mathnormal{N}}", "Dnh": r"D_{\mathnormal{N}h}", "Dnd": r"D_{\mathnormal{N}d}"}
+BLOCKS = dict([(f, r"The $\grp{%s}$ family" % FAMILY_TEX[f]) for f in FAMILIES]
+              + [("exceptional", "The exceptional groups"), ("continuous", "The continuous groups")])
 FIGURE_COLUMNS = 8
 FIGURE_HEIGHT = "1.75cm"
 FIGURES = "figures"                       # the folder of the figures' files beside volume.tex
@@ -143,12 +139,12 @@ NUMBERED_HEADING = re.compile(r"\\phantomsection(\\(?:sub)*section\*\{(\d+(?:\.\
 
 
 def order():
-    """The 98 names in the order of the volume."""
+    """The 98 names in the order of the volume, the site's: the families by increasing N, the
+    exceptional groups, then the continuous groups."""
     out = []
     for family in FAMILIES:
         out += [names.name_of(family, N) for N in range(1, names.N_MAX + 1)]
-        out += [CLOSES[family]] if family in CLOSES else []
-    out += list(names.EXCEPTIONAL) + list(names.SPHERICAL)
+    out += list(names.EXCEPTIONAL) + list(names.CONTINUOUS)
     if sorted(out) != sorted(names.NAMES):
         raise ValueError("the order of the volume does not hold each of the 98 groups once")
     return out
@@ -158,8 +154,8 @@ def block_of(name):
     """The block of the contents that a group opens (BLOCKS), or None."""
     if name == names.EXCEPTIONAL[0]:
         return "exceptional"
-    if name == names.SPHERICAL[0]:
-        return "spherical"
+    if name == names.CONTINUOUS[0]:
+        return "continuous"
     family = names.family_of(name) if name in names.AXIAL else None
     return family[0] if family and family[1] == 1 else None
 

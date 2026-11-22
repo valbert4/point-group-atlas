@@ -22,7 +22,7 @@ from .. import names
 from ..formats import volume
 from .tex import attr, esc
 
-DATA = (("json", "JSON"), ("sympy", "SymPy"), ("wolfram", "Wolfram Language"), ("gap", "GAP"))
+DATA = (("json", "JSON"), ("gap", "GAP"), ("wolfram", "Wolfram Language"), ("sympy", "SymPy"))
 FORMATS = {"pdf": "PDF", "markdown": "Markdown", "json": "JSON"}
 DOCUMENTS = (("pdf", "PDF"), ("latex", "LaTeX"))
 # The file of the subgroups of O(3) that a continuous group's document reads in place of a
@@ -37,8 +37,18 @@ LEVELS_APART = "subduction_unitary"
 BASES = "symmetry_adapted_bases"
 CLEBSCH_GORDAN = "clebsch_gordan"
 # The release of each catalogue that holds the bases too large for the repository (README).
-RELEASES = {"rotation": ("bases", "<i>J</i> = 11 to 60"),
-            "double": ("double-bases", "2<i>J</i> = 23 to 121")}
+RELEASES = {"rotation": ("bases", "<i>J</i> = 11, 12, \u2026, 60"),
+            "double": ("double-bases", "2<i>J</i> = 23, 25, \u2026, 121")}
+# The classes of groups that the lattice of each catalogue orders (README), in the Data section of
+# a volume.
+LATTICES = {"rotation": 'the <span class="grp">O(3)</span>-conjugacy classes of the point groups',
+            "double": 'the 112 <span class="grp">Pin<sup>\u2212</sup>(3)</span>-conjugacy classes '
+                      'of the double point groups'}
+# What index.json gives besides the records that each record names (README, conventions
+# section 18), in the Data sections and llms.txt.
+INDEX_JSON = ("the size and SHA-256 digest of each file of the records, of each volume's "
+              "conventions, lattice and record schemas, and of the README, the references and the "
+              "license")
 
 
 class Reading(dict):
@@ -150,11 +160,14 @@ class Files:
         return "%s/raw/%s/%s" % (volume.REPOSITORY, self.ref, path)
 
     def at(self):
-        """"at commit X" of the Data sections, and in a preview, a build with changes that the
-        commit lacks, a word that says so."""
-        return "at commit <code>%s</code>%s" % (esc(self.ref[:8]), (
-            ", with changes not yet committed (a preview: a file from GitHub may differ from the "
-            "one this site shows)" if self.changed else ""))
+        """"at commit X" of the Data sections (preview gives the sentence of a preview)."""
+        return "at commit <code>%s</code>" % esc(self.ref[:8])
+
+    def preview(self):
+        """The sentence of the Data sections that says so in a preview, a build with changes that
+        the commit lacks, with its leading space; "" otherwise."""
+        return (" In this preview, the files have changes not yet committed, so a file from GitHub "
+                "may differ from the version on this site." if self.changed else "")
 
     def link(self, path, label, here=None):
         """The link to the file at `path`: a PDF, its copy in the site, from the site path
@@ -228,7 +241,20 @@ def data_line(files, stem, keys, point_groups):
         path = "rotation/data/%s.json" % POINT_GROUPS
         parts.append('the subgroups of <span class="grp">O(3)</span> in %s'
                      % files.link(path, "%s.json" % POINT_GROUPS))
-    return '<p class="data">Data: %s</p>\n' % "; ".join(parts)
+    return '<p class="data">Data: %s</p>\n' % ", and ".join(parts)
+
+
+def index_text(name):
+    """The sentences on index.json, the file named as `name` (its link, or its name and where it
+    is)."""
+    return ("The file %s gives %s. For each record it also lists the records that the record "
+            "names." % (name, INDEX_JSON))
+
+
+def index_sentence(files):
+    """The sentences on index.json that end the Data box of a group and the Data section of a
+    volume."""
+    return index_text(files.link("index.json", "index.json"))
 
 
 def data_box(files, stem, rec, group_link, here):
@@ -241,12 +267,12 @@ def data_box(files, stem, rec, group_link, here):
             label, files.link(f["path"], esc(f["path"].rsplit("/", 1)[1]), here),
             size(f["bytes"])))
     out = ['<h2 id="data">Data</h2>',
-           "<p>The files are those of the repository %s: the PDF is a "
-           "copy on this site and opens in a tab of its own, and any other file downloads from "
-           "GitHub. The SymPy, Wolfram Language and "
-           "GAP files hold the record of the JSON file as the value <code>%s</code>, under the "
-           "same keys; under the title of each section a line names the keys that the section "
-           "reads.</p>" % (files.at(), names.LITERAL[files.cat]),
+           "<p>The files are those of the repository %s: the PDF is a copy on this site and opens "
+           "in a tab of its own, and any other file downloads from GitHub.%s The GAP, Wolfram "
+           "Language and SymPy files hold the record as one literal bound to <code>%s</code>, "
+           "under the same keys as the JSON file. Under the title of each section, a line names "
+           "the fields that the section reads and the files that hold them.</p>" % (
+               files.at(), files.preview(), names.LITERAL[files.cat]),
            '<div class="scroll"><table class="files"><thead><tr><th>Format</th><th>File</th>'
            '<th class="c-r">Size</th></tr></thead><tbody>%s</tbody></table></div>' % "".join(rows)]
     apart = {}
@@ -262,27 +288,27 @@ def data_box(files, stem, rec, group_link, here):
                             for f, m in zip(apart[BASES], twice)),
             size(sum(f["bytes"] for f in apart[BASES]))))
     if LEVELS_APART in apart:
-        out.append("<p>The blocks of the larger levels, kept apart from the record (gzipped "
-                   "JSON): %s.</p>" % ", ".join(
+        out.append("<p>The states that <code>%s</code> names, kept apart from the record (gzipped "
+                   "JSON): %s.</p>" % (LEVELS_APART, ", ".join(
                        '%s (%s)' % (files.link(f["path"],
                                                esc(f["path"].rsplit("/", 1)[1].split(".")[0])),
                                     size(f["bytes"]))
-                       for f in apart[LEVELS_APART]))
+                       for f in apart[LEVELS_APART])))
     if CLEBSCH_GORDAN in apart:
         twice = [int(f["path"].rsplit("/", 1)[1].split(".")[0]) for f in apart[CLEBSCH_GORDAN]]
-        out.append("<p>The Clebsch–Gordan coefficients, kept apart from the record, one file per "
-                   "2<i>J</i><sub>1</sub> = %s (JSON, %s in all).</p>" % (
+        out.append("<p>The Clebsch–Gordan coefficients are kept apart from the record (JSON, %s "
+                   "in all). One file holds the coefficients of each 2<i>J</i><sub>1</sub> = "
+                   "%s.</p>" % (
+                       size(sum(f["bytes"] for f in apart[CLEBSCH_GORDAN])),
                        ", ".join(files.link(f["path"], "%d" % n)
-                                 for f, n in zip(apart[CLEBSCH_GORDAN], twice)),
-                       size(sum(f["bytes"] for f in apart[CLEBSCH_GORDAN]))))
-    notes = ["The schema of the record: %s" % files.link(
-        schema_path(files.cat, rec), esc(schema_path(files.cat, rec).rsplit("/", 1)[1]))]
+                                 for f, n in zip(apart[CLEBSCH_GORDAN], twice))))
+    from ..formats.latex import listed
+    schema = "The schema of the record is %s" % files.link(
+        schema_path(files.cat, rec), esc(schema_path(files.cat, rec).rsplit("/", 1)[1]))
     named = files.requires.get(stem, [])
     if named:
-        notes.append("the record names %s" % ", ".join(group_link(r) for r in named))
-    notes.append("the size and SHA-256 digest of each file of the records, the conventions and "
-                 "the schemas of the records: %s" % files.link("index.json", "index.json"))
-    out.append("<p>%s.</p>" % "; ".join(notes))
+        schema += ", and the record names %s" % listed([group_link(r) for r in named])
+    out.append("<p>%s. %s</p>" % (schema, index_sentence(files)))
     return "\n".join(out)
 
 
@@ -304,25 +330,24 @@ def volume_box(files, here, pdf=None):
     lattice = next(f["path"].rsplit("/", 1)[1] for f in files.catalogue
                    if f["path"].endswith(".json") and not f["path"].endswith(".schema.json"))
     out = ['<h2 id="data">Data</h2>',
-           "<p>%s those of the repository %s: a PDF is a copy on this "
-           "site and opens in a tab of its own, and any other file downloads from GitHub.</p>" % (
-               "The volume as one PDF is a file of this site; the other files are" if pdf else
-               "The files are", files.at()),
+           "<p>%s those of the repository %s: a PDF is a copy on this site and opens in a tab of "
+           "its own, and any other file downloads from GitHub.%s</p>" % (
+               "The volume as one PDF is a file of this site. The other files are" if pdf else
+               "The files are", files.at(), files.preview()),
            '<div class="scroll"><table class="files"><thead><tr><th>Format</th><th>File</th>'
            '<th class="c-r">Size</th></tr></thead><tbody>%s</tbody></table></div>' % "".join(rows)]
     notes = []
     if pdf:
         notes.append("The volume as one PDF%s holds the conventions, the documents of its groups, "
-                     "the references and the index of notation" % (
-                         ", %d sheets," % pdf[3] if pdf[3] else ""))
-    notes.append("CONVENTIONS.pdf is CONVENTIONS.md typeset; <code>%s</code> holds the lattice of "
-                 "the catalogue's classes; the schemas are those of its records" % esc(lattice))
-    notes.append("each group's own files are listed in the Data section of the group")
-    out.append("<p>%s.</p>" % "; ".join(notes))
+                     "the references and the index of notation." % (
+                         " (%d sheets)" % pdf[3] if pdf[3] else ""))
+    notes.append("CONVENTIONS.pdf is CONVENTIONS.md typeset, the file <code>%s</code> holds the "
+                 "lattice of %s, and the schemas are those of this volume's records."
+                 % (esc(lattice), LATTICES[files.cat]))
+    notes.append("The Data section of each group lists the group's own files.")
+    out.append("<p>%s</p>" % " ".join(notes))
     tag, which = RELEASES[files.cat]
     out.append('<p>The symmetry-adapted bases for %s, too large for the repository, are attached '
-               'to its release <a href="%s/releases/tag/%s">%s</a>, one archive per group; the '
-               'size and SHA-256 digest of each file of the records, the conventions and the '
-               'schemas of the records: %s.</p>' % (
-                   which, volume.REPOSITORY, tag, tag, files.link("index.json", "index.json")))
+               'to its release <a href="%s/releases/tag/%s">%s</a>, one archive for each group. '
+               '%s</p>' % (which, volume.REPOSITORY, tag, tag, index_sentence(files)))
     return "\n".join(out)

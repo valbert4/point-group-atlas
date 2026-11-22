@@ -118,25 +118,10 @@ def section_unitary(D):
     lvs = levels(D)
     D.part(LV.PART)
     D.section(r"Subduction from \texorpdfstring{$\grp{U(\mathnormal{N})}$}{U(N)}", "section 19")
-    D.w(D.define("local.level.dimension", "group.unitary", "irrep.schur", "shape.partition",
-                 "local.partition", "function.multiplicity.unitary", "local.partition.power",
-                 "local.electrons", "local.spin")
-        + r"A level of $\grp{G}$ is a real irrep $\Gamma$ of dimension $N \ge 2$, here a member of "
-        r"a family of the table: a degenerate mode of vibration, or a set of degenerate orbitals. "
-        r"Its matrices $\repD{\Gamma}(g)$ lie in $\grp{U(\mathnormal{N})}$, and "
-        r"$b_\Lambda(\lambda)$ is the multiplicity of the irrep $\Lambda$ of $\grp{G}$ in the "
-        r"irrep $\schur{\lambda}$ of $\grp{U(\mathnormal{N})}$ of highest weight "
-        r"$\lambda = \shape{\lambda_1, \lambda_2, \dots}$, restricted along $\repD{\Gamma}$: the "
-        r"branching rule $\grp{U(\mathnormal{N})} \supset \grp{G}$. The quanta of a degenerate "
-        r"mode fill the one-row shapes $\schur{\shape{v}}\Gamma = \operatorname{Sym}^{v}\Gamma$ "
-        r"(section~\ref{s:overtones}); $n$ electrons of spin $S$ fill the two-column shapes "
-        r"$\lambda = \shape{2^{n/2-S}, 1^{2S}}$ (section~\ref{s:terms}).")
-    D.w(D.define("head.level", "head.chain")
-        + r"In the table, level is the family of the levels, and chain the subgroups through which "
-        r"$\grp{U(\mathnormal{N})}$ restricts to $\grp{G}$, down to the image of $\Gamma$, the "
-        r"group that its matrices form, isomorphic to $\grp{G}/\ker\Gamma$. The image leaves a "
-        r"quadratic form invariant, and $\grp{O(\mathnormal{N})}$ is the orthogonal group of that "
-        r"form.")
+    D.w(LV.level_lead(D))
+    D.w(r"Each level here is a member of a family of the table. "
+        + D.define("head.level", "head.chain")
+        + LV.unitary_legend("the family (level)", "the level's matrices"))
     D.w(r"{\small\begin{longtable}{@{}lll@{}}\toprule")
     D.w(r"level & $N$ & chain\\\midrule\endhead")
     for lv in lvs:
@@ -145,24 +130,25 @@ def section_unitary(D):
     D.w(r"\bottomrule\end{longtable}}")
     if not spherical(D):
         parity = any(lv["family"] in ("Eg", "Eu") for lv in lvs)
-        D.w(D.define("index.harmonic.degree")
-            + r"The matrices of $\irr{e}_n$ form $\grp{O(2)}$ for every $n$, "
-            r"$\grp{C_{\infty v}}$ acting on the plane; the rotations by the "
-            r"multiples of $2\pi/n$ act trivially. Its states of harmonic degree $\ell$ "
-            r"(section~\ref{s:overtones}) carry $\irr{e}_{\ell n}$ ($\ell > 0$) or $\irr{a}_{1}$ "
-            r"($\ell = 0$)%s." % (r", at the parity $p^{\ell}$ of a level of parity $p$"
-                                  if parity else ""))
+        D.w(r"For every $n$, the matrices of $\irr{e}_n$ form $\grp{O(2)}$, which is "
+            r"$\grp{C_{\infty v}}$ acting on the plane, and the rotations by the multiples of "
+            r"$2\pi/n$ act as the identity. "
+            + D.define("index.harmonic.degree")
+            + r"The level's states of harmonic degree $\ell$ (section~\ref{s:overtones}) carry "
+              r"$\irr{e}_{\ell n}$ ($\ell > 0$) or $\irr{a}_{1}$ ($\ell = 0$)%s."
+            % (r", at the parity $p^{\ell}$ of a level of parity $p$" if parity else ""))
         return
-    D.w(D.define("index.harmonic.degree", "index.constituent")
-        + r"The matrices of $\irrJ{J}$, $J \ge 1$, form $\grp{SO(3)}$%s. The "
-        r"harmonic polynomials of degree $\ell$ in its $2J + 1$ partners "
-        r"(section~\ref{s:overtones}) restrict to $\grp{SO(3)}$ as $\irrJ{\ell}$ for $J = 1$, and "
-        r"for $J = 2$ as the $\irrJ{J'}$ with $J' = 2k, 2k - 2, 2k - 3, \dots, k$ for $k = \ell, "
-        r"\ell - 3, \ell - 6, \dots \ge 0$ (CONVENTIONS.pdf, section 19), the rule that gives the "
-        r"species of the levels \irr{h} of $\grp{I}$ and \href{Ih.pdf}{"
-        r"$\grp{I_{h}}$}. The $J'$ for $\ell \le 6$:" % (
-            r"; $\irrJp{J}{-}$ forms $\grp{O(3)}$, faithfully, and $\irrJp{J}{+}$ "
-            r"forms $\grp{SO(3)}$, the inversion acting trivially" if D.name == "O3" else ""))
+    # the levels of O(3) are D^(J,+) and D^(J,-), those of SO(3) D^(J)
+    D.w((r"The matrices of $\irrJp{J}{-}$, $J \ge 1$, form $\grp{O(3)}$, faithfully, and the "
+         r"inversion acts trivially in $\irrJp{J}{+}$, whose matrices form $\grp{SO(3)}$. "
+         if D.name == "O3" else r"The matrices of $\irrJ{J}$, $J \ge 1$, form $\grp{SO(3)}$. ")
+        + D.define("index.harmonic.degree", "index.constituent")
+        + r"The harmonic polynomials of degree $\ell$ in the $2J + 1$ partners of a level "
+          r"(section~\ref{s:overtones}) restrict to $\grp{SO(3)}$ as $\irrJ{\ell}$ for $J = 1$, "
+          r"and for $J = 2$ as the $\irrJ{J'}$ with $J' = 2k, 2k - 2, 2k - 3, \dots, k$ for "
+          r"$k = \ell, \ell - 3, \ell - 6, \dots \ge 0$ (CONVENTIONS.pdf, section 19). The second "
+          r"rule gives the irreps of the states of the levels $\irr{h}$ of $\grp{I}$ and "
+          r"\href{Ih.pdf}{$\grp{I_{h}}$}. A table gives the $J'$ for $\ell \le 6$:")
     from ..tables.unitary import five_degrees
     D.w(r"{\small%s\begin{longtable}{@{}rl@{}}\toprule" % L.snake_mark())
     D.w(r"$\ell$ & $J'$\\\midrule\endhead")
@@ -177,23 +163,18 @@ def section_overtones(D):
     D.section("Vibrational overtone levels", "section 19")
     if not spherical(D):
         parity = any(lv["family"] in ("Eg", "Eu") for lv in lvs)
-        D.w(D.define("index.quanta", "operator.symmetric.power", "local.quadratic.form",
-                     "set.harmonic", "function.multiplicity.harmonic")
-            + r"$\Gamma$ is a level of section~\ref{s:unitary}. The states of $v$ quanta carry "
-            r"$\operatorname{Sym}^{v}\Gamma$, which splits by harmonic degree $\ell = v, v - 2, "
-            r"\dots$ into $r^{v-\ell}H_\ell$, $r^2$ the invariant quadratic form and $H_\ell$ the "
-            r"states of $\ell$ quanta that the invariant Laplacian annihilates; $H_\ell$ is "
-            r"$\irr{e}_{\ell n}$ ($\ell > 0$) or $\irr{a}_{1}$ ($\ell = 0$)%s, for every $n$, so "
-            r"that "
-            r"$\mathnormal{h}_\Lambda(\ell)$ is 1 or 0 and $\operatorname{Sym}^{v}\irr{e}_n = "
-            r"\irr{e}_{vn} \oplus "
-            r"\irr{e}_{(v-2)n} \oplus \dots$, down to $\irr{e}_n$ or $\irr{a}_{1}$. The generating "
-            r"function of $\irr{e}_{\ell n}$ is $t^{\ell}/(1 - t^2)$, that of $\irr{a}_{1}$ "
-            r"$1/(1 - t^2)$; $\ell$ is the vibrational angular momentum. A table gives "
-            r"$\operatorname{Sym}^{v}\Gamma$ and, in the same row, $H_\ell$ at $\ell = v$: "
-            r"$\operatorname{Sym}^{v}\Gamma = H_\ell \oplus "
-            r"r^2\operatorname{Sym}^{v-2}\Gamma$ at $\ell = v$." % (
-                r", at the parity $p^{\ell}$" if parity else ""))
+        D.w(LV.overtone_lead(D, r"\Gamma", r"$\operatorname{Sym}^{v}\Gamma$") + " "
+            + D.define("function.multiplicity.harmonic")
+            + r"For every $n$, $H_\ell$ is $\irr{e}_{\ell n}$ ($\ell > 0$) or $\irr{a}_{1}$ "
+              r"($\ell = 0$)%s, so that $\mathnormal{h}_\Lambda(\ell)$ is 1 or 0 and "
+              r"$\operatorname{Sym}^{v}\irr{e}_n = \irr{e}_{vn} \oplus \irr{e}_{(v-2)n} \oplus "
+              r"\dots$, down to $\irr{e}_n$ or $\irr{a}_{1}$. The generating function of "
+              r"$\irr{e}_{\ell n}$ is $t^{\ell}/(1 - t^2)$, and that of $\irr{a}_{1}$ is "
+              r"$1/(1 - t^2)$. The harmonic degree $\ell$ is the vibrational angular momentum. "
+              r"A table gives "
+              r"$\operatorname{Sym}^{v}\Gamma$ and, in the same row, $H_\ell$ at $\ell = v$: "
+              r"$\operatorname{Sym}^{v}\Gamma = H_\ell \oplus r^2\operatorname{Sym}^{v-2}\Gamma$ "
+              r"at $\ell = v$." % (r", at the parity $p^{\ell}$" if parity else ""))
         for lv in lvs:
             if len(lvs) > 1:
                 D.w(r"\paragraph{The level $\Gamma = %s$.}" % level_label(D, lv))
@@ -202,11 +183,11 @@ def section_overtones(D):
                               [axial_sum(row) for row in sym["harmonic"]["table"]])
         return
     par = D.name == "O3"
-    D.w(D.define("index.quanta", "operator.symmetric.power", "local.quadratic.form",
-                 "set.harmonic", "index.constituent")
-        + SPHERICAL_LEAD
-        % (level_label(D, lvs[0]) if len(lvs) == 1 else r"\irrJp{J}{p}",
-           r"; $\irrJp{J}{p}$ adds the parity $p^{v}$" if par else ""))
+    D.w(LV.overtone_lead(D, r"\Gamma = %s" % (level_label(D, lvs[0]) if len(lvs) == 1
+                                              else r"\irrJp{J}{p}"),
+                         r"$\operatorname{Sym}^{v}\Gamma$") + " "
+        + D.define("index.constituent")
+        + SPHERICAL_LEAD % (r" The level $\irrJp{J}{p}$ adds the parity $p^{v}$." if par else ""))
     lv = lvs[0]
     for inst in lv["symmetric"]["instances"]:
         J = inst["J"]
@@ -225,15 +206,17 @@ def section_overtone_states(D):
         vmax = lvs[0]["symmetric"]["bases"]["v_max"]
         D.section(r"Overtone states for \texorpdfstring{$v \le %d$}{v \textleq\ %d}"
                   % (vmax, vmax), "section 19")
-        D.w(D.define("vector.occupation", "local.quanta.partner")
-            + r"The states are the occupation states themselves: $\occ{v_1 v_2}$, $v_1$ quanta in "
-            r"the partner $(x - \iunit y)^n$ and $v_2$ in $(x + \iunit y)^n$ (times $z^{a}$ as the "
-            r"family has it), is partner 1 of $\irr{e}_{(v_1 - v_2)n}$ when $v_1 > v_2$, partner 2 "
-            r"of $\irr{e}_{(v_2 - v_1)n}$ when $v_2 > v_1$ and $\irr{a}_{1}$ when $v_1 = v_2$, in "
-            r"$r^{2\min(v_1, v_2)} H_\ell$, $\ell = \lvert v_1 - v_2\rvert$; $r^2 = \occ{11}$. "
-            r"A row of the table gives one partner: its harmonic degree $\ell$, the irrep, the "
-            r"partner index $\intx$ and the state at $v = \ell, \ell + 2, \dots$, every number of "
-            r"quanta raised by 1 from one column to the next.")
+        D.w(r"The states are the occupation states themselves. "
+            + D.define("vector.occupation", "local.quanta.partner")
+            + r"The state $\occ{v_1 v_2}$ has $v_1$ quanta in the partner $(x - \iunit y)^n$ and "
+              r"$v_2$ in $(x + \iunit y)^n$ (times $z^{\delta}$ of section~\ref{s:continuous_irreps}). It is partner 1 "
+              r"of $\irr{e}_{(v_1 - v_2)n}$ when $v_1 > v_2$, partner 2 of "
+              r"$\irr{e}_{(v_2 - v_1)n}$ when $v_2 > v_1$ and $\irr{a}_{1}$ when $v_1 = v_2$. "
+              r"This state lies in $r^{2\min(v_1, v_2)} H_\ell$ with "
+              r"$\ell = \lvert v_1 - v_2\rvert$ ($r^2 = \occ{11}$). A row gives one partner: its "
+              r"harmonic degree $\ell$, the irrep, the partner index $\intx$ and the state at "
+              r"$v = \ell, \ell + 2, \dots$. Every number of quanta rises by 1 from one column to "
+              r"the next.")
         ncol = vmax // 2 + 1
         rows = []
         for lv in lvs:
@@ -250,13 +233,13 @@ def section_overtone_states(D):
         return
     lv = lvs[0]
     D.section(r"Overtone states for \texorpdfstring{$v \le 4$}{v \textleq\ 4}", "section 19")
-    D.w(D.define("vector.occupation", "local.quanta.partner")
-        + r"The highest-weight states, partner 1 ($m = J'$) of each copy of $\irrJ{J'}$, of $v "
-          r"\le 4$ "
-        r"quanta of $\irrJ{1}$ and $\irrJ{2}$, in each $r^{v-\ell}H_\ell$, by the rule of "
-        r"CONVENTIONS.pdf, section 19: $\occ{v_1 \dots v_N}$ holds $v_1, \dots, v_N$ quanta in the "
-        r"partners $\ket{J, J}, \dots, \ket{J, -J}$ in turn, and a coefficient is that of the "
-        r"monomial in the creation operators, a rational times a square root.")
+    D.w(r"The table gives the highest-weight states of $v \le 4$ quanta of $\irrJ{1}$ and "
+        r"$\irrJ{2}$ by the rule of CONVENTIONS.pdf, section 19. These states are partner 1 "
+        r"($m = J'$) of each copy of $\irrJ{J'}$ in each $r^{v-\ell}H_\ell$. "
+        + D.define("vector.occupation", "local.quanta.partner")
+        + r"The state $\occ{v_1 \dots v_N}$ has $v_1, \dots, v_N$ quanta in the partners "
+          r"$\ket{J, J}, \dots, \ket{J, -J}$ in turn. A coefficient is that of the monomial in the "
+          r"creation operators, a rational times a square root.")
     rows = []
     for b in lv["symmetric"]["bases"]:
         rows.append(LV.band(r"$\Gamma = \irrJ{%d}$" % b["J"]))
@@ -268,18 +251,16 @@ def section_overtone_states(D):
     LV.basis_table(D, "rrlr", r"$v$ & $\ell$ & irrep & $\mult$ & vector", rows)
 
 
-# the lead of the overtone levels of SO(3) and O(3)
+# the overtone levels of SO(3) and O(3) after their first sentences (levels.overtone_lead): Cayley
+# and Sylvester's rule, the parity of O(3) (the slot) and the tables
 SPHERICAL_LEAD = (
-    r"$\Gamma = %s$ is a level of section~\ref{s:unitary}. The states of $v$ quanta carry "
-    r"$\operatorname{Sym}^{v}\Gamma$, which splits by harmonic degree $\ell = v, v - 2, \dots$ "
-    r"into $r^{v-\ell}H_\ell$, $r^2$ the invariant quadratic form and $H_\ell$ the states of "
-    r"$\ell$ quanta that the invariant Laplacian annihilates. $\operatorname{Sym}^{v}\irrJ{J}$ "
-    r"holds $\irrJ{J'}$ as many times as there are monomials of degree $v$ in the partners "
-    r"$\ket{J, m}$ of weight $J'$, less those of weight $J' + 1$; by Cayley and Sylvester, the "
-    r"partitions of $vJ - J'$ into at most $v$ parts of size at most $2J$, less those of "
-    r"$vJ - J' - 1$%s. The tables give $\operatorname{Sym}^{v}$ for $J \le 3$ and, in the "
-    r"same row, $H_\ell$ at $\ell = v$: $\operatorname{Sym}^{v}\Gamma "
-    r"= H_\ell \oplus r^2\operatorname{Sym}^{v-2}\Gamma$ at $\ell = v$.")
+    r"The symmetric power $\operatorname{Sym}^{v}\irrJ{J}$ contains $\irrJ{J'}$ as many times as "
+    r"there are monomials of degree $v$ in the partners $\ket{J, m}$ of weight $J'$, minus those "
+    r"of weight $J' + 1$. By Cayley and Sylvester's rule, this number is that of the partitions of "
+    r"$vJ - J'$ into at most $v$ parts of size at most $2J$, minus those of $vJ - J' - 1$.%s "
+    r"The tables give $\operatorname{Sym}^{v}\Gamma$ for $J \le 3$ and, in the same row, $H_\ell$ at "
+    r"$\ell = v$: $\operatorname{Sym}^{v}\Gamma = H_\ell \oplus r^2\operatorname{Sym}^{v-2}\Gamma$ "
+    r"at $\ell = v$.")
 
 
 # ---------------------------------------------------------------- Electronic terms
@@ -289,12 +270,13 @@ def section_terms(D):
     if not spherical(D):
         D.w(D.define("local.configuration", "symbol.term", "vector.determinant", "index.spin.down",
                      "local.spin.projection")
-            + r"$n$ electrons in a level $\Gamma$ of section~\ref{s:unitary}, the configuration "
-            r"$\Gamma^{n}$, have the terms $\term{2S+1}{\Lambda}$ of the two-column shapes: for "
-            r"$\irr{e}_n$, the same for every $n$. $\sdet{1\,\bar{2}}$ is the Slater determinant "
-            r"of "
-            r"an electron with spin up in partner 1 and one with spin down in partner 2; a state "
-            r"is that of $M_S = S$.")
+            + r"The configuration $\Gamma^{n}$ of $n$ electrons in a level $\Gamma$ of "
+              r"section~\ref{s:unitary} has the terms $\term{2S+1}{\Lambda}$ of the two-column "
+              r"shapes, and for $\irr{e}_n$ they are the same at every index of the family. The "
+              r"determinant "
+              r"$\sdet{1\,\bar{2}}$ is the Slater determinant of an electron with spin up in "
+              r"partner 1 and one with spin down in partner 2, and each state of the table has "
+              r"$M_S = S$.")
         rows = []
         for lv in lvs:
             if len(lvs) > 1:
@@ -311,19 +293,21 @@ def section_terms(D):
         LV.basis_table(D, "rrlrr", r"$n$ & $2S + 1$ & irrep & $\mult$ & $\intx$ & vector", rows)
         return
     par = D.name == "O3"
-    D.w(D.define("symbol.term", "vector.determinant", "index.spin.down", "local.shell.l",
-                 "head.terms")
-        + r"$n$ electrons in an atomic subshell of angular momentum $l$, the configurations "
-        r"$\orbital{p}^{n}$, $\orbital{d}^{n}$, $\orbital{f}^{n}$, occupy the level $\irrJ{l}$%s; "
-        r"their terms are the two-column shapes of $\grp{U(2\mathnormal{l}+1)}$ restricted to "
-        r"$\grp{SO(3)}$, "
-        r"each written with its spin multiplicity $2S + 1$ and the spectroscopic letter of its "
-        r"$\irrJ{J'}$ ($\spec{S}, \spec{P}, \spec{D}, \dots$ for $J' = 0, 1, 2, \dots$)%s. A "
-        r"number before a term is its multiplicity; $n$ and $4l + 2 - n$ electrons have the same "
-        r"terms. In the table, terms are those of $n$ electrons in the subshell of the band "
-        r"above." % (
-            r", in $\grp{O(3)}$ $\irrJp{l}{(-1)^l}$, the parity of the orbitals" if par else "",
-            r", with the parity $(-1)^{nl}$" if par else ""))
+    # the shell (l) and its level, the terms, then the legend of the table, whose head anchor heads
+    # its sentence; a row under the centered row that names its shell (CONVENTIONS.md section 19)
+    D.w(D.define("symbol.term", "vector.determinant", "index.spin.down", "local.shell.l")
+        + r"In an atomic shell of angular momentum $l$, $n$ electrons in the configurations "
+          r"$\orbital{p}^{n}$, $\orbital{d}^{n}$ and $\orbital{f}^{n}$ occupy the level "
+          r"$\irrJ{l}$%s. Their terms are the two-column shapes of $\grp{U(2\mathnormal{l}+1)}$ "
+          r"restricted to $\grp{SO(3)}$, each written with its spin multiplicity $2S + 1$ and the "
+          r"spectroscopic letter of its $\irrJ{J'}$ ($\spec{S}, \spec{P}, \spec{D}, \dots$ for "
+          r"$J' = 0, 1, 2, \dots$)%s. The configurations of $n$ and of $4l + 2 - n$ electrons "
+          r"have the same terms. " % (
+              r", which in $\grp{O(3)}$ is $\irrJp{l}{(-1)^l}$, with the parity of the orbitals"
+              if par else "", r", with the parity $(-1)^{nl}$" if par else "")
+        + D.define("head.terms")
+        + r"A row gives the terms of $n$ electrons in the shell named by the centered row above "
+          r"it, and a number before a term is its multiplicity.")
     rows = []
     for l in (sh["l"] for sh in levels(D)[0]["two_column"]["shells"]):
         sh = next(x for x in shell_level(D, l)["two_column"]["shells"] if x["l"] == l)
@@ -337,12 +321,13 @@ def section_terms(D):
         rows += [(n, ", ".join(x)) for n, x in merged.items()]
     rows_table(D, ("n", "terms"), rows, math=False)
     D.w(D.define("local.orbital.projection", "local.spin.projection")
-        + r"The highest-weight states, $M_L = J'$ and $M_S = S$, of the terms of the %s shells for "
-        r"$n \le 2l + 1$, in determinants of the orbitals $\ket{l, m}$, $m = l, \dots, -l$ the "
-        r"partners $1, \dots, 2l + 1$, by the rule of CONVENTIONS.pdf, section 19; those of the f "
-        r"shell are in the file that the record's \texttt{bases\symbol{95}location} names, and "
-        r"those of $n > 2l + 1$ in the record." % L.listed(
-            [SHELL_LETTER[l] for l in TERM_STATES_SET]))
+        + r"The next table gives the highest-weight states, $M_L = J'$ and $M_S = S$, of the terms "
+          r"of the %s shells for $n \le 2l + 1$, by the rule of CONVENTIONS.pdf, section 19. They "
+          r"are written in determinants of the orbitals $\ket{l, m}$, which are the partners "
+          r"$1, \dots, 2l + 1$ for $m = l, \dots, -l$. The file named by the record's "
+          r"\texttt{bases\symbol{95}location} holds the states of the f shell, and the record "
+          r"holds the states for $n > 2l + 1$." % L.listed(
+              [SHELL_LETTER[l] for l in TERM_STATES_SET]))
     rows = []
     for l in TERM_STATES_SET:
         sh = next(x for x in shell_level(D, l)["two_column"]["shells"] if x["l"] == l)

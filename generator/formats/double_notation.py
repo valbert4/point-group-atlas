@@ -7,10 +7,11 @@ that Rotation's build keeps Rotation's registry.
 DROP: the records of Rotation for the features the Double catalogue lacks (double/CONVENTIONS.md
 section 20.4): Cartesian tensors and the invariant polynomials, fundamental domains, the naming
 schemes of the covered group (its Rotation record holds them), the coset DFT of the cubic and
-icosahedral irreps, and the symbols whose glyph its documents give another meaning (U, U(R)).
+icosahedral irreps, and the symbols whose glyph its documents give another meaning (U, U(R), the
+coset index j).
 REPLACE: the records of Rotation that the documents read with the meaning of this catalogue (the
 angular momentum J of the irreps D^(J,p) of Pin-(3), integer or half-integer; the angle omega of
-a lift, in [0, 4 pi)).
+a lift, in [0, 4 pi)), and the records whose scope or defining places differ here.
 DOUBLE: the records of this catalogue.
 """
 from . import notation as N
@@ -35,8 +36,9 @@ DROP = (
     "ig.product", "ig.cyclic", "ig.central", "ig.twisted", "cs.plus", "cs.plusminus",
     "cs.cyclic", "cs.dihedral", "olive.product", "olive.cyclic", "olive.central",
     "olive.twisted", "orbifold.order", "orbifold.mirror", "orbifold.cross",
-    # the coset DFT construction (perm-dft)
-    "group.W", "element.coset.least", "local.coset.image",
+    # the coset DFT construction (perm-dft); the coset index j, whose letter section 25.4 gives the
+    # total angular momentum of a subshell (local.subshell.j)
+    "group.W", "element.coset.least", "local.coset.image", "index.coset",
     # U and U(R): the canonical lift U(g) in this catalogue
     "matrix.unitary", "matrix.operator",
 )
@@ -100,8 +102,8 @@ DROP_UNUSED = (
 REPLACE = {
     # the documents place an object by a lift of Q (section 21.3), written with mark.lift
     "element.placement": {"meaning": r"an element of $\grp{O(3)}$, the placement of an object, "
-                                     r"and $\grp{G}Q$ its coset; its lifts place the object in "
-                                     r"$\grp{Pin^{-}(3)}$",
+                                     r"with $\grp{G}Q$ its coset and with its lifts placing the "
+                                     r"object in $\grp{Pin^{-}(3)}$",
                           "defined": ("conv:21.3", "conv:17")},
     "operator.cosets": {"meaning": r"the space of the cosets $\grp{G}\lift{Q} = "
                                    r"\{g\lift{Q} : g \in \grp{G}\}$ of $\grp{Pin^{-}(3)}$",
@@ -109,8 +111,8 @@ REPLACE = {
                         "defined": ("part:fundamental_domain", "conv:21.3")},
     "operator.volume": {"meaning": r"the volume in the metric that the covering map carries to "
                                    r"that of $\grp{O(3)}$, in which the distance from $\elt{E}$ "
-                                   r"to a rotation by $\omega \le \pi$ is $\omega$; of a finite "
-                                   r"group, its number of elements",
+                                   r"to a rotation by $\omega \le \pi$ is $\omega$, or a finite "
+                                   r"group's number of elements",
                         "defined": ("part:fundamental_domain", "conv:21.3", "conv:17")},
     "set.cell": {"meaning": r"the cell: the part of the fundamental domain $\mathcal{F}$ in "
                             r"$\grp{SU(2)}$, one element of every coset of "
@@ -121,36 +123,54 @@ REPLACE = {
                                    r"$\mathcal{D}$ or $\mathcal{D} \cup "
                                    r"\elt{\lift{i}}\,\mathcal{D}$",
                         "defined": ("part:fundamental_domain", "conv:21.3", "conv:17")},
-    "set.lens": {"meaning": r"the lens space $\mathsf{L}(p, 1)$: "
-                            r"$\grp{C_{\mathnormal{N}}}\backslash\grp{SO(3)} = \mathsf{L}(2N, 1)$, "
-                            r"and $\mathsf{L}(N, 1)$ for a cyclic subgroup of $\grp{SU(2)}$ of "
+    "set.lens": {"meaning": r"the lens space $\mathsf{L}(2N, 1)$, the space "
+                            r"$\grp{C_{\mathnormal{N}}}\backslash\grp{SO(3)}$, or "
+                            r"$\mathsf{L}(N, 1)$ for a cyclic subgroup of $\grp{SU(2)}$ of "
                             r"order $N$",
                  "defined": ("part:fundamental_domain", "conv:21.3", "conv:17")},
+    # J, the ket and G read with this catalogue's meaning, defined in its sections, not in the
+    # common notation of 0.1, whose glosses are Rotation's; the later places are the sections that
+    # the documents cite before their first use (the labels of section 23.2, the sections of
+    # section 27, the families of section 29.2)
     "index.J": {"meaning": r"the angular momentum of an irrep $D^{(J,p)}$ of $\grp{Pin^{-}(3)}$: "
                            r"$J = 0, \tfrac{1}{2}, 1, \tfrac{3}{2}, \dots$",
-                "defined": ("part:subduction_parent", "conv:0.1", "conv:11", "conv:25")},
-    "index.parity": {"meaning": r"the parity $p = \pm 1$ of an irrep $D^{(J,p)}$ of "
-                                r"$\grp{Pin^{-}(3)}$",
+                "defined": ("part:subduction_parent", "conv:25.1", "conv:11", "conv:25", "conv:23",
+                            "conv:27")},
+    "index.parity": {"meaning": r"the parity of an irrep $D^{(J,p)}$ of $\grp{Pin^{-}(3)}$: "
+                                r"$p = \pm 1$",
                      "defined": ("part:subduction_parent", "conv:11", "conv:25")},
     "irrep.o3": {"meaning": r"the irrep of $\grp{Pin^{-}(3)}$ of angular momentum $J$ and parity "
-                            r"$p$; at integer $J$ the irrep of $\grp{O(3)}$ pulled back",
+                            r"$p$, pulled back from $\grp{O(3)}$ at integer $J$",
                  "defined": ("conv:11", "conv:25", "part:subduction_parent")},
     "irrep.so3": {"meaning": r"the irrep of $\grp{SU(2)}$ of angular momentum $J$, integer or "
                              r"half-integer",
                   "defined": ("conv:11", "conv:25")},
-    "function.multiplicity": {"defined": ("part:subduction_parent", "part:subduction",
+    # b_Gamma(J) at half-integer J is the number of blocks at the parity of the kets of the bases
+    # (sections 26.2 and 29.4), and (-1)^J is no parity there
+    "function.multiplicity": {"meaning": r"the number of blocks of $\Gamma$ at $J$, with "
+                                         r"$b_\Gamma(J, p)$ the multiplicity of $\Gamma$ in "
+                                         r"$D^{(J,p)}$ restricted to the group",
+                              "defined": ("part:subduction_parent", "part:subduction",
                                           "conv:11", "conv:25")},
+    "function.generating": {"meaning": r"the generating function "
+                                       r"$\sum_{J\ge1/2} b_\Gamma(J)\,t^{2J}$ of the "
+                                       r"multiplicities, over the half-integer $J$"},
+    # the parent records of the derived preimages (section 26.3)
+    "irrep.Gamma": {"meaning": r"an irrep of $\grp{G}$, with $\Gamma'$ an irrep of the parent "
+                               r"record $\grp{2T}$, $\grp{2O}$ or $\grp{2I}$ whose bases a derived "
+                               r"record relabels"},
     "index.increment": {"defined": ("part:subduction_parent", "conv:11", "conv:25")},
     "angle.omega": {"meaning": r"the angle of a rotation $R_{\mathbf{v}}(\omega)$, "
                                r"$0 \le \omega < 2\pi$, and of its lift "
                                r"$\tilde{R}_{\mathbf{v}}(\omega)$, $0 \le \omega < 4\pi$",
                     "defined": ("part:elements", "conv:4", "conv:21")},
-    "vector.ket": {"meaning": r"the ket of angular momentum $J$ and $z$ component $m$; for "
-                              r"integer $J$ a spherical harmonic"},
-    "group.G": {"meaning": r"a group of the catalogue: in the conventions the image in "
-                           r"$\grp{O(3)}$, $\grp{2G}$ its preimage; in the document of a section, "
-                           r"the section (a preimage's document names its own group)",
-                "defined": ("conv:0.1", "part:identification")},
+    "vector.ket": {"meaning": r"the ket of angular momentum $J$ and $z$ component $m$, a "
+                              r"spherical harmonic for integer $J$",
+                   "defined": ("e:ket", "conv:26.1", "conv:4", "conv:29.2")},
+    "group.G": {"meaning": r"a point group or a section: the image in $\grp{O(3)}$ in the "
+                           r"conventions, where $\grp{2G}$ is its preimage, and the section in the "
+                           r"document of a section (a preimage's document names its own group)",
+                "defined": ("conv:20.2", "part:identification")},
     "relation.sameclass": {"meaning": r"another name of the same class of subgroups of "
                                       r"$\grp{Pin^{-}(3)}$",
                            "defined": ("conv:20.2", "conv:2")},
@@ -158,9 +178,10 @@ REPLACE = {
                             "defined": ("part:subduction", "conv:20.4", "conv:2")},
     "group.centralizer.o3": {"meaning": r"the centralizer in $\grp{Pin^{-}(3)}$",
                              "defined": ("part:subduction", "conv:20.4", "conv:2")},
-    "index.element": {"meaning": r"the index of an element of the group; $k'$ a second one",
+    "index.element": {"meaning": r"the index of an element of the group (from 0), with $k'$ a "
+                                 r"second one",
                       "forms": ("k", "k'", "k^{#}")},
-    "matrix.wigner": {"meaning": r"the Wigner matrix of the element $U$ of $\grp{SU(2)}$, of "
+    "matrix.wigner": {"meaning": r"the Wigner $D$ matrix of the element $U$ of $\grp{SU(2)}$, of "
                                  r"entries $\bigl\langle{}^{J}_{\,m'}\bigm\vert U\bigm\vert"
                                  r"{}^{J}_{\,m}\bigr\rangle$",
                       "defined": ("part:multiplicities", "part:bases", "part:continuous_irreps",
@@ -169,21 +190,25 @@ REPLACE = {
     "index.realpair": {"long": r"the sign $\varepsilon$ in $\irr{a}_1, \irr{a}_2 = "
                                r"\tfrac{1}{2}\sqrt{2}\,(\lvert e_1\rangle\lvert f_2\rangle \pm "
                                r"\varepsilon\,\lvert e_2\rangle\lvert f_1\rangle)$ of "
-                               r"$\irr{e}_n \otimes \irr{e}_n$ (section 10); in "
-                               r"$\grp{Pin^{-}(3)}$, the sign of an element $(U, \varepsilon)$, "
+                               r"$\irr{e}_n \otimes \irr{e}_n$ (section 10), or in "
+                               r"$\grp{Pin^{-}(3)}$ the sign of an element $(U, \varepsilon)$, "
                                r"the determinant of the element of $\grp{O(3)}$ that it covers "
                                r"(section 20.1)"},
     "operator.determinant.character": {"defined": ("part:subduction_parent", "part:bases",
                                                    "conv:14", "conv:11")},
-    "vector.unitaxis": {"defined": ("part:cover", "conv:4", "part:continuous_irreps", "conv:9")},
+    "vector.unitaxis": {"defined": ("part:cover", "conv:9", "part:continuous_irreps", "conv:4")},
+    # a and b are the Cayley-Klein parameters only in SU2 and Pinminus3; elsewhere b is the bar of
+    # an element (index.bar) and a, b the degrees of the invariants (local.degree.ab)
+    "index.cayleyklein": {"scope": ("SU2,Pinminus3|families|", "SU2,Pinminus3|continuous_irreps|"),
+                          "index": True},
     "arithmetic.fraction": {"forms": (r"\frac*", r"\tfrac*", r"\dfrac*", r"\nicefrac*")},
     "group.su2": {"meaning": r"the unitary $2\times2$ matrices of determinant 1, the double "
                              r"cover of $\grp{SO(3)}$",
                   "defined": ("part:cover", "conv:20", "conv:19")},
     # the index of a vector family is an integer, of a spinor family half-odd (section 29.2)
-    "head.index.family": {"meaning": r"the range of the index of the irreps of a family, as "
-                                     r"$n \ge 1$, half-odd for a spinor family, as "
-                                     r"$n \ge \tfrac{1}{2}$",
+    "head.index.family": {"meaning": r"the range of the index of the irreps of a family, such "
+                                     r"as $n \ge 1$, with a half-integer index for a spinor "
+                                     r"family, such as $n \ge \tfrac{1}{2}$",
                           "defined": ("part:families", "part:continuous_irreps", "conv:29.2")},
     # the image of a spinor irrep is no point group (section 23.1)
     "head.image": {"meaning": r"the image of an irrep, the group of its matrices, isomorphic to "
@@ -198,7 +223,7 @@ DOUBLE = (
     S("group.spin", "group", r"\grp{Spin(3)}",
       r"the spin group in three dimensions, another name of $\grp{SU(2)}$", r"\grp{Spin(*)}",
       defined=("conv:29", "part:identification")),
-    H("head.subshell", "head", "subshell", r"a subshell $\orbital{p}_{1/2}$, ..., of the "
+    H("head.subshell", "head", "subshell", r"a subshell $\orbital{p}_{1/2}$, …, of the "
       r"electrons of orbital angular momentum $l$ and total angular momentum $J = l \mp 1/2$",
       "subshell", defined=("part:spin_orbitals", "conv:25.4")),
     H("head.state", "head", "state", "a state, up to a positive factor", "state",
@@ -206,7 +231,7 @@ DOUBLE = (
     H("head.form", "head", "form", "a binary form", "form",
       defined=("part:invariants", "conv:26.4")),
     H("head.generators", "head", "generators",
-      "the generators of the semi-invariants of a one-dimensional irrep; the degrees of the "
+      "the generators of the semi-invariants of a one-dimensional irrep, or the degrees of the "
       "generators of the invariants of a spinor irrep", "generators",
       defined=("part:invariants", "conv:26.4")),
     H("head.primary", "head", "primary",
@@ -230,18 +255,19 @@ DOUBLE = (
       r"the lift of the inversion is central of order 2",
       r"\grp{Pin^{-}(*)}", defined=("conv:20", "part:cover")),
     S("group.preimage", "group", r"\grp{2G}",
-      r"the preimage of a point group $\grp{G}$ in $\grp{Pin^{-}(3)}$, its double group "
-      r"($\grp{2T}$, $\grp{2C_{3v}}$)",
+      r"the preimage of a point group $\grp{G}$ in $\grp{Pin^{-}(3)}$, its double group, such as "
+      r"$\grp{2T}$ and $\grp{2C_{3v}}$",
       r"\grp{#*}", defined=("conv:20", "part:identification")),
     C("mark.bar", "mark", r"\bar{#1}",
-      r"the barred partner: $\bar{E} = (E, 1)$, the element of the kernel other than $E$; "
-      r"$\bar{X}$ the lift $(X, 1)$ of $X$ of the other sign, and the class that holds it",
+      r"the barred partner: $\elt{\barred{E}} = (\elt{E}, 1)$, the element of the kernel other "
+      r"than $\elt{E}$, and $\elt{\barred{X}}$, the lift $(\elt{X}, 1)$ of $\elt{X}$ of the "
+      r"other sign, or the class that contains it",
       r"\barred{*}*", r"\bar", r"\bar_{*}", r"\bar^{*}", r"\bar_{*}^{*}",
       command=r"\barred[1]{\bar{#1}}", arguments="g",
       defined=("conv:21", "conv:22", "part:cover"), pattern=r"\barred{<element:X>}"),
     S("abbreviation.parent.su2", "abbreviation", "parent J",
-      r"the copy of an irrep that SU(2) parentage places in the components of total angular "
-      r"momentum $J$, each copy orthogonal to those before", "parent $J",
+      r"the copy of an irrep that $\grp{SU(2)}$ parentage places in the components of total "
+      r"angular momentum $J$, each copy orthogonal to those before", "parent $J",
       defined=("conv:24", "part:clebsch_gordan")),
     C("group.abstract.quaternion", "group", r"\grp{Q_{#1}}",
       "the generalized quaternion group of order $n$",
@@ -252,24 +278,24 @@ DOUBLE = (
       command=r"\SL[1]{\grp{SL}(2,#1)}", defined="conv:20.4", data_field="group.abstract_type",
       pattern=r"\SL{<integer:\mathnormal{q}>}"),
     C("mark.section.second", "mark", r"\mathrm{b}",
-      r"the second class of sections over $\grp{S_{2N}}$, $N$ odd, after its symbol: "
+      r"the second class of sections over $\grp{S_{2N}}$, $N$ odd, after its symbol, such as "
       r"$\grp{S_{6}}\secondclass$", r"\secondclass",
       command=r"\secondclass{\mathrm{b}}", defined=("conv:20.2",),
       pattern=r"<group:\grp{S_{6}}>\secondclass"),
     C("mark.double", "mark", r"{}^{d}",
-      r"the mark of a double group before the Hermann--Mauguin symbol of the group that it "
-      r"covers: $\dmark\hmname{3m}$", r"\dmark",
+      r"the mark of a double group before the Hermann–Mauguin symbol of the group that it "
+      r"covers, such as $\dmark\hmname{3m}$", r"\dmark",
       command=r"\dmark{{}^{d}}", defined=("conv:20.4", "part:identification")),
     C("mark.lift", "mark", r"\tilde{#1}",
       r"a lift to $\grp{Pin^{-}(3)}$: $\elt{\lift{i}}$ of the inversion, $\elt{\lift{\sigma}}$ of "
-      r"a reflection", r"\lift{*}*", r"\tilde", r"\tilde_{*}", r"\tilde^{*}",
+      r"a mirror", r"\lift{*}*", r"\tilde", r"\tilde_{*}", r"\tilde^{*}",
       command=r"\lift[1]{\tilde{#1}}", arguments="g",
       defined=("conv:21", "part:cover"), pattern=r"\lift{<element:\sigma>}"),
     S("element.rotation.lift", "element", r"\tilde{R}_{\mathbf{v}}(\omega)",
       r"the lift of $R_{\mathbf{v}}(\omega)$ to $\grp{SU(2)}$, "
       r"$\cos\tfrac{\omega}{2} - \mathrm{i}\sin\tfrac{\omega}{2}\,\hat{\mathbf{v}}\cdot"
-      r"\vec{\sigma}$, $0 \le \omega < 4\pi$; "
-      r"$\tilde{R}_{\mathbf{v}}(\omega + 2\pi) = \bar{E}\,\tilde{R}_{\mathbf{v}}(\omega)$",
+      r"\vec{\sigma}$, $0 \le \omega < 4\pi$, with "
+      r"$\tilde{R}_{\mathbf{v}}(\omega + 2\pi) = \elt{\barred{E}}\,\tilde{R}_{\mathbf{v}}(\omega)$",
       r"\lift{R}_{*}(.)", r"\tilde_{*}(.)", defined=("conv:21", "part:cover")),
     C("matrix.pauli", "matrix", r"\sigma_{#1}",
       r"the Pauli matrices $\sigma_x$, $\sigma_y$, $\sigma_z$",
@@ -280,11 +306,12 @@ DOUBLE = (
       command=r"\paulivec{\vec{\sigma}}", defined=("conv:21", "part:cover")),
     S("matrix.lift.su2", "matrix", "U(g)",
       r"the canonical lift of the element $g$ of a point group to $\grp{SU(2)}$, the lift of "
-      r"its rotation part of non-negative scalar part; $U$, $V$, elements of $\grp{SU(2)}$",
+      r"its rotation part of nonnegative scalar part, with $U$, $V$ elements of $\grp{SU(2)}$",
       "U(.)", "U", r"U^{\dagger}", "V", defined=("conv:21", "part:cover")),
     S("local.pin.sign", "local", r"\varepsilon",
       r"the sign of an element $(U, \varepsilon)$ of $\grp{Pin^{-}(3)}$, the determinant of the "
-      r"element of $\grp{O(3)}$ it covers; $\delta$ a second one", r"\varepsilon", r"\delta",
+      r"element of $\grp{O(3)}$ that it covers, with $\delta$ a second one", r"\varepsilon",
+      r"\delta",
       r"\varepsilon^{*}", scope=("finite|cover|", "finite|subduction_parent|",
                                  "Pinminus3|families|", "Pinminus3|continuous_irreps|",
                                  "conventions|conv:20|",
@@ -295,7 +322,7 @@ DOUBLE = (
       defined=("conv:20", "part:cover")),
     S("index.bar", "index", "b",
       r"the bar of an element $(g, b)$ of a preimage: 0 for the canonical lift, 1 for its barred "
-      r"partner", "b", "b'", defined=("conv:21", "part:cover")),
+      r"partner", "b", "b'", "a", defined=("conv:21", "part:cover")),
     S("function.cocycle", "function", "c(g, h)",
       r"the sign of a product of canonical lifts, $U(h)\,U(g) = (-1)^{c(g,h)}\,U(gh)$", "c(.)",
       defined=("conv:21", "part:cover")),
@@ -316,10 +343,12 @@ DOUBLE = (
       r"half-integer $J$ at which it occurs in $D^{(J,p)}$ (section 23.2)", r"\irr{a}_{#/#}*",
       defined="conv:23"),
     S("irrep.spinor.e", "irrep", r"\irr{e}_{1/2}",
-      r"a two-dimensional spinor irrep; ${}^1\irr{e}_{J}$, ${}^2\irr{e}_{J}$: the "
+      r"a two-dimensional spinor irrep, with ${}^1\irr{e}_{J}$ and ${}^2\irr{e}_{J}$ the "
       r"one-dimensional spinor irreps of a complex-conjugate pair", r"\irr{e}_{#/#}*",
       defined="conv:23"),
-    S("irrep.spinor.g", "irrep", r"\irr{g}_{3/2}", "a four-dimensional spinor irrep",
+    S("irrep.spinor.g", "irrep", r"\irr{g}_{3/2}",
+      r"a four-dimensional spinor irrep, with ${}^1\irr{g}_{J}$ and ${}^2\irr{g}_{J}$ the "
+      r"two-dimensional spinor irreps of a complex-conjugate pair",
       r"\irr{g}_{#/#}*", defined="conv:23"),
     S("irrep.spinor.i", "irrep", r"\irr{i}_{5/2}", "a six-dimensional spinor irrep",
       r"\irr{i}*", defined="conv:23"),
@@ -347,7 +376,7 @@ DOUBLE = (
     # the spin-orbitals (section 25.4)
     S("index.orbital.l", "index", "l",
       r"the orbital angular momentum of an electron: $l = 0, 1, 2, 3$ in the $\orbital{s}$, "
-      r"$\orbital{p}$, $\orbital{d}$ and $\orbital{f}$ shells; $m_l$ and $m_s$ the "
+      r"$\orbital{p}$, $\orbital{d}$ and $\orbital{f}$ shells, with $m_l$ and $m_s$ the "
       r"projections of the orbital and of the spin angular momentum", "l", "m_{l}", "m_{s}",
       scope=("*|spin_orbitals|", "conventions|conv:25|"),
       defined=("part:spin_orbitals", "conv:25.4")),
@@ -358,7 +387,7 @@ DOUBLE = (
       defined=("part:spin_orbitals", "conv:25.4")),
     # the invariant polynomials (section 26.4)
     S("local.binary.form", "local", "f",
-      r"a binary form $f = \sum_i c_i u^i v^{n-i}$ of degree $n$ in the spin kets $u$, $v$; "
+      r"a binary form $f = \sum_i c_i u^i v^{n-i}$ of degree $n$ in the spin kets $u$, $v$, with "
       r"$f_1$, $f_2$, $f_3$ the generators of the invariant forms", "f", "f_{#}", "f_{#}^{*}",
       "c_{*}", "n",
       "i", scope=("*|invariants|", "conventions|conv:26|"),
@@ -370,17 +399,25 @@ DOUBLE = (
       r"semi-invariants of $\chi$", "H(.)", "H_{*}(.)", "P_{*}(.)", "V",
       scope=("*|invariants|", "conventions|conv:26|"),
       defined=("part:invariants", "conv:26.4")),
+    S("local.degree.ab", "local", "a, b",
+      r"the degrees $a$ and $b$ of the two generators of the semi-invariants of a one-dimensional "
+      r"irrep, or the even exponent $a$ of a factor $1 - t^{a}$ of the denominator of a Molien "
+      r"series", "a", "b", scope="*|invariants|", defined="conv:26.4"),
     S("local.partner.x", "local", "x",
-      r"the partner $x$ of a one-dimensional spinor irrep; $x$ and $y$ those of a level of two",
+      r"the partner $x$ of a one-dimensional spinor irrep, with $x$ and $y$ those of a level of "
+      r"two",
       "x", "y", "x^{*}", "y^{*}", scope="*|invariants|", defined="part:invariants"),
 )
 
 # The symbols of CONVENTIONS.md that its Markdown writes without the commands of the documents.
 CONVENTIONS_ONLY = (
     S("local.ket.X", "local", "X_i",
-      r"the kets $X_i = u^i v^{2J-i}$ of a spinor irrep of dimension $2J + 1$, $i = 0, \dots, 2J$; "
-      r"$X^a$ the monomial with the exponents $a_i$", "X_{*}", "X^{*}", "a_{*}",
+      r"the kets $X_i = u^i v^{2J-i}$ of a spinor irrep of dimension $2J + 1$, $i = 0, \dots, 2J$, "
+      r"with $X^a$ the monomial of exponents $a_i$", "X_{*}", "X^{*}", "X^{a}", "a_{*}",
       scope=("conventions|conv:26|", "*|invariants|"), defined=("conv:26.4", "part:invariants")),
+    S("local.subshell.j", "local", "j",
+      r"the total angular momentum $j = l \mp \tfrac{1}{2}$ of the electrons of a subshell", "j",
+      scope=("conventions|conv:25|", "*|jj|"), defined=("conv:25.4", "conv:25")),
     S("local.pauli.sigma", "local", r"\sigma_x",
       r"the Pauli matrices $\sigma_x$, $\sigma_y$, $\sigma_z$ and the $\sigma$ of their vector",
       r"\sigma", r"\sigma_{x}", r"\sigma_{y}", r"\sigma_{z}",

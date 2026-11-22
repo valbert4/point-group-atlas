@@ -18,9 +18,8 @@ and sections, compiled until its .aux file no longer changes.  What differs:
     reference to a section of the conventions resolves in whichever file holds it, and the
     preamble defines the commands of both registries (macros).
   - The documents are those of the records built, so that a catalogue built in part gives a
-    volume in part.  They follow the order of Rotation's volume: under each group of O(3) its
-    preimage, then its sections (names.preimage_stem, names.section_stems), each in the contents
-    under that group's block.
+    volume in part.  They follow the site's order (built, BLOCKS): the preimages family by
+    family, the sections, the exceptional preimages, then the continuous preimages.
   - A link to another document of the catalogue leads to it in the volume, and is dropped when the
     volume does not hold it; a link to a document of Rotation leads to its PDF in the repository
     on GitHub, at the commit of the title sheet (volume.commit_line), or at main outside a
@@ -55,11 +54,12 @@ TEXT_CONTENTS = r"""\makeatletter
     \hyperlink{#3}{\makebox[\dimexpr\textwidth/COLUMNS-6pt\relax]{\sffamily\small #1\hfill #2}}}%
   \ignorespaces}
 \makeatother""".replace("COLUMNS", str(V.FIGURE_COLUMNS))
-SUBJECT = ("Point Group Atlas, volume II: the conventions, the documents of the double point "
+SUBJECT = ("Point Group Atlas, volume II: the conventions, the documents of the 116 double point "
            "groups, the references and the index of notation")
 # The documents of the two files of conventions in the volume (their \docmark names), each shown
-# as a line of the contents, and the entry of the catalogue's.
+# as a line of the contents, and the entries of Rotation's and of the catalogue's.
 CONVENTIONS_DOCS = ("conventions", "conventionsdouble")
+ROTATION_CONVENTIONS_ENTRY = "Conventions of the point groups"
 DOUBLE_CONVENTIONS_ENTRY = "Conventions of the double point groups"
 # A link of a Double document to another beside it, and to a document of Rotation.
 DOUBLE_LINK = re.compile(r"\\href\{(\w+)\.pdf\}")
@@ -81,27 +81,38 @@ def read(stem):
 
 
 def built():
-    """The stems of the records in double/data/json/, in the order of the volume."""
+    """The stems of the records in double/data/json/, in the order of the volume, the site's:
+    the preimages family by family by increasing N, the sections, the exceptional preimages, then
+    the continuous preimages."""
     have = {f[:-5] for f in os.listdir(names.path(names.RECORDS_DIR)) if f.endswith(".json")}
-    out = []
-    for G in V.order():
-        out += [s for s in [names.preimage_stem(G)] + names.section_stems(G) if s in have]
+    stems = [names.preimage_stem(names.name_of(family, N)) for family in V.FAMILIES
+             for N in range(1, names.N_MAX + 1)]
+    stems += list(names.DOUBLE_SECTIONS + names.DOUBLE_EXCEPTIONAL + names.DOUBLE_CONTINUOUS)
+    out = [s for s in stems if s in have]
     if set(out) != have:
         raise ValueError("records outside the order of the volume: %s"
                          % ", ".join(sorted(have - set(out))))
     return out
 
 
-def block_of(G):
-    """The block of the contents that holds the group G of O(3) (volume.BLOCKS)."""
-    if G in names.EXCEPTIONAL:
-        return "exceptional"
-    if G in names.SPHERICAL:
-        return "spherical"
-    family = names.family_of(G)
-    if family:
-        return family[0]
-    return next(f for f, closer in V.CLOSES.items() if closer == G)
+# The blocks of the contents, as the site groups the documents: the families of the preimages,
+# the sections, the exceptional and the continuous preimages (volume.BLOCKS for the others).
+BLOCKS = dict([(f, r"The $\grp{2%s}$ family" % V.FAMILY_TEX[f]) for f in V.FAMILIES]
+              + [("sections", "The sections"), ("exceptional", "The exceptional groups"),
+                 ("continuous", "The continuous groups")])
+BLOCK_MACROS = "\n".join([r"\makeatletter"] + [
+    r"\expandafter\def\csname vol@block@%s\endcsname{%s}" % (key, label)
+    for key, label in BLOCKS.items()] + [r"\makeatother"])
+
+
+def block_of(stem):
+    """The block of the contents that holds the document `stem` (BLOCKS)."""
+    for key, stems in (("sections", names.DOUBLE_SECTIONS),
+                       ("exceptional", names.DOUBLE_EXCEPTIONAL),
+                       ("continuous", names.DOUBLE_CONTINUOUS)):
+        if stem in stems:
+            return key
+    return names.family_of(stem[1:])[0]
 
 
 def commit():
@@ -163,14 +174,13 @@ def render():
     without figures (TEXT_CONTENTS)."""
     stems = built()
     held = set(stems)
-    images = {stem: double_latex.covered_stem(read(stem)) for stem in stems}
     figures = {}
     # Rotation's conventions as Rotation's build sets them: its catalogue and its registry
     names.use_catalogue("rotation")
     notation.activate(ROTATION_RECORDS)
     try:
         rotation_conventions, known = conventions_document(
-            names.path("CONVENTIONS.md"), CONVENTIONS_DOCS[0], "Conventions")
+            names.path("CONVENTIONS.md"), CONVENTIONS_DOCS[0], ROTATION_CONVENTIONS_ENTRY)
     finally:
         names.use_catalogue("double")
         notation.activate(double_notation.records())
@@ -180,7 +190,7 @@ def render():
     known |= known_double
     parts = [r"\pdfinfoomitdate=1", r"\pdftrailerid{}", r"\pdfsuppressptexinfo=-1",
              r"\documentclass[10pt,a4paper]{article}", style.current(), macros(), latex.MACROS,
-             conventions.MACROS, V.MACROS, V.TITLE_PACKAGES, TEXT_CONTENTS,
+             conventions.MACROS, V.MACROS, BLOCK_MACROS, V.TITLE_PACKAGES, TEXT_CONTENTS,
              r"\expandafter\def\csname vol@text@%s\endcsname{}" % CONVENTIONS_DOCS[1],
              r"\hypersetup{pdftitle={%s},pdfauthor={%s},pdfsubject={%s}}"
              % (style.TITLES[names.CATALOGUE], style.AUTHOR, SUBJECT),
@@ -191,7 +201,7 @@ def render():
               double_conventions]
     ref, opened = commit(), set()
     for stem in stems:
-        block = block_of(images[stem])
+        block = block_of(stem)
         if block not in opened:
             opened.add(block)
             parts.append(r"\addtocontents{toc}{\protect\familymark{%s}}" % block)

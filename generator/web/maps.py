@@ -54,34 +54,41 @@ def write(site, documents, out):
 
 
 def llms(volumes, index):
-    """llms.txt: the atlas, its volumes, its notation and data, and each group with its JSON;
+    """llms.txt: the atlas (site.DESCRIPTION, the description of every file of the site), its
+    volumes, the indexes of notation, the conventions and the data, and each group with its JSON;
     `index` the URL of index.json."""
-    lines = ["# %s" % style.TITLE, "",
-             "> Exact tables of 98 point groups (closed subgroups of O(3)) and 116 double "
-             "point groups (closed subgroups of Pin-(3)): their representations and their "
-             "data, from the records of the repository.", "",
-             "Each group has a file per section of its document, its formulas in MathML with "
-             "their TeX, and its data in JSON, SymPy, Wolfram Language and GAP in the "
-             "repository on GitHub, whose index.json gives the size and SHA-256 digest of each "
-             "file of the records, the conventions and the schemas of the records; "
-             "sitemap.json maps the site by volume, group and section.", "", "## Volumes", ""]
+    from ..formats.latex import listed
+    from .data import INDEX_JSON, index_text
+    from .site import DESCRIPTION
+    lines = ["# %s" % style.TITLE, "", "> %s" % DESCRIPTION, "",
+             "The point groups are closed subgroups of O(3), and the double point groups are "
+             "closed subgroups of Pin\u207b(3). The tables come from the records of the "
+             "repository.", "",
+             "Each group has a file for each section of its document, with its formulas in MathML "
+             "and their TeX. Its record is in the repository on GitHub, in JSON, GAP, Wolfram "
+             "Language and SymPy. %s The file sitemap.json maps the site by volume, group and "
+             "section." % index_text("index.json of the repository"), "",
+             "## Volumes", ""]
     for v in volumes:
-        lines.append("- [%s](%s): its conventions, %d groups and its references%s"
-                     % (v["title"], v["path"], len(v["groups"]),
-                        "; [the volume as one PDF](%s)" % v["pdf"] if v.get("pdf") else ""))
-    lines += ["", "## Notation and data", "",
-              "- [Index of notation](%s): the common notation and selected symbols of the "
+        n = len(v["groups"])
+        held = ["its conventions", "%d group%s" % (n, "" if n == 1 else "s"), "its references"]
+        if v.get("pdf"):
+            held.append("[the volume as one PDF](%s)" % v["pdf"])
+        lines.append("- [%s](%s): %s" % (v["title"], v["path"], listed(held)))
+    lines += ["", "## Notation and data", ""]
+    lines += ["- [Index of notation, %s](%s): the common notation and selected symbols of the "
               "sections, each with its meaning and the section that defines it"
-              % INDEX_OF_NOTATION]
+              % (v["title"], v["index_of_notation"]) for v in volumes if v.get("index_of_notation")]
     lines += ["- [Conventions, %s](%s)" % (v["title"], v["conventions"]) for v in volumes]
     lines += ["- [References](references/)",
-              "- [index.json](%s): the files of the records, the conventions and the schemas "
-              "of the records, with their sizes and digests" % index,
+              "- [index.json](%s): %s, and the records that each record names"
+              % (index, INDEX_JSON),
               "- [sitemap.json](sitemap.json): the files of the site, by group and section"]
     for v in volumes:
         lines += ["", "## %s" % v["title"], ""]
         for g in v["groups"]:
             json_file = next((f for f in g["data"] if f.endswith(".json")), None)
-            lines.append("- [%s](%s): %s%s" % (g["stem"], g["path"], g["title"],
-                                                "; [JSON](%s)" % json_file if json_file else ""))
+            lines.append("- [%s](%s): %s%s" % (
+                g["stem"], g["path"], g["title"],
+                ", with the group's record in [JSON](%s)" % json_file if json_file else ""))
     return "\n".join(lines) + "\n"

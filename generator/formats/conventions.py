@@ -538,7 +538,9 @@ def table(lines, anchors=None, links=None):
         if anchors:
             row[0] = ROW_ANCHOR % anchors[k] + row[0]
         if links:
-            row[-1] = r"\hyperlink{%s}{%s}" % (links[k], row[-1])
+            # a destination in another file (FILE#name) is an external link
+            row[-1] = (r"\href{%s}{%s}" % (links[k].replace("#", r"\#"), row[-1]) if "#" in links[k]
+                       else r"\hyperlink{%s}{%s}" % (links[k], row[-1]))
     head, *body = [" & ".join(row) for row in cells]
     spec = column_spec(len(rows[0]), size, widths)
     return "\n".join([r"{\%s\setlength{\tabcolsep}{%gpt}" % (font, TABCOLSEP),
@@ -710,17 +712,30 @@ def body(markdown_text, numbered=True, margin_max=NUMBER_MARGIN_MAX, index=True)
         raise ValueError("CONVENTIONS.md: the generated %s differs from the registry; the formats "
                          "stage writes it (python3 -B -m generator.build formats)"
                          % " and the ".join(stale))
-    (i, j), (k, _) = spans
+    common, (k, _) = spans
 
     def text(a, b):
         return tex_blocks(blocks(markdown_text[a:b].split("\n")), numbered=numbered,
                           margin_max=margin_max)
     h = markdown_text.rindex("\n## %s" % notation.INDEX_TITLE, 0, k) + 1
-    out = [text(0, i), GENERATED[0] + "\n" + common_tex() + "\n" + GENERATED[1],
-           text(j, k if index else h)]
+    if common is None:
+        # the conventions of the double point groups: no section 0.1, the index at the end
+        out = [text(0, k if index else h)]
+    else:
+        i, j = common
+        out = [text(0, i), GENERATED[0] + "\n" + common_tex() + "\n" + GENERATED[1],
+               text(j, k if index else h)]
     if index:
-        out.append(GENERATED[0] + "\n" + index_tex() + "\n" + GENERATED[1])
+        out.append(GENERATED[0] + "\n" + index_tex(outside=OUTSIDE.get(names.CATALOGUE)) + "\n"
+                   + GENERATED[1])
     return "\n\n".join(out)
+
+
+# The file that holds the sections of another catalogue that an index row may name: the index of
+# the double point groups names sections 0 to 19, which are in Rotation's CONVENTIONS.pdf, beside
+# its own CONVENTIONS.pdf in the volume's folder.
+OUTSIDE = {"double": "../rotation/CONVENTIONS.pdf"}
+FIRST_SECTION = {"double": 20}
 
 
 # ---------------------------------------------------------------- the generated blocks (T6)
@@ -733,11 +748,13 @@ def generated_spans(markdown_text):
     of section 0.1 to the next heading, and after the heading of the index to the end; None
     when the text has no section 0.1."""
     common = re.search(r"^%s[ \t]*\n" % re.escape(notation.COMMON_TITLE), markdown_text, re.M)
+    index = re.search(r"^## %s[ \t]*\n" % re.escape(notation.INDEX_TITLE), markdown_text, re.M)
     if common is None:
         if re.search(r"^###? 0\.1 ", markdown_text, re.M):
             raise ValueError("CONVENTIONS.md: section 0.1 is not headed %r, so its generated "
                              "block is not found" % notation.COMMON_TITLE)
-        return None
+        # the conventions of the double point groups: the index of notation alone, at the end
+        return None if index is None else (None, (index.end(), len(markdown_text)))
     i = common.end()
     following = re.search(r"^#", markdown_text[i:], re.M)
     j = i + following.start() if following else len(markdown_text)
@@ -781,7 +798,10 @@ def index_records(records=None):
 def regenerate(markdown_text, records=None):
     """The Markdown text of CONVENTIONS.md with its generated blocks written anew."""
     records = index_records(records)
-    (i, j), (k, _) = generated_spans(markdown_text)
+    common, (k, _) = generated_spans(markdown_text)
+    if common is None:
+        return markdown_text[:k] + notation.index_markdown(records)
+    i, j = common
     return (markdown_text[:i] + notation.common_markdown(records) + markdown_text[j:k]
             + notation.index_markdown(records))
 
@@ -789,11 +809,13 @@ def regenerate(markdown_text, records=None):
 def drift(markdown_text, records=None):
     """The generated blocks of CONVENTIONS.md that differ from the registry's."""
     records = index_records(records)
-    (i, j), (k, _) = generated_spans(markdown_text)
-    return [name for name, now, then in (
-        ("table of section 0.1", markdown_text[i:j], notation.common_markdown(records)),
-        ("index of notation", markdown_text[k:], notation.index_markdown(records)))
-        if now != then]
+    common, (k, _) = generated_spans(markdown_text)
+    blocks_ = [("index of notation", markdown_text[k:], notation.index_markdown(records))]
+    if common is not None:
+        i, j = common
+        blocks_.insert(0, ("table of section 0.1", markdown_text[i:j],
+                           notation.common_markdown(records)))
+    return [name for name, now, then in blocks_ if now != then]
 
 
 def common_tex(records=None):
@@ -815,16 +837,23 @@ def common_tex(records=None):
     return "\n\n".join(out)
 
 
-def index_tex(records=None):
+def index_tex(records=None, outside=None):
     """The LaTeX of the index of notation: its lead and its table, each row linked to its
-    defining place (a row of 0.1 or a section)."""
+    defining place (a row of 0.1 or a section).  outside: the file of the sections before
+    FIRST_SECTION of the catalogue (the PDF of Rotation's conventions, for the standalone PDF of
+    the double point groups), into which those rows link; None in a volume that holds both."""
     records = index_records(records)
     rows = notation.index_rows(records)
+
+    def link(rid, place):
+        name = "conv.0.1.%s" % rid if place == "0.1" else "conv.%s" % place
+        if outside and int(place.split(".")[0]) < FIRST_SECTION[names.CATALOGUE]:
+            return "%s#%s" % (outside, name)
+        return name
     out = []
     for kind, data in blocks(notation.index_markdown(records).split("\n")):
         if kind == "table":
-            out.append(table(data, links=["conv.0.1.%s" % rid if place == "0.1"
-                                          else "conv.%s" % place for rid, _, _, place in rows]))
+            out.append(table(data, links=[link(rid, place) for rid, _, _, place in rows]))
         else:
             out.append(block_tex(kind, data, 0))
     return "\n\n".join(out)

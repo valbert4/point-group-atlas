@@ -312,6 +312,41 @@ def circular(lv):
 
 
 # ---------------------------------------------------------------- Subduction from U(N)
+def level_lead(D):
+    """The opening of Subduction from U(N), finite and continuous (levels_continuous): a level,
+    its matrices in U(N), the branching rule that gives the multiplicities b_Lambda(lambda), and
+    the shapes that quanta and electrons fill. Each sentence opens with the anchors of the symbols
+    that it uses first."""
+    return (D.define("local.level.dimension")
+            + r"A level of $\grp{G}$ is a real irrep $\Gamma$ of dimension $N \ge 2$: a degenerate "
+              r"mode of vibration, or a set of degenerate orbitals. "
+            + D.define("group.unitary")
+            + r"Its matrices $\repD{\Gamma}(g)$ lie in $\grp{U(\mathnormal{N})}$. "
+            + D.define("irrep.schur", "shape.partition", "local.partition",
+                       "function.multiplicity.unitary")
+            + r"The branching rule $\grp{U(\mathnormal{N})} \supset \grp{G}$ gives the "
+              r"multiplicity $b_\Lambda(\lambda)$ of the irrep $\Lambda$ of $\grp{G}$ in the irrep "
+              r"$\schur{\lambda}$ of $\grp{U(\mathnormal{N})}$ of highest weight "
+              r"$\lambda = \shape{\lambda_1, \lambda_2, \dots}$, restricted along $\repD{\Gamma}$. "
+            + D.define("local.partition.power", "local.electrons", "local.spin")
+            + r"The quanta of a degenerate mode fill the one-row shapes "
+              r"$\schur{\shape{v}}\Gamma = \operatorname{Sym}^{v}\Gamma$ "
+              r"(section~\ref{s:overtones}), and $n$ electrons of spin $S$ fill the two-column "
+              r"shapes $\lambda = \shape{2^{n/2-S}, 1^{2S}}$ (section~\ref{s:terms}).")
+
+
+def unitary_legend(row, matrices, kernel=""):
+    """The legend of the table of levels of Subduction from U(N), finite and continuous
+    (levels_continuous): the row (`row`, the columns before the chain), the chain down to the
+    image of Gamma, the group formed by `matrices` (with `kernel`, the column that sets its
+    kernel, or ""), and the orthogonal group of the form that the image leaves invariant."""
+    return (r"A row gives %s and the subgroups through which $\grp{U(\mathnormal{N})}$ restricts "
+            r"to $\grp{G}$ (chain). The chain ends at the image of $\Gamma$, the group formed by "
+            r"%s, isomorphic to $\grp{G}/\ker\Gamma$%s. The image leaves a quadratic form "
+            r"invariant, and $\grp{O(\mathnormal{N})}$ is the orthogonal group of that form."
+            % (row, matrices, kernel))
+
+
 def section_unitary(D):
     if continuous(D):
         return LC.section_unitary(D)
@@ -320,28 +355,13 @@ def section_unitary(D):
         return
     D.part(PART)
     D.section(r"Subduction from \texorpdfstring{$\grp{U(\mathnormal{N})}$}{U(N)}", "section 19")
-    D.w(D.define("local.level.dimension", "group.unitary", "irrep.schur", "shape.partition",
-                 "local.partition", "function.multiplicity.unitary", "local.partition.power",
-                 "local.electrons", "local.spin")
-        + r"A level of $\grp{G}$ is a real irrep $\Gamma$ of dimension $N \ge 2$: a degenerate "
-        r"mode of vibration, or a set of degenerate orbitals. Its matrices $\repD{\Gamma}(g)$ lie "
-        r"in $\grp{U(\mathnormal{N})}$, and $b_\Lambda(\lambda)$ is the multiplicity of the irrep "
-        r"$\Lambda$ of $\grp{G}$ in the irrep $\schur{\lambda}$ of $\grp{U(\mathnormal{N})}$ of "
-        r"highest weight $\lambda = \shape{\lambda_1, \lambda_2, \dots}$, restricted along "
-        r"$\repD{\Gamma}$: the branching rule $\grp{U(\mathnormal{N})} \supset \grp{G}$. The "
-        r"quanta of a degenerate mode fill the one-row shapes "
-        r"$\schur{\shape{v}}\Gamma = \operatorname{Sym}^{v}\Gamma$ (section~\ref{s:overtones}); "
-        r"$n$ electrons of spin $S$ fill the two-column shapes "
-        r"$\lambda = \shape{2^{n/2-S}, 1^{2S}}$ (section~\ref{s:terms}).")
-    D.w(D.define("head.level", "head.denominator", "index.overtone.denominator", "head.chain")
-        + r"In the table, level is the irrep $\Gamma$, denominator the product "
-        r"$\prod_k (1 - t^{a_k})$ under the generating functions of its overtones, "
-        r"(\ref{e:molien}), and chain the subgroups through which $\grp{U(\mathnormal{N})}$ "
-        r"restricts to $\grp{G}$, down to the image of $\Gamma$: the group that the matrices "
-        r"$\repD{\Gamma}(g)$ form, isomorphic to $\grp{G}/\ker\Gamma$ (the column kernel of the "
-        r"table of irreps, section~\ref{s:irreps}). The image leaves a quadratic form "
-        r"invariant, and $\grp{O(\mathnormal{N})}$ is the orthogonal group of that form. The "
-        r"levels go by their dimension.")
+    D.w(level_lead(D))
+    D.w(r"The table lists the levels by dimension. "
+        + D.define("head.level", "head.denominator", "index.overtone.denominator", "head.chain")
+        + unitary_legend(r"the level $\Gamma$, the denominator $\prod_k (1 - t^{a_k})$ of the "
+                         r"generating functions (\ref{e:molien}) of its overtones",
+                         r"the matrices $\repD{\Gamma}(g)$",
+                         r" (the column kernel of the table of irreps, section~\ref{s:irreps})"))
     by_dim = sorted(lvs, key=lambda lv: lv["dim"])        # stable: irrep order within a dimension
     rows = [["level", "$N$", "denominator", "chain"]] + [[
         "$%s$" % D.irrep_id(lv["irrep_id"]), "%d" % lv["dim"],
@@ -357,70 +377,97 @@ def section_unitary(D):
         D.w(r"%s\\" % " & ".join(r))
     D.w(r"\bottomrule\end{longtable}}")
     if any(lv["dim"] == 2 for lv in lvs):
-        D.w(D.define("index.harmonic.degree")
-            + r"The image of a level of dimension 2 lies in $\grp{O(2)}$, which is "
-            r"$\grp{C_{\infty v}}$ acting on the plane. Its states of harmonic "
-            r"degree $\ell$ (section~\ref{s:overtones}) carry the irrep $\irr{e}_{\ell}$ of "
-            r"$\grp{C_{\infty v}}$ ($\ell > 0$) or $\irr{a}_{1}$ ($\ell = 0$), restricted to the "
-            r"image (CONVENTIONS.pdf, section 16.1).")
+        D.w(r"A level of dimension 2 has its image in $\grp{O(2)}$, which is "
+            r"$\grp{C_{\infty v}}$ acting on the plane. "
+            + D.define("index.harmonic.degree")
+            + r"Its states of harmonic degree $\ell$ (section~\ref{s:overtones}) carry the irrep "
+              r"$\irr{e}_{\ell}$ of $\grp{C_{\infty v}}$ ($\ell > 0$) or $\irr{a}_{1}$ "
+              r"($\ell = 0$), restricted to the image (CONVENTIONS.pdf, section 16.1).")
     three = [lv for lv in lvs if lv["dim"] == 3]
     if three:
-        D.w(D.define("index.harmonic.degree", "matrix.conjugator")
-            + r"The matrices of a level of dimension 3, conjugated by a matrix $u$, are those of "
-            r"the elements of the record of its image: $u\,\repD{\Gamma}(g)\,u^{-1} = P(k)$, $k$ "
-            r"the element that the record's \texttt{chain.image.element\symbol{95}map} gives "
-            r"for $g$. Its states of harmonic degree $\ell$ carry $\irrJp{\ell}{(-1)^{\ell}}$ "
-            r"of $\grp{O(3)}$ restricted to the image: the row $J = \ell$, "
-            r"$p = (-1)^{\ell}$, of the image's subduction from $\grp{O(3)}$, pulled back by "
-            r"$g \mapsto k$.")
+        D.w(D.define("matrix.conjugator")
+            + r"The matrices of a level of dimension 3 are conjugate by a matrix $u$ to those of "
+              r"the elements of the record of its image: $u\,\repD{\Gamma}(g)\,u^{-1} = P(k)$. The "
+              r"level's \texttt{chain.image.element\symbol{95}map} gives the element $k$ for $g$. "
+            + D.define("index.harmonic.degree")
+            + r"The level's states of harmonic degree $\ell$ carry $\irrJp{\ell}{(-1)^{\ell}}$ of "
+              r"$\grp{O(3)}$ restricted to the image. This restriction is the row $J = \ell$, "
+              r"$p = (-1)^{\ell}$, of the image's subduction from $\grp{O(3)}$, pulled back by "
+              r"$g \mapsto k$.")
         moved = [lv for lv in three if any(
             (x != {"f": "q", "v": [1 if i == j else 0, 1]})
             for i, row in enumerate(lv["chain"]["image"]["conjugator"]) for j, x in enumerate(row))]
         if moved:
-            D.w(r"$u = 1$ for every level but %s:" % " and ".join(
+            D.w(r"Every level of dimension 3 has $u = 1$ except %s:" % " and ".join(
                 "$%s$" % D.irrep_id(lv["irrep_id"]) for lv in moved))
             for lv in moved:
                 conj = D.display_matrix(lv["chain"]["image"]["conjugator"])
                 D.equation("conj%s" % lv["irrep_id"],
                            D.irrep_id(lv["irrep_id"]) + r":\quad u = %s." % conj)
         else:
-            D.w(r"$u = 1$ for every level of dimension 3.")
+            D.w(r"Every level of dimension 3 has $u = 1$.")
     five = [lv for lv in lvs if lv["dim"] == 5]
     four = [lv for lv in lvs if lv["dim"] == 4]
     if five:
-        middle = [r"$\grp{SO(3)}$" if " SO(3) " in lv["chain"]["kind"] else r"$\grp{O(3)}$"
-                  for lv in five]
-        D.w(r"The level%s %s %s restricted to $\grp{G}$, and the %s of %s the %s. "
-            r"The harmonic polynomials of degree $\ell$ "
-            r"in five variables, an irrep of $\grp{SO(5)}$, restrict to $\grp{SO(3)}$ as the "
-            r"$\irrJ{J}$ with $J = 2k, 2k - 2, 2k - 3, \dots, k$ for $k = \ell, \ell - 3, "
-            r"\ell - 6, \dots \ge 0$ (CONVENTIONS.pdf, section 19; their table by $\ell$ is in "
-            r"the document of $\grp{SO(3)}$, under Subduction from "
-            r"$\grp{U(\mathnormal{N})}$). So the species of the states of "
-            r"harmonic degree $\ell$ (section~\ref{s:overtones}) are the sum of those rows $J$ of "
-            r"the subduction from $\grp{O(3)}$ (section~\ref{s:subduction_o3})%s." % (
-                "s" if len(five) > 1 else "", L.listed(["$%s$" % name(D, lv) for lv in five]),
-                ("are " if len(five) > 1 else "is ") + L.listed([
+        # one sentence for each level: the irrep of O(3) that it restricts and the group of its
+        # chain that is the image of that irrep
+        for lv in five:
+            D.w(r"The level $%s$ is %s restricted to $\grp{G}$, and the %s of its chain is the "
+                r"image of that irrep." % (
+                    name(D, lv),
                     r"$\irrJp{2}{%s}$" % ("+" if lv["chain"]["image"]["o3_irrep"]["parity"] > 0
                                           else "-") if D.rec["group"].get("contains_inversion")
-                    else r"$\irrJ{2}$" for lv in five]),
-                L.listed(middle), "their chains are" if len(five) > 1 else "its chain is",
-                "images of those irreps" if len(five) > 1 else "image of that irrep",
+                    else r"$\irrJ{2}$",
+                    r"$\grp{SO(3)}$" if " SO(3) " in lv["chain"]["kind"] else r"$\grp{O(3)}$"))
+        # the rule, its consequence, then where the document of SO(3) tabulates the rule
+        D.w(r"The harmonic polynomials of degree $\ell$ in five variables, an irrep of "
+            r"$\grp{SO(5)}$, restrict to $\grp{SO(3)}$ as the $\irrJ{J}$ with "
+            r"$J = 2k, 2k - 2, 2k - 3, \dots, k$ for $k = \ell, \ell - 3, \ell - 6, \dots \ge 0$ "
+            r"(CONVENTIONS.pdf, section 19). Thus the states of harmonic degree $\ell$ "
+            r"(section~\ref{s:overtones}) carry the sum of those rows $J$ of the subduction from "
+            r"$\grp{O(3)}$ (section~\ref{s:subduction_o3})%s. The table of this rule by $\ell$ is "
+            r"in the document of $\grp{SO(3)}$, in its section Subduction from "
+            r"$\grp{U(\mathnormal{N})}$." % (
                 r", at the parity $p^{\ell}$ for the level of parity $p$"
                 if D.rec["group"].get("contains_inversion") else ""))
     if four:
-        D.w(D.define("group.su2", "local.so4.angles")
-            + r"The level%s %s %s the product of the irrep of $\grp{SU(2)}$ of dimension 2 and its "
-            r"Galois twin. %s image lies in $\grp{SO(4)}$, and the table names it by its abstract "
-            r"type. At an element whose matrix turns two orthogonal planes by $\theta_{1}$ and "
-            r"$\theta_{2}$, the harmonic polynomials of degree $\ell$ in four variables have the "
-            r"character $\irchar{\ell/2}(\theta_{1} + \theta_{2})\,"
-            r"\irchar{\ell/2}(\theta_{1} - \theta_{2})$ (CONVENTIONS.pdf, section 19)." % (
-                "s" if len(four) > 1 else "", L.listed(["$%s$" % name(D, lv) for lv in four]),
-                "are" if len(four) > 1 else "is", "Each" if len(four) > 1 else "Its"))
+        # one level (I) or two (I_h), each branch written whole
+        several = len(four) > 1
+        D.w(D.define("group.su2")
+            + (r"The levels %s are each" if several else r"The level %s is")
+            % L.listed(["$%s$" % name(D, lv) for lv in four])
+            + r" the product of the irrep of $\grp{SU(2)}$ of dimension 2 and its Galois twin. "
+            + ("Each" if several else "Its")
+            + r" image lies in $\grp{SO(4)}$, and the table names it by its abstract type. "
+            + D.define("local.so4.angles")
+            + r"At an element whose matrix turns two orthogonal planes by $\theta_{1}$ and "
+              r"$\theta_{2}$, the harmonic polynomials of degree $\ell$ in four variables have the "
+              r"character $\irchar{\ell/2}(\theta_{1} + \theta_{2})\,"
+              r"\irchar{\ell/2}(\theta_{1} - \theta_{2})$ (CONVENTIONS.pdf, section 19)."
+            # Ih: at an improper element, p^l times the character at the rotation part (section 19)
+            + (r" At an improper element it is $p^{\ell}$ times the character at the rotation part, "
+               r"where $p = +1$ for %s and $p = -1$ for %s." % tuple(
+                   L.listed(["$%s$" % D.irrep_id(lv["irrep_id"]) for lv in four
+                             if lv["irrep_id"].endswith(t)])
+                   for t in "gu")
+               if D.rec["group"]["contains_inversion"] else ""))
 
 
 # ---------------------------------------------------------------- Vibrational overtone levels
+def overtone_lead(D, mode, power):
+    """The opening of Vibrational overtone levels, finite and continuous (levels_continuous): the
+    states of v quanta of the degenerate mode `mode` (the level, as its span names it) carry
+    `power` (the span of Sym^v Gamma, with what follows it in the sentence), and they split by
+    harmonic degree."""
+    return (D.define("index.quanta", "operator.symmetric.power")
+            + r"The states of $v$ quanta of a degenerate mode $%s$, a level of "
+              r"section~\ref{s:unitary}, carry %s. " % (mode, power)
+            + D.define("local.quadratic.form", "set.harmonic")
+            + r"They split by harmonic degree $\ell = v, v - 2, \dots$ into $r^{v-\ell}H_\ell$, "
+              r"where $r^2$ is the invariant quadratic form of the level and $H_\ell$ consists of "
+              r"the states of $\ell$ quanta annihilated by the invariant Laplacian.")
+
+
 def section_overtones(D):
     if continuous(D):
         return LC.section_overtones(D)
@@ -430,72 +477,74 @@ def section_overtones(D):
     D.section("Vibrational overtone levels", "section 19")
     two = any(lv["dim"] == 2 for lv in lvs)
     vector = [lv for lv in lvs if lv["dim"] == 3 and vector_level(D, lv)]
-    D.w(D.define("index.quanta", "operator.symmetric.power", "local.quadratic.form",
-                 "set.harmonic", "function.multiplicity.harmonic", "function.generating.level")
-        + r"$\Gamma$ is a level of section~\ref{s:unitary}. The states of $v$ quanta of a "
-        r"degenerate mode of species $\Gamma$ carry $\operatorname{Sym}^{v}\Gamma = "
-        r"\schur{\shape{v}}\Gamma$, and $b_\Lambda(v) = b_\Lambda(\shape{v})$. They split by their "
-        r"harmonic degree $\ell = v, v - 2, \dots$ into $r^{v-\ell}H_\ell$, $r^2$ the invariant "
-        r"quadratic form of the level and $H_\ell$ the states of $\ell$ quanta that the invariant "
-        r"Laplacian annihilates, so that the multiplicity $\mathnormal{h}_\Lambda(\ell)$ of "
-        r"$\Lambda$ in $H_\ell$ is the same at every $v$ and $b_\Lambda(v) = "
-        r"\mathnormal{h}_\Lambda(v) + \mathnormal{h}_\Lambda(v - 2) + \dots$. With "
-        r"$H^{\Gamma}_\Lambda(t) = \sum_{\ell\ge0} \mathnormal{h}_\Lambda(\ell)\,t^{\ell}$, "
-        r"Molien's formula reads")
+    D.w(overtone_lead(D, r"\Gamma", r"$\operatorname{Sym}^{v}\Gamma = \schur{\shape{v}}\Gamma$, "
+                                    r"and $b_\Lambda(v) = b_\Lambda(\shape{v})$")
+        + " " + D.define("function.multiplicity.harmonic")
+        + r"Thus the multiplicity $\mathnormal{h}_\Lambda(\ell)$ of $\Lambda$ in $H_\ell$ is the "
+          r"same at every $v$, and $b_\Lambda(v) = \mathnormal{h}_\Lambda(v) + "
+          r"\mathnormal{h}_\Lambda(v - 2) + \dots$. "
+        + D.define("function.generating.level")
+        + r"With $H^{\Gamma}_\Lambda(t) = \sum_{\ell\ge0} \mathnormal{h}_\Lambda(\ell)\,t^{\ell}$, "
+          r"Molien's formula reads")
     D.equation("molien", r"\frac{H^{\Gamma}_\Lambda(t)}{1 - t^2} = \sum_{v\ge0} b_\Lambda(v)\,t^v "
                          r"= \frac{1}{|\grp{G}|}\sum_{g}\frac{\conj{\irchar{\Lambda}(g)}}{\det\bigl("
                          r"1 - t\,\repD{\Gamma}(g)\bigr)} = \frac{P_\Lambda(t)}{\prod_k "
                          r"(1-t^{a_k})},")
     triv = D.irrep_id(D.irrep_order[0])      # the trivial irrep, first in irrep order
-    invariants = []
-    if two:
-        invariants.append(r"for a level of dimension 2 they are the polynomials in $r^2$ and in "
-                          r"one "
-                          r"invariant of degree $a_2$")
+    # the sentences after the display, in their order: the display ends on a comma, so its
+    # sentence goes on in lowercase; the anchors of L and Delta_Lambda open the sentence of the
+    # levels of dimension 2 that first uses them
+    out = [r"where the factor $1/(1 - t^2) = 1 + t^2 + t^4 + \dots$ counts the powers of $r^2$, "
+           r"which raise $v$ by 2 and keep the irrep.",
+           r"The denominator is that of least $\prod_k a_k$ for which every $P_\Lambda(t)$ has "
+           r"nonnegative integer coefficients. Here $a_1 = 2$ is the degree of $r^2$, so that "
+           r"$H^{\Gamma}_\Lambda(t) = P_\Lambda(t)/\prod_{k\ge2}(1 - t^{a_k})$."]
+    if vector:
+        out.append(r"For %s, whose partners are $x$, $y$, $z$, $H^{\Gamma}_\Lambda(t)$ is the "
+                   r"generating function $H_\Lambda(t)$ (\ref{e:gf}) of the symmetry-adapted "
+                   r"bases." % L.listed(["$%s$" % name(D, lv) for lv in vector]))
+    out.append(r"The Hilbert series of the polynomials in the partners of the level that "
+               r"$\grp{G}$ leaves invariant is $H^{\Gamma}_{%s}(t)/(1 - t^2)$." % triv)
+    # the case of dimension 3 first, so that the sentences on a level of dimension 2 run on
     if any(lv["dim"] == 3 for lv in lvs):
-        invariants.append(
-            r"for a level of dimension 3 the series is that of the invariant polynomials in the "
-            r"document of its image, with the same $a_k$, the degrees of its primary "
-            r"invariants%s" % (r" (for %s, section~\ref{s:invariant_polynomials})"
-                               % L.listed(["$%s$" % name(D, lv) for lv in vector])
-                               if vector else ""))
-    D.w(D.define(*(["index.overtone.period", "index.increment.unitary"] if two else []))
-        + r"The factor $1/(1 - t^2) = 1 + t^2 + t^4 + \dots$ counts the powers of $r^2$, which "
-        r"raise $v$ by 2 and leave the species alone. The denominator is that of least "
-        r"$\prod_k a_k$ for which every $P_\Lambda(t)$ has nonnegative integer coefficients; "
-        r"$a_1 = 2$, the degree of $r^2$, so that $H^{\Gamma}_\Lambda(t) = P_\Lambda(t)/"
-        r"\prod_{k\ge2}(1 - t^{a_k})$.%s $H^{\Gamma}_{%s}(t)/(1 - t^2)$ is the Hilbert series of "
-        r"the polynomials in the partners of the level that $\grp{G}$ leaves invariant%s.%s A "
-        r"table "
-        r"of numerators leaves out the irreps that occur at no $v$. The table after it gives "
-        r"$\operatorname{Sym}^{v}\Gamma$ and, in the same row, $H_\ell$ at $\ell = v$: "
-        r"$\operatorname{Sym}^{v}\Gamma = H_\ell \oplus "
-        r"r^2\operatorname{Sym}^{v-2}\Gamma$ at $\ell = v$." % (
-            (r" For %s, whose partners are $x$, $y$, $z$, $H^{\Gamma}_\Lambda(t)$ is the "
-             r"generating "
-             r"function $H_\Lambda(t)$ of the symmetry-adapted bases, (\ref{e:gf})."
-             % L.listed(["$%s$" % name(D, lv) for lv in vector])) if vector else "",
-            triv, (": " + "; ".join(invariants)) if invariants else "",
-            (r" For a level of dimension 2, $\ell$ is the vibrational angular momentum, and "
-             r"$b_\Lambda(v + L) = b_\Lambda(v) + \Delta_\Lambda$ at the $v$ of the parity at "
-             r"which $\Lambda$ occurs, $L$ the least common multiple of the $a_k$. "
-             + D.define("local.torsion.angle")
-             + r"The functions $\expe^{\mp\iunit\tau}$ of a torsion angle $\tau$ that $\grp{G}$ "
-             r"maps affinely may transform as the partners of such a level; its free-rotor states "
-             r"$\expe^{\mp\iunit\ell\tau}$ are then $\occ{\ell 0}$ and $\occ{0 \ell}$, of "
-             r"harmonic degree $\ell$ (CONVENTIONS.pdf, section 19).") if two else ""))
+        out.append(r"For a level of dimension 3 the series is that of the invariant polynomials in "
+                   r"the document of its image, with the same $a_k$, the degrees of its primary "
+                   r"invariants%s." % (r" (for %s, section~\ref{s:invariant_polynomials})"
+                                      % L.listed(["$%s$" % name(D, lv) for lv in vector])
+                                      if vector else ""))
+    if two:
+        out += [r"For a level of dimension 2 the invariants are the polynomials in $r^2$ and in "
+                r"one invariant of degree $a_2$.",
+                D.define("index.overtone.period", "index.increment.unitary")
+                + r"For such a level, $\ell$ is the vibrational angular momentum, and "
+                  r"$b_\Lambda(v + L) = b_\Lambda(v) + \Delta_\Lambda$ at the $v$ of the parity at "
+                  r"which $\Lambda$ occurs, where $L$ is the least common multiple of the $a_k$.",
+                D.define("local.torsion.angle")
+                + r"The functions $\expe^{\mp\iunit\tau}$ of a torsion angle $\tau$ that $\grp{G}$ "
+                  r"maps affinely may transform as the partners of such a level (CONVENTIONS.pdf, "
+                  r"section 19).",
+                r"The angle's free-rotor states $\expe^{\mp\iunit\ell\tau}$ are then "
+                r"$\occ{\ell 0}$ and $\occ{0 \ell}$, of harmonic degree $\ell$."]
+    out += [r"A table of numerators leaves out the irreps that occur at no $v$.",
+            r"The table after it gives $\operatorname{Sym}^{v}\Gamma$ and, in the same row, "
+            r"$H_\ell$ at $\ell = v$: $\operatorname{Sym}^{v}\Gamma = H_\ell \oplus "
+            r"r^2\operatorname{Sym}^{v-2}\Gamma$ at $\ell = v$."]
+    D.w(" ".join(out))
     for lv in lvs:
         sym = lv["symmetric"]
         gf = sym["generating_function"]
         ids = [x["irrep_id"] for x in gf["numerators"] if any(x["coefficients"])]
         nums = {x["irrep_id"]: x["coefficients"] for x in gf["numerators"]}
         inc = sym.get("increment")
-        line = r"enominator $%s$%s." % (denominator(gf["denominator"]),
-                                        r", $L = %d$" % sym["period"] if inc else "")
+        den = "$%s$" % denominator(gf["denominator"])
+        period = r"$L = %d$" % sym["period"] if inc else ""
+        # the sentence after the label has its verb, and so does the sentence of a single level
         if len(lvs) > 1:
-            D.w(r"\paragraph{The level $%s$.} D%s" % (name(D, lv), line))
+            D.w(r"\paragraph{The level $%s$.} Its denominator is %s%s." % (
+                name(D, lv), den, ", and " + period if period else ""))
         else:
-            D.w(r"The level $%s$: d%s" % (name(D, lv), line))
+            D.w(r"The level $%s$ has the denominator %s%s." % (
+                name(D, lv), den, " and " + period if period else ""))
         D.w(r"{\small%s\begin{longtable}{@{}ll%s@{}}\toprule" % (L.snake_mark(),
                                                                "r" if inc else ""))
         D.w(r"$\Lambda$ & $P_\Lambda(t)$%s\\\midrule\endhead" % (r" & $\Delta_\Lambda$"
@@ -523,41 +572,51 @@ def section_overtone_states(D):
     D.section(r"Overtone states for \texorpdfstring{$v \le %d$}{v \textleq\ %d}" % (vmax, vmax),
               "section 19")
     D.w(D.define("vector.occupation", "local.quanta.partner", "local.weight.occupation")
-        + r"$\occ{v_1, \dots, v_N}$ is the state of $v_1$ quanta in partner 1 of the level, "
-        r"\dots, $v_N$ in partner $N$, $v = v_1 + \dots + v_N$, written without commas in the "
-        r"tables, as $\occ{03}$: the partners transform by the matrices $\repD{\Gamma}(g)$ of the "
-        r"level, and so do the creation operators of the quanta. A vector is listed by its "
-        r"coefficients $e$, the vector being")
+        + r"The occupation state $\occ{v_1, \dots, v_N}$ is the state of $v_1$ quanta in partner 1 "
+          r"of the level, \dots, $v_N$ in partner $N$, with $v = v_1 + \dots + v_N$. The tables "
+          r"set occupation states such as $\occ{03}$ without commas. The partners and the creation "
+          r"operators of the quanta transform by the matrices $\repD{\Gamma}(g)$ of the level. "
+          r"A vector is listed by its coefficients $e$:")
     D.equation("occupation", r"\frac{1}{\sqrt{\mathrm{tot}}}\sum e\sqrt{F}\;"
                              r"\occ{v_1, \dots, v_N},\qquad F = v_1!\dots v_N!,\qquad "
                              r"\mathrm{tot} = \sum |e|^2F,")
     known = [lv for lv in lvs if lv.get("partner_functions")]
-    D.w(r"so that $e$ is the coefficient of the product of the creation operators, as $e_m$ is "
-        r"in section~\ref{s:bases}.%s A row gives one partner of one copy of an irrep (the copies "
-        r"as in CONVENTIONS.pdf, section 19): %s." % ("".join(
+    # the legend: the row and the columns of its kind of table, the states of a level of
+    # dimension 2 by harmonic degree first, in the colon form of the other vector tables with the
+    # copies cited on the copy index; a table of each kind when both occur, the copies cited on
+    # the row, then the columns of each case; the rise of the quanta names its case
+    row = r"A row gives one partner of one copy of an irrep"
+    copies = r" (as in CONVENTIONS.pdf, section 19)"
+    circle = (r"the harmonic degree $\ell$, the irrep, the copy index $\mult$%s, the partner index "
+              r"$\intx$ and the state at $v = \ell, \ell + 2, \dots$.")
+    rise = (r"Since $r^2 = \occ{11}$%s, every number of quanta rises by 1 from one column to the "
+            r"next.")
+    if rule and len(rule) < len(lvs):
+        legend = (row + r" (the copies as in CONVENTIONS.pdf, section 19). For a level of "
+                        r"dimension 2 the columns give " + circle % "" + " "
+                  + rise % " for such a level"
+                  + r" For the other levels the columns give $v$, $\ell$, the irrep, $\mult$, "
+                    r"$\intx$ and the vector.")
+    elif rule:
+        legend = row + ": " + circle % copies + " " + rise % ""
+    else:
+        legend = (row + r": $v$, $\ell$, the irrep, the copy index $\mult$" + copies
+                  + r", the partner index $\intx$ and the vector.")
+    D.w(r"so that $e$ is the coefficient of the product of the creation operators, like $e_m$ in "
+        r"section~\ref{s:bases}.%s %s" % ("".join(
             r" The partners of the level $%s$ transform as %s." % (
                 D.irrep_id(lv["irrep_id"]), L.listed(["$%s$" % function_tex(f)
                                                       for f in lv["partner_functions"]]))
-            for lv in known), (
-            r"for a level of dimension 2, its harmonic degree $\ell$, the irrep, the copy index "
-            r"$\mult$, the partner index $\intx$ and the state at $v = \ell, \ell + 2, \dots$, "
-            r"every number of quanta raised by 1 from one column to the next, since "
-            r"$r^2 = \occ{11}$; for the others, $v$, $\ell$, the irrep, $\mult$, $\intx$ and the "
-            r"vector" if rule and len(rule) < len(lvs) else
-            r"its harmonic degree $\ell$, the irrep, the copy index $\mult$, the partner index "
-            r"$\intx$ and the state at $v = \ell, \ell + 2, \dots$, every number of quanta raised "
-            r"by 1 from one column to the next, since $r^2 = \occ{11}$" if rule else
-            r"$v$, $\ell$, the irrep, the copy index $\mult$, the partner index $\intx$ and the "
-            r"vector")))
+            for lv in known), legend))
     stopped = stops(D, lvs, tops)
     if stopped:
         most = sorted({(lv["dim"], STATES_MOST[lv["dim"]]) for lv in lvs
                        if lv["dim"] in STATES_MOST})
         D.w(r"The table sets the states of a level for $v \le %d$ and for each further $v$ at "
-            r"which every state fills at most %s lines%s, so it stops %s." % (
+            r"which every state fills at most %s lines%s. This rule stops %s.%s" % (
                 STATES_LEAST, L.VECTOR_LINES_TEXT, "".join(
                     r", up to $v = %d$ for a level of dimension %d" % (m, n) for n, m in most),
-                L.listed(stopped)))
+                stopped[0], "".join(" It also stops %s." % c for c in stopped[1:])))
     several = len(lvs) > 1
     circ, rows, ncol = [], [], 0
     for lv in lvs:
@@ -605,8 +664,8 @@ def states_up_to(D, lv):
 
 def stops(D, lvs, tops):
     """The clauses of the levels whose states the table stops below v_max, the levels of one stop,
-    one v_max and one place (the record, or the level's file) in one: "the states of the levels
-    T_1 and T_2 at v = 4 (the record holds v <= 6)"."""
+    one v_max and one place (the record, or the level's file) in one, each clause naming the
+    states again: "the states of the levels T_1 and T_2 at v = 4 (the record holds v <= 6)"."""
     out = {}
     for lv in lvs:
         top, held = tops[lv["irrep_id"]], states(lv)[0]["v_max"]
@@ -615,9 +674,8 @@ def stops(D, lvs, tops):
             out.setdefault(key, []).append("$%s$" % D.irrep_id(lv["irrep_id"]))
     clauses = []
     for (top, held, in_file), ids in out.items():
-        clauses.append(r"%s %s %s at $v = %d$ (%s $v \le %d$)" % (
-            "those of" if clauses else "the states of", "the levels" if len(ids) > 1
-            else "the level", L.listed(ids), top,
+        clauses.append(r"the states of %s %s at $v = %d$ (%s $v \le %d$)" % (
+            "the levels" if len(ids) > 1 else "the level", L.listed(ids), top,
             ("their files hold" if len(ids) > 1 else "its file holds") if in_file
             else "the record holds", held))
     return clauses
@@ -653,12 +711,13 @@ def section_terms(D):
         return
     D.section("Electronic terms", "section 19")
     D.w(D.define("symbol.term", "local.configuration")
-        + r"$n$ electrons in a level $\Gamma$ of section~\ref{s:unitary}, without spin--orbit "
-        r"coupling, have their orbital states in $\schur{\lambda}\Gamma$ for the spin $S$, "
-        r"$\lambda = \shape{2^{n/2-S}, 1^{2S}}$ of at most $N$ rows, $0 \le n \le 2N$. A term "
-        r"$\term{2S+1}{\Lambda}$ of the configuration $\Gamma^{n}$ is a summand $\Lambda$ of the "
-        r"entry in row $n$, column $2S + 1$; an empty entry has no shape, and row $2N - n$ is row "
-        r"$n$ (the holes of the filled level).")
+        + r"Without spin--orbit coupling, the orbital states of $n$ electrons ($0 \le n \le 2N$) "
+          r"of spin $S$ in a level $\Gamma$ of section~\ref{s:unitary} lie in "
+          r"$\schur{\lambda}\Gamma$ when $\lambda = \shape{2^{n/2-S}, 1^{2S}}$ has at most $N$ "
+          r"rows. A "
+          r"term $\term{2S+1}{\Lambda}$ of the configuration $\Gamma^{n}$ is a summand $\Lambda$ "
+          r"of the entry in row $n$, column $2S + 1$. An empty entry has no shape, and row "
+          r"$2N - n$ is row $n$ (the holes of the filled level).")
     term_grid(D, lvs)
 
 
@@ -671,19 +730,21 @@ def section_term_states(D):
         return
     D.section("Term states", "section 19")
     D.w(D.define("vector.determinant", "index.spin.down", "local.spin.projection")
-        + r"$\sdet{1\,\bar{2}}$ is the Slater determinant of the spin-orbitals in it, written in "
-        r"the order $1, \bar{1}, 2, \bar{2}, \dots$: $\intx$ is partner $\intx$ of the level with "
-        r"spin up and $\bar{\intx}$ with spin down, and $\sdet{\,}$ is the vacuum. The orbitals "
-        r"transform by the matrices $\repD{\Gamma}(g)$ of the level, and the spins do not. A row "
-        r"gives the component $M_S = S$ of a vector of a term $\term{2S+1}{\Lambda}$ of "
-        r"$\Gamma^{n}$: $n$, $2S + 1$, the irrep $\Lambda$, its copy index $\mult$, the partner "
-        r"index $\intx$ and the vector "
-        r"$\mathrm{tot}^{-1/2}\sum e\,\sdet{\dots}$, $\mathrm{tot} = \sum |e|^2$ (the copies "
-        r"as in CONVENTIONS.pdf, section 19). Lowering the spin gives the other components. The "
-        r"table gives %s; the record holds every $n$." % (
-            r"$n \le N$" if all(terms_set(lv["dim"]) == lv["dim"] for lv in lvs) else
-            r"$n \le N$ for the levels of dimension $N \le 3$ and $n \le %d$ for the others"
-            % TERMS_SET_DEFAULT))
+        + r"The determinant $\sdet{1\,\bar{2}}$ is the Slater determinant of the spin--orbitals in "
+          r"it, written in the order $1, \bar{1}, 2, \bar{2}, \dots$, and $\sdet{\,}$ is the "
+          r"vacuum. The spin--orbital $\intx$ is partner $\intx$ of the level with spin up, and "
+          r"$\bar{\intx}$ with spin down. Unlike the spins, the orbitals transform by the matrices "
+          r"$\repD{\Gamma}(g)$ of the level. A row gives the component $M_S = S$ of a vector of a "
+          r"term $\term{2S+1}{\Lambda}$ of $\Gamma^{n}$: $n$, $2S + 1$, the irrep $\Lambda$, its "
+          r"copy index $\mult$ (as in CONVENTIONS.pdf, section 19) and the partner index $\intx$. "
+          r"The vector is $\mathrm{tot}^{-1/2}\sum e\,\sdet{\dots}$, where "
+          r"$\mathrm{tot} = \sum |e|^2$, and lowering the spin gives the other components. The "
+          r"table gives %s, and the record%s holds every $n$." % (
+              r"$n \le N$" if all(terms_set(lv["dim"]) == lv["dim"] for lv in lvs) else
+              r"$n \le N$ for the levels of dimension $N \le 3$ and $n \le %d$ for the others"
+              % TERMS_SET_DEFAULT,
+              # the states of a level kept apart (I, Ih: G and H) are in its file
+              " and the files" if any("bases_location" in lv for lv in lvs) else ""))
     rows = []
     for lv in lvs:
         if len(lvs) > 1:

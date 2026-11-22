@@ -2,11 +2,12 @@
 
 This document defines the fields of the records of the double point groups, the closed subgroups of
 $`\mathsf{Pin^{-}(3)}`$ up to conjugacy. It continues the conventions of the point groups
-(`rotation/CONVENTIONS.md`), and the files of conventions are numbered as one: sections 0 to 19 are in that
-file, sections 20 to 29 in this one. It cites the sections of that file by number and uses its notation, adding
-half-integer $`J`$ (section 25.1) and the tags of the spinor irreps (section 23.2). A record of this catalogue
-repeats no value that a record of the point groups holds (section 20.3), except its subgroup lattice, which it
-stores whole (section 28.1). The continuous records also repeat the `space` of a fundamental domain
+(`rotation/CONVENTIONS.md`), and the files of conventions are numbered as one: sections 0 to 19 are in that file,
+sections 20 to 29 in this one. It cites the sections of that file by number and uses its notation, adding
+half-integer $`J`$ (section 25.1) and the tags of the spinor irreps (section 23.2). Its index of notation lists
+the notation of the documents of this catalogue, each symbol with the section that defines it. A record of this
+catalogue repeats no value that a record of the point groups holds (section 20.3), except its subgroup lattice,
+which it stores whole (section 28.1). The continuous records also repeat the `space` of a fundamental domain
 (section 29.1) and the `index`, `normal` and `class_size` of a continuous subgroup (section 29.5).
 
 ## 20. The parent and the records
@@ -160,12 +161,12 @@ spinor irrep, $`-D(\mathsfit{g}, 0)`$.
 A finite record stores no fundamental domain, and a continuous record names that of its image and stores its
 volumes (section 29.1). The documents set the fundamental domain of the orientations of
 objects whose symmetry is a closed subgroup of $`\mathsf{Pin^{-}(3)}`$, its cosets placed by the lifts
-$`\tilde{Q}`$, from that of its image $`\mathsf{G}`$ in section 17. Volumes are those of the metric that the
-covering map carries to that of $`\mathsf{O(3)}`$: $`\operatorname{vol}\mathsf{SU(2)} = 16\pi^2`$ and
-$`\operatorname{vol}\mathsf{Pin^{-}(3)} = 32\pi^2`$.
+$`\tilde{\mathsfit{Q}}`$, from that of its image $`\mathsf{G}`$ in section 17. Volumes are those of the metric
+that the covering map carries to that of $`\mathsf{O(3)}`$: $`\operatorname{vol}\mathsf{SU(2)} = 16\pi^2`$
+and $`\operatorname{vol}\mathsf{Pin^{-}(3)} = 32\pi^2`$.
 
-The preimage $`\mathsf{2G}`$ contains $`\bar{\mathsfit{E}}`$, so its cosets $`\mathsf{2G}\tilde{Q}`$ are the
-lifts of those of $`\mathsf{G}`$: the cell of $`\mathsf{G}`$, each rotation by its canonical lift
+The preimage $`\mathsf{2G}`$ contains $`\bar{\mathsfit{E}}`$, so its cosets $`\mathsf{2G}\tilde{\mathsfit{Q}}`$
+are the lifts of those of $`\mathsf{G}`$: the cell of $`\mathsf{G}`$, each rotation by its canonical lift
 (section 21.1), its fundamental domain and its space. The preimage has
 $`\operatorname{vol}\mathsf{2G} = 2\operatorname{vol}\mathsf{G}`$. A section over $`\mathsf{G}`$ does not
 contain $`\bar{\mathsfit{E}}`$: its cosets cover those of $`\mathsf{G}`$ twice. The two lifts of the rotations
@@ -255,7 +256,7 @@ matrix of an operation is a lift of its rotation part, the identity for the inve
 section 20.1), and the operation marked d is the other lift. On its hexagonal tables the matrices are those of
 [BC72]. Their rows and columns run over $`m = -\tfrac{1}{2}, \tfrac{1}{2}`$: in the usual order the matrices
 are lifts in the frame with $`x`$ along [120], $`y`$ along [100] and $`z`$ against the hexagonal axis c. Thus
-`2_001` and `m_001` are barred lifts, and `2_1-10` and `m_1-10` are the lifts about their named axes.
+`2_001` and `m_001` are barred partners, and `2_1-10` and `m_1-10` are the lifts about their named axes.
 
 In $`\mathsf{D_{3d}}`$ the binary rotations fix the frame of both works, [KDWS63] and [EBW+17]. Thus their mirrors
 $`\mathsfit{\sigma_{d}} = \mathsfit{i}\,\mathsfit{C_{2}'}`$ are the record's $`(\mathsfit{\sigma_{d}}, 1)`$:
@@ -677,3 +678,273 @@ functions count the blocks at $`p = +1`$, as in the members' records, and the ex
 records' generating functions (`generating_function`). A section is restricted as its preimage (`sections`),
 and at integer $`J`$ the rules are those of `O3` (`integer_J`). The rules give the restrictions of the members
 $`N \le 12`$ for $`2J \le 41`$ at both parities and the irreps of the blocks of their bases.
+
+## Index of notation
+
+This index lists the common notation of the documents and selected symbols of their sections, each with its meaning and the section of the conventions that defines it (0.1 for the common notation). The symbols that are not letters come first, then the others by letter, a Greek letter under its Latin name.
+
+| Notation | Meaning | Defined |
+|---|---|---|
+| $`n/m`$ | an axis with a mirror perpendicular to it, $`n/m`$, in a `hermann_mauguin` symbol, as in $`2/m`$ (with $`\mathsf{C_{2h}}`$) | 2 |
+| $`\bigoplus`$ | a direct sum over an index | 0.1 |
+| $`\cap`$ | the intersection | 0.1 |
+| $`\cup`$ | the union | 0.1 |
+| $`\Gamma\!\downarrow\mathsf{H}`$ | the restriction of the irrep $`\Gamma`$ to the subgroup $`\mathsf{H}`$ | 12 |
+| $`\oplus`$ | the direct sum of representations | 0.1 |
+| $`\otimes`$ | the tensor product of irreps, of representations and of their matrices | 10 |
+| $`\mathsf{H_{1}} \rtimes \mathsf{H_{2}}`$ | the semidirect product of groups, the normal factor first | 12 |
+| $`m \times n`$ | multiplication, or the size of a matrix of $`m`$ rows and $`n`$ columns | 0.1 |
+| $`\mathsf{H_{1}} \times \mathsf{H_{2}}`$ | the direct product of groups | 0.1 |
+| $`\cong`$ | another name of the same class of subgroups of $`\mathsf{Pin^{-}(3)}`$ | 20.2 |
+| $`\in`$ | an element of | 0.1 |
+| $`\le`$ | less than or equal to, also of irreps in their order and of classes of subgroups by inclusion | 0.1 |
+| $`\mapsto`$ | maps to | 0.1 |
+| $`\to`$ | a product coupled to an irrep (as in $`\Gamma_1 \otimes \Gamma_2 \to \Gamma`$), a limit, a map or a rename | 0.1 |
+| $`'`$ | a prime, or on an irrep label, symmetric ($`'`$) or antisymmetric ($`''`$) under $`\mathsfit{\sigma_h}`$ ($`\mathsfit{\sigma_v}(0)`$ in `C1v`) | 0.1 |
+| $`\bar{X}`$ | the barred partner: $`\mathsfit{\bar{E}} = (\mathsfit{E}, 1)`$, the element of the kernel other than $`\mathsfit{E}`$, and $`\mathsfit{\bar{X}}`$, the lift $`(\mathsfit{X}, 1)`$ of $`\mathsfit{X}`$ of the other sign, or the class that contains it | 21 |
+| $`\bar{n}`$ | the rotoinversion bar over an axis order in a `hermann_mauguin` symbol, as in $`\bar{4}`$ (with $`\mathsf{S_{4}}`$) | 2 |
+| $`\boxed{\Gamma}`$ | a boxed irrep: the determinant character, of value $`\det \mathsfit{g}`$ | 0.1 |
+| $`\hat{\mathbf{v}}`$ | the unit axis $`\mathbf{v}/\lVert\mathbf{v}\rVert`$ of a rotation | 9 |
+| $`\hat{v}_x`$ | a component of the unit axis $`\hat{\mathbf{v}} = (\hat{v}_x, \hat{v}_y, \hat{v}_z)`$ | 9 |
+| $`\tilde{\sigma}`$ | a lift to $`\mathsf{Pin^{-}(3)}`$: $`\mathsfit{\tilde{i}}`$ of the inversion, $`\mathsfit{\tilde{\sigma}}`$ of a mirror | 21 |
+| $`\tilde{\mathsfit{R}}_{\mathbf{v}}(\omega)`$ | the lift of $`\mathsfit{R}_{\mathbf{v}}(\omega)`$ to $`\mathsf{SU(2)}`$, $`\cos\tfrac{\omega}{2} - \mathrm{i}\sin\tfrac{\omega}{2}\,\hat{\mathbf{v}}\cdot\vec{\sigma}`$, $`0 \le \omega < 4\pi`$, with $`\tilde{\mathsfit{R}}_{\mathbf{v}}(\omega + 2\pi) = \mathsfit{\bar{E}}\,\tilde{\mathsfit{R}}_{\mathbf{v}}(\omega)`$ | 21 |
+| $`{}^{2S+1}\Lambda`$ | a term of a configuration $`\Gamma^{n}`$: its spin multiplicity $`2S + 1`$ and its irrep $`\Lambda`$, the orbital states of the irrep $`\Lambda`$ with spin $`S`$ | 19 |
+| $`{z}^{*}`$ | the complex conjugate | 0.1 |
+| $`{}^{1}\mathrm{\scriptsize E}`$ | the member 1 or 2 of a complex-conjugate pair of irreps, as a left superscript | 6 |
+| $`\mathsfit{h}^{[k]}`$ | a generator $`\mathsfit{h}`$ of a subgroup and its element index $`k`$ in the subgroup's record | 0.1 |
+| $`U^{\dagger}`$ | the conjugate transpose | 0.1 |
+| $`P(\mathsfit{g})^{\top}`$ | the transpose | 0.1 |
+| $`{}^{d}`$ | the mark of a double group before the Hermann–Mauguin symbol of the group that it covers, such as $`{}^{d}3m`$ | 20.4 |
+| $`(0, 0, 1)`$ | a direction (an axis or the normal of a mirror) as a triple of numbers, such as $`(0, 0, 1)`$ for $`z`$ | 4 |
+| $`\left(\begin{smallmatrix} 0 & -1 \\ 1 & 0 \end{smallmatrix}\right)`$ | a matrix, in parentheses: in script size in tables and in the prose, in text size in displays | 0.1 |
+| $`[\mathsf{G} : \mathsf{H}]`$ | the index of the subgroup $`\mathsf{H}`$ in $`\mathsf{G}`$, the number of its cosets | 0.1 |
+| $`[ ]`$ | brackets: an interval, or a stored array or an entry of one, such as $`C[(\mu_1,\mu_2),\mu]`$ | 0.1 |
+| $`[\det \mathsfit{g} = -1]`$ | 1 when the condition in the brackets holds, 0 otherwise | 0.1 |
+| $`\lfloor x\rfloor`$ | the floor, the greatest integer $`\le x`$ | 0.1 |
+| $`\lvert x\rvert`$ | the absolute value of $`x`$, or the order $`\lvert \mathsf{G}\rvert`$ of a group $`\mathsf{G}`$ | 0.1 |
+| $`\{ \}`$ | braces: a set, or the antisymmetric part of a square $`\Gamma \otimes \Gamma`$ | 0.1 |
+| $`\langle \Gamma_1\,\Gamma_2\mid \Gamma\rangle`$ | the Clebsch–Gordan coefficient of two one-dimensional irreps in $`\Gamma_1 \otimes \Gamma_2 \to \Gamma`$ | 10 |
+| $`\bigl\langle{}^{\Gamma_1}_{\,\mu_1}\,{}^{\Gamma_2}_{\,\mu_2}\bigm\vert{}^{\Gamma}_{\,\mu};\kappa\bigr\rangle`$ | the Clebsch–Gordan coefficient of a finite group in $`\Gamma_1 \otimes \Gamma_2 \to \Gamma`$, for the copy $`\kappa`$ of $`\Gamma`$ | 10 |
+| $`\bigl\langle{}^{J_1}_{\,m_1}\,{}^{J_2}_{\,m_2}\bigm\vert{}^{J}_{\,M}\bigr\rangle`$ | the Clebsch–Gordan coefficient of $`\mathsf{SO(3)}`$ in $`D^{(J_1)} \otimes D^{(J_2)} \to D^{(J)}`$ | 10 |
+| $`\lvert \Gamma\rangle`$ | the partner of a one-dimensional irrep $`\Gamma`$, or a numbered partner $`\lvert 1\rangle`$, or a basis vector $`\lvert e_j\rangle`$ | 0.1 |
+| $`\lvert {\mu_1}\,{\mu_2}\rangle`$ | the product $`\bigl\lvert{}^{\Gamma_1}_{\,\mu_1}\bigr\rangle\bigl\lvert{}^{\Gamma_2}_{\,\mu_2}\bigr\rangle`$ of two partners, or $`\bigl\lvert{}^{J_1}_{\,m_1}\bigr\rangle\bigl\lvert{}^{J_2}_{\,m_2}\bigr\rangle`$ of two kets | 0.1 |
+| $`\bigl\lvert{}^{\Gamma}_{\,\mu};\kappa\bigr\rangle`$ | the partner $`\mu`$ of the copy $`\kappa`$ of the irrep $`\Gamma`$ in a product, or of $`\Lambda`$ in a restriction | 10 |
+| $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ | the ket of angular momentum $`J`$ and $`z`$ component $`m`$, a spherical harmonic for integer $`J`$ | 26.1 |
+| $`\bigl\lvert{}^{\Gamma}_{\,\mu}\bigr\rangle`$ | the partner $`\mu`$ of the irrep $`\Gamma`$, a vector of its basis | 9 |
+| $`\mathsf{G}\backslash\mathsf{Pin^{-}(3)}`$ | the space of the cosets $`\mathsf{G}\tilde{\mathsfit{Q}} = \{\mathsfit{g}\tilde{\mathsfit{Q}} : \mathsfit{g} \in \mathsf{G}\}`$ of $`\mathsf{Pin^{-}(3)}`$ | 21.3 |
+| $`\prod`$ | a product over an index | 0.1 |
+| $`\vec{\sigma}`$ | the vector $`(\sigma_x, \sigma_y, \sigma_z)`$ of the Pauli matrices | 21 |
+| $`\text{–}`$ | the dash in place of an Euler angle that is not a rational multiple of $`\pi`$ | 0.1 |
+| $`\mathsf{2G}`$ | the preimage of a point group $`\mathsf{G}`$ in $`\mathsf{Pin^{-}(3)}`$, its double group, such as $`\mathsf{2T}`$ and $`\mathsf{2C_{3v}}`$ | 20 |
+| $`\mathsf{A}`$ | the subgroup $`\mathsf{G} \cap \mathsf{C_{\infty h}}`$, the rotations and rotoreflections of $`\mathsf{G}`$ about $`z`$ | 14 |
+| $`\mathrm{\scriptsize A}`$ | a one-dimensional irrep, with $`\chi(\mathsfit{g}_p) = +1`$ in an axial group | 6 |
+| $`\mathrm{\scriptsize A}_{1/2}`$ | a one-dimensional spinor irrep ($`\chi(\bar{E}) = -1`$), its subscript the least half-integer $`J`$ at which it occurs in $`D^{(J,p)}`$ (section 23.2) | 23 |
+| $`a, b`$ | the Cayley–Klein parameters of a rotation | 9 |
+| $`\alpha`$ | the first Euler angle | 4 |
+| $`\mathrm{\scriptsize B}`$ | a one-dimensional irrep of an axial group with $`\chi(\mathsfit{g}_p) = -1`$, except for the small-$`N`$ renames | 6 |
+| $`b`$ | the bar of an element $`(\mathsfit{g}, b)`$ of a preimage: 0 for the canonical lift, 1 for its barred partner | 21 |
+| $`\mathsf{S_{6}}\mathrm{b}`$ | the second class of sections over $`\mathsf{S_{2N}}`$, $`N`$ odd, after its symbol, such as $`\mathsf{S_{6}}\mathrm{b}`$ | 20.2 |
+| $`\beta`$ | the second Euler angle | 4 |
+| $`b(\mathsfit{g})`$ | the bit of the element $`\mathsfit{g}`$ in a section $`\{(\mathsfit{g}, b(\mathsfit{g}))\}`$, its lift $`(-1)^{b(\mathsfit{g})}\,U(\mathsfit{g})`$ | 21 |
+| $`b_\Gamma(J)`$ | the number of blocks of $`\Gamma`$ at $`J`$, with $`b_\Gamma(J, p)`$ the multiplicity of $`\Gamma`$ in $`D^{(J,p)}`$ restricted to the group | 11 |
+| Bilbao | the symbol of an irrep in the double point group tables of [EBW+17] (`bilbao`) | 0.1 |
+| $`\mathsf{C}`$ | the centralizer in $`\mathsf{Pin^{-}(3)}`$ | 20.4 |
+| $`C`$ | the block of Clebsch–Gordan coefficients of a coupling, $`C = \mathcal{E}/\sqrt{\mathcal{N}}`$ | 10 |
+| $`\mathbb{C}`$ | the complex numbers | 0.1 |
+| $`c`$ | the sign of the second partner of a two-dimensional block | 14 |
+| $`\mathsfit{C_2'}`$ | a binary rotation about a horizontal axis: $`\mathsfit{C_2'}`$ in the class of $`\mathsfit{C_{2x}}`$, $`\mathsfit{C_2''}`$ in the other | 5 |
+| $`\mathsfit{C_2'}(\psi)`$ | the binary rotation about the horizontal axis at the azimuth $`\psi`$ (the $`x`$ axis for $`\psi = 0`$) | 16 |
+| $`\mathsfit{C_{2x}}`$ | the rotation $`\mathsfit{C_{\mathnormal{n}}}`$ about a coordinate axis: $`\mathsfit{C_{2x}}`$ about $`x`$, $`\mathsfit{C_{4z}}`$ about $`z`$ | 3 |
+| case | a kind of block of the symmetry-adapted bases, by the condition that gives it | 0.1 |
+| $`c_\beta, s_\beta`$ | the cosine and the sine of $`\beta/2`$, half the second Euler angle | 9 |
+| centralizer | the centralizer of a closed subgroup in the group | 29.5 |
+| $`\mathsf{C}_{\mathsf{G}}(\mathsf{H})`$ | the centralizer of $`\mathsf{H}`$ in $`\mathsf{G}`$ | 12 |
+| $`c(\mathsfit{g}, \mathsfit{h})`$ | the sign of a product of canonical lifts, $`U(\mathsfit{h})\,U(\mathsfit{g}) = (-1)^{c(\mathsfit{g},\mathsfit{h})}\,U(\mathsfit{g}\mathsfit{h})`$ | 21 |
+| $`\chi_{\Gamma}(\mathsfit{g})`$ | the character of the irrep $`\Gamma`$ at the element $`\mathsfit{g}`$ | 6 |
+| $`\chi_{\mathsf{A}}(m)`$ | the character by which $`\mathsf{A} = \mathsf{G} \cap \mathsf{C_{\infty h}}`$ acts on the ket $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ | 14 |
+| $`\chi(\mathsfit{g})`$ | the character of the irrep in question at the element $`\mathsfit{g}`$ | 6 |
+| $`\chi^{(J,p)}(\mathsfit{g})`$ | the character of the irrep $`D^{(J,p)}`$ of $`\mathsf{Pin^{-}(3)}`$ at the element $`\mathsfit{g}`$ | 25 |
+| $`\mathsf{C_{i}}`$ | the group of the inversion | 2 |
+| $`\mathsf{C_{\infty}}`$ | the rotations about $`z`$ | 3 |
+| $`\mathsf{C_{\infty h}}`$ | $`\mathsf{C_{\infty}}`$ with the horizontal mirror | 3 |
+| $`\mathsf{C_{\infty v}}`$ | $`\mathsf{C_{\infty}}`$ with the vertical mirrors | 3 |
+| class | the class of an element, or a class | 0.1 |
+| classes | the classes of $`\mathsf{G}`$ other than $`\mathsfit{E}`$ that a subgroup meets | 0.1 |
+| class of | the class of the inverse $`\mathsfit{g}^{-1}`$ or of the square $`\mathsfit{g}^{2}`$ of an element $`\mathsfit{g}`$ of a class | 0.1 |
+| $`\mathsf{C_{\mathnormal{N}}}`$ | the cyclic group of the $`N`$ rotations about $`z`$ | 3 |
+| $`\mathsf{C_{\mathnormal{N}h}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with the horizontal mirror | 3 |
+| $`\mathsfit{C_{\mathnormal{n}}^{\mathnormal{k}}}`$ | the rotation by $`2\pi k/n`$ about an axis, written $`\mathsfit{C_{\mathnormal{n}}}`$ when $`k = 1`$ | 5 |
+| $`\mathsf{C_{\mathnormal{N}v}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with $`N`$ vertical mirrors | 3 |
+| complete | whether the generators listed generate the ring of invariants | 26.4 |
+| component | a component of the class space | 0.1 |
+| conjugate | the complex conjugate of a complex irrep or of a family of complex irreps | 0.1 |
+| conjugates | the number of subgroups conjugate to a subgroup $`\mathsf{H}`$ in $`\mathsf{G}`$ | 0.1 |
+| coset | whether the elements of a component are proper or improper | 0.1 |
+| cross. sym., cross. anti. | symmetric and antisymmetric under the crossing: the rule that distinguishes two copies of an irrep in a product | 0.1 |
+| $`\mathcal{D}`$ | the cell: the part of the fundamental domain $`\mathcal{F}`$ in $`\mathsf{SU(2)}`$, one element of every coset of $`\mathsf{G} \cap \mathsf{SU(2)}`$ | 21.3 |
+| $`D^{(J)}`$ | the irrep of $`\mathsf{SU(2)}`$ of angular momentum $`J`$, integer or half-integer | 11 |
+| $`D^{\Gamma}(\mathsfit{g})`$ | the matrix of the irrep $`\Gamma`$ at the element $`\mathsfit{g}`$ | 9 |
+| $`D^{J}(U)`$ | the Wigner $`D`$ matrix of the element $`U`$ of $`\mathsf{SU(2)}`$, of entries $`\bigl\langle{}^{J}_{\,m'}\bigm\vert U\bigm\vert{}^{J}_{\,m}\bigr\rangle`$ | 9 |
+| $`D^{(J,p)}`$ | the irrep of $`\mathsf{Pin^{-}(3)}`$ of angular momentum $`J`$ and parity $`p`$, pulled back from $`\mathsf{O(3)}`$ at integer $`J`$ | 11 |
+| $`d`$ | the dimension of an irrep | 9 |
+| $`\mathrm{d}`$ | the differential | 0.1 |
+| $`d^{J}(\beta)`$ | the Wigner $`d`$ matrix, of entries $`\bigl\langle{}^{J}_{\,m'}\bigm\vert \mathrm{e}^{-\mathrm{i}\beta J_y}\bigm\vert{}^{J}_{\,m}\bigr\rangle`$ | 9 |
+| degree | the degree of an invariant polynomial | 0.1 |
+| $`\Delta_\Gamma`$ | the increase of $`b_\Gamma(J, p)`$ when $`J`$ grows by one period | 11 |
+| $`\delta_{j,k}`$ | the Kronecker delta | 0.1 |
+| $`\det`$ | the determinant, of a matrix or of an element: $`\det \mathsfit{g} = \det P(\mathsfit{g})`$ | 0.1 |
+| $`\det_{\mathsf{G}}`$ | the determinant character of $`\mathsf{G}`$, the one-dimensional irrep $`\mathsfit{g} \mapsto \det \mathsfit{g}`$ | 14 |
+| $`D(\mathsfit{g})`$ | the matrix of the irrep in question at the element $`\mathsfit{g}`$ | 9 |
+| $`\operatorname{diag}`$ | the diagonal matrix with the listed entries on its diagonal | 0.1 |
+| $`\mathsf{D_{\infty}}`$ | $`\mathsf{C_{\infty}}`$ with the binary axes perpendicular to $`z`$ | 3 |
+| $`\mathsf{D_{\infty h}}`$ | $`\mathsf{D_{\infty}}`$ with the horizontal mirror | 3 |
+| $`\mathsf{D_{\mathnormal{N}}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with $`N`$ binary axes perpendicular to $`z`$ | 3 |
+| $`\mathsf{D_{\mathnormal{N}d}}`$ | $`\mathsf{D_{\mathnormal{N}}}`$ with $`N`$ dihedral mirrors | 3 |
+| $`\mathsf{D_{\mathnormal{N}h}}`$ | $`\mathsf{D_{\mathnormal{N}}}`$ with the horizontal mirror | 3 |
+| $`D_{\nu,\mu}(\mathsfit{g})`$ | the entry in row $`\nu`$ and column $`\mu`$ of the matrix $`D(\mathsfit{g})`$ of an irrep | 9 |
+| $`\mathsfit{E}`$ | the identity | 5 |
+| $`\mathrm{\scriptsize E}`$ | a two-dimensional irrep, with $`{}^1\mathrm{\scriptsize E}`$ and $`{}^2\mathrm{\scriptsize E}`$ the one-dimensional irreps of a complex-conjugate pair, which together form the irrep $`\mathrm{\scriptsize E}`$ over $`\mathbb{R}`$ | 6 |
+| $`\mathrm{e}`$ | the base of the natural logarithm | 0.1 |
+| $`\mathrm{\scriptsize E}_{1/2}`$ | a two-dimensional spinor irrep, with $`{}^1\mathrm{\scriptsize E}_{J}`$ and $`{}^2\mathrm{\scriptsize E}_{J}`$ the one-dimensional spinor irreps of a complex-conjugate pair | 23 |
+| $`e_j`$ | the vector $`\lvert e_j\rangle`$ of the coset $`j`$, or the rotation-diagonal basis $`\lvert e_1\rangle`$, $`\lvert e_2\rangle`$, or a unit column | 9 |
+| element | the element of a component at its angle | 0.1 |
+| $`e_m`$ | the coefficient of the ket $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ in a basis vector, its amplitude being $`e_m\sqrt{F_m/\mathrm{tot}}`$ | 14 |
+| $`\varepsilon`$ | the sign $`\varepsilon`$ in $`\mathrm{\scriptsize A}_1, \mathrm{\scriptsize A}_2 = \tfrac{1}{2}\sqrt{2}\,(\lvert e_1\rangle\lvert f_2\rangle \pm \varepsilon\,\lvert e_2\rangle\lvert f_1\rangle)`$ of $`\mathrm{\scriptsize E}_n \otimes \mathrm{\scriptsize E}_n`$ (section 10), or in $`\mathsf{Pin^{-}(3)}`$ the sign of an element $`(U, \varepsilon)`$, the determinant of the element of $`\mathsf{O(3)}`$ that it covers (section 20.1) | 10 |
+| exch. sym., exch. anti. | symmetric and antisymmetric under the exchange of the two factors: the rule that distinguishes two copies of an irrep in a square | 0.1 |
+| $`\mathcal{F}`$ | a fundamental domain of $`\mathsf{G}\backslash\mathsf{Pin^{-}(3)}`$, one element of every coset (more only on its boundary): $`\mathcal{D}`$ or $`\mathcal{D} \cup \mathsfit{\tilde{i}}\,\mathcal{D}`$ | 21.3 |
+| $`f_1`$ | the rotation-diagonal basis $`\lvert f_1\rangle`$, $`\lvert f_2\rangle`$ of the second factor of a product | 10 |
+| family | a family of irreps | 0.1 |
+| $`\texttt{field}`$ | a field name in a formula, standing for the value of the field | 0.1 |
+| $`F_m`$ | the weight $`(J + m)!\,(J - m)!`$ of the ket $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ | 14 |
+| form | a binary form | 26.4 |
+| $`\mathsf{G}`$ | a point group or a section: the image in $`\mathsf{O(3)}`$ in the conventions, where $`\mathsf{2G}`$ is its preimage, and the section in the document of a section (a preimage's document names its own group) | 20.2 |
+| $`\mathrm{\scriptsize G}`$ | a four-dimensional irrep | 6 |
+| $`\mathsfit{g}`$ | an element of the group | 0.1 |
+| $`\mathsfit{g}^{k}`$ | the $`k`$-th power of $`\mathsfit{g}`$ | 0.1 |
+| $`\mathsfit{g}^{-1}`$ | the inverse of $`\mathsfit{g}`$ | 0.1 |
+| $`\mathrm{\scriptsize G}_{3/2}`$ | a four-dimensional spinor irrep, with $`{}^1\mathrm{\scriptsize G}_{J}`$ and $`{}^2\mathrm{\scriptsize G}_{J}`$ the two-dimensional spinor irreps of a complex-conjugate pair | 23 |
+| $`\Gamma`$ | an irrep of $`\mathsf{G}`$, with $`\Gamma'`$ an irrep of the parent record $`\mathsf{2T}`$, $`\mathsf{2O}`$ or $`\mathsf{2I}`$ whose bases a derived record relabels | 6 |
+| $`\gamma`$ | the third Euler angle | 4 |
+| $`\Gamma_1, \Gamma_2`$ | the two factors of a product of irreps | 10 |
+| generators | the generators of the semi-invariants of a one-dimensional irrep, or the degrees of the generators of the invariants of a spinor irrep | 26.4 |
+| $`\mathrm{g}, \mathrm{u}`$ | the parity tags of an irrep label: gerade (even under the inversion $`\mathsfit{i}`$) and ungerade (odd) | 6 |
+| $`\mathsf{H}`$ | a subgroup of $`\mathsf{G}`$: its own record, or the representative of its class | 12 |
+| $`\mathrm{\scriptsize H}`$ | a five-dimensional irrep | 6 |
+| $`\mathsf{H}\,{\scriptstyle\mathrm{a}}`$ | the small letter, gray in the documents, that distinguishes classes of subgroups of $`\mathsf{G}`$ with the same symbol as $`\mathsf{H}`$ | 0.1 |
+| $`\mathsfit{h}`$ | a second element, or an element of a subgroup | 0.1 |
+| $`\mathsf{H}\,{\scriptstyle{\times}c}`$ | the number $`c > 1`$ of subgroups of $`\mathsf{G}`$ conjugate to $`\mathsf{H}`$, with $`{\times}\infty`$ for infinitely many | 0.1 |
+| $`H_\Gamma(t)`$ | the generating function $`\sum_{J\ge1/2} b_\Gamma(J)\,t^{2J}`$ of the multiplicities, over the half-integer $`J`$ | 14 |
+| $`\mathsf{I}`$ | the rotations of the icosahedron | 3 |
+| $`\mathrm{i}`$ | the imaginary unit | 0.1 |
+| $`\mathsfit{i}`$ | the inversion | 0.1 |
+| $`\mathrm{\scriptsize I}_{5/2}`$ | a six-dimensional spinor irrep | 23 |
+| $`\mathsf{I_{h}}`$ | $`\mathsf{I}`$ with the inversion | 3 |
+| image | the image of an irrep, the group of its matrices, isomorphic to the quotient of the group by $`\ker\Gamma`$ | 23.1 |
+| images | the images of the generators of a subgroup under a setting | 0.1 |
+| $`\operatorname{Ind}_{\mathsf{H}}^{\mathsf{G}} \Lambda`$ | the representation of $`\mathsf{G}`$ induced from the irrep $`\Lambda`$ of the subgroup $`\mathsf{H}`$ | 12 |
+| index | the range of the index of the irreps of a family, such as $`n \ge 1`$, with a half-integer index for a spinor family, such as $`n \ge \tfrac{1}{2}`$ | 29.2 |
+| $`\mathsfit{\infty\sigma_v}`$ | an atom of the class space: the class of all the $`\mathsfit{\sigma_v}(\psi)`$, or of all the $`\mathsfit{C_2'}(\psi)`$ | 0.1 |
+| irrep | an irrep | 0.1 |
+| irreps | the irreps of the nonzero isotypic components of a function | 0.1 |
+| $`J`$ | the angular momentum of an irrep $`D^{(J,p)}`$ of $`\mathsf{Pin^{-}(3)}`$: $`J = 0, \tfrac{1}{2}, 1, \tfrac{3}{2}, \dots`$ | 25.1 |
+| $`J_1, J_2`$ | the angular momenta of the two factors of a product, or the indices of their families | 10 |
+| $`k`$ | the index of an element of the group (from 0), with $`k'`$ a second one | 9 |
+| $`k^{-1}`$ | the index of the inverse of an element | 0.1 |
+| $`\kappa`$ | the copy index of an irrep | 0.1 |
+| $`\ker`$ | the kernel of a representation, the elements that it maps to the identity | 0.1 |
+| kernel | the kernel $`\ker\Gamma`$ of an irrep (the normal subgroup of the elements that it maps to the identity), or of a permutation representation (the normal subgroup of the elements that fix every point) | 0.1 |
+| $`\mathsf{L}(2N, 1)`$ | the lens space $`\mathsf{L}(2N, 1)`$, the space $`\mathsf{C_{\mathnormal{N}}}\backslash\mathsf{SO(3)}`$, or $`\mathsf{L}(N, 1)`$ for a cyclic subgroup of $`\mathsf{SU(2)}`$ of order $`N`$ | 21.3 |
+| $`\Lambda`$ | an irrep of a subgroup | 12 |
+| $`\lambda`$ | a one-dimensional irrep | 9 |
+| $`\Lambda_m`$ | the irrep, or sum of two, of a subgroup on the ket $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ or the pair $`\bigl\lvert{}^{J}_{\,\pm m}\bigr\rangle`$ | 16 |
+| $`\Lambda^{n}`$ | the exterior power of a representation: $`n`$ fermions in one level, $`\mathbb{S}_{[1^{n}]}`$ | 19 |
+| $`M`$ | the $`z`$ component of a coupled ket | 10 |
+| $`m`$ | a mirror plane in a `hermann_mauguin` symbol, as in $`2/m`$ (with $`\mathsf{C_{2h}}`$) | 2 |
+| $`m`$ | the $`z`$ component of the angular momentum | 4 |
+| $`m_1, m_2`$ | the $`z`$ components of the kets of the two factors of a product | 10 |
+| $`M(k)`$ | the stored $`2\times2`$ matrix of the element of index $`k`$, the transpose of its $`\mathsf{SU(2)}`$ part, so that $`M(k)\,M(k') = M(kk')`$ | 21 |
+| $`n \bmod N`$ | the residue of $`n`$ modulo $`N`$ in $`0, 1, \dots, N - 1`$ | 0.1 |
+| $`\mu`$ | the partner index of an irrep | 0.1 |
+| $`\mu_1, \mu_2`$ | the partners of the two factors of a product | 10 |
+| $`\mathsf{N}`$ | the normalizer in $`\mathsf{Pin^{-}(3)}`$ | 20.4 |
+| $`N`$ | the parameter of an axial family, the number of its rotations about the principal axis | 1 |
+| $`\mathcal{N}`$ | the normalization of a Clebsch–Gordan or subduction block $`\mathcal{E}/\sqrt{\mathcal{N}}`$ | 10 |
+| $`n`$ | the number of elements of a class, before its symbol, such as the 8 of $`\mathsfit{8C_3}`$ | 5 |
+| $`n`$ | the index of a family of irreps, with $`n`$ and $`n'`$ the indices of the two factors of a product | 16 |
+| $`\mathsf{N}_{\mathsf{G}}(\mathsf{H})`$ | the normalizer of $`\mathsf{H}`$ in $`\mathsf{G}`$ | 12 |
+| normal | whether a subgroup is normal | 0.1 |
+| normalizer | the normalizer of a closed subgroup in the group | 29.5 |
+| $`\nu`$ | a second partner index | 9 |
+| $`\nu_{\mathrm{FS}}`$ | the Frobenius–Schur indicator of an irrep: $`+1`$ (real), $`-1`$ (pseudoreal) or $`0`$ (complex) | 7 |
+| $`\mathsf{O}`$ | the rotations of the cube | 3 |
+| $`\mathsf{O(3)}`$ | the orthogonal group, $`\mathsf{SO(3)} \cup \mathsfit{i}\,\mathsf{SO(3)}`$, with $`\mathsf{O(2)}`$ the orthogonal group of the plane and $`\mathsf{O(\mathnormal{N})}`$ that of $`N`$ dimensions | 3 |
+| $`\mathsf{O_{h}}`$ | $`\mathsf{O}`$ with the inversion | 3 |
+| $`\Omega`$ | the projection $`\Omega = \lvert\Lambda + \Sigma\rvert`$ of the angular momentum on the axis of a linear molecule (Hund's case (a)), the index of the levels $`\mathrm{\scriptsize E}_{\Omega}`$ | 29.4 |
+| $`\omega`$ | the angle of a rotation $`\mathsfit{R}_{\mathbf{v}}(\omega)`$, $`0 \le \omega < 2\pi`$, and of its lift $`\tilde{\mathsfit{R}}_{\mathbf{v}}(\omega)`$, $`0 \le \omega < 4\pi`$ | 4 |
+| ord | the order of an element, or of the elements of a class | 0.1 |
+| order | the order of a subgroup | 0.1 |
+| over $`\mathbb{R}`$ | the irrep over $`\mathbb{R}`$ in which an irrep lies: itself when real or pseudoreal and the irrep over $`\mathbb{R}`$ of its complex-conjugate pair when complex, or for a family the family of these irreps | 0.1 |
+| $`p`$ | the parity of an irrep $`D^{(J,p)}`$ of $`\mathsf{Pin^{-}(3)}`$: $`p = \pm 1`$ | 11 |
+| $`\mathrm{p}`$ | the letter of a real solid harmonic of degree 0 to 3 (s, p, d, f), or of an atomic subshell of that angular momentum (with a power $`n`$, the configuration of $`n`$ electrons in it), or of a component $`\mathrm{R}_x`$, $`\mathrm{R}_y`$, $`\mathrm{R}_z`$ of an axial vector | 13 |
+| $`P^{\Gamma}_{\mu,1}`$ | the map, up to a factor, from partner 1 to partner $`\mu`$ of each copy of $`\Gamma`$, which at $`\mu = 1`$ is a multiple of the projector on the first partners | 12 |
+| parent J | the copy of an irrep that $`\mathsf{SU(2)}`$ parentage places in the components of total angular momentum $`J`$, each copy orthogonal to those before | 24 |
+| partners | the partners of a block | 0.1 |
+| $`P(\mathsfit{g})`$ | the $`3\times 3`$ matrix of the element $`\mathsfit{g}`$, acting on rows: $`\mathbf{r} \mapsto \mathbf{r}\, P(\mathsfit{g})`$ | 4 |
+| $`P_\Gamma(t)`$ | the numerator of the generating function $`H_\Gamma(t)`$, or of $`H^\Gamma_\Lambda(t)/(1 - t^2)`$, a polynomial in $`t`$ | 14 |
+| $`\phi`$ | a rotation angle, that of the arcs $`\mathsfit{C}(\phi)`$ and $`\mathsfit{i\,C}(\phi)`$ of the class space | 0.2 |
+| $`\varphi`$ | the golden ratio $`\tfrac{1}{2}\bigl(1 + \sqrt{5}\bigr)`$ | 0.1 |
+| $`\pi`$ | the ratio of a circle's circumference to its diameter | 0.1 |
+| $`\mathsf{Pin^{-}(3)}`$ | the parent, $`\mathsf{SU(2)} \times \{+1, -1\}`$: the double cover of $`\mathsf{O(3)}`$ in which the lift of the inversion is central of order 2 | 20 |
+| primary | the degrees of the primary invariants, a homogeneous system of parameters | 26.4 |
+| $`\psi`$ | the azimuth of an element of an atom of the class space, $`\mathsfit{\sigma_v}(\psi)`$ or $`\mathsfit{C_2'}(\psi)`$ | 0.2 |
+| $`\mathsfit{Q}`$ | an element of $`\mathsf{O(3)}`$, the placement of an object, with $`\mathsf{G}\mathsfit{Q}`$ its coset and with its lifts placing the object in $`\mathsf{Pin^{-}(3)}`$ | 21.3 |
+| $`\mathsf{Q_{\mathnormal{n}}}`$ | the generalized quaternion group of order $`n`$ | 20.4 |
+| $`q`$ | the exponent in $`\chi(\mathsfit{g}_p) = \zeta_{N_p}^q`$ (a least residue modulo $`N_p`$), or the residue modulo $`K`$ in $`n_K(J, q)`$ | 6 |
+| $`q_m`$ | the integer coefficients of a vector stored with a common factor | 14 |
+| $`\mathsfit{R}`$ | the rotation part $`(\det \mathsfit{g})\,\mathsfit{g}`$ of an element $`\mathsfit{g}`$ | 4 |
+| $`\mathbb{R}`$ | the real numbers | 0.1 |
+| $`\mathbf{r}`$ | the point $`(x, y, z)`$ of space, written as a row | 4 |
+| $`\operatorname{Re}`$ | the real part | 0.1 |
+| reality | the reality of an irrep: real, pseudoreal or complex | 0.1 |
+| $`\mathbb{R}\mathsf{P}^{2}`$ | the real projective plane, the lines through the origin | 17 |
+| $`\mathsfit{R}(U)`$ | the rotation that $`U \in \mathsf{SU(2)}`$ covers, a column-vector matrix | 20 |
+| $`\mathsfit{R_{\mathbf{v}}}(\omega)`$ | the rotation by $`\omega`$ about the axis $`\mathbf{v}`$, counterclockwise as seen from its tip ($`\mathsfit{R_z}`$ and $`\mathsfit{R_y}`$ for $`\mathbf{v}`$ along $`z`$ and $`y`$), or the element with matrix $`P(\mathsfit{R_{\mathbf{v}}}(\omega))`$ | 4 |
+| $`S`$ | the intertwiner from a parent block to an irrep of a derived record, $`w_\mu = \sum_\nu S_{\nu,\mu} v_\nu`$ | 14 |
+| $`s`$ | the sign of the second ket of a pair $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle + s\,\bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$ | 14 |
+| $`\mathsf{S}^{2}`$ | the unit sphere, the directions in space | 17 |
+| $`\mathsf{S_{2\mathnormal{N}}}`$ | the cyclic group generated by the rotoreflection $`\mathsfit{\sigma_h} \mathsfit{R_z}(\pi/N)`$ | 3 |
+| setting | the number of a setting of a subgroup | 0.1 |
+| $`\mathsfit{\sigma}`$ | a mirror of $`\mathsf{I_{h}}`$, of the class $`\mathsfit{15\sigma}`$ | 5 |
+| $`\sigma_{x}`$ | the Pauli matrices $`\sigma_x`$, $`\sigma_y`$, $`\sigma_z`$ | 21 |
+| $`\mathsfit{\sigma_d}`$ | a vertical mirror outside the class of $`\mathsfit{\sigma_v}(0)`$, or a diagonal mirror of $`\mathsf{T_{d}}`$ and $`\mathsf{O_{h}}`$ | 5 |
+| $`\mathsfit{\sigma_h}`$ | the horizontal mirror, in the $`xy`$ plane, or a mirror in a coordinate plane in $`\mathsf{T_{h}}`$ and $`\mathsf{O_{h}}`$ | 5 |
+| $`\mathsfit{\sigma_v}`$ | a vertical mirror, in the class of $`\mathsfit{\sigma_v}(0)`$ | 5 |
+| $`\mathsfit{\sigma_v}(\psi)`$ | the mirror in the vertical plane at the azimuth $`\psi`$ (the $`xz`$ plane for $`\psi = 0`$) | 16 |
+| size | the number of elements of a class | 0.1 |
+| $`\mathsf{SL}(2,\mathnormal{q})`$ | the group of the $`2 \times 2`$ matrices of determinant 1 over the field of $`q`$ elements | 20.4 |
+| $`\mathsfit{S_{\mathnormal{n}}^{\mathnormal{k}}}`$ | the rotoreflection: $`\mathsfit{C_{\mathnormal{n}}^{\mathnormal{k}}}`$ and the reflection in the plane normal to its axis ($`k`$ odd) | 5 |
+| $`\mathsf{SO(3)}`$ | the group of all rotations, with $`\mathsf{SO(2)}`$ the rotations about one axis and $`\mathsf{SO(\mathnormal{N})}`$ the rotations of $`N`$ dimensions | 3 |
+| $`\mathsf{Spin(3)}`$ | the spin group in three dimensions, another name of $`\mathsf{SU(2)}`$ | 29 |
+| state | a state, up to a positive factor | 25.4 |
+| $`\mathsf{SU(2)}`$ | the unitary $`2\times2`$ matrices of determinant 1, the double cover of $`\mathsf{SO(3)}`$ | 20 |
+| subgrp | a subgroup, the representative of its class | 0.1 |
+| subshell | a subshell $`\mathrm{p}_{1/2}`$, …, of the electrons of orbital angular momentum $`l`$ and total angular momentum $`J = l \mp 1/2`$ | 25.4 |
+| $`\mathsf{Sym_{\mathnormal{n}}}`$ | the symmetric group of degree $`n`$ | 2 |
+| sym | the symbol of an element | 0.1 |
+| $`\mathsf{T}`$ | the rotations of the tetrahedron | 3 |
+| $`\mathrm{\scriptsize T}`$ | a three-dimensional irrep | 6 |
+| $`t`$ | the variable of the generating functions | 14 |
+| $`\tau`$ | the turn $`\omega/2\pi \in [0, 2)`$ of the lift $`\tilde{\mathsfit{R}}_{\mathbf{v}}(\omega)`$ of an element's rotation part (the field `su2_turn`) | 21 |
+| $`\mathsf{T_{d}}`$ | the symmetries of the tetrahedron | 3 |
+| $`\mathsf{T_{h}}`$ | $`\mathsf{T}`$ with the inversion | 3 |
+| $`\mathrm{tot}`$ | the normalization $`\sum_m \lvert e_m\rvert^2 F_m`$ of a basis vector | 14 |
+| $`\operatorname{tr}`$ | the trace | 0.1 |
+| $`U(\mathsfit{g})`$ | the canonical lift of the element $`\mathsfit{g}`$ of a point group to $`\mathsf{SU(2)}`$, the lift of its rotation part of nonnegative scalar part, with $`U`$, $`V`$ elements of $`\mathsf{SU(2)}`$ | 21 |
+| $`\mathbf{v}`$ | the axis of an element, or the normal of its mirror | 4 |
+| $`v`$ | a symmetry-adapted vector, a combination of kets $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$, with $`v_\mu`$ the partner $`\mu`$ of a block | 14 |
+| vector | a symmetry-adapted vector | 0.1 |
+| $`\operatorname{vol}`$ | the volume in the metric that the covering map carries to that of $`\mathsf{O(3)}`$, in which the distance from $`\mathsfit{E}`$ to a rotation by $`\omega \le \pi`$ is $`\omega`$, or a finite group's number of elements | 21.3 |
+| $`\mathsfit{X}`$ | an element of the point group, named in a sentence | 21 |
+| $`x, y, z`$ | the coordinates of a point and the coordinate axes, or the variables of the polynomials | 4 |
+| $`\mathsf{Z_{\mathnormal{n}}}`$ | the cyclic group of order $`n`$ | 2 |
+| $`\zeta_{n}`$ | the root of unity $`\mathrm{e}^{2\pi\mathrm{i}/n}`$ | 0.1 |

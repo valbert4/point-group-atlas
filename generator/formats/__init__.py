@@ -43,6 +43,9 @@ def run_double(args):
             tex = double_latex.render(name, rec, reports)
         serialize.write_text(names.latex_path(name), tex)
     md = names.path("CONVENTIONS.md")
+    # the generated block of CONVENTIONS.md (the index of notation, in this registry)
+    if os.path.exists(md):
+        conventions.write_generated()
     sources = ([(md, conventions.render)] if os.path.exists(md) else []) + [
         (names.repository_path("REFERENCES.md"), conventions.references_tex)]
     for path, render in sources:

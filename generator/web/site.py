@@ -180,9 +180,9 @@ FAVICONS = ("favicon.svg",) + tuple("favicon-%s.svg" % c for c in
 # (1200 x 630), the mark beside the title on its grid, as on the home. The image's address carries
 # the first digits of its SHA-256, so that a site that keeps a copy of a preview fetches the image
 # again when it changes.
-DESCRIPTION = ("Exact tables of the 98 point groups and their 116 double groups: characters, irrep "
-               "matrices, Clebsch–Gordan coefficients, descent of symmetry and symmetry-adapted "
-               "bases, with JSON, GAP, SymPy and Wolfram Language records.")
+DESCRIPTION = ("Exact tables of the 98 point groups and the 116 double point groups: characters, "
+               "irrep matrices, Clebsch–Gordan coefficients, descent of symmetry and "
+               "symmetry-adapted bases, with records in JSON, GAP, Wolfram Language and SymPy.")
 CARD = "social.png"
 CARD_ALT = "The mark and the title of the Point Group Atlas"
 LOGO_FILES = FAVICONS + (WORDMARK, CARD)
@@ -786,10 +786,10 @@ def write_conventions(site, markdown_text):
     cat = site.cat
     top = "%s/conventions/" % cat
     records = conventions.index_records()
-    if cat != "rotation":
-        # the index of notation of the volume, in the catalogue's registry, as its PDF sets it
-        # last (double_volume, volume.index_document); Rotation's CONVENTIONS.md holds its own
-        markdown_text = (markdown_text.rstrip("\n") + "\n\n## Index of notation\n"
+    if "\n## %s\n" % notation.INDEX_TITLE not in markdown_text:
+        # a CONVENTIONS.md without its index of notation gets it here, in the catalogue's
+        # registry (both files now hold theirs, written by the formats stage)
+        markdown_text = (markdown_text.rstrip("\n") + "\n\n## %s\n" % notation.INDEX_TITLE
                          + notation.index_markdown(records))
     parts = markdown.sections(markdown_text)
     # the rows of 0.1 and of the index of notation, anchored by record (Rotation's file holds
@@ -899,8 +899,8 @@ def write_volume(site):
             '%s\n<h2>Groups</h2>\n%s\n%s\n%s%s\n<h2>References</h2>\n<p><a href="%s">References'
             '</a></p>' % (esc(style.VOLUMES[cat]), conventions_line,
                           "" if built == total else
-                          '<p class="note">This build holds %d of the %d groups; the others are '
-                          'listed without links.</p>' % (built, total),
+                          '<p class="note">This build holds %d of the %d groups, and the others '
+                          'are listed without links.</p>' % (built, total),
                           grid, others, data.volume_box(site.data, here,
                                                         volume_pdf(site, here)),
                           rel(here, "references/")))
