@@ -192,8 +192,8 @@ def render():
              r"\documentclass[10pt,a4paper]{article}", style.current(), macros(), latex.MACROS,
              conventions.MACROS, V.MACROS, BLOCK_MACROS, V.TITLE_PACKAGES, TEXT_CONTENTS,
              r"\expandafter\def\csname vol@text@%s\endcsname{}" % CONVENTIONS_DOCS[1],
-             r"\hypersetup{pdftitle={%s},pdfauthor={%s},pdfsubject={%s}}"
-             % (style.TITLES[names.CATALOGUE], style.AUTHOR, SUBJECT),
+             r"\hypersetup{pdftitle={%s},pdfsubject={%s}}"
+             % (style.TITLES[names.CATALOGUE], SUBJECT),
              r"\begin{document}", V.title_sheet(style.VOLUMES[names.CATALOGUE])]
     parts += [r"\clearpage\pagestyle{plain}\pdfbookmark[0]{Contents}{contents}",
               r"\begin{center}{\LARGE\sffamily\bfseries\color{parttitle}Contents}\end{center}",

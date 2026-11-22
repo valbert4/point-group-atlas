@@ -4,7 +4,7 @@ r"""The conventions, the 98 group documents and the references as one PDF:
 
 (the Double catalogue's volume, --catalogue double, is double_volume.py's).
 
-The PDF's metadata are TITLE, AUTHOR and SUBJECT.  A title sheet (title_sheet: TITLE on a grid of
+The PDF's metadata are TITLE and SUBJECT.  A title sheet (title_sheet: TITLE on a grid of
 three rows, the volume, the mark in the volume's color, and at the foot the commit of the
 repository the volume is built from, linked to the commit on GitHub and marked when the working
 tree has uncommitted changes, none outside a git checkout), the contents of the
@@ -38,7 +38,7 @@ import tempfile
 from .. import names, serialize
 from . import conventions, latex, lint, notation, pdf, solids, style
 
-TITLE, AUTHOR = style.TITLE, style.AUTHOR
+TITLE = style.TITLE
 SUBJECT = ("Point Group Atlas, volume I: the conventions, the documents of the 98 point groups, "
            "the references and the index of notation")
 REPOSITORY = "https://github.com/valbert4/point-group-atlas"
@@ -374,8 +374,7 @@ def render():
     parts = [r"\pdfinfoomitdate=1", r"\pdftrailerid{}", r"\pdfsuppressptexinfo=-1",
              r"\documentclass[10pt,a4paper]{article}", style.STYLE, notation.MACROS, latex.MACROS,
              conventions.MACROS, MACROS, TITLE_PACKAGES,
-             r"\hypersetup{pdftitle={%s},pdfauthor={%s},pdfsubject={%s}}"
-             % (style.TITLES["rotation"], AUTHOR, SUBJECT),
+             r"\hypersetup{pdftitle={%s},pdfsubject={%s}}" % (style.TITLES["rotation"], SUBJECT),
              r"\begin{document}", title_sheet(style.VOLUMES["rotation"])]
     parts += [r"\clearpage\pagestyle{plain}\pdfbookmark[0]{Contents}{contents}",
               r"\begin{center}{\LARGE\sffamily\bfseries\color{parttitle}Contents}\end{center}",

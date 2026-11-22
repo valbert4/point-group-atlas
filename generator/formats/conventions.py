@@ -62,8 +62,6 @@ def preamble(head, title=None):
 \begin{document}""")
 
 
-PREAMBLE = preamble("Conventions")
-
 HEADING = r"""\thispagestyle{opening}
 \begin{center}
 {\LARGE\sffamily\bfseries\color{parttitle}%s}
@@ -893,7 +891,7 @@ def render(markdown_text, reports=None):
     text = body(markdown_text)
     lint_text(text, "conventions", reports)
     text = link_citations(latex.group_breaks(text), r"\href{../REFERENCES.pdf\#ref.%s}{%s}")
-    return PREAMBLE + "\n" + text + "\n\\end{document}\n"
+    return preamble("Conventions") + "\n" + text + "\n\\end{document}\n"
 
 
 def compile_markdown(md_name, tex, out):

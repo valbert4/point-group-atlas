@@ -24,7 +24,8 @@ from .tex import attr, esc
 
 DATA = (("json", "JSON"), ("gap", "GAP"), ("wolfram", "Wolfram Language"), ("sympy", "SymPy"))
 FORMATS = {"pdf": "PDF", "markdown": "Markdown", "json": "JSON"}
-DOCUMENTS = (("pdf", "PDF"), ("latex", "LaTeX"))
+# The rows of a group's Data box: the PDF first, then the record in each format, then the LaTeX.
+BOX = (("pdf", "PDF"),) + DATA + (("latex", "LaTeX"),)
 # The file of the subgroups of O(3) that a continuous group's document reads in place of a
 # lattice of its own.
 POINT_GROUPS = "point_groups"
@@ -261,7 +262,7 @@ def data_box(files, stem, rec, group_link, here):
     """The Data box of a group's contents, the site path `here`: its files with their sizes, the
     files kept apart from the record, the schema, the records that it names, and index.json."""
     rows = []
-    for fmt, label in DATA + DOCUMENTS:
+    for fmt, label in BOX:
         f = files.of(stem, fmt)
         rows.append('<tr><td>%s</td><td>%s</td><td class="c-r">%s</td></tr>' % (
             label, files.link(f["path"], esc(f["path"].rsplit("/", 1)[1]), here),
@@ -322,7 +323,8 @@ def volume_box(files, here, pdf=None):
         href, name, n, _ = pdf
         rows.append('<tr><td>PDF</td><td><a href="%s" target="_blank" rel="noopener">%s</a></td>'
                     '<td class="c-r">%s</td></tr>' % (esc(href), esc(name), size(n)))
-    for f in files.catalogue:
+    # the PDFs first, as in a group's Data box, then the other files in the order of index.json
+    for f in sorted(files.catalogue, key=lambda f: f["format"] != "pdf"):
         label = "JSON Schema" if f["path"].endswith(".schema.json") else FORMATS[f["format"]]
         rows.append('<tr><td>%s</td><td>%s</td><td class="c-r">%s</td></tr>' % (
             label, files.link(f["path"], esc(f["path"].rsplit("/", 1)[1]), here),

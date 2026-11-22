@@ -133,9 +133,8 @@ STYLE = "\n".join([STYLE, MARK, OPENING])
 
 
 # The PDF metadata: the title names the document and the collection, the Point Group Atlas, with
-# the volume of the catalogue; the subject what it holds.
+# the volume of the catalogue; the subject what it holds.  The PDFs name no author.
 TITLE = "Point Group Atlas"
-AUTHOR = "Victor V. Albert"
 # The volume of each catalogue, on the title sheet of its volume and in the titles of its documents,
 # and its style: the Double catalogue's has \nicefrac (the half-integer J) and its part titles in
 # pine (the colors of the catalogues, scope Q8).
@@ -155,8 +154,8 @@ def current():
 
 
 def metadata(name, subject, title=None):
-    """\\hypersetup with the PDF title, author and subject of a document (static strings, so the
-    PDF stays byte-reproducible); the title is that of the catalogue's volume, or `title`."""
+    """\\hypersetup with the PDF title and subject of a document (static strings, so the PDF stays
+    byte-reproducible); the title is that of the catalogue's volume, or `title`."""
     from .. import names
-    return "\n\\hypersetup{pdftitle={%s: %s}, pdfauthor={%s}, pdfsubject={%s}}" % (
-        name, title or TITLES.get(names.CATALOGUE, TITLE), AUTHOR, subject)
+    return "\n\\hypersetup{pdftitle={%s: %s}, pdfsubject={%s}}" % (
+        name, title or TITLES.get(names.CATALOGUE, TITLE), subject)

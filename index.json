@@ -10,10 +10,10 @@
           "sha256": "f3880247abdf579bb0402bbe0feb944ad12d4fad584a72c76690870d371ed55a"
         },
         {
-          "bytes": 770785,
+          "bytes": 770693,
           "format": "pdf",
           "path": "rotation/CONVENTIONS.pdf",
-          "sha256": "111878246e6c04d60db6397038fab5a1b58e3b638ea810ae1d9745023aeacb7f"
+          "sha256": "327034c35470bb9c18a8d7920714bdfeacd4d7585a27fd9922eff4cd9f6aff9a"
         },
         {
           "bytes": 156100,
@@ -47,10 +47,10 @@
           "sha256": "1f2b2134c0eb5cce85aae69e6e3e6cb2df187781111d3a5acd4939b17461669e"
         },
         {
-          "bytes": 479481,
+          "bytes": 479533,
           "format": "pdf",
           "path": "double/CONVENTIONS.pdf",
-          "sha256": "7805eea6ece4467f684ce21d90b828483b0fbb3e350ff57bc991e22308b34155"
+          "sha256": "141e178c89dfa0cf932b78401ec1bf2a7c45a0b9c3c2635a92e4cacfdab5e480"
         },
         {
           "bytes": 85739,
@@ -95,10 +95,10 @@
       "sha256": "c38d705a320e9c68af22735262629968439e5f42ea9e0fcaa1dac6e0873214b0"
     },
     {
-      "bytes": 178435,
+      "bytes": 178340,
       "format": "pdf",
       "path": "REFERENCES.pdf",
-      "sha256": "fe94d603f2dfa4f78bf4e1419df775c8f55d49f7c79b4f3aa103d53e57f4011d"
+      "sha256": "bbd2a9455311de5a7e305d62dbed865a7995cff27912a8026d2ab2ba49b3ec2d"
     },
     {
       "bytes": 46135,
@@ -142,16 +142,16 @@
           "sha256": "e94fcd9d928f7cf14190df5022f3c61205ca1829da3d997179569c384b539687"
         },
         {
-          "bytes": 60709,
+          "bytes": 60679,
           "format": "latex",
           "path": "rotation/data/latex/C1.tex",
-          "sha256": "122424f31905fb1038533803d877750ee1eecd7e1fc54a644be44a13ff5eec83"
+          "sha256": "7b8a0bbab07ee1ecba642c4fb6a9b29f965c8c5f1148f4b45f1afe60c11bd45a"
         },
         {
-          "bytes": 387651,
+          "bytes": 387560,
           "format": "pdf",
           "path": "rotation/data/pdf/C1.pdf",
-          "sha256": "5c8cae41996363c02100ccaa576a84afc763f956d3a19066b8fc4020e3ef3b00"
+          "sha256": "94df4a92f92d8a368db3ece1fd6023565fe8c3cab097a082955add888f10e54d"
         }
       ],
       "requires": [],
@@ -187,16 +187,16 @@
           "sha256": "ed50f5dac0c016e65365efb5786ee22b6d260f12498bcea1b4217cc49bf4c923"
         },
         {
-          "bytes": 64778,
+          "bytes": 64748,
           "format": "latex",
           "path": "rotation/data/latex/C2.tex",
-          "sha256": "8a431f01df8ccc121038f8188c87020a0283db0252e85c03e3c6223389769fc5"
+          "sha256": "25069f263d7f133ba76112b944540e9b13092f576cebc33d05d4333a069f8394"
         },
         {
-          "bytes": 402113,
+          "bytes": 402021,
           "format": "pdf",
           "path": "rotation/data/pdf/C2.pdf",
-          "sha256": "5876db8c1702d5b8efebe0e5f4c657ab1098c559e1a7c5c7f1a785e7dad065f4"
+          "sha256": "3fdb562a0246b938324ef699154de74a93bf722041d61fe85498f20ad06aee82"
         }
       ],
       "requires": [],
@@ -232,16 +232,16 @@
           "sha256": "6c133f99101b5d589a5497aeb7d642c3b13afae14ac40e7b14adeace4aaa92d0"
         },
         {
-          "bytes": 74313,
+          "bytes": 74283,
           "format": "latex",
           "path": "rotation/data/latex/C3.tex",
-          "sha256": "585d47a1e0c5e2a155db634eded0eaa8aeb240864c5302e6ea9fabdd28d3c5a5"
+          "sha256": "f956ff3fb86d052175b034f9740e18778f3ad7d641b8ef00992e73e68b0874e5"
         },
         {
-          "bytes": 410054,
+          "bytes": 409959,
           "format": "pdf",
           "path": "rotation/data/pdf/C3.pdf",
-          "sha256": "2b2ecee9b4c6305897d5f9393188cc2fda1959397339d1bf43b948d75be3e67b"
+          "sha256": "4151db544a674378b8ed8c128d3eb7fae4dd8b63259812bb48e64cdcb43f98ac"
         }
       ],
       "requires": [],
@@ -277,16 +277,16 @@
           "sha256": "255e8ad4e25edbad56666baa4d1a886d025818c90117ea8adef8e90304d19067"
         },
         {
-          "bytes": 75327,
+          "bytes": 75297,
           "format": "latex",
           "path": "rotation/data/latex/C4.tex",
-          "sha256": "3abb66f4f7e1d80ce49312a1e7f300ebf242c75bef40c9978d6ca550ee947c38"
+          "sha256": "6dacfdbdaa27d95e57fa52eb2b8a8ef6d739f1e0819e1e74440d3ce144e66562"
         },
         {
-          "bytes": 410015,
+          "bytes": 409921,
           "format": "pdf",
           "path": "rotation/data/pdf/C4.pdf",
-          "sha256": "fdc1cf1ece490cb7a04bd2eaad407220295257ba636a2ddc8945be3b604b2099"
+          "sha256": "e5e765cf8a849b5d57890105f77671d6565f6e5fea1d69146ffc4a26ff0a761c"
         }
       ],
       "requires": [],
@@ -322,16 +322,16 @@
           "sha256": "b96a63fe96acbe383a42da9e578274c55706f2147f0e1cf1172a3e766e1bdf87"
         },
         {
-          "bytes": 80283,
+          "bytes": 80253,
           "format": "latex",
           "path": "rotation/data/latex/C5.tex",
-          "sha256": "cbe9ba76a7ca822cd82c89aa36526d9c9a4b00463dfb82bc7b694f3dd3908e0a"
+          "sha256": "1e970edec62f5f2ffbaaf06b0c459ca7abdd8c3411c96fab3afc5d7fe58d55ed"
         },
         {
-          "bytes": 412096,
+          "bytes": 411998,
           "format": "pdf",
           "path": "rotation/data/pdf/C5.pdf",
-          "sha256": "65615f2670a4a2f2450eedc6017213517f26c49fd8adef687c58c1f4bb47279b"
+          "sha256": "4359cd4dc336c38dcd3f20f8f64c66c1967b81763b1bc2b147cceb2d5fb8af21"
         }
       ],
       "requires": [],
@@ -367,16 +367,16 @@
           "sha256": "a8565a15add0f0eeb58beaf90cd231702f287b84d132ec78f02e0535e8efc619"
         },
         {
-          "bytes": 87321,
+          "bytes": 87291,
           "format": "latex",
           "path": "rotation/data/latex/C6.tex",
-          "sha256": "bafd4333c93b4e42c5ce615aa594d2869ee64b07b80d924d6b231a9d3609e809"
+          "sha256": "c597fac1fc5d8110223cb1f8a23bd65498ca49fe1a7f4931e569b442e6ed361b"
         },
         {
-          "bytes": 419640,
+          "bytes": 419546,
           "format": "pdf",
           "path": "rotation/data/pdf/C6.pdf",
-          "sha256": "e768105bc3bd650fd03f3d0cbee9f4e9c5c3073bc1ddfd87f872d73c13756708"
+          "sha256": "172b29878425f8910a844c647921ca21663f9a150e3555253b163e79f4ebce7d"
         }
       ],
       "requires": [],
@@ -412,16 +412,16 @@
           "sha256": "b8c9017a4f482f968e62dd744afebc400e98b411c1f6c31c2cba9923379b2da2"
         },
         {
-          "bytes": 85077,
+          "bytes": 85047,
           "format": "latex",
           "path": "rotation/data/latex/C7.tex",
-          "sha256": "4b46420d1108a212658c696c066a5468aa2b690c450e1a17b0da7874019865ef"
+          "sha256": "19a04af9e6e6338ad27725c46f4f558dce64feaddb50e13aa0c7235a450e5523"
         },
         {
-          "bytes": 411888,
+          "bytes": 411796,
           "format": "pdf",
           "path": "rotation/data/pdf/C7.pdf",
-          "sha256": "7eae580bcc8bca27dfe9dcf92b9b0e7413daa97eef26433eaefc417ca1f50907"
+          "sha256": "3fa36624f3b1bd6bf35005ab872d4faa91e709889ff4fedc5c8772f38e17025d"
         }
       ],
       "requires": [],
@@ -457,16 +457,16 @@
           "sha256": "131fd9db56f7baa226e123b396148d33325ab06ccca1032aac8f41559248a5ef"
         },
         {
-          "bytes": 91876,
+          "bytes": 91846,
           "format": "latex",
           "path": "rotation/data/latex/C8.tex",
-          "sha256": "f8329fa4e14cd928ac41b35cfbf7733cdf61c013c6730f93a0282a480253e985"
+          "sha256": "da5133d1ca5faf6cfec7a502a084760f409f69965a1f62c85abff85a91051277"
         },
         {
-          "bytes": 419422,
+          "bytes": 419326,
           "format": "pdf",
           "path": "rotation/data/pdf/C8.pdf",
-          "sha256": "785027c570b152267f57f031378abae3901622341a9992ef6836fea2bdce8db0"
+          "sha256": "d65165a55c4fa19648a73a4ada8b9f38ef8fc189dc21bd609425a545d7382e78"
         }
       ],
       "requires": [],
@@ -502,16 +502,16 @@
           "sha256": "f0e794f34e9894a9bb322e6c3e287475d88cd7314b50bd04af2c62321c15e5de"
         },
         {
-          "bytes": 95335,
+          "bytes": 95305,
           "format": "latex",
           "path": "rotation/data/latex/C9.tex",
-          "sha256": "3198533bb9e08f4d7f8100fca55db47b13b547289a073b0b2cbb322f4e9c466a"
+          "sha256": "9e09bf797a84e191da74ddc10c50a93d094489707fce2fee3769d14865def60a"
         },
         {
-          "bytes": 420009,
+          "bytes": 419917,
           "format": "pdf",
           "path": "rotation/data/pdf/C9.pdf",
-          "sha256": "5c3e0b4e7cc1f315698a2ed8079f569084b4a213b5bbaef4ebaccdf1fbeb7fe2"
+          "sha256": "153fe4e5c81431c2faffb02c19b0f79a2b38c042c65110519a22501764fe9976"
         }
       ],
       "requires": [],
@@ -547,16 +547,16 @@
           "sha256": "6d2ecf6607655b92a1b895d993850264b9b769d94d9f4cadaaed8a8a0a04f887"
         },
         {
-          "bytes": 98724,
+          "bytes": 98694,
           "format": "latex",
           "path": "rotation/data/latex/C10.tex",
-          "sha256": "c351a03c2f0d4e565aade03a38d2ba352b2b6400f8e4122b1bbfd9777f2beb9e"
+          "sha256": "14441a41759f9d31a315aaea585892343954b8376aa880fe63c0feacfea4c07b"
         },
         {
-          "bytes": 422527,
+          "bytes": 422433,
           "format": "pdf",
           "path": "rotation/data/pdf/C10.pdf",
-          "sha256": "63c608bb6113714102a4659d846a43c31f770b53d45892e5f1992c00d799f105"
+          "sha256": "5b59503fe8c7fd1aae9ff7bfb640931608869a0d3ce37e456f8dc88fb4c12446"
         }
       ],
       "requires": [],
@@ -592,16 +592,16 @@
           "sha256": "2d7ac58e85e58f80451a5c228752e405053567fccdd1ce932ff24d4cef1356aa"
         },
         {
-          "bytes": 95353,
+          "bytes": 95323,
           "format": "latex",
           "path": "rotation/data/latex/C11.tex",
-          "sha256": "1fca10ffd67f7cce8aed65d2e8b97323f95def7c7213d21fe9e37d0acb7c3d67"
+          "sha256": "5c8a6044f875148eadbf67c4e326e1abd79b8a34304c9a8b5ae246118d5718a7"
         },
         {
-          "bytes": 415112,
+          "bytes": 415019,
           "format": "pdf",
           "path": "rotation/data/pdf/C11.pdf",
-          "sha256": "9ee8a9059375c510ad258ef90b64338dbb626aeb66b8cd025fb250855f7c8100"
+          "sha256": "df69e96e1169789de677154f2fb3d8ec980c278752bc20586160a534db53bf59"
         }
       ],
       "requires": [],
@@ -637,16 +637,16 @@
           "sha256": "345d2cf53876c2e44a2300f91cedb795c5ef33804660002858070d2009ff11cd"
         },
         {
-          "bytes": 105043,
+          "bytes": 105013,
           "format": "latex",
           "path": "rotation/data/latex/C12.tex",
-          "sha256": "07534ae151cd55902ae265a17f85498c0f3636e692a091b8b3e5226ed46ec5dc"
+          "sha256": "a0712518ba5da55c22fa5af23912d2b81a794c4426c548c31902029f948c7053"
         },
         {
-          "bytes": 425081,
+          "bytes": 424986,
           "format": "pdf",
           "path": "rotation/data/pdf/C12.pdf",
-          "sha256": "4dced12dd0ade7a160110d2db191486826a3884c3975d244f8c34a7499c4ab4a"
+          "sha256": "2fcc6db28f98f7cbfa52a211d6744d3817c0eb36862e1eaa0972b0e910f99b99"
         }
       ],
       "requires": [],
@@ -682,16 +682,16 @@
           "sha256": "0e1baf214c773561d85205e7c4a3a2a68ea3972810e3b5f67f0ed44cc41b430a"
         },
         {
-          "bytes": 66360,
+          "bytes": 66330,
           "format": "latex",
           "path": "rotation/data/latex/S2.tex",
-          "sha256": "d6ff708e2c657a531d7c37bc2af4140e2e86c0f1ef2f2dc034327bc62767d444"
+          "sha256": "f3fe54c0a15d0c310bec790f11592526ecc750e6c9043975513e15d233b39816"
         },
         {
-          "bytes": 394915,
+          "bytes": 394823,
           "format": "pdf",
           "path": "rotation/data/pdf/S2.pdf",
-          "sha256": "3bf5f75d8f3be848e6be058bd812940277b02c2faf2f65a0850ec16c4dd7435a"
+          "sha256": "08ea352b78feefa00f5436eb1fc24d95a189d41308d2a6422234bbd03ef7156d"
         }
       ],
       "requires": [],
@@ -727,16 +727,16 @@
           "sha256": "a76ec662e0fc07105cf728ea14a9eba46134be5c739f48cf388b05b92b5a2046"
         },
         {
-          "bytes": 77023,
+          "bytes": 76993,
           "format": "latex",
           "path": "rotation/data/latex/S4.tex",
-          "sha256": "83df3478179ecf784eba2fd536396e1c01c6caf3e12c038810fd78e7eccd59cd"
+          "sha256": "0071a7682a0511c4ee864b0cb3284ca63ab23f2586abbf6b82b803d5f4d059d7"
         },
         {
-          "bytes": 412322,
+          "bytes": 412228,
           "format": "pdf",
           "path": "rotation/data/pdf/S4.pdf",
-          "sha256": "45e0a59f97f48791af941657e02f5f79729a4942798ecebbc7d576de2d223af2"
+          "sha256": "66f173084adf032d00b9335af3a1ab46e5468015929c4cd3b3d2e04521150fe6"
         }
       ],
       "requires": [],
@@ -772,16 +772,16 @@
           "sha256": "dc66ba308bb87e1a76147bd0f6dd9081d8b590e6d98bd8b957231c6277b01020"
         },
         {
-          "bytes": 90096,
+          "bytes": 90066,
           "format": "latex",
           "path": "rotation/data/latex/S6.tex",
-          "sha256": "01623a588f04bcd37bfbb5f2a6ceef5544944046e3caed9ba88c86e30d01c46b"
+          "sha256": "9892c2f838b7de94fb837fb8bca89116f38d619374d0818ee7887cd4da14ff5f"
         },
         {
-          "bytes": 424094,
+          "bytes": 424000,
           "format": "pdf",
           "path": "rotation/data/pdf/S6.pdf",
-          "sha256": "d898182166bac00e4fd0f43ff4c5fb34ac3284cd6392b1b49851dd311e845fe7"
+          "sha256": "ba5b252fad8ea2899115efade2565463b0d6460c14dddeb28e55f95b223cb7a8"
         }
       ],
       "requires": [],
@@ -817,16 +817,16 @@
           "sha256": "5ddc1d9c37bfc15a905a59e3a04d6dedba52f849b76987a1c8e79ae911ae5065"
         },
         {
-          "bytes": 94546,
+          "bytes": 94516,
           "format": "latex",
           "path": "rotation/data/latex/S8.tex",
-          "sha256": "285f9b97a935f6fa1a6023ed510981e72a7b90c019fbdb04de07bfe9117d272e"
+          "sha256": "d1575f313020b78591b5b2f8fa813e8d578b45d419f1a9b0e85725f95a0f9094"
         },
         {
-          "bytes": 422677,
+          "bytes": 422582,
           "format": "pdf",
           "path": "rotation/data/pdf/S8.pdf",
-          "sha256": "bc2fd7af2e45a649c0d5a8f3677ce4752e942c3eb54ceb3dc9048d82f129e21f"
+          "sha256": "00b0d321cf98a3c47b062a27cbb5a419bf13c4d050781acb31c041d5c5432b86"
         }
       ],
       "requires": [],
@@ -862,16 +862,16 @@
           "sha256": "7bd8ba944717ef0e1e37c779ff7caef5d1a07c316f4f7eccf211609f4871e0da"
         },
         {
-          "bytes": 102548,
+          "bytes": 102518,
           "format": "latex",
           "path": "rotation/data/latex/S10.tex",
-          "sha256": "befcd0655191e9520f6a3f3006b14de590b27b84a691917055ded2f9d02686f4"
+          "sha256": "311ca6d52adb69984f9716e20a501e3ae33c942a628bfca4d509a95e6a86caf5"
         },
         {
-          "bytes": 427542,
+          "bytes": 427447,
           "format": "pdf",
           "path": "rotation/data/pdf/S10.pdf",
-          "sha256": "4f0355004f497033bc71312a114e45c9cb6526a6d7ee7b546a0b3bda59b9805a"
+          "sha256": "1793f5a3250010a9567ebcff6c02ddf301c748f3798e706210966b6424641e71"
         }
       ],
       "requires": [],
@@ -907,16 +907,16 @@
           "sha256": "c5e7b81cd76f9e6c3df6a78cf3e9146138bac782a4c50ec579b98f174111bfee"
         },
         {
-          "bytes": 108402,
+          "bytes": 108372,
           "format": "latex",
           "path": "rotation/data/latex/S12.tex",
-          "sha256": "f17d429c9a05b356f1ba272e52f8d80bc340426af9bf969b4f9b694c69943106"
+          "sha256": "a5c42aeede77305cfcbf2fba9018f5a1bc2e6258d5956bb7f14d0334957f27d7"
         },
         {
-          "bytes": 429150,
+          "bytes": 429057,
           "format": "pdf",
           "path": "rotation/data/pdf/S12.pdf",
-          "sha256": "8635bb78d68510ce79616135a8776d34ac061529abf9785560a90fa6ea04d95f"
+          "sha256": "9924ded0db83ceeb66d2909baf8930ca527d233117b1a55a9449ad3f16adaef2"
         }
       ],
       "requires": [],
@@ -952,16 +952,16 @@
           "sha256": "2187220488ede10c20a4050a108e4483144f8398f2f88394459e21574a5bae65"
         },
         {
-          "bytes": 115807,
+          "bytes": 115777,
           "format": "latex",
           "path": "rotation/data/latex/S14.tex",
-          "sha256": "e1f0030bc9b5b8d95c96c1970c64414633ecfa29f997c8aead39f49b7a736ff1"
+          "sha256": "241b4eebbd789b57c176b0398bc39dc71a753676cc73b4f5be313b6ed1f3f6bd"
         },
         {
-          "bytes": 428309,
+          "bytes": 428214,
           "format": "pdf",
           "path": "rotation/data/pdf/S14.pdf",
-          "sha256": "8972350721dbbba0286cbc01c365f5dfac7a4906da5162e1655046bd47e6750c"
+          "sha256": "9504752749633c1c79e7d189e516eb9a01038c30deb7cebbb21b8d1e1da2f2bf"
         }
       ],
       "requires": [],
@@ -997,16 +997,16 @@
           "sha256": "dc6c6b775ebc4c40ba1ba7f7117dd6c1da730c15b3ab6af25449457aae52b08b"
         },
         {
-          "bytes": 119904,
+          "bytes": 119874,
           "format": "latex",
           "path": "rotation/data/latex/S16.tex",
-          "sha256": "786fa35cad7a729e470f8d898acad370a357fb2ebaac1122b0547ed22d812f07"
+          "sha256": "f2150474cb44bc771dcb2eba0b4b7adb747f27fe5d4ce91d648649d53fbebbf7"
         },
         {
-          "bytes": 433778,
+          "bytes": 433684,
           "format": "pdf",
           "path": "rotation/data/pdf/S16.pdf",
-          "sha256": "614a43bf15e58f242c2c569f7be1c43d86ea50c9401408d16043b81bcef2df2a"
+          "sha256": "b7cdf53f84341eaad786f21856cbe6dcb309cf62ad8d70138a68fca46326e808"
         }
       ],
       "requires": [],
@@ -1042,16 +1042,16 @@
           "sha256": "dc545ba62178725cd0c4878db22270975befe55441a60dcd4a0551da53a8872b"
         },
         {
-          "bytes": 135467,
+          "bytes": 135437,
           "format": "latex",
           "path": "rotation/data/latex/S18.tex",
-          "sha256": "848812ca2719c645972334b7f9c9088f2aa13c91c19975bc89829a5aa5d9f3de"
+          "sha256": "bc1de3020e19fa1fb1c77f9c7d1d2b79d2219b7aaadf5c78a7865271d538d351"
         },
         {
-          "bytes": 437443,
+          "bytes": 437350,
           "format": "pdf",
           "path": "rotation/data/pdf/S18.pdf",
-          "sha256": "662fbad58f7a12064b679d09a6a7fecc1a56d33036570038eec99bd47957e104"
+          "sha256": "d2afc65fcce24f93a906166cf32a03d834b5a99c92422c43b2cdedb5c11d34bf"
         }
       ],
       "requires": [],
@@ -1087,16 +1087,16 @@
           "sha256": "8834d383367a004fa02bbff54aeeb62b0643e0b17698ea60ff129d952a06e0a8"
         },
         {
-          "bytes": 138795,
+          "bytes": 138765,
           "format": "latex",
           "path": "rotation/data/latex/S20.tex",
-          "sha256": "0e29df9671e8aa785ddecfa88116fb251eb097ced10bedf3ad86615cc0f201a9"
+          "sha256": "126fd74b0b9633ef5fe8fa327270c6bec8a2782d6474a46b70a9d3a90d068284"
         },
         {
-          "bytes": 439706,
+          "bytes": 439611,
           "format": "pdf",
           "path": "rotation/data/pdf/S20.pdf",
-          "sha256": "157a4d523ebe7a99de4a59ffce9e03440fd5653ecbc064e867d915c2b3f416d4"
+          "sha256": "b7dc0d5226e86f2a66535f9309dfff1c951920f73736f2c848a0c239855bc6e9"
         }
       ],
       "requires": [],
@@ -1132,16 +1132,16 @@
           "sha256": "2f84b0508982261fa85a858d92667cb760a9b5777d8b6339f6aeb0101f04b92e"
         },
         {
-          "bytes": 151270,
+          "bytes": 151240,
           "format": "latex",
           "path": "rotation/data/latex/S22.tex",
-          "sha256": "122726c36a71236b78bf9f7595c0b72b8271a2bb9d9a16243501c3b85e6ace1c"
+          "sha256": "796bb93f4636aafa2737e9d35d7174d55737edc544c1e2edc927e682b34fa432"
         },
         {
-          "bytes": 438768,
+          "bytes": 438675,
           "format": "pdf",
           "path": "rotation/data/pdf/S22.pdf",
-          "sha256": "2c0eec619f0dbce4fd9029adcda44bd340e443ea7301f87aae4e27b8f696250b"
+          "sha256": "379c0820d4e2add0d3ea04fc9856d98655f0072813201339edab80c489045148"
         }
       ],
       "requires": [],
@@ -1177,16 +1177,16 @@
           "sha256": "664ae6ad44427145407dfe2e719706daed5cf5abe23f9e6a7b707a3746d90292"
         },
         {
-          "bytes": 159797,
+          "bytes": 159767,
           "format": "latex",
           "path": "rotation/data/latex/S24.tex",
-          "sha256": "6e0e02c239759deb0d12ba1c2793969810feb066d77571f383acfbb2b09c77ec"
+          "sha256": "db1851cd2546eec15abd86c92ed9f1703804c6fb83af04eae7a7b7487f8f533a"
         },
         {
-          "bytes": 446312,
+          "bytes": 446220,
           "format": "pdf",
           "path": "rotation/data/pdf/S24.pdf",
-          "sha256": "d9651d37241d8b0bf37d83862b3a58d2d0dcd1dc7d1f89eec964213ffd7b1109"
+          "sha256": "152503e1d6bd2f98d4a25d7bc6859dbef5c678640d1a102e44a0e5b7a1b4f507"
         }
       ],
       "requires": [],
@@ -1222,16 +1222,16 @@
           "sha256": "952924fb614a5966a411b2c968d36f312cc9cf9fde589eb1c1edf2b4aa397ce8"
         },
         {
-          "bytes": 65212,
+          "bytes": 65182,
           "format": "latex",
           "path": "rotation/data/latex/C1h.tex",
-          "sha256": "56b9ef8c1c1e4fa21933c670a50fcbb2517bdc59f3bd6b6212a3a5370b713052"
+          "sha256": "fb8ed93a7865d60a8e3b76974ca539ce2646ce56d81ba88156c936dc5c862ca1"
         },
         {
-          "bytes": 401965,
+          "bytes": 401868,
           "format": "pdf",
           "path": "rotation/data/pdf/C1h.pdf",
-          "sha256": "795181f8c77fb95265b4dfe029736ed5969932a59e4df17c5afba0ebc19accf9"
+          "sha256": "9e03876ec087cf1e245846f5a8cddd750fcaba2d869e9b84063f5c43752e2e05"
         }
       ],
       "requires": [],
@@ -1267,16 +1267,16 @@
           "sha256": "ffbe9768a437092d75f1c16998029ff1a7de73539ad3d21db633ae8f79e1f7cf"
         },
         {
-          "bytes": 75548,
+          "bytes": 75518,
           "format": "latex",
           "path": "rotation/data/latex/C2h.tex",
-          "sha256": "4282446d5332f3ab0d335353573911ed8175f89c7217068ba2a50c68e68a50b4"
+          "sha256": "4f0ff8e32e106a152298ad92735896a828f61b31e4f694c45ee0c096c08f07eb"
         },
         {
-          "bytes": 419823,
+          "bytes": 419729,
           "format": "pdf",
           "path": "rotation/data/pdf/C2h.pdf",
-          "sha256": "82c56398bff6029525e2d58482e1424cbdb3df844a40629b15763c6c1a2f41f4"
+          "sha256": "da9b7caa7a4450405c56f57191115c5283a113cda41b4a8b11dac3898e666de1"
         }
       ],
       "requires": [],
@@ -1312,16 +1312,16 @@
           "sha256": "d76b803d2c06d954c8fd985fbbe830516804f4ddde143fb0c5734e6ec1233d47"
         },
         {
-          "bytes": 88590,
+          "bytes": 88560,
           "format": "latex",
           "path": "rotation/data/latex/C3h.tex",
-          "sha256": "2b7cab089951ab0e7918c8d27782e53ec96b5fec878d4a8524bd6a8f097ddf36"
+          "sha256": "5d5ba53a0519c74b017bcabb19ab995f7556424a97da180aff4229bad85741e9"
         },
         {
-          "bytes": 430138,
+          "bytes": 430044,
           "format": "pdf",
           "path": "rotation/data/pdf/C3h.pdf",
-          "sha256": "11767071070fbc8969a386356012d2ad06a4b1727ad6afc9df3df9127ec15c93"
+          "sha256": "3c4102c3b4d1afe161263d44c98b0b970687de3afa04fec2c94f4bb3119b667a"
         }
       ],
       "requires": [],
@@ -1357,16 +1357,16 @@
           "sha256": "be8907af4b5f03c889dd09925c0543a954955e798c79bd657586e9064fff4440"
         },
         {
-          "bytes": 95693,
+          "bytes": 95663,
           "format": "latex",
           "path": "rotation/data/latex/C4h.tex",
-          "sha256": "5972253c5f9dac1683550a9e284ce6b6aa3adc20581ba406e407f8a8c06c4a80"
+          "sha256": "f020e9a21efd3aac706f591a1027e45646c96487b32cef70a54e94fd511529d4"
         },
         {
-          "bytes": 431092,
+          "bytes": 430998,
           "format": "pdf",
           "path": "rotation/data/pdf/C4h.pdf",
-          "sha256": "a4a51c77de4f1f9cb9250dc746724788b231036b925fed412d4c50472baf5abf"
+          "sha256": "34e75265bcd8f8272dff1f0d416c2fe882126f52e2610f52aacaba47af0d46e8"
         }
       ],
       "requires": [],
@@ -1402,16 +1402,16 @@
           "sha256": "7d0d769432051acb347cede5b8e66019ef524b7deb3e50b5c0877c1be8d87908"
         },
         {
-          "bytes": 102138,
+          "bytes": 102108,
           "format": "latex",
           "path": "rotation/data/latex/C5h.tex",
-          "sha256": "1e12af6191e2b460f1d21912ec3682d88b35e7776fdea46b236ee037947ddfa5"
+          "sha256": "93daefb78caad9140959d1177e0a3d46556a2e99b15d9bb43a58c8d20e8458e1"
         },
         {
-          "bytes": 431798,
+          "bytes": 431703,
           "format": "pdf",
           "path": "rotation/data/pdf/C5h.pdf",
-          "sha256": "47c1acde4c28db03ae6e1272aa8cc0a48aaa56cabe443c8ea9c4d702d742768e"
+          "sha256": "fe1c42d9d839d8156099036ca7e92e170e1f98cb9d31171f60b38e049ffe0594"
         }
       ],
       "requires": [],
@@ -1447,16 +1447,16 @@
           "sha256": "d4826304fba9ea67497ea68182d244dc64ff8188d02f9de8953bc17d0b60b4ca"
         },
         {
-          "bytes": 115576,
+          "bytes": 115546,
           "format": "latex",
           "path": "rotation/data/latex/C6h.tex",
-          "sha256": "85be696f54233914177a63f4d639ff276ab1cd706ca30f5e8fdcd8901dde4775"
+          "sha256": "2b5e74d643dc1f0d714ebc19b09a4381a8a84aefeecbc49c5e25fdfa3fd4ac77"
         },
         {
-          "bytes": 441460,
+          "bytes": 441366,
           "format": "pdf",
           "path": "rotation/data/pdf/C6h.pdf",
-          "sha256": "e75edb048bca19dd12de743a28a4c8a972332d1cbccbddb59e1d7cd01a2b5f4d"
+          "sha256": "f04b6c86c5ef7fa3516cbbc7cda2960e153037703c0e41dfb2394efeae960265"
         }
       ],
       "requires": [],
@@ -1492,16 +1492,16 @@
           "sha256": "408d2bc10768007e19909c67277510035d52acc84ef9ef0ecfbc0e733e7e629a"
         },
         {
-          "bytes": 113135,
+          "bytes": 113105,
           "format": "latex",
           "path": "rotation/data/latex/C7h.tex",
-          "sha256": "c27af66296cd5bfb84642ebecd6a166811e88a81163808203d413ed2a6a3fea3"
+          "sha256": "0c09298ad459392390c9d9d5ff7155b510f653ba67833e2829116fa1497eb2aa"
         },
         {
-          "bytes": 434174,
+          "bytes": 434080,
           "format": "pdf",
           "path": "rotation/data/pdf/C7h.pdf",
-          "sha256": "8a00b96dc0c58918e07372296c32b43854b201e96bb191915e84df9bffc21b10"
+          "sha256": "80c5ac27c920f8693f584d3fbdf11e3571eddab4ef29a4e218d926933ba66496"
         }
       ],
       "requires": [],
@@ -1537,16 +1537,16 @@
           "sha256": "415190c0d3b49ff49a30772c1c304c1a263bac4dec0ccdd016f2b6ef90f5edf9"
         },
         {
-          "bytes": 131000,
+          "bytes": 130970,
           "format": "latex",
           "path": "rotation/data/latex/C8h.tex",
-          "sha256": "d99037466bc827b70c93a63e7890625f3d9cbe126d2749d8536e979da459ff6f"
+          "sha256": "6e77845a8ad90dce437658dccbff006a2c086f24784e348248ce7b1e1229d4d6"
         },
         {
-          "bytes": 445401,
+          "bytes": 445307,
           "format": "pdf",
           "path": "rotation/data/pdf/C8h.pdf",
-          "sha256": "810d6701482972a206221589d9fe307be8a608774eeeddd616561c8d4388f315"
+          "sha256": "93fc011cd5d671fd4539c2e1a5ed88ac82a763e143382db296dda058024ca49d"
         }
       ],
       "requires": [],
@@ -1582,16 +1582,16 @@
           "sha256": "17d54a24c113358185f0fbf425a2fdb0e69f0b380c8f68ab79124db049561196"
         },
         {
-          "bytes": 130191,
+          "bytes": 130161,
           "format": "latex",
           "path": "rotation/data/latex/C9h.tex",
-          "sha256": "b5698e98698050d8ca92590a3466c144698fec7a54612cef624f956a916c6931"
+          "sha256": "44bb4fb9906d47d6e7f9abffc0252890e2cb4138e97fbd05df9e80657e2445e0"
         },
         {
-          "bytes": 443404,
+          "bytes": 443312,
           "format": "pdf",
           "path": "rotation/data/pdf/C9h.pdf",
-          "sha256": "1e2ccbd6d55ebb83faff0646703979270cc08d74b9afa7e0d3f26d7403acc11d"
+          "sha256": "2aa2c5f6b5a7f23741db2f5560de93e5e0872735821756455eb0e732d2554038"
         }
       ],
       "requires": [],
@@ -1627,16 +1627,16 @@
           "sha256": "35fab58925c0aa9747c2c1b902229e349da9214dd0767483203a05604fa9a563"
         },
         {
-          "bytes": 152132,
+          "bytes": 152102,
           "format": "latex",
           "path": "rotation/data/latex/C10h.tex",
-          "sha256": "5f4f4035dc0d7231ccdcd48d892414980b691f39d4b943942d66d7b9e5d6da31"
+          "sha256": "c44cff1ea5b6a674fd3a1d6b3f4e5a6e6e19c7501663332632739ac5d73b6516"
         },
         {
-          "bytes": 451595,
+          "bytes": 451499,
           "format": "pdf",
           "path": "rotation/data/pdf/C10h.pdf",
-          "sha256": "bfcb1f444ec3d6f395fcc76eae91b79d38c7e51a1c08b35be54883e083271e7d"
+          "sha256": "7ccf7732a45f29bf99fad4c6759d852986bcf79f7dc7a1166466b241ea1e53d2"
         }
       ],
       "requires": [],
@@ -1672,16 +1672,16 @@
           "sha256": "d89cc8816f5a254e297da8fb8c0ab4c7caff8b328a9f3f15458d5abb1134a942"
         },
         {
-          "bytes": 145838,
+          "bytes": 145808,
           "format": "latex",
           "path": "rotation/data/latex/C11h.tex",
-          "sha256": "83dc211de260b9856be42bf147441549d1ebd61ffbbb646f6e2dc36f8220ec82"
+          "sha256": "b36e961a927b8e32dda1fbd720ca9fec459bf59540df7f8a6d2ea315ae2853cd"
         },
         {
-          "bytes": 445983,
+          "bytes": 445889,
           "format": "pdf",
           "path": "rotation/data/pdf/C11h.pdf",
-          "sha256": "60223429251994475f15d3ba9ade4ae8c0c596502fcd53d8dbcf2bee2ec53738"
+          "sha256": "e66f2a12e6376b5d96c16ed0528c684dcc7dab26096ae154cde47e0a0927a37a"
         }
       ],
       "requires": [],
@@ -1717,16 +1717,16 @@
           "sha256": "9e7597159bfc8559239067a46029666aaab337a700b133319bcfd3415a192069"
         },
         {
-          "bytes": 182843,
+          "bytes": 182813,
           "format": "latex",
           "path": "rotation/data/latex/C12h.tex",
-          "sha256": "d5e2a5352af661cabdc8f1a63d0620a92de0df7589cdddac2c3e5c5a77a202e8"
+          "sha256": "9a6a6c8063426ce8d5c274c5eed39902b0309ed4faacc20a50f272e8c0cd08e4"
         },
         {
-          "bytes": 458954,
+          "bytes": 458858,
           "format": "pdf",
           "path": "rotation/data/pdf/C12h.pdf",
-          "sha256": "bc8d4dc3a4012be814d3e18ab771d918b443fbfc6a3727a1e7d251d53306d0f3"
+          "sha256": "16a532dbbab1043e7ab06f5e778c81aaaf8905354ea5b0fd9c304666966d2a83"
         }
       ],
       "requires": [],
@@ -1762,16 +1762,16 @@
           "sha256": "db5041c783ab3842bd90ad81f8471d2329af92c5f170e2590f68a3cd8312daa6"
         },
         {
-          "bytes": 67569,
+          "bytes": 67539,
           "format": "latex",
           "path": "rotation/data/latex/C1v.tex",
-          "sha256": "b0980425ba28cfb64e98e2702e93dff0363f40952cd1dd35d4fe15266c1af937"
+          "sha256": "41db2b2a5fb209834ee32b1c1c9f620e8ff92f17427994b9187937c03d3d5964"
         },
         {
-          "bytes": 405204,
+          "bytes": 405110,
           "format": "pdf",
           "path": "rotation/data/pdf/C1v.pdf",
-          "sha256": "996fb7882528fd4c5169461ecc525bc8e76dd881ed5544f79097531f560d6218"
+          "sha256": "fba8098f3c7026eb60e17824d1c7dfcddc44f0aaa39a34a084a926b434a87aec"
         }
       ],
       "requires": [],
@@ -1807,16 +1807,16 @@
           "sha256": "e3f11dc2b5ccb8588849dc7378336b6a1e35eeff4cb75dab72bb086cd411a06b"
         },
         {
-          "bytes": 80846,
+          "bytes": 80816,
           "format": "latex",
           "path": "rotation/data/latex/C2v.tex",
-          "sha256": "3e17fc8c01de6493d0794b10237d1594c79276d330a77bd595a586d395c6157c"
+          "sha256": "4228770ef96c296c7d056bd6df39dab07f13f01003c35a7b68121ddad5e65c05"
         },
         {
-          "bytes": 423055,
+          "bytes": 422962,
           "format": "pdf",
           "path": "rotation/data/pdf/C2v.pdf",
-          "sha256": "9341d6dbcadbedb3e03295b27b9de5e584a66e497bb60fb7403056406d759d6d"
+          "sha256": "1de4b0f9d9e5d59316ccd4649ed2ac19db767292eb73da7587ba4d3ad12d2ef6"
         }
       ],
       "requires": [],
@@ -1852,16 +1852,16 @@
           "sha256": "1f1071c47b6b8cd32abf149d5d49e840a0792b832a4b4fee30344ce57ce2e4b9"
         },
         {
-          "bytes": 95652,
+          "bytes": 95622,
           "format": "latex",
           "path": "rotation/data/latex/C3v.tex",
-          "sha256": "a1d8caf7b44982e20ee5a4c68f37718571b818ecd02123d1de8945abc6b8a3a6"
+          "sha256": "b8ba3ae0107890fe9f4bab4923d12dccaccf61b98b8014bb25adfd13d3d7214e"
         },
         {
-          "bytes": 467064,
+          "bytes": 466970,
           "format": "pdf",
           "path": "rotation/data/pdf/C3v.pdf",
-          "sha256": "f65e706c718c51f68eac4c84efcbe2f60c998a6e63052b5f8e92e07f1ca543e5"
+          "sha256": "182f926398da7a17a81f469932f0c012f0ffc0badcf730eef283f7d943362feb"
         }
       ],
       "requires": [],
@@ -1897,16 +1897,16 @@
           "sha256": "dd06b7c8208d3782e140ace9ebf3adf5e1f836861354bb3677f750b60fc5e4d9"
         },
         {
-          "bytes": 105481,
+          "bytes": 105451,
           "format": "latex",
           "path": "rotation/data/latex/C4v.tex",
-          "sha256": "f9907b7336e36aac9ba8a49929350b7ea18dadafbc3693fc4d139547f1c431b2"
+          "sha256": "6d2cdd99c085ed9e3f8ee51adb0de270dd435b3e0992005ef61b6dc245de7035"
         },
         {
-          "bytes": 468575,
+          "bytes": 468482,
           "format": "pdf",
           "path": "rotation/data/pdf/C4v.pdf",
-          "sha256": "1ab4da20f0f2aea8680593c2d286747df03aea13507d289e07213bdc996b96c3"
+          "sha256": "40f39e4cc652af5bfe51fa2497e89b56e4def60649c0c070496cded2f1c0389b"
         }
       ],
       "requires": [],
@@ -1942,16 +1942,16 @@
           "sha256": "040b8a713d44b95c25a60566516ad248a01b8cf73823295787d8b8954d5abc1d"
         },
         {
-          "bytes": 107468,
+          "bytes": 107438,
           "format": "latex",
           "path": "rotation/data/latex/C5v.tex",
-          "sha256": "bc1bbc64f0dcc6e95c0af32d672b2f5bdcca054cf88733315c467978b023e0a3"
+          "sha256": "557e429677403c56c3458dc6f90cdb7be17d22ec0cc1e9005d80a93cedc67fe4"
         },
         {
-          "bytes": 471752,
+          "bytes": 471659,
           "format": "pdf",
           "path": "rotation/data/pdf/C5v.pdf",
-          "sha256": "fad7a166a0a96a3feb135d362b2fd7c43ee8674e8bf9e3ea8c9b4267f918bd68"
+          "sha256": "6ec5f76efe690c7f99ab32502956732081719303f00e33ab62ac3b15b092f9a8"
         }
       ],
       "requires": [],
@@ -1987,16 +1987,16 @@
           "sha256": "7ba5608d4f232d0b83ce88533df529add879021bbe94f50f27c1b33fccac795b"
         },
         {
-          "bytes": 125874,
+          "bytes": 125844,
           "format": "latex",
           "path": "rotation/data/latex/C6v.tex",
-          "sha256": "857234f8ae1030f192fa7b5aef7c829a63466691c36f0e04a20d83ef82b5e07a"
+          "sha256": "007e4ede157566a253669501fc060ec3a5b338f983e28f7b4d7e2f9007911879"
         },
         {
-          "bytes": 490293,
+          "bytes": 490202,
           "format": "pdf",
           "path": "rotation/data/pdf/C6v.pdf",
-          "sha256": "69e56742fb62582137f14484400b940377a9b6b56ad0bfd4e555b4d9007f84b9"
+          "sha256": "2c347d7a1152d8a08fe72f2ded159c01f878dbbc477d350cb8fe47cb1d3d981b"
         }
       ],
       "requires": [],
@@ -2032,16 +2032,16 @@
           "sha256": "20c5d656d68bcc11dd9e63f77bb4864cb9692478c210f9e8892bc7fea7e4a68b"
         },
         {
-          "bytes": 120408,
+          "bytes": 120378,
           "format": "latex",
           "path": "rotation/data/latex/C7v.tex",
-          "sha256": "4442fd7c76fb4bd4a92275c8ab29279d873198d8dffb58cc905b6328a9799785"
+          "sha256": "418f33201f0e1a5800f20fda1cca4971b64a2e86723d40d206d03508920612ed"
         },
         {
-          "bytes": 475374,
+          "bytes": 475280,
           "format": "pdf",
           "path": "rotation/data/pdf/C7v.pdf",
-          "sha256": "cd98316aaa9a2e84c49e48ddb6e308b4904f87045bacaa249b3f6dc9fcbc1443"
+          "sha256": "efb6b4d9d80c125ee9103970c7122d899f2d6c2724534d14abff708500230faf"
         }
       ],
       "requires": [],
@@ -2077,16 +2077,16 @@
           "sha256": "0bcd7aded26e1ac9075e0a3076cf7c8910630a8f06ed012df368cb90e4750f7d"
         },
         {
-          "bytes": 134919,
+          "bytes": 134889,
           "format": "latex",
           "path": "rotation/data/latex/C8v.tex",
-          "sha256": "5e054e093531b0cead9da48cb0bf961986f06cb1f58f4a55d45370003ff03042"
+          "sha256": "75c0fc858412abdad563612b9c749c4b1d18405fea1d4c6b3b327f4ef332b8ef"
         },
         {
-          "bytes": 486267,
+          "bytes": 486173,
           "format": "pdf",
           "path": "rotation/data/pdf/C8v.pdf",
-          "sha256": "9474079a88cd6252635ecc503353ec2708d61c6aa842d90c147e28bb4557409c"
+          "sha256": "4a5b8a1af74ab7c635eed3505c94068ddcc3ea00598120f2354028887c52f464"
         }
       ],
       "requires": [],
@@ -2122,16 +2122,16 @@
           "sha256": "fff1a4c322f483cc86697515c58453cd9689d740aa6ca118ec99c1d0fb1a3bae"
         },
         {
-          "bytes": 134461,
+          "bytes": 134431,
           "format": "latex",
           "path": "rotation/data/latex/C9v.tex",
-          "sha256": "b77b8b9d885e0a9ffe1d2a40ee97376c843cd750343a28a5fb19a66dea55e4bf"
+          "sha256": "8b9857612015137c0ab844b4044a8b7938264bada0c6f9c8712f3deb6f982c2f"
         },
         {
-          "bytes": 482946,
+          "bytes": 482852,
           "format": "pdf",
           "path": "rotation/data/pdf/C9v.pdf",
-          "sha256": "69621379d8ee8eef4a327dcfa37c5c7927efde6ac01ced4859270c0c9dd7ee0b"
+          "sha256": "529f9197059239d97e074c9c153eedebdaab5b946736a7d091bbbbb45d1c6b4c"
         }
       ],
       "requires": [],
@@ -2167,16 +2167,16 @@
           "sha256": "f1669a9dc363d6e2f725569d4055f9e1d39b98f754e039d3199bb3f0113b54ad"
         },
         {
-          "bytes": 154305,
+          "bytes": 154275,
           "format": "latex",
           "path": "rotation/data/latex/C10v.tex",
-          "sha256": "e73094235a0a3c646fd9eaab5945ac11db5d386b7322d488589d04f178258093"
+          "sha256": "1a43883493b8cae57007c282dcf8b888e9eda432ea39d8d41dab3368b90f0bde"
         },
         {
-          "bytes": 499422,
+          "bytes": 499328,
           "format": "pdf",
           "path": "rotation/data/pdf/C10v.pdf",
-          "sha256": "a38ed8f281e551fec613f7ce910000685719e0755f40668476f42b32542aa4a1"
+          "sha256": "d568781aa1adcaf87e905c488e87c404e3d78e693078162f546126b87a5d46d6"
         }
       ],
       "requires": [],
@@ -2212,16 +2212,16 @@
           "sha256": "e5d9f68d55c2683c77a1636b46a3739879569b6c3a43395169f448cb20342564"
         },
         {
-          "bytes": 150870,
+          "bytes": 150840,
           "format": "latex",
           "path": "rotation/data/latex/C11v.tex",
-          "sha256": "a1cd14585cb097b98783a6258f163a2472581063d134d5abe5ff30e4641c385a"
+          "sha256": "a528d24ed7d7ba0d0acba5e25c65ffa5d39f6be26af10ec48a597294a9b2d051"
         },
         {
-          "bytes": 485885,
+          "bytes": 485791,
           "format": "pdf",
           "path": "rotation/data/pdf/C11v.pdf",
-          "sha256": "0bb24c8daa5af17669eac9334d88f7a9cd93dd32342f0ccbb08671ca7015d955"
+          "sha256": "426c8ce8937933e7c6396aba47a48011f39db879820cad3e031b0b30ef6f1d5b"
         }
       ],
       "requires": [],
@@ -2257,16 +2257,16 @@
           "sha256": "ee3b595fb271994fa2fa6b782b4173fee03c5405d3098767b9be93bdabe94797"
         },
         {
-          "bytes": 175635,
+          "bytes": 175605,
           "format": "latex",
           "path": "rotation/data/latex/C12v.tex",
-          "sha256": "0402049742472927b3e8fe4d80c55d4f6d069fe598b46f096d95363a8ffe3e7e"
+          "sha256": "ef95f289b031f6141e8f7b4db2e89ec4858ad4f79673c012cd534784c2a4eb91"
         },
         {
-          "bytes": 509257,
+          "bytes": 509165,
           "format": "pdf",
           "path": "rotation/data/pdf/C12v.pdf",
-          "sha256": "6f47718d60f1b816104f766edbfb8f797df77322a25e5c521a880f835b36b41e"
+          "sha256": "a73b2c9a5d7fc46d74c8936d32dcf8756fdb13ce0a94d8264c95dae70d3f0ad3"
         }
       ],
       "requires": [],
@@ -2302,16 +2302,16 @@
           "sha256": "6bf6b1e11c02dda6a1b3659deb95886208e618ea2c3798fcae710c87214abb06"
         },
         {
-          "bytes": 67076,
+          "bytes": 67046,
           "format": "latex",
           "path": "rotation/data/latex/D1.tex",
-          "sha256": "b2abc24fdb3e687f0295a9666bdb374de687e3f8d82f153ff3962f324fa5a833"
+          "sha256": "6f3587cac71589fad5f7b39b56bb022ec144c85e999b7aa02fee4c9f5c632489"
         },
         {
-          "bytes": 404457,
+          "bytes": 404365,
           "format": "pdf",
           "path": "rotation/data/pdf/D1.pdf",
-          "sha256": "2f4615cb8917ab9e5dcd2db16f3df5f0fa6aa60884fd09bcc506e19b428476c9"
+          "sha256": "3892a0df7e6d9ac84bfd14c1a053ef2637ceefc4fcc04c33cf45651d52f5e945"
         }
       ],
       "requires": [],
@@ -2347,16 +2347,16 @@
           "sha256": "562735150a7aa240116ec417bb40ac25e2c1635264b18543ce6f9989eb183b45"
         },
         {
-          "bytes": 78972,
+          "bytes": 78942,
           "format": "latex",
           "path": "rotation/data/latex/D2.tex",
-          "sha256": "35929d1b40d3e74587c5ade57a6c935770ab5b4d7689c7314e82155b7d82c3ff"
+          "sha256": "fe07b48be6a5a711228bd577ee686e460e410d3d941fad193798cb694d2694ec"
         },
         {
-          "bytes": 412109,
+          "bytes": 412012,
           "format": "pdf",
           "path": "rotation/data/pdf/D2.pdf",
-          "sha256": "146f77de1743d1caef503d636987204051150f7514aa8ee3395afc3ccc7751c4"
+          "sha256": "9ab14416e583e44cf80bb063484700e2051e73e3a13589076e833a7c9d6dd954"
         }
       ],
       "requires": [],
@@ -2392,16 +2392,16 @@
           "sha256": "64a28769fb0a943e76dea1466bb15e2a45fa364b87f92a8beca8534dfec0387e"
         },
         {
-          "bytes": 94756,
+          "bytes": 94726,
           "format": "latex",
           "path": "rotation/data/latex/D3.tex",
-          "sha256": "d202c75d3add41a3391f4e1e3c419a262536eb9863c84b3a606c214f10e246cb"
+          "sha256": "26503e2efbec61590a7486151a2655e2f22b1655f3c5e3277f2c639bb7eaa537"
         },
         {
-          "bytes": 459779,
+          "bytes": 459687,
           "format": "pdf",
           "path": "rotation/data/pdf/D3.pdf",
-          "sha256": "f41869bb517b0fce2d6ea415a12c0181464811359e55b005d1a897c8c8faf735"
+          "sha256": "1150e66c91fd40fe1541b278c6dd8d9f7f5a62fd928467f5b87f2980c3b59253"
         }
       ],
       "requires": [],
@@ -2437,16 +2437,16 @@
           "sha256": "0cc209af226022811b36a0eb9c924ada2a0e068924fcb9bd0282552f9d37c5e1"
         },
         {
-          "bytes": 107826,
+          "bytes": 107796,
           "format": "latex",
           "path": "rotation/data/latex/D4.tex",
-          "sha256": "e903764dbf650a9b0f3a0d79ce7bb707b23bd0c77b27fc0f30c004a01b595837"
+          "sha256": "2f4c72827524dd1c46b1b4cdcb298a9d61992007855f0ab3f55503b3bf590f18"
         },
         {
-          "bytes": 465256,
+          "bytes": 465160,
           "format": "pdf",
           "path": "rotation/data/pdf/D4.pdf",
-          "sha256": "a6784d383e70c788018b9804cb289534281bf3735b44fd858e78c89440525cbd"
+          "sha256": "3abcde51e7cb8dac87f496a2639dbcf75c997116a848fdb17e53f51a8954c4ad"
         }
       ],
       "requires": [],
@@ -2482,16 +2482,16 @@
           "sha256": "3c4db918558c940cbd888fc8229a4f737a531cb8237c1c1b716d53edb679f204"
         },
         {
-          "bytes": 106590,
+          "bytes": 106560,
           "format": "latex",
           "path": "rotation/data/latex/D5.tex",
-          "sha256": "e92777a6a8c76d13a000652aaefebb78c9c605c7ace7d0d704c428adfb398c91"
+          "sha256": "ad283a3dd2435f92f97db6b7e44a3d4b72dafb5cce2f9079adc6c1f800052936"
         },
         {
-          "bytes": 465308,
+          "bytes": 465212,
           "format": "pdf",
           "path": "rotation/data/pdf/D5.pdf",
-          "sha256": "6d892fc4ec0db0338c8ab0e55a24f9e860a632c3bdc76534e0a09c7b54613a19"
+          "sha256": "9d8718fb1bf0d3f0429ead694dce7a927f2da4d42e9931dc36b121d73007df76"
         }
       ],
       "requires": [],
@@ -2527,16 +2527,16 @@
           "sha256": "1b44f4e3562bd1ea89d20c6bb969638706baa33d2f090a0dbf9d3be22ac95646"
         },
         {
-          "bytes": 124077,
+          "bytes": 124047,
           "format": "latex",
           "path": "rotation/data/latex/D6.tex",
-          "sha256": "c71d5291c10d098f653b83bf27b84726b41e755ce74adec445f3d5222f42b04c"
+          "sha256": "14e237ac61adf058b229ac067badfc0ca08b471bcdd8cf627e1663603f4e8204"
         },
         {
-          "bytes": 477182,
+          "bytes": 477088,
           "format": "pdf",
           "path": "rotation/data/pdf/D6.pdf",
-          "sha256": "1cb453d8dac68dcc2facf904831b4e952302d4955fa5baff6c40fc36352c1f86"
+          "sha256": "6b5574e2f78d1a2c308be8d72406b948fd96b3256289a6d078e19354663a55a8"
         }
       ],
       "requires": [],
@@ -2572,16 +2572,16 @@
           "sha256": "7771e1e38f79885ae8732e8d2917aeff3efc0535577dc4c377917edcfed66bd1"
         },
         {
-          "bytes": 119554,
+          "bytes": 119524,
           "format": "latex",
           "path": "rotation/data/latex/D7.tex",
-          "sha256": "063cab731ed9b4e9a6f377a6a0dfdfbe8d288e6ff7686e733ad899f1ca5aaffc"
+          "sha256": "5fb80c64b5951765396e49248c268309728755ef4e43db39f80d909be4589874"
         },
         {
-          "bytes": 469414,
+          "bytes": 469318,
           "format": "pdf",
           "path": "rotation/data/pdf/D7.pdf",
-          "sha256": "0ea78b733a7ecbaa39498c84dd336c9d72567269663d39df72f81575df4f8a7f"
+          "sha256": "952f3acebdd27f60fdf11fc65f3c9901ab50549219b90a1e087a86091160fd9e"
         }
       ],
       "requires": [],
@@ -2617,16 +2617,16 @@
           "sha256": "adcb4dd828aaca8cd30cdf47b67432e4dd8c9b04c0c237bca6cf0b090875eb67"
         },
         {
-          "bytes": 137642,
+          "bytes": 137612,
           "format": "latex",
           "path": "rotation/data/latex/D8.tex",
-          "sha256": "6e9fc43b7c6fc7e5b42af7d07c5fe894824239f72421dfdf00c9855b1b423790"
+          "sha256": "7e4a19d4b3369030dd0b600962aa5d30f6312f963ba6e5331b712b9933476eba"
         },
         {
-          "bytes": 480431,
+          "bytes": 480337,
           "format": "pdf",
           "path": "rotation/data/pdf/D8.pdf",
-          "sha256": "35e28af312be24d9bf7fb3b2bbfdc49fda4acabe24ad6d3c0676b340b8242d60"
+          "sha256": "17e7db5d61489c02b8c076e820e162dcb42cb50b9c7d24765c4f91523283bda1"
         }
       ],
       "requires": [],
@@ -2662,16 +2662,16 @@
           "sha256": "4c907ca49d992af3de3f3cb4e16ecc8afbf506aee6ad91544cdbd1f7818ab3ea"
         },
         {
-          "bytes": 133637,
+          "bytes": 133607,
           "format": "latex",
           "path": "rotation/data/latex/D9.tex",
-          "sha256": "db4e74dc7f737417d64a65ca79b7f7d507cb1e267d558693bc41fb2590bfffc8"
+          "sha256": "79ca9dd8301b4547f579a61f7c52a3eb37d8a4ffac5b33f560b1723befb93040"
         },
         {
-          "bytes": 477750,
+          "bytes": 477656,
           "format": "pdf",
           "path": "rotation/data/pdf/D9.pdf",
-          "sha256": "19b61ee7da16b57567bd7d6357ff58667858ea5c7c00a7f38595723b61a7595d"
+          "sha256": "c838412df490f7b2ad1d95244156ef7ee9183617b02dc3e3aaa5665cb02158b3"
         }
       ],
       "requires": [],
@@ -2707,16 +2707,16 @@
           "sha256": "2f41dff00e96b0320d55e96d4f2e9e52722f0c4d7df60d3f1ede59f8f7044808"
         },
         {
-          "bytes": 153620,
+          "bytes": 153590,
           "format": "latex",
           "path": "rotation/data/latex/D10.tex",
-          "sha256": "2dd8a5cf876a2b085fd4619b2c7d84107cf23f620b7053905d798b605c6db29e"
+          "sha256": "9409435b0b4668245da38d1c561b2032019e6831c5465557a505f7745f4f91ca"
         },
         {
-          "bytes": 487621,
+          "bytes": 487530,
           "format": "pdf",
           "path": "rotation/data/pdf/D10.pdf",
-          "sha256": "a971762f8c6598d26d98a0053320244b1ce0e1487241eeaaa8efc7f17fc7f877"
+          "sha256": "015a3867962d3ac889b2e6fbfd3832e97580ff529e2ee1d27caa23e2ff88028f"
         }
       ],
       "requires": [],
@@ -2752,16 +2752,16 @@
           "sha256": "f996acb45c9c9ffa0e5d2bbfb30b9bd7ec1f03d7becad10cb65e6ea95344fbcc"
         },
         {
-          "bytes": 150243,
+          "bytes": 150213,
           "format": "latex",
           "path": "rotation/data/latex/D11.tex",
-          "sha256": "e0e1956e174ffb48b47caea27ff60908f9ae71df5ffecda55b43f4c31d32d101"
+          "sha256": "6fa84b85c17b0b352d1d1120ddb2ddade76616d54755bf436e2d80ca4c199de1"
         },
         {
-          "bytes": 478960,
+          "bytes": 478865,
           "format": "pdf",
           "path": "rotation/data/pdf/D11.pdf",
-          "sha256": "0fccd1f7d0c11290b6849d8c30a48b56c7b09a9bad9dd1e55341d980c9402cbc"
+          "sha256": "947ef9c45547eef41568a2a40aca885e95acc14c3197c8c3cc72491e525850a3"
         }
       ],
       "requires": [],
@@ -2797,16 +2797,16 @@
           "sha256": "df5e2c27d41e4a6b2daaa6a3ea5a71689835696bd4f85cdecf7c5f1008ca251a"
         },
         {
-          "bytes": 177075,
+          "bytes": 177045,
           "format": "latex",
           "path": "rotation/data/latex/D12.tex",
-          "sha256": "4edb8185c1edaa67a7921355d009408cd98ca3a6a65953431a9dc90672bfb0b6"
+          "sha256": "14cce86a05751ece61c9344265e5d57bc987e3000c707db392ad6ada22ea171c"
         },
         {
-          "bytes": 497533,
+          "bytes": 497438,
           "format": "pdf",
           "path": "rotation/data/pdf/D12.pdf",
-          "sha256": "eddcb4201daa7e04448859d2a1cd3bb223c3e47e2c4967b864dd167f296caad2"
+          "sha256": "031560fc15a8514108901fb127a970585553da17e89343ab03b6e6e07a5a03c0"
         }
       ],
       "requires": [],
@@ -2842,16 +2842,16 @@
           "sha256": "bc93c77b6470d71fc8e90f4850b8005049d4dc545d670b5cfe541552f82ac100"
         },
         {
-          "bytes": 81063,
+          "bytes": 81033,
           "format": "latex",
           "path": "rotation/data/latex/D1h.tex",
-          "sha256": "5e83805e2691b7cfaebbab9cfeeb52a643a2b274ff891b316ce012b0a1c9a546"
+          "sha256": "3d457de99d62b8490f82b86d4fe86e61b17df32fc1ff849c6dc2f3ce59b3b593"
         },
         {
-          "bytes": 423525,
+          "bytes": 423434,
           "format": "pdf",
           "path": "rotation/data/pdf/D1h.pdf",
-          "sha256": "15f27d3f8461dfeb6b2dbec524555ac8f925bc065e0114593f186b33733129ea"
+          "sha256": "a59570f2aa72708946d737d2d7a8337b87c94a4102dd7c664c5824ece885394d"
         }
       ],
       "requires": [],
@@ -2887,16 +2887,16 @@
           "sha256": "181986289e192cebaf58220cdb7e8ace4a8ab94d5b338056d3e07400fa24fad0"
         },
         {
-          "bytes": 112201,
+          "bytes": 112171,
           "format": "latex",
           "path": "rotation/data/latex/D2h.tex",
-          "sha256": "42312a734c4465a17d87a612cafd59684d1fe49031378aac3d7521740d017a46"
+          "sha256": "0798633f9c746ed354d1ada8d30983ce9fa0aabd4cddb2f21a200d10a1b8c6e2"
         },
         {
-          "bytes": 446459,
+          "bytes": 446366,
           "format": "pdf",
           "path": "rotation/data/pdf/D2h.pdf",
-          "sha256": "57f998644463694a3267964ec2b220a56fb6132b327e8e90ccf772bdf7c1f3d4"
+          "sha256": "b70075ed057bb9355817f7f6a5ce0c7a4455975acda89a72ab16c7d8725a3ec5"
         }
       ],
       "requires": [],
@@ -2932,16 +2932,16 @@
           "sha256": "06c327e8b0c808c93bbe930c9d6ac685eb175dfeefda7279be7353216402ceb1"
         },
         {
-          "bytes": 122974,
+          "bytes": 122944,
           "format": "latex",
           "path": "rotation/data/latex/D3h.tex",
-          "sha256": "f51044abdb8b7f31b2170ee0da9b266252c71f5c64284313c2ee8b2e3bb9b441"
+          "sha256": "45381324f1bbaac6855219295623194a2fc0eaa79c80a0d681d4dbe59dc7383d"
         },
         {
-          "bytes": 491865,
+          "bytes": 491774,
           "format": "pdf",
           "path": "rotation/data/pdf/D3h.pdf",
-          "sha256": "c394a912294cfd38e03598c89f4a2113b44dabdc0fba30aa01cd909d91c11277"
+          "sha256": "fdd5ded7e95050819cd94461d7c9b495e9de263c421cfc80e954eede5da3a92d"
         }
       ],
       "requires": [],
@@ -2977,16 +2977,16 @@
           "sha256": "d045a060e8fa19ad8c6cdfc5e68130303f5eb2a211f48046370911f6873112c2"
         },
         {
-          "bytes": 175670,
+          "bytes": 175640,
           "format": "latex",
           "path": "rotation/data/latex/D4h.tex",
-          "sha256": "a8a0bdbca454024373cff1bad428ce31964ebbfb5fe6a4988b4246b1ee93ec5b"
+          "sha256": "df78c40bbab41daf34305a3a89b740ad9194a4389f5841670db77c8a26fbf8ae"
         },
         {
-          "bytes": 509746,
+          "bytes": 509652,
           "format": "pdf",
           "path": "rotation/data/pdf/D4h.pdf",
-          "sha256": "1ae24df8af2f6748df9d8ddf5ccc49b79062c2c2dea8d2dd36bc3466d33be543"
+          "sha256": "16789584d1935d3dc027e6faef7bd46b600af2a04d4cff930c0e40d2083240ca"
         }
       ],
       "requires": [],
@@ -3022,16 +3022,16 @@
           "sha256": "ec9237a6a7074ff8e76c754016278e305b97c41993ced9404a66bc273d668cf0"
         },
         {
-          "bytes": 153415,
+          "bytes": 153385,
           "format": "latex",
           "path": "rotation/data/latex/D5h.tex",
-          "sha256": "79722ee4e150122b5ade887bc7b8abe24c69e6123f98e2222d4fd1879328176e"
+          "sha256": "043c764bff577a10883524184e915616edc76def15361030c4f4252d71f997f5"
         },
         {
-          "bytes": 503734,
+          "bytes": 503640,
           "format": "pdf",
           "path": "rotation/data/pdf/D5h.pdf",
-          "sha256": "94581ba566d82125ed9ad8eb9d28f51427909aa1ee0f6713b90e14e4243d0fd4"
+          "sha256": "4890978623deb07a84bdf0ece9b09d3b16fb309f9d81aa5b628089e9792c52b2"
         }
       ],
       "requires": [],
@@ -3067,16 +3067,16 @@
           "sha256": "8f0d452ba0fbe7c859ee2f3c59a474815c8b9e5f561b0f9ada736e672f68a366"
         },
         {
-          "bytes": 224974,
+          "bytes": 224944,
           "format": "latex",
           "path": "rotation/data/latex/D6h.tex",
-          "sha256": "0292c53ee5492b3d9fdaa92743564404af0f2a9916e113ac1f2442e17b601f0a"
+          "sha256": "464e8c480721ad13963ecfb43476261b0078de3fe511342a21d242ae94d62b9e"
         },
         {
-          "bytes": 531179,
+          "bytes": 531085,
           "format": "pdf",
           "path": "rotation/data/pdf/D6h.pdf",
-          "sha256": "1e40816dac49d2dd16634e3092013fa6fb12f82fe598c0f13c0306735be12f77"
+          "sha256": "ff11e000654059cd483126b75796f7ceaa6eb83c5a529eb1ada32051d1a354da"
         }
       ],
       "requires": [],
@@ -3112,16 +3112,16 @@
           "sha256": "a7a97dcfda976e1f6d1522ff1530078a7313282eb6259eefebec11c67868ec3b"
         },
         {
-          "bytes": 188837,
+          "bytes": 188807,
           "format": "latex",
           "path": "rotation/data/latex/D7h.tex",
-          "sha256": "b6b80147105b4a5a156d8b645ebe3d75c778013a951e72c04aa0117ca1b25e68"
+          "sha256": "c5e567bdcced97ebbd6b4fb8c35ce3beb7fcbad3e2b9753739ffe446f5bc6e86"
         },
         {
-          "bytes": 513197,
+          "bytes": 513103,
           "format": "pdf",
           "path": "rotation/data/pdf/D7h.pdf",
-          "sha256": "107d112067b3bbc2736646ceef445b25e63e44035e9eccd1ba31650393d4b887"
+          "sha256": "b201c12040a64f8729ffd17a577d023b9e3deca1679734b65fe710c15b051c8b"
         }
       ],
       "requires": [],
@@ -3157,16 +3157,16 @@
           "sha256": "dce03a3fb5126de22c41c3bd7296349453d1f6897dfcbbb02e4a863ae6e68f17"
         },
         {
-          "bytes": 275329,
+          "bytes": 275299,
           "format": "latex",
           "path": "rotation/data/latex/D8h.tex",
-          "sha256": "a57540c33816eabbd63b9d0874e5f45f07cab964477596e9f47ce616a5b2f516"
+          "sha256": "17c995d719330e4b3d9d552c9290663211d2ec0067a28130ac9d99baeb7d95bf"
         },
         {
-          "bytes": 545198,
+          "bytes": 545100,
           "format": "pdf",
           "path": "rotation/data/pdf/D8h.pdf",
-          "sha256": "e761c4e36baf486d65583f2892665ce2b9f49dcf345f554a43aedd3d2d0c9722"
+          "sha256": "fb355aa910594168af751f5173b90a973d546a0cc4abb8df8c6a0995fb63144c"
         }
       ],
       "requires": [],
@@ -3202,16 +3202,16 @@
           "sha256": "74a70e5b29b0aed49be4f3ec1a1c8fe7df8dc688f6663bfc3ebcbf3f01219dab"
         },
         {
-          "bytes": 234465,
+          "bytes": 234435,
           "format": "latex",
           "path": "rotation/data/latex/D9h.tex",
-          "sha256": "725e28ea13c760fa55be3c8107fc5bcc9f82e6717ec6e2561423ee2d402637d1"
+          "sha256": "77239c75ef5c46dcfab1186e4f457932c5891b948d474adef2fa60ae7494a961"
         },
         {
-          "bytes": 531421,
+          "bytes": 531327,
           "format": "pdf",
           "path": "rotation/data/pdf/D9h.pdf",
-          "sha256": "7ef6c25595ee713ea7dd6fa0f82ca0bbbee52a126f521cb77d119c10612cbfbc"
+          "sha256": "7539bc50102d4dc2da683433381aee2bd1274d16894dc2dc3f9bffe8ee5a2f44"
         }
       ],
       "requires": [],
@@ -3247,16 +3247,16 @@
           "sha256": "c83795b26eba662530f5c6891a25420ccb809f033d3100aa640e682247725d5d"
         },
         {
-          "bytes": 328094,
+          "bytes": 328064,
           "format": "latex",
           "path": "rotation/data/latex/D10h.tex",
-          "sha256": "c054eec3b4caa3b1e6b8cc86cc2a6c2175e9c2376f27043d9b70062aa6075314"
+          "sha256": "3b4ccfccd8b05c4abcafef2e76b3e99b02418cb262e2aca0f5d90c8d111fb41e"
         },
         {
-          "bytes": 556549,
+          "bytes": 556458,
           "format": "pdf",
           "path": "rotation/data/pdf/D10h.pdf",
-          "sha256": "0dadf41373d4414a6af95ed2afaf7614acd8e82d5752faf246b04447c8e2c8d5"
+          "sha256": "652095b6f83330d83d04d6eadf0d9fff95b02122eab05d8bd0e558a7f29973cd"
         }
       ],
       "requires": [],
@@ -3292,16 +3292,16 @@
           "sha256": "c867179c0a8ad9a6e436e888a68091c01a87ade7d5408f8f7343b7bd00e3803d"
         },
         {
-          "bytes": 287777,
+          "bytes": 287747,
           "format": "latex",
           "path": "rotation/data/latex/D11h.tex",
-          "sha256": "06ddd5d5bb919e37cd77a6e593412876b967bf5a965f52f3d89eff7f2684e468"
+          "sha256": "9afe54c209b10e40ca4f391b0c96a31f34cf59e9070938bff9dcd1536d7d23fd"
         },
         {
-          "bytes": 550855,
+          "bytes": 550761,
           "format": "pdf",
           "path": "rotation/data/pdf/D11h.pdf",
-          "sha256": "b102aa88998b9459466ca45a604428ade15c5d60549956ffb2e0d7b2f1cf09ee"
+          "sha256": "2fd7abac4ecc79b448f204edec4b83799832730bcf89531584f41fa7226510f9"
         }
       ],
       "requires": [],
@@ -3337,16 +3337,16 @@
           "sha256": "147c17d57d433a36e5ababb27361cbfbe786144e367b6fbdca875c77b2c00ef5"
         },
         {
-          "bytes": 417139,
+          "bytes": 417109,
           "format": "latex",
           "path": "rotation/data/latex/D12h.tex",
-          "sha256": "036b5004028050acb902aeff81c1332440d85519dead64eb73f7be74290c9aaa"
+          "sha256": "ebff4bdabcb1ac9e44e7974f398bdfd1eeb263f36de5ad6593528a7693d019a0"
         },
         {
-          "bytes": 591981,
+          "bytes": 591887,
           "format": "pdf",
           "path": "rotation/data/pdf/D12h.pdf",
-          "sha256": "e7c77029bb2ed22a100400e2da032d23102b07713bf17c342e539668787a5feb"
+          "sha256": "f50127588d3b543f2ee478fdb6a52ac80cdf01385fcb7b24aef4ac583b876279"
         }
       ],
       "requires": [],
@@ -3382,16 +3382,16 @@
           "sha256": "9661916b7bf782c438ef177c31ae845368117de964e52d79e9ca1bc4822ad1b6"
         },
         {
-          "bytes": 77845,
+          "bytes": 77815,
           "format": "latex",
           "path": "rotation/data/latex/D1d.tex",
-          "sha256": "f847dbff65337d71570aaf01bc11cf0838c1b88ba24d186bbe8206beacd1a5df"
+          "sha256": "0c6008455d19837b34a9c1d0e7a8990937345d7231d60aea908666c0aca5dc2c"
         },
         {
-          "bytes": 422222,
+          "bytes": 422128,
           "format": "pdf",
           "path": "rotation/data/pdf/D1d.pdf",
-          "sha256": "d715d387d7ab96b58b94695e07560189cb3ce0c4e267aaf4e6d492d132e12c99"
+          "sha256": "69b5abc36bf9c3c01b8dd16eb3346c13fa6b2f24bec7de68155a2da54de67886"
         }
       ],
       "requires": [],
@@ -3427,16 +3427,16 @@
           "sha256": "118f76dab71fb80d1dae087e3f2ab5c50d4bf2fad2bf4b5fadd7e51aeea67605"
         },
         {
-          "bytes": 108318,
+          "bytes": 108288,
           "format": "latex",
           "path": "rotation/data/latex/D2d.tex",
-          "sha256": "5982c80b4b8b08eddd679f19bf51797df984ab147ce168bd5a47aab6bb3aefc8"
+          "sha256": "cf4950814cd99cce4bc8adb246af379ed47818072ec713af6175cb77d400459d"
         },
         {
-          "bytes": 474539,
+          "bytes": 474444,
           "format": "pdf",
           "path": "rotation/data/pdf/D2d.pdf",
-          "sha256": "5d463a495823d13137ef4929358c7e2b6cabd7fb40790798863c13efd50509e5"
+          "sha256": "09acafd290989964905ae6e044ce04ee2c94cb5de9230a34d297da022dafc9a9"
         }
       ],
       "requires": [],
@@ -3472,16 +3472,16 @@
           "sha256": "36c15b20dc161716f99121af9d2fa623353f8334b048083e515f05139675cc0a"
         },
         {
-          "bytes": 123781,
+          "bytes": 123751,
           "format": "latex",
           "path": "rotation/data/latex/D3d.tex",
-          "sha256": "d7be2daaa3402c766e018de75219212c968b1cd9166e5f3734b2020b8f1b72fb"
+          "sha256": "6e034579fbff6a5831c720cb2795deb26d5566c0abcb526d764de2237810789c"
         },
         {
-          "bytes": 484622,
+          "bytes": 484528,
           "format": "pdf",
           "path": "rotation/data/pdf/D3d.pdf",
-          "sha256": "2788318c2b1528371eb16b8a6475d01952a44952399657e667c12be9d5d293d1"
+          "sha256": "95cd9ef36c03797f39f8f430ede65ce2fb9d91a96549b9d53ebb366ecb115b3b"
         }
       ],
       "requires": [],
@@ -3517,16 +3517,16 @@
           "sha256": "461828a9b952cb919547507c41afa6e771f3864d2a54a7f0852da3d097c48901"
         },
         {
-          "bytes": 138058,
+          "bytes": 138028,
           "format": "latex",
           "path": "rotation/data/latex/D4d.tex",
-          "sha256": "8bbd8a8f74768635991566b6f622e9cfc29dd6e811561414050802b24e7ef0aa"
+          "sha256": "e5e2e2a730b778388fad5d022394dee6bb2684faf23ceb78fd545f05b9d86de7"
         },
         {
-          "bytes": 490242,
+          "bytes": 490148,
           "format": "pdf",
           "path": "rotation/data/pdf/D4d.pdf",
-          "sha256": "017f23648e8c7b8a59f1aa6fe0e3ac119adb82e965a845e8dcfd0911695cdee8"
+          "sha256": "54cc0240bc44123d08ae7e37c3ed5031be8d0377951390233bc6e9dc9007b27b"
         }
       ],
       "requires": [],
@@ -3562,16 +3562,16 @@
           "sha256": "6ee37333414dacd19b6202e3f88b033720b15e391b7deb1bed7407d0042b09b4"
         },
         {
-          "bytes": 155790,
+          "bytes": 155760,
           "format": "latex",
           "path": "rotation/data/latex/D5d.tex",
-          "sha256": "c44df25bef85cfcf3d2fa7943a8c0ad74fb385c7d4e088ee92157493a8149dbd"
+          "sha256": "0530f2f63ce83125f112541a2ad11212bb9e40d7ba9344214a08c885a07a7bb6"
         },
         {
-          "bytes": 495881,
+          "bytes": 495786,
           "format": "pdf",
           "path": "rotation/data/pdf/D5d.pdf",
-          "sha256": "9865d614566afca07d543e74eeee704cc2e3261f686e72de9d93e568ffd571b0"
+          "sha256": "419acac0c99f42309de62d2dcad18f8159a80a7c3f5d37f5177dd0bfda699a4a"
         }
       ],
       "requires": [],
@@ -3607,16 +3607,16 @@
           "sha256": "c6defb2b24e82313b9a50d3145b98bb652c41310d5b6e9ac58fdf93d8e69bd4c"
         },
         {
-          "bytes": 176388,
+          "bytes": 176358,
           "format": "latex",
           "path": "rotation/data/latex/D6d.tex",
-          "sha256": "44000210a6b9449aace0d1bf39a9abffad813ba6c10eaf3df5ebf43c3dfbb8e8"
+          "sha256": "cf00127375c3ac2d03b66ec10307b5931554b36b1a5c0d00aba4f6c390790b1d"
         },
         {
-          "bytes": 507222,
+          "bytes": 507133,
           "format": "pdf",
           "path": "rotation/data/pdf/D6d.pdf",
-          "sha256": "9ce72266fefb4af3e0d8c05563a3aa389e4fc496123cbc059ad48d627c89be4f"
+          "sha256": "bdcf764ec6384dad019d0f263972fa0e188c5beecd57a2df8e87001526f925ae"
         }
       ],
       "requires": [],
@@ -3652,16 +3652,16 @@
           "sha256": "ecf715b692965fa0689c18b776505c39b95d3691b895e64515cc8db09e00818d"
         },
         {
-          "bytes": 194724,
+          "bytes": 194694,
           "format": "latex",
           "path": "rotation/data/latex/D7d.tex",
-          "sha256": "39ebdce0719fa9e7bf3c58e54cf494b2eac71cf96b10391a9d4d3e53a44ac3f6"
+          "sha256": "2bf532687507e3dd0fbcbf95b9d7b4af3712f12fbb18f27248afb896c6e1d9c9"
         },
         {
-          "bytes": 504912,
+          "bytes": 504817,
           "format": "pdf",
           "path": "rotation/data/pdf/D7d.pdf",
-          "sha256": "55c47bb884e6b842a559bdfda6386d1238bd0898acfd123fce0087d5642a1346"
+          "sha256": "5fb413bb27afc7b9b9a952f26248a2216165f3bd799cd8447dc7abf14f7fd1d2"
         }
       ],
       "requires": [],
@@ -3697,16 +3697,16 @@
           "sha256": "63b5c7afcc804ee0402f900ade81ef5ff46a33d8f46cc7e782a859798161d213"
         },
         {
-          "bytes": 210973,
+          "bytes": 210943,
           "format": "latex",
           "path": "rotation/data/latex/D8d.tex",
-          "sha256": "35135c5b36cc9731055074b6bd767a347a85f64221c603e8ff12fc1e5adf0b41"
+          "sha256": "58390341b5c6765401a67a15baed06202a5e6a3bca2c24f732c7be09f9cbfa26"
         },
         {
-          "bytes": 519492,
+          "bytes": 519398,
           "format": "pdf",
           "path": "rotation/data/pdf/D8d.pdf",
-          "sha256": "9fe648be36e1823f6bf3ef78317e3ec2db85a78cab29e845e0076a1d4786ce28"
+          "sha256": "c02beeb639879cee30c60aea6362b210da42fcc27380e514fcd930d496aa2be8"
         }
       ],
       "requires": [],
@@ -3742,16 +3742,16 @@
           "sha256": "04b6508dac667848ae75ebae4d555d2e1deb9f296dd4b6f2e391a5986ec76a88"
         },
         {
-          "bytes": 245084,
+          "bytes": 245054,
           "format": "latex",
           "path": "rotation/data/latex/D9d.tex",
-          "sha256": "0a35fbf6051aae3b6c012e00eaf0d04effe6437b3a201970e4550c3740e52daf"
+          "sha256": "7d03fbcb865a64a34de82b821d969708fcd977b7181e2e2f68938e4736f25378"
         },
         {
-          "bytes": 522984,
+          "bytes": 522889,
           "format": "pdf",
           "path": "rotation/data/pdf/D9d.pdf",
-          "sha256": "94c5c36db549bd43ec4cce332f32cd71edd24d9eec79b310c464a0f6bc8f749b"
+          "sha256": "588f0624b77c0eb641cc0b9a47a218f299cf44e89b92e0f718f575febbacb8dc"
         }
       ],
       "requires": [],
@@ -3787,16 +3787,16 @@
           "sha256": "fade3136a20be25bd4e02acf00050e7ec639583bc4bf14bca60bb1e0dea1ec43"
         },
         {
-          "bytes": 262586,
+          "bytes": 262556,
           "format": "latex",
           "path": "rotation/data/latex/D10d.tex",
-          "sha256": "776c02d593e2c2281acf9f1f5034bf75c34453a019164e18dce46d923f1f4f3f"
+          "sha256": "21e0d770c6858d5ea02dfcdcbfa3e77f98f3723400b8b30e596897f8c2f0504c"
         },
         {
-          "bytes": 536445,
+          "bytes": 536353,
           "format": "pdf",
           "path": "rotation/data/pdf/D10d.pdf",
-          "sha256": "0cdd6f1ee91ed7c52e576b4d41a9698b67ca976cd37aafea9bef0c01cd0d8168"
+          "sha256": "dd1274ffdd2cba028c94ad3b5444f3affccd028116739258a93a8e69b977d7eb"
         }
       ],
       "requires": [],
@@ -3832,16 +3832,16 @@
           "sha256": "114d0171c443a8c2e1c93aa00f0596519c05059000807c04e7807359a2cf8eba"
         },
         {
-          "bytes": 300806,
+          "bytes": 300776,
           "format": "latex",
           "path": "rotation/data/latex/D11d.tex",
-          "sha256": "2fd146f0df87775895fe218edd6cad0c6c09e9a464a5cbc5307e57a16c199316"
+          "sha256": "599ba59fdd18a75e12cfb1dc890049e2021398ac93eb5955c1a24ac8c426f8c4"
         },
         {
-          "bytes": 542959,
+          "bytes": 542866,
           "format": "pdf",
           "path": "rotation/data/pdf/D11d.pdf",
-          "sha256": "316f215d4d3a70101770783e68edf6a76e00d13c23c9dd6af2a9d7cdd3f80c63"
+          "sha256": "b163bc56f7c7d579924190595cd77ce39a470bd73d7df313fdcad89e293ed8d5"
         }
       ],
       "requires": [],
@@ -3877,16 +3877,16 @@
           "sha256": "508f00992508be5980454af370d9c6c3150a7d1aaff1c9f3b66210f2d77621b9"
         },
         {
-          "bytes": 320855,
+          "bytes": 320825,
           "format": "latex",
           "path": "rotation/data/latex/D12d.tex",
-          "sha256": "e619c79bd96abf00e7ec19e3d1b50af3710f5c33e3126781aa95a744b022c185"
+          "sha256": "662a889d91862d99668f0987c19fe58110808aeba7c6a37a1257b8e1686801c0"
         },
         {
-          "bytes": 556451,
+          "bytes": 556356,
           "format": "pdf",
           "path": "rotation/data/pdf/D12d.pdf",
-          "sha256": "e9cbf59c9dd7e30859948334e44f6d3d5f96ded625467be06606339de1ab1e88"
+          "sha256": "83bdddd7e986711c93fbe872fdb68b32fd7105d0a502e8703d9b1ef51a5cc54f"
         }
       ],
       "requires": [],
@@ -3922,16 +3922,16 @@
           "sha256": "d3132166aa46e12eef7bcfcf0edda54f6178260ab8fa9593bd41ea8091dc6363"
         },
         {
-          "bytes": 134176,
+          "bytes": 134146,
           "format": "latex",
           "path": "rotation/data/latex/T.tex",
-          "sha256": "035bb0f69ea66a4747c56914d780ee8202029058018887f1b582b87920c5b061"
+          "sha256": "7251216d09579db67d3e28b86670e505921d8be9d0534766fce8ffbb2e20bf9d"
         },
         {
-          "bytes": 462615,
+          "bytes": 462521,
           "format": "pdf",
           "path": "rotation/data/pdf/T.pdf",
-          "sha256": "d58e6fdc7bdc550b55228dbc2d8370ecc815fa6f8a0b3dd65cf4b4c923c9e435"
+          "sha256": "afa127e6316f41754fcc2ddbbe99dd4fd6dc77582c53ea8531ea094c91f3ac6b"
         },
         {
           "bytes": 262,
@@ -4033,16 +4033,16 @@
           "sha256": "5712d03f2372cf7a6a3f6e31cd7041bf1b21832b63c89a8b8f0e7714bd6c480a"
         },
         {
-          "bytes": 186962,
+          "bytes": 186932,
           "format": "latex",
           "path": "rotation/data/latex/Th.tex",
-          "sha256": "37b95207d41bdb1103798da90daa6285f5b76289ac12ed0ea68c0f7aa2841e23"
+          "sha256": "91687422fcca318a571c11ab40bdd36b2cf9b5e75b006a5114463676c1b6da2b"
         },
         {
-          "bytes": 495463,
+          "bytes": 495368,
           "format": "pdf",
           "path": "rotation/data/pdf/Th.pdf",
-          "sha256": "3a3d656780a945904cb9b781fb590704337aaa4c1c4e25743b365a98d596776d"
+          "sha256": "a0986ec45d01b5474e43da9be08387cf30c185e549534cbad3397720bc528623"
         },
         {
           "bytes": 267,
@@ -4146,16 +4146,16 @@
           "sha256": "62753c643ac47b23f83c8a5aa55705e037cb89bea75fc4d283848d2adb994e70"
         },
         {
-          "bytes": 173057,
+          "bytes": 173027,
           "format": "latex",
           "path": "rotation/data/latex/Td.tex",
-          "sha256": "0c4d7ced48ac6ca3f2c67673710aeba4fc3ebf3e468d1e2ac05e722a73dd3e22"
+          "sha256": "8f9a6cde4df9a83f10d13f76ccf24d56429c3eaac87a4948ab9e1d83b07adf33"
         },
         {
-          "bytes": 494802,
+          "bytes": 494711,
           "format": "pdf",
           "path": "rotation/data/pdf/Td.pdf",
-          "sha256": "1892703a6a8ccf2cef810cfce04499e59f4b131c8f974cda1ffe0c2497a204ec"
+          "sha256": "4d669574e11cf2bf9cf532b630929cd1359080f8c8b5041c08a129522c3c9071"
         },
         {
           "bytes": 271,
@@ -4259,16 +4259,16 @@
           "sha256": "32d4c02c925f5642305366e419280c475b853c0e33895e6f95ea4792df385906"
         },
         {
-          "bytes": 176859,
+          "bytes": 176829,
           "format": "latex",
           "path": "rotation/data/latex/O.tex",
-          "sha256": "cce942a3fdba74cf23ae93671258bd39145375c98d03679b0abae4377e5fbbae"
+          "sha256": "1f290fba2ac5ea9838d2d5687bfb4ef4baf601839fb0dd2653f1001f67677824"
         },
         {
-          "bytes": 489027,
+          "bytes": 488933,
           "format": "pdf",
           "path": "rotation/data/pdf/O.pdf",
-          "sha256": "cd7387cafe411c0c80a29931c06b25230ce997ec15f2ddf9ca790e5940358f39"
+          "sha256": "083f73968e8acdff1a028dd935660d2fcb7f92ff41bdfbde81678a038ea60c76"
         },
         {
           "bytes": 271,
@@ -4372,16 +4372,16 @@
           "sha256": "15b1007ad572140d5e01bedf4623df8f4dc77b9159b3297d5a7bf7b424ce77d2"
         },
         {
-          "bytes": 321865,
+          "bytes": 321835,
           "format": "latex",
           "path": "rotation/data/latex/Oh.tex",
-          "sha256": "234b851d6cbeb62af6dcc220f2817255487122ac3b301ae0426ee19a78a30885"
+          "sha256": "74adfa79ea89498be2fe84e831f200affc94b146d471ea4597c73005910ab378"
         },
         {
-          "bytes": 554346,
+          "bytes": 554253,
           "format": "pdf",
           "path": "rotation/data/pdf/Oh.pdf",
-          "sha256": "c029d814f704502c98d2a864cc765735f182ae7093695d474a1563f8acbdaeb3"
+          "sha256": "71edb6ef6c723587c198c264cb4aaaf3d4248dd81deb7ca424a1792c7d358e0e"
         },
         {
           "bytes": 272,
@@ -4486,16 +4486,16 @@
           "sha256": "5a30566fcaeac4216f6698f498ad3892e8bba5b812393df95bfa525e102fc8b1"
         },
         {
-          "bytes": 568994,
+          "bytes": 568964,
           "format": "latex",
           "path": "rotation/data/latex/I.tex",
-          "sha256": "bbb2face46ffd607343dba57369a6006ccff25b5c408a9c4f50cd2cffdda9280"
+          "sha256": "2c13e5dcaa5474587162cb9b67ac17d6632303cc3e5b10ba5ef4d7ddebc7269a"
         },
         {
-          "bytes": 737105,
+          "bytes": 737010,
           "format": "pdf",
           "path": "rotation/data/pdf/I.pdf",
-          "sha256": "e5c7d7288d6a63b9e3659b1f6c92ae8dfd23da6811a3493aeb29e52dfc934cc9"
+          "sha256": "eb76858174edd9dfff46ccdec44b6c06fb959999edf0db3d043761751a94f4b3"
         },
         {
           "bytes": 235,
@@ -4609,16 +4609,16 @@
           "sha256": "eb11ae0e8354d0cc552ed3dd659a25877defb878d2a82ec693fdb607a0b45b5e"
         },
         {
-          "bytes": 1603443,
+          "bytes": 1603413,
           "format": "latex",
           "path": "rotation/data/latex/Ih.tex",
-          "sha256": "ec23c124fc57459fa58ec9f33f9391e31c3f9fea2d15061fbcd890547b810519"
+          "sha256": "1121e00e811dd2784c919659054f1d355def3270200dba2276a76f56f59649e6"
         },
         {
-          "bytes": 1320726,
+          "bytes": 1320631,
           "format": "pdf",
           "path": "rotation/data/pdf/Ih.pdf",
-          "sha256": "c65f4f7f0ac7ac5933b412ef5d44132295d71fa69fd93327abaaf199883726f2"
+          "sha256": "528652d9fdf5f66d856040033e378d79c8e7bb6d95080393041aac6e31ad0ff2"
         },
         {
           "bytes": 238,
@@ -4746,16 +4746,16 @@
           "sha256": "435a793ee32b45b468459ab29134ec2223239ba7301e956060a8c4f24f562d70"
         },
         {
-          "bytes": 96191,
+          "bytes": 96161,
           "format": "latex",
           "path": "rotation/data/latex/Cinf.tex",
-          "sha256": "722cfcfb797d9f3fa7d7f40b28694290dce6b56127a7b308e14291301b416142"
+          "sha256": "84c0ec557b4c195a8fbf9cd0712271ab17ae8c74b46c5cfb0767247658efb98d"
         },
         {
-          "bytes": 386232,
+          "bytes": 386137,
           "format": "pdf",
           "path": "rotation/data/pdf/Cinf.pdf",
-          "sha256": "8a9cca0e745f5284d51315ed8336b5035f33f50cf1f3ec1655cf80da027524bf"
+          "sha256": "fd09f9eb517f529812e51448d187e578c49785d55397f3501b3d81142d536ba4"
         }
       ],
       "requires": [],
@@ -4791,16 +4791,16 @@
           "sha256": "36c1d5eca141c1ddd750b0b8f7f20b0a20fbdd4c84181feb03a9e54bc7047f50"
         },
         {
-          "bytes": 181253,
+          "bytes": 181223,
           "format": "latex",
           "path": "rotation/data/latex/Cinfh.tex",
-          "sha256": "99fe102ba915f278fa27ff9d09a4a3436190a76e2f5ff85da52bef3d343e846f"
+          "sha256": "4eea4dc8da0af332c287e9f92d93ba0eaad3dc40feb1d762f46cd9d246ba950b"
         },
         {
-          "bytes": 430394,
+          "bytes": 430302,
           "format": "pdf",
           "path": "rotation/data/pdf/Cinfh.pdf",
-          "sha256": "0e2c791fba43938c36fd77d8bde241d0eca46ffb61e27597437536b9e2ad3eac"
+          "sha256": "14b79c1498c261b623266a051c5650219dac5b5321afa8b37f8adc6a828fb416"
         }
       ],
       "requires": [],
@@ -4836,16 +4836,16 @@
           "sha256": "0aff3b1c94584d7641963023c0751b7032b48e1727c153f796df6a42f4877b75"
         },
         {
-          "bytes": 94027,
+          "bytes": 93997,
           "format": "latex",
           "path": "rotation/data/latex/Cinfv.tex",
-          "sha256": "36d275f0f4c6f4f788f902741983c752d903b41548e865a31786fd926b52e4bf"
+          "sha256": "09051833bf8b542e6bb2137c65e2098c8e1c80d3a2f092a612749c0d039f34ce"
         },
         {
-          "bytes": 437113,
+          "bytes": 437020,
           "format": "pdf",
           "path": "rotation/data/pdf/Cinfv.pdf",
-          "sha256": "5d5ac65b7f3b973b82ff5d933977b496f7918e40ceaaa4a8c233a6f07f8d9d0a"
+          "sha256": "da28f0abf47c26453fef7c4e50a50abf8552083941b3c775e9fb0379b81b267d"
         }
       ],
       "requires": [],
@@ -4881,16 +4881,16 @@
           "sha256": "e0b4e5c163ebdab5169f3c39b9de6e31beb59d9d1962c774e6975221bbc5f33a"
         },
         {
-          "bytes": 94752,
+          "bytes": 94722,
           "format": "latex",
           "path": "rotation/data/latex/Dinf.tex",
-          "sha256": "9386a348031dd07506a6261bb038c6d14ab71654a9d3138fe99622690dacac06"
+          "sha256": "f0e8ee7ce8040cc8f9fcc2a24c794bcdf7e9e914e00137326ce7187099ac31f6"
         },
         {
-          "bytes": 424650,
+          "bytes": 424555,
           "format": "pdf",
           "path": "rotation/data/pdf/Dinf.pdf",
-          "sha256": "b06da3895bc2860ad6df4558cfb7bd2cb8143605fbaac984f38507b26108e04d"
+          "sha256": "68bda0f5ca596a4ec962572e713e4c7399946048a2b963aca9ab497e6c892e34"
         }
       ],
       "requires": [],
@@ -4926,16 +4926,16 @@
           "sha256": "092eb7244a1a7fb0c8e21f1fbe1b0597580048961bc7d3f44139d20a3228c9dd"
         },
         {
-          "bytes": 184983,
+          "bytes": 184953,
           "format": "latex",
           "path": "rotation/data/latex/Dinfh.tex",
-          "sha256": "c471cd542cede31e5bb669432c5cc641ae47a91002c543180946ee18b8ff7c9e"
+          "sha256": "045efa86b9c86ea70a12fe14bf513df2233635265f3684136d125354ae4b8790"
         },
         {
-          "bytes": 473783,
+          "bytes": 473689,
           "format": "pdf",
           "path": "rotation/data/pdf/Dinfh.pdf",
-          "sha256": "eb2fb61ff032b84321003b50b925ac82e892c05465e07a26367da35b960e5be8"
+          "sha256": "70b95a34c923a8f3d68d53cdb992bed6dc313e214c7158b389afee1dcda14d0e"
         }
       ],
       "requires": [],
@@ -4971,16 +4971,16 @@
           "sha256": "28d163a00a3cd06c227f1348042da9a01f393a3a26a31698ad1e2e4ca27f5a3e"
         },
         {
-          "bytes": 147800,
+          "bytes": 147770,
           "format": "latex",
           "path": "rotation/data/latex/SO3.tex",
-          "sha256": "42eae3b8913cf1e587c1136b455d558be461ce5caff7f694d0bd5f0088121c58"
+          "sha256": "a164201854aacc1fdd98d91b4fea360537d926bb65c6f9e722eff1155a8a4fe3"
         },
         {
-          "bytes": 464033,
+          "bytes": 463939,
           "format": "pdf",
           "path": "rotation/data/pdf/SO3.pdf",
-          "sha256": "c9a1898d27f78e934c7b09e8d45606f3aedb12babf26b030706332d019009e87"
+          "sha256": "2093931fa7dec09cfa35af2118f1d095f90addcbe0aa3324f9270b9beb7a2b0c"
         },
         {
           "bytes": 270430,
@@ -5022,16 +5022,16 @@
           "sha256": "b46b72aa5e30e329ac218fcf4a3a5e4b290e6abf4810b79adbfa595144f4b9f7"
         },
         {
-          "bytes": 176817,
+          "bytes": 176787,
           "format": "latex",
           "path": "rotation/data/latex/O3.tex",
-          "sha256": "1874904bb7ff7c8691ed721bf43a46e3d21aa8b6d228e8a721594bc84fdfb61c"
+          "sha256": "899e1350cb1771f7d04965bb11e87f1b6b2f7319d16cbc389df68efad03cc324"
         },
         {
-          "bytes": 505092,
+          "bytes": 504996,
           "format": "pdf",
           "path": "rotation/data/pdf/O3.pdf",
-          "sha256": "b81c4cfff2dd940bb034f239acf9f9fb8ce0e282cd0785aef792faf269a83a25"
+          "sha256": "ccd78b4111f277fc7e36ff0925f77e08d18ace6036d36aa194fe314de8108443"
         },
         {
           "bytes": 270430,
@@ -5073,16 +5073,16 @@
           "sha256": "41f04c086c7786b0cd1569285c4608e3680fd1b74ca5aeb9a7432a46feda46ac"
         },
         {
-          "bytes": 62740,
+          "bytes": 62710,
           "format": "latex",
           "path": "double/data/latex/2C1.tex",
-          "sha256": "f1b50fdfa94361acd8803c8296fe882486963e0018c47e604010f80f6651bb30"
+          "sha256": "69a5bb3ff1374c5a7c3113507beee0195dab1f7968f2814672726aba9ef0155d"
         },
         {
-          "bytes": 403625,
+          "bytes": 403533,
           "format": "pdf",
           "path": "double/data/pdf/2C1.pdf",
-          "sha256": "87b4da84e455b9ddd2d3e8a58121f9226370c802cd5d5b6c63594e39238be459"
+          "sha256": "febef9bf77ea1e720983f1ad407ea1e4ea58fdc8dfff36f114cbed1157755542"
         }
       ],
       "requires": [
@@ -5120,16 +5120,16 @@
           "sha256": "fe8887fbe90f6f10c4312822db8808ccec22abad0aaf8ad46f72c44fabf2d74e"
         },
         {
-          "bytes": 70352,
+          "bytes": 70322,
           "format": "latex",
           "path": "double/data/latex/2C2.tex",
-          "sha256": "a4d0fd7bc36fb6dcb52afbd96c842c4bca3d6c733fa3cb055e284b3691a42612"
+          "sha256": "b2cd7ad8db19cb404ce7a1d278c727ce966423f0fa7bbd80704007fb6d15560a"
         },
         {
-          "bytes": 411446,
+          "bytes": 411354,
           "format": "pdf",
           "path": "double/data/pdf/2C2.pdf",
-          "sha256": "3929449f4871ecee06144c4cc3979bc5f35f270f456c4571b7892ace20781d03"
+          "sha256": "0d703c9a3c26ef9fb8b9cbae3159d33a9dc885ae7f890abc0643e6decbb580e0"
         }
       ],
       "requires": [
@@ -5167,16 +5167,16 @@
           "sha256": "501f1552015fcd4fd08911f91d1de186165f74de58ad1fca4b4fcdd2049f59e7"
         },
         {
-          "bytes": 74957,
+          "bytes": 74927,
           "format": "latex",
           "path": "double/data/latex/2C3.tex",
-          "sha256": "c65afc484c3ba58aab573f589bbe4bf4227a573d94206a2c36406134c44a2763"
+          "sha256": "0994a251dddd584dacd12d0f33379e8e60e473d16c0f7e1e89e1fd7fce1a3550"
         },
         {
-          "bytes": 416705,
+          "bytes": 416612,
           "format": "pdf",
           "path": "double/data/pdf/2C3.pdf",
-          "sha256": "8b70e46b8c003e1de0fdf29f9ac8fac41788453feeb90aa727db44a38ce4c8b6"
+          "sha256": "b6050ad4218fc6bc146e0e7f90a4895d1a3f3067b057c7b3e2d53927b0eed133"
         }
       ],
       "requires": [
@@ -5214,16 +5214,16 @@
           "sha256": "5f553e5d73a0f9487efae3efe9543b02f333414296b2063c1bc5182f9415d83d"
         },
         {
-          "bytes": 81781,
+          "bytes": 81751,
           "format": "latex",
           "path": "double/data/latex/2C4.tex",
-          "sha256": "af1078701196b4d74114e8af0c93e4a620c79612b86003d1435a32eb7324936d"
+          "sha256": "8824585816d9fa2f3588e1895678c2fcf1510921ad9df6384857981898673668"
         },
         {
-          "bytes": 421646,
+          "bytes": 421553,
           "format": "pdf",
           "path": "double/data/pdf/2C4.pdf",
-          "sha256": "63462a69082313fd002c97c1c089b11100ad7be3e930a2748fe7e06158511b0a"
+          "sha256": "84004931c152c420319ebe2ecf22c1b29c4e90794e162a1d3d39bf379fc19d50"
         }
       ],
       "requires": [
@@ -5261,16 +5261,16 @@
           "sha256": "0d4869e8b818ffa0a9d8b6315d4987ad603e05663a36212ac0282a057afbe459"
         },
         {
-          "bytes": 83891,
+          "bytes": 83861,
           "format": "latex",
           "path": "double/data/latex/2C5.tex",
-          "sha256": "1f0ef859167c015755a9a60cdf086aec49d135f24d348dc9b4adfdd40f37c1fe"
+          "sha256": "9f91807ce3719298c20331d34176909252a7bbab257b9c08a1bff12ee02d6f9b"
         },
         {
-          "bytes": 420388,
+          "bytes": 420295,
           "format": "pdf",
           "path": "double/data/pdf/2C5.pdf",
-          "sha256": "3448df785d0a5b0cf309db53fd4facb13df8069e483b8ace51dbbd4f5574ae0a"
+          "sha256": "42c76d6e6e19f8afcd43fa0288202179188366f5bd29f8dca0b25b06cf9277a2"
         }
       ],
       "requires": [
@@ -5308,16 +5308,16 @@
           "sha256": "ad1dfd95b03347a292167446f5485b15de436d2f3f65a5777d2069cc96e326db"
         },
         {
-          "bytes": 93547,
+          "bytes": 93517,
           "format": "latex",
           "path": "double/data/latex/2C6.tex",
-          "sha256": "215b911c47b97a42e98179cda49880746c2d1243c15d39e59c03419f8d228a96"
+          "sha256": "96d5b362db7d834fd430a2d47dc529655053fee26a9d53cfaa9a913b6a12b960"
         },
         {
-          "bytes": 425955,
+          "bytes": 425859,
           "format": "pdf",
           "path": "double/data/pdf/2C6.pdf",
-          "sha256": "4e0174a9c23e9cb1ba283cd455a526ebdd7355d22e5c4d0968fee7aa7d5990ac"
+          "sha256": "100e8162ab0003eb2982d03aedf274d00e32d48d31f266215e17a294970f0029"
         }
       ],
       "requires": [
@@ -5355,16 +5355,16 @@
           "sha256": "93a48982034533c75a14c5008a697d33073a89d939e2a5158573668358421f45"
         },
         {
-          "bytes": 94209,
+          "bytes": 94179,
           "format": "latex",
           "path": "double/data/latex/2C7.tex",
-          "sha256": "d9300f15c43baf8834117fec7939870cc86359c70c0f13323c3cbd2a3619b781"
+          "sha256": "7981e607ca7329578aae8a500d5f2296e6ee961e82d7ac64a2c4c45ed11892d3"
         },
         {
-          "bytes": 422198,
+          "bytes": 422101,
           "format": "pdf",
           "path": "double/data/pdf/2C7.pdf",
-          "sha256": "c43f7d9119b9aa1c2130ee6cbc1d070275b70b200cbc15bd732108a29e5e9483"
+          "sha256": "25da1763b801003541abb2a0aaea263dff1543037c867d3bc6b8d50a6ab03154"
         }
       ],
       "requires": [
@@ -5402,16 +5402,16 @@
           "sha256": "8b46242c656ce83e46238f88cb93faa2893cb0c7978b254e00d27a28d626f31e"
         },
         {
-          "bytes": 103046,
+          "bytes": 103016,
           "format": "latex",
           "path": "double/data/latex/2C8.tex",
-          "sha256": "553e0830690af41af807d60e4a5fe88d1b4ab0091ebb7be6ff00b4cbecaf0418"
+          "sha256": "d1ee937354da7a70ddbf79a4c5b044ec91bab934c67d4c875f62e43f6afcecdc"
         },
         {
-          "bytes": 428807,
+          "bytes": 428713,
           "format": "pdf",
           "path": "double/data/pdf/2C8.pdf",
-          "sha256": "11a8d759233a6e50b440c3ae3386d7aa31b00060ede84c00f18bd6ceac987078"
+          "sha256": "2a45a29e86a6d218a7a0ecfc9d9b99e5bc0ad957990d49dec213276fbf351057"
         }
       ],
       "requires": [
@@ -5449,16 +5449,16 @@
           "sha256": "55043bf5a5f911beefb39e30d206fa6ecb5a1f227eac6ba92e1862347f236c0e"
         },
         {
-          "bytes": 110017,
+          "bytes": 109987,
           "format": "latex",
           "path": "double/data/latex/2C9.tex",
-          "sha256": "1d23f5839d4847e57568a67407edcb13c7aefe35b58d8227080fb2760e6042b3"
+          "sha256": "3204ca25b1a1ecb1578a8fc94b2f0f12eb8d2d83bf3a70784dbfe288de2c986e"
         },
         {
-          "bytes": 430864,
+          "bytes": 430765,
           "format": "pdf",
           "path": "double/data/pdf/2C9.pdf",
-          "sha256": "542c298df85cb9a85bcdcd1e340570aac07e97822c452fc2c3ef85b0f964e7a1"
+          "sha256": "d1fbc11cf2d80c8db59fa0b7a6787a01a4fde4f8b13bcab0c6691284006c44ae"
         }
       ],
       "requires": [
@@ -5496,16 +5496,16 @@
           "sha256": "e9e24bdca436ccf87c3a9842aa51849408e5e1db59279b075b18caa4cc94421d"
         },
         {
-          "bytes": 117602,
+          "bytes": 117572,
           "format": "latex",
           "path": "double/data/latex/2C10.tex",
-          "sha256": "b1eeda1820e5ca1695e4d26f0ed9c7b9433b71dba295272fa19b46789e7d337a"
+          "sha256": "34bd38292888682fb06ef93e9b67adab99f752245f5cbea1ef029e97392bfdde"
         },
         {
-          "bytes": 433683,
+          "bytes": 433588,
           "format": "pdf",
           "path": "double/data/pdf/2C10.pdf",
-          "sha256": "8363ced8e85c522c99fb1b69983cca1b6d5f148c40977a9db768ce461d363384"
+          "sha256": "c0d2fc56e78c9f9dd19b64e3de8dd7add55efef4d7b87989d56a15f4500501eb"
         }
       ],
       "requires": [
@@ -5543,16 +5543,16 @@
           "sha256": "ce41b17545e090d00c22129e3d4e90f948381f108a5541a4021cf191efd9657c"
         },
         {
-          "bytes": 121472,
+          "bytes": 121442,
           "format": "latex",
           "path": "double/data/latex/2C11.tex",
-          "sha256": "9b3c0a5459311aa888fa81107f34917e21a494acaa5941a2a7482e7aa118788f"
+          "sha256": "53e7f1f09c8777f9e309e621b55f960b40c8a7785c2684c05663543a7faa183b"
         },
         {
-          "bytes": 431245,
+          "bytes": 431151,
           "format": "pdf",
           "path": "double/data/pdf/2C11.pdf",
-          "sha256": "b4bc89f91dd726444d7a39a58ea91a7443e3065fee6d24e8fe71215ba14d5f5f"
+          "sha256": "3997546371d262e8fd1cf21b20cda16b0537e616064ca717790c05816aa32728"
         }
       ],
       "requires": [
@@ -5590,16 +5590,16 @@
           "sha256": "0c40e0da6044c5af24ebe6e964922dd0925d7cbe8423941d020e8ebba505f437"
         },
         {
-          "bytes": 135543,
+          "bytes": 135513,
           "format": "latex",
           "path": "double/data/latex/2C12.tex",
-          "sha256": "18b8f7e9557b826c412198a97a24d07e16bfeaade54d525ed1e8eb99e6091544"
+          "sha256": "e1714add3077f75a88f950075e684a0e9a144d501c875bee1fd9b9d03bff6342"
         },
         {
-          "bytes": 440551,
+          "bytes": 440458,
           "format": "pdf",
           "path": "double/data/pdf/2C12.pdf",
-          "sha256": "f8ccf37a2c579038b88b73c5c4a7879a3ef42238bb395600d2eb1773263bc732"
+          "sha256": "14274d106ae9cd09b9c638241a55a11a2fd1ff1a14959d1a0c12c4b644ef46c7"
         }
       ],
       "requires": [
@@ -5637,16 +5637,16 @@
           "sha256": "57bbf5a712c0d45df3bc89a469300a0004868e4688148ee9a7a7a0fcf6c9b0e8"
         },
         {
-          "bytes": 71270,
+          "bytes": 71240,
           "format": "latex",
           "path": "double/data/latex/2S2.tex",
-          "sha256": "7a55edead08b490bf618f0f22c7c1c847cbb501b30be24f21f7cddd4332c4d08"
+          "sha256": "db86ba94d49e48dc82a8bb5294432931784c0053e8a67d91ba0142ba6198d7bc"
         },
         {
-          "bytes": 419454,
+          "bytes": 419356,
           "format": "pdf",
           "path": "double/data/pdf/2S2.pdf",
-          "sha256": "aad79628522a296e1718a94703adebdb22eb8976321d61db24f8b99d8645c7dc"
+          "sha256": "8a48301675dc879127e2c1410fefd671c6d066b6cd7ea0a41e6d7fa5b7fdef12"
         }
       ],
       "requires": [
@@ -5684,16 +5684,16 @@
           "sha256": "b169e74b2dd98aa6cf2eba14a1879b5a6c458f177816d7f795c1d94e2ef0b8da"
         },
         {
-          "bytes": 84097,
+          "bytes": 84067,
           "format": "latex",
           "path": "double/data/latex/2S4.tex",
-          "sha256": "7840b8e6de89166001048e2a241b8adce63fa624bc70c55bd7639f62d86c1d8f"
+          "sha256": "426050ea27d6fe5e07b32e9e0285a78091168df3d35a091efbebbe0bf254880a"
         },
         {
-          "bytes": 424606,
+          "bytes": 424512,
           "format": "pdf",
           "path": "double/data/pdf/2S4.pdf",
-          "sha256": "0e3387089c4ffde9e5cd362e3162b081330f5dce1857969655bdb3681479d54c"
+          "sha256": "d1a3f9233a7c4748705af6b3a03b24cde3ed501be8b0f0e131a0935e6f2b5281"
         }
       ],
       "requires": [
@@ -5731,16 +5731,16 @@
           "sha256": "8dade35c17ec2daad760ee27d34b79cd35a1ff9dbc3bd9aac29b5b8e18312854"
         },
         {
-          "bytes": 100477,
+          "bytes": 100447,
           "format": "latex",
           "path": "double/data/latex/2S6.tex",
-          "sha256": "e92a85d83eda35ec0af843faab71dfb852dec22fa29e7fbdcde90633eac2a441"
+          "sha256": "753d66cd0db10a23538c7b9e716919285a1d28e4feea8e40545f2ac6b6272e76"
         },
         {
-          "bytes": 438045,
+          "bytes": 437950,
           "format": "pdf",
           "path": "double/data/pdf/2S6.pdf",
-          "sha256": "582f784d2cb5cba5dc5ee040b7719153e964acdce35a666efa77c0bfc1f8af3f"
+          "sha256": "808ca1869be9f58cdc95daf746951cab2c3ef34891b8de9673586ef63665060d"
         }
       ],
       "requires": [
@@ -5778,16 +5778,16 @@
           "sha256": "c8df1df4908061ae8844daf1ca8854d91d25729044c1e821a21ae22b5c7c8be9"
         },
         {
-          "bytes": 105815,
+          "bytes": 105785,
           "format": "latex",
           "path": "double/data/latex/2S8.tex",
-          "sha256": "068729016390fffdd505a3a93f75a63fa4f4004c23002e88916c7f3bf831d29d"
+          "sha256": "a931b37fdbf378d85ff4012f4736db5795b662e57022451dcfd613328d39f337"
         },
         {
-          "bytes": 432358,
+          "bytes": 432265,
           "format": "pdf",
           "path": "double/data/pdf/2S8.pdf",
-          "sha256": "0f34efbe82ea26d408d0ace43b11d26f2fa0dcbfc7a20b37a6ba3c281e6cb336"
+          "sha256": "a4f833c07f46e4654e4d6a6cf91d532e42ac25ffd0f4e29787dcccc5eb4fb99a"
         }
       ],
       "requires": [
@@ -5825,16 +5825,16 @@
           "sha256": "fc7ade0cf65b99ac8b42fb46076cf844355a5053dffec95cee20ef94f7b8f9a8"
         },
         {
-          "bytes": 130060,
+          "bytes": 130030,
           "format": "latex",
           "path": "double/data/latex/2S10.tex",
-          "sha256": "2099b52d60cb4944494f9fab6a7367b6598b8bdb3d04efa7398df341aae73fef"
+          "sha256": "324180367d4da28dd687ad633c6060c87d2444689b41ccd4a7caf5a4332ba910"
         },
         {
-          "bytes": 445598,
+          "bytes": 445504,
           "format": "pdf",
           "path": "double/data/pdf/2S10.pdf",
-          "sha256": "5e12db222bf7460c076382a6b7bb8f42a90d9bdda3dd5c8fab2c6ccb1159ec20"
+          "sha256": "b1cd6cd9987fceba3211a716eb9c5584a028104dad07346c548e357fcc1bd7bb"
         }
       ],
       "requires": [
@@ -5872,16 +5872,16 @@
           "sha256": "0f384110f6eb2a6872383d5cef126258e310de9215d85f65f94922c2c98dc9ff"
         },
         {
-          "bytes": 139235,
+          "bytes": 139205,
           "format": "latex",
           "path": "double/data/latex/2S12.tex",
-          "sha256": "3e04f7db7c7876c109f9f4fa6776374fc128d16dda54387a699743673b7f0e95"
+          "sha256": "0b426a6129b192dd32390a28f9b76ff4a93a3dbeeaec8ee3d5c663be197ef429"
         },
         {
-          "bytes": 444320,
+          "bytes": 444226,
           "format": "pdf",
           "path": "double/data/pdf/2S12.pdf",
-          "sha256": "b1d502f781698928fb44da7fd4bc5334d8fa479349ac0d212d32e960fc45cd9a"
+          "sha256": "86548db06993a9c983d2b0718bac65296a8416cf6343cd3252856e251f0aef00"
         }
       ],
       "requires": [
@@ -5919,16 +5919,16 @@
           "sha256": "59cc16390848a0b6c4d30970946a0821f8d4d8312d86338c6679388fc26acccd"
         },
         {
-          "bytes": 165824,
+          "bytes": 165794,
           "format": "latex",
           "path": "double/data/latex/2S14.tex",
-          "sha256": "81d177e8070227a6ebef92b3075c4d2855ce4c058d1233f23aac5594f653e961"
+          "sha256": "c619477e2b81521280464d4691089085d01a12b4bc21ae287a0c9149dda9a396"
         },
         {
-          "bytes": 453336,
+          "bytes": 453240,
           "format": "pdf",
           "path": "double/data/pdf/2S14.pdf",
-          "sha256": "28af400e406b90aa9213073884684b2882a9be3ce3767acfcf860a6958f066cc"
+          "sha256": "32158ae11bd4bda618ba5f92e9ffd8562c44d1acd9013a4d909a9e4667926935"
         }
       ],
       "requires": [
@@ -5966,16 +5966,16 @@
           "sha256": "2ce0005a9508d081ca07513953eb33adc9a06e0572fc13b2af8315e2e10c62d6"
         },
         {
-          "bytes": 172793,
+          "bytes": 172763,
           "format": "latex",
           "path": "double/data/latex/2S16.tex",
-          "sha256": "30064a97d88adcf3235a89baf5dc0d7984e98fbafcb49a8796e8831045c4f3e6"
+          "sha256": "38a2dc1e7153e08cd7fb74172d81eef30aa937c24980367c96672a784593c834"
         },
         {
-          "bytes": 452050,
+          "bytes": 451958,
           "format": "pdf",
           "path": "double/data/pdf/2S16.pdf",
-          "sha256": "c903c61795daf4af0ab9a4bdfde9312b709b23af23249d03bc679acfe310cc02"
+          "sha256": "66c830c92870fed695f5c06d760c86309e5cffc0c5679c7677c48aad4d7a9cb2"
         }
       ],
       "requires": [
@@ -6013,16 +6013,16 @@
           "sha256": "b6bfd63453eaa6e73a57e4be579624a25e7c387ca2c1c264cd48431906d927ad"
         },
         {
-          "bytes": 218903,
+          "bytes": 218873,
           "format": "latex",
           "path": "double/data/latex/2S18.tex",
-          "sha256": "07e7d2738f32cc9c4607135f6cc5dcd675c981a1614e80c2b8940f2349df6922"
+          "sha256": "962e84f3aa926ef12f1a1ddaaecd6265e7960fd3eac2c329a36ceffc159fc938"
         },
         {
-          "bytes": 467456,
+          "bytes": 467360,
           "format": "pdf",
           "path": "double/data/pdf/2S18.pdf",
-          "sha256": "6c3f1aaa03ffd19b62da2ceb6050570092261c315c9e67d207b3983ac0caea48"
+          "sha256": "0bd9dd7810c01c1317fa2ca3c20db234102fd240c0f9b87b371fdb86b4be45a5"
         }
       ],
       "requires": [
@@ -6060,16 +6060,16 @@
           "sha256": "c03a61320c9b38793de5ed3dac5a8f3f372824ad46dfc5f01ee3a8115e6a7670"
         },
         {
-          "bytes": 218705,
+          "bytes": 218675,
           "format": "latex",
           "path": "double/data/latex/2S20.tex",
-          "sha256": "5048dada779a080592af91d09cc7526d37d709cd6e6519310dbbf4b1b56c6e3c"
+          "sha256": "656f5a6fa6afd9c2d650d3cda28c3a707941bd77db353a35277cb563cb8c6c19"
         },
         {
-          "bytes": 463584,
+          "bytes": 463492,
           "format": "pdf",
           "path": "double/data/pdf/2S20.pdf",
-          "sha256": "8dfd4ee0cfdc02c9201235154b5bd72c7dc2065359151aed37359a63eac7c795"
+          "sha256": "533b5d5ae2984a2849ce5b0daba70ba51cab969f27703e3706e82b633fb80513"
         }
       ],
       "requires": [
@@ -6107,16 +6107,16 @@
           "sha256": "725368a0be09f0a27560363038ef8fc43dcac63c821ee8795a261456385a81b1"
         },
         {
-          "bytes": 261133,
+          "bytes": 261103,
           "format": "latex",
           "path": "double/data/latex/2S22.tex",
-          "sha256": "25dcc808cb400004c88c28fa41bb232c553ecbccc3790c45061d8f947c360bc1"
+          "sha256": "ce0bb84f4fa8f5bfb264e26768a101de6e7bd5ebdb9405c8411f47e1be2c7c70"
         },
         {
-          "bytes": 479928,
+          "bytes": 479834,
           "format": "pdf",
           "path": "double/data/pdf/2S22.pdf",
-          "sha256": "25884e1e5d1ce7912f1469ea6a50abce72e5f96b46ffad010cb74454442468ff"
+          "sha256": "8db9584454291a9026f11e0eab7d2b4feb416f991a38bd465fcad5e5299f97bf"
         }
       ],
       "requires": [
@@ -6154,16 +6154,16 @@
           "sha256": "59a0597306758e2b596552b8be37845ecf146c8305faa3bc8408529d73ea09e5"
         },
         {
-          "bytes": 273439,
+          "bytes": 273409,
           "format": "latex",
           "path": "double/data/latex/2S24.tex",
-          "sha256": "9bb50b8fccedaac970392ce4b29c9c520a70465cf492532e1c848144c285ffce"
+          "sha256": "be8c0f5c25421ad56f327ef075dcf6e110c42d9ea4c744b7fe12c4acca13dfcb"
         },
         {
-          "bytes": 477052,
+          "bytes": 476959,
           "format": "pdf",
           "path": "double/data/pdf/2S24.pdf",
-          "sha256": "e32fe464bcb0ce83eb5748c68e6eb26d6fa7d6c884c196eb2f80c75eacf3da0d"
+          "sha256": "defd4ccdf10d226dc2aa748477ba54a253065bf294a95ebeefaaaee15f3eba64"
         }
       ],
       "requires": [
@@ -6201,16 +6201,16 @@
           "sha256": "c1b17f7f181ff462a14124ca631e65ba32cd06418dc7a99286f62be93bcf413b"
         },
         {
-          "bytes": 69040,
+          "bytes": 69010,
           "format": "latex",
           "path": "double/data/latex/2C1h.tex",
-          "sha256": "a90fe86bb98a3b1b72627ab08dbd12ebe302df27715fab960e2143ffd9214e6a"
+          "sha256": "efcf70156301cdb5025abc02798eab84102e0672b9244267ac6f626ef2eb71a4"
         },
         {
-          "bytes": 426727,
+          "bytes": 426633,
           "format": "pdf",
           "path": "double/data/pdf/2C1h.pdf",
-          "sha256": "7a5ceca6cd08c27c6d331b81e02b39907d8e3d5396d8087c6bd7a1277fa1189b"
+          "sha256": "a8d7f784973f5ae7b2144a98e24f1885e7368d463f0fd78b9d47298b44a6841f"
         }
       ],
       "requires": [
@@ -6248,16 +6248,16 @@
           "sha256": "32d364dae329ae33c25a1aae6f66012452c2aba35cebea751d378d1d2c06d37a"
         },
         {
-          "bytes": 86259,
+          "bytes": 86229,
           "format": "latex",
           "path": "double/data/latex/2C2h.tex",
-          "sha256": "ab5c0cd3f2eb782310146daf2541a549eb3792127c1966f551c61236d7652863"
+          "sha256": "86a04234fad0ae5ab7ed578588d8a2c7e7a4b7f67fee632971bb8eb63c44e898"
         },
         {
-          "bytes": 450343,
+          "bytes": 450251,
           "format": "pdf",
           "path": "double/data/pdf/2C2h.pdf",
-          "sha256": "391e7e833cfce0f97b392bee0bae73612d594bbd49045835e85191dd740c91b0"
+          "sha256": "41f1b7f2a04a9a5f88c8955b27f9b7e2f95eb1f1380958e2b2a9c114fa277405"
         }
       ],
       "requires": [
@@ -6295,16 +6295,16 @@
           "sha256": "8347ad502418bba181c032ec5ebd222f89a7171846ef249b1f7d8210861bfc00"
         },
         {
-          "bytes": 91569,
+          "bytes": 91539,
           "format": "latex",
           "path": "double/data/latex/2C3h.tex",
-          "sha256": "2b99e053d3f8bc22661c9b9d7875287427f79145df01044322a133104142d5f8"
+          "sha256": "42939926d19b358d66c519ea91607c4656408b5f238cffb4469046f238ab420b"
         },
         {
-          "bytes": 449392,
+          "bytes": 449298,
           "format": "pdf",
           "path": "double/data/pdf/2C3h.pdf",
-          "sha256": "6de1ab7b168ff8439b42cd6f800c58314258f469c5f1cd9b855351dd7c60fb08"
+          "sha256": "ca682ca338f435925d8ca28ed5cbfcc7544ea910f32440c0c0f1177873a5ecb1"
         }
       ],
       "requires": [
@@ -6342,16 +6342,16 @@
           "sha256": "457e5af91ba761d6bdb798e0d45d4ec9b7c2459572ebf4156bdc930b006b24cc"
         },
         {
-          "bytes": 115337,
+          "bytes": 115307,
           "format": "latex",
           "path": "double/data/latex/2C4h.tex",
-          "sha256": "984487010a2fb7043983594c77dbbbec9618b731709dc8b64f387d78715dc1d1"
+          "sha256": "bc18c74d50d6f8b8a7e6d4564edf83b78fdf3366e94138db72cffed2ea2b6e8f"
         },
         {
-          "bytes": 465349,
+          "bytes": 465257,
           "format": "pdf",
           "path": "double/data/pdf/2C4h.pdf",
-          "sha256": "a2ba6b998e4c29e781db584cffadfe0c02359b433ff45666be1cad7b45ff8a6a"
+          "sha256": "d33a84cd0dbababe9c0b1c4bc66025a91d849180c52ba562d5946c78af35c215"
         }
       ],
       "requires": [
@@ -6389,16 +6389,16 @@
           "sha256": "b3adb7cd80df55de0a72c16ffb65a608e9535f5b652ada54f651fb8ea1d975ac"
         },
         {
-          "bytes": 115138,
+          "bytes": 115108,
           "format": "latex",
           "path": "double/data/latex/2C5h.tex",
-          "sha256": "f369a4afb8463a8a2c7b7b9a4e883ab7028acb498f0e465f6f102039711b9511"
+          "sha256": "8bbf7d87f6862cce1d54b59b761e95a7a0e0ee21851e5202633a3f9f343cde5a"
         },
         {
-          "bytes": 458853,
+          "bytes": 458758,
           "format": "pdf",
           "path": "double/data/pdf/2C5h.pdf",
-          "sha256": "308040945bcf7c1d120022cd182d06b20fe6a4a766e88130588123f3075d0e62"
+          "sha256": "edbf15b4b50348227185a3c3399a32dafcc21475a56e6bbfc37a2657e3329aab"
         }
       ],
       "requires": [
@@ -6436,16 +6436,16 @@
           "sha256": "763deb28283129ab593895795ed2e92aa63b52749adafe357075ecc344d99805"
         },
         {
-          "bytes": 158825,
+          "bytes": 158795,
           "format": "latex",
           "path": "double/data/latex/2C6h.tex",
-          "sha256": "8dd28b9d11bf87ddf51499cabd42e1cc9ba4e56ae84c10a66b70062fc3853974"
+          "sha256": "49747b92472800e472115b1af6484125082bc89fa7b562181122777968d0c3cb"
         },
         {
-          "bytes": 476851,
+          "bytes": 476760,
           "format": "pdf",
           "path": "double/data/pdf/2C6h.pdf",
-          "sha256": "37c450481ea058344186d9334f3c137fb223b1d760fbda1f1f49247a439f85a4"
+          "sha256": "8da07c2ab78d626dc8f425e254aee7bb80b6405108d4f537d01ce95bfa586920"
         }
       ],
       "requires": [
@@ -6483,16 +6483,16 @@
           "sha256": "790a1e6d87b6ca4276d7e3bcc7b8e5ccf800b1a3482f1eb0dbbbeeecba9e006c"
         },
         {
-          "bytes": 145799,
+          "bytes": 145769,
           "format": "latex",
           "path": "double/data/latex/2C7h.tex",
-          "sha256": "4e2b1380d18edb309182e781d2e4d9485b9af92c358ba4b4925ba8580fc7bd9e"
+          "sha256": "e553ce647dd8a3e148a145b12b5742e746dc254109c6f510ab0e74aeee7905bc"
         },
         {
-          "bytes": 468691,
+          "bytes": 468598,
           "format": "pdf",
           "path": "double/data/pdf/2C7h.pdf",
-          "sha256": "6d789022d80375c456d2d0da528755af60d21ee9817c018356c3cadf42759cc1"
+          "sha256": "f3edf7f89956db09d23e0c249fadb3efec50206caa8eb19c5f6b0349a65e09c4"
         }
       ],
       "requires": [
@@ -6530,16 +6530,16 @@
           "sha256": "b8653af86dd985e1f9281b1eb331264b98bb0e8f8afa7e1dfab98b2bc942b89a"
         },
         {
-          "bytes": 196065,
+          "bytes": 196035,
           "format": "latex",
           "path": "double/data/latex/2C8h.tex",
-          "sha256": "5b581a26cf9acc9c69947a6a12a43729be05640e25c280f53eb7fa76661ea7eb"
+          "sha256": "202b516f74d24c671e80b6508f9f789349d4cb7279535c685a3517f86e0d112d"
         },
         {
-          "bytes": 482466,
+          "bytes": 482372,
           "format": "pdf",
           "path": "double/data/pdf/2C8h.pdf",
-          "sha256": "acc478fed307f934294e90b38e26f781d1fbebacb8207620a1efbffa1729ad09"
+          "sha256": "a6067f87702b91d7176e32729be0cf9622abd5dc11276d195ea3058d6dac447f"
         }
       ],
       "requires": [
@@ -6577,16 +6577,16 @@
           "sha256": "ae8c2966fcb13eb047d13362240f748a63fa66fd2cabcfae5042ed47cc00f111"
         },
         {
-          "bytes": 186698,
+          "bytes": 186668,
           "format": "latex",
           "path": "double/data/latex/2C9h.tex",
-          "sha256": "cc74ceb9f56d0e553ded871e6992a505ac64d7e1454f3e68ab5849bc63955cdf"
+          "sha256": "8b195df767be9be31302333fa1b1ce26492eba3f204a6191b5de18f4cbb87621"
         },
         {
-          "bytes": 481419,
+          "bytes": 481325,
           "format": "pdf",
           "path": "double/data/pdf/2C9h.pdf",
-          "sha256": "623dcacbdf7a7eda962a51669667eba1fdf849e7fd4cdc229b69972aec6c96c6"
+          "sha256": "03e8cc5f7fc004d7c69b103e9b50339129efef36ad4b9c1b5c7e551e4d1e312e"
         }
       ],
       "requires": [
@@ -6624,16 +6624,16 @@
           "sha256": "bc34a79a238e5fc8891ae0a10141cea08e40b0021ad14eb320b1744ed43d1152"
         },
         {
-          "bytes": 250380,
+          "bytes": 250350,
           "format": "latex",
           "path": "double/data/latex/2C10h.tex",
-          "sha256": "891a1325cca825b44a6da3113985d4fffbce358b2b3e06ec28f3629717e8196f"
+          "sha256": "e6e4a867e6d3ad11de8f46e7db2fb8d105c8284b1eed924c6b374be2703df94f"
         },
         {
-          "bytes": 495334,
+          "bytes": 495242,
           "format": "pdf",
           "path": "double/data/pdf/2C10h.pdf",
-          "sha256": "26c735b9683c02bd061d0cfd0a363f23f4c20d74ca3aa8c5fc21fef2713e01b2"
+          "sha256": "dccaf3de1ba906fa936845274dddf946e122352a813ce6be2a089016268c3bfe"
         }
       ],
       "requires": [
@@ -6671,16 +6671,16 @@
           "sha256": "17a99b71da24255737571a63e39ce0fc1b01a0362831ac9afeef82035d55ba06"
         },
         {
-          "bytes": 226141,
+          "bytes": 226111,
           "format": "latex",
           "path": "double/data/latex/2C11h.tex",
-          "sha256": "b8aca3f2049b009aa0d62b3d1d2f5f5b4487331eb98ac6c165d1bd3d97119b96"
+          "sha256": "dec6aea8b3912476af5f89adc2964afb78dd01d9156cff79258bbaf594c22c52"
         },
         {
-          "bytes": 503724,
+          "bytes": 503633,
           "format": "pdf",
           "path": "double/data/pdf/2C11h.pdf",
-          "sha256": "e9373803654a4291601e1650a66d6be68f2f5708fa1352f49422bd9f60e35974"
+          "sha256": "33ed298d01501dcf692847d62c177d0e25ad992a3366566a53966160c64275bc"
         }
       ],
       "requires": [
@@ -6718,16 +6718,16 @@
           "sha256": "94d595d31f2800ee7e5049e8a09ea5d94c522b9a7d1170c91c43c93c1559afe2"
         },
         {
-          "bytes": 326119,
+          "bytes": 326089,
           "format": "latex",
           "path": "double/data/latex/2C12h.tex",
-          "sha256": "8636e3a88ce29ea1b34a6499a82128997a4ef6613868a0aca141f7e36e94c9ce"
+          "sha256": "1321e74696957e1d11bdc08a9e6a4d8fad4ff25db691a3566901f4543d30a96f"
         },
         {
-          "bytes": 513183,
+          "bytes": 513091,
           "format": "pdf",
           "path": "double/data/pdf/2C12h.pdf",
-          "sha256": "078006842d207bf169a466b0b96db9fb7480bb704e8316a5a9fd41ef7f48b5f7"
+          "sha256": "71c1a3d7163942d5f15994ccf86d22cebc7ae10e9f0e28bd7c5fb493bee2a0e3"
         }
       ],
       "requires": [
@@ -6765,16 +6765,16 @@
           "sha256": "fe45475db5d04f952f6dbbbb0e01c4c72e8d169fdc83399d58f85cfd123e15ae"
         },
         {
-          "bytes": 79851,
+          "bytes": 79821,
           "format": "latex",
           "path": "double/data/latex/2C1v.tex",
-          "sha256": "bac0c06af22abff3a7811e211ea078b66504ae26a11386ecc6324d914e00f4d9"
+          "sha256": "4958f442dd3598b554568b8b5eec86acf038ae6d4768502429d04b2eab8bfcd9"
         },
         {
-          "bytes": 429086,
+          "bytes": 428991,
           "format": "pdf",
           "path": "double/data/pdf/2C1v.pdf",
-          "sha256": "b98df8313a152822d223e2a08d829c42d6eacc5024b0f8a1f38c0d7e704c30f2"
+          "sha256": "94ef1f6d896d2a4b2ea273ecf9227e01b1f706007f8ce30c2ff1683f5c593691"
         }
       ],
       "requires": [
@@ -6812,16 +6812,16 @@
           "sha256": "2c1d502d8275c839636a6b0be4ede929fbaab2d65715de75e9be7cc9590c6e5c"
         },
         {
-          "bytes": 78633,
+          "bytes": 78603,
           "format": "latex",
           "path": "double/data/latex/2C2v.tex",
-          "sha256": "18e3470f9adea32040927825830f690c07230fcc2a11f955db770b6a4fc38a7d"
+          "sha256": "4738b2b15bd2bc6437914f40508c3bc4e691a52a44c38857f4824b3cba914434"
         },
         {
-          "bytes": 441264,
+          "bytes": 441171,
           "format": "pdf",
           "path": "double/data/pdf/2C2v.pdf",
-          "sha256": "75b851cea6a182e1c652ca3b63737837a92a885c06d86ac7b5de677fc59c7004"
+          "sha256": "1378af05d5a2952980dfff8137c301cf4af59d84fffbf3bca38ef51d3bfe927d"
         }
       ],
       "requires": [
@@ -6859,16 +6859,16 @@
           "sha256": "24a2a2a2e8a176bb3042e2b8230afb26c09bf4bc74c5d2c154c7c5b1df0be191"
         },
         {
-          "bytes": 91778,
+          "bytes": 91748,
           "format": "latex",
           "path": "double/data/latex/2C3v.tex",
-          "sha256": "bbc83f2ab5ac9bef837ed56f08e4263397ff0622a992658013cbadfccc73a60f"
+          "sha256": "f1c4446e83ff9d983f9a2f8180afa194ecf4da212245061ba358961d9ef97f33"
         },
         {
-          "bytes": 458421,
+          "bytes": 458328,
           "format": "pdf",
           "path": "double/data/pdf/2C3v.pdf",
-          "sha256": "fece955b198552eb142ba66fe9f3eb906af891e44259f028dc388efbd068d622"
+          "sha256": "c7f4dc013939b9f082360d399643197dc65f01a60838919a68f4678cdcc85405"
         }
       ],
       "requires": [
@@ -6906,16 +6906,16 @@
           "sha256": "f45c7f58aceae3a56c460f036b5429fd291628536a239849343ceb2e259b578c"
         },
         {
-          "bytes": 91546,
+          "bytes": 91516,
           "format": "latex",
           "path": "double/data/latex/2C4v.tex",
-          "sha256": "31aaaf57c26b232073eb05e3e5a8ec0e30bff383562ea5ce50705c89c5546c47"
+          "sha256": "91f9647f3a2ba2abd97e75d708487986ac22b20421cbe37188c5a7176cf1c71c"
         },
         {
-          "bytes": 449543,
+          "bytes": 449449,
           "format": "pdf",
           "path": "double/data/pdf/2C4v.pdf",
-          "sha256": "878bb75413ceb0827d663aec5121e6cdb3b9a94a9c91d86d9d81a40b4fb55109"
+          "sha256": "8427620b78c71146814afb2134e2d2cd74403d476a609bed6d1bb518d75078bd"
         }
       ],
       "requires": [
@@ -6953,16 +6953,16 @@
           "sha256": "d7cb112636dd2782c532e1d7fcbb36aa98687d82051cbf4d60b8f88b816cb3f0"
         },
         {
-          "bytes": 102786,
+          "bytes": 102756,
           "format": "latex",
           "path": "double/data/latex/2C5v.tex",
-          "sha256": "ebba923918f5f3541a2d574b052f3db97293dc06a678a5b0c148205b1a463bd0"
+          "sha256": "214e92674dcce5884a314319042347167309148c328e0a1aa55f91971a6d519b"
         },
         {
-          "bytes": 463317,
+          "bytes": 463226,
           "format": "pdf",
           "path": "double/data/pdf/2C5v.pdf",
-          "sha256": "4560bfede3b17d9def8872f4f16c3990d16eef13520ed130071aeb701612b80c"
+          "sha256": "ec7d8d85afdb49a04aaff3c6d5a62b397f81e30778a6520bf1d9e23d2f4eb61c"
         }
       ],
       "requires": [
@@ -7000,16 +7000,16 @@
           "sha256": "2b7f083ee24e18025ea6bec2aadd50571ede42af58a0541ccc7b01fb08fafe3a"
         },
         {
-          "bytes": 109927,
+          "bytes": 109897,
           "format": "latex",
           "path": "double/data/latex/2C6v.tex",
-          "sha256": "56702195d51d0ea9a61803f0909c36e3bcd5810ffac0c64786bb23efd35cc569"
+          "sha256": "51d7f32d879fe145d1b566cbb16faac9113affe31d4a36be3875191975cf1710"
         },
         {
-          "bytes": 465147,
+          "bytes": 465056,
           "format": "pdf",
           "path": "double/data/pdf/2C6v.pdf",
-          "sha256": "4b794cfc97afe3e82ee40070d327dbaba70945447f3318a2634133c115ecbf17"
+          "sha256": "8f53ec3d376520e372c2ca6bebbc1b82c1699e0599eaf509cb3f4f109d7fcb3a"
         }
       ],
       "requires": [
@@ -7047,16 +7047,16 @@
           "sha256": "68458c569b576292bc32b8417c242566b1d519a083d2ef75b13e22c8a8497180"
         },
         {
-          "bytes": 118374,
+          "bytes": 118344,
           "format": "latex",
           "path": "double/data/latex/2C7v.tex",
-          "sha256": "cadbc58b1fcbed5850500d84438da02b5fc3af2fc7200c1a063f3a7961865621"
+          "sha256": "088d54b724d99f264e13c934495be0ef035de2d3220f22dc4d5004bb29a5beee"
         },
         {
-          "bytes": 468582,
+          "bytes": 468486,
           "format": "pdf",
           "path": "double/data/pdf/2C7v.pdf",
-          "sha256": "b09489f6fb540a85b5b6c76cb23834b6586cebac7f798b79af31dff0e2383a7c"
+          "sha256": "2ca2f79f63ea6a7272ad3f0430250f07ebcc0ef8525c68cb67991041335f2fcb"
         }
       ],
       "requires": [
@@ -7094,16 +7094,16 @@
           "sha256": "32e2da9d11a30ed2ec29ead854e23731bc0c45a063ae0affa100bfe9cea0b5fa"
         },
         {
-          "bytes": 124010,
+          "bytes": 123980,
           "format": "latex",
           "path": "double/data/latex/2C8v.tex",
-          "sha256": "23c06a8654971e0bdeada3be5038a63b7778a40f0174ada0de18aa381da2865b"
+          "sha256": "6bed07e6a47719c618195e2a9c5994a849f24292118904a54faa12ecae527ff9"
         },
         {
-          "bytes": 462870,
+          "bytes": 462778,
           "format": "pdf",
           "path": "double/data/pdf/2C8v.pdf",
-          "sha256": "903a56339b1bc9703fd8c53dac282a30953af9d1a238b5aaf47452d3349af602"
+          "sha256": "7c7a890d4036d722305dc5cdb6be545516abac3994a319b1620a68597548093e"
         }
       ],
       "requires": [
@@ -7141,16 +7141,16 @@
           "sha256": "43caa341bb56e02f400366a407e970750ff6a9af4de69ee6c8134870f161bdb5"
         },
         {
-          "bytes": 138682,
+          "bytes": 138652,
           "format": "latex",
           "path": "double/data/latex/2C9v.tex",
-          "sha256": "3f387d8b31090230d4fe4ce6c88480e7a54f05f857918e39bd467547c1cb6744"
+          "sha256": "9b38057bae610dd9350d27ab7f255901a8adb8574ae43fcded2fd8d95e89a587"
         },
         {
-          "bytes": 474595,
+          "bytes": 474505,
           "format": "pdf",
           "path": "double/data/pdf/2C9v.pdf",
-          "sha256": "ffc49a07d82c1595b056a34052ae0c989e20c2f166a63742b00cb9f9f190f2d2"
+          "sha256": "dc378efe4b7e18f5acc7a4d3a50314382481169008871dc51460dc0abd8c955f"
         }
       ],
       "requires": [
@@ -7188,16 +7188,16 @@
           "sha256": "a0be7a8d72646d94d845dc6c02074123e7bf32e815111a045388e99df32bf2b8"
         },
         {
-          "bytes": 147663,
+          "bytes": 147633,
           "format": "latex",
           "path": "double/data/latex/2C10v.tex",
-          "sha256": "5374ec675e474693e93d2bd22a34ebaf39b95574700fcdefc1d4b46995e47246"
+          "sha256": "42c96d42f789d647224f2885786a1a10aa311bd77c2b9d47bccd6527b72f8ddc"
         },
         {
-          "bytes": 476111,
+          "bytes": 476015,
           "format": "pdf",
           "path": "double/data/pdf/2C10v.pdf",
-          "sha256": "1b882fe8a511511ab9af18f6e19da0a73efd06601ba3d6ae1725858013c1879d"
+          "sha256": "91bce09886f8faad403f45249b87de15e698fdda319dda8a384cf373459f21c2"
         }
       ],
       "requires": [
@@ -7235,16 +7235,16 @@
           "sha256": "01424ede087d53958b7ff4420971c60bb74da5530a8aa5a8369c42e0f98fc2c1"
         },
         {
-          "bytes": 161895,
+          "bytes": 161865,
           "format": "latex",
           "path": "double/data/latex/2C11v.tex",
-          "sha256": "a52da1bd69fc06cb897c3252111ded1c549284ef9eecc62d97a3f1f6de946c01"
+          "sha256": "a030b8f096a5368cfc2728ef772a6e176dabcef8b903d35d8eda179342d07403"
         },
         {
-          "bytes": 497324,
+          "bytes": 497230,
           "format": "pdf",
           "path": "double/data/pdf/2C11v.pdf",
-          "sha256": "3d12134c84018e444f72c42c9eeaf3ced6e0c7048759e65b70369cc5d81098d3"
+          "sha256": "c5816bbb4e1700f3b3942b773d049340a52ce365f117f89bd9551cdb969a88e5"
         }
       ],
       "requires": [
@@ -7282,16 +7282,16 @@
           "sha256": "3b067b156e7d2970fa06b1e00026fb18c6e7c8647bcae683db923dee3265b8b1"
         },
         {
-          "bytes": 175461,
+          "bytes": 175431,
           "format": "latex",
           "path": "double/data/latex/2C12v.tex",
-          "sha256": "c0390f1231f54427c0f384faa8524cae935f440a16506315844cdd801d5c8bde"
+          "sha256": "9f2b112f97deb6c0b236c3d6734e9a07869a70c99c60a1466b045b22b4277b19"
         },
         {
-          "bytes": 487918,
+          "bytes": 487824,
           "format": "pdf",
           "path": "double/data/pdf/2C12v.pdf",
-          "sha256": "9fa8a7907ec97c829c023260634a45ff37a18890540a5746b0ebf577ec703beb"
+          "sha256": "9a697c2d6bf5ea901693622b16efb368c7c92aa1ed7b9c3257df44208d17dc05"
         }
       ],
       "requires": [
@@ -7329,16 +7329,16 @@
           "sha256": "3a1d90029a264a59f0dd699f501749c2472e691260d04647a650a9e82ce5e6b3"
         },
         {
-          "bytes": 77335,
+          "bytes": 77305,
           "format": "latex",
           "path": "double/data/latex/2D1.tex",
-          "sha256": "382644845537d23587707765748d9a94a2e7d0717c7eae1e9505e41d08607dcb"
+          "sha256": "2f9de87d6fcb78a417a82ba3c98f6b7434d99d974b87df9f5ce4500888ce71e6"
         },
         {
-          "bytes": 414013,
+          "bytes": 413919,
           "format": "pdf",
           "path": "double/data/pdf/2D1.pdf",
-          "sha256": "c4d0a48f2d96770b24cf3e6b7642586adc74d2525cc0d13e9d67a064d4939ed4"
+          "sha256": "051e0796ded4a91bcaa9face7e82da1e4be12b5fcf07c32aed8bbb20a6593397"
         }
       ],
       "requires": [
@@ -7376,16 +7376,16 @@
           "sha256": "1256bd45083f352bd2ec1b71b6b48c2206f6330f91941a64dbbb6b2f9a961a2d"
         },
         {
-          "bytes": 77730,
+          "bytes": 77700,
           "format": "latex",
           "path": "double/data/latex/2D2.tex",
-          "sha256": "b1051f042370e735d3c17a3757b4468036b8f5dd1aa5670846519d05e354d34a"
+          "sha256": "fec1814476de601b8ed5faa1fcb67d11afd1d2dd165c8bc152c438b2e5b06155"
         },
         {
-          "bytes": 425642,
+          "bytes": 425552,
           "format": "pdf",
           "path": "double/data/pdf/2D2.pdf",
-          "sha256": "3f63135ee2148f72129f844c244683c878928adbcb93091387055c9307991755"
+          "sha256": "84f8b50d2ab20c83cb8ad10b20ad848ceef2e9216178244f2439e2a0642fa958"
         }
       ],
       "requires": [
@@ -7423,16 +7423,16 @@
           "sha256": "13703493476581229da0fc9cfed2b73916bdb292f11d7ead50bad67e12c4ca42"
         },
         {
-          "bytes": 90213,
+          "bytes": 90183,
           "format": "latex",
           "path": "double/data/latex/2D3.tex",
-          "sha256": "f2d7e887e332e8e62e7b277057b849589ddf9c1de316968d2cbaf3b61b271d07"
+          "sha256": "7bc17680b3c6ef7fc7667d02637265ca7242250c44f947f01703d1b35c0e4b70"
         },
         {
-          "bytes": 435807,
+          "bytes": 435713,
           "format": "pdf",
           "path": "double/data/pdf/2D3.pdf",
-          "sha256": "f4b80534b91c6074cbad1887f3b31378adce62d1b716468e79af14c18ef0ad48"
+          "sha256": "78b0aec9e1acb627fae9ff7f3ff1d09b1f933c498c86a39275f844807e8446ef"
         }
       ],
       "requires": [
@@ -7470,16 +7470,16 @@
           "sha256": "f95a46e02b46a423977c7543fd669fadcec3fec1b0ca6e6909e1ebb81d8bbb4e"
         },
         {
-          "bytes": 94344,
+          "bytes": 94314,
           "format": "latex",
           "path": "double/data/latex/2D4.tex",
-          "sha256": "68e79215f194efe4faf373c6ac871efea20458134420e79c8326eee85a261b6e"
+          "sha256": "f392c332f34f1e68b3f506aed627acbb1647e96a0d7ddef37c0efeecf7b0d897"
         },
         {
-          "bytes": 437599,
+          "bytes": 437506,
           "format": "pdf",
           "path": "double/data/pdf/2D4.pdf",
-          "sha256": "a3392cbe88d216a0757ae487aa4079459d7370f54f8e665b55d2d46378cef2a3"
+          "sha256": "6de1ea6b2f6d1b4f6e31edf06a55995f351ec75c407c9c51096a248bed812cbe"
         }
       ],
       "requires": [
@@ -7517,16 +7517,16 @@
           "sha256": "45c6ec43898a7c85f9ceb299e74bfce6510bdfcd68216287b0343a0905e04093"
         },
         {
-          "bytes": 101351,
+          "bytes": 101321,
           "format": "latex",
           "path": "double/data/latex/2D5.tex",
-          "sha256": "219c91999bfd27a348c5ef92c6f602a5cbed5313b807eee75a54cc353218239c"
+          "sha256": "adc72465f5846827187acff3d09edfd7f2366979b65626f047aec5b08734d4ae"
         },
         {
-          "bytes": 441135,
+          "bytes": 441040,
           "format": "pdf",
           "path": "double/data/pdf/2D5.pdf",
-          "sha256": "9175d80084ab766c3db9190631eb25907fc997c56f68018a774249b1ea60ba50"
+          "sha256": "0a0c9fce50d8e40b8e951b7077b4ea861372650c5668790b40d7cfb7ba2167aa"
         }
       ],
       "requires": [
@@ -7564,16 +7564,16 @@
           "sha256": "b83e2d25a5d7b6f9e14b04d503ed55000c84fd038175b73a11d2e9b70a071fc0"
         },
         {
-          "bytes": 110866,
+          "bytes": 110836,
           "format": "latex",
           "path": "double/data/latex/2D6.tex",
-          "sha256": "0351a9cae366aec41b63b65d40b49247a4aedf351b698a99dbf786e200ee3f2f"
+          "sha256": "1f31a8049c2ce83eb0817ea5bf3a2ef6c83db20f26fc3c8271c319608a385f39"
         },
         {
-          "bytes": 445944,
+          "bytes": 445853,
           "format": "pdf",
           "path": "double/data/pdf/2D6.pdf",
-          "sha256": "d3243ac48542eab08b605c8a1a08b1366e0773c19c45c85ae773def8bd354844"
+          "sha256": "ad2800f4593739e2f5868d6681bca64b9851c2a86da5ca78fb02f4354757e904"
         }
       ],
       "requires": [
@@ -7611,16 +7611,16 @@
           "sha256": "c527be3fd9cd64a4feac578107416227615d1a2b08be8fe6df30c73b928d333e"
         },
         {
-          "bytes": 116955,
+          "bytes": 116925,
           "format": "latex",
           "path": "double/data/latex/2D7.tex",
-          "sha256": "ae933cb64c0e1074b44671b44da0e9d62f6e7f66c8b66fc3f7b3e58bb00cba0e"
+          "sha256": "62ed5db0ab3ef74982e385d6d1cbff87b1b57b69be014d840437e954f56c6142"
         },
         {
-          "bytes": 446402,
+          "bytes": 446309,
           "format": "pdf",
           "path": "double/data/pdf/2D7.pdf",
-          "sha256": "bbe094244d6a3f0060bbafb2c0103b5eec274c896d997c21976ad19bfdae4910"
+          "sha256": "c15d3de42b210d1883066accf808df275039b58b2685774e1a187fa7bbbb782d"
         }
       ],
       "requires": [
@@ -7658,16 +7658,16 @@
           "sha256": "e28535369a43d450f709eec17df07c0a313a341f60af0503bbd58eba471d80f2"
         },
         {
-          "bytes": 127422,
+          "bytes": 127392,
           "format": "latex",
           "path": "double/data/latex/2D8.tex",
-          "sha256": "c4961b9090cd4a4f342a9056da6b706e87e2f90a414bfb9cd28bf3358c87115d"
+          "sha256": "79e7c3259f466bb96af85a77ff8315ce281f139919b7890f16e838afcc8c7ab9"
         },
         {
-          "bytes": 449970,
+          "bytes": 449877,
           "format": "pdf",
           "path": "double/data/pdf/2D8.pdf",
-          "sha256": "d4c79215f1e22b59db9a5e580a5eb7286415a0b548dacdbb268304ca8988b23e"
+          "sha256": "b0e2ef7bfbc87019fea6d5e4f809213057709a34c9d8eac0f015e15be60a67af"
         }
       ],
       "requires": [
@@ -7705,16 +7705,16 @@
           "sha256": "5d1148b95f1b3df32c5ba6d1322673fdb8cae347956dd0b603d4d429b7f670c9"
         },
         {
-          "bytes": 137268,
+          "bytes": 137238,
           "format": "latex",
           "path": "double/data/latex/2D9.tex",
-          "sha256": "3380f8447bf880a5868e4cc05bb705d17ada764c7e3d587e3c4d4e3c7bc65320"
+          "sha256": "88f2cf045c7f28a08689eb5a8eb91e3d191993335b9d4ba47ccb345dfd2a0fa3"
         },
         {
-          "bytes": 454072,
+          "bytes": 453977,
           "format": "pdf",
           "path": "double/data/pdf/2D9.pdf",
-          "sha256": "db485148313a1c549c55a180a1ae88217d2d9f5b14d9a2278a5947d07198fca5"
+          "sha256": "2d9e84bb85e6580653426768116f4923fdf02ad63c627413314dfd6707d7a04b"
         }
       ],
       "requires": [
@@ -7752,16 +7752,16 @@
           "sha256": "979b8cc2d7f47105a464183c4921bd7c4ae45cb7445dd42664750792fa89ab0c"
         },
         {
-          "bytes": 148998,
+          "bytes": 148968,
           "format": "latex",
           "path": "double/data/latex/2D10.tex",
-          "sha256": "6a541349c36ab2a4f4fcd9ada4ade1566e5f7a715201938f80a378a08ab5a12d"
+          "sha256": "89029f7c56604e732bcaaf61b0df824377d7fe480992854bdf8b147b46d9b3e1"
         },
         {
-          "bytes": 455950,
+          "bytes": 455856,
           "format": "pdf",
           "path": "double/data/pdf/2D10.pdf",
-          "sha256": "d457c3cf876ee54d779f49e7167923b090d10bd14d1c75782c84efcd58c92e88"
+          "sha256": "1c7c3551b886d18f3a1f91ba51a607435b18c170e2149dfb4ee8e664b4602a2b"
         }
       ],
       "requires": [
@@ -7799,16 +7799,16 @@
           "sha256": "2c32cb67357045300e9292c2df49a191aa519a3c44c450ec8d260a9bcac7a540"
         },
         {
-          "bytes": 160389,
+          "bytes": 160359,
           "format": "latex",
           "path": "double/data/latex/2D11.tex",
-          "sha256": "9e02bafa07abe59cebea3404570ce31d1c9ad328d25b99725918945836a7b245"
+          "sha256": "7feb2a6a7332688eafd7cdbb01b1b3f541eff3ccb58c2b9c7568962bfa48a200"
         },
         {
-          "bytes": 476278,
+          "bytes": 476184,
           "format": "pdf",
           "path": "double/data/pdf/2D11.pdf",
-          "sha256": "2a312094d3068dcbbbc00052b832c42bbdd58bdfb26ed3537bb8e24706d1f5ea"
+          "sha256": "1236ba0456ba8ca7dd2c3238c9f23684d7be7545b279c5e722759c05c9a69734"
         }
       ],
       "requires": [
@@ -7846,16 +7846,16 @@
           "sha256": "908a70e40d242542fb18000949b021dba8d484dfd2977c4b24411c909dd0b1b0"
         },
         {
-          "bytes": 177106,
+          "bytes": 177076,
           "format": "latex",
           "path": "double/data/latex/2D12.tex",
-          "sha256": "fb8d5d254fac4694adc820b9ee0d4e7fe210e333f19c4d1c2f136d34070ffc3e"
+          "sha256": "4e3eef54570fef197051cd8d9371c7713847f16a8851c3a7b41953b35d3081a9"
         },
         {
-          "bytes": 466718,
+          "bytes": 466623,
           "format": "pdf",
           "path": "double/data/pdf/2D12.pdf",
-          "sha256": "2bac4922345b46fbaefdce206cc32e227b7d5e29340389e2dc31d03c8cffdefe"
+          "sha256": "db2297a88271e03cfed2e6a1129c64cecfa1c5f17375bca1b38634a0f0c0788b"
         }
       ],
       "requires": [
@@ -7893,16 +7893,16 @@
           "sha256": "fb0c62445515c7f1c8ba5451badbc82a85e04b70806eb61655882275aab16471"
         },
         {
-          "bytes": 78716,
+          "bytes": 78686,
           "format": "latex",
           "path": "double/data/latex/2D1h.tex",
-          "sha256": "f28dc9eec0fe82a1f07c0312f387bb7f5e251ffb569db28b31fc7671e68879d9"
+          "sha256": "ed9bd5075236281f87d29b6527e086e3585d69c247fd61cb041ddab9fb685962"
         },
         {
-          "bytes": 441524,
+          "bytes": 441429,
           "format": "pdf",
           "path": "double/data/pdf/2D1h.pdf",
-          "sha256": "b0eebedfb9f81d834e19e434e061236c27ea902e418fb672a40ca5e61283342a"
+          "sha256": "d877cc69209bf52d39dd857d49201e091ea492104d23ece7aa51775cc3d52fe3"
         }
       ],
       "requires": [
@@ -7940,16 +7940,16 @@
           "sha256": "607a8da1d27054cfdc3a6d4c5383abce66620b536d3b31dc1528cf2b50fbe93a"
         },
         {
-          "bytes": 117571,
+          "bytes": 117541,
           "format": "latex",
           "path": "double/data/latex/2D2h.tex",
-          "sha256": "721d614c8e56312285ccdf30f1529e1ee485593cea10380e911ec40ce38d5bf3"
+          "sha256": "87bb978194ad52de398502e039b7b851093784e6a0e40841a00ea1bc59404876"
         },
         {
-          "bytes": 470929,
+          "bytes": 470835,
           "format": "pdf",
           "path": "double/data/pdf/2D2h.pdf",
-          "sha256": "d0f16bc454e8d33dd3ee9def349f3cc806b9f52435b9742d328e941c47dd58ac"
+          "sha256": "c9fcfe99249353058cfeee12b2fe83981c5fe57f4f55a60439e96acbc0f25286"
         }
       ],
       "requires": [
@@ -7987,16 +7987,16 @@
           "sha256": "15f8710a8701deb63b64ef1dfea0ea974e640e99a43dfb86404bbfd91dd1ec38"
         },
         {
-          "bytes": 111441,
+          "bytes": 111411,
           "format": "latex",
           "path": "double/data/latex/2D3h.tex",
-          "sha256": "14c9c362a55a90a46d74052e5bfb8c8f859668d56691f841ce7656b3a7770937"
+          "sha256": "abfe681f553c9effbea343a264dd9729cf2634493e845cb5fad956db7db32866"
         },
         {
-          "bytes": 467537,
+          "bytes": 467442,
           "format": "pdf",
           "path": "double/data/pdf/2D3h.pdf",
-          "sha256": "39acba6ebae9957fa7e7d41796e97c306aab7c3de01080e057d197f748ba5619"
+          "sha256": "afe24bca7874ea49f8d2529be8c64184af5d6194f3e19cde270346f8a9c73fd6"
         }
       ],
       "requires": [
@@ -8034,16 +8034,16 @@
           "sha256": "eabf24d210fa83b9249733ab2633e8075acb8bc44cf382dd0a19ac861fab7b53"
         },
         {
-          "bytes": 170404,
+          "bytes": 170374,
           "format": "latex",
           "path": "double/data/latex/2D4h.tex",
-          "sha256": "5164e5a7a9658eb97d0ef0ee4213fa29f721c440d6ca2eef781a3ecac9a7e1ed"
+          "sha256": "ec92fcc41fc7ddaa630d654da03b2c575f66a63ffc29adac4cb30a119f09f3ea"
         },
         {
-          "bytes": 494396,
+          "bytes": 494300,
           "format": "pdf",
           "path": "double/data/pdf/2D4h.pdf",
-          "sha256": "24c29b39a2dd7cbeadd0b983d19e232087c1a3dabf85e39c08333b087fb5c805"
+          "sha256": "832a984d8caf561f19b1518576a5382e59783c994f460e5eb11ed41f1e0bcfc4"
         }
       ],
       "requires": [
@@ -8081,16 +8081,16 @@
           "sha256": "a8061e0cadab336f2b91edda2fb49aaa95cc8f1fdc2cd659de51059af86ceacf"
         },
         {
-          "bytes": 149759,
+          "bytes": 149729,
           "format": "latex",
           "path": "double/data/latex/2D5h.tex",
-          "sha256": "0da75e2bfa3195b2b2d17d9cd0d0470db68b7b6a97c56d704b5c1635e237770c"
+          "sha256": "199f4d8d5099a2dc97c4845badd31fdde3b30e49be56ff450aa9650f4618300e"
         },
         {
-          "bytes": 478787,
+          "bytes": 478694,
           "format": "pdf",
           "path": "double/data/pdf/2D5h.pdf",
-          "sha256": "a75b4c449356632cec829dfe8ce78afdb3dd0655a34732edd1c3ee9da9369c92"
+          "sha256": "f66172135bb55ad99466bfe2d7b06d31ee1d2c0f3916be34f07031b073655e9b"
         }
       ],
       "requires": [
@@ -8128,16 +8128,16 @@
           "sha256": "fcd6529332f429b1ff04caa6ff6b44eaec5ca44daa94b748ac55a1d8f8d69895"
         },
         {
-          "bytes": 239577,
+          "bytes": 239547,
           "format": "latex",
           "path": "double/data/latex/2D6h.tex",
-          "sha256": "b7f465dcaa111e95a1187e3141f57b0777fab049ecae289d7e2f7f24d420bcaf"
+          "sha256": "1a6bd7719e34168b6d48243d2265b3056273be0158c1da2bccc3f59165a6136c"
         },
         {
-          "bytes": 514290,
+          "bytes": 514198,
           "format": "pdf",
           "path": "double/data/pdf/2D6h.pdf",
-          "sha256": "d971424604b56c2832a378816505bd99a20e3f2d5a447e950ca4ce3dafaaffa1"
+          "sha256": "46817202a47ddf404b0c24dc4c116119fa407248d392f2eef36f1f037fdf1610"
         }
       ],
       "requires": [
@@ -8175,16 +8175,16 @@
           "sha256": "cb5e777ddbb1383d8a90a33af0a711c17b961434a6ff7d69ca0380532cedb3f7"
         },
         {
-          "bytes": 201641,
+          "bytes": 201611,
           "format": "latex",
           "path": "double/data/latex/2D7h.tex",
-          "sha256": "c936e1ae744d885b599efad6ba4f5c9c4508ae41464a2121f1ff245360552e9e"
+          "sha256": "bdc6e5f0d88aa71cdb9122a69ac7b9e0c9512d430e567cedaa67315c70181873"
         },
         {
-          "bytes": 496151,
+          "bytes": 496056,
           "format": "pdf",
           "path": "double/data/pdf/2D7h.pdf",
-          "sha256": "0bb5ecab859cdaff1624a1823afb9ad31f813ca849a725a44c4d036a99baf6d1"
+          "sha256": "3f869aaebd9e52b9e5cfc19534bf48831ef6f386098e8c36f4e1c8e28a81cbcf"
         }
       ],
       "requires": [
@@ -8222,16 +8222,16 @@
           "sha256": "e7cee0e6fa9b93a6870944bd4015618defeb2dd3d68a864d478bdfa77ad3c10e"
         },
         {
-          "bytes": 290508,
+          "bytes": 290478,
           "format": "latex",
           "path": "double/data/latex/2D8h.tex",
-          "sha256": "eb27340c91721791a20d807413fda0808792590cd3193a180a0316bd8d709a7d"
+          "sha256": "9783f2dd59be7e7c0aa5328d94fbcd8292423848401a1763b8f2fb029d5e7141"
         },
         {
-          "bytes": 526462,
+          "bytes": 526369,
           "format": "pdf",
           "path": "double/data/pdf/2D8h.pdf",
-          "sha256": "d2852713eef2061970aa643596f330c8e6d5ab701bba37930e2fffeac0d962af"
+          "sha256": "e707f8cf0f85d8cf79cd6358a608d7c0b9649de33c54a0b329c37c0fae1d8ced"
         }
       ],
       "requires": [
@@ -8269,16 +8269,16 @@
           "sha256": "a5d0751b70c9def205f130607254563dd7571db30b3d3504a39b0230b17756ff"
         },
         {
-          "bytes": 246267,
+          "bytes": 246237,
           "format": "latex",
           "path": "double/data/latex/2D9h.tex",
-          "sha256": "72f79528accbcd68113cf9fe750e70bcc18ae0069eef500942145ab6f743a75b"
+          "sha256": "75523a52d8b64e7f4a730c2466ca78b950ed338a891ee5d358f47eb2e0405ac2"
         },
         {
-          "bytes": 511110,
+          "bytes": 511015,
           "format": "pdf",
           "path": "double/data/pdf/2D9h.pdf",
-          "sha256": "e381e64601f56a008c1142c6556430f0e2ac6e3ac2f2ba01e5818f88ff59a855"
+          "sha256": "2c7c7025f4a6d4ea7933f3c8c8e1ba2c56ed55461e77631d272d72468703a461"
         }
       ],
       "requires": [
@@ -8316,16 +8316,16 @@
           "sha256": "4b0a6ca648069c8de91b315de7ee5b82b88c186369b1dd17e363da049c06131a"
         },
         {
-          "bytes": 369686,
+          "bytes": 369656,
           "format": "latex",
           "path": "double/data/latex/2D10h.tex",
-          "sha256": "7d3f1271b713501a1ff2d26b7126e35b519c78c5b75e0e3f10717faa4c5d1c2e"
+          "sha256": "975b2dbebb9e99de43a0f1255f61270f926faf7917b8453df05f0dbc55e7a299"
         },
         {
-          "bytes": 542560,
+          "bytes": 542467,
           "format": "pdf",
           "path": "double/data/pdf/2D10h.pdf",
-          "sha256": "5897651acb2804ecc944e6946288c9875ae92dbc9beba54350e05e11395e7490"
+          "sha256": "81615a60d2d818a41cd663f653e82de9e6c404d4873297bb38d5db8f200c9c21"
         }
       ],
       "requires": [
@@ -8363,16 +8363,16 @@
           "sha256": "82e44a6e5cd20392b7812298fac05f9fe569e4d21d3c5b86b40889d296b7047f"
         },
         {
-          "bytes": 309350,
+          "bytes": 309320,
           "format": "latex",
           "path": "double/data/latex/2D11h.tex",
-          "sha256": "c4c39481b54eb5022523ebbfa1bb40f7f77a515bb99e156aaa0d518279d83c33"
+          "sha256": "f8bc05aa261dfe5a83c0a04e996a59be1957ca387d8f0048813a953c6b7cbc0d"
         },
         {
-          "bytes": 521574,
+          "bytes": 521481,
           "format": "pdf",
           "path": "double/data/pdf/2D11h.pdf",
-          "sha256": "54bb754d389675ded78b9c074cde027fbcf7bc2f6303c829f2dccd4b7d966664"
+          "sha256": "1a3c63e7a66956d2fc43645aebfea6b9b3cac6ea963d4158351a195abf8f5556"
         }
       ],
       "requires": [
@@ -8410,16 +8410,16 @@
           "sha256": "171d5ae5d5168d97059e420ebf6ff1662a2cf47a7601d149d9696905149e243c"
         },
         {
-          "bytes": 490450,
+          "bytes": 490420,
           "format": "latex",
           "path": "double/data/latex/2D12h.tex",
-          "sha256": "45c8829d1aaadd0d3cc037eb22646e6021239ad75c9b4a32ddeb7ca4dca075c4"
+          "sha256": "621d34537e231724d5e6f91d78d382610afc705da60e95c90374be79f512acf0"
         },
         {
-          "bytes": 575832,
+          "bytes": 575738,
           "format": "pdf",
           "path": "double/data/pdf/2D12h.pdf",
-          "sha256": "bd0743100c4253029cabfd8698cd1101969d1683993d135e3f05205549c44120"
+          "sha256": "9f9cb5ff5ab5bd4e8e6234e6172592693e6e11ed836f2c17498a6535817840d1"
         }
       ],
       "requires": [
@@ -8457,16 +8457,16 @@
           "sha256": "3f56fe29c71104022b17c04769473070c70f7fa837dab306859a98f27f0b9f4f"
         },
         {
-          "bytes": 93245,
+          "bytes": 93215,
           "format": "latex",
           "path": "double/data/latex/2D1d.tex",
-          "sha256": "7c0726aff277dc35fed82e3d45e508181296966cd797c44c8fee526848eaab52"
+          "sha256": "7f0602131ddd342b556b6437eb92a26632e31e397b6bdfe79eab46d91c023e5e"
         },
         {
-          "bytes": 453161,
+          "bytes": 453069,
           "format": "pdf",
           "path": "double/data/pdf/2D1d.pdf",
-          "sha256": "1d564efa68637a751675e6c9f2174f916b21290d717429a8575f6e77593e4927"
+          "sha256": "bfce4c668e53d32c64b2de0d5b365e4898ecda1ea50f7239b35c794634c99199"
         }
       ],
       "requires": [
@@ -8504,16 +8504,16 @@
           "sha256": "f788021db717fe45b1fa0553a7740dc133d269964b00971e7274c63c2d8922f7"
         },
         {
-          "bytes": 95498,
+          "bytes": 95468,
           "format": "latex",
           "path": "double/data/latex/2D2d.tex",
-          "sha256": "b4f5990bf182d4baacc04582499787fb342807ee0cc9b1339f57d85ca78d9150"
+          "sha256": "ef8a2986fd5fa2fb324c8ac854dc20c108bbc104204293256a8b0ea8deb7a529"
         },
         {
-          "bytes": 455577,
+          "bytes": 455480,
           "format": "pdf",
           "path": "double/data/pdf/2D2d.pdf",
-          "sha256": "9b75371979856e027acb07ef6fe1e09fd7496e151fa049c88751536f3346f793"
+          "sha256": "9c7cdd54ac7f7450962a7b1207d8c4ce08027e466aa6cdeb4ca79895e1fb154c"
         }
       ],
       "requires": [
@@ -8551,16 +8551,16 @@
           "sha256": "5e262fb50ac77a3c3a81285f3c3bc79f97c6786fdeaf659820c2e5647fb7054e"
         },
         {
-          "bytes": 138917,
+          "bytes": 138887,
           "format": "latex",
           "path": "double/data/latex/2D3d.tex",
-          "sha256": "118f53f1747d57bcd15895e39d3be71931c6fade7ecd3985b5748cd7ecec1a97"
+          "sha256": "3f529080b84f352d9c3ad938e90bdba583abb3003f8b95a88e0bb05745d57b50"
         },
         {
-          "bytes": 483927,
+          "bytes": 483832,
           "format": "pdf",
           "path": "double/data/pdf/2D3d.pdf",
-          "sha256": "5a04fa898cb867896e4a0a28060621357473ff7472c1e541cd8eba2fad016a5f"
+          "sha256": "fc8c6dfda841535468868becc39e3e781fdb29e41ffe7bec24c053aae8eae8ae"
         }
       ],
       "requires": [
@@ -8598,16 +8598,16 @@
           "sha256": "84e51ff27cbd6c3287f8ab252f93b2039c559d295b32ec40082e79630072f185"
         },
         {
-          "bytes": 128351,
+          "bytes": 128321,
           "format": "latex",
           "path": "double/data/latex/2D4d.tex",
-          "sha256": "1c38855ccb0680bf10af49961408bbf0f97219e27803484118775b05971456d5"
+          "sha256": "c7a85db69881f1e9b72dd25c83dfd1e540336922ad0e0b33d8ac2dcdd118f6cc"
         },
         {
-          "bytes": 467294,
+          "bytes": 467200,
           "format": "pdf",
           "path": "double/data/pdf/2D4d.pdf",
-          "sha256": "5ae9469d701225de4696277315ea3bdf27b5fa0b02a4d60f805fd24a1aa248b4"
+          "sha256": "b2c34ad5cb768a7d5657c2f30ed89be53f562b35efec9c5243e1ddff5bb47843"
         }
       ],
       "requires": [
@@ -8645,16 +8645,16 @@
           "sha256": "85e7762c44db4b441a22eec552c91c9e7344bb1d5a48e5dc2f608b9138586b51"
         },
         {
-          "bytes": 187820,
+          "bytes": 187790,
           "format": "latex",
           "path": "double/data/latex/2D5d.tex",
-          "sha256": "918b99b622cacf9aed5363978704933ffc1e938b66ed58dcce534aefc9411fb5"
+          "sha256": "a4f6f930d09e6215d433ced335d09dd4f6c91db6ddc70cbbb9ddff5124ebbc26"
         },
         {
-          "bytes": 498234,
+          "bytes": 498139,
           "format": "pdf",
           "path": "double/data/pdf/2D5d.pdf",
-          "sha256": "f2f8ad36000f7da6ee9cd35b37a228b6611287d286adc4fe22347ca2a634620a"
+          "sha256": "82fd568c86669d0e372057777f759ad167c5a7104d713f7cc4559d2e6b925d03"
         }
       ],
       "requires": [
@@ -8692,16 +8692,16 @@
           "sha256": "c6395851b3cfce3b0af9a8a7897fc8e1c0ec0530fbdbb49618cacfce7315b992"
         },
         {
-          "bytes": 177318,
+          "bytes": 177288,
           "format": "latex",
           "path": "double/data/latex/2D6d.tex",
-          "sha256": "6822b18152306e4e9dace99dc005b68cc3227d7d62243eba8ad072aae8623bc3"
+          "sha256": "e9a04e5636abe6b01bf03b42fc26364e9d9ed11962c5a376a6f8a221fc647ed6"
         },
         {
-          "bytes": 484055,
+          "bytes": 483963,
           "format": "pdf",
           "path": "double/data/pdf/2D6d.pdf",
-          "sha256": "a5feda5dc118c5b915f3fc96ffe26af88e30ff382f299b1ca9c18d871602c9f8"
+          "sha256": "058b8566c27809bc392b2ebdf3a2975479167c4a6f51dfe21de373ccd2c64d33"
         }
       ],
       "requires": [
@@ -8739,16 +8739,16 @@
           "sha256": "86acb7397644439f60dbf35e7340b19d14e08bf9f2bcc1f544899d2564ad79fe"
         },
         {
-          "bytes": 253637,
+          "bytes": 253607,
           "format": "latex",
           "path": "double/data/latex/2D7d.tex",
-          "sha256": "281b5f3f51e92173375b27a4ad9982f30c653024f81573fd6edd0838cc0210d8"
+          "sha256": "c6114d57301a0314b561c658ec2bbb393741496a446ad9d1e960b1f266566369"
         },
         {
-          "bytes": 512721,
+          "bytes": 512627,
           "format": "pdf",
           "path": "double/data/pdf/2D7d.pdf",
-          "sha256": "dd7a1f051ace5d27164aa453f4d1e2315d8b5cd324af71f213f9f856689d17f5"
+          "sha256": "6632c4fc714c02cb7cae31db7a0c87840117e6f236d8a26050704e88a1cdc6e5"
         }
       ],
       "requires": [
@@ -8786,16 +8786,16 @@
           "sha256": "681a9d4c32bf158aa257b9920ae9cf89e0ea72359e6b130fb0e067efa7e63c3e"
         },
         {
-          "bytes": 213467,
+          "bytes": 213437,
           "format": "latex",
           "path": "double/data/latex/2D8d.tex",
-          "sha256": "a809302b0ef0a55dc8ebcdb61e7d562f9b01ff39a7999ff4352db72de47ff5ea"
+          "sha256": "37148d8897cd0db4cf3ad92691f215328e519a55df9c17be65a92cb7530da1a4"
         },
         {
-          "bytes": 494367,
+          "bytes": 494274,
           "format": "pdf",
           "path": "double/data/pdf/2D8d.pdf",
-          "sha256": "992a30c14ebc6129c7932041a9b3da74cb838f68233c1f6c0a2b3cd719c8fbeb"
+          "sha256": "93c9cecfae4bbf99e942f54c0855ea23495b8f491a627c0bac02ccc248ff61f0"
         }
       ],
       "requires": [
@@ -8833,16 +8833,16 @@
           "sha256": "9a9370479bb3951a1500972eea66891809beb2055698657dd82f49a1fd54c55b"
         },
         {
-          "bytes": 319257,
+          "bytes": 319227,
           "format": "latex",
           "path": "double/data/latex/2D9d.tex",
-          "sha256": "a8d06f12f438ec8c645e87ac56eb7b2da7b801dd3f09d2c89b2f814c8ce6db6f"
+          "sha256": "1ae60445ee33122d9d0f0546960c97e28c1ac2bc9eaf9ddd9cadcd11a71f205d"
         },
         {
-          "bytes": 532519,
+          "bytes": 532423,
           "format": "pdf",
           "path": "double/data/pdf/2D9d.pdf",
-          "sha256": "041b24145456d62380c83544f0c401c6c7eb8b8780a0851a67e2aeba9bf9ba93"
+          "sha256": "46a94403a64d361b5c07ed65b2a23fc50dcacf91a91fb32984e8e47aa8d7c301"
         }
       ],
       "requires": [
@@ -8880,16 +8880,16 @@
           "sha256": "5ab337502bf953e49222a19aed707794962fac47051443635dfec3efb9a478de"
         },
         {
-          "bytes": 277565,
+          "bytes": 277535,
           "format": "latex",
           "path": "double/data/latex/2D10d.tex",
-          "sha256": "7dd218ce07eb3e803023b1796fbdd3dde29b8dc43f16426be1a043735a43f56d"
+          "sha256": "71d4c65f5bd02d6f6fd542db6130098ec32103a50bbdd0cef659d94549eb4f12"
         },
         {
-          "bytes": 510186,
+          "bytes": 510092,
           "format": "pdf",
           "path": "double/data/pdf/2D10d.pdf",
-          "sha256": "bfcd936afe9183bc1234622cae669814eb6469000f106d000687c264672cf638"
+          "sha256": "bc91a7a83e0d0208e1c5ef59300dcca792768102b3162e995b713bd6614afed1"
         }
       ],
       "requires": [
@@ -8927,16 +8927,16 @@
           "sha256": "f4a61da15b930ced54e413df711082940608b3b6ded9ac5b2c027735bd3e8985"
         },
         {
-          "bytes": 391510,
+          "bytes": 391480,
           "format": "latex",
           "path": "double/data/latex/2D11d.tex",
-          "sha256": "d15ba8ee0f8e38b70bf25345e37183451b671dfdeb9fc0cfd6a3f7e70df7fca0"
+          "sha256": "135d033dbff84a6cc6537145c7481e9696b2d65e87ab68f16e21b0659a59511e"
         },
         {
-          "bytes": 545573,
+          "bytes": 545480,
           "format": "pdf",
           "path": "double/data/pdf/2D11d.pdf",
-          "sha256": "c0e1f9fd2cb7e8f1f730ee0cf952c08b452f5dc2458a1bb79384dece07382481"
+          "sha256": "f2feb199fb89c3e056aa0c65f30f4880ce6e17d01ee38758942bd19cae9181db"
         }
       ],
       "requires": [
@@ -8974,16 +8974,16 @@
           "sha256": "260152db25cb05adfd30688c40d7029d8c045232735a013d7fcc7ae766f7f4e3"
         },
         {
-          "bytes": 354999,
+          "bytes": 354969,
           "format": "latex",
           "path": "double/data/latex/2D12d.tex",
-          "sha256": "ed2786c15914242cf8508a8e8563d68366b6a3e157e7e330f11b29d4f51a048d"
+          "sha256": "a95b62e22a3d3276921fecc267211a5d4f6cb87c2700d9642bd5b3ba566ddef1"
         },
         {
-          "bytes": 532488,
+          "bytes": 532396,
           "format": "pdf",
           "path": "double/data/pdf/2D12d.pdf",
-          "sha256": "97f52d463ac9317b6650ef6d27335de3c1ed24b7ab9ef3abd4301f9eb4ad97f8"
+          "sha256": "ae7ab4d652f341c57e6fec164f92c90abb81767b20bfd12398d6f923a6cc0fb6"
         }
       ],
       "requires": [
@@ -9021,16 +9021,16 @@
           "sha256": "684222ff01f4cd75c35abd9a382260da8711c13a2f49ede1a850b182ea7a9489"
         },
         {
-          "bytes": 143230,
+          "bytes": 143200,
           "format": "latex",
           "path": "double/data/latex/2T.tex",
-          "sha256": "ca5323ead5d9069e1b61da1f922be1a8d7a64f7cfac88cb47cff7a6449d1438f"
+          "sha256": "f8b553f98f04ad66bec645f969a5f28b23f05d923bc8e243ad26cfe70572c31e"
         },
         {
-          "bytes": 456849,
+          "bytes": 456755,
           "format": "pdf",
           "path": "double/data/pdf/2T.pdf",
-          "sha256": "4d597815a24c02d2a84b652ce560ac6670a4f913c50d31ac34bd3047a3c81128"
+          "sha256": "90f5d76096336a109f6423f97b9ccf33ce9e27289d1970ae64d0c1ca09cbc8c7"
         },
         {
           "bytes": 268,
@@ -9134,16 +9134,16 @@
           "sha256": "a8e7d26d6f9c132bf296c32d4f3fb67c49b266939498ee22366bd7c0acbb375c"
         },
         {
-          "bytes": 248040,
+          "bytes": 248010,
           "format": "latex",
           "path": "double/data/latex/2Th.tex",
-          "sha256": "1bd4a88474afc0abee3cd159d2e2137748f03ad52df72e5c57001b9af7f258ba"
+          "sha256": "3554be1615cd2422cd4a0657ca801f0036a7b87f374fb08f8ada9eba3576e5f6"
         },
         {
-          "bytes": 516381,
+          "bytes": 516288,
           "format": "pdf",
           "path": "double/data/pdf/2Th.pdf",
-          "sha256": "d1bc775a4f2fb0f6e4b69ab0f9abab5f13a5065126f47bf47d04e20799515cb4"
+          "sha256": "f76177918644aff7ea35081407e7615c37f949e4b3c71e3db2fdd8c92fd5d1f1"
         },
         {
           "bytes": 271,
@@ -9247,16 +9247,16 @@
           "sha256": "1e863067b104e23635ae793d24d5f951b358fde2b41e0cab8a85933043915fab"
         },
         {
-          "bytes": 188290,
+          "bytes": 188260,
           "format": "latex",
           "path": "double/data/latex/2Td.tex",
-          "sha256": "5214bac7c0b115e89f3cd997ef07761415b4796ead1c6eeebc9fb275cb5b219a"
+          "sha256": "c2c5dd336f2783170c9b2d91fb204ea51c67af7611171abb20447b110c3b6d56"
         },
         {
-          "bytes": 497368,
+          "bytes": 497274,
           "format": "pdf",
           "path": "double/data/pdf/2Td.pdf",
-          "sha256": "33c2d5ff055fc66b6dea03e0e88a7ccb04687d0951c8e235447387db86bd3285"
+          "sha256": "df46be0154f45decae551d8651287968d5226e1ddccc0c9863aa26697af71490"
         },
         {
           "bytes": 267,
@@ -9361,16 +9361,16 @@
           "sha256": "aace97cb420e9839ef303c86b3c7890c3c644e58e23207bb969a1cb44787fe0e"
         },
         {
-          "bytes": 189636,
+          "bytes": 189606,
           "format": "latex",
           "path": "double/data/latex/2O.tex",
-          "sha256": "587cd66914f2a24d963a4d3c1ccc4e53cc07271896d8f9e70f859a6036e9be28"
+          "sha256": "e3b86cb01dc967e7994996fe2926a2af3ba228d09aa402df5aba756a09c1120c"
         },
         {
-          "bytes": 482165,
+          "bytes": 482073,
           "format": "pdf",
           "path": "double/data/pdf/2O.pdf",
-          "sha256": "e45447a68739e81ebd4bdfd35ca1a4b2133f0aac179461f0e1131c80e6055ddb"
+          "sha256": "178f0e62fea21a42357ce46ab5dcc488ebdfa9e83f8e35085f8891ced9fe1980"
         },
         {
           "bytes": 267,
@@ -9474,16 +9474,16 @@
           "sha256": "4300936df98da7ffd22ab2b15b7236fd9d2158999f37a255d4ec09202395caa6"
         },
         {
-          "bytes": 363924,
+          "bytes": 363894,
           "format": "latex",
           "path": "double/data/latex/2Oh.tex",
-          "sha256": "4b5b23615f194df9e9a1f6fd90b9131fe17a380eabdbcf1c77ed09b2ed1f0b9b"
+          "sha256": "18341ba813940cc59c38d7970233ce548d78ed7a917936fa9035269e94222c10"
         },
         {
-          "bytes": 594239,
+          "bytes": 594144,
           "format": "pdf",
           "path": "double/data/pdf/2Oh.pdf",
-          "sha256": "1358fe3e1ab8b549dee827e8103f0e7da5bd135119e4620f90bbfd03a94a3a12"
+          "sha256": "e4d2070050b5e4ddc2d88e2d7517d7a1d44287726315a6972d605f355b69ecd3"
         },
         {
           "bytes": 270,
@@ -9588,16 +9588,16 @@
           "sha256": "b76914354189b3d931387344befed2b1773f3916e6a2a69594cf1bd13b560c41"
         },
         {
-          "bytes": 359751,
+          "bytes": 359721,
           "format": "latex",
           "path": "double/data/latex/2I.tex",
-          "sha256": "5c2066a803462a11515ebfac0416df639c729cc80dc202b37399bbebe9dbcb15"
+          "sha256": "5c15c8f832c1d83b24ed0a43bf6c645e76b78a948913d57c4c10b4851a9bfe13"
         },
         {
-          "bytes": 564858,
+          "bytes": 564762,
           "format": "pdf",
           "path": "double/data/pdf/2I.pdf",
-          "sha256": "83a63ce81727ea80f416786608a4220f0d06991fb06e7b8f74dd85c421eba75f"
+          "sha256": "46061a390cd84359d667447947f6d357b0de9aaa9269946be85542930ef8c11a"
         },
         {
           "bytes": 270,
@@ -9701,16 +9701,16 @@
           "sha256": "1ad63343685c623858b0a7c43c88ffc1aabebd407b4009002f8a33328b5b5c49"
         },
         {
-          "bytes": 1029927,
+          "bytes": 1029897,
           "format": "latex",
           "path": "double/data/latex/2Ih.tex",
-          "sha256": "bc95be77fcc5b8941fb9e701224a5b2cee1780ae7b7cbabdf5aac5b4fced3875"
+          "sha256": "3696644085f56de26508e11ccd77cf01292c74f350fb6318509e3e3d2bef2f7e"
         },
         {
-          "bytes": 894929,
+          "bytes": 894835,
           "format": "pdf",
           "path": "double/data/pdf/2Ih.pdf",
-          "sha256": "813e311edd2809fd24b94b308473ab7e7748233da1cb14c79d18183381c78470"
+          "sha256": "e8a43ea1b96501b9ed806c04807241dc5ceb50658ecd63e143829cf1c4158305"
         },
         {
           "bytes": 272,
@@ -9815,16 +9815,16 @@
           "sha256": "8cf5ca897b72e78cce911e28f7aeabddc84b94632ca8ae62c300878ba453ee65"
         },
         {
-          "bytes": 29004,
+          "bytes": 28974,
           "format": "latex",
           "path": "double/data/latex/C1.tex",
-          "sha256": "15384c9228eeb2beb27d43b6fc21c6b0cc4fb94d686a099ee903764d7271e0ab"
+          "sha256": "e606b04eb6ae63aa6577d115692b24b2f49288aee64cbe6a097f668c5950d633"
         },
         {
-          "bytes": 292751,
+          "bytes": 292654,
           "format": "pdf",
           "path": "double/data/pdf/C1.pdf",
-          "sha256": "59ac0e16036ef5d30baaf81cc6dc301a1e25cd6db612ef276f1d28cc827c21cc"
+          "sha256": "a698cfb74e87095c639a52ca06e75560c74418df3a455852d2ef6c85a31ae903"
         }
       ],
       "requires": [
@@ -9863,16 +9863,16 @@
           "sha256": "4878a0451308afc2848b5712b21d9c2673f74684291f8dd5372c3997f879a8b0"
         },
         {
-          "bytes": 31966,
+          "bytes": 31936,
           "format": "latex",
           "path": "double/data/latex/C3.tex",
-          "sha256": "b3eb63f47c38831c4f74bf3728816e9f543833895b9d98e52dbe3b880b73c98d"
+          "sha256": "9e60736b9a69d9986f078d8ed8aca020c2ea00f9d62c693566acd7cbf90cd095"
         },
         {
-          "bytes": 322777,
+          "bytes": 322680,
           "format": "pdf",
           "path": "double/data/pdf/C3.pdf",
-          "sha256": "4a796de34fe914a9c8d3f99e97a1ad839c772288671229c08c5c0797b2337742"
+          "sha256": "cf26f463307b1ac1d1eb606835b09260a0b1fd22b1e683b2e2d6edad00e79dad"
         }
       ],
       "requires": [
@@ -9911,16 +9911,16 @@
           "sha256": "dc1107afdb14e5508dfd9a7deb0609b6829abf92f9e9ea2b1e2d655f3dc90c5a"
         },
         {
-          "bytes": 33601,
+          "bytes": 33571,
           "format": "latex",
           "path": "double/data/latex/C5.tex",
-          "sha256": "050b8cec0e6a611ae71a2bfcbeaf17a2ea7b0b9f298ae353c36df51d89f4bf6b"
+          "sha256": "74298fd9f143c1f2c175427e7584c9b7912b6d650a22acd1f40247a9bb1cc31c"
         },
         {
-          "bytes": 327082,
+          "bytes": 326986,
           "format": "pdf",
           "path": "double/data/pdf/C5.pdf",
-          "sha256": "eebf700cf775cb75ffe3742f3eea6da86e5eac016daf8fee3325b7894bb1c69a"
+          "sha256": "65c89a1e5fc4b21b4cf84ad68d137dcddbc827a5c19a089ec7c07d94686bcfdd"
         }
       ],
       "requires": [
@@ -9959,16 +9959,16 @@
           "sha256": "ffbb857ae789eec1423cb927cb653b0c24613343ae5b48e47ecdf90909fcf7cd"
         },
         {
-          "bytes": 35372,
+          "bytes": 35342,
           "format": "latex",
           "path": "double/data/latex/C7.tex",
-          "sha256": "67ac82c72f44c7b0bf0ba95ea2f598fc8d175731f604b418830909f886caf4ca"
+          "sha256": "7825cb981b3075fd9bf52757d9e77746091098abdca2851fb28b78339efeb55f"
         },
         {
-          "bytes": 329215,
+          "bytes": 329125,
           "format": "pdf",
           "path": "double/data/pdf/C7.pdf",
-          "sha256": "177be4e30f156a8fbf7cdb3984b99ebb2a459e31434a5eb1f8814a614a43549d"
+          "sha256": "b999e0674557127fa33a41f5142cdc882791bdaab7cec97db562ba5208fd6ddd"
         }
       ],
       "requires": [
@@ -10007,16 +10007,16 @@
           "sha256": "b1f94170daf76affd16b5ad1a9720096ac0df56ec577298ddf5cd4e9c4dc4434"
         },
         {
-          "bytes": 37603,
+          "bytes": 37573,
           "format": "latex",
           "path": "double/data/latex/C9.tex",
-          "sha256": "dbf51d1f927efba6d69160a9f0d83cce8d2b60f8c746ae5e234568a7c2abdfa4"
+          "sha256": "3351e92d7e38e7941a68056dc4d0026892e5aff15c28f0f70d71577aa366d497"
         },
         {
-          "bytes": 331416,
+          "bytes": 331312,
           "format": "pdf",
           "path": "double/data/pdf/C9.pdf",
-          "sha256": "7e969e33fa5885a69728a46f41347f2039807519995f2f09a3ad81004c99458f"
+          "sha256": "e31a2a2273acc0faea74f57705988f889566589ee9d98f1569e7b73bec6d30b9"
         }
       ],
       "requires": [
@@ -10055,16 +10055,16 @@
           "sha256": "069f01dcb4c1caa44d7a5ff66536b5675067ad71307babb7fdd68beca3cf4124"
         },
         {
-          "bytes": 39871,
+          "bytes": 39841,
           "format": "latex",
           "path": "double/data/latex/C11.tex",
-          "sha256": "5b22c9f31695daabc84aced0c5732c6d59ec4e04a17773a6e133a29c862bc7e0"
+          "sha256": "01acca88a2e283f3752f0b52d27197fd5b522075974d8dc846b855b7621d076e"
         },
         {
-          "bytes": 331971,
+          "bytes": 331875,
           "format": "pdf",
           "path": "double/data/pdf/C11.pdf",
-          "sha256": "d82ae665cc14e8ce86b9a72f50f533e4a8e5718a69b7fa30d1b69ce29187aa84"
+          "sha256": "6aedeedb234e2b184bed17677624acf957c54a45ffda40cf84656f6505c8b420"
         }
       ],
       "requires": [
@@ -10103,16 +10103,16 @@
           "sha256": "dc014d2eceda5d8ed317d44871f3f996b8b62bda2460b7e3a8ee7187a81c1bc6"
         },
         {
-          "bytes": 30066,
+          "bytes": 30036,
           "format": "latex",
           "path": "double/data/latex/S2.tex",
-          "sha256": "3f182c6efbec3e16858d037b5572331ea41ccabf5f96eb609ff7dd48707fe042"
+          "sha256": "e47555a5c02233194540fab658b601ae0c11411de4d3b8544ce5f52860429e74"
         },
         {
-          "bytes": 302042,
+          "bytes": 301949,
           "format": "pdf",
           "path": "double/data/pdf/S2.pdf",
-          "sha256": "e26b0486522c486a351b064ca5ef409bf5231d2746ecf91d1c52f6e4b196d6e2"
+          "sha256": "e4eb1a5d90481c284f0db044421e0dda9c8f56b90b73a88161f78ddd53497a0b"
         }
       ],
       "requires": [
@@ -10151,16 +10151,16 @@
           "sha256": "0b4896a03c326f6bcb230321eb6cf45ebff4c78ec775c63db7f20f5c52132036"
         },
         {
-          "bytes": 30632,
+          "bytes": 30602,
           "format": "latex",
           "path": "double/data/latex/S2b.tex",
-          "sha256": "05d5dcee0a76cf7a6a3b88795b465edaedfca2de44fda443a7ac9d6e06a50668"
+          "sha256": "18ff9ee95a8cb662ce2d53c50c0102a31009b2d92d15accb21b5ce0b96f15e67"
         },
         {
-          "bytes": 311993,
+          "bytes": 311895,
           "format": "pdf",
           "path": "double/data/pdf/S2b.pdf",
-          "sha256": "7fd7d0b425925de8d6415a329dcf609da6acf168ecff5cad480d645831bf2b21"
+          "sha256": "80f92419a8e47443d83728064e9b1b0aa88735af5982a80beda3a0baf69f2f9f"
         }
       ],
       "requires": [
@@ -10199,16 +10199,16 @@
           "sha256": "131e5c4a6d1aede4ff3c9b3110774c3ee2a1ab3c2fe61014f250541e26d8fbdc"
         },
         {
-          "bytes": 35060,
+          "bytes": 35030,
           "format": "latex",
           "path": "double/data/latex/S6.tex",
-          "sha256": "07e33b481a14901c724a909d3cffe96c51600be3f1650aed232d0b5c842576e0"
+          "sha256": "03c5ce09b46e4a02cc611c6061bb690a1f342357009bb6e77688946d4acf0779"
         },
         {
-          "bytes": 329503,
+          "bytes": 329409,
           "format": "pdf",
           "path": "double/data/pdf/S6.pdf",
-          "sha256": "abc9d57639cfc07bd3a9c091794a7d09169ec566176731b1b3eaa6f31940cc4c"
+          "sha256": "a479d210a37dd95798adba789ef566010a934a09bf51f4b07d128dd2254320a6"
         }
       ],
       "requires": [
@@ -10247,16 +10247,16 @@
           "sha256": "7c640e86873b13eef2830c5861bc81d447aeaa77ba56a4af3ac802d46994bd5c"
         },
         {
-          "bytes": 35390,
+          "bytes": 35360,
           "format": "latex",
           "path": "double/data/latex/S6b.tex",
-          "sha256": "52e5dfd27bbd85e3230a583e1b47f2a74b577755d65a3a71026d55fcd3d49f9e"
+          "sha256": "47c1f0ffa5d90310cced70ab42db9b2332fd158b7db3887130a3c052088c64ab"
         },
         {
-          "bytes": 337378,
+          "bytes": 337283,
           "format": "pdf",
           "path": "double/data/pdf/S6b.pdf",
-          "sha256": "27198040783cecbe0000dc98a8debd0d498d8cf6204630b22ad00e9345269cf0"
+          "sha256": "0c9258fa3a660d9c885719304f1db25ef20bf5ed4221b4aa188b24fe84af9250"
         }
       ],
       "requires": [
@@ -10295,16 +10295,16 @@
           "sha256": "d52c0e03e6a01c69b16c74f4684ddd8f69c6b4afa77942e41d7b7a3104ee038f"
         },
         {
-          "bytes": 39337,
+          "bytes": 39307,
           "format": "latex",
           "path": "double/data/latex/S10.tex",
-          "sha256": "425a256c14859c8fc87260e46023ef28dd61a12adde562312be3ae9fd9b4d649"
+          "sha256": "29bdc6b90cf5d93445b422bd986c66f713ee4194627cfdd433666aed459ce444"
         },
         {
-          "bytes": 334379,
+          "bytes": 334285,
           "format": "pdf",
           "path": "double/data/pdf/S10.pdf",
-          "sha256": "3ee504bb16fccc7d9a00d4a807becd9f0c76e587d2e113c167f7b96960a9eef8"
+          "sha256": "6946e3191dc0ec68f03a151f52a82e674b9c2fa06e3b3af99b2e0942773aa48e"
         }
       ],
       "requires": [
@@ -10343,16 +10343,16 @@
           "sha256": "1dacdafe62345cb28ea3c33a67fc55f394b4e9bcacdf503c357fd4bd5859cdaa"
         },
         {
-          "bytes": 39703,
+          "bytes": 39673,
           "format": "latex",
           "path": "double/data/latex/S10b.tex",
-          "sha256": "e84b68ee0676b6fdc390abd10fd8caa9af83eaf7bdd4e4d3dc9ba369fd650f8f"
+          "sha256": "b5f8d3db139822a60ba161133fefef7dd579f424353a64b3c232bbaad551f164"
         },
         {
-          "bytes": 342404,
+          "bytes": 342311,
           "format": "pdf",
           "path": "double/data/pdf/S10b.pdf",
-          "sha256": "f0efef0e8746fff36dcec909a70155c7651fbe437ac678f4457b3e68034b0660"
+          "sha256": "72f92f872874864ac11892896542ba71f3133be80c07d1ac4e5187dca3ad94fd"
         }
       ],
       "requires": [
@@ -10391,16 +10391,16 @@
           "sha256": "b69a189006e09c7a054e4396abc0647ddfb01233ba9b39d2a0e661210a8de321"
         },
         {
-          "bytes": 43832,
+          "bytes": 43802,
           "format": "latex",
           "path": "double/data/latex/S14.tex",
-          "sha256": "b54c45a82390d059c4617444053cebf2282397ea0ee07a422169926855e6f345"
+          "sha256": "3253f63d4a64229c0704d7464ba78dceea7334d20391f0a4608e45284f7393ee"
         },
         {
-          "bytes": 336284,
+          "bytes": 336189,
           "format": "pdf",
           "path": "double/data/pdf/S14.pdf",
-          "sha256": "5b2beea6918a6ab919e720fc96f408320ba2823fa1ef4283c071d39c9a8828ad"
+          "sha256": "9d5dc918afe02799477dbe84862e0ec148c3c0b052ff598e719ba3b5d1e55d50"
         }
       ],
       "requires": [
@@ -10439,16 +10439,16 @@
           "sha256": "5b8d5bb20171a4013623b7d146319f9634d300f371f6b78a03623674d43dc737"
         },
         {
-          "bytes": 44228,
+          "bytes": 44198,
           "format": "latex",
           "path": "double/data/latex/S14b.tex",
-          "sha256": "192964b92767a8d6bd5fedf3f06613c8cf697a51487ed00d7ee8739c586df842"
+          "sha256": "720d6832dc5c85cf47ea47bb9b25aeab7b38c7873f8e3445f113fe8ee03d15dc"
         },
         {
-          "bytes": 344387,
+          "bytes": 344293,
           "format": "pdf",
           "path": "double/data/pdf/S14b.pdf",
-          "sha256": "1628ea009d5fb0cc1e6899e0db33d4d323c8d717f343362053fe36c25a1617d2"
+          "sha256": "7f0a30c310ab8247d45eb152d088d3c9a5f164d0cfc12e305dbc361ebae66da9"
         }
       ],
       "requires": [
@@ -10487,16 +10487,16 @@
           "sha256": "6c916a63d41b2ad487cfa92761dc5af6f695adad3cd416de863ba37b5baf0f15"
         },
         {
-          "bytes": 49661,
+          "bytes": 49631,
           "format": "latex",
           "path": "double/data/latex/S18.tex",
-          "sha256": "75d4d77c363b425c9ef817c937c0a28380e5fe2f7d503f859152cefd3f23b7ef"
+          "sha256": "dab4b50429b90408b1512fc3ecc240f47f7510979e5747c6b2f17f41f750260b"
         },
         {
-          "bytes": 340756,
+          "bytes": 340662,
           "format": "pdf",
           "path": "double/data/pdf/S18.pdf",
-          "sha256": "b9cf78af49822a1d4a4ce5873fad194d83f95fc2e980b57c919df9371360f62a"
+          "sha256": "79c5daf11a00c80ce5ba7b8adf9317a7575ed1d16802253f31698c632dabcc11"
         }
       ],
       "requires": [
@@ -10535,16 +10535,16 @@
           "sha256": "d8fd32c2a59cc8dc5c8eee15c2a81adac3e3f88cafcfccc49acce6bd75ad1843"
         },
         {
-          "bytes": 50180,
+          "bytes": 50150,
           "format": "latex",
           "path": "double/data/latex/S18b.tex",
-          "sha256": "62089556e1bbfa7d38e5b9aa87ad0f027f8a32cb7d36b8519acbbd441a642d42"
+          "sha256": "e9f662f6b991e0d29490ff4001d1ca345c07201b107418602d15e5ff3d471f39"
         },
         {
-          "bytes": 348811,
+          "bytes": 348715,
           "format": "pdf",
           "path": "double/data/pdf/S18b.pdf",
-          "sha256": "151789ebd9cb770d3f8616001731933ee06076cbbc29faacf754c426be0d64c1"
+          "sha256": "804c1e7f9c5a513ceb542971236b1c3458e5245f1a52c0a7065cdc6a51422123"
         }
       ],
       "requires": [
@@ -10583,16 +10583,16 @@
           "sha256": "031f9fcd6a486a2f40599e86acc40c2e0785ce2c67077fd5fbe2c6cb0da63e3a"
         },
         {
-          "bytes": 57068,
+          "bytes": 57038,
           "format": "latex",
           "path": "double/data/latex/S22.tex",
-          "sha256": "173e80efc4f420a29613152a26cc6c184346432e3d19ad8358588c5911e9206c"
+          "sha256": "0aa44d2fc1930dda7cd84f2724755ab446fb37ca3e9e915ce793b8ef3fec87cf"
         },
         {
-          "bytes": 340566,
+          "bytes": 340472,
           "format": "pdf",
           "path": "double/data/pdf/S22.pdf",
-          "sha256": "8db49e4b64ea4a4c5d59ad25031a21971a6821162b779d5eebf1fb255bab61e5"
+          "sha256": "9054144d3058f83925c38027c64c56358db45df5f5ba260e5698806e5313c6ae"
         }
       ],
       "requires": [
@@ -10631,16 +10631,16 @@
           "sha256": "b976eafb8de68224a0498ac3db0ec931e6de7aea7c6463b926f08ab9f3cba578"
         },
         {
-          "bytes": 57528,
+          "bytes": 57498,
           "format": "latex",
           "path": "double/data/latex/S22b.tex",
-          "sha256": "2ebe16e5c114b3e10745c668fe0b057b86754f53c6c4d8f1fb877088c697d4be"
+          "sha256": "62a80cd9ba8ab7daae8050c77726ba32d4ffc2c7ec5dd83ed9da3a3a4db19f53"
         },
         {
-          "bytes": 348489,
+          "bytes": 348396,
           "format": "pdf",
           "path": "double/data/pdf/S22b.pdf",
-          "sha256": "71288abd8dffcb9b47f7cc3324f68ffb777e22ab51ddbe95ac562ec9325ecfa7"
+          "sha256": "3c621424c229f692124596144e7625f678e68e8697958d33f67932a0382753f5"
         }
       ],
       "requires": [
@@ -10679,16 +10679,16 @@
           "sha256": "fac60f0119750490348e5e2d97472188ac2a864ed0aa86afa0c8202c23b737b4"
         },
         {
-          "bytes": 82736,
+          "bytes": 82706,
           "format": "latex",
           "path": "double/data/latex/2Cinf.tex",
-          "sha256": "3dff3f2c5f8fb3df51ce8c144a1b21edc8c841b389dea172612ab955f69762fa"
+          "sha256": "e7fdd1302c9bc1532ce6ab7e2d0cc9494985a7644b0ff5fabb61dd2388de6e69"
         },
         {
-          "bytes": 387820,
+          "bytes": 387726,
           "format": "pdf",
           "path": "double/data/pdf/2Cinf.pdf",
-          "sha256": "1dc4da99e020353c849991a2394ade277b6326fa965d5e08b7daa7c71daf19df"
+          "sha256": "5e7e0703c50f8423c53828ffdb71058cd01ca191b8a3e6bcbdb981c19d997623"
         }
       ],
       "requires": [
@@ -10726,16 +10726,16 @@
           "sha256": "8abdbb40200b1f03148f280efd7ff9304d988696c8c6784aab088cf093082ab9"
         },
         {
-          "bytes": 232194,
+          "bytes": 232164,
           "format": "latex",
           "path": "double/data/latex/2Cinfh.tex",
-          "sha256": "ea50025ba632fa50eed4552e9f8c13e60437f2ecfe3df97ba798733e8ecdf641"
+          "sha256": "d9f839091c776c5241f69d1b7e8da543355962dcbecedc0ac7998ba7b2b1307a"
         },
         {
-          "bytes": 435129,
+          "bytes": 435034,
           "format": "pdf",
           "path": "double/data/pdf/2Cinfh.pdf",
-          "sha256": "455792bf492e7835aa00c28c70533b80f4fa0a6966568449a4b5347177ca0db3"
+          "sha256": "fbe7c374837b489abf7d79428068d14c71a2018041a79fb37327b8fa69f494f1"
         }
       ],
       "requires": [
@@ -10773,16 +10773,16 @@
           "sha256": "d95369402c93c16731b7b133ec7462ffeac525900c5d6febf70e0b47926212c9"
         },
         {
-          "bytes": 72377,
+          "bytes": 72347,
           "format": "latex",
           "path": "double/data/latex/2Cinfv.tex",
-          "sha256": "a548ecbb96735dba6b93de3d458af215d65b0e0989e2aa5816ce6e6078af3817"
+          "sha256": "d6ce4f61767b99c15aaec07810051e68a4957a4131a173c3c252c9d29b76dd13"
         },
         {
-          "bytes": 409247,
+          "bytes": 409152,
           "format": "pdf",
           "path": "double/data/pdf/2Cinfv.pdf",
-          "sha256": "09a8300253f0815096a6edbb2a14ebaaf76c181c6fe70ca7e70503b958af1bc3"
+          "sha256": "fb4ffe39626537023010b1b3884d7f225b9ccf61414ddab9c0cfb2b77f57dae7"
         }
       ],
       "requires": [
@@ -10820,16 +10820,16 @@
           "sha256": "079f4202ff0ebcf2261bcf4cb7d610814185b5d782b384dd8d38f528fec41bfa"
         },
         {
-          "bytes": 74825,
+          "bytes": 74795,
           "format": "latex",
           "path": "double/data/latex/2Dinf.tex",
-          "sha256": "a7b94bc0476bf27ab494560232913c0eb053867baf88422caf336b19bed9ccfa"
+          "sha256": "db0b8f6ec5d758df0ae5e43a62fb8162568a6f0ba8e0dfee661cb0c741f1efbb"
         },
         {
-          "bytes": 400143,
+          "bytes": 400048,
           "format": "pdf",
           "path": "double/data/pdf/2Dinf.pdf",
-          "sha256": "21e2872ce34c27d5cb9163d8321747fac9302873b648379ab707fd05b06ff801"
+          "sha256": "3fea44f24646f6d9a08f2cc45d5cea97c5c7b6c64f6724878f411a461fdf4171"
         }
       ],
       "requires": [
@@ -10867,16 +10867,16 @@
           "sha256": "0aac46c3750371061b1414b8cf6043773c300506d51e50a216c04e85043b581f"
         },
         {
-          "bytes": 243835,
+          "bytes": 243805,
           "format": "latex",
           "path": "double/data/latex/2Dinfh.tex",
-          "sha256": "4994b3f245545a247ffa8c1284f4f5d97228026d76bbf0192c43a38c8bf53a79"
+          "sha256": "2c25c51ce66de0be436e96e73b75e9221e7bebec93646b98594257c5d3441df7"
         },
         {
-          "bytes": 468440,
+          "bytes": 468348,
           "format": "pdf",
           "path": "double/data/pdf/2Dinfh.pdf",
-          "sha256": "8b51353d34b9fc5fb863058d5a1ce723858059f073bd56c91dfabd17adb1ba84"
+          "sha256": "242e70de39e2aa67104f160f914afcc5019e20b69ea342b7d94275ed9e19a815"
         }
       ],
       "requires": [
@@ -10914,16 +10914,16 @@
           "sha256": "c1c44c9760d0e0e6b07614da59ed46ff40406117302a57372ec398c4358a2cde"
         },
         {
-          "bytes": 151717,
+          "bytes": 151687,
           "format": "latex",
           "path": "double/data/latex/SU2.tex",
-          "sha256": "736d55c0e021ef6bb415b3e8d8e97bcaf748978fc1e77504508c3dde7eb7233d"
+          "sha256": "08a82ffa3afeb3ba7e1189a61194b589ae735239849cb8aa63fdf8737782e931"
         },
         {
-          "bytes": 441866,
+          "bytes": 441773,
           "format": "pdf",
           "path": "double/data/pdf/SU2.pdf",
-          "sha256": "97d2dbff7dba9938aaa92eab92836c92a4792042f1f1ac3ac597d5f81152fc70"
+          "sha256": "5e3baec586541dca6dfd1b98d14ebfeb0cfd66d51a3b83df1495c762e1e119a1"
         },
         {
           "bytes": 42526,
@@ -11090,16 +11090,16 @@
           "sha256": "bfaca3bb0d2c38e6c1273f3cd1579df8a6782174207fb19ffbb2120ae0a63d21"
         },
         {
-          "bytes": 83608,
+          "bytes": 83578,
           "format": "latex",
           "path": "double/data/latex/Pinminus3.tex",
-          "sha256": "de8e88010087b52b635cc6997a0113b3e11e4da9fb8da43bbb340a916c915b75"
+          "sha256": "a892def82a3cc31f28743ac5f99601e99aeb2239da011100fc70b8074a4e39d5"
         },
         {
-          "bytes": 425469,
+          "bytes": 425376,
           "format": "pdf",
           "path": "double/data/pdf/Pinminus3.pdf",
-          "sha256": "faa64584f7d287108d4d51bf289969bcb38c5388c89e0458202fc2d98723ac83"
+          "sha256": "806c5d6060e6fbc98aaba2891da25869d7736756d7ebbf9a2f0765b7cd8146da"
         }
       ],
       "requires": [
