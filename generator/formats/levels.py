@@ -353,7 +353,6 @@ def section_unitary(D):
     lvs = levels(D)
     if not lvs:
         return
-    D.part(PART)
     D.section(r"Subduction from \texorpdfstring{$\grp{U(\mathnormal{N})}$}{U(N)}", "section 19")
     D.w(level_lead(D))
     D.w(r"The table lists the levels by dimension. "

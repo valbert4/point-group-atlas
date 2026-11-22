@@ -437,7 +437,7 @@ EXTEND = {
     "irrep.Gamma.factors": {"scope": ("conventions|conv:24|",)},
     "index.conductor": {"scope": ("conventions|conv:23.3|",)},
     # SU2 and Pinminus3 write the matrices of a general element and the Clebsch--Gordan
-    # coefficients as SO3 and O3 do (double_continuous.spherical_matrices, su2_clebsch_gordan)
+    # coefficients as SO3 and O3 do (latex.spherical_matrices, spherical_clebsch_gordan)
     "local.sum.wigner": {"scope": ("SU2,Pinminus3|families|", "SU2,Pinminus3|continuous_irreps|",)},
     "local.sum.cayleyklein": {"scope": ("SU2,Pinminus3|families|",
                                         "SU2,Pinminus3|continuous_irreps|",),

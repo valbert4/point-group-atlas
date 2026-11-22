@@ -116,7 +116,6 @@ def rows_table(D, head, rows, wrap=1, math=True):
 # ---------------------------------------------------------------- Subduction from U(N)
 def section_unitary(D):
     lvs = levels(D)
-    D.part(LV.PART)
     D.section(r"Subduction from \texorpdfstring{$\grp{U(\mathnormal{N})}$}{U(N)}", "section 19")
     D.w(LV.level_lead(D))
     D.w(r"Each level here is a member of a family of the table. "

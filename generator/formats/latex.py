@@ -1,6 +1,13 @@
-r"""The record as a LaTeX document: data/latex/<G>.tex.
+r"""The documents of every catalogue as LaTeX, and the record of Rotation as data/latex/<G>.tex.
 
-The document opens with a table of contents, then the parts The group, Representations,
+Every section that the catalogues share is one function here, section_<key>, and assemble and finish
+make every catalogue's document.  A section writes once what all catalogues share and adds a
+catalogue's own sentences where its record holds more (the spinor irreps of a preimage, the lifts of a
+section over G).  What a section takes from a catalogue's own records comes from the document class:
+Document, which double_latex.Doc and double_continuous.Doc extend.  The conventions a section cites
+are given by catalogue where the catalogues' files differ.
+
+A document of Rotation opens with a table of contents, then the parts The group, Representations,
 Subgroups, Permutation representations (for a finite group: the figure of every class of
 subgroups, the decompositions and the cycle types), Angular momentum and Tensors (each only where
 the record has the data; Subgroups from the record's subgroup_lattice, for a continuous group
@@ -121,8 +128,8 @@ LOWER_WIDTH = 4.6
 # A rule under one copy sits SNAKE_RULE_SPACE pt from the rows above and below, a space the other
 # copies share; the groups are separated by heavier rules.
 SNAKE_RULE_SPACE = 1.5
-# A table of products that a document asks to wrap (section_fusion) and that would be one copy is
-# set as two, at a \tabcolsep of WRAP_TABCOLSEP pt and up to TIGHT_MARGIN into each margin, its
+# A table of products of a document of Double (section_fusion) that would be one copy is set as
+# two, at a \tabcolsep of WRAP_TABCOLSEP pt and up to TIGHT_MARGIN into each margin, its
 # products a paragraph column as wide as the two other columns leave as TeX sets them (fill_width),
 # of at least WRAP_MIN_CHARS characters by their estimate; snake_table is told a copy
 # WRAP_COPY_SLACK pt narrower than two copies allow in the text width, against rounding.
@@ -149,9 +156,6 @@ ELEMENT_ROW_MAX_WIDTH = 40
 # characters and \tabcolsep (6 pt) on each side, MULTIPLICITY_PAD characters; the irreps go into
 # the fewest tables of about equal size whose estimated widths stay within TABLE_MAX_WIDTH.
 MULTIPLICITY_PAD = 2.2
-# The tables of the subduction from O(3) list at least the rows J <= SUBDUCTION_MIN_ROWS - 1, and
-# a full period.
-SUBDUCTION_MIN_ROWS = 21
 # The documents of SO(3) and O(3) typeset the Wigner d^J for J <= D_TYPESET_JMAX and the
 # Clebsch-Gordan coefficients of D^(J1) x D^(J2) for J1 <= J2 <= CG_TYPESET_JMAX; the records
 # hold J <= 10.  A table of d^J has a row per m' and, as its columns, m whose widest entries
@@ -195,16 +199,21 @@ SEPARATION_SHORT = {"unique": "", "exchange-symmetric": r"exch.\ sym.",
                     "so3-parent-complement": "complement"}
 # The records of the separation tags (notation.py, abbreviation.*), by rule.
 SEPARATION_RECORD = {"exchange": "abbreviation.exchange", "crossing": "abbreviation.crossing",
-                     "so3-parent": "abbreviation.parent"}
-# The rules of the separations, in the order of CONVENTIONS.md section 10.4: for each, the sentence
-# that reads its tags (section_clebsch_gordan writes one after another, each with its anchor).
+                     "so3-parent": "abbreviation.parent", "su2-parent": "abbreviation.parent.su2"}
+# The rules of the separations, in the order of CONVENTIONS.md section 10.4, then the SU(2)
+# parentage of Double (its section 24): for each, the sentence that reads its tags
+# (table_couplings writes one after another, each with its anchor).  The copy that SU(2)
+# parentage places is labeled parent J, from the coupling's parent_twoJ (separation_tag).
 SEPARATION_TAGS = (
     ("exchange", r"The copies labeled exch.\ sym.\ and exch.\ anti.\ are symmetric and "
                  r"antisymmetric under the exchange of the two factors."),
     ("crossing", r"The copies labeled cross.\ sym.\ and cross.\ anti.\ are symmetric and "
                  r"antisymmetric under the crossing."),
     ("so3-parent", r"The copies labeled lowest parent and complement are the copy that the rule "
-                   r"of $\grp{SO(3)}$ parentage selects and its orthogonal complement."))
+                   r"of $\grp{SO(3)}$ parentage selects and its orthogonal complement."),
+    ("su2-parent", r"The copy labeled parent $J$ lies in the components of least total angular "
+                   r"momentum $J$ of the product of the factors' parent irreps, and each next "
+                   r"copy is orthogonal to those before."))
 
 REALITY = {1: "real", -1: "pseudoreal", 0: "complex"}
 
@@ -1049,15 +1058,31 @@ def hermann_mauguin(s, barred=None):
     return re.sub(r"-(\d+)", lambda m: bar(m.group(1)), t)
 
 
-def hm_barred(D):
-    """The axis order under the bar of the record's Hermann--Mauguin symbol when a 2 or a 3
-    follows it: 2N for D_Nd with N even (-42m), 4 for T_d (-43m); None otherwise."""
-    if D.name == "Td":
+def hm_barred(stem):
+    """The axis order under the bar of the Hermann--Mauguin symbol of the record `stem` of
+    Rotation when a 2 or a 3 follows it: 2N for D_Nd with N even (-42m), 4 for T_d (-43m); None
+    otherwise."""
+    if stem == "Td":
         return "4"
-    family = D.rec["group"].get("family")
-    if isinstance(family, dict) and family.get("name") == "Dnd" and family["N"] % 2 == 0:
-        return str(2 * family["N"])
+    family = names.family_of(stem)
+    if family and family[0] == "Dnd" and family[1] % 2 == 0:
+        return str(2 * family[1])
     return None
+
+
+def hm_tex(stem, v):
+    r"""A record's Hermann--Mauguin name as a formula in both volumes (CONVENTIONS.pdf, sections
+    2.3 and 20.4): the symbol of the record `stem` of Rotation (-43m -> \hmname{\bar{4}3m}); in
+    Double, the mark \dmark before the symbol of the covered group `stem` for a preimage
+    (^d-43m -> \dmark\hmname{\bar{4}3m}), and the symbol with the mark of the second class for a
+    section.  The bar covers the axis order of a D_Nd, N even, or of T_d (hm_barred)."""
+    double = v.startswith("^d")
+    body = v[2:] if double else v
+    second = not double and body.endswith("b")
+    body = body[:-1] if second else body
+    return "$%s\\hmname{%s}%s$" % (r"\dmark" if double else "",
+                                    hermann_mauguin(body, hm_barred(stem)),
+                                    r"\secondclass" if second else "")
 
 
 def subgroup_label(s):
@@ -1090,7 +1115,31 @@ def with_common(conventions):
 
 # ---------------------------------------------------------------- the document
 class Document:
-    """The lines of one section and the irrep displays of the record."""
+    """The lines of one section and the irrep displays of the record.  A document of another
+    catalogue extends it (double_latex.Doc, double_continuous.Doc): its catalogue, the group of
+    Rotation it covers, and the methods below that give what the sections take from the catalogue's
+    own records."""
+
+    catalogue = "rotation"
+    # the group of Rotation that a document of Double covers; a document of Rotation covers none
+    cover = None
+    preimage = False
+
+    def rotation_group(self):
+        """The block group of the record of Rotation that the document is about or covers."""
+        return self.rec["group"]
+
+    def determinant_irrep(self):
+        """The id of the irrep that is the determinant character."""
+        return self.rec["group"]["determinant_character"]
+
+    def irrep_kernel(self, ir):
+        """The cell kernel of an irrep in the table of irreps (levels.irrep_kernel)."""
+        return levels.irrep_kernel(self, ir)
+
+    def irrep_image(self, ir):
+        """The cell image of an irrep in the table of irreps (levels.irrep_image)."""
+        return levels.irrep_image(self, ir)
 
     def __init__(self, rec, lattice, name=None):
         self.rec = rec
@@ -1136,12 +1185,12 @@ class Document:
     def w(self, line=""):
         self.lines.append(line)
 
-    def part(self, title):
-        self.w(r"\partbox{%s}" % title)
-
     def section(self, title, conventions):
         """A section with its label s:<key>, then its Conventions line; the document's first one
-        also cites section 0.1, the common notation."""
+        also cites section 0.1, the common notation.  `conventions` is the sections cited, or a
+        dict of them by catalogue, where the catalogues' conventions differ."""
+        if isinstance(conventions, dict):
+            conventions = conventions[self.catalogue]
         self.w(r"\section{%s}\label{s:%s}" % (title, self.key))
         if not self.cites_common:
             conventions = with_common(conventions)
@@ -1299,6 +1348,191 @@ class Document:
             return r"\comp{%s}" % self.component[cid]
         return r"\cls{%s}" % self.point.get(cid, mathify(cid))
 
+    # The group
+    # The table of Symmetry operations: an element's axis and matrix share its row when their
+    # estimated width stays within this many characters; a preimage of Double lists its canonical
+    # lifts alone (double_latex.UNBARRED_ONLY), and a group of Rotation has no lifts.
+    element_row_max_width = ELEMENT_ROW_MAX_WIDTH
+    unbarred_only = False
+
+    def group_fields(self):
+        """The fields of the record's group block as it stores them, the rows of the table of
+        Names and structure."""
+        return self.rec["group"]
+
+    def identification_rows(self):
+        """The rows of the table of Names and structure by theme, a rule between two themes."""
+        return IDENTIFICATION_ROWS
+
+    def identification_cell(self, k, v):
+        """The cell of the field k, of value v, in the table of Names and structure; None for a
+        field without a row."""
+        return identification_cell(self, k, v)
+
+    def element_tex(self, sym):
+        """An element's symbol or its class label, as the record stores it, in math mode."""
+        return mathify(sym)
+
+    def element_matrices(self, items):
+        """The matrices of the elements in the table of Symmetry operations, and the estimated
+        width of each in characters: P(g), by the widest entry of each of its columns."""
+        return ([self.matrix(it["matrix"]) for it in items],
+                [sum(max(visible(self.val(row[j])) for row in it["matrix"]) for j in range(3))
+                 for it in items])
+
+    def component_cells(self, c):
+        """The class-space component c in the table of Class space, in math: its display, its
+        element at the angle and the matrix P of that element."""
+        return r"\comp{%s}" % c["display"], componentwise(self, c["id"]), component_matrix(c)
+
+    def domain_record(self):
+        """The record of Rotation whose fundamental domain the document shows: its own."""
+        return self.rec
+
+    # Representations
+    # The rows of the tables of the irreps' matrices: every element (a preimage of Double lists
+    # the canonical lifts alone, double_latex.UNBARRED_ONLY).  The documents of Double also give
+    # what only their paths of the sections call: jket (double_latex.Doc); linked, stated,
+    # record_of, component_display, chi_tex and frac_tex (double_continuous.Doc).
+    def matrix_form(self, mats):
+        """(cells, width, golden) of a list of matrices, as double_latex.matrix_form gives them:
+        cells(gap) the matrices as cells, here as written, so no common factor (golden false) and
+        no estimate of the width."""
+        return (lambda gap: [self.matrix(M, gap) for M in mats]), None, False
+
+    def half_frac(self, two):
+        """A number given by its double, as the catalogue writes it (Double's half-integers:
+        double_latex.half_frac): here an integer."""
+        if two % 2:
+            raise ValueError("%s: the half-integer %d/2 in a document of Rotation"
+                             % (self.name, two))
+        return "%d" % (two // 2)
+
+    def label_tex(self, label):
+        """A label of an irrep or an irrep family of the record in math mode (irrep_label)."""
+        return irrep_label(label)
+
+    def component_element(self, cid):
+        """The element of a class-space component, as a function of its angle (componentwise)."""
+        return componentwise(self, cid)
+
+    def one_dimensional_cell(self, t, cid):
+        """A one-dimensional character on a class-space component, in the component's angle
+        (one_dimensional_value)."""
+        return one_dimensional_value(self, t, angle(cid))
+
+    def rotation_kernel(self, s):
+        """The cell of a kernel of a family of a group of Rotation (family_cases): the subgroup,
+        linked."""
+        return linked_group(s)
+
+    def rotation_image(self, s):
+        """The cell of an image of a family of a group of Rotation (family_cases)."""
+        return linked_group(s)
+
+    # Subgroups
+    # The keys of a subgroup's symbol and of its record in the entries of the catalogue's records,
+    # and the layout of the diagram of a subgroup lattice (hasse.tikz).
+    symbol_key = "schoenflies"
+    class_key = "o3_class"
+    lattice_aspect = None
+    lattice_both = False
+
+    def lattice_view(self):
+        """The subgroup lattice as the sections of Subgroups read it, each node's symbol
+        o3_schoenflies and its record o3_class."""
+        return self.lattice
+
+    def subgroup_tex(self, symbol):
+        """A group symbol of the catalogue in math mode."""
+        return grp(symbol)
+
+    def subgroup_link(self, symbol, record=None):
+        """A group symbol of the catalogue, linked to the document of its record (linked_group)."""
+        return linked_group(symbol, record)
+
+    def subgroup_other_names(self, symbol, record):
+        """The other names that the row of a subgroup shows: those of its O(3) class."""
+        return other_names(symbol, record)
+
+    def other_name_link(self, symbol, record):
+        """One of those names, linked (class_name)."""
+        return class_name(symbol, record)
+
+    def subgroup_rank(self, record):
+        """The place of a class of subgroups among those of one order (type_rank)."""
+        return type_rank(record)
+
+    def subgroup_record(self, catalogue, stem):
+        """The record `stem` of a catalogue, a subgroup's: in Rotation, of this catalogue."""
+        return serialize.read_json(names.record_path(stem))
+
+    def subgroup_irreps(self, record):
+        """{irrep id: display} of the record of a subgroup, whose irreps the cells of the descent
+        of symmetry name (subgroup_displays)."""
+        return subgroup_displays(self, record)
+
+    def vector_record(self):
+        """The record of Rotation whose families the descent of a continuous group restricts: the
+        document's own."""
+        return self.rec
+
+    def descent_column(self, sub):
+        """The record and the symbol in math mode that head the column of a subgroup `sub` of the
+        record of Rotation in the descent of a continuous group: the subgroup's own."""
+        return sub["o3_class"], grp(sub["schoenflies"])
+
+    def setting_symbol(self, symbol):
+        """A generator of H in the row images of the descent (mathify)."""
+        return mathify(symbol)
+
+    def setting_point(self, comp, turn):
+        """The image of a generator in the row images, at a point of the class space (point_tex)."""
+        return point_tex(comp, turn, inline=True)
+
+    def conjugation_group(self):
+        """The group of the conjugations that relate the subgroups and their settings, in a
+        formula."""
+        return r"\grp{O(3)}"
+
+    def conjugation_text(self):
+        """That group in running text."""
+        return O3_LINK
+
+    def subgroup_diagram(self):
+        """The diagram of the continuous closed subgroups: the lattice of the groups (the
+        document's lattice, point_groups.json), the places of the groups in it (cm) and their
+        symbols in math mode."""
+        return self.lattice, CONTINUOUS_DIAGRAM, lambda g: grp(names.schoenflies_of(g))
+
+    def family_label(self, label):
+        """A label of an irrep family, or of an irrep of a rule, in math mode (irrep_label)."""
+        return irrep_label(label)
+
+    # Angular momentum
+    # The parent group, whose irreps D^(J,p) restrict to G in the section Subduction from O(3)
+    # (from Pin-(3) in Double): the key of the record's restriction, the group in the heading and
+    # in its PDF bookmark, and the clauses of parent_irrep on J and on p.
+    parent_group = ("subduction_o3", r"\grp{O(3)}", "O(3)", "",
+                    r"$p$ ($\ptag{g}$ for $p = +1$, $\ptag{u}$ for $p = -1$)")
+
+    def momentum(self, value):
+        """An angular momentum J or a projection m as the record holds it (momentum_of), in a
+        formula: the records of Rotation hold J and m, those of Double 2J and 2m (DL.Doc)."""
+        return "%s" % value
+
+    def momentum_text(self, value):
+        """The same in plain text, for the estimated width of a cell."""
+        return "%s" % value
+
+    def momentum_cell(self, value):
+        """The same as a cell of a table: an integer J is set as text."""
+        return "%s" % value
+
+    def plain_label(self, label):
+        """The typeset label of a plain label of the record's irreps or families (irrep_label)."""
+        return irrep_label(label)
+
 
 def negate(x):
     """The exact value -x."""
@@ -1414,20 +1648,28 @@ def product_form_cell(D, pf):
             return r"\,\nconj{%d}" % n if n > 1 else ""
         return r"\,\nconj{\infty}"
 
+    return product_form_lines(
+        [(factor(r["H"]) + factor_letter(r["H"]), factor(r["K"]) + factor_letter(r["K"]) + ids(r))
+         for r in pf["direct"]],
+        [(factor(r["H"]) + factor_letter(r["H"]),
+          factor(r["K"]) + factor_letter(r["K"]) + ids(r) + conjugates(r))
+         for r in pf["semidirect"]])
+
+
+def product_form_lines(direct, semidirect=()):
+    r"""The row product_form of Names and structure in every catalogue, a line for each kind of
+    form: "direct: H x K; ...", "semidirect: H n K; ...", or indecomposable.  `direct` and
+    `semidirect` are the pairs of factors in math, each with its marks."""
     lines = []
-    if pf["direct"]:
-        lines.append(r"direct: " + "; ".join(
-            r"%s%s${}\dirprod{}$%s%s%s" % (factor(r["H"]), factor_letter(r["H"]), factor(r["K"]),
-                                          factor_letter(r["K"]), ids(r))
-            for r in pf["direct"]))
-    if pf["semidirect"]:
-        lines.append(r"semidirect: " + "; ".join(
-            r"%s%s${}\sdprod{}$%s%s%s%s" % (factor(r["H"]), factor_letter(r["H"]), factor(r["K"]),
-                                             factor_letter(r["K"]), ids(r), conjugates(r))
-            for r in pf["semidirect"]))
-    if not lines:
-        lines.append(r"indecomposable (no form with both factors non-trivial)")
-    return lines
+    if direct:
+        lines.append("direct: " + "; ".join(r"%s${}\dirprod{}$%s" % hk for hk in direct))
+    if semidirect:
+        lines.append("semidirect: " + "; ".join(r"%s${}\sdprod{}$%s" % hk for hk in semidirect))
+    return lines or ["indecomposable (no form with both factors non-trivial)"]
+
+
+# The cell of the field hk of Names and structure in every catalogue: H and K, linked.
+HK_CELL = r"\texttt{H}${} = {}$%s, \texttt{K}${} = {}$%s"
 
 
 OMITTED = ("not-defined-for-family", "continuous-group", "not-in-source")
@@ -1480,6 +1722,16 @@ def linked_group(s, target=None):
     return sym
 
 
+# The documents of Rotation from those of Double (double/data/pdf/), and SU(2) in running text.
+ROTATION_PDF = "../../../rotation/data/pdf/%s.pdf"
+SU2 = r"\grp{SU(2)}"
+
+
+def rotation_linked(name):
+    """A point group of Rotation, linked to its document there from a document of Double."""
+    return r"\href{%s}{$%s$}" % (ROTATION_PDF % name, grp(names.schoenflies_of(name)))
+
+
 def class_name(s, record):
     """A name of the O(3) class of the record `record`, linked to the document of the record of
     that name, or to that of `record` when no record has it (S_inf)."""
@@ -1501,14 +1753,6 @@ def other_names(symbol, record):
         if x != symbol and x not in out:
             out.append(x)
     return out
-
-
-def class_names(symbol, record, letter=""):
-    r"""A subgroup's symbol linked to the record, with its gray letter, then the other names of its
-    O(3) class joined by \cong, each linked as class_name links it: C_s \cong C_{1v} \cong
-    C_{1h}, C_{2v} \cong D_{1h}, C_{\infty h} \cong S_\infty."""
-    return r" $\samecls$ ".join([linked_group(symbol, record) + letter]
-                             + [class_name(x, record) for x in other_names(symbol, record)])
 
 
 def identification_cell(D, k, v):
@@ -1549,14 +1793,13 @@ def identification_cell(D, k, v):
     if k == "limit_of":
         return r"$%s$, $N\to\infty$" % family_symbol(v["family"])
     if k == "hk" and isinstance(v, dict) and "H" in v:
-        return r"\texttt{H}${} = {}$%s, \texttt{K}${} = {}$%s" % (linked_group(v["H"]),
-                                                                  linked_group(v["K"]))
+        return HK_CELL % (linked_group(v["H"]), linked_group(v["K"]))
     if k == "product_form":
         return product_form_cell(D, v)
     if k == "abstract_type":
         return "$%s$" % abstract_type(v)
     if k == "hermann_mauguin":
-        return r"$\hmname{%s}$" % hermann_mauguin(v, hm_barred(D))
+        return hm_tex(D.name, v)
     if k in ("ihrig_golubitsky", "olive"):
         return r"$\%s{%s}$" % ("igname" if k == "ihrig_golubitsky" else "olivename",
                                subgroup_label(v))
@@ -1600,43 +1843,59 @@ IDENTIFICATION_UNSET = ("schoenflies_unicode", "determinant_character", "allowed
 
 
 def section_identification(D):
-    g = D.rec["group"]
-    D.part("The group")
-    D.section("Names and structure", "sections 2, 3 and 12")
-    rows = [k for theme in IDENTIFICATION_ROWS for k in theme]
+    """The table of the record's group block, a rule between two themes, then the sentences that
+    read it: in a group of Rotation the fields it glosses (product_form_legend), in a group of
+    Double the group it covers or is a section over and the fields read in Pin-(3)
+    (reading_paragraph); then the notes on the marks of product_form (product_form_notes)."""
+    g = D.group_fields()
+    # a continuous group of Double: its order and GAP identifier are undefined (section 29)
+    continuous = omitted(g.get("order"))
+    D.section("Names and structure", {"rotation": "sections 2, 3 and 12",
+                                      "double": "sections 2, 20 and %d" % (29 if continuous
+                                                                           else 28)})
+    themes = D.identification_rows()
+    rows = [k for theme in themes for k in theme]
     stray = set(g) - set(rows) - set(IDENTIFICATION_UNSET)
     if stray:
         raise ValueError("%s: no row for the group fields %s" % (D.name, ", ".join(sorted(stray))))
-    cells = {k: identification_cell(D, k, g[k]) for k in rows
-             if k in g and not omitted(g[k]) and g[k] != []}
-    lines = cells["product_form"]
-    wide = max(visible(line) for line in lines) > TABLE_MAX_WIDTH - 24
-    if wide:
+    cells = {}
+    for k in rows:
+        if k in g and not omitted(g[k]) and g[k] != []:
+            cell = D.identification_cell(k, g[k])
+            if cell is not None:
+                cells[k] = cell
+    # the product forms one per line, in a tabular, or in a column of the free width when one is
+    # too wide; a cell of one line, a continuous group of Double's, as it is
+    lines = cells["product_form"] if isinstance(cells.get("product_form"), list) else []
+    marks = ((["index.family.N"] if "family" in cells or "limit_of" in cells else [])
+             + [i for i, m in (("mark.conjugates", r"\nconj{"), ("mark.classes", r"\metclasses{"),
+                               ("mark.letter", r"\clsletter{")) if m in " ".join(lines)])
+    if lines and max(visible(line) for line in lines) > TABLE_MAX_WIDTH - 24:
         cells["product_form"] = r"\newline ".join(lines)
-        D.w(D.define(*(["index.family.N"] if "family" in cells or "limit_of" in cells else [])
-                     + [i for i, m in (("mark.conjugates", r"\nconj{"),
-                                       ("mark.classes", r"\metclasses{"),
-                                       ("mark.letter", r"\clsletter{"))
-                        if m in cells["product_form"]])
+        D.w(D.define(*marks)
             + r"{\small%s\begin{longtable}{@{}l>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}"
             r"\toprule" % fill_width([[code(k), cells[k]] for k in cells], 1))
     else:
-        cells["product_form"] = r"\begin{tabular}[t]{@{}l@{}}%s\end{tabular}" % r"\\".join(lines)
-        D.w(D.define(*(["index.family.N"] if "family" in cells or "limit_of" in cells else [])
-                     + [i for i, m in (("mark.conjugates", r"\nconj{"),
-                                       ("mark.classes", r"\metclasses{"),
-                                       ("mark.letter", r"\clsletter{"))
-                        if m in cells["product_form"]])
-            + r"{\small\begin{longtable}{@{}ll@{}}\toprule")
-    themes = [[k for k in theme if k in cells] for theme in IDENTIFICATION_ROWS]
-    for i, theme in enumerate(t for t in themes if t):
+        if lines:
+            cells["product_form"] = r"\begin{tabular}[t]{@{}l@{}}%s\end{tabular}" % r"\\".join(
+                lines)
+        D.w(D.define(*marks) + r"{\small\begin{longtable}{@{}ll@{}}\toprule")
+    shown = [[k for k in theme if k in cells] for theme in themes]
+    for i, theme in enumerate(t for t in shown if t):
         if i:
             D.w(r"\midrule")
         for k in theme:
             D.w(r"%s & %s\\" % (code(k), cells[k]))
     D.w(r"\bottomrule\end{longtable}}")
-    product_form_legend(D, g["product_form"], " ".join(lines), "hk" in cells,
-                        "lattices" in cells)
+    if D.cover:
+        reading_paragraph(D, cells, continuous)
+    else:
+        product_form_legend(D, "hk" in cells, "lattices" in cells)
+    forms = g.get("product_form") or {}
+    notes = (product_form_notes(D, forms.get("direct", []) + forms.get("semidirect", []),
+                                " ".join(lines)) if lines else "")
+    if notes:
+        D.w(notes)
 
 
 def product_form_notes(D, forms, text):
@@ -1669,16 +1928,22 @@ def product_form_notes(D, forms, text):
                     for i, (anchor, note) in enumerate(notes))
 
 
-def product_form_legend(D, pf, text, hk, lattices):
-    """The sentences that read the table, one for each field they gloss (type, hk when the table
-    has it, polar with the crystallographers' terms, lattices when the table has them, and
-    laue_class), then the notes on the marks of product_form (product_form_notes)."""
+def hk_gloss(subgroup, rotations, extra=""):
+    r"""The gloss of the field hk of Names and structure in both volumes: H, the group `subgroup`
+    isomorphic to G, and K = G \cap `rotations`, then `extra`."""
+    return (r"\texttt{hk} gives \texttt{H}, %s isomorphic to $\grp{G}$, and \texttt{K}${} = "
+            r"\grp{G} \cap %s$%s" % (subgroup, rotations, extra))
+
+
+def product_form_legend(D, hk, lattices):
+    """The sentences that read the table of a group of Rotation, one for each field they gloss
+    (type, hk when the table has it, polar with the crystallographers' terms, lattices when the
+    table has them, and laue_class)."""
     fields = [D.define("element.inversion")
               + r"The field \texttt{type} is I when $\grp{G}$ contains only rotations, II when "
                 r"$\grp{G}$ contains the inversion $\elt{i}$ and III otherwise."]
     if hk:
-        fields.append(r"The field \texttt{hk} gives \texttt{H}, the rotation group isomorphic to "
-                      r"$\grp{G}$, and \texttt{K}${} = \grp{G} \cap \grp{SO(3)}$.")
+        fields.append("The field %s." % hk_gloss("the rotation group", r"\grp{SO(3)}"))
     fields.append(r"The field \texttt{polar} is yes when $\grp{G}$ fixes a nonzero vector. "
                   r"Crystallographers call a group chiral, or enantiomorphic, when its type is I, "
                   r"and centrosymmetric when it contains $\elt{i}$.")
@@ -1690,9 +1955,101 @@ def product_form_legend(D, pf, text, hk, lattices):
                   r"and $\elt{i}$%s." % (r", the symmetry of the diffraction patterns of its "
                                          r"crystals" if lattices else ""))
     D.w(" ".join(fields))
-    notes = product_form_notes(D, pf["direct"] + pf["semidirect"], text)
-    if notes:
-        D.w(notes)
+
+
+def preimage_lead(D, covered, fields):
+    """The first sentence under the table of Names and structure of a preimage of Double, finite
+    or continuous: the group, the group it covers (`covered`, as the document names it) and the
+    fields that the table leaves to the document of that group (`fields`)."""
+    # Pin-(3) itself is the double cover of O(3), not a preimage in itself
+    return (r"The group $%s$ is %s %s, whose document sets the fields of $%s$ that this table "
+            r"does not repeat (\texttt{cover\symbol{95}of}): %s."
+            % (D.sym, "the double cover of" if D.sym == D.P else r"the preimage in $%s$ of" % D.P,
+               covered, D.base, fields))
+
+
+def pin_fields(D, su2=None, hk=None, center=False):
+    """The sentences that read the fields of the table of Names and structure in Pin-(3), for the
+    finite and the continuous records of Double, in the order of the table: su2_subgroup with the
+    gloss `su2` ("" for none; None when the table has no such row), joined to normalizer and
+    centralizer, then hk with the gloss `hk` (None when the table has no row hk) and the classes
+    center and commutator_subgroup when `center`.  When both glosses are empty (2Cinfv), the three
+    glosses share one sentence.  A section's sentence says "above", which keeps it to the table
+    above, apart from the subgroup table, whose normalizers and centralizers are taken in G."""
+    taken = r"\texttt{normalizer} and \texttt{centralizer} are taken in $%s$" % D.P
+    # H as volume I glosses it: the image of x -> x, i~x (proper, improper), isomorphic to G
+    gives = hk_gloss(r"the subgroup of $%s$" % SU2, SU2, hk or "")
+    merged = su2 == "" and hk == ""
+    if su2 is None:
+        out = [r"The fields \texttt{normalizer} and \texttt{centralizer} above are taken in $%s$."
+               % D.P]
+    elif merged:
+        out = [r"The field \texttt{su2\symbol{95}subgroup} is $\grp{G} \cap %s$, %s, and %s."
+               % (SU2, taken, gives)]
+    elif D.name == "SU2":
+        # SU(2) lies in SU(2): the field is the group itself
+        out = [r"The field \texttt{su2\symbol{95}subgroup} is $\grp{G}$ itself, and %s." % taken]
+    else:
+        out = [r"The field \texttt{su2\symbol{95}subgroup} is $\grp{G} \cap %s$%s, and %s."
+               % (SU2, su2, taken)]
+    if hk is not None and not merged:
+        out.append("The field %s." % gives)
+    if center:
+        out.append(r"The fields \texttt{center} and \texttt{commutator\symbol{95}subgroup} are "
+                   r"classes of the table of section~\ref{s:subgroups}.")
+    return " ".join(out)
+
+
+def reading_paragraph(D, cells, continuous):
+    """The paragraph under the table of Names and structure of a group of Double, which reads its
+    fields in Pin-(3): the group, a preimage (finite or continuous) or a section with the renaming
+    of its spinor irreps and its table, then the fields (pin_fields)."""
+    if D.preimage:
+        lead = preimage_lead(D, rotation_linked(D.cover) if continuous else "$%s$" % D.base,
+                             "its type, names and geometry" if continuous else
+                             r"its type, family and crystal classes, from \texttt{polar} to "
+                             r"\texttt{laue\symbol{95}class}")
+    else:
+        preimage, renamed = D.section_preimage()
+        lead = (r"In this document, $\grp{G}$ is $%s$, a section over $%s$ in $%s$, which the "
+                r"covering map carries one to one onto $%s$ (CONVENTIONS.pdf, section 27). Its "
+                r"representations are those of $%s$, and its multiplicities and bases at "
+                r"half-integer $J$ are those of its preimage %s (\texttt{section\symbol{95}of}), "
+                r"with the spinor irreps "
+                r"renamed as in the table below." % (D.sym, D.base, D.P, D.base, D.base, preimage))
+    if continuous:
+        lead += " This preimage is continuous, so its order and GAP identifier are undefined."
+        fields = pin_fields(D, "", "" if "hk" in cells else None)
+    else:
+        hk = (r", with $\grp{G} = \texttt{K} \cup \elt{\lift{i}}\,(\texttt{H} \setminus "
+              r"\texttt{K})$ as sets, where $\elt{\lift{i}}$ is the lift of the inversion $-1$ "
+              r"(section~\ref{s:cover})"
+              if "hk" in cells else None)
+        fields = pin_fields(D, r", the largest subgroup of $\grp{G}$ in $%s$ (its elements of "
+                               r"parity $+1$)" % SU2 if D.preimage else None, hk, "center" in cells)
+    D.w(D.define(*([] if D.preimage else ["group.G"]),
+                 *([] if continuous else ["element.inversion"]), "group.preimage")
+        + lead + " " + fields)
+    if not D.preimage:
+        D.w(r"A spinor irrep $\Delta$ of %s restricts to an irrep of $\grp{G}$, the irrep of $%s$ "
+            r"with the same characters on the elements of $\grp{G}$ (section~\ref{s:elements}):"
+            % (preimage, D.base))
+        relabel_table(D, renamed)
+
+
+# The table that renames the spinor irreps of a section's preimage is cut into parts of at most
+# this many irreps.
+RELABEL_COLUMNS = 8
+
+
+def relabel_table(D, renamed):
+    """The spinor irreps of a section's preimage and the irreps of G they restrict to: `renamed`,
+    [(the display of a spinor irrep, the id of the irrep of G)]."""
+    for part in chunks(renamed, -(-len(renamed) // -(-len(renamed) // RELABEL_COLUMNS))):
+        D.w(r"\begin{center}\begin{tabular}{@{}%s@{}}\toprule" % ("l" * (len(part) + 1)))
+        D.w(r"$\Delta$ & %s\\\midrule" % " & ".join("$%s$" % irrep(d) for d, _ in part))
+        D.w(r"on $\grp{G}$ & %s\\" % " & ".join("$%s$" % D.irrep_id(i) for _, i in part))
+        D.w(r"\bottomrule\end{tabular}\end{center}")
 
 
 # ---------------------------------------------------------------- 2 Symmetry operations
@@ -1717,75 +2074,154 @@ FRAME = {
 }
 
 
+def product_display(matrix, a, b):
+    r"""The display of the product of the elements a and b by their matrices `matrix`, first a,
+    then b, in Symmetry operations: P(g) P(h) = P(gh) in Rotation, M(k) M(k') = M(kk') in
+    Double."""
+    return (r"%s(%s)\,%s(%s) = %s(%s%s),\qquad %s%s = \text{first } %s\text{, then } %s."
+            % (matrix, a, matrix, b, matrix, a, b, a, b, a, b))
+
+
 def section_elements(D):
+    """The elements of a finite group and their table.  In Rotation: the matrices P(g), the
+    frame of an exceptional group, the axis and the angle of each element.  In Double: the
+    elements (g, b) of a preimage or the lifts (g, b(g)) of a section, their matrices M(k), the
+    lift of the rotation part and its sign s, and in a preimage the barred partners that the table
+    leaves out.  Both: the Euler angles, the row legend and the table, with the column s of a
+    lift's sign and its angle omega where the elements are lifts."""
     el = D.rec.get("elements")
     if not el:
         return
-    D.section("Symmetry operations", "sections 4 and 5.1")
-    D.w(D.define("element.g", "matrix.element", "vector.point", "vector.coordinates",
-                 "element.h")
-        + r"An element $g$ is the matrix $P(g)$ that moves the point $\pointr = (x, y, z)$, a row, "
-          r"to $\pointr\,P(g)$, and products compose as")
-    D.equation("product", r"P(g)\,P(h) = P(gh),\qquad gh = \text{first } g\text{, then } h.")
-    letter = D.rec["group"]["schoenflies"][0] if D.name in names.EXCEPTIONAL else None
-    D.w(r"On column vectors its matrix is the transpose $P(g)^{\top}$, and products compose in the "
-        r"reverse order."
-        + (" " + D.define("vector.pole", *(["constant.golden"] if letter == "I" else []))
-           + FRAME[letter] if letter else ""))
-    D.w(D.define("element.rotation.axis", "angle.omega", "vector.axis")
-        + r"A proper element is the rotation $\elt{R_{\vv}}(\omega)$ by the angle $\omega$ about "
-          r"the axis $\vv$, counterclockwise as seen from the tip of $\vv$. "
-        + D.define("element.rotoreflection.axis", "element.mirror.axis")
-        + r"An improper element is the rotoreflection")
-    D.equation("axis", r"\elt{S_{\vv}}(\omega) = \elt{\sigma_{\vv}}\, \elt{R_{\vv}}(\omega),")
+    D.section("Symmetry operations",
+              {"rotation": "sections 4 and 5.1", "double": "sections 4, 5.1 and 21"})
+    # some element has an axis, the pole that its sentence defines
+    axial = any(it["pole"].get("kind") != "none" for it in el["items"])
+    if D.cover:
+        first = D.define("index.element", "element.g")
+        if D.preimage:
+            lift = (r"Element $k$ of $\grp{G}$ is the pair $(g, b)$ of the element $g$ of %s of "
+                    r"index $\lfloor k/2\rfloor$ in its document and "
+                    r"$b = k - 2\lfloor k/2\rfloor$. "
+                    r"The pair $(g, 0)$ is the canonical lift of $g$, and $(g, 1)$ is its barred "
+                    r"partner (section~\ref{s:cover}). From section~\ref{s:irreps} on, $g$ stands "
+                    r"for the element $(g, b)$ of $\grp{G}$, and $\det g$ is its parity."
+                    % rotation_linked(D.cover))
+        else:
+            bits = ", ".join(str(b) for b in el["lift_bits"])
+            lift = (D.define("function.section")
+                    + r"Element $k$ of $\grp{G}$ is the lift $(g, b(g))$ of the element $g$ of %s "
+                      r"of index $k$ in its document. This lift is the pair "
+                      r"$((-1)^{b(g)}\,U(g), \det g)$, where $U(g)$ is the canonical lift of $g$ "
+                      r"to $%s$ (CONVENTIONS.pdf, section 21.1). The bits $b(g) = %s$, in the "
+                      r"order of $k$, are those of the section over $%s$ of least bits in its "
+                      r"class (CONVENTIONS.pdf, section 27). From section~\ref{s:irreps} on, $g$ "
+                      r"stands for that lift." % (rotation_linked(D.cover), SU2, bits, D.base))
+        D.w(first + lift + " " + D.define("matrix.element.pin", "matrix.element")
+            + r"The matrix $M(k)$ of the element is the transpose of its $%s$ part "
+              r"$(-1)^{%s}\,U(g)$, and the matrices compose as the matrices $P(g)$ of the "
+              r"elements of $%s$:" % (SU2, D.bits, D.base))
+        D.equation("mprod", product_display("M", "k", "k'"))
+        lead = (D.define("angle.omega", "vector.axis", *(["vector.pole"] if axial else []))
+                + r"That part is the lift $\lift{R}_{\vv}(\omega)$, $0 \le \omega < 4\pi$, of the "
+                  r"rotation part $(\det g)\,g$ of the element, about the axis $\vv$ of $g$ "
+                  r"(a dash for none, CONVENTIONS.pdf, section 21.1). ")
+    else:
+        D.w(D.define("element.g", "matrix.element", "vector.point", "vector.coordinates",
+                     "element.h")
+            + r"An element $g$ is the matrix $P(g)$ that moves the point $\pointr = (x, y, z)$, a "
+              r"row, to $\pointr\,P(g)$, and products compose as")
+        D.equation("product", product_display("P", "g", "h"))
+        letter = D.rec["group"]["schoenflies"][0] if D.name in names.EXCEPTIONAL else None
+        D.w(r"On column vectors its matrix is the transpose $P(g)^{\top}$, and products compose in "
+            r"the reverse order."
+            + (" " + D.define("vector.pole", *(["constant.golden"] if letter == "I" else []))
+               + FRAME[letter] if letter else ""))
+        D.w(D.define("element.rotation.axis", "angle.omega", "vector.axis")
+            + r"A proper element is the rotation $\elt{R_{\vv}}(\omega)$ by the angle $\omega$ "
+              r"about the axis $\vv$, counterclockwise as seen from the tip of $\vv$. "
+            + D.define("element.rotoreflection.axis", "element.mirror.axis")
+            + r"An improper element is the rotoreflection")
+        D.equation("axis", r"\elt{S_{\vv}}(\omega) = \elt{\sigma_{\vv}}\, \elt{R_{\vv}}(\omega),")
+        lead = (r"where $\elt{\sigma_{\vv}}$ is the reflection in the plane normal to $\vv$ (so "
+                r"$\omega = 0$ is that mirror). "
+                + (D.define("vector.pole") if axial else "")
+                + r"The axis $\vv$ is an unnormalized direction, and $\elt{E}$ and $\elt{i}$ have "
+                  r"none (a dash). ")
     irrational = any("turn" not in it["euler"][k] for it in el["items"] if it.get("euler")
                      for k in ("alpha", "beta", "gamma"))
-    D.w(r"where $\elt{\sigma_{\vv}}$ is the reflection in the plane normal to $\vv$ (so "
-        r"$\omega = 0$ is that mirror). "
-        + (D.define("vector.pole") if any(it["pole"].get("kind") != "none" for it in el["items"])
-           else "")
-        + r"The axis $\vv$ is an unnormalized direction, and $\elt{E}$ and $\elt{i}$ have none (a "
-          r"dash). "
-        + D.define("angle.euler.alpha", "angle.euler.beta", "angle.euler.gamma")
-        + r"The Euler angles of the rotation part $(\det g)\,g$ are $(\alpha,\beta,\gamma)$: by "
-          r"$\alpha$ about $z$, then by $\beta$ about $y$, then by $\gamma$ about $z$ (fixed "
-          r"axes). "
-        + (D.define("mark.irrational") + r"An en dash marks an Euler angle that is not a rational "
-           r"multiple of $\pi$. " if irrational else "")
-        + D.define("index.element", "index.element.inverse", "head.sym", "head.ord")
-        + r"A row gives the index $k$ of $g$, its symbol (sym), its order (ord) and the index "
-          r"$k^{-1}$ of $g^{-1}$. "
+    # the coordinates, defined with the point in Rotation, first used here in Double
+    text = (lead + D.define("angle.euler.alpha", "angle.euler.beta", "angle.euler.gamma",
+                            "vector.coordinates")
+            + r"The Euler angles of the rotation part%s are $(\alpha,\beta,\gamma)$: by $\alpha$ "
+              r"about $z$, then by $\beta$ about $y$, then by $\gamma$ about $z$ (fixed axes). "
+            % ("" if D.cover else r" $(\det g)\,g$")
+            + (D.define("mark.irrational") + r"An en dash marks an Euler angle that is not a "
+               r"rational multiple of $\pi$. " if irrational else ""))
+    if D.cover:
+        D.w(text + D.define("local.euler.sign") + r"The sign $s$ of the lift satisfies")
+        D.equation("euler", r"(-1)^{%s}\,U(g) = s\,\expe^{-\iunit\gamma\pauli{z}/2}\,"
+                            r"\expe^{-\iunit\beta\pauli{y}/2}\,\expe^{-\iunit\alpha\pauli{z}/2}"
+                   % D.bits + ".")
+        text = ""
+    # Double names the element g of the covered group, and an element of G by its index k
+    element = "the element" if D.cover else "$g$"
+    D.w(text + D.define("index.element", "index.element.inverse", "head.sym", "head.ord")
+        # a section's table sets no bar, and no section of its document defines barred partners
+        + r"A row gives the index $k$ of %s, its symbol (sym%s), its order (ord) and the index "
+          r"$k^{-1}$ of %s. " % (element, ", barred for a barred partner" if D.preimage else "",
+                                 "its inverse" if D.cover else "$g^{-1}$")
         + D.define("head.class")
-        + r"The class of $g$ is set with its size before its symbol (section~\ref{s:classes}).")
+        + r"The class of %s is set with its size before its symbol (section~\ref{s:classes})."
+        % element)
+    unbarred = D.preimage and D.unbarred_only
+    if unbarred:
+        its = el["items"]
+        merged = any(its[k]["class_id"] == its[k + 1]["class_id"] for k in range(0, len(its), 2))
+        # where two lifts are conjugate (merged), the class item keeps its condition and ends its
+        # sentence, and the rest of the list follows in a sentence of its own
+        D.w(r"The table lists the canonical lifts $(g, 0)$, of even $k$. The barred partner "
+            r"$(g, 1) = \elt{\barred{E}}\,(g, 0)$, of index $k + 1$, has the barred symbol and "
+            r"class, "
+            + (r"or the class of $(g, 0)$ when the two lifts are conjugate "
+               r"(section~\ref{s:classes}). It has " if merged else "")
+            + r"the same $\det$, $(\alpha,\beta,\gamma)$ and axis, $\omega + 2\pi$ modulo $4\pi$, "
+              r"the sign $-s$ and the matrix $-M(k)$. Its order and inverse "
+              r"(\texttt{elements.items}) are read from $\omega + 2\pi$ and the multiplication "
+              r"table.")
     D.w(CONSTANTS)
-    items = el["items"]
-    wide = 0
-    for it in items:
-        axis = sum(visible(D.val(c)) + 1 for c in it["pole"].get("cartesian", []))
-        cols = [max(visible(D.val(row[j])) for row in it["matrix"]) for j in range(3)]
-        wide = max(wide, axis + sum(cols) + 4)
-    one_row = wide <= ELEMENT_ROW_MAX_WIDTH
+    items = [it for it in el["items"] if not (unbarred and it["bar"])]
+    cells, widths = D.element_matrices(items)
+    axes = [sum(visible(D.val(c)) + 1 for c in it["pole"].get("cartesian", [])) for it in items]
+    one_row = max(a + w for a, w in zip(axes, widths)) + 4 <= D.element_row_max_width
+    # the elements are lifts (Double): the column s of the sign of the lift, and its angle omega
+    lifted = all("su2_turn" in it for it in items)
+    columns = "rlllrrl" + ("r" if lifted else "") + "l"
+    matrix = "M(k)" if D.cover else "P"
     D.w(r"{\small\setlength{\tabcolsep}{4pt}")
-    head = (r"$k$ & sym & class & $\det$ & ord & $k^{-1}$ & $(\alpha,\beta,\gamma)$ & $\omega$")
+    head = (r"$k$ & sym & class & $\det$ & ord & $k^{-1}$ & $(\alpha,\beta,\gamma)$%s & $\omega$"
+            % (" & $s$" if lifted else ""))
     if one_row:
-        D.w(r"\begin{longtable}{@{}rlllrrlll l@{}}\toprule")
-        D.w(head + r" & $\vv$ & $P$\\\midrule\endhead")
+        D.w(r"\begin{longtable}{@{}%s%s@{}}\toprule" % (columns, "ll" if D.cover else "l l"))
+        D.w(head + r" & $\vv$ & $%s$\\\midrule\endhead" % matrix)
     else:
-        D.w(r"\begin{longtable}{@{}rlllrrll@{}}\toprule")
+        D.w(r"\begin{longtable}{@{}%s@{}}\toprule" % columns)
         D.w(head + r"\\")
-        D.w(r"\multicolumn{8}{@{}l@{}}{\quad $\vv$;\enspace $P$}\\\midrule\endhead")
+        D.w(r"\multicolumn{%d}{@{}l@{}}{\quad $\vv$%s$%s$}\\\midrule\endhead"
+            % (len(columns), r"\qquad " if D.cover else r";\enspace ", matrix))
     for i, it in enumerate(items):
-        row = r"%d & $\cls{%s}$ & $\cls{%s}$ & $%+d$ & %d & %d & %s & $%s$" % (
-            it["index"], mathify(it["symbol"]), mathify(it["class_label"]), it["det"],
-            it["order"], it["inverse"], euler(it["euler"]) if it.get("euler") else "---",
-            pi_multiple(it["angle"]))
+        row = r"%d & $\cls{%s}$ & $\cls{%s}$ & $%+d$ & %d & %d & %s%s & $%s$" % (
+            it["index"], D.element_tex(it["symbol"]), D.element_tex(it["class_label"]),
+            it["det"], it["order"], it["inverse"],
+            euler(it["euler"]) if it.get("euler") else "---",
+            r" & $%+d$" % it["euler_sign"] if lifted else "",
+            pi_multiple(it["su2_turn"] if lifted else it["angle"]))
         if one_row:
-            D.w(r"%s & %s & %s%s" % (row, D.vector(it["pole"]), D.matrix(it["matrix"]),
+            D.w(r"%s & %s & %s%s" % (row, D.vector(it["pole"]), cells[i],
                                      row_end(i, len(items))))
         else:
             D.w(row + r"\\*")
-            D.w(r"\multicolumn{8}{@{}l@{}}{\quad %s;\enspace %s}\\\addlinespace[3pt]"
-                % (D.vector(it["pole"]), D.matrix(it["matrix"])))
+            D.w(r"\multicolumn{%d}{@{}l@{}}{\quad %s;\enspace %s}\\\addlinespace[3pt]"
+                % (len(columns), D.vector(it["pole"]), cells[i]))
     D.w(r"\bottomrule\end{longtable}}")
 
 
@@ -1800,23 +2236,29 @@ def multiplication_lead(n, row, column, fits):
 
 
 def section_multiplication(D):
+    """The table of the products of a finite group by the indices of its elements, g and h in
+    Rotation, k and k' in Double; a section of Double has none, its record holding no table (its
+    products are those of its image)."""
     el = D.rec.get("elements")
-    if not el:
+    if not el or "multiplication_table" not in el:
         return
     n = el["count"]
-    D.section("Multiplication table", "section 4.1")
+    D.section("Multiplication table",
+              {"rotation": "section 4.1", "double": "sections 4.1 and 21"})
+    row, column = ("k", "k'") if D.cover else ("g", "h")
     digits = len(str(n - 1))
     fonts = [f for f, size, w in MULTIPLICATION_FONTS
              if (n + 1) * (digits * w + 0.2 * size) + 12 <= TEXT_WIDTH]
-    D.w(multiplication_lead(n, "g", "h", bool(fonts)))
+    D.w(multiplication_lead(n, row, column, bool(fonts)))
     if fonts:
         D.w(r"{\%s\setlength{\tabcolsep}{0.1em}"
             r"\setlength{\LTleft}{-%gpt plus 1fill}\setlength{\LTright}{-%gpt plus 1fill}"
             r"\begin{longtable}{@{}r|%s@{}}\toprule" % (fonts[0], TIGHT_MARGIN, TIGHT_MARGIN,
                                                       "r" * n))
-        D.w(r"$gh$ & " + " & ".join(str(j) for j in range(n)) + r"\\\midrule\endhead")
-        for i, row in enumerate(el["multiplication_table"]):
-            D.w(r"%d & %s\\" % (i, " & ".join(str(x) for x in row)))
+        D.w(r"$%s%s$ & " % (row, column) + " & ".join(str(j) for j in range(n))
+            + r"\\\midrule\endhead")
+        for i, products in enumerate(el["multiplication_table"]):
+            D.w(r"%d & %s\\" % (i, " & ".join(str(x) for x in products)))
         D.w(r"\bottomrule\end{longtable}}")
 
 
@@ -1833,24 +2275,52 @@ def class_legend(D, k, angle=""):
 
 
 def section_classes(D):
+    """The conjugacy classes of a finite group: in Double, how the classes of the covered group
+    lift (a preimage) or that they are its classes (a section); the legend, with the angle omega
+    of the lift where the classes are of lifts; then the table, the class i of an axial group of
+    Rotation on its principal axis."""
     ct = D.rec.get("character_table")
-    if not ct or "elements" not in D.rec:
+    # a finite group of Rotation holds its elements, a continuous one neither (Double's are finite)
+    if not ct or not D.cover and "elements" not in D.rec:
         return
-    D.section("Conjugacy classes", "section 5")
+    D.section("Conjugacy classes", {"rotation": "section 5", "double": "sections 5 and 22"})
+    classes = ct["classes"]
+    if D.preimage:
+        # the reference, which closed the sentence on the lifts, stays on the topic sentence
+        D.w(r"A class of $%s$ lifts to one class of $\grp{G}$ that contains both lifts of its "
+            r"elements (its size doubled, no bar) or to two classes listed next to each other "
+            r"(section~\ref{s:cover}). The two are the class of the canonical lifts $(g, 0)$ of "
+            r"these elements and that of their barred partners $(g, 1)$." % D.base)
+    elif D.cover:
+        D.w(r"The classes are those of $%s$, whose elements $g$ lift to $(g, b(g))$ "
+            r"(section~\ref{s:elements})." % D.base)
+    # the classes of lifts (Double): the column omega, the angle of the lift
+    lifted = all("su2_turn" in c for c in classes)
+    k = "k" if D.cover else "g"
     axial_i = any(c.get("axis_type") == "inversion" and c["pole"].get("kind") != "none"
-                  for c in ct["classes"])
-    D.w(class_legend(D, "g")
+                  for c in classes)
+    D.w(class_legend(D, k, r"the angle $\omega$ of the lift of the rotation part of $%s$ "
+                           r"(section~\ref{s:elements}) and " % k if lifted else "")
         + (" " + D.define("element.rotoreflection.z")
            + r"The class $\cls{i}$ has the principal axis $z$, about which $\elt{i}$ is the "
              r"rotoreflection $\elt{S_z}(\pi)$." if axial_i else ""))
     D.w(CONSTANTS)
-    D.w(r"\begin{center}\begin{tabular}{@{}lrrlll@{}}\toprule")
-    D.w(r"class & size & ord & class of $g^{-1}$ & class of $g^{2}$ & $\vv$\\\midrule")
-    for c in ct["classes"]:
-        D.w(r"$\cls{%s}$ & %d & %s & $\cls{%s}$ & $\cls{%s}$ & %s\\" % (
-            c["display"], c["size"], c["element_order"], D.class_display[c["inverse_class"]],
-            D.class_display[c["power_map"]], D.vector(c["pole"])))
-    D.w(r"\bottomrule\end{tabular}\end{center}")
+    columns = "lrrlll" + ("l" if lifted else "")
+    head = (r"class & size & ord & class of $%s^{-1}$ & class of $%s^{2}$ & %s$\vv$\\\midrule"
+            % (k, k, r"$\omega$ & " if lifted else ""))
+    # Double's in a longtable, so that the 48 classes of 2C12h and 2S24 break between sheets
+    if D.cover:
+        D.w(r"\begin{longtable}{@{}%s@{}}\toprule" % columns)
+        D.w(head + r"\endhead")
+    else:
+        D.w(r"\begin{center}\begin{tabular}{@{}%s@{}}\toprule" % columns)
+        D.w(head)
+    for c in classes:
+        D.w(r"$\cls{%s}$ & %d & %s & $\cls{%s}$ & $\cls{%s}$ & %s%s\\" % (
+            D.class_display[c["id"]], c["size"], c["element_order"],
+            D.class_display[c["inverse_class"]], D.class_display[c["power_map"]],
+            r"$%s$ & " % pi_multiple(c["su2_turn"]) if lifted else "", D.vector(c["pole"])))
+    D.w(r"\bottomrule\end{longtable}" if D.cover else r"\bottomrule\end{tabular}\end{center}")
 
 
 # ---------------------------------------------------------------- 4 Character table
@@ -1952,16 +2422,33 @@ def character_sentence(irreps, spinor=False):
                 r"two rows" if any(ir["conjugate_of"] is not None for ir in irreps) else ""))
 
 
+# A character of the form 2 cos(k pi/n) or 2 sin(k pi/n) sets about this many characters more
+# than visible() counts (a spinor character table, at \small): -2 cos(5 pi/24) is 37.9 pt wide.
+# The estimate of Double's character tables (section_character_table).
+TRIG_EXTRA = 3
+
+
+def character_width(tex):
+    """visible(tex), and TRIG_EXTRA more for each cos or sin."""
+    return visible(tex) + TRIG_EXTRA * len(re.findall(r"\\(?:cos|sin)(?![A-Za-z])", tex))
+
+
 def section_character_table(D):
+    """The characters of the irreps on the classes, in a finite document of every catalogue: a
+    table in the fewest parts that fit the line, the spinor irreps of a preimage below a rule."""
     ct = D.rec.get("character_table")
-    if not ct or "elements" not in D.rec:
+    # a record of Double that has a character table is finite; testing for its elements would
+    # note the key for the web stage
+    if not ct or not D.cover and "elements" not in D.rec:
         return
-    D.section("Character table", "sections 6 and 7")
+    D.section("Character table", {"rotation": "sections 6 and 7",
+                                  "double": "sections 6, 7 and 23"})
     classes, irreps = ct["classes"], ct["irreps"]
-    D.w(character_sentence(irreps))
+    D.w(character_sentence(irreps, spinor=any(ir.get("spinor") for ir in irreps)))
     D.w(CONSTANTS)
     cells = [[D.val(x) for x in ir["chi"]] for ir in irreps]
-    widths = [max(max(visible(row[j]) for row in cells), visible(c["display"])) + 3
+    width = character_width if D.cover else visible
+    widths = [max(max(width(row[j]) for row in cells), visible(D.class_display[c["id"]])) + 3
               for j, c in enumerate(classes)]
     for n in range(1, len(classes) + 1):
         parts = chunks(list(range(len(classes))), -(-len(classes) // n))
@@ -1970,9 +2457,15 @@ def section_character_table(D):
     for part in parts:
         D.w(r"{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}l%s@{}}\toprule"
             % ("c" * len(part)))
-        D.w(r"$%s$ & %s\\\midrule\endhead" % (grp(D.rec["group"]["schoenflies"]), " & ".join(
-            r"$\cls{%s}$" % classes[j]["display"] for j in part)))
+        D.w(r"$%s$ & %s\\\midrule\endhead" % (
+            D.sym if D.cover else grp(D.rec["group"]["schoenflies"]),
+            " & ".join(r"$\cls{%s}$" % D.class_display[classes[j]["id"]] for j in part)))
+        # the spinor irreps below a rule, as in the table of irreps
+        first_spinor = True
         for ir, row in zip(irreps, cells):
+            if ir.get("spinor") and first_spinor:
+                D.w(r"\midrule")
+                first_spinor = False
             D.w(r"$%s$ & %s\\" % (irrep(ir["display"]), " & ".join("$%s$" % row[j] for j in part)))
         D.w(r"\bottomrule\end{longtable}}")
 
@@ -2014,26 +2507,127 @@ def irrep_columns(D, symbols, over_real, spinor=False):
     return " ".join(out)
 
 
+def image_rules(D, irreps):
+    """The sentences of the table of irreps on its column image in a document of Double: a vector
+    irrep's is that of the irrep of G, a spinor irrep's is named by the rules of
+    kernels.spinor_image."""
+    head = IMAGE_FRAME
+    if not any(ir.get("spinor") for ir in irreps):
+        return head + r", and it is that of the irrep of %s." % rotation_linked(D.cover)
+    return (head + r". For a vector irrep it is that of the irrep of %s. For a spinor irrep of "
+            r"dimension 1 it is the cyclic group of the characters. For a spinor irrep of "
+            r"dimension 2 with its matrices in $%s$ it is the preimage $\grp{2H}$ formed by them. "
+            r"Otherwise it is the group of this catalogue isomorphic to it." % (
+                rotation_linked(D.cover), SU2))
+
+
+def over_real_name(D, ir, irreps):
+    """The irrep over R in which an irrep lies: itself when it is real or pseudoreal; for a
+    complex irrep of G (a vector irrep of a preimage) the pair label; for a complex spinor irrep
+    the labels of the two members of its pair in irrep order, side by side."""
+    if ir["frobenius_schur"] != 0:
+        return D.irrep_id(ir["id"])
+    if not ir.get("spinor"):
+        return D.over_real(ir["id"])
+    order = [x["id"] for x in irreps]
+    pair = sorted((ir["id"], ir["conjugate_of"]), key=order.index)
+    return "".join(D.irrep_id(i) for i in pair)
+
+
+def irreps_over_real(D, irreps):
+    """The irreps are irreducible over C, and what each is over R (CONVENTIONS.pdf, sections 6.4,
+    7 and 23.2): the sentences of over_real_sentences that the irreps need, with the spinor irreps
+    of a preimage."""
+    complex_ = [ir for ir in irreps if ir["conjugate_of"] is not None]
+    spinor = any(ir.get("spinor") for ir in complex_)
+    vector = any(not ir.get("spinor") for ir in complex_)
+    # "Each is real" where every irrep is real, and the sections that the irreps need: 6.4 for
+    # complex pairs, 7 always, 23.2 for complex spinor pairs
+    cited = ["6.4"] * vector + ["7"] + ["23.2"] * spinor
+    return over_real_sentences(vector, each=True, label="" if D.cover else r"$\irr{e}$, ",
+                               vector=" when they are vector irreps" if spinor else "",
+                               spinor=spinor,
+                               pseudoreal=any(ir["frobenius_schur"] == -1 for ir in irreps),
+                               sections=("section " if len(cited) == 1 else "sections ")
+                               + listed(cited))
+
+
+def irreps_lead(D, irreps):
+    """The sentences after the first of the irreps where the record holds more than a group of
+    Rotation: in a preimage, what the vector and the spinor irreps are and how a spinor irrep is
+    labeled; in a section over G, that its irreps are those of G on the lifts."""
+    spin = [ir for ir in irreps if ir.get("spinor")]
+    if spin:
+        pre = any(ir["mulliken"][:1] in "12" for ir in spin)
+        return (" " + D.define("index.dimension")
+                + r"The vector irreps ($\irchar{\Gamma}(\elt{\barred{E}}) = +d$, $d$ the "
+                r"dimension) are those of %s, on both lifts (\texttt{vector\symbol{95}irreps}), "
+                r"and the spinor irreps ($\irchar{\Gamma}(\elt{\barred{E}}) = -d$) follow below "
+                r"the rule. A spinor irrep is labeled by its dimension, $\irr{a}$ (1), $\irr{e}$ "
+                r"(2), $\irr{g}$ (4) or $\irr{i}$ (6), and a complex one by that of its "
+                r"complex-conjugate pair ($\irr{e}$ for dimension 1, $\irr{g}$ for dimension 2). "
+                r"%s.%s" % (
+                    rotation_linked(D.cover),
+                    # the tags and the parity of D^(J,p) of section 23.2: g or u where G holds the
+                    # lift of the inversion (p of the tag), ' or '' where the lifts of sigma_h are
+                    # apart
+                    r"The label carries the tag $\ptag{g}$ or $\ptag{u}$ of "
+                    r"$\irchar{\Gamma}(\elt{\lift{i}}) = \pm d$ and the least half-integer $J$ at "
+                    r"which the irrep occurs in $\irrJp{J}{+1}$ of $%s$ for $\ptag{g}$, or in "
+                    r"$\irrJp{J}{-1}$ for $\ptag{u}$ (section~\ref{s:subduction_parent})" % D.P
+                    if D.holds_inversion else
+                    r"The label carries the tag ${}'$ or ${}''$ of the character $\pm\iunit d$ on "
+                    r"the canonical lift of $\elt{\sigma_h}$ and the least half-integer $J$ at "
+                    r"which the irrep occurs in $\irrJp{J}{+1}$ of $%s$ "
+                    r"(section~\ref{s:subduction_parent})" % D.P
+                    if any(ir["mulliken"].endswith("'") for ir in spin) else
+                    r"The label carries the least half-integer $J$ at which the irrep occurs in "
+                    r"$\irrJp{J}{+1}$ of $%s$ (section~\ref{s:subduction_parent})" % D.P,
+                    r" Two that would share a label carry the prefixes 1 and 2: 1 has the "
+                    r"character of the smaller argument in $[0, 2\pi)$ on the first class with "
+                    r"unequal characters." if pre else ""))
+    if D.cover:
+        return (r" The irreps of $\grp{G}$ are those of %s, on the lifts $(g, b(g))$."
+                % rotation_linked(D.cover))
+    return ""
+
+
+# The sections of the conventions that the column of outside symbols cites, by catalogue.
+SYMBOL_SECTIONS = {"rotation": "section 6.5", "double": "sections 6.5 and 23.4"}
+
+
 def section_irreps(D):
+    """The irreps, the first section of Representations in a finite document of every catalogue:
+    their character, what they are where the record holds more than a group of Rotation
+    (irreps_lead), the legend, then their table, the spinor irreps below a rule."""
     ct = D.rec.get("character_table")
     if not ct or "elements" not in D.rec:
         return
     irreps = ct["irreps"]
-    D.part("Representations")
-    D.section("Irreducible representations", "sections 6 and 7")
+    D.section("Irreducible representations",
+              {"rotation": "sections 6 and 7", "double": "sections 6, 7 and 23"})
+    D.w(character_pointer(D) + irreps_lead(D, irreps))
     pairs = any(ir["conjugate_of"] is not None for ir in irreps)
-    symbols = irrep_symbols.entry("rotation", D.name) is not None
-    D.w(character_pointer(D))
-    D.w(irrep_columns(D, "section 6.5" if symbols else None, pairs) + " "
-        + D.define("head.image") + image_sentence(D, irreps) + " " + over_real_sentences(pairs)
-        + " " + D.define("mark.determinant") + r"The boxed irrep is the determinant character "
-        r"(\texttt{determinant\symbol{95}character}), of value $\det g$%s." % (
-            r", and is trivial in a group of type I" if D.rec["group"]["type"] == "I" else ""))
+    column = pairs or any(ir["frobenius_schur"] == -1 for ir in irreps)
+    symbols = irrep_symbols.entry(D.catalogue, D.name) is not None
+    det = D.determinant_irrep()
+    D.w(irrep_columns(D, SYMBOL_SECTIONS[D.catalogue] if symbols else None, column,
+                      spinor=any(ir.get("spinor") for ir in irreps))
+        + " " + D.define("head.image")
+        + (image_rules(D, irreps) if D.cover else image_sentence(D, irreps))
+        + " " + irreps_over_real(D, irreps)
+        + (" " + D.define("mark.determinant") + r"The boxed irrep is the determinant character "
+           r"%s, of value $\det g$%s%s." % (
+               r"of %s" % rotation_linked(D.cover) if D.cover
+               else r"(\texttt{determinant\symbol{95}character})",
+               r" on the element $(g, %s)$" % D.bits if D.cover else "",
+               r", and is trivial in a group of type I"
+               if D.rotation_group()["type"] == "I" else "")
+           if isinstance(det, str) else ""))
     D.w(LOOSE_PAR)
-    det = D.rec["group"]["determinant_character"]
     rows = [["irrep"] + (list(SYMBOL_HEAD_WORDS) if symbols else [])
             + [r"$d$", r"$\fsind$", "reality", "conjugate"]
-            + ([r"over $\mathbb{R}$"] if pairs else []) + ["kernel", "image"]]
+            + ([r"over $\mathbb{R}$"] if column else []) + ["kernel", "image"]]
     for ir in irreps:
         nu = ir["frobenius_schur"]
         label = "$%s$" % irrep(ir["display"])
@@ -2042,16 +2636,22 @@ def section_irreps(D):
                     + ["%d" % ir["dim"],
                        "$%s$" % (("%+d" % nu) if nu else "0"), REALITY[nu],
                        "$%s$" % D.irrep_id(ir["conjugate_of"]) if ir["conjugate_of"] is not None
-                       else "---"] + (["$%s$" % D.over_real(ir["id"])] if pairs else [])
-                    + [levels.irrep_kernel(D, ir), levels.irrep_image(D, ir)])
-    sep = IRREPS_PAIRS_TABCOLSEP if pairs else 6.0
-    layout = ((r"\setlength{\tabcolsep}{%gpt}" % sep if pairs else "")
+                       else "---"]
+                    + (["$%s$" % over_real_name(D, ir, irreps)] if column else [])
+                    + [D.irrep_kernel(ir), D.irrep_image(ir)])
+    sep = IRREPS_PAIRS_TABCOLSEP if column else 6.0
+    layout = ((r"\setlength{\tabcolsep}{%gpt}" % sep if column else "")
               + snake_mark(sep, labels_width(rows, sep)))
     D.w(r"{\small\renewcommand{\arraystretch}{%g}%s\begin{longtable}{@{}l%srrll%sll@{}}\toprule"
         % (DETBOX_STRETCH, layout, "l" * len(SYMBOL_HEAD_WORDS) if symbols else "",
-           "l" if pairs else ""))
+           "l" if column else ""))
     D.w(" & ".join(rows[0]) + r"\\\midrule\endhead")
-    for row in rows[1:]:
+    # the spinor irreps below a rule, as in the character table
+    first_spinor = True
+    for ir, row in zip(irreps, rows[1:]):
+        if ir.get("spinor") and first_spinor:
+            D.w(r"\midrule")
+            first_spinor = False
         D.w(" & ".join(row) + r"\\")
     D.w(r"\bottomrule\end{longtable}}")
 
@@ -2059,8 +2659,8 @@ def section_irreps(D):
 # ---------------------------------------------------------------- 5 Representation matrices
 def galois_sentence(label, source, conductor, sigma, golden=False):
     """The matrices of an irrep made from those of another irrep by an automorphism of the
-    cyclotomic field (the construction galois), in both volumes (double_latex.construction);
-    `golden` adds the sentence on what the automorphism does to the golden ratio and sqrt 5."""
+    cyclotomic field (the construction galois), in both volumes (construction); `golden` adds the
+    sentence on what the automorphism does to the golden ratio and sqrt 5."""
     return (r"The matrix $\repD{%s}(g)$ is $\repD{%s}(g)$ with the automorphism "
             r"$\rootunity{%d} \mapsto \rootunity{%d}^{%d}$ applied to every entry.%s"
             % (label, source, conductor, conductor, sigma,
@@ -2068,10 +2668,22 @@ def galois_sentence(label, source, conductor, sigma, golden=False):
                r"$-\sqrt{5}$." if golden else ""))
 
 
+def action_sentence(label, kets, parent, case=""):
+    """The matrices of a spinor irrep, or of a spinor family, as the action on kets of an irrep of
+    Pin-(3) (the construction wigner), in the finite and the continuous preimages
+    (section_continuous_irreps): the kets (`kets`, in the partner order) of `parent` carry the
+    matrices of `label`, whose entries are coefficients of that action.  A `case` ("For a family
+    of parity $p$, ") opens the sentence."""
+    return (r"%s kets (%s) of %s (section~\ref{s:bases}) carry the matrices $\repD{%s}(g)$: "
+            r"$\repD{%s}_{\nu,\intx}(g)$ is the coefficient of ket $\nu$ in $g$ applied to ket "
+            r"$\intx$." % (case + "the" if case else "The", kets, parent, label, label))
+
+
 def construction(D, ir):
     """The rule that gives the matrices of an irrep, as a sentence, or as a short paragraph for
     the permutation construction, each anchor at the head of the sentence that first uses its
-    symbol (axial-monomial irreps are described together, by monomial_rule)."""
+    symbol (axial-monomial irreps are described together, by monomial_rule); in a preimage, the
+    rule of a spinor irrep's matrices, the construction wigner an action on kets."""
     c = ir["matrices"]["construction"]
     method = c["method"]
     label = irrep(ir["display"])
@@ -2105,11 +2717,22 @@ def construction(D, ir):
                    if n == 3
                    else ""))
     if method == "galois":
+        # with the golden-ratio sentence where the automorphism moves it (2I, 2Ih: zeta_20 ->
+        # zeta_20^13, and 13 = 3 mod 5)
         golden = c["conductor"] % 5 == 0 and c["sigma"] % 5 in (2, 3)
         return galois_sentence(label, D.irrep_id(c["from"]), c["conductor"], c["sigma"], golden)
     if method == "twist":
-        return (r"$\repD{%s}(g) = \irchar{%s}(g)\, \repD{%s}(g)$."
-                % (label, D.irrep_id(c["by"]), D.irrep_id(c["from"])))
+        by, source = D.irrep_id(c["by"]), D.irrep_id(c["from"])
+        # Double's sets no space after the thin space and says what the product is
+        return (r"$\repD{%s}(g) = \irchar{%s}(g)\,%s\repD{%s}(g)$%s." % (
+            label, by, "" if D.cover else " ", source,
+            r", the character of $%s$ times the matrix of $%s$" % (by, source) if D.cover else ""))
+    if method == "wigner":
+        # the kets of an irrep of Pin-(3), a formula per ket, so that a line, and the site's
+        # narrow view, may break between kets
+        kets = ", ".join("$%s$" % D.jket(c["twoJ"], t) for t in c["twoM"])
+        return action_sentence(label, kets,
+                               r"$\irrJp{%s}{%s}$" % (D.half_frac(c["twoJ"]), c["parity"]))
     return tx(c.get("note", ""))
 
 
@@ -2183,7 +2806,7 @@ def matrix_tables(D, irs, symbol_width, width=None):
 
 def matrix_rows(below="", of="", element="element of index", character=False):
     """The clause that reads the rows of the matrix tables of Representation matrices, in both
-    volumes (double_latex.section_irrep_matrices): `below` places the tables, `of` names the
+    volumes (section_irrep_matrices): `below` places the tables, `of` names the
     irreps whose matrices they set and `element` names the element of a row up to its index $k$
     ("canonical lift $g$ of even index" in volume II).  `character` ends the clause on the
     formula of the matrices of dimension 1, where every irrep that the tables set has dimension
@@ -2194,26 +2817,56 @@ def matrix_rows(below="", of="", element="element of index", character=False):
                r", and $\repD{\Gamma}(g) = \irchar{\Gamma}(g)$" if character else ""))
 
 
+# The matrices over a common factor of a preimage (Document.matrix_form) are estimated
+# GOLDEN_WIDTH[0] w + GOLDEN_WIDTH[1] (d - 1) + GOLDEN_WIDTH[2] + GOLDEN_SAFETY pt wide in a table,
+# w their characters with the factor's (double_latex.FACTOR_WIDTH): a fit to 2I's matrices of
+# dimensions 2, 4 and 6 typeset at \small, within 6.2 pt of each; MATRIX_WIDTH, fitted to
+# Rotation's entries, falls 7 to 25 % short of them.
+GOLDEN_WIDTH = (3.735, 13.417, 9.205)
+GOLDEN_SAFETY = 6.2
+
+
 def section_irrep_matrices(D):
+    """The matrices of the irreps, in a finite document of every catalogue: the rule that gives
+    each, then a table for each dimension, a row per element.  A preimage sets those of its
+    spinor irreps, its vector irreps having G's (their construction pullback,
+    double_latex.resolve); a section over G sets none."""
+    if D.cover and not D.preimage:
+        return
     ct = D.rec.get("character_table")
     if not ct or "elements" not in D.rec:
         return
-    irreps = [ir for ir in ct["irreps"] if "by_element" in (ir.get("matrices") or {})]
+    irreps = [ir for ir in ct["irreps"] if "by_element" in (ir.get("matrices") or {})
+              and ir["matrices"]["construction"]["method"] != "pullback"]
     if not irreps:
         return
-    symbols = [r"\cls{%s}" % mathify(it["symbol"]) for it in D.rec["elements"]["items"]]
+    items = D.rec["elements"]["items"]
+    symbols = [r"\cls{%s}" % D.element_tex(it["symbol"]) for it in items]
     symbol_width = 3.4 * max(visible(s) for s in symbols)
-    D.section("Representation matrices", "section 9")
+    D.section("Representation matrices", {"rotation": "section 9", "double": "sections 9 and 23.3"})
     D.w(D.define("vector.ket.partner", "index.partner", "matrix.irrep",
                  *(["index.partner.summed"] if any(ir["matrices"]["construction"]["method"]
-                                                   == "perm-dft" for ir in irreps) else []))
+                                                   in ("perm-dft", "wigner") for ir in irreps)
+                   else []))
         + r"A basis $(\irket{\Gamma}{1}, \dots, \irket{\Gamma}{d})$ of the irrep $\Gamma$ obeys")
     D.equation("partner", r"g\irket{\Gamma}{\intx} = \sum_\nu \irket{\Gamma}{\nu}\, "
                           r"\repD{\Gamma}_{\nu,\intx}(g);")
-    # where every irrep has dimension 1, no subsection prints, and the row sentence ends on the
-    # formula of their matrices
+    # where every irrep that the tables set has dimension 1, no subsection prints, and the row
+    # sentence ends on the formula of their matrices
     lone = {ir["matrices"]["dim"] for ir in irreps} == {1}
-    D.w(matrix_rows(character=lone) + ".")
+    spinor = any(ir.get("spinor") for ir in irreps)
+    if spinor:
+        # the vector irreps, the rows, which are the canonical lifts, and the barred partners that
+        # the tables leave out
+        rows = matrix_rows(" below", " of a spinor irrep",
+                           "canonical lift $g$ of even index" if D.unbarred_only
+                           else "element $g$ of index", lone)
+        D.w(r"the matrices of a vector irrep are those of %s, on both lifts. %s.%s"
+            % (rotation_linked(D.cover), rows[0].upper() + rows[1:],
+               r" On the barred partner of that lift, a spinor irrep has "
+               r"$\repD{\Gamma}(k + 1) = -\repD{\Gamma}(k)$." if D.unbarred_only else ""))
+    else:
+        D.w(matrix_rows(character=lone) + ".")
     D.w(CONSTANTS)
     by_dim = {}
     for ir in irreps:
@@ -2221,8 +2874,9 @@ def section_irrep_matrices(D):
     for d in sorted(by_dim):
         irs = by_dim[d]
         if len(by_dim) > 1:
-            label = r"\label{s:irreps2}" if d == 2 else ""
-            D.w(r"\subsection{The irreps of dimension %d}%s" % (d, label))
+            D.w(r"\subsection{The %sirreps of dimension %d}%s" % (
+                "spinor " if spinor else "", d,
+                r"\label{s:irreps2}" if d == 2 and not spinor else ""))
         if d == 1:
             # the formula under its heading, or none where the row sentence ends on it
             if not lone:
@@ -2239,29 +2893,51 @@ def section_irrep_matrices(D):
             if len(others) == 1:
                 D.w(others[0])
             elif others:
-                D.w(r"\begin{romanlist}")
+                D.w(r"\begin{romanlist}%s" % (r"\raggedright" if D.cover else ""))
                 for sentence in others:
                     D.w(r"\item " + sentence)
                 D.w(r"\end{romanlist}")
-        for part, tight in matrix_tables(D, irs, symbol_width):
+        # the matrices as written, over a common factor in a preimage where that is narrower
+        forms = {ir["id"]: D.matrix_form(ir["matrices"]["by_element"]) for ir in irs} \
+            if d > 1 else {}
+
+        def width(D, ir, tight=False):
+            """The estimated width (pt) of an irrep's column (matrix_width), from the entries as
+            written: GOLDEN_WIDTH for a matrix over a common factor."""
+            if d == 1 or not forms[ir["id"]][2]:
+                return matrix_width(D, ir, tight)
+            a, b, c = GOLDEN_WIDTH
+            w = a * forms[ir["id"]][1] + b * (d - 1) + c + GOLDEN_SAFETY
+            return w - (GAP_SAVING * (d - 1) if tight else 0)
+        for part, tight in matrix_tables(D, irs, symbol_width, width):
+            if D.cover:
+                # in Double a table wider than the text, even of one irrep, is set tight, into the
+                # margins
+                tight = tight or table_width([width(D, ir) for ir in part],
+                                             symbol_width) > TEXT_WIDTH
             gap = TIGHT_GAP if tight else NORMAL_GAP
             sep = TIGHT_TABCOLSEP if tight else NORMAL_TABCOLSEP
             margin = (r"\setlength{\LTleft}{-%gpt plus 1fill}\setlength{\LTright}{-%gpt plus "
                       r"1fill}" % (TIGHT_MARGIN, TIGHT_MARGIN)) if tight else ""
             D.w(r"{\small\setlength{\tabcolsep}{%gpt}%s" % (sep, margin))
             mark = "" if tight else snake_mark(sep, table_width(
-                [matrix_width(D, ir) for ir in part], symbol_width))
+                [width(D, ir) for ir in part], symbol_width))
             D.w(mark + r"\begin{longtable}{@{}rl%s@{}}\toprule" % ("l" * len(part)))
             D.w(r"$k$ & sym & " + " & ".join(
                 ("$%s$" % irrep(ir["display"])) if d == 1 else
-                (r"$\repD{%s}(g)$" % irrep(ir["display"])) for ir in part) + r"\\\midrule\endhead")
-            for k, sym in enumerate(symbols):
+                (r"$\repD{%s}(%s)$" % (irrep(ir["display"]), "k" if D.cover else "g"))
+                for ir in part) + r"\\\midrule\endhead")
+            written = {ir["id"]: forms[ir["id"]][0](gap) for ir in part} if d > 1 else {}
+            # the rows: every element, or in a preimage the canonical lifts alone
+            shown = [k for k in range(len(symbols)) if not (D.unbarred_only and items[k]["bar"])]
+            for k in shown:
                 if d == 1:
                     cells = ["$%s$" % D.val(ir["matrices"]["by_element"][k][0][0]) for ir in part]
                 else:
-                    cells = [D.matrix(ir["matrices"]["by_element"][k], gap) for ir in part]
-                D.w(r"%d & $%s$ & %s%s" % (k, sym, " & ".join(cells),
-                                          r"\\" if d == 1 else row_end(k, len(symbols))))
+                    cells = [written[ir["id"]][k] for ir in part]
+                D.w(r"%d & $%s$ & %s%s" % (k, symbols[k], " & ".join(cells),
+                                          r"\\" if d == 1 else row_end(shown.index(k),
+                                                                       len(shown))))
             D.w(r"\bottomrule\end{longtable}}")
 
 
@@ -2393,42 +3069,74 @@ def haar_sentences(D, arcs, atoms):
     return out + "." + (" " + masses[0].upper() + masses[1:] + "." if masses else "")
 
 
-def axial_haar_measure(D, comps):
-    r"""The Haar measure of an axial continuous group: on an arc the constant density c per turn,
-    dh = c\,d\phi/(2\pi) over its angles, and on an atom its mass."""
+def haar_arc(density, component, mass, angles=""):
+    r"""The Haar measure on one arc in both volumes, a phrase of haar_sentences: dh = `density` on
+    `component`, then the range of its angle (`angles`, a clause after a comma, or none) and its
+    mass, in math."""
+    return r"$\diff h = %s$ on $%s$%s, of mass $%s$" % (density, component, angles, mass)
+
+
+def axial_haar_measure(D, comps, components):
+    r"""The Haar measure of an axial continuous group of Rotation, as the arcs and the atoms of
+    haar_sentences: on an arc the constant density c per turn, dh = c\,d\phi/(2\pi) over its
+    angles, and on an atom its mass.  `components` are the components in math."""
     parts, atoms = [], []
-    for c in comps:
+    for c, comp in zip(comps, components):
         m = c["measure"]
         if m.get("kind") == "atom":
-            atoms.append((r"$\comp{%s}$" % c["display"],
-                          "$%s$" % D.val(rat(Fraction(*m["mass"])))))
+            atoms.append(("$%s$" % comp, "$%s$" % D.val(rat(Fraction(*m["mass"])))))
             continue
         dens = Fraction(*m["density_dt"])
         x = angle(c["id"])
         dh = (r"\diff%s/(%s\pi)" % (x, 2 * dens.denominator) if dens.numerator == 1
               else r"%d\,\diff%s/(%s\pi)" % (dens.numerator, x, 2 * dens.denominator))
         whole = Fraction(*c["coordinate"]["t1"]) == 1
-        parts.append(r"$\diff h = %s$ on $\comp{%s}$, $%s\in\bigl[%s, %s\bigr%s$, of mass $%s$"
-                     % (dh, c["display"], x, pi_multiple(c["coordinate"]["t0"]),
-                        pi_multiple(c["coordinate"]["t1"]), ")" if whole else "]",
-                        D.val(rat(Fraction(*c["haar_mass"])))))
-    D.w(haar_sentences(D, parts, atoms))
+        parts.append(haar_arc(dh, comp, D.val(rat(Fraction(*c["haar_mass"]))),
+                              r", $%s\in\bigl[%s, %s\bigr%s$" % (
+                                  x, pi_multiple(c["coordinate"]["t0"]),
+                                  pi_multiple(c["coordinate"]["t1"]), ")" if whole else "]")))
+    return parts, atoms
 
 
-def haar_measure(D, comps):
-    r"""The Haar measure on the arcs whose density is a trigonometric polynomial (SO(3) and
-    O(3)), in the arc's angle x = 2 pi t: dh = (2 - 2\cos\phi)\,d\phi/(2\pi) on C(\phi), phi
-    from 0 to pi, and the mass of the arc."""
-    arcs = [c for c in comps if isinstance(c["measure"].get("density_dt"), dict)]
+def haar_measure(D, comps, components):
+    r"""The Haar measure of a continuous group of Rotation, as the arcs and the atoms of
+    haar_sentences: on the arcs whose density is a trigonometric polynomial (SO(3) and O(3)), in
+    the arc's angle x = 2 pi t, dh = (2 - 2\cos\phi)\,d\phi/(2\pi) on C(\phi), phi from 0 to pi,
+    and the mass of the arc; otherwise as axial_haar_measure gives it."""
+    arcs = [(c, comp) for c, comp in zip(comps, components)
+            if isinstance(c["measure"].get("density_dt"), dict)]
     if not arcs:
-        return axial_haar_measure(D, comps)
-    D.w(haar_sentences(D, [
-        r"$\diff h = \bigl(%s\bigr)\,\diff%s/(2\pi)$ on $\comp{%s}$, $%s\in\bigl[%s, %s\bigr]$, "
-        r"of mass $%s$"
-        % (trig_closed_form(D, c["measure"]["density_dt"], angle(c["id"])), angle(c["id"]),
-           c["display"], angle(c["id"]), pi_multiple(c["coordinate"]["t0"]),
-           pi_multiple(c["coordinate"]["t1"]), D.val(rat(Fraction(*c["haar_mass"]))))
-        for c in arcs], []))
+        return axial_haar_measure(D, comps, components)
+    return [haar_arc(r"\bigl(%s\bigr)\,\diff%s/(2\pi)" % (
+        trig_closed_form(D, c["measure"]["density_dt"], angle(c["id"])), angle(c["id"])),
+        comp, D.val(rat(Fraction(*c["haar_mass"]))), r", $%s\in\bigl[%s, %s\bigr]$" % (
+            angle(c["id"]), pi_multiple(c["coordinate"]["t0"]),
+            pi_multiple(c["coordinate"]["t1"]))) for c, comp in arcs], []
+
+
+def lift_haar_measure(D, comps, components):
+    r"""The Haar measure of a continuous preimage of Double in the angle omega of the lift, as the
+    arcs and the atoms of haar_sentences: on an arc of the density rho per turn of psi = omega/2,
+    dh = rho\,d\omega/(2T\pi), T the turns of the arc; on the arcs of SU(2) and Pin-(3) a density
+    in 1 - cos omega; on an atom its mass.  `components` are the components in math."""
+    arcs, atoms = [], []
+    for c, comp in zip(comps, components):
+        mass = D.val(rat(Fraction(*c["haar_mass"])))
+        if c["kind"] != "arc":
+            atoms.append(("$%s$" % comp, "$%s$" % mass))
+            continue
+        dens = c["measure"]["density_dt"]
+        if isinstance(dens, list):
+            rho = Fraction(*dens) * c["coordinate"]["t1"][0]
+            # no thin space before d omega when the density is 1
+            arcs.append(haar_arc(r"%s\diff\omega/(%s\pi)" % (
+                D.val(rat(rho)) + r"\," if rho != 1 else "", 2 * c["coordinate"]["t1"][0]),
+                comp, mass))
+        else:
+            rho = Fraction(*dens["terms"][0]["cos"]["v"])
+            arcs.append(haar_arc(r"%s(1 - \cos\omega)\,\diff\omega/(2\pi)"
+                                 % (D.val(rat(rho)) if rho != 1 else ""), comp, mass))
+    return arcs, atoms
 
 
 def spectroscopic(alias):
@@ -2438,9 +3146,17 @@ def spectroscopic(alias):
     return r"\spec{%s}" % letter + ("_{%s}" % tagged(sub) if sub else "")
 
 
+def affine_J(a):
+    """An affine bound of the record with the family index j written J (the records of Double
+    write the index of SU2's and Pinminus3's families j, CONVENTIONS 29.2)."""
+    if a.get("index_symbol") == "j":
+        a = dict(a, index_symbol="J")
+    return affine(a)
+
+
 def dimension(d):
     """The dimension of a family: its integer, or the affine formula 2J+1."""
-    return "%s" % d if isinstance(d, int) else "$%s$" % affine(d)
+    return "%s" % d if isinstance(d, int) else "$%s$" % affine_J(d)
 
 
 def cs_polynomial(D, terms):
@@ -2467,14 +3183,14 @@ def cs_polynomial(D, terms):
     return out or "0"
 
 
-def d_table(D, blk):
-    """The Wigner d^J of one J, a row per m' and a column per m (both J, ..., -J), in the fewest
-    tables of equal size whose columns' widest entries add up to at most D_TABLE_MAX_WIDTH
-    characters; each table is titled d^J(beta) and kept on one sheet."""
-    J = blk["J"]
-    ms = list(range(J, -J - 1, -1))
-    cells = [[cs_polynomial(D, e["terms"]) for e in row] for row in blk["entries"]]
-    if J == 0:
+def d_table(D, two, entries):
+    """The Wigner d^J of one J, given by its double `two` (half-integer in SU(2), written by
+    D.half_frac), a row per m' and a column per m (both J, ..., -J), in the fewest tables of equal
+    size whose columns' widest entries add up to at most D_TABLE_MAX_WIDTH characters; each table
+    is titled d^J(beta) and kept on one sheet.  d^0 is a sentence."""
+    ms = list(range(two, -two - 1, -2))
+    cells = [[cs_polynomial(D, e["terms"]) for e in row] for row in entries]
+    if two == 0:
         D.w(r"\par $\wignerd{0}(\beta) = %s$." % cells[0][0])
         return
     widths = [max(visible(row[j]) for row in cells) for j in range(len(ms))]
@@ -2484,15 +3200,17 @@ def d_table(D, blk):
             break
     for part in parts:
         D.w(r"\begin{center}\small\begin{tabular}{@{}r%s@{}}\toprule" % ("l" * len(part)))
-        D.w(r"\multicolumn{%d}{@{}c@{}}{$\wignerd{%d}(\beta)$}\\" % (len(part) + 1, J))
-        D.w(r"$m'$ & %s\\\midrule" % " & ".join("$m = %d$" % ms[j] for j in part))
+        D.w(r"\multicolumn{%d}{@{}c@{}}{$\wignerd{%s}(\beta)$}\\" % (len(part) + 1,
+                                                                   D.half_frac(two)))
+        D.w(r"$m'$ & %s\\\midrule" % " & ".join("$m = %s$" % D.half_frac(ms[j]) for j in part))
         for i, mp in enumerate(ms):
-            D.w(r"$%d$ & %s\\" % (mp, " & ".join("$%s$" % cells[i][j] for j in part)))
+            D.w(r"$%s$ & %s\\" % (D.half_frac(mp), " & ".join("$%s$" % cells[i][j]
+                                                               for j in part)))
         D.w(r"\bottomrule\end{tabular}\end{center}")
 
 
 # The words around the displays of the matrices of a general element, in both volumes
-# (double_continuous.spherical_matrices): the lead-in of the Euler form, the clause on the range of
+# (general_element, spherical_matrices): the lead-in of the Euler form, the clause on the range of
 # a sum that the factorials bound, the continuation of the Wigner d^J and the sentence before its
 # tables.
 GENERAL_MATRIX = (r"In the basis $\jm{J}{m}$, rows $m'$ and columns $m = J, J-1, \dots, -J$, the "
@@ -2599,40 +3317,125 @@ def general_element(D, families):
     D.w(d_tables_sentence(", ".join(str(blk["J"]) for blk in shown) if len(shown) <= 4
                           else integers(0, shown[-1]["J"]), "the record", "%d" % d[-1]["J"]))
     for blk in shown:
-        d_table(D, blk)
+        d_table(D, 2 * blk["J"], blk["entries"])
+
+
+# The distinguished points of the arcs of a continuous preimage of Double, by their ids: the lifts
+# of E, C_2, i and sigma_h and their barred partners.
+POINT = {"E": r"\cls{E}", "C2": r"\cls{C_2}", "bE": r"\cls{\barred{E}}",
+         "bC2": r"\cls{\barred{C}_2}", "i": r"\cls{\lift{i}}", "sh": r"\cls{\sigma_h}",
+         "bi": r"\cls{\barred{\lift{i}}}", "bsh": r"\cls{\barred{\sigma}_h}"}
+
+
+def lifts_sentence(ids, atoms):
+    """The elements at the angles of the components of a continuous preimage of Double, the
+    entries of the column element: the lift R~_z(omega), its products with the lift of the
+    inversion, and the lifts of the mirrors and binary rotations of the atoms ("the elements at
+    the angles", in the singular where one lift is listed, SU2 and 2Cinf); a comma closes the
+    range of the first lift before "and"."""
+    lifts = [r"the lift $\lift{R}_z(\omega) = \cos\tfrac{\omega}{2} - "
+             r"\iunit\sin\tfrac{\omega}{2}\,\pauli{z}$, $0 \le \omega < 4\pi$"]
+    if "iCphi" in ids:
+        # the element of the component iCphi is the pair (R~_z(omega), -1) of section 29.1
+        lifts.append(r"its products $\elt{\lift{i}}\,\lift{R}_z(\omega)$ with the lift of the "
+                     r"inversion $\elt{\lift{i}}$")
+    reflected = " and ".join(w for k, w in (("sv", "mirrors"), ("c2p", "binary rotations"))
+                             if k in ids)
+    if atoms:
+        lifts.append(r"the lifts of the %s at the azimuth $\psi$, $0 \le \psi < 2\pi$" % reflected)
+    if len(lifts) == 1:
+        return r"The element at each angle is %s" % lifts[0]
+    if len(lifts) == 2:
+        return r"The elements at the angles are %s, and %s" % tuple(lifts)
+    # three lifts (2Dinfh) in two sentences, under the limit of 35 words
+    return (r"The elements at the angles are %s, and %s. The others are %s"
+            % (lifts[0], lifts[1], lifts[2]))
+
+
+def lift_classes(D, comps, ids, atoms):
+    """The classes of a continuous preimage of Double on its arcs, from omega = 0 to 2 pi where
+    an arc folds (its lifts at omega and 4 pi - omega conjugate) or to 4 pi in an abelian group,
+    its atoms, and the distinguished points of the arcs."""
+    arcs = [c for c in comps if c["kind"] == "arc"]
+    folded = arcs[0]["coordinate"]["t1"] == [1, 1]
+    if folded:
+        D.w(r"On an arc, $\elt{\lift{R}_z}(\omega)$ is conjugate to "
+            r"$\elt{\lift{R}_z}(4\pi - \omega)$, so the classes run over $0 \le \omega \le 2\pi$, "
+            r"from %s through the half turns to %s.%s" % (
+                POINT[arcs[0]["distinguished_points"][0]["id"]].join("$$"),
+                POINT[arcs[0]["distinguished_points"][-1]["id"]].join("$$"),
+                r" An atom is one class: conjugation by $\elt{\lift{R}_z}(\pi)$ carries a lift "
+                r"of %s to the other lift." % " or of ".join(
+                    w for k, w in (("sv", "a mirror"), ("c2p", "a binary rotation")) if k in ids)
+                if atoms else ""))
+    else:
+        D.w(r"The group $\grp{G}$ is abelian, so every element is a class, and the arcs run over "
+            r"$0 \le \omega < 4\pi$, where the two lifts $\omega$ and $\omega + 2\pi$ of a "
+            r"rotation lie apart.")
+    pts = [(c, p) for c in arcs for p in c["distinguished_points"]]
+    D.w(r"The distinguished points are %s." % listed([
+        r"$%s$ at $\omega = %s$" % (POINT[p["id"]], pi_multiple((p["turn"][0], p["turn"][1])))
+        for c, p in pts]))
 
 
 def section_class_space(D):
+    """The class space of a continuous group: its components, arcs of classes and atoms, with
+    their coset, the element at the angle and its matrix (in Double the lifts in Pin-(3) and their
+    matrices M(g), CONVENTIONS.pdf, section 29.1), the classes they run over, then the Haar
+    measure."""
     cf = D.rec.get("character_functions")
     if not cf:
         return
     comps = cf["class_space"]["components"]
-    D.section("Class space", "section 16")
+    ids = [c["id"] for c in comps]
+    D.section("Class space", {"rotation": "section 16", "double": "sections 16, 21 and 29.1"})
     atoms = [c for c in comps if c["kind"] == "atom"]
-    D.w(D.define("angle.phi") + (D.define("mark.atom", "angle.psi") if atoms else "")
-        + D.define("head.component")
-        + r"A row is a component of the class space, %s. " % (
-            "an arc of classes or an atom (a single class)" if atoms else "an arc of classes")
-        + D.define("head.coset", "head.element")
-        + r"A row gives whether its elements are proper or improper (coset) and the element%s at "
-          r"its angle. The matrix $P$ of the element is in the row-vector convention "
-          r"(CONVENTIONS.pdf, section 4). On column vectors its matrix is the transpose "
-          r"$P^{\top}$, and products compose in the reverse order."
-        % (r" about $z$ of the class" if D.spherical else ""))
+    cells = [D.component_cells(c) for c in comps]
+    # the angles phi and psi of Rotation's components lead the legend; Double's omega and psi
+    # follow its sentence of the coset
+    text = ("" if D.cover else
+            D.define("angle.phi") + (D.define("mark.atom", "angle.psi") if atoms else ""))
+    text += (D.define("head.component")
+             + r"A row is a component of the class space%s, %s. " % (
+                 r" of $\grp{G}$" if D.cover else "",
+                 "an arc of classes or an atom (a single class)" if atoms else "an arc of classes")
+             + D.define("head.coset", "head.element")
+             + r"A row gives whether its elements %s (coset) and the element%s at its angle." % (
+                 (r"cover proper or improper elements of %s" % rotation_linked(D.cover),
+                  r" of $%s$" % D.P) if D.cover else
+                 ("are proper or improper", r" about $z$ of the class" if D.spherical else "")))
+    if D.cover:
+        # the matrix sentence opens as that of Symmetry operations in the finite preimages
+        D.w(text + " " + D.define("angle.omega", *(["angle.psi"] if atoms else []))
+            + lifts_sentence(ids, atoms) + r" (CONVENTIONS.pdf, section 29.1). "
+            + D.define("matrix.element.pin")
+            + r"The matrix $M(g)$ of the element is the transpose of its $\grp{SU(2)}$ part, so "
+              r"that the matrices compose as the matrices $P(g)$ of the elements of %s "
+              r"(CONVENTIONS.pdf, section 21.2)." % rotation_linked(D.cover))
+        # the constants, first written in the lifts above, are defined after this paragraph
+        D.w(CONSTANTS)
+    else:
+        D.w(text + r" The matrix $P$ of the element is in the row-vector convention "
+                   r"(CONVENTIONS.pdf, section 4). On column vectors its matrix is the transpose "
+                   r"$P^{\top}$, and products compose in the reverse order.")
     D.w(r"\begin{center}\begin{tabular}{@{}llll@{}}\toprule")
-    D.w(r"component & coset & element & $P$\\\midrule")
-    for c in comps:
-        D.w(r"$\comp{%s}$ & %s & $%s$ & $%s$\\" % (c["display"], tx(c["coset"]),
-                                                  componentwise(D, c["id"]),
-                                         component_matrix(c)))
+    D.w(r"component & coset & element & $%s$\\\midrule" % ("M(g)" if D.cover else "P"))
+    for k, (c, (comp, element, matrix)) in enumerate(zip(comps, cells)):
+        D.w(r"$%s$ & %s & $%s$ & $%s$%s" % (comp, tx(c["coset"]), element, matrix,
+                                            row_end(k, len(comps)) if D.cover else r"\\"))
     D.w(r"\bottomrule\end{tabular}\end{center}")
-    if D.spherical:
-        D.w(" ".join(SPHERICAL_CLASSES[c["id"]] for c in comps))
-    if atoms:
-        D.w("The %s." % ", and the ".join(r"atom $\comp{%s}$ is the class of %s"
-                                          % (c["display"], ATOM_CLASS[c["id"]][k > 0])
-                                          for k, c in enumerate(atoms)))
-    haar_measure(D, comps)
+    if D.cover:
+        lift_classes(D, comps, ids, atoms)
+    else:
+        if D.spherical:
+            D.w(" ".join(SPHERICAL_CLASSES[c["id"]] for c in comps))
+        if atoms:
+            D.w("The %s." % ", and the ".join(r"atom $\comp{%s}$ is the class of %s"
+                                              % (c["display"], ATOM_CLASS[c["id"]][k > 0])
+                                              for k, c in enumerate(atoms)))
+    components = [comp for comp, _, _ in cells]
+    D.w(haar_sentences(D, *(lift_haar_measure(D, comps, components) if D.cover
+                            else haar_measure(D, comps, components))))
 
 
 # ---------------------------------------------------------------- Fundamental domain
@@ -2776,34 +3579,91 @@ def domain_cell_continuous(D, cell, vols):
                                   pi_multiple(cell["beta"]["t1"]), volume_tex(vols["cell"])))
 
 
-# The sentences of Fundamental domain that both volumes print (double_latex): the orientations of
-# the placed molecule or object, by its cosets (math) and their space (math), and the volume of a
-# finite group (math).
+# The sentences of Fundamental domain that both volumes print: the placed molecule or object (its
+# placement Q, the parent, and the words that differ), its orientations by its cosets (math) and
+# their space (math), the metric of the volumes and the volumes of the parent's two components,
+# the volume of a finite group (math), the reason why a group with an improper element has a
+# domain of one component (math), and the volume of the domain.
+PLACED = (r"%(object)s with symmetry $\grp{G}$ placed by $%(Q)s \in %(parent)s$ is the same "
+          r"%(same)swhen placed by $g%(Q)s$ with $g \in \grp{G}$%(since)s.")
 ORIENTATIONS = r"Thus its orientations are the cosets $%s$, the points of the space $%s$."
+VOLUMES = r"Volumes are those of the %s, so that $\vol%s = %s$ and $\vol%s = %s$%s."
 COUNTING_MEASURE = r"A finite group has the counting measure, $\vol\grp{G} = |\grp{G}| = %s$."
+IMPROPER = (r"As $\grp{G}$ contains %s, every coset $\grp{G}%s$ meets $%s$ in %s, so that "
+            r"$\fdomain = \fcell$")
+DOMAIN_VOLUME = (r"\vol\fdomain = %s,\qquad \vol\grp{G}\cdot\vol\fdomain = %s\cdot %s = %s "
+                 r"= \vol%s.")
+
+
+def doubled(v):
+    """A volume of Rotation's fundamental_domain times 2."""
+    return dict(v, coefficient=[2 * v["coefficient"][0], v["coefficient"][1]])
+
+
+def domain_space(space, two, rotations):
+    r"""The space G\O(3) of a group of Rotation in words, from the record's fundamental_domain:
+    its space (fundamental_domain.space), whether the domain has two components, and the rotation
+    subgroup; with the record of the notation that names the space, or None."""
+    record, name = None, None
+    if space["name"] == "lens space":
+        record, name = "set.lens", r"the lens space $\lensspace{%d}{%d}$" % tuple(space["lens"])
+    elif space["name"] != "point":
+        record, name = SPACE_NAME[space["name"]]
+    if name is None:
+        return record, "two points" if two else "a point"
+    if rotations == "C_1":
+        return record, (r"two copies of $\grp{SO(3)}$, %s" if two else r"$\grp{SO(3)}$, %s") % name
+    return record, r"%s$%s\backslash\grp{SO(3)}$, %s" % ("two copies of " if two else "",
+                                                         grp(rotations), name)
 
 
 def section_fundamental_domain(D):
-    fd = D.rec.get("fundamental_domain")
+    """The fundamental domain of the orientations, the cosets of G in the parent.  In Rotation the
+    cell of the rotations nearest E (a finite group's facets and vertices, or a slice of the Euler
+    angles), the domain and the space G\\O(3).  In Double, from that of the image in Rotation
+    (CONVENTIONS.pdf, section 21.3), nothing stored for a finite group: a preimage holds Ebar,
+    and its cosets are those of the image, with the image's cell, by the canonical lifts, its
+    domain and its space, the volume of the group twice the image's; a section does not, and the
+    two lifts of the rotations of the image's cell are its cell, of twice the volume, its space
+    (S n SU(2))\\SU(2), a lens space L(N, 1) or SU(2) itself."""
+    rec = D.domain_record()
+    fd = rec.get("fundamental_domain")
     if not fd:
         return
     cell, vols, space = fd["cell"], fd["volumes"], fd["space"]
-    D.section("Fundamental domain", "sections 4.2 and 17" if cell["shape"] == "slice"
-              else "section 17")
+    finite = "elements" in D.rec
+    two = fd["components"] == ["proper", "improper"]
+    D.section("Fundamental domain",
+              {"rotation": "sections 4.2 and 17" if cell["shape"] == "slice" else "section 17",
+               "double": "sections 17 and 21.3"})
+    # a preimage covers its image twice
+    group = volume_tex(doubled(vols["group"]) if D.preimage else vols["group"])
+    if D.cover:
+        order = D.rec["group"]["order"] if finite else None
+        # vol G . vol F = vol Pin-(3) = 32 pi^2, F the image's domain for a preimage, twice it for
+        # a section, or the build stops
+        size = (Fraction(order) if finite else 2 * Fraction(*vols["group"]["coefficient"]))
+        dom = Fraction(*vols["domain"]["coefficient"]) * (1 if D.preimage else 2)
+        if size * dom != 32 or vols["group"]["pi_power"] + vols["domain"]["pi_power"] != 2 or (
+                finite and order != (2 if D.preimage else 1) * vols["group"]["coefficient"][0]):
+            raise ValueError("%s: the volumes of the fundamental domain do not give vol Pin-(3)"
+                             % D.name)
+    # Double places an object by a lift Q~ in Pin-(3)
+    Q, parent = (r"\lift{Q}", D.P) if D.cover else ("Q", r"\grp{O(3)}")
     # the symbol \ of the space of cosets is first used in the sentence of the orientations, whose
     # head takes its anchor; on column vectors a coset is named as the left coset that
     # its matrices P(Q)^T P(g)^T, g in G, form
-    D.w(D.define("element.placement")
-        + r"A molecule with symmetry $\grp{G}$ placed by $Q \in \grp{O(3)}$ is the same set of "
-          r"atoms when placed by $gQ$ with $g \in \grp{G}$, since $P(gQ) = P(g)\,P(Q)$. "
-        + D.define("operator.cosets")
-        + ORIENTATIONS % (r"\grp{G}Q = \{gQ : g \in \grp{G}\}", r"\grp{G}\backslash\grp{O(3)}")
-        + r" On column vectors a coset is the left coset of the transposes "
-          r"$P(Q)^{\top}P(g)^{\top}$, $g \in \grp{G}$, a point of $\grp{O(3)}/\grp{G}$.")
-    group = volume_tex(vols["group"])
-    if "elements" in D.rec:
+    text = (("" if D.cover else D.define("element.placement"))
+            + PLACED % (dict(object="An object", Q=Q, parent=parent, same="", since="")
+                        if D.cover else
+                        dict(object="A molecule", Q=Q, parent=parent, same="set of atoms ",
+                             since=r", since $P(gQ) = P(g)\,P(Q)$"))
+            + " " + D.define("operator.cosets")
+            + ORIENTATIONS % (r"\grp{G}%s = \{g%s : g \in \grp{G}\}" % (Q, Q),
+                              r"\grp{G}\backslash%s" % parent))
+    if finite:
         size = " " + COUNTING_MEASURE % group
-    elif D.spherical:
+    elif D.spherical or D.cover:
         size = ""
     else:
         comps = D.rec["character_functions"]["class_space"]["components"]
@@ -2813,42 +3673,86 @@ def section_fundamental_domain(D):
             "the union of the circles" if len(comps) > 1 else "the circle",
             listed([r"$%s$" % componentwise(D, c["id"]) for c in comps]), listed(ranges),
             "each of length" if len(comps) > 1 else "of length", group)
-    D.w(D.define("operator.volume")
-        + r"Volumes are those of the invariant metric of $\grp{O(3)}$ in which the distance from "
-          r"$\elt{E}$ to a rotation by $\omega \le \pi$ is $\omega$, so that "
-          r"$\vol\grp{SO(3)} = 8\pi^2$ and $\vol\grp{O(3)} = 16\pi^2$.%s" % size)
-    if "elements" in D.rec:
-        domain_cell_finite(D, cell)
+    if D.cover:
+        D.w(text + " " + D.define("operator.volume")
+            + VOLUMES % (r"metric that the covering map carries to that of %s (CONVENTIONS.pdf, "
+                         r"section 17)" % rotation_linked("O3"), SU2, r"16\pi^2", D.P, r"32\pi^2",
+                         r", twice those of $\grp{SO(3)}$ and $\grp{O(3)}$") + size)
     else:
-        domain_cell_continuous(D, cell, vols)
-    two = fd["components"] == ["proper", "improper"]
-    D.w("")
-    D.w(D.define("set.fundamental") + (
-        r"Every coset $\grp{G}Q$ lies in $\grp{SO(3)}$ or in $\elt{i}\,\grp{SO(3)}$, so that "
-        r"$\fdomain = \fcell \cup \elt{i}\,\fcell$" if two else
-        r"As $\grp{G}$ contains an improper element, every coset $\grp{G}Q$ meets $\grp{SO(3)}$ "
-        r"in one coset of $\grp{G} \cap \grp{SO(3)}$, so that $\fdomain = \fcell$")
-        + r" is a fundamental domain. It contains one element of every coset, more only on its "
-          r"boundary.")
-    rotations = D.rec["group"]["rotation_subgroup"]
-    record, name = None, None
-    if space["name"] == "lens space":
-        record, name = "set.lens", r"the lens space $\lensspace{%d}{%d}$" % tuple(space["lens"])
-    elif space["name"] != "point":
-        record, name = SPACE_NAME[space["name"]]
-    if name is None:
-        quotient = "two points" if two else "a point"
-    elif rotations == "C_1":
-        quotient = (r"two copies of $\grp{SO(3)}$, %s" if two else r"$\grp{SO(3)}$, %s") % name
+        D.w(text + r" On column vectors a coset is the left coset of the transposes "
+                   r"$P(Q)^{\top}P(g)^{\top}$, $g \in \grp{G}$, a point of $\grp{O(3)}/\grp{G}$.")
+        D.w(D.define("operator.volume")
+            + VOLUMES % (r"invariant metric of $\grp{O(3)}$ in which the distance from "
+                         r"$\elt{E}$ to a rotation by $\omega \le \pi$ is $\omega$", r"\grp{SO(3)}",
+                         r"8\pi^2", r"\grp{O(3)}", r"16\pi^2", "") + size)
+    domain = volume_tex(vols["domain"])
+    if D.preimage:
+        # the quotient as the image's document writes it; the cosets and the space, and the
+        # canonical lifts that the rotations of a cell stand for; then, as their consequence, the
+        # cell and the domain of the image's document, on which "Hence" and the volumes rest; a
+        # continuous preimage covers its image twice
+        image = rotation_linked(D.cover)
+        record, name = domain_space(space, two, rec["group"]["rotation_subgroup"])
+        parts = [w for w in ("facets", "vertices") if cell.get(w)]
+        D.w((D.define(record) if record else "")
+            + r"As $\grp{G}$ contains $\elt{\barred{E}}$, a coset $\grp{G}\lift{Q}$ contains both "
+              r"lifts of every element of a coset of %s in $\grp{O(3)}$, and "
+              r"$\grp{G}\backslash%s$ is $%s\backslash\grp{O(3)}$, %s. A cell's rotations stand "
+              r"here for their canonical lifts (CONVENTIONS.pdf, section 21.1). "
+            % (image, D.P, D.base, name)
+            + D.define("set.cell", "set.fundamental")
+            + r"Thus the cell $\fcell$%s and the fundamental domain $\fdomain$ are those of the "
+              r"document of %s, in its section Fundamental domain.%s Hence"
+            % (", with its " + " and ".join(parts) + "," if parts else "", image,
+               r" The group $\grp{G}$ covers %s twice, and the circles of its components have "
+               r"length $4\pi$." % image if not finite and not D.spherical else
+               r" The group $\grp{G}$ covers %s twice." % image if not finite else ""))
+        D.equation("volume", DOMAIN_VOLUME % (domain, group, domain, r"32\pi^2", D.P))
+    elif D.cover:
+        image = rotation_linked(D.cover)
+        rotations = len([it for it in D.rec["elements"]["items"] if it["det"] == 1])
+        space_name = (r"$\grp{SU(2)}$ itself, the 3-sphere" if rotations == 1 else
+                      r"the lens space $\lensspace{%d}{1}$" % rotations)
+        # the cosets cover those of the image twice; then the cell, its cosets and the domain, and
+        # the space of the rotation subgroup
+        D.w(r"As $\grp{G}$ does not contain $\elt{\barred{E}}$, a coset $\grp{G}\lift{Q}$ contains "
+            r"one lift of each element of a coset of %s in $\grp{O(3)}$, and $\grp{G}\backslash%s$ "
+            r"covers $%s\backslash\grp{O(3)}$ twice. " % (image, D.P, D.base)
+            + D.define("set.cell")
+            + r"Thus the cell $\fcell$ here consists of both lifts of every rotation of the cell "
+              r"of %s, in its section Fundamental domain. " % image
+            + D.define("set.fundamental")
+            + r"It contains one element of every coset of $\grp{G} \cap \grp{SU(2)}$ in "
+              r"$\grp{SU(2)}$"
+            + (r", and $\fdomain = \fcell \cup \elt{\lift{i}}\,\fcell$ is a fundamental domain. "
+               if two else
+               # the reason of volume I's S6, for the sections over S_2N
+               ". " + IMPROPER % ("the lift of an improper element", r"\lift{Q}", r"\grp{SU(2)}",
+                                  "one of these cosets") + " is a fundamental domain. ")
+            + D.define(*(("set.lens",) if rotations > 1 else ()))
+            + r"The group $\grp{G} \cap \grp{SU(2)}$ has %d %s, so that the space "
+              r"$(\grp{G} \cap \grp{SU(2)})\backslash\grp{SU(2)}$ is %s. Hence"
+            % (rotations, "element" if rotations == 1 else "elements", space_name))
+        D.equation("volume", DOMAIN_VOLUME % (r"2\cdot %s = %s" % (domain, volume_tex(doubled(
+            vols["domain"]))), group, volume_tex(doubled(vols["domain"])), r"32\pi^2", D.P))
     else:
-        quotient = r"%s$%s\backslash\grp{SO(3)}$, %s" % ("two copies of " if two else "",
-                                                        grp(rotations), name)
-    D.w((D.define(record) if record else "")
-        + r"The space $\grp{G}\backslash\grp{O(3)}$ is %s, and" % quotient)
-    D.equation("volume", r"\vol\fdomain = %s\vol\fcell = %s,\qquad \vol\grp{G}\cdot\vol\fdomain = "
-               r"%s\cdot %s = 16\pi^2 = \vol\grp{O(3)}." % (
-                   "2" if two else "", volume_tex(vols["domain"]), group,
-                   volume_tex(vols["domain"])))
+        if finite:
+            domain_cell_finite(D, cell)
+        else:
+            domain_cell_continuous(D, cell, vols)
+        D.w("")
+        D.w(D.define("set.fundamental") + (
+            r"Every coset $\grp{G}Q$ lies in $\grp{SO(3)}$ or in $\elt{i}\,\grp{SO(3)}$, so that "
+            r"$\fdomain = \fcell \cup \elt{i}\,\fcell$" if two else
+            IMPROPER % ("an improper element", "Q", r"\grp{SO(3)}",
+                        r"one coset of $\grp{G} \cap \grp{SO(3)}$"))
+            + r" is a fundamental domain. It contains one element of every coset, more only on its "
+              r"boundary.")
+        record, quotient = domain_space(space, two, rec["group"]["rotation_subgroup"])
+        D.w((D.define(record) if record else "")
+            + r"The space $\grp{G}\backslash\grp{O(3)}$ is %s, and" % quotient)
+        D.equation("volume", DOMAIN_VOLUME % (r"%s\vol\fcell = %s" % ("2" if two else "", domain),
+                                              group, domain, r"16\pi^2", r"\grp{O(3)}"))
 
 
 def one_dimensional_value(D, t, var):
@@ -2931,12 +3835,13 @@ _CONDITIONS = {"n even": r"$n$ even", "n odd": r"$n$ odd", "J = 0": r"$J = 0$",
                "J >= 1": r"$J \ge 1$"}
 
 
-def family_cases(rule):
-    """The cells of a kernel or an image of a family: its symbol, linked, or one cell a case of
-    the index."""
+def family_cases(rule, cell=linked_group):
+    """The cells of a kernel or an image of a family of a group of Rotation (kernels.FAMILIES):
+    its symbol as `cell` writes it (linked), or one cell a case of the index, with its
+    condition."""
     if isinstance(rule, str):
-        return [linked_group(rule)]
-    return ["%s, %s" % (linked_group(c["schoenflies"]), _CONDITIONS[c["if"]]) for c in rule]
+        return [cell(rule)]
+    return ["%s, %s" % (cell(c["schoenflies"]), _CONDITIONS[c["if"]]) for c in rule]
 
 
 def family_image_sentence(D, families):
@@ -2970,100 +3875,245 @@ FAMILY_KERNEL = (r"The kernel $\ker\Gamma$ is the subgroup of the elements that 
                  r"$\Gamma$ of the family maps to the identity")
 
 
+def family_lines(cells, kernel, image, after=(), wide=None):
+    r"""The lines of a family's row in a table of irrep families: one, or one per case of its
+    kernel or its image (family_cases), the other cells spanning those rows (\multirow): `cells`
+    before the kernel, `after` after the image, then `wide`, the cell of a paragraph column (the
+    aliases), which spans them at that column's width."""
+    n = max(len(kernel), len(image))
+    if n == 1:
+        return [" & ".join(cells + kernel + image + list(after)
+                           + ([] if wide is None else [wide])) + r"\\"]
+
+    def span(c, width="*"):
+        return r"\multirow{%d}{%s}{%s}" % (n, width, c)
+    lines = []
+    for k in range(n):
+        row = [span(c) if k == 0 else "" for c in cells]
+        for case in (kernel, image):
+            row.append(case[k] if len(case) > 1 else (span(case[0]) if k == 0 else ""))
+        row += [span(c) if k == 0 else "" for c in after]
+        if wide is not None:
+            row.append(span(r"\RaggedRight " + wide, "=") if k == 0 else "")
+        lines.append(" & ".join(row) + (r"\\*" if k < n - 1 else r"\\"))
+    return lines
+
+
+def in_psi(t):
+    """A character of Rotation, a trig in phi, in psi = phi/2 as the records of Double write the
+    spinor families' (double CONVENTIONS section 29.1): every harmonic doubled."""
+    if t["var"] != "phi":
+        raise ValueError("a character of Rotation in %s, not phi" % t["var"])
+    return {"f": "trig", "var": "psi", "terms": [
+        dict(u, harmonic=dict(u["harmonic"], coefficient=2 * u["harmonic"]["coefficient"],
+                              constant=2 * u["harmonic"]["constant"])) for u in t["terms"]]}
+
+
+def spinor_image(D, sym):
+    """An image of a spinor family (kernels.DOUBLE_FAMILIES): C_inf of Rotation, linked to its
+    document there; 2D_inf or SU(2) of Double."""
+    return rotation_linked("Cinf") if sym == "C_inf" else D.linked(sym)
+
+
+def spinor_image_rules(D, spinors):
+    """The sentences on the images of the spinor families of a preimage, after the sentence on
+    the spinor families: one image, or a sentence for each dimension (no record has two)."""
+    if D.spherical:
+        return r"The image of a spinor family is $%s$." % SU2
+    rules = {1: r"%s, the group of the characters, turning the complex plane"
+                % spinor_image(D, "C_inf"),
+             2: r"%s, the preimage in $%s$ formed by its matrices" % (spinor_image(D, "2D_inf"),
+                                                                     SU2)}
+    dims = sorted({f["dim"] for f in spinors})
+    if len(dims) == 1:
+        return "The image of a spinor family is %s." % rules[dims[0]]
+    first = "The image of a spinor family of dimension %d is %s." % (dims[0], rules[dims[0]])
+    return " ".join([first] + ["For one of dimension %d it is %s." % (d, rules[d])
+                               for d in dims[1:]])
+
+
 def section_families(D):
+    """The families of irreps of a continuous group, in every catalogue: the legend, then the table
+    of the families of G, a row per family, a row per case where its kernel or its image depends
+    on the index.  In a preimage these are its vector families, read through the covering map,
+    with the characters on its components, and its spinor families follow below a rule; its
+    conjugate pairs and its instances follow the table."""
     cf = D.rec.get("character_functions")
     if not cf:
         return
-    families = cf["irrep_families"]
+    # a preimage's record holds its spinor families, and G's are its vector families
+    spinors = cf["irrep_families"] if "vector_families" in cf else []
+    G = D.covered if spinors else D.rec
+    families = G["character_functions"]["irrep_families"]
     traced = any(not isinstance(f["dim"], int) or f["dim"] > 1 for f in families)
-    D.part("Representations")
-    D.section("Families of irreps", "sections 6, 7 and 16")
+    D.section("Families of irreps", {"rotation": "sections 6, 7 and 16",
+                                     "double": "sections 7, 16, 23 and 29.2"})
     nus = sorted({f["frobenius_schur"] for f in families}, reverse=True)
     pairs = any(f.get("conjugate_of") for f in families)
     template = {f["id"]: f["label_template"] for f in families}
-    det = D.rec["group"]["determinant_character"]
+    det = G["group"]["determinant_character"]
     boxed = isinstance(det, str)
-    rotations = r", and is trivial in a group of type I" if D.rec["group"]["type"] == "I" else ""
-    # the character, first used by the irreps over R of a complex pair, joins the kernel's
-    # sentence, the first on the irrep Gamma
-    character = pairs and not traced
-    legend = [
-        D.define("index.dimension", "index.frobenius",
-                 *([] if D.spherical else ["index.family"]), "head.family.irreps",
-                 "head.index.family")
-        + family_row(listed([r"%s for $%s$" % (REALITY[nu], "%+d" % nu if nu else "0")
-                             for nu in nus]))]
-    legend += [D.define(*(["head.conjugate", "head.over.real"] if pairs else []), "head.aliases")
-               + (D.define("irrep.alias.greek") if any(f.get("greek_alias") for f in families)
-                  else "")
-               + r"It also gives %sits other names (aliases).%s" % (
-                   r"the family of the complex-conjugate irreps, the family of the irreps over "
-                   r"$\mathbb{R}$ in which its irreps lie and " if pairs else "",
-                   # only where a cell has a dash (SO3 and O3 have none)
-                   " A dash stands for none." if any(
-                       family_index(f) == "---" or family_aliases(f) == "---"
-                       or (pairs and not f.get("conjugate_of")) for f in families) else ""),
-               D.define("irrep.Gamma", "head.kernel", *(["function.character"] if character
-                                                        else []))
-               + FAMILY_KERNEL + (r", and the character of $\Gamma$ at $g$ is "
-                                  r"$\irchar{\Gamma}(g)$" if character else "") + ".",
-               D.define("head.image") + family_image_sentence(D, families),
-               over_real_sentences(pairs)]
+    # Double's sentence on the determinant character names G and has no type I clause
+    rotations = (r", and is trivial in a group of type I" if G["group"]["type"] == "I"
+                 and not spinors else "")
+    if spinors:
+        comps = [c["id"] for c in cf["class_space"]["components"]]
+        atoms = any(c["kind"] == "atom" for c in cf["class_space"]["components"])
+        sym = "J" if D.spherical else "n"
+        cover = rotation_linked(D.cover)
+    # the character, first used by the irreps over R of a complex pair (Rotation's), joins the
+    # kernel's sentence, the first on the irrep Gamma
+    character = pairs and not traced and not spinors
+    if spinors:
+        legend = [D.define("head.family.irreps", "index.dimension", "index.frobenius",
+                           "head.index.family") + family_row()]
+    else:
+        legend = [
+            D.define("index.dimension", "index.frobenius",
+                     *([] if D.spherical else ["index.family"]), "head.family.irreps",
+                     "head.index.family")
+            + family_row(listed([r"%s for $%s$" % (REALITY[nu], "%+d" % nu if nu else "0")
+                                 for nu in nus])),
+            D.define(*(["head.conjugate", "head.over.real"] if pairs else []), "head.aliases")
+            + (D.define("irrep.alias.greek") if any(f.get("greek_alias") for f in families)
+               else "")
+            + r"It also gives %sits other names (aliases).%s" % (
+                r"the family of the complex-conjugate irreps, the family of the irreps over "
+                r"$\mathbb{R}$ in which its irreps lie and " if pairs else "",
+                # only where a cell has a dash (SO3 and O3 have none)
+                " A dash stands for none." if any(
+                    family_index(f) == "---" or family_aliases(f) == "---"
+                    or (pairs and not f.get("conjugate_of")) for f in families) else "")]
+    legend.append(D.define(*([] if spinors else ["irrep.Gamma"]), "head.kernel",
+                           *(["function.character"] if character else []))
+                  + FAMILY_KERNEL + (r", and the character of $\Gamma$ at $g$ is "
+                                     r"$\irchar{\Gamma}(g)$" if character else "") + ".")
+    if spinors:
+        legend.append(D.define("head.image") + IMAGE_FRAME
+                      + r". A row also gives the family's character on each component, in the "
+                        r"angle $\omega$ of the lift.")
+        # a vector family of one irrep has a dash for its index
+        if any(family_index(f) == "---" for f in families):
+            legend.append("A dash stands for none.")
+        legend += [
+            r"The vector families, on which $\elt{\barred{E}}$ is the identity, are those of %s "
+            r"(\texttt{vector\symbol{95}families}), read on these classes through the covering "
+            r"map." % cover,
+            r"A point $\omega$ of an arc covers the rotation angle $\phi = \omega$ modulo $2\pi$%s."
+            % (", and an atom covers the atom of %s" % cover if atoms else ""),
+            r"The image and matrices of a vector family are those of %s, and its kernel is the "
+            r"preimage of its kernel in that group." % cover,
+            r"The spinor families, on which $\elt{\barred{E}}$ is $-1$, follow below the rule, "
+            r"with an instance for every half-integer $%s = \tfrac{1}{2}, \tfrac{3}{2}, \dots$."
+            % sym,
+            spinor_image_rules(D, spinors)]
+        if not D.spherical:
+            legend.append(r"As $2n$ is odd, the kernel of a spinor instance $n$ is a section "
+                          r"(CONVENTIONS.pdf, section 27).")
+    else:
+        legend += [D.define("head.image") + family_image_sentence(D, families),
+                   over_real_sentences(pairs)]
+    # the determinant character: of G, on the elements that cover g, in a preimage
+    of, cover_g = ((r"of %s" % rotation_linked(D.cover), r" on the elements that cover $g$")
+                   if spinors else (r"(\texttt{determinant\symbol{95}character})", ""))
     if boxed:
         legend.append((D.define("mark.determinant") if not D.spherical else "")
-                      + r"The boxed family, of one irrep, is the determinant character "
-                      r"(\texttt{determinant\symbol{95}character}), of value $\det g$%s."
-                      % rotations)
+                      + r"The boxed family, of one irrep, is the determinant character %s, of "
+                        r"value $\det g$%s%s." % (of, cover_g, rotations))
     else:
         legend.append((D.define("mark.determinant") if not D.spherical else "")
-                      + r"The determinant character (\texttt{determinant\symbol{95}character}), of "
-                      r"value $\det g$, is $%s$, the instance $J = %d$ of $%s$%s."
-                      % (irrep_label(template[det["family"]].replace("J", str(det["index"]))),
+                      + r"The determinant character %s, of value $\det g$%s, is $%s$, the "
+                        r"instance $J = %d$ of $%s$%s."
+                      % (of, cover_g,
+                         irrep_label(template[det["family"]].replace("J", str(det["index"]))),
                          det["index"], irrep_label(template[det["family"]]), rotations))
     D.w(" ".join(legend))
-    rows = [["family", "$d$", r"$\fsind$", "index"]
-            + (["conjugate", r"over $\mathbb{R}$"] if pairs else []) + ["kernel", "image",
-                                                                         "aliases"]]
-    # a family whose kernel or image depends on the index has a row per case, its other cells
-    # spanning those rows (\multirow); `rows` holds the cells as the widths measure them
+    # Rotation's table has the conjugate and the irrep over R of a family of a complex pair, and
+    # its aliases; Double's has its characters on the components, and its spinor families
+    heads = (["family", "$d$", r"$\fsind$", "index"]
+             + (["conjugate", r"over $\mathbb{R}$"] if pairs and not spinors else [])
+             + ["kernel", "image"])
+    rows = [heads + ([] if spinors else ["aliases"])]
     lines = []
     for f in families:
         nu = f["frobenius_schur"]
         conj = ["$%s$" % irrep_label(template[f["conjugate_of"]]) if f.get("conjugate_of")
-                else "---", "$%s$" % D.over_real(f["id"])] if pairs else []
+                else "---", "$%s$" % D.over_real(f["id"])] if pairs and not spinors else []
         label = "$%s$" % irrep_label(f["label_template"])
-        kernel, image = (family_cases(f[k]) for k in ("kernel", "image"))
+        kernel = family_cases(f["kernel"], D.rotation_kernel)
+        image = family_cases(f["image"], D.rotation_image)
         shared = [r"\detbox{%s}" % label if f["id"] == det else label, dimension(f["dim"]),
                   "$%s$" % ("%+d" % nu if nu else "0"), family_index(f)] + conj
-        n = max(len(kernel), len(image))
-        for k in range(n):
+        if spinors:
+            lines += family_lines(shared, kernel, image,
+                                  ["$%s$" % D.chi_tex(in_psi(f["chi"][c]), sym) for c in comps])
+            continue
+        # a family whose kernel or image depends on the index has a row per case, its other
+        # cells spanning those rows; `rows` holds the cells as the widths measure them
+        for k in range(max(len(kernel), len(image))):
             rows.append(shared + [kernel[min(k, len(kernel) - 1)],
                                   image[min(k, len(image) - 1)], family_aliases(f)])
-        if n == 1:
-            lines.append(" & ".join(rows[-1]) + r"\\")
-            continue
-
-        def span(cell, width="*"):
-            return r"\multirow{%d}{%s}{%s}" % (n, width, cell)
-        for k in range(n):
-            cells = ([span(c) for c in shared] if k == 0 else [""] * len(shared))
-            cells += [kernel[k] if len(kernel) > 1 else (span(kernel[0]) if k == 0 else ""),
-                      image[k] if len(image) > 1 else (span(image[0]) if k == 0 else ""),
-                      span(r"\RaggedRight " + family_aliases(f), "=") if k == 0 else ""]
-            lines.append(" & ".join(cells) + (r"\\*" if k < n - 1 else r"\\"))
-    D.w(r"{\small\renewcommand{\arraystretch}{%g}%s\begin{longtable}{@{}lrrl%sll>{\RaggedRight"
-        r"\arraybackslash}p{\fillwidth}@{}}\toprule"
-        % (DETBOX_STRETCH if boxed else 1, fill_width(rows, len(rows[0]) - 1),
-           "ll" if pairs else ""))
-    D.w(" & ".join(rows[0]) + r"\\\midrule\endhead")
+        lines += family_lines(shared, kernel, image, wide=family_aliases(f))
+    if spinors:
+        D.w(r"{\small%s\begin{longtable}{@{}llllll%s@{}}\toprule" % (
+            r"\renewcommand{\arraystretch}{%g}" % DETBOX_STRETCH if boxed else "",
+            "l" * len(comps)))
+        D.w(" & ".join(heads + ["$%s$" % D.component_display(c) for c in comps])
+            + r"\\\midrule\endhead")
+    else:
+        D.w(r"{\small\renewcommand{\arraystretch}{%g}%s\begin{longtable}{@{}lrrl%sll>{\RaggedRight"
+            r"\arraybackslash}p{\fillwidth}@{}}\toprule"
+            % (DETBOX_STRETCH if boxed else 1, fill_width(rows, len(rows[0]) - 1),
+               "ll" if pairs else ""))
+        D.w(" & ".join(rows[0]) + r"\\\midrule\endhead")
     for line in lines:
         D.w(line)
+    if spinors:
+        # the spinor families below a rule, as in the finite documents
+        D.w(r"\midrule")
+        for f in spinors:
+            D.w(" & ".join(["$%s$" % D.label_tex(f["label_template"]), dimension(f["dim"]),
+                            "$%s$" % ("%+d" % f["frobenius_schur"] if f["frobenius_schur"]
+                                      else "0"),
+                            r"$%s \ge \tfrac{1}{2}$" % sym, D.linked(f["kernel"]),
+                            spinor_image(D, f["image"])]
+                           + ["$%s$" % D.chi_tex(f["chi"][c], sym) for c in comps]) + r"\\")
     D.w(r"\bottomrule\end{longtable}}")
+    if not spinors:
+        return
+    conjugates, kinds = [], set()
+    for kind, fs in (("vector", families), ("spinor", spinors)):
+        label = {f["id"]: D.label_tex(f["label_template"]) for f in fs}
+        for f in fs:
+            if f.get("conjugate_of") and f["id"] < f["conjugate_of"]:
+                kinds.add(kind)
+                pair = r"$%s$ and $%s$" % (label[f["id"]], label[f["conjugate_of"]])
+                if pair not in conjugates:
+                    conjugates.append(pair)
+    if conjugates:
+        D.w(r"The complex %sfamilies come in conjugate pairs: %s." % (
+            "vector and spinor " if len(kinds) == 2 else "",
+            conjugates[0] if len(conjugates) == 1
+            else ", ".join(conjugates[:-1]) + ", and " + conjugates[-1]))
+    if D.spherical and len(spinors) == 1:
+        D.w(r"The irreps $%s$ at half-integer $J$ are the pseudoreal irreps of the spin-$J$ "
+            r"particle." % D.label_tex(spinors[0]["label_template"]))
+    elif D.spherical:
+        D.w(r"The spinor irreps of $%s$ are the irreps $%s$ at half-integer $J$, which differ by "
+            r"their sign on the lifts of the inversion. Both restrict to the irrep $%s$ of $%s$, "
+            r"the pseudoreal irrep of the spin-$J$ particle." % (
+                D.P, r"$ and $".join(D.label_tex(f["label_template"]) for f in spinors),
+                D.label_tex("D^(j)"), SU2))
+    insts = spinors[0]["instances"]
+    D.w(r"The record holds the spinor instances up to $%s = %s$, with their characters at the "
+        r"distinguished points (\texttt{instances})." % (
+            sym, insts[-1]["label"].split("_")[-1].split(",")[0] if not D.spherical
+            else D.frac_tex(Fraction(*insts[-1]["index"]["v"]))))
 
 
 def family_rows(of="", about=""):
     """The sentence that reads the rows of the matrix tables of the irrep families, on the
-    components of the class space, in both volumes (double_continuous.section_continuous_irreps):
+    components of the class space, in both volumes (section_continuous_irreps):
     `of` names the families whose matrices they set and `about` the axis of the elements (the
     spherical groups)."""
     return (r"A row of a table gives $\repD{\Gamma}(g)$%s for the elements%s of a component of the "
@@ -3081,40 +4131,223 @@ def trace_sentence(source):
 
 def spherical_basis(anchors, kets):
     """The basis of the irreps of dimension 2J + 1 of the spherical groups, in both volumes
-    (double_continuous.spherical_matrices): the kets in their order with the partner index, then,
-    after the `anchors` of its symbols, what these kets are (`kets`)."""
+    (spherical_matrices): the kets in their order with the partner index, then, after the
+    `anchors` of its symbols, what these kets are (`kets`)."""
     return (r"The basis is $\jm{J}{m}$, $m = J, J-1, \dots, -J$, with partner $\intx = J - m + 1$. "
             + anchors + "These kets are %s." % kets)
 
 
+# The documents of SU(2) and Pin-(3) set what those of SO(3) and O(3) set.  The relations of the
+# matrices of a general element as the records state them (general_element), which the documents
+# write as formulas: another text stops the build.
+EULER_RELATION = (
+    "for U = R~_z(alpha) R~_y(beta) R~_z(gamma) (the lifts of section 21.1, product in the order "
+    "of SU(2) matrices), D^j(U)_{m'm} = exp(-i m' alpha) d^j_{m'm}(beta) exp(-i m gamma), d^j the "
+    "Wigner d matrix of SU2's wigner_d")
+SU2_RELATION = (
+    "hat D(U, eps)_{m'm} = p^[eps = -1] conj(D^j(U)_{m m'}) (double/CONVENTIONS.md section 26.1), "
+    "D^j(U)_{m'm} = sqrt((j+m')! (j-m')! (j+m)! (j-m)!) sum_k a^k b^(j+m'-k) c^(j+m-k) "
+    "d^(k-m-m') / (k! (j+m'-k)! (j+m-k)! (k-m-m')!), over the k for which every factorial "
+    "argument is >= 0; U = [[a, b], [c, d]] in SU(2); D^j(U) is the matrix of U on the "
+    "polynomials u^(j+m) v^(j-m) / sqrt((j+m)! (j-m)!) under u -> a u + c v, v -> b u + d v, and "
+    "D^(1/2)(U) = U; p the parity of the family (+1 for Dhalf and Dhalfg, -1 for Dhalfu)")
+# The matrices of the families on the components about z, as formulas.
+SPHERICAL_DIAG = {
+    "exp(2i m x), m = j, ..., -j":
+        r"\diag\bigl(\expe^{\iunit J\omega}, \expe^{\iunit (J-1)\omega}, \dots, "
+        r"\expe^{-\iunit J\omega}\bigr)",
+    "p exp(2i m x), m = j, ..., -j":
+        r"p\,\diag\bigl(\expe^{\iunit J\omega}, \expe^{\iunit (J-1)\omega}, \dots, "
+        r"\expe^{-\iunit J\omega}\bigr)",
+}
+# The Wigner d^J that the documents set, 2J <= D_TWOJ_SHOWN (SO(3)'s set J <= 3).
+D_TWOJ_SHOWN = 5
+
+
+def spherical_matrices(D, families):
+    """SU(2) and Pin-(3), as SO(3) and O(3) (the last case of section_continuous_irreps and
+    general_element), in their sentences where the statements agree (spherical_basis,
+    GENERAL_MATRIX, wigner_where, factorial_sum, d_tables_sentence, d_table): the irreps of
+    dimension 2J+1 (`families`) on the kets and their matrices on the components; the matrices of
+    a general element by the records' relations (general_element); the Wigner d^J for
+    2J <= D_TWOJ_SHOWN (SU2's wigner_d)."""
+    ge = families[0]["matrices"]["general_element"]
+    if any(f["matrices"]["general_element"] != ge for f in families[1:]) or (
+            ge["euler"]["relation"], ge["su2"]["relation"]) != (EULER_RELATION, SU2_RELATION):
+        raise ValueError("%s: the matrices of a general element are not those the document "
+                         "writes" % D.name)
+    pin = len(families) > 1
+    p = r"p^{\iverson{\varepsilon = -1}}\," if pin else ""
+    irrep = r"\irrJp{J}{p}" if pin else r"\irrJ{J}"
+    D.w(r"\subsection{The irreps of dimension \texorpdfstring{$2J+1$}{2J+1}}")
+    # the basis, then the matrix of an element in T1's words (The matrix ... of the element is the
+    # transpose of its SU(2) part) and its action on these states
+    D.w(spherical_basis(D.define("local.spinor.uv"),
+                        r"the states of angular momentum $J$, realized by the polynomials "
+                        r"$u^{J+m}v^{J-m}/\sqrt{(J+m)!\,(J-m)!}$ in the kets "
+                        r"$u = \jm{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ and "
+                        r"$v = \jm{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$, as the spherical "
+                        r"harmonics realize them at integer $J$")
+        # in SU(2) an element is its own SU(2) part
+        + r" The field \texttt{matrix} of an element %s, and the element acts on these states by "
+          r"$\wignerD{J}(U)^{\dagger}$%s (CONVENTIONS.pdf, sections 21.2 and 26.1)." % (
+              r"$(U, \varepsilon)$ is the transpose of its $\grp{SU(2)}$ part $U$" if pin else
+              r"$U$ is its transpose",
+              r", times $p$ when $\varepsilon = -1$" if pin else ""))
+    D.w(r"{\small\begin{longtable}{@{}ll@{}}\toprule")
+    D.w(r"$g$ & $%s(g)$\\\midrule\endhead" % irrep)
+    for cid, e in families[0]["matrices"]["entries"].items():
+        D.w(r"$%s$ & $%s$\\" % (D.component_display(cid),
+                                D.stated(SPHERICAL_DIAG, e["diag"], "matrix")))
+    D.w(r"\bottomrule\end{longtable}}")
+    D.w(r"\subsection{Matrices of a general element}\label{s:general}")
+    D.w(D.define("angle.euler.alpha", "angle.euler.beta", "angle.euler.gamma")
+        + r"The Euler angles $\alpha$, $\beta$, $\gamma$ are those of "
+          r"$U = \lift{R}_z(\alpha)\,\lift{R}_y(\beta)\,\lift{R}_z(\gamma)$, the lifts "
+          r"(CONVENTIONS.pdf, section 21.1) multiplied as matrices of $\grp{SU(2)}$. "
+        + (r"The bracket $\iverson{\varepsilon = -1}$ is 1 when $\varepsilon = -1$ and 0 "
+           r"otherwise. " if pin else "")
+        + D.define("matrix.irrep.entry") + GENERAL_MATRIX)
+    D.equation("euler", r"D_{m',m}(g) = %s\expe^{\iunit m\alpha}\,\wignerd{J}_{m,m'}(\beta)\,"
+                        r"\expe^{\iunit m'\gamma} = %s(-1)^{m-m'}\,\expe^{\iunit m\alpha}\,"
+                        r"\wignerd{J}_{m',m}(\beta)\,\expe^{\iunit m'\gamma}," % (p, p))
+    D.w(D.define("matrix.wigner")
+        + r"that is, $D(g) = %s\wignerD{J}(U)^\dagger$ with $\wignerD{J}_{m',m}(U) = "
+          r"\expe^{-\iunit m'\alpha}\,\wignerd{J}_{m',m}(\beta)\,\expe^{-\iunit m\gamma}$ "
+          r"(\texttt{general\symbol{95}element}). " % p
+        + D.define("matrix.wigner.small", "index.halfangle", "local.sum.wigner")
+        + r"The Wigner matrix [VMK88, section 4.3] is")
+    D.equation("wigner", r"\begin{aligned}\wignerd{J}_{m',m}(\beta) &= \sum_\sigma "
+                         r"(-1)^{m'-m+\sigma}\,\frac{\sqrt{(J+m')!\,(J-m')!\,(J+m)!\,(J-m)!}}"
+                         r"{(J+m-\sigma)!\,\sigma!\,(m'-m+\sigma)!\,(J-m'-\sigma)!}\,"
+                         r"c_\beta^{2J+m-m'-2\sigma}s_\beta^{m'-m+2\sigma},\end{aligned}")
+    D.w(wigner_where() + " "
+        + D.define("index.cayleyklein", "local.sum.cayleyklein")
+        + r"In the entries of $U = \bigl(\begin{smallmatrix} a & b\\ -\conj{b} & \conj{a}"
+          r"\end{smallmatrix}\bigr)$, the matrix is")
+    D.equation("entries", r"\begin{aligned}\wignerD{J}_{m',m}(U) &= \sqrt{(J+m')!\,(J-m')!\,"
+                          r"(J+m)!\,(J-m)!}\\ &\quad\times\sum_k\frac{a^{k}\,b^{J+m'-k}\,"
+                          r"(-\conj{b})^{J+m-k}\,(\conj{a})^{k-m-m'}}{k!\,(J+m'-k)!\,(J+m-k)!\,"
+                          r"(k-m-m')!},\end{aligned}")
+    D.w(r"where " + factorial_sum("k") + r". This matrix is that of $U$ on the polynomials of "
+        r"the kets $\jm{J}{m}$ when $U$ sends $u$ to $au - \conj{b}v$ and $v$ to $bu + \conj{a}v$, "
+        r"so that $\wignerD{\nicefrac{1}{2}}(U) = U$. "
+        + D.define("vector.unitaxis", "vector.axis.components")
+        + r"For the lift $U = \lift{R}_{\vv}(\phi)$ by $\phi$ about the unit axis "
+          r"$\unitaxis = (\hat{v}_x, \hat{v}_y, \hat{v}_z)$, "
+          r"$a = \cos\tfrac{\phi}{2} - \iunit\hat{v}_z\sin\tfrac{\phi}{2}$ and "
+          r"$b = -(\hat{v}_y + \iunit\hat{v}_x)\sin\tfrac{\phi}{2}$.")
+    wd = D.record_of("double", "SU2")["wigner_d"]["tables"]
+    shown = [t for t in wd if t["twoJ"] <= D_TWOJ_SHOWN]
+    D.w(d_tables_sentence(
+        ", ".join(D.half_frac(t["twoJ"]) for t in shown),
+        "the record" if D.name == "SU2" else r"the record of %s" % D.linked("SU(2)", "SU2"),
+        D.half_frac(wd[-1]["twoJ"]), r" (\texttt{wigner\symbol{95}d})"))
+    for t in shown:
+        d_table(D, t["twoJ"], t["entries"])
+
+
+def _arc_entry(x):
+    s = str(x)
+    sign = ""
+    if s.startswith("p "):
+        sign, s = "p", s[2:]
+    k = r"-" if "-2i" in s else ""
+    return r"%s\expe^{%s\iunit n\omega}" % (sign, k)
+
+
+def _atom_entry(x):
+    s = str(x).replace(" ", "")
+    sign = "-" if s.startswith("-") else ""
+    s = s.lstrip("-")
+    p = ""
+    if s.startswith("p"):
+        p, s = "p", s[1:]
+    i2n = ""
+    if s.startswith("i^(2n)"):
+        i2n, s = r"\iunit^{2n}", s[len("i^(2n)"):]
+    k = "-" if "-2i" in s else ""
+    return r"%s%s%s\expe^{%s2\iunit n\psi}" % (sign, p, i2n, k)
+
+
+def spinor_matrix_cells(D, two):
+    """The matrices of the spinor families of dimension 2 (`two`) of an axial preimage on the
+    components: ({component id: matrix}, the families' labels, the sentence after the table on
+    the values of p and i^(2n), or "").  The families of dimension 2 of one preimage differ only
+    by the parity p, which the sentence before the table names."""
+    cells = {}
+    for cid, e in two[0]["matrices"]["entries"].items():
+        if e["form"] == "diagonal":
+            body = r"%s & 0\\0 & %s" % tuple(_arc_entry(x) for x in e["diag"])
+        else:
+            body = r"0 & %s\\%s & 0" % tuple(_atom_entry(x) for x in e["antidiag"])
+        cells[cid] = r"\left(\begin{irmatrix}{%s}%s\end{irmatrix}\right)" % (NORMAL_GAP, body)
+    notes = []
+    if any(f["label_template"].endswith(("g", "u")) for f in two):
+        notes.append(r"The parity $p$ is $+1$ for $\ptag{g}$ and $-1$ for $\ptag{u}$")
+    if "c2p" in cells:
+        notes.append(r"$\iunit^{2n}$ is $\iunit$ for $n = \tfrac{1}{2}, \tfrac{5}{2}, \dots$ and "
+                     r"$-\iunit$ for $n = \tfrac{3}{2}, \tfrac{7}{2}, \dots$")
+    # a sentence opens on the parity, or on "Here" before the symbol i^(2n) of the table
+    sentence = ", and ".join(notes) + "." if notes else ""
+    return (cells, [D.label_tex(f["label_template"]) for f in two],
+            sentence if sentence.startswith("The ") or not notes else "Here " + sentence)
+
+
 def section_continuous_irreps(D):
-    cf = D.rec.get("character_functions")
-    if not cf:
+    """The matrices of the irrep families of a continuous group, in every catalogue: their rows
+    on the components of the class space, a table for each dimension, and the matrices of a
+    general element of SO(3) and O(3) (general_element).  A preimage gives those of its spinor
+    families, the vector families' being G's: on the kets of an irrep of Pin-(3), and for SU(2)
+    and Pin-(3) as SO(3) and O(3) (spherical_matrices)."""
+    # Rotation's records test for the families (finite ones have none); a record of Double is
+    # continuous here, and its families were read with it (Document)
+    if not D.cover and not D.rec.get("character_functions"):
         return
-    families = cf["irrep_families"]
-    comps = [c["id"] for c in cf["class_space"]["components"]]
+    families = list(D.families.values())
     general = [f for f in families if "general_element" in f["matrices"]]
-    D.section("Representation matrices", "sections 9 and 16")
-    D.w(D.define("irrep.Gamma", "index.dimension", "vector.ket.partner", "index.partner",
-                 "matrix.irrep")
+    D.section("Representation matrices", {"rotation": "sections 9 and 16",
+                                           "double": "sections 9, 16, 23.3 and 29.2"})
+    # the anchors of Gamma and d head the legend of the families (section_families)
+    D.w(D.define("vector.ket.partner", "index.partner", "matrix.irrep")
         + r"A basis $(\irket{\Gamma}{1}, \dots, \irket{\Gamma}{d})$ of the irrep $\Gamma$ obeys")
     D.equation("partner", r"g\irket{\Gamma}{\intx} = \sum_\nu \irket{\Gamma}{\nu}\, "
                           r"\repD{\Gamma}_{\nu,\intx}(g);")
+    # in a preimage the families of the record are its spinor families
+    vector = (r"the matrices of a vector family are those of %s, on the elements that cover its "
+              r"elements. " % rotation_linked(D.cover)) if D.cover else ""
+    irreps = "The spinor irreps" if D.cover else "the irreps"
     if D.spherical:
-        D.w(D.define("index.J")
-            + r"the irreps form families, here the irreps %s of angular momentum $J$%s "
-              r"(CONVENTIONS.pdf, section 11). " % ((r"$\irrJp{J}{\pm}$", r" and parity $\pm1$")
-                                                     if D.name == "O3" else (r"$\irrJ{J}$", ""))
+        if D.cover:
+            here = r"%s at half-integer $J$" % (r"$\irrJp{J}{p}$ of parity $p$"
+                                                 if len(families) > 1 else r"$\irrJ{J}$")
+        else:
+            here = r"%s of angular momentum $J$%s (CONVENTIONS.pdf, section 11)" % (
+                (r"$\irrJp{J}{\pm}$", r" and parity $\pm1$") if len(families) > 1
+                else (r"$\irrJ{J}$", ""))
+        D.w(vector + D.define("index.J") + irreps + r" form families, here the irreps %s. " % here
             + family_rows(about=r" about $z$")
             + r" Section~\ref{s:general} gives the matrices of every element.")
     else:
-        D.w(r"the irreps form families. " + family_rows())
+        D.w(vector + irreps + r" form families. "
+            + family_rows(" of a spinor family" if D.cover else ""))
     traced = any(not isinstance(f["dim"], int) or f["dim"] > 1 for f in families)
     if traced:
-        D.w(D.define("function.character") + trace_sentence("the record holds it in closed form"))
+        # Double's table of families gives the characters
+        D.w(D.define("function.character") + trace_sentence(
+            r"section~\ref{s:families} gives it" if D.cover
+            else "the record holds it in closed form"))
     # the constants, after the sentences that open the section (as in section_irrep_matrices)
     # and before the first table, which uses them
     D.w(CONSTANTS)
+    if D.cover and D.spherical:
+        return spherical_matrices(D, families)
+    comps = [c["id"] for c in D.rec["character_functions"]["class_space"]["components"]]
+    # in a preimage the kets of the irrep of Pin-(3) that carry the spinor families, and the case
+    # that names the family's parity p when the families have one
+    parity = any(f["label_template"].endswith(("g", "u")) for f in families)
+    parent = r"$\irrJp{n}{p}$" if parity else r"$\irrJp{n}{+1}$"
+    case = r"For a family of parity $p$, " if parity else ""
     by_dim = {}
     for f in families:
         by_dim.setdefault(f["dim"] if isinstance(f["dim"], int) else None, []).append(f)
@@ -3125,16 +4358,37 @@ def section_continuous_irreps(D):
         if d == 1:
             if several:
                 D.w(r"\subsection{The irreps of dimension 1}")
-            D.w(D.define("function.character") + r"$\repD{\Gamma}(g) = \irchar{\Gamma}(g)$%s." % (
-                "" if traced else r", the character of $\Gamma$"))
+            # in a preimage (2Cinf and 2Cinfh, whose spinor families all have dimension 1) the
+            # ket of each family
+            D.w(D.define("function.character")
+                + (r"%s matrix " % (case + "the" if case else "The") if D.cover else "")
+                + r"$\repD{\Gamma}(g) = \irchar{\Gamma}(g)$%s." % (
+                    r" acts on one ket of %s, $\jm{n}{n}$ for a family $\conjpair{1}\irr{e}$ and "
+                    r"$\jm{n}{-n}$ for a family $\conjpair{2}\irr{e}$" % parent if D.cover
+                    else "" if traced else r", the character of $\Gamma$"))
             D.w(r"{\small\setlength{\tabcolsep}{4pt}")
             D.w(r"\begin{longtable}{@{}l%s@{}}\toprule" % ("l" * len(fs)))
-            D.w(r"$g$ & " + " & ".join("$%s$" % irrep_label(f["label_template"]) for f in fs)
+            D.w(r"$g$ & " + " & ".join("$%s$" % D.label_tex(f["label_template"]) for f in fs)
                 + r"\\\midrule\endhead")
             for cid in comps:
-                D.w(r"$%s$ & %s\\" % (componentwise(D, cid), " & ".join(
-                    "$%s$" % one_dimensional_value(D, f["chi"][cid], angle(cid)) for f in fs)))
+                D.w(r"$%s$ & %s\\" % (D.component_element(cid), " & ".join(
+                    "$%s$" % D.one_dimensional_cell(f["chi"][cid], cid) for f in fs)))
             D.w(r"\bottomrule\end{longtable}}")
+        elif d == 2 and D.cover:
+            # the spinor families of dimension 2, on the kets of an irrep of Pin-(3): one table,
+            # their matrices differing only by the parity p
+            cells = spinor_matrix_cells(D, fs)
+            D.w(action_sentence(r"\Gamma", r"$\jm{n}{-n}$, $\jm{n}{n}$", parent, case))
+            D.w(r"{\small\setlength{\tabcolsep}{4pt}")
+            D.w(r"\begin{longtable}{@{}ll@{}}\toprule")
+            D.w(r"$g$ & $%s$\\\midrule\endhead" % ", ".join(
+                r"\repD{%s}(g)" % x for x in cells[1]))
+            for k, cid in enumerate(comps):
+                D.w(r"$%s$ & $%s$%s" % (D.component_element(cid), cells[0][cid],
+                                        row_end(k, len(comps))))
+            D.w(r"\bottomrule\end{longtable}}")
+            if cells[2]:
+                D.w(cells[2])
         elif d == 2:
             if several:
                 D.w(r"\subsection{The irreps of dimension 2}\label{s:irreps2}")
@@ -3352,13 +4606,69 @@ def families_lead(a, b, kinds="", squares=r" $\Gamma\irrprod\Gamma$"):
             r"squares%s follow, with the antisymmetric part in braces." % (a, b, kinds, squares))
 
 
-def section_fusion(D, wrap=False):
-    """The products of the irreps.  With wrap (the Double's documents), a table of products that
-    is set as one copy is set as two, its products breaking over lines (wrapped_copies)."""
+def spherical_parity(label):
+    """The parity of a family label of SU2 or Pinminus3: D^(j,+) -> 1, D^(J,-) -> -1, D^(j) ->
+    None."""
+    return {"+": 1, "-": -1}.get(label[-2]) if label.endswith(("+)", "-)")) else None
+
+
+def spherical_fusion(D, fu):
+    """The rules of SU(2) and Pin-(3), one for each pair of families with a spinor factor, are
+    the Clebsch-Gordan series with the parities multiplied: the document writes them as one, and
+    the squares as one; a rule of the record that is not that one stops the build."""
+    par = {f: spherical_parity(t) for f, t in fu["family_labels"].items()}
+    parity = any(p is not None for p in par.values())
+    for r in fu["rules"]:
+        t = r["terms"]
+        if not (len(t) == 1 and t[0]["mult"] == 1 and r["condition"] == "always"
+                and t[0]["index_range"]["step"] == 1
+                and t[0]["index_range"]["from"] == "|%s-%s|" % (r["a"]["index"], r["b"]["index"])
+                and t[0]["index_range"]["to"] == "%s+%s" % (r["a"]["index"], r["b"]["index"])
+                and (not parity or par[t[0]["family"]] == par[r["a"]["family"]]
+                     * par[r["b"]["family"]])):
+            raise ValueError("%s: the rule %s is not the Clebsch-Gordan series" % (
+                D.name, r["display"]))
+    for q in fu["squares"]:
+        sym, anti = q["symmetric"], q["antisymmetric"]
+        if not (len(sym) == len(anti) == 1
+                and (sym[0]["index_range"]["from"], sym[0]["index_range"]["to"],
+                     sym[0]["index_range"]["step"]) == ("1", "2j", 2)
+                and (anti[0]["index_range"]["from"], anti[0]["index_range"]["to"],
+                     anti[0]["index_range"]["step"]) == ("0", "2j-1", 2)
+                and sym[0]["family"] == anti[0]["family"] == fu["identity"]["family"]):
+            raise ValueError("%s: the square %s is not the rule" % (D.name, q["display"]))
+    if parity:
+        a, b = r"\irrJp{J_1}{p_1}", r"\irrJp{J_2}{p_2}"
+        c, s, k = r"\irrJp{J}{p_1p_2}", r"\irrJp{J}{p}", r"\irrJp{K}{+}"
+    else:
+        a, b, c, s, k = r"\irrJ{J_1}", r"\irrJ{J_2}", r"\irrJ{J}", r"\irrJ{J}", r"\irrJ{K}"
+    D.w(r"The record holds a rule for every pair of families with a spinor factor "
+        r"(\texttt{rules}), and these rules take one form. " + D.define("index.J12")
+        + r"In this form $J_1$ and $J_2$ are the indices of the factors, an integer for a vector "
+          r"family and a half-integer for a spinor family%s. The square of a spinor irrep "
+          r"(\texttt{squares}) follows, with the antisymmetric part in braces. The products of "
+          r"two vector families are those of %s (\texttt{vector\symbol{95}rules})." % (
+              r", and $p_1$ and $p_2$ are the factors' parities" if parity else "",
+              rotation_linked(D.cover)))
+    D.w(r"\begin{align}%s\irrprod %s &= \bigoplus_{J=\lvert J_1-J_2\rvert}^{J_1+J_2} %s,\\"
+        r"%s\irrprod %s &= \bigoplus_{K=1,3,\dots,2J} %s\oplus\Bigl\{\bigoplus_{K=0,2,\dots,2J-1}"
+        r" %s\Bigr\}.\end{align}" % (a, b, c, s, s, k, k))
+
+
+def section_fusion(D):
+    """The products of the irreps, in every catalogue: a grid where every product is one irrep,
+    else the table of the pairs; in a continuous group the rules of the products of its families.
+    In Double a table of products that would be one copy is set as two, its products breaking
+    over lines (wrapped_copies), and a continuous preimage, whose record holds the rules with a
+    spinor factor (those of two vector families are G's, vector_rules), lists its rules by the
+    kinds of their factors; those of SU(2) and Pin-(3) take one form (spherical_fusion)."""
+    if D.cover and not D.preimage:
+        return
     fus = D.rec.get("fusion")
     if not fus:
         return
-    D.section("Direct products of irreps", "section 10")
+    D.section("Direct products of irreps", {"rotation": "section 10", "double": (
+        "section 10" if fus["kind"] == "table" else "sections 10.2 and 29.3")})
     if fus["kind"] == "table" and all(len(p["terms"]) == 1 and p["terms"][0]["mult"] == 1
                                       for p in fus["products"]):
         return fusion_grid(D, fus)
@@ -3384,7 +4694,7 @@ def section_fusion(D, wrap=False):
             [max(visible(r[0]) for r in rows), max(visible(r[1]) for r in rows),
              max(visible(r[2]) for r in rows)], cells)
         mark = snake_mark()
-        two = wrapped_copies(cells) if wrap and not fill else None
+        two = wrapped_copies(cells) if D.cover and not fill else None
         if two:
             spec[2] = r">{\RaggedRight\arraybackslash}p{\fillwidth}"
             mark = (r"\setlength{\tabcolsep}{%gpt}\setlength{\LTleft}{-%gpt plus 1fill}"
@@ -3396,33 +4706,58 @@ def section_fusion(D, wrap=False):
         for r in rows:
             D.w(r"$%s$ & $%s$ & $%s$\\" % r)
         D.w(r"\bottomrule\end{longtable}}")
-    else:
-        sym = fus["index_symbols"]
-        D.w(D.define("index.J12" if D.spherical else "index.family")
-            + families_lead(index_tex(factor_indices(sym["a"])),
-                            index_tex(factor_indices(sym["b"]))))
-        ranges = any("index_range" in t for r in fus["rules"] for t in r["terms"])
-        for title, rules in (("Products", fus["rules"]), ("Squares", fus["squares"])):
-            D.w(r"\paragraph{%s.}" % title)
-            if ranges:
-                # direct sums over index ranges, with their limits above and below
-                # a comma after each rule, a period after the last
-                D.w(r"\begin{align}%s.\end{align}" % r",\\".join(
-                    r"%s &= %s%s" % (lhs, rhs, r",\quad %s" % cond if cond else "")
-                    for lhs, rhs, cond in (fusion_structured(D, r) for r in rules)))
-                continue
-            D.w(r"{\small\begin{longtable}{@{}l@{${}={}$}ll@{}}\toprule")
-            for r in rules:
+        return
+    vector = fus.get("vector_rules")
+    if vector and D.spherical:
+        return spherical_fusion(D, fus)
+    sym = fus["index_symbols"]
+    D.w(D.define("index.J12" if D.spherical else "index.family")
+        + families_lead(index_tex(factor_indices(sym["a"])), index_tex(factor_indices(sym["b"])),
+                        *((", by the kinds of the factors, where a vector index is an integer "
+                           "and a spinor index a half-integer", " of the families") if vector
+                          else ()))
+        + (r" The rules with two vector factors are those of %s (\texttt{vector\symbol{95}rules})."
+           % rotation_linked(D.cover) if vector else ""))
+    ranges = any("index_range" in t for r in fus["rules"] for t in r["terms"])
+    if vector:
+        # a vector and a spinor family can share a symbol (1E_n of 2C_inf): the products are
+        # listed by the kinds of their factors, the vector ones first, as the finite documents
+        # order theirs
+        own = D.covered["fusion"]
+        spinor = {f["id"] for f in D.rec["character_functions"]["irrep_families"]}
+        kinds = (("a vector and a spinor factor", False), ("two spinor factors", True))
+    for title, rules in (("Products", fus["rules"]), ("Squares", fus["squares"])):
+        D.w(r"\paragraph{%s.}" % title)
+        if ranges:
+            # direct sums over index ranges, with their limits above and below
+            # a comma after each rule, a period after the last
+            D.w(r"\begin{align}%s.\end{align}" % r",\\".join(
+                r"%s &= %s%s" % (lhs, rhs, r",\quad %s" % cond if cond else "")
+                for lhs, rhs, cond in (fusion_structured(D, r) for r in rules)))
+            continue
+        D.w(r"{\small\begin{longtable}{@{}l@{${}={}$}ll@{}}\toprule")
+        if not vector:
+            groups = [(None, rules)]
+        elif title == "Products":
+            groups = ([("two vector factors", own["rules"])]
+                      + [(head, [r for r in rules if (r["a"]["family"] in spinor) == both])
+                         for head, both in kinds])
+        else:
+            groups = [("a vector family", own["squares"]), ("a spinor family", rules)]
+        for head, group in groups:
+            if head and group:
+                D.w(r"\multicolumn{3}{@{}l@{}}{\emph{%s}}\\*" % head)
+            for r in group:
                 # the factors of a product take n and n' when both carry an index
                 lhs, rhs, cond = fusion_rule(factor_indices(
                     r["display"], "index" in r.get("a", {}) and "index" in r.get("b", {})))
                 D.w(r"$%s$ & $%s$ & %s\\" % (lhs, rhs, "$%s$" % cond if cond else ""))
-            D.w(r"\bottomrule\end{longtable}}")
+        D.w(r"\bottomrule\end{longtable}}")
 
 
 # ---------------------------------------------------------------- Clebsch--Gordan
 # The closed form of van der Waerden and Racah as a display, in the coupling rules of SO(3) and O(3)
-# (COUPLING_RULE) and of SU(2) (double_continuous.su2_coupling_rules).
+# (COUPLING_RULE) and of SU(2) (su2_coupling_rules).
 RACAH_FORMULA = (
     r"\begin{equation}\begin{aligned}&\cgc{J_1}{m_1}{J_2}{m_2}{J}{M} = "
     r"\delta_{M,m_1+m_2}\sqrt{\frac{(2J+1)\,(J_1+J_2-J)!\,(J_1-J_2+J)!\,(-J_1+J_2+J)!}"
@@ -3588,7 +4923,7 @@ def o3_first(rules):
 
 def spherical_kets(D, top, half, stored, block, files=False):
     """The paragraph on the table of coupled kets of SO(3) and O(3), and of SU(2) at half-integer
-    J (double_continuous.su2_clebsch_gordan): the blocks typeset, `block` (the symbol of a block)
+    J (spherical_clebsch_gordan): the blocks typeset, `block` (the symbol of a block)
     with J1 <= J2 <= top (TeX) and `half` the condition that SU(2) adds, then those stored,
     J1 <= J2 <= stored, in the record or in the files (`files`); then the rows and the stored
     layout."""
@@ -3611,45 +4946,111 @@ def coupling_lead(scope="every pair of irreps"):
     return r"These coupling rules cover %s:" % scope
 
 
+def su2_coupling_rules():
+    """{the text of a rule of SU2's clebsch_gordan.rules: its TeX}: SO(3)'s where the texts agree
+    (the convention and the symmetries), and SU(2)'s own for simple reducibility, the kets, the
+    closed form at integer and half-integer J (in the words of SO(3)'s, with RACAH_FORMULA) and
+    the files."""
+    def rot(start):
+        return next((k, v) for k, v in COUPLING_RULE.items() if k.startswith(start))
+    cs = rot("<j1 m1 j2 m2 | J M> in the Condon-Shortley convention")
+    sym = rot("symmetries (VMK 8.4)")
+    return {
+        "D^(j1) (x) D^(j2) = sum_{J=|j1-j2|}^{j1+j2} D^(J), each J once: SU(2) is simply "
+        "reducible":
+            r"Every irrep in the product of two irreps (section~\ref{s:fusion}) occurs once: "
+            r"$\grp{SU(2)}$ is simply reducible.",
+        cs[0]: cs[1],
+        "C[(i,k), mu] = <j1 m1 j2 m2 | J M> with i = j1 - m1 + 1, k = j2 - m2 + 1, mu = J - M + 1 "
+        "(m descending), on the kets |j,m> of D^(j,+1) (double/CONVENTIONS.md section 26.1)":
+            r"$C[(\intx_1,\intx_2),\intx] = \cgc{J_1}{m_1}{J_2}{m_2}{J}{M}$ with "
+            r"$\intx_1 = J_1 - m_1 + 1$, $\intx_2 = J_2 - m_2 + 1$, $\intx = J - M + 1$ ($m$ "
+            r"descending), on the kets $\jm{J}{m}$ of $\irrJp{J}{+1}$ (CONVENTIONS.pdf, section "
+            r"26.1).",
+        "closed form (van der Waerden, Racah; VMK 8.2.1 eq. 3), at integer and half-integer j: "
+        "<j1 m1 j2 m2 | J M> = delta_{M,m1+m2} sqrt((2J+1) (j1+j2-J)! (j1-j2+J)! (-j1+j2+J)! / "
+        "(j1+j2+J+1)!) sqrt((j1+m1)! (j1-m1)! (j2+m2)! (j2-m2)! (J+M)! (J-M)!) sum_z (-1)^z / "
+        "(z! (j1+j2-J-z)! (j1-m1-z)! (j2+m2-z)! (J-j2+m1+z)! (J-j1-m2+z)!), over the z for which "
+        "every factorial argument is >= 0":
+            r"The closed form of van der Waerden and Racah [VMK88, section 8.2.1, eq.~3] applies "
+            r"at integer and half-integer $J$ and sums over the $z$ for which every factorial "
+            r"argument is $\ge 0$: " + RACAH_FORMULA,
+        sym[0]: sym[1],
+        "the products j1 <= j2 <= 10 with j1 or j2 half-integer are in one file per 2j1, "
+        "data/clebsch_gordan/SU2/<NN>.json with NN = 2j1 in two digits (00 to 19); the products "
+        "of two integer j are SO3's (vector_products)":
+            r"The products with $J_1 \le J_2 \le 10$ and $J_1$ or $J_2$ half-integer are in one "
+            r"file for each $2J_1$, \texttt{data/clebsch\symbol{95}gordan/SU2/<NN>.json} with "
+            r"\texttt{NN} "
+            r"$= 2J_1$ in two digits, 00 to 19 (\texttt{files}). The products of two integer $J$ "
+            r"are those of %s (\texttt{vector\symbol{95}products})." % rotation_linked("SO3"),
+    }
+
+
+# The blocks of Clebsch--Gordan coefficients that SU(2)'s document sets whole, those with a spinor
+# factor, 2J_1 <= 2J_2 <= CG_TWOJ_SHOWN (SO(3)'s set J_1 <= J_2 <= CG_TYPESET_JMAX).
+CG_TWOJ_SHOWN = 5
+
+
 def spherical_clebsch_gordan(D, cg):
-    """The Clebsch-Gordan coefficients of SO(3) and O(3): the rules, then the coupled kets |J M>
-    of every block of D^(J1) x D^(J2), J1 <= J2 <= CG_TYPESET_JMAX, in the kets |m1 m2> (the
+    """The Clebsch-Gordan coefficients of SO(3), O(3) and SU(2): the rules, then the coupled kets
+    |J M> of every block of D^(J1) x D^(J2), J1 <= J2 <= CG_TYPESET_JMAX (in SU(2) those with a
+    spinor factor, 2J1 <= 2J2 <= CG_TWOJ_SHOWN, from the files), in the kets |m1 m2> (the
     record's i, k, mu turned into m1 = J1 - i + 1, m2 = J2 - k + 1, M = J - mu + 1); in O(3) a
-    block is headed D^(J1,p1) x D^(J2,p2) -> D^(J,p1 p2), for every parity."""
+    block is headed D^(J1,p1) x D^(J2,p2) -> D^(J,p1 p2), for every parity.  The angular momenta
+    are taken by their doubles, as SU(2)'s files give them, and written by D.half_frac."""
+    files = "files" in cg
+    # the parities of a block: none in SO(3) and SU(2); p1, p2 and p1 p2 in O(3)
+    improper = "improper" in D.component_coset.values()
     D.w(D.define("function.cg", "index.J12", "index.m12", "index.projection.M",
                  "matrix.cg.stored", "index.cg", "local.sum.racah",
-                 *(("function.cg.parity",) if "improper" in D.component_coset.values() else ()))
+                 *(("function.cg.parity",) if improper else ()))
         + coupling_lead())
+    if files:
+        rules = su2_coupling_rules()
+        items = [D.stated(rules, r, "coupling rule") for r in cg["rules"]]
+    else:
+        items = [COUPLING_RULE.get(r, tx(r)) for r in o3_first(cg["rules"])]
     D.w(r"\begin{romanlist}\raggedright")
-    for r in o3_first(cg["rules"]):
-        D.w(r"\item " + COUPLING_RULE.get(r, tx(r)))
+    for item in items:
+        D.w(r"\item " + item)
     D.w(r"\end{romanlist}")
-    spherical_kets(D, "%d" % CG_TYPESET_JMAX, "", cg["J_max_tabulated"], (
-        r"${\irrJp{J_1}{p_1}\irrprod\irrJp{J_2}{p_2}\to\irrJp{J}{p_1p_2}}$"
-        if "improper" in D.component_coset.values()
-        else r"${\irrJ{J_1}\irrprod\irrJ{J_2}\to\irrJ{J}}$"))
+    top = CG_TWOJ_SHOWN if files else 2 * CG_TYPESET_JMAX
+    spherical_kets(D, D.half_frac(top), r" and $J_1$ or $J_2$ half-integer" if files else "",
+                   cg["twoJ_max_tabulated"] // 2 if files else cg["J_max_tabulated"], (
+                       r"${\irrJp{J_1}{p_1}\irrprod\irrJp{J_2}{p_2}\to\irrJp{J}{p_1p_2}}$"
+                       if improper else r"${\irrJ{J_1}\irrprod\irrJ{J_2}\to\irrJ{J}}$"),
+                   files=files)
     D.w(CONSTANTS)
-    j = {inst["label"]: inst["index"] for f in D.families.values() for inst in f["instances"]}
-    # the parities of a block: none in SO(3); p1, p2 and p1 p2 in O(3)
-    improper = "improper" in D.component_coset.values()
+    if files:
+        products = [(int(Fraction(re.fullmatch(r"D\^\((.+)\)", p["a"]).group(1)) * 2),
+                     int(Fraction(re.fullmatch(r"D\^\((.+)\)", p["b"]).group(1)) * 2), p)
+                    for f in cg["files"] if f["twoj1"] <= top
+                    for p in serialize.read_json(names.path(f["path"]))["products"]]
+    else:
+        j = {inst["label"]: inst["index"] for f in D.families.values() for inst in f["instances"]}
+        products = [(2 * j[p["a"]], 2 * j[p["b"]], p) for p in cg["products"]]
 
-    def label(j, p):
-        return r"\irrJp{%d}{%s}" % (j, p) if improper else r"\irrJ{%d}" % j
+    def label(two, p):
+        return (r"\irrJp{%s}{%s}" % (D.half_frac(two), p) if improper
+                else r"\irrJ{%s}" % D.half_frac(two))
     blocks = []
-    for p in cg["products"]:
-        j1, j2 = j[p["a"]], j[p["b"]]
-        if max(j1, j2) > CG_TYPESET_JMAX:
+    for t1, t2, p in products:
+        if max(t1, t2) > top:
             continue
         for n, c in enumerate(p["couplings"]):
-            if c["N"] != rat(1) or c["separation"] != "unique":
-                raise ValueError("%s: %s x %s -> %s is not a unique block with N = 1"
-                                 % (D.name, p["a"], p["b"], c["c"]))
-            J = abs(j1 - j2) + n
-            rows = [("$%d$" % (J - q["mu"] + 1), coupled_terms(D, [
-                (t["e"], r"\prodket{%d}{%d}" % (j1 - t["i"] + 1, j2 - t["k"] + 1))
+            tJ = abs(t1 - t2) + 2 * n
+            # SU(2)'s files name the irrep of each block, D^(J)
+            if (c["N"] != rat(1) or c["separation"] != "unique" or files and c["c"] != "D^(%s)"
+                    % (str(tJ // 2) if tJ % 2 == 0 else "%d/2" % tJ)):
+                raise ValueError("%s: %s x %s -> %s is not the unique block with N = 1 at "
+                                 "J = %s/2" % (D.name, p["a"], p["b"], c["c"], tJ))
+            rows = [("$%s$" % D.half_frac(tJ - 2 * (q["mu"] - 1)), coupled_terms(D, [
+                (t["e"], r"\prodket{%s}{%s}" % (D.half_frac(t1 - 2 * (t["i"] - 1)),
+                                                D.half_frac(t2 - 2 * (t["k"] - 1))))
                 for t in q["terms"]])) for q in c["partners"]]
             blocks.append((p, r"$%s\irrprod %s \to %s$" % (
-                label(j1, "p_1"), label(j2, "p_2"), label(J, "p_1p_2")), rows))
+                label(t1, "p_1"), label(t2, "p_2"), label(tJ, "p_1p_2")), rows))
     coupling_table(D, blocks, r"$M$ & $\jm{J}{M}$")
 
 
@@ -3662,44 +5063,133 @@ def factor_bases(kind, source):
             % (kind, source))
 
 
-def section_clebsch_gordan(D, tags=SEPARATION_TAGS, records=SEPARATION_RECORD,
-                           rules_of=None, tag_of=None,
-                           twice=("twice", "the two copies", "section 10.4"), shown=None):
-    """The Clebsch--Gordan section; tags (for each rule, the sentence that reads its tags),
-    records, rules_of(coupling) (the rules that separated it), tag_of(coupling) (its tag after
-    kappa) and twice (the words of the sentence that leads the tags) let a catalogue add its
-    rules, and shown(product) keep only some products in the table (double_latex)."""
-    if rules_of is None:
-        def rules_of(c):
-            return {c["separation"].rsplit("-", 1)[0]}
-    if tag_of is None:
-        def tag_of(c):
-            return SEPARATION_SHORT.get(c["separation"], tx(c["separation"]))
-    cg = D.rec.get("clebsch_gordan")
-    if not cg:
+# The signs of the couplings of an axial preimage of Double (clebsch_gordan.couplings[].sign), as
+# formulas; the others are in words (sign_tex).
+COUPLING_SIGN_TEX = {"1": "+1", "-1": "-1", "(-1)^m": "(-1)^{n}", "(-1)^(m+1)": "(-1)^{n+1}",
+                     "(-1)^(m+n)": "(-1)^{n+n'}"}
+
+
+def sign_tex(s):
+    """A sign of the couplings: a formula, or words for the parities, its two cases joined by
+    "and"."""
+    if s in COUPLING_SIGN_TEX:
+        return "$%s$" % COUPLING_SIGN_TEX[s]
+    return {"pa": r"$+1$ when the vector factor is $\ptag{g}$ and $-1$ when it is $\ptag{u}$",
+            "-pa": r"$-1$ when the vector factor is $\ptag{g}$ and $+1$ when it is $\ptag{u}$",
+            "pc": r"$+1$ when the result is $\ptag{g}$ and $-1$ when it is $\ptag{u}$",
+            "-pc": r"$-1$ when the result is $\ptag{g}$ and $+1$ when it is $\ptag{u}$"}[s]
+
+
+def spinor_couplings(c, flip, cover):
+    """The coupling rules of the products with a spinor factor of an axial preimage of Double,
+    whose couplings give the signs `c` ({key: sign}) on the partner |2>, `flip` the reference flip
+    of the covered group `cover`."""
+    items = [r"$\lambda\irrprod\irr{e}_n = \irr{e}_n$ for a one-dimensional $\lambda$: "
+             r"$\ket{1} = \ket{f_1}$, $\ket{2} = \lambda(%s)\ket{f_2}$." % flip,
+             r"$\irr{e}_n\irrprod\irr{e}_{n'} = "
+             r"\irr{e}_{n+n'}\oplus\irr{e}_{\lvert n-n'\rvert}$, $n$ a vector and $n'$ a spinor "
+             r"index: $\irr{e}_{n+n'}$ has $\ket{1} = \ket{e_1}\ket{f_1}$, "
+             r"$\ket{2} = s\ket{e_2}\ket{f_2}$, $s = $ %s. The irrep $\irr{e}_{n-n'}$ ($n > n'$) "
+             r"has $\ket{1} = \ket{e_1}\ket{f_2}$, $\ket{2} = s\ket{e_2}\ket{f_1}$, $s = $ %s. "
+             r"The irrep $\irr{e}_{n'-n}$ ($n < n'$) has $\ket{1} = \ket{e_2}\ket{f_1}$, "
+             r"$\ket{2} = s\ket{e_1}\ket{f_2}$, $s = $ %s."
+             % (sign_tex(c["vs+"]), sign_tex(c["vs>"]), sign_tex(c["vs<"]))]
+    signs = tuple(sign_tex(c[k]) for k in ("ss+", "ss>", "ss<"))
+    # signs that are formulas share a sentence; signs in words take a sentence each, the other
+    # irrep of the product named in each
+    if all(c[k] in COUPLING_SIGN_TEX for k in ("ss+", "ss>", "ss<")):
+        items.append(r"$\irr{e}_n\irrprod\irr{e}_{n'}$ for spinor indices $n \ne n'$ has the "
+                     r"same partners, with $s = $ %s for $\irr{e}_{n+n'}$, %s for $n > n'$ and %s "
+                     r"for $n < n'$." % signs)
+    else:
+        items.append(r"$\irr{e}_n\irrprod\irr{e}_{n'}$ for spinor indices $n \ne n'$ has the "
+                     r"same partners. For $\irr{e}_{n+n'}$, $s = $ %s. For $n > n'$ the other "
+                     r"irrep has the sign %s. For $n < n'$ the other irrep has the sign %s."
+                     % signs)
+    items.append(r"$\irr{e}_n\irrprod\irr{e}_n = \irr{a}_1\oplus\irr{a}_2\oplus\irr{e}_{2n}$ "
+                 r"for a spinor family: $\irr{a}_1$, "
+                 r"$\irr{a}_2 = \tfrac{1}{2}\sqrt{2}\,(\ket{e_1}\ket{f_2} "
+                 r"\mp \ket{e_2}\ket{f_1})$ ($\cgnorm = 2$). The irrep $\irr{e}_{2n}$ is coupled "
+                 r"as $\irr{e}_{n+n'}$.")
+    if cover == "Dinfh":
+        items.append(r"The $\ptag{g}$ or $\ptag{u}$ of the result is the product of those of the "
+                     r"factors.")
+    return items
+
+
+def family_couplings(D, cg):
+    """The coupling rules of an axial group: one rule in a sentence, else a list, led by the
+    bases and partners where its rules use them.  Rotation's are the record's rules
+    (COUPLING_RULE); a preimage of Double, whose products of two vector irreps are G's
+    (vector_products), gives those with a spinor factor, by the signs of its couplings, or, where
+    every irrep has dimension 1, one sentence."""
+    vector = "vector_products" in cg
+    if vector and "couplings" not in cg:
+        D.w(r"Every irrep has dimension 1: the characters multiply, and the coefficient has "
+            r"the value 1.%s The products of two vector irreps are those of %s." % (
+                r" The $\ptag{g}$ or $\ptag{u}$ of the result is the product of those of the "
+                r"factors." if D.cover == "Cinfh" else "", rotation_linked(D.cover)))
         return
-    D.section("Clebsch--Gordan coefficients",
-              "sections 10.3 and 10.6" if cg["kind"] == "table" and "rules" in cg
-              else "section 10")
-    if cg["kind"] != "table":
-        if len(cg["rules"]) == 1:
-            D.w(r"The coupling rule of every pair of irreps is "
-                + COUPLING_RULE.get(cg["rules"][0], tx(cg["rules"][0])))
-            return
-        # the bases and partners lead the rules that use them, as in double_continuous; the
-        # anchors of lambda and epsilon head the lead of the list whose rules use them
+    if not vector and len(cg["rules"]) == 1:
+        D.w(r"The coupling rule of every pair of irreps is "
+            + COUPLING_RULE.get(cg["rules"][0], tx(cg["rules"][0])))
+        return
+    # the bases and partners lead the rules that use them; the anchors of lambda (and of epsilon)
+    # head the lead of the list whose rules use them
+    if vector:
+        flip = {"Cinfv": r"\elt{\lift{\sigma}_v}(0)"}.get(D.cover, r"\elt{\lift{C}_2'}(0)")
+        # the bases and partners, the sign, then the lead of the list
+        D.w(D.define("vector.basis.factor")
+            + factor_bases("", r"those of section~\ref{s:continuous_irreps} for a spinor and of "
+                               r"%s for a vector" % rotation_linked(D.cover))
+            + r" The partner $\ket{2}$ carries the sign $s$ determined by the reference flip $%s$, "
+              r"and a ket written below without a coefficient has the coefficient 1. " % flip
+            + D.define("irrep.lambda") + coupling_lead("the products with a spinor factor"))
+        items = spinor_couplings({r["key"]: r["sign"] for r in cg["couplings"]}, flip, D.cover)
+    else:
         bases = any(r"\ket{e_1}" in COUPLING_RULE.get(r, "") for r in cg["rules"])
         D.w((D.define("vector.ket.one", "vector.basis.factor")
              + factor_bases("rotation-diagonal ", r"section~\ref{s:irreps2}") + " "
              + D.define("irrep.lambda", "index.realpair") if bases else "")
             + coupling_lead())
-        D.w(r"\begin{romanlist}\raggedright")
-        for r in cg["rules"]:
-            D.w(r"\item " + COUPLING_RULE.get(r, tx(r)))
-        D.w(r"\end{romanlist}")
-        return
-    if "rules" in cg:
-        return spherical_clebsch_gordan(D, cg)
+        items = [COUPLING_RULE.get(r, tx(r)) for r in cg["rules"]]
+    D.w(r"\begin{romanlist}\raggedright")
+    for item in items:
+        D.w(r"\item " + item)
+    D.w(r"\end{romanlist}")
+    if vector:
+        # as 2Cinf and 2Cinfh and the finite preimages say of their vector irreps
+        D.w(r"The products of two vector irreps are those of %s "
+            r"(\texttt{vector\symbol{95}products})." % rotation_linked(D.cover))
+
+
+def cg_lines(D, p):
+    """The lines that the longest row of a product's blocks fills (VECTOR_LINE characters a line,
+    as the vectors of the bases)."""
+    widest = max(sum(visible(t) + 1 for t in partner_terms(D, q["terms"])) + 4
+                 for c in p["couplings"] for q in c["partners"])
+    return -(-widest // VECTOR_LINE)
+
+
+def separation_rules(c):
+    """The rules that separate the copies of a coupling (SEPARATION_TAGS): that of its separation
+    (exchange for exchange-symmetric), and SU(2) parentage where it has a parent J."""
+    return ({c["separation"].rsplit("-", 1)[0]} - {"su2"}) | (
+        {"su2-parent"} if "parent_twoJ" in c else set())
+
+
+def separation_tag(D, c):
+    """The tag of a copy after kappa: its separation in short (SEPARATION_SHORT), and the parent J
+    of a copy that SU(2) parentage places."""
+    short = SEPARATION_SHORT.get(c["separation"], "" if D.cover else tx(c["separation"]))
+    parent = (r"parent $J = %s$" % D.half_frac(c["parent_twoJ"])) if "parent_twoJ" in c else ""
+    return ", ".join(x for x in (short, parent) if x)
+
+
+def table_couplings(D, cg, left):
+    """The blocks of the Clebsch-Gordan coefficients of a finite group, but those of the products
+    `left` (ids): the coupled kets, the rules that separate the copies of an irrep, then a table
+    of the blocks; where every irrep has dimension 1, one sentence."""
     dim = {ir["id"]: ir["dim"] for ir in D.rec["character_table"]["irreps"]}
     one = [p for p in cg["products"] if dim[p["a"]] == dim[p["b"]] == 1]
     for p in one:
@@ -3738,13 +5228,17 @@ def section_clebsch_gordan(D, tags=SEPARATION_TAGS, records=SEPARATION_RECORD,
         r"whose two factors are one-dimensional is left out: it is "
         r"$\ket{\Gamma} = \ket{\Gamma_1}\ket{\Gamma_2}$, "
         r"$\cgcone{\Gamma_1}{\Gamma_2}{\Gamma} = 1$.")
-    kept = [p for p in cg["products"] if shown is None or shown(p)]
-    rules = set().union(*[rules_of(c) for p in kept for c in p["couplings"]])
+    kept = [p for p in cg["products"] if id(p) not in left]
+    rules = set().union(*[separation_rules(c) for p in kept for c in p["couplings"]])
     # a sentence for the rule, then one for the tags of each rule, each with its anchor
-    shown = [D.define(records[rule]) + text for rule, text in tags if rule in rules]
+    shown = [D.define(SEPARATION_RECORD[rule]) + text for rule, text in SEPARATION_TAGS
+             if rule in rules]
     if shown:
         D.w(r"Where $\Gamma$ occurs %s, $\mult$ is followed by the rule that separates %s "
-            r"(CONVENTIONS.pdf, %s). " % twice + " ".join(shown))
+            r"(CONVENTIONS.pdf, %s). " % (("more than once", "its copies", "sections 10.4 and 24")
+                                          if D.cover else ("twice", "the two copies",
+                                                           "section 10.4"))
+            + " ".join(shown))
     D.w(CONSTANTS)
     blocks = []
     for p in kept:
@@ -3754,7 +5248,7 @@ def section_clebsch_gordan(D, tags=SEPARATION_TAGS, records=SEPARATION_RECORD,
             head = r"$%s\irrprod %s \to %s$" % (D.irrep_id(p["a"]), D.irrep_id(p["b"]),
                                               D.irrep_id(c["c"]))
             if c["separation"] != "unique":
-                head += r", $\mult = %d$ (%s)" % (c["kappa"], tag_of(c))
+                head += r", $\mult = %d$ (%s)" % (c["kappa"], separation_tag(D, c))
             else:
                 head += r", $\mult$ trivial"
             head += r", \quad $\cgnorm = %s$" % D.val(c["N"])
@@ -3762,6 +5256,48 @@ def section_clebsch_gordan(D, tags=SEPARATION_TAGS, records=SEPARATION_RECORD,
             blocks.append((p, head, rows))
     if blocks:
         coupling_table(D, blocks, r"$\intx$ & $\sqrt{\cgnorm}\,\cgket{\Gamma}{\intx}{\mult}$")
+
+
+def section_clebsch_gordan(D):
+    """The Clebsch--Gordan coefficients, in every catalogue: the coupling rules of an axial group
+    (family_couplings), the rules and coupled kets of SO(3), O(3) and SU(2)
+    (spherical_clebsch_gordan), Pin-(3)'s as SU(2)'s, or the blocks of a finite group's products
+    (table_couplings).  A preimage of Double gives those of its products with a spinor factor, the
+    others being G's, and leaves to its record a product whose rows of coefficients fill more than
+    VECTOR_LINES lines (cg_lines)."""
+    if D.cover and not D.preimage:
+        return
+    cg = D.rec.get("clebsch_gordan")
+    if not cg:
+        return
+    D.section("Clebsch--Gordan coefficients", {
+        "rotation": ("sections 10.3 and 10.6" if cg["kind"] == "table" and "rules" in cg
+                     else "section 10"),
+        "double": "section 10" if cg["kind"] == "table" else "sections 10.3 and 29.3"})
+    if cg["kind"] == "family-law":
+        return family_couplings(D, cg)
+    if cg["kind"] == "parity-rule":
+        D.w(r"The coefficients are those of %s (\texttt{table}): $(U, -1)$ acts on a product ket "
+            r"of $\irrJp{J_1}{p_1} \irrprod \irrJp{J_2}{p_2}$ as $p_1 p_2$ times $(U, +1)$, so the "
+            r"coupled kets carry the parity $p_1 p_2$. Thus the coefficients do not depend on the "
+            r"parities." % D.linked("SU(2)", "SU2"))
+        return
+    if "rules" in cg:
+        return spherical_clebsch_gordan(D, cg)
+    left = [p for p in cg["products"] if cg_lines(D, p) > VECTOR_LINES] if D.cover else []
+    table_couplings(D, cg, {id(p) for p in left})
+    if not D.cover:
+        return
+    if left:
+        names_ = [r"$%s\irrprod %s$" % (D.irrep_id(p["a"]), D.irrep_id(p["b"])) for p in left]
+        one = len(names_) == 1
+        D.w(r"The %s %s %s left to the record (\texttt{clebsch\symbol{95}gordan.products}): a "
+            r"row of %s coefficients fills more than %s lines (CONVENTIONS.pdf, section 24)." % (
+                "product" if one else "products",
+                names_[0] if one else ", ".join(names_[:-1]) + " and " + names_[-1],
+                "is" if one else "are", "its" if one else "their", VECTOR_LINES_TEXT))
+    D.w(r"The products of two vector irreps have the coefficients of %s." %
+        rotation_linked(D.cover))
 
 
 # ---------------------------------------------------------------- Subgroup lattice
@@ -3812,72 +5348,140 @@ def continuous_diagram(gray):
             % (r" The groups that do not lie in $\grp{G}$ are gray." if gray else ""))
 
 
+def diagram_lines(D, lattice, places, mine, symbol):
+    """The diagram of the continuous closed subgroups, in both volumes: each group of `places`
+    (its position in cm) linked to its document, gray unless it is in `mine`, and a line for each
+    covering edge of `lattice` between two of them; symbol(g), a group's symbol in math mode."""
+    D.w(r"\begin{center}\begin{tikzpicture}[x=1cm, y=1cm, every node/.style={fill=white, "
+        r"font=\small, inner sep=2pt}]")
+    for edge in lattice["edges"]:
+        lo, up = edge["lower"], edge["upper"]
+        if lo in places and up in places:
+            D.w(r"\draw[%s, line width=0.4pt] (%g,%g) -- (%g,%g);" % (
+                "black!50" if up in mine else "black!25", *places[lo], *places[up]))
+    for g, (x, y) in places.items():
+        D.w(r"\node at (%g,%g) {\href{%s.pdf}{\textcolor{%s}{$%s$}}};" % (
+            x, y, g, "black" if g in mine else "black!40", symbol(g)))
+    D.w(r"\end{tikzpicture}\end{center}")
+
+
+def closed_lead(group, among, are):
+    """The first sentence on the closed subgroups of a continuous group, in both volumes: those
+    of `group` up to conjugacy (`among`: in which group, or which group they exclude) are
+    `are`."""
+    return r"The closed subgroups of $%s$ up to conjugacy%s are %s" % (group, among, are)
+
+
+# The preimages that the closed subgroups of a continuous group of Double are (closed_lead).
+PREIMAGES = r"the preimages of the closed subgroups of %s"
+
+
 def continuous_subgroups(D):
-    lattice, node = D.lattice, D.name
+    """The closed subgroups of a continuous group, in both volumes: what they are, the diagram of
+    the continuous ones (the document's subgroup_diagram: its catalogue's lattice of groups),
+    then their table (subgroup_table).  In Rotation they are the families and the exceptional
+    groups below G in point_groups.json, and O(3) first gives the documents of its families'
+    members; in Double they are the preimages and the sections that the record holds."""
+    lattice, places, symbol = D.subgroup_diagram()
+    node = D.name
     sub = below(lattice, node)
-    alias = lattice["aliases"]["finite"]
-    families = CONTINUOUS_FAMILIES[node]
-    exceptional = CONTINUOUS_EXCEPTIONAL.get(node, ())
-    finite = {alias.get(names.name_of(f, N), names.name_of(f, N))
-              for f in families for N in range(1, names.N_MAX + 1)} | set(exceptional)
-    if sub - set(CONTINUOUS_DIAGRAM) != finite:
-        raise ValueError("%s: the families of its subgroups differ from point_groups.json" % node)
-    continuous = [g for g in CONTINUOUS_DIAGRAM if g in sub]
+    continuous = [g for g in places if g in sub]
     mine = set(continuous) | {node}
-    symbol = lambda g: grp(names.schoenflies_of(g))
-    D.part("Subgroups")
-    D.section("Closed subgroups", "sections 15.2 and 16.1")
-    linked = "".join(", " + r"\href{%s.pdf}{$%s$}" % (g, symbol(g)) for g in continuous)
-    # O(3) keeps the table of its families' documents above the stored classes
-    tabled = ("subduction_subgroups" in D.rec or "subgroup_classes" in D.rec) and node != "O3"
-    if tabled:
-        D.w(D.define("index.family.N")
-            + r"The closed subgroups of $\grp{G}$ up to conjugacy in \href{O3.pdf}{$\grp{O(3)}$} "
-            r"are $\grp{G}$%s%s and, for every $N \ge 1$, the members of the %s."
-            % (linked, "".join(", " + r"\href{%s.pdf}{$%s$}" % (g, symbol(g))
-                               for g in exceptional),
-               ("family %s" if len(families) == 1 else "families %s")
-               % listed(["$%s$" % family_symbol(f) for f in families])))
+    if D.cover:
+        ss, sc = D.rec.get("subduction_subgroups"), D.rec.get("subgroup_classes")
+        if ss is None and sc is None and node != "Pinminus3":
+            return
+        sb = sc if sc is not None else ss
+        listed_ = {e["subgroup"]["double_class"] for e in (ss or sc or {}).get("continuous", [])}
+        if listed_ and listed_ != mine - {node}:
+            raise ValueError("%s: the continuous subgroups differ from data/double_groups.json"
+                             % node)
+        held = r"The record holds the members with $N \le %d$ (\texttt{%s})"
+        if node == "Pinminus3":
+            # derived, as O(3)'s from point_groups.json: the records' own normalizers and
+            # centralizers
+            cited, group = "sections 20.4, 27, 28.3 and 29.6", D.P
+            among, rest = (r", other than $%s$ itself," % D.P,
+                           r" and the sections over $\grp{C_{\mathnormal{N}}}$ and "
+                           r"$\grp{S_{2\mathnormal{N}}}$ with $N$ odd.")
+            held = (r"This catalogue holds the members with $N \le %d$ "
+                    r"(\texttt{data/double%sgroups.json}), whose records give these normalizers "
+                    r"and centralizers (\texttt{subgroup\symbol{95}classes}). Some of these "
+                    r"members have other names: "
+                    + listed(["%s is %s" % (D.record_link(a["alias"]),
+                                            D.subgroup_link(a["symbol"], a["class"]))
+                              for a in sb["aliases"]]))
+            key = r"\symbol{95}"
+        elif sc is not None:
+            cited, group, key = "sections 16.1 and 29.6", SU2, r"subgroup\symbol{95}classes"
+            among, rest = (r", other than $%s$ itself," % SU2,
+                           r" and the cyclic groups of odd order, the sections "
+                           r"$\grp{C_{\mathnormal{N}}}$.")
+        else:
+            cited, group, key = ("sections 16.1 and 29.5", r"\grp{G}",
+                                 r"subduction\symbol{95}subgroups")
+            among, rest = (" in it", r" (in the section Closed subgroups of the covered group's "
+                                     r"document) and the sections.")
+    else:
+        cited = None
+        alias = lattice["aliases"]["finite"]
+        families = CONTINUOUS_FAMILIES[node]
+        exceptional = CONTINUOUS_EXCEPTIONAL.get(node, ())
+        finite = {alias.get(names.name_of(f, N), names.name_of(f, N))
+                  for f in families for N in range(1, names.N_MAX + 1)} | set(exceptional)
+        if sub - set(CONTINUOUS_DIAGRAM) != finite:
+            raise ValueError("%s: the families of its subgroups differ from point_groups.json"
+                             % node)
+        # O(3) keeps the table of its families' documents above the stored classes
+        tabled = ("subduction_subgroups" in D.rec or "subgroup_classes" in D.rec) and node != "O3"
+    D.section("Closed subgroups", {"rotation": "sections 15.2 and 16.1", "double": cited})
+    if D.cover:
+        # Pinminus3 anchors N in its first sentence, which uses it
+        D.w((D.define("index.family.N") if node == "Pinminus3" else "")
+            + closed_lead(group, among, PREIMAGES % rotation_linked(D.cover) + rest))
+    elif tabled:
+        D.w(D.define("index.family.N") + closed_lead(
+            r"\grp{G}", r" in \href{O3.pdf}{$\grp{O(3)}$}",
+            r"$\grp{G}$%s%s and, for every $N \ge 1$, the members of the %s." % (
+                "".join(", " + r"\href{%s.pdf}{$%s$}" % (g, symbol(g)) for g in continuous),
+                "".join(", " + r"\href{%s.pdf}{$%s$}" % (g, symbol(g)) for g in exceptional),
+                ("family %s" if len(families) == 1 else "families %s")
+                % listed(["$%s$" % family_symbol(f) for f in families]))))
     else:
         # one list of the groups, the finite groups of the table's families in it, then the
         # table's last row and its links
-        D.w(D.define("index.family.N", "head.family.groups")
-            + r"The closed subgroups of $\grp{G}$ up to conjugacy in \href{O3.pdf}{$\grp{O(3)}$} "
-            r"are %s and, for every $N \ge 1$, the finite groups of %s (family). " % (
+        D.w(D.define("index.family.N", "head.family.groups") + closed_lead(
+            r"\grp{G}", r" in \href{O3.pdf}{$\grp{O(3)}$}",
+            r"%s and, for every $N \ge 1$, the finite groups of %s (family). " % (
                 ", ".join([r"$\grp{G}$"] + [r"\href{%s.pdf}{$%s$}" % (g, symbol(g))
                                             for g in continuous]
                           + (["the exceptional groups of the table"] if exceptional else [])),
-                "its families" if exceptional else "the families in the table")
+                "its families" if exceptional else "the families in the table"))
             + D.define("head.documents")
             + (r"The last row of the table gives the exceptional groups, and each number or "
                r"symbol under documents links to the document of that group." if exceptional
                else r"Each number under documents links to the document of that group."))
-    ones = [ONE_MEMBER[f] for f in families if f in ONE_MEMBER]
-    if ones:
-        # C_1, the member N = 1 of C_N, has no other name
-        D.w((r"Some members with $N = 1$ have other names: %s." if len(ones) > 1 else
-             r"One member with $N = 1$ has another name: %s.") % listed(
-            [r"%s $\samecls$ %s" % (linked_group(a), linked_group(b)) for a, b in ones]))
-    D.w(continuous_diagram(mine != set(CONTINUOUS_DIAGRAM)))
+    if not D.cover:
+        ones = [ONE_MEMBER[f] for f in families if f in ONE_MEMBER]
+        if ones:
+            # C_1, the member N = 1 of C_N, has no other name
+            D.w((r"Some members with $N = 1$ have other names: %s." if len(ones) > 1 else
+                 r"One member with $N = 1$ has another name: %s.") % listed(
+                [r"%s $\samecls$ %s" % (linked_group(a), linked_group(b)) for a, b in ones]))
+    D.w(continuous_diagram(mine != set(places)))
     if node in ("SO3", "O3"):
         D.w(r"Section~\ref{s:subduction} gives the restriction of $%s$ to each closed subgroup, "
             r"and the document of each group except the members with $N > 12$ lists it $J$ by "
             r"$J$, in its section Subduction from $\grp{O(3)}$."
             % (r"\irrJ{J}" if node == "SO3" else r"\irrJp{J}{p}"))
-    D.w(r"\begin{center}\begin{tikzpicture}[x=1cm, y=1cm, every node/.style={fill=white, "
-        r"font=\small, inner sep=2pt}]")
-    for edge in lattice["edges"]:
-        lo, up = edge["lower"], edge["upper"]
-        if lo in CONTINUOUS_DIAGRAM and up in CONTINUOUS_DIAGRAM:
-            D.w(r"\draw[%s, line width=0.4pt] (%g,%g) -- (%g,%g);" % (
-                "black!50" if up in mine else "black!25", *CONTINUOUS_DIAGRAM[lo],
-                *CONTINUOUS_DIAGRAM[up]))
-    for g, (x, y) in CONTINUOUS_DIAGRAM.items():
-        D.w(r"\node at (%g,%g) {\href{%s.pdf}{\textcolor{%s}{$%s$}}};" % (
-            x, y, g, "black" if g in mine else "black!40", symbol(g)))
-    D.w(r"\end{tikzpicture}\end{center}")
+    diagram_lines(D, lattice, places, mine, symbol)
+    if D.cover:
+        return subgroup_table(D, sb, ss is not None, held=held % (max(
+            e["subgroup"]["N"] for e in sb["finite"] if e["subgroup"].get("N")), key), group=group)
     if tabled:
-        return subgroup_rows(D)
+        axial = "subduction_subgroups" in D.rec
+        return subgroup_table(D, D.rec["subduction_subgroups"] if axial
+                              else D.rec["subgroup_classes"], axial)
     D.w(r"{\small\begin{longtable}{@{}ll@{}}\toprule")
     D.w(r"family & documents, $N = %s$\\\midrule\endhead" % integers(1, names.N_MAX))
     for f in families:
@@ -3888,14 +5492,14 @@ def continuous_subgroups(D):
             r"\href{%s.pdf}{$%s$}" % (g, symbol(g)) for g in exceptional))
     D.w(r"\bottomrule\end{longtable}}")
     if node == "O3":
-        subgroup_rows(D, D.rec["subgroup_classes"])
+        subgroup_table(D, D.rec["subgroup_classes"], False, derived=True)
 
 
 def families_apart(families, example=True):
     """The sentence that members of different families are different classes, also where they lie
     in one O(3)-conjugacy class when G contains both C_N and D_N (with the example of D_1 and C_2),
     after a space; empty for one family.  Both callers, the table of Closed subgroups
-    (subgroup_rows, without the example) and the axial Descent of symmetry, set it whole."""
+    (subgroup_table, without the example) and the axial Descent of symmetry, set it whole."""
     if len(families) < 2:
         return ""
     if "Cn" in families and "Dn" in families:
@@ -3906,30 +5510,63 @@ def families_apart(families, example=True):
     return r" Members of different families are not conjugate in $\grp{G}$."
 
 
-def subgroup_symbol_pattern(symbols, last):
-    """The Schoenflies symbols of the members of a family up to N = last as a function of N:
-    ("const", s) when the members last - 1 and last have the symbol s, ("affine", letter, a, b,
-    tag) when theirs are letter_{aN + b}tag; None otherwise."""
-    m11, m12 = (re.fullmatch(r"([CDS])_(\d+)([hvd]?)", symbols[k]) for k in (-2, -1))
+# A symbol of a member of a family, in either catalogue: C_11, 2C_12, 2D_24h, S_6b.
+SYMBOL_N = re.compile(r"(2?)([CDS])_(\d+)([hvd]?)(b?)")
+# The symbol of a family's member N, as a format of N (S_2N: of 2N).
+MEMBER = {"Cn": "C_%d", "Cnh": "C_%dh", "Cnv": "C_%dv", "Dn": "D_%d", "Dnh": "D_%dh",
+          "Dnd": "D_%dd", "S2n": "S_%d"}
+
+
+def symbol_pattern(symbols, Ns):
+    """The symbols of a column of a family's members as a function of N, from its last two
+    members: ("const", s), or ("affine", two, letter, a, b, tag, second) when they are
+    two letter_{aN+b}tag second; None otherwise."""
     if symbols[-2] == symbols[-1]:
         return ("const", symbols[-1])
-    if m11 and m12 and m11.group(1, 3) == m12.group(1, 3):
-        a = int(m12.group(2)) - int(m11.group(2))
-        return ("affine", m12.group(1), a, int(m12.group(2)) - last * a, m12.group(3))
-    return None
+    m1, m2 = (SYMBOL_N.fullmatch(s) for s in symbols[-2:])
+    if not (m1 and m2 and m1.group(1, 2, 4, 5) == m2.group(1, 2, 4, 5)):
+        return None
+    a, rest = divmod(int(m2.group(3)) - int(m1.group(3)), Ns[-1] - Ns[-2])
+    if rest:
+        return None
+    two, letter, last, tag, second = m2.groups()
+    return ("affine", two, letter, a, int(last) - a * Ns[-1], tag, second)
 
 
 def follows(pattern, s, N):
     """Whether the symbol s of the member N follows the pattern."""
     if pattern[0] == "const":
         return s == pattern[1]
-    _kind, letter, a, b, tag = pattern
-    return s == "%s_%d%s" % (letter, a * N + b, tag)
+    _, two, letter, a, b, tag, second = pattern
+    return s == "%s%s_%d%s%s" % (two, letter, a * N + b, tag, second)
 
 
 def affine_n(a, b):
     """aN + b as a formula: N, 2N, N+1."""
     return ("" if a == 1 else "%d" % a) + "N" + ("%+d" % b if b else "")
+
+
+def pattern_cell(D, pattern):
+    """A pattern as a cell: the linked symbol of a constant, the symbol of aN + b."""
+    if pattern[0] == "const":
+        return D.subgroup_link(pattern[1])
+    _, two, letter, a, b, tag, second = pattern
+    return "$%s%s$" % (grp("%s%s_%s%s" % (two, letter, affine_n(a, b), tag)),
+                       r"\secondclass" if second else "")
+
+
+def member_symbol(sub, symbol):
+    """The symbol that the member N of its family has by the family's name, with the 2 of a
+    preimage and the b of a second class of its symbol `symbol`: C_3, 2C_3, S_6b."""
+    N = sub["N"]
+    body = MEMBER[sub["family"]] % (2 * N if sub["family"] == "S2n" else N)
+    return ("2" if symbol.startswith("2") else "") + body + ("b" if symbol.endswith("b") else "")
+
+
+def subgroup_order(e):
+    """The order of a subgroup of an entry, None for a continuous one."""
+    order = e["subgroup"].get("order")
+    return order if isinstance(order, int) else None
 
 
 def samecls_sentence(group, section):
@@ -3940,109 +5577,171 @@ def samecls_sentence(group, section):
             r"(CONVENTIONS.pdf, section %s)." % (group, section))
 
 
-def subgroup_rows(D, derived=None):
-    """The closed subgroups of a continuous group up to conjugacy in it, one in each row as in the
-    table of a finite group: the continuous subgroups, then for each family the members with
-    small N and one row for every larger N, its entries functions of N, from the first N on which
-    every member up to N_MAX has them, then the exceptional groups (SO(3)); `derived`, the
-    entries of O(3), its stored subgroup_classes.  The legend: the rows (with the sentence of
-    families_apart in the axial groups), the columns, then the other names."""
-    axial = derived is None and "subduction_subgroups" in D.rec
-    sb = derived or (D.rec["subduction_subgroups"] if axial else D.rec["subgroup_classes"])
+def row_gives(subject, count, which):
+    """The sentence on the first columns of a table of subgroups, in both volumes: a row gives
+    `subject`, its order, the number of subgroups `count` and whether `which` is normal."""
+    return (r"A row gives %s (subgrp), its order, the number of subgroups %s (conjugates) and "
+            r"whether %s is normal. " % (subject, count, which))
+
+
+def also_gives(subject, group, rest):
+    """The sentence on the columns of the normalizer and the centralizer of a table of subgroups,
+    in both volumes: `subject`, in the group `group`, and `rest` before the full stop."""
+    return r"It also gives %s in $%s$%s. " % (subject, group, rest)
+
+
+# The normalizer and the centralizer of H in G as the tables of Rotation and of a finite group of
+# Double head their columns (also_gives).
+NORMALIZERS = (r"the normalizer $\grp{N}_{\grp{G}}(\grp{H})$ and the centralizer "
+               r"$\grp{C}_{\grp{G}}(\grp{H})$")
+
+
+def subgroup_table(D, sb, axial, derived=False, held="", group=r"\grp{G}"):
+    """The legend and the table of the closed subgroups of a continuous group up to conjugacy in
+    it, in both volumes, one in each row (subgroup_rows): the continuous subgroups, then the
+    members of each family (in Double its preimages and its sections), then the exceptional
+    groups unless the group is `axial`.  The legend: the rows (with the sentence of families_apart
+    in the axial groups of Rotation), the columns, then in Rotation where the normalizers come
+    from (`derived`: O(3)'s entries, its stored subgroup_classes) and the other names, in Double
+    the members that the record holds (`held`) and `group`, the group of the normalizers."""
     entries = sb["continuous"] + sb["finite"]
-    components = all("class_ids" in e for e in entries)
+    # the records of Double hold the components too, and its tables leave them out
+    components = not D.cover and all("class_ids" in e for e in entries)
     families = list(dict.fromkeys(e["subgroup"]["family"] for e in sb["finite"]
                                   if e["subgroup"].get("family")))
-    scope = ("the members of each family" if sb["continuous"] or len(families) > 1
-             else "the members of the family")
-    D.w(D.define("group.H")
-        + r"The table lists the closed subgroups $\grp{H}$ other than $\grp{G}$ up to conjugacy in "
-        r"$\grp{G}$, one in each row: %s." % (
-            ("the continuous subgroups, then " if sb["continuous"] else "") + scope
-            + ("" if axial else ", then the exceptional groups"))
-        + (families_apart(families, example=False) if axial else "")
-        + r" A row with $N$ in its symbol stands for every $N$ of its range, and its entries are "
+    D.w(("The table lists " if D.cover else D.define("group.H")
+         + r"The table lists the closed subgroups $\grp{H}$ other than $\grp{G}$ up to conjugacy "
+           r"in $\grp{G}$, one in each row: ")
+        + ("the continuous subgroups, then " if sb["continuous"] else "")
+        + ("the preimages and the sections of each family" if D.cover
+           else "the members of each family" if sb["continuous"] or len(families) > 1
+           else "the members of the family")
+        + ("" if axial else ", then the exceptional preimages" if D.cover
+           else ", then the exceptional groups") + "."
+        + (families_apart(families, example=False) if axial and not D.cover else "")
+        # N is anchored here unless the first sentence of the section has it
+        + " " + D.define("index.family.N")
+        + r"A row with $N$ in its symbol stands for every $N$ of its range, and its entries are "
         r"functions of $N$. "
         + D.define("head.subgroup", "head.order", "head.conjugates", "head.normal")
-        + r"A row gives $\grp{H}$ (subgrp), its order, the number of subgroups conjugate to "
-        r"$\grp{H}$ in $\grp{G}$ (conjugates) and whether $\grp{H}$ is normal. "
-        + D.define("group.normalizer", "group.centralizer")
-        + r"It also gives the normalizer $\grp{N}_{\grp{G}}(\grp{H})$ and the centralizer "
-        r"$\grp{C}_{\grp{G}}(\grp{H})$ in $\grp{G}$ %s. " % (
-            r"(the fields \texttt{normalizer} and \texttt{centralizer} of the record of "
-            r"$\grp{H}$)" if derived else r"(\texttt{normalizer}, \texttt{centralizer})")
-        + (D.define("head.components") + r"The column components gives the components of the "
-           r"class space (section~\ref{s:class_space}) met by the subgroup. " if components else
-           "" if derived else
-           r"They are the normalizer and the centralizer in %s intersected with $\grp{G}$. As "
-           r"$\elt{i}$ commutes with every element, every map of the record of $\grp{H}$ onto a "
-           r"subgroup given by a conjugation in %s is also given by a conjugation in $\grp{G}$. "
-           r"Thus the restriction of $\irrJ{J}$ to $\grp{H}$ has one setting. "
-           % (O3_LINK, O3_LINK))
-        + samecls_sentence(O3_LINK, "2.1"))
-    head = ["subgrp", "order", "conjugates", "normal", r"$\grp{N}_{\grp{G}}(\grp{H})$",
-            r"$\grp{C}_{\grp{G}}(\grp{H})$"] + (["components"] if components else [])
-    body = []
-
-    def cells(e):
-        size = e.get("class_size", 1)
-        return [size if isinstance(size, int) else r"$\infty$", "yes" if e["normal"] else "no"]
-
-    def comps(e):
-        return [", ".join("$%s$" % D.comp(c) for c in e["class_ids"])] if components else []
-
-    def row(*cols):
-        body.append([str(c) for c in cols])
-
-    def single(e):
-        order = e["subgroup"].get("order")
-        row(class_names(e["subgroup"]["schoenflies"], e["subgroup"]["o3_class"]),
-            order if isinstance(order, int) else r"$\infty$", *cells(e),
-            linked_group(e["normalizer"]["schoenflies"]),
-            linked_group(e["centralizer"]["schoenflies"]), *comps(e))
-    for e in sb["continuous"]:
-        single(e)
-    families = list(dict.fromkeys(e["subgroup"].get("family") for e in sb["finite"]))
-    for i, family in enumerate(families):
-        if i or sb["continuous"]:
-            body.append(None)
-        members = [e for e in sb["finite"] if e["subgroup"].get("family") == family]
-        if family is None:
-            for e in members:
-                single(e)
-            continue
-        last = members[-1]["subgroup"]["N"]
-        a = members[-1]["subgroup"]["order"] // last
-        pats = [subgroup_symbol_pattern([e[k]["schoenflies"] for e in members], last)
-                for k in ("normalizer", "centralizer")]
-
-        def general(e):
-            N = e["subgroup"]["N"]
-            return (e["subgroup"]["order"] == a * N and None not in pats
-                    and not other_names(e["subgroup"]["schoenflies"], e["subgroup"]["o3_class"])
-                    and all(follows(p, e[k]["schoenflies"], N)
-                            for p, k in zip(pats, ("normalizer", "centralizer")))
-                    and cells(e) == cells(members[-1]) and comps(e) == comps(members[-1]))
-        first = len(members)
-        while first > 1 and general(members[first - 2]):
-            first -= 1
-        if first == len(members):
-            first += 1
-        for e in members[:first - 1]:
-            single(e)
-        if first <= len(members):
-            sym = [linked_group(p[1]) if p[0] == "const"
-                   else "$%s$" % grp("%s_%s%s" % (p[1], affine_n(p[2], p[3]), p[4])) for p in pats]
-            row(r"$%s$, $N \ge %d$" % (family_symbol(family), members[first - 1]["subgroup"]["N"]),
-                "$%s$" % affine_n(a, 0), *cells(members[-1]), *sym, *comps(members[-1]))
+        + (row_gives("the representative of a class of subgroups", "conjugate to it", "it")
+           if D.cover else
+           row_gives(r"$\grp{H}$", r"conjugate to $\grp{H}$ in $\grp{G}$", r"$\grp{H}$"))
+        + (D.define("head.normalizer", "head.centralizer")
+           + also_gives("its normalizer and its centralizer", group, "") + held + "."
+           if D.cover else
+           D.define("group.normalizer", "group.centralizer")
+           + also_gives(NORMALIZERS, r"\grp{G}", " " + (
+               r"(the fields \texttt{normalizer} and \texttt{centralizer} of the record of "
+               r"$\grp{H}$)" if derived else r"(\texttt{normalizer}, \texttt{centralizer})"))
+           + (D.define("head.components") + r"The column components gives the components of the "
+              r"class space (section~\ref{s:class_space}) met by the subgroup. " if components else
+              "" if derived else
+              r"They are the normalizer and the centralizer in %s intersected with $\grp{G}$. As "
+              r"$\elt{i}$ commutes with every element, every map of the record of $\grp{H}$ onto a "
+              r"subgroup given by a conjugation in %s is also given by a conjugation in $\grp{G}$. "
+              r"Thus the restriction of $\irrJ{J}$ to $\grp{H}$ has one setting. "
+              % (O3_LINK, O3_LINK))
+           + samecls_sentence(O3_LINK, "2.1")))
+    head = (["subgrp", "order", "conjugates", "normal"]
+            + (["normalizer", "centralizer"] if D.cover
+               else [r"$\grp{N}_{\grp{G}}(\grp{H})$", r"$\grp{C}_{\grp{G}}(\grp{H})$"])
+            + (["components"] if components else []))
+    body = subgroup_rows(D, sb, components)
     rows = [head] + [r for r in body if r is not None]
     D.w(r"{\small%s\begin{longtable}{@{}lrrlll%s@{}}\toprule" % (
-        fill_width(rows, 6) if components else "",
+        fill_width(rows, 6) if components else snake_mark() if D.cover else "",
         r">{\RaggedRight\arraybackslash}p{\fillwidth}" if components else ""))
     D.w(" & ".join(head) + r"\\\midrule\endhead")
     for r in body:
         D.w(r"\midrule" if r is None else " & ".join(r) + r"\\")
     D.w(r"\bottomrule\end{longtable}}")
+
+
+def subgroup_rows(D, sb, components):
+    """The rows of the table of the closed subgroups of a continuous group, in both volumes, each
+    a list of cells, None between two parts or families: the continuous subgroups, then per family
+    each class of its members (in Double its preimages, then each class of its sections), the
+    members with small N one per row and one row for every larger N, its entries functions of N,
+    from the first N on which every member up to the last that the record lists has them; a
+    subgroup outside the families one per row.  A member falls in the row for every larger N only
+    where its symbol is the family's and its row shows no other name; `components`: the column of
+    the components of the class space met (Rotation)."""
+    sym, rec = D.symbol_key, D.class_key
+
+    def counts(e):
+        size = e.get("class_size", 1)
+        return ["%d" % size if isinstance(size, int) else r"$\infty$",
+                "yes" if e["normal"] else "no"]
+
+    def comps(e):
+        return [", ".join("$%s$" % D.comp(c) for c in e["class_ids"])] if components else []
+
+    def single(e):
+        s = e["subgroup"]
+        order = subgroup_order(e)
+        return [class_names(D, s[sym], s[rec]), "%d" % order if order else r"$\infty$",
+                *counts(e), D.subgroup_link(e["normalizer"][sym]),
+                D.subgroup_link(e["centralizer"][sym]), *comps(e)]
+
+    def part(entries):
+        groups = {}
+        for e in entries:
+            s = e["subgroup"]
+            f = s.get("family")
+            key = ((f, s[sym].startswith("2"), s[sym].endswith("b")) if f
+                   else ("single", id(e)))
+            groups.setdefault(key, []).append(e)
+        rows, last_family = [], None
+        for key, members in groups.items():
+            family = key[0] if key[0] != "single" else None
+            if (rows and (family != last_family or family is None)
+                    and last_family != "exceptional"):
+                rows.append(None)
+            last_family = family or "exceptional"
+            if family is None:
+                rows.append(single(members[0]))
+                continue
+            members.sort(key=lambda e: e["subgroup"]["N"])
+            Ns = [e["subgroup"]["N"] for e in members]
+            pats = ([symbol_pattern([e[k][sym] for e in members], Ns)
+                     for k in ("normalizer", "centralizer")] if len(members) > 2 else [None])
+            # the order a N of the members of a family, the last member's a
+            a = (subgroup_order(members[-1]) or 0) // Ns[-1]
+
+            def general(e):
+                s = e["subgroup"]
+                return (None not in pats and s[sym] == member_symbol(s, s[sym])
+                        and not D.subgroup_other_names(s[sym], s[rec])
+                        and all(follows(p, e[k][sym], s["N"])
+                                for p, k in zip(pats, ("normalizer", "centralizer")))
+                        and a and subgroup_order(e) == a * s["N"]
+                        and counts(e) == counts(members[-1]) and comps(e) == comps(members[-1]))
+            first = len(members)
+            while first > 1 and general(members[first - 2]):
+                first -= 1
+            if first == len(members) or not general(members[-1]):
+                first = len(members) + 1
+            rows += [single(e) for e in members[:first - 1]]
+            if first <= len(members):
+                odd = Ns[-1] - Ns[-2] == 2 and all(N % 2 for N in Ns)
+                symbol = grp(("2" if key[1] else "") + FAMILY[family]) + (
+                    r"\secondclass" if key[2] else "")
+                rows.append([r"$%s$, $N \ge %d$%s" % (symbol, Ns[first - 1], " odd" if odd else ""),
+                             "$%s$" % affine_n(a, 0), *counts(members[-1]),
+                             *(pattern_cell(D, p) for p in pats), *comps(members[-1])])
+        return rows
+    return [r for p in (part(sb["continuous"]), part(sb["finite"])) if p for r in [None] + p][1:]
+
+
+def class_names(D, symbol, record, letter=""):
+    r"""A subgroup's symbol linked to its record, with its gray letter, then the other names of its
+    class joined by \samecls, in both volumes (the document's subgroup_other_names and
+    other_name_link): in Rotation those of its O(3) class, C_s \cong C_{1v} \cong C_{1h},
+    C_{\infty h} \cong S_\infty, in a finite group of Double those of its Pin-(3) class."""
+    return r" $\samecls$ ".join([D.subgroup_link(symbol, record) + letter]
+                                + [D.other_name_link(x, record)
+                                   for x in D.subgroup_other_names(symbol, record)])
 
 
 def lattice_diagram(D, conjugates):
@@ -4072,41 +5771,56 @@ def lattice_legend(D, order, group, section):
     of a subgroup's class (samecls_sentence with `group` and `section`)."""
     return (r" The table lists the classes by order, %s. " % order
             + D.define("group.H", "head.subgroup", "head.order", "head.conjugates", "head.normal")
-            + r"A row gives the representative $\grp{H}$ of a class of subgroups (subgrp), its "
-            r"order, the number of subgroups in the class (conjugates) and whether $\grp{H}$ is "
-            r"normal. "
+            + row_gives(r"the representative $\grp{H}$ of a class of subgroups", "in the class",
+                        r"$\grp{H}$")
             + D.define("group.normalizer", "group.centralizer", "head.classes")
-            + r"It also gives the normalizer $\grp{N}_{\grp{G}}(\grp{H})$ and the centralizer "
-            r"$\grp{C}_{\grp{G}}(\grp{H})$ in $\grp{G}$, by their classes (\texttt{normalizer}, "
-            r"\texttt{centralizer}), and the classes of $\grp{G}$ other than $\cls{E}$ met by "
-            r"$\grp{H}$ (classes, a dash for none). " + samecls_sentence(group, section))
+            + also_gives(NORMALIZERS, r"\grp{G}", r", by their classes (\texttt{normalizer}, "
+                         r"\texttt{centralizer}), and the classes of $\grp{G}$ other than "
+                         r"$\cls{E}$ met by $\grp{H}$ (classes, a dash for none)")
+            + samecls_sentence(group, section))
+
+
+# The sentence of Double on the subgroups of a finite group, a preimage or a section
+# (section_subgroups).
+PREIMAGE_OR_SECTION = (r"A subgroup that contains $\elt{\barred{E}}$ is the preimage of its image "
+                       r"in $\grp{O(3)}$, named $\grp{2H}$ for the image $\grp{H}$. Any other "
+                       r"subgroup is a section over its image, named $\grp{H}$.")
 
 
 def section_subgroups(D):
-    if not D.lattice:
+    """The subgroups, the first section of Subgroups in both volumes: the lattice of a finite
+    group, with its diagram and its table, or the closed subgroups of a continuous one
+    (continuous_subgroups).  A record of Double names its classes of subgroups by the preimage or
+    the section that each is (the document's lattice_view), ordered by the type of the image, a
+    preimage before a section, and its anchor of H opens the first sentence that uses it."""
+    if not D.lattice and not D.cover:
         return
-    if "aliases" in D.lattice:
+    if not D.lattice or "aliases" in D.lattice:
         return continuous_subgroups(D)
-    letter = hasse.letters(D.lattice)
-    D.part("Subgroups")
-    D.section("Subgroup lattice", "section 15")
-    D.w(lattice_diagram(D, any(node["class_size"] > 1 for node in D.lattice["nodes"]))
-        + (gray_letter(D, r"$\grp{O(3)}$") if letter else "")
-        + lattice_legend(D, "those of one symbol together", O3_LINK, "2.1"))
-    for line in hasse.tikz(D.lattice, lambda node: grp(node["o3_schoenflies"])):
+    lattice = D.lattice_view()
+    letter = hasse.letters(lattice)
+    D.section("Subgroup lattice", {"rotation": "section 15", "double": "sections 15 and 28"})
+    D.w(lattice_diagram(D, any(node["class_size"] > 1 for node in lattice["nodes"]))
+        + (" " + D.define("group.H") + PREIMAGE_OR_SECTION if D.cover else "")
+        + (gray_letter(D, "$%s$" % D.conjugation_group()) if letter else "")
+        + lattice_legend(D, "then by the type of the image, a preimage before a section"
+                         if D.cover else "those of one symbol together", D.conjugation_text(),
+                         {"rotation": "2.1", "double": "20.2"}[D.catalogue]))
+    for line in hasse.tikz(lattice, lambda node: D.subgroup_tex(node["o3_schoenflies"]),
+                           D.lattice_aspect, both=D.lattice_both):
         D.w(line)
-    top = max(node["order"] for node in D.lattice["nodes"])
-    by_id = {node["id"]: node for node in D.lattice["nodes"]}
+    top = max(node["order"] for node in lattice["nodes"])
+    by_id = {node["id"]: node for node in lattice["nodes"]}
 
     def named(node_id):
-        return linked_group(by_id[node_id]["o3_schoenflies"], by_id[node_id]["o3_class"]) + (
+        return D.subgroup_link(by_id[node_id]["o3_schoenflies"], by_id[node_id]["o3_class"]) + (
             hasse.letter_tex(letter.get(node_id)))
     rows = [["subgrp", "order", "conjugates", "normal", r"$\grp{N}_{\grp{G}}(\grp{H})$",
              r"$\grp{C}_{\grp{G}}(\grp{H})$", "classes"]]
-    for node in by_type(D.lattice["nodes"]):
+    for node in by_type(D, lattice["nodes"]):
         met = [c for c in node["embedding"]["representative"]["class_ids"] if c != "E"]
         rows.append([
-            class_names(node["o3_schoenflies"], node["o3_class"],
+            class_names(D, node["o3_schoenflies"], node["o3_class"],
                         hasse.letter_tex(letter.get(node["id"]))),
             "%d" % node["order"],
             "%d" % node["class_size"], "yes" if node["normal"] else "no",
@@ -4133,20 +5847,22 @@ def type_rank(name):
     return (2, names.CONTINUOUS.index(name) if name in names.CONTINUOUS else 0, 0)
 
 
-def by_type(items, record=lambda x: x["o3_class"], order=lambda x: x["order"]):
-    """Classes of subgroups (lattice nodes, embeddings) by order, then by type (type_rank), the
-    copies of one type together in node order, as the gray letters count them."""
-    return sorted(items, key=lambda x: (order(x), type_rank(record(x))))
+def by_type(D, items, record=lambda x: x["o3_class"], order=lambda x: x["order"]):
+    """Classes of subgroups (lattice nodes, embeddings) by order, then by type (the document's
+    subgroup_rank), the copies of one type together in node order, as the gray letters count
+    them."""
+    return sorted(items, key=lambda x: (order(x), D.subgroup_rank(record(x))))
 
 
 # ---------------------------------------------------------------- Descent of symmetry
 _SUBGROUP_DISPLAYS = {}
 
 
-def subgroup_displays(name):
-    """{irrep id: display} of the record `name`, the record of a subgroup."""
+def subgroup_displays(D, name):
+    """{irrep id: display} of the record of Rotation `name`, the record of a subgroup (the
+    document's subgroup_record)."""
     if name not in _SUBGROUP_DISPLAYS:
-        rec = serialize.read_json(names.record_path(name))
+        rec = D.subgroup_record("rotation", name)
         _SUBGROUP_DISPLAYS[name] = {ir["id"]: ir["display"]
                                     for ir in rec["character_table"]["irreps"]}
     return _SUBGROUP_DISPLAYS[name]
@@ -4171,10 +5887,12 @@ def pi_inline(pair):
 
 
 def setting_images(D, settings):
-    """Per setting, the lines of its cell in the row images: for each generator of H whose image
-    differs between the settings, in the order of the generators, the generator (with its index
-    in H when another generator shown has its symbol) mapped to the class of G of its image (a
-    continuous group: to the image, its component's element at its angle)."""
+    """Per setting, the lines of its cell in the row images, in both volumes: for each generator
+    of H whose image differs between the settings, in the order of the generators, the generator
+    (with its index in H when another generator shown has its symbol) mapped to the class of G of
+    its image (a continuous group: to the image, its component's element at its angle).  The
+    document writes the generators (setting_symbol) and the points (setting_point) as its
+    catalogue does."""
     def key(s):
         return s["g_class"] if "g_class" in s else (s["g_component"], tuple(s["g_turn"]))
     gens = range(len(settings[0]))
@@ -4186,10 +5904,10 @@ def setting_images(D, settings):
         count[settings[0][j]["h_symbol"]] = count.get(settings[0][j]["h_symbol"], 0) + 1
 
     def show(s):
-        name = (r"\cls{\genidx{%s}{%d}}" % (mathify(s["h_symbol"]), s["h_index"])
-                if count[s["h_symbol"]] > 1 else r"\cls{%s}" % mathify(s["h_symbol"]))
+        name = (r"\cls{\genidx{%s}{%d}}" % (D.setting_symbol(s["h_symbol"]), s["h_index"])
+                if count[s["h_symbol"]] > 1 else r"\cls{%s}" % D.setting_symbol(s["h_symbol"]))
         image = (r"\cls{%s}" % D.class_display[s["g_class"]] if "g_class" in s
-                 else point_tex(s["g_component"], s["g_turn"], inline=True))
+                 else D.setting_point(s["g_component"], s["g_turn"]))
         return r"%s \mapsto %s" % (name, image)
     return [[show(s[j]) for j in differ] for s in settings]
 
@@ -4203,31 +5921,38 @@ def images_cell(lines):
 
 
 def subduction_columns(D):
-    """The classes of subgroups of the subduction tables, other than the trivial group and G, by
-    order and then by type, as in the subgroup table (by_type): (symbol, letter or None, record,
-    tables, images), the tables of the stored monomorphism and then of the alternative settings,
-    one column each."""
+    """The classes of subgroups of the subduction tables of a finite group, in both volumes, other
+    than the trivial group and G, by order and then by type, as in the subgroup table (by_type):
+    (symbol, letter or None, record, tables, images), the tables of the stored monomorphism and
+    then of the alternative settings, one column each.  A section of Double has the one table
+    that the document's section_rows gives, its preimage's with the spinor irreps renamed."""
     order = D.rec["group"]["order"]
-    symbol = {n["id"]: n["o3_schoenflies"] for n in D.lattice["nodes"]}
-    letter = hasse.letters(D.lattice)
+    lattice = D.lattice_view()
+    symbol = {n["id"]: n["o3_schoenflies"] for n in lattice["nodes"]}
+    letter = hasse.letters(lattice)
     out = []
-    for e in by_type(D.rec["subduction_embeddings"]["embeddings"],
-                     record=lambda e: e["subgroup"]["o3_class"],
+    for e in by_type(D, D.rec["subduction_embeddings"]["embeddings"],
+                     record=lambda e: e["subgroup"][D.class_key],
                      order=lambda e: e["subgroup"]["order"]):
         if e["subgroup"]["order"] in (1, order):
+            continue
+        if "preimage_node" in e:
+            out.append((symbol[e["id"]], letter.get(e["id"]), e["subgroup"][D.class_key],
+                        [D.section_rows(e)], None))
             continue
         alt = e.get("alternative_settings") or []
         tables = [e["subduction"]] + [a["subduction"] for a in alt]
         images = setting_images(D, [e["monomorphism"]["setting"]] + [a["setting"] for a in alt]
                                 ) if alt else None
-        out.append((symbol[e["id"]], letter.get(e["id"]), e["subgroup"]["o3_class"], tables,
+        out.append((symbol[e["id"]], letter.get(e["id"]), e["subgroup"][D.class_key], tables,
                     images))
     return out
 
 
-def restriction_cell(entry, H):
-    r"""The restriction of one irrep: the irreps of the subgroup's record joined by \oplus."""
-    shown = subgroup_displays(H)
+def restriction_cell(D, entry, H):
+    r"""The restriction of one irrep: the irreps of the subgroup's record (the document's
+    subgroup_irreps) joined by \oplus."""
+    shown = D.subgroup_irreps(H)
     return r"\oplus ".join(multiple(t["multiplicity"], irrep(shown[t["irrep"]]))
                            for t in entry["terms"])
 
@@ -4370,26 +6095,63 @@ def induction_sentences(D, entries=""):
             r"section 12.4." % entries)
 
 
-def so3_cond_tex(cond):
-    """A condition of a rule of SO(3) as TeX: m = 0 and J even -> $m = 0$ and $J$ even."""
-    return " and ".join("$J$ %s" % part[2:] if part.startswith("J ") else "$%s$" % part
-                        for part in cond.split(" and "))
+def rule_term(D, term, plus):
+    """A term of a rule of a spherical group as TeX, with the tag `plus` of p = +1 (or none), in
+    the labels of the catalogue's records: Rotation's by rule_label, Double's by pin_label_tex."""
+    if D.cover:
+        return pin_label_tex(term.replace("min(q, N-q)", r"\min(q,N-q)").replace(
+            "min(q, 2N-q)", r"\min(q,2N-q)") + ({"g": ",g", "'": "'"}[plus] if plus else ""))
+    return rule_label(term.replace("min", r"\min"), plus)
 
 
-def so3_rule_tex(rule):
-    """A rule of SO(3) (subduction_rules) as TeX: the direct sum over the kets, the cases that
-    give the term of each ket or pair, and q."""
-    pairs = rule["sum"]["from"] == "0"
-    cases = []
-    for cs in rule["cases"]:
-        terms = r"\oplus ".join(rule_label(t.replace("min", r"\min")) for t in cs["terms"])
-        cases.append("$%s$%s" % (terms, " otherwise" if cs["if"] == "otherwise"
-                                 else " if " + so3_cond_tex(cs["if"])))
-    return (r"$\bigoplus_{m=%s}^{J}\Lambda_m$, %s: %s%s" % (
-        "0" if pairs else "-J",
-        r"$\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}"
-        if pairs else r"$\Lambda_m$ on $\jm{J}{m}$", ", ".join(cases),
-        r"; $q = m \bmod N$" if "q" in rule else ""))
+def rule_case(cond):
+    """The condition of a case of a rule of a spherical group, after its terms, in both volumes:
+    nothing for always, otherwise, or if and the condition, its parts joined by and each in math
+    (J even in words): m = 0 and J even -> if $m = 0$ and $J$ even."""
+    if cond == "always":
+        return ""
+    if cond == "otherwise":
+        return " otherwise"
+    return " if " + " and ".join(
+        "$J$ %s" % part[2:] if part.startswith("J ") else
+        "$%s$" % part.replace("!=", r"\ne").replace(" mod ", r" \bmod ")
+        for part in cond.split(" and "))
+
+
+def rule_sum_tex(D, rule):
+    """A rule of a spherical group (subduction_rules) as TeX, in both volumes: the direct sum over
+    the kets, or over the pairs of kets (with the ket m = 0 at integer J), the cases with their
+    terms at p = +1 (or where the sign of sigma_h on the ket is +1, by the tag), the change of the
+    tag at the other sign, and q; a rule of its terms alone holds for both p."""
+    if "terms" in rule:
+        return (r"$%s$, independent of $p$" if D.cover else r"$%s$ for both $p$") % (
+            r"\oplus ".join(D.family_label(t) for t in rule["terms"]))
+    start = rule["sum"]["from"]
+    tag = rule.get("tag")
+    cases = ["$%s$%s" % (r"\oplus ".join(rule_term(D, t, tag["plus"] if tag else "")
+                                          for t in cs["terms"]), rule_case(cs["if"]))
+             for cs in rule["cases"]]
+    zero = start == "0"
+    out = r"$\bigoplus_{m=%s}^{J}\Lambda_m$, %s: %s" % (
+        start, r"$\Lambda_m$ on $\jm{J}{m}$" if start == "-J" else
+        (r"$\Lambda_0$ on $\jm{J}{0}$ and " if zero else "")
+        + r"$\Lambda_m$ on the pair $\jm{J}{\pm m}$" + (r" for \mbox{$m > 0$}" if zero else ""),
+        ", ".join(cases))
+    if tag and tag["by"] == "p":
+        out += r"; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$"
+    elif tag:
+        # the sign of sigma_h, p(-1)^m at integer J, p(-1)^(m-1/2) at half-integer J
+        out += r"; with $''$ for $'$ on the kets where $%s = -1$" % re.sub(
+            r"\^\((.*)\)", r"^{\1}", tag["by"])
+    if rule.get("q") == "m mod N":
+        out += r"; $q = m \bmod N$"
+    elif rule.get("q"):
+        # x + N[p = -1] mod 2N
+        x = rule["q"].split(" + N[p = -1]")[0]
+        out += r"; $q = %s \bmod 2N$ at $p = +1$ and $%s + N \bmod 2N$ at $p = -1$" % (x, x)
+    if rule.get("text", "").endswith("for both p"):
+        out += r"; independent of $p$"
+    return out
 
 
 def so3_power_tex(expr):
@@ -4444,6 +6206,54 @@ def so3_gf_tex(gf):
         [so3_numerator(x) for x in gf["numerators"]]))
 
 
+def su2_power(expr):
+    """A numerator of SU2's generating functions as TeX: t^(2N-2q) -> t^{2N-2q}, 2*t^N -> 2t^{N}."""
+    t = re.sub(r"t\^\(([^()]*)\)", r"t^{\1}", expr.replace("*", ""))
+    return re.sub(r"t\^([A-Za-z0-9]+)(?![A-Za-z0-9{])", r"t^{\1}", t)
+
+
+def term_tex(t, m=None):
+    """A term of a rule of Double: 1E_{q} -> {}^1E_q, A_{N/2} -> A_{N/2}, 2A_{N/2} -> 2 A_{N/2}."""
+    mult = ""
+    if re.match(r"2A", t):
+        mult, t = r"2\,", t[1:]
+    mm = re.fullmatch(r"([12]?)([AE])_\{(.*)\}", t)
+    pre, letter, sub = mm.groups()
+    if m is not None:
+        sub = sub.replace("m", m) if sub == "m" else sub
+    sub = sub.replace("min(q, N-q)", r"\min(q,N-q)").replace("N-q", "N-q")
+    return mult + (r"\conjpair{%s}" % pre if pre else "") + r"\irr{%s}_{%s}" % (letter.lower(),
+                                                                              sub)
+
+
+def cond_tex(c):
+    return c.replace("!=", r"\ne").replace(" = ", " = ")
+
+
+def su2_gf_tex(D, gf):
+    """The generating functions of a rule of SU2, in t^{2J}: per family numerator/denominator, or
+    P/(the denominator) with the P of each irrep, the irreps with one P and condition together."""
+    if gf.get("variable") != "t^(2J)":
+        raise ValueError("SU2: a generating function not in t^(2J)")
+
+    def den(ds):
+        f = "".join("(1-t^{%s})" % d for d in ds)
+        return "(%s)" % f if len(ds) > 1 else f
+    groups = {}
+    if "families" in gf:
+        for f in gf["families"]:
+            groups.setdefault(("%s/%s" % (su2_power(f["numerator"]), den(f["denominator"])),
+                               None), []).append(D.family_label(f["label_template"]))
+        return ", ".join("$%s$ for %s" % (v, " and ".join("$%s$" % x for x in labs))
+                         for (v, _c), labs in groups.items())
+    for x in gf["numerators"]:
+        groups.setdefault((su2_power(x["numerator"]), x["if"]), []).append(term_tex(x["irrep"]))
+    return r"$P_\Lambda(t)/%s$, $P_\Lambda(t)$: %s" % (den(gf["denominator"]), ", ".join(
+        "$%s$ for %s (%s)" % (v, " and ".join("$%s$" % x for x in labs),
+                              r"$N$ odd" if c == "N odd" else "$%s$" % cond_tex(c))
+        for (v, c), labs in groups.items()))
+
+
 def rules_lead(irrep, subgroup, kind, extent):
     """The first sentence of the descent of a spherical group (SO3, O3, SU2, Pinminus3), in both
     volumes: below is the restriction of `irrep` to each closed subgroup (`subgroup`: " $H$ of $G$"
@@ -4466,71 +6276,134 @@ def axial_sum(subgroup, paired, pairs, subject="it"):
             % (subgroup, subject, paired, pairs))
 
 
-def section_subduction_rules(D):
-    """SO(3): the restriction of D^(J) to its closed subgroups, by the rules of the record's
-    subduction_rules and the generating functions of the multiplicities; no tables of
-    instances."""
-    sr = D.rec["subduction_rules"]
-    D.section("Descent of symmetry", "section 16.1")
-    D.w(rules_lead(r"$\irrJ{J}$", r" $\grp{H}$ of $\grp{G}$", "", "") + " "
-        + D.define("irrep.Gamma.subgroup")
-        + axial_sum(r"$\grp{H}$", r"$\grp{D_{\infty}}$ and $\grp{D_{\mathnormal{N}}}$",
-                    r"$\jm{J}{0}$ and the pairs $\jm{J}{\pm m}$, \mbox{$m > 0$}") + " "
-        + D.define("index.residue", "constant.root")
-        + r"In the rules, $q = m \bmod N$, and $\rootunity{N}^{q}$ is the character of $\jm{J}{m}$ "
-          r"on the rotation by $2\pi/N$ about $z$, where $\rootunity{N} = \expe^{2\pi\iunit/N}$. "
-          r"In the rules of a family, the terms and the irreps of the generating functions are "
-          r"irreps of the member of $\grp{C_{\mathnormal{N}}}$ or $\grp{D_{\mathnormal{N}}}$. "
-          r"They are labeled as in "
-          r"CONVENTIONS.pdf, section 6.1, and for $N \le 2$ named as in "
-          r"CONVENTIONS.pdf, section 6.3. "
-        + D.define("function.multiplicity", "irrep.Delta", "index.generating.variable",
-                   "function.generating", "function.generating.numerator")
-        + r"The multiplicity $b_\Lambda(J)$ of an irrep $\Lambda$ of $\grp{H}$ is the coefficient "
-          r"of $t^J$ in its generating function $H_\Lambda(t) = \sum_{J\ge0} b_\Lambda(J)\, t^J$. "
-          r"The generating functions are given for every $\grp{H}$, and without a rule for "
-          r"$\grp{T}$, $\grp{O}$ and $\grp{I}$. They use the same $q$, and $n$ is the index of a "
-          r"family of irreps of $\grp{C_{\infty}}$ or $\grp{D_{\infty}}$. The document of each "
-          r"subgroup except the members with $N > 12$ lists the restrictions $J$ by $J$, in its "
-          r"section Subduction from %s." % O3_LINK)
+def rules_head(D, irrep, extent):
+    """The first sentence of the descent of a spherical group (rules_lead) and the anchor of the
+    restricted irrep: in Rotation for every J, then the anchor; in Double the anchor, then for
+    every half-integer J, and the sentence that at integer J the restriction is the covered
+    group's of Rotation."""
+    if D.cover:
+        return (D.define("irrep.Gamma.subgroup")
+                + rules_lead(irrep, "", "half-integer ", extent)
+                + r" At integer $J$ the restriction is that of %s, in its section Descent of "
+                  r"symmetry. " % rotation_linked(D.cover))
+    return (rules_lead(irrep, r" $\grp{H}$ of $\grp{G}$", "", extent) + " "
+            + D.define("irrep.Gamma.subgroup"))
 
-    # the tables of the rules, the continuous subgroups' and the families', rows 1.6 times the
-    # usual height for the kets
-    def table(rules):
-        return (r"{\small\renewcommand{\arraystretch}{1.6}%s\begin{longtable}{@{}l>{\raggedright"
-                r"\arraybackslash}p{\fillwidth}@{}}\toprule"
-                % fill_width([[r"$\irrJ{J}$", so3_rule_tex(r)] for r in rules]
-                             + [[r"$H_\Lambda(t)$", so3_gf_tex(r["generating_function"])]
-                                for r in rules], 1))
 
-    def rows(r):
-        D.w(r"$\irrJ{J}$ & %s\\*" % so3_rule_tex(r))
-        D.w(r"$H_\Lambda(t)$ & %s\\" % so3_gf_tex(r["generating_function"]))
-    D.w(r"\paragraph{Continuous subgroups.}")
-    D.w(table(sr["continuous"]))
-    for k, r in enumerate(sr["continuous"]):
+def rules_axial(D, paired):
+    """axial_sum in the descent of a spherical group, in both volumes: for an axial H (Rotation)
+    or subgroup (Double, which names the restriction again after the sentence on integer J), the
+    groups `paired` sum over the pairs of kets, with the ket m = 0 at integer J."""
+    pairs = r"the pairs $\jm{J}{\pm m}$"
+    if D.cover:
+        return axial_sum("subgroup", paired, pairs, r"the restriction at half-integer $J$")
+    return axial_sum(r"$\grp{H}$", paired, r"$\jm{J}{0}$ and %s, \mbox{$m > 0$}" % pairs)
+
+
+def rules_residue(D):
+    """The sentence on q in the rules of a spherical group, in both volumes: in Rotation with the
+    root of unity of which it is the exponent, which the rules of Double do not use."""
+    return (D.define(*["index.residue"] + ([] if D.cover else ["constant.root"]))
+            + r"In the rules, $q = m \bmod N$"
+            + ("." if D.cover else
+               r", and $\rootunity{N}^{q}$ is the character of $\jm{J}{m}$ on the rotation by "
+               r"$2\pi/N$ about $z$, where $\rootunity{N} = \expe^{2\pi\iunit/N}$."))
+
+
+def rules_multiplicity(D, at):
+    """The sentence on the multiplicity of an irrep of a subgroup, the coefficient of its
+    generating function, in both volumes: in t^J in Rotation, in t^(2J) at half-integer J in
+    Double; `at`, the parity at which O(3) and Pin-(3) give it, or nothing."""
+    ids = ["function.multiplicity", "index.generating.variable", "function.generating",
+           "function.generating.numerator"]
+    ids.insert(len(ids) if D.cover else 1, "irrep.Delta")
+    return D.define(*ids) + (
+        r"The multiplicity $b_\Lambda(J)$ of an irrep $\Lambda$ of %s%s is the coefficient of $%s$ "
+        r"in its generating function $H_\Lambda(t) = \sum_{J\ge%s} b_\Lambda(J)%s$." % (
+            ("a subgroup", at, "t^{2J}", "1/2", r"\,t^{2J}") if D.cover
+            else (r"$\grp{H}$", at, "t^J", "0", r"\, t^J")))
+
+
+# The sentences of the descent of a spherical group on the multiplicities at parity, in O(3) and
+# Pin-(3), and on the indices of the generating functions (with the irrep that k labels, or
+# nothing); and the renaming of a section's spinor irreps, in Double.
+SUBGROUP_DOCUMENTS = (r"The documents of the subgroups use this definition in their section "
+                      r"Multiplicities and allowed $m$. ")
+GF_INDICES = (r"In the generating functions, $k$ is the subscript of an irrep%s, and $n$ the index "
+              r"of a family of irreps of a continuous subgroup. ")
+RENAMED = r"with each spinor irrep renamed by the section's record (CONVENTIONS.pdf, section 27)"
+# The families of the axial subgroups of O(3) whose sums run over the pairs of kets, and the two
+# families of O(3) labeled by their rotoreflection at N even.
+AXIAL_FAMILIES = (r"$\grp{C_{\mathnormal{N}v}}$, $\grp{D_{\mathnormal{N}}}$, "
+                  r"$\grp{D_{\mathnormal{N}h}}$ and $\grp{D_{\mathnormal{N}d}}$")
+EVEN_N = r"$\grp{S_{2\mathnormal{N}}}$ and $\grp{D_{\mathnormal{N}d}}$ with $N$ even"
+
+
+def members_head(D, r):
+    """The head of the rule of a family in the descent of a spherical group: the members it holds
+    for (every N from N_min, odd N or even N)."""
+    return {"odd": "odd $N$", "even": "even $N$"}.get(r.get("N")) or (
+        "every $N$" if r["N_min"] == 1
+        else r"%s$N \ge %d$" % ("" if D.cover else "every ", r["N_min"]))
+
+
+def rules_table(D, groups, label, gf_tex):
+    """A table of the rules of a spherical group, in both volumes: for each (head, rule) of
+    `groups` the head over both columns, then the rule of the restricted irrep `label` and its
+    generating functions (gf_tex) where it has them; rows 1.6 times the usual height for the
+    kets."""
+    D.w(r"{\small\renewcommand{\arraystretch}{1.6}%s\begin{longtable}{@{}l>{%s\arraybackslash}"
+        r"p{\fillwidth}@{}}\toprule" % (
+            fill_width([[label, rule_sum_tex(D, r)] for _h, r in groups]
+                       + [[r"$H_\Lambda(t)$", gf_tex(r["generating_function"])]
+                          for _h, r in groups if "generating_function" in r], 1),
+            r"\RaggedRight" if D.cover else r"\raggedright"))
+    for k, (head, r) in enumerate(groups):
         if k:
             D.w(r"\midrule")
-        D.w(r"\multicolumn{2}{@{}c@{}}{%s}\\*" % linked_group(r["subgroup"]["schoenflies"],
-                                                            r["subgroup"]["o3_class"]))
-        rows(r)
+        D.w(r"\multicolumn{2}{@{}c@{}}{%s}\\*" % head)
+        if "generating_function" not in r:
+            D.w(r"%s & %s\\" % (label, rule_sum_tex(D, r)))
+            continue
+        D.w(r"%s & %s\\*" % (label, rule_sum_tex(D, r)))
+        D.w(r"$H_\Lambda(t)$ & %s\\" % gf_tex(r["generating_function"]))
     D.w(r"\bottomrule\end{longtable}}")
-    for r in sr["families"]:
-        D.w(r"\paragraph{Subduction to the $%s$ family.}" % family_symbol(r["family"]))
-        D.w(table([r]))
-        D.w(r"\multicolumn{2}{@{}c@{}}{%s}\\*" % (
-            "every $N$" if r["N_min"] == 1 else r"every $N \ge %d$" % r["N_min"]))
-        rows(r)
-        D.w(r"\bottomrule\end{longtable}}")
-    # the three generating functions in one display: inline, a line would break inside a factor
-    dens = []
-    for r in sr["exceptional"]:
-        den = "".join("(1-t%s)" % ("" if d == 1 else "^{%d}" % d)
-                      for d in r["generating_function"]["denominator"])
-        dens.append(r"P_\Lambda(t)/(%s)\ \text{for } %s" % (den, grp(r["subgroup"]["schoenflies"])))
-    D.w(r"\paragraph{Subduction to $\grp{T}$, $\grp{O}$ and $\grp{I}$.} The generating functions "
-        r"are")
-    D.equation("gftoi", r"H_\Lambda(t) = %s." % r",\quad ".join(dens))
+
+
+def rules_tables(D, sr, label, gf_tex, blank=False):
+    """The tables of the rules of a spherical group: in Double one table, the continuous
+    subgroups then the families; in Rotation one for the continuous subgroups and one for each
+    family, each after its run-in heading (`blank`: after a blank line, O(3))."""
+    continuous = [(D.subgroup_link(r["subgroup"][D.symbol_key], r["subgroup"][D.class_key]), r)
+                  for r in sr["continuous"]]
+    if D.cover:
+        return rules_table(D, continuous + [
+            (r"$%s$, %s" % (grp("2" + FAMILY[r["family"]]), members_head(D, r)), r)
+            for r in sr["families"]], label, gf_tex)
+    D.w(r"\paragraph{Continuous subgroups.}")
+    rules_table(D, continuous, label, gf_tex)
+    # each run-in heading of O(3)'s families opens a paragraph of its own in the source, as it
+    # does in the PDF
+    for family in dict.fromkeys(r["family"] for r in sr["families"]):
+        if blank:
+            D.w("")
+        D.w(r"\paragraph{Subduction to the $%s$ family.}" % family_symbol(family))
+        rules_table(D, [(members_head(D, r), r) for r in sr["families"] if r["family"] == family],
+                    label, gf_tex)
+
+
+def exceptional_functions(D, sr):
+    """The generating functions of the exceptional preimages in the descent of SU2 and Pinminus3:
+    those of their documents."""
+    return (r"For %s, the generating function is that of their documents, in their sections "
+            r"Multiplicities and allowed $m$." % listed(
+                [D.subgroup_link(e["subgroup"]["symbol"], e["subgroup"]["double_class"])
+                 for e in sr["exceptional"]]))
+
+
+def exceptional_numerators(D, sr):
+    """The numerators P_Lambda(t) of the generating functions of the exceptional subgroups of SO(3)
+    and O(3), the irreps of each subgroup under its symbol."""
     D.w(r"{\small%s\begin{longtable}{@{}ll@{}}\toprule" % snake_mark())
     D.w(r"$\Lambda$ & $P_\Lambda(t)$\\\midrule\endhead")
     for k, r in enumerate(sr["exceptional"]):
@@ -4543,6 +6416,46 @@ def section_subduction_rules(D):
             D.w(r"$%s$ & $%s$\\%s" % (irrep_label(x["irrep"]), polynomial_in_t(x["coefficients"]),
                                      "*" if i < len(gf["numerators"]) - 1 else ""))
     D.w(r"\bottomrule\end{longtable}}")
+
+
+def section_subduction_rules(D, sr):
+    """SO(3) and SU(2): the restriction of D^(J) to the closed subgroups by the rules of the
+    record's subduction_rules, at every J in Rotation and at half-integer J in Double, with the
+    generating functions of the multiplicities; no tables of instances.  Those of T, O and I are
+    given in Rotation, and in Double those of 2T, 2O and 2I are their documents'."""
+    D.section("Descent of symmetry", {"rotation": "section 16.1",
+                                      "double": "sections 16.1 and 29.6"})
+    D.w(rules_head(D, r"$\irrJ{J}$", "")
+        + rules_axial(D, r"%s and $\grp{2D_{\mathnormal{N}}}$" % D.subgroup_link("2D_inf")
+                      if D.cover else r"$\grp{D_{\infty}}$ and $\grp{D_{\mathnormal{N}}}$") + " "
+        + rules_residue(D)
+        + (r" A section $\grp{C_{\mathnormal{N}}}$ ($N$ odd) is restricted as its preimage "
+           r"$\grp{2C_{\mathnormal{N}}}$, " + RENAMED + ". " if D.cover else
+           r" In the rules of a family, the terms and the irreps of the generating functions are "
+           r"irreps of the member of $\grp{C_{\mathnormal{N}}}$ or $\grp{D_{\mathnormal{N}}}$. "
+           r"They are labeled as in "
+           r"CONVENTIONS.pdf, section 6.1, and for $N \le 2$ named as in "
+           r"CONVENTIONS.pdf, section 6.3. ")
+        + rules_multiplicity(D, "") + " "
+        + (GF_INDICES % "" + exceptional_functions(D, sr) if D.cover else
+           r"The generating functions are given for every $\grp{H}$, and without a rule for "
+           r"$\grp{T}$, $\grp{O}$ and $\grp{I}$. They use the same $q$, and $n$ is the index of a "
+           r"family of irreps of $\grp{C_{\infty}}$ or $\grp{D_{\infty}}$. The document of each "
+           r"subgroup except the members with $N > 12$ lists the restrictions $J$ by $J$, in its "
+           r"section Subduction from %s." % O3_LINK))
+    rules_tables(D, sr, r"$\irrJ{J}$", (lambda gf: su2_gf_tex(D, gf)) if D.cover else so3_gf_tex)
+    if D.cover:
+        return
+    # the three generating functions in one display: inline, a line would break inside a factor
+    dens = []
+    for r in sr["exceptional"]:
+        den = "".join("(1-t%s)" % ("" if d == 1 else "^{%d}" % d)
+                      for d in r["generating_function"]["denominator"])
+        dens.append(r"P_\Lambda(t)/(%s)\ \text{for } %s" % (den, grp(r["subgroup"]["schoenflies"])))
+    D.w(r"\paragraph{Subduction to $\grp{T}$, $\grp{O}$ and $\grp{I}$.} The generating functions "
+        r"are")
+    D.equation("gftoi", r"H_\Lambda(t) = %s." % r",\quad ".join(dens))
+    exceptional_numerators(D, sr)
 
 
 def o3_label_tex(label):
@@ -4564,37 +6477,6 @@ def o3_cond_tex(cond):
         m = re.fullmatch(r"(k|N|N/2) (even|odd)", part)
         parts.append("$%s$ %s" % m.groups() if m else "$%s$" % part)
     return ", ".join(parts)
-
-
-def o3_rule_tex(rule):
-    """A rule of O(3) (subduction_rules) as TeX: the direct sum over the kets, the cases with
-    their terms at p = +1 (or where p (-1)^m = +1, by the tag), the change of the tag at the
-    other sign, and q."""
-    if "terms" in rule:
-        return r"$%s$ for both $p$" % r"\oplus ".join(irrep_label(t) for t in rule["terms"])
-    pairs = rule["sum"]["from"] == "0"
-    tag = rule.get("tag")
-    cases = []
-    for cs in rule["cases"]:
-        terms = r"\oplus ".join(rule_label(t.replace("min", r"\min"), tag["plus"] if tag else "")
-                                for t in cs["terms"])
-        cases.append("$%s$%s" % (terms, " otherwise" if cs["if"] == "otherwise"
-                                 else " if " + so3_cond_tex(cs["if"])))
-    out = r"$\bigoplus_{m=%s}^{J}\Lambda_m$, %s: %s" % (
-        "0" if pairs else "-J",
-        r"$\Lambda_0$ on $\jm{J}{0}$ and $\Lambda_m$ on the pair $\jm{J}{\pm m}$ for \mbox{$m > 0$}"
-        if pairs else r"$\Lambda_m$ on $\jm{J}{m}$", ", ".join(cases))
-    if tag and tag["by"] == "p":
-        out += r"; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$"
-    elif tag:
-        out += r"; with $''$ for $'$ on the kets where $p(-1)^m = -1$"
-    if rule.get("q") == "m mod N":
-        out += r"; $q = m \bmod N$"
-    elif rule.get("q"):
-        out += r"; $q = (N+1)m \bmod 2N$ at $p = +1$ and $(N+1)m + N \bmod 2N$ at $p = -1$"
-    if rule.get("text", "").endswith("for both p"):
-        out += r"; independent of $p$"
-    return out
 
 
 def o3_gf_tex(gf):
@@ -4635,82 +6517,97 @@ def other_parity(parity, group, subject):
             % (parity, subject, group))
 
 
-def section_subduction_rules_o3(D):
-    """O(3): the restriction of D^(J,p) to its closed subgroups, by the rules of the record's
-    subduction_rules, and the generating functions of the multiplicities at the parity (-1)^J;
-    no tables of instances."""
-    sr = D.rec["subduction_rules"]
-    D.section("Descent of symmetry", "section 16.1")
-    D.w(rules_lead(r"$\irrJp{J}{p}$", r" $\grp{H}$ of $\grp{G}$", "", " and both parities") + " "
-        + D.define("irrep.Gamma.subgroup")
-        + axial_sum(r"$\grp{H}$", r"$\grp{C_{\infty v}}$, $\grp{D_{\infty}}$, $\grp{D_{\infty h}}$ "
-                    r"and the families $\grp{C_{\mathnormal{N}v}}$, $\grp{D_{\mathnormal{N}}}$, "
-                    r"$\grp{D_{\mathnormal{N}h}}$ and $\grp{D_{\mathnormal{N}d}}$",
-                    r"$\jm{J}{0}$ and the pairs $\jm{J}{\pm m}$, \mbox{$m > 0$}") + " "
-        + D.define("index.residue", "constant.root")
-        + r"In the rules, $q = m \bmod N$, and $\rootunity{N}^{q}$ is the character of $\jm{J}{m}$ "
-          r"on the rotation by $2\pi/N$ about $z$, where $\rootunity{N} = \expe^{2\pi\iunit/N}$. "
-          r"However, in $\grp{S_{2\mathnormal{N}}}$ and $\grp{D_{\mathnormal{N}d}}$ with $N$ even, "
-          r"the rotoreflection $\elt{\sigma_h C_\infty}(\pi/N)$ labels their irreps, and "
-          r"$\rootunity{2N}^{q}$ is the character of $\jm{J}{m}$ on it. In the rules of a family, "
-          r"the terms are irreps of the member, labeled as in CONVENTIONS.pdf, section 6.1, and for "
-          r"$N \le 2$ named as in "
-          r"CONVENTIONS.pdf, section 6.3. " + inversion_terms(r"$\elt{i}$")
-        + r" In $\grp{C_{\mathnormal{N}h}}$ and $\grp{D_{\mathnormal{N}h}}$ with $N$ odd, "
-          r"$\elt{\sigma_h}$ acts on $\jm{J}{m}$ as $p(-1)^m$, and the terms are written where this "
-          r"sign is $+1$. "
-        + D.define("function.multiplicity", "irrep.Delta", "index.generating.variable",
-                   "function.generating", "function.generating.numerator")
-        + r"The multiplicity $b_\Lambda(J)$ of an irrep $\Lambda$ of $\grp{H}$ at the parity "
-          r"$(-1)^J$ is the coefficient of $t^J$ in its generating function "
-          r"$H_\Lambda(t) = \sum_{J\ge0} b_\Lambda(J)\, t^J$. The documents of the subgroups use "
-          r"this definition in their section Multiplicities and allowed $m$. "
-        + other_parity("the other parity", r"$\grp{H}$", r"the multiplicity of $\Lambda$")
-        + r" In the generating functions, $k$ is the subscript of an irrep $\irr{e}_{k}$, and $n$ "
-          r"the index of a family of irreps of a continuous subgroup. "
-        + D.define("delimiter.floor", "local.floor.x", "delimiter.ceiling")
-        + r"The floor $\lfloor x\rfloor$ is the greatest integer $\le x$, and the ceiling "
-          r"$\lceil x\rceil$ is the least integer $\ge x$. The document of each subgroup except "
-          r"the members with $N > 12$ lists the restrictions $J$ by $J$ at both parities, in its "
-          r"section Subduction from %s." % O3_LINK)
+def pin_label_tex(label):
+    """An irrep of a rule or a generating function of Pinminus3: 1E_{q},g -> {}^1E_{q,g},
+    E_{k}'' -> E_{k}'', A_{N/2} -> A_{N/2}."""
+    tag = ""
+    for t in (",g", ",u", "''", "'"):
+        if label.endswith(t):
+            label, tag = label[:-len(t)], t
+            break
+    out = term_tex(label)
+    if tag in (",g", ",u"):
+        return out[:-1] + r",\ptag{%s}}" % tag[1]
+    return out + tag
+
+
+def pin_gf_tex(D, gf):
+    """The generating functions of a rule of Pinminus3 at p = +1, in t^{2J}: per family
+    numerator/denominator, or P/(the denominator) with the P of each irrep, the irreps with one P
+    and condition together."""
+    if gf.get("variable") != "t^(2J)" or gf.get("parity") != "+1":
+        raise ValueError("Pinminus3: a generating function not in t^(2J) at p = +1")
+
+    def den(ds):
+        f = "".join("(1-t^{%s})" % d for d in ds)
+        return "(%s)" % f if len(ds) > 1 else f
+    groups = {}
+    if "families" in gf:
+        for f in gf["families"]:
+            value = su2_power(f["numerator"]) if not f["denominator"] else "%s/%s" % (
+                su2_power(f["numerator"]), den(f["denominator"]))
+            groups.setdefault((value, None), []).append(D.family_label(f["label_template"]))
+        return ", ".join("$%s$ for %s" % (v, " and ".join("$%s$" % x for x in labs))
+                         for (v, _c), labs in groups.items())
+    for x in gf["numerators"]:
+        groups.setdefault((su2_power(x["numerator"]), x["if"]), []).append(
+            pin_label_tex(x["irrep"]))
+    return r"$P_\Lambda(t)/%s$, $P_\Lambda(t)$: %s" % (den(gf["denominator"]), ", ".join(
+        "$%s$ for %s (%s)" % (v, " and ".join("$%s$" % x for x in labs),
+                              r"$N$ odd" if c == "N odd" else "$%s$" % cond_tex(c))
+        for (v, c), labs in groups.items()))
+
+
+def section_subduction_rules_o3(D, sr):
+    """O(3) and Pin-(3): the restriction of D^(J,p) to the closed subgroups by the rules of the
+    record's subduction_rules at both parities, at every J in Rotation and at half-integer J in
+    Double, and the generating functions of the multiplicities at the parity (-1)^J in Rotation
+    and at p = +1 in Double; no tables of instances.  Those of the exceptional groups are given in
+    Rotation, and in Double those of the exceptional preimages are their documents'."""
+    D.section("Descent of symmetry", {"rotation": "section 16.1",
+                                      "double": "sections 16.1 and 29.6"})
     label = r"$\irrJp{J}{p}$"
-
-    def table(rules):
-        cells = [[label, o3_rule_tex(r)] for r in rules] + [
-            [r"$H_\Lambda(t)$", o3_gf_tex(r["generating_function"])] for r in rules
-            if "generating_function" in r]
-        return (r"{\small\renewcommand{\arraystretch}{1.6}%s\begin{longtable}{@{}l>{\raggedright"
-                r"\arraybackslash}p{\fillwidth}@{}}\toprule" % fill_width(cells, 1))
-
-    def rows(r):
-        if "generating_function" not in r:
-            D.w(r"%s & %s\\" % (label, o3_rule_tex(r)))
-            return
-        D.w(r"%s & %s\\*" % (label, o3_rule_tex(r)))
-        D.w(r"$H_\Lambda(t)$ & %s\\" % o3_gf_tex(r["generating_function"]))
-    D.w(r"\paragraph{Continuous subgroups.}")
-    D.w(table(sr["continuous"]))
-    for k, r in enumerate(sr["continuous"]):
-        if k:
-            D.w(r"\midrule")
-        D.w(r"\multicolumn{2}{@{}c@{}}{%s}\\*" % linked_group(r["subgroup"]["schoenflies"],
-                                                            r["subgroup"]["o3_class"]))
-        rows(r)
-    D.w(r"\bottomrule\end{longtable}}")
-    # each run-in heading opens a paragraph of its own in the source, as it does in the PDF
-    for family in dict.fromkeys(r["family"] for r in sr["families"]):
-        group = [r for r in sr["families"] if r["family"] == family]
-        D.w("")
-        D.w(r"\paragraph{Subduction to the $%s$ family.}" % family_symbol(family))
-        D.w(table(group))
-        for k, r in enumerate(group):
-            if k:
-                D.w(r"\midrule")
-            D.w(r"\multicolumn{2}{@{}c@{}}{%s}\\*" % (
-                {"odd": "odd $N$", "even": "even $N$"}.get(r["N"]) or (
-                    "every $N$" if r["N_min"] == 1 else r"every $N \ge %d$" % r["N_min"])))
-            rows(r)
-        D.w(r"\bottomrule\end{longtable}}")
+    D.w(rules_head(D, label, " and both parities")
+        + rules_axial(D, (r"%s, %s, %s and the preimages of " % (
+            D.subgroup_link("2C_infv", "2Cinfv"), D.subgroup_link("2D_inf", "2Dinf"),
+            D.subgroup_link("2D_infh", "2Dinfh")) if D.cover else
+            r"$\grp{C_{\infty v}}$, $\grp{D_{\infty}}$, $\grp{D_{\infty h}}$ and the families ")
+            + AXIAL_FAMILIES) + " "
+        + rules_residue(D) + " However, in "
+        + (r"the preimages of " + EVEN_N + r" and of $\grp{C_{\mathnormal{N}h}}$ and "
+           r"$\grp{D_{\mathnormal{N}h}}$ with $N$ odd, $q$ is taken modulo $2N$, shifted by $N$ "
+           r"at $p = -1$. The map $(U, \varepsilon) \mapsto U$ carries these preimages onto "
+           r"$\grp{2C_{2\mathnormal{N}}}$ or $\grp{2D_{2\mathnormal{N}}}$. An irrep is named by "
+           r"the least $J$ at which it occurs in the restriction of $\irrJp{J}{p}$, where "
+           r"$p = -1$ for the tag $\ptag{u}$ and $p = +1$ otherwise (CONVENTIONS.pdf, section "
+           r"23.2). "
+           if D.cover else
+           EVEN_N + r", the rotoreflection $\elt{\sigma_h C_\infty}(\pi/N)$ labels their irreps, "
+           r"and $\rootunity{2N}^{q}$ is the character of $\jm{J}{m}$ on it. In the rules of a "
+           r"family, the terms are irreps of the member, labeled as in CONVENTIONS.pdf, section "
+           r"6.1, and for $N \le 2$ named as in "
+           r"CONVENTIONS.pdf, section 6.3. ")
+        + inversion_terms(r"$\elt{\lift{i}}$" if D.cover else r"$\elt{i}$")
+        + (r" A section over $\grp{C_{\mathnormal{N}}}$ or $\grp{S_{2\mathnormal{N}}}$ ($N$ odd) "
+           r"is restricted as its preimage, " + RENAMED + ". " if D.cover else
+           r" In $\grp{C_{\mathnormal{N}h}}$ and $\grp{D_{\mathnormal{N}h}}$ with $N$ odd, "
+           r"$\elt{\sigma_h}$ acts on $\jm{J}{m}$ as $p(-1)^m$, and the terms are written where "
+           r"this sign is $+1$. ")
+        + rules_multiplicity(D, r" at $p = +1$" if D.cover else r" at the parity $(-1)^J$") + " "
+        + SUBGROUP_DOCUMENTS
+        + (other_parity("$p = -1$", "the subgroup", "it") if D.cover else
+           other_parity("the other parity", r"$\grp{H}$", r"the multiplicity of $\Lambda$"))
+        + " " + GF_INDICES % ("" if D.cover else r" $\irr{e}_{k}$")
+        + (exceptional_functions(D, sr) if D.cover else
+           D.define("delimiter.floor", "local.floor.x", "delimiter.ceiling")
+           + r"The floor $\lfloor x\rfloor$ is the greatest integer $\le x$, and the ceiling "
+             r"$\lceil x\rceil$ is the least integer $\ge x$. The document of each subgroup "
+             r"except the members with $N > 12$ lists the restrictions $J$ by $J$ at both "
+             r"parities, in its section Subduction from %s." % O3_LINK))
+    rules_tables(D, sr, label, (lambda gf: pin_gf_tex(D, gf)) if D.cover else o3_gf_tex,
+                 blank=True)
+    if D.cover:
+        return
     D.w("")
     # the exponents of the registry's index.gf.ab (a and b alone would read as the Cayley-Klein
     # parameters of section 9)
@@ -4721,44 +6618,54 @@ def section_subduction_rules_o3(D):
         % listed([r"$(%d, %d)$ for $%s$" % (tuple(r["generating_function"]["denominator"])
                                            + (grp(r["subgroup"]["schoenflies"]),))
                   for r in sr["exceptional"]]))
-    D.w(r"{\small%s\begin{longtable}{@{}ll@{}}\toprule" % snake_mark())
-    D.w(r"$\Lambda$ & $P_\Lambda(t)$\\\midrule\endhead")
-    for k, r in enumerate(sr["exceptional"]):
-        gf = r["generating_function"]
-        if k:
-            D.w(r"\midrule")
-        D.w(r"\multicolumn{2}{@{}c@{}}{%s}\\*" % linked_group(r["subgroup"]["schoenflies"],
-                                                            r["subgroup"]["o3_class"]))
-        for i, x in enumerate(gf["numerators"]):
-            D.w(r"$%s$ & $%s$\\%s" % (irrep_label(x["irrep"]), polynomial_in_t(x["coefficients"]),
-                                     "*" if i < len(gf["numerators"]) - 1 else ""))
-    D.w(r"\bottomrule\end{longtable}}")
+    exceptional_numerators(D, sr)
 
 
 def section_subduction(D):
-    if "subduction_rules" in D.rec and D.name == "O3":
-        return section_subduction_rules_o3(D)
-    if "subduction_rules" in D.rec:
-        return section_subduction_rules(D)
-    if "subduction_subgroups" in D.rec:
-        return section_subduction_continuous(D)
-    if not D.lattice or "aliases" in D.lattice or "subduction_embeddings" not in D.rec:
+    """The descent of symmetry, the second section of Subgroups in both volumes: the restriction
+    of the irreps to the subgroups.  A spherical group gives it by the rules of its record
+    (section_subduction_rules, section_subduction_rules_o3), an axial continuous group by the
+    tables of its families (section_subduction_continuous), a finite group by a column for each
+    class of subgroups, the settings of its classes of monomorphisms and the induction they give.
+    A section of Double has none: its preimage's document gives its columns, renamed."""
+    if not D.cover or D.lattice is None:
+        # a record of Rotation or a continuous one of Double (no lattice of its own): its keys
+        # tell which descent it has; Double reads both keys, Rotation the second without rules
+        sr = D.rec.get("subduction_rules")
+        ss = D.rec.get("subduction_subgroups") if D.cover or sr is None else None
+        if sr is not None:
+            return (section_subduction_rules_o3 if D.name in ("O3", "Pinminus3")
+                    else section_subduction_rules)(D, sr)
+        if ss is not None:
+            return section_subduction_continuous(D, ss)
+        if D.cover or not D.lattice or "aliases" in D.lattice \
+                or "subduction_embeddings" not in D.rec:
+            return
+    elif not D.preimage:
         return
     groups = subduction_columns(D)
     if not groups:
         return
-    D.section("Descent of symmetry", "sections 12.2 and 12.4")
-    D.w(subduction_legend(groups) + (settings_sentences(
-        D, r"\grp{O(3)}", O3_LINK, SETTINGS_IMAGE[False],
-        any(r"\genidx" in x for g in groups for s in g[4] or () for x in s))
-        if any(len(g[3]) > 1 for g in groups) else ""))
+    D.section("Descent of symmetry", {"rotation": "sections 12.2 and 12.4",
+                                      "double": "sections 12.2, 12.4 and 28"})
+    D.w(subduction_legend(groups)
+        + (r" The rows of the vector irreps of a preimage are those of %s "
+           r"(\texttt{vector\symbol{95}subduction}). The column of a section, which the record "
+           r"does not store, is that of its preimage with the spinor irreps renamed "
+           r"(CONVENTIONS.pdf, section 27)." % rotation_linked(D.cover) if D.cover else "")
+        + (settings_sentences(
+            D, D.conjugation_group(), D.conjugation_text(), SETTINGS_IMAGE[False],
+            any(r"\genidx" in x for g in groups for s in g[4] or () for x in s))
+           if any(len(g[3]) > 1 for g in groups) else ""))
     rows = D.irrep_order
     subduction_tables(D, [D.irrep_id(i) for i in rows], [
-        {"target": H, "symbol": grp(sym), "letter": letter, "images": images,
-         "columns": [[restriction_cell(next(x for x in table if x["irrep"] == i), H)
+        {"target": H, "symbol": D.subgroup_tex(sym), "letter": letter, "images": images,
+         "columns": [[restriction_cell(D, next(x for x in table if x["irrep"] == i), H)
                       for i in rows] for table in tables]}
         for sym, letter, H, tables, images in groups])
-    D.w(induction_sentences(D))
+    # Double's records hold the blocks of the spinor irreps' entries; the vector irreps' are those
+    # of the covered group
+    D.w(induction_sentences(D, " of a spinor irrep" if D.cover else ""))
 
 
 # The rows of the tables of a continuous group: the singleton families and the instances
@@ -4865,68 +6772,103 @@ def continuous_intertwiners(entries, template):
                        for text, subs in grouped.items()])
 
 
-def section_subduction_continuous(D):
-    sb = D.rec["subduction_subgroups"]
-    fams = D.rec["character_functions"]["irrep_families"]
-    D.section("Descent of symmetry", "section 16.1")
+# The last sentence of the lead of the descent of a continuous group, in both volumes.
+ENTRY = (r"The entry of row $\Gamma$ is $\restr{\Gamma}{\grp{H}}$ as a sum of the irreps of "
+         r"$\grp{H}$.")
+
+
+def index_table(D, cols, heads, rows):
+    """A table of the restrictions to the continuous subgroups `cols`, in both volumes: a column
+    for each subgroup headed by `heads`, its index under it, then the rows [(label, cells)]."""
+    D.w(r"{\small\begin{longtable}{@{}l%s@{}}\toprule" % ("c" * len(cols)))
+    D.w(r"subgrp & " + " & ".join(heads) + r"\\")
+    D.w(r"index & " + " & ".join(str(c["index"]) for c in cols) + r"\\\midrule\endhead")
+    for label, cells in rows:
+        D.w(r"$%s$ & %s\\" % (label, " & ".join(cells)))
+    D.w(r"\bottomrule\end{longtable}}")
+
+
+def section_subduction_continuous(D, ss):
+    """An axial continuous group: the restriction of its families to its closed subgroups, in both
+    volumes, by the tables of the record of Rotation whose families they are (the document's
+    vector_record), each column headed by its subgroup (descent_column).  Rotation gives with them
+    its sentences on the subgroups, the intertwiners, the rules and the induction; in Double they
+    restrict the vector families, the covered group's, and the spinor families of the record
+    (`ss`, its subduction_subgroups) follow (spinor_descent)."""
+    G = D.vector_record()
+    sb = G["subduction_subgroups"]
+    fams = G["character_functions"]["irrep_families"]
+    D.section("Descent of symmetry", {"rotation": "section 16.1",
+                                      "double": "sections 16.1 and 29.5"})
     families = list(dict.fromkeys(e["subgroup"]["family"] for e in sb["finite"]))
-    # families_apart (T6) prints a whole sentence, or nothing for one family
-    D.w(" ".join(s for s in (
-        r"The closed subgroups of $\grp{G}$ other than $\grp{G}$, up to conjugacy in $\grp{G}$, "
-        r"are%sfor every $N \ge 1$, one subgroup for each member of %s of "
-        r"section~\ref{s:subgroups}." % (" its continuous subgroups and, " if sb["continuous"]
-                                         else ", ",
-                                         "each family" if len(families) > 1 else "the family"),
-        r"The subgroup for a member is the group of that member's document, in its own frame.",
-        families_apart(families).strip(),
-        r"The entry of row $\Gamma$ is $\restr{\Gamma}{\grp{H}}$ as a sum of the irreps of "
-        r"$\grp{H}$.") if s))
     template = {f["id"]: f["label_template"] for f in fams}
+    alternative = any(e.get("alternative_settings") for e in sb["finite"])
+    if D.cover:
+        rot = rotation_linked(D.cover)
+        # the entry sentence closes the paragraph, after H is introduced, with its anchor
+        D.w(r"\paragraph{Vector families.} The vector families of "
+            r"$\grp{G}$ are those of %s. They restrict to the preimage $\grp{2H}$ of a closed "
+            r"subgroup $\grp{H}$ of %s as %s restricts them to $\grp{H}$ "
+            r"(\texttt{vector\symbol{95}entry}, \texttt{vector\symbol{95}rules}), whose irreps are "
+            r"the vector irreps of $\grp{2H}$. The families restrict to a section as to its "
+            r"preimage. The tables are those of the section Descent of symmetry of the document of "
+            r"%s%s. They are headed by the preimages%s. "
+            % (rot, rot, rot, rot,
+               # the settings and the row images print only where an entry has other settings
+               ", with its settings" if alternative else "",
+               r" and give the images of the generators of $\grp{H}$ at the points of the class "
+               r"space (section~\ref{s:class_space})" if alternative else "")
+            + D.define("irrep.Gamma.subgroup") + ENTRY)
+    else:
+        # families_apart (T6) prints a whole sentence, or nothing for one family
+        D.w(" ".join(s for s in (
+            r"The closed subgroups of $\grp{G}$ other than $\grp{G}$, up to conjugacy in "
+            r"$\grp{G}$, are%sfor every $N \ge 1$, one subgroup for each member of %s of "
+            r"section~\ref{s:subgroups}." % (" its continuous subgroups and, " if sb["continuous"]
+                                             else ", ",
+                                             "each family" if len(families) > 1 else "the family"),
+            r"The subgroup for a member is the group of that member's document, in its own frame.",
+            families_apart(families).strip(), ENTRY) if s))
     if sb["continuous"]:
-        D.w(r"\paragraph{Continuous subgroups.} " + D.define("head.index.subgroup")
-            + r"The row subgrp gives each continuous subgroup $\grp{H}$, and the row index gives "
-            r"its index $\grpindex{\grp{G}}{\grp{H}}$. %s"
-            % continuous_intertwiners(sb["continuous"], template))
         cols = sb["continuous"]
-        templates = [{x["id"]: x["label_template"] for x in serialize.read_json(
-            names.record_path(c["subgroup"]["o3_class"]))["character_functions"]["irrep_families"]}
+        if not D.cover:
+            D.w(r"\paragraph{Continuous subgroups.} " + D.define("head.index.subgroup")
+                + r"The row subgrp gives each continuous subgroup $\grp{H}$, and the row index "
+                r"gives its index $\grpindex{\grp{G}}{\grp{H}}$. %s"
+                % continuous_intertwiners(cols, template))
+        templates = [{x["id"]: x["label_template"] for x in D.subgroup_record(
+            "rotation", c["subgroup"]["o3_class"])["character_functions"]["irrep_families"]}
             for c in cols]
-        D.w(r"{\small\begin{longtable}{@{}l%s@{}}\toprule" % ("c" * len(cols)))
-        D.w(r"subgrp & " + " & ".join(
-            r"\href{%s.pdf}{$%s$}" % (c["subgroup"]["o3_class"], grp(c["subgroup"]["schoenflies"]))
-            for c in cols) + r"\\")
-        D.w(r"index & " + " & ".join(str(c["index"]) for c in cols) + r"\\\midrule\endhead")
-        for f in fams:
-            cells = []
-            for c, ht in zip(cols, templates):
-                e = next(x for x in c["subduction"] if x["family"] == f["id"])
-                cells.append(r"$%s$" % r"\oplus ".join(irrep_label(ht[t["family"]])
-                                                        for t in e["terms"]))
-            D.w(r"$%s$ & %s\\" % (irrep_label(f["label_template"]), " & ".join(cells)))
-        D.w(r"\bottomrule\end{longtable}}")
-    doubled = ["$%s$" % family_symbol(f) for f in ("S2n", "Dnd") if f in families]
-    D.w(r"\paragraph{Finite subgroups.} " + D.define(
-            "function.character.plain", "element.principal", "constant.root", "index.residue",
-            "index.order.principal")
-        + r"For each family, the rule gives the restriction for every $N$ as the irrep with "
-        r"$\chi(g_p) = \rootunity{N_p}^{q}$ (the pair $\rootunity{N_p}^{\pm q}$ for an "
-        r"$\irr{e}_n$), labeled as in CONVENTIONS.pdf, section 6.1. Here "
-        r"$\rootunity{N_p} = \expe^{2\pi\iunit/N_p}$, where $g_p = \elt{C_\infty}(2\pi/N)$ and "
-        r"$N_p = N$%s. For $N = 1$ and $2$ the irreps are named as in CONVENTIONS.pdf, section "
-        r"6.3. %sThe restriction of the instance $n$ depends on $n$ only modulo the period "
-        r"$\period$ of the member. The tables list $N \le %d$ and $n \le %d$, and the record holds "
-        r"$n = 1, 2, \dots, \period$ with the intertwiners "
-        r"(\texttt{subduction\symbol{95}subgroups.finite[]}).%s" % (
-            r", or $g_p = \elt{\sigma_h C_\infty}(\pi/N)$ and $N_p = 2N$ in %s with $N$ even"
-            % " and in ".join(doubled) if doubled else "",
-            D.define("index.period"), names.N_MAX, CONTINUOUS_ROWS,
-            settings_sentences(
-                D, r"\grp{O(3)}", O3_LINK, SETTINGS_IMAGE[True], any(
-                    r"\genidx" in x for e in sb["finite"] if e.get("alternative_settings")
-                    for s in setting_images(D, [e["monomorphism"]["setting"]]
-                                            + [a["setting"] for a in e["alternative_settings"]])
-                    for x in s))
-            if any(e.get("alternative_settings") for e in sb["finite"]) else ""))
+        index_table(D, cols, [r"\href{%s.pdf}{$%s$}" % D.descent_column(c["subgroup"])
+                              for c in cols],
+                    [(irrep_label(f["label_template"]), [
+                        r"$%s$" % r"\oplus ".join(irrep_label(ht[t["family"]]) for t in next(
+                            x for x in c["subduction"] if x["family"] == f["id"])["terms"])
+                        for c, ht in zip(cols, templates)]) for f in fams])
+    if not D.cover:
+        doubled = ["$%s$" % family_symbol(f) for f in ("S2n", "Dnd") if f in families]
+        D.w(r"\paragraph{Finite subgroups.} " + D.define(
+                "function.character.plain", "element.principal", "constant.root", "index.residue",
+                "index.order.principal")
+            + r"For each family, the rule gives the restriction for every $N$ as the irrep with "
+            r"$\chi(g_p) = \rootunity{N_p}^{q}$ (the pair $\rootunity{N_p}^{\pm q}$ for an "
+            r"$\irr{e}_n$), labeled as in CONVENTIONS.pdf, section 6.1. Here "
+            r"$\rootunity{N_p} = \expe^{2\pi\iunit/N_p}$, where $g_p = \elt{C_\infty}(2\pi/N)$ and "
+            r"$N_p = N$%s. For $N = 1$ and $2$ the irreps are named as in CONVENTIONS.pdf, section "
+            r"6.3. %sThe restriction of the instance $n$ depends on $n$ only modulo the period "
+            r"$\period$ of the member. The tables list $N \le %d$ and $n \le %d$, and the record "
+            r"holds $n = 1, 2, \dots, \period$ with the intertwiners "
+            r"(\texttt{subduction\symbol{95}subgroups.finite[]}).%s" % (
+                r", or $g_p = \elt{\sigma_h C_\infty}(\pi/N)$ and $N_p = 2N$ in %s with $N$ even"
+                % " and in ".join(doubled) if doubled else "",
+                D.define("index.period"), names.N_MAX, CONTINUOUS_ROWS,
+                settings_sentences(
+                    D, D.conjugation_group(), D.conjugation_text(), SETTINGS_IMAGE[True], any(
+                        r"\genidx" in x for e in sb["finite"] if e.get("alternative_settings")
+                        for s in setting_images(D, [e["monomorphism"]["setting"]]
+                                                + [a["setting"] for a in e["alternative_settings"]])
+                        for x in s))
+                if alternative else ""))
     rows = []
     for f in fams:
         if f.get("index", {}).get("kind") == "family":
@@ -4937,7 +6879,8 @@ def section_subduction_continuous(D):
     for family in dict.fromkeys(r["family"] for r in sb["rules"]):
         # a blank line before each run-in label: the label is not part of the sentence after it
         D.w("")
-        D.w(r"\paragraph{Subduction to the $%s$ family.}" % family_symbol(family))
+        D.w(r"\paragraph{Vector families, the $%s$ family.}" % grp("2" + FAMILY[family])
+            if D.cover else r"\paragraph{Subduction to the $%s$ family.}" % family_symbol(family))
         labels = [["$%s$" % irrep_label(template[rule["family"]]), rule_tex(rule)]
                   for grp_rules in sb["rules"] if grp_rules["family"] == family
                   for rule in grp_rules["rules"]]
@@ -4965,16 +6908,19 @@ def section_subduction_continuous(D):
                 for fid, n, _label in rows:
                     sub = next(x for x in table if x["family"] == fid)
                     entry = sub if n is None else sub["residues"][(n - 1) % e["period"]]
-                    col.append(restriction_cell(entry, H))
+                    col.append(restriction_cell(D, entry, H))
                 columns.append(col)
             alt = e.get("alternative_settings") or []
-            groups.append({"target": H, "symbol": grp(e["subgroup"]["schoenflies"]),
+            target, symbol = D.descent_column(e["subgroup"])
+            groups.append({"target": target, "symbol": symbol,
                            "letter": None, "columns": columns,
                            "images": (setting_images(D, [e["monomorphism"]["setting"]]
                                                      + [a["setting"] for a in alt])
                                       if alt else None)})
         if groups:
             subduction_tables(D, [irrep_label(label) for _f, _n, label in rows], groups)
+    if D.cover:
+        return spinor_descent(D, ss)
     # a label of its own: the paragraph is about every subgroup, not the last family's
     D.w("")
     D.w(r"\paragraph{Induction.} " + D.define("irrep.Delta") + r"For a finite subgroup $\grp{H}$, "
@@ -4985,6 +6931,100 @@ def section_subduction_continuous(D):
             r"representatives (\texttt{transversal}) and the intertwiners in closed form, from "
             r"which $\Ind{\grp{H}}{\grp{G}} \Lambda$ follows as in CONVENTIONS.pdf, section 12.4."
             if sb["continuous"] else ""))
+
+
+def rule_math(rule):
+    """A rule of the spinor families of an axial preimage of Double as TeX: its cases, the
+    subscript m of a term written out as the rule's formula for it, then q."""
+    m = rule.get("m")
+    mtex = m.replace("min", r"\min").replace(" - ", "-").replace(", ", ",") if m else None
+    cases = []
+    for cs in rule["cases"]:
+        terms = r"\oplus ".join(term_tex(x, mtex) for x in cs["terms"])
+        cases.append("$%s$%s" % (terms, "" if cs["if"] == "always" else
+                                 " if $%s$" % cond_tex(cs["if"])))
+    out = ", ".join(cases)
+    if "q" in rule:
+        expr, M = rule["q"].split(" mod ")
+        out += r"; $q = %s \bmod %s$" % (expr, M)
+    return out
+
+
+def irrep_of(D, stem, irrep_id):
+    """An irrep of the record of Double `stem`, in math mode."""
+    rec = D.subgroup_record("double", stem)
+    ir = next(x for x in rec["character_table"]["irreps"] if x["id"] == irrep_id)
+    return "$%s$" % irrep(ir["display"])
+
+
+def spinor_descent(D, ss):
+    """The restriction of the spinor families of an axial preimage of Double (its record's
+    subduction_subgroups, `ss`): to the continuous subgroups, a column for each with its index
+    (index_table), then by the rules of the families of its preimages, then by period to the
+    finite preimages with N <= N_MAX; a section as its preimage."""
+    # a blank line before each run-in label: the label is not part of the sentence after it
+    D.w("")
+    # the families of the rules are the record's (2Cinf and 2Cinfh have 2C_N only)
+    ruled = ["$%s$" % grp("2" + FAMILY[f]) for f in dict.fromkeys(g["family"] for g in ss["rules"])]
+    D.w(r"\paragraph{Spinor families.} Below is the restriction of the spinor families to the "
+        r"%sfinite subgroups that the rules and the tables list.%s" % (
+            r"continuous subgroups and to the " if ss["continuous"] else "",
+            r" The first table gives it for each continuous subgroup, and its row index gives the "
+            r"subgroup's index." if ss["continuous"] else ""))
+    cols = ss["continuous"]
+    if cols:
+        rows = []
+        for c in cols:
+            ht = {x["id"]: x["label_template"] for x in D.subgroup_record(
+                "double", c["subgroup"]["double_class"])["character_functions"]["irrep_families"]}
+            rows.append({e["family"]: r"$%s$" % r"\oplus ".join(
+                multiple(t["multiplicity"], D.family_label(ht[t["family"]])) for t in e["terms"])
+                for e in c["subduction"]})
+        index_table(D, cols, [D.subgroup_link(c["subgroup"]["symbol"],
+                                              c["subgroup"]["double_class"]) for c in cols],
+                    [(D.family_label(f["label_template"]), [r[f["id"]] for r in rows])
+                     for f in D.families.values() if f["id"] in rows[0]])
+    D.w(D.define("index.residue")
+        + r"For the preimage%s %s, the rules give it for every $N$ by $q$ ($0 < q < N$):"
+        % ("s" if len(ruled) > 1 else "", listed(ruled)))
+    D.w(r"{\small\begin{longtable}{@{}ll>{\RaggedRight\arraybackslash}p{0.7\textwidth}@{}}"
+        r"\toprule")
+    D.w(r"subgrp & family & irreps\\\midrule\endhead")
+    for g in ss["rules"]:
+        for r in g["rules"]:
+            D.w(r"$%s$ & $%s$ & %s\\" % (grp("2" + FAMILY[g["family"]]),
+                                         D.family_label(D.families[r["family"]]["label_template"]),
+                                         rule_math(r)))
+    D.w(r"\bottomrule\end{longtable}}")
+    D.w(r"For a finite subgroup the restriction of the instance $n$ depends on $n$ only modulo its "
+        r"period $P$. The table lists the finite preimages with $N \le %d$ and gives, for "
+        r"$n = \tfrac{1}{2}, \tfrac{3}{2}, \dots, P - \tfrac{1}{2}$, the irreps of the subgroup, "
+        r"and the record holds the intertwiners (\texttt{blocks}). A section is restricted as its "
+        r"preimage, " % names.N_MAX + RENAMED + ".")
+    rows = [["subgrp", "family", "$P$", "irreps"]]
+    for e in ss["finite"]:
+        if "preimage_entry" in e:
+            continue
+        s = e["subgroup"]
+        for f in e["subduction"]:
+            cells = []
+            for r in f["residues"]:
+                # a slanted fraction, of the height of a line: these cells break over lines
+                n = Fraction(*r["n"]["v"])
+                cells.append(r"$\nicefrac{%d}{%d}$: %s" % (
+                    n.numerator, n.denominator, r"${}\oplus{}$".join(
+                        ("%d" % t["multiplicity"] if t["multiplicity"] > 1 else "")
+                        + irrep_of(D, s["double_class"], t["irrep"]) for t in r["terms"])))
+            rows.append([D.subgroup_link(s["symbol"], s["double_class"]),
+                         "$%s$" % D.family_label(D.families[f["family"]]["label_template"]),
+                         "%d" % e["period"], "; ".join(cells)])
+    # the irreps fill the width that the other columns leave
+    D.w(r"{\small%s\begin{longtable}{@{}llr>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}"
+        r"\toprule" % fill_width(rows, 3))
+    D.w(" & ".join(rows[0]) + r"\\\midrule\endhead")
+    for row in rows[1:]:
+        D.w(" & ".join(row) + r"\\")
+    D.w(r"\bottomrule\end{longtable}}")
 
 
 # ---------------------------------------------------------------- Subduction from O(3)
@@ -5010,6 +7050,26 @@ SUBDUCTION_RULE = {
              r"\quad k = 1 \text{ if } J \text{ is even},\ 2 \text{ if it is odd}",
     "SO3": r"\restr{\irrJp{J}{p}}{\grp{SO(3)}} = \irrJ{J}\quad\text{for both } p",
     "O3": r"\restr{\irrJp{J}{p}}{\grp{O(3)}} = \irrJp{J}{p}",
+}
+# The rules that the records of Double's continuous preimages state as text, as math (with
+# BASES_CASE and PARITY_RULE below; a text that is not here stops the build).  PARENT_RULE: the
+# restriction of the irreps of Pin-(3) at half-integer J to G (subduction_parent.rule), as the
+# right side for p = +1 and the tag that replaces g at p = -1 (None when the restriction does not
+# depend on p), the sum over n = 1/2, 3/2, ..., J.
+PARENT_RULE = {
+    "D^(J,p) | 2C_inf = sum_{n=1/2..J} (1E_n + 2E_n)   [independent of p]":
+        (r"\bigoplus_{n=1/2}^{J}(\conjpair{1}\irr{e}_{n}\oplus\conjpair{2}\irr{e}_{n})", None),
+    "D^(J,p) | 2C_infh = sum_{n=1/2..J} (1E_n,x + 2E_n,x),  x = g if p=+1 else u":
+        (r"\bigoplus_{n=1/2}^{J}(\conjpair{1}\irr{e}_{n,\ptag{g}}\oplus"
+         r"\conjpair{2}\irr{e}_{n,\ptag{g}})", "u"),
+    "D^(J,p) | 2C_infv = sum_{n=1/2..J} E_n   [independent of p]":
+        (r"\bigoplus_{n=1/2}^{J}\irr{e}_{n}", None),
+    "D^(J,p) | 2D_inf = sum_{n=1/2..J} E_n   [independent of p]":
+        (r"\bigoplus_{n=1/2}^{J}\irr{e}_{n}", None),
+    "D^(J,p) | 2D_infh = sum_{n=1/2..J} E_n,x,  x = g if p=+1 else u":
+        (r"\bigoplus_{n=1/2}^{J}\irr{e}_{n,\ptag{g}}", "u"),
+    "D^(J,p) | SU(2) = D^(J)   [independent of p]": (r"\irrJ{J}", None),
+    "D^(J,p) | Pin^-(3) = D^(J,p)": (r"\irrJp{J}{p}", None),
 }
 
 
@@ -5041,72 +7101,156 @@ def one_table(element):
             r"and one table gives both parities." % element)
 
 
+def occurs(entry, i):
+    """Whether the irrep i has a multiplicity other than 0 at some J in a table of Subduction from
+    O(3) or from Pin-(3), one parity of the record's (the irreps of its increment)."""
+    return i in entry["increment"] and bool(entry["increment"][i]
+                                            or any(r[i] for r in entry["residues"]))
+
+
+def parity_table(D, entry, rows, shown):
+    """The multiplicities b_Gamma(J, p) of one parity of Subduction from O(3) or from Pin-(3): a
+    row for each J of `rows` (as the record holds it, Document.momentum) with the multiplicities
+    `shown`, and the increment last; a column for each irrep that occurs, in the fewest tables of
+    about equal size whose estimated widths fit (MULTIPLICITY_PAD)."""
+    inc = entry["increment"]
+    cols = [i for i in D.irrep_order if occurs(entry, i)]
+    if not cols:
+        D.w(r"No irrep has a nonzero multiplicity.")
+        return
+    width = {c: max(GRID_LABEL * visible(D.irrep_id(c)), max(len(str(r[c])) for r in shown),
+                    len(str(inc[c]))) + MULTIPLICITY_PAD for c in cols}
+    first = max(len(D.momentum_text(rows[-1])), visible(r"\Delta_\Gamma")) + MULTIPLICITY_PAD
+    for n in range(1, len(cols) + 1):
+        parts = chunks(cols, -(-len(cols) // n))
+        if all(first + sum(width[c] for c in part) <= TABLE_MAX_WIDTH for part in parts):
+            break
+    for part in parts:
+        cells = ([[r"$J$"] + ["$%s$" % D.irrep_id(c) for c in part]]
+                 + [[D.momentum_cell(J)] + [str(r[c]) for c in part] for J, r in zip(rows, shown)]
+                 + [[r"$\Delta_\Gamma$"] + [str(inc[c]) for c in part]])
+        # Double's documents give snake_tables the width of the table
+        D.w(r"{\small%s\begin{longtable}{@{}r%s@{}}\toprule" % (
+            snake_mark(6.0, labels_width(cells, 6.0)) if D.cover else snake_mark(),
+            "r" * len(part)))
+        D.w(" & ".join(cells[0]) + r"\\\midrule\endhead")
+        for row in cells[1:-1]:
+            D.w(" & ".join(row) + r"\\")
+        D.w(r"\midrule " + " & ".join(cells[-1]) + r"\\")
+        D.w(r"\bottomrule\end{longtable}}")
+
+
+def parity_tables(D, so, half):
+    """The tables of Subduction from O(3) or from Pin-(3) of a finite group, by parity: the rows of
+    the record's table and at least a period, those past the table from its residues
+    (CONVENTIONS.pdf, sections 11 and 25.1); at half-integer J in a preimage (`half`), whose vector
+    irreps occur at integer J only, and the multiplicities there its covered group's."""
+    P = so["period"]
+    pars = so["parities"]
+    count = max(len(pars["g"]["table"]), P)
+    rows = list(range(1, 2 * count, 2)) if half else list(range(count))
+    same = len(pars) == 2 and pars["g"] == pars["u"]
+    left_out = any(not occurs(e, i) for e in pars.values() if e["table"] for i in D.irrep_order)
+    given = recurrence(r"%s \le %d" % ("2J" if half else "J", rows[-1]), P, "")
+    text = (r"At integer $J$ only the vector irreps occur, and $b_\Gamma(J, p)$ is the "
+            r"multiplicity in the subduction from $\grp{O(3)}$ to %s "
+            r"(\texttt{integer\symbol{95}J}). " % rotation_linked(D.cover) if half else "")
+    text += D.define("index.increment") + (
+        r"At half-integer $J$ only the spinor irreps occur: " + given if half
+        else given[0].upper() + given[1:])
+    if same and not half:
+        text += " " + one_table("is")
+    if left_out:
+        text += " " + LEFT_OUT + (
+            r" As $\elt{i} \in \grp{G}$ acts on $\irrJp{J}{p}$ as $p$, these irreps are the "
+            r"$\ptag{u}$ irreps at $p = +1$ and the $\ptag{g}$ irreps at $p = -1$."
+            if not half and D.rec["group"]["contains_inversion"] else "")
+    D.w(text)
+    if half and not same:
+        D.w(D.define("operator.determinant.character")
+            + r"The determinant exchanges the parities: $\irrJp{J}{-1} = \irrJp{J}{+1} \irrprod "
+            r"\det$, so that $b_\Gamma(J, -1) = b_{\Gamma \irrprod \det_{\grp{G}}}(J, +1)$.")
+    for par in sorted(pars):
+        entry = pars[par]
+        if not entry["table"] or (same and par == "u"):
+            continue
+        sign = "+" if par == "g" else "-"
+        if half:
+            D.w(r"\paragraph{Half-integer $J$, $p = %s$.}" % (r"\pm 1" if same else sign + "1"))
+            if same:
+                D.w(one_table("covers") if not D.improper
+                    else r"The two parities give the same table.")
+        else:
+            D.w(r"\paragraph{Parity %s.}" % (r"$\ptag{g}$ and $\ptag{u}$ ($p = \pm1$)" if same
+                                            else r"$\ptag{%s}$ ($p = %s1$)" % (par, sign)))
+        table = entry["table"]
+        parity_table(D, entry, rows, table + entry["residues"][len(table):count])
+
+
 def section_subduction_o3(D):
-    so = D.rec.get("subduction_o3")
+    """Subduction from the parent group (Document.parent_group), in every catalogue: O(3) in
+    Rotation, Pin-(3) in Double, the section's key its catalogue's (subduction_o3,
+    subduction_parent).  The multiplicities b_Gamma(J, p) of a finite group by parity
+    (parity_tables), at half-integer J in a preimage of Double (the record's domain); the rule of
+    the restriction to a continuous group; nothing in a section over G, whose preimage's document
+    gives them."""
+    if D.cover and not D.preimage:
+        return
+    key, parent, bookmark, momentum, parity = D.parent_group
+    so = D.rec.get(key)
     if not so:
         return
-    D.part("Angular momentum")
-    D.section(r"Subduction from \texorpdfstring{$\grp{O(3)}$}{O(3)}", "section 11")
-    irrep = parent_irrep(O3_LINK, "", r"$p$ ($\ptag{g}$ for $p = +1$, $\ptag{u}$ for $p = -1$)")
+    D.section(r"Subduction from \texorpdfstring{$%s$}{%s}" % (parent, bookmark),
+              {"rotation": "section 11",
+               "double": "sections 11, 25.1 and 29.4" if D.families else "sections 11 and 25.1"})
+    half = so.get("domain") == "half-integer J"
+    if half and "rule" in so:
+        # a continuous preimage: the restriction by the rule that the record states (PARENT_RULE)
+        rhs, other = D.stated(PARENT_RULE, so["rule"], "rule")
+        D.w(D.define("irrep.o3", "index.J", "index.parity")
+            + r"The irrep $\irrJp{J}{p}$ of $%s$ at half-integer $J$ restricts to $\grp{G}$ by the "
+              r"rule (\texttt{rule})%s:" % (parent, r", at $p = +1$" if other else ""))
+        D.equation("parent", r"\restr{%s}{\grp{G}} = %s," % (
+            r"\irrJp{J}{+1}" if other else r"\irrJp{J}{p}", rhs))
+        # the "where" clause defines the display's sum, so it comes right after the display
+        where = (r"where the sum runs over $n = \tfrac{1}{2}, \tfrac{3}{2}, \dots, J$"
+                 if "bigoplus" in rhs else "")
+        if other:
+            after = ((where + ", and " if where else "and ")
+                     + r"$\irrJp{J}{-1}$ restricts to the same irreps with $\ptag{%s}$ for "
+                       r"$\ptag{g}$" % other)
+        else:
+            after = r"for either $p$" + (", " + where if where else "")
+        D.w(r"%s. At integer $J$ the restriction is the subduction of %s "
+            r"(\texttt{integer\symbol{95}J})." % (after, rotation_linked(D.cover)))
+        return
+    # O(3) is linked to its document, Pin-(3) named
+    irrep = parent_irrep("$%s$" % parent if D.cover else O3_LINK, momentum, parity)
     if D.name in ("SO3", "O3"):
         D.w(D.define("index.J", "index.parity") + irrep + r". For every $J$,")
         D.equation("o3rule", SUBDUCTION_RULE[D.name] + ".")
         D.w(r"The record also holds the restrictions for $J \le %d$ "
             r"(\texttt{subduction\symbol{95}o3.instances})." % so["J_range"][1])
         return
-    D.w(D.define("index.J", "index.parity", "function.multiplicity") + irrep
-        + r", and $b_\Gamma(J, p)$ is the multiplicity of $\Gamma$ in")
-    D.equation("o3", r"\restr{\irrJp{J}{p}}{\grp{G}} .")
+    lead = D.define("index.J", "index.parity",
+                    "irrep.o3" if half else "function.multiplicity") + irrep
+    multiplicity = r"and $b_\Gamma(J, p)$ is the multiplicity of $\Gamma$ in"
+    if half:
+        # how Pin-(3) acts on D^(J,p), and its character
+        D.w(lead + r". An element $(U, \varepsilon)$ acts on it as $\varepsilon^{[p = -1]}$ times "
+            r"$U$ acting on the kets of angular momentum $J$, and $\elt{\barred{E}}$ as "
+            r"$(-1)^{2J}$. " + D.define("function.character.parent", "function.multiplicity")
+            + r"An element whose $%s$ part is $\lift{R}_{\vv}(\omega)$ (section~\ref{s:elements}) "
+              r"has the character" % SU2)
+        D.equation("chi", r"\chi^{(J,p)}(g) = p^{\iverson{\det g = -1}}\sum_{m=-J}^{J} "
+                          r"\expe^{\iunit m\omega},")
+        D.w(multiplicity)
+        D.equation("parent", r"\restr{\irrJp{J}{p}}{\grp{G}}.")
+    else:
+        D.w(lead + ", " + multiplicity)
+        D.equation("o3", r"\restr{\irrJp{J}{p}}{\grp{G}} .")
     if "parities" in so:
-        P = so["period"]
-        rows = max(SUBDUCTION_MIN_ROWS, P)
-        same = (len(so["parities"]) == 2 and so["parities"]["g"] == so["parities"]["u"])
-
-        def occurs(entry, i):
-            """Whether the irrep i has a multiplicity other than 0 at some J."""
-            return entry["increment"][i] or any(r[i] for r in entry["residues"])
-        left_out = any(not occurs(e, i) for e in so["parities"].values() if e["table"]
-                       for i in e["increment"])
-        given = recurrence(r"J \le %d" % (rows - 1), P, "")
-        D.w(D.define("index.increment") + given[0].upper() + given[1:]
-            + (" " + one_table("is") if same else "")
-            + (" " + LEFT_OUT + (
-                r" As $\elt{i} \in \grp{G}$ acts on $\irrJp{J}{p}$ as $p$, these irreps are the "
-                r"$\ptag{u}$ irreps at $p = +1$ and the $\ptag{g}$ irreps at $p = -1$."
-                if D.rec["group"]["contains_inversion"] else "") if left_out else ""))
-        for par in sorted(so["parities"]):
-            entry = so["parities"][par]
-            if not entry["table"] or (same and par == "u"):
-                continue
-
-            def mult(J, i):
-                if J < P:
-                    return entry["residues"][J][i]
-                return entry["table"][J][i] if J < len(entry["table"]) else (
-                    entry["residues"][J % P][i] + entry["increment"][i] * (J // P))
-
-            cols = [i for i in D.irrep_order if i in entry["increment"] and occurs(entry, i)]
-            D.w(r"\paragraph{Parity %s.}" % (r"$\ptag{g}$ and $\ptag{u}$ ($p = \pm1$)" if same
-                                            else r"$\ptag{%s}$ ($p = %s1$)" % (
-                                                par, "+" if par == "g" else "-")))
-            width = {c: max(GRID_LABEL * visible(D.irrep_id(c)),
-                            max(len(str(mult(J, c))) for J in range(rows)),
-                            len(str(entry["increment"][c]))) + MULTIPLICITY_PAD for c in cols}
-            first = max(len(str(rows - 1)), visible(r"\Delta_\Gamma")) + MULTIPLICITY_PAD
-            for n in range(1, len(cols) + 1):
-                parts = chunks(cols, -(-len(cols) // n))
-                if all(first + sum(width[c] for c in part) <= TABLE_MAX_WIDTH for part in parts):
-                    break
-            for part in parts:
-                D.w(r"{\small%s\begin{longtable}{@{}r%s@{}}\toprule"
-                    % (snake_mark(), "r" * len(part)))
-                D.w(r"$J$ & " + " & ".join("$%s$" % D.irrep_id(c) for c in part)
-                    + r"\\\midrule\endhead")
-                for J in range(rows):
-                    D.w(r"%d & %s\\" % (J, " & ".join(str(mult(J, c)) for c in part)))
-                D.w(r"\midrule $\Delta_\Gamma$ & %s\\" % " & ".join(
-                    str(entry["increment"][c]) for c in part))
-                D.w(r"\bottomrule\end{longtable}}")
+        parity_tables(D, so, half)
     else:
         name = next(k for k in SUBDUCTION_RULE if names.schoenflies_of(k)
                     == D.rec["group"]["schoenflies"])
@@ -5141,17 +7285,26 @@ def section_subduction_o3(D):
 
 
 # ---------------------------------------------------------------- Symmetry-adapted bases
+def momentum_of(item, key):
+    """The J or the m (key J, J_max, m, ...) of an item of a record as the record holds it: J and m
+    in Rotation's records, 2J and 2m in Double's (twoJ, twoM), as Document.momentum writes them."""
+    two = "two" + key[0].upper() + key[1:]
+    return item[two] if two in item else item[key]
+
+
 def ket_terms(D, J, terms):
     """sum_m e_m |J m> for the pairs (e_m, m) as pieces a paragraph column may break between, the
     terms joined by + and - set alike, a coefficient that is a sum in parentheses, a coefficient 1
-    not written."""
+    not written; in Double's documents a minus sign after the first term stays with its term."""
     out = []
     for c, m in terms:
         tex, compound = D.factor(c)
         if out:
             negative = not compound and tex.startswith("-")
-            out.append("$-$" if negative else "$+$")
-            if negative:
+            if not negative:
+                out.append("$+$")
+            elif not D.cover:
+                out.append("$-$")
                 tex = tex[1:]
         if compound:
             e = "(" + tex + r")\,"
@@ -5164,16 +7317,19 @@ def ket_terms(D, J, terms):
 
 
 def enumerated_terms(D, blk, vec):
-    """One vector of the exceptional groups' J <= 10 blocks: e_m |J m> per component, or
-    factor (q_m |J m> + ...) when the vector is stored with a common factor."""
-    J = blk["J"]
+    """One vector of a block (the exceptional groups' and preimages' blocks up to the J of the
+    repository): e_m |J m> per component, or factor (q_m |J m> + ...) when the vector is stored
+    with a common factor."""
+    J = D.momentum(momentum_of(blk, "J"))
     if "factor" not in vec:
-        return ket_terms(D, J, [(comp["e"], comp["m"]) for comp in vec["components"]])
+        return ket_terms(D, J, [(comp["e"], D.momentum(momentum_of(comp, "m")))
+                                for comp in vec["components"]])
     out = []
     for comp in vec["components"]:
         n, d = comp["q"]
         size = Fraction(abs(n), d)
-        body = ket(J, comp["m"]) if size == 1 else r"%s\,%s" % (D.val(rat(size)), ket(J, comp["m"]))
+        m = D.momentum(momentum_of(comp, "m"))
+        body = ket(J, m) if size == 1 else r"%s\,%s" % (D.val(rat(size)), ket(J, m))
         if out:
             out.append("$-$" if n < 0 else "$+$")
         elif n < 0:
@@ -5185,11 +7341,11 @@ def enumerated_terms(D, blk, vec):
 
 
 def formula(expr):
-    """A closed form in J (or n) as a formula: floor((J+a)/b) -> the floor of (J+a)/b,
-    n_K(J,q) -> n_{K}(J,q), [n <= J] -> [n \\le J]."""
-    t = re.sub(r"floor\(\(J\+(\d+)\)/(\d+)\)",
-               r"\\bigl\\lfloor\\tfrac{J+\1}{\2}\\bigr\\rfloor", expr)
-    t = re.sub(r"floor\(J/(\d+)\)", r"\\bigl\\lfloor\\tfrac{J}{\1}\\bigr\\rfloor", t)
+    """A closed form in J, 2J (Double's records) or n as a formula: floor((J+a)/b) -> the floor of
+    (J+a)/b, floor((2J+a)/b) alike, n_K(J,q) -> n_{K}(J,q), [n <= J] -> [n \\le J]."""
+    t = re.sub(r"floor\(\((2?J)\+(\d+)\)/(\d+)\)",
+               r"\\bigl\\lfloor\\tfrac{\1+\2}{\3}\\bigr\\rfloor", expr)
+    t = re.sub(r"floor\((2?J)/(\d+)\)", r"\\bigl\\lfloor\\tfrac{\1}{\2}\\bigr\\rfloor", t)
     t = re.sub(r"n_(\d+)\(J,(\d+)\)", r"n_{\1}(J,\2)", t)
     return t.replace("[n <= J]", r"\iverson{n\le J}")
 
@@ -5310,21 +7466,53 @@ AMPLITUDE = (r"the amplitude of $\jm{J}{m}$ is $e_m\sqrt{F_m/\mathrm{tot}}$, and
 
 
 def bases_reading(D, sb):
-    # the action of the inversion, except where bases_construction_enumerated states it with its
-    # consequence (a derived record whose group contains the inversion: Oh, Th, Ih)
-    stated = (sb["status"] != "closed-form" and sb.get("computed_from")
-              and D.rec["group"]["contains_inversion"])
-    D.w(D.define("index.m", "vector.ket") +
-        r"The kets $\jm{J}{m}$ are the spherical harmonics%s. " % (
-            "" if stated else r" (the inversion acts as $(-1)^J$)") +
-        D.define("index.ketcoefficient", "vector.basis.symmetry", "index.ketweight",
-                 "index.total") + KET_LEAD)
+    """The kets, and a vector listed by its coefficients e_m: Rotation's kets are the spherical
+    harmonics; at half-integer J in Double's records (with the integer J of the covered group)
+    a finite preimage's kets carry D^(J,+1), on which an element acts by the Wigner matrix of
+    its SU(2) part, and SU(2)'s and Pin-(3)'s are the states of their families."""
+    closed = sb["status"] == "closed-form"
+    half = "integer_J" in sb
+    kets = r"The kets $\jm{J}{m}$ %s. "
+    if half and not D.families:
+        D.w(D.define("index.m", "vector.ket")
+            + r"The bases at integer $J$ are those of %s (\texttt{integer\symbol{95}J}), and at "
+            r"half-integer $J$ the kets $\jm{J}{m}$, $m = J, J-1, \dots, -J$, carry "
+            r"$\irrJp{J}{+1}$. " % rotation_linked(D.cover) + D.define("matrix.wigner")
+            + r"The Wigner matrix $\wignerD{J}$ of $%s$ satisfies $\wignerD{1/2}(U) = U$ on "
+            r"$\jm{1/2}{1/2}$, $\jm{1/2}{-1/2}$. The element $g$ of $\grp{G}$ whose $%s$ part is "
+            r"$U$ acts as" % (SU2, SU2))
+        D.equation("action", r"g\,\jm{J}{m} = \sum_{m'} \jm{J}{m'}\; "
+                             r"\conj{\wignerD{J}_{m m'}(U)},")
+        reading = (r"so $\lift{R}_{z}(\omega)$ multiplies $\jm{J}{m}$ by $\expe^{\iunit m\omega}$, "
+                   r"$0 \le \omega < 4\pi$, and $\elt{\barred{E}}$ by $-1$. ")
+    elif half:
+        reading = D.define("index.m", "vector.ket") + kets % (
+            r"at half-integer $J$ are the states of section~\ref{s:continuous_irreps} "
+            r"($\elt{\barred{E}}$ acts as $-1$%s)" % (
+                r", $\elt{\lift{i}}$ as $p$ on $\irrJp{J}{p}$" if len(D.families) > 1 else ""))
+    else:
+        # the action of the inversion, except where bases_construction_enumerated states it with
+        # its consequence (a derived record whose group contains the inversion: Oh, Th, Ih)
+        stated = (not closed and sb.get("computed_from")
+                  and D.rec["group"]["contains_inversion"])
+        reading = D.define("index.m", "vector.ket") + kets % (
+            "are the spherical harmonics"
+            + ("" if stated else r" (the inversion acts as $(-1)^J$)"))
+    D.w(reading + D.define("index.ketcoefficient", "vector.basis.symmetry", "index.ketweight",
+                           "index.total") + KET_LEAD)
+    # a finite preimage of Double goes on after a semicolon
     D.equation("ket", r"v = \frac{1}{\sqrt{\mathrm{tot}}}\sum_m e_m\sqrt{F_m}\;\jm{J}{m},\qquad "
-                      r"F_m = (J+m)!\,(J-m)!,\qquad \mathrm{tot} = \sum_m |e_m|^2F_m,")
-    if sb["status"] == "closed-form" and (all_kets(sb)
-                                          or sb["closed_form"]["abelian_index"] == 1):
+                      r"F_m = (J+m)!\,(J-m)!,\qquad \mathrm{tot} = \sum_m |e_m|^2F_m"
+                      + (";" if half and not D.families else ","))
+    if not closed:
+        D.w(D.define("index.factor.c") + AMPLITUDE if half else
+            D.define("index.factor.c", "index.multiplicity.copies") + "so " + AMPLITUDE)
+    elif all_kets(sb) or (not half and sb["closed_form"]["abelian_index"] == 1):
         D.w(ONE_KET)
-    elif sb["status"] == "closed-form":
+    elif half:
+        D.w(r"here every $e_m$ is $\pm 1$%s." % (
+            r", or $\pm\iunit$ in a pair" if sb["closed_form"]["flip"] == "sigma_v" else ""))
+    else:
         two, pairs = two_dimensional(D), pairs_occur(sb)
         minus = ([r"on the second partner of a two-dimensional block"] if two else []) + (
             [r"on $\jm{J}{-m}$ in a pair with $s = -1$"] if pairs else [])
@@ -5337,13 +7525,13 @@ def bases_reading(D, sb):
                 r"$\tfrac{1}{2}\sqrt{2}$ and $\tfrac{1}{2}s\sqrt{2}$"
                 % (r"from $J = %d$ on " % first if first and first > 1 else "")
                 if pairs else "", " and ".join(minus)))
-    else:
-        D.w(D.define("index.factor.c", "index.multiplicity.copies") + "so " + AMPLITUDE)
 
 
-# The flip of the axial bases: the binary rotation about x or the mirror in the xz plane.
+# The flip of the axial bases: the binary rotation about x or the mirror in the xz plane (Double:
+# in the plane y = 0).
 FLIP = {True: r"$\elt{C_{2x}}$",
         False: r"$\elt{\sigma_v}(0)$, the mirror in the $xz$ plane,"}
+MIRROR_Y0 = r"$\elt{\sigma_v}(0)$, the mirror in the plane $y = 0$,"
 
 
 # The sentences of both volumes on the subgroup A, the blocks and the table of their cases, the
@@ -5365,54 +7553,116 @@ def all_kets_sentences(restriction, values, irrep):
             % (restriction, values, irrep))
 
 
-def bases_construction_closed(D, sb):
-    """How the blocks of a closed form are built, at the head of the subsection of the blocks."""
-    cf = sb["closed_form"]
-    if all_kets(sb):
-        # SO(3) has no parity: its block carries D^(J) (section 14.1); O(3)'s that of the harmonics
-        D.w(all_kets_sentences(r"$\restr{\irrJp{J}{p}}{\grp{G}}$", r"$J$ and $p$",
-                               r"$\irrJ{J}$" if D.name == "SO3" else
-                               r"$\irrJp{J}{(-1)^J}$, at the parity of the spherical harmonics")
-            + r" Blocks are ordered by $J$. " + D.define("head.case", "head.partners")
-            + CASE_LEGEND)
-        D.w(r"\begin{center}\begin{tabular}{@{}lrl@{}}\toprule")
-        D.w(r"case & $d$ & partners\\\midrule")
-        D.w(r"every $J$ & $2J+1$ & $\jm{J}{J}, \jm{J}{J-1}, \dots, \jm{J}{-J}$\\")
-        D.w(r"\bottomrule\end{tabular}\end{center}")
-        return
-    subgroup = r"$\grp{A} = \grp{G}\cap\grp{C_{\infty h}}$"
-    if cf["abelian_index"] == 1:
-        D.w(D.define("group.A") + ABELIAN_BLOCKS % subgroup)
-    else:
-        pairs = pairs_occur(sb)
-        text = (D.define("group.A", "function.character.abelian") + INDEX_TWO % subgroup + " "
-                + D.define(*(() if cf["flip"] == "C_2x" else ("element.mirror.angle",)))
-                + r"The flip %s sends $m$ to $-m$. " % FLIP[cf["flip"] == "C_2x"])
-        order = r"ordered by $J$, then $|m|$%s" % (r", a pair with $s = +1$ first" if pairs else "")
-        if two_dimensional(D):
-            # the order of the blocks after their construction (the flip, the block, its partners)
-            text += (D.define("index.partner.sign")
-                     + r"By the rule of CONVENTIONS.pdf, section 14.1, a two-dimensional block has "
-                     r"$e = +1$ on partner 1 and $e = c = \pm1$ on partner 2. " + partner_rule(D)
-                     + " Blocks are " + order + ".")
-        else:
-            text += (r"Every irrep is one-dimensional, so a block is one ket%s. Blocks are %s "
-                     r"(CONVENTIONS.pdf, section 14.1)." % (r" or a pair" if pairs else "", order))
-        D.w(text)
-    D.w(D.define("head.case", "head.partners") + CASE_LEGEND)
+def case_table(D, rows, lead=""):
+    """The table of the cases of block after `lead` and its legend (CASE_LEGEND): a row (case & d &
+    partners) for each of `rows`."""
+    D.w(lead + D.define("head.case", "head.partners") + CASE_LEGEND)
     D.w(r"\begin{center}\begin{tabular}{@{}lrl@{}}\toprule")
     D.w(r"case & $d$ & partners\\\midrule")
-    if cf["abelian_index"] == 1:
-        D.w(r"every $m$ & 1 & $\jm{J}{m}$\\")
-    else:
-        if two_dimensional(D):
-            D.w(r"$\chiA(m) \ne \chiA(-m)$ & 2 & $\jm{J}{m}$;\ "
-                r"$c\,\jm{J}{-m}$\\")
-        if pairs_occur(sb):
-            D.w(r"$\chiA(m) = \chiA(-m)$, $m > 0$ & 1 & $\jm{J}{m} + s\,"
-                r"\jm{J}{-m}$, $s = \pm1$\\")
-        D.w(r"$m = 0$ & 1 & $\jm{J}{0}$\\")
+    for row in rows:
+        D.w(row + r"\\")
     D.w(r"\bottomrule\end{tabular}\end{center}")
+
+
+def relabeled(D, moved):
+    """The blocks at the parity -1 of a preimage whose determinant moves irreps: `moved` the pairs
+    (Gamma, Gamma x det) as math."""
+    return (D.define("operator.determinant.character")
+            + r"At the parity $p = -1$ a block keeps its kets, and its irrep $\Gamma$ becomes "
+            r"$\Gamma \irrprod \det_{\grp{G}}$: %s." % ", ".join(
+                r"$%s \to %s$" % pair for pair in moved))
+
+
+def bases_construction_closed(D, sb):
+    """How the blocks of a closed form are built, at the head of the subsection of the blocks: the
+    block of all the kets at J of the spherical groups, or the blocks by the abelian subgroup A
+    and the flip; in a preimage of Double by the canonical lift of the flip, with the blocks whose
+    irrep the determinant moves at the parity -1."""
+    cf = sb["closed_form"]
+    half = "integer_J" in sb
+    if all_kets(sb):
+        if half and [c["vectors"] for c in cf["cases"]] != [ALL_KETS]:
+            raise ValueError("%s: the blocks of the bases are not the kets" % D.name)
+        # a group without the parity (SO(3), SU(2)): its block carries D^(J) (section 14.1); the
+        # block of O(3) that of the harmonics, of Pin-(3) that of the kets
+        irrep = (r"$\irrJp{J}{%s}$, at the parity of the %s" % (
+            ("+1", r"kets, which at $p = -1$ carry $\irrJp{J}{-1}$ with the same partners "
+                   r"(\texttt{parity\symbol{95}rule})") if half
+            else ("(-1)^J", "spherical harmonics")) if len(D.families) > 1 else r"$\irrJ{J}$")
+        values = ("half-integer $J$" if half else "$J$") + (
+            " and $p$" if not half or len(D.families) > 1 else "")
+        case_table(D, [r"every $J$ & $2J+1$ & $\jm{J}{J}, \jm{J}{J-1}, \dots, \jm{J}{-J}$"],
+                   all_kets_sentences(r"$\restr{\irrJp{J}{p}}{\grp{G}}$", values, irrep)
+                   + r" Blocks are ordered by $J$. ")
+        return
+    subgroup = (r"$\grp{A}$ of the elements over $\grp{C_{\infty h}}$" if half
+                else r"$\grp{A} = \grp{G}\cap\grp{C_{\infty h}}$")
+    if cf["abelian_index"] == 1:
+        D.w(D.define("group.A") + ABELIAN_BLOCKS % subgroup)
+        # a preimage's blocks are its kets, with no table of cases
+        rows = [] if half else [r"every $m$ & 1 & $\jm{J}{m}$"]
+    else:
+        c2x = cf["flip"] == "C_2x"
+        text = (D.define("group.A", "function.character.abelian") + INDEX_TWO % subgroup + " "
+                + D.define(*(() if c2x else ("element.mirror.angle",)))
+                + (r"The canonical lift of the flip %s sends $\jm{J}{m}$ to a multiple of "
+                   r"$\jm{J}{-m}$. " % (FLIP[True] if c2x else MIRROR_Y0) if half
+                   else r"The flip %s sends $m$ to $-m$. " % FLIP[c2x]))
+        if half:
+            two = any(ir["dim"] == 2 for ir in D.rec["character_table"]["irreps"] if ir["spinor"])
+            pairs = True
+            pair = (r"$s = \pm 1$ ($s = +1$ first)" if c2x else
+                    r"$s = \pm\iunit$ ($s = +\iunit$ first)")
+            if two:
+                # the partners in a sentence of their own, as in partner_rule; the anchor of c
+                # opens that sentence, which first writes c
+                text += (r"For $m > 0$ by increasing $m$, when $\grp{A}$ acts differently on "
+                         r"$\jm{J}{m}$ and $\jm{J}{-m}$, they span one two-dimensional block. "
+                         + D.define("index.partner.sign")
+                         + r"Its first partner is $v_1 = \jm{J}{m_1}$, the ket on which $\grp{A}$ "
+                         r"acts as $\repD{\Gamma}_{1,1}(k)$, $k \in \grp{A}$, and the second "
+                         r"$v_2 = c\,\jm{J}{-m_1}$ by the partner law (\ref{e:partner}). "
+                         + D.define("index.pair.sign")
+                         + r"Otherwise these kets give two one-dimensional blocks "
+                         r"$\jm{J}{m} + s\,\jm{J}{-m}$, %s." % pair)
+            else:
+                text += (D.define("index.pair.sign")
+                         + r"For $m > 0$ by increasing $m$, $\grp{A}$ acts in the same way on "
+                         r"$\jm{J}{m}$ and $\jm{J}{-m}$, and they give two one-dimensional "
+                         r"blocks $\jm{J}{m} + s\,\jm{J}{-m}$, %s." % pair)
+            D.w(text + r" The index $\mult$ counts the blocks of one irrep at one $J$.")
+        else:
+            two, pairs = two_dimensional(D), pairs_occur(sb)
+            order = r"ordered by $J$, then $|m|$%s" % (r", a pair with $s = +1$ first"
+                                                       if pairs else "")
+            if two:
+                # the order of the blocks after their construction (the flip, the block, its
+                # partners)
+                text += (D.define("index.partner.sign")
+                         + r"By the rule of CONVENTIONS.pdf, section 14.1, a two-dimensional "
+                         r"block has $e = +1$ on partner 1 and $e = c = \pm1$ on partner 2. "
+                         + partner_rule(D) + " Blocks are " + order + ".")
+            else:
+                text += (r"Every irrep is one-dimensional, so a block is one ket%s. Blocks are %s "
+                         r"(CONVENTIONS.pdf, section 14.1)." % (r" or a pair" if pairs else "",
+                                                                order))
+            D.w(text)
+        # the first partner of a two-dimensional block is |J m_1> in Double; a pair has s = +-1
+        # in Rotation; m = 0 at integer J only
+        rows = ([r"$\chiA(m) \ne \chiA(-m)$ & 2 & $\jm{J}{%s}$;\ $c\,\jm{J}{-%s}$"
+                 % (("m_1",) * 2 if half else ("m",) * 2)] if two else []) + (
+            [r"$\chiA(m) = \chiA(-m)$, $m > 0$ & 1 & $\jm{J}{m} + s\,\jm{J}{-m}$"
+             + ("" if half else r", $s = \pm1$")] if pairs else []) + (
+            [] if half else [r"$m = 0$ & 1 & $\jm{J}{0}$"])
+    if rows:
+        case_table(D, rows)
+    if half:
+        # in the irrep order of the record (the map's keys are sorted as strings)
+        plm = cf["parity_label_map"]
+        order = {ir["mulliken"]: k for k, ir in enumerate(D.rec["character_table"]["irreps"])}
+        moved = sorted(((a, b) for a, b in plm.items() if a != b), key=lambda m: order[m[0]])
+        if moved:
+            D.w(relabeled(D, [(D.irrep_of_label(a), D.irrep_of_label(b)) for a, b in moved]))
 
 
 # The copies of the exceptional groups and preimages in both volumes, around the display of the
@@ -5426,32 +7676,75 @@ GRAM_SCHMIDT = (r"The copies of $\Gamma$ at $J$ are orthonormal. %sIn the coordi
                 r"partner 1.")
 
 
+def det_moved(D):
+    """[(Gamma, Gamma x det)] for the spinor irreps that the determinant moves, in irrep order:
+    at the parity -1 a block of Gamma is one of Gamma x det."""
+    from ..exact.cyclo import Cyc
+    ct = D.rec["character_table"]
+    det = [Cyc.rational(c["det"]) for c in ct["classes"]]
+    spinors = [ir for ir in ct["irreps"] if ir["spinor"]]
+    chi = {ir["id"]: [Cyc.from_json(x) for x in ir["chi"]] for ir in spinors}
+    out = []
+    for ir in spinors:
+        want = [d * x for d, x in zip(det, chi[ir["id"]])]
+        hits = [j for j, c in chi.items() if all((x - y).is_zero() for x, y in zip(c, want))]
+        if len(hits) != 1:
+            raise ValueError("%s: %d irreps are %s times det" % (D.name, len(hits), ir["id"]))
+        if hits[0] != ir["id"]:
+            out.append((ir["id"], hits[0]))
+    return out
+
+
 def bases_construction_enumerated(D, sb):
-    """How the enumerated blocks are built, at the head of the subsection of the blocks."""
+    """How the enumerated blocks are built, at the head of the subsection of the blocks: by the
+    projectors (Gram--Schmidt), or as the bases of the group they are computed from
+    (computed_from: T, O or I, and 2T, 2O or 2I in Double), relabeled; in a preimage of Double the
+    kets carry D^(J,+1)."""
     cf = sb.get("computed_from")
+    half = "integer_J" in sb
     if not cf:
         D.w(GRAM_SCHMIDT[0] % D.define("matrix.projector"))
         D.equation("projector", r"P^\Gamma_{1,1} = \sum_g \conj{\repD{\Gamma}_{1,1}(g)}\,"
-                                r"\irrJ{J}(g),")
+                                r"%s(g)," % (r"\irrJp{J}{+1}" if half else r"\irrJ{J}"))
         D.w(GRAM_SCHMIDT[1] % D.define("index.copy"))
         return
-    parent = grp(names.schoenflies_of(cf["group"]))
-    if D.rec["group"]["contains_inversion"]:
-        D.w(r"The bases are those of $%s$. " % parent + D.define("head.parity") +
-            r"The inversion acts on $\jm{J}{m}$ as $(-1)^J$, so the blocks at even $J$ are "
-            r"gerade and those at odd $J$ ungerade, with the labels of this table.")
+    # Double's records name the group (2T, 2O, 2I), Rotation's its Schoenflies symbol
+    parent = grp(cf["group"] if half else names.schoenflies_of(cf["group"]))
+    those = r"the bases are those of $%s$. " % parent
+    if half:
+        # "At half-integer J", since bases_reading gives the integer J to the covered group
+        D.w(r"At half-integer $J$ " + those + r"At the parity $+1$ an element acts on the kets as "
+            r"the element of $%s$ with the same $%s$ part. Each spinor irrep of $%s$ then has the "
+            r"matrices of a spinor irrep of $\grp{G}$, as in this table." % (parent, SU2, parent))
+        displays = {ir["id"]: ir["display"] for ir in
+                    D.catalogue_record(cf["group"])["character_table"]["irreps"]}
+        head = [r"$\grp{G}$"]
+        rows = [["$%s$" % irrep(displays[a]), "$%s$" % D.irrep_id(b)]
+                for a, b in cf["irreps"].items()]
     else:
-        D.w(r"The bases are those of $%s$. " % parent + D.define("head.parity") +
-            r"An element $g$ acts as $(\det g)^J$ times its rotation part $(\det g)\,g$ in "
-            r"$%s$, and this factor relabels the blocks at odd $J$ as in this table." % parent)
-    D.w(r"\begin{center}\begin{tabular}{@{}lll@{}}\toprule")
-    D.w(r"$%s$ & $J$ even & $J$ odd\\\midrule" % parent)
-    even = {cf["l_even"][k]: k for k in cf["l_even"]}
-    for image in D.in_irrep_order(even):
-        k = even[image]
-        D.w(r"$%s$ & $%s$ & $%s$\\" % (irrep_label(k), D.irrep_of_label(image),
-                                       D.irrep_of_label(cf["l_odd"][k])))
+        if D.rec["group"]["contains_inversion"]:
+            D.w(those[0].upper() + those[1:] + D.define("head.parity") +
+                r"The inversion acts on $\jm{J}{m}$ as $(-1)^J$, so the blocks at even $J$ are "
+                r"gerade and those at odd $J$ ungerade, with the labels of this table.")
+        else:
+            D.w(those[0].upper() + those[1:] + D.define("head.parity") +
+                r"An element $g$ acts as $(\det g)^J$ times its rotation part $(\det g)\,g$ in "
+                r"$%s$, and this factor relabels the blocks at odd $J$ as in this table." % parent)
+        even = {cf["l_even"][k]: k for k in cf["l_even"]}
+        head = [r"$J$ even", r"$J$ odd"]
+        rows = [["$%s$" % irrep_label(even[image]), "$%s$" % D.irrep_of_label(image),
+                 "$%s$" % D.irrep_of_label(cf["l_odd"][even[image]])]
+                for image in D.in_irrep_order(even)]
+    D.w(r"\begin{center}\begin{tabular}{@{}l%s@{}}\toprule" % ("l" * len(head)))
+    D.w(" & ".join(["$%s$" % parent] + head) + r"\\\midrule")
+    for row in rows:
+        D.w(" & ".join(row) + r"\\")
     D.w(r"\bottomrule\end{tabular}\end{center}")
+    if half:
+        moved = det_moved(D)
+        if moved:
+            D.w(relabeled(D, [(D.irrep_id(a), D.irrep_id(b)) for a, b in moved]))
+        return
     inter = cf["intertwiner"]
     n = 0
     for par in ("l_even", "l_odd"):
@@ -5483,92 +7776,170 @@ def residues_sentence(m, modulus):
             r"of $\Gamma$." % (m, modulus))
 
 
+# The floor in words, in the legends of the multiplicities of both volumes.
+FLOOR = r"the floor $\lfloor x\rfloor$ is the greatest integer $\le x$"
+# The multiplicities, generating functions and allowed 2m of the bases of a continuous preimage
+# of Double (subduction_basis), as the records state them, in TeX; a text that is not here stops
+# the build.
+MULTIPLICITY_TEX = {"1": "1", "0": "0", "[n <= J]": r"\iverson{n\le J}"}
+GF_TEX = {("t^(2j)", ()): "t^{2J}", ("t^(2n)", (2,)): r"\dfrac{t^{2n}}{1-t^{2}}"}
+TWOM_TEX = {"2j, 2j-2, ..., -2j": r"J, J-1, \dots, -J", "2n, -2n": "n, -n", "2n": "n",
+            "-2n": "-n"}
+
+
+def multiplicity_cells(text):
+    """The cells of b(J) at p = +1 and p = -1 of a stored multiplicity: "X at p = +1, Y at
+    p = -1", or X at either parity."""
+    m = re.fullmatch(r"(.+) at p = \+1, (.+) at p = -1", text)
+    parts = m.groups() if m else (text, text)
+    if any(x not in MULTIPLICITY_TEX for x in parts):
+        raise ValueError("no TeX for the multiplicity %r" % text)
+    return ["$%s$" % MULTIPLICITY_TEX[x] for x in parts]
+
+
 def bases_multiplicities(D, sb):
-    D.w(D.define("function.generating", "index.generating.variable") + MULTIPLICITY_LEAD % (
-        r"$b_\Gamma(J)$" if D.name in ("SO3", "O3") else r"$b_\Gamma(J) = b_\Gamma(J, (-1)^J)$"))
-    D.equation("gf", r"H_\Gamma(t) = \sum_{J\ge0} b_\Gamma(J)\,t^J,")
+    """The multiplicities of the blocks with their generating function, and the allowed m: by
+    family in a continuous group (in Double's records, a family's tag picks a parity), by irrep
+    with the residues of m in a finite group; at half-integer J in Double's records, whose
+    b_Gamma(J) is the multiplicity in D^(J,+1)."""
     gf, am = sb["generating_function"], sb["allowed_m"]
     cf = sb.get("closed_form") or {}
-    if "families" in gf and all_kets(sb):
-        brackets = [c for c in ("even", "odd")
-                    if any("[J %s]" % c in g["numerator"] for g in gf["families"])]
-        if len(brackets) == 2:
-            defined = (r" The brackets $\iverson{J\text{ even}}$ and $\iverson{J\text{ odd}}$ are 1 "
-                       r"when $J$ is even, respectively odd, and 0 otherwise.")
-        elif brackets:
-            defined = (r" The bracket $\iverson{J\text{ %s}}$ is 1 when $J$ is %s and 0 otherwise."
-                       % (brackets[0], brackets[0]))
+    half = "integer_J" in sb
+    families = "families" in gf
+    if not families:
+        a, b = gf["denominator"]
+        den = "".join("(1-t%s)" % ("" if d == 1 else "^{%d}" % d) for d in (a, b))
+    if half:
+        name = r"$b_\Gamma(J)$" if families else r"$b_\Gamma(J) = b_\Gamma(J, +1)$"
+    else:
+        name = r"$b_\Gamma(J)$" if D.spherical else r"$b_\Gamma(J) = b_\Gamma(J, (-1)^J)$"
+    D.w(D.define("function.generating", "index.generating.variable",
+                 *(["function.generating.numerator"] if half and not families else []))
+        + MULTIPLICITY_LEAD % name)
+    # a finite preimage of Double gives the numerator in the display
+    D.equation("gf", r"H_\Gamma(t) = \sum_{J\ge%s} b_\Gamma(J)\,t^%s%s," % (
+        ("1/2", "{2J}", "" if families else r" = P_\Gamma(t)/(%s)" % den) if half
+        else ("0", "J", "")))
+    if families:
+        tagged = any("parity" in g for g in gf["families"])
+        at = r", at the parity $p$ of $\irrJp{J}{p}$ carried by the kets" if tagged else ""
+        # Double's documents name the fields
+        field = r" (\texttt{generating\symbol{95}function})" if half else ""
+        lead = "" if half else D.define("head.parity")
+        if all_kets(sb):
+            brackets = [c for c in ("even", "odd")
+                        if any("[J %s]" % c in g["numerator"] for g in gf["families"])]
+            if len(brackets) == 2:
+                defined = (r" The brackets $\iverson{J\text{ even}}$ and $\iverson{J\text{ odd}}$ "
+                           r"are 1 when $J$ is even, respectively odd, and 0 otherwise.")
+            elif brackets:
+                defined = (r" The bracket $\iverson{J\text{ %s}}$ is 1 when $J$ is %s and 0 "
+                           r"otherwise." % (brackets[0], brackets[0]))
+            else:
+                defined = ""
+            text = lead + FAMILY_MEMBER % "J" + field + ". " + ONE_MOMENTUM + at + "." + defined
         else:
-            defined = ""
-        D.w(D.define("head.parity") + FAMILY_MEMBER % "J" + ". " + ONE_MOMENTUM + "." + defined
-            + " " + COLUMN_M + ".")
-    elif "families" in gf:
-        # the bracket, then the floor and the ceiling that the numerators use, in a sentence of
-        # their own ("The floor ... and the ceiling ..."), so that one rounding alone reads too
-        rounded = [r for r, word in ((r"the floor $\lfloor x\rfloor$ is the greatest integer "
-                                      r"$\le x$", "floor("),
-                                     (r"the ceiling $\lceil x\rceil$ is the least integer $\ge x$",
-                                      "ceil("))
-                   if any(word in g["numerator"] for g in gf["families"])]
-        text = D.define("head.parity") + FAMILY_MEMBER % "n" + ". " + BRACKET_N + "."
-        if rounded:
-            glosses = listed(rounded)
-            text += (" " + D.define(*[rec_id for rec_id, word in (("delimiter.floor", "floor("),
-                                                                  ("local.floor.x", "floor("),
-                                                                  ("delimiter.ceiling", "ceil("))
-                                      if any(word in g["numerator"] for g in gf["families"])])
-                     + glosses[0].upper() + glosses[1:] + ".")
-        D.w(text + " " + COLUMN_M + ".")
-    if "families" in gf:
+            # the bracket, then the floor and the ceiling that the numerators use, in a sentence
+            # of their own ("The floor ... and the ceiling ..."), so that one rounding alone reads
+            # too
+            rounded = [r for r, word in ((FLOOR, "floor("),
+                                         (r"the ceiling $\lceil x\rceil$ is the least integer "
+                                          r"$\ge x$", "ceil("))
+                       if any(word in g["numerator"] for g in gf["families"])]
+            text = lead + FAMILY_MEMBER % "n" + at + field + ". " + BRACKET_N + "."
+            if rounded:
+                glosses = listed(rounded)
+                text += (" " + D.define(*[rec_id for rec_id, word in (
+                    ("delimiter.floor", "floor("), ("local.floor.x", "floor("),
+                    ("delimiter.ceiling", "ceil("))
+                    if any(word in g["numerator"] for g in gf["families"])])
+                    + glosses[0].upper() + glosses[1:] + ".")
+        D.w(text + " " + COLUMN_M + (r" (\texttt{allowed\symbol{95}m})" if half else "") + ".")
         mult = {m["family"]: m for m in cf.get("multiplicity", [])}
-        ms = {m["family"]: m["m"] for m in am["families"]}
-        D.w(r"\begin{center}\small\begin{tabular}{@{}lllll@{}}\toprule")
-        D.w(r"family & $H_\Gamma(t)$ & $b_\Gamma(J)$, $J$ even & $J$ odd & $m$\\\midrule")
+        ms = {m["family"]: m for m in am["families"]}
+        rows = []
         for g in gf["families"]:
+            label = "$%s$" % D.plain_label(g["label_template"])
+            if half:
+                # the forms that Double's records state (GF_TEX, TWOM_TEX, multiplicity_cells)
+                h = GF_TEX.get((g["numerator"], tuple(g["denominator"])))
+                if h is None or ms[g["family"]]["twoM"] not in TWOM_TEX:
+                    raise ValueError("%s: no TeX for the multiplicities of %s"
+                                     % (D.name, g["family"]))
+                b = multiplicity_cells(mult[g["family"]]["multiplicity"])
+                rows.append([label, "$%s$" % h] + (b if tagged else b[:1])
+                            + ["$%s$" % TWOM_TEX[ms[g["family"]]["twoM"]]])
+                continue
             factors = ["1-t%s" % ("" if d == 1 else "^{%d}" % d) for d in g["denominator"]]
             den = factors[0] if len(factors) == 1 else "".join("(%s)" % f for f in factors)
             h = family_numerator(g["numerator"]) if not den else (
                 r"\dfrac{%s}{%s}" % (family_numerator(g["numerator"]), den))
             mm = mult[g["family"]]
-            D.w(r"$%s$ & $%s$ & $%s$ & $%s$ & $%s$\\" % (
-                irrep_label(g["label_template"]), h, formula(mm["even"]), formula(mm["odd"]),
-                ms[g["family"]].replace("...", r"\dots")))
-        D.w(r"\bottomrule\end{tabular}\end{center}")
+            rows.append([label, "$%s$" % h, "$%s$" % formula(mm["even"]),
+                         "$%s$" % formula(mm["odd"]),
+                         "$%s$" % ms[g["family"]]["m"].replace("...", r"\dots")])
+        # Double's table is set with taller rows, and its multiplicities by parity p when a
+        # family's tag picks one; Rotation's by the parity of J
+        D.w(r"\begin{center}\small%s\begin{tabular}{@{}ll%sl@{}}\toprule" % (
+            r"{\renewcommand{\arraystretch}{1.3}" if half else "", "l" * (len(rows[0]) - 3)))
+        D.w(r"family & $H_\Gamma(t)$ & %s & $m$\\\midrule" % (
+            (r"$b_\Gamma(J)$, $p = +1$ & $p = -1$" if tagged else r"$b_\Gamma(J)$") if half
+            else r"$b_\Gamma(J)$, $J$ even & $J$ odd"))
+        for row in rows:
+            D.w(" & ".join(row) + r"\\")
+        D.w(r"\bottomrule\end{tabular}%s\end{center}" % ("}" if half else ""))
         return
-    a, b = gf["denominator"]
-    den = "".join("(1-t%s)" % ("" if d == 1 else "^{%d}" % d) for d in (a, b))
     n = am["modulus"]
-    # the legend in the order of the columns: P, the closed forms of b (the floor and n_K), the
-    # residues of m and their dash
-    text = (D.define("function.generating.numerator") +
-            r"where $H_\Gamma(t) = P_\Gamma(t)/(%s)$." % den)
     mult = {x["irrep_id"]: x for x in cf.get("multiplicity", [])}
-    if mult:
-        D.w(text + r" " + D.define("delimiter.floor", "local.floor.x", "function.count",
-                                   "index.modulus.K", "index.residue") +
-            r"The closed forms of $b_\Gamma(J)$ use the floor $\lfloor x\rfloor$, the greatest "
-            r"integer $\le x$, and")
-        D.equation("count", r"n_K(J,q) = \Bigl\lfloor\frac{J-q}{K}\Bigr\rfloor + \Bigl\lfloor"
-                            r"\frac{J+q}{K}\Bigr\rfloor + 1 = \#\{m\in[-J,J] : m\equiv q "
-                            r"\pmod{K}\}.")
-        text = ""
-    D.w(text + (" " if text else "") + D.define("head.parity") + residues_sentence("m", n)
-        + r" A dash means no block of $\Gamma$ at that parity of $J$.")
-    rows = {x["irrep_id"]: x for x in am["residues"]}
-    spec = "ll" + ("ll" if mult else "") + "ll"
-    D.w(r"{\small\begin{longtable}{@{}%s@{}}\toprule" % spec)
-    head = r"$\Gamma$ & $P_\Gamma(t)$"
-    if mult:
-        head += r" & $b_\Gamma(J)$, $J$ even & $J$ odd"
-    head += r" & $m \bmod %d$, $J$ even & $J$ odd" % n
-    D.w(head + r"\\\midrule\endhead")
-    for x in gf["numerators"]:
-        i = x["irrep_id"]
-        row = r"$%s$ & $%s$" % (D.irrep_id(i), polynomial_in_t(x["coefficients"]))
+    # the irreps that no block carries (P = 0: the ungerade irreps of a preimage of Double with
+    # the inversion, at the parity +1) are left out, as section_bases leaves them out
+    shown = [x for x in gf["numerators"] if any(x["coefficients"])]
+    if half:
+        text = r"summed over the half-integer $J$. " + (
+            D.define("delimiter.floor", "local.floor.x") + FLOOR[0].upper() + FLOOR[1:] + ". "
+            if mult else "") + residues_sentence("2m", n)
+        if len(shown) < len(gf["numerators"]):
+            text += (r" The irreps that no block carries, $P_\Gamma(t) = 0$, are left out: the "
+                     r"kets carry $\irrJp{J}{+1}$, and " + (
+                         r"the blocks of $\irrJp{J}{-1}$ carry those irreps "
+                         r"(section~\ref{s:bases})." if mult else
+                         r"the kets of $\irrJp{J}{-1}$ carry those irreps, with the "
+                         r"multiplicities $b_\Gamma(J, -1)$ of section~\ref{s:subduction_parent}."))
+        D.w(text)
+    else:
+        # the legend in the order of the columns: P, the closed forms of b (the floor and n_K),
+        # the residues of m and their dash
+        text = (D.define("function.generating.numerator") +
+                r"where $H_\Gamma(t) = P_\Gamma(t)/(%s)$." % den)
         if mult:
-            row += r" & $%s$ & $%s$" % (formula(mult[i]["even"]), formula(mult[i]["odd"]))
-        row += " & %s & %s" % (residues_cell(rows[i]["even"]), residues_cell(rows[i]["odd"]))
-        D.w(row + r"\\")
+            D.w(text + r" " + D.define("delimiter.floor", "local.floor.x", "function.count",
+                                       "index.modulus.K", "index.residue") +
+                r"The closed forms of $b_\Gamma(J)$ use the floor $\lfloor x\rfloor$, the greatest "
+                r"integer $\le x$, and")
+            D.equation("count", r"n_K(J,q) = \Bigl\lfloor\frac{J-q}{K}\Bigr\rfloor + \Bigl\lfloor"
+                                r"\frac{J+q}{K}\Bigr\rfloor + 1 = \#\{m\in[-J,J] : m\equiv q "
+                                r"\pmod{K}\}.")
+            text = ""
+        D.w(text + (" " if text else "") + D.define("head.parity") + residues_sentence("m", n)
+            + r" A dash means no block of $\Gamma$ at that parity of $J$.")
+    rows = {x["irrep_id"]: x for x in am["residues"]}
+    # one column of b and of the residues of 2m in Double's records, by the parity of J in
+    # Rotation's
+    head = [r"$\Gamma$", r"$P_\Gamma(t)$"]
+    if mult:
+        head += [r"$b_\Gamma(J)$"] if half else [r"$b_\Gamma(J)$, $J$ even", r"$J$ odd"]
+    head += [r"$2m \bmod %d$" % n] if half else [r"$m \bmod %d$, $J$ even" % n, r"$J$ odd"]
+    D.w(r"{\small\begin{longtable}{@{}%s@{}}\toprule" % ("l" * len(head)))
+    D.w(" & ".join(head) + r"\\\midrule\endhead")
+    for x in shown:
+        i = x["irrep_id"]
+        row = ["$%s$" % D.irrep_id(i), "$%s$" % polynomial_in_t(x["coefficients"])]
+        if mult:
+            row += (["$%s$" % formula(mult[i]["formula"])] if half else
+                    ["$%s$" % formula(mult[i]["even"]), "$%s$" % formula(mult[i]["odd"])])
+        row += ([residues_cell(rows[i]["residues"])] if half else
+                [residues_cell(rows[i]["even"]), residues_cell(rows[i]["odd"])])
+        D.w(" & ".join(row) + r"\\")
     D.w(r"\bottomrule\end{longtable}}")
 
 
@@ -5611,37 +7982,52 @@ def full_set_sentences(whole, blocks, vectors, location, stored, rest, release, 
 
 
 def bases_blocks(D, sb, construction):
-    """The blocks: how they are built (construction()), their counts and the table."""
+    """The blocks: how they are built (construction()), their counts and the table; the J as the
+    record holds them (momentum_of), 2J in Double's records at half-integer J, whose integer J are
+    the covered group's."""
     en = sb["enumerated"]
     if not en["blocks"]:
         construction()
         return
+    half = "integer_J" in sb
+    top = momentum_of(en, "J_max")
     kets = all(b.get("kind") == "all_kets" for b in en["blocks"])
-    # the J that the table sets; the blocks of SO(3) and O(3), a ket a partner, all of them
+    # the J that the table sets; the blocks of the spherical groups, a ket a partner, all of them
     longest = {}
     for b in ([] if kets else en["blocks"]):
         for vec in b["vectors"]:
-            longest[b["J"]] = max(longest.get(b["J"], 0),
-                                  vector_lines(enumerated_terms(D, b, vec)))
-    shown_max = set_up_to(longest) if longest else en["J_max"]
+            J = momentum_of(b, "J")
+            longest[J] = max(longest.get(J, 0), vector_lines(enumerated_terms(D, b, vec)))
+    shown_max = set_up_to(longest) if longest else top
     construction()
-    text = bases_counts(en["block_count"], en["vector_count"], integers(en["J_min"], en["J_max"]),
+    text = bases_counts(en["block_count"], en["vector_count"],
+                        r"\nicefrac{1}{2}, \nicefrac{3}{2}, \dots, %s" % D.momentum(top) if half
+                        else integers(en["J_min"], en["J_max"]),
                         D.define("index.copy", "head.irrep",
                                  "head.partners" if kets else "head.vector"), kets)
     fs = sb.get("full_set")
-    if fs:
+    if fs and momentum_of(fs, "J_max") > top:
+        # Rotation's records name every J of the full set, Double's its largest
         text += " " + full_set_sentences(
-            "= " + integers(0, fs["J_max"]), fs["block_count"], fs["vector_count"],
-            code(fs["location"]), "10", integers(11, fs["J_max"]), code(fs["release"]),
-            code(names.CATALOGUE + "/"))
-    if shown_max < en["J_max"]:
-        shown = [b for b in en["blocks"] if b["J"] <= shown_max]
-        text += (r" A vector at $J = %d$ fills more than %s lines, so the table stops at $J = %d$ "
-                 r"(%d blocks, %d vectors). The record "
-                 r"(\texttt{subduction\symbol{95}basis.\allowbreak enumerated}) and the files also "
-                 r"hold $J = %s$."
-                 % (shown_max + 1, VECTOR_LINES_TEXT, shown_max, len(shown),
-                    sum(len(b["vectors"]) for b in shown), integers(shown_max + 1, en["J_max"])))
+            r"\le %s" % D.momentum(fs["twoJ_max"]) if half else "= " + integers(0, fs["J_max"]),
+            fs["block_count"], fs["vector_count"], code(fs["location"]),
+            D.momentum(top) if half else "10",
+            r"%s, %s, \dots, %s" % (D.momentum(top + 2), D.momentum(top + 4),
+                                    D.momentum(fs["twoJ_max"])) if half
+            else integers(11, fs["J_max"]), code(fs["release"]), code(names.CATALOGUE + "/"))
+    elif fs:
+        text += r" The files are in %s." % code(fs["location"])
+    if shown_max < top:
+        shown = [b for b in en["blocks"] if momentum_of(b, "J") <= shown_max]
+        vectors = sum(len(b["vectors"]) for b in shown)
+        # Rotation's sentence counts the blocks too and names the J past the table
+        text += (r" A vector at $J = %s$ fills more than %s lines, so the table stops at $J = %s$ "
+                 r"(%s vectors). The record (\texttt{subduction\symbol{95}basis.%senumerated}) and "
+                 r"the files also hold %s." % (
+                     D.momentum(shown_max + (2 if half else 1)), VECTOR_LINES_TEXT,
+                     D.momentum(shown_max), "%d" % vectors if half
+                     else "%d blocks, %d" % (len(shown), vectors), "" if half else r"\allowbreak ",
+                     "the larger $J$" if half else "$J = %s$" % integers(shown_max + 1, top)))
         en = dict(en, blocks=shown)
     D.w(text)
     if kets:
@@ -5654,12 +8040,13 @@ def bases_blocks(D, sb, construction):
         else:
             label = irrep(b["display"])
         for vec in b["vectors"]:
-            rows.append((b["J"], label, b["kappa"], vec["mu"], enumerated_terms(D, b, vec)))
+            rows.append((momentum_of(b, "J"), label, b["kappa"], vec["mu"],
+                         enumerated_terms(D, b, vec)))
     width = max(sum(visible(t) + 1 for t in r[4]) for r in rows)
     wrap = width + 16 > TABLE_MAX_WIDTH
     fill = fill_width([["$J$", "irrep", r"$\mult$", r"$\intx$", "vector"]]
-                      + [["%s" % J, "$%s$" % label, "%s" % kappa, "%s" % mu, " ".join(terms)]
-                         for J, label, kappa, mu, terms in rows], 4,
+                      + [[D.momentum_text(J), "$%s$" % label, "%s" % kappa, "%s" % mu,
+                          " ".join(terms)] for J, label, kappa, mu, terms in rows], 4,
                       r"\dimexpr 6\tabcolsep+4pt\relax") if wrap else ""
     D.w(r"{\small\setlength{\tabcolsep}{3pt}%s%s\begin{longtable}{@{}rlrr@{\hspace{4pt}}%s@{}}"
         r"\toprule" % (fill, snake_mark(3), r">{\RaggedRight\arraybackslash}p{\fillwidth}"
@@ -5672,52 +8059,116 @@ def bases_blocks(D, sb, construction):
         last = J
         # the partners of one block stay together
         joined = i + 1 < len(rows) and rows[i + 1][:3] == (J, label, kappa)
-        D.w(r"%s & $%s$ & %s & %s & %s\\%s" % (J, label, kappa, mu, " ".join(terms),
-                                             "*" if joined else ""))
+        D.w(r"%s & $%s$ & %s & %s & %s\\%s" % (D.momentum_cell(J), label, kappa, mu,
+                                             " ".join(terms), "*" if joined else ""))
     D.w(r"\bottomrule\end{longtable}}")
 
 
 def ket_blocks(D, blocks):
-    """The blocks of SO(3) and O(3), a line each: J, the irrep, kappa, the dimension and the
-    partners mu = 1, ..., d in order."""
+    """The blocks of the spherical groups (SO(3), O(3); SU(2), Pin-(3)), a line each: J, the
+    irrep, kappa, the dimension and the partners mu = 1, ..., d in order, each one ket of e_m = 1
+    (the build stops on another)."""
     rows = []
     for b in blocks:
         label = (D.irrep_id(b["irrep_id"]) if b["irrep_id"] in D.display
-                 else irrep_label(b["irrep"]))
-        kets = [" ".join(ket_terms(D, b["J"], [(c["e"], c["m"]) for c in vec["components"]]))
-                for vec in sorted(b["vectors"], key=lambda vec: vec["mu"])]
-        rows.append((b["J"], label, b["kappa"], b["dim"], kets))
+                 else D.plain_label(b["irrep"]))
+        J = momentum_of(b, "J")
+        kets = []
+        for vec in sorted(b["vectors"], key=lambda vec: vec["mu"]):
+            c = vec["components"]
+            if len(c) != 1 or c[0]["e"] != {"f": "q", "v": [1, 1]}:
+                raise ValueError("%s: a vector of the bases is not one ket" % D.name)
+            kets.append(" ".join(ket_terms(D, D.momentum(J), [
+                (x["e"], D.momentum(momentum_of(x, "m"))) for x in c])))
+        rows.append((J, label, b["kappa"], b["dim"], kets))
     wrap = max(sum(visible(k) + 2 for k in r[4]) for r in rows) + 20 > TABLE_MAX_WIDTH
-    fill = fill_width([["$J$", "irrep", r"$\mult$", "$d$", r"partners $\intx = 1, 2, \dots, d$"]]
-                      + [["%s" % J, "$%s$" % label, "%s" % kappa, "%s" % dim, ", ".join(kets)]
-                         for J, label, kappa, dim, kets in rows], 4,
-                      r"\dimexpr 6\tabcolsep+6pt\relax") if wrap else ""
+    head = ["$J$", "irrep", r"$\mult$", "$d$", r"partners $\intx = 1, 2, \dots, d$"]
+    cells = [[D.momentum_cell(J), "$%s$" % label, "%s" % kappa, "%s" % dim, ", ".join(kets)]
+             for J, label, kappa, dim, kets in rows]
+    fill = fill_width([head] + cells, 4, r"\dimexpr 6\tabcolsep+6pt\relax") if wrap else ""
+    # Double's documents set the partners ragged right, in one copy of the table
     D.w(r"{\small\setlength{\tabcolsep}{3pt}%s%s\begin{longtable}{@{}rlrr@{\hspace{6pt}}%s@{}}"
-        r"\toprule" % (fill, snake_mark(3), r"p{\fillwidth}" if wrap else "l"))
-    D.w(r"$J$ & irrep & $\mult$ & $d$ & partners $\intx = 1, 2, \dots, d$\\\midrule\endhead")
-    for J, label, kappa, dim, kets in rows:
-        D.w(r"%s & $%s$ & %s & %s & %s\\" % (J, label, kappa, dim, ", ".join(kets)))
+        r"\toprule" % (fill, "" if D.cover else snake_mark(3), (
+            r">{\RaggedRight\arraybackslash}p{\fillwidth}" if D.cover else r"p{\fillwidth}")
+            if wrap else "l"))
+    D.w(" & ".join(head) + r"\\\midrule\endhead")
+    for row in cells:
+        D.w(" & ".join(row) + r"\\")
     D.w(r"\bottomrule\end{longtable}}")
 
 
+# The blocks of the bases of a continuous preimage of Double as math, from the text of its record
+# (subduction_basis.closed_form.cases[].vectors): BASES_CASE, each %s the parity tag of a label;
+# PARITY_RULE, the bases at p = -1 (closed_form.parity_rule); ALL_KETS, the one case of SU(2) and
+# Pin-(3), which set what SO(3) and O(3) set.
+BASES_CASE = {
+    "|J,m>: 1E_m for m > 0, 2E_-m for m < 0":
+        r"every ket $\jm{J}{m}$ is a block, of $\conjpair{1}\irr{e}_{m%s}$ for $m > 0$ and of "
+        r"$\conjpair{2}\irr{e}_{-m%s}$ for $m < 0$",
+    "mu = 1: |J,-n>; mu = 2: (-1)^(J-n) |J,n>":
+        r"the block of $\irr{e}_{n%s}$, $n = \tfrac{1}{2}, \tfrac{3}{2}, \dots, J$, has the "
+        r"partners $\jm{J}{-n}$ and $(-1)^{J-n}\jm{J}{n}$",
+}
+PARITY_RULE = {
+    "D^(J,-1)|2G = (D^(J,+1)|2G) (x) det: at parity -1 a block keeps its kets and partners, its "
+    "label g becomes u":
+        r"At $p = -1$ a block keeps its kets and partners, and the $\ptag{g}$ of its irrep "
+        r"becomes $\ptag{u}$.",
+}
+ALL_KETS = "mu = J - m + 1: |J,m>, m = J, J-1, ..., -J"
+
+
+def axial_bases(D, sb):
+    """The bases of an axial continuous preimage of Double, by the cases of its record
+    (BASES_CASE): at half-integer J, the integer J being its covered group's."""
+    cf = sb["closed_form"]
+    tag = r",\ptag{g}" if "parity_rule" in cf else ""          # after the letter m or n
+    cases = []
+    for c in cf["cases"]:
+        text = D.stated(BASES_CASE, c["vectors"], "case of the bases")
+        cases.append(text % ((tag,) * text.count("%s")))
+    # the first case joins the kets' sentence, and each further case, a clause with commas of its
+    # own, is a sentence (every record has one case)
+    D.w(D.define("index.m")
+        + r"At half-integer $J$ the kets $\jm{J}{m}$ carry $\irrJp{J}{+1}$, and %s.%s At integer "
+        r"$J$ the bases are those of %s (\texttt{integer\symbol{95}J}). The record holds the "
+        r"blocks for $2J \le %d$ (\texttt{enumerated})." % (
+            cases[0] + "".join(". " + c[0].upper() + c[1:] for c in cases[1:]),
+            " " + D.stated(PARITY_RULE, cf["parity_rule"], "parity rule")
+            if "parity_rule" in cf else "", rotation_linked(D.cover),
+            sb["enumerated"]["twoJ_max"]))
+
+
 def section_multiplicities(D):
+    """Multiplicities and allowed m, before the bases (bases_multiplicities), in every catalogue;
+    nothing in a section over G, whose preimage's document gives them."""
     sb = D.rec.get("subduction_basis")
-    if not sb:
+    if not sb or (D.cover and not D.preimage):
         return
-    D.section(r"Multiplicities and allowed \texorpdfstring{$m$}{m}", "section 14")
+    D.section(r"Multiplicities and allowed \texorpdfstring{$m$}{m}",
+              {"rotation": "section 14",
+               "double": "sections 14, 26.2 and 29.4" if D.families else "sections 14 and 26"})
     bases_multiplicities(D, sb)
 
 
 def section_bases(D):
+    """Symmetry-adapted bases, in every catalogue: the kets (bases_reading), how the blocks are
+    built and their table (bases_blocks); an axial continuous preimage of Double by the cases of
+    its record (axial_bases); nothing in a section over G, whose preimage's document gives
+    them."""
     sb = D.rec.get("subduction_basis")
-    if not sb:
+    if not sb or (D.cover and not D.preimage):
         return
-    D.section("Symmetry-adapted bases", "section 14.1" if sb["status"] == "closed-form"
-              else "sections 14 and 14.2 to 14.4")
+    closed = sb["status"] == "closed-form"
+    D.section("Symmetry-adapted bases", {
+        "rotation": "section 14.1" if closed else "sections 14 and 14.2 to 14.4",
+        "double": "sections 14, 26.2 and 29.4" if D.families
+        else "sections 14 and 26" if closed else "sections 14, 14.2 and 26"})
     D.w(CONSTANTS)
+    if "integer_J" in sb and D.families and not D.spherical:
+        return axial_bases(D, sb)
     bases_reading(D, sb)
-    construction = (bases_construction_closed if sb["status"] == "closed-form"
-                    else bases_construction_enumerated)
+    construction = bases_construction_closed if closed else bases_construction_enumerated
     bases_blocks(D, sb, lambda: construction(D, sb))
 
 
@@ -5845,7 +8296,6 @@ def section_orbitals(D):
     ct = D.rec.get("cartesian_tensors")
     if not ct:
         return
-    D.part("Tensors")
     D.section(r"\texorpdfstring{%s}{s, p, d, f} functions" % ORBITALS, "section 13")
     D.w(CONSTANTS)
     # the function first, then the row: the heads that the second sentence glosses take their
@@ -6132,7 +8582,6 @@ def section_permutation(D):
         return words[0] if len(words) == 1 else "%s %s %s" % (", ".join(words[:-1]), last,
                                                              words[-1])
 
-    D.part("Permutation representations")
     D.section("Figures", "sections 12.4 to 12.6")
     D.w(r"Every class of subgroups $\grp{H}$ is the stabilizer of a figure in space, the subgroup "
         r"of the elements that carry it into itself. "
@@ -6313,35 +8762,61 @@ def section_cycle_types(D):
 
 from . import levels  # noqa: E402  (the last part; levels.py uses this module)
 
-SECTIONS = (section_identification, section_elements, section_multiplication, section_classes,
-            section_class_space, section_fundamental_domain,
-            section_irreps, section_character_table, section_irrep_matrices, section_families,
-            section_continuous_irreps, section_fusion, section_clebsch_gordan,
-            section_subgroups, section_subduction,
-            section_permutation, section_decompositions, section_cycle_types,
-            section_subduction_o3, section_multiplicities, section_bases,
-            section_orbitals, section_tensor_spaces, section_isotypic,
-            section_invariant_polynomials,
-            levels.section_unitary, levels.section_overtones, levels.section_overtone_states,
-            levels.section_terms, levels.section_term_states)
+# The parts of a document of Rotation and their sections, in order: (part title, [(section key,
+# function)]).  A section without text is left out, and a part without sections (assemble).
+PARTS = (
+    ("The group", (("identification", section_identification), ("elements", section_elements),
+                   ("multiplication", section_multiplication), ("classes", section_classes),
+                   ("class_space", section_class_space),
+                   ("fundamental_domain", section_fundamental_domain))),
+    ("Representations", (("irreps", section_irreps), ("character_table", section_character_table),
+                         ("irrep_matrices", section_irrep_matrices),
+                         ("families", section_families),
+                         ("continuous_irreps", section_continuous_irreps),
+                         ("fusion", section_fusion), ("clebsch_gordan", section_clebsch_gordan))),
+    ("Subgroups", (("subgroups", section_subgroups), ("subduction", section_subduction))),
+    ("Permutation representations", (("permutation", section_permutation),
+                                     ("decompositions", section_decompositions),
+                                     ("cycle_types", section_cycle_types))),
+    ("Angular momentum", (("subduction_o3", section_subduction_o3),
+                          ("multiplicities", section_multiplicities),
+                          ("bases", section_bases))),
+    ("Tensors", (("orbitals", section_orbitals), ("tensor_spaces", section_tensor_spaces),
+                 ("isotypic", section_isotypic),
+                 ("invariant_polynomials", section_invariant_polynomials))),
+    (levels.PART, (("unitary", levels.section_unitary), ("overtones", levels.section_overtones),
+                   ("overtone_states", levels.section_overtone_states),
+                   ("terms", levels.section_terms), ("term_states", levels.section_term_states))),
+)
 
 
 def sections(name, rec, lattice=None, on_section=None):
-    """The sections of a document as [(key, text)], the key the name of the section's function
-    without section_; the sections without text left out.  The named constants the document
-    prints are defined once, at the constants marker of the first section that prints one (after
-    its Conventions line when it has none).  on_section(key), when given, is called before each
-    section is written (the web stage notes there which keys of the record each section reads)."""
-    D = Document(rec, lattice, name)
+    """The sections of a document of Rotation as [(key, text)] (assemble)."""
+    return assemble(Document(rec, lattice, name), PARTS, on_section)
+
+
+def assemble(D, parts, on_section=None):
+    """The sections of the document D as [(key, text)], in the order of `parts`, (part title,
+    [(section key, function)]): the sections without text left out, and the heading of each part
+    set at the head of its first section with text.  The documents of every catalogue are
+    assembled here.  The named constants the document prints are defined once, at the constants
+    marker of the first section that prints one (after its Conventions line when it has none).
+    on_section(key), when given, is called before each section is written (the web stage notes
+    there which keys of the record each section reads)."""
     rendered = []
-    for section in SECTIONS:
-        D.lines = []
-        D.key = section.__name__[len("section_"):]
-        if on_section:
-            on_section(D.key)
-        section(D)
-        if D.lines:
-            rendered.append((section.__name__[len("section_"):], D.lines))
+    for title, group in parts:
+        boxed = False
+        for key, section in group:
+            D.lines = []
+            D.key = key
+            if on_section:
+                on_section(key)
+            section(D)
+            if D.lines:
+                if not boxed:
+                    D.lines.insert(0, r"\partbox{%s}" % title)
+                    boxed = True
+                rendered.append((key, D.lines))
     named = [constants_in("\n".join(lines)) for _, lines in rendered]
     used = set().union(*named)
     out = []
@@ -6386,13 +8861,25 @@ def own_symbol(parts, symbol):
 def body(name, rec, lattice=None, title=None, reports=None):
     """The text of data/latex/<name>.tex between its contents list and \\end{document}: the
     parts and sections of the record and of the subgroup lattice, the group named by its symbol
-    (own_symbol).  The notation of the sections (and of the title, when given) is linted
-    (lint.lint_document)."""
+    (own_symbol), the mentions of groups linked to their documents (finish)."""
     parts = own_symbol(sections(name, rec, lattice), grp(rec["group"]["schoenflies"]))
+    return finish(name, parts, title, reports, linked=True)
+
+
+def finish(name, parts, title=None, reports=None, linked=False, stretch=True):
+    """The text of a document of any catalogue from its sections `parts`, named by its group
+    already: their notation and that of the title, when given, linted (lint.lint_document), the
+    paragraph anchors, the tables kept, broken and ruled as the documents set them, the tables
+    that hold a fraction stretched (`stretch`; not in the continuous documents of Double, whose
+    tables set their own), and, where the catalogue does not link its own mentions of groups
+    (Rotation), those mentions linked to their documents (`linked`)."""
     lint.lint_document(name, ([("title", title)] if title else []) + parts, reports)
     text = PARAGRAPH_ANCHOR.sub(r"\\leavevmode\1", "\n".join(t for _, t in parts))
-    return link_groups(foot_rules(group_breaks(stretch_fraction_tables(keep_headings(keep_rows(
-        snake_tables(text)))))), name)
+    text = keep_headings(keep_rows(snake_tables(text)))
+    if stretch:
+        text = stretch_fraction_tables(text)
+    text = foot_rules(group_breaks(text))
+    return link_groups(text, name) if linked else text
 
 
 # A formula of one group alone, $\grp{C_{3v}}$ or $\grp{SO(3)}$, and a link with its text; the
