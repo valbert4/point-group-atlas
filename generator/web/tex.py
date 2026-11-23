@@ -533,7 +533,10 @@ class Converter:
                     tds.append('<span class="cell %s">%s</span>' % (side, formula))
                 ids = "".join('<span class="anchor" id="%s"></span>' % attr(x) for x in labels)
                 no = self.c.equation_number(labels) if numbered else ""
-                out.append('<span class="eqno">%s%s</span>' % (ids, no) + "".join(tds))
+                # the cells between two pads that share the rest of the row, so that the
+                # columns are centered as a block after the number, as a display's formula is
+                out.append('<span class="eqno">%s%s</span><span class="pad"></span>' % (ids, no)
+                           + "".join(tds) + '<span class="pad"></span>')
             # in a scroll box of its own, as a table is no wider than its box only when
             # its rows fit (a narrow view)
             return ('<div class="scroll"><div class="display align" style="--cells: %d">%s'

@@ -204,6 +204,7 @@ math .bb, math .script, math .bf, math .bfit, math .it { text-transform: none; }
 .display.align .cell.r { text-align: right; }
 .display.align .cell.l { text-align: left; }
 .display.align .eqno { width: 3.4em; }
+.display.align .pad { width: 50%; padding: 0; }
 .scroll > .display.align { margin: 0; }
 
 /* tables */
