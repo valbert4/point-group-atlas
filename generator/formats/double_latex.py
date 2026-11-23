@@ -22,10 +22,9 @@ catalogue's (link_conventions).
 import collections
 import copy
 import re
-from math import gcd, lcm
+from math import lcm
 
 from .. import names, serialize
-from ..exact import readable
 from ..exact.cyclo import Cyc
 from ..tables import kernels as KER
 from . import hasse, lint
@@ -45,13 +44,6 @@ LATTICE_ASPECT = 0.5
 # columns where Rotation's has three, and the column s besides; 2I's 44 characters leave about
 # 30 pt of the text width.
 ELEMENT_ROW_MAX_WIDTH = 48
-# The factor 1/q of a matrix written over a common factor counts this many characters (the width
-# of such a matrix in a table: latex.GOLDEN_WIDTH).
-FACTOR_WIDTH = 2
-# The matrices are written over a common factor only when that makes the widest of them at least
-# this fraction narrower: 29 to 31 % for 2T, 2Th, 2I and 2Ih, 15 % for 2O's g_{3/2}, whose
-# entries zeta_8^k would become (1/2) sqrt(2) (1 - i).
-GOLDEN_GAIN = 0.2
 # The volume's fallback (scope 7.4): the tables of the elements and of the spinor matrices of a
 # preimage list the canonical lifts (g, 0) alone, and state the rule for the barred partners
 # (g, 1) = Ebar (g, 0): M(k + 1) = -M(k), D(g, 1) = -D(g, 0) for a spinor irrep.
@@ -63,120 +55,9 @@ GRID_LABEL = 0.65
 
 
 # ---------------------------------------------------------------- matrices over a common factor
-# A matrix whose every entry is sqrt(n) (x + y i), x and y in Q(varphi) (readable.surd_forms), is
-# written 1/q times the matrix of the entries k sqrt(n) (x + y i), k an integer and x, y integer
-# combinations of 1 and varphi or a multiple of sqrt(5), each entry the narrowest of its forms;
-# sums are written as readable writes them: the rational term first, or last when it is negative
-# and the other term positive, a minus sign in front of the factor when every term is negative,
-# the coefficient before i and i before the irrational factors.  The matrices of an irrep, or the
-# matrices M(k) of the element table, are written so when that makes the widest of them at least
-# GOLDEN_GAIN narrower.
-def _golden_terms(a, b):
-    """a + b varphi (integers) as [(coefficient, unit)]: c sqrt(5) when it is c (2 varphi - 1)."""
-    if b and b % 2 == 0 and a == -b // 2:
-        return [(b // 2, r"\sqrt{5}")]
-    out = [(c, u) for c, u in ((a, ""), (b, r"\goldenratio{}")) if c]
-    return out[::-1] if len(out) == 2 and a < 0 < b else out
-
-
-def _joined(terms, unit=""):
-    """The terms as a sum, each its coefficient, then unit (i), then its irrational factor."""
-    out = ""
-    for k, (c, u) in enumerate(terms):
-        mag = "" if abs(c) == 1 and (unit or u) else str(abs(c))
-        out += ("-" if c < 0 else ("+" if k else "")) + mag + unit + u
-    return out
-
-
-def golden_entry(k, n, x, y):
-    """k sqrt(n) (x + y i), k a nonzero integer, x = (a, b) for a + b varphi and y likewise."""
-    root = r"\sqrt{%d}" % n if n > 1 else ""
-    xt, yt = _golden_terms(*x), _golden_terms(*y)
-    if (abs(k) > 1 or root) and len(xt) + len(yt) > 1 and all(c < 0 for c, _ in xt + yt):
-        k, xt, yt = -k, [(-c, u) for c, u in xt], [(-c, u) for c, u in yt]
-    if len(xt) + len(yt) == 1:
-        (c, u), unit = (xt[0], "") if xt else (yt[0], r"\iunit{}")
-        c *= k
-        return (("-" if c < 0 else "") + ("" if abs(c) == 1 and (unit or root or u) else
-                                          str(abs(c))) + unit + root + u)
-    compound = True
-    if not yt:
-        body = _joined(xt)
-    else:
-        neg = yt[0][0] < 0
-        ys = [(-c, u) for c, u in yt] if neg else yt
-        ypart = _joined(ys, r"\iunit{}") if len(ys) == 1 else r"(%s)\iunit{}" % _joined(ys)
-        if xt:
-            body = _joined(xt) + ("-" if neg else "+") + ypart
-        else:
-            body, compound = ("-" if neg else "") + ypart, False
-    pre = ("" if abs(k) == 1 else str(abs(k))) + root
-    minus = k < 0
-    if not compound:
-        if body.startswith("-"):
-            minus, body = not minus, body[1:]
-        return ("-" if minus else "") + pre + (r"\," if pre else "") + body
-    if pre:
-        return ("-" if minus else "") + pre + r"\,(" + body + ")"
-    return ("-(%s)" % body) if minus else body
-
-
-def golden_matrix(rows):
-    """(q, [[tex]]): the matrix as 1/q times entries k sqrt(n) (x + y i), q the least common
-    denominator of the entries in their forms of least denominator; None when an entry has no
-    such form."""
-    forms = []
-    for row in rows:
-        line = [readable.surd_forms(v) for v in row]
-        if not all(line):
-            return None
-        forms.append(line)
-    q = 1
-    for line in forms:
-        for got in line:
-            q = lcm(q, min(lcm(*(t.denominator for t in f[1:])) for f in got))
-    tex = []
-    for line in forms:
-        out = []
-        for got in line:
-            best = None
-            for n, *coords in got:
-                ints = [t * q for t in coords]
-                if any(t.denominator != 1 for t in ints):
-                    continue
-                ints = [int(t) for t in ints]
-                if not any(ints):
-                    best = ((1, 0), "0")
-                    break
-                g = gcd(*ints)
-                t = golden_entry(g, n, (ints[0] // g, ints[1] // g), (ints[2] // g, ints[3] // g))
-                key = (visible(t), t.count(r"\sqrt"))
-                if best is None or key < best[0]:
-                    best = (key, t)
-            out.append(best[1])
-        tex.append(out)
-    return q, tex
-
-
-def _matrix_chars(tex, q=1):
-    """The width of a matrix of entries in visible characters, its factor included."""
-    d = len(tex[0])
-    return sum(max(visible(row[j]) for row in tex) for j in range(d)) + (FACTOR_WIDTH if q > 1
-                                                                          else 0)
-
-
-def matrix_form(D, mats):
-    """(cells, width, golden): cells(gap) the cells of a list of matrices, written over a common
-    factor (golden True) when that makes the widest of them at least GOLDEN_GAIN narrower, and
-    the width of the widest in visible characters."""
-    plain = [[[D.val(x) for x in row] for row in M] for M in mats]
-    width = max(_matrix_chars(t) for t in plain)
-    golden = [golden_matrix(M) for M in mats]
-    if all(golden) and max(_matrix_chars(t, q) for q, t in golden) <= (1 - GOLDEN_GAIN) * width:
-        return (lambda gap: [r"$%s\left(\begin{irmatrix}{%s}%s\end{irmatrix}\right)$" % (
-            r"\tfrac{1}{%d}" % q if q > 1 else "", gap, r"\\".join(" & ".join(r) for r in t))
-            for q, t in golden]), max(_matrix_chars(t, q) for q, t in golden), True
-    return (lambda gap: [D.matrix(M, gap) for M in mats]), width, False
+# The rule of latex.matrix_form, which the irrep matrices of every catalogue follow, also writes
+# the matrices M(k) of the element table of a preimage (Doc.element_matrices).
+matrix_form = L.matrix_form
 
 
 # ---------------------------------------------------------------- pointers
@@ -477,9 +358,6 @@ class Doc(L.Document):
         return record_of("rotation", self.cover)
 
     # Representations
-    def matrix_form(self, mats):
-        return matrix_form(self, mats)
-
     def half_frac(self, two):
         """A number given by its double (half_frac)."""
         return half_frac(two)
@@ -528,12 +406,10 @@ class Doc(L.Document):
     def conjugation_group(self):
         return self.P
 
-    def conjugation_text(self):
-        return "$%s$" % self.P
-
     # Angular momentum
     parent_group = ("subduction_parent", PIN, r"Pin\unichar{8315}(3)",
-                    r" ($J = 0, \nicefrac{1}{2}, 1, \dots$)", r"$p = \pm 1$")
+                    r" ($J = 0, \nicefrac{1}{2}, 1, \dots$)")
+    parent_link = r"\href{Pinminus3.pdf}{$%s$}" % PIN
 
     def momentum(self, two):
         """2J or 2m of the record as a half-integer in a formula (half_frac)."""
@@ -615,11 +491,10 @@ def product_form_cell(D, pf):
 
 
 def structure_cell(D, v):
-    """The center or the commutator subgroup: its class, linked, with its order and index."""
+    """The center or the commutator subgroup: its class, linked, with its index."""
     letter = hasse.letters(lattice_view(D.lattice))
-    return "%s%s, order %d, index %d" % (linked(v["symbol"], v["double_class"]),
-                                         hasse.letter_tex(letter.get(v["node"])), v["order"],
-                                         v["index"])
+    return "%s%s, index %d" % (linked(v["symbol"], v["double_class"]),
+                               hasse.letter_tex(letter.get(v["node"])), v["index"])
 
 
 def identification_cell(D, k, v):

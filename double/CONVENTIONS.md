@@ -640,9 +640,9 @@ $`\mathsf{2G}`$ is the preimage of the normalizer in $`\mathsf{G}`$ of its image
 preimage of the elements of the centralizer of its image whose lifts commute with every element of the
 subgroup.
 
-A spinor family's restriction depends on $`n`$ only through $`n`$ modulo the `period` $`P`$, the least $`P`$
-for which the matrices of $`n`$ and $`n + P`$ agree on the subgroup. The table lists
-$`n = \tfrac{1}{2}, \tfrac{3}{2}, \dots, P - \tfrac{1}{2}`$ with the intertwiners (`blocks`), and the settings
+A spinor family's restriction depends on $`n`$ only through $`n`$ modulo the `period` $`L`$, the least $`L`$
+for which the matrices of $`n`$ and $`n + L`$ agree on the subgroup. The table lists
+$`n = \tfrac{1}{2}, \tfrac{3}{2}, \dots, L - \tfrac{1}{2}`$ with the intertwiners (`blocks`), and the settings
 are as in section 16.1. A section's entry names that of its preimage (`preimage_entry`), whose rows, renamed,
 are its rows (section 27). A continuous subgroup's index, normality and transversal are those of its image
 (`vector_entry`), read as the lifts at the same points, and stored (`index`, `normal`, `class_size`).
@@ -723,6 +723,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\lfloor x\rfloor`$ | the floor, the greatest integer $`\le x`$ | 0.1 |
 | $`\lvert x\rvert`$ | the absolute value of $`x`$, or the order $`\lvert \mathsf{G}\rvert`$ of a group $`\mathsf{G}`$ | 0.1 |
 | $`\{ \}`$ | braces: a set, or the antisymmetric part of a square $`\Gamma \otimes \Gamma`$ | 0.1 |
+| $`\mathsf{H}\,{\scriptstyle\{\mathsfit{E}, \dots\}}`$ | the classes of a continuous $`\mathsf{G}`$ that the finite second factor $`\mathsf{H}`$ of a product form meets | 0.1 |
 | $`\langle \Gamma_1\,\Gamma_2\mid \Gamma\rangle`$ | the Clebsch–Gordan coefficient of two one-dimensional irreps in $`\Gamma_1 \otimes \Gamma_2 \to \Gamma`$ | 10 |
 | $`\bigl\langle{}^{\Gamma_1}_{\,\mu_1}\,{}^{\Gamma_2}_{\,\mu_2}\bigm\vert{}^{\Gamma}_{\,\mu};\kappa\bigr\rangle`$ | the Clebsch–Gordan coefficient of a finite group in $`\Gamma_1 \otimes \Gamma_2 \to \Gamma`$, for the copy $`\kappa`$ of $`\Gamma`$ | 10 |
 | $`\bigl\langle{}^{J_1}_{\,m_1}\,{}^{J_2}_{\,m_2}\bigm\vert{}^{J}_{\,M}\bigr\rangle`$ | the Clebsch–Gordan coefficient of $`\mathsf{SO(3)}`$ in $`D^{(J_1)} \otimes D^{(J_2)} \to D^{(J)}`$ | 10 |
@@ -739,6 +740,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathsf{A}`$ | the subgroup $`\mathsf{G} \cap \mathsf{C_{\infty h}}`$, the rotations and rotoreflections of $`\mathsf{G}`$ about $`z`$ | 14 |
 | $`\mathrm{\scriptsize A}`$ | a one-dimensional irrep, with $`\chi(\mathsfit{g}_p) = +1`$ in an axial group | 6 |
 | $`\mathrm{\scriptsize A}_{1/2}`$ | a one-dimensional spinor irrep ($`\chi(\bar{E}) = -1`$), its subscript the least half-integer $`J`$ at which it occurs in $`D^{(J,p)}`$ (section 23.2) | 23 |
+| $`a_1, a_2`$ | the exponents of the denominator $`(1 - t^{a_1})(1 - t^{a_2})`$ of a generating function, $`a_1 \le a_2`$ | 14 |
 | $`a, b`$ | the Cayley–Klein parameters of a rotation | 9 |
 | $`\alpha`$ | the first Euler angle | 4 |
 | $`\mathrm{\scriptsize B}`$ | a one-dimensional irrep of an axial group with $`\chi(\mathsfit{g}_p) = -1`$, except for the small-$`N`$ renames | 6 |
@@ -757,7 +759,6 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathsfit{C_{2x}}`$ | the rotation $`\mathsfit{C_{\mathnormal{n}}}`$ about a coordinate axis: $`\mathsfit{C_{2x}}`$ about $`x`$, $`\mathsfit{C_{4z}}`$ about $`z`$ | 3 |
 | case | a kind of block of the symmetry-adapted bases, by the condition that gives it | 0.1 |
 | $`c_\beta, s_\beta`$ | the cosine and the sine of $`\beta/2`$, half the second Euler angle | 9 |
-| centralizer | the centralizer of a closed subgroup in the group | 29.5 |
 | $`\mathsf{C}_{\mathsf{G}}(\mathsf{H})`$ | the centralizer of $`\mathsf{H}`$ in $`\mathsf{G}`$ | 12 |
 | $`c(\mathsfit{g}, \mathsfit{h})`$ | the sign of a product of canonical lifts, $`U(\mathsfit{h})\,U(\mathsfit{g}) = (-1)^{c(\mathsfit{g},\mathsfit{h})}\,U(\mathsfit{g}\mathsfit{h})`$ | 21 |
 | $`\chi_{\Gamma}(\mathsfit{g})`$ | the character of the irrep $`\Gamma`$ at the element $`\mathsfit{g}`$ | 6 |
@@ -777,6 +778,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathsf{C_{\mathnormal{N}v}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with $`N`$ vertical mirrors | 3 |
 | complete | whether the generators listed generate the ring of invariants | 26.4 |
 | component | a component of the class space | 0.1 |
+| components | the components of the class space that a subgroup meets | 0.1 |
 | conjugate | the complex conjugate of a complex irrep or of a family of complex irreps | 0.1 |
 | conjugates | the number of subgroups conjugate to a subgroup $`\mathsf{H}`$ in $`\mathsf{G}`$ | 0.1 |
 | coset | whether the elements of a component are proper or improper | 0.1 |
@@ -853,6 +855,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\kappa`$ | the copy index of an irrep | 0.1 |
 | $`\ker`$ | the kernel of a representation, the elements that it maps to the identity | 0.1 |
 | kernel | the kernel $`\ker\Gamma`$ of an irrep (the normal subgroup of the elements that it maps to the identity), or of a permutation representation (the normal subgroup of the elements that fix every point) | 0.1 |
+| $`L`$ | the period in the family index $`n`$ of the restrictions to a finite subgroup | 16 |
 | $`\mathsf{L}(2N, 1)`$ | the lens space $`\mathsf{L}(2N, 1)`$, the space $`\mathsf{C_{\mathnormal{N}}}\backslash\mathsf{SO(3)}`$, or $`\mathsf{L}(N, 1)`$ for a cyclic subgroup of $`\mathsf{SU(2)}`$ of order $`N`$ | 21.3 |
 | $`\Lambda`$ | an irrep of a subgroup | 12 |
 | $`\lambda`$ | a one-dimensional irrep | 9 |
@@ -873,7 +876,6 @@ This index lists the common notation of the documents and selected symbols of th
 | $`n`$ | the index of a family of irreps, with $`n`$ and $`n'`$ the indices of the two factors of a product | 16 |
 | $`\mathsf{N}_{\mathsf{G}}(\mathsf{H})`$ | the normalizer of $`\mathsf{H}`$ in $`\mathsf{G}`$ | 12 |
 | normal | whether a subgroup is normal | 0.1 |
-| normalizer | the normalizer of a closed subgroup in the group | 29.5 |
 | $`\nu`$ | a second partner index | 9 |
 | $`\nu_{\mathrm{FS}}`$ | the Frobenius–Schur indicator of an irrep: $`+1`$ (real), $`-1`$ (pseudoreal) or $`0`$ (complex) | 7 |
 | $`\mathsf{O}`$ | the rotations of the cube | 3 |

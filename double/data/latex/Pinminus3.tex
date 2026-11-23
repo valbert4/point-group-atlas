@@ -151,6 +151,7 @@
 \newcommand{\samecls}{\cong}
 \newcommand{\nconj}[1]{{\scriptsize$\times#1$}}
 \newcommand{\clsletter}[1]{\,{\scriptsize\color{black!55}#1}}
+\newcommand{\metclasses}[1]{\,{\scriptsize$\{#1\}$}}
 \newcommand{\Cyc}[1]{\grp{Z_{#1}}}
 \newcommand{\Sym}[1]{\grp{Sym_{#1}}}
 \newcommand{\dirvec}[3]{(#1, #2, #3)}
@@ -182,6 +183,7 @@
 \newcommand{\mult}{\kappa}
 \newcommand{\intx}{\mu}
 \newcommand{\cgnorm}{\mathcal{N}}
+\newcommand{\period}{L}
 \newcommand{\jm}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
 \newcommand{\cgket}[3]{\bigl\lvert{}^{#1}_{\,#2};#3\bigr\rangle}
 \newcommand{\irket}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
@@ -230,8 +232,8 @@
 \needspace{194pt}
 \partbox{The group}
 \section{Names and structure}\label{s:identification}
-Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.0.1}{0.1}, \href{../../../rotation/CONVENTIONS.pdf\#conv.2}{2}, \href{../../CONVENTIONS.pdf\#conv.20}{20} and \href{../../CONVENTIONS.pdf\#conv.29}{29}.
-{\small\begin{longtable}{@{}ll@{}}\toprule
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.0.1}{0.1}, \href{../../../rotation/CONVENTIONS.pdf\#conv.2}{2}, \href{../../../rotation/CONVENTIONS.pdf\#conv.12}{12}, \href{../../CONVENTIONS.pdf\#conv.20}{20} and \href{../../CONVENTIONS.pdf\#conv.29}{29}.
+\label{n:mark.classes}{\small\begin{longtable}{@{}ll@{}}\toprule
 \texttt{symbol} & \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$}\\
 \texttt{cover\symbol{95}of} & \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}\\
 \grouprule{0pt}{\lightrulewidth}
@@ -240,14 +242,15 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \texttt{su2\symbol{95}subgroup} & \href{SU2.pdf}{$\grp{SU(2)}$}, index 2\\
 \texttt{normalizer} & \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$}, index 1\\
 \texttt{centralizer} & \href{2S2.pdf}{$\grp{2C_{i}}$}\\
-\texttt{product\symbol{95}form} & direct: \href{SU2.pdf}{$\grp{SU(2)}$}${}\dirprod{}$\href{S2.pdf}{$\grp{C_{i}}$}; \href{SU2.pdf}{$\grp{SU(2)}$}${}\dirprod{}$\href{S2b.pdf}{$\grp{C_{i}}\secondclass$}\\
-\texttt{center} & \href{2S2.pdf}{$\grp{2C_{i}}$}, order 4\\
+\texttt{product\symbol{95}form} & \begin{tabular}[t]{@{}l@{}}direct: \href{SU2.pdf}{$\grp{SU(2)}$}${}\dirprod{}$\href{S2.pdf}{$\grp{C_{i}}$}\metclasses{\cls{E}, \cls{\lift{i}}}; \href{SU2.pdf}{$\grp{SU(2)}$}${}\dirprod{}$\href{S2b.pdf}{$\grp{C_{i}}\secondclass$}\metclasses{\cls{E}, \cls{\barred{\lift{i}}}}\end{tabular}\\
+\texttt{center} & \href{2S2.pdf}{$\grp{2C_{i}}$}\\
 \texttt{commutator\symbol{95}subgroup} & \href{SU2.pdf}{$\grp{SU(2)}$}, index 2\\
 \grouprule{0pt}{\lightrulewidth}
 \texttt{alternative\symbol{95}names} & \href{Pinminus3.pdf}{$\grp{2K_{h}}$}\\
 \texttt{hermann\symbol{95}mauguin} & $\dmark\hmname{\infty \infty m}$\\
 \bottomrule\end{longtable}}
-\leavevmode\label{n:group.preimage}The group $\grp{Pin^{-}(3)}$ is the double cover of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, whose document sets the fields of $\grp{O(3)}$ that this table does not repeat (\texttt{cover\symbol{95}of}): its type, names and geometry. This preimage is continuous, so its order and GAP identifier are undefined. The field \texttt{su2\symbol{95}subgroup} is $\grp{Pin^{-}(3)} \cap \grp{SU(2)}$, and \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{Pin^{-}(3)}$.
+\leavevmode\label{n:group.preimage}The group $\grp{Pin^{-}(3)}$ is the double cover of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, whose document sets the fields that this table does not repeat (\texttt{cover\symbol{95}of}): its type, geometry, crystal classes and the names of its \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}-conjugacy class. This preimage is continuous, so its order and GAP identifier are undefined. The field \texttt{su2\symbol{95}subgroup} is $\grp{Pin^{-}(3)} \cap \grp{SU(2)}$, the largest subgroup of $\grp{Pin^{-}(3)}$ in $\grp{SU(2)}$ (its elements of parity $+1$), and \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{Pin^{-}(3)}$.
+In \texttt{product\symbol{95}form}, the braces contain the classes of $\grp{Pin^{-}(3)}$ that the finite second factor meets: atoms of the class space (section~\ref{s:class_space}) and distinguished points of its arcs (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.21}{21} and \href{../../CONVENTIONS.pdf\#conv.29.1}{29.1}).
 \needspace{103pt}
 \section{Class space}\label{s:class_space}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.21}{21} and \href{../../CONVENTIONS.pdf\#conv.29.1}{29.1}.
@@ -260,7 +263,7 @@ $\comp{\lift{i}\,\lift{C}(\omega)}$ & improper & $\elt{\lift{i}\,\lift{C}}(\omeg
 \bottomrule\end{tabular}\end{center}
 On an arc, $\elt{\lift{R}_z}(\omega)$ is conjugate to $\elt{\lift{R}_z}(4\pi - \omega)$, so the classes run over $0 \le \omega \le 2\pi$, from $\cls{E}$ through the half turns to $\cls{\barred{E}}$.
 The distinguished points are $\cls{E}$ at $\omega = 0$, $\cls{C_2}$ at $\omega = \pi$, $\cls{\barred{E}}$ at $\omega = 2\pi$, $\cls{\lift{i}}$ at $\omega = 0$, $\cls{\sigma_h}$ at $\omega = \pi$ and $\cls{\barred{\lift{i}}}$ at $\omega = 2\pi$.
-\leavevmode\label{n:local.haar.h}The Haar measure, of total mass 1, is $\diff h = \tfrac{1}{2}(1 - \cos\omega)\,\diff\omega/(2\pi)$ on $\comp{\lift{C}(\omega)}$, of mass $\tfrac{1}{2}$, and $\diff h = \tfrac{1}{2}(1 - \cos\omega)\,\diff\omega/(2\pi)$ on $\comp{\lift{i}\,\lift{C}(\omega)}$, of mass $\tfrac{1}{2}$.
+\leavevmode\label{n:local.haar.h}The Haar measure, of total mass 1, is $\diff h = (1 - \cos\omega)\,\diff\omega/(4\pi)$ on $\comp{\lift{C}(\omega)}$, $\omega\in\bigl[0, 2\pi\bigr]$, of mass $\tfrac{1}{2}$, and $\diff h = (1 - \cos\omega)\,\diff\omega/(4\pi)$ on $\comp{\lift{i}\,\lift{C}(\omega)}$, $\omega\in\bigl[0, 2\pi\bigr]$, of mass $\tfrac{1}{2}$.
 \needspace{103pt}
 \section{Fundamental domain}\label{s:fundamental_domain}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.17}{17} and \href{../../CONVENTIONS.pdf\#conv.21.3}{21.3}.
@@ -271,18 +274,18 @@ As $\grp{Pin^{-}(3)}$ contains $\elt{\barred{E}}$, a coset $\grp{Pin^{-}(3)}\lif
 \partbox{Representations}
 \section{Families of irreps}\label{s:families}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.7}{7}, \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.23}{23} and \href{../../CONVENTIONS.pdf\#conv.29.2}{29.2}.
-\leavevmode\label{n:head.family.irreps}\label{n:index.dimension}\label{n:index.frobenius}\label{n:head.index.family}A row is a family of irreps, by its label, with its dimension $d$, its Frobenius--Schur indicator $\fsind$ and the range of the index of its irreps. \label{n:head.kernel}The kernel $\ker\Gamma$ is the subgroup of the elements that an irrep $\Gamma$ of the family maps to the identity. \label{n:head.image}The image is the group formed by the irrep's matrices, isomorphic to $\grp{Pin^{-}(3)}/\ker\Gamma$. A row also gives the family's character on each component, in the angle $\omega$ of the lift. The vector families, on which $\elt{\barred{E}}$ is the identity, are those of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} (\texttt{vector\symbol{95}families}), read on these classes through the covering map. A point $\omega$ of an arc covers the rotation angle $\phi = \omega$ modulo $2\pi$. The image and matrices of a vector family are those of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, and its kernel is the preimage of its kernel in that group. The spinor families, on which $\elt{\barred{E}}$ is $-1$, follow below the rule, with an instance for every half-integer $J = \tfrac{1}{2}, \tfrac{3}{2}, \dots$. The image of a spinor family is $\grp{SU(2)}$. The determinant character of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, of value $\det g$ on the elements that cover $g$, is $\irrJp{0}{-}$, the instance $J = 0$ of $\irrJp{J}{-}$.
-{\small\begin{longtable}{@{}llllllll@{}}\toprule
+\leavevmode\label{n:head.family.irreps}\label{n:index.dimension}\label{n:index.frobenius}\label{n:head.index.family}A row is a family of irreps, by its label, with its dimension $d$, its Frobenius--Schur indicator $\fsind$ (real for $+1$ and pseudoreal for $-1$) and the range of the index of its irreps. \label{n:head.kernel}\label{n:function.character}The kernel $\ker\Gamma$ is the subgroup of the elements that an irrep $\Gamma$ of the family maps to the identity, and the character of $\Gamma$ at $g$ is $\irchar{\Gamma}(g)$. \label{n:head.image}The image is the group formed by the irrep's matrices, isomorphic to $\grp{Pin^{-}(3)}/\ker\Gamma$. A row also gives the family's character on each component, in the angle $\omega$ of the lift. The vector families, on which $\elt{\barred{E}}$ is the identity, are those of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} (\texttt{vector\symbol{95}families}), read on these classes through the covering map. A point $\omega$ of an arc covers the rotation angle $\phi = \omega$ modulo $2\pi$. The image and matrices of a vector family are those of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, and its kernel is the preimage of its kernel in that group. The spinor families, on which $\elt{\barred{E}}$ is $-1$, follow below the rule, with an instance for every half-integer $J = \tfrac{1}{2}, \tfrac{3}{2}, \dots$. The image of a spinor family is $\grp{SU(2)}$. The irreps are irreducible over $\mathbb{C}$. Over $\mathbb{R}$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.7}{7}), a real irrep is also an irrep in a basis with real matrices. Read as a real space of dimension $2d$, a pseudoreal irrep is one irrep over $\mathbb{R}$ of character $2\irchar{\Gamma}$ and keeps its own label. The determinant character of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, of value $\det g$ on the elements that cover $g$, is $\irrJp{0}{-}$, the instance $J = 0$ of $\irrJp{J}{-}$.
+{\small{\renewcommand{\arraystretch}{1.3}\begin{longtable}{@{}lrrlllll@{}}\toprule
 family & $d$ & $\fsind$ & index & kernel & image & $\comp{\lift{C}(\omega)}$ & $\comp{\lift{i}\,\lift{C}(\omega)}$\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
-\multirow{2}{*}{$\irrJp{J}{+}$} & \multirow{2}{*}{$2J+1$} & \multirow{2}{*}{$+1$} & \multirow{2}{*}{$J \ge 0$} & \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$}, $J = 0$ & \href{../../../rotation/data/pdf/C1.pdf}{$\grp{C_{1}}$}, $J = 0$ & \multirow{2}{*}{$1+2\sum_{k=1}^{J}\cos(k\omega)$} & \multirow{2}{*}{$1+2\sum_{k=1}^{J}\cos(k\omega)$}\\*
+\multirow{2}{*}{$\irrJp{J}{+}$} & \multirow{2}{*}{$2J+1$} & \multirow{2}{*}{$+1$} & \multirow{2}{*}{$J \ge 0$} & \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$}, $J = 0$ & \href{../../../rotation/data/pdf/C1.pdf}{$\grp{C_{1}}$}, $J = 0$ & \multirow{2}{*}{$\sum_{m=-J}^{J}\expe^{\iunit m\omega}$} & \multirow{2}{*}{$\sum_{m=-J}^{J}\expe^{\iunit m\omega}$}\\*
  &  &  &  & \href{2S2.pdf}{$\grp{2C_{i}}$}, $J \ge 1$ & \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}, $J \ge 1$ &  & \\*
-\multirow{2}{*}{$\irrJp{J}{-}$} & \multirow{2}{*}{$2J+1$} & \multirow{2}{*}{$+1$} & \multirow{2}{*}{$J \ge 0$} & \href{SU2.pdf}{$\grp{SU(2)}$}, $J = 0$ & \href{../../../rotation/data/pdf/C2.pdf}{$\grp{C_{2}}$}, $J = 0$ & \multirow{2}{*}{$1+2\sum_{k=1}^{J}\cos(k\omega)$} & \multirow{2}{*}{$-1-2\sum_{k=1}^{J}\cos(k\omega)$}\\*
+\multirow{2}{*}{$\irrJp{J}{-}$} & \multirow{2}{*}{$2J+1$} & \multirow{2}{*}{$+1$} & \multirow{2}{*}{$J \ge 0$} & \href{SU2.pdf}{$\grp{SU(2)}$}, $J = 0$ & \href{../../../rotation/data/pdf/C2.pdf}{$\grp{C_{2}}$}, $J = 0$ & \multirow{2}{*}{$\sum_{m=-J}^{J}\expe^{\iunit m\omega}$} & \multirow{2}{*}{$-\sum_{m=-J}^{J}\expe^{\iunit m\omega}$}\\*
  &  &  &  & \href{2C1.pdf}{$\grp{2C_{1}}$}, $J \ge 1$ & \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, $J \ge 1$ &  & \\*
 \grouprule{0pt}{\lightrulewidth}
-$\irrJp{J}{+}$ & $2J+1$ & $-1$ & $J \ge \tfrac{1}{2}$ & \href{S2.pdf}{$\grp{C_{i}}$} & \href{SU2.pdf}{$\grp{SU(2)}$} & $\sum_{m=-J}^{J}\cos(m\omega)$ & $\sum_{m=-J}^{J}\cos(m\omega)$\\*
-$\irrJp{J}{-}$ & $2J+1$ & $-1$ & $J \ge \tfrac{1}{2}$ & \href{S2b.pdf}{$\grp{C_{i}}\secondclass$} & \href{SU2.pdf}{$\grp{SU(2)}$} & $\sum_{m=-J}^{J}\cos(m\omega)$ & $-\sum_{m=-J}^{J}\cos(m\omega)$\\
-\bottomrule\end{longtable}}
+$\irrJp{J}{+}$ & $2J+1$ & $-1$ & $J \ge \tfrac{1}{2}$ & \href{S2.pdf}{$\grp{C_{i}}$} & \href{SU2.pdf}{$\grp{SU(2)}$} & $\sum_{m=-J}^{J}\expe^{\iunit m\omega}$ & $\sum_{m=-J}^{J}\expe^{\iunit m\omega}$\\*
+$\irrJp{J}{-}$ & $2J+1$ & $-1$ & $J \ge \tfrac{1}{2}$ & \href{S2b.pdf}{$\grp{C_{i}}\secondclass$} & \href{SU2.pdf}{$\grp{SU(2)}$} & $\sum_{m=-J}^{J}\expe^{\iunit m\omega}$ & $-\sum_{m=-J}^{J}\expe^{\iunit m\omega}$\\
+\bottomrule\end{longtable}}}
 The spinor irreps of $\grp{Pin^{-}(3)}$ are the irreps $\irrJp{J}{+}$ and $\irrJp{J}{-}$ at half-integer $J$, which differ by their sign on the lifts of the inversion. Both restrict to the irrep $\irrJ{J}$ of $\grp{SU(2)}$, the pseudoreal irrep of the spin-$J$ particle.
 The record holds the spinor instances up to $J = \tfrac{19}{2}$, with their characters at the distinguished points (\texttt{instances}).
 \needspace{110pt}
@@ -290,16 +293,16 @@ The record holds the spinor instances up to $J = \tfrac{19}{2}$, with their char
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.9}{9}, \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.23.3}{23.3} and \href{../../CONVENTIONS.pdf\#conv.29.2}{29.2}.
 \leavevmode\label{n:vector.ket.partner}\label{n:index.partner}\label{n:matrix.irrep}A basis $(\irket{\Gamma}{1}, \dots, \irket{\Gamma}{d})$ of the irrep $\Gamma$ obeys
 \begin{equation}\label{e:partner}g\irket{\Gamma}{\intx} = \sum_\nu \irket{\Gamma}{\nu}\, \repD{\Gamma}_{\nu,\intx}(g);\end{equation}
-the matrices of a vector family are those of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, on the elements that cover its elements. \label{n:index.J}The spinor irreps form families, here the irreps $\irrJp{J}{p}$ of parity $p$ at half-integer $J$. A row of a table gives $\repD{\Gamma}(g)$ for the elements about $z$ of a component of the class space (section~\ref{s:class_space}), as a function of their angle. Section~\ref{s:general} gives the matrices of every element.
-\leavevmode\label{n:function.character}The character is the trace, $\irchar{\Gamma}(g) = \trace\repD{\Gamma}(g)$, and section~\ref{s:families} gives it on each component (\texttt{character\symbol{95}functions.\allowbreak irrep\symbol{95}families[].\allowbreak chi}).
+the matrices of a vector family are those of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, on the elements that cover its elements. \label{n:index.J}The spinor irreps form families, here the irreps $\irrJp{J}{p}$ of angular momentum $J$ and parity $p$ at half-integer $J$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.25.1}{25.1}). A row of a table gives $\repD{\Gamma}(g)$ for the elements about $z$ of a component of the class space (section~\ref{s:class_space}), as a function of their angle. Section~\ref{s:general} gives the matrices of every element.
+The character is the trace, $\irchar{\Gamma}(g) = \trace\repD{\Gamma}(g)$, and section~\ref{s:families} gives it on each component (\texttt{character\symbol{95}functions.\allowbreak irrep\symbol{95}families[].\allowbreak chi}).
 \needspace{153pt}
 \subsection{The irreps of dimension \texorpdfstring{$2J+1$}{2J+1}}
 The basis is $\jm{J}{m}$, $m = J, J-1, \dots, -J$, with partner $\intx = J - m + 1$. \label{n:local.spinor.uv}These kets are the states of angular momentum $J$, realized by the polynomials $u^{J+m}v^{J-m}/\sqrt{(J+m)!\,(J-m)!}$ in the kets $u = \jm{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ and $v = \jm{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$, as the spherical harmonics realize them at integer $J$. The field \texttt{matrix} of an element $(U, \varepsilon)$ is the transpose of its $\grp{SU(2)}$ part $U$, and the element acts on these states by $\wignerD{J}(U)^{\dagger}$, times $p$ when $\varepsilon = -1$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.21.2}{21.2} and \href{../../CONVENTIONS.pdf\#conv.26.1}{26.1}).
-{\small\begin{longtable}{@{}ll@{}}\toprule
-$g$ & $\irrJp{J}{p}(g)$\\\midrule\endhead
+{\small\begin{longtable}{@{}lll@{}}\toprule
+$g$ & $\irrJp{J}{+}(g)$ & $\irrJp{J}{-}(g)$\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
-$\comp{\lift{C}(\omega)}$ & $\diag\bigl(\expe^{\iunit J\omega}, \expe^{\iunit (J-1)\omega}, \dots, \expe^{-\iunit J\omega}\bigr)$\\*
-$\comp{\lift{i}\,\lift{C}(\omega)}$ & $p\,\diag\bigl(\expe^{\iunit J\omega}, \expe^{\iunit (J-1)\omega}, \dots, \expe^{-\iunit J\omega}\bigr)$\\
+$\comp{\lift{C}(\omega)}$ & $\diag\bigl(\expe^{\iunit J\omega}, \expe^{\iunit (J-1)\omega}, \dots, \expe^{-\iunit J\omega}\bigr)$ & $\diag\bigl(\expe^{\iunit J\omega}, \expe^{\iunit (J-1)\omega}, \dots, \expe^{-\iunit J\omega}\bigr)$\\*
+$\comp{\lift{i}\,\lift{C}(\omega)}$ & $\diag\bigl(\expe^{\iunit J\omega}, \expe^{\iunit (J-1)\omega}, \dots, \expe^{-\iunit J\omega}\bigr)$ & $-\diag\bigl(\expe^{\iunit J\omega}, \expe^{\iunit (J-1)\omega}, \dots, \expe^{-\iunit J\omega}\bigr)$\\
 \bottomrule\end{longtable}}
 \needspace{103pt}
 \subsection{Matrices of a general element}\label{s:general}
@@ -349,7 +352,12 @@ $-\nicefrac{5}{2}$ & $\sqrt{10}\,c_{\beta}^{3}s_{\beta}^{2}$ & $\sqrt{5}\,c_{\be
 \section{Direct products of irreps}\label{s:fusion}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.2}{10.2} and \href{../../CONVENTIONS.pdf\#conv.29.3}{29.3}.
 The record holds a rule for every pair of families with a spinor factor (\texttt{rules}), and these rules take one form. \label{n:index.J12}In this form $J_1$ and $J_2$ are the indices of the factors, an integer for a vector family and a half-integer for a spinor family, and $p_1$ and $p_2$ are the factors' parities. The square of a spinor irrep (\texttt{squares}) follows, with the antisymmetric part in braces. The products of two vector families are those of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} (\texttt{vector\symbol{95}rules}).
-\begin{align}\irrJp{J_1}{p_1}\irrprod \irrJp{J_2}{p_2} &= \bigoplus_{J=\lvert J_1-J_2\rvert}^{J_1+J_2} \irrJp{J}{p_1p_2},\\\irrJp{J}{p}\irrprod \irrJp{J}{p} &= \bigoplus_{K=1,3,\dots,2J} \irrJp{K}{+}\oplus\Bigl\{\bigoplus_{K=0,2,\dots,2J-1} \irrJp{K}{+}\Bigr\}.\end{align}
+\needspace{183pt}
+\paragraph{Products.}
+\begin{align}\irrJp{J_1}{p_1}\irrprod \irrJp{J_2}{p_2} &= \bigoplus_{J=\lvert J_1-J_2\rvert}^{J_1+J_2} \irrJp{J}{p_1p_2}.\end{align}
+\needspace{131pt}
+\paragraph{Squares.}
+\begin{align}\irrJp{J}{p}\irrprod \irrJp{J}{p} &= \bigoplus_{K=1,3,\dots,2J} \irrJp{K}{+}\oplus\Bigl\{\bigoplus_{K=0,2,\dots,2J-1} \irrJp{K}{+}\Bigr\}.\end{align}
 \needspace{78pt}
 \section{Clebsch--Gordan coefficients}\label{s:clebsch_gordan}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.3}{10.3} and \href{../../CONVENTIONS.pdf\#conv.29.3}{29.3}.
@@ -359,7 +367,9 @@ The coefficients are those of \href{SU2.pdf}{$\grp{SU(2)}$} (\texttt{table}): $(
 \section{Closed subgroups}\label{s:subgroups}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.20.4}{20.4}, \href{../../CONVENTIONS.pdf\#conv.27}{27}, \href{../../CONVENTIONS.pdf\#conv.28.3}{28.3} and \href{../../CONVENTIONS.pdf\#conv.29.6}{29.6}.
 \leavevmode\label{n:index.family.N}The closed subgroups of $\grp{Pin^{-}(3)}$ up to conjugacy, other than $\grp{Pin^{-}(3)}$ itself, are the preimages of the closed subgroups of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} and the sections over $\grp{C_{\mathnormal{N}}}$ and $\grp{S_{2\mathnormal{N}}}$ with $N$ odd.
+Some members with $N = 1$ have other names: \href{2S2.pdf}{$\grp{2S_{2}}$} $\samecls$ \href{2S2.pdf}{$\grp{2C_{i}}$}, \href{2C1h.pdf}{$\grp{2C_{1h}}$} $\samecls$ \href{2C1v.pdf}{$\grp{2C_{s}}$}, \href{2C1v.pdf}{$\grp{2C_{1v}}$} $\samecls$ \href{2C1v.pdf}{$\grp{2C_{s}}$}, \href{2D1.pdf}{$\grp{2D_{1}}$} $\samecls$ \href{2C2.pdf}{$\grp{2C_{2}}$}, \href{2D1h.pdf}{$\grp{2D_{1h}}$} $\samecls$ \href{2C2v.pdf}{$\grp{2C_{2v}}$} and \href{2D1d.pdf}{$\grp{2D_{1d}}$} $\samecls$ \href{2C2h.pdf}{$\grp{2C_{2h}}$}.
 In the diagram, each group links to its document, and a line joins a group to a maximal closed subgroup among the groups of the diagram.
+Section~\ref{s:subduction} gives the restriction of $\irrJp{J}{p}$ to each closed subgroup, and the document of each preimage except the members with $N > 12$ lists it $J$ by $J$, in its section Subduction from $\grp{Pin^{-}(3)}$.
 \begin{center}\begin{tikzpicture}[x=1cm, y=1cm, every node/.style={fill=white, font=\small, inner sep=2pt}]
 \draw[black!50, line width=0.4pt] (0,0) -- (-2.4,1.4);
 \draw[black!50, line width=0.4pt] (0,0) -- (0,1.4);
@@ -378,9 +388,9 @@ In the diagram, each group links to its document, and a line joins a group to a 
 \node at (2.4,2.8) {\href{SU2.pdf}{\textcolor{black}{$\grp{SU(2)}$}}};
 \node at (1.2,4.2) {\href{Pinminus3.pdf}{\textcolor{black}{$\grp{Pin^{-}(3)}$}}};
 \end{tikzpicture}\end{center}
-The table lists the continuous subgroups, then the preimages and the sections of each family, then the exceptional preimages. A row with $N$ in its symbol stands for every $N$ of its range, and its entries are functions of $N$. \label{n:head.subgroup}\label{n:head.order}\label{n:head.conjugates}\label{n:head.normal}A row gives the representative of a class of subgroups (subgrp), its order, the number of subgroups conjugate to it (conjugates) and whether it is normal. \label{n:head.normalizer}\label{n:head.centralizer}It also gives its normalizer and its centralizer in $\grp{Pin^{-}(3)}$. This catalogue holds the members with $N \le 12$ (\texttt{data/double\symbol{95}groups.json}), whose records give these normalizers and centralizers (\texttt{subgroup\symbol{95}classes}). Some of these members have other names: \href{2C1h.pdf}{$\grp{2C_{1h}}$} is \href{2C1v.pdf}{$\grp{2C_{s}}$}, \href{2D1.pdf}{$\grp{2D_{1}}$} is \href{2C2.pdf}{$\grp{2C_{2}}$}, \href{2D1d.pdf}{$\grp{2D_{1d}}$} is \href{2C2h.pdf}{$\grp{2C_{2h}}$} and \href{2D1h.pdf}{$\grp{2D_{1h}}$} is \href{2C2v.pdf}{$\grp{2C_{2v}}$}.
+\leavevmode\label{n:group.H}The table lists the closed subgroups $\grp{H}$ other than $\grp{Pin^{-}(3)}$ up to conjugacy in $\grp{Pin^{-}(3)}$, one in each row: the continuous subgroups, then the preimages and the sections of each family, then the exceptional preimages. A row with $N$ in its symbol stands for every $N$ of its range, and its entries are functions of $N$. \label{n:head.subgroup}\label{n:head.order}\label{n:head.conjugates}\label{n:head.normal}A row gives the representative $\grp{H}$ of a class of subgroups (subgrp), its order, the number of subgroups in the class (conjugates) and whether $\grp{H}$ is normal. \label{n:group.normalizer}\label{n:group.centralizer}It also gives the normalizer $\grp{N}_{\hairsp \grp{Pin^{-}(3)}}(\grp{H})$ and the centralizer $\grp{C}_{\hairsp \grp{Pin^{-}(3)}}(\grp{H})$ in $\grp{Pin^{-}(3)}$ (\texttt{normalizer}, \texttt{centralizer}). This catalogue holds the members with $N \le 12$ (\texttt{data/double\symbol{95}groups.json}), whose records give these normalizers and centralizers (\texttt{subgroup\symbol{95}classes}). A subgroup's other names in its \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$}-conjugacy class follow $\samecls$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.20.2}{20.2}).
 {\small\begin{longtable}{@{}lrrlll@{}}\toprule
-subgrp & order & conjugates & normal & normalizer & centralizer\\\midrule\endhead
+subgrp & order & conjugates & normal & $\grp{N}_{\hairsp \grp{Pin^{-}(3)}}(\grp{H})$ & $\grp{C}_{\hairsp \grp{Pin^{-}(3)}}(\grp{H})$\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
 \href{2Cinf.pdf}{$\grp{2C_{\infty }}$} & $\infty$ & $\infty$ & no & \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} & \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$}\\*
 \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$} & $\infty$ & $\infty$ & no & \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} & \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$}\\
@@ -390,7 +400,8 @@ subgrp & order & conjugates & normal & normalizer & centralizer\\\midrule\endhea
 \href{SU2.pdf}{$\grp{SU(2)}$} & $\infty$ & 1 & yes & \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$} & \href{2S2.pdf}{$\grp{2C_{i}}$}\\
 \grouprule{0pt}{\lightrulewidth}
 \href{2C1.pdf}{$\grp{2C_{1}}$} & 2 & 1 & yes & \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$} & \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$}\\
-$\grp{2C_{\mathnormal{N}}}$, $N \ge 2$ & $2N$ & $\infty$ & no & \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} & \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$}\\
+\href{2C2.pdf}{$\grp{2C_{2}}$} $\samecls$ \href{2D1.pdf}{$\grp{2D_{1}}$} & 4 & $\infty$ & no & \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} & \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$}\\
+$\grp{2C_{\mathnormal{N}}}$, $N \ge 3$ & $2N$ & $\infty$ & no & \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} & \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$}\\
 \href{C1.pdf}{$\grp{C_{1}}$} & 1 & 1 & yes & \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$} & \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$}\\
 $\grp{C_{\mathnormal{N}}}$, $N \ge 3$ odd & $N$ & $\infty$ & no & \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} & \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$}\\
 \grouprule{0pt}{\lightrulewidth}
@@ -401,10 +412,12 @@ $\grp{S_{2\mathnormal{N}}}$, $N \ge 3$ odd & $2N$ & $\infty$ & no & \href{2Dinfh
 \href{S2b.pdf}{$\grp{C_{i}}\secondclass$} & 2 & 1 & yes & \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$} & \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$}\\
 $\grp{S_{2\mathnormal{N}}}\secondclass$, $N \ge 3$ odd & $2N$ & $\infty$ & no & \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} & \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$}\\
 \grouprule{0pt}{\lightrulewidth}
-$\grp{2C_{\mathnormal{N}h}}$, $N \ge 2$ & $4N$ & $\infty$ & no & \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} & \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$}\\
+\href{2C2h.pdf}{$\grp{2C_{2h}}$} $\samecls$ \href{2D1d.pdf}{$\grp{2D_{1d}}$} & 8 & $\infty$ & no & \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} & \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$}\\
+$\grp{2C_{\mathnormal{N}h}}$, $N \ge 3$ & $4N$ & $\infty$ & no & \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} & \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$}\\
 \grouprule{0pt}{\lightrulewidth}
-\href{2C1v.pdf}{$\grp{2C_{s}}$} & 4 & $\infty$ & no & \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} & \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$}\\
-$\grp{2C_{\mathnormal{N}v}}$, $N \ge 2$ & $4N$ & $\infty$ & no & $\grp{2D_{2\mathnormal{N}h}}$ & \href{2S2.pdf}{$\grp{2C_{i}}$}\\
+\href{2C1v.pdf}{$\grp{2C_{s}}$} $\samecls$ \href{2C1h.pdf}{$\grp{2C_{1h}}$} & 4 & $\infty$ & no & \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} & \href{2Cinfh.pdf}{$\grp{2C_{\infty h}}$}\\
+\href{2C2v.pdf}{$\grp{2C_{2v}}$} $\samecls$ \href{2D1h.pdf}{$\grp{2D_{1h}}$} & 8 & $\infty$ & no & \href{2D4h.pdf}{$\grp{2D_{4h}}$} & \href{2S2.pdf}{$\grp{2C_{i}}$}\\
+$\grp{2C_{\mathnormal{N}v}}$, $N \ge 3$ & $4N$ & $\infty$ & no & $\grp{2D_{2\mathnormal{N}h}}$ & \href{2S2.pdf}{$\grp{2C_{i}}$}\\
 \grouprule{0pt}{\lightrulewidth}
 \href{2D2.pdf}{$\grp{2D_{2}}$} & 8 & $\infty$ & no & \href{2Oh.pdf}{$\grp{2O_{h}}$} & \href{2S2.pdf}{$\grp{2C_{i}}$}\\
 $\grp{2D_{\mathnormal{N}}}$, $N \ge 3$ & $4N$ & $\infty$ & no & $\grp{2D_{2\mathnormal{N}h}}$ & \href{2S2.pdf}{$\grp{2C_{i}}$}\\
@@ -425,8 +438,10 @@ $\grp{2D_{\mathnormal{N}d}}$, $N \ge 2$ & $8N$ & $\infty$ & no & $\grp{2D_{2\mat
 \needspace{103pt}
 \section{Descent of symmetry}\label{s:subduction}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.16.1}{16.1} and \href{../../CONVENTIONS.pdf\#conv.29.6}{29.6}.
-\leavevmode\label{n:irrep.Gamma.subgroup}Below is the restriction of $\irrJp{J}{p}$ to each closed subgroup (section~\ref{s:subgroups}) for every half-integer $J$ and both parities (\texttt{subduction\symbol{95}rules}). At integer $J$ the restriction is that of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, in its section Descent of symmetry. For an axial subgroup the restriction at half-integer $J$ is the direct sum, over the kets $\jm{J}{m}$, of the terms of the first true case of its rule. For \href{2Cinfv.pdf}{$\grp{2C_{\infty v}}$}, \href{2Dinf.pdf}{$\grp{2D_{\infty }}$}, \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} and the preimages of $\grp{C_{\mathnormal{N}v}}$, $\grp{D_{\mathnormal{N}}}$, $\grp{D_{\mathnormal{N}h}}$ and $\grp{D_{\mathnormal{N}d}}$, the sum runs over the pairs $\jm{J}{\pm m}$. \label{n:index.residue}In the rules, $q = m \bmod N$. However, in the preimages of $\grp{S_{2\mathnormal{N}}}$ and $\grp{D_{\mathnormal{N}d}}$ with $N$ even and of $\grp{C_{\mathnormal{N}h}}$ and $\grp{D_{\mathnormal{N}h}}$ with $N$ odd, $q$ is taken modulo $2N$, shifted by $N$ at $p = -1$. The map $(U, \varepsilon) \mapsto U$ carries these preimages onto $\grp{2C_{2\mathnormal{N}}}$ or $\grp{2D_{2\mathnormal{N}}}$. An irrep is named by the least $J$ at which it occurs in the restriction of $\irrJp{J}{p}$, where $p = -1$ for the tag $\ptag{u}$ and $p = +1$ otherwise (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.23.2}{23.2}). The terms of a rule whose subgroup contains $\elt{\lift{i}}$, which acts on $\irrJp{J}{p}$ as $p$, are written at $p = +1$. A section over $\grp{C_{\mathnormal{N}}}$ or $\grp{S_{2\mathnormal{N}}}$ ($N$ odd) is restricted as its preimage, with each spinor irrep renamed by the section's record (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.27}{27}). \label{n:function.multiplicity}\label{n:index.generating.variable}\label{n:function.generating}\label{n:function.generating.numerator}\label{n:irrep.Delta}The multiplicity $b_\Lambda(J)$ of an irrep $\Lambda$ of a subgroup at $p = +1$ is the coefficient of $t^{2J}$ in its generating function $H_\Lambda(t) = \sum_{J\ge1/2} b_\Lambda(J)\,t^{2J}$. The documents of the subgroups use this definition in their section Multiplicities and allowed $m$. At $p = -1$ it is that of the product of $\Lambda$ and the determinant character of the subgroup. In the generating functions, $k$ is the subscript of an irrep, and $n$ the index of a family of irreps of a continuous subgroup. For \href{2T.pdf}{$\grp{2T}$}, \href{2Th.pdf}{$\grp{2T_{h}}$}, \href{2Td.pdf}{$\grp{2T_{d}}$}, \href{2O.pdf}{$\grp{2O}$}, \href{2Oh.pdf}{$\grp{2O_{h}}$}, \href{2I.pdf}{$\grp{2I}$} and \href{2Ih.pdf}{$\grp{2I_{h}}$}, the generating function is that of their documents, in their sections Multiplicities and allowed $m$.
-{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$), $t^{N}$ for $\conjpair{1}\irr{e}_{N/2,\ptag{g}}$ and $\conjpair{2}\irr{e}_{N/2,\ptag{g}}$ ($N$ odd), $0$ for $\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$), $0$ for $\conjpair{1}\irr{e}_{N/2,\ptag{u}}$ and $\conjpair{2}\irr{e}_{N/2,\ptag{u}}$ ($N$ odd)}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\conjpair{1}\irr{e}_{k,\ptag{g}}$ and $\conjpair{2}\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$), $2t^{N}$ for $\irr{a}_{N/2,\ptag{g}}$ ($N$ odd), $0$ for $\conjpair{1}\irr{e}_{k,\ptag{u}}$ and $\conjpair{2}\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$), $0$ for $\irr{a}_{N/2,\ptag{u}}$ ($N$ odd)}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,N-q),\ptag{g}}$ if $q \ne N/2$, $\conjpair{1}\irr{e}_{N/2,\ptag{g}}\oplus \conjpair{2}\irr{e}_{N/2,\ptag{g}}$ if $q = N/2$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\irr{e}_{\min(q,2N-q)}'$; with $''$ for $'$ on the kets where $p(-1)^{m-1/2} = -1$; $q = m \bmod 2N$ at $p = +1$ and $m + N \bmod 2N$ at $p = -1$}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\conjpair{1}\irr{e}_{k,\ptag{g}}$ and $\conjpair{2}\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$), $0$ for $\conjpair{1}\irr{e}_{k,\ptag{u}}$ and $\conjpair{2}\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$)}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{q,\ptag{g}}$ if $0 < q < N/2$, $\irr{a}_{N/2,\ptag{g}}$ if $q = N/2$, $\conjpair{2}\irr{e}_{N-q,\ptag{g}}$ if $N/2 < q < N$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{\min(q,2N-q)}$ if $q \bmod N < N/2$, $\conjpair{2}\irr{e}_{\min(q,2N-q)}$ if $q \bmod N > N/2$; $q = m \bmod 2N$ at $p = +1$ and $m + N \bmod 2N$ at $p = -1$}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,N-q)}$ if $q \ne N/2$, $\conjpair{1}\irr{e}_{N/2}\oplus \conjpair{2}\irr{e}_{N/2}$ if $q = N/2$; $q = m \bmod N$; independent of $p$}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\irr{e}_{k}$ ($0 < k < N/2$), $t^{N}$ for $\conjpair{1}\irr{e}_{N/2}$ and $\conjpair{2}\irr{e}_{N/2}$ ($N$ odd)}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{q}$ if $0 < q < N/2$, $\irr{a}_{N/2}$ if $q = N/2$, $\conjpair{2}\irr{e}_{N-q}$ if $N/2 < q < N$; $q = m \bmod N$; independent of $p$}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\conjpair{1}\irr{e}_{k}$ and $\conjpair{2}\irr{e}_{k}$ ($0 < k < N/2$), $2t^{N}$ for $\irr{a}_{N/2}$ ($N$ odd)}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{q,\ptag{g}}$ if $0 < q < N/2$, $\conjpair{2}\irr{e}_{N-q,\ptag{g}}$ if $N/2 < q < N$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$), $0$ for $\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$)}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,N-q),\ptag{g}}$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,2N-q)}$; $q = m \bmod 2N$ at $p = +1$ and $m + N \bmod 2N$ at $p = -1$}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{m,\ptag{g}}$ if $m > 0$, $\conjpair{2}\irr{e}_{-m,\ptag{g}}$ if $m < 0$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{4N}))$, $P_\Lambda(t)$: $t^{2k} + t^{4N-2k}$ for $\irr{e}_{k}'$ and $\irr{e}_{k}''$ ($0 < k < N$)}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{4N}))$, $P_\Lambda(t)$: $t^{2k} + t^{4N-2k}$ for $\conjpair{1}\irr{e}_{k}$ and $\conjpair{2}\irr{e}_{k}$ ($0 < k < N$)}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{m,\ptag{g}}$ if $m > 0$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{m}$ if $m > 0$, $\conjpair{2}\irr{e}_{-m}$ if $m < 0$; independent of $p$}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{4N}))$, $P_\Lambda(t)$: $t^{2k} + t^{4N-2k}$ for $\irr{e}_{k}$ ($0 < k < N$)}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{m}$ if $m > 0$; independent of $p$}\cellmax{$t^{2n}/(1-t^{2})$ for $\conjpair{1}\irr{e}_{n,\ptag{g}}$ and $\conjpair{2}\irr{e}_{n,\ptag{g}}$, $0$ for $\conjpair{1}\irr{e}_{n,\ptag{u}}$ and $\conjpair{2}\irr{e}_{n,\ptag{u}}$}\cellmax{$t^{2n}/(1-t^{2})$ for $\irr{e}_{n,\ptag{g}}$, $0$ for $\irr{e}_{n,\ptag{u}}$}\cellmax{$t^{2n}/(1-t^{2})$ for $\conjpair{1}\irr{e}_{n}$ and $\conjpair{2}\irr{e}_{n}$}\cellmax{$\irrJ{J}$, independent of $p$}\cellmax{$t^{2n}/(1-t^{2})$ for $\irr{e}_{n}$}\fillcap\begin{longtable}{@{}l>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
+\leavevmode\label{n:irrep.Gamma.subgroup}Below is the restriction of $\irrJp{J}{p}$ to each closed subgroup $\grp{H}$ of $\grp{Pin^{-}(3)}$ (section~\ref{s:subgroups}) for every half-integer $J$ and both parities (\texttt{subduction\symbol{95}rules}). At integer $J$ the restriction is that of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, in its section Descent of symmetry. For an axial $\grp{H}$ the restriction at half-integer $J$ is the direct sum, over the kets $\jm{J}{m}$, of the terms of the first true case of its rule. For \href{2Cinfv.pdf}{$\grp{2C_{\infty v}}$}, \href{2Dinf.pdf}{$\grp{2D_{\infty }}$}, \href{2Dinfh.pdf}{$\grp{2D_{\infty h}}$} and the preimages of $\grp{C_{\mathnormal{N}v}}$, $\grp{D_{\mathnormal{N}}}$, $\grp{D_{\mathnormal{N}h}}$ and $\grp{D_{\mathnormal{N}d}}$, the sum runs over the pairs $\jm{J}{\pm m}$. \label{n:index.residue}In the rules, $q = m \bmod N$. However, in the preimages of $\grp{S_{2\mathnormal{N}}}$ and $\grp{D_{\mathnormal{N}d}}$ with $N$ even and of $\grp{C_{\mathnormal{N}h}}$ and $\grp{D_{\mathnormal{N}h}}$ with $N$ odd, $q$ is taken modulo $2N$, shifted by $N$ at $p = -1$. The map $(U, \varepsilon) \mapsto U$ carries these preimages onto $\grp{2C_{2\mathnormal{N}}}$ or $\grp{2D_{2\mathnormal{N}}}$. An irrep is named by the least $J$ at which it occurs in the restriction of $\irrJp{J}{p}$, where $p = -1$ for the tag $\ptag{u}$ and $p = +1$ otherwise (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.23.2}{23.2}). In the rules of a family, the terms are irreps of the member, labeled as in \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.6.1}{6.1} and \href{../../CONVENTIONS.pdf\#conv.23.2}{23.2}. The terms of a rule whose subgroup contains $\elt{\lift{i}}$, which acts on $\irrJp{J}{p}$ as $p$, are written at $p = +1$. A section over $\grp{C_{\mathnormal{N}}}$ or $\grp{S_{2\mathnormal{N}}}$ ($N$ odd) is restricted as its preimage, with each spinor irrep renamed by the section's record (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.27}{27}). \label{n:function.multiplicity}\label{n:index.generating.variable}\label{n:function.generating}\label{n:function.generating.numerator}\label{n:irrep.Delta}The multiplicity $b_\Lambda(J)$ of an irrep $\Lambda$ of $\grp{H}$ at $p = +1$ is the coefficient of $t^{2J}$ in its generating function $H_\Lambda(t) = \sum_{J\ge1/2} b_\Lambda(J)\,t^{2J}$. The documents of the subgroups use this definition in their section Multiplicities and allowed $m$. At $p = -1$ the multiplicity of $\Lambda$ is that of the product of $\Lambda$ and the determinant character of $\grp{H}$. In the generating functions, $k$ is the subscript of an irrep $\irr{e}_{k}$, and $n$ the index of a family of irreps of a continuous subgroup. The document of each preimage except the members with $N > 12$ lists the restrictions $J$ by $J$ at both parities, in its section Subduction from \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$}.
+\needspace{95pt}
+\paragraph{Continuous subgroups.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{m,\ptag{g}}$ if $m > 0$, $\conjpair{2}\irr{e}_{-m,\ptag{g}}$ if $m < 0$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{m,\ptag{g}}$ if $m > 0$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{m}$ if $m > 0$, $\conjpair{2}\irr{e}_{-m}$ if $m < 0$; independent of $p$}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{m}$ if $m > 0$; independent of $p$}\cellmax{$t^{2n}/(1-t^{2})$ for $\conjpair{1}\irr{e}_{n,\ptag{g}}$ and $\conjpair{2}\irr{e}_{n,\ptag{g}}$, $0$ for $\conjpair{1}\irr{e}_{n,\ptag{u}}$ and $\conjpair{2}\irr{e}_{n,\ptag{u}}$}\cellmax{$t^{2n}/(1-t^{2})$ for $\irr{e}_{n,\ptag{g}}$, $0$ for $\irr{e}_{n,\ptag{u}}$}\cellmax{$t^{2n}/(1-t^{2})$ for $\conjpair{1}\irr{e}_{n}$ and $\conjpair{2}\irr{e}_{n}$}\cellmax{$\irrJ{J}$, independent of $p$}\cellmax{$t^{2n}/(1-t^{2})$ for $\irr{e}_{n}$}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
 \multicolumn{2}{@{}c@{}}{\href{2Cinf.pdf}{$\grp{2C_{\infty }}$}}\\*
 $\irrJp{J}{p}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{m}$ if $m > 0$, $\conjpair{2}\irr{e}_{-m}$ if $m < 0$; independent of $p$\\*
 $H_\Lambda(t)$ & $t^{2n}/(1-t^{2})$ for $\conjpair{1}\irr{e}_{n}$ and $\conjpair{2}\irr{e}_{n}$\\
@@ -449,56 +464,115 @@ $H_\Lambda(t)$ & $t^{2n}/(1-t^{2})$ for $\irr{e}_{n,\ptag{g}}$, $0$ for $\irr{e}
 \grouprule{0pt}{\lightrulewidth}
 \multicolumn{2}{@{}c@{}}{\href{SU2.pdf}{$\grp{SU(2)}$}}\\*
 $\irrJp{J}{p}$ & $\irrJ{J}$, independent of $p$\\
-\grouprule{0pt}{\lightrulewidth}
-\multicolumn{2}{@{}c@{}}{$\grp{2C_{\mathnormal{N}}}$, every $N$}\\*
+\bottomrule\end{longtable}}
+
+\needspace{95pt}
+\paragraph{Subduction to the $\grp{2C_{\mathnormal{N}}}$ family.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{q}$ if $0 < q < N/2$, $\irr{a}_{N/2}$ if $q = N/2$, $\conjpair{2}\irr{e}_{N-q}$ if $N/2 < q < N$; $q = m \bmod N$; independent of $p$}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\conjpair{1}\irr{e}_{k}$ and $\conjpair{2}\irr{e}_{k}$ ($0 < k < N/2$), $2t^{N}$ for $\irr{a}_{N/2}$ ($N$ odd)}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{every $N$}\\*
 $\irrJp{J}{p}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{q}$ if $0 < q < N/2$, $\irr{a}_{N/2}$ if $q = N/2$, $\conjpair{2}\irr{e}_{N-q}$ if $N/2 < q < N$; $q = m \bmod N$; independent of $p$\\*
 $H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\conjpair{1}\irr{e}_{k}$ and $\conjpair{2}\irr{e}_{k}$ ($0 < k < N/2$), $2t^{N}$ for $\irr{a}_{N/2}$ ($N$ odd)\\
-\grouprule{0pt}{\lightrulewidth}
-\multicolumn{2}{@{}c@{}}{$\grp{2S_{2\mathnormal{N}}}$, odd $N$}\\*
+\bottomrule\end{longtable}}
+
+\needspace{95pt}
+\paragraph{Subduction to the $\grp{2S_{2\mathnormal{N}}}$ family.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\conjpair{1}\irr{e}_{k,\ptag{g}}$ and $\conjpair{2}\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$), $2t^{N}$ for $\irr{a}_{N/2,\ptag{g}}$ ($N$ odd), $0$ for $\conjpair{1}\irr{e}_{k,\ptag{u}}$ and $\conjpair{2}\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$), $0$ for $\irr{a}_{N/2,\ptag{u}}$ ($N$ odd)}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{q,\ptag{g}}$ if $0 < q < N/2$, $\irr{a}_{N/2,\ptag{g}}$ if $q = N/2$, $\conjpair{2}\irr{e}_{N-q,\ptag{g}}$ if $N/2 < q < N$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{\min(q,2N-q)}$ if $q \bmod N < N/2$, $\conjpair{2}\irr{e}_{\min(q,2N-q)}$ if $q \bmod N > N/2$; $q = m \bmod 2N$ at $p = +1$ and $m + N \bmod 2N$ at $p = -1$}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{4N}))$, $P_\Lambda(t)$: $t^{2k} + t^{4N-2k}$ for $\conjpair{1}\irr{e}_{k}$ and $\conjpair{2}\irr{e}_{k}$ ($0 < k < N$)}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{odd $N$}\\*
 $\irrJp{J}{p}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{q,\ptag{g}}$ if $0 < q < N/2$, $\irr{a}_{N/2,\ptag{g}}$ if $q = N/2$, $\conjpair{2}\irr{e}_{N-q,\ptag{g}}$ if $N/2 < q < N$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$\\*
 $H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\conjpair{1}\irr{e}_{k,\ptag{g}}$ and $\conjpair{2}\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$), $2t^{N}$ for $\irr{a}_{N/2,\ptag{g}}$ ($N$ odd), $0$ for $\conjpair{1}\irr{e}_{k,\ptag{u}}$ and $\conjpair{2}\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$), $0$ for $\irr{a}_{N/2,\ptag{u}}$ ($N$ odd)\\
 \grouprule{0pt}{\lightrulewidth}
-\multicolumn{2}{@{}c@{}}{$\grp{2S_{2\mathnormal{N}}}$, even $N$}\\*
+\multicolumn{2}{@{}c@{}}{even $N$}\\*
 $\irrJp{J}{p}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{\min(q,2N-q)}$ if $q \bmod N < N/2$, $\conjpair{2}\irr{e}_{\min(q,2N-q)}$ if $q \bmod N > N/2$; $q = m \bmod 2N$ at $p = +1$ and $m + N \bmod 2N$ at $p = -1$\\*
 $H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{4N}))$, $P_\Lambda(t)$: $t^{2k} + t^{4N-2k}$ for $\conjpair{1}\irr{e}_{k}$ and $\conjpair{2}\irr{e}_{k}$ ($0 < k < N$)\\
-\grouprule{0pt}{\lightrulewidth}
-\multicolumn{2}{@{}c@{}}{$\grp{2C_{\mathnormal{N}h}}$, odd $N$}\\*
+\bottomrule\end{longtable}}
+
+\needspace{95pt}
+\paragraph{Subduction to the $\grp{2C_{\mathnormal{N}h}}$ family.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\irr{e}_{\min(q,2N-q)}'$; with $''$ for $'$ on the kets where $p(-1)^{m-1/2} = -1$; $q = m \bmod 2N$ at $p = +1$ and $m + N \bmod 2N$ at $p = -1$}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\conjpair{1}\irr{e}_{k,\ptag{g}}$ and $\conjpair{2}\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$), $0$ for $\conjpair{1}\irr{e}_{k,\ptag{u}}$ and $\conjpair{2}\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$)}\cellmax{$\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{q,\ptag{g}}$ if $0 < q < N/2$, $\conjpair{2}\irr{e}_{N-q,\ptag{g}}$ if $N/2 < q < N$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{4N}))$, $P_\Lambda(t)$: $t^{2k} + t^{4N-2k}$ for $\irr{e}_{k}'$ and $\irr{e}_{k}''$ ($0 < k < N$)}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{odd $N$}\\*
 $\irrJp{J}{p}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\irr{e}_{\min(q,2N-q)}'$; with $''$ for $'$ on the kets where $p(-1)^{m-1/2} = -1$; $q = m \bmod 2N$ at $p = +1$ and $m + N \bmod 2N$ at $p = -1$\\*
 $H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{4N}))$, $P_\Lambda(t)$: $t^{2k} + t^{4N-2k}$ for $\irr{e}_{k}'$ and $\irr{e}_{k}''$ ($0 < k < N$)\\
 \grouprule{0pt}{\lightrulewidth}
-\multicolumn{2}{@{}c@{}}{$\grp{2C_{\mathnormal{N}h}}$, even $N$}\\*
+\multicolumn{2}{@{}c@{}}{even $N$}\\*
 $\irrJp{J}{p}$ & $\bigoplus_{m=-J}^{J}\Lambda_m$, $\Lambda_m$ on $\jm{J}{m}$: $\conjpair{1}\irr{e}_{q,\ptag{g}}$ if $0 < q < N/2$, $\conjpair{2}\irr{e}_{N-q,\ptag{g}}$ if $N/2 < q < N$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$\\*
 $H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\conjpair{1}\irr{e}_{k,\ptag{g}}$ and $\conjpair{2}\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$), $0$ for $\conjpair{1}\irr{e}_{k,\ptag{u}}$ and $\conjpair{2}\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$)\\
-\grouprule{0pt}{\lightrulewidth}
-\multicolumn{2}{@{}c@{}}{$\grp{2C_{\mathnormal{N}v}}$, every $N$}\\*
+\bottomrule\end{longtable}}
+
+\needspace{95pt}
+\paragraph{Subduction to the $\grp{2C_{\mathnormal{N}v}}$ family.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,N-q)}$ if $q \ne N/2$, $\conjpair{1}\irr{e}_{N/2}\oplus \conjpair{2}\irr{e}_{N/2}$ if $q = N/2$; $q = m \bmod N$; independent of $p$}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\irr{e}_{k}$ ($0 < k < N/2$), $t^{N}$ for $\conjpair{1}\irr{e}_{N/2}$ and $\conjpair{2}\irr{e}_{N/2}$ ($N$ odd)}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{every $N$}\\*
 $\irrJp{J}{p}$ & $\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,N-q)}$ if $q \ne N/2$, $\conjpair{1}\irr{e}_{N/2}\oplus \conjpair{2}\irr{e}_{N/2}$ if $q = N/2$; $q = m \bmod N$; independent of $p$\\*
 $H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\irr{e}_{k}$ ($0 < k < N/2$), $t^{N}$ for $\conjpair{1}\irr{e}_{N/2}$ and $\conjpair{2}\irr{e}_{N/2}$ ($N$ odd)\\
-\grouprule{0pt}{\lightrulewidth}
-\multicolumn{2}{@{}c@{}}{$\grp{2D_{\mathnormal{N}}}$, $N \ge 2$}\\*
+\bottomrule\end{longtable}}
+
+\needspace{95pt}
+\paragraph{Subduction to the $\grp{2D_{\mathnormal{N}}}$ family.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,N-q)}$ if $q \ne N/2$, $\conjpair{1}\irr{e}_{N/2}\oplus \conjpair{2}\irr{e}_{N/2}$ if $q = N/2$; $q = m \bmod N$; independent of $p$}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\irr{e}_{k}$ ($0 < k < N/2$), $t^{N}$ for $\conjpair{1}\irr{e}_{N/2}$ and $\conjpair{2}\irr{e}_{N/2}$ ($N$ odd)}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{every $N \ge 2$}\\*
 $\irrJp{J}{p}$ & $\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,N-q)}$ if $q \ne N/2$, $\conjpair{1}\irr{e}_{N/2}\oplus \conjpair{2}\irr{e}_{N/2}$ if $q = N/2$; $q = m \bmod N$; independent of $p$\\*
 $H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\irr{e}_{k}$ ($0 < k < N/2$), $t^{N}$ for $\conjpair{1}\irr{e}_{N/2}$ and $\conjpair{2}\irr{e}_{N/2}$ ($N$ odd)\\
-\grouprule{0pt}{\lightrulewidth}
-\multicolumn{2}{@{}c@{}}{$\grp{2D_{\mathnormal{N}h}}$, odd $N$}\\*
+\bottomrule\end{longtable}}
+
+\needspace{95pt}
+\paragraph{Subduction to the $\grp{2D_{\mathnormal{N}h}}$ family.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$), $0$ for $\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$)}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,N-q),\ptag{g}}$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,2N-q)}$; $q = m \bmod 2N$ at $p = +1$ and $m + N \bmod 2N$ at $p = -1$}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{4N}))$, $P_\Lambda(t)$: $t^{2k} + t^{4N-2k}$ for $\irr{e}_{k}$ ($0 < k < N$)}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{odd $N$}\\*
 $\irrJp{J}{p}$ & $\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,2N-q)}$; $q = m \bmod 2N$ at $p = +1$ and $m + N \bmod 2N$ at $p = -1$\\*
 $H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{4N}))$, $P_\Lambda(t)$: $t^{2k} + t^{4N-2k}$ for $\irr{e}_{k}$ ($0 < k < N$)\\
 \grouprule{0pt}{\lightrulewidth}
-\multicolumn{2}{@{}c@{}}{$\grp{2D_{\mathnormal{N}h}}$, even $N$}\\*
+\multicolumn{2}{@{}c@{}}{even $N$}\\*
 $\irrJp{J}{p}$ & $\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,N-q),\ptag{g}}$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$\\*
 $H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$), $0$ for $\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$)\\
-\grouprule{0pt}{\lightrulewidth}
-\multicolumn{2}{@{}c@{}}{$\grp{2D_{\mathnormal{N}d}}$, odd $N$}\\*
+\bottomrule\end{longtable}}
+
+\needspace{95pt}
+\paragraph{Subduction to the $\grp{2D_{\mathnormal{N}d}}$ family.}
+{\small\renewcommand{\arraystretch}{1.6}\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\irrJp{J}{p}$}\cellmax{$H_\Lambda(t)$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$), $t^{N}$ for $\conjpair{1}\irr{e}_{N/2,\ptag{g}}$ and $\conjpair{2}\irr{e}_{N/2,\ptag{g}}$ ($N$ odd), $0$ for $\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$), $0$ for $\conjpair{1}\irr{e}_{N/2,\ptag{u}}$ and $\conjpair{2}\irr{e}_{N/2,\ptag{u}}$ ($N$ odd)}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,N-q),\ptag{g}}$ if $q \ne N/2$, $\conjpair{1}\irr{e}_{N/2,\ptag{g}}\oplus \conjpair{2}\irr{e}_{N/2,\ptag{g}}$ if $q = N/2$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$}\cellmax{$\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,2N-q)}$; $q = m \bmod 2N$ at $p = +1$ and $m + N \bmod 2N$ at $p = -1$}\cellmax{$P_\Lambda(t)/((1-t^{2})(1-t^{4N}))$, $P_\Lambda(t)$: $t^{2k} + t^{4N-2k}$ for $\irr{e}_{k}$ ($0 < k < N$)}\fillcap\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{\fillwidth}@{}}\toprule
+\multicolumn{2}{@{}c@{}}{odd $N$}\\*
 $\irrJp{J}{p}$ & $\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,N-q),\ptag{g}}$ if $q \ne N/2$, $\conjpair{1}\irr{e}_{N/2,\ptag{g}}\oplus \conjpair{2}\irr{e}_{N/2,\ptag{g}}$ if $q = N/2$; at $p = -1$ the same with $\ptag{u}$ for $\ptag{g}$; $q = m \bmod N$\\*
 $H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{2N}))$, $P_\Lambda(t)$: $t^{2k} + t^{2N-2k}$ for $\irr{e}_{k,\ptag{g}}$ ($0 < k < N/2$), $t^{N}$ for $\conjpair{1}\irr{e}_{N/2,\ptag{g}}$ and $\conjpair{2}\irr{e}_{N/2,\ptag{g}}$ ($N$ odd), $0$ for $\irr{e}_{k,\ptag{u}}$ ($0 < k < N/2$), $0$ for $\conjpair{1}\irr{e}_{N/2,\ptag{u}}$ and $\conjpair{2}\irr{e}_{N/2,\ptag{u}}$ ($N$ odd)\\
 \grouprule{0pt}{\lightrulewidth}
-\multicolumn{2}{@{}c@{}}{$\grp{2D_{\mathnormal{N}d}}$, even $N$}\\*
+\multicolumn{2}{@{}c@{}}{even $N$}\\*
 $\irrJp{J}{p}$ & $\bigoplus_{m=1/2}^{J}\Lambda_m$, $\Lambda_m$ on the pair $\jm{J}{\pm m}$: $\irr{e}_{\min(q,2N-q)}$; $q = m \bmod 2N$ at $p = +1$ and $m + N \bmod 2N$ at $p = -1$\\*
 $H_\Lambda(t)$ & $P_\Lambda(t)/((1-t^{2})(1-t^{4N}))$, $P_\Lambda(t)$: $t^{2k} + t^{4N-2k}$ for $\irr{e}_{k}$ ($0 < k < N$)\\
+\bottomrule\end{longtable}}
+
+\needspace{224pt}
+\paragraph{Subduction to the exceptional preimages.} \label{n:index.gf.ab}The generating functions are $H_\Lambda(t) = P_\Lambda(t)/((1-t^{a_1})(1-t^{a_2}))$. The exponents $(a_1, a_2)$ are $(4, 6)$ for $\grp{2T}$, $(4, 6)$ for $\grp{2T_{h}}$, $(6, 8)$ for $\grp{2T_{d}}$, $(6, 8)$ for $\grp{2O}$, $(6, 8)$ for $\grp{2O_{h}}$, $(10, 12)$ for $\grp{2I}$ and $(10, 12)$ for $\grp{2I_{h}}$.
+{\small\begin{longtable}{@{}ll@{\hspace{18pt}}ll@{}}\toprule
+$\Lambda$ & $P_\Lambda(t)$ & $\Lambda$ & $P_\Lambda(t)$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\multicolumn{2}{@{}c@{\hspace{18pt}}}{\href{2T.pdf}{$\grp{2T}$}} & \multicolumn{2}{@{}c@{}}{\href{2Td.pdf}{$\grp{2T_{d}}$}}\\*
+$\irr{e}_{1/2}$ & $t + t^{7}$ & $\irr{e}_{1/2}$ & $t + t^{11}$\\*
+$\conjpair{1}\irr{g}_{3/2}$ & $t^{3} + t^{5}$ & $\irr{e}_{5/2}$ & $t^{5} + t^{7}$\\*
+$\conjpair{2}\irr{g}_{3/2}$ & $t^{3} + t^{5}$ & $\irr{g}_{3/2}$ & $t^{3} + t^{5} + t^{7} + t^{9}$\\*\noalign{\vskip 1.5pt}\multispan{2}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{2}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
+\multicolumn{2}{@{}c@{\hspace{18pt}}}{\href{2Th.pdf}{$\grp{2T_{h}}$}} & \multicolumn{2}{@{}c@{}}{\href{2O.pdf}{$\grp{2O}$}}\\*
+$\irr{e}_{1/2,\ptag{g}}$ & $t + t^{7}$ & $\irr{e}_{1/2}$ & $t + t^{11}$\\*
+$\conjpair{1}\irr{g}_{3/2,\ptag{g}}$ & $t^{3} + t^{5}$ & $\irr{e}_{5/2}$ & $t^{5} + t^{7}$\\*
+$\conjpair{2}\irr{g}_{3/2,\ptag{g}}$ & $t^{3} + t^{5}$ & $\irr{g}_{3/2}$ & $t^{3} + t^{5} + t^{7} + t^{9}$\\*
+$\irr{e}_{1/2,\ptag{u}}$ & $0$ &  & \\*
+$\conjpair{1}\irr{g}_{3/2,\ptag{u}}$ & $0$ &  & \\*
+$\conjpair{2}\irr{g}_{3/2,\ptag{u}}$ & $0$ &  & \\
+\grouprule{0pt}{\heavyrulewidth}
+\multicolumn{2}{@{}c@{\hspace{18pt}}}{\href{2Oh.pdf}{$\grp{2O_{h}}$}} & \multicolumn{2}{@{}c@{}}{\href{2Ih.pdf}{$\grp{2I_{h}}$}}\\*
+$\irr{e}_{1/2,\ptag{g}}$ & $t + t^{11}$ & $\irr{e}_{1/2,\ptag{g}}$ & $t + t^{19}$\\*
+$\irr{e}_{5/2,\ptag{g}}$ & $t^{5} + t^{7}$ & $\irr{e}_{7/2,\ptag{g}}$ & $t^{7} + t^{13}$\\*
+$\irr{g}_{3/2,\ptag{g}}$ & $t^{3} + t^{5} + t^{7} + t^{9}$ & $\irr{g}_{3/2,\ptag{g}}$ & $t^{3} + t^{9} + t^{11} + t^{17}$\\*
+$\irr{e}_{1/2,\ptag{u}}$ & $0$ & $\irr{i}_{5/2,\ptag{g}}$ & $t^{5} + t^{7} + t^{9} + t^{11} + t^{13} + t^{15}$\\*
+$\irr{e}_{5/2,\ptag{u}}$ & $0$ & $\irr{e}_{1/2,\ptag{u}}$ & $0$\\*
+$\irr{g}_{3/2,\ptag{u}}$ & $0$ & $\irr{e}_{7/2,\ptag{u}}$ & $0$\\*\noalign{\vskip 1.5pt}\multispan{2}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{2}\\*\noalign{\vskip 1.5pt}
+\multicolumn{2}{@{}c@{\hspace{18pt}}}{\href{2I.pdf}{$\grp{2I}$}} & $\irr{g}_{3/2,\ptag{u}}$ & $0$\\*
+$\irr{e}_{1/2}$ & $t + t^{19}$ & $\irr{i}_{5/2,\ptag{u}}$ & $0$\\*
+$\irr{e}_{7/2}$ & $t^{7} + t^{13}$ &  & \\*
+$\irr{g}_{3/2}$ & $t^{3} + t^{9} + t^{11} + t^{17}$ &  & \\*
+$\irr{i}_{5/2}$ & $t^{5} + t^{7} + t^{9} + t^{11} + t^{13} + t^{15}$ &  & \\
 \bottomrule\end{longtable}}
 \needspace{177pt}
 \partbox{Angular momentum}
 \section{Subduction from \texorpdfstring{$\grp{Pin^{-}(3)}$}{Pin\unichar{8315}(3)}}\label{s:subduction_parent}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.11}{11}, \href{../../CONVENTIONS.pdf\#conv.25.1}{25.1} and \href{../../CONVENTIONS.pdf\#conv.29.4}{29.4}.
-\leavevmode\label{n:irrep.o3}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{Pin^{-}(3)}$ at half-integer $J$ restricts to $\grp{Pin^{-}(3)}$ by the rule (\texttt{rule}):
+\leavevmode\label{n:irrep.o3}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of \href{Pinminus3.pdf}{$\grp{Pin^{-}(3)}$} at half-integer $J$ restricts to $\grp{Pin^{-}(3)}$ by the rule (\texttt{rule}):
 \begin{equation}\label{e:parent}\restr{\irrJp{J}{p}}{\grp{Pin^{-}(3)}} = \irrJp{J}{p},\end{equation}
 for either $p$. At integer $J$ the restriction is the subduction of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} (\texttt{integer\symbol{95}J}).
 \needspace{110pt}
@@ -507,11 +581,11 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 The multiplicity $b_\Gamma(J)$ is the number of blocks of $\Gamma$ at $J$, with the generating function
 \begin{equation}\label{e:gf}H_\Gamma(t) = \sum_{J\ge1/2} b_\Gamma(J)\,t^{2J},\end{equation}
 for each family's instance of index $J$ (\texttt{generating\symbol{95}function}). This instance can only have a block at the angular momentum $J$, at the parity $p$ of $\irrJp{J}{p}$ carried by the kets. The column $m$ gives the $m$ of the kets of $\Gamma$ (\texttt{allowed\symbol{95}m}).
-\begin{center}\small{\renewcommand{\arraystretch}{1.3}\begin{tabular}{@{}lllll@{}}\toprule
+\begin{center}\small\begin{tabular}{@{}lllll@{}}\toprule
 family & $H_\Gamma(t)$ & $b_\Gamma(J)$, $p = +1$ & $p = -1$ & $m$\\\midrule
 $\irrJp{J}{+}$ & $t^{2J}$ & $1$ & $0$ & $J, J-1, \dots, -J$\\
 $\irrJp{J}{-}$ & $t^{2J}$ & $0$ & $1$ & $J, J-1, \dots, -J$\\
-\bottomrule\end{tabular}}\end{center}
+\bottomrule\end{tabular}\end{center}
 \needspace{110pt}
 \section{Symmetry-adapted bases}\label{s:bases}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.14}{14}, \href{../../CONVENTIONS.pdf\#conv.26.2}{26.2} and \href{../../CONVENTIONS.pdf\#conv.29.4}{29.4}.

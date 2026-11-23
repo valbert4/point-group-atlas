@@ -130,8 +130,9 @@ class Doc(L.Document):
         return DL.linked(symbol, record)
 
     def subgroup_other_names(self, symbol, record):
-        """No other name: a continuous document names a class of subgroups by its symbol."""
-        return []
+        """The other names of its Pin-(3)-conjugacy class, as the finite documents show them
+        (double_latex.other_names)."""
+        return DL.other_names(symbol, record)
 
     def record_link(self, stem):
         """The symbol of the record `stem`, linked to its document."""
@@ -154,9 +155,6 @@ class Doc(L.Document):
     def conjugation_group(self):
         return self.P
 
-    def conjugation_text(self):
-        return "$%s$" % self.P
-
     def subgroup_diagram(self):
         """The continuous preimages in data/double_groups.json, at the places of Rotation's diagram
         of the groups they cover (DOUBLE_DIAGRAM)."""
@@ -171,12 +169,48 @@ class Doc(L.Document):
     # Angular momentum
     # the parent group and the half-integer J as in the finite documents
     parent_group = DL.Doc.parent_group
+    parent_link = DL.Doc.parent_link
     momentum = DL.Doc.momentum
     momentum_text = DL.Doc.momentum_text
     momentum_cell = DL.Doc.momentum_cell
 
     def plain_label(self, label):
         return label_tex(label)
+
+    # The group (step 2): the covered group's block, whose family Names and structure reads
+    def rotation_group(self):
+        return self.covered["group"]
+
+    # Subgroups, step 2: the other names linked as in the finite documents, the components of
+    # the class space as the section Class space writes them, and the generating functions of
+    # the exceptional preimages, which the record names by pointers.
+    other_name_link = DL.Doc.other_name_link
+
+    def subgroup_component(self, cid):
+        return COMPONENT_DISPLAY[cid]
+
+    def exceptional_function(self, entry):
+        """The generating function of an exceptional preimage: that of its record, which the
+        pointer generating_function names."""
+        return DL.follow(entry["generating_function"])
+
+    def numerator_label(self, record, x):
+        """The irrep of a numerator as the record of the subgroup displays it."""
+        irreps = DL.record_of("double", record)["character_table"]["irreps"]
+        return L.irrep(next(ir["display"] for ir in irreps if ir["id"] == x["irrep_id"]))
+
+    # Representations, step 2 of the one generator
+    def family_character(self, t, cid, sym="n"):
+        """A character of the record, or of a vector family of G (a trig in phi, read in psi:
+        latex.in_psi), as a formula in omega: s sum_{m=-J}^{J} e^{i m omega} where it is one
+        (latex.character_sum), otherwise as one_dimensional_tex writes it."""
+        t = L.in_psi(t) if t["var"] == "phi" else t
+        found = L.character_sum(t)
+        if found:
+            sign, top, a = found
+            return r"%s\sum_{m=-%s}^{%s}\expe^{\iunit %s}" % (
+                sign, L.affine_J(top), L.affine_J(top), harmonic_tex(a, 0, "m"))
+        return one_dimensional_tex(self, t, sym)
 
 # ---------------------------------------------------------------- characters in omega
 def harmonic_tex(a, b, sym):
@@ -301,17 +335,18 @@ def _cell(D, k, v):
     if k == "abstract_type":
         return "$%s$" % abstract_tex(v)
     if k == "product_form":
-        # one line, the direct forms: a continuous preimage has no semidirect one
+        # the direct forms, a continuous preimage having no semidirect one, each with the classes
+        # that its finite second factor meets (as in Rotation's continuous groups), in the notation
+        # of the class space
         return L.product_form_lines([(DL.linked(r["H"]["symbol"], r["H"]["double_class"]),
-                                      DL.linked(r["K"]["symbol"], r["K"]["double_class"]))
-                                     for r in v["direct"]])[0]
+                                      DL.linked(r["K"]["symbol"], r["K"]["double_class"])
+                                      + r"\metclasses{%s}" % ", ".join(
+                                          L.POINT.get(c) or COMPONENT_DISPLAY[c]
+                                          for c in r["K"]["class_ids"]))
+                                     for r in v["direct"]])
     if k in ("center", "commutator_subgroup"):
-        parts = [DL.linked(v["symbol"], v["double_class"])]
-        if isinstance(v["order"], int):
-            parts.append("order %d" % v["order"])
-        if isinstance(v["index"], int):
-            parts.append("index %d" % v["index"])
-        return ", ".join(parts)
+        return DL.linked(v["symbol"], v["double_class"]) + (
+            ", index %d" % v["index"] if isinstance(v["index"], int) else "")
     if k == "alternative_names":
         # a symbol of the catalogue's form (2K, 2S_inf) as the finite documents give it, a name
         # such as Spin(3) as an abstract type
@@ -745,7 +780,7 @@ def body(name, rec, reports=None):
     (latex.finish)."""
     group = DL.pgrp(rec["group"]["symbol"])
     return L.finish(name, L.own_symbol(sections(name, rec), group), L.title_lines(group, name),
-                    reports, stretch=False)
+                    reports)
 
 
 def render(name, rec, reports=None):

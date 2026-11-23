@@ -584,6 +584,8 @@ COMMON = (
       "the intersection", r"\cap",
       defined="standard"),
     S("operator.union", "operator", r"\cup", "the union", r"\cup", defined="standard"),
+    S("operator.setminus", "operator", r"\setminus", "the difference of two sets", r"\setminus",
+      defined="standard", index=False),
     S("relation.to", "relation", r"\to",
       r"a product coupled to an irrep (as in $\Gamma_1 \otimes \Gamma_2 \to \Gamma$), a limit, a "
       "map or a rename",

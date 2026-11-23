@@ -1014,6 +1014,8 @@ permutation character $`1 + \chi_\Gamma`$. Its right cosets $`\mathsf{W}\mathsfi
 functions (section 4.1), so that $`\mathsfit{g}\, \lvert e_{j'}\rangle = \lvert e_j\rangle`$. On the basis $`\bigl\lvert{}^{\Gamma}_{\,\mu}\bigr\rangle = \sum_j \zeta_{d+1}^{-j\mu} \lvert e_j\rangle`$, $`\mu = 1, 2, \dots, d`$, of the sum-zero part of
 the permutation module, $`D^\Gamma_{\nu,\mu}(\mathsfit{g}) = \tfrac{1}{d+1} \sum_j \zeta_{d+1}^{j\nu - j'\mu}`$, $`\nu, \mu = 1, 2, \dots, d`$.
 
+A document writes the matrices of an irrep over a common rational factor when doing so makes the widest of them at least a fifth narrower.
+
 Continuous groups. A continuous family's `matrices` give $`D`$ on each class-space component (section 16) as functions
 of the component's angle, $`\phi`$ on an arc and $`\psi`$ on an atom (the records write it as $`x`$). For a one-dimensional family,
 `basis` is `"trivial"` and `entries.<component>` is `"chi"`. For $`\mathrm{\scriptsize E}_n`$, `entries.<component>` holds the complex form

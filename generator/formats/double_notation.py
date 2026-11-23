@@ -49,9 +49,9 @@ DROP = (
 # the words, operators and heads that only Rotation's documents print.
 DROP_UNUSED = (
     "irrep.alias.point",
-    "typography.spectroscopic", "mark.classes", "group.abstract.dihedral", "head.level",
+    "typography.spectroscopic", "group.abstract.dihedral", "head.level",
     "group.abstract.alternating", "accent.conjugate.star", "operator.degree",
-    "index.period", "function.matrixelement", "function.cg.parity",
+    "function.matrixelement", "function.cg.parity",
     "abbreviation.parent", "delimiter.ceiling", "delimiter.norm",
     "arithmetic.union", "relation.congruent", "relation.notin",
     "relation.subset", "relation.exchange", "relation.iff",
@@ -77,8 +77,8 @@ DROP_UNUSED = (
     "local.matrix.crossing", "local.tensor.T", "local.irrep.V", "local.coefficients.f",
     "local.bispectrum.B", "local.lcm.L", "local.numerators", "local.denominators",
     "local.cyclotomic.polynomial", "index.harmonic.k", "index.harmonic.a", "index.rule.k",
-    "index.gf.ab", "local.dummy.i", "local.dummy.j", "local.dummy.k", "local.dummy.h",
-    "local.dummy.n", "local.dummy.lambda", "local.coefficients.a", "head.components",
+    "local.dummy.i", "local.dummy.j", "local.dummy.k", "local.dummy.h",
+    "local.dummy.n", "local.dummy.lambda", "local.coefficients.a",
     "head.index.subgroup", "head.terms", "head.parity", "head.function",
     "head.polynomial", "head.name", "head.description", "head.dim", "head.decomposition",
     "head.figure", "head.site", "head.vertices", "head.rank", "head.cos", "head.hand",
@@ -240,11 +240,6 @@ DOUBLE = (
     H("head.complete", "head", "complete",
       "whether the generators listed generate the ring of invariants", "complete",
       defined=("part:invariants", "conv:26.4")),
-    H("head.normalizer", "head", "normalizer", "the normalizer of a closed subgroup in the group",
-      "normalizer", defined=("part:subgroups", "conv:29.5")),
-    H("head.centralizer", "head", "centralizer",
-      "the centralizer of a closed subgroup in the group", "centralizer",
-      defined=("part:subgroups", "conv:29.5")),
     S("index.Omega", "index", r"\Omega",
       r"the projection $\Omega = \lvert\Lambda + \Sigma\rvert$ of the angular momentum on the "
       r"axis of a "
@@ -361,8 +356,6 @@ DOUBLE = (
     S("function.character.parent", "function", r"\chi^{(J,p)}(g)",
       r"the character of the irrep $D^{(J,p)}$ of $\grp{Pin^{-}(3)}$ at the element $g$",
       r"\chi^{*}(.)", defined=("e:chi", "conv:25")),
-    S("operator.setminus", "operator", r"\setminus", "the difference of two sets", r"\setminus",
-      defined="standard", index=False),
     S("local.spinor.uv", "local", "u, v",
       r"the kets $u = \bigl\lvert{}^{1/2}_{\,1/2}\bigr\rangle$ and "
       r"$v = \bigl\lvert{}^{1/2}_{\,-1/2}\bigr\rangle$ of spin $\tfrac{1}{2}$, whose polynomials "
