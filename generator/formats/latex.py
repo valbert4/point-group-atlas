@@ -1789,6 +1789,11 @@ def other_names(symbol, record):
     return out
 
 
+def orbifold_symbol(v):
+    """The orbifold symbol of the field group.orbifold, as the role \\orbname sets it."""
+    return r"$\orbname{%s}$" % v.replace("*", r"{\ast}").replace("x", r"{\times}")
+
+
 def identification_cell(D, k, v):
     if isinstance(v, dict) and set(v) == {"reason", "value"} and v["value"] is None:
         return leaf(D, v)
@@ -1812,7 +1817,10 @@ def identification_cell(D, k, v):
     if k == "conway_smith":
         return r"$\conwayname{%s}$" % algebraic_name_tex(v)
     if k == "orbifold":
-        return r"$\orbname{%s}$" % v.replace("*", r"{\ast}").replace("x", r"{\times}")
+        # the symbol, and the section Orbifold where the record holds the orbifold
+        return orbifold_symbol(v) + (r", section~\ref{s:orbifold}"
+                                     if isinstance(D.rec.get("orbifold"), dict)
+                                     and "surface" in D.rec["orbifold"] else "")
     if k == "o3_conjugates":
         return ", ".join(r"\href{%s.pdf}{$%s$}" % (g, grp(names.schoenflies_of(g))) for g in v)
     if k == "alternative_names":
@@ -3937,6 +3945,348 @@ def section_fundamental_domain(D):
             + r"The space $\grp{G}\backslash\grp{O(3)}$ is %s, and" % quotient)
         D.equation("volume", DOMAIN_VOLUME % (r"%s\vol\fcell = %s" % ("2" if two else "", domain),
                                               group, domain, r"16\pi^2", r"\grp{O(3)}"))
+    domain_orbifold(D, parent, finite, space)
+
+
+def harmonics_of(D):
+    """The harmonics on the orientation space that the document's own record holds: the field
+    fundamental_domain.harmonics of a record of Rotation (CONVENTIONS.md section 17.5), its pointer
+    in a preimage of Double (section 21.3), or None (a section over G)."""
+    return D.rec.get("harmonics") or (D.rec.get("fundamental_domain") or {}).get("harmonics")
+
+
+def orbifold_of(D):
+    """The orbifold that the document's own record holds: ("finite", the field orbifold of a
+    finite record of Rotation), ("continuous", the field orbit_space of a continuous one), or
+    ("pointer", its pointer in a record of Double, with the key that holds it); None without
+    one (CONVENTIONS.md sections 17.8 and 21.3)."""
+    orb, space = D.rec.get("orbifold"), D.rec.get("orbit_space")
+    for key, v in (("orbifold", orb), ("orbit_space", space)):
+        if isinstance(v, str):
+            return "pointer", (key, v)
+    if isinstance(orb, dict) and "surface" in orb:
+        return "finite", orb
+    if isinstance(space, dict):
+        return "continuous", space
+    return None
+
+
+def harmonics_rows(count):
+    """The rows of the table of the counts of the harmonics (fundamental_domain.harmonics.count,
+    CONVENTIONS.md section 17.5), each a parity with its numbers of harmonics by J: one row for
+    both parities when they have the same numbers, the parity +1 alone when the other has none;
+    and the note on the parities that the legend gives for a single row."""
+    js = sorted({c["J"] for c in count})
+    at = {(c["J"], c["p"]): c["harmonics"] for c in count}
+    plus, minus = [at[(J, 1)] for J in js], [at[(J, -1)] for J in js]
+    if plus == minus:
+        return js, [(r"$p = \pm 1$", plus)], ", the same at both parities"
+    if not any(minus):
+        return js, [(r"$p = +1$", plus)], r", all at $p = +1$"
+    return js, [(r"$p = +1$", plus), (r"$p = -1$", minus)], " at each parity"
+
+
+def domain_harmonics(D, h, finite):
+    """The harmonics on the orientation space of a group of Rotation (fundamental_domain.
+    harmonics, CONVENTIONS.md section 17.5): their number for each vector of the bases and the
+    irreps of these vectors by parity, for a continuous group the kets of the vectors, and the
+    table of their numbers for J <= 10, one column for each J."""
+    js, rows, parities = harmonics_rows(h["count"])
+    vectors = ("of the trivial irrep in section~\\ref{s:bases}, at both parities"
+               if h["trivial"] == h["determinant"] else
+               r"of section~\ref{s:bases}: of the trivial irrep at $p = (-1)^J$ and of the "
+               r"determinant character at $p = -(-1)^J$")
+    D.w(r"The harmonics on $\grp{G}\backslash\grp{O(3)}$ (CONVENTIONS.pdf, sections 11 and 17.5) "
+        r"number $2J + 1$ for each vector %s." % vectors
+        + ("" if finite else
+           r" The rotations about $z$ leave these vectors invariant, so each is the ket "
+           r"$\jm{J}{0}$ and the harmonics depend only on $\det Q$ and on the axis "
+           r"$\dirvec{0}{0}{1}P((\det Q)\,Q)$.")
+        + r" The table gives these numbers for $J \le %d$%s, and the record holds their "
+          r"generating functions." % (js[-1], parities))
+    D.w(r"{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}l%s@{}}\toprule"
+        % ("r" * len(js)))
+    D.w(r"$J$ & %s\\\midrule\endhead" % " & ".join("%d" % J for J in js))
+    for parity, numbers in rows:
+        D.w(r"%s & %s\\" % (parity, " & ".join("%d" % n for n in numbers)))
+    D.w(r"\bottomrule\end{longtable}}")
+
+
+def domain_orbifold(D, parent, finite, space):
+    """The end of the section Fundamental domain in every catalogue: for a record of Rotation,
+    the map of the orientation space onto the orbifold or the orbit space of section Orbifold
+    (not where the space of the rotations is a point), then the harmonics on the orientation space
+    (domain_harmonics); for a record of Double, which names the orbifold of its image by a pointer
+    and has no section Orbifold, that orbifold and the map onto it (orbifold_pointer), the
+    harmonics of the image, of integer J, and the singularity of the invariant forms."""
+    found = orbifold_of(D)
+    if found is None:
+        return
+    D.w("")
+    if found[0] == "pointer":
+        orbifold_pointer(D, parent, *found[1])
+    elif space["name"] != "point":
+        D.w(r"Forgetting the turn about a direction sends $\grp{G}\backslash%s$ onto the %s of "
+            r"section~\ref{s:orbifold}." % (parent, "orbifold" if finite else "orbit space"))
+    h = harmonics_of(D)
+    if isinstance(h, dict):
+        domain_harmonics(D, h, finite)
+    elif isinstance(h, str):
+        D.w(r"The harmonics on $\grp{G}\backslash%s$ are those on $%s\backslash\grp{O(3)}$ of the "
+            r"document of %s (\texttt{harmonics}), of integer $J$ since $\elt{\barred{E}}$ acts on "
+            r"$\irrJp{J}{p}$ (CONVENTIONS.pdf, section 25.1) by $(-1)^{2J}$."
+            % (parent, D.base, rotation_linked(D.cover)))
+    binary = (D.rec.get("invariants") or {}).get("binary") if found[0] == "pointer" else None
+    if binary and "type" in binary:
+        letter, rank = binary["type"].split("_")
+        D.w(r"The invariant forms of section~\ref{s:invariants} are the functions on the "
+            r"singularity of type %s\textsubscript{%s}, the quotient of the spin kets by the "
+            r"matrices of the elements." % (letter, rank))
+
+
+# ---------------------------------------------------------------- Orbifold
+# The surface of an orbifold (orbifold.surface, CONVENTIONS.md section 17.8) in words; the
+# letters of the generators of its presentation (section 17.7), the mirrors of the sides first,
+# then the elements of the pairs of glued sides, each list in the order of the sides.
+SURFACE = {"sphere": "a sphere", "disk": "a disk", "projective plane": "a projective plane"}
+MIRROR_LETTERS = (r"\elt{s}", r"\elt{s'}", r"\elt{s''}")
+GLUED_LETTERS = (r"\elt{g_{1}}", r"\elt{g_{2}}")
+# The orbits of a continuous group on the sphere (orbit_space.strata[].orbit), one and many.
+ORBIT_WORDS = {"pole": "a pole", "pair of poles": "the pair of poles",
+               "circle": "a circle of latitude", "pair of circles": "a pair of circles of latitude",
+               "equator": "the equator", "sphere": "the sphere"}
+
+
+def fraction_tex(pair):
+    r"""The rational [n, d] as a formula: 2, \tfrac{1}{3}, -\tfrac{2}{3}."""
+    q = Fraction(*pair)
+    if q.denominator == 1:
+        return "%d" % q
+    return r"%s\tfrac{%d}{%d}" % ("-" if q < 0 else "", abs(q.numerator), q.denominator)
+
+
+def direction_tex(D, v):
+    """A direction of the orbifold, an unnormalized vector of exact values."""
+    return r"$\dirvec{%s}{%s}{%s}$" % tuple(D.val(x) for x in v)
+
+
+def generator_letters(orb):
+    """The letter of each generator of the presentation, by the kind of its side."""
+    sides = orb["region"]["sides"]
+    mirrors, glued, out = iter(MIRROR_LETTERS), iter(GLUED_LETTERS), []
+    for g in orb["presentation"]["generators"]:
+        out.append(next(mirrors if sides[g["side"]]["kind"] == "mirror" else glued))
+    return out
+
+
+def relator_tex(letters, rel):
+    """A relator of the presentation, the word raised to its power: the equal letters next to each
+    other written once with the sum of their exponents, a word of one letter as its power."""
+    word = []
+    for g, e in rel["word"]:
+        if word and word[-1][0] == g:
+            word[-1][1] += e
+        else:
+            word.append([g, e])
+    word = [(g, e) for g, e in word if e]
+
+    def power(base, e):
+        return base if e == 1 else "%s^{%d}" % (base, e)
+    if len(word) == 1:
+        return power(letters[word[0][0]], word[0][1] * rel["power"])
+    text = "".join(power(letters[g], e) for g, e in word)
+    return text if rel["power"] == 1 else "(%s)^{%d}" % (text, rel["power"])
+
+
+def seifert_tex(seifert):
+    r"""The Seifert invariants (b; (alpha_1, beta_1), ...), as CONVENTIONS.md section 17.6 writes
+    them: (-2;\ (3, 2), (3, 2)), and (-2) without a fiber."""
+    fibers = ", ".join("(%d, %d)" % (f["alpha"], f["beta"]) for f in seifert["fibers"])
+    return r"(%d%s)" % (seifert["b"], r";\ " + fibers if fibers else "")
+
+
+def orbifold_strata(D, orb):
+    """The table of the strata of a finite group's orbifold: the cone points, the corners and the
+    arcs of the mirror edge, then the generic points, each with its order, its direction (an arc
+    its side of the region), its stabilizer and the size and shape of its orbit (the entry of
+    permutation_representations.actions that it names)."""
+    nodes = {x["id"]: x for x in D.lattice["nodes"]}
+    acts = D.rec["permutation_representations"]["actions"]
+    subgroup = permutation_subgroup(D)
+    mirror = orb["mirror"] if "corners" in (orb["mirror"] or {}) else {"corners": [], "arcs": []}
+    rows = []
+
+    def row(kind, order, where, stratum):
+        a = acts[stratum["orbit"]]
+        rows.append([kind, order, where, subgroup(nodes[stratum["stabilizer_node"]]),
+                     "%d" % a["degree"], orbit_shape(a) or "---"])
+    for c in orb["cone_points"]:
+        row("cone point", "%d" % c["order"], direction_tex(D, c["direction"]), c)
+    for c in mirror["corners"]:
+        row("corner", "%d" % c["order"], direction_tex(D, c["direction"]), c)
+    for a in mirror["arcs"]:
+        row("mirror arc", "", "side %d" % a["side"], a)
+    row("generic", "", "", orb["generic"])
+    D.w(D.define("head.stratum", "head.order.point", "head.direction", "head.stabilizer",
+                 "head.size.orbit", "head.shape")
+        + r"A row is a stratum, with the order of its point (order), its direction or the side of "
+          r"the region with an arc, and its stabilizer. Its orbit has the size and the shape of "
+          r"the figure of the stabilizer in section~\ref{s:permutation} (a dash where the shape "
+          r"depends on the point).")
+    D.w(r"{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lrllrl@{}}\toprule")
+    D.w(r"stratum & order & direction & stabilizer & size & shape\\\midrule\endhead")
+    for r in rows:
+        D.w(" & ".join(r) + r"\\")
+    D.w(r"\bottomrule\end{longtable}}")
+
+
+def orbifold_region(D, orb):
+    """The fundamental region of a finite group's orbifold: its vertices with their directions and
+    angles, each with the side that leaves it, that side's normal, element and partner; the
+    sense of the glued sides; the whole sphere for a region with no vertex."""
+    region = orb["region"]
+    items = D.rec["elements"]["items"]
+    if not region["vertices"]:
+        D.w(r"The region is the whole sphere, with no vertex and no side.")
+        return
+    sides = region["sides"]
+    D.w(D.define("head.vertex.region", "head.angle", "head.normal.side", "head.partner",
+                 "head.sense")
+        + r"The region holds one direction of every orbit, more only on its boundary. A row is a "
+          r"vertex, with its direction and angle, and the side from it to the next vertex. It also "
+          r"gives the inward normal of the side's plane (normal), the index $k$ and the symbol "
+          r"(sym) of its element, its partner, itself on a mirror, and the sense of the gluing.")
+    D.w(r"{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}rlllrlrl@{}}\toprule")
+    D.w(r"vertex & direction & angle & normal & $k$ & sym & partner & sense\\\midrule\endhead")
+    for i, (v, angle, s) in enumerate(zip(region["vertices"], region["angles"], sides)):
+        D.w(r"%d & %s & $%s$ & %s & %d & $\cls{%s}$ & %d & %s\\" % (
+            i, direction_tex(D, v), pi_multiple([angle[0], 2 * angle[1]]),
+            direction_tex(D, s["normal"]), s["element"],
+            mathify(items[s["element"]]["symbol"]), s["partner"], s["sense"]))
+    D.w(r"\bottomrule\end{longtable}}")
+
+
+def orbifold_presentation(D, orb):
+    """The presentation of a finite group that its region gives (CONVENTIONS.md section 17.7):
+    the generators, the elements of the sides, then the display of the generators and the
+    relators."""
+    pres = orb["presentation"]
+    if not pres["generators"]:
+        D.w(r"Thus the presentation of $\grp{G}$ has no generator and no relator.")
+        return
+    letters = generator_letters(orb)
+    D.w(D.define("element.presentation.generator", "local.presentation.brackets")
+        + r"The %s %s %s $\grp{G}$, with the presentation (CONVENTIONS.pdf, section 17.7)"
+        % ("elements" if len(letters) > 1 else "element",
+           listed([r"$%s$ of the side %d" % (letters[k], g["side"])
+                   for k, g in enumerate(pres["generators"])]),
+           "generate" if len(letters) > 1 else "generates"))
+    D.equation("presentation", r"\langle %s \mid %s \rangle." % (
+        ", ".join(letters), ", ".join(relator_tex(letters, r) for r in pres["relators"])))
+
+
+def orbifold_fibration(D, orb):
+    """The orientation space over the orbifold (orientation_space, CONVENTIONS.md sections 17.6
+    and 17.8): the map of the space of section Fundamental domain onto the orbifold of the
+    rotation subgroup, the sheets of that orbifold over this one, and the Seifert invariants of
+    the space."""
+    os_ = orb["orientation_space"]
+    rotations = D.rec["group"]["rotation_subgroup"]
+    space = (r"$\grp{SO(3)}$" if rotations == "C_1" else
+             r"$%s\backslash\grp{SO(3)}$" % grp(rotations))
+    if os_["base"] == "self":
+        onto = "this orbifold"
+    else:
+        onto = (r"the orbifold of %s, which covers this one with %d sheets"
+                % (linked_group(names.schoenflies_of(target_stem(os_["base"]))), os_["sheets"]))
+    s = os_["seifert"]
+    D.w("")
+    D.w(r"Forgetting the turn about a direction sends the space %s of "
+        r"section~\ref{s:fundamental_domain} onto %s. In the orientation of CONVENTIONS.pdf, "
+        r"section 17.6, the space has the Seifert invariants $%s$ over the sphere, the Euler "
+        r"number $%s$ and a first homology of order %d."
+        % (space, onto, seifert_tex(s), fraction_tex(s["euler_number"]),
+           s["first_homology_order"]))
+
+
+def target_stem(pointer):
+    """The record that a pointer "<catalogue>/<stem>#<JSON pointer>" names."""
+    return pointer.split("#", 1)[0].split("/", 1)[1]
+
+
+def orbit_space_sentences(D, space):
+    """The orbits of a continuous group on the sphere (orbit_space, CONVENTIONS.md sections 17.6
+    and 17.8): no orbifold of the kind of the finite groups; the arc of the polar angle, or the
+    one point, that they form; the stratum of each end and of the inside of the arc."""
+    def stab(st):
+        return r"of stabilizer %s" % linked_group(st["stabilizer"]["schoenflies"],
+                                                 st["stabilizer"]["o3_class"])
+    D.w(r"The orbits of $\grp{G}$ on the sphere $\twosphere$ of the directions form no orbifold "
+        r"of the kind of the finite groups.")
+    strata = {st["position"]: st for st in space["strata"]}
+    if space["kind"] == "point":
+        st = strata["point"]
+        D.w(r"They form one orbit, %s, so that the orbit space is a point "
+            r"(\texttt{orbit\symbol{95}space}), and the stabilizer of a direction is %s."
+            % (ORBIT_WORDS[st["orbit"]], linked_group(st["stabilizer"]["schoenflies"],
+                                                      st["stabilizer"]["o3_class"])))
+        return
+    t0, t1 = space["theta"]["t0"], space["theta"]["t1"]
+    a, b, inside = strata["t0"], strata["t1"], strata["interior"]
+    D.w(D.define("local.polar.theta")
+        + r"They are the points of the arc $%s \le \theta \le %s$ of the polar angle $\theta$ "
+          r"(\texttt{orbit\symbol{95}space}), and its ends and its inside are its strata. "
+        % (pi_multiple(t0), pi_multiple(t1))
+        + (r"Each end is %s, %s, " % (ORBIT_WORDS[a["orbit"]], stab(a))
+           if (a["orbit"], a["stabilizer"]) == (b["orbit"], b["stabilizer"]) else
+           r"The end $\theta = %s$ is %s, %s, the end $\theta = %s$ is %s, %s, "
+           % (pi_multiple(t0), ORBIT_WORDS[a["orbit"]], stab(a), pi_multiple(t1),
+              ORBIT_WORDS[b["orbit"]], stab(b)))
+        + r"and each point inside is %s, %s." % (ORBIT_WORDS[inside["orbit"]], stab(inside)))
+
+
+def orbifold_pointer(D, parent, key, pointer):
+    """The orbifold of a record of Double, that of its image in Rotation (the pointer orbifold,
+    or orbit_space for a continuous preimage, CONVENTIONS.md section 21.3), and for a preimage
+    the map of its orientation space onto that orbifold."""
+    image = rotation_linked(target_stem(pointer))
+    D.w(r"The group $\grp{G}$ acts on the directions through the covering map, so its %s of "
+        r"the document of %s (%s)."
+        % ("orbifold is that" if key == "orbifold" else "orbits are those", image, code(key)))
+    if key == "orbifold" and D.preimage:
+        D.w(r"Forgetting the turn about a direction sends the orientation space "
+            r"$\grp{G}\backslash%s$ onto that orbifold." % parent)
+
+
+def section_orbifold(D):
+    """The orbifold of the directions (CONVENTIONS.md sections 17.6 to 17.8), the last section of
+    the part The group where the record holds the orbifold.  For a finite group: the orbifold,
+    its symbol, surface, area and Euler characteristic, the table of its strata, the table of its
+    fundamental region, the presentation that the region gives and the Seifert fibered space over
+    it; for a continuous group the orbit space of its directions.  A record that names the
+    orbifold by a pointer (Double) states it in section Fundamental domain (domain_orbifold)."""
+    found = orbifold_of(D)
+    if found is None or found[0] == "pointer":
+        return
+    kind, orb = found
+    D.section("Orbifold", "sections 17.6 to 17.8" if kind == "finite" else "sections 17.6 and 17.8")
+    if kind == "continuous":
+        orbit_space_sentences(D, orb)
+        return
+    symbol = orbifold_symbol(D.rec["group"]["orbifold"])
+    D.w(r"The orbifold $\twosphere/\grp{G}$ is the set of the orbits of $\grp{G}$ on the sphere "
+        r"$\twosphere$ of the directions, each orbit marked by the class of the stabilizer of its "
+        r"directions. Its symbol is %s, and it lies on %s%s, of area $%s\pi$ and of Euler "
+        r"characteristic $%s$."
+        % (symbol, SURFACE[orb["surface"]],
+           r" (the cross-cap ${\times}$ of the symbol)" if orb["cross_cap"] else "",
+           "" if orb["area"] == [1, 1] else fraction_tex(orb["area"]),
+           fraction_tex(orb["euler_characteristic"])))
+    D.w(CONSTANTS)
+    orbifold_strata(D, orb)
+    orbifold_region(D, orb)
+    orbifold_presentation(D, orb)
+    orbifold_fibration(D, orb)
 
 
 def one_dimensional_value(D, t, var):
@@ -9068,7 +9418,8 @@ PARTS = (
     ("The group", (("identification", section_identification), ("elements", section_elements),
                    ("multiplication", section_multiplication), ("classes", section_classes),
                    ("class_space", section_class_space),
-                   ("fundamental_domain", section_fundamental_domain))),
+                   ("fundamental_domain", section_fundamental_domain),
+                   ("orbifold", section_orbifold))),
     ("Representations", (("irreps", section_irreps), ("character_table", section_character_table),
                          ("irrep_matrices", section_irrep_matrices),
                          ("families", section_families),

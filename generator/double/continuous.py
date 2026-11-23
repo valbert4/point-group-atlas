@@ -1343,6 +1343,8 @@ def record(base):
             base, doc["character_functions"]["irrep_families"])
     doc["spin_orbit_levels"] = spin_orbit_levels.continuous_block(base)
     doc["fundamental_domain"] = fundamental_domain_block(base)
+    # the orbit space of the directions of the image, which 2G moves through G (section 29.1)
+    doc["orbit_space"] = rot(base, "/orbit_space")
     sub = CS.block(base)
     if sub is not None:
         doc["subduction_subgroups"] = sub
@@ -1371,8 +1373,12 @@ def fundamental_domain_block(base):
     g, d, t = (F(*v["coefficient"]) for v in (group, vols["domain"], pin))
     if g * d != t or group["pi_power"] + vols["domain"]["pi_power"] != pin["pi_power"]:
         raise AssertionError("2%s: vol 2G vol F is not vol Pin-(3)" % base)
+    if "harmonics" not in rot_fd or "orbit_space" not in serialize.read_json(
+            names.catalogue_path("rotation", "%s/%s.json" % (names.RECORDS_DIR, base))):
+        raise AssertionError("2%s: the record of %s has no harmonics or orbit space" % (base, base))
     return {"image": rot(base, "/fundamental_domain"), "space": rot_fd["space"],
-            "volumes": {"group": group, "domain": vols["domain"], "pin_minus_3": pin}}
+            "volumes": {"group": group, "domain": vols["domain"], "pin_minus_3": pin},
+            "harmonics": rot(base, "/fundamental_domain/harmonics")}
 
 
 # ---------------------------------------------------------------- the subgroups of Pin-(3)

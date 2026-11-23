@@ -697,6 +697,53 @@ o3t := rec(
   ("fundamental_domain") := rec(
     ("cell") := rec( ("facets") := [], ("shape") := "whole", ("vertices") := [] ),
     ("components") := [ "proper", "improper" ],
+    ("harmonics") := rec(
+      ("blocks") := "rotation/C1#/subduction_basis",
+      ("count") := [
+        rec( ("J") := 0, ("harmonics") := 1, ("invariants") := 1, ("p") := 1 ),
+        rec( ("J") := 0, ("harmonics") := 1, ("invariants") := 1, ("p") := -1 ),
+        rec( ("J") := 1, ("harmonics") := 9, ("invariants") := 3, ("p") := 1 ),
+        rec( ("J") := 1, ("harmonics") := 9, ("invariants") := 3, ("p") := -1 ),
+        rec( ("J") := 2, ("harmonics") := 25, ("invariants") := 5, ("p") := 1 ),
+        rec( ("J") := 2, ("harmonics") := 25, ("invariants") := 5, ("p") := -1 ),
+        rec( ("J") := 3, ("harmonics") := 49, ("invariants") := 7, ("p") := 1 ),
+        rec( ("J") := 3, ("harmonics") := 49, ("invariants") := 7, ("p") := -1 ),
+        rec( ("J") := 4, ("harmonics") := 81, ("invariants") := 9, ("p") := 1 ),
+        rec( ("J") := 4, ("harmonics") := 81, ("invariants") := 9, ("p") := -1 ),
+        rec( ("J") := 5, ("harmonics") := 121, ("invariants") := 11, ("p") := 1 ),
+        rec( ("J") := 5, ("harmonics") := 121, ("invariants") := 11, ("p") := -1 ),
+        rec( ("J") := 6, ("harmonics") := 169, ("invariants") := 13, ("p") := 1 ),
+        rec( ("J") := 6, ("harmonics") := 169, ("invariants") := 13, ("p") := -1 ),
+        rec( ("J") := 7, ("harmonics") := 225, ("invariants") := 15, ("p") := 1 ),
+        rec( ("J") := 7, ("harmonics") := 225, ("invariants") := 15, ("p") := -1 ),
+        rec( ("J") := 8, ("harmonics") := 289, ("invariants") := 17, ("p") := 1 ),
+        rec( ("J") := 8, ("harmonics") := 289, ("invariants") := 17, ("p") := -1 ),
+        rec( ("J") := 9, ("harmonics") := 361, ("invariants") := 19, ("p") := 1 ),
+        rec( ("J") := 9, ("harmonics") := 361, ("invariants") := 19, ("p") := -1 ),
+        rec( ("J") := 10, ("harmonics") := 441, ("invariants") := 21, ("p") := 1 ),
+        rec( ("J") := 10, ("harmonics") := 441, ("invariants") := 21, ("p") := -1 )
+      ],
+      ("determinant") := "A",
+      ("euler") := "rotation/SO3#/character_functions/irrep_families/0/matrices/general_element/euler",
+      ("generating_function") := rec(
+        ("denominator") := [ 1, 1, 1, 1 ],
+        ("numerators") := [
+          rec( ("coefficients") := [ 1, 5, -5, -1 ], ("irrep_id") := "A", ("parity") := "(-1)^J" ),
+          rec(
+            ("coefficients") := [ 1, 5, -5, -1 ],
+            ("irrep_id") := "A",
+            ("parity") := "-(-1)^J"
+          )
+        ]
+      ),
+      ("norm") := rec(
+        ("divisor") := rec( ("coefficient") := 2, ("constant") := 1, ("index_symbol") := "J" ),
+        ("rule") := "the integral of |f_(kappa,m)|^2 over the domain is vol(domain)/(2J+1)",
+        ("volume") := "rotation/C1#/fundamental_domain/volumes/domain"
+      ),
+      ("rule") := "f_(kappa,m)(Q) = sum_(m') conj(c_(m')) D^(J,p)(Q)_(m'm), m = J, ..., -J, for the vector c = (c_J, ..., c_-J) of the copy kappa at J of the trivial irrep (p = (-1)^J) or of the determinant character (p = -(-1)^J), the amplitudes of its kets, and D^(J,p) the matrices of O(3) of the relation `euler`; then f_(kappa,m)(g Q) = f_(kappa,m)(Q) for every g of G: a function on the cosets G Q",
+      ("trivial") := "A"
+    ),
     ("space") := rec( ("lens") := [ 2, 1 ], ("name") := "lens space" ),
     ("volumes") := rec(
       ("cell") := rec( ("coefficient") := [ 8, 1 ], ("dimension") := 3, ("pi_power") := 2 ),
@@ -867,6 +914,37 @@ o3t := rec(
         ("primary") := true
       )
     ]
+  ),
+  ("orbifold") := rec(
+    ("area") := [ 4, 1 ],
+    ("cone_points") := [],
+    ("cross_cap") := false,
+    ("euler_characteristic") := [ 2, 1 ],
+    ("generic") := rec( ("orbit") := 0, ("stabilizer_node") := "n00" ),
+    ("mirror") := rec( ("reason") := "no-mirror", ("value") := fail ),
+    ("orientable") := true,
+    ("orientation_space") := rec(
+      ("base") := "self",
+      ("seifert") := rec(
+        ("b") := -2,
+        ("base_orientable") := true,
+        ("euler_number") := [ 2, 1 ],
+        ("fibers") := [],
+        ("first_homology_order") := 2,
+        ("genus") := 0
+      ),
+      ("sheets") := 1
+    ),
+    ("presentation") := rec( ("generators") := [], ("relators") := [] ),
+    ("region") := rec(
+      ("angles") := [],
+      ("contains") := rec( ("direction") := [ 1, 2, 4 ], ("element") := 0 ),
+      ("sides") := [],
+      ("vertex_classes") := [],
+      ("vertices") := []
+    ),
+    ("surface") := "sphere",
+    ("symbol") := "rotation/C1#/group/orbifold"
   ),
   ("permutation_representations") := rec(
     ("actions") := [

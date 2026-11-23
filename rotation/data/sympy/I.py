@@ -21352,6 +21352,57 @@ o3t = {
             ]
         },
         'components': ['proper', 'improper'],
+        'harmonics': {
+            'blocks': 'rotation/I#/subduction_basis',
+            'count': [
+                {'J': 0, 'harmonics': 1, 'invariants': 1, 'p': 1},
+                {'J': 0, 'harmonics': 1, 'invariants': 1, 'p': -1},
+                {'J': 1, 'harmonics': 0, 'invariants': 0, 'p': 1},
+                {'J': 1, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 2, 'harmonics': 0, 'invariants': 0, 'p': 1},
+                {'J': 2, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 3, 'harmonics': 0, 'invariants': 0, 'p': 1},
+                {'J': 3, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 4, 'harmonics': 0, 'invariants': 0, 'p': 1},
+                {'J': 4, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 5, 'harmonics': 0, 'invariants': 0, 'p': 1},
+                {'J': 5, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 6, 'harmonics': 13, 'invariants': 1, 'p': 1},
+                {'J': 6, 'harmonics': 13, 'invariants': 1, 'p': -1},
+                {'J': 7, 'harmonics': 0, 'invariants': 0, 'p': 1},
+                {'J': 7, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 8, 'harmonics': 0, 'invariants': 0, 'p': 1},
+                {'J': 8, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 9, 'harmonics': 0, 'invariants': 0, 'p': 1},
+                {'J': 9, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 10, 'harmonics': 21, 'invariants': 1, 'p': 1},
+                {'J': 10, 'harmonics': 21, 'invariants': 1, 'p': -1}
+            ],
+            'determinant': 'A1',
+            'euler': 'rotation/SO3#/character_functions/irrep_families/0/matrices/general_element/euler',
+            'generating_function': {
+                'denominator': [6, 6, 10, 10],
+                'numerators': [
+                    {
+                        'coefficients': [1, 0, 0, 0, 0, 0, 11, 0, 0, 0, 19, 0, 0, 0, 0, 31, -31, 0, 0, 0, 0, -19, 0, 0, 0, -11, 0, 0, 0, 0, 0, -1],
+                        'irrep_id': 'A1',
+                        'parity': '(-1)^J'
+                    },
+                    {
+                        'coefficients': [1, 0, 0, 0, 0, 0, 11, 0, 0, 0, 19, 0, 0, 0, 0, 31, -31, 0, 0, 0, 0, -19, 0, 0, 0, -11, 0, 0, 0, 0, 0, -1],
+                        'irrep_id': 'A1',
+                        'parity': '-(-1)^J'
+                    }
+                ]
+            },
+            'norm': {
+                'divisor': {'coefficient': 2, 'constant': 1, 'index_symbol': 'J'},
+                'rule': 'the integral of |f_(kappa,m)|^2 over the domain is vol(domain)/(2J+1)',
+                'volume': 'rotation/I#/fundamental_domain/volumes/domain'
+            },
+            'rule': "f_(kappa,m)(Q) = sum_(m') conj(c_(m')) D^(J,p)(Q)_(m'm), m = J, ..., -J, for the vector c = (c_J, ..., c_-J) of the copy kappa at J of the trivial irrep (p = (-1)^J) or of the determinant character (p = -(-1)^J), the amplitudes of its kets, and D^(J,p) the matrices of O(3) of the relation `euler`; then f_(kappa,m)(g Q) = f_(kappa,m)(Q) for every g of G: a function on the cosets G Q",
+            'trivial': 'A1'
+        },
         'space': {
             'lens': {'reason': 'not-defined-for-family', 'value': None},
             'name': 'Poincare dodecahedral space'
@@ -21780,6 +21831,144 @@ o3t = {
                 'primary': False
             }
         ]
+    },
+    'orbifold': {
+        'area': [1, 15],
+        'cone_points': [
+            {
+                'direction': [Rational(0,1), Rational(0,1), Rational(1,1)],
+                'orbit': 1,
+                'order': 2,
+                'stabilizer_node': 'n01',
+                'vertex': 0
+            },
+            {
+                'direction': [
+                    Rational(1,1),
+                    Rational(0,1),
+                    (Rational(1,1) + Rational(-1,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1,1)*exp(2*pi*I*Rational(3,5)))
+                ],
+                'orbit': 2,
+                'order': 3,
+                'stabilizer_node': 'n02',
+                'vertex': 1
+            },
+            {
+                'direction': [
+                    Rational(0,1),
+                    Rational(1,1),
+                    (Rational(-1,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1,1)*exp(2*pi*I*Rational(3,5)))
+                ],
+                'orbit': 3,
+                'order': 5,
+                'stabilizer_node': 'n04',
+                'vertex': 3
+            }
+        ],
+        'cross_cap': False,
+        'euler_characteristic': [1, 30],
+        'generic': {'orbit': 0, 'stabilizer_node': 'n00'},
+        'mirror': {'reason': 'no-mirror', 'value': None},
+        'orientable': True,
+        'orientation_space': {
+            'base': 'self',
+            'seifert': {
+                'b': -2,
+                'base_orientable': True,
+                'euler_number': [1, 30],
+                'fibers': [
+                    {'alpha': 2, 'beta': 1, 'cone_point': 0},
+                    {'alpha': 3, 'beta': 2, 'cone_point': 1},
+                    {'alpha': 5, 'beta': 4, 'cone_point': 2}
+                ],
+                'first_homology_order': 1,
+                'genus': 0
+            },
+            'sheets': 1
+        },
+        'presentation': {
+            'generators': [{'element': 26, 'side': 0}, {'element': 6, 'side': 2}],
+            'relators': [
+                {'power': 2, 'vertex_class': 0, 'word': [[1, -1], [0, -1]]},
+                {'power': 3, 'vertex_class': 1, 'word': [[0, 1]]},
+                {'power': 5, 'vertex_class': 2, 'word': [[1, 1]]}
+            ]
+        },
+        'region': {
+            'angles': [[1, 2], [2, 3], [1, 2], [2, 5]],
+            'contains': {'direction': [Rational(1,1), Rational(2,1), Rational(4,1)], 'element': 0},
+            'sides': [
+                {
+                    'element': 26,
+                    'from': 0,
+                    'kind': 'glued',
+                    'normal': [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    'partner': 1,
+                    'sense': 'reversed',
+                    'to': 1
+                },
+                {
+                    'element': 25,
+                    'from': 1,
+                    'kind': 'glued',
+                    'normal': [
+                        (Rational(-1,1) + Rational(1,1)*exp(2*pi*I*Rational(2,5)) + Rational(1,1)*exp(2*pi*I*Rational(3,5))),
+                        (Rational(-1,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1,1)*exp(2*pi*I*Rational(3,5))),
+                        Rational(1,1)
+                    ],
+                    'partner': 0,
+                    'sense': 'reversed',
+                    'to': 2
+                },
+                {
+                    'element': 6,
+                    'from': 2,
+                    'kind': 'glued',
+                    'normal': [
+                        Rational(-1,1),
+                        (Rational(-1,1) + Rational(1,1)*exp(2*pi*I*Rational(2,5)) + Rational(1,1)*exp(2*pi*I*Rational(3,5))),
+                        (Rational(-1,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1,1)*exp(2*pi*I*Rational(3,5)))
+                    ],
+                    'partner': 3,
+                    'sense': 'reversed',
+                    'to': 3
+                },
+                {
+                    'element': 5,
+                    'from': 3,
+                    'kind': 'glued',
+                    'normal': [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    'partner': 2,
+                    'sense': 'reversed',
+                    'to': 0
+                }
+            ],
+            'vertex_classes': [
+                {'angle_sum': [1, 1], 'order': 2, 'stratum': 'cone point', 'vertices': [0, 2]},
+                {'angle_sum': [2, 3], 'order': 3, 'stratum': 'cone point', 'vertices': [1]},
+                {'angle_sum': [2, 5], 'order': 5, 'stratum': 'cone point', 'vertices': [3]}
+            ],
+            'vertices': [
+                [Rational(0,1), Rational(0,1), Rational(1,1)],
+                [
+                    Rational(1,1),
+                    Rational(0,1),
+                    (Rational(1,1) + Rational(-1,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1,1)*exp(2*pi*I*Rational(3,5)))
+                ],
+                [
+                    (Rational(-1,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1,1)*exp(2*pi*I*Rational(3,5))),
+                    Rational(1,1),
+                    (Rational(1,1) + Rational(-1,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1,1)*exp(2*pi*I*Rational(3,5)))
+                ],
+                [
+                    Rational(0,1),
+                    Rational(1,1),
+                    (Rational(-1,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1,1)*exp(2*pi*I*Rational(3,5)))
+                ]
+            ]
+        },
+        'surface': 'sphere',
+        'symbol': 'rotation/I#/group/orbifold'
     },
     'permutation_representations': {
         'actions': [

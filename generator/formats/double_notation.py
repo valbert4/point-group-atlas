@@ -41,6 +41,12 @@ DROP = (
     "group.W", "element.coset.least", "local.coset.image", "index.coset",
     # U and U(R): the canonical lift U(g) in this catalogue
     "matrix.unitary", "matrix.operator",
+    # the orbifold and the harmonics on the orientation space: the documents name the image's
+    # (section 21.3) and set no table of their own
+    "function.harmonic.orientation", "vector.direction", "local.polar.theta",
+    "element.presentation.generator", "local.presentation.brackets", "head.stratum",
+    "head.order.point", "head.direction", "head.stabilizer", "head.size.orbit", "head.shape",
+    "head.vertex.region", "head.angle", "head.normal.side", "head.partner", "head.sense",
 )
 
 # The records of Rotation that no document of this catalogue uses, nor its conventions (lint rule
@@ -77,6 +83,10 @@ DROP_UNUSED = (
     "local.matrix.crossing", "local.tensor.T", "local.irrep.V", "local.coefficients.f",
     "local.bispectrum.B", "local.lcm.L", "local.numerators", "local.denominators",
     "local.cyclotomic.polynomial", "index.harmonic.k", "index.harmonic.a", "index.rule.k",
+    "local.harmonic.amplitudes", "local.harmonic.exponent", "local.orbifold.chi", "local.lens.pq",
+    "local.seifert.r", "local.seifert.alpha", "local.seifert.beta", "local.seifert.b",
+    "local.seifert.euler", "local.region.index", "local.region.vertex", "local.region.side",
+    "local.region.mirror", "local.region.word", "local.azimuth.phi",
     "local.dummy.i", "local.dummy.j", "local.dummy.k", "local.dummy.h",
     "local.dummy.n", "local.dummy.lambda", "local.coefficients.a",
     "head.index.subgroup", "head.terms", "head.parity", "head.function",

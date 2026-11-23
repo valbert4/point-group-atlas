@@ -15,6 +15,7 @@ o3d = {
         'section_of': 'double/2C5#',
         'symbol': 'C_5'
     },
+    'orbifold': 'rotation/C5#/orbifold',
     'schema': 'point-group-atlas/double/section/1',
     'subgroup_lattice': {
         'counts': {

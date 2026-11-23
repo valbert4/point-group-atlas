@@ -106,6 +106,7 @@
           "enum": [
             "continuous-group",
             "depends-on-the-point",
+            "no-mirror",
             "not-a-named-shape",
             "not-a-rational-turn",
             "not-a-regular-compound",
@@ -1163,6 +1164,10 @@
       "additionalProperties": false,
       "description": "See CONVENTIONS.md section 29.1.",
       "properties": {
+        "harmonics": {
+          "description": "See CONVENTIONS.md section 29.1.",
+          "type": "string"
+        },
         "image": {
           "description": "See CONVENTIONS.md section 29.1.",
           "type": "string"
@@ -1284,6 +1289,7 @@
         }
       },
       "required": [
+        "harmonics",
         "image",
         "space",
         "volumes"
@@ -2466,6 +2472,10 @@
         "rule"
       ],
       "type": "object"
+    },
+    "orbit_space": {
+      "description": "See CONVENTIONS.md section 29.1.",
+      "type": "string"
     },
     "schema": {
       "const": "point-group-atlas/double/group-continuous/1",
@@ -5023,6 +5033,7 @@
     "group",
     "invariants",
     "jj_configurations",
+    "orbit_space",
     "schema",
     "spin_orbit_levels",
     "spin_orbitals",

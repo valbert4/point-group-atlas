@@ -614,6 +614,7 @@ o3d := rec(
   ),
   ("domain") := "continuous",
   ("fundamental_domain") := rec(
+    ("harmonics") := "rotation/SO3#/fundamental_domain/harmonics",
     ("image") := "rotation/SO3#/fundamental_domain",
     ("space") := rec(
       ("lens") := rec( ("reason") := "not-defined-for-family", ("value") := fail ),
@@ -928,6 +929,7 @@ o3d := rec(
     ],
     ("rule") := "Lambda^n of the spinor level L, n = 0, ..., dim L: chi = e_n(g), n e_n = sum_{k=1}^{n} (-1)^(k-1) e_(n-k) chi_L(g^k); Lambda^(d-n)(L) = Lambda^n(L) (x) Lambda^d(L)"
   ),
+  ("orbit_space") := "rotation/SO3#/orbit_space",
   ("schema") := "point-group-atlas/double/group-continuous/1",
   ("spin_orbit_levels") := rec(
     ("levels") := [

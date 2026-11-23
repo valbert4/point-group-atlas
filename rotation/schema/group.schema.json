@@ -76,6 +76,7 @@
           "enum": [
             "continuous-group",
             "depends-on-the-point",
+            "no-mirror",
             "not-a-named-shape",
             "not-a-rational-turn",
             "not-a-regular-compound",
@@ -1077,6 +1078,171 @@
           },
           "type": "array"
         },
+        "harmonics": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 17.5.",
+          "properties": {
+            "blocks": {
+              "description": "See CONVENTIONS.md section 17.5.",
+              "type": "string"
+            },
+            "count": {
+              "description": "See CONVENTIONS.md section 17.5.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 17.5.",
+                "properties": {
+                  "J": {
+                    "description": "See CONVENTIONS.md section 17.5.",
+                    "type": "integer"
+                  },
+                  "harmonics": {
+                    "description": "See CONVENTIONS.md section 17.5.",
+                    "type": "integer"
+                  },
+                  "invariants": {
+                    "description": "See CONVENTIONS.md section 17.5.",
+                    "type": "integer"
+                  },
+                  "p": {
+                    "description": "See CONVENTIONS.md section 17.5.",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "J",
+                  "harmonics",
+                  "invariants",
+                  "p"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "determinant": {
+              "description": "See CONVENTIONS.md section 17.5.",
+              "type": "string"
+            },
+            "euler": {
+              "description": "See CONVENTIONS.md section 17.5.",
+              "type": "string"
+            },
+            "generating_function": {
+              "additionalProperties": false,
+              "description": "See CONVENTIONS.md section 17.5.",
+              "properties": {
+                "denominator": {
+                  "description": "See CONVENTIONS.md section 17.5.",
+                  "items": {
+                    "description": "See CONVENTIONS.md section 17.5.",
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                "numerators": {
+                  "description": "See CONVENTIONS.md section 17.5.",
+                  "items": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 17.5.",
+                    "properties": {
+                      "coefficients": {
+                        "description": "See CONVENTIONS.md section 17.5.",
+                        "items": {
+                          "description": "See CONVENTIONS.md section 17.5.",
+                          "type": "integer"
+                        },
+                        "type": "array"
+                      },
+                      "irrep_id": {
+                        "description": "See CONVENTIONS.md section 17.5.",
+                        "type": "string"
+                      },
+                      "parity": {
+                        "description": "See CONVENTIONS.md section 17.5.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "coefficients",
+                      "irrep_id",
+                      "parity"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "denominator",
+                "numerators"
+              ],
+              "type": "object"
+            },
+            "norm": {
+              "additionalProperties": false,
+              "description": "See CONVENTIONS.md section 17.5.",
+              "properties": {
+                "divisor": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 17.5.",
+                  "properties": {
+                    "coefficient": {
+                      "description": "See CONVENTIONS.md section 17.5.",
+                      "type": "integer"
+                    },
+                    "constant": {
+                      "description": "See CONVENTIONS.md section 17.5.",
+                      "type": "integer"
+                    },
+                    "index_symbol": {
+                      "description": "See CONVENTIONS.md section 17.5.",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "coefficient",
+                    "constant",
+                    "index_symbol"
+                  ],
+                  "type": "object"
+                },
+                "rule": {
+                  "description": "See CONVENTIONS.md section 17.5.",
+                  "type": "string"
+                },
+                "volume": {
+                  "description": "See CONVENTIONS.md section 17.5.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "divisor",
+                "rule",
+                "volume"
+              ],
+              "type": "object"
+            },
+            "rule": {
+              "description": "See CONVENTIONS.md section 17.5.",
+              "type": "string"
+            },
+            "trivial": {
+              "description": "See CONVENTIONS.md section 17.5.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "blocks",
+            "count",
+            "determinant",
+            "euler",
+            "generating_function",
+            "norm",
+            "rule",
+            "trivial"
+          ],
+          "type": "object"
+        },
         "space": {
           "additionalProperties": false,
           "description": "See CONVENTIONS.md section 17.",
@@ -1236,6 +1402,7 @@
       "required": [
         "cell",
         "components",
+        "harmonics",
         "space",
         "volumes"
       ],
@@ -2217,6 +2384,522 @@
         "hilbert_series",
         "polynomial_ring",
         "polynomials"
+      ],
+      "type": "object"
+    },
+    "orbifold": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 17.8.",
+      "properties": {
+        "area": {
+          "description": "See CONVENTIONS.md section 17.8.",
+          "items": {
+            "description": "See CONVENTIONS.md section 17.8.",
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "cone_points": {
+          "description": "See CONVENTIONS.md section 17.8.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 17.8.",
+            "properties": {
+              "direction": {
+                "description": "See CONVENTIONS.md section 17.8.",
+                "items": {
+                  "$ref": "#/$defs/exact",
+                  "description": "See CONVENTIONS.md section 17.8."
+                },
+                "type": "array"
+              },
+              "orbit": {
+                "description": "See CONVENTIONS.md section 17.8.",
+                "type": "integer"
+              },
+              "order": {
+                "description": "See CONVENTIONS.md section 17.8.",
+                "type": "integer"
+              },
+              "stabilizer_node": {
+                "description": "See CONVENTIONS.md section 17.8.",
+                "type": "string"
+              },
+              "vertex": {
+                "description": "See CONVENTIONS.md section 17.8.",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "direction",
+              "orbit",
+              "order",
+              "stabilizer_node",
+              "vertex"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "cross_cap": {
+          "description": "See CONVENTIONS.md section 17.8.",
+          "type": "boolean"
+        },
+        "euler_characteristic": {
+          "description": "See CONVENTIONS.md section 17.8.",
+          "items": {
+            "description": "See CONVENTIONS.md section 17.8.",
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "generic": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 17.8.",
+          "properties": {
+            "orbit": {
+              "description": "See CONVENTIONS.md section 17.8.",
+              "type": "integer"
+            },
+            "stabilizer_node": {
+              "description": "See CONVENTIONS.md section 17.8.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "orbit",
+            "stabilizer_node"
+          ],
+          "type": "object"
+        },
+        "mirror": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/null"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "arcs": {
+                  "description": "See CONVENTIONS.md section 17.8.",
+                  "items": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 17.8.",
+                    "properties": {
+                      "orbit": {
+                        "description": "See CONVENTIONS.md section 17.8.",
+                        "type": "integer"
+                      },
+                      "side": {
+                        "description": "See CONVENTIONS.md section 17.8.",
+                        "type": "integer"
+                      },
+                      "stabilizer_node": {
+                        "description": "See CONVENTIONS.md section 17.8.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "orbit",
+                      "side",
+                      "stabilizer_node"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "corners": {
+                  "description": "See CONVENTIONS.md section 17.8.",
+                  "items": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 17.8.",
+                    "properties": {
+                      "direction": {
+                        "description": "See CONVENTIONS.md section 17.8.",
+                        "items": {
+                          "$ref": "#/$defs/exact",
+                          "description": "See CONVENTIONS.md section 17.8."
+                        },
+                        "type": "array"
+                      },
+                      "orbit": {
+                        "description": "See CONVENTIONS.md section 17.8.",
+                        "type": "integer"
+                      },
+                      "order": {
+                        "description": "See CONVENTIONS.md section 17.8.",
+                        "type": "integer"
+                      },
+                      "stabilizer_node": {
+                        "description": "See CONVENTIONS.md section 17.8.",
+                        "type": "string"
+                      },
+                      "vertex": {
+                        "description": "See CONVENTIONS.md section 17.8.",
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "direction",
+                      "orbit",
+                      "order",
+                      "stabilizer_node",
+                      "vertex"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "arcs",
+                "corners"
+              ],
+              "type": "object"
+            }
+          ],
+          "description": "See CONVENTIONS.md section 17.8."
+        },
+        "orientable": {
+          "description": "See CONVENTIONS.md section 17.8.",
+          "type": "boolean"
+        },
+        "orientation_space": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 17.8.",
+          "properties": {
+            "base": {
+              "description": "See CONVENTIONS.md section 17.8.",
+              "type": "string"
+            },
+            "seifert": {
+              "additionalProperties": false,
+              "description": "See CONVENTIONS.md section 17.8.",
+              "properties": {
+                "b": {
+                  "description": "See CONVENTIONS.md section 17.8.",
+                  "type": "integer"
+                },
+                "base_orientable": {
+                  "description": "See CONVENTIONS.md section 17.8.",
+                  "type": "boolean"
+                },
+                "euler_number": {
+                  "description": "See CONVENTIONS.md section 17.8.",
+                  "items": {
+                    "description": "See CONVENTIONS.md section 17.8.",
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                "fibers": {
+                  "description": "See CONVENTIONS.md section 17.8.",
+                  "items": {
+                    "additionalProperties": false,
+                    "description": "See CONVENTIONS.md section 17.8.",
+                    "properties": {
+                      "alpha": {
+                        "description": "See CONVENTIONS.md section 17.8.",
+                        "type": "integer"
+                      },
+                      "beta": {
+                        "description": "See CONVENTIONS.md section 17.8.",
+                        "type": "integer"
+                      },
+                      "cone_point": {
+                        "description": "See CONVENTIONS.md section 17.8.",
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "alpha",
+                      "beta",
+                      "cone_point"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "first_homology_order": {
+                  "description": "See CONVENTIONS.md section 17.8.",
+                  "type": "integer"
+                },
+                "genus": {
+                  "description": "See CONVENTIONS.md section 17.8.",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "b",
+                "base_orientable",
+                "euler_number",
+                "fibers",
+                "first_homology_order",
+                "genus"
+              ],
+              "type": "object"
+            },
+            "sheets": {
+              "description": "See CONVENTIONS.md section 17.8.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "base",
+            "seifert",
+            "sheets"
+          ],
+          "type": "object"
+        },
+        "presentation": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 17.7.",
+          "properties": {
+            "generators": {
+              "description": "See CONVENTIONS.md section 17.7.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 17.7.",
+                "properties": {
+                  "element": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "type": "integer"
+                  },
+                  "side": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "element",
+                  "side"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "relators": {
+              "description": "See CONVENTIONS.md section 17.7.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 17.7.",
+                "properties": {
+                  "power": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "type": "integer"
+                  },
+                  "side": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "type": "integer"
+                  },
+                  "vertex_class": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "type": "integer"
+                  },
+                  "word": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 17.7.",
+                      "items": {
+                        "description": "See CONVENTIONS.md section 17.7.",
+                        "type": "integer"
+                      },
+                      "type": "array"
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "power",
+                  "word"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "generators",
+            "relators"
+          ],
+          "type": "object"
+        },
+        "region": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 17.7.",
+          "properties": {
+            "angles": {
+              "description": "See CONVENTIONS.md section 17.7.",
+              "items": {
+                "description": "See CONVENTIONS.md section 17.7.",
+                "items": {
+                  "description": "See CONVENTIONS.md section 17.7.",
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "contains": {
+              "additionalProperties": false,
+              "description": "See CONVENTIONS.md section 17.7.",
+              "properties": {
+                "direction": {
+                  "description": "See CONVENTIONS.md section 17.7.",
+                  "items": {
+                    "$ref": "#/$defs/exact",
+                    "description": "See CONVENTIONS.md section 17.7."
+                  },
+                  "type": "array"
+                },
+                "element": {
+                  "description": "See CONVENTIONS.md section 17.7.",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "direction",
+                "element"
+              ],
+              "type": "object"
+            },
+            "sides": {
+              "description": "See CONVENTIONS.md section 17.7.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 17.7.",
+                "properties": {
+                  "element": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "type": "integer"
+                  },
+                  "from": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "type": "integer"
+                  },
+                  "kind": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "type": "string"
+                  },
+                  "normal": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "items": {
+                      "$ref": "#/$defs/exact",
+                      "description": "See CONVENTIONS.md section 17.7."
+                    },
+                    "type": "array"
+                  },
+                  "partner": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "type": "integer"
+                  },
+                  "sense": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "type": "string"
+                  },
+                  "to": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "element",
+                  "from",
+                  "kind",
+                  "normal",
+                  "partner",
+                  "sense",
+                  "to"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "vertex_classes": {
+              "description": "See CONVENTIONS.md section 17.7.",
+              "items": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 17.7.",
+                "properties": {
+                  "angle_sum": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 17.7.",
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "order": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "type": "integer"
+                  },
+                  "stratum": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "type": "string"
+                  },
+                  "vertices": {
+                    "description": "See CONVENTIONS.md section 17.7.",
+                    "items": {
+                      "description": "See CONVENTIONS.md section 17.7.",
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "angle_sum",
+                  "order",
+                  "stratum",
+                  "vertices"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "vertices": {
+              "description": "See CONVENTIONS.md section 17.7.",
+              "items": {
+                "description": "See CONVENTIONS.md section 17.7.",
+                "items": {
+                  "$ref": "#/$defs/exact",
+                  "description": "See CONVENTIONS.md section 17.7."
+                },
+                "type": "array"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "angles",
+            "contains",
+            "sides",
+            "vertex_classes",
+            "vertices"
+          ],
+          "type": "object"
+        },
+        "surface": {
+          "description": "See CONVENTIONS.md section 17.8.",
+          "type": "string"
+        },
+        "symbol": {
+          "description": "See CONVENTIONS.md section 17.8.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "area",
+        "cone_points",
+        "cross_cap",
+        "euler_characteristic",
+        "generic",
+        "mirror",
+        "orientable",
+        "orientation_space",
+        "presentation",
+        "region",
+        "surface",
+        "symbol"
       ],
       "type": "object"
     },
@@ -4598,6 +5281,7 @@
     "fusion",
     "group",
     "invariants",
+    "orbifold",
     "permutation_representations",
     "schema",
     "subduction_basis",

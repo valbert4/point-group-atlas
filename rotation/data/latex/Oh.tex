@@ -208,6 +208,7 @@
 \newcommand{\lensspace}[2]{\mathsf{L}(#1, #2)}
 \newcommand{\twosphere}{\mathsf{S}^{2}}
 \newcommand{\projplane}{\mathbb{R}\mathsf{P}^{2}}
+\newcommand{\axisd}{\mathbf{d}}
 \newcommand{\schur}[1]{\mathbb{S}_{#1}}
 \newcommand{\shape}[1]{[#1]}
 \newcommand{\term}[2]{{}^{#1}#2}
@@ -238,7 +239,7 @@
 \partbox{The group}
 \section{Names and structure}\label{s:identification}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.0.1}{0.1}, \href{../../CONVENTIONS.pdf\#conv.2}{2}, \href{../../CONVENTIONS.pdf\#conv.3}{3} and \href{../../CONVENTIONS.pdf\#conv.12}{12}.
-\label{n:mark.conjugates}\label{n:mark.letter}{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{\texttt{commutator\symbol{95}subgroup}}\cellmax{\texttt{contains\symbol{95}inversion}}\cellmax{\texttt{gap\symbol{95}smallgroup\symbol{95}id}}\cellmax{\texttt{rotation\symbol{95}subgroup}}\cellmax{\texttt{contains\symbol{95}sigma\symbol{95}h}}\cellmax{\texttt{crystallographic}}\cellmax{\texttt{ihrig\symbol{95}golubitsky}}\cellmax{\texttt{hermann\symbol{95}mauguin}}\cellmax{\texttt{crystal\symbol{95}family}}\cellmax{\texttt{crystal\symbol{95}system}}\cellmax{\texttt{abstract\symbol{95}type}}\cellmax{\texttt{conway\symbol{95}smith}}\cellmax{\texttt{product\symbol{95}form}}\cellmax{\texttt{centralizer}}\cellmax{\texttt{schoenflies}}\cellmax{\texttt{laue\symbol{95}class}}\cellmax{\texttt{normalizer}}\cellmax{\texttt{altmann\symbol{95}T}}\cellmax{\texttt{lattices}}\cellmax{\texttt{orbifold}}\cellmax{\texttt{center}}\cellmax{\texttt{olive}}\cellmax{\texttt{order}}\cellmax{\texttt{polar}}\cellmax{\texttt{type}}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{semidirect: $\grp{O}$${}\sdprod{}$$\grp{C_{s}}$\clsletter{a}\,\nconj{3}; $\grp{O}$${}\sdprod{}$$\grp{C_{s}}$\clsletter{b}\,\nconj{6}; $\grp{T_{h}}$${}\sdprod{}$$\grp{C_{2}}$\clsletter{b}\,\nconj{6}; $\grp{T_{h}}$${}\sdprod{}$$\grp{C_{s}}$\clsletter{b}\,\nconj{6}; $\grp{T_{d}}$${}\sdprod{}$$\grp{C_{2}}$\clsletter{b}\,\nconj{6}; $\grp{T_{d}}$${}\sdprod{}$$\grp{C_{s}}$\clsletter{a}\,\nconj{3}; $\grp{T}$${}\sdprod{}$$\grp{C_{2h}}$\clsletter{b}\,\nconj{6}; $\grp{T}$${}\sdprod{}$$\grp{C_{2v}}$\clsletter{c}\,\nconj{6}; $\grp{D_{2h}}$\clsletter{a}${}\sdprod{}$$\grp{D_{3}}$\,\nconj{4}; $\grp{D_{2h}}$\clsletter{a}${}\sdprod{}$$\grp{C_{3v}}$\,\nconj{4}; $\grp{D_{2}}$\clsletter{a}${}\sdprod{}$$\grp{D_{3d}}$\,\nconj{4}}\cellmax{$\grp{C_{i}}$, index 24 in the normalizer}\cellmax{cP, cI, cF (holohedry $\grp{O_{h}}$)}\cellmax{direct: $\grp{O}$${}\dirprod{}$$\grp{C_{i}}$; $\grp{T_{d}}$${}\dirprod{}$$\grp{C_{i}}$}\cellmax{$\grp{C_{i}}$, index 24}\cellmax{$\grp{O_{h}}$, index 1}\cellmax{$\Sym{4}\dirprod\Cyc{2}$}\cellmax{$\grp{O}$, index 2}\cellmax{$\grp{T}$, index 4}\cellmax{$\igname{\grp{O} \oplus \grp{Z_{2}^{c}}}$}\cellmax{$\olivename{\grp{O} + \grp{Z_{2}^{c}}}$}\cellmax{[48, 48]}\cellmax{cubic}\cellmax{$\hmname{m\bar{3}m}$}\cellmax{$\orbname{{\ast}432}$}\cellmax{$\conwayname{\pm\grp{O}}$}\cellmax{$\grp{O_{h}}$}\cellmax{yes}\cellmax{48}\cellmax{71}\cellmax{II}\cellmax{no}\fillcap\begin{longtable}{@{}l>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
+\label{n:mark.conjugates}\label{n:mark.letter}{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{\texttt{commutator\symbol{95}subgroup}}\cellmax{\texttt{contains\symbol{95}inversion}}\cellmax{\texttt{gap\symbol{95}smallgroup\symbol{95}id}}\cellmax{\texttt{rotation\symbol{95}subgroup}}\cellmax{\texttt{contains\symbol{95}sigma\symbol{95}h}}\cellmax{\texttt{crystallographic}}\cellmax{\texttt{ihrig\symbol{95}golubitsky}}\cellmax{\texttt{hermann\symbol{95}mauguin}}\cellmax{\texttt{crystal\symbol{95}family}}\cellmax{\texttt{crystal\symbol{95}system}}\cellmax{\texttt{abstract\symbol{95}type}}\cellmax{\texttt{conway\symbol{95}smith}}\cellmax{\texttt{product\symbol{95}form}}\cellmax{\texttt{centralizer}}\cellmax{\texttt{schoenflies}}\cellmax{\texttt{laue\symbol{95}class}}\cellmax{\texttt{normalizer}}\cellmax{\texttt{altmann\symbol{95}T}}\cellmax{\texttt{lattices}}\cellmax{\texttt{orbifold}}\cellmax{\texttt{center}}\cellmax{\texttt{olive}}\cellmax{\texttt{order}}\cellmax{\texttt{polar}}\cellmax{\texttt{type}}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{semidirect: $\grp{O}$${}\sdprod{}$$\grp{C_{s}}$\clsletter{a}\,\nconj{3}; $\grp{O}$${}\sdprod{}$$\grp{C_{s}}$\clsletter{b}\,\nconj{6}; $\grp{T_{h}}$${}\sdprod{}$$\grp{C_{2}}$\clsletter{b}\,\nconj{6}; $\grp{T_{h}}$${}\sdprod{}$$\grp{C_{s}}$\clsletter{b}\,\nconj{6}; $\grp{T_{d}}$${}\sdprod{}$$\grp{C_{2}}$\clsletter{b}\,\nconj{6}; $\grp{T_{d}}$${}\sdprod{}$$\grp{C_{s}}$\clsletter{a}\,\nconj{3}; $\grp{T}$${}\sdprod{}$$\grp{C_{2h}}$\clsletter{b}\,\nconj{6}; $\grp{T}$${}\sdprod{}$$\grp{C_{2v}}$\clsletter{c}\,\nconj{6}; $\grp{D_{2h}}$\clsletter{a}${}\sdprod{}$$\grp{D_{3}}$\,\nconj{4}; $\grp{D_{2h}}$\clsletter{a}${}\sdprod{}$$\grp{C_{3v}}$\,\nconj{4}; $\grp{D_{2}}$\clsletter{a}${}\sdprod{}$$\grp{D_{3d}}$\,\nconj{4}}\cellmax{$\grp{C_{i}}$, index 24 in the normalizer}\cellmax{$\orbname{{\ast}432}$, section~\ref{s:orbifold}}\cellmax{cP, cI, cF (holohedry $\grp{O_{h}}$)}\cellmax{direct: $\grp{O}$${}\dirprod{}$$\grp{C_{i}}$; $\grp{T_{d}}$${}\dirprod{}$$\grp{C_{i}}$}\cellmax{$\grp{C_{i}}$, index 24}\cellmax{$\grp{O_{h}}$, index 1}\cellmax{$\Sym{4}\dirprod\Cyc{2}$}\cellmax{$\grp{O}$, index 2}\cellmax{$\grp{T}$, index 4}\cellmax{$\igname{\grp{O} \oplus \grp{Z_{2}^{c}}}$}\cellmax{$\olivename{\grp{O} + \grp{Z_{2}^{c}}}$}\cellmax{[48, 48]}\cellmax{cubic}\cellmax{$\hmname{m\bar{3}m}$}\cellmax{$\conwayname{\pm\grp{O}}$}\cellmax{$\grp{O_{h}}$}\cellmax{yes}\cellmax{48}\cellmax{71}\cellmax{II}\cellmax{no}\fillcap\begin{longtable}{@{}l>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
 \texttt{type} & II\\
 \grouprule{0pt}{\lightrulewidth}
 \texttt{abstract\symbol{95}type} & $\Sym{4}\dirprod\Cyc{2}$\\
@@ -267,7 +268,7 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \texttt{hermann\symbol{95}mauguin} & $\hmname{m\bar{3}m}$\\
 \texttt{ihrig\symbol{95}golubitsky} & $\igname{\grp{O} \oplus \grp{Z_{2}^{c}}}$\\
 \texttt{olive} & $\olivename{\grp{O} + \grp{Z_{2}^{c}}}$\\
-\texttt{orbifold} & $\orbname{{\ast}432}$\\
+\texttt{orbifold} & $\orbname{{\ast}432}$, section~\ref{s:orbifold}\\
 \texttt{schoenflies} & \href{Oh.pdf}{$\grp{O_{h}}$}\\
 \bottomrule\end{longtable}}
 \leavevmode\label{n:element.inversion}The field \texttt{type} is I when $\grp{O_{h}}$ contains only rotations, II when $\grp{O_{h}}$ contains the inversion $\elt{i}$ and III otherwise. The fields \texttt{center} and \texttt{commutator\symbol{95}subgroup} are classes of the table of section~\ref{s:subgroups}. The field \texttt{polar} is yes when $\grp{O_{h}}$ fixes a nonzero vector. Crystallographers call a group chiral, or enantiomorphic, when its type is I, and centrosymmetric when it contains $\elt{i}$. The field \texttt{lattices} gives the Bravais types of the lattices of the crystals of $\grp{O_{h}}$ [\href{../../../REFERENCES.pdf\#ref.Aro16}{Aro16}], each with its holohedry, the point group of the lattice. The field \texttt{laue\symbol{95}class} is the group generated by $\grp{O_{h}}$ and $\elt{i}$, the symmetry of the diffraction patterns of its crystals.
@@ -446,6 +447,42 @@ $(2\sqrt{2} - 3, 1 - \sqrt{2}, \sqrt{2} - 1)$ & $(1 - \sqrt{2}, 1 - \sqrt{2}, 2\
 \leavevmode\label{n:set.fundamental}As $\grp{O_{h}}$ contains an improper element, every coset $\grp{O_{h}}Q$ meets \href{SO3.pdf}{$\grp{SO(3)}$} in one coset of $\grp{O_{h}} \cap \grp{SO(3)}$, so that $\fdomain = \fcell$ is a fundamental domain. It contains one element of every coset, more only on its boundary.
 The space $\grp{O_{h}}\backslash\grp{O(3)}$ is $\grp{O}\backslash\grp{SO(3)}$, the truncated-cube space, and
 \begin{equation}\label{e:volume}\vol\fdomain = \vol\fcell = \tfrac{1}{3}\pi^2,\qquad \vol\grp{O_{h}}\cdot\vol\fdomain = 48\cdot \tfrac{1}{3}\pi^2 = 16\pi^2 = \vol\grp{O(3)}.\end{equation}
+
+Forgetting the turn about a direction sends $\grp{O_{h}}\backslash\grp{O(3)}$ onto the orbifold of section~\ref{s:orbifold}.
+The harmonics on $\grp{O_{h}}\backslash\grp{O(3)}$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.11}{11} and \href{../../CONVENTIONS.pdf\#conv.17.5}{17.5}) number $2J + 1$ for each vector of section~\ref{s:bases}: of the trivial irrep at $p = (-1)^J$ and of the determinant character at $p = -(-1)^J$. The table gives these numbers for $J \le 10$, all at $p = +1$, and the record holds their generating functions.
+{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lrrrrrrrrrrr@{}}\toprule
+$J$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$p = +1$ & 1 & 0 & 0 & 0 & 9 & 0 & 13 & 0 & 17 & 19 & 21\\
+\bottomrule\end{longtable}}
+\needspace{103pt}
+\section{Orbifold}\label{s:orbifold}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.17.6}{17.6} to \href{../../CONVENTIONS.pdf\#conv.17.8}{17.8}.
+The orbifold $\twosphere/\grp{O_{h}}$ is the set of the orbits of $\grp{O_{h}}$ on the sphere $\twosphere$ of the directions, each orbit marked by the class of the stabilizer of its directions. Its symbol is $\orbname{{\ast}432}$, and it lies on a disk, of area $\tfrac{1}{12}\pi$ and of Euler characteristic $\tfrac{1}{24}$.
+\leavevmode\label{n:head.stratum}\label{n:head.order.point}\label{n:head.direction}\label{n:head.stabilizer}\label{n:head.size.orbit}\label{n:head.shape}A row is a stratum, with the order of its point (order), its direction or the side of the region with an arc, and its stabilizer. Its orbit has the size and the shape of the figure of the stabilizer in section~\ref{s:permutation} (a dash where the shape depends on the point).
+{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lrllrl@{}}\toprule
+stratum & order & direction & stabilizer & size & shape\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+corner & 4 & $\dirvec{0}{0}{1}$ & \href{C4v.pdf}{$\grp{C_{4v}}$} & 6 & octahedron\\*
+corner & 3 & $\dirvec{1}{1}{1}$ & \href{C3v.pdf}{$\grp{C_{3v}}$} & 8 & cube\\*
+corner & 2 & $\dirvec{0}{1}{1}$ & \href{C2v.pdf}{$\grp{C_{2v}}$}\clsletter{c} & 12 & cuboctahedron\\*
+mirror arc &  & side 0 & \href{C1v.pdf}{$\grp{C_{s}}$}\clsletter{b} & 24 & ---\\*
+mirror arc &  & side 1 & \href{C1v.pdf}{$\grp{C_{s}}$}\clsletter{b} & 24 & ---\\*
+mirror arc &  & side 2 & \href{C1v.pdf}{$\grp{C_{s}}$}\clsletter{a} & 24 & ---\\*
+generic &  &  & \href{C1.pdf}{$\grp{C_{1}}$} & 48 & ---\\
+\bottomrule\end{longtable}}
+\leavevmode\label{n:head.vertex.region}\label{n:head.angle}\label{n:head.normal.side}\label{n:head.partner}\label{n:head.sense}The region holds one direction of every orbit, more only on its boundary. A row is a vertex, with its direction and angle, and the side from it to the next vertex. It also gives the inward normal of the side's plane (normal), the index $k$ and the symbol (sym) of its element, its partner, itself on a mirror, and the sense of the gluing.
+{\small\setlength{\tabcolsep}{4pt}{\renewcommand{\arraystretch}{1.3}\begin{longtable}{@{}rlllrlrl@{}}\toprule
+vertex & direction & angle & normal & $k$ & sym & partner & sense\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+0 & $\dirvec{0}{0}{1}$ & $\tfrac{\pi}{4}$ & $\dirvec{-1}{1}{0}$ & 45 & $\cls{\sigma_{d}}$ & 0 & same\\*
+1 & $\dirvec{1}{1}{1}$ & $\tfrac{\pi}{3}$ & $\dirvec{0}{-1}{1}$ & 43 & $\cls{\sigma_{d}}$ & 1 & same\\*
+2 & $\dirvec{0}{1}{1}$ & $\tfrac{\pi}{2}$ & $\dirvec{1}{0}{0}$ & 41 & $\cls{\sigma_{h}}$ & 2 & same\\
+\bottomrule\end{longtable}}}
+\leavevmode\label{n:element.presentation.generator}\label{n:local.presentation.brackets}The elements $\elt{s}$ of the side 0, $\elt{s'}$ of the side 1 and $\elt{s''}$ of the side 2 generate $\grp{O_{h}}$, with the presentation (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.17.7}{17.7})
+\begin{equation}\label{e:presentation}\langle \elt{s}, \elt{s'}, \elt{s''} \mid \elt{s}^{2}, \elt{s'}^{2}, \elt{s''}^{2}, (\elt{s''}\elt{s})^{4}, (\elt{s}\elt{s'})^{3}, (\elt{s'}\elt{s''})^{2} \rangle.\end{equation}
+
+Forgetting the turn about a direction sends the space $\grp{O}\backslash\grp{SO(3)}$ of section~\ref{s:fundamental_domain} onto the orbifold of \href{O.pdf}{$\grp{O}$}, which covers this one with 2 sheets. In the orientation of \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.17.6}{17.6}, the space has the Seifert invariants $(-2;\ (4, 3), (2, 1), (3, 2))$ over the sphere, the Euler number $\tfrac{1}{12}$ and a first homology of order 2.
 \needspace{171pt}
 \partbox{Representations}
 \section{Irreducible representations}\label{s:irreps}

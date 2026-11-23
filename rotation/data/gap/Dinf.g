@@ -1274,6 +1274,49 @@ o3t := rec(
       ("volume_element") := "sin(beta) dbeta dgamma"
     ),
     ("components") := [ "proper", "improper" ],
+    ("harmonics") := rec(
+      ("blocks") := "rotation/Dinf#/subduction_basis",
+      ("count") := [
+        rec( ("J") := 0, ("harmonics") := 1, ("invariants") := 1, ("p") := 1 ),
+        rec( ("J") := 0, ("harmonics") := 1, ("invariants") := 1, ("p") := -1 ),
+        rec( ("J") := 1, ("harmonics") := 0, ("invariants") := 0, ("p") := 1 ),
+        rec( ("J") := 1, ("harmonics") := 0, ("invariants") := 0, ("p") := -1 ),
+        rec( ("J") := 2, ("harmonics") := 5, ("invariants") := 1, ("p") := 1 ),
+        rec( ("J") := 2, ("harmonics") := 5, ("invariants") := 1, ("p") := -1 ),
+        rec( ("J") := 3, ("harmonics") := 0, ("invariants") := 0, ("p") := 1 ),
+        rec( ("J") := 3, ("harmonics") := 0, ("invariants") := 0, ("p") := -1 ),
+        rec( ("J") := 4, ("harmonics") := 9, ("invariants") := 1, ("p") := 1 ),
+        rec( ("J") := 4, ("harmonics") := 9, ("invariants") := 1, ("p") := -1 ),
+        rec( ("J") := 5, ("harmonics") := 0, ("invariants") := 0, ("p") := 1 ),
+        rec( ("J") := 5, ("harmonics") := 0, ("invariants") := 0, ("p") := -1 ),
+        rec( ("J") := 6, ("harmonics") := 13, ("invariants") := 1, ("p") := 1 ),
+        rec( ("J") := 6, ("harmonics") := 13, ("invariants") := 1, ("p") := -1 ),
+        rec( ("J") := 7, ("harmonics") := 0, ("invariants") := 0, ("p") := 1 ),
+        rec( ("J") := 7, ("harmonics") := 0, ("invariants") := 0, ("p") := -1 ),
+        rec( ("J") := 8, ("harmonics") := 17, ("invariants") := 1, ("p") := 1 ),
+        rec( ("J") := 8, ("harmonics") := 17, ("invariants") := 1, ("p") := -1 ),
+        rec( ("J") := 9, ("harmonics") := 0, ("invariants") := 0, ("p") := 1 ),
+        rec( ("J") := 9, ("harmonics") := 0, ("invariants") := 0, ("p") := -1 ),
+        rec( ("J") := 10, ("harmonics") := 21, ("invariants") := 1, ("p") := 1 ),
+        rec( ("J") := 10, ("harmonics") := 21, ("invariants") := 1, ("p") := -1 )
+      ],
+      ("determinant") := "A1",
+      ("euler") := "rotation/SO3#/character_functions/irrep_families/0/matrices/general_element/euler",
+      ("generating_function") := rec(
+        ("denominator") := [ 2, 2 ],
+        ("numerators") := [
+          rec( ("coefficients") := [ 1, 0, 3 ], ("irrep_id") := "A1", ("parity") := "(-1)^J" ),
+          rec( ("coefficients") := [ 1, 0, 3 ], ("irrep_id") := "A1", ("parity") := "-(-1)^J" )
+        ]
+      ),
+      ("norm") := rec(
+        ("divisor") := rec( ("coefficient") := 2, ("constant") := 1, ("index_symbol") := "J" ),
+        ("rule") := "the integral of |f_(kappa,m)|^2 over the domain is vol(domain)/(2J+1)",
+        ("volume") := "rotation/Dinf#/fundamental_domain/volumes/domain"
+      ),
+      ("rule") := "f_(kappa,m)(Q) = sum_(m') conj(c_(m')) D^(J,p)(Q)_(m'm), m = J, ..., -J, for the vector c = (c_J, ..., c_-J) of the copy kappa at J of the trivial irrep (p = (-1)^J) or of the determinant character (p = -(-1)^J), the amplitudes of its kets, and D^(J,p) the matrices of O(3) of the relation `euler`; then f_(kappa,m)(g Q) = f_(kappa,m)(Q) for every g of G: a function on the cosets G Q",
+      ("trivial") := "A1"
+    ),
     ("space") := rec(
       ("lens") := rec( ("reason") := "not-defined-for-family", ("value") := fail ),
       ("name") := "projective plane"
@@ -1504,6 +1547,28 @@ o3t := rec(
         ("primary") := true
       )
     ]
+  ),
+  ("orbifold") := rec( ("reason") := "continuous-group", ("value") := fail ),
+  ("orbit_space") := rec(
+    ("kind") := "arc",
+    ("strata") := [
+      rec(
+        ("orbit") := "pair of poles",
+        ("position") := "t0",
+        ("stabilizer") := rec( ("o3_class") := "Cinf", ("schoenflies") := "C_inf" )
+      ),
+      rec(
+        ("orbit") := "pair of circles",
+        ("position") := "interior",
+        ("stabilizer") := rec( ("o3_class") := "C1", ("schoenflies") := "C_1" )
+      ),
+      rec(
+        ("orbit") := "equator",
+        ("position") := "t1",
+        ("stabilizer") := rec( ("o3_class") := "D1", ("schoenflies") := "D_1" )
+      )
+    ],
+    ("theta") := rec( ("t0") := [ 0, 1 ], ("t1") := [ 1, 4 ] )
   ),
   ("schema") := "point-group-atlas/group-continuous/1",
   ("subduction_basis") := rec(

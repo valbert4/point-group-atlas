@@ -49,7 +49,8 @@ continuous subgroup (section 29.5). The pointer
 fields, named for what they replace, name these values:
 
 - `cover_of`, `image`, `preimage_of`, `vector_irreps`, `vector_families`, `vector_entry`, `vector_products`,
-  `vector_rules`, `vector_subduction`, `integer_J` and `integer_j`: values of the point groups' records.
+  `vector_rules`, `vector_subduction`, `integer_J`, `integer_j`, `orbifold`, `harmonics` and `orbit_space`:
+  values of the point groups' records.
 - `preimages` (in `double_groups.json`): the `family_rules` of `point_groups`.
 - `section_of`, `d`, `generating_function`, `table`, `shells` and `same_as`: values of another record of this
   catalogue.
@@ -171,9 +172,16 @@ are the lifts of those of $`\mathsf{G}`$: the cell of $`\mathsf{G}`$, each rotat
 $`\operatorname{vol}\mathsf{2G} = 2\operatorname{vol}\mathsf{G}`$. A section over $`\mathsf{G}`$ does not
 contain $`\bar{\mathsfit{E}}`$: its cosets cover those of $`\mathsf{G}`$ twice. The two lifts of the rotations
 of the cell of $`\mathsf{G}`$ form the section's cell, of twice the volume. Its space is $`\mathsf{SU(2)}`$
-modulo its $`N`$ elements in $`\mathsf{SU(2)}`$: the lens space $`\mathsf{L}(N, 1)`$, or $`\mathsf{SU(2)}`$
-itself for $`N = 1`$. Either way, the volume of the group times $`\operatorname{vol}\mathcal{F}`$ is
-$`32\pi^2`$.
+modulo its $`N`$ elements in $`\mathsf{SU(2)}`$: the lens space $`\mathsf{L}(N, 1)`$ in the orientation of
+section 17.6, or $`\mathsf{SU(2)}`$ itself for $`N = 1`$. Either way, the volume of the group times
+$`\operatorname{vol}\mathcal{F}`$ is $`32\pi^2`$.
+
+A preimage and a section act on the directions through the covering map, so a finite record names the
+orbifold of $`\mathsf{G}`$ (`orbifold`, section 17.6). A preimage also names the harmonics of $`\mathsf{G}`$
+(`harmonics`, section 17.5). As $`\bar{\mathsfit{E}}`$ acts on $`D^{(J,p)}`$ by $`(-1)^{2J}`$, the harmonics on
+$`\mathsf{2G}\backslash\mathsf{Pin^{-}(3)}`$ have integer $`J`$, and they are those on
+$`\mathsf{G}\backslash\mathsf{O(3)}`$. A continuous record names its orbit space and its harmonics in the same
+way (section 29.1). The documents name these values at the end of their section Fundamental domain.
 
 ## 22. Conjugacy classes
 
@@ -472,8 +480,8 @@ over $`\mathsf{C_{\mathnormal{N}}}`$ and two over $`\mathsf{S_{2\mathnormal{N}}}
 $`\mathsfit{i}`$, which is central, distinguishes these two classes.
 
 A section's record holds the bits $`b(\mathsfit{g})`$ (`lift_bits`, the least bit vector of its class), its
-identification and its lattice. Its representations are those of $`\mathsf{G}`$. As
-$`\mathsf{2G} = \mathsf{H} \times \{\mathsfit{E}, \bar{\mathsfit{E}}\}`$, each spinor irrep $`\Delta`$ of
+identification, its lattice and the pointer `orbifold` (section 21.3). Its representations are those of
+$`\mathsf{G}`$. As $`\mathsf{2G} = \mathsf{H} \times \{\mathsfit{E}, \bar{\mathsfit{E}}\}`$, each spinor irrep $`\Delta`$ of
 $`\mathsf{2G}`$ restricts to an irrep of $`\mathsf{H}`$. The multiplicities and bases of $`\mathsf{H}`$ at
 half-integer $`J`$, and the rows that restrict an irrep of a larger group to $`\mathsf{H}`$, are those of
 $`\mathsf{2G}`$ with each $`\Delta`$ so renamed. No record stores them.
@@ -553,7 +561,8 @@ $`\mathsf{G}`$ (`covering_map`).
 
 The `fundamental_domain` names that of $`\mathsf{G}`$ (`image`), repeats its `space` and gives the volumes of
 section 21.3 (`volumes`): of the group (twice that of $`\mathsf{G}`$), of the domain (as in $`\mathsf{G}`$)
-and of $`\mathsf{Pin^{-}(3)}`$ ($`32\pi^2`$).
+and of $`\mathsf{Pin^{-}(3)}`$ ($`32\pi^2`$). It also names the harmonics of $`\mathsf{G}`$ (`harmonics`), and
+the record names the orbit space of $`\mathsf{G}`$ on the directions (`orbit_space`, section 17.8).
 
 The documents write the characters in $`\omega`$.
 

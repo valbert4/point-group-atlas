@@ -1428,6 +1428,42 @@ CONVENTIONS_LETTERS = (
       "T_{*}", scope="conventions|conv:10|", defined="conv:10"),
     S("local.irrep.V", "local", "V", "the three-dimensional irrep of the rotations (the "
       "trace character)", "V", scope="conventions|conv:10|", defined="conv:10"),
+    # the harmonics on the orientation space, the orbifold of the directions and its region
+    # (sections 17.5 to 17.8)
+    S("local.harmonic.amplitudes", "local", "c", "the amplitudes of the kets of an invariant "
+      "vector, or of the partner mu of a block of another irrep", "c", "c^{\\dagger}", "c_{*}",
+      "c_{*}^{*}", scope="conventions|conv:17.5|", defined="conv:17.5"),
+    S("local.harmonic.exponent", "local", "d", "an exponent of a factor 1 - t^d of the "
+      "denominator of a generating function", "d", scope="conventions|conv:17.5|",
+      defined="conv:17.5"),
+    S("local.orbifold.chi", "local", r"\chi", "the Euler characteristic of the orbifold, with "
+      "chi_0 that of its surface", r"\chi", r"\chi_{#}",
+      scope=("conventions|conv:17.6|", "conventions|conv:17.8|"), defined="conv:17.6"),
+    S("local.lens.pq", "local", "p, q", "the order p and the exponent q of the lens space "
+      "L(p, q)", "p", "q", scope="conventions|conv:17.6|", defined="conv:17.6"),
+    S("local.seifert.r", "local", "r", "the number of cone points of the base of a Seifert "
+      "fibered space", "r", scope="conventions|conv:17.6|", defined="conv:17.6"),
+    S("local.seifert.alpha", "local", r"\alpha_i", "the order of the cone point i of the base, "
+      "the first Seifert invariant of its fiber", r"\alpha_{i}", r"\alpha_{#}", r"\alpha_{r}",
+      scope="conventions|conv:17.6|", defined="conv:17.6"),
+    S("local.seifert.beta", "local", r"\beta_i", "the second Seifert invariant of the fiber over "
+      "the cone point i", r"\beta_{i}", r"\beta_{#}", r"\beta_{r}",
+      scope="conventions|conv:17.6|", defined="conv:17.6"),
+    S("local.seifert.b", "local", "b", "the Seifert invariant b of a Seifert fibered space", "b",
+      scope="conventions|conv:17.6|", defined="conv:17.6"),
+    S("local.seifert.euler", "local", "e", "the Euler number of a Seifert fibered space", "e",
+      scope=("conventions|conv:17.6|", "conventions|conv:17.8|"), defined="conv:17.6"),
+    S("local.region.index", "local", "i", "the index of a vertex of the region and of the side "
+      "that leaves it", "i", scope="conventions|conv:17.7|", defined="conv:17.7"),
+    S("local.region.vertex", "local", "v", "a vertex of the region on a walk around its class",
+      "v", "v'", scope="conventions|conv:17.7|", defined="conv:17.7"),
+    S("local.region.side", "local", "t", "a glued side of the region that a walk crosses", "t",
+      scope="conventions|conv:17.7|", defined="conv:17.7"),
+    S("local.region.mirror", "local", "s", "the mirror of a side of the region, a generator of "
+      "the presentation", "s", "s'", "s^{#}", scope="conventions|conv:17.7|",
+      defined="conv:17.7"),
+    S("local.region.word", "local", "W", "the word of a walk around a vertex class of the region",
+      "W", "W^{*}", scope="conventions|conv:17.7|", defined="conv:17.7"),
     S("local.coefficients.f", "local", "f^J_m", "the coefficients of a function on the sphere in "
       "the spherical harmonics, with f^J those of degree J", "f^{*}", "f^{*}_{*}",
       scope="conventions|conv:10|", defined="conv:10"),
@@ -1690,6 +1726,61 @@ DOMAINS = (
       defined=("e:prism", "conv:17")),
     H("head.vertex", "head", "vertex", r"a vertex of the cell $\mathcal{D}$", "vertex",
       defined=("part:fundamental_domain", "conv:0.1")),
+    # the harmonics on the orientation space and the direction of a placed molecule
+    # (CONVENTIONS.md sections 17.5 and 17.6)
+    S("function.harmonic.orientation", "function", r"f_{\kappa,m}",
+      r"a harmonic on $\grp{G}\backslash\grp{O(3)}$: the function of column $m$ of the vector of "
+      r"the copy $\kappa$ at $J$ of the trivial irrep or of the determinant character, or of the "
+      r"partner $\mu$ of a block of another irrep",
+      r"f_{\mult,m}", r"f_{\mult,m}(.)", r"f_{\intx,m}", r"f_{\intx,m}(.)", r"f_{\nu,m}(.)",
+      defined="conv:17.5"),
+    C("vector.direction", "vector", r"\mathbf{d}",
+      r"the direction $(0, 0, 1)\,P(Q)^{-1}$ of the axis $z$ of a molecule placed by $Q$",
+      command=r"\axisd{\mathbf{d}}", md=r"\mathbf{d}",
+      defined="conv:17.6"),
+    # the orbifold of the directions (CONVENTIONS.md sections 17.6 to 17.8; the documents' section
+    # Orbifold): the angles of the sphere, the letters of the presentation, the heads of the tables
+    S("local.polar.theta", "local", r"\theta", "the polar angle from the axis z", r"\theta",
+      scope=("continuous|orbifold|", "conventions|conv:17.6|", "conventions|conv:17.7|"),
+      defined=("part:orbifold", "conv:17.6")),
+    S("local.azimuth.phi", "local", r"\phi", "the azimuth from the axis x", r"\phi",
+      scope="conventions|conv:17.7|", defined="conv:17.7"),
+    S("element.presentation.generator", "element", "s, g_1",
+      "a generator of the presentation of the group: s, s', s'' the mirrors of the mirror sides "
+      "of the region, g_1 and g_2 the elements of its glued sides", "s", "s'", "s''", "s^{*}",
+      "s'^{*}", "s''^{*}", "g_{#}", "g_{#}^{*}", scope="finite|orbifold|",
+      defined="part:orbifold"),
+    S("local.presentation.brackets", "local", r"\langle \mid \rangle",
+      "the group presented by the generators before the bar and the relators after it",
+      r"\langle", r"\mid", r"\mid(.)", r"\rangle", scope="finite|orbifold|",
+      defined="part:orbifold"),
+    H("head.stratum", "head", "stratum",
+      "a stratum of the orbifold: the cone points, the corners and the arcs of the mirror edge, "
+      "and the generic points", "stratum", defined=("part:orbifold", "conv:0.1")),
+    H("head.order.point", "head", "order", "the order of a cone point or of a corner of the "
+      "orbifold", "order", defined=("part:orbifold", "conv:0.1")),
+    H("head.direction", "head", "direction",
+      "the direction of a point of the orbifold or of a vertex of its region, an unnormalized "
+      "vector", "direction", defined=("part:orbifold", "conv:0.1")),
+    H("head.stabilizer", "head", "stabilizer", "the stabilizer of the directions of a stratum",
+      "stabilizer", defined=("part:orbifold", "conv:0.1")),
+    H("head.size.orbit", "head", "size", "the number of the directions of the orbit of a "
+      "stratum", "size", defined=("part:orbifold", "conv:0.1")),
+    H("head.shape", "head", "shape", "the shape of the directions of the orbit of a stratum",
+      "shape", defined=("part:orbifold", "conv:0.1")),
+    H("head.vertex.region", "head", "vertex",
+      "a vertex of the region of the orbifold, with the side from it to the next vertex",
+      "vertex", defined=("part:orbifold", "conv:0.1")),
+    H("head.angle", "head", "angle", "the interior angle of the region at a vertex", "angle",
+      defined=("part:orbifold", "conv:0.1")),
+    H("head.normal.side", "head", "normal", "the inward normal of the plane of a side of the region",
+      "normal", defined=("part:orbifold", "conv:0.1")),
+    H("head.partner", "head", "partner",
+      "the side onto which the element of a side of the region carries it, the side itself on a "
+      "mirror", "partner", defined=("part:orbifold", "conv:0.1")),
+    H("head.sense", "head", "sense",
+      "the sense in which the element of a side of the region carries it onto its partner: "
+      "reversed or same", "sense", defined=("part:orbifold", "conv:0.1")),
 )
 
 # ---------------------------------------------------------------- the degenerate levels

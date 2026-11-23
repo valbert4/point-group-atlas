@@ -40766,6 +40766,233 @@
     "components": [
       "proper"
     ],
+    "harmonics": {
+      "blocks": "rotation/C12h#/subduction_basis",
+      "count": [
+        {
+          "J": 0,
+          "harmonics": 1,
+          "invariants": 1,
+          "p": 1
+        },
+        {
+          "J": 0,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 1,
+          "harmonics": 3,
+          "invariants": 1,
+          "p": 1
+        },
+        {
+          "J": 1,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 2,
+          "harmonics": 5,
+          "invariants": 1,
+          "p": 1
+        },
+        {
+          "J": 2,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 3,
+          "harmonics": 7,
+          "invariants": 1,
+          "p": 1
+        },
+        {
+          "J": 3,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 4,
+          "harmonics": 9,
+          "invariants": 1,
+          "p": 1
+        },
+        {
+          "J": 4,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 5,
+          "harmonics": 11,
+          "invariants": 1,
+          "p": 1
+        },
+        {
+          "J": 5,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 6,
+          "harmonics": 13,
+          "invariants": 1,
+          "p": 1
+        },
+        {
+          "J": 6,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 7,
+          "harmonics": 15,
+          "invariants": 1,
+          "p": 1
+        },
+        {
+          "J": 7,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 8,
+          "harmonics": 17,
+          "invariants": 1,
+          "p": 1
+        },
+        {
+          "J": 8,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 9,
+          "harmonics": 19,
+          "invariants": 1,
+          "p": 1
+        },
+        {
+          "J": 9,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 10,
+          "harmonics": 21,
+          "invariants": 1,
+          "p": 1
+        },
+        {
+          "J": 10,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        }
+      ],
+      "determinant": "Au",
+      "euler": "rotation/SO3#/character_functions/irrep_families/0/matrices/general_element/euler",
+      "generating_function": {
+        "denominator": [
+          2,
+          2,
+          12,
+          12
+        ],
+        "numerators": [
+          {
+            "coefficients": [
+              1,
+              0,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              48,
+              0,
+              -48,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              -3
+            ],
+            "irrep_id": "Ag",
+            "parity": "(-1)^J"
+          },
+          {
+            "coefficients": [
+              0,
+              3,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              48,
+              0,
+              -48,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -3,
+              0,
+              -1
+            ],
+            "irrep_id": "Au",
+            "parity": "-(-1)^J"
+          }
+        ]
+      },
+      "norm": {
+        "divisor": {
+          "coefficient": 2,
+          "constant": 1,
+          "index_symbol": "J"
+        },
+        "rule": "the integral of |f_(kappa,m)|^2 over the domain is vol(domain)/(2J+1)",
+        "volume": "rotation/C12h#/fundamental_domain/volumes/domain"
+      },
+      "rule": "f_(kappa,m)(Q) = sum_(m') conj(c_(m')) D^(J,p)(Q)_(m'm), m = J, ..., -J, for the vector c = (c_J, ..., c_-J) of the copy kappa at J of the trivial irrep (p = (-1)^J) or of the determinant character (p = -(-1)^J), the amplitudes of its kets, and D^(J,p) the matrices of O(3) of the relation `euler`; then f_(kappa,m)(g Q) = f_(kappa,m)(Q) for every g of G: a function on the cosets G Q",
+      "trivial": "Ag"
+    },
     "space": {
       "lens": [
         24,
@@ -45234,6 +45461,440 @@
         "primary": false
       }
     ]
+  },
+  "orbifold": {
+    "area": [
+      1,
+      6
+    ],
+    "cone_points": [
+      {
+        "direction": [
+          {
+            "f": "q",
+            "v": [
+              0,
+              1
+            ]
+          },
+          {
+            "f": "q",
+            "v": [
+              0,
+              1
+            ]
+          },
+          {
+            "f": "q",
+            "v": [
+              1,
+              1
+            ]
+          }
+        ],
+        "orbit": 2,
+        "order": 12,
+        "stabilizer_node": "n12",
+        "vertex": 0
+      }
+    ],
+    "cross_cap": false,
+    "euler_characteristic": [
+      1,
+      12
+    ],
+    "generic": {
+      "orbit": 0,
+      "stabilizer_node": "n00"
+    },
+    "mirror": {
+      "arcs": [
+        {
+          "orbit": 1,
+          "side": 1,
+          "stabilizer_node": "n03"
+        }
+      ],
+      "corners": []
+    },
+    "orientable": false,
+    "orientation_space": {
+      "base": "rotation/C12#/orbifold",
+      "seifert": {
+        "b": -2,
+        "base_orientable": true,
+        "euler_number": [
+          1,
+          6
+        ],
+        "fibers": [
+          {
+            "alpha": 12,
+            "beta": 11,
+            "cone_point": 0
+          },
+          {
+            "alpha": 12,
+            "beta": 11,
+            "cone_point": 1
+          }
+        ],
+        "first_homology_order": 24,
+        "genus": 0
+      },
+      "sheets": 2
+    },
+    "presentation": {
+      "generators": [
+        {
+          "element": 1,
+          "side": 0
+        },
+        {
+          "element": 13,
+          "side": 1
+        }
+      ],
+      "relators": [
+        {
+          "power": 2,
+          "side": 1,
+          "word": [
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "power": 12,
+          "vertex_class": 0,
+          "word": [
+            [
+              0,
+              -1
+            ]
+          ]
+        },
+        {
+          "power": 1,
+          "vertex_class": 1,
+          "word": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              -1
+            ]
+          ]
+        }
+      ]
+    },
+    "region": {
+      "angles": [
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "contains": {
+        "direction": [
+          {
+            "M": 12,
+            "c": [
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ]
+            ],
+            "f": "cyc"
+          },
+          {
+            "M": 12,
+            "c": [
+              [
+                1,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "f": "cyc"
+          },
+          {
+            "f": "q",
+            "v": [
+              4,
+              1
+            ]
+          }
+        ],
+        "element": 10
+      },
+      "sides": [
+        {
+          "element": 1,
+          "from": 0,
+          "kind": "glued",
+          "normal": [
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            }
+          ],
+          "partner": 2,
+          "sense": "reversed",
+          "to": 1
+        },
+        {
+          "element": 13,
+          "from": 1,
+          "kind": "mirror",
+          "normal": [
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            }
+          ],
+          "partner": 1,
+          "sense": "same",
+          "to": 2
+        },
+        {
+          "element": 11,
+          "from": 2,
+          "kind": "glued",
+          "normal": [
+            {
+              "f": "q",
+              "v": [
+                1,
+                2
+              ]
+            },
+            {
+              "M": 12,
+              "c": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  -1,
+                  1
+                ],
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              "f": "cyc"
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            }
+          ],
+          "partner": 0,
+          "sense": "reversed",
+          "to": 0
+        }
+      ],
+      "vertex_classes": [
+        {
+          "angle_sum": [
+            1,
+            6
+          ],
+          "order": 12,
+          "stratum": "cone point",
+          "vertices": [
+            0
+          ]
+        },
+        {
+          "angle_sum": [
+            1,
+            1
+          ],
+          "order": 1,
+          "stratum": "mirror arc",
+          "vertices": [
+            1,
+            2
+          ]
+        }
+      ],
+      "vertices": [
+        [
+          {
+            "f": "q",
+            "v": [
+              0,
+              1
+            ]
+          },
+          {
+            "f": "q",
+            "v": [
+              0,
+              1
+            ]
+          },
+          {
+            "f": "q",
+            "v": [
+              1,
+              1
+            ]
+          }
+        ],
+        [
+          {
+            "f": "q",
+            "v": [
+              1,
+              1
+            ]
+          },
+          {
+            "f": "q",
+            "v": [
+              0,
+              1
+            ]
+          },
+          {
+            "f": "q",
+            "v": [
+              0,
+              1
+            ]
+          }
+        ],
+        [
+          {
+            "M": 12,
+            "c": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                2
+              ]
+            ],
+            "f": "cyc"
+          },
+          {
+            "f": "q",
+            "v": [
+              1,
+              2
+            ]
+          },
+          {
+            "f": "q",
+            "v": [
+              0,
+              1
+            ]
+          }
+        ]
+      ]
+    },
+    "surface": "disk",
+    "symbol": "rotation/C12h#/group/orbifold"
   },
   "permutation_representations": {
     "actions": [

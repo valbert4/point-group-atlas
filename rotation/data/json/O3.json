@@ -1007255,6 +1007255,179 @@
     "components": [
       "proper"
     ],
+    "harmonics": {
+      "blocks": "rotation/O3#/subduction_basis",
+      "count": [
+        {
+          "J": 0,
+          "harmonics": 1,
+          "invariants": 1,
+          "p": 1
+        },
+        {
+          "J": 0,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 1,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": 1
+        },
+        {
+          "J": 1,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 2,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": 1
+        },
+        {
+          "J": 2,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 3,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": 1
+        },
+        {
+          "J": 3,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 4,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": 1
+        },
+        {
+          "J": 4,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 5,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": 1
+        },
+        {
+          "J": 5,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 6,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": 1
+        },
+        {
+          "J": 6,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 7,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": 1
+        },
+        {
+          "J": 7,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 8,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": 1
+        },
+        {
+          "J": 8,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 9,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": 1
+        },
+        {
+          "J": 9,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        },
+        {
+          "J": 10,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": 1
+        },
+        {
+          "J": 10,
+          "harmonics": 0,
+          "invariants": 0,
+          "p": -1
+        }
+      ],
+      "determinant": {
+        "family": "Du",
+        "index": 0
+      },
+      "euler": "rotation/SO3#/character_functions/irrep_families/0/matrices/general_element/euler",
+      "generating_function": {
+        "denominator": [],
+        "numerators": [
+          {
+            "coefficients": [
+              1
+            ],
+            "irrep_id": "Dg",
+            "parity": "(-1)^J"
+          },
+          {
+            "coefficients": [],
+            "irrep_id": {
+              "family": "Du",
+              "index": 0
+            },
+            "parity": "-(-1)^J"
+          }
+        ]
+      },
+      "norm": {
+        "divisor": {
+          "coefficient": 2,
+          "constant": 1,
+          "index_symbol": "J"
+        },
+        "rule": "the integral of |f_(kappa,m)|^2 over the domain is vol(domain)/(2J+1)",
+        "volume": "rotation/O3#/fundamental_domain/volumes/domain"
+      },
+      "rule": "f_(kappa,m)(Q) = sum_(m') conj(c_(m')) D^(J,p)(Q)_(m'm), m = J, ..., -J, for the vector c = (c_J, ..., c_-J) of the copy kappa at J of the trivial irrep (p = (-1)^J) or of the determinant character (p = -(-1)^J), the amplitudes of its kets, and D^(J,p) the matrices of O(3) of the relation `euler`; then f_(kappa,m)(g Q) = f_(kappa,m)(Q) for every g of G: a function on the cosets G Q",
+      "trivial": "Dg"
+    },
     "space": {
       "lens": {
         "reason": "not-defined-for-family",
@@ -1007704,6 +1007877,27 @@
         "primary": true
       }
     ]
+  },
+  "orbifold": {
+    "reason": "continuous-group",
+    "value": null
+  },
+  "orbit_space": {
+    "kind": "point",
+    "strata": [
+      {
+        "orbit": "sphere",
+        "position": "point",
+        "stabilizer": {
+          "o3_class": "Cinfv",
+          "schoenflies": "C_infv"
+        }
+      }
+    ],
+    "theta": {
+      "reason": "not-defined-for-family",
+      "value": null
+    }
   },
   "schema": "point-group-atlas/group-continuous/1",
   "subduction_basis": {

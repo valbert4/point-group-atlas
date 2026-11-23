@@ -2057,6 +2057,49 @@ o3t = {
             'volume_element': 'sin(beta) dbeta dgamma'
         },
         'components': ['proper'],
+        'harmonics': {
+            'blocks': 'rotation/Dinfh#/subduction_basis',
+            'count': [
+                {'J': 0, 'harmonics': 1, 'invariants': 1, 'p': 1},
+                {'J': 0, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 1, 'harmonics': 0, 'invariants': 0, 'p': 1},
+                {'J': 1, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 2, 'harmonics': 5, 'invariants': 1, 'p': 1},
+                {'J': 2, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 3, 'harmonics': 0, 'invariants': 0, 'p': 1},
+                {'J': 3, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 4, 'harmonics': 9, 'invariants': 1, 'p': 1},
+                {'J': 4, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 5, 'harmonics': 0, 'invariants': 0, 'p': 1},
+                {'J': 5, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 6, 'harmonics': 13, 'invariants': 1, 'p': 1},
+                {'J': 6, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 7, 'harmonics': 0, 'invariants': 0, 'p': 1},
+                {'J': 7, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 8, 'harmonics': 17, 'invariants': 1, 'p': 1},
+                {'J': 8, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 9, 'harmonics': 0, 'invariants': 0, 'p': 1},
+                {'J': 9, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 10, 'harmonics': 21, 'invariants': 1, 'p': 1},
+                {'J': 10, 'harmonics': 0, 'invariants': 0, 'p': -1}
+            ],
+            'determinant': 'A1u',
+            'euler': 'rotation/SO3#/character_functions/irrep_families/0/matrices/general_element/euler',
+            'generating_function': {
+                'denominator': [2, 2],
+                'numerators': [
+                    {'coefficients': [1, 0, 3], 'irrep_id': 'A1g', 'parity': '(-1)^J'},
+                    {'coefficients': [], 'irrep_id': 'A1u', 'parity': '-(-1)^J'}
+                ]
+            },
+            'norm': {
+                'divisor': {'coefficient': 2, 'constant': 1, 'index_symbol': 'J'},
+                'rule': 'the integral of |f_(kappa,m)|^2 over the domain is vol(domain)/(2J+1)',
+                'volume': 'rotation/Dinfh#/fundamental_domain/volumes/domain'
+            },
+            'rule': "f_(kappa,m)(Q) = sum_(m') conj(c_(m')) D^(J,p)(Q)_(m'm), m = J, ..., -J, for the vector c = (c_J, ..., c_-J) of the copy kappa at J of the trivial irrep (p = (-1)^J) or of the determinant character (p = -(-1)^J), the amplitudes of its kets, and D^(J,p) the matrices of O(3) of the relation `euler`; then f_(kappa,m)(g Q) = f_(kappa,m)(Q) for every g of G: a function on the cosets G Q",
+            'trivial': 'A1g'
+        },
         'space': {
             'lens': {'reason': 'not-defined-for-family', 'value': None},
             'name': 'projective plane'
@@ -2582,6 +2625,28 @@ o3t = {
                 'primary': True
             }
         ]
+    },
+    'orbifold': {'reason': 'continuous-group', 'value': None},
+    'orbit_space': {
+        'kind': 'arc',
+        'strata': [
+            {
+                'orbit': 'pair of poles',
+                'position': 't0',
+                'stabilizer': {'o3_class': 'Cinfv', 'schoenflies': 'C_infv'}
+            },
+            {
+                'orbit': 'pair of circles',
+                'position': 'interior',
+                'stabilizer': {'o3_class': 'C1v', 'schoenflies': 'C_1v'}
+            },
+            {
+                'orbit': 'equator',
+                'position': 't1',
+                'stabilizer': {'o3_class': 'D1h', 'schoenflies': 'D_1h'}
+            }
+        ],
+        'theta': {'t0': [0, 1], 't1': [1, 4]}
     },
     'schema': 'point-group-atlas/group-continuous/1',
     'subduction_basis': {

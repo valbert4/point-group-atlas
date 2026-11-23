@@ -208,6 +208,7 @@
 \newcommand{\lensspace}[2]{\mathsf{L}(#1, #2)}
 \newcommand{\twosphere}{\mathsf{S}^{2}}
 \newcommand{\projplane}{\mathbb{R}\mathsf{P}^{2}}
+\newcommand{\axisd}{\mathbf{d}}
 \newcommand{\schur}[1]{\mathbb{S}_{#1}}
 \newcommand{\shape}[1]{[#1]}
 \newcommand{\term}[2]{{}^{#1}#2}
@@ -238,7 +239,7 @@
 \partbox{The group}
 \section{Names and structure}\label{s:identification}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.0.1}{0.1}, \href{../../CONVENTIONS.pdf\#conv.2}{2}, \href{../../CONVENTIONS.pdf\#conv.3}{3} and \href{../../CONVENTIONS.pdf\#conv.12}{12}.
-\label{n:index.family.N}\label{n:mark.conjugates}\label{n:mark.letter}{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{\texttt{commutator\symbol{95}subgroup}}\cellmax{\texttt{contains\symbol{95}inversion}}\cellmax{\texttt{gap\symbol{95}smallgroup\symbol{95}id}}\cellmax{\texttt{rotation\symbol{95}subgroup}}\cellmax{\texttt{contains\symbol{95}sigma\symbol{95}h}}\cellmax{\texttt{crystallographic}}\cellmax{\texttt{ihrig\symbol{95}golubitsky}}\cellmax{\texttt{hermann\symbol{95}mauguin}}\cellmax{\texttt{principal\symbol{95}axis}}\cellmax{\texttt{abstract\symbol{95}type}}\cellmax{\texttt{conway\symbol{95}smith}}\cellmax{\texttt{product\symbol{95}form}}\cellmax{\texttt{centralizer}}\cellmax{\texttt{schoenflies}}\cellmax{\texttt{laue\symbol{95}class}}\cellmax{\texttt{normalizer}}\cellmax{\texttt{altmann\symbol{95}T}}\cellmax{\texttt{orbifold}}\cellmax{\texttt{center}}\cellmax{\texttt{family}}\cellmax{\texttt{olive}}\cellmax{\texttt{order}}\cellmax{\texttt{polar}}\cellmax{\texttt{type}}\cellmax{\texttt{hk}}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{semidirect: $\grp{C_{10}}$${}\sdprod{}$$\grp{C_{s}}$\clsletter{a}\,\nconj{5}; $\grp{C_{10}}$${}\sdprod{}$$\grp{C_{s}}$\clsletter{b}\,\nconj{5}; $\grp{C_{5v}}$\clsletter{a}${}\sdprod{}$$\grp{C_{s}}$\clsletter{b}\,\nconj{5}; $\grp{C_{5v}}$\clsletter{b}${}\sdprod{}$$\grp{C_{s}}$\clsletter{a}\,\nconj{5}; $\grp{C_{5}}$${}\sdprod{}$$\grp{C_{2v}}$\,\nconj{5}}\cellmax{$\grp{C_{2h}}$, index 20 in the normalizer}\cellmax{direct: $\grp{C_{5v}}$\clsletter{a}${}\dirprod{}$$\grp{C_{2}}$; $\grp{C_{5v}}$\clsletter{b}${}\dirprod{}$$\grp{C_{2}}$}\cellmax{\texttt{H}${} = {}$$\grp{D_{10}}$, \texttt{K}${} = {}$$\grp{C_{10}}$}\cellmax{$\grp{D_{10h}}$, index 2}\cellmax{$\grp{D_{20h}}$, index 4}\cellmax{$\grp{C_{10}}$, index 2}\cellmax{$\grp{C_{2}}$, index 10}\cellmax{$\grp{C_{5}}$, index 4}\cellmax{$\grp{C_{\mathnormal{N}v}}$, $N = 10$}\cellmax{$\conwayname{\grp{CD}(10)}$}\cellmax{$\dirvec{0}{0}{1}$}\cellmax{$\Dih{20}$}\cellmax{[20, 4]}\cellmax{$\grp{C_{10v}}$}\cellmax{$\igname{\grp{D_{10}^{z}}}$}\cellmax{$\olivename{\grp{D_{10}^{v}}}$}\cellmax{$\orbname{{\ast}1010}$}\cellmax{$\hmname{10mm}$}\cellmax{III}\cellmax{yes}\cellmax{20}\cellmax{58}\cellmax{no}\fillcap\begin{longtable}{@{}l>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
+\label{n:index.family.N}\label{n:mark.conjugates}\label{n:mark.letter}{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-2\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{\texttt{commutator\symbol{95}subgroup}}\cellmax{\texttt{contains\symbol{95}inversion}}\cellmax{\texttt{gap\symbol{95}smallgroup\symbol{95}id}}\cellmax{\texttt{rotation\symbol{95}subgroup}}\cellmax{\texttt{contains\symbol{95}sigma\symbol{95}h}}\cellmax{\texttt{crystallographic}}\cellmax{\texttt{ihrig\symbol{95}golubitsky}}\cellmax{\texttt{hermann\symbol{95}mauguin}}\cellmax{\texttt{principal\symbol{95}axis}}\cellmax{\texttt{abstract\symbol{95}type}}\cellmax{\texttt{conway\symbol{95}smith}}\cellmax{\texttt{product\symbol{95}form}}\cellmax{\texttt{centralizer}}\cellmax{\texttt{schoenflies}}\cellmax{\texttt{laue\symbol{95}class}}\cellmax{\texttt{normalizer}}\cellmax{\texttt{altmann\symbol{95}T}}\cellmax{\texttt{orbifold}}\cellmax{\texttt{center}}\cellmax{\texttt{family}}\cellmax{\texttt{olive}}\cellmax{\texttt{order}}\cellmax{\texttt{polar}}\cellmax{\texttt{type}}\cellmax{\texttt{hk}}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{semidirect: $\grp{C_{10}}$${}\sdprod{}$$\grp{C_{s}}$\clsletter{a}\,\nconj{5}; $\grp{C_{10}}$${}\sdprod{}$$\grp{C_{s}}$\clsletter{b}\,\nconj{5}; $\grp{C_{5v}}$\clsletter{a}${}\sdprod{}$$\grp{C_{s}}$\clsletter{b}\,\nconj{5}; $\grp{C_{5v}}$\clsletter{b}${}\sdprod{}$$\grp{C_{s}}$\clsletter{a}\,\nconj{5}; $\grp{C_{5}}$${}\sdprod{}$$\grp{C_{2v}}$\,\nconj{5}}\cellmax{$\grp{C_{2h}}$, index 20 in the normalizer}\cellmax{direct: $\grp{C_{5v}}$\clsletter{a}${}\dirprod{}$$\grp{C_{2}}$; $\grp{C_{5v}}$\clsletter{b}${}\dirprod{}$$\grp{C_{2}}$}\cellmax{$\orbname{{\ast}1010}$, section~\ref{s:orbifold}}\cellmax{\texttt{H}${} = {}$$\grp{D_{10}}$, \texttt{K}${} = {}$$\grp{C_{10}}$}\cellmax{$\grp{D_{10h}}$, index 2}\cellmax{$\grp{D_{20h}}$, index 4}\cellmax{$\grp{C_{10}}$, index 2}\cellmax{$\grp{C_{2}}$, index 10}\cellmax{$\grp{C_{5}}$, index 4}\cellmax{$\grp{C_{\mathnormal{N}v}}$, $N = 10$}\cellmax{$\conwayname{\grp{CD}(10)}$}\cellmax{$\dirvec{0}{0}{1}$}\cellmax{$\Dih{20}$}\cellmax{[20, 4]}\cellmax{$\grp{C_{10v}}$}\cellmax{$\igname{\grp{D_{10}^{z}}}$}\cellmax{$\olivename{\grp{D_{10}^{v}}}$}\cellmax{$\hmname{10mm}$}\cellmax{III}\cellmax{yes}\cellmax{20}\cellmax{58}\cellmax{no}\fillcap\begin{longtable}{@{}l>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
 \texttt{type} & III\\
 \texttt{family} & $\grp{C_{\mathnormal{N}v}}$, $N = 10$\\
 \grouprule{0pt}{\lightrulewidth}
@@ -267,7 +268,7 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \texttt{hermann\symbol{95}mauguin} & $\hmname{10mm}$\\
 \texttt{ihrig\symbol{95}golubitsky} & $\igname{\grp{D_{10}^{z}}}$\\
 \texttt{olive} & $\olivename{\grp{D_{10}^{v}}}$\\
-\texttt{orbifold} & $\orbname{{\ast}1010}$\\
+\texttt{orbifold} & $\orbname{{\ast}1010}$, section~\ref{s:orbifold}\\
 \texttt{schoenflies} & \href{C10v.pdf}{$\grp{C_{10v}}$}\\
 \bottomrule\end{longtable}}
 \leavevmode\label{n:element.inversion}The field \texttt{type} is I when $\grp{C_{10v}}$ contains only rotations, II when $\grp{C_{10v}}$ contains the inversion $\elt{i}$ and III otherwise. The field \texttt{hk} gives \texttt{H}, the rotation group isomorphic to $\grp{C_{10v}}$, and \texttt{K}${} = \grp{C_{10v}} \cap \grp{SO(3)}$, with $\grp{C_{10v}} = \texttt{K} \cup \elt{i}\,(\texttt{H} \setminus \texttt{K})$ as sets. The fields \texttt{center} and \texttt{commutator\symbol{95}subgroup} are classes of the table of section~\ref{s:subgroups}. The field \texttt{polar} is yes when $\grp{C_{10v}}$ fixes a nonzero vector. Crystallographers call a group chiral, or enantiomorphic, when its type is I, and centrosymmetric when it contains $\elt{i}$. The field \texttt{laue\symbol{95}class} is the group generated by $\grp{C_{10v}}$ and $\elt{i}$.
@@ -372,6 +373,40 @@ $k$ & $k^{-1}$ & sym & $\omega$ & $\tan(\omega/4)$ & $\vv$\\\midrule\endhead
 \leavevmode\label{n:set.fundamental}As $\grp{C_{10v}}$ contains an improper element, every coset $\grp{C_{10v}}Q$ meets \href{SO3.pdf}{$\grp{SO(3)}$} in one coset of $\grp{C_{10v}} \cap \grp{SO(3)}$, so that $\fdomain = \fcell$ is a fundamental domain. It contains one element of every coset, more only on its boundary.
 \leavevmode\label{n:set.lens}The space $\grp{C_{10v}}\backslash\grp{O(3)}$ is $\grp{C_{10}}\backslash\grp{SO(3)}$, the lens space $\lensspace{20}{1}$, and
 \begin{equation}\label{e:volume}\vol\fdomain = \vol\fcell = \tfrac{4}{5}\pi^2,\qquad \vol\grp{C_{10v}}\cdot\vol\fdomain = 20\cdot \tfrac{4}{5}\pi^2 = 16\pi^2 = \vol\grp{O(3)}.\end{equation}
+
+Forgetting the turn about a direction sends $\grp{C_{10v}}\backslash\grp{O(3)}$ onto the orbifold of section~\ref{s:orbifold}.
+The harmonics on $\grp{C_{10v}}\backslash\grp{O(3)}$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.11}{11} and \href{../../CONVENTIONS.pdf\#conv.17.5}{17.5}) number $2J + 1$ for each vector of section~\ref{s:bases}: of the trivial irrep at $p = (-1)^J$ and of the determinant character at $p = -(-1)^J$. The table gives these numbers for $J \le 10$ at each parity, and the record holds their generating functions.
+{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lrrrrrrrrrrr@{}}\toprule
+$J$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$p = +1$ & 1 & 0 & 5 & 0 & 9 & 0 & 13 & 0 & 17 & 0 & 42\\*
+$p = -1$ & 0 & 3 & 0 & 7 & 0 & 11 & 0 & 15 & 0 & 19 & 21\\
+\bottomrule\end{longtable}}
+\needspace{103pt}
+\section{Orbifold}\label{s:orbifold}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.17.6}{17.6} to \href{../../CONVENTIONS.pdf\#conv.17.8}{17.8}.
+The orbifold $\twosphere/\grp{C_{10v}}$ is the set of the orbits of $\grp{C_{10v}}$ on the sphere $\twosphere$ of the directions, each orbit marked by the class of the stabilizer of its directions. Its symbol is $\orbname{{\ast}1010}$, and it lies on a disk, of area $\tfrac{1}{5}\pi$ and of Euler characteristic $\tfrac{1}{10}$.
+\leavevmode\label{n:head.stratum}\label{n:head.order.point}\label{n:head.direction}\label{n:head.stabilizer}\label{n:head.size.orbit}\label{n:head.shape}A row is a stratum, with the order of its point (order), its direction or the side of the region with an arc, and its stabilizer. Its orbit has the size and the shape of the figure of the stabilizer in section~\ref{s:permutation} (a dash where the shape depends on the point).
+{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lrllrl@{}}\toprule
+stratum & order & direction & stabilizer & size & shape\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+corner & 10 & $\dirvec{0}{0}{1}$ & \href{C10v.pdf}{$\grp{C_{10v}}$} & 1 & point\\*
+corner & 10 & $\dirvec{0}{0}{-1}$ & \href{C10v.pdf}{$\grp{C_{10v}}$} & 1 & point\\*
+mirror arc &  & side 0 & \href{C1v.pdf}{$\grp{C_{s}}$}\clsletter{a} & 10 & regular decagon\\*
+mirror arc &  & side 1 & \href{C1v.pdf}{$\grp{C_{s}}$}\clsletter{b} & 10 & regular decagon\\*
+generic &  &  & \href{C1.pdf}{$\grp{C_{1}}$} & 20 & ---\\
+\bottomrule\end{longtable}}
+\leavevmode\label{n:head.vertex.region}\label{n:head.angle}\label{n:head.normal.side}\label{n:head.partner}\label{n:head.sense}The region holds one direction of every orbit, more only on its boundary. A row is a vertex, with its direction and angle, and the side from it to the next vertex. It also gives the inward normal of the side's plane (normal), the index $k$ and the symbol (sym) of its element, its partner, itself on a mirror, and the sense of the gluing.
+{\small\setlength{\tabcolsep}{4pt}{\renewcommand{\arraystretch}{1.3}\begin{longtable}{@{}rlllrlrl@{}}\toprule
+vertex & direction & angle & normal & $k$ & sym & partner & sense\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+0 & $\dirvec{0}{0}{1}$ & $\tfrac{\pi}{10}$ & $\dirvec{0}{1}{0}$ & 10 & $\cls{\sigma_{v}}$ & 0 & same\\*
+1 & $\dirvec{0}{0}{-1}$ & $\tfrac{\pi}{10}$ & $\dirvec{\tfrac{1}{2}(\goldenratio - 1)}{-\sin\tfrac{2\pi}{5}}{0}$ & 15 & $\cls{\sigma_{d}}$ & 1 & same\\
+\bottomrule\end{longtable}}}
+\leavevmode\label{n:element.presentation.generator}\label{n:local.presentation.brackets}The elements $\elt{s}$ of the side 0 and $\elt{s'}$ of the side 1 generate $\grp{C_{10v}}$, with the presentation (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.17.7}{17.7})
+\begin{equation}\label{e:presentation}\langle \elt{s}, \elt{s'} \mid \elt{s}^{2}, \elt{s'}^{2}, (\elt{s'}\elt{s})^{10}, (\elt{s}\elt{s'})^{10} \rangle.\end{equation}
+
+Forgetting the turn about a direction sends the space $\grp{C_{10}}\backslash\grp{SO(3)}$ of section~\ref{s:fundamental_domain} onto the orbifold of \href{C10.pdf}{$\grp{C_{10}}$}, which covers this one with 2 sheets. In the orientation of \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.17.6}{17.6}, the space has the Seifert invariants $(-2;\ (10, 9), (10, 9))$ over the sphere, the Euler number $\tfrac{1}{5}$ and a first homology of order 20.
 \needspace{171pt}
 \partbox{Representations}
 \section{Irreducible representations}\label{s:irreps}

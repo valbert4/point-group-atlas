@@ -6,11 +6,13 @@ matrices, fusion rules, Clebsch-Gordan coefficients, subduction from O(3), subgr
 subduction along each embedding, Cartesian tensors, the invariant polynomials, symmetry-adapted
 bases, the fundamental domain of the cosets G Q of O(3) (tables.fundamental_domain), its
 subgroup lattice (section 15.1), its permutation representations on the orbits of points
-(section 12.5) and the center and the commutator subgroup of its group block (section 2.2), the
-last three added by lattice_files.attach once every record is written, which also writes
-data/point_groups.json; a continuous record holds its class space and irrep
-families in place of the elements and the character table, the Cartesian tensors, the invariant
-polynomials and its fundamental domain; those of SO(3) and O(3) also hold the
+(section 12.5), the center and the commutator subgroup of its group block (section 2.2), the
+orbifold of the directions (tables.orbifold) and the harmonics on the cosets G Q in its
+fundamental domain (tables.harmonics), the last five added by lattice_files.attach once every record is
+written, which also writes data/point_groups.json; a continuous record holds its class space and
+irrep families in place of the elements and the character table, the Cartesian tensors, the
+invariant polynomials, its fundamental domain with its harmonics and the orbit space of the
+directions in place of the orbifold (orbit_space); those of SO(3) and O(3) also hold the
 Clebsch-Gordan coefficients and the Wigner d matrices of their irreps for J <= 10, and those of the
 five axial continuous groups the subduction to their closed subgroups (tables.branching_continuous).  The bases
 section of T, Th, Td, O, Oh, I, Ih is read from the bases files of T, O, I; without those files
@@ -34,6 +36,8 @@ from .tables import embeddings, fusion, irrep_matrices, product_form, spherical_
 from .tables import (branching_continuous, fundamental_domain, lattice, subduction_o3, unitary,
                      unitary_continuous)
 from .tables import wigner
+from .tables import harmonics
+from .tables import orbifold as orbifold_block
 
 J_MAX_SUBDUCTION = 20          # subduction_o3 tabulated for J <= 20 (finite groups)
 J_MAX_ENUMERATED = 10          # closed-form bases enumerated for J <= 10
@@ -1585,6 +1589,14 @@ def continuous_record(name):
         doc["subduction_rules"] = o3_subduction_rules()
     unitary_continuous.attach(doc, name)
     kernels.attach_families(doc, name)
+    doc["fundamental_domain"]["harmonics"] = harmonics.continuous_block(doc, name)
+    # the quotient of the sphere is no orbifold of section 17.6: orbifold is null, and
+    # orbit_space names the arc or the point of the orbits, each stabilizer a class of the
+    # subgroups that the record holds (section 17.8)
+    doc["orbifold"] = dict(orbifold_block.CONTINUOUS)
+    doc["orbit_space"] = orbifold_block.continuous_orbit_space(
+        name, doc, {n: serialize.read_json(names.record_path(n))
+                    for n in ("C1", "C1v", "C1h", "D1", "D1h")})
     return doc
 
 

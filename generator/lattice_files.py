@@ -2,9 +2,12 @@
 G-conjugacy classes of subgroups of G and their covering relation), written into
 data/json/<G>.json with the key permutation_representations (the orbits of points, one per node
 that is the stabilizer of a point, tables.permutation, CONVENTIONS.md section 12.5; the figure of
-every node and the table of marks, tables.figures, section 12.6) and with the
+every node and the table of marks, tables.figures, section 12.6), with the
 center and the commutator subgroup of G in the group block (group.center,
-group.commutator_subgroup, each a node of the lattice; section 2.2), and
+group.commutator_subgroup, each a node of the lattice; section 2.2), with the key orbifold (the
+orbifold of the directions, whose strata name nodes of the lattice and orbits of points,
+tables.orbifold, sections 17.6 to 17.8) and with fundamental_domain.harmonics (tables.harmonics,
+section 17.5), and
 data/point_groups.json (the O(3)-conjugacy classes of the catalogue's groups, SO(3) and O(3) among
 them, ordered by containment).  The records stage calls attach() after it has written the
 records.  Definitions: CONVENTIONS.md section 15.
@@ -17,7 +20,7 @@ denote another record's class, C1h, D1, D1h and D1d, are mapped to that record b
 lattice.SMALL_N_ALIAS).
 """
 from . import names, serialize
-from .tables import kernels, lattice, permutation
+from .tables import harmonics, kernels, lattice, orbifold, permutation
 
 EMBEDDING_KIND = "G-conjugacy class of subgroups"
 SUBGROUP_WITNESS = "explicit subgroup of the record"
@@ -306,24 +309,70 @@ def read_records(group_names):
 
 def attach():
     """Add subgroup_lattice, permutation_representations (from the nodes of the lattice,
-    permutation.block), the center and the commutator subgroup of the group block and the kernel
-    and the image of each irrep (kernels.attach) to the finite records in data/json/ and write
-    data/point_groups.json."""
+    permutation.block), the center and the commutator subgroup of the group block, the kernel
+    and the image of each irrep (kernels.attach), the block orbifold (orbifold.block, which names
+    the nodes of the lattice and the orbits of points) and fundamental_domain.harmonics
+    (harmonics.finite_block) to the finite records in data/json/ and write
+    data/point_groups.json; then assert the identities across records (orbifold_across)."""
+    so3 = serialize.read_json(names.record_path("SO3"))
+    harmonics.euler_form_holds(so3["character_functions"]["irrep_families"][0]["matrices"]
+                               ["general_element"]["euler"]["d"])
     o3_class = o3_class_names(read_records(names.FINITE))
     finite_nodes, below, smallest = {}, {}, {}
+    orbifolds, facts = {}, {}
     for name, rec in read_records(names.FINITE):
         doc, smallest[name], structure = subgroup_lattice(name, rec, o3_class)
         rec["subgroup_lattice"] = doc
         rec["group"].update(structure)
         rec["permutation_representations"] = permutation.block(rec)
         kernels.attach(rec, name)
+        rotation = rec["group"]["product_form"]["rotation_subgroup"]["o3_class"]
+        base = orbifolds[rotation] if rec["group"]["type"] != "I" else None
+        rec["orbifold"] = orbifolds[name] = orbifold.block(rec, name, base)
+        if "subduction_basis" in rec:
+            rec["fundamental_domain"]["harmonics"] = harmonics.finite_block(rec, name)
+            facts[name] = (rec["group"]["type"], rotation,
+                           len(rec["fundamental_domain"]["components"]),
+                           rec["fundamental_domain"]["harmonics"]["count"])
         serialize.write_json(names.record_path(name), rec)
         canonical = lattice.SMALL_N_ALIAS.get(name, name)
         below.setdefault(canonical, set()).update(x["o3_class"] for x in doc["nodes"])
         if canonical == name:
             g = rec["group"]
             finite_nodes[name] = (names.display_schoenflies(name), g["order"], g["type"])
-    continuous_types = {name: rec["group"]["type"]
-                        for name, rec in read_records(names.CONTINUOUS)}
+    continuous_types = {}
+    for name, rec in read_records(names.CONTINUOUS):
+        g = rec["group"]
+        continuous_types[name] = g["type"]
+        facts[name] = (g["type"], CONTINUOUS_ROTATION[g["rotation_subgroup"]],
+                       len(rec["fundamental_domain"]["components"]),
+                       rec["fundamental_domain"]["harmonics"]["count"])
+    orbifold_across(orbifolds, facts)
     serialize.write_json(names.point_groups_lattice_path(),
                          point_groups_lattice(finite_nodes, continuous_types, below, smallest))
+
+
+# The record of the rotation subgroup of a continuous group, by group.rotation_subgroup.
+CONTINUOUS_ROTATION = {"C_inf": "Cinf", "D_inf": "Dinf", "SO(3)": "SO3"}
+
+
+def orbifold_across(orbifolds, facts):
+    """The identities that cross records: the Seifert invariants of a group of type II or III are
+    those of the record of its rotation subgroup (orientation_space.base), and over both
+    parities the harmonics number (2J + 1) c b+(J), c the components of the domain and b+ the
+    counts of the rotation subgroup (CONVENTIONS.md sections 17.5 and 17.6).  `facts` maps a
+    record to (type, the record of its rotation subgroup, c, harmonics.count)."""
+    for name, block in orbifolds.items():
+        rotation = facts[name][1] if name in facts else None
+        if block["orientation_space"]["base"] != "self" and rotation is not None and (
+                block["orientation_space"]["seifert"]
+                != orbifolds[rotation]["orientation_space"]["seifert"]):
+            raise ArithmeticError("%s: the Seifert invariants are not those of %s"
+                                  % (name, rotation))
+    for name, (group_type, rotation, c, count) in facts.items():
+        plus = {r["J"]: r["invariants"] for r in facts[rotation][3] if r["p"] == 1}
+        both = {}
+        for r in count:
+            both[r["J"]] = both.get(r["J"], 0) + r["invariants"]
+        if any(both[J] != c * plus[J] for J in both):
+            raise ArithmeticError("%s: b(J, +) + b(J, -) is not %d b+(J)" % (name, c))

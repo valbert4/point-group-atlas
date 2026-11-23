@@ -368,12 +368,33 @@ def group_block(C, lat, emb):
 
 
 # ---------------------------------------------------------------- the records
+def orbifold_pointers(C, doc, harmonics=True):
+    """The pointers to the orbifold of the image (section 21.3) and, for a preimage, to the
+    harmonics on its orientation space: the functions on Pin-(3) that 2G leaves invariant are
+    those of G on O(3), as Ebar acts on the kets of J as (-1)^(2J).  For a preimage of a group of
+    type I, the order of the first homology of G\\SO(3) is the index of the commutator subgroup
+    of 2G, the abelianized fundamental group."""
+    rec = C.G.L.rec
+    doc["orbifold"] = rot(C.base, "/orbifold")
+    if "orbifold" not in rec or (harmonics and "harmonics" not in rec["fundamental_domain"]):
+        raise AssertionError("%s: the record of %s has no orbifold or harmonics" % (C.name, C.base))
+    if harmonics:
+        doc["harmonics"] = rot(C.base, "/fundamental_domain/harmonics")
+        if rec["group"]["type"] == "I":
+            h1 = rec["orbifold"]["orientation_space"]["seifert"]["first_homology_order"]
+            if h1 != doc["group"]["commutator_subgroup"]["index"]:
+                raise AssertionError("%s: |H_1| = %d of the orientation space is not the index %d"
+                                     " of the commutator subgroup" % (
+                                         C.name, h1, doc["group"]["commutator_subgroup"]["index"]))
+
+
 def preimage_record(base):
     C = CORE.core(base)
     lat, classes, info = PL.lattice_block(C)
     emb = embeddings_block(C, classes, info)
     doc = {"schema": names.DOUBLE_RECORD_TAG}
     doc["group"] = group_block(C, lat, emb)
+    orbifold_pointers(C, doc)
     doc["elements"] = elements_block(C)
     doc["character_table"] = character_table_block(C)
     doc["fusion"], doc["clebsch_gordan"] = fusion_blocks(C, doc)
@@ -412,6 +433,7 @@ def section_record(base, second=False):
     emb = PL.embeddings_block(C, classes, info)
     doc = {"schema": names.DOUBLE_SECTION_TAG}
     doc["group"] = group_block(C, lat, emb)
+    orbifold_pointers(C, doc, harmonics=False)
     doc["elements"] = section_elements_block(C)
     doc["subgroup_lattice"] = lat
     return doc

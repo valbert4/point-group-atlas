@@ -3278,8 +3278,9 @@
       "lower": "2Oh",
       "upper": "Pinminus3",
       "witness": {
-        "kind": "argument",
-        "reason": "Pin^-(3) is the parent: every class lies in it"
+        "entry": "finite/102",
+        "in": "Pinminus3",
+        "kind": "explicit subgroup of the record"
       }
     },
     {
@@ -3287,8 +3288,9 @@
       "lower": "2Ih",
       "upper": "Pinminus3",
       "witness": {
-        "kind": "argument",
-        "reason": "Pin^-(3) is the parent: every class lies in it"
+        "entry": "finite/104",
+        "in": "Pinminus3",
+        "kind": "explicit subgroup of the record"
       }
     },
     {
@@ -3296,8 +3298,9 @@
       "lower": "2Dinfh",
       "upper": "Pinminus3",
       "witness": {
-        "kind": "argument",
-        "reason": "Pin^-(3) is the parent: every class lies in it"
+        "entry": "continuous/4",
+        "in": "Pinminus3",
+        "kind": "explicit subgroup of the record"
       }
     },
     {
@@ -3305,8 +3308,9 @@
       "lower": "SU2",
       "upper": "Pinminus3",
       "witness": {
-        "kind": "argument",
-        "reason": "Pin^-(3) is the parent: every class lies in it"
+        "entry": "continuous/5",
+        "in": "Pinminus3",
+        "kind": "explicit subgroup of the record"
       }
     }
   ],

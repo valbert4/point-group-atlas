@@ -86,9 +86,14 @@ SECTIONS = [
     ("$.subgroup_classes", "16.1"),
     ("$.subduction_rules", "16.1"),
     ("$.fundamental_domain", "17"),
+    ("$.fundamental_domain.harmonics", "17.5"),
+    ("$.orbifold", "17.8"),
+    ("$.orbifold.region", "17.7"),
+    ("$.orbifold.presentation", "17.7"),
+    ("$.orbit_space", "17.8"),
     ("$.subduction_unitary", "19"),
 ]
-NULL_REASONS = ["continuous-group", "depends-on-the-point", "not-a-named-shape",
+NULL_REASONS = ["continuous-group", "depends-on-the-point", "no-mirror", "not-a-named-shape",
                 "not-a-rational-turn", "not-a-regular-compound", "not-defined-for-family",
                 "not-in-source", "one-class-under-the-rotations"]
 KIND_ORDER = ["exact", "structured-null", "null", "boolean", "integer", "string", "array",
@@ -271,6 +276,8 @@ DOUBLE_SECTIONS = [
     ("$.spin_orbitals", "25.4"),
     ("$.jj_configurations", "25.3"),
     ("$.invariants", "26.4"),
+    ("$.orbifold", "21.3"),
+    ("$.harmonics", "21.3"),
 ]
 DOUBLE_CONTINUOUS_MAP_PATHS = {
     "$.character_functions.irrep_families[].chi",
@@ -296,6 +303,7 @@ DOUBLE_CONTINUOUS_SECTIONS = [
     ("$.subduction_rules", "29.6"),
     ("$.wigner_d", "29.6"),
     ("$.fundamental_domain", "29.1"),
+    ("$.orbit_space", "29.1"),
     ("$.spin_orbit_levels", "29.4"),
     ("$.invariants.molien", "29.4"),
     ("$.spin_orbitals", "25.4"),

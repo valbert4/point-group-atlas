@@ -76,6 +76,7 @@
           "enum": [
             "continuous-group",
             "depends-on-the-point",
+            "no-mirror",
             "not-a-named-shape",
             "not-a-rational-turn",
             "not-a-regular-compound",
@@ -243,6 +244,10 @@
         "symbol"
       ],
       "type": "object"
+    },
+    "orbifold": {
+      "description": "See CONVENTIONS.md section 21.3.",
+      "type": "string"
     },
     "schema": {
       "const": "point-group-atlas/double/section/1",
@@ -626,6 +631,7 @@
   "required": [
     "elements",
     "group",
+    "orbifold",
     "schema",
     "subgroup_lattice"
   ],

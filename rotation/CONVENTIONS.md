@@ -123,6 +123,7 @@ The symbols of this section have one meaning in every document of this catalogue
 | Notation | Meaning |
 |---|---|
 | aliases | the Greek or spectroscopic aliases of the irreps of a family |
+| angle | the interior angle of the region at a vertex |
 | basis | a basis of an isotypic component |
 | Bilbao | the symbol of an irrep in the double point group tables of [EBW+17] (`bilbao`) |
 | case | a kind of block of the symmetry-adapted bases, by the condition that gives it |
@@ -142,6 +143,7 @@ The symbols of this section have one meaning in every document of this catalogue
 | denominator | the denominator $`\prod_k (1 - t^{a_k})`$ of the overtone generating functions of a level |
 | description | a space of Cartesian tensors, in words |
 | dim | the dimension of a space or of an isotypic component |
+| direction | the direction of a point of the orbifold or of a vertex of its region, an unnormalized vector |
 | documents | the documents of the members of a family |
 | element | the element of a component at its angle |
 | even, odd | the columns for even and for odd angular momentum $`J`$ |
@@ -161,23 +163,32 @@ The symbols of this section have one meaning in every document of this catalogue
 | mult. | the multiplicity of an irrep in a space |
 | name | a space of Cartesian tensors, by its Jahn symbol |
 | normal | whether a subgroup is normal |
+| normal | the inward normal of the plane of a side of the region |
 | ord | the order of an element, or of the elements of a class |
 | order | the order of a subgroup |
+| order | the order of a cone point or of a corner of the orbifold |
 | over $`\mathbb{R}`$ | the irrep over $`\mathbb{R}`$ in which an irrep lies: itself when real or pseudoreal and the irrep over $`\mathbb{R}`$ of its complex-conjugate pair when complex, or for a family the family of these irreps |
+| partner | the side onto which the element of a side of the region carries it, the side itself on a mirror |
 | partners | the partners of a block |
 | polynomial | the polynomial in $`x`$, $`y`$, $`z`$ of a function or of an invariant |
 | rank | the number of classes of pairs of copies of a figure, a copy with itself one of them |
 | reality | the reality of an irrep: real, pseudoreal or complex |
 | real, rotation-diagonal | the matrices in the real and the rotation-diagonal bases |
 | role | whether an invariant polynomial is a primary or a secondary invariant |
+| sense | the sense in which the element of a side of the region carries it onto its partner: reversed or same |
 | setting | the number of a setting of a subgroup |
+| shape | the shape of the directions of the orbit of a stratum |
 | site | the stabilizer of the point $`\mathbf{r}_0`$ of a figure, which tells the symmetry elements that the figure lies on |
 | size | the number of elements of a class |
+| size | the number of the directions of the orbit of a stratum |
+| stabilizer | the stabilizer of the directions of a stratum |
+| stratum | a stratum of the orbifold: the cone points, the corners and the arcs of the mirror edge, and the generic points |
 | subgrp | a subgroup, the representative of its class |
 | sym | the symbol of an element |
 | terms | the terms of the configuration of a row |
 | vector | a symmetry-adapted vector |
 | vertex | a vertex of the cell $`\mathcal{D}`$ |
+| vertex | a vertex of the region of the orbifold, with the side from it to the next vertex |
 | vertices | what the points of all the copies of a figure form |
 
 ### 0.2 Typesetting
@@ -236,12 +247,13 @@ Each group has one record, `data/json/<G>.json`. A finite record holds these fie
 - `subduction_basis` (section 14).
 - `subgroup_lattice` (section 15.1).
 - `fundamental_domain` (section 17).
+- `orbifold` (sections 17.6 to 17.8).
 - `subduction_unitary` (section 19), when the group has a level (a real irrep of dimension at least 2).
 
 Continuous groups. A continuous record has `domain` = `"continuous"` and holds `group`, `character_functions`
-(section 16), `fusion`, `clebsch_gordan`, `subduction_o3`, `cartesian_tensors`, `invariants`,
-`subduction_basis` and `fundamental_domain`. The records of the five axial continuous groups also hold
-`subduction_subgroups`, and the records of $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$ hold `subgroup_classes` and `subduction_rules`
+(section 16), `fusion`, `clebsch_gordan`, `subduction_o3`, `cartesian_tensors`, `invariants`, `subduction_basis`,
+`fundamental_domain`, `orbifold` and `orbit_space` (section 17.8). The records of the five axial continuous groups
+also hold `subduction_subgroups`, and the records of $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$ hold `subgroup_classes` and `subduction_rules`
 (section 16.1). These two records also hold the Clebsch–Gordan coefficients (section 10.6) and the Wigner
 $`d`$ matrices (section 9) of their irreps for $`J \le 10`$. The records of $`\mathsf{C_{\infty v}}`$, $`\mathsf{D_{\infty}}`$, $`\mathsf{D_{\infty h}}`$, $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$,
 which have a level, hold `subduction_unitary` (section 19).
@@ -951,7 +963,9 @@ An absent datum is the structured null `{"reason": R, "value": null}`, with `rea
   - the `class_size` of an entry of `subduction_subgroups.finite` or `subgroup_classes` with a continuum of
     conjugates, and the `order` of a continuous normalizer or centralizer in the `subduction_subgroups` or
     `subgroup_classes` of section 16.1.
+  - `orbifold` (section 17.8).
 - `depends-on-the-point`: the `shape` of an orbit of points whose shape depends on its point (section 12.5).
+- `no-mirror`: the `mirror` of the orbifold of a group without a mirror (section 17.8).
 - `not-a-named-shape`: the `shape` or the `vertex_shape` of a figure whose points form none of the shapes of
   section 12.6.
 - `not-a-rational-turn`: an Euler angle that is not a rational turn (section 4.2).
@@ -961,6 +975,7 @@ An absent datum is the structured null `{"reason": R, "value": null}`, with `rea
     (section 17) and the `index` of a one-member continuous family.
   - `closed_form.abelian_part`, `abelian_index` and `self_conjugacy_condition` of $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$.
   - `crystal_family`, `crystal_system` and `lattices` of a group that is not crystallographic.
+  - the `theta` of an orbit space that is a point (section 17.8).
 - `not-in-source`: `altmann_T`, `conway_smith` and `orbifold` of a group, and `bethe` and `bilbao` of an irrep of a group,
   when not tabulated in the cited work.
 - `one-class-under-the-rotations`: the `hands` of a figure whose copies the rotations of the group keep in one
@@ -2481,6 +2496,254 @@ The field `fundamental_domain` has these fields:
 - `volumes`: `group`, `cell`, `domain` and `o3`, each the volume of a set of `dimension` 0 (a number of
   elements) to 3, `coefficient` times $`\pi`$ to the power `pi_power`. The volume `domain` is `cell` times the
   number of `components`.
+- `harmonics`: the harmonics on $`\mathsf{G}\backslash\mathsf{O(3)}`$ (section 17.5).
+
+### 17.5 Harmonics on the orientation space
+
+The field `harmonics` of `fundamental_domain` gives the harmonics on $`\mathsf{G}\backslash\mathsf{O(3)}`$:
+functions on the orientations of section 17.1, built from the matrices of section 9 and the blocks of
+section 14. Let $`c = (c_J, c_{J-1}, \dots, c_{-J})`$ be the amplitudes of the kets of the vector of the copy
+$`\kappa`$ at $`J`$ of the trivial irrep or of the determinant character (`group.determinant_character`). The
+vector of the trivial irrep is invariant under the matrices $`D^{(J,p)}`$ of $`p = (-1)^J`$, and the vector of
+the determinant character under the matrices of $`p = -(-1)^J`$ (sections 11 and 14). The harmonics of the
+vector are the $`2J + 1`$ functions
+
+```math
+f_{\kappa,m}(\mathsfit{Q}) = \sum_{m'} c_{m'}^{*}\, D^{(J,p)}_{m',m}(\mathsfit{Q}), \qquad m = J, J - 1, \dots, -J,
+```
+
+of the elements $`\mathsfit{Q}`$ of $`\mathsf{O(3)}`$. As $`D^{(J,p)}`$ is unitary, the row $`c^{\dagger}`$
+obeys $`c^{\dagger} D^{(J,p)}(\mathsfit{g}) = c^{\dagger}`$ for every element $`\mathsfit{g}`$ of
+$`\mathsf{G}`$. Thus $`f_{\kappa,m}(\mathsfit{g}\mathsfit{Q}) = f_{\kappa,m}(\mathsfit{Q})`$, and
+$`f_{\kappa,m}`$ is a function on the cosets $`\mathsf{G}\mathsfit{Q}`$.
+
+At $`(J, p)`$ the harmonics number $`(2J + 1)\, b_{\Gamma}(J, p)`$, where $`b_{\Gamma}(J, p)`$ is the
+multiplicity of the trivial irrep $`\Gamma`$ in $`D^{(J,p)}`$ restricted to $`\mathsf{G}`$ (`subduction_o3`,
+section 11). Over both parities, the harmonics at $`J`$ on each of the `components` of $`\mathcal{F}`$ number
+$`2J + 1`$ times the multiplicity of the trivial irrep of $`\mathsf{G} \cap \mathsf{SO(3)}`$ in $`D^{(J)}`$.
+Harmonics of different $`(J, p, \kappa, m)`$ are orthogonal, and the integral of
+$`\lvert f_{\kappa,m}\rvert^{2}`$ over $`\mathcal{F}`$ is $`\operatorname{vol}\mathcal{F}/(2J + 1)`$ in the
+volumes of section 17.1. The harmonics are the eigenfunctions of the Laplacian of the metric of section 17.1,
+of the eigenvalue $`J\,(J + 1)`$. The members with $`m = 0`$ depend only on the direction
+$`\mathbf{d} = (0, 0, 1)\, P(\mathsfit{Q})^{-1}`$ (section 17.6). Each such member is
+$`\sqrt{4\pi/(2J + 1)}`$ times the conjugate of the function of its block (section 4.1) at $`\mathbf{d}`$, an
+invariant spherical harmonic. With the vectors $`c_\mu`$ of a block of another irrep $`\Lambda`$, the same sum
+gives the functions $`f_{\mu,m}`$ with
+$`f_{\mu,m}(\mathsfit{g}\mathsfit{Q}) = \sum_\nu D^{\Lambda}_{\mu,\nu}(\mathsfit{g})\, f_{\nu,m}(\mathsfit{Q})`$.
+
+Continuous groups. The same sum gives the harmonics of a continuous group, from the blocks of its trivial
+family and of its determinant character (section 14.1). For $`\mathsf{C_{\infty}}`$ the vectors are the kets
+with $`m = 0`$, so its harmonics at $`p = (-1)^J`$ are $`\sqrt{4\pi/(2J + 1)}`$ times the spherical harmonics
+of the axis $`(0, 0, 1)\, P(\mathsfit{Q})`$ of section 17.3. At $`p = -(-1)^J`$ they carry the extra factor
+$`\det \mathsfit{Q}`$.
+
+A pointer `"rotation/<G>#<JSON pointer>"` names the value at the JSON pointer (RFC 6901) after `#` in the
+record `<G>`, as in section 20.3. The field `harmonics` has these fields:
+
+- `rule`: the sum above, as text.
+- `blocks`: the pointer to the blocks, `subduction_basis`.
+- `trivial`, `determinant`: the ids of the trivial irrep and of the determinant character, for a continuous
+  group the id of its trivial family and its `group.determinant_character`.
+- `euler`: the pointer to the Euler form of $`D^{(J,p)}`$ in the record of $`\mathsf{SO(3)}`$ (section 9).
+- `count[]`: for $`J = 0, 1, \dots, 10`$ and $`p = 1, -1`$, the fields `J`, `p`, `invariants`,
+  $`b_{\Gamma}(J, p)`$, and `harmonics`, $`(2J + 1)\, b_{\Gamma}(J, p)`$.
+- `generating_function`: the series of the counts of each parity,
+  $`(1 + 2t\, \mathrm{d}/\mathrm{d}t)\, H_{\Gamma}(t)`$ for the series $`H_{\Gamma}(t)`$ of section 14 of the
+  trivial irrep ($`p = (-1)^J`$) or of the determinant character ($`p = -(-1)^J`$). It has `denominator`, the
+  exponents $`d`$ of its factors $`1 - t^d`$, and `numerators[]`, each with `parity` (`"(-1)^J"` or
+  `"-(-1)^J"`), `irrep_id` and `coefficients` from $`t^0`$.
+- `norm`: `rule`, the integral above as text, `volume`, the pointer to `volumes.domain`, and `divisor`, the
+  affine form $`2J + 1`$ of section 16.
+
+### 17.6 The orbifold of the directions
+
+The field `orbifold` of a finite record gives the orbifold $`\mathsf{S}^{2}/\mathsf{G}`$ of the directions. A
+direction is a unit vector $`\mathbf{r}`$, moved by an element as a point (section 4.1):
+$`\mathbf{r} \mapsto \mathbf{r}\, P(\mathsfit{g})`$. The orbifold is the set of the orbits of $`\mathsf{G}`$
+on the sphere $`\mathsf{S}^{2}`$ of the directions, each orbit marked by the class of the stabilizer of its
+directions. The stabilizer of a direction is the group of the rotations about it, with the mirrors through it
+when there are any. The strata are the orbits of directions by their stabilizer:
+
+- $`\mathsf{C_{1}}`$: the generic points.
+- $`\mathsf{C_{\mathnormal{N}}}`$, $`N \ge 2`$: a cone point of order $`N`$.
+- $`\mathsf{C_{s}}`$: a point of an open arc of the mirror edge.
+- $`\mathsf{C_{\mathnormal{N}v}}`$, $`N \ge 2`$: a corner of order $`N`$, of angle $`\pi/N`$, on the mirror
+  edge.
+
+Each cone point and each corner is one orbit, so the two poles of $`\mathsf{C_{\mathnormal{N}}}`$ are two cone
+points with one class of stabilizers. The orders of the cone points and of the corners are the numbers of the
+symbol `group.orbifold` (section 2.2). The orbifold lies on a sphere when $`\mathsf{G}`$ is of type I, on a
+disk when $`\mathsf{G}`$ contains a mirror, and otherwise on a projective plane, the cross-cap `x` of the
+symbol. The Euler characteristic $`\chi`$ of the orbifold (`euler_characteristic`) is
+
+```math
+\chi = \chi_0 - \sum_{\text{cone points}} \Bigl(1 - \frac{1}{N}\Bigr) - \sum_{\text{corners}} \frac{1}{2}\Bigl(1 - \frac{1}{N}\Bigr) = \frac{2}{\lvert \mathsf{G}\rvert},
+```
+
+where $`\chi_0`$ is 2 for the sphere and 1 for the disk and the projective plane. The area of the orbifold is
+$`2\pi\chi = 4\pi/\lvert \mathsf{G}\rvert`$. Each stratum names the node of its stabilizer's class in
+`subgroup_lattice` (section 15.1) and the entry of `permutation_representations.actions` with that node
+(section 12.5). Thus strata with one class of stabilizers name one entry. For a subgroup $`\mathsf{H}`$ of
+$`\mathsf{G}`$, $`\mathsf{S}^{2}/\mathsf{H}`$ covers $`\mathsf{S}^{2}/\mathsf{G}`$ with
+$`[\mathsf{G} : \mathsf{H}]`$ sheets.
+
+The direction $`\mathbf{d}(\mathsfit{Q}) = (0, 0, 1)\, P(\mathsfit{Q})^{-1}`$ is the axis $`z`$ in the frame
+of a molecule placed by $`\mathsfit{Q}`$ (section 17.1). As
+$`\mathbf{d}(\mathsfit{g}\mathsfit{Q}) = \mathbf{d}(\mathsfit{Q})\, P(\mathsfit{g})^{-1}`$, the map
+$`\mathsfit{Q} \mapsto \mathbf{d}(\mathsfit{Q})`$ carries the space
+$`(\mathsf{G} \cap \mathsf{SO(3)})\backslash\mathsf{SO(3)}`$ of section 17.1 onto
+$`\mathsf{S}^{2}/(\mathsf{G} \cap \mathsf{SO(3)})`$. The fiber over a point is the circle of the turns
+$`\mathsfit{Q}\,\mathsfit{R_{z}}(\phi)`$, which change the Euler angle $`\gamma`$ of section 4.2. Over a cone
+point of order $`N`$ the fiber is $`N`$ times shorter. For a group with an improper element,
+$`\mathsf{G}\backslash\mathsf{O(3)}`$ is $`(\mathsf{G} \cap \mathsf{SO(3)})\backslash\mathsf{SO(3)}`$
+(section 17.1), and $`\mathsf{S}^{2}/(\mathsf{G} \cap \mathsf{SO(3)})`$ covers $`\mathsf{S}^{2}/\mathsf{G}`$
+with 2 sheets.
+
+The lens space $`\mathsf{L}(p, q)`$ of section 17.1 is the quotient of the sphere $`\mathsf{S}^{3}`$ of the
+complex unit vectors by the matrix $`\operatorname{diag}(\zeta_p, \zeta_p^{q})`$. The sphere is oriented as
+the boundary of the unit ball. The group $`\mathsf{SU(2)}`$ (section 19) is oriented as $`\mathsf{S}^{3}`$ by
+the first column of its matrices, and $`\mathsf{SO(3)}`$ so that the covering of section 21.1 preserves
+orientation. As $`U(\mathsfit{g}\mathsfit{Q}) = \pm U(\mathsfit{Q})\, U(\mathsfit{g})`$, and $`U(\mathsfit{g})`$ is
+diagonal for $`\mathsfit{g}`$ in $`\mathsf{C_{\mathnormal{N}}}`$, the first column of $`U(\mathsfit{Q})`$ changes by a
+$`2N`$th root of unity. Thus the map from $`\mathsfit{Q}`$ to that column carries
+$`\mathsf{C_{\mathnormal{N}}}\backslash\mathsf{SO(3)}`$ onto $`\mathsf{L}(2N, 1)`$, the lens space of `lens`
+(section 17.4), and preserves orientation. In the same way $`\mathsf{SU(2)}`$ modulo a cyclic subgroup of
+order $`N`$, the space of section 21.3, is $`\mathsf{L}(N, 1)`$. In this orientation the Euler angles
+$`(\alpha, \beta, \gamma)`$ of section 4.2 are a negative chart, and two fibers link $`-1/2`$. The rotations
+about $`x`$, $`y`$ and $`z`$ by small positive angles, in this order, form a negative frame at
+$`\mathsfit{E}`$. Then $`(\mathsf{G} \cap \mathsf{SO(3)})\backslash\mathsf{SO(3)}`$ is the Seifert fibered
+space over the sphere with the $`r`$ cone points of $`\mathsf{S}^{2}/(\mathsf{G} \cap \mathsf{SO(3)})`$, of
+orders $`\alpha_1, \dots, \alpha_r`$, with the invariants
+
+```math
+(b;\ (\alpha_1, \beta_1), \dots, (\alpha_r, \beta_r)) = (-2;\ (\alpha_1, \alpha_1 - 1), \dots, (\alpha_r, \alpha_r - 1)), \qquad e = -b - \sum_i \frac{\beta_i}{\alpha_i} = \frac{2}{\lvert \mathsf{G} \cap \mathsf{SO(3)}\rvert},
+```
+
+normalized by $`0 < \beta_i < \alpha_i`$, where $`e`$ is its Euler number. The opposite orientation, that of
+the Euler angles, gives $`(2 - r;\ (\alpha_1, 1), \dots, (\alpha_r, 1))`$ and
+$`e = -2/\lvert \mathsf{G} \cap \mathsf{SO(3)}\rvert`$. The first homology of
+$`(\mathsf{G} \cap \mathsf{SO(3)})\backslash\mathsf{SO(3)}`$ has the order $`\lvert e\rvert`$ times the
+product of the $`\alpha_i`$. This order is the index of the commutator subgroup of the preimage of
+$`\mathsf{G} \cap \mathsf{SO(3)}`$ (section 20.4), and for a lens space the first entry of `lens`
+(section 17.4).
+
+Continuous groups. The orbits of a continuous group on the sphere form no orbifold of this kind. They are the
+points of an arc of the polar angle $`\theta`$, or one point for $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$. The
+arc runs from 0 to $`\pi`$ for $`\mathsf{C_{\infty}}`$ and $`\mathsf{C_{\infty v}}`$ and from 0 to $`\pi/2`$
+for $`\mathsf{C_{\infty h}}`$, $`\mathsf{D_{\infty}}`$ and $`\mathsf{D_{\infty h}}`$. Each end and the
+interior of the arc is a stratum, with its orbit and the class of its stabilizer among the subgroups of
+section 16.1.
+
+### 17.7 The region
+
+The field `region` gives a fundamental region of $`\mathsf{G}`$ on the sphere: a convex spherical polygon that
+holds one direction of every orbit, more only on its boundary. Its vertices are exact, unnormalized directions
+in counterclockwise order seen from outside the sphere. The first vertex is $`(0, 0, 1)`$ when it is a vertex,
+and otherwise $`(1, 0, 0)`$ for an axial group and $`(0, 1, \varphi)`$ for $`\mathsf{I_{h}}`$. Side $`i`$ runs
+from vertex $`i`$ to vertex $`i + 1`$, the last side back to vertex 0, along a great circle given by the
+inward normal of its plane.
+
+The region lies in one chamber of the mirrors of $`\mathsf{G}`$, and its sides on mirrors form the mirror edge
+of the orbifold. In the azimuth $`\phi`$ from the axis $`x`$ and the polar angle $`\theta`$ from the axis
+$`z`$, the families have these regions:
+
+- $`\mathsf{C_{\mathnormal{N}}}`$: $`0 \le \phi \le 2\pi/N`$, the sphere for $`N = 1`$.
+- $`\mathsf{C_{\mathnormal{N}v}}`$: $`0 \le \phi \le \pi/N`$.
+- $`\mathsf{C_{\mathnormal{N}h}}`$, $`\mathsf{S_{2\mathnormal{N}}}`$ and $`\mathsf{D_{\mathnormal{N}}}`$:
+  $`0 \le \phi \le 2\pi/N`$ and $`\theta \le \pi/2`$, the equator side cut at $`\phi = \pi/N`$ in
+  $`\mathsf{S_{2\mathnormal{N}}}`$ and $`\mathsf{D_{\mathnormal{N}}}`$.
+- $`\mathsf{D_{\mathnormal{N}h}}`$: $`0 \le \phi \le \pi/N`$ and $`\theta \le \pi/2`$.
+- $`\mathsf{D_{\mathnormal{N}d}}`$: $`-\pi/(2N) \le \phi \le \pi/(2N)`$ and $`\theta \le \pi/2`$, the equator
+  side cut at $`\phi = 0`$.
+- $`\mathsf{T}`$: $`y \ge \lvert x\rvert`$ and $`z \ge \lvert x\rvert`$.
+- $`\mathsf{T_{d}}`$: $`z \ge y \ge \lvert x\rvert`$.
+- $`\mathsf{T_{h}}`$ and $`\mathsf{O}`$: $`x \ge 0`$, $`y \ge 0`$, $`z \ge x`$ and $`z \ge y`$.
+- $`\mathsf{O_{h}}`$: $`z \ge y \ge x \ge 0`$.
+- $`\mathsf{I_{h}}`$: the triangle of the vertices $`(0, 1, \varphi)`$, $`(1, 0, \varphi^2)`$ and
+  $`(\varphi, 1, \varphi^2)`$, on a 5-fold, a 3-fold and a 2-fold axis.
+- $`\mathsf{I}`$: the triangle of $`\mathsf{I_{h}}`$ with its mirror image in the side from
+  $`(0, 1, \varphi)`$ to $`(1, 0, \varphi^2)`$, a kite with the fourth vertex $`(0, 0, 1)`$.
+
+The vertices are the corners of the polygon, the cone points and the corners of the orbifold on its boundary,
+and the cut point of the equator side of $`\mathsf{S_{2\mathnormal{N}}}`$. A region bounded by one great
+circle has two vertices on it, where the rule of its family places them at $`N = 1`$ or 2. These vertices are
+the poles for $`\mathsf{C_{2}}`$ and $`\mathsf{C_{1v}}`$ and the points $`(\pm 1, 0, 0)`$ for
+$`\mathsf{C_{1h}}`$, $`\mathsf{S_{2}}`$ and $`\mathsf{D_{1}}`$. In $`\mathsf{D_{1h}}`$ and $`\mathsf{D_{1d}}`$
+the two meridians of the rule form one side.
+
+A side on a mirror of $`\mathsf{G}`$ has the `kind` `"mirror"`, and its `element` is that mirror. Every other
+side has the `kind` `"glued"`: its `element` carries it onto another side, its `partner`, and carries the
+region to the other side of the partner. The `sense` is `"reversed"` when the element carries `from` to the
+partner's `to`, as a rotation about a shared vertex does, and `"same"` when it carries `from` to the partner's
+`from`. A mirror side is its own partner, in the sense `"same"`. The gluing identifies the vertices in
+classes, each a point of the orbifold. The angles of a class add up to $`2\pi/N`$ at a cone point of order
+$`N`$, to $`\pi/N`$ at a corner of order $`N`$ and to $`\pi`$ at another point of the mirror edge. At a
+generic point their sum is $`2\pi`$.
+
+The elements of the sides generate $`\mathsf{G}`$, and the vertex classes give its relations (Poincaré's
+theorem for polygons). The generators are one for each mirror side, its mirror, and one for each pair of glued
+sides, the element of the side of lower index. Each mirror side gives the relator $`\mathsfit{s}^2`$ of its
+mirror $`\mathsfit{s}`$, and each vertex class gives one relator by a walk around it. From a vertex $`v`$, the
+walk crosses a glued side $`t`$ at $`v`$ to the vertex $`v'`$ onto which the element of $`t`$ carries $`v`$.
+The walk then crosses the side at $`v'`$ other than the partner of $`t`$. Its word $`W`$ is the product, in
+the order of section 4.1, of the inverses of the elements of the sides crossed, from the last side crossed to
+the first. A walk that returns to its first vertex and side gives the relator $`W^N`$, where $`N`$ is the
+order of the class's point and 1 at a generic point. A walk from the mirror $`\mathsfit{s}`$ of a side to the
+mirror $`\mathsfit{s}'`$ of a side gives $`(\mathsfit{s}\, W^{-1} \mathsfit{s}'\, W)^N`$, where $`N`$ is the
+order of the corner and 1 at another point of the mirror edge. The presented group has the order
+$`\lvert \mathsf{G}\rvert`$, and the map of its generators to their elements is an isomorphism.
+
+The field `region` has these fields:
+
+- `vertices[]`: the vertices.
+- `sides[]`: one for each side, with `from` and `to` (its vertices), `normal` (the inward normal of its
+  plane), `kind`, `element`, `partner` and `sense`.
+- `angles[]`: the interior angle at each vertex, in units of $`\pi`$, as $`[n, d]`$.
+- `vertex_classes[]`: the classes, each with `vertices`, `stratum` (`"cone point"`, `"corner"`, `"mirror arc"`
+  or `"generic"`), `order` ($`N`$, and 1 for the last two) and `angle_sum` (in units of $`\pi`$).
+- `contains`: the image $`\mathbf{r}_0\, P(\mathsfit{g})`$ of the point $`\mathbf{r}_0 = (1, 2, 4)`$ of the
+  orbit of section 12.5 with the stabilizer $`\mathsf{C_{1}}`$, inside the region, as `direction`, and its
+  `element` $`\mathsfit{g}`$.
+
+The field `presentation` has `generators[]`, each with `element` and `side`, and `relators[]`, each with
+`word`, `power` and its source, a `vertex_class` or a `side`. A `word` is a list of `[generator, exponent]`
+pairs, multiplied in the order of section 4.1, the first applied first, and raised to `power`.
+
+### 17.8 Fields of `orbifold`
+
+The field `orbifold` of a finite record has these fields:
+
+- `symbol`: the pointer to `group.orbifold`.
+- `surface`: `"sphere"`, `"disk"` or `"projective plane"`.
+- `orientable`: whether $`\mathsf{G}`$ is of type I.
+- `euler_characteristic`: the Euler characteristic $`\chi = 2/\lvert \mathsf{G}\rvert`$, as $`[n, d]`$.
+- `area`: the area $`4\pi/\lvert \mathsf{G}\rvert`$ in units of $`\pi`$, as $`[n, d]`$.
+- `cone_points[]`: one for each cone point, in the order of its first vertex, with `order`, `direction`,
+  `stabilizer_node`, `orbit` and `vertex`, the first vertex of its class.
+- `mirror`: null `no-mirror` for a group without a mirror, otherwise the edge, with `corners[]` (as
+  `cone_points[]`) and `arcs[]` (`stabilizer_node`, `orbit` and `side`). Both lists follow the edge from the
+  first vertex of its mirror side of least index.
+- `cross_cap`: whether the surface is the projective plane.
+- `generic`: `stabilizer_node` and `orbit` of the generic points.
+- `region`, `presentation`: section 17.7.
+- `orientation_space`: the tie to `fundamental_domain` (section 17.6), with these fields:
+  - `base`: `"self"` for a group of type I, otherwise the pointer to `orbifold` in the record of
+    $`\mathsf{G} \cap \mathsf{SO(3)}`$, named by `product_form.rotation_subgroup.o3_class`.
+  - `sheets`: the sheets of $`\mathsf{S}^{2}/(\mathsf{G} \cap \mathsf{SO(3)})`$ over
+    $`\mathsf{S}^{2}/\mathsf{G}`$, 1 or 2.
+  - `seifert`: the invariants of section 17.6, with `genus` (0), `base_orientable` (true), `b`, `fibers[]`,
+    `euler_number` ($`e`$, as $`[n, d]`$) and `first_homology_order`. An entry of `fibers[]`, one for each
+    cone point of the base, has `alpha`, `beta` and `cone_point`, its index in the base's `cone_points`.
+
+Continuous groups. The field `orbifold` of a continuous record is null `continuous-group`, and the field
+`orbit_space` has these fields:
+
+- `kind`: `"arc"` or `"point"`.
+- `theta`: the ends `t0` and `t1` of the arc in turns, or null `not-defined-for-family` for a point.
+- `strata[]`: the ends and the interior of the arc in order, or the point. A stratum has `position` (`"t0"`,
+  `"interior"`, `"t1"` or `"point"`), `orbit` (`"pole"`, `"pair of poles"`, `"circle"`, `"pair of circles"`,
+  `"equator"` or `"sphere"`) and `stabilizer`. The `stabilizer` gives the `o3_class` and the `schoenflies` of
+  its class among the subgroups of section 16.1.
 
 ## 18. Files
 
@@ -2536,7 +2799,7 @@ levels (section 19). Section p.s is the s-th section of part p, with the subsect
 (p.s.n). A continuous group, which has no Permutation representations, numbers its later parts on.
 
 For a finite group, part 1 has the sections 1.1 Names and structure, 1.2 Symmetry operations, 1.3
-Multiplication table, 1.4 Conjugacy classes, 1.5 Fundamental domain. Part 2 has 2.1 Irreducible
+Multiplication table, 1.4 Conjugacy classes, 1.5 Fundamental domain, 1.6 Orbifold. Part 2 has 2.1 Irreducible
 representations, 2.2 Character table, 2.3 Representation matrices, 2.4 Direct products of irreps, 2.5
 Clebsch–Gordan coefficients. Part 3 has 3.1 Subgroup lattice, 3.2 Descent of symmetry. Part 4 has 4.1 Figures,
 4.2 Decompositions, 4.3 Cycle types. Part 5 has 5.1 Subduction from O(3), 5.2 Multiplicities and allowed m,
@@ -2556,13 +2819,20 @@ subgroup's $`\mathsf{O(3)}`$-conjugacy class, the `schoenflies` and `alternative
 (section 2.2), follow its symbol after $`\cong`$ ($`\mathsf{C_{2v}} \cong \mathsf{D_{1h}}`$). The list of
 irreps (of irrep families, for an axial continuous group) boxes the determinant character, left out of the
 table of the section Names and structure. For $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$, whose determinant character is an instance of a family,
-the document names it in a sentence.
+the document names it in a sentence. In that table the row `orbifold` of a finite group cites the section
+Orbifold.
 
-The part The group ends with the section Fundamental domain (section 17). For a finite group it sets the
-cell's facets in a table, one row for each pair of opposite facets. It sets $`\tan(\omega_{\mathsfit{g}}/4)`$
-as its value when that is rational or a real quadratic number, and as the tangent otherwise. The vertices are
-set in a table, except that those of a prism with $`N \ge 3`$ are set by the formula of section 17.2. The
-record holds every vertex.
+The part The group ends with the sections Fundamental domain and Orbifold (section 17). For a finite group
+the section Fundamental domain sets the cell's facets in a table, one row for each pair of opposite facets.
+It sets $`\tan(\omega_{\mathsfit{g}}/4)`$ as its value when that is rational or a real quadratic number, and
+as the tangent otherwise. The vertices are set in a table, except that those of a prism with $`N \ge 3`$ are
+set by the formula of section 17.2. The record holds every vertex. For every group the section also sets the
+numbers of the harmonics of section 17.5 for $`J \le 10`$ in a table, one row for each parity. Two parities
+with the same numbers share a row, and a parity without harmonics has no row.
+
+The section Orbifold of a finite group sets the strata of the orbifold and the vertices and sides of its
+region in two tables, and the presentation in a display. For a continuous group it states the orbit space
+of section 17.6 in sentences.
 
 For a finite group, the character table is split into blocks of columns fitting the line. The fusion rules of
 a group whose every product is one irrep are a grid of the products $`\Gamma_1 \otimes \Gamma_2`$,
@@ -3000,6 +3270,7 @@ This index lists the common notation of the documents and selected symbols of th
 | aliases | the Greek or spectroscopic aliases of the irreps of a family | 0.1 |
 | $`\alpha`$ | the first Euler angle | 4 |
 | $`\mathsf{Alt_{\mathnormal{n}}}`$ | the alternating group of degree $`n`$ | 2 |
+| angle | the interior angle of the region at a vertex | 0.1 |
 | $`\mathrm{\scriptsize B}`$ | a one-dimensional irrep of an axial group with $`\chi(\mathsfit{g}_p) = -1`$, except for the small-$`N`$ renames | 6 |
 | basis | a basis of an isotypic component | 0.1 |
 | $`\beta`$ | the second Euler angle | 4 |
@@ -3053,6 +3324,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathsf{D_{2\mathnormal{n}}}`$ | the dihedral group of order $`2n`$ in a `conway_smith` name (with $`\mathsf{D_{\mathnormal{n}}}`$) | 2 |
 | $`d`$ | the dimension of an irrep | 9 |
 | $`\mathrm{d}`$ | the differential | 0.1 |
+| $`\mathbf{d}`$ | the direction $`(0, 0, 1)\,P(\mathsfit{Q})^{-1}`$ of the axis $`z`$ of a molecule placed by $`\mathsfit{Q}`$ | 17.6 |
 | $`d^{J}(\beta)`$ | the Wigner $`d`$ matrix, of entries $`\bigl\langle{}^{J}_{\,m'}\bigm\vert \mathrm{e}^{-\mathrm{i}\beta J_y}\bigm\vert{}^{J}_{\,m}\bigr\rangle`$ | 9 |
 | decomposition | the decomposition of a space into irreps | 0.1 |
 | $`\deg`$ | the degree of a polynomial | 0.1 |
@@ -3076,6 +3348,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`D^{\mathrm{Ind}}(\mathsfit{g})`$ | the matrix at $`\mathsfit{g}`$ of an induced representation $`\operatorname{Ind}_{\mathsf{H}}^{\mathsf{G}} \Lambda`$ | 12 |
 | $`\mathsf{D_{\infty}}`$ | $`\mathsf{C_{\infty}}`$ with the binary axes perpendicular to $`z`$ | 3 |
 | $`\mathsf{D_{\infty h}}`$ | $`\mathsf{D_{\infty}}`$ with the horizontal mirror | 3 |
+| direction | the direction of a point of the orbifold or of a vertex of its region, an unnormalized vector | 0.1 |
 | $`\mathsf{D_{\mathnormal{N}}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with $`N`$ binary axes perpendicular to $`z`$ | 3 |
 | $`\mathsf{D_{\mathnormal{N}d}}`$ | $`\mathsf{D_{\mathnormal{N}}}`$ with $`N`$ dihedral mirrors | 3 |
 | $`\mathsf{D_{\mathnormal{N}h}}`$ | $`\mathsf{D_{\mathnormal{N}}}`$ with the horizontal mirror | 3 |
@@ -3103,6 +3376,7 @@ This index lists the common notation of the documents and selected symbols of th
 | family | a family of irreps | 0.1 |
 | $`\texttt{field}`$ | a field name in a formula, standing for the value of the field | 0.1 |
 | figure | the figure of a class of subgroups: a point, a line, a spin, a spinning arrow, a helix, a segment, a polygon or a polyhedron | 0.1 |
+| $`f_{\kappa,m}`$ | a harmonic on $`\mathsf{G}\backslash\mathsf{O(3)}`$: the function of column $`m`$ of the vector of the copy $`\kappa`$ at $`J`$ of the trivial irrep or of the determinant character, or of the partner $`\mu`$ of a block of another irrep | 17.5 |
 | $`F_m`$ | the weight $`(J + m)!\,(J - m)!`$ of the ket $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ | 14 |
 | function | a real solid harmonic of degree 0 to 3, or a component $`\mathrm{R}_x`$, $`\mathrm{R}_y`$, $`\mathrm{R}_z`$ of an axial vector | 0.1 |
 | $`\mathsf{G}`$ | a group of this catalogue (a document names its own group) | 0.1 |
@@ -3183,6 +3457,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathsf{N}_{\mathsf{G}}(\mathsf{H})`$ | the normalizer of $`\mathsf{H}`$ in $`\mathsf{G}`$ | 12 |
 | $`n_K(J, q)`$ | the number of integers $`m \in [-J, J]`$ with $`m \equiv q \pmod{K}`$ | 14 |
 | normal | whether a subgroup is normal | 0.1 |
+| normal | the inward normal of the plane of a side of the region | 0.1 |
 | $`N_p`$ | the order of the principal generator $`\mathsfit{g}_p`$, $`N`$ or $`2N`$ | 6 |
 | $`\nu`$ | a second partner index | 9 |
 | $`\nu_{\mathrm{FS}}`$ | the Frobenius–Schur indicator of an irrep: $`+1`$ (real), $`-1`$ (pseudoreal) or $`0`$ (complex) | 7 |
@@ -3193,10 +3468,12 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\omega_{\min}`$ | the smallest rotation angle of the members of a class | 5 |
 | ord | the order of an element, or of the elements of a class | 0.1 |
 | order | the order of a subgroup | 0.1 |
+| order | the order of a cone point or of a corner of the orbifold | 0.1 |
 | over $`\mathbb{R}`$ | the irrep over $`\mathbb{R}`$ in which an irrep lies: itself when real or pseudoreal and the irrep over $`\mathbb{R}`$ of its complex-conjugate pair when complex, or for a family the family of these irreps | 0.1 |
 | $`p`$ | the parity of an irrep of $`\mathsf{O(3)}`$: $`+1`$ ($`\mathrm{g}`$) or $`-1`$ ($`\mathrm{u}`$) | 11 |
 | $`\mathrm{p}`$ | the letter of a real solid harmonic of degree 0 to 3 (s, p, d, f), or of an atomic subshell of that angular momentum (with a power $`n`$, the configuration of $`n`$ electrons in it), or of a component $`\mathrm{R}_x`$, $`\mathrm{R}_y`$, $`\mathrm{R}_z`$ of an axial vector | 13 |
 | $`P^{\Gamma}_{\mu,1}`$ | the map, up to a factor, from partner 1 to partner $`\mu`$ of each copy of $`\Gamma`$, which at $`\mu = 1`$ is a multiple of the projector on the first partners | 12 |
+| partner | the side onto which the element of a side of the region carries it, the side itself on a mirror | 0.1 |
 | partners | the partners of a block | 0.1 |
 | $`P(\mathsfit{g})`$ | the $`3\times 3`$ matrix of the element $`\mathsfit{g}`$, acting on rows: $`\mathbf{r} \mapsto \mathbf{r}\, P(\mathsfit{g})`$ | 4 |
 | $`P_\Gamma(t)`$ | the numerator of the generating function $`H_\Gamma(t)`$, or of $`H^\Gamma_\Lambda(t)/(1 - t^2)`$, a polynomial in $`t`$ | 14 |
@@ -3237,7 +3514,9 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathsf{S}^{2}`$ | the unit sphere, the directions in space | 17 |
 | $`\mathsf{S_{2\mathnormal{N}}}`$ | the cyclic group generated by the rotoreflection $`\mathsfit{\sigma_h} \mathsfit{R_z}(\pi/N)`$ | 3 |
 | $`\mathsfit{S_{4z}}`$ | the rotoreflection $`\mathsfit{S_{\mathnormal{n}}}`$ about a coordinate axis, such as $`\mathsfit{S_{4z}} = \mathsfit{\sigma_h} \mathsfit{R_z}(\pi/2)`$ | 3 |
+| sense | the sense in which the element of a side of the region carries it onto its partner: reversed or same | 0.1 |
 | setting | the number of a setting of a subgroup | 0.1 |
+| shape | the shape of the directions of the orbit of a stratum | 0.1 |
 | $`\Sigma^{+}`$ | a Greek alias of an irrep of $`\mathsf{C_{\infty v}}`$ (with $`\mathrm{\scriptsize A}_{1}`$) | 16 |
 | $`\Sigma^{-}`$ | a Greek alias of an irrep of $`\mathsf{C_{\infty v}}`$ (with $`\mathrm{\scriptsize A}_{2}`$) | 16 |
 | $`\mathsfit{\sigma}`$ | a mirror of $`\mathsf{I_{h}}`$, of the class $`\mathsfit{15\sigma}`$ | 5 |
@@ -3255,8 +3534,11 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathsf{S_{\infty}}`$ | the limit of $`\mathsf{S_{2\mathnormal{N}}}`$ as $`N \to \infty`$ (with $`\mathsf{C_{\infty h}}`$) | 3 |
 | site | the stabilizer of the point $`\mathbf{r}_0`$ of a figure, which tells the symmetry elements that the figure lies on | 0.1 |
 | size | the number of elements of a class | 0.1 |
+| size | the number of the directions of the orbit of a stratum | 0.1 |
 | $`\mathsfit{S_{\mathnormal{n}}^{\mathnormal{k}}}`$ | the rotoreflection: $`\mathsfit{C_{\mathnormal{n}}^{\mathnormal{k}}}`$ and the reflection in the plane normal to its axis ($`k`$ odd) | 5 |
 | $`\mathsf{SO(3)}`$ | the group of all rotations, with $`\mathsf{SO(2)}`$ the rotations about one axis and $`\mathsf{SO(\mathnormal{N})}`$ the rotations of $`N`$ dimensions | 3 |
+| stabilizer | the stabilizer of the directions of a stratum | 0.1 |
+| stratum | a stratum of the orbifold: the cone points, the corners and the arcs of the mirror edge, and the generic points | 0.1 |
 | $`\mathsf{SU(2)}`$ | the unitary $`2\times2`$ matrices of determinant 1, the double cover of $`\mathsf{SO(3)}`$ | 19 |
 | subgrp | a subgroup, the representative of its class | 0.1 |
 | $`\mathsfit{S_{\mathbf{v}}}(\omega)`$ | the rotoreflection $`\mathsfit{\sigma_{\mathbf{v}}} \mathsfit{R_{\mathbf{v}}}(\omega)`$ by $`\omega`$ about $`\mathbf{v}`$ | 4 |
@@ -3283,6 +3565,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`v`$ | a symmetry-adapted vector, a combination of kets $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$, with $`v_\mu`$ the partner $`\mu`$ of a block | 14 |
 | vector | a symmetry-adapted vector | 0.1 |
 | vertex | a vertex of the cell $`\mathcal{D}`$ | 0.1 |
+| vertex | a vertex of the region of the orbifold, with the side from it to the next vertex | 0.1 |
 | vertices | what the points of all the copies of a figure form | 0.1 |
 | $`\operatorname{vol}`$ | the volume in the invariant metric of $`\mathsf{O(3)}`$ in which the distance from $`\mathsfit{E}`$ to a rotation by $`\omega \le \pi`$ is $`\omega`$; of a finite group, its number of elements; of a set of cosets, its volume in the metric of the cosets (two cosets as far apart as their nearest elements) | 17 |
 | $`\mathsf{W}`$ | the subgroup whose right cosets $`\mathsf{G}`$ permutes in the `perm-dft` construction of an irrep | 9 |

@@ -771,6 +771,53 @@ o3t = {
     'fundamental_domain': {
         'cell': {'facets': [], 'shape': 'whole', 'vertices': []},
         'components': ['proper'],
+        'harmonics': {
+            'blocks': 'rotation/S2#/subduction_basis',
+            'count': [
+                {'J': 0, 'harmonics': 1, 'invariants': 1, 'p': 1},
+                {'J': 0, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 1, 'harmonics': 9, 'invariants': 3, 'p': 1},
+                {'J': 1, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 2, 'harmonics': 25, 'invariants': 5, 'p': 1},
+                {'J': 2, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 3, 'harmonics': 49, 'invariants': 7, 'p': 1},
+                {'J': 3, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 4, 'harmonics': 81, 'invariants': 9, 'p': 1},
+                {'J': 4, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 5, 'harmonics': 121, 'invariants': 11, 'p': 1},
+                {'J': 5, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 6, 'harmonics': 169, 'invariants': 13, 'p': 1},
+                {'J': 6, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 7, 'harmonics': 225, 'invariants': 15, 'p': 1},
+                {'J': 7, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 8, 'harmonics': 289, 'invariants': 17, 'p': 1},
+                {'J': 8, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 9, 'harmonics': 361, 'invariants': 19, 'p': 1},
+                {'J': 9, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 10, 'harmonics': 441, 'invariants': 21, 'p': 1},
+                {'J': 10, 'harmonics': 0, 'invariants': 0, 'p': -1}
+            ],
+            'determinant': 'Au',
+            'euler': 'rotation/SO3#/character_functions/irrep_families/0/matrices/general_element/euler',
+            'generating_function': {
+                'denominator': [2, 2, 2, 2],
+                'numerators': [
+                    {'coefficients': [1, 0, 21, 0, -13, 0, -9], 'irrep_id': 'Ag', 'parity': '(-1)^J'},
+                    {
+                        'coefficients': [0, 9, 0, 13, 0, -21, 0, -1],
+                        'irrep_id': 'Au',
+                        'parity': '-(-1)^J'
+                    }
+                ]
+            },
+            'norm': {
+                'divisor': {'coefficient': 2, 'constant': 1, 'index_symbol': 'J'},
+                'rule': 'the integral of |f_(kappa,m)|^2 over the domain is vol(domain)/(2J+1)',
+                'volume': 'rotation/S2#/fundamental_domain/volumes/domain'
+            },
+            'rule': "f_(kappa,m)(Q) = sum_(m') conj(c_(m')) D^(J,p)(Q)_(m'm), m = J, ..., -J, for the vector c = (c_J, ..., c_-J) of the copy kappa at J of the trivial irrep (p = (-1)^J) or of the determinant character (p = -(-1)^J), the amplitudes of its kets, and D^(J,p) the matrices of O(3) of the relation `euler`; then f_(kappa,m)(g Q) = f_(kappa,m)(Q) for every g of G: a function on the cosets G Q",
+            'trivial': 'Ag'
+        },
         'space': {'lens': [2, 1], 'name': 'lens space'},
         'volumes': {
             'cell': {'coefficient': [8, 1], 'dimension': 3, 'pi_power': 2},
@@ -903,6 +950,62 @@ o3t = {
             },
             {'degree': 2, 'generator': True, 'poly': {'0,1,1': Rational(1,1)}, 'primary': False}
         ]
+    },
+    'orbifold': {
+        'area': [2, 1],
+        'cone_points': [],
+        'cross_cap': True,
+        'euler_characteristic': [1, 1],
+        'generic': {'orbit': 0, 'stabilizer_node': 'n00'},
+        'mirror': {'reason': 'no-mirror', 'value': None},
+        'orientable': False,
+        'orientation_space': {
+            'base': 'rotation/C1#/orbifold',
+            'seifert': {
+                'b': -2,
+                'base_orientable': True,
+                'euler_number': [2, 1],
+                'fibers': [],
+                'first_homology_order': 2,
+                'genus': 0
+            },
+            'sheets': 2
+        },
+        'presentation': {
+            'generators': [{'element': 1, 'side': 0}],
+            'relators': [{'power': 1, 'vertex_class': 0, 'word': [[0, -1], [0, -1]]}]
+        },
+        'region': {
+            'angles': [[1, 1], [1, 1]],
+            'contains': {'direction': [Rational(1,1), Rational(2,1), Rational(4,1)], 'element': 0},
+            'sides': [
+                {
+                    'element': 1,
+                    'from': 0,
+                    'kind': 'glued',
+                    'normal': [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    'partner': 1,
+                    'sense': 'same',
+                    'to': 1
+                },
+                {
+                    'element': 1,
+                    'from': 1,
+                    'kind': 'glued',
+                    'normal': [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    'partner': 0,
+                    'sense': 'same',
+                    'to': 0
+                }
+            ],
+            'vertex_classes': [{'angle_sum': [2, 1], 'order': 1, 'stratum': 'generic', 'vertices': [0, 1]}],
+            'vertices': [
+                [Rational(1,1), Rational(0,1), Rational(0,1)],
+                [Rational(-1,1), Rational(0,1), Rational(0,1)]
+            ]
+        },
+        'surface': 'projective plane',
+        'symbol': 'rotation/S2#/group/orbifold'
     },
     'permutation_representations': {
         'actions': [

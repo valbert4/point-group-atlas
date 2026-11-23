@@ -16,6 +16,7 @@ o3d = <|
     "section_of" -> "double/2C9#",
     "symbol" -> "C_9"
   |>,
+  "orbifold" -> "rotation/C9#/orbifold",
   "schema" -> "point-group-atlas/double/section/1",
   "subgroup_lattice" -> <|
     "counts" -> <|

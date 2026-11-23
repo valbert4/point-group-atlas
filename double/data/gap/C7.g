@@ -16,6 +16,7 @@ o3d := rec(
     ("section_of") := "double/2C7#",
     ("symbol") := "C_7"
   ),
+  ("orbifold") := "rotation/C7#/orbifold",
   ("schema") := "point-group-atlas/double/section/1",
   ("subgroup_lattice") := rec(
     ("counts") := rec(

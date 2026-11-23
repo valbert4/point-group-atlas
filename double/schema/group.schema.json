@@ -76,6 +76,7 @@
           "enum": [
             "continuous-group",
             "depends-on-the-point",
+            "no-mirror",
             "not-a-named-shape",
             "not-a-rational-turn",
             "not-a-regular-compound",
@@ -1352,6 +1353,10 @@
       ],
       "type": "object"
     },
+    "harmonics": {
+      "description": "See CONVENTIONS.md section 21.3.",
+      "type": "string"
+    },
     "invariants": {
       "additionalProperties": false,
       "description": "See CONVENTIONS.md section 26.4.",
@@ -1875,6 +1880,10 @@
         "rule"
       ],
       "type": "object"
+    },
+    "orbifold": {
+      "description": "See CONVENTIONS.md section 21.3.",
+      "type": "string"
     },
     "schema": {
       "const": "point-group-atlas/double/group/1",
@@ -3595,8 +3604,10 @@
     "elements",
     "fusion",
     "group",
+    "harmonics",
     "invariants",
     "jj_configurations",
+    "orbifold",
     "schema",
     "spin_orbit_levels",
     "spin_orbitals",

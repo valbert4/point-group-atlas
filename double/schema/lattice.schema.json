@@ -76,6 +76,7 @@
           "enum": [
             "continuous-group",
             "depends-on-the-point",
+            "no-mirror",
             "not-a-named-shape",
             "not-a-rational-turn",
             "not-a-regular-compound",
@@ -178,13 +179,10 @@
               "node": {
                 "description": "See CONVENTIONS.md section 28.3.",
                 "type": "string"
-              },
-              "reason": {
-                "description": "See CONVENTIONS.md section 28.3.",
-                "type": "string"
               }
             },
             "required": [
+              "in",
               "kind"
             ],
             "type": "object"

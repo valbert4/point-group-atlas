@@ -208,6 +208,7 @@
 \newcommand{\lensspace}[2]{\mathsf{L}(#1, #2)}
 \newcommand{\twosphere}{\mathsf{S}^{2}}
 \newcommand{\projplane}{\mathbb{R}\mathsf{P}^{2}}
+\newcommand{\axisd}{\mathbf{d}}
 \newcommand{\schur}[1]{\mathbb{S}_{#1}}
 \newcommand{\shape}[1]{[#1]}
 \newcommand{\term}[2]{{}^{#1}#2}
@@ -285,6 +286,18 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../
 \leavevmode\label{n:set.fundamental}Every coset $\grp{SO(3)}Q$ lies in $\grp{SO(3)}$ or in $\elt{i}\,\grp{SO(3)}$, so that $\fdomain = \fcell \cup \elt{i}\,\fcell$ is a fundamental domain. It contains one element of every coset, more only on its boundary.
 The space $\grp{SO(3)}\backslash\grp{O(3)}$ is two points, and
 \begin{equation}\label{e:volume}\vol\fdomain = 2\vol\fcell = 2,\qquad \vol\grp{SO(3)}\cdot\vol\fdomain = 8\pi^2\cdot 2 = 16\pi^2 = \vol\grp{O(3)}.\end{equation}
+
+The harmonics on $\grp{SO(3)}\backslash\grp{O(3)}$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.11}{11} and \href{../../CONVENTIONS.pdf\#conv.17.5}{17.5}) number $2J + 1$ for each vector of section~\ref{s:bases}: of the trivial irrep at $p = (-1)^J$ and of the determinant character at $p = -(-1)^J$. The rotations about $z$ leave these vectors invariant, so each is the ket $\jm{J}{0}$ and the harmonics depend only on $\det Q$ and on the axis $\dirvec{0}{0}{1}P((\det Q)\,Q)$. The table gives these numbers for $J \le 10$, the same at both parities, and the record holds their generating functions.
+{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lrrrrrrrrrrr@{}}\toprule
+$J$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$p = \pm 1$ & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\bottomrule\end{longtable}}
+\needspace{91pt}
+\section{Orbifold}\label{s:orbifold}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.17.6}{17.6} and \href{../../CONVENTIONS.pdf\#conv.17.8}{17.8}.
+The orbits of $\grp{SO(3)}$ on the sphere $\twosphere$ of the directions form no orbifold of the kind of the finite groups.
+They form one orbit, the sphere, so that the orbit space is a point (\texttt{orbit\symbol{95}space}), and the stabilizer of a direction is \href{Cinf.pdf}{$\grp{C_{\infty}}$}.
 \needspace{171pt}
 \partbox{Representations}
 \section{Families of irreps}\label{s:families}

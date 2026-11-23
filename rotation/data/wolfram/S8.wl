@@ -2379,6 +2379,57 @@ o3t = <|
       "vertices" -> {}
     |>,
     "components" -> {"proper"},
+    "harmonics" -> <|
+      "blocks" -> "rotation/S8#/subduction_basis",
+      "count" -> {
+        <|"J" -> 0, "harmonics" -> 1, "invariants" -> 1, "p" -> 1|>,
+        <|"J" -> 0, "harmonics" -> 0, "invariants" -> 0, "p" -> -1|>,
+        <|"J" -> 1, "harmonics" -> 3, "invariants" -> 1, "p" -> 1|>,
+        <|"J" -> 1, "harmonics" -> 0, "invariants" -> 0, "p" -> -1|>,
+        <|"J" -> 2, "harmonics" -> 5, "invariants" -> 1, "p" -> 1|>,
+        <|"J" -> 2, "harmonics" -> 0, "invariants" -> 0, "p" -> -1|>,
+        <|"J" -> 3, "harmonics" -> 7, "invariants" -> 1, "p" -> 1|>,
+        <|"J" -> 3, "harmonics" -> 0, "invariants" -> 0, "p" -> -1|>,
+        <|"J" -> 4, "harmonics" -> 9, "invariants" -> 1, "p" -> 1|>,
+        <|"J" -> 4, "harmonics" -> 18, "invariants" -> 2, "p" -> -1|>,
+        <|"J" -> 5, "harmonics" -> 11, "invariants" -> 1, "p" -> 1|>,
+        <|"J" -> 5, "harmonics" -> 22, "invariants" -> 2, "p" -> -1|>,
+        <|"J" -> 6, "harmonics" -> 13, "invariants" -> 1, "p" -> 1|>,
+        <|"J" -> 6, "harmonics" -> 26, "invariants" -> 2, "p" -> -1|>,
+        <|"J" -> 7, "harmonics" -> 15, "invariants" -> 1, "p" -> 1|>,
+        <|"J" -> 7, "harmonics" -> 30, "invariants" -> 2, "p" -> -1|>,
+        <|"J" -> 8, "harmonics" -> 51, "invariants" -> 3, "p" -> 1|>,
+        <|"J" -> 8, "harmonics" -> 34, "invariants" -> 2, "p" -> -1|>,
+        <|"J" -> 9, "harmonics" -> 57, "invariants" -> 3, "p" -> 1|>,
+        <|"J" -> 9, "harmonics" -> 38, "invariants" -> 2, "p" -> -1|>,
+        <|"J" -> 10, "harmonics" -> 63, "invariants" -> 3, "p" -> 1|>,
+        <|"J" -> 10, "harmonics" -> 42, "invariants" -> 2, "p" -> -1|>
+      },
+      "determinant" -> "B",
+      "euler" -> "rotation/SO3#/character_functions/irrep_families/0/matrices/general_element/euler",
+      "generating_function" -> <|
+        "denominator" -> {2, 2, 8, 8},
+        "numerators" -> {
+          <|
+            "coefficients" -> {1, 0, 3, 0, 0, 22, 0, -14, 32, 0, -32, 0, 0, 10, 0, -18, -1, 0, -3},
+            "irrep_id" -> "A",
+            "parity" -> "(-1)^J"
+          |>,
+          <|
+            "coefficients" -> {0, 3, 0, 1, 18, 0, -10, 0, 0, 32, 0, -32, 14, 0, -22, 0, 0, -3, 0, -1},
+            "irrep_id" -> "B",
+            "parity" -> "-(-1)^J"
+          |>
+        }
+      |>,
+      "norm" -> <|
+        "divisor" -> <|"coefficient" -> 2, "constant" -> 1, "index_symbol" -> "J"|>,
+        "rule" -> "the integral of |f_(kappa,m)|^2 over the domain is vol(domain)/(2J+1)",
+        "volume" -> "rotation/S8#/fundamental_domain/volumes/domain"
+      |>,
+      "rule" -> "f_(kappa,m)(Q) = sum_(m') conj(c_(m')) D^(J,p)(Q)_(m'm), m = J, ..., -J, for the vector c = (c_J, ..., c_-J) of the copy kappa at J of the trivial irrep (p = (-1)^J) or of the determinant character (p = -(-1)^J), the amplitudes of its kets, and D^(J,p) the matrices of O(3) of the relation `euler`; then f_(kappa,m)(g Q) = f_(kappa,m)(Q) for every g of G: a function on the cosets G Q",
+      "trivial" -> "A"
+    |>,
     "space" -> <|"lens" -> {8, 1}, "name" -> "lens space"|>,
     "volumes" -> <|
       "cell" -> <|"coefficient" -> {2, 1}, "dimension" -> 3, "pi_power" -> 2|>,
@@ -2784,6 +2835,108 @@ o3t = <|
         "primary" -> False
       |>
     }
+  |>,
+  "orbifold" -> <|
+    "area" -> {1, 2},
+    "cone_points" -> {
+      <|
+        "direction" -> {0, 0, 1},
+        "orbit" -> 1,
+        "order" -> 4,
+        "stabilizer_node" -> "n02",
+        "vertex" -> 0
+      |>
+    },
+    "cross_cap" -> True,
+    "euler_characteristic" -> {1, 4},
+    "generic" -> <|"orbit" -> 0, "stabilizer_node" -> "n00"|>,
+    "mirror" -> <|"reason" -> "no-mirror", "value" -> Null|>,
+    "orientable" -> False,
+    "orientation_space" -> <|
+      "base" -> "rotation/C4#/orbifold",
+      "seifert" -> <|
+        "b" -> -2,
+        "base_orientable" -> True,
+        "euler_number" -> {1, 2},
+        "fibers" -> {
+          <|"alpha" -> 4, "beta" -> 3, "cone_point" -> 0|>,
+          <|"alpha" -> 4, "beta" -> 3, "cone_point" -> 1|>
+        },
+        "first_homology_order" -> 8,
+        "genus" -> 0
+      |>,
+      "sheets" -> 2
+    |>,
+    "presentation" -> <|
+      "generators" -> {<|"element" -> 1, "side" -> 0|>, <|"element" -> 4, "side" -> 1|>},
+      "relators" -> {
+        <|"power" -> 4, "vertex_class" -> 0, "word" -> {{0, -1}}|>,
+        <|"power" -> 1, "vertex_class" -> 1, "word" -> {{0, 1}, {1, -1}, {1, -1}}|>
+      }
+    |>,
+    "region" -> <|
+      "angles" -> {{1, 2}, {1, 2}, {1, 1}, {1, 2}},
+      "contains" -> <|"direction" -> {1, 2, 4}, "element" -> 0|>,
+      "sides" -> {
+        <|
+          "element" -> 1,
+          "from" -> 0,
+          "kind" -> "glued",
+          "normal" -> {0, 1, 0},
+          "partner" -> 3,
+          "sense" -> "reversed",
+          "to" -> 1
+        |>,
+        <|
+          "element" -> 4,
+          "from" -> 1,
+          "kind" -> "glued",
+          "normal" -> {0, 0, 1},
+          "partner" -> 2,
+          "sense" -> "same",
+          "to" -> 2
+        |>,
+        <|
+          "element" -> 7,
+          "from" -> 2,
+          "kind" -> "glued",
+          "normal" -> {0, 0, 1},
+          "partner" -> 1,
+          "sense" -> "same",
+          "to" -> 3
+        |>,
+        <|
+          "element" -> 3,
+          "from" -> 3,
+          "kind" -> "glued",
+          "normal" -> {1, 0, 0},
+          "partner" -> 0,
+          "sense" -> "reversed",
+          "to" -> 0
+        |>
+      },
+      "vertex_classes" -> {
+        <|"angle_sum" -> {1, 2}, "order" -> 4, "stratum" -> "cone point", "vertices" -> {0}|>,
+        <|
+          "angle_sum" -> {2, 1},
+          "order" -> 1,
+          "stratum" -> "generic",
+          "vertices" -> {1, 2, 3}
+        |>
+      },
+      "vertices" -> {
+        {0, 0, 1},
+        {1, 0, 0},
+        {
+          (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+          (1/2 Exp[2 Pi I/8] + -1/2 Exp[2 Pi I 3/8]),
+          0
+        },
+        {0, 1, 0}
+      }
+    |>,
+    "surface" -> "projective plane",
+    "symbol" -> "rotation/S8#/group/orbifold"
   |>,
   "permutation_representations" -> <|
     "actions" -> {

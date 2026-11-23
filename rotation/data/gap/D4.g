@@ -1599,6 +1599,57 @@ o3t := rec(
       ]
     ),
     ("components") := [ "proper", "improper" ],
+    ("harmonics") := rec(
+      ("blocks") := "rotation/D4#/subduction_basis",
+      ("count") := [
+        rec( ("J") := 0, ("harmonics") := 1, ("invariants") := 1, ("p") := 1 ),
+        rec( ("J") := 0, ("harmonics") := 1, ("invariants") := 1, ("p") := -1 ),
+        rec( ("J") := 1, ("harmonics") := 0, ("invariants") := 0, ("p") := 1 ),
+        rec( ("J") := 1, ("harmonics") := 0, ("invariants") := 0, ("p") := -1 ),
+        rec( ("J") := 2, ("harmonics") := 5, ("invariants") := 1, ("p") := 1 ),
+        rec( ("J") := 2, ("harmonics") := 5, ("invariants") := 1, ("p") := -1 ),
+        rec( ("J") := 3, ("harmonics") := 0, ("invariants") := 0, ("p") := 1 ),
+        rec( ("J") := 3, ("harmonics") := 0, ("invariants") := 0, ("p") := -1 ),
+        rec( ("J") := 4, ("harmonics") := 18, ("invariants") := 2, ("p") := 1 ),
+        rec( ("J") := 4, ("harmonics") := 18, ("invariants") := 2, ("p") := -1 ),
+        rec( ("J") := 5, ("harmonics") := 11, ("invariants") := 1, ("p") := 1 ),
+        rec( ("J") := 5, ("harmonics") := 11, ("invariants") := 1, ("p") := -1 ),
+        rec( ("J") := 6, ("harmonics") := 26, ("invariants") := 2, ("p") := 1 ),
+        rec( ("J") := 6, ("harmonics") := 26, ("invariants") := 2, ("p") := -1 ),
+        rec( ("J") := 7, ("harmonics") := 15, ("invariants") := 1, ("p") := 1 ),
+        rec( ("J") := 7, ("harmonics") := 15, ("invariants") := 1, ("p") := -1 ),
+        rec( ("J") := 8, ("harmonics") := 51, ("invariants") := 3, ("p") := 1 ),
+        rec( ("J") := 8, ("harmonics") := 51, ("invariants") := 3, ("p") := -1 ),
+        rec( ("J") := 9, ("harmonics") := 38, ("invariants") := 2, ("p") := 1 ),
+        rec( ("J") := 9, ("harmonics") := 38, ("invariants") := 2, ("p") := -1 ),
+        rec( ("J") := 10, ("harmonics") := 63, ("invariants") := 3, ("p") := 1 ),
+        rec( ("J") := 10, ("harmonics") := 63, ("invariants") := 3, ("p") := -1 )
+      ],
+      ("determinant") := "A1",
+      ("euler") := "rotation/SO3#/character_functions/irrep_families/0/matrices/general_element/euler",
+      ("generating_function") := rec(
+        ("denominator") := [ 2, 2, 4, 4 ],
+        ("numerators") := [
+          rec(
+            ("coefficients") := [ 1, 0, 3, 0, 7, 11, -11, -7, 0, -3, 0, -1 ],
+            ("irrep_id") := "A1",
+            ("parity") := "(-1)^J"
+          ),
+          rec(
+            ("coefficients") := [ 1, 0, 3, 0, 7, 11, -11, -7, 0, -3, 0, -1 ],
+            ("irrep_id") := "A1",
+            ("parity") := "-(-1)^J"
+          )
+        ]
+      ),
+      ("norm") := rec(
+        ("divisor") := rec( ("coefficient") := 2, ("constant") := 1, ("index_symbol") := "J" ),
+        ("rule") := "the integral of |f_(kappa,m)|^2 over the domain is vol(domain)/(2J+1)",
+        ("volume") := "rotation/D4#/fundamental_domain/volumes/domain"
+      ),
+      ("rule") := "f_(kappa,m)(Q) = sum_(m') conj(c_(m')) D^(J,p)(Q)_(m'm), m = J, ..., -J, for the vector c = (c_J, ..., c_-J) of the copy kappa at J of the trivial irrep (p = (-1)^J) or of the determinant character (p = -(-1)^J), the amplitudes of its kets, and D^(J,p) the matrices of O(3) of the relation `euler`; then f_(kappa,m)(g Q) = f_(kappa,m)(Q) for every g of G: a function on the cosets G Q",
+      ("trivial") := "A1"
+    ),
     ("space") := rec(
       ("lens") := rec( ("reason") := "not-defined-for-family", ("value") := fail ),
       ("name") := "prism space"
@@ -1941,6 +1992,131 @@ o3t := rec(
         ("primary") := false
       )
     ]
+  ),
+  ("orbifold") := rec(
+    ("area") := [ 1, 2 ],
+    ("cone_points") := [
+      rec(
+        ("direction") := [ 0, 0, 1 ],
+        ("orbit") := 3,
+        ("order") := 4,
+        ("stabilizer_node") := "n04",
+        ("vertex") := 0
+      ),
+      rec(
+        ("direction") := [ 1, 0, 0 ],
+        ("orbit") := 1,
+        ("order") := 2,
+        ("stabilizer_node") := "n02",
+        ("vertex") := 1
+      ),
+      rec(
+        ("direction") := [ 1/2*E(8)+-1/2*E(8)^3, 1/2*E(8)+-1/2*E(8)^3, 0 ],
+        ("orbit") := 2,
+        ("order") := 2,
+        ("stabilizer_node") := "n03",
+        ("vertex") := 2
+      )
+    ],
+    ("cross_cap") := false,
+    ("euler_characteristic") := [ 1, 4 ],
+    ("generic") := rec( ("orbit") := 0, ("stabilizer_node") := "n00" ),
+    ("mirror") := rec( ("reason") := "no-mirror", ("value") := fail ),
+    ("orientable") := true,
+    ("orientation_space") := rec(
+      ("base") := "self",
+      ("seifert") := rec(
+        ("b") := -2,
+        ("base_orientable") := true,
+        ("euler_number") := [ 1, 4 ],
+        ("fibers") := [
+          rec( ("alpha") := 4, ("beta") := 3, ("cone_point") := 0 ),
+          rec( ("alpha") := 2, ("beta") := 1, ("cone_point") := 1 ),
+          rec( ("alpha") := 2, ("beta") := 1, ("cone_point") := 2 )
+        ],
+        ("first_homology_order") := 4,
+        ("genus") := 0
+      ),
+      ("sheets") := 1
+    ),
+    ("presentation") := rec(
+      ("generators") := [ rec( ("element") := 1, ("side") := 0 ), rec( ("element") := 6, ("side") := 1 ) ],
+      ("relators") := [
+        rec( ("power") := 4, ("vertex_class") := 0, ("word") := [ [ 0, -1 ] ] ),
+        rec( ("power") := 2, ("vertex_class") := 1, ("word") := [ [ 0, 1 ], [ 1, -1 ] ] ),
+        rec( ("power") := 2, ("vertex_class") := 2, ("word") := [ [ 1, 1 ] ] )
+      ]
+    ),
+    ("region") := rec(
+      ("angles") := [ [ 1, 2 ], [ 1, 2 ], [ 1, 1 ], [ 1, 2 ] ],
+      ("contains") := rec( ("direction") := [ 1, 2, 4 ], ("element") := 0 ),
+      ("sides") := [
+        rec(
+          ("element") := 1,
+          ("from") := 0,
+          ("kind") := "glued",
+          ("normal") := [ 0, 1, 0 ],
+          ("partner") := 3,
+          ("sense") := "reversed",
+          ("to") := 1
+        ),
+        rec(
+          ("element") := 6,
+          ("from") := 1,
+          ("kind") := "glued",
+          ("normal") := [ 0, 0, 1 ],
+          ("partner") := 2,
+          ("sense") := "reversed",
+          ("to") := 2
+        ),
+        rec(
+          ("element") := 6,
+          ("from") := 2,
+          ("kind") := "glued",
+          ("normal") := [ 0, 0, 1 ],
+          ("partner") := 1,
+          ("sense") := "reversed",
+          ("to") := 3
+        ),
+        rec(
+          ("element") := 2,
+          ("from") := 3,
+          ("kind") := "glued",
+          ("normal") := [ 1, 0, 0 ],
+          ("partner") := 0,
+          ("sense") := "reversed",
+          ("to") := 0
+        )
+      ],
+      ("vertex_classes") := [
+        rec(
+          ("angle_sum") := [ 1, 2 ],
+          ("order") := 4,
+          ("stratum") := "cone point",
+          ("vertices") := [ 0 ]
+        ),
+        rec(
+          ("angle_sum") := [ 1, 1 ],
+          ("order") := 2,
+          ("stratum") := "cone point",
+          ("vertices") := [ 1, 3 ]
+        ),
+        rec(
+          ("angle_sum") := [ 1, 1 ],
+          ("order") := 2,
+          ("stratum") := "cone point",
+          ("vertices") := [ 2 ]
+        )
+      ],
+      ("vertices") := [
+        [ 0, 0, 1 ],
+        [ 1, 0, 0 ],
+        [ 1/2*E(8)+-1/2*E(8)^3, 1/2*E(8)+-1/2*E(8)^3, 0 ],
+        [ 0, 1, 0 ]
+      ]
+    ),
+    ("surface") := "sphere",
+    ("symbol") := "rotation/D4#/group/orbifold"
   ),
   ("permutation_representations") := rec(
     ("actions") := [

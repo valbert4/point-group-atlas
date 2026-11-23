@@ -1205,6 +1205,49 @@ o3t = {
             ]
         },
         'components': ['proper', 'improper'],
+        'harmonics': {
+            'blocks': 'rotation/D2#/subduction_basis',
+            'count': [
+                {'J': 0, 'harmonics': 1, 'invariants': 1, 'p': 1},
+                {'J': 0, 'harmonics': 1, 'invariants': 1, 'p': -1},
+                {'J': 1, 'harmonics': 0, 'invariants': 0, 'p': 1},
+                {'J': 1, 'harmonics': 0, 'invariants': 0, 'p': -1},
+                {'J': 2, 'harmonics': 10, 'invariants': 2, 'p': 1},
+                {'J': 2, 'harmonics': 10, 'invariants': 2, 'p': -1},
+                {'J': 3, 'harmonics': 7, 'invariants': 1, 'p': 1},
+                {'J': 3, 'harmonics': 7, 'invariants': 1, 'p': -1},
+                {'J': 4, 'harmonics': 27, 'invariants': 3, 'p': 1},
+                {'J': 4, 'harmonics': 27, 'invariants': 3, 'p': -1},
+                {'J': 5, 'harmonics': 22, 'invariants': 2, 'p': 1},
+                {'J': 5, 'harmonics': 22, 'invariants': 2, 'p': -1},
+                {'J': 6, 'harmonics': 52, 'invariants': 4, 'p': 1},
+                {'J': 6, 'harmonics': 52, 'invariants': 4, 'p': -1},
+                {'J': 7, 'harmonics': 45, 'invariants': 3, 'p': 1},
+                {'J': 7, 'harmonics': 45, 'invariants': 3, 'p': -1},
+                {'J': 8, 'harmonics': 85, 'invariants': 5, 'p': 1},
+                {'J': 8, 'harmonics': 85, 'invariants': 5, 'p': -1},
+                {'J': 9, 'harmonics': 76, 'invariants': 4, 'p': 1},
+                {'J': 9, 'harmonics': 76, 'invariants': 4, 'p': -1},
+                {'J': 10, 'harmonics': 126, 'invariants': 6, 'p': 1},
+                {'J': 10, 'harmonics': 126, 'invariants': 6, 'p': -1}
+            ],
+            'determinant': 'A',
+            'euler': 'rotation/SO3#/character_functions/irrep_families/0/matrices/general_element/euler',
+            'generating_function': {
+                'denominator': [2, 2, 2, 2],
+                'numerators': [
+                    {'coefficients': [1, 0, 6, 7, -7, -6, 0, -1], 'irrep_id': 'A', 'parity': '(-1)^J'},
+                    {'coefficients': [1, 0, 6, 7, -7, -6, 0, -1], 'irrep_id': 'A', 'parity': '-(-1)^J'}
+                ]
+            },
+            'norm': {
+                'divisor': {'coefficient': 2, 'constant': 1, 'index_symbol': 'J'},
+                'rule': 'the integral of |f_(kappa,m)|^2 over the domain is vol(domain)/(2J+1)',
+                'volume': 'rotation/D2#/fundamental_domain/volumes/domain'
+            },
+            'rule': "f_(kappa,m)(Q) = sum_(m') conj(c_(m')) D^(J,p)(Q)_(m'm), m = J, ..., -J, for the vector c = (c_J, ..., c_-J) of the copy kappa at J of the trivial irrep (p = (-1)^J) or of the determinant character (p = -(-1)^J), the amplitudes of its kets, and D^(J,p) the matrices of O(3) of the relation `euler`; then f_(kappa,m)(g Q) = f_(kappa,m)(Q) for every g of G: a function on the cosets G Q",
+            'trivial': 'A'
+        },
         'space': {
             'lens': {'reason': 'not-defined-for-family', 'value': None},
             'name': 'prism space'
@@ -1473,6 +1516,116 @@ o3t = {
             },
             {'degree': 3, 'generator': True, 'poly': {'1,1,1': Rational(1,1)}, 'primary': False}
         ]
+    },
+    'orbifold': {
+        'area': [1, 1],
+        'cone_points': [
+            {
+                'direction': [Rational(0,1), Rational(0,1), Rational(1,1)],
+                'orbit': 1,
+                'order': 2,
+                'stabilizer_node': 'n01',
+                'vertex': 0
+            },
+            {
+                'direction': [Rational(1,1), Rational(0,1), Rational(0,1)],
+                'orbit': 2,
+                'order': 2,
+                'stabilizer_node': 'n02',
+                'vertex': 1
+            },
+            {
+                'direction': [Rational(0,1), Rational(1,1), Rational(0,1)],
+                'orbit': 3,
+                'order': 2,
+                'stabilizer_node': 'n03',
+                'vertex': 2
+            }
+        ],
+        'cross_cap': False,
+        'euler_characteristic': [1, 2],
+        'generic': {'orbit': 0, 'stabilizer_node': 'n00'},
+        'mirror': {'reason': 'no-mirror', 'value': None},
+        'orientable': True,
+        'orientation_space': {
+            'base': 'self',
+            'seifert': {
+                'b': -2,
+                'base_orientable': True,
+                'euler_number': [1, 2],
+                'fibers': [
+                    {'alpha': 2, 'beta': 1, 'cone_point': 0},
+                    {'alpha': 2, 'beta': 1, 'cone_point': 1},
+                    {'alpha': 2, 'beta': 1, 'cone_point': 2}
+                ],
+                'first_homology_order': 4,
+                'genus': 0
+            },
+            'sheets': 1
+        },
+        'presentation': {
+            'generators': [{'element': 1, 'side': 0}, {'element': 3, 'side': 1}],
+            'relators': [
+                {'power': 2, 'vertex_class': 0, 'word': [[0, -1]]},
+                {'power': 2, 'vertex_class': 1, 'word': [[0, 1], [1, -1]]},
+                {'power': 2, 'vertex_class': 2, 'word': [[1, 1]]}
+            ]
+        },
+        'region': {
+            'angles': [[1, 1], [1, 2], [1, 1], [1, 2]],
+            'contains': {'direction': [Rational(1,1), Rational(2,1), Rational(4,1)], 'element': 0},
+            'sides': [
+                {
+                    'element': 1,
+                    'from': 0,
+                    'kind': 'glued',
+                    'normal': [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    'partner': 3,
+                    'sense': 'reversed',
+                    'to': 1
+                },
+                {
+                    'element': 3,
+                    'from': 1,
+                    'kind': 'glued',
+                    'normal': [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    'partner': 2,
+                    'sense': 'reversed',
+                    'to': 2
+                },
+                {
+                    'element': 3,
+                    'from': 2,
+                    'kind': 'glued',
+                    'normal': [Rational(0,1), Rational(0,1), Rational(1,1)],
+                    'partner': 1,
+                    'sense': 'reversed',
+                    'to': 3
+                },
+                {
+                    'element': 1,
+                    'from': 3,
+                    'kind': 'glued',
+                    'normal': [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    'partner': 0,
+                    'sense': 'reversed',
+                    'to': 0
+                }
+            ],
+            'vertex_classes': [
+                {'angle_sum': [1, 1], 'order': 2, 'stratum': 'cone point', 'vertices': [0]},
+                {'angle_sum': [1, 1], 'order': 2, 'stratum': 'cone point', 'vertices': [1, 3]},
+                {'angle_sum': [1, 1], 'order': 2, 'stratum': 'cone point', 'vertices': [2]}
+            ],
+            'vertices': [
+                [Rational(0,1), Rational(0,1), Rational(1,1)],
+                [Rational(1,1), Rational(0,1), Rational(0,1)],
+                [Rational(0,1), Rational(1,1), Rational(0,1)],
+                [Rational(-1,1), Rational(0,1), Rational(0,1)]
+            ]
+        },
+        'surface': 'sphere',
+        'symbol': 'rotation/D2#/group/orbifold'
     },
     'permutation_representations': {
         'actions': [

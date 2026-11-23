@@ -6329,6 +6329,7 @@ o3d = <|
     "su2_subgroup" -> "2D_12",
     "symbol" -> "2D_12"
   |>,
+  "harmonics" -> "rotation/D12#/fundamental_domain/harmonics",
   "invariants" -> <|
     "binary" -> <|
       "generators" -> {
@@ -6508,6 +6509,7 @@ o3d = <|
     },
     "rule" -> "Lambda^n of the spinor level L, n = 0, ..., dim L: chi = e_n(g), n e_n = sum_{k=1}^{n} (-1)^(k-1) e_(n-k) chi_L(g^k); Lambda^(d-n)(L) = Lambda^n(L) (x) Lambda^d(L)"
   |>,
+  "orbifold" -> "rotation/D12#/orbifold",
   "schema" -> "point-group-atlas/double/group/1",
   "spin_orbit_levels" -> <|
     "levels" -> {
