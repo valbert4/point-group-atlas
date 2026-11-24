@@ -9772,7 +9772,7 @@ o3t := rec(
         ("spaces") := [ "axial-3" ]
       )
     ],
-    ("alternative_names") := [],
+    ("alternative_names") := [ rec( ("schoenflies") := "C_11i", ("source") := fail ) ],
     ("altmann_T") := rec( ("reason") := "not-in-source", ("value") := fail ),
     ("automorphisms") := rec(
       ("class_orbits") := [

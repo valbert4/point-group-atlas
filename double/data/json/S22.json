@@ -27,7 +27,12 @@
     ]
   },
   "group": {
-    "alternative_names": [],
+    "alternative_names": [
+      {
+        "source": null,
+        "symbol": "C_11i"
+      }
+    ],
     "altmann_T": {
       "reason": "not-in-source",
       "value": null

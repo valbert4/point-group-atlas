@@ -70329,7 +70329,12 @@
         ]
       }
     ],
-    "alternative_names": [],
+    "alternative_names": [
+      {
+        "schoenflies": "C_11i",
+        "source": null
+      }
+    ],
     "altmann_T": {
       "reason": "not-in-source",
       "value": null

@@ -194,7 +194,10 @@ def write_bases(task):
 
 def run(args):
     """Compute every requested (group, J), one per worker process, the largest first.  In the
-    catalogue double, the files of double.exceptional_bases."""
+    catalogue double, the files of double.exceptional_bases; none in a magnetic catalogue, whose
+    records hold no bases files."""
+    if names.CATALOGUE in names.MAGNETIC:
+        return None
     if names.CATALOGUE == "double":
         from ..double import exceptional_bases
         return exceptional_bases.run(args)

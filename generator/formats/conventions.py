@@ -731,9 +731,10 @@ def body(markdown_text, numbered=True, margin_max=NUMBER_MARGIN_MAX, index=True)
 
 # The file that holds the sections of another catalogue that an index row may name: the index of
 # the double point groups names sections 0 to 19, which are in Rotation's CONVENTIONS.pdf, beside
-# its own CONVENTIONS.pdf in the volume's folder.
-OUTSIDE = {"double": "../rotation/CONVENTIONS.pdf"}
-FIRST_SECTION = {"double": 20}
+# its own CONVENTIONS.pdf in the volume's folder, and so does the index of the magnetic point
+# groups.  The first section of each catalogue's file (the files are numbered as one).
+OUTSIDE = {"double": "../rotation/CONVENTIONS.pdf", "magnetic": "../rotation/CONVENTIONS.pdf"}
+FIRST_SECTION = {"double": 20, "magnetic": 30, "magnetic-double": 40}
 
 
 # ---------------------------------------------------------------- the generated blocks (T6)

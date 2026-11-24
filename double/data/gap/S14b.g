@@ -2,7 +2,7 @@
 o3d := rec(
   ("elements") := rec( ("count") := 14, ("lift_bits") := [ 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0 ] ),
   ("group") := rec(
-    ("alternative_names") := [],
+    ("alternative_names") := [ rec( ("source") := fail, ("symbol") := "C_7ib" ) ],
     ("altmann_T") := 18,
     ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
     ("conway_smith") := rec( ("reason") := "not-in-source", ("value") := fail ),

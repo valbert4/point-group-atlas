@@ -28175,7 +28175,12 @@
         ]
       }
     ],
-    "alternative_names": [],
+    "alternative_names": [
+      {
+        "schoenflies": "C_7i",
+        "source": null
+      }
+    ],
     "altmann_T": 18,
     "automorphisms": {
       "class_orbits": [

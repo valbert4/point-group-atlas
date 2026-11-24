@@ -1854,7 +1854,7 @@ o3t = <|
         "spaces" -> {"axial-3"}
       |>
     },
-    "alternative_names" -> {},
+    "alternative_names" -> {<|"schoenflies" -> "C_3i", "source" -> Null|>},
     "altmann_T" -> 14,
     "automorphisms" -> <|
       "class_orbits" -> {{"E"}, {"C3", "C32"}, {"i"}, {"S6", "S65"}},

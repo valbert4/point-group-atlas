@@ -137,20 +137,33 @@ STYLE = "\n".join([STYLE, MARK, OPENING])
 TITLE = "Point Group Atlas"
 # The volume of each catalogue, on the title sheet of its volume and in the titles of its documents,
 # and its style: the Double catalogue's has \nicefrac (the half-integer J) and its part titles in
-# pine (the colors of the catalogues, scope Q8).
-VOLUMES = {"rotation": "Volume I: point groups", "double": "Volume II: double point groups"}
+# pine, the Magnetic catalogue's are in wine and the Magnetic double catalogue's in gold, with
+# \nicefrac (the colors of the catalogues, scope Q8 and Q35, and their tones in the dark theme).
+VOLUMES = {"rotation": "Volume I: point groups", "double": "Volume II: double point groups",
+           "magnetic": "Volume III: magnetic point groups",
+           "magnetic-double": "Volume IV: magnetic double point groups"}
 TITLES = {key: "%s, %s" % (TITLE, volume[0].lower() + volume[1:])
           for key, volume in VOLUMES.items()}
-DOUBLE_STYLE = STYLE.replace(
-    r"\definecolor{parttitle}{rgb}{0.6,0.1,0.1}",
-    r"\usepackage{nicefrac}" + "\n" + r"\definecolor{parttitle}{HTML}{295A2C}").replace(
-    r"\definecolor{parttitlelight}{HTML}{EC6B60}", r"\definecolor{parttitlelight}{HTML}{6C9F6D}")
+
+
+def colored(dark, light, nicefrac=False):
+    """STYLE with the part titles in the color `dark` and its second tone `light` (hex)."""
+    return STYLE.replace(
+        r"\definecolor{parttitle}{rgb}{0.6,0.1,0.1}",
+        (r"\usepackage{nicefrac}" + "\n" if nicefrac else "") + r"\definecolor{parttitle}{HTML}{%s}"
+        % dark).replace(r"\definecolor{parttitlelight}{HTML}{EC6B60}",
+                        r"\definecolor{parttitlelight}{HTML}{%s}" % light)
+
+
+DOUBLE_STYLE = colored("295A2C", "6C9F6D", nicefrac=True)
+STYLES = {"rotation": STYLE, "double": DOUBLE_STYLE, "magnetic": colored("7A1466", "D66EBC"),
+          "magnetic-double": colored("9B690B", "F2A618", nicefrac=True)}
 
 
 def current():
     """The style of the catalogue being built."""
     from .. import names
-    return DOUBLE_STYLE if names.CATALOGUE == "double" else STYLE
+    return STYLES[names.CATALOGUE]
 
 
 def metadata(name, subject, title=None):

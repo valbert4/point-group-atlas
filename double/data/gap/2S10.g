@@ -4705,7 +4705,7 @@ o3d := rec(
   ),
   ("group") := rec(
     ("abstract_type") := "Z_10 x Z_2",
-    ("alternative_names") := [],
+    ("alternative_names") := [ rec( ("source") := fail, ("symbol") := "2C_5i" ) ],
     ("altmann_T") := 16,
     ("automorphisms") := rec(
       ("class_orbits") := [

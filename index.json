@@ -4,16 +4,16 @@
       "catalogue": "rotation",
       "files": [
         {
-          "bytes": 333361,
+          "bytes": 333967,
           "format": "markdown",
           "path": "rotation/CONVENTIONS.md",
-          "sha256": "c3c7d7bd24b67831cae5798774bd8462131f2c227a7e81539ad54a26591a42c1"
+          "sha256": "bf1f774a87316f8379100f67a25ce3670a9d584c1280cbb031450a2dcebd4279"
         },
         {
-          "bytes": 809418,
+          "bytes": 810168,
           "format": "pdf",
           "path": "rotation/CONVENTIONS.pdf",
-          "sha256": "381cbc4aaeb79b23c33a6367c5efa158d33d0ca46867e447d32fee036b64a0b1"
+          "sha256": "1c71889b9a23b4dde5af38857394ed6a397b7e1ba2ec9715dbb1f4d1fdb8a03a"
         },
         {
           "bytes": 156100,
@@ -41,16 +41,16 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 81723,
+          "bytes": 81872,
           "format": "markdown",
           "path": "double/CONVENTIONS.md",
-          "sha256": "c8e85dc9b6f84f8463022b416ca8ec0681999f6c71b8255a6c646b6de529cdcc"
+          "sha256": "b5e936e7f914f443c44c40853ad70b3299dc45e42a39c5d34ba0fb1d713a2b0e"
         },
         {
-          "bytes": 484779,
+          "bytes": 484867,
           "format": "pdf",
           "path": "double/CONVENTIONS.pdf",
-          "sha256": "37550e323241c7e1e80d118ef9dcc8849122a57253155a0733a3f4fbfb049817"
+          "sha256": "3219b83501d078376de76646296dc6352f9770cd266032deb7bc3b77a176b7a4"
         },
         {
           "bytes": 85795,
@@ -79,6 +79,31 @@
       ],
       "parent": "Pin^-(3)",
       "title": "Double point groups"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 12952,
+          "format": "markdown",
+          "path": "magnetic/CONVENTIONS.md",
+          "sha256": "6d842f67d056dd343266a379a790c6ebf3da48aee2663e8342881039d0b46fdd"
+        },
+        {
+          "bytes": 213496,
+          "format": "pdf",
+          "path": "magnetic/CONVENTIONS.pdf",
+          "sha256": "ce343198409329ec6be68e4862d7a78e051f0a73db88a5ab13ef29fa135e11b5"
+        }
+      ],
+      "parent": "O(3) x C_2^T",
+      "title": "Magnetic point groups"
+    },
+    {
+      "catalogue": "magnetic-double",
+      "files": [],
+      "parent": "Pin^-(3)1'",
+      "title": "Magnetic double point groups"
     }
   ],
   "files": [
@@ -89,22 +114,22 @@
       "sha256": "0ff846d59888fb8184d65a5839a4d463b454c7c50c286ecfbfe50638e5f8fc91"
     },
     {
-      "bytes": 27630,
+      "bytes": 28160,
       "format": "markdown",
       "path": "REFERENCES.md",
-      "sha256": "27b14e45292342df74a8003f43cdcf6b8d31e9786abfa850c2bbda3e569ae63d"
+      "sha256": "1d15a7d2f95636c67319f80b9d40d717b2292a2986447adcaaa76f90ef734cf2"
     },
     {
-      "bytes": 179491,
+      "bytes": 180060,
       "format": "pdf",
       "path": "REFERENCES.pdf",
-      "sha256": "38262a44f57f91f1f7ec1316cea85b05c7c565f76713e6696460f9a5b0d78db1"
+      "sha256": "d7ae0749ef5b5a0a49172a7876e016b1b771db0c54f5d93b92076b03b62e6c34"
     },
     {
-      "bytes": 47682,
+      "bytes": 48751,
       "format": "bibtex",
       "path": "references.bib",
-      "sha256": "e4ae35d9a462188cd0cfd51badd0d3136bfa1fc7cff14568a7cc6422a01b0dce"
+      "sha256": "182119ef65fef21db4d10688f3d5ed7655b3d9ee5c2a3f891bf90dbdf50651c1"
     },
     {
       "bytes": 913,
@@ -778,40 +803,40 @@
       "catalogue": "rotation",
       "files": [
         {
-          "bytes": 391873,
+          "bytes": 391948,
           "format": "json",
           "path": "rotation/data/json/S6.json",
-          "sha256": "903bcb2f296441ca6f550e9ac1b7607b0892656b4cdbc7d5d98923d805bf3050"
+          "sha256": "feb7dc3ad1b00a864ac3a54d32016ba1ce87dae99870616d2fa27b6043aa3b40"
         },
         {
-          "bytes": 153704,
+          "bytes": 153758,
           "format": "gap",
           "path": "rotation/data/gap/S6.g",
-          "sha256": "2a736d62af68def390882a7df392b3168535a5bd0de4b357d3ac3b55b6927ebf"
+          "sha256": "b21bcda1ae479b7bb8d335f71c90aba372a4ba8c84a16cea0e54c951457293cd"
         },
         {
-          "bytes": 140773,
+          "bytes": 140818,
           "format": "wolfram",
           "path": "rotation/data/wolfram/S6.wl",
-          "sha256": "fb829d22be8e90ae827e3dc85b52220bf69b21a72f48b22a7d4bbdbb5da0a8e6"
+          "sha256": "9607d077d7da4b2a75b17b1f353029a3e9bfe41924fa8efa2d4912a5ab7c2946"
         },
         {
-          "bytes": 200212,
+          "bytes": 200251,
           "format": "sympy",
           "path": "rotation/data/sympy/S6.py",
-          "sha256": "4c4f7512151f34e4ebed223a96923cbfcfa115ed9b72f395b7e92ec734342643"
+          "sha256": "cb65623e514ca7b170a644972aeae554ce1a5ebaca74b512d210bc2abdd1627c"
         },
         {
-          "bytes": 94851,
+          "bytes": 94989,
           "format": "latex",
           "path": "rotation/data/latex/S6.tex",
-          "sha256": "78801539d0c17ea79e6fafa09cbd9527b6e9f81dbf1b103cca9d7c81538c2f77"
+          "sha256": "261674c14cfa1e2132a92523336bcebd93d6797d6fcbd2aa949b54aab74002cb"
         },
         {
-          "bytes": 429796,
+          "bytes": 429944,
           "format": "pdf",
           "path": "rotation/data/pdf/S6.pdf",
-          "sha256": "8f62b1f0f6dee44d24e552867e27b5204b192d787301abdecc1e9c46a415e087"
+          "sha256": "6a20c2a00df0a1ce1fcf3f38a690361be52f188bbf9aa71e9d66e28e65393562"
         }
       ],
       "requires": [
@@ -874,40 +899,40 @@
       "catalogue": "rotation",
       "files": [
         {
-          "bytes": 610149,
+          "bytes": 610224,
           "format": "json",
           "path": "rotation/data/json/S10.json",
-          "sha256": "7feb024c7bc2f081b281ee487fa6c9e74c86af337e8fe2f0b2c9e49289e03a35"
+          "sha256": "9da1d7358c294cd2507e2c1b789cb7dfe027562b663f51dc2e8ff14d6e77926f"
         },
         {
-          "bytes": 226972,
+          "bytes": 227026,
           "format": "gap",
           "path": "rotation/data/gap/S10.g",
-          "sha256": "6737cfce0785d728561a84c8157ad60741b59be4bff08005f0dc6ac98bdc67aa"
+          "sha256": "8217d78ded3f59804b82949db3d4fcf5f8bda03cf56bfcae139eadc3393a1bd1"
         },
         {
-          "bytes": 213228,
+          "bytes": 213273,
           "format": "wolfram",
           "path": "rotation/data/wolfram/S10.wl",
-          "sha256": "95a4a1b429a818e847babb74c9bd1ab2ed973012bf7e94d08a7394222e272f66"
+          "sha256": "c17078d7404e4a056e6cc00aa4467fab961428e38e1d2e515476f9c250abbc02"
         },
         {
-          "bytes": 310407,
+          "bytes": 310446,
           "format": "sympy",
           "path": "rotation/data/sympy/S10.py",
-          "sha256": "f40cc27e833983200e83ac9d6580d93573be03f8ddf20177853b1cca3faa5e0e"
+          "sha256": "e8ea96babf13c3e48b3f6c6b9889c33c90bf5100e58c7828869bf56158550367"
         },
         {
-          "bytes": 107360,
+          "bytes": 107500,
           "format": "latex",
           "path": "rotation/data/latex/S10.tex",
-          "sha256": "36368a2645dc18086bc6c12ebb6a4b531013d287c2e396c1029411fc624f435f"
+          "sha256": "b3172ed69dc80aadd3de6a614ae92f6a0e3b23971a2154a733d555c4bddfa999"
         },
         {
-          "bytes": 432301,
+          "bytes": 432432,
           "format": "pdf",
           "path": "rotation/data/pdf/S10.pdf",
-          "sha256": "4a77dbaeb977ede12e19604b31266a4ce34ab3498e0435267dfc80e2a35b7e69"
+          "sha256": "6f938bdb734a5c847435eb2280bc6855751f09b827c37891531f51a4422c32e8"
         }
       ],
       "requires": [
@@ -970,40 +995,40 @@
       "catalogue": "rotation",
       "files": [
         {
-          "bytes": 915592,
+          "bytes": 915667,
           "format": "json",
           "path": "rotation/data/json/S14.json",
-          "sha256": "9115b4c099d90c0dccc82eb6283577ed9e51c1152eeecb5c465ed5eef3adeb02"
+          "sha256": "3cba192f70ed1d5ce2369aa3c20ed35b2d00611b850f6609b12882341cdd424e"
         },
         {
-          "bytes": 305462,
+          "bytes": 305516,
           "format": "gap",
           "path": "rotation/data/gap/S14.g",
-          "sha256": "d437535a8d9dd9f09b7707307d54a77d555d949b27224403df97ae9c44e1689e"
+          "sha256": "2ae07131d70426fdb2198294b7ca80a1192949516cee7e94f4e35923ea46feff"
         },
         {
-          "bytes": 289938,
+          "bytes": 289983,
           "format": "wolfram",
           "path": "rotation/data/wolfram/S14.wl",
-          "sha256": "259b3cfa473b3d2d79f15b653fa7210efa40ca37d2918a9a0038e673f7e54170"
+          "sha256": "e545bf0c8912b8f31ac73fa5f78ad25af66d940f4ff1682ecb4b9593f424242a"
         },
         {
-          "bytes": 422067,
+          "bytes": 422106,
           "format": "sympy",
           "path": "rotation/data/sympy/S14.py",
-          "sha256": "b4a647260420d9d4170bc6cbe3ab8d12eabad2617282b2354e6fd5c0ea1f1d78"
+          "sha256": "24e977f22b09cbfbc63a52886cb1f5b11cbe0944fe02c2547f3036ab2a8072bc"
         },
         {
-          "bytes": 121326,
+          "bytes": 121466,
           "format": "latex",
           "path": "rotation/data/latex/S14.tex",
-          "sha256": "da135f70939678795054050a6a0f2ada7cee23f26a17596557cbe2d0de971b0a"
+          "sha256": "e474ecdfa6d540a035f2628ea9f798a439195122549dd53dcf13091d4fe02a7e"
         },
         {
-          "bytes": 435334,
+          "bytes": 435454,
           "format": "pdf",
           "path": "rotation/data/pdf/S14.pdf",
-          "sha256": "b0164a6606851d7430554716c469472c8de1564d54f6b23d6f4dc232bd9625a3"
+          "sha256": "b843eb5132870e521a6ec12d3cd38b1d8018f485de1ef31961764b516b21f874"
         }
       ],
       "requires": [
@@ -1066,40 +1091,40 @@
       "catalogue": "rotation",
       "files": [
         {
-          "bytes": 1314059,
+          "bytes": 1314134,
           "format": "json",
           "path": "rotation/data/json/S18.json",
-          "sha256": "0edcd1a654b07f03b4e5a2066f3c2edad42ac7f6f291e23cbab1b65253396666"
+          "sha256": "4310263e971445f8901af3fa52e2e55dfb3322f63b1b2ada4af7148b457de459"
         },
         {
-          "bytes": 442244,
+          "bytes": 442298,
           "format": "gap",
           "path": "rotation/data/gap/S18.g",
-          "sha256": "3e76eb681a7132d69d920ec08ddf64bce3fa097763afcdd0bc50e1db3bffc870"
+          "sha256": "d37fca47229717682f5acd6f2da32b54acac4e00562346da5fe96c679e312900"
         },
         {
-          "bytes": 417762,
+          "bytes": 417807,
           "format": "wolfram",
           "path": "rotation/data/wolfram/S18.wl",
-          "sha256": "c48111999b8d60922fb28af660d41799023125472b61f36b0058319a843e128d"
+          "sha256": "c57366f293bc2a4a0170a380422141449c3d9e6d7b9c1190e9eefab50a7bafea"
         },
         {
-          "bytes": 611107,
+          "bytes": 611146,
           "format": "sympy",
           "path": "rotation/data/sympy/S18.py",
-          "sha256": "8b2645647df9cac237f46c1140bf72933bc5ed95029b5eb3b71d8f060e1dd8f6"
+          "sha256": "892c0ac24e7b74149a40644b2163fad558227c0032bd04ce5f953727bbec5a6d"
         },
         {
-          "bytes": 140247,
+          "bytes": 140454,
           "format": "latex",
           "path": "rotation/data/latex/S18.tex",
-          "sha256": "a3e3b6b74d8c2b7f9c68dd9efdde57e07b658fb7d4ca99a78b651637b62384da"
+          "sha256": "30e4493aabc8c85fc61c5a4adfbb3b2d8655fe52a03e574a2ba2e0c2a48cc1a0"
         },
         {
-          "bytes": 443434,
+          "bytes": 443637,
           "format": "pdf",
           "path": "rotation/data/pdf/S18.pdf",
-          "sha256": "404cec3ae49beb67009652a63a7fe0c903375d05d3d48578c35306dbcfd56552"
+          "sha256": "425874968c327931b8daf5a65fefcd05814510baf6d17d1bcd538152be2ed01d"
         }
       ],
       "requires": [
@@ -1162,40 +1187,40 @@
       "catalogue": "rotation",
       "files": [
         {
-          "bytes": 1977974,
+          "bytes": 1978050,
           "format": "json",
           "path": "rotation/data/json/S22.json",
-          "sha256": "aee3893be1f20673bbf9953edd4dba80b7a3531253da8745455a94cc6af68638"
+          "sha256": "77c67dcaf28da22af2c099357360f1e7fb5b2b634064cb724323c9af31c96f41"
         },
         {
-          "bytes": 497857,
+          "bytes": 497912,
           "format": "gap",
           "path": "rotation/data/gap/S22.g",
-          "sha256": "a1b817ebd809cefd2c454433da95dec92076313eaa1f421f941b8ddd3c5b95bd"
+          "sha256": "e8785e9fd39491206e7b68129fdccb200e0a67298e847f309018295d968c0e7a"
         },
         {
-          "bytes": 477588,
+          "bytes": 477634,
           "format": "wolfram",
           "path": "rotation/data/wolfram/S22.wl",
-          "sha256": "d281f6d5110f2f04c7b1c1ee77ddb3a1002ed15b86dfdeba7b49c6f2141b49f0"
+          "sha256": "7361be4843d5382c54b6c80452c29979ac4cd95b74a8ec6e3c710c89f5a48ecb"
         },
         {
-          "bytes": 698477,
+          "bytes": 698517,
           "format": "sympy",
           "path": "rotation/data/sympy/S22.py",
-          "sha256": "ce9ab8174332da35801028dfdc8c82fa858d69a542763810e91dc52e8ce5c92d"
+          "sha256": "9381fced5b18accbd8e54260c1ee34878374753c3cb4e7c0fd0773fe915a336c"
         },
         {
-          "bytes": 156078,
+          "bytes": 156221,
           "format": "latex",
           "path": "rotation/data/latex/S22.tex",
-          "sha256": "c969e000aa73ac72ba8330b6ad93c3776d9d50fc35b0ae6af2e6882625f88c11"
+          "sha256": "63cb23ce9e322a5f80a2c05398e4477efb93414256f611fecc352faaecb969a1"
         },
         {
-          "bytes": 444029,
+          "bytes": 444093,
           "format": "pdf",
           "path": "rotation/data/pdf/S22.pdf",
-          "sha256": "c43654fd817598e356359a29da71493e8a7dc5bc303b1696bae05c62db6f20ed"
+          "sha256": "c2eb014229c9c0127c5f06fed068a75ecf568d53ec7f9caf72084a6655fbaa2b"
         }
       ],
       "requires": [
@@ -1522,16 +1547,16 @@
           "sha256": "9bb17ceb5f72a7227076697d8ec2462f60e248a2ec8c76ed6206ba0c05059a96"
         },
         {
-          "bytes": 120921,
+          "bytes": 120988,
           "format": "latex",
           "path": "rotation/data/latex/C6h.tex",
-          "sha256": "0938a78e3a44e5997fd7ff651bf26aba2470b516ec23f476ac13e97695bc5671"
+          "sha256": "ed83ffe3016005b21e45c99d3ec2d111dad8fde829ed63f627dd2704e7fc0e5a"
         },
         {
-          "bytes": 447044,
+          "bytes": 447054,
           "format": "pdf",
           "path": "rotation/data/pdf/C6h.pdf",
-          "sha256": "9a2543101b5f2f0aee24699e22ad130fee99fde385b9ee4795396bccc42e9fa6"
+          "sha256": "dadbb954d50aa16db8c9bd1b5139bede2095065a97df2f232778b25da5556547"
         }
       ],
       "requires": [
@@ -1714,16 +1739,16 @@
           "sha256": "8a100f804aaa2a718bc146089b401af582c9905b22988294c99f6d7151c48180"
         },
         {
-          "bytes": 156901,
+          "bytes": 156969,
           "format": "latex",
           "path": "rotation/data/latex/C10h.tex",
-          "sha256": "268eedef3124053f3285e93e09e5265b3eee67035df2e7dac4ba8b38aca59b15"
+          "sha256": "9db71f3a3551fecafca0dac52cdead9912999b11368b9910edf0a6c7968f09ca"
         },
         {
-          "bytes": 457662,
+          "bytes": 457845,
           "format": "pdf",
           "path": "rotation/data/pdf/C10h.pdf",
-          "sha256": "a2e856c9aad1ae32ea0edd4203a9c0637ed0a89bba62c6e526848a837e500467"
+          "sha256": "c77c6b5fb5c41cb7a312b7d7234ada13277d7d2eec25d49cf886c181a75c53bb"
         }
       ],
       "requires": [
@@ -1810,16 +1835,16 @@
           "sha256": "dbc2ad91187e622afa10d7daa872e0011143f2e30ee08888041f6a7581942d91"
         },
         {
-          "bytes": 187594,
+          "bytes": 187661,
           "format": "latex",
           "path": "rotation/data/latex/C12h.tex",
-          "sha256": "2aab24e9f934740f2bbcb7aa9945bbfb58c057053fe42fc2bd0762c668fbd862"
+          "sha256": "8405465bf1f01331cde4368cc9526ddb406062dc06e78ad43b554d3690b9cd95"
         },
         {
-          "bytes": 467760,
+          "bytes": 467837,
           "format": "pdf",
           "path": "rotation/data/pdf/C12h.pdf",
-          "sha256": "415a7c61044dcb442655956e905b0d91c55370f974e19efb07b1fdefde43404f"
+          "sha256": "4d1098c35859aed21c2c96974aef0e9e608b102efc9bf47d4010a00e693acde1"
         }
       ],
       "requires": [
@@ -3238,16 +3263,16 @@
           "sha256": "2d5f6d643c028a5e6c365adf7b25d41ed1d66263d4ebce0a92c06655f3c64e58"
         },
         {
-          "bytes": 230442,
+          "bytes": 230509,
           "format": "latex",
           "path": "rotation/data/latex/D6h.tex",
-          "sha256": "b80efa259545d7603bebf3d1b6ace8d2f5c1fa00fd82785782b2c90ea56ba7be"
+          "sha256": "da199248c768cb9a9ccd185d01bbfe66d7f386d68e1089d1c199a2b511dcd654"
         },
         {
-          "bytes": 537737,
+          "bytes": 537799,
           "format": "pdf",
           "path": "rotation/data/pdf/D6h.pdf",
-          "sha256": "365526369fc5674423b56d0ed83365b670b5c4d2843842ccf0f442c42719f256"
+          "sha256": "145f6e75e6cbc6d84f3c4181b18873ec3faf46aab079ab64b51b53570a4b3142"
         }
       ],
       "requires": [
@@ -3430,16 +3455,16 @@
           "sha256": "1863a11a2164879f7d408800c227d8287b3f7030539f7e19bcbd31e3b41763c7"
         },
         {
-          "bytes": 334425,
+          "bytes": 334493,
           "format": "latex",
           "path": "rotation/data/latex/D10h.tex",
-          "sha256": "f00aa95b3fdfaaa3532b7151b630678d49bd6fe1119b84792c81d83f8ef77b4c"
+          "sha256": "ea461064bc804fe80b1670ec4a10e46d83276d0a0a5d32edd8878f1a54bd67f8"
         },
         {
-          "bytes": 562656,
+          "bytes": 562707,
           "format": "pdf",
           "path": "rotation/data/pdf/D10h.pdf",
-          "sha256": "e0b371ceaa250765b0d4546be989859328c695daff67b4cff82b935249c915d1"
+          "sha256": "c18737835da7b1d69a233912e1a7041d62c199c86d30390b336334cbcc9211cf"
         }
       ],
       "requires": [
@@ -3526,16 +3551,16 @@
           "sha256": "25f20bddeaa46cf0d7bf72b2665d2a23a6d91c3022ec15c5c26161480c7753e3"
         },
         {
-          "bytes": 422673,
+          "bytes": 422738,
           "format": "latex",
           "path": "rotation/data/latex/D12h.tex",
-          "sha256": "fc1614a2f781c1e6d0c4d4b4fa3a4205d7157f051baeb4756b6d16f3b28126ae"
+          "sha256": "ed1bb27b90d5c7db59947f8b64d96e3cf3db4bd97c28edd4893b50d5c573aae8"
         },
         {
-          "bytes": 598917,
+          "bytes": 598904,
           "format": "pdf",
           "path": "rotation/data/pdf/D12h.pdf",
-          "sha256": "188c2e0d2c4435840dad32690054a057763ed3b26751fefc22234dbd977a5484"
+          "sha256": "90d92d1e2160df4d36b814d386265c7ac3ff2a65fc97821653de1f5e19bc434d"
         }
       ],
       "requires": [
@@ -3670,16 +3695,16 @@
           "sha256": "d165f563781eaaf5a8b50f1ffce91a1582e302c0acd3f89e7be6c5f81152e778"
         },
         {
-          "bytes": 129235,
+          "bytes": 129302,
           "format": "latex",
           "path": "rotation/data/latex/D3d.tex",
-          "sha256": "1b2fe8c1226463b2541a38a3fd195e6fe2b368ad2618341724f1f925f204a7b7"
+          "sha256": "ee8c50fa362b09e49a93bd7eadff8da207df2e05e17e5d216e6373957c221fe9"
         },
         {
-          "bytes": 491188,
+          "bytes": 491214,
           "format": "pdf",
           "path": "rotation/data/pdf/D3d.pdf",
-          "sha256": "dda485263b679658e60a6be1294ed79939978459bd7a0d595f1efd84c43cb96e"
+          "sha256": "a95243ab22d1e9e61367fbf66f2f3f60fcda88e13abc339c401d9c991a0e8f4d"
         }
       ],
       "requires": [
@@ -3766,16 +3791,16 @@
           "sha256": "f54324b6b39f8dacc87367dab7ef4ea60ba1a53d01a4dfbd0cc78c2ec81e73c6"
         },
         {
-          "bytes": 161517,
+          "bytes": 161585,
           "format": "latex",
           "path": "rotation/data/latex/D5d.tex",
-          "sha256": "8541445fbe0044c8ff4d9716bd42fec8aeb5b36cabfe53236c489b510fd959a2"
+          "sha256": "54f328dc68006f3440c88abfa048cad22fd610d0c779ce0d7aba78771c62565a"
         },
         {
-          "bytes": 502487,
+          "bytes": 502528,
           "format": "pdf",
           "path": "rotation/data/pdf/D5d.pdf",
-          "sha256": "cf195f8657436dce79dd909c07c25cd4a66cf06628f7ce4692bf96ee6fc6ba93"
+          "sha256": "f3e7d163cc1b4f44029a3d2fba4ee6d10ac529462e24d14b793ea2b99205caa0"
         }
       ],
       "requires": [
@@ -3862,16 +3887,16 @@
           "sha256": "b618389700c3ca1dad2d5d2f547bce37c75d82e95db3fbc40f9eab2e3917a9a1"
         },
         {
-          "bytes": 200481,
+          "bytes": 200549,
           "format": "latex",
           "path": "rotation/data/latex/D7d.tex",
-          "sha256": "90969ec6dfe003a6d53dbfc1b6d73ea0a4827f3806fcf0f772128923a5a38734"
+          "sha256": "151ea5c7983b94e4ff746a736e5fee031eae9a9bf473048ebb9b53db14317d32"
         },
         {
-          "bytes": 509967,
+          "bytes": 510034,
           "format": "pdf",
           "path": "rotation/data/pdf/D7d.pdf",
-          "sha256": "cb10dba1c039dff56adeb83a0a9638fc106ec51597ad910aaeb9bc35b9707224"
+          "sha256": "7c71e288b04187c3e49f72fee658cfc6ee6f182b4fe5972093048c7bb8711105"
         }
       ],
       "requires": [
@@ -3958,16 +3983,16 @@
           "sha256": "b8badfc20e0210e220692063ec467002e30057fa1bf5f7aaa8c9b0abaa94a776"
         },
         {
-          "bytes": 250452,
+          "bytes": 250587,
           "format": "latex",
           "path": "rotation/data/latex/D9d.tex",
-          "sha256": "ac7add8c994f02249a194d0b4163eda198aac18d770b91d55edec15d53a880e8"
+          "sha256": "a378f487d5d97637a8766e5744a5666abaae9a7f88a534f2eff86f5646711ed2"
         },
         {
-          "bytes": 529277,
+          "bytes": 529453,
           "format": "pdf",
           "path": "rotation/data/pdf/D9d.pdf",
-          "sha256": "375cdbe88c17f7336f77e7cace9b68588d791511fe34e15c87d2f811ff6e43da"
+          "sha256": "4b6bfca6602e6bd7a934dd869b42146b5240295ce902a34bafb8cdfaed720f08"
         }
       ],
       "requires": [
@@ -4054,16 +4079,16 @@
           "sha256": "7c973dcb0bd42500681730b9abd482eb681aa8c57d1bbcfce1851c27400da095"
         },
         {
-          "bytes": 306875,
+          "bytes": 306945,
           "format": "latex",
           "path": "rotation/data/latex/D11d.tex",
-          "sha256": "c41a8aab81d50b42d644f8a159f5dd64144763b4d2766d042b3a6c47fc338d4c"
+          "sha256": "21550d77fed9de510dce688a57ba8a9106a723ad6d2913a8a276ca35ec0042cf"
         },
         {
-          "bytes": 546643,
+          "bytes": 546678,
           "format": "pdf",
           "path": "rotation/data/pdf/D11d.pdf",
-          "sha256": "0be341d108bca222a1c2f1e5e867753f4c902b549823e984202eb1d897d5bd68"
+          "sha256": "4ef9d65a6170439e6dc6749790fdc9e4b24089be5e488f559046e269f00a9782"
         }
       ],
       "requires": [
@@ -4263,16 +4288,16 @@
           "sha256": "cbfd965f3ab20bfe6066cec859b197b1fce83ad5cf531cc3e79ec1c21468f71e"
         },
         {
-          "bytes": 191296,
+          "bytes": 191363,
           "format": "latex",
           "path": "rotation/data/latex/Th.tex",
-          "sha256": "05fa1533f84ba19793623f75e7acb3fe93cc55eed01e42f050b7aba440fe0b4c"
+          "sha256": "a8eaa243bd3355f08a99f9c7d947dae90593446cdd072a8846a34d9b5f1099f8"
         },
         {
-          "bytes": 502999,
+          "bytes": 503042,
           "format": "pdf",
           "path": "rotation/data/pdf/Th.pdf",
-          "sha256": "dd3a325732dda49dfa94bc8bfc0e45e94c80a6ec40391247c82fe62278bc2c8d"
+          "sha256": "afa56c7c7973c6c4a43598aff39eabc4dce1b42b221dcd30bc74cfbcb50bc1a0"
         },
         {
           "bytes": 267,
@@ -4606,16 +4631,16 @@
           "sha256": "fe3cda0584bb3f33b506164221dd071da1971083282a794cfa93da4f3311fc64"
         },
         {
-          "bytes": 326646,
+          "bytes": 326713,
           "format": "latex",
           "path": "rotation/data/latex/Oh.tex",
-          "sha256": "5cc450b4a1bd6f496883a6093b4607c12902751d28663511f0c2226519af6b4a"
+          "sha256": "ae75e3111035c0a3f7da116d6302d2e97735acd2dd5a5e11d82d6fa48bfaaf2d"
         },
         {
-          "bytes": 560696,
+          "bytes": 560774,
           "format": "pdf",
           "path": "rotation/data/pdf/Oh.pdf",
-          "sha256": "1a30829cf5cac9c0ee84bb1b826011020efb8ae1f4b082838281d6479d17efc0"
+          "sha256": "9b3ee60503cdd47abb77b26e24d3639810dacf0b06712c086ea4c02cd59612df"
         },
         {
           "bytes": 272,
@@ -4846,16 +4871,16 @@
           "sha256": "61c00d05346f7fe7af7ecf57e3fb01584a9316f42973f379fd31ded5b7e72963"
         },
         {
-          "bytes": 1574773,
+          "bytes": 1574908,
           "format": "latex",
           "path": "rotation/data/latex/Ih.tex",
-          "sha256": "e1d361a9712a82b78157cee4158ae106f1dbfaf1affc1ac3db8f1b28e947e7bd"
+          "sha256": "704636528d4baae946d2062ea0af964f1243b708a2ca2d5f7fcc9fda05d695ef"
         },
         {
-          "bytes": 1289263,
+          "bytes": 1289338,
           "format": "pdf",
           "path": "rotation/data/pdf/Ih.pdf",
-          "sha256": "577b56f0a2ecf8cc0c5e28627e5604eb1459aea82d64d062e4e728d84c09d266"
+          "sha256": "a6ece9be55319b78bf0dac6fc28c8549da5287d665742a4b5e81f94d2da83ec4"
         },
         {
           "bytes": 238,
@@ -5957,40 +5982,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 382719,
+          "bytes": 382790,
           "format": "json",
           "path": "double/data/json/2S6.json",
-          "sha256": "2fb87512ab12e6c67482e91f803b6c909312ae2ba397080f9697a9dda1a0e691"
+          "sha256": "be14babcda750c18e832a67e35dbbffb14744e432648b1dd2eff52eb435d6a15"
         },
         {
-          "bytes": 212507,
+          "bytes": 212557,
           "format": "gap",
           "path": "double/data/gap/2S6.g",
-          "sha256": "11ba93be37f3f9c3ecff16611273039a10e23b6bebfd62f7dcea1a2c3bc37aa0"
+          "sha256": "4cc6094aebb6796e13045e2317df72fa4f968969224c4cdfab5ddb607a8185c6"
         },
         {
-          "bytes": 188398,
+          "bytes": 188439,
           "format": "wolfram",
           "path": "double/data/wolfram/2S6.wl",
-          "sha256": "534341fbc47d6d3db3137f2410f1ff4f0821a47227e2be4a3d008e98c55da052"
+          "sha256": "e008cb15eb094c3530f06f8eaad4fca5a0788725ecc107a6089fd2228b9a2b39"
         },
         {
-          "bytes": 240823,
+          "bytes": 240858,
           "format": "sympy",
           "path": "double/data/sympy/2S6.py",
-          "sha256": "7ebd6708e823c3342216d2f36c719b964d90d40d3e15314c62c3d6c77b6c3115"
+          "sha256": "a7ebb8fadda45c03b3848aabc7f2f91ffebac946e469b93c0260ac893310895b"
         },
         {
-          "bytes": 101710,
+          "bytes": 101854,
           "format": "latex",
           "path": "double/data/latex/2S6.tex",
-          "sha256": "1c36b0b64c8207051512ed719d23ab8459285884889535074f4c31a71cbcf865"
+          "sha256": "06eb597b0d7d757e19bac6c50d56b3c8799eade4630cb85cc784f046af624915"
         },
         {
-          "bytes": 439497,
+          "bytes": 439559,
           "format": "pdf",
           "path": "double/data/pdf/2S6.pdf",
-          "sha256": "8ef3f9b0d6a8545444dbb9bc61ac246c87609461df728364411f2398a4448bd4"
+          "sha256": "4a0249d83e8cc59d020985001cd1c39f7e945b0ca04b04e803e747699973604c"
         }
       ],
       "requires": [
@@ -6051,40 +6076,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 717815,
+          "bytes": 717886,
           "format": "json",
           "path": "double/data/json/2S10.json",
-          "sha256": "5bbecff31ab05df33e41b6e13c84f6ea5a5d62c4a688e6a2a78d8b7e45f6671c"
+          "sha256": "dcd926f7ec412ab7110ccdd8fc718ff82170555ec261860d4c9cee39aa9cd256"
         },
         {
-          "bytes": 343312,
+          "bytes": 343362,
           "format": "gap",
           "path": "double/data/gap/2S10.g",
-          "sha256": "e7957bac5c5179d44094532655e5239800110c2ecee7f7efc87c592d2c0fedaf"
+          "sha256": "65f8ea1746db1a4c08384c277953597397bcc4791aea756468910b4e13a1f67d"
         },
         {
-          "bytes": 312979,
+          "bytes": 313020,
           "format": "wolfram",
           "path": "double/data/wolfram/2S10.wl",
-          "sha256": "856d015a5ecbda3beaaf2cf1d5feb8709da71645f5a7220c3f5389214eaa69f3"
+          "sha256": "b709e8dec7f2879e70f9a2ae8ec66c0413d4a9f5389d5bc9a77897583213a8f7"
         },
         {
-          "bytes": 417998,
+          "bytes": 418033,
           "format": "sympy",
           "path": "double/data/sympy/2S10.py",
-          "sha256": "f355e9193a19ec4bbf25d176176d1f36415e3a243ede6385911458b8cc4e6c92"
+          "sha256": "1d173ebe2f06c8ef7b0cd8e577fce7e721419d0a4dc9d2b39ee98cc42e4a56b2"
         },
         {
-          "bytes": 131301,
+          "bytes": 131446,
           "format": "latex",
           "path": "double/data/latex/2S10.tex",
-          "sha256": "28f25550c90184734c33ae924d05f84882985806b9cba58e5bfc88acfff3f39b"
+          "sha256": "5d670d6f3a90180dc7178f497e955a6f2da4451b2a01b0ca5c2b86f3cb72b502"
         },
         {
-          "bytes": 447068,
+          "bytes": 447083,
           "format": "pdf",
           "path": "double/data/pdf/2S10.pdf",
-          "sha256": "b48e344030932e48849126eda0c14413f9fc3951ae77b055185ed61a55385898"
+          "sha256": "7a8e3ac8b198e160e551a06f07948be5e3fc69790318845822e29cab638cd925"
         }
       ],
       "requires": [
@@ -6145,40 +6170,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 1252004,
+          "bytes": 1252075,
           "format": "json",
           "path": "double/data/json/2S14.json",
-          "sha256": "3c792049dc6331570d4e6f2cebdbd0a5238c4ce1c326a2ab323074e81400ad2a"
+          "sha256": "fb67bed0e887ddea49e4bc0f82ff09d6014a4891a51ea00f7355515e7f013210"
         },
         {
-          "bytes": 508201,
+          "bytes": 508251,
           "format": "gap",
           "path": "double/data/gap/2S14.g",
-          "sha256": "03d1c772c4178b174a7e0c0245e922df4a6f4df4ef82d6f8f3eecbe5db9f3842"
+          "sha256": "f1b791eee44ecaec0492c259e71032db6da14b65862483949edf37c0c5e200a9"
         },
         {
-          "bytes": 468902,
+          "bytes": 468943,
           "format": "wolfram",
           "path": "double/data/wolfram/2S14.wl",
-          "sha256": "e101eb8809885484bc7c03891572bac5dd93bf9b28bc84233beada3e727403a2"
+          "sha256": "0d135f10e0c985514a660881070e97fbaccdac7403c150c35b68eea4dca70a71"
         },
         {
-          "bytes": 630825,
+          "bytes": 630860,
           "format": "sympy",
           "path": "double/data/sympy/2S14.py",
-          "sha256": "5bc7577d79cc80d068f633d336c09b60a862b9e38ec81cd3366da60ec07672d4"
+          "sha256": "1d7341db8511824c82ec55bb9913b85aac38d4a473cec1e5b0912842030f782f"
         },
         {
-          "bytes": 167066,
+          "bytes": 167211,
           "format": "latex",
           "path": "double/data/latex/2S14.tex",
-          "sha256": "3ffdf812e127559e9c11dbff34ae580ace1d7ed2c7f243bc9c2c5dcf7e04b72c"
+          "sha256": "26056ccfc5b74382e531dc4e42544b58e7fd7e150568aeddf8ada3f0c7489ca6"
         },
         {
-          "bytes": 453806,
+          "bytes": 453893,
           "format": "pdf",
           "path": "double/data/pdf/2S14.pdf",
-          "sha256": "5d3f22b4796c0f32d445c68fa835348a887e44f908af1bb2a20c13f4a1be66ad"
+          "sha256": "2abf4714e45ca7ea02c37dbc733a71c88efd0e31420c47684a8e2ee93aa55875"
         }
       ],
       "requires": [
@@ -6239,40 +6264,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 1850611,
+          "bytes": 1850682,
           "format": "json",
           "path": "double/data/json/2S18.json",
-          "sha256": "30b5ffe8e0eb78543007c55a058536d11745634993d16b212fc9ed28b8447775"
+          "sha256": "6824d5f6a718fa5f57c76aa7d9e366c6c5e5ea9bbe5d5df2f6ee6c8067ba6e44"
         },
         {
-          "bytes": 760187,
+          "bytes": 760237,
           "format": "gap",
           "path": "double/data/gap/2S18.g",
-          "sha256": "7c75e3f8561af7c46119781d0faadcd7239000f322faee750cdc86ad7e311b43"
+          "sha256": "9c9ce7fa0d3e5d464779c672c2f2f5c57e2f087ab0a147b1389e60d6ce04936d"
         },
         {
-          "bytes": 691685,
+          "bytes": 691726,
           "format": "wolfram",
           "path": "double/data/wolfram/2S18.wl",
-          "sha256": "b88dac6dd2ffefe3a3019efc5be04670f60beaf7bcf4d704008a9f1cc76c3c66"
+          "sha256": "280fc2d7df961065b3229e6cf2c496dfbd322f63e27d6cb8a9488dbd4fff8eee"
         },
         {
-          "bytes": 942040,
+          "bytes": 942075,
           "format": "sympy",
           "path": "double/data/sympy/2S18.py",
-          "sha256": "6a7c33b74fd1b4a1f6540e493dbc0f22cf4ab68390988ba06513a19e77715e05"
+          "sha256": "dd0faf802d85de4ec290b590e0b675864ee994eb248851a0e12d59b574890f15"
         },
         {
-          "bytes": 220231,
+          "bytes": 220376,
           "format": "latex",
           "path": "double/data/latex/2S18.tex",
-          "sha256": "c0293b1fef872c920a3cea616472a0808d2e359dd3200ba34862edf4c65968ba"
+          "sha256": "1d4dc53e35a2d8bd4865be0f0bc1d111f11fa52aa7b1161f10aafc84ff0fdec5"
         },
         {
-          "bytes": 467957,
+          "bytes": 467997,
           "format": "pdf",
           "path": "double/data/pdf/2S18.pdf",
-          "sha256": "5434ccab8ffc79a4fe494e78559ce3684cbdba69c37fffc27eefbc336c0f55ac"
+          "sha256": "c48fdefc15fe7013aff2cbda049f6c6f76ede0d62930899906cb4a6dacdb22c5"
         }
       ],
       "requires": [
@@ -6333,40 +6358,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 3166800,
+          "bytes": 3166872,
           "format": "json",
           "path": "double/data/json/2S22.json",
-          "sha256": "ec9f47868a1eb5fae3cccc287fb6a26455150a4e0333073bceb8924514d393f6"
+          "sha256": "02d4c2f72f608d6dce49303759171c0e3e7a886c0db528dd1823c86c0ad31d36"
         },
         {
-          "bytes": 972360,
+          "bytes": 972411,
           "format": "gap",
           "path": "double/data/gap/2S22.g",
-          "sha256": "5039a4cad3f0390565249fb2d6808351c4c63355321ae7fcf8e69c2a47188b12"
+          "sha256": "1a95356f4983cf7e2e63b987305388aa474c9bc2ee6411009c8291bcec564e14"
         },
         {
-          "bytes": 903464,
+          "bytes": 903506,
           "format": "wolfram",
           "path": "double/data/wolfram/2S22.wl",
-          "sha256": "0f2eddc91e9f2cbf11fa60d3487abcb6cc729279f3ff7c21e51a4b8f408edb55"
+          "sha256": "fc96fadccf14b27ffba7e5b4e8b1cc811626a14a510267e3955a5880bfc03e06"
         },
         {
-          "bytes": 1260825,
+          "bytes": 1260861,
           "format": "sympy",
           "path": "double/data/sympy/2S22.py",
-          "sha256": "c7e3fa98e987c13f9a6d5dc3ecc64208366551ede1ebb690b7425ee86de68c05"
+          "sha256": "065fd481c21e06366fefaa4ca4b988ec9fa9de76b6b7e464261068cced75758e"
         },
         {
-          "bytes": 262461,
+          "bytes": 262608,
           "format": "latex",
           "path": "double/data/latex/2S22.tex",
-          "sha256": "954dc15e1a3907fe76ad70324c45280921b4350c6490c474316774bf6c4751da"
+          "sha256": "7d29710fc36f8f9dfbb0bb044383978077f87d206c3d698bab2fa5c3993538a1"
         },
         {
-          "bytes": 473733,
+          "bytes": 473925,
           "format": "pdf",
           "path": "double/data/pdf/2S22.pdf",
-          "sha256": "9d3b4721cdafd75b180e6fb61e514d329fd150557b0f6b46b494b842511ed7d2"
+          "sha256": "2043dc089ce98e2ae49b57ac4cd54e4c0f41e8a8bce02c66ce4484dbca5e0b07"
         }
       ],
       "requires": [
@@ -10425,40 +10450,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 13720,
+          "bytes": 13790,
           "format": "json",
           "path": "double/data/json/S6.json",
-          "sha256": "603c13bdf1dd1556bb8cc56a745c5acd17b092d7d423eaf04bb9cdb75a276cc6"
+          "sha256": "a5f1d350167cde5464409d63ae9becb83a85a3957ba30d0725fe3aa5f4329d24"
         },
         {
-          "bytes": 7365,
+          "bytes": 7414,
           "format": "gap",
           "path": "double/data/gap/S6.g",
-          "sha256": "ae33ed42b8bb2779e6fc2851712091079ff57ba5c5aa3a5a4b2160f158508b5f"
+          "sha256": "4b52177e6ec0a24d7b114c04ca87d8016593de91b5ec90148ea9695ed724159b"
         },
         {
-          "bytes": 6600,
+          "bytes": 6640,
           "format": "wolfram",
           "path": "double/data/wolfram/S6.wl",
-          "sha256": "a578370049b0354b7e043cdddd5fcd9ecf28e10a121fa512a6e4fc5fa88707af"
+          "sha256": "1ccaa73d1ba79acbc5ee9ef6702f89059b68ceeadc9b187fa50194ee1f924dbf"
         },
         {
-          "bytes": 7785,
+          "bytes": 7819,
           "format": "sympy",
           "path": "double/data/sympy/S6.py",
-          "sha256": "77c60f60b42779b798e34c7601e4941f65b79af38b409110108d1bc8d35fc510"
+          "sha256": "b127d634ccf8e86d294592f46bb43bffebc8c3ff2838a6d9b4c14eea419c25ce"
         },
         {
-          "bytes": 35376,
+          "bytes": 35447,
           "format": "latex",
           "path": "double/data/latex/S6.tex",
-          "sha256": "5696b05999738dafb9aa93edb743b751029f7ef9de173a0ddc7f491bb6772ea0"
+          "sha256": "42983a4c6b84f887e31e087c42b3011cffbe08c8db616b977965a39554dba0a0"
         },
         {
-          "bytes": 329850,
+          "bytes": 329919,
           "format": "pdf",
           "path": "double/data/pdf/S6.pdf",
-          "sha256": "c798f926dc9f64d6207b46aadb195191cfabf8a6060149db1f4d386e150da0e3"
+          "sha256": "2c7e14816effa91e4b3a1f1fb87a523ade762a22ff1ea683bd78dc6699485593"
         }
       ],
       "requires": [
@@ -10473,40 +10498,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 13726,
+          "bytes": 13797,
           "format": "json",
           "path": "double/data/json/S6b.json",
-          "sha256": "7eb457d956e10294f1a51aaeb13debb1646b236524facc22d5a33d3132b3343f"
+          "sha256": "63c7a04f46bc4d17bda10d80b1fab115dd05db735c1182ff042b629b4f522aed"
         },
         {
-          "bytes": 7374,
+          "bytes": 7424,
           "format": "gap",
           "path": "double/data/gap/S6b.g",
-          "sha256": "2b6b8b1380e675e169c55004d846c236e0a2e5711b984048a8a5c581b61089a0"
+          "sha256": "f7870544d8ca94036e8689d501188cd9c4d8241e2902b2298d476b07a8dd444a"
         },
         {
-          "bytes": 6609,
+          "bytes": 6650,
           "format": "wolfram",
           "path": "double/data/wolfram/S6b.wl",
-          "sha256": "b7a946c55839abe9bf6792a15049ab9ea42f20f60943e7e3e9a05acc59e0994d"
+          "sha256": "ca960782d0a997e1b347d0554085ed1d0368bda5a6f4be602bcced3f4f1ba6a9"
         },
         {
-          "bytes": 7794,
+          "bytes": 7829,
           "format": "sympy",
           "path": "double/data/sympy/S6b.py",
-          "sha256": "2c1774301b25ea8587789b76114d50b0c94df4ff4529c98926035a81b040c5f8"
+          "sha256": "c08fe3457a2e51f9c07432746b932f68e5cb647ff145dfe894728dbd1474ff12"
         },
         {
-          "bytes": 35706,
+          "bytes": 35790,
           "format": "latex",
           "path": "double/data/latex/S6b.tex",
-          "sha256": "fb079a8bf9feef92457d970ef994036dc31dfac8b9a96553209ec4875a0e20d2"
+          "sha256": "ef913e666329472b710a08916342d340a62a7ca2de74f158a542e5fec4d661bf"
         },
         {
-          "bytes": 337704,
+          "bytes": 337955,
           "format": "pdf",
           "path": "double/data/pdf/S6b.pdf",
-          "sha256": "cf3915c12ea3bb4b1a50655a252885abf922da62c746cc9046942ab365f0368e"
+          "sha256": "cc3d7f2b2a8f9f50d833e9751636e2675f2d6d2ca150ce22077e4bd8921ca46c"
         }
       ],
       "requires": [
@@ -10521,40 +10546,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 19818,
+          "bytes": 19888,
           "format": "json",
           "path": "double/data/json/S10.json",
-          "sha256": "20fd8dabaa69a8f899151c3999e304ae88d936e082c06ae76a809c210e92df8a"
+          "sha256": "2954018478cff5406a13a1232a6ba234c9b42614013a62ac9d4360b38f20d62d"
         },
         {
-          "bytes": 8304,
+          "bytes": 8353,
           "format": "gap",
           "path": "double/data/gap/S10.g",
-          "sha256": "0379ea87e5f20b89482d6168f78402bcdd01650c562a1df857170b90c2b600f4"
+          "sha256": "6e1c8b699c1174c3bfc94c2abfa78cb0b24318f7cac0a7277c508610a65a7941"
         },
         {
-          "bytes": 7493,
+          "bytes": 7533,
           "format": "wolfram",
           "path": "double/data/wolfram/S10.wl",
-          "sha256": "2f08fcbc0ecf7ace3eefbe960170aaca7e2778c9ebc91898b2603a3747687353"
+          "sha256": "e43110a999964bdb2fd93e4ee3023ba1afa93cce2cf4473373440faa3773b8a2"
         },
         {
-          "bytes": 9102,
+          "bytes": 9136,
           "format": "sympy",
           "path": "double/data/sympy/S10.py",
-          "sha256": "074b400f61e5436846b86be683229d8b9ffe4c00ef52715f0980ba3af2a6f6ba"
+          "sha256": "17f373c7f935024b0a616aa8f96983a9cf5b3a09a94df6586adb2b1dea01a839"
         },
         {
-          "bytes": 39655,
+          "bytes": 39727,
           "format": "latex",
           "path": "double/data/latex/S10.tex",
-          "sha256": "0244797307615034d18cc979ea0c892719a3a52810be7320ba05819d310c63b5"
+          "sha256": "e9850b14fc0e8e745c4c8266abd28673fc461bc4c0e3a7143340e5a2673437f6"
         },
         {
-          "bytes": 334847,
+          "bytes": 334990,
           "format": "pdf",
           "path": "double/data/pdf/S10.pdf",
-          "sha256": "f4eba84c7ae5f2cc84fe1c85ed87aab91c99ae719747566df704bbe7ba5dcb41"
+          "sha256": "8e6568bfa4967129a728a9aaffd1df635f8673ccf6a2fc362fc3b5c1a24db52e"
         }
       ],
       "requires": [
@@ -10569,40 +10594,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 19824,
+          "bytes": 19895,
           "format": "json",
           "path": "double/data/json/S10b.json",
-          "sha256": "4062f41df4d04946f717d8d0525e1e9a0d6e2a145221ca1a25a1cc5b19609768"
+          "sha256": "6483519b828b2c950a60a18bd2a2366aa3f45ba6f42dca0912da30212a9b8b20"
         },
         {
-          "bytes": 8313,
+          "bytes": 8363,
           "format": "gap",
           "path": "double/data/gap/S10b.g",
-          "sha256": "58e88ca60ad0e9a069fde291f4c7c58a5efe1f50bfd0d8d9cfe90bd149d27f9a"
+          "sha256": "d3cfa1f6be91f570ad1c8881065e5d1e4d56c115224a0db6447eb444e35feb79"
         },
         {
-          "bytes": 7502,
+          "bytes": 7543,
           "format": "wolfram",
           "path": "double/data/wolfram/S10b.wl",
-          "sha256": "2ac07a810a5c0ca39bd25b80a20ea1eff7fe0110791b33a0040a424d17c4637c"
+          "sha256": "cffcbed0bc4bb1a14cc76cce74813065ce50e03f605e4b43c6d1a50848dd6717"
         },
         {
-          "bytes": 9111,
+          "bytes": 9146,
           "format": "sympy",
           "path": "double/data/sympy/S10b.py",
-          "sha256": "a96ad150e1de026a3d485c1e727848775daf3db5543c9ad3b757df7a5e7a7ce6"
+          "sha256": "67ad932a4b13fe2eba5b6d0a0386aecf4654fe30f56792363b3c4de65e3a03b4"
         },
         {
-          "bytes": 40021,
+          "bytes": 40106,
           "format": "latex",
           "path": "double/data/latex/S10b.tex",
-          "sha256": "79a869d9409db1dcf5c0f53636a92ec72f01f6bb9cf535795c5d3012daad7c9c"
+          "sha256": "e244999a92b91091e4f7dcecdbd0a967456411e444973685b4e29076bf0a0616"
         },
         {
-          "bytes": 342864,
+          "bytes": 343018,
           "format": "pdf",
           "path": "double/data/pdf/S10b.pdf",
-          "sha256": "6dad817d2d76078e23da3336faf0fcae6011d96413e9690626f8da07b5bfe58d"
+          "sha256": "cbe20753423ed5cfbb6089fc99a7400907d9243294962c26736725dc107b4f3b"
         }
       ],
       "requires": [
@@ -10617,40 +10642,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 25948,
+          "bytes": 26018,
           "format": "json",
           "path": "double/data/json/S14.json",
-          "sha256": "44d444fffb06434b6beaa5004dd957893b65eec8a6e9823c44e7d37628940506"
+          "sha256": "c849a2a33cfcc8e7ee41a9207c7a7018704faedcd0ce62ffe9a5c60dcf6ed919"
         },
         {
-          "bytes": 9650,
+          "bytes": 9699,
           "format": "gap",
           "path": "double/data/gap/S14.g",
-          "sha256": "443fa6f3cd302680e3115c1e6a90487bc776a79060dc0b8369a453d64eabdbde"
+          "sha256": "af2661f993ea1abbb7cbca6d283bb4dd599fe1e2a97be468d1a88eb28ff93b49"
         },
         {
-          "bytes": 8601,
+          "bytes": 8641,
           "format": "wolfram",
           "path": "double/data/wolfram/S14.wl",
-          "sha256": "bce7b91d454610f57456002e314cf79f27b57193e11ee46bc21b7b4123d93e31"
+          "sha256": "b473ac4b660c10b08b42838a40f5654241e6fe5b2f269b6b52d47017c0bd7ff2"
         },
         {
-          "bytes": 10756,
+          "bytes": 10790,
           "format": "sympy",
           "path": "double/data/sympy/S14.py",
-          "sha256": "166accf92ac85cc7447325ef9b00325ebf384660f1394016f6164792ef4366a2"
+          "sha256": "9fdd5be63bc94c32f14ed011728acb02e9bfe12827b40d9f498d7bb3e3dfa31e"
         },
         {
-          "bytes": 44150,
+          "bytes": 44222,
           "format": "latex",
           "path": "double/data/latex/S14.tex",
-          "sha256": "82ca511da4e1cd1cfd8b39eb80f039935ba62973e2f15c2f9ce338e8d0de3d94"
+          "sha256": "14aa241af17290d511b1907a7f417c72e844898274ac9d6a70b27dd1f3b484ba"
         },
         {
-          "bytes": 337148,
+          "bytes": 337285,
           "format": "pdf",
           "path": "double/data/pdf/S14.pdf",
-          "sha256": "24357e921e8d1356f6e8136345bb6bcedddaf02de845922e8a53502b7777fb95"
+          "sha256": "23c47d1366b46bbe6fb2a6794cec76f78c75a85fd3de82f23616b9877d64f856"
         }
       ],
       "requires": [
@@ -10665,40 +10690,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 25954,
+          "bytes": 26025,
           "format": "json",
           "path": "double/data/json/S14b.json",
-          "sha256": "09570852a1cc556bde0aeb0e6df93dc47410c84dd210a529ab3f315b7c5a40d4"
+          "sha256": "4f895019e241a0cd6b176dfa0e752f85343c1990d4e0ff96b4f44f13d2cc6007"
         },
         {
-          "bytes": 9659,
+          "bytes": 9709,
           "format": "gap",
           "path": "double/data/gap/S14b.g",
-          "sha256": "48233581d1b6a4a07ff37a7734345ce4e8ee7743e2ff9d1590561e5a495dad8f"
+          "sha256": "4bee6f8dd6c1c53f272879e873504c0b53fe9e1b1d7b643b52ed5961615ab2c2"
         },
         {
-          "bytes": 8610,
+          "bytes": 8651,
           "format": "wolfram",
           "path": "double/data/wolfram/S14b.wl",
-          "sha256": "8b3e9aad73ac0d21f6960c3dd4dd734872a0677f39a60b2ea4b5957adbc97885"
+          "sha256": "d38af6c70bd9492adebe1f907e354d6379b758aa60823bd871fc40f91ba2519b"
         },
         {
-          "bytes": 10765,
+          "bytes": 10800,
           "format": "sympy",
           "path": "double/data/sympy/S14b.py",
-          "sha256": "c5249c9bd13b3f624909933c7cb235c19247a113c8e5c5bc3dffb5fda4f75986"
+          "sha256": "e655eb2b582a995da792a3cc9a0c2d70efde966f9e78c06a5d8ccf91339c6c5a"
         },
         {
-          "bytes": 44546,
+          "bytes": 44631,
           "format": "latex",
           "path": "double/data/latex/S14b.tex",
-          "sha256": "102af37c76ab1fc320af4a87935bfeab891a934b4e2ac7eb844bba4a3933fa26"
+          "sha256": "af3bf1ec3ef13cfd52500e370b873289759fe91b53abab2b7356892168843e4b"
         },
         {
-          "bytes": 345117,
+          "bytes": 345310,
           "format": "pdf",
           "path": "double/data/pdf/S14b.pdf",
-          "sha256": "0c0c6f5f4c996fdbff81a1b02579ea9a9e5ce15c26ae8a0be9fbb669009f90e8"
+          "sha256": "662735f5b052bab16ecd75e8cdd40d1db3b6358373e00948a5d078f12e99df6a"
         }
       ],
       "requires": [
@@ -10713,40 +10738,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 46135,
+          "bytes": 46205,
           "format": "json",
           "path": "double/data/json/S18.json",
-          "sha256": "b0511deda5e20fa3b246eb9672cc73a22f4efe6132d57e75297863f99d71cc3d"
+          "sha256": "e73e66cb134e5ad83eca9dc0b415d69f5b9ff8d2b7362868596086284e126ec7"
         },
         {
-          "bytes": 15752,
+          "bytes": 15801,
           "format": "gap",
           "path": "double/data/gap/S18.g",
-          "sha256": "e740b218f5e2d75c279d12b15eb39e0695861da2855e375e6b000ed1ff33bb73"
+          "sha256": "5ed52f3fc3673ec04c4c942aeb52f0f3f86a62c176843229879c491e9b4fe3e9"
         },
         {
-          "bytes": 14398,
+          "bytes": 14438,
           "format": "wolfram",
           "path": "double/data/wolfram/S18.wl",
-          "sha256": "87f09c1b064aa5730e91e4aa68365df30fdf9104c0c5ef1ec95cfbd81dcb6423"
+          "sha256": "c9800f16e591d33b080ea31ffc1d4ccfa17730a26842447e6f05fab5bf5ab164"
         },
         {
-          "bytes": 18911,
+          "bytes": 18945,
           "format": "sympy",
           "path": "double/data/sympy/S18.py",
-          "sha256": "87d66dbb38df01947cd7cf56ccb5efa71de3727d38ad9a017b8bb1ff6282a080"
+          "sha256": "4a2b45cb047b49dd90506bf09c29b5a322fa4471e33cbc0c94e785bcd8cf431b"
         },
         {
-          "bytes": 49979,
+          "bytes": 50051,
           "format": "latex",
           "path": "double/data/latex/S18.tex",
-          "sha256": "d78de40d526dd9bad8aa4f00c1dc6fb923cd57649ef5dfb53b9ca46ba3db89d7"
+          "sha256": "5ca454fb956b3e1c6ef0ca82b1025e182bde740d37b0675bd59e6c5b4bc340d0"
         },
         {
-          "bytes": 341321,
+          "bytes": 341527,
           "format": "pdf",
           "path": "double/data/pdf/S18.pdf",
-          "sha256": "2d7b3bd44bcaf451790d9f2527dc6b26fb1d2382be12123609c2af40099cb07a"
+          "sha256": "9684bed9bba4f7e2c7d11c1a350e542082f1f32c32a451872eae27a01db0e0ca"
         }
       ],
       "requires": [
@@ -10761,40 +10786,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 46143,
+          "bytes": 46214,
           "format": "json",
           "path": "double/data/json/S18b.json",
-          "sha256": "673088311a517ad4085b42528d95b0c981a57a7762f22c38e2dd7bdb81e21291"
+          "sha256": "386e8a3aafd0c5ca3fcfc22a466095fada86a398d820c896869a18e97fecbc5a"
         },
         {
-          "bytes": 15763,
+          "bytes": 15813,
           "format": "gap",
           "path": "double/data/gap/S18b.g",
-          "sha256": "1aed06739fa0655fd49382142950d0167548dd8a6868f3da0b667c971361a5b5"
+          "sha256": "06c1c23fa9bc39bce46120e30c77037b4524e1ceb5faa0025b354ae8e6d0b456"
         },
         {
-          "bytes": 14409,
+          "bytes": 14450,
           "format": "wolfram",
           "path": "double/data/wolfram/S18b.wl",
-          "sha256": "a92f038ba2ff3550c3d5ffff21c3d4920a67c10e4966be87657a6499349037fc"
+          "sha256": "d043ddd986e8f25ab7a0c7d73170fa1517d04e4da239a002ff3ce39722156512"
         },
         {
-          "bytes": 18922,
+          "bytes": 18957,
           "format": "sympy",
           "path": "double/data/sympy/S18b.py",
-          "sha256": "180091c8d302a22d684896ed7cacb36bb7cece4db3eb1c0cef52d23ed05f0e24"
+          "sha256": "cb25adee7b443a4e54dd2ef5d6d7cae7048092d782b742cd4388780f6ed60e80"
         },
         {
-          "bytes": 50498,
+          "bytes": 50583,
           "format": "latex",
           "path": "double/data/latex/S18b.tex",
-          "sha256": "7e887397e0fa8c34f1cbffc91b790396de91afff820e66e9bfac468abf481ed1"
+          "sha256": "51ff2bbca3dded08d36cf3fe9b6f22f059455bb279b49ad923230a834747d1e6"
         },
         {
-          "bytes": 349379,
+          "bytes": 349595,
           "format": "pdf",
           "path": "double/data/pdf/S18b.pdf",
-          "sha256": "f6f24cefa91033d8442320cc4fd1103e45f463e63f1bbad05d926e74d681c09a"
+          "sha256": "1cac161d17b85efa176bb1354c3492ce364f520986cbfd0afb1dbee379480fb6"
         }
       ],
       "requires": [
@@ -10809,40 +10834,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 38336,
+          "bytes": 38407,
           "format": "json",
           "path": "double/data/json/S22.json",
-          "sha256": "6dbcb26009b834b8832f07499ce9afc7dd0dcff575da21b7a4d3aa69e5970258"
+          "sha256": "8b9e6adf7444566869e959dd4463ee8ef0ba3784488556b9826f41bf606f0c7b"
         },
         {
-          "bytes": 12351,
+          "bytes": 12401,
           "format": "gap",
           "path": "double/data/gap/S22.g",
-          "sha256": "647b6c9b26ebac2a3f702cd523eef289b8a960c2c63e51288e8e0add40438769"
+          "sha256": "816700ee03cd0689894ef5c5843fe1675b3ece7d0a8b35933df5ad0b8bb718ed"
         },
         {
-          "bytes": 11399,
+          "bytes": 11440,
           "format": "wolfram",
           "path": "double/data/wolfram/S22.wl",
-          "sha256": "09e56e7bc21308b87e99b5731d5aa1079bf9d432788af6f30f56a04c80b66a14"
+          "sha256": "823d1c6b30954b35690f60e70cd4a8c0dec51b7fa080291e41c1f4475d1ad587"
         },
         {
-          "bytes": 15328,
+          "bytes": 15363,
           "format": "sympy",
           "path": "double/data/sympy/S22.py",
-          "sha256": "c7841f9546b20100a77b3b7c8c0555d51a2de21ae3fcb98d9dd12c9b87a5dd66"
+          "sha256": "fa8754387602cb873be8ee7f71c3480e72d4bcfc1c4aa911ad663434b41d0cdf"
         },
         {
-          "bytes": 57386,
+          "bytes": 57459,
           "format": "latex",
           "path": "double/data/latex/S22.tex",
-          "sha256": "6ec03971de51c8ff159af9b7a18cf06fa570eeade7ebd0168020c9c25a9fadcb"
+          "sha256": "66a7e854b5e7cb2b4db15a4241e5f576d0e64bda01b22ae5db132a9b7ca4584b"
         },
         {
-          "bytes": 341077,
+          "bytes": 341321,
           "format": "pdf",
           "path": "double/data/pdf/S22.pdf",
-          "sha256": "0d6f4562aa79547be76e51454a0a46708f2c02157eaeddf86772d331fd509c5c"
+          "sha256": "f3f93a30605b41d4a87b2f2e6b828d71b83a85df08da32a0062e7ee5cc71583e"
         }
       ],
       "requires": [
@@ -10857,40 +10882,40 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 38342,
+          "bytes": 38414,
           "format": "json",
           "path": "double/data/json/S22b.json",
-          "sha256": "ae785b127a614e36366c44733af4df15964c3a32027f79c9666f23aa62ef9fa1"
+          "sha256": "9d846e1dc56d1d8f6b46e7d6c93e42e7bd41d1158d6e0ddb7a0f7f3e522d61ca"
         },
         {
-          "bytes": 12360,
+          "bytes": 12411,
           "format": "gap",
           "path": "double/data/gap/S22b.g",
-          "sha256": "7a017128c863eee913bcacbc56ddba7933808a398b61bdf07fe708d18a9fceac"
+          "sha256": "4740acf9d7a33d43ad6d26b7713f8653bf5da83ab55168c13e4378a0e46c84e3"
         },
         {
-          "bytes": 11408,
+          "bytes": 11450,
           "format": "wolfram",
           "path": "double/data/wolfram/S22b.wl",
-          "sha256": "f73b746acf86c0dbd92a9eee2d9b0e2387f47884626f630da180da4a9db44b98"
+          "sha256": "1aadcff3c36537e8a5edce53bf4d723aa644ba63686a97bad1828648390016b4"
         },
         {
-          "bytes": 15337,
+          "bytes": 15373,
           "format": "sympy",
           "path": "double/data/sympy/S22b.py",
-          "sha256": "792f90028ff8de4f8591d0ecc1545b9eb6d340a0bec000c00f6ab61255df1285"
+          "sha256": "cc7bc915beecbcb8cd4725868fce42f35299f4bc9b9e7772312f9fef9aaa28e6"
         },
         {
-          "bytes": 57846,
+          "bytes": 57932,
           "format": "latex",
           "path": "double/data/latex/S22b.tex",
-          "sha256": "310b998fba4e074ac13c96e414cd3ac79129b9dfbd14a6878e50968e33687cba"
+          "sha256": "6bb0ae04bd49caeaa8ee2854f4a4f26bf49fa48f989320590fec81d6135a8303"
         },
         {
-          "bytes": 349021,
+          "bytes": 349261,
           "format": "pdf",
           "path": "double/data/pdf/S22b.pdf",
-          "sha256": "6578b55c63f1cb4242975c79820e3e6b361c17c12fbed6587f46d8a37b296ab4"
+          "sha256": "3a15660f29497388e2616460f2bf3ba01cc610fb185dafb66ef326680b0225e9"
         }
       ],
       "requires": [

@@ -64,14 +64,20 @@ def compile_job(job):
     return compile_pdf(*job)
 
 
+# The format tag of data/pdf/numbers.json in each catalogue.
+NUMBERS_TAGS = {"rotation": names.NUMBERS_TAG, "double": names.DOUBLE_NUMBERS_TAG,
+                "magnetic": names.MAGNETIC_NUMBERS_TAG,
+                "magnetic-double": names.MAGNETIC_DOUBLE_NUMBERS_TAG}
+
+
 def run(args):
     from . import conventions
-    if names.CATALOGUE == "double":
-        from . import double_notation, notation, present
-        notation.activate(double_notation.records())
-        built = present()
-    else:
+    if names.CATALOGUE == "rotation":
         built = names.NAMES
+    else:
+        from . import present, registry
+        registry()
+        built = present()
     jobs = [(name, names.latex_path(name), names.pdf_path(name)) for name in built]
     jobs.sort(key=lambda job: -os.path.getsize(job[1]))         # the longest documents first
     numbers = {}
@@ -84,9 +90,10 @@ def run(args):
         with Pool(args.jobs) as pool:
             for name, found in pool.imap_unordered(compile_job, jobs):
                 numbers[name] = found
-    tag = names.DOUBLE_NUMBERS_TAG if names.CATALOGUE == "double" else names.NUMBERS_TAG
     serialize.write_json(names.path(NUMBERS), {
-        "schema": tag, "documents": {k: numbers[k] for k in sorted(numbers)}})
-    conventions.build()
+        "schema": NUMBERS_TAGS[names.CATALOGUE],
+        "documents": {k: numbers[k] for k in sorted(numbers)}})
+    if os.path.exists(names.path("CONVENTIONS.md")):
+        conventions.build()
     if names.CATALOGUE == "rotation":
         conventions.build_references()

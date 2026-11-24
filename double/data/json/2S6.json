@@ -5876,7 +5876,12 @@
   },
   "group": {
     "abstract_type": "Z_6 x Z_2",
-    "alternative_names": [],
+    "alternative_names": [
+      {
+        "source": null,
+        "symbol": "2C_3i"
+      }
+    ],
     "altmann_T": 14,
     "automorphisms": {
       "class_orbits": [

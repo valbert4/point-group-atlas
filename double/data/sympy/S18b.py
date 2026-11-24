@@ -7,7 +7,7 @@ o3d = {
         'lift_bits': [0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1]
     },
     'group': {
-        'alternative_names': [],
+        'alternative_names': [{'source': None, 'symbol': 'C_9ib'}],
         'altmann_T': 20,
         'centralizer': {'normalizer_index': 2, 'symbol': '2C_infh'},
         'conway_smith': {'reason': 'not-in-source', 'value': None},

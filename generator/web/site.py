@@ -173,8 +173,7 @@ _DIGESTS = {}
 # static/ in black, which the stylesheet turns into the color of the bar's text).
 LOGO = os.path.join(names.ROOT, "logo")
 WORDMARK = "wordmark.svg"
-FAVICONS = ("favicon.svg",) + tuple("favicon-%s.svg" % c for c in
-                                    ("rotation", "double", "magnetic", "magnetic-double"))
+FAVICONS = ("favicon.svg",) + tuple("favicon-%s.svg" % c for c in names.CATALOGUES)
 # The link preview of every file (Open Graph and its Twitter form, which LinkedIn, X, Bluesky and
 # Mastodon read): the file's title and address, one description of the atlas, and logo/social.png
 # (1200 x 630), the mark beside the title on its grid, as on the home. The image's address carries

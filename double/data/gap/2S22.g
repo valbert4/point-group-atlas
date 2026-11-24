@@ -22253,7 +22253,7 @@ o3d := rec(
   ),
   ("group") := rec(
     ("abstract_type") := "Z_22 x Z_2",
-    ("alternative_names") := [],
+    ("alternative_names") := [ rec( ("source") := fail, ("symbol") := "2C_11i" ) ],
     ("altmann_T") := rec( ("reason") := "not-in-source", ("value") := fail ),
     ("automorphisms") := rec(
       ("class_orbits") := [

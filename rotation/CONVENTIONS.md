@@ -310,12 +310,14 @@ are entries of REFERENCES.pdf. Every other field follows from the record by the 
   - `D1h` `["C2v"]` and `C2v` `["D1h"]`.
   - `D1d` `["C2h"]` and `C2h` `["D1d"]`.
   - `[]` for every other group.
-- `hermann_mauguin`: the short Hermann–Mauguin symbol in ASCII (section 2.3).
+- `hermann_mauguin`: the short Hermann–Mauguin symbol in ASCII (section 2.3). For the 32 crystallographic
+  classes the symbol is the string that spglib returns for the point group of a crystal [TST24].
 - `alternative_names`: the other symbols of the $`\mathsf{O(3)}`$-conjugacy class of $`\mathsf{G}`$, each an object
   `{"schoenflies": S, "source": null}`. Its `source` is null for a name of the Schoenflies system and the key
-  of the entry of references.bib for an author's own symbol (no record has one). The symbols are the
-  conventional name of the class when it is not `schoenflies` (section 2.1), then, without repeats, the
-  `schoenflies` of the records of `o3_conjugates`:
+  of the entry of references.bib for an author's own symbol (no record has one). For odd $`N`$ the group
+  $`\mathsf{S_{2\mathnormal{N}}} = \mathsf{C_{\mathnormal{N}}} \times \mathsf{C_{i}}`$ (section 3) is also written $`\mathsf{C_{\mathnormal{N}i}}`$. The symbols are the conventional name of
+  the class when it is not `schoenflies` (section 2.1), $`\mathsf{C_{\mathnormal{N}i}}`$ for odd $`N \ge 3`$, then, without
+  repeats, the `schoenflies` of the records of `o3_conjugates`:
   - `C1h`: `"C_s"`, `"C_1v"`.
   - `C1v`: `"C_s"`, `"C_1h"`.
   - `D1`: `"C_2"`.
@@ -325,6 +327,11 @@ are entries of REFERENCES.pdf. Every other field follows from the record by the 
   - `D1d`: `"C_2h"`.
   - `C2h`: `"D_1d"`.
   - `S2`: `"C_i"`.
+  - `S6`: `"C_3i"`.
+  - `S10`: `"C_5i"`.
+  - `S14`: `"C_7i"`.
+  - `S18`: `"C_9i"`.
+  - `S22`: `"C_11i"`.
   - $`\mathsf{C_{\infty h}}`$, $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$: one entry each, given below.
   - `[]` for every other group.
 
@@ -3444,6 +3451,7 @@ This index lists the common notation of the documents and selected symbols of th
 | class of | the class of the inverse $`\mathsfit{g}^{-1}`$ or of the square $`\mathsfit{g}^{2}`$ of an element $`\mathsfit{g}`$ of a class | 0.1 |
 | $`\mathsf{C_{\mathnormal{N}}}`$ | the cyclic group of the $`N`$ rotations about $`z`$ | 3 |
 | $`\mathsf{C_{\mathnormal{N}h}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with the horizontal mirror | 3 |
+| $`\mathsf{C_{\mathnormal{N}i}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with the inversion, for odd $`N`$ (with $`\mathsf{S_{2\mathnormal{N}}}`$) | 2 |
 | $`\mathsfit{C_{\mathnormal{n}}^{\mathnormal{k}}}`$ | the rotation by $`2\pi k/n`$ about an axis, written $`\mathsfit{C_{\mathnormal{n}}}`$ when $`k = 1`$ | 5 |
 | $`\mathsf{C_{\mathnormal{N}v}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with $`N`$ vertical mirrors | 3 |
 | coefficients | the field of the coefficients of a basis | 0.1 |

@@ -22,10 +22,13 @@ import re
 from . import names, serialize
 
 CATALOGUES = {"rotation": ("Point groups", "O(3)"),
-              "double": ("Double point groups", "Pin^-(3)")}
+              "double": ("Double point groups", "Pin^-(3)"),
+              "magnetic": ("Magnetic point groups", "O(3) x C_2^T"),
+              "magnetic-double": ("Magnetic double point groups", "Pin^-(3)1'")}
 # A pointer of a later catalogue's record: "<catalogue>/<stem>#<JSON pointer>" (the Double
-# catalogue's CONVENTIONS.md section 20.3).
-POINTER = re.compile(r"\A([a-z-]+)/([A-Za-z0-9]+)#")
+# catalogue's CONVENTIONS.md section 20.3), the stem a record's name (2C3v, C3v-C3, C3v-1p) or
+# point_groups, which stands for the lattice file of the point groups.
+POINTER = re.compile(r"\A([a-z-]+)/([A-Za-z0-9_-]+)#")
 FORMATS = {".json": "json", ".g": "gap", ".wl": "wolfram", ".py": "sympy", ".tex": "latex",
            ".pdf": "pdf", ".gz": "json.gz", ".md": "markdown", ".bib": "bibtex"}
 ROOT_FILES = ("README.md", "REFERENCES.md", "REFERENCES.pdf", "references.bib", "LICENSE")
@@ -84,6 +87,9 @@ def record_entry(catalogue, name):
     requires |= {r for r in pointers(rec) if r != "%s/%s" % (catalogue, name)}
     if catalogue == "rotation":
         symbol, kind = rec["group"]["schoenflies"], rec["group"]["type"]
+    elif catalogue in names.MAGNETIC:
+        raise ValueError("%s/%s: the index of a magnetic record is not defined yet"
+                         % (catalogue, name))
     else:
         # a Double record's type is its covered group's (cover_of), a section's its image's
         g = rec["group"]
@@ -101,6 +107,11 @@ def catalogue_entry(catalogue):
         files = [names.path("CONVENTIONS.md"), names.path("CONVENTIONS.pdf"),
                  names.point_groups_lattice_path(), names.schema_path("finite"),
                  names.schema_path("continuous")]
+    elif catalogue in names.MAGNETIC:
+        lattice = "data/%s_groups.json" % catalogue.replace("-", "_")
+        files = [p for p in (names.path("CONVENTIONS.md"), names.path("CONVENTIONS.pdf"),
+                             names.path(lattice), names.path("schema/group.schema.json"))
+                 if os.path.exists(p)]
     else:
         files = [p for p in (names.path("CONVENTIONS.md"), names.path("CONVENTIONS.pdf"),
                              names.path("data/double_groups.json"),
@@ -118,7 +129,8 @@ def run(args):
         names.use_catalogue(catalogue)
         catalogues.append(catalogue_entry(catalogue))
         stems = (names.NAMES if catalogue == "rotation" else
-                 [n for n in names.DOUBLE_NAMES if os.path.exists(names.record_path(n))])
+                 [n for n in names.catalogue_names(catalogue)
+                  if os.path.exists(names.record_path(n))])
         records += [record_entry(catalogue, name) for name in stems]
     names.use_catalogue(current)
     serialize.write_json(names.repository_path(names.INDEX), {

@@ -17213,7 +17213,12 @@
         ]
       }
     ],
-    "alternative_names": [],
+    "alternative_names": [
+      {
+        "schoenflies": "C_5i",
+        "source": null
+      }
+    ],
     "altmann_T": 16,
     "automorphisms": {
       "class_orbits": [

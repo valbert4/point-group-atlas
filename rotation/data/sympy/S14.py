@@ -5325,7 +5325,7 @@ o3t = {
                 'spaces': ['axial-3']
             }
         ],
-        'alternative_names': [],
+        'alternative_names': [{'schoenflies': 'C_7i', 'source': None}],
         'altmann_T': 18,
         'automorphisms': {
             'class_orbits': [

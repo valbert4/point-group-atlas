@@ -33,8 +33,9 @@ def write_files(task):
 def run(args):
     """Every J of T, O, I whose bases file is present, one (G, J) per worker process, the
     largest first.  The catalogue double has no such stage: its store writes the files of the
-    derived preimages too, since its records read them."""
-    if names.CATALOGUE == "double":
+    derived preimages too, since its records read them.  The magnetic catalogues hold no bases
+    files."""
+    if names.CATALOGUE == "double" or names.CATALOGUE in names.MAGNETIC:
         return None
     tasks = sorted(((G, J) for G in names.STORE_GROUPS for J in range(names.J_MAX + 1)
                     if os.path.exists(names.bases_path(G, J))),

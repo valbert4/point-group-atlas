@@ -4,7 +4,7 @@ from sympy import I, Rational, S, exp, pi
 o3d = {
     'elements': {'count': 14, 'lift_bits': [0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1]},
     'group': {
-        'alternative_names': [],
+        'alternative_names': [{'source': None, 'symbol': 'C_7i'}],
         'altmann_T': 18,
         'centralizer': {'normalizer_index': 2, 'symbol': '2C_infh'},
         'conway_smith': {'reason': 'not-in-source', 'value': None},

@@ -90,9 +90,12 @@ HERMANN_MAUGUIN = {
 # The conventional name of the O(3)-conjugacy class of a group where it is not the group's own
 # Schoenflies symbol, with the axial family the group is the limit of under that name (None: no
 # family): the N = 1 groups C1h, C1v, D1, D1h, D1d, S2 are C_s, C_s, C_2, C_2v, C_2h, C_i; C_infh,
-# the limit of C_Nh, is also S_inf, the limit of S_2N; SO(3) and O(3) are also K and K_h.
+# the limit of C_Nh, is also S_inf, the limit of S_2N; SO(3) and O(3) are also K and K_h.  For odd
+# N >= 3, S_2N = C_N x C_i is also C_Ni: S6, S10, S14, S18, S22 are C_3i, C_5i, C_7i, C_9i, C_11i.
 CONVENTIONAL_NAME = {"C1h": ("C_s", None), "C1v": ("C_s", None), "D1": ("C_2", None),
                      "D1h": ("C_2v", None), "D1d": ("C_2h", None), "S2": ("C_i", None),
+                     "S6": ("C_3i", None), "S10": ("C_5i", None), "S14": ("C_7i", None),
+                     "S18": ("C_9i", None), "S22": ("C_11i", None),
                      "Cinfh": ("S_inf", "S2n"), "SO3": ("K", None), "O3": ("K_h", None)}
 
 # sigma_z = diag(1, 1, -1) as the records write a matrix
@@ -104,9 +107,9 @@ _TABLES = {}
 
 def alternative_names(name):
     """The other Schoenflies symbols of the O(3)-conjugacy class of a group: its conventional name
-    (CONVENTIONAL_NAME; a continuous group's also in unicode, with the axial family the group is
-    the limit of under that name when there is one), then the symbols of the other records of the
-    class (o3_conjugates) not already listed."""
+    or C_Ni (CONVENTIONAL_NAME; a continuous group's also in unicode, with the axial family the
+    group is the limit of under that name when there is one), then the symbols of the other records
+    of the class (o3_conjugates) not already listed."""
     out = []
     if name in CONVENTIONAL_NAME:
         schoenflies, family = CONVENTIONAL_NAME[name]
@@ -1628,10 +1631,14 @@ def run(args):
     """Write the 98 records, then the subgroup lattices of the finite ones and
     data/point_groups.json (lattice_files.attach).  Without the bases files of T, O, I for J <= 10
     the seven exceptional records are written without subduction_basis and the exit status is 3.
-    In the catalogue double, the records of double.records."""
+    In the catalogue double, the records of double.records, and in a magnetic catalogue those of
+    magnetic.records."""
     if names.CATALOGUE == "double":
         from .double import records as double_records
         return double_records.run(args)
+    if names.CATALOGUE in names.MAGNETIC:
+        from .magnetic import records as magnetic_records
+        return magnetic_records.run(args)
     from . import lattice_files
     missing = names.missing_store_files()
     exceptional = {}

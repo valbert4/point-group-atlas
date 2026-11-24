@@ -14,7 +14,12 @@ folder.
 
 The Double catalogue (double/) names the preimage of a point group G 2<G> (SU2 and Pinminus3 for
 SO(3) and O(3)) and a section over G <G>, the second class over S_2n (n odd) <G>b
-(double/CONVENTIONS.md section 20.2).
+(double/CONVENTIONS.md section 20.2).  The Magnetic catalogue (magnetic/) names a group G(H) of
+magnetic type III <G>-<H>, H its unitary subgroup, of index 2 in G, and the group G1' of magnetic
+type II <G>-1p; a group of magnetic type I is the record of the point group G
+(magnetic/CONVENTIONS.md section 30.2).  The Magnetic double catalogue (magnetic-double/) names the
+preimage of a magnetic group 2 followed by its magnetic name (2C3v-C3, 2C3v-1p), and a section over
+a group of magnetic type III its magnetic name, the second class with b appended.
 """
 import os
 import re
@@ -105,16 +110,23 @@ DOUBLE_SECTION_TAG = "point-group-atlas/double/section/1"
 DOUBLE_CONTINUOUS_TAG = "point-group-atlas/double/group-continuous/1"
 DOUBLE_LATTICE_TAG = "point-group-atlas/double/lattice/1"
 DOUBLE_BASES_TAG = "point-group-atlas/double/symmetry-adapted-basis/1"
+MAGNETIC_RECORD_TAG = "point-group-atlas/magnetic/group/1"
+MAGNETIC_DOUBLE_RECORD_TAG = "point-group-atlas/magnetic-double/group/1"
 # data/pdf/numbers.json, the numbers that the PDFs print (formats/pdf.py)
 NUMBERS_TAG = "point-group-atlas/pdf-numbers/1"
 DOUBLE_NUMBERS_TAG = "point-group-atlas/double/pdf-numbers/1"
+MAGNETIC_NUMBERS_TAG = "point-group-atlas/magnetic/pdf-numbers/1"
+MAGNETIC_DOUBLE_NUMBERS_TAG = "point-group-atlas/magnetic-double/pdf-numbers/1"
 
 # ---------------------------------------------------------------- paths
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# The catalogues, each in the folder of its name at the root, and the one whose folder path()
-# resolves against, the one the stages build (build.py, --catalogue).
-CATALOGUES = ("rotation", "double")
+# The catalogues, each in the folder of its name at the root, in the order of their volumes, and
+# the one whose folder path() resolves against, the one the stages build (build.py, --catalogue).
+CATALOGUES = ("rotation", "double", "magnetic", "magnetic-double")
 CATALOGUE = "rotation"
+# The magnetic catalogues, whose records name the values of the records of the point groups and
+# the double point groups by pointers and hold no bases files of their own.
+MAGNETIC = ("magnetic", "magnetic-double")
 # The name of a record in the literal channels (GAP, Wolfram, SymPy) of each catalogue.
 LITERAL = {"rotation": "o3t", "double": "o3d"}
 
@@ -224,7 +236,10 @@ def schema_path(domain):
 def missing_store_files():
     """The repository-relative paths of the bases files that the records read and that do not
     exist: data/symmetry_adapted_bases/{T,O,I}/J000.json.gz ... J010.json.gz, or in the
-    catalogue double those of its seven exceptional preimages, 2J = 1, 3, ..., 21."""
+    catalogue double those of its seven exceptional preimages, 2J = 1, 3, ..., 21; none in a
+    magnetic catalogue."""
+    if CATALOGUE in MAGNETIC:
+        return []
     if CATALOGUE == "double":
         return [relative(double_bases_path(s, t)) for s in DOUBLE_EXCEPTIONAL
                 for t in range(1, DOUBLE_TWOJ_FILES + 1, 2) if not os.path.exists(
@@ -264,3 +279,14 @@ DOUBLE_EXCEPTIONAL = ("2T", "2Th", "2Td", "2O", "2Oh", "2I", "2Ih")
 DOUBLE_TWOJ_FILES = 21         # the Double's bases files in the tree: 2J = 1, 3, ..., 21
 DOUBLE_TWOJ_MAX = 121          # and in the release: 2J = 23, 25, ..., 121
 
+
+# ---------------------------------------------------------------- the magnetic catalogues
+# The records of Magnetic and of Magnetic double, in the order of each catalogue: none so far.
+MAGNETIC_NAMES = ()
+MAGNETIC_DOUBLE_NAMES = ()
+
+
+def catalogue_names(catalogue=None):
+    """The names of the records of a catalogue (by default the one being built), in its order."""
+    return {"rotation": NAMES, "double": DOUBLE_NAMES, "magnetic": MAGNETIC_NAMES,
+            "magnetic-double": MAGNETIC_DOUBLE_NAMES}[catalogue or CATALOGUE]

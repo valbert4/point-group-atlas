@@ -20951,7 +20951,7 @@ o3d = <|
   |>,
   "group" -> <|
     "abstract_type" -> "Z_22 x Z_2",
-    "alternative_names" -> {},
+    "alternative_names" -> {<|"source" -> Null, "symbol" -> "2C_11i"|>},
     "altmann_T" -> <|"reason" -> "not-in-source", "value" -> Null|>,
     "automorphisms" -> <|
       "class_orbits" -> {

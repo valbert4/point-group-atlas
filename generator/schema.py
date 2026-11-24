@@ -372,6 +372,10 @@ FILE_FORMATS = {
                                       "group at one 2J", "26.3", set()),
     "double/pdf-numbers": ("Point Group Atlas numbers of the sections and displays of the "
                            "PDFs", "20.5", {"$.documents", "$.documents.*"}),
+    "magnetic/pdf-numbers": ("Point Group Atlas numbers of the sections and displays of the "
+                             "PDFs", "30.4", {"$.documents", "$.documents.*"}),
+    "magnetic-double/pdf-numbers": ("Point Group Atlas numbers of the sections and displays of "
+                                    "the PDFs", "18", {"$.documents", "$.documents.*"}),
 }
 
 
@@ -413,6 +417,12 @@ def run_files():
 def run(args):
     if names.CATALOGUE == "double":
         run_double()
+        return run_files()
+    if names.CATALOGUE in names.MAGNETIC:
+        import os
+        # the schemas of the records come with the first records
+        if [n for n in names.catalogue_names() if os.path.exists(names.record_path(n))]:
+            raise NotImplementedError("%s: the schema of the records" % names.CATALOGUE)
         return run_files()
     for domain, group_names in (("finite", names.FINITE), ("continuous", names.CONTINUOUS)):
         records = (serialize.read_json(names.record_path(g)) for g in group_names)

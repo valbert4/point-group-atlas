@@ -13,13 +13,29 @@ from .. import names, serialize
 
 
 def present():
-    """The records of the catalogue double in data/json/, in the order of the catalogue."""
+    """The records of the catalogue (double, or a magnetic one) in data/json/, in the order of the
+    catalogue; none when the folder is absent."""
     folder = names.path(names.RECORDS_DIR)
-    have = {f[:-5] for f in os.listdir(folder) if f.endswith(".json")}
-    unknown = have - set(names.DOUBLE_NAMES)
+    have = ({f[:-5] for f in os.listdir(folder) if f.endswith(".json")}
+            if os.path.isdir(folder) else set())
+    catalogue = names.catalogue_names()
+    unknown = have - set(catalogue)
     if unknown:
         raise ValueError("records outside the catalogue: %s" % ", ".join(sorted(unknown)))
-    return [n for n in names.DOUBLE_NAMES if n in have]
+    return [n for n in catalogue if n in have]
+
+
+def registry():
+    """Make the registry of the catalogue being built the registry of the build (notation.activate):
+    double_notation for the catalogue double, magnetic_notation for the catalogue magnetic, and
+    Rotation's registry otherwise."""
+    from . import notation
+    if names.CATALOGUE == "double":
+        from . import double_notation
+        notation.activate(double_notation.records())
+    elif names.CATALOGUE == "magnetic":
+        from . import magnetic_notation
+        notation.activate(magnetic_notation.records())
 
 
 def run_double(args):
@@ -59,9 +75,31 @@ def run_double(args):
               "built (L5, not enforced)" % (len(built), len(names.DOUBLE_NAMES), len(unused)))
 
 
+def run_magnetic(args):
+    """The formats of a magnetic catalogue, in its registry: the records in data/json/, none so
+    far, then the notation of its conventions, when it has them, and of the references."""
+    from . import conventions, lint
+    registry()
+    built = present()
+    if built:
+        raise NotImplementedError("%s: the formats of %s" % (names.CATALOGUE, ", ".join(built)))
+    md = names.path("CONVENTIONS.md")
+    if not os.path.exists(md):
+        print("%s: no records and no CONVENTIONS.md" % names.CATALOGUE)
+        return
+    reports = []
+    for path, render in ((md, conventions.render),
+                         (names.repository_path("REFERENCES.md"), conventions.references_tex)):
+        with open(path, encoding="utf-8") as fh:
+            render(fh.read(), reports)
+    lint.lint_compendium(reports, partial=True)
+
+
 def run(args):
     if names.CATALOGUE == "double":
         return run_double(args)
+    if names.CATALOGUE in names.MAGNETIC:
+        return run_magnetic(args)
     from . import conventions, gap, latex, lint, sympy, wolfram
     point_groups = serialize.read_json(names.point_groups_lattice_path())
     reports = []

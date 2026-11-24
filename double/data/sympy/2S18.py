@@ -13383,7 +13383,7 @@ o3d = {
     },
     'group': {
         'abstract_type': 'Z_18 x Z_2',
-        'alternative_names': [],
+        'alternative_names': [{'source': None, 'symbol': '2C_9i'}],
         'altmann_T': 20,
         'automorphisms': {
             'class_orbits': [

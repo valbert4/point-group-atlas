@@ -5,7 +5,7 @@ o3d := rec(
     ("lift_bits") := [ 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1 ]
   ),
   ("group") := rec(
-    ("alternative_names") := [],
+    ("alternative_names") := [ rec( ("source") := fail, ("symbol") := "C_11i" ) ],
     ("altmann_T") := rec( ("reason") := "not-in-source", ("value") := fail ),
     ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "2C_infh" ),
     ("conway_smith") := rec( ("reason") := "not-in-source", ("value") := fail ),

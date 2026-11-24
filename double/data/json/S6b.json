@@ -11,7 +11,12 @@
     ]
   },
   "group": {
-    "alternative_names": [],
+    "alternative_names": [
+      {
+        "source": null,
+        "symbol": "C_3ib"
+      }
+    ],
     "altmann_T": 14,
     "centralizer": {
       "normalizer_index": 2,

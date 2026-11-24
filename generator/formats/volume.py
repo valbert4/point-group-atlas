@@ -427,6 +427,9 @@ def run(args):
     if names.CATALOGUE == "double":
         from . import double_volume
         return double_volume.run(args)
+    if names.CATALOGUE in names.MAGNETIC:
+        raise SystemExit("volume: the volume of the catalogue %s is not built yet"
+                         % names.CATALOGUE)
     out = os.path.abspath(args.out or OUT)
     tex, figures = render()
     runs = compile_volume(tex, out, figures)

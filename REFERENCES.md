@@ -114,12 +114,14 @@
 - Schreiber, V., Veselov, A. P., and Ward, J. P. (2015). In search for a perfect shape of polyhedra: Buffon transformation. *L'Enseignement Mathématique* 61(3–4), 261–284. https://doi.org/10.4171/LEM/61-3/4-1. arXiv:1402.5354
 - Schutte, C. J. H., Bertie, J. E., Bunker, P. R., Hougen, J. T., Mills, I. M., Watson, J. K. G., and Winnewisser, B. P. (1997). Notations and conventions in molecular spectroscopy: Part 2. Symmetry notation (IUPAC Recommendations 1997). *Pure and Applied Chemistry* 69(8), 1641–1649. https://doi.org/10.1351/pac199769081641
 - Schwinger, J. (1952). On angular momentum. Report NYO-3071, US Atomic Energy Commission. https://doi.org/10.2172/4389568
+- Shinohara, K., Togo, A., and Tanaka, I. (2023). Algorithms for magnetic symmetry operation search and identification of magnetic space group from magnetic crystal structure. *Acta Crystallographica Section A* 79(5), 390–398. https://doi.org/10.1107/S2053273323005016. arXiv:2211.15008
 - Skilling, J. (1976). Uniform compounds of uniform polyhedra. *Mathematical Proceedings of the Cambridge Philosophical Society* 79(3), 447–457. https://doi.org/10.1017/S0305004100052440
 - Stapelfeldt, H., and Seideman, T. (2003). Colloquium: Aligning molecules with strong laser pulses. *Reviews of Modern Physics* 75(2), 543–557. https://doi.org/10.1103/RevModPhys.75.543
 - Sugano, S., Tanabe, Y., and Kamimura, H. (1970). *Multiplets of Transition-Metal Ions in Crystals*. Pure and Applied Physics 33. Academic Press, New York. ISBN 0-12-676050-0. https://doi.org/10.1016/B978-0-12-676050-7.X5001-X
 - Sylvester, J. J. (1878). Proof of the hitherto undemonstrated fundamental theorem of invariants. *Philosophical Magazine* (5) 5, 178–188.
 - Tang, A.-C., Sun, C.-C., et al. (1979). *Theoretical Method of the Ligand Field Theory*. Science Press, Beijing.
 - Tinkham, M. (1964). *Group Theory and Quantum Mechanics*. McGraw-Hill, New York; republished by Dover Publications, Mineola, NY, 2003. ISBN 0-486-43247-5.
+- Togo, A., Shinohara, K., and Tanaka, I. (2024). Spglib: a software library for crystal symmetry search. *Science and Technology of Advanced Materials: Methods* 4(1), 2384822. https://doi.org/10.1080/27660400.2024.2384822. arXiv:1808.01590
 - Varshalovich, D. A., Moskalev, A. N., and Khersonskii, V. K. (1988). *Quantum Theory of Angular Momentum*. World Scientific, Singapore. https://doi.org/10.1142/0270
 - Vilenkin, N. Ja. (1968). *Special Functions and the Theory of Group Representations*. Translations of Mathematical Monographs 22. American Mathematical Society, Providence, RI.
 - Vilenkin, N. Ja., and Klimyk, A. U. (1991). *Representation of Lie Groups and Special Functions, Volume 1: Simplest Lie Groups, Special Functions and Integral Transforms*. Mathematics and Its Applications (Soviet Series) 72. Kluwer Academic Publishers, Dordrecht. ISBN 0-7923-1466-2.

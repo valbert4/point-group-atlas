@@ -122,6 +122,8 @@ def double_document(site, name):
 
 
 def run(args):
+    if names.CATALOGUE in names.MAGNETIC:
+        raise SystemExit("web: the site of the catalogue %s is not built yet" % names.CATALOGUE)
     out = output_folder(args.out)
     status, site = build(args, out)
     if args.repeat and status == 0:

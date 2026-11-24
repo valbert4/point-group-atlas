@@ -728,6 +728,10 @@ GROUPS = (
       r"\grp{C_{s}}", defined="conv:2"),
     S("group.schoenflies.ci", "group", r"\grp{C_{i}}", "the group of the inversion",
       r"\grp{C_{i}}", defined="conv:2"),
+    S("group.schoenflies.cni", "group", r"\grp{C_{\mathnormal{N}i}}",
+      r"$\grp{C_{\mathnormal{N}}}$ with the inversion, for odd $N$ (with "
+      r"$\grp{S_{2\mathnormal{N}}}$)", r"\grp{C_{#i}}", r"\grp{C_{\mathnormal{N}i}}",
+      defined="conv:2", alt_of="group.schoenflies.s2n"),
     S("group.schoenflies.t", "group", r"\grp{T}", "the rotations of the tetrahedron",
       r"\grp{T}", defined=("conv:3", "conv:1")),
     S("group.schoenflies.th", "group", r"\grp{T_{h}}",

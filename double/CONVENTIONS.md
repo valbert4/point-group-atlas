@@ -807,6 +807,7 @@ This index lists the common notation of the documents and selected symbols of th
 | class of | the class of the inverse $`\mathsfit{g}^{-1}`$ or of the square $`\mathsfit{g}^{2}`$ of an element $`\mathsfit{g}`$ of a class | 0.1 |
 | $`\mathsf{C_{\mathnormal{N}}}`$ | the cyclic group of the $`N`$ rotations about $`z`$ | 3 |
 | $`\mathsf{C_{\mathnormal{N}h}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with the horizontal mirror | 3 |
+| $`\mathsf{C_{\mathnormal{N}i}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with the inversion, for odd $`N`$ (with $`\mathsf{S_{2\mathnormal{N}}}`$) | 2 |
 | $`\mathsfit{C_{\mathnormal{n}}^{\mathnormal{k}}}`$ | the rotation by $`2\pi k/n`$ about an axis, written $`\mathsfit{C_{\mathnormal{n}}}`$ when $`k = 1`$ | 5 |
 | $`\mathsf{C_{\mathnormal{N}v}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with $`N`$ vertical mirrors | 3 |
 | complete | whether the generators listed generate the ring of invariants | 26.4 |

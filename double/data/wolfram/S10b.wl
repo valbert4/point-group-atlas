@@ -2,7 +2,7 @@
 o3d = <|
   "elements" -> <|"count" -> 10, "lift_bits" -> {0, 1, 0, 0, 1, 1, 1, 0, 0, 1}|>,
   "group" -> <|
-    "alternative_names" -> {},
+    "alternative_names" -> {<|"source" -> Null, "symbol" -> "C_5ib"|>},
     "altmann_T" -> 16,
     "centralizer" -> <|"normalizer_index" -> 2, "symbol" -> "2C_infh"|>,
     "conway_smith" -> <|"reason" -> "not-in-source", "value" -> Null|>,
