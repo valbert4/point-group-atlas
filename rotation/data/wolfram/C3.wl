@@ -883,6 +883,7 @@ o3t = <|
         "angle" -> {0, 1},
         "axis_order_n" -> 1,
         "axis_type" -> "identity",
+        "centralizer_order" -> 3,
         "det" -> 1,
         "display" -> "E",
         "element_order" -> 1,
@@ -891,6 +892,7 @@ o3t = <|
         "label" -> "E",
         "pole" -> <|"kind" -> "none"|>,
         "power_map" -> "E",
+        "power_maps" -> <|"3" -> "E"|>,
         "size" -> 1
       |>,
       <|
@@ -898,6 +900,7 @@ o3t = <|
         "angle" -> {1, 3},
         "axis_order_n" -> 3,
         "axis_type" -> "principal",
+        "centralizer_order" -> 3,
         "det" -> 1,
         "display" -> "C_{3}",
         "element_order" -> 3,
@@ -906,6 +909,7 @@ o3t = <|
         "label" -> "C_3",
         "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
         "power_map" -> "C32",
+        "power_maps" -> <|"3" -> "E"|>,
         "size" -> 1
       |>,
       <|
@@ -913,6 +917,7 @@ o3t = <|
         "angle" -> {2, 3},
         "axis_order_n" -> 3,
         "axis_type" -> "principal",
+        "centralizer_order" -> 3,
         "det" -> 1,
         "display" -> "C_{3}^{2}",
         "element_order" -> 3,
@@ -921,6 +926,7 @@ o3t = <|
         "label" -> "C_3^2",
         "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
         "power_map" -> "C3",
+        "power_maps" -> <|"3" -> "E"|>,
         "size" -> 1
       |>
     },
@@ -1347,6 +1353,16 @@ o3t = <|
     },
     "alternative_names" -> {},
     "altmann_T" -> 3,
+    "automorphisms" -> <|
+      "class_orbits" -> {{"E"}, {"C3", "C32"}},
+      "induced_class_orbits" -> {{"E"}, {"C3", "C32"}},
+      "induced_irrep_orbits" -> {{"A"}, {"1E1", "2E1"}},
+      "induced_order" -> 2,
+      "inner_order" -> 1,
+      "irrep_orbits" -> {{"A"}, {"1E1", "2E1"}},
+      "order" -> 2,
+      "outer_order" -> 2
+    |>,
     "center" -> <|
       "index" -> 1,
       "node" -> "n01",
@@ -1404,6 +1420,7 @@ o3t = <|
     |>,
     "rotation_subgroup" -> "C_3",
     "schoenflies" -> "C_3",
+    "schur_multiplier" -> <|"invariants" -> {}, "order" -> 1, "other_classes" -> 0, "spinor_class" -> "trivial"|>,
     "type" -> "I"
   |>,
   "invariants" -> <|

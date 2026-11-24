@@ -6,12 +6,16 @@
         "ambivalent": true,
         "bar": false,
         "base_class": "E",
+        "centralizer_order": 8,
         "display": "E",
         "element_order": 1,
         "id": "E",
         "inverse_class": "E",
         "label": "E",
         "power_map": "E",
+        "power_maps": {
+          "2": "E"
+        },
         "size": 1,
         "su2_turn": [
           0,
@@ -22,12 +26,16 @@
         "ambivalent": true,
         "bar": true,
         "base_class": "E",
+        "centralizer_order": 8,
         "display": "\\bar{E}",
         "element_order": 2,
         "id": "bE",
         "inverse_class": "bE",
         "label": "bar E",
         "power_map": "E",
+        "power_maps": {
+          "2": "E"
+        },
         "size": 1,
         "su2_turn": [
           1,
@@ -38,12 +46,16 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "C2",
+        "centralizer_order": 8,
         "display": "C_{2}",
         "element_order": 4,
         "id": "C2",
         "inverse_class": "bC2",
         "label": "C_2",
         "power_map": "bE",
+        "power_maps": {
+          "2": "bE"
+        },
         "size": 1,
         "su2_turn": [
           1,
@@ -54,12 +66,16 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "C2",
+        "centralizer_order": 8,
         "display": "\\bar{C}_{2}",
         "element_order": 4,
         "id": "bC2",
         "inverse_class": "C2",
         "label": "bar C_2",
         "power_map": "bE",
+        "power_maps": {
+          "2": "bE"
+        },
         "size": 1,
         "su2_turn": [
           3,
@@ -70,12 +86,16 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "S4",
+        "centralizer_order": 8,
         "display": "S_{4}",
         "element_order": 8,
         "id": "S4",
         "inverse_class": "S43",
         "label": "S_4",
         "power_map": "bC2",
+        "power_maps": {
+          "2": "bC2"
+        },
         "size": 1,
         "su2_turn": [
           7,
@@ -86,12 +106,16 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "S4",
+        "centralizer_order": 8,
         "display": "\\bar{S}_{4}",
         "element_order": 8,
         "id": "bS4",
         "inverse_class": "bS43",
         "label": "bar S_4",
         "power_map": "bC2",
+        "power_maps": {
+          "2": "bC2"
+        },
         "size": 1,
         "su2_turn": [
           3,
@@ -102,12 +126,16 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "S43",
+        "centralizer_order": 8,
         "display": "S_{4}^{3}",
         "element_order": 8,
         "id": "S43",
         "inverse_class": "S4",
         "label": "S_4^3",
         "power_map": "C2",
+        "power_maps": {
+          "2": "C2"
+        },
         "size": 1,
         "su2_turn": [
           1,
@@ -118,12 +146,16 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "S43",
+        "centralizer_order": 8,
         "display": "\\bar{S}_{4}^{3}",
         "element_order": 8,
         "id": "bS43",
         "inverse_class": "bS4",
         "label": "bar S_4^3",
         "power_map": "C2",
+        "power_maps": {
+          "2": "C2"
+        },
         "size": 1,
         "su2_turn": [
           5,
@@ -3362,6 +3394,88 @@
     "abstract_type": "Z_8",
     "alternative_names": [],
     "altmann_T": 13,
+    "automorphisms": {
+      "class_orbits": [
+        [
+          "E"
+        ],
+        [
+          "bE"
+        ],
+        [
+          "C2",
+          "bC2"
+        ],
+        [
+          "S4",
+          "bS4",
+          "S43",
+          "bS43"
+        ]
+      ],
+      "induced_class_orbits": [
+        [
+          "E"
+        ],
+        [
+          "bE"
+        ],
+        [
+          "C2",
+          "bC2"
+        ],
+        [
+          "S4",
+          "S43"
+        ],
+        [
+          "bS4",
+          "bS43"
+        ]
+      ],
+      "induced_irrep_orbits": [
+        [
+          "A"
+        ],
+        [
+          "B"
+        ],
+        [
+          "1E1",
+          "2E1"
+        ],
+        [
+          "1E1h",
+          "2E1h"
+        ],
+        [
+          "1E3h",
+          "2E3h"
+        ]
+      ],
+      "induced_order": 2,
+      "inner_order": 1,
+      "irrep_orbits": [
+        [
+          "A"
+        ],
+        [
+          "B"
+        ],
+        [
+          "1E1",
+          "2E1"
+        ],
+        [
+          "1E1h",
+          "2E1h",
+          "1E3h",
+          "2E3h"
+        ]
+      ],
+      "order": 4,
+      "outer_order": 4
+    },
     "center": {
       "double_class": "2S4",
       "index": 1,
@@ -3417,6 +3531,10 @@
         "node": "n02",
         "symbol": "2C_2"
       }
+    },
+    "schur_multiplier": {
+      "invariants": [],
+      "order": 1
     },
     "su2_subgroup": "2C_2",
     "symbol": "2S_4"

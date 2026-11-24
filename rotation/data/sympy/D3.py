@@ -768,6 +768,7 @@ o3t = {
                 'angle': [0, 1],
                 'axis_order_n': 1,
                 'axis_type': 'identity',
+                'centralizer_order': 6,
                 'det': 1,
                 'display': 'E',
                 'element_order': 1,
@@ -776,6 +777,7 @@ o3t = {
                 'label': 'E',
                 'pole': {'kind': 'none'},
                 'power_map': 'E',
+                'power_maps': {'2': 'E', '3': 'E'},
                 'size': 1
             },
             {
@@ -783,6 +785,7 @@ o3t = {
                 'angle': [1, 3],
                 'axis_order_n': 3,
                 'axis_type': 'principal',
+                'centralizer_order': 3,
                 'det': 1,
                 'display': '2C_{3}',
                 'element_order': 3,
@@ -791,6 +794,7 @@ o3t = {
                 'label': '2C_3',
                 'pole': {'cartesian': [Rational(0,1), Rational(0,1), Rational(1,1)], 'kind': 'axis'},
                 'power_map': 'C3',
+                'power_maps': {'2': 'C3', '3': 'E'},
                 'size': 2
             },
             {
@@ -798,6 +802,7 @@ o3t = {
                 'angle': [1, 2],
                 'axis_order_n': 2,
                 'axis_type': 'perpendicular',
+                'centralizer_order': 2,
                 'det': 1,
                 'display': '3C_{2}',
                 'element_order': 2,
@@ -806,6 +811,7 @@ o3t = {
                 'label': '3C_2',
                 'pole': {'azimuth_turn': [0, 1], 'kind': 'axis'},
                 'power_map': 'E',
+                'power_maps': {'2': 'E', '3': 'C2'},
                 'size': 3
             }
         ],
@@ -1469,6 +1475,16 @@ o3t = {
         ],
         'alternative_names': [],
         'altmann_T': 23,
+        'automorphisms': {
+            'class_orbits': [['E'], ['C3'], ['C2']],
+            'induced_class_orbits': [['E'], ['C3'], ['C2']],
+            'induced_irrep_orbits': [['A1'], ['A2'], ['E1']],
+            'induced_order': 6,
+            'inner_order': 6,
+            'irrep_orbits': [['A1'], ['A2'], ['E1']],
+            'order': 6,
+            'outer_order': 1
+        },
         'center': {'index': 6, 'node': 'n00', 'o3_class': 'C1', 'order': 1, 'schoenflies': 'C_1'},
         'centralizer': {'normalizer_index': 6, 'schoenflies': 'C_2h'},
         'commutator_subgroup': {'index': 2, 'node': 'n02', 'o3_class': 'C3', 'order': 3, 'schoenflies': 'C_3'},
@@ -1528,6 +1544,7 @@ o3t = {
         },
         'rotation_subgroup': 'D_3',
         'schoenflies': 'D_3',
+        'schur_multiplier': {'invariants': [], 'order': 1, 'other_classes': 0, 'spinor_class': 'trivial'},
         'type': 'I'
     },
     'invariants': {

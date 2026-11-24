@@ -1193,6 +1193,7 @@ o3t = <|
         "angle" -> {0, 1},
         "axis_order_n" -> 1,
         "axis_type" -> "identity",
+        "centralizer_order" -> 60,
         "det" -> 1,
         "display" -> "E",
         "element_order" -> 1,
@@ -1201,6 +1202,7 @@ o3t = <|
         "label" -> "E",
         "pole" -> <|"kind" -> "none"|>,
         "power_map" -> "E",
+        "power_maps" -> <|"2" -> "E", "3" -> "E", "5" -> "E"|>,
         "size" -> 1
       |>,
       <|
@@ -1208,6 +1210,7 @@ o3t = <|
         "angle" -> {1, 5},
         "axis_order_n" -> 5,
         "axis_type" -> "rotation-axis",
+        "centralizer_order" -> 5,
         "det" -> 1,
         "display" -> "12C_{5}",
         "element_order" -> 5,
@@ -1219,6 +1222,7 @@ o3t = <|
           "kind" -> "axis"
         |>,
         "power_map" -> "C52",
+        "power_maps" -> <|"2" -> "C52", "3" -> "C52", "5" -> "E"|>,
         "size" -> 12
       |>,
       <|
@@ -1226,6 +1230,7 @@ o3t = <|
         "angle" -> {2, 5},
         "axis_order_n" -> 5,
         "axis_type" -> "rotation-axis",
+        "centralizer_order" -> 5,
         "det" -> 1,
         "display" -> "12C_{5}^{2}",
         "element_order" -> 5,
@@ -1237,6 +1242,7 @@ o3t = <|
           "kind" -> "axis"
         |>,
         "power_map" -> "C5",
+        "power_maps" -> <|"2" -> "C5", "3" -> "C5", "5" -> "E"|>,
         "size" -> 12
       |>,
       <|
@@ -1244,6 +1250,7 @@ o3t = <|
         "angle" -> {1, 3},
         "axis_order_n" -> 3,
         "axis_type" -> "rotation-axis",
+        "centralizer_order" -> 3,
         "det" -> 1,
         "display" -> "20C_{3}",
         "element_order" -> 3,
@@ -1259,6 +1266,7 @@ o3t = <|
           "kind" -> "axis"
         |>,
         "power_map" -> "C3",
+        "power_maps" -> <|"2" -> "C3", "3" -> "E", "5" -> "C3"|>,
         "size" -> 20
       |>,
       <|
@@ -1266,6 +1274,7 @@ o3t = <|
         "angle" -> {1, 2},
         "axis_order_n" -> 2,
         "axis_type" -> "rotation-axis",
+        "centralizer_order" -> 4,
         "det" -> 1,
         "display" -> "15C_{2}",
         "element_order" -> 2,
@@ -1274,6 +1283,7 @@ o3t = <|
         "label" -> "15C_2",
         "pole" -> <|"cartesian" -> {0, 0, 2}, "kind" -> "axis"|>,
         "power_map" -> "E",
+        "power_maps" -> <|"2" -> "E", "3" -> "C2", "5" -> "C2"|>,
         "size" -> 15
       |>
     },
@@ -20013,6 +20023,16 @@ o3t = <|
     },
     "alternative_names" -> {},
     "altmann_T" -> 74,
+    "automorphisms" -> <|
+      "class_orbits" -> {{"E"}, {"C5", "C52"}, {"C3"}, {"C2"}},
+      "induced_class_orbits" -> {{"E"}, {"C5"}, {"C52"}, {"C3"}, {"C2"}},
+      "induced_irrep_orbits" -> {{"A1"}, {"T1"}, {"T2"}, {"G"}, {"H"}},
+      "induced_order" -> 60,
+      "inner_order" -> 60,
+      "irrep_orbits" -> {{"A1"}, {"T1", "T2"}, {"G"}, {"H"}},
+      "order" -> 120,
+      "outer_order" -> 2
+    |>,
     "center" -> <|
       "index" -> 60,
       "node" -> "n00",
@@ -20058,6 +20078,12 @@ o3t = <|
     |>,
     "rotation_subgroup" -> "I",
     "schoenflies" -> "I",
+    "schur_multiplier" -> <|
+      "invariants" -> {2},
+      "order" -> 2,
+      "other_classes" -> 0,
+      "spinor_class" -> "nontrivial"
+    |>,
     "type" -> "I"
   |>,
   "invariants" -> <|

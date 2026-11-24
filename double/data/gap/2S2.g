@@ -7,12 +7,14 @@ o3d := rec(
         ("ambivalent") := true,
         ("bar") := false,
         ("base_class") := "E",
+        ("centralizer_order") := 4,
         ("display") := "E",
         ("element_order") := 1,
         ("id") := "E",
         ("inverse_class") := "E",
         ("label") := "E",
         ("power_map") := "E",
+        ("power_maps") := rec( ("2") := "E" ),
         ("size") := 1,
         ("su2_turn") := [ 0, 1 ]
       ),
@@ -20,12 +22,14 @@ o3d := rec(
         ("ambivalent") := true,
         ("bar") := true,
         ("base_class") := "E",
+        ("centralizer_order") := 4,
         ("display") := "\\bar{E}",
         ("element_order") := 2,
         ("id") := "bE",
         ("inverse_class") := "bE",
         ("label") := "bar E",
         ("power_map") := "E",
+        ("power_maps") := rec( ("2") := "E" ),
         ("size") := 1,
         ("su2_turn") := [ 1, 1 ]
       ),
@@ -33,12 +37,14 @@ o3d := rec(
         ("ambivalent") := true,
         ("bar") := false,
         ("base_class") := "i",
+        ("centralizer_order") := 4,
         ("display") := "i",
         ("element_order") := 2,
         ("id") := "i",
         ("inverse_class") := "i",
         ("label") := "i",
         ("power_map") := "E",
+        ("power_maps") := rec( ("2") := "E" ),
         ("size") := 1,
         ("su2_turn") := [ 0, 1 ]
       ),
@@ -46,12 +52,14 @@ o3d := rec(
         ("ambivalent") := true,
         ("bar") := true,
         ("base_class") := "i",
+        ("centralizer_order") := 4,
         ("display") := "\\bar{i}",
         ("element_order") := 2,
         ("id") := "bi",
         ("inverse_class") := "bi",
         ("label") := "bar i",
         ("power_map") := "E",
+        ("power_maps") := rec( ("2") := "E" ),
         ("size") := 1,
         ("su2_turn") := [ 1, 1 ]
       )
@@ -346,6 +354,16 @@ o3d := rec(
     ("abstract_type") := "Z_2 x Z_2",
     ("alternative_names") := [ rec( ("source") := fail, ("symbol") := "2C_i" ) ],
     ("altmann_T") := 11,
+    ("automorphisms") := rec(
+      ("class_orbits") := [ [ "E" ], [ "bE", "i", "bi" ] ],
+      ("induced_class_orbits") := [ [ "E" ], [ "bE" ], [ "i" ], [ "bi" ] ],
+      ("induced_irrep_orbits") := [ [ "Ag" ], [ "Au" ], [ "A1hg" ], [ "A1hu" ] ],
+      ("induced_order") := 1,
+      ("inner_order") := 1,
+      ("irrep_orbits") := [ [ "Ag" ], [ "Au", "A1hg", "A1hu" ] ],
+      ("order") := 6,
+      ("outer_order") := 6
+    ),
     ("center") := rec(
       ("double_class") := "2S2",
       ("index") := 1,
@@ -455,6 +473,7 @@ o3d := rec(
         ("symbol") := "2C_1"
       )
     ),
+    ("schur_multiplier") := rec( ("invariants") := [ 2 ], ("order") := 2 ),
     ("su2_subgroup") := "2C_1",
     ("symbol") := "2S_2"
   ),

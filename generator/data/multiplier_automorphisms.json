@@ -1,0 +1,5541 @@
+{
+  "2C1": {
+    "aut_generators": [],
+    "aut_order": 1,
+    "center_order": 2,
+    "generators": [
+      1
+    ],
+    "multiplier": []
+  },
+  "2C10": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        6
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 20,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": []
+  },
+  "2C10h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        21
+      ],
+      [
+        1,
+        3,
+        20
+      ],
+      [
+        1,
+        6,
+        20
+      ],
+      [
+        1,
+        26,
+        20
+      ]
+    ],
+    "aut_order": 32,
+    "center_order": 40,
+    "generators": [
+      1,
+      2,
+      20
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2C10v": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        21
+      ],
+      [
+        1,
+        2,
+        22
+      ],
+      [
+        1,
+        2,
+        30
+      ],
+      [
+        1,
+        3,
+        20
+      ],
+      [
+        1,
+        4,
+        20
+      ],
+      [
+        1,
+        10,
+        20
+      ]
+    ],
+    "aut_order": 160,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      20
+    ],
+    "multiplier": []
+  },
+  "2C11": {
+    "aut_generators": [
+      [
+        1,
+        5
+      ]
+    ],
+    "aut_order": 10,
+    "center_order": 22,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": []
+  },
+  "2C11h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        23
+      ],
+      [
+        1,
+        5,
+        22
+      ]
+    ],
+    "aut_order": 20,
+    "center_order": 44,
+    "generators": [
+      1,
+      2,
+      22
+    ],
+    "multiplier": []
+  },
+  "2C11v": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        23
+      ],
+      [
+        1,
+        2,
+        24
+      ],
+      [
+        1,
+        4,
+        22
+      ],
+      [
+        1,
+        7,
+        22
+      ]
+    ],
+    "aut_order": 220,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      22
+    ],
+    "multiplier": []
+  },
+  "2C12": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        1,
+        14
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 24,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": []
+  },
+  "2C12h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        25
+      ],
+      [
+        1,
+        3,
+        24
+      ],
+      [
+        1,
+        10,
+        24
+      ],
+      [
+        1,
+        14,
+        24
+      ],
+      [
+        1,
+        28,
+        24
+      ]
+    ],
+    "aut_order": 32,
+    "center_order": 48,
+    "generators": [
+      1,
+      2,
+      24
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2C12v": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        25
+      ],
+      [
+        1,
+        2,
+        26
+      ],
+      [
+        1,
+        2,
+        36
+      ],
+      [
+        1,
+        3,
+        24
+      ],
+      [
+        1,
+        4,
+        24
+      ],
+      [
+        1,
+        18,
+        24
+      ]
+    ],
+    "aut_order": 192,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      24
+    ],
+    "multiplier": []
+  },
+  "2C1h": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ]
+    ],
+    "aut_order": 2,
+    "center_order": 4,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": []
+  },
+  "2C1v": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ]
+    ],
+    "aut_order": 2,
+    "center_order": 4,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": []
+  },
+  "2C2": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ]
+    ],
+    "aut_order": 2,
+    "center_order": 4,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": []
+  },
+  "2C2h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        5
+      ],
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        1,
+        6,
+        4
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 8,
+    "generators": [
+      1,
+      2,
+      4
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2C2v": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        5
+      ],
+      [
+        1,
+        2,
+        6
+      ],
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        1,
+        4,
+        2
+      ]
+    ],
+    "aut_order": 24,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      4
+    ],
+    "multiplier": []
+  },
+  "2C3": {
+    "aut_generators": [
+      [
+        1,
+        4
+      ]
+    ],
+    "aut_order": 2,
+    "center_order": 6,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": []
+  },
+  "2C3h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        7
+      ],
+      [
+        1,
+        4,
+        6
+      ]
+    ],
+    "aut_order": 4,
+    "center_order": 12,
+    "generators": [
+      1,
+      2,
+      6
+    ],
+    "multiplier": []
+  },
+  "2C3v": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        7
+      ],
+      [
+        1,
+        2,
+        8
+      ],
+      [
+        1,
+        4,
+        6
+      ]
+    ],
+    "aut_order": 12,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      6
+    ],
+    "multiplier": []
+  },
+  "2C4": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        6
+      ]
+    ],
+    "aut_order": 4,
+    "center_order": 8,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": []
+  },
+  "2C4h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        9
+      ],
+      [
+        1,
+        3,
+        8
+      ],
+      [
+        1,
+        6,
+        8
+      ],
+      [
+        1,
+        12,
+        8
+      ]
+    ],
+    "aut_order": 16,
+    "center_order": 16,
+    "generators": [
+      1,
+      2,
+      8
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2C4v": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        9
+      ],
+      [
+        1,
+        2,
+        10
+      ],
+      [
+        1,
+        2,
+        12
+      ],
+      [
+        1,
+        3,
+        8
+      ],
+      [
+        1,
+        4,
+        8
+      ]
+    ],
+    "aut_order": 32,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      8
+    ],
+    "multiplier": []
+  },
+  "2C5": {
+    "aut_generators": [
+      [
+        1,
+        5
+      ]
+    ],
+    "aut_order": 4,
+    "center_order": 10,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": []
+  },
+  "2C5h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        11
+      ],
+      [
+        1,
+        5,
+        10
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 20,
+    "generators": [
+      1,
+      2,
+      10
+    ],
+    "multiplier": []
+  },
+  "2C5v": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        11
+      ],
+      [
+        1,
+        2,
+        12
+      ],
+      [
+        1,
+        4,
+        10
+      ],
+      [
+        1,
+        7,
+        10
+      ]
+    ],
+    "aut_order": 40,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      10
+    ],
+    "multiplier": []
+  },
+  "2C6": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        10
+      ]
+    ],
+    "aut_order": 4,
+    "center_order": 12,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": []
+  },
+  "2C6h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        13
+      ],
+      [
+        1,
+        3,
+        12
+      ],
+      [
+        1,
+        10,
+        12
+      ],
+      [
+        1,
+        18,
+        12
+      ]
+    ],
+    "aut_order": 16,
+    "center_order": 24,
+    "generators": [
+      1,
+      2,
+      12
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2C6v": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        13
+      ],
+      [
+        1,
+        2,
+        14
+      ],
+      [
+        1,
+        2,
+        18
+      ],
+      [
+        1,
+        3,
+        12
+      ],
+      [
+        1,
+        4,
+        12
+      ]
+    ],
+    "aut_order": 48,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      12
+    ],
+    "multiplier": []
+  },
+  "2C7": {
+    "aut_generators": [
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 14,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": []
+  },
+  "2C7h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        15
+      ],
+      [
+        1,
+        5,
+        14
+      ],
+      [
+        1,
+        6,
+        14
+      ]
+    ],
+    "aut_order": 12,
+    "center_order": 28,
+    "generators": [
+      1,
+      2,
+      14
+    ],
+    "multiplier": []
+  },
+  "2C7v": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        15
+      ],
+      [
+        1,
+        2,
+        16
+      ],
+      [
+        1,
+        4,
+        14
+      ],
+      [
+        1,
+        7,
+        14
+      ]
+    ],
+    "aut_order": 84,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      14
+    ],
+    "multiplier": []
+  },
+  "2C8": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        10
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 16,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": []
+  },
+  "2C8h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        17
+      ],
+      [
+        1,
+        3,
+        16
+      ],
+      [
+        1,
+        6,
+        16
+      ],
+      [
+        1,
+        10,
+        16
+      ],
+      [
+        1,
+        20,
+        16
+      ]
+    ],
+    "aut_order": 32,
+    "center_order": 32,
+    "generators": [
+      1,
+      2,
+      16
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2C8v": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        17
+      ],
+      [
+        1,
+        2,
+        18
+      ],
+      [
+        1,
+        2,
+        24
+      ],
+      [
+        1,
+        3,
+        16
+      ],
+      [
+        1,
+        4,
+        16
+      ],
+      [
+        1,
+        10,
+        16
+      ]
+    ],
+    "aut_order": 128,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      16
+    ],
+    "multiplier": []
+  },
+  "2C9": {
+    "aut_generators": [
+      [
+        1,
+        5
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 18,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": []
+  },
+  "2C9h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        19
+      ],
+      [
+        1,
+        5,
+        18
+      ]
+    ],
+    "aut_order": 12,
+    "center_order": 36,
+    "generators": [
+      1,
+      2,
+      18
+    ],
+    "multiplier": []
+  },
+  "2C9v": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        19
+      ],
+      [
+        1,
+        2,
+        20
+      ],
+      [
+        1,
+        4,
+        18
+      ],
+      [
+        1,
+        7,
+        18
+      ]
+    ],
+    "aut_order": 108,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      18
+    ],
+    "multiplier": []
+  },
+  "2D1": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ]
+    ],
+    "aut_order": 2,
+    "center_order": 4,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": []
+  },
+  "2D10": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        21
+      ],
+      [
+        1,
+        2,
+        22
+      ],
+      [
+        1,
+        2,
+        30
+      ],
+      [
+        1,
+        3,
+        20
+      ],
+      [
+        1,
+        4,
+        20
+      ],
+      [
+        1,
+        10,
+        20
+      ]
+    ],
+    "aut_order": 160,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      20
+    ],
+    "multiplier": []
+  },
+  "2D10d": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        20,
+        41
+      ],
+      [
+        1,
+        2,
+        21,
+        40
+      ],
+      [
+        1,
+        2,
+        22,
+        40
+      ],
+      [
+        1,
+        2,
+        60,
+        40
+      ],
+      [
+        1,
+        3,
+        20,
+        58
+      ],
+      [
+        1,
+        4,
+        20,
+        42
+      ],
+      [
+        1,
+        10,
+        20,
+        44
+      ]
+    ],
+    "aut_order": 640,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      20,
+      40
+    ],
+    "multiplier": []
+  },
+  "2D10h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        20,
+        41
+      ],
+      [
+        1,
+        2,
+        21,
+        40
+      ],
+      [
+        1,
+        2,
+        22,
+        40
+      ],
+      [
+        1,
+        2,
+        30,
+        40
+      ],
+      [
+        1,
+        2,
+        60,
+        40
+      ],
+      [
+        1,
+        3,
+        20,
+        40
+      ],
+      [
+        1,
+        4,
+        20,
+        40
+      ],
+      [
+        1,
+        10,
+        20,
+        40
+      ],
+      [
+        1,
+        48,
+        20,
+        40
+      ]
+    ],
+    "aut_order": 1280,
+    "center_order": 4,
+    "generators": [
+      1,
+      2,
+      20,
+      40
+    ],
+    "multiplier": [
+      2,
+      2
+    ]
+  },
+  "2D11": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        23
+      ],
+      [
+        1,
+        2,
+        24
+      ],
+      [
+        1,
+        4,
+        22
+      ],
+      [
+        1,
+        7,
+        22
+      ]
+    ],
+    "aut_order": 220,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      22
+    ],
+    "multiplier": []
+  },
+  "2D11d": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        22,
+        45
+      ],
+      [
+        1,
+        2,
+        23,
+        44
+      ],
+      [
+        1,
+        2,
+        24,
+        44
+      ],
+      [
+        1,
+        2,
+        66,
+        44
+      ],
+      [
+        1,
+        4,
+        22,
+        44
+      ],
+      [
+        1,
+        7,
+        22,
+        44
+      ]
+    ],
+    "aut_order": 880,
+    "center_order": 4,
+    "generators": [
+      1,
+      2,
+      22,
+      44
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2D11h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        22,
+        45
+      ],
+      [
+        1,
+        2,
+        23,
+        44
+      ],
+      [
+        1,
+        2,
+        24,
+        44
+      ],
+      [
+        1,
+        2,
+        66,
+        44
+      ],
+      [
+        1,
+        4,
+        22,
+        44
+      ],
+      [
+        1,
+        7,
+        22,
+        44
+      ]
+    ],
+    "aut_order": 880,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      22,
+      44
+    ],
+    "multiplier": []
+  },
+  "2D12": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        25
+      ],
+      [
+        1,
+        2,
+        26
+      ],
+      [
+        1,
+        2,
+        36
+      ],
+      [
+        1,
+        3,
+        24
+      ],
+      [
+        1,
+        4,
+        24
+      ],
+      [
+        1,
+        18,
+        24
+      ]
+    ],
+    "aut_order": 192,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      24
+    ],
+    "multiplier": []
+  },
+  "2D12d": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        24,
+        49
+      ],
+      [
+        1,
+        2,
+        25,
+        48
+      ],
+      [
+        1,
+        2,
+        26,
+        48
+      ],
+      [
+        1,
+        2,
+        72,
+        48
+      ],
+      [
+        1,
+        3,
+        24,
+        70
+      ],
+      [
+        1,
+        4,
+        24,
+        50
+      ],
+      [
+        1,
+        18,
+        24,
+        56
+      ]
+    ],
+    "aut_order": 768,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      24,
+      48
+    ],
+    "multiplier": []
+  },
+  "2D12h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        24,
+        49
+      ],
+      [
+        1,
+        2,
+        25,
+        48
+      ],
+      [
+        1,
+        2,
+        26,
+        48
+      ],
+      [
+        1,
+        2,
+        36,
+        48
+      ],
+      [
+        1,
+        2,
+        72,
+        48
+      ],
+      [
+        1,
+        3,
+        24,
+        48
+      ],
+      [
+        1,
+        4,
+        24,
+        48
+      ],
+      [
+        1,
+        18,
+        24,
+        48
+      ],
+      [
+        1,
+        52,
+        24,
+        48
+      ]
+    ],
+    "aut_order": 1536,
+    "center_order": 4,
+    "generators": [
+      1,
+      2,
+      24,
+      48
+    ],
+    "multiplier": [
+      2,
+      2
+    ]
+  },
+  "2D1d": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        5
+      ],
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        1,
+        6,
+        4
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 8,
+    "generators": [
+      1,
+      2,
+      4
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2D1h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        5
+      ],
+      [
+        1,
+        2,
+        6
+      ],
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        1,
+        4,
+        2
+      ]
+    ],
+    "aut_order": 24,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      4
+    ],
+    "multiplier": []
+  },
+  "2D2": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        5
+      ],
+      [
+        1,
+        2,
+        6
+      ],
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        1,
+        4,
+        2
+      ]
+    ],
+    "aut_order": 24,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      4
+    ],
+    "multiplier": []
+  },
+  "2D2d": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        4,
+        9
+      ],
+      [
+        1,
+        2,
+        5,
+        8
+      ],
+      [
+        1,
+        2,
+        6,
+        8
+      ],
+      [
+        1,
+        2,
+        12,
+        8
+      ],
+      [
+        1,
+        3,
+        4,
+        10
+      ]
+    ],
+    "aut_order": 32,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "multiplier": []
+  },
+  "2D2h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        4,
+        9
+      ],
+      [
+        1,
+        2,
+        5,
+        8
+      ],
+      [
+        1,
+        2,
+        6,
+        8
+      ],
+      [
+        1,
+        2,
+        12,
+        8
+      ],
+      [
+        1,
+        3,
+        4,
+        8
+      ],
+      [
+        1,
+        4,
+        2,
+        8
+      ]
+    ],
+    "aut_order": 192,
+    "center_order": 4,
+    "generators": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "multiplier": [
+      2,
+      2
+    ]
+  },
+  "2D3": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        7
+      ],
+      [
+        1,
+        2,
+        8
+      ],
+      [
+        1,
+        4,
+        6
+      ]
+    ],
+    "aut_order": 12,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      6
+    ],
+    "multiplier": []
+  },
+  "2D3d": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        6,
+        13
+      ],
+      [
+        1,
+        2,
+        7,
+        12
+      ],
+      [
+        1,
+        2,
+        8,
+        12
+      ],
+      [
+        1,
+        2,
+        18,
+        12
+      ],
+      [
+        1,
+        4,
+        6,
+        12
+      ]
+    ],
+    "aut_order": 48,
+    "center_order": 4,
+    "generators": [
+      1,
+      2,
+      6,
+      12
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2D3h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        6,
+        13
+      ],
+      [
+        1,
+        2,
+        7,
+        12
+      ],
+      [
+        1,
+        2,
+        8,
+        12
+      ],
+      [
+        1,
+        2,
+        18,
+        12
+      ],
+      [
+        1,
+        4,
+        6,
+        12
+      ]
+    ],
+    "aut_order": 48,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      6,
+      12
+    ],
+    "multiplier": []
+  },
+  "2D4": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        9
+      ],
+      [
+        1,
+        2,
+        10
+      ],
+      [
+        1,
+        2,
+        12
+      ],
+      [
+        1,
+        3,
+        8
+      ],
+      [
+        1,
+        4,
+        8
+      ]
+    ],
+    "aut_order": 32,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      8
+    ],
+    "multiplier": []
+  },
+  "2D4d": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        8,
+        17
+      ],
+      [
+        1,
+        2,
+        9,
+        16
+      ],
+      [
+        1,
+        2,
+        10,
+        16
+      ],
+      [
+        1,
+        2,
+        24,
+        16
+      ],
+      [
+        1,
+        3,
+        8,
+        22
+      ],
+      [
+        1,
+        4,
+        8,
+        18
+      ]
+    ],
+    "aut_order": 128,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      8,
+      16
+    ],
+    "multiplier": []
+  },
+  "2D4h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        8,
+        17
+      ],
+      [
+        1,
+        2,
+        9,
+        16
+      ],
+      [
+        1,
+        2,
+        10,
+        16
+      ],
+      [
+        1,
+        2,
+        12,
+        16
+      ],
+      [
+        1,
+        2,
+        24,
+        16
+      ],
+      [
+        1,
+        3,
+        8,
+        16
+      ],
+      [
+        1,
+        4,
+        8,
+        16
+      ],
+      [
+        1,
+        20,
+        8,
+        16
+      ]
+    ],
+    "aut_order": 256,
+    "center_order": 4,
+    "generators": [
+      1,
+      2,
+      8,
+      16
+    ],
+    "multiplier": [
+      2,
+      2
+    ]
+  },
+  "2D5": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        11
+      ],
+      [
+        1,
+        2,
+        12
+      ],
+      [
+        1,
+        4,
+        10
+      ],
+      [
+        1,
+        7,
+        10
+      ]
+    ],
+    "aut_order": 40,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      10
+    ],
+    "multiplier": []
+  },
+  "2D5d": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        10,
+        21
+      ],
+      [
+        1,
+        2,
+        11,
+        20
+      ],
+      [
+        1,
+        2,
+        12,
+        20
+      ],
+      [
+        1,
+        2,
+        30,
+        20
+      ],
+      [
+        1,
+        4,
+        10,
+        20
+      ],
+      [
+        1,
+        7,
+        10,
+        20
+      ]
+    ],
+    "aut_order": 160,
+    "center_order": 4,
+    "generators": [
+      1,
+      2,
+      10,
+      20
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2D5h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        10,
+        21
+      ],
+      [
+        1,
+        2,
+        11,
+        20
+      ],
+      [
+        1,
+        2,
+        12,
+        20
+      ],
+      [
+        1,
+        2,
+        30,
+        20
+      ],
+      [
+        1,
+        4,
+        10,
+        20
+      ],
+      [
+        1,
+        7,
+        10,
+        20
+      ]
+    ],
+    "aut_order": 160,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      10,
+      20
+    ],
+    "multiplier": []
+  },
+  "2D6": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        13
+      ],
+      [
+        1,
+        2,
+        14
+      ],
+      [
+        1,
+        2,
+        18
+      ],
+      [
+        1,
+        3,
+        12
+      ],
+      [
+        1,
+        4,
+        12
+      ]
+    ],
+    "aut_order": 48,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      12
+    ],
+    "multiplier": []
+  },
+  "2D6d": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        12,
+        25
+      ],
+      [
+        1,
+        2,
+        13,
+        24
+      ],
+      [
+        1,
+        2,
+        14,
+        24
+      ],
+      [
+        1,
+        2,
+        36,
+        24
+      ],
+      [
+        1,
+        3,
+        12,
+        34
+      ],
+      [
+        1,
+        4,
+        12,
+        26
+      ]
+    ],
+    "aut_order": 192,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      12,
+      24
+    ],
+    "multiplier": []
+  },
+  "2D6h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        12,
+        25
+      ],
+      [
+        1,
+        2,
+        13,
+        24
+      ],
+      [
+        1,
+        2,
+        14,
+        24
+      ],
+      [
+        1,
+        2,
+        18,
+        24
+      ],
+      [
+        1,
+        2,
+        36,
+        24
+      ],
+      [
+        1,
+        3,
+        12,
+        24
+      ],
+      [
+        1,
+        4,
+        12,
+        24
+      ],
+      [
+        1,
+        32,
+        12,
+        24
+      ]
+    ],
+    "aut_order": 384,
+    "center_order": 4,
+    "generators": [
+      1,
+      2,
+      12,
+      24
+    ],
+    "multiplier": [
+      2,
+      2
+    ]
+  },
+  "2D7": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        15
+      ],
+      [
+        1,
+        2,
+        16
+      ],
+      [
+        1,
+        4,
+        14
+      ],
+      [
+        1,
+        7,
+        14
+      ]
+    ],
+    "aut_order": 84,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      14
+    ],
+    "multiplier": []
+  },
+  "2D7d": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        14,
+        29
+      ],
+      [
+        1,
+        2,
+        15,
+        28
+      ],
+      [
+        1,
+        2,
+        16,
+        28
+      ],
+      [
+        1,
+        2,
+        42,
+        28
+      ],
+      [
+        1,
+        4,
+        14,
+        28
+      ],
+      [
+        1,
+        7,
+        14,
+        28
+      ]
+    ],
+    "aut_order": 336,
+    "center_order": 4,
+    "generators": [
+      1,
+      2,
+      14,
+      28
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2D7h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        14,
+        29
+      ],
+      [
+        1,
+        2,
+        15,
+        28
+      ],
+      [
+        1,
+        2,
+        16,
+        28
+      ],
+      [
+        1,
+        2,
+        42,
+        28
+      ],
+      [
+        1,
+        4,
+        14,
+        28
+      ],
+      [
+        1,
+        7,
+        14,
+        28
+      ]
+    ],
+    "aut_order": 336,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      14,
+      28
+    ],
+    "multiplier": []
+  },
+  "2D8": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        17
+      ],
+      [
+        1,
+        2,
+        18
+      ],
+      [
+        1,
+        2,
+        24
+      ],
+      [
+        1,
+        3,
+        16
+      ],
+      [
+        1,
+        4,
+        16
+      ],
+      [
+        1,
+        10,
+        16
+      ]
+    ],
+    "aut_order": 128,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      16
+    ],
+    "multiplier": []
+  },
+  "2D8d": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        16,
+        33
+      ],
+      [
+        1,
+        2,
+        17,
+        32
+      ],
+      [
+        1,
+        2,
+        18,
+        32
+      ],
+      [
+        1,
+        2,
+        48,
+        32
+      ],
+      [
+        1,
+        3,
+        16,
+        46
+      ],
+      [
+        1,
+        4,
+        16,
+        34
+      ],
+      [
+        1,
+        10,
+        16,
+        36
+      ]
+    ],
+    "aut_order": 512,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      16,
+      32
+    ],
+    "multiplier": []
+  },
+  "2D8h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        16,
+        33
+      ],
+      [
+        1,
+        2,
+        17,
+        32
+      ],
+      [
+        1,
+        2,
+        18,
+        32
+      ],
+      [
+        1,
+        2,
+        24,
+        32
+      ],
+      [
+        1,
+        2,
+        48,
+        32
+      ],
+      [
+        1,
+        3,
+        16,
+        32
+      ],
+      [
+        1,
+        4,
+        16,
+        32
+      ],
+      [
+        1,
+        10,
+        16,
+        32
+      ],
+      [
+        1,
+        36,
+        16,
+        32
+      ]
+    ],
+    "aut_order": 1024,
+    "center_order": 4,
+    "generators": [
+      1,
+      2,
+      16,
+      32
+    ],
+    "multiplier": [
+      2,
+      2
+    ]
+  },
+  "2D9": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        19
+      ],
+      [
+        1,
+        2,
+        20
+      ],
+      [
+        1,
+        4,
+        18
+      ],
+      [
+        1,
+        7,
+        18
+      ]
+    ],
+    "aut_order": 108,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      18
+    ],
+    "multiplier": []
+  },
+  "2D9d": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        18,
+        37
+      ],
+      [
+        1,
+        2,
+        19,
+        36
+      ],
+      [
+        1,
+        2,
+        20,
+        36
+      ],
+      [
+        1,
+        2,
+        54,
+        36
+      ],
+      [
+        1,
+        4,
+        18,
+        36
+      ],
+      [
+        1,
+        7,
+        18,
+        36
+      ]
+    ],
+    "aut_order": 432,
+    "center_order": 4,
+    "generators": [
+      1,
+      2,
+      18,
+      36
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2D9h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        18,
+        37
+      ],
+      [
+        1,
+        2,
+        19,
+        36
+      ],
+      [
+        1,
+        2,
+        20,
+        36
+      ],
+      [
+        1,
+        2,
+        54,
+        36
+      ],
+      [
+        1,
+        4,
+        18,
+        36
+      ],
+      [
+        1,
+        7,
+        18,
+        36
+      ]
+    ],
+    "aut_order": 432,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      18,
+      36
+    ],
+    "multiplier": []
+  },
+  "2I": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        10
+      ],
+      [
+        1,
+        4,
+        8
+      ],
+      [
+        1,
+        6,
+        2
+      ],
+      [
+        1,
+        27,
+        31
+      ]
+    ],
+    "aut_order": 120,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      6
+    ],
+    "multiplier": []
+  },
+  "2Ih": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        6,
+        121
+      ],
+      [
+        1,
+        2,
+        10,
+        120
+      ],
+      [
+        1,
+        4,
+        8,
+        120
+      ],
+      [
+        1,
+        6,
+        2,
+        120
+      ],
+      [
+        1,
+        27,
+        31,
+        120
+      ]
+    ],
+    "aut_order": 240,
+    "center_order": 4,
+    "generators": [
+      1,
+      2,
+      6,
+      120
+    ],
+    "multiplier": []
+  },
+  "2O": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        8
+      ],
+      [
+        1,
+        2,
+        10
+      ],
+      [
+        1,
+        3,
+        7
+      ],
+      [
+        1,
+        4,
+        6
+      ],
+      [
+        1,
+        6,
+        2
+      ]
+    ],
+    "aut_order": 48,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      6
+    ],
+    "multiplier": []
+  },
+  "2Oh": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        6,
+        49
+      ],
+      [
+        1,
+        2,
+        8,
+        48
+      ],
+      [
+        1,
+        2,
+        10,
+        48
+      ],
+      [
+        1,
+        3,
+        7,
+        48
+      ],
+      [
+        1,
+        4,
+        6,
+        48
+      ],
+      [
+        1,
+        6,
+        2,
+        48
+      ],
+      [
+        1,
+        50,
+        54,
+        48
+      ]
+    ],
+    "aut_order": 192,
+    "center_order": 4,
+    "generators": [
+      1,
+      2,
+      6,
+      48
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2S10": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        11
+      ],
+      [
+        1,
+        5,
+        10
+      ],
+      [
+        10,
+        12,
+        1
+      ]
+    ],
+    "aut_order": 24,
+    "center_order": 20,
+    "generators": [
+      1,
+      2,
+      10
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2S12": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        13
+      ],
+      [
+        1,
+        3,
+        18
+      ],
+      [
+        1,
+        10,
+        22
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 24,
+    "generators": [
+      1,
+      2,
+      12
+    ],
+    "multiplier": []
+  },
+  "2S14": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        15
+      ],
+      [
+        1,
+        5,
+        14
+      ],
+      [
+        1,
+        6,
+        14
+      ],
+      [
+        14,
+        17,
+        1
+      ]
+    ],
+    "aut_order": 36,
+    "center_order": 28,
+    "generators": [
+      1,
+      2,
+      14
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2S16": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        17
+      ],
+      [
+        1,
+        3,
+        24
+      ],
+      [
+        1,
+        6,
+        18
+      ],
+      [
+        1,
+        10,
+        28
+      ]
+    ],
+    "aut_order": 16,
+    "center_order": 32,
+    "generators": [
+      1,
+      2,
+      16
+    ],
+    "multiplier": []
+  },
+  "2S18": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        19
+      ],
+      [
+        1,
+        5,
+        18
+      ],
+      [
+        18,
+        20,
+        1
+      ]
+    ],
+    "aut_order": 36,
+    "center_order": 36,
+    "generators": [
+      1,
+      2,
+      18
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2S2": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 4,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2S20": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        21
+      ],
+      [
+        1,
+        3,
+        30
+      ],
+      [
+        1,
+        6,
+        22
+      ]
+    ],
+    "aut_order": 16,
+    "center_order": 40,
+    "generators": [
+      1,
+      2,
+      20
+    ],
+    "multiplier": []
+  },
+  "2S22": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        23
+      ],
+      [
+        1,
+        5,
+        22
+      ],
+      [
+        22,
+        25,
+        1
+      ]
+    ],
+    "aut_order": 60,
+    "center_order": 44,
+    "generators": [
+      1,
+      2,
+      22
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2S24": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        25
+      ],
+      [
+        1,
+        3,
+        36
+      ],
+      [
+        1,
+        10,
+        28
+      ],
+      [
+        1,
+        14,
+        42
+      ]
+    ],
+    "aut_order": 16,
+    "center_order": 48,
+    "generators": [
+      1,
+      2,
+      24
+    ],
+    "multiplier": []
+  },
+  "2S4": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        5
+      ],
+      [
+        1,
+        3,
+        6
+      ]
+    ],
+    "aut_order": 4,
+    "center_order": 8,
+    "generators": [
+      1,
+      2,
+      4
+    ],
+    "multiplier": []
+  },
+  "2S6": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        7
+      ],
+      [
+        1,
+        4,
+        6
+      ],
+      [
+        6,
+        9,
+        1
+      ]
+    ],
+    "aut_order": 12,
+    "center_order": 12,
+    "generators": [
+      1,
+      2,
+      6
+    ],
+    "multiplier": [
+      2
+    ]
+  },
+  "2S8": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        9
+      ],
+      [
+        1,
+        3,
+        12
+      ],
+      [
+        1,
+        6,
+        14
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 16,
+    "generators": [
+      1,
+      2,
+      8
+    ],
+    "multiplier": []
+  },
+  "2T": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        6
+      ],
+      [
+        1,
+        4,
+        2
+      ],
+      [
+        1,
+        10,
+        12
+      ]
+    ],
+    "aut_order": 24,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      4
+    ],
+    "multiplier": []
+  },
+  "2Td": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        6,
+        25
+      ],
+      [
+        1,
+        2,
+        10,
+        34
+      ],
+      [
+        1,
+        4,
+        8,
+        28
+      ],
+      [
+        1,
+        6,
+        2,
+        26
+      ]
+    ],
+    "aut_order": 48,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      6,
+      24
+    ],
+    "multiplier": []
+  },
+  "2Th": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        4,
+        25
+      ],
+      [
+        1,
+        2,
+        6,
+        24
+      ],
+      [
+        1,
+        4,
+        2,
+        24
+      ],
+      [
+        1,
+        10,
+        12,
+        24
+      ]
+    ],
+    "aut_order": 48,
+    "center_order": 4,
+    "generators": [
+      1,
+      2,
+      4,
+      24
+    ],
+    "multiplier": []
+  },
+  "C1": {
+    "aut_generators": [],
+    "aut_order": 1,
+    "center_order": 1,
+    "generators": [],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C10": {
+    "aut_generators": [
+      [
+        3
+      ]
+    ],
+    "aut_order": 4,
+    "center_order": 10,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C10h": {
+    "aut_generators": [
+      [
+        1,
+        11
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        12,
+        5
+      ]
+    ],
+    "aut_order": 24,
+    "center_order": 20,
+    "generators": [
+      1,
+      10
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "trivial"
+  },
+  "C10v": {
+    "aut_generators": [
+      [
+        1,
+        11
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        5,
+        10
+      ]
+    ],
+    "aut_order": 40,
+    "center_order": 2,
+    "generators": [
+      1,
+      10
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "C11": {
+    "aut_generators": [
+      [
+        2
+      ]
+    ],
+    "aut_order": 10,
+    "center_order": 11,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C11h": {
+    "aut_generators": [
+      [
+        2,
+        11
+      ]
+    ],
+    "aut_order": 10,
+    "center_order": 22,
+    "generators": [
+      1,
+      11
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C11v": {
+    "aut_generators": [
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        3,
+        11
+      ]
+    ],
+    "aut_order": 110,
+    "center_order": 1,
+    "generators": [
+      1,
+      11
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C12": {
+    "aut_generators": [
+      [
+        5
+      ],
+      [
+        7
+      ]
+    ],
+    "aut_order": 4,
+    "center_order": 12,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C12h": {
+    "aut_generators": [
+      [
+        1,
+        13
+      ],
+      [
+        5,
+        12
+      ],
+      [
+        7,
+        12
+      ],
+      [
+        14,
+        12
+      ]
+    ],
+    "aut_order": 16,
+    "center_order": 24,
+    "generators": [
+      1,
+      12
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "trivial"
+  },
+  "C12v": {
+    "aut_generators": [
+      [
+        1,
+        13
+      ],
+      [
+        1,
+        18
+      ],
+      [
+        2,
+        12
+      ],
+      [
+        9,
+        12
+      ]
+    ],
+    "aut_order": 48,
+    "center_order": 2,
+    "generators": [
+      1,
+      12
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "C1h": {
+    "aut_generators": [],
+    "aut_order": 1,
+    "center_order": 2,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C1v": {
+    "aut_generators": [],
+    "aut_order": 1,
+    "center_order": 2,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C2": {
+    "aut_generators": [],
+    "aut_order": 1,
+    "center_order": 2,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C2h": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 4,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "trivial"
+  },
+  "C2v": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 4,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "C3": {
+    "aut_generators": [
+      [
+        2
+      ]
+    ],
+    "aut_order": 2,
+    "center_order": 3,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C3h": {
+    "aut_generators": [
+      [
+        2,
+        3
+      ]
+    ],
+    "aut_order": 2,
+    "center_order": 6,
+    "generators": [
+      1,
+      3
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C3v": {
+    "aut_generators": [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 1,
+    "generators": [
+      1,
+      3
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C4": {
+    "aut_generators": [
+      [
+        3
+      ]
+    ],
+    "aut_order": 2,
+    "center_order": 4,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C4h": {
+    "aut_generators": [
+      [
+        1,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        6,
+        4
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 8,
+    "generators": [
+      1,
+      4
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "trivial"
+  },
+  "C4v": {
+    "aut_generators": [
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 2,
+    "generators": [
+      1,
+      4
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "C5": {
+    "aut_generators": [
+      [
+        2
+      ]
+    ],
+    "aut_order": 4,
+    "center_order": 5,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C5h": {
+    "aut_generators": [
+      [
+        2,
+        5
+      ]
+    ],
+    "aut_order": 4,
+    "center_order": 10,
+    "generators": [
+      1,
+      5
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C5v": {
+    "aut_generators": [
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "aut_order": 20,
+    "center_order": 1,
+    "generators": [
+      1,
+      5
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C6": {
+    "aut_generators": [
+      [
+        5
+      ]
+    ],
+    "aut_order": 2,
+    "center_order": 6,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C6h": {
+    "aut_generators": [
+      [
+        1,
+        7
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        8,
+        3
+      ]
+    ],
+    "aut_order": 12,
+    "center_order": 12,
+    "generators": [
+      1,
+      6
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "trivial"
+  },
+  "C6v": {
+    "aut_generators": [
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        6
+      ]
+    ],
+    "aut_order": 12,
+    "center_order": 2,
+    "generators": [
+      1,
+      6
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "C7": {
+    "aut_generators": [
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 7,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C7h": {
+    "aut_generators": [
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 14,
+    "generators": [
+      1,
+      7
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C7v": {
+    "aut_generators": [
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "aut_order": 42,
+    "center_order": 1,
+    "generators": [
+      1,
+      7
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C8": {
+    "aut_generators": [
+      [
+        3
+      ],
+      [
+        5
+      ]
+    ],
+    "aut_order": 4,
+    "center_order": 8,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C8h": {
+    "aut_generators": [
+      [
+        1,
+        9
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        10,
+        8
+      ]
+    ],
+    "aut_order": 16,
+    "center_order": 16,
+    "generators": [
+      1,
+      8
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "trivial"
+  },
+  "C8v": {
+    "aut_generators": [
+      [
+        1,
+        9
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    "aut_order": 32,
+    "center_order": 2,
+    "generators": [
+      1,
+      8
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "C9": {
+    "aut_generators": [
+      [
+        2
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 9,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C9h": {
+    "aut_generators": [
+      [
+        2,
+        9
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 18,
+    "generators": [
+      1,
+      9
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "C9v": {
+    "aut_generators": [
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        3,
+        9
+      ]
+    ],
+    "aut_order": 54,
+    "center_order": 1,
+    "generators": [
+      1,
+      9
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "D1": {
+    "aut_generators": [],
+    "aut_order": 1,
+    "center_order": 2,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "D10": {
+    "aut_generators": [
+      [
+        1,
+        11
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        5,
+        10
+      ]
+    ],
+    "aut_order": 40,
+    "center_order": 2,
+    "generators": [
+      1,
+      10
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D10d": {
+    "aut_generators": [
+      [
+        1,
+        10,
+        29
+      ],
+      [
+        1,
+        11,
+        20
+      ],
+      [
+        1,
+        30,
+        20
+      ],
+      [
+        2,
+        10,
+        21
+      ],
+      [
+        5,
+        10,
+        22
+      ]
+    ],
+    "aut_order": 160,
+    "center_order": 2,
+    "generators": [
+      1,
+      10,
+      20
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D10h": {
+    "aut_generators": [
+      [
+        1,
+        10,
+        21
+      ],
+      [
+        1,
+        11,
+        20
+      ],
+      [
+        1,
+        15,
+        20
+      ],
+      [
+        1,
+        30,
+        20
+      ],
+      [
+        2,
+        10,
+        20
+      ],
+      [
+        5,
+        10,
+        20
+      ],
+      [
+        22,
+        10,
+        9
+      ]
+    ],
+    "aut_order": 480,
+    "center_order": 4,
+    "generators": [
+      1,
+      10,
+      20
+    ],
+    "multiplier": [
+      2,
+      2,
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D11": {
+    "aut_generators": [
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        3,
+        11
+      ]
+    ],
+    "aut_order": 110,
+    "center_order": 1,
+    "generators": [
+      1,
+      11
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "D11d": {
+    "aut_generators": [
+      [
+        1,
+        12,
+        22
+      ],
+      [
+        1,
+        33,
+        22
+      ],
+      [
+        2,
+        11,
+        22
+      ],
+      [
+        3,
+        11,
+        22
+      ]
+    ],
+    "aut_order": 220,
+    "center_order": 2,
+    "generators": [
+      1,
+      11,
+      22
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "trivial"
+  },
+  "D11h": {
+    "aut_generators": [
+      [
+        1,
+        12,
+        22
+      ],
+      [
+        1,
+        33,
+        22
+      ],
+      [
+        2,
+        11,
+        22
+      ],
+      [
+        3,
+        11,
+        22
+      ]
+    ],
+    "aut_order": 220,
+    "center_order": 2,
+    "generators": [
+      1,
+      11,
+      22
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D12": {
+    "aut_generators": [
+      [
+        1,
+        13
+      ],
+      [
+        1,
+        18
+      ],
+      [
+        2,
+        12
+      ],
+      [
+        9,
+        12
+      ]
+    ],
+    "aut_order": 48,
+    "center_order": 2,
+    "generators": [
+      1,
+      12
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D12d": {
+    "aut_generators": [
+      [
+        1,
+        12,
+        35
+      ],
+      [
+        1,
+        13,
+        24
+      ],
+      [
+        1,
+        36,
+        24
+      ],
+      [
+        2,
+        12,
+        25
+      ],
+      [
+        9,
+        12,
+        28
+      ]
+    ],
+    "aut_order": 192,
+    "center_order": 2,
+    "generators": [
+      1,
+      12,
+      24
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D12h": {
+    "aut_generators": [
+      [
+        1,
+        12,
+        25
+      ],
+      [
+        1,
+        13,
+        24
+      ],
+      [
+        1,
+        18,
+        24
+      ],
+      [
+        1,
+        36,
+        24
+      ],
+      [
+        2,
+        12,
+        24
+      ],
+      [
+        9,
+        12,
+        24
+      ],
+      [
+        26,
+        12,
+        24
+      ]
+    ],
+    "aut_order": 384,
+    "center_order": 4,
+    "generators": [
+      1,
+      12,
+      24
+    ],
+    "multiplier": [
+      2,
+      2,
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D1d": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 4,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "trivial"
+  },
+  "D1h": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 4,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D2": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 4,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D2d": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        5
+      ],
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        1,
+        6,
+        4
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      4
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D2h": {
+    "aut_generators": [
+      [
+        1,
+        2,
+        5
+      ],
+      [
+        1,
+        2,
+        6
+      ],
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        1,
+        4,
+        2
+      ],
+      [
+        2,
+        1,
+        4
+      ]
+    ],
+    "aut_order": 168,
+    "center_order": 8,
+    "generators": [
+      1,
+      2,
+      4
+    ],
+    "multiplier": [
+      2,
+      2,
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D3": {
+    "aut_generators": [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 1,
+    "generators": [
+      1,
+      3
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "D3d": {
+    "aut_generators": [
+      [
+        1,
+        4,
+        6
+      ],
+      [
+        1,
+        9,
+        6
+      ],
+      [
+        2,
+        3,
+        6
+      ]
+    ],
+    "aut_order": 12,
+    "center_order": 2,
+    "generators": [
+      1,
+      3,
+      6
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "trivial"
+  },
+  "D3h": {
+    "aut_generators": [
+      [
+        1,
+        4,
+        6
+      ],
+      [
+        1,
+        9,
+        6
+      ],
+      [
+        2,
+        3,
+        6
+      ]
+    ],
+    "aut_order": 12,
+    "center_order": 2,
+    "generators": [
+      1,
+      3,
+      6
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D4": {
+    "aut_generators": [
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 2,
+    "generators": [
+      1,
+      4
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D4d": {
+    "aut_generators": [
+      [
+        1,
+        4,
+        11
+      ],
+      [
+        1,
+        5,
+        8
+      ],
+      [
+        1,
+        12,
+        8
+      ],
+      [
+        2,
+        4,
+        9
+      ]
+    ],
+    "aut_order": 32,
+    "center_order": 2,
+    "generators": [
+      1,
+      4,
+      8
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D4h": {
+    "aut_generators": [
+      [
+        1,
+        4,
+        9
+      ],
+      [
+        1,
+        5,
+        8
+      ],
+      [
+        1,
+        6,
+        8
+      ],
+      [
+        1,
+        12,
+        8
+      ],
+      [
+        2,
+        4,
+        8
+      ],
+      [
+        10,
+        4,
+        8
+      ]
+    ],
+    "aut_order": 64,
+    "center_order": 4,
+    "generators": [
+      1,
+      4,
+      8
+    ],
+    "multiplier": [
+      2,
+      2,
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D5": {
+    "aut_generators": [
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "aut_order": 20,
+    "center_order": 1,
+    "generators": [
+      1,
+      5
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "D5d": {
+    "aut_generators": [
+      [
+        1,
+        6,
+        10
+      ],
+      [
+        1,
+        15,
+        10
+      ],
+      [
+        2,
+        5,
+        10
+      ],
+      [
+        3,
+        5,
+        10
+      ]
+    ],
+    "aut_order": 40,
+    "center_order": 2,
+    "generators": [
+      1,
+      5,
+      10
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "trivial"
+  },
+  "D5h": {
+    "aut_generators": [
+      [
+        1,
+        6,
+        10
+      ],
+      [
+        1,
+        15,
+        10
+      ],
+      [
+        2,
+        5,
+        10
+      ],
+      [
+        3,
+        5,
+        10
+      ]
+    ],
+    "aut_order": 40,
+    "center_order": 2,
+    "generators": [
+      1,
+      5,
+      10
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D6": {
+    "aut_generators": [
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        6
+      ]
+    ],
+    "aut_order": 12,
+    "center_order": 2,
+    "generators": [
+      1,
+      6
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D6d": {
+    "aut_generators": [
+      [
+        1,
+        6,
+        17
+      ],
+      [
+        1,
+        7,
+        12
+      ],
+      [
+        1,
+        18,
+        12
+      ],
+      [
+        2,
+        6,
+        13
+      ]
+    ],
+    "aut_order": 48,
+    "center_order": 2,
+    "generators": [
+      1,
+      6,
+      12
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D6h": {
+    "aut_generators": [
+      [
+        1,
+        6,
+        13
+      ],
+      [
+        1,
+        7,
+        12
+      ],
+      [
+        1,
+        9,
+        12
+      ],
+      [
+        1,
+        18,
+        12
+      ],
+      [
+        2,
+        6,
+        12
+      ],
+      [
+        14,
+        6,
+        5
+      ]
+    ],
+    "aut_order": 144,
+    "center_order": 4,
+    "generators": [
+      1,
+      6,
+      12
+    ],
+    "multiplier": [
+      2,
+      2,
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D7": {
+    "aut_generators": [
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "aut_order": 42,
+    "center_order": 1,
+    "generators": [
+      1,
+      7
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "D7d": {
+    "aut_generators": [
+      [
+        1,
+        8,
+        14
+      ],
+      [
+        1,
+        21,
+        14
+      ],
+      [
+        2,
+        7,
+        14
+      ],
+      [
+        3,
+        7,
+        14
+      ]
+    ],
+    "aut_order": 84,
+    "center_order": 2,
+    "generators": [
+      1,
+      7,
+      14
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "trivial"
+  },
+  "D7h": {
+    "aut_generators": [
+      [
+        1,
+        8,
+        14
+      ],
+      [
+        1,
+        21,
+        14
+      ],
+      [
+        2,
+        7,
+        14
+      ],
+      [
+        3,
+        7,
+        14
+      ]
+    ],
+    "aut_order": 84,
+    "center_order": 2,
+    "generators": [
+      1,
+      7,
+      14
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D8": {
+    "aut_generators": [
+      [
+        1,
+        9
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    "aut_order": 32,
+    "center_order": 2,
+    "generators": [
+      1,
+      8
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D8d": {
+    "aut_generators": [
+      [
+        1,
+        8,
+        23
+      ],
+      [
+        1,
+        9,
+        16
+      ],
+      [
+        1,
+        24,
+        16
+      ],
+      [
+        2,
+        8,
+        17
+      ],
+      [
+        5,
+        8,
+        18
+      ]
+    ],
+    "aut_order": 128,
+    "center_order": 2,
+    "generators": [
+      1,
+      8,
+      16
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D8h": {
+    "aut_generators": [
+      [
+        1,
+        8,
+        17
+      ],
+      [
+        1,
+        9,
+        16
+      ],
+      [
+        1,
+        12,
+        16
+      ],
+      [
+        1,
+        24,
+        16
+      ],
+      [
+        2,
+        8,
+        16
+      ],
+      [
+        5,
+        8,
+        16
+      ],
+      [
+        18,
+        8,
+        16
+      ]
+    ],
+    "aut_order": 256,
+    "center_order": 4,
+    "generators": [
+      1,
+      8,
+      16
+    ],
+    "multiplier": [
+      2,
+      2,
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "D9": {
+    "aut_generators": [
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        3,
+        9
+      ]
+    ],
+    "aut_order": 54,
+    "center_order": 1,
+    "generators": [
+      1,
+      9
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "D9d": {
+    "aut_generators": [
+      [
+        1,
+        10,
+        18
+      ],
+      [
+        1,
+        27,
+        18
+      ],
+      [
+        2,
+        9,
+        18
+      ],
+      [
+        3,
+        9,
+        18
+      ]
+    ],
+    "aut_order": 108,
+    "center_order": 2,
+    "generators": [
+      1,
+      9,
+      18
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "trivial"
+  },
+  "D9h": {
+    "aut_generators": [
+      [
+        1,
+        10,
+        18
+      ],
+      [
+        1,
+        27,
+        18
+      ],
+      [
+        2,
+        9,
+        18
+      ],
+      [
+        3,
+        9,
+        18
+      ]
+    ],
+    "aut_order": 108,
+    "center_order": 2,
+    "generators": [
+      1,
+      9,
+      18
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "I": {
+    "aut_generators": [
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        13,
+        15
+      ]
+    ],
+    "aut_order": 120,
+    "center_order": 1,
+    "generators": [
+      1,
+      3
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "Ih": {
+    "aut_generators": [
+      [
+        1,
+        5,
+        60
+      ],
+      [
+        2,
+        4,
+        60
+      ],
+      [
+        3,
+        1,
+        60
+      ],
+      [
+        13,
+        15,
+        60
+      ]
+    ],
+    "aut_order": 120,
+    "center_order": 2,
+    "generators": [
+      1,
+      3,
+      60
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "O": {
+    "aut_generators": [
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    "aut_order": 24,
+    "center_order": 1,
+    "generators": [
+      1,
+      3
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "Oh": {
+    "aut_generators": [
+      [
+        1,
+        4,
+        24
+      ],
+      [
+        1,
+        5,
+        24
+      ],
+      [
+        2,
+        3,
+        24
+      ],
+      [
+        3,
+        1,
+        24
+      ],
+      [
+        25,
+        27,
+        24
+      ]
+    ],
+    "aut_order": 48,
+    "center_order": 2,
+    "generators": [
+      1,
+      3,
+      24
+    ],
+    "multiplier": [
+      2,
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "S10": {
+    "aut_generators": [
+      [
+        2,
+        5
+      ]
+    ],
+    "aut_order": 4,
+    "center_order": 10,
+    "generators": [
+      1,
+      5
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "S12": {
+    "aut_generators": [
+      [
+        1,
+        9
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    "aut_order": 4,
+    "center_order": 12,
+    "generators": [
+      1,
+      6
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "S14": {
+    "aut_generators": [
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 14,
+    "generators": [
+      1,
+      7
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "S16": {
+    "aut_generators": [
+      [
+        1,
+        12
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        5,
+        10
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 16,
+    "generators": [
+      1,
+      8
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "S18": {
+    "aut_generators": [
+      [
+        2,
+        9
+      ]
+    ],
+    "aut_order": 6,
+    "center_order": 18,
+    "generators": [
+      1,
+      9
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "S2": {
+    "aut_generators": [],
+    "aut_order": 1,
+    "center_order": 2,
+    "generators": [
+      1
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "S20": {
+    "aut_generators": [
+      [
+        1,
+        15
+      ],
+      [
+        3,
+        11
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 20,
+    "generators": [
+      1,
+      10
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "S22": {
+    "aut_generators": [
+      [
+        2,
+        11
+      ]
+    ],
+    "aut_order": 10,
+    "center_order": 22,
+    "generators": [
+      1,
+      11
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "S24": {
+    "aut_generators": [
+      [
+        1,
+        18
+      ],
+      [
+        5,
+        14
+      ],
+      [
+        7,
+        15
+      ]
+    ],
+    "aut_order": 8,
+    "center_order": 24,
+    "generators": [
+      1,
+      12
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "S4": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ]
+    ],
+    "aut_order": 2,
+    "center_order": 4,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "S6": {
+    "aut_generators": [
+      [
+        2,
+        3
+      ]
+    ],
+    "aut_order": 2,
+    "center_order": 6,
+    "generators": [
+      1,
+      3
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "S8": {
+    "aut_generators": [
+      [
+        1,
+        6
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "aut_order": 4,
+    "center_order": 8,
+    "generators": [
+      1,
+      4
+    ],
+    "multiplier": [],
+    "spinor_class": "trivial"
+  },
+  "T": {
+    "aut_generators": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "aut_order": 24,
+    "center_order": 1,
+    "generators": [
+      1,
+      2
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "Td": {
+    "aut_generators": [
+      [
+        1,
+        5,
+        17
+      ],
+      [
+        2,
+        4,
+        14
+      ],
+      [
+        3,
+        1,
+        13
+      ]
+    ],
+    "aut_order": 24,
+    "center_order": 1,
+    "generators": [
+      1,
+      3,
+      12
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  },
+  "Th": {
+    "aut_generators": [
+      [
+        1,
+        3,
+        12
+      ],
+      [
+        2,
+        1,
+        12
+      ],
+      [
+        5,
+        6,
+        12
+      ]
+    ],
+    "aut_order": 24,
+    "center_order": 2,
+    "generators": [
+      1,
+      2,
+      12
+    ],
+    "multiplier": [
+      2
+    ],
+    "spinor_class": "nontrivial"
+  }
+}

@@ -697,6 +697,7 @@ o3t = {
                 'angle': [0, 1],
                 'axis_order_n': 1,
                 'axis_type': 'identity',
+                'centralizer_order': 2,
                 'det': 1,
                 'display': 'E',
                 'element_order': 1,
@@ -705,6 +706,7 @@ o3t = {
                 'label': 'E',
                 'pole': {'kind': 'none'},
                 'power_map': 'E',
+                'power_maps': {'2': 'E'},
                 'size': 1
             },
             {
@@ -712,6 +714,7 @@ o3t = {
                 'angle': [1, 2],
                 'axis_order_n': 2,
                 'axis_type': 'principal',
+                'centralizer_order': 2,
                 'det': 1,
                 'display': 'C_{2}',
                 'element_order': 2,
@@ -720,6 +723,7 @@ o3t = {
                 'label': 'C_2',
                 'pole': {'cartesian': [Rational(0,1), Rational(0,1), Rational(1,1)], 'kind': 'axis'},
                 'power_map': 'E',
+                'power_maps': {'2': 'E'},
                 'size': 1
             }
         ],
@@ -1011,6 +1015,16 @@ o3t = {
         ],
         'alternative_names': [{'schoenflies': 'D_1', 'source': None}],
         'altmann_T': 2,
+        'automorphisms': {
+            'class_orbits': [['E'], ['C2']],
+            'induced_class_orbits': [['E'], ['C2']],
+            'induced_irrep_orbits': [['A'], ['B']],
+            'induced_order': 1,
+            'inner_order': 1,
+            'irrep_orbits': [['A'], ['B']],
+            'order': 1,
+            'outer_order': 1
+        },
         'center': {'index': 1, 'node': 'n01', 'o3_class': 'C2', 'order': 2, 'schoenflies': 'C_2'},
         'centralizer': {'normalizer_index': 1, 'schoenflies': 'D_infh'},
         'commutator_subgroup': {'index': 2, 'node': 'n00', 'o3_class': 'C1', 'order': 1, 'schoenflies': 'C_1'},
@@ -1050,6 +1064,7 @@ o3t = {
         },
         'rotation_subgroup': 'C_2',
         'schoenflies': 'C_2',
+        'schur_multiplier': {'invariants': [], 'order': 1, 'other_classes': 0, 'spinor_class': 'trivial'},
         'type': 'I'
     },
     'invariants': {

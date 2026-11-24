@@ -918,6 +918,7 @@ o3t = {
                 'angle': [0, 1],
                 'axis_order_n': 1,
                 'axis_type': 'identity',
+                'centralizer_order': 22,
                 'det': 1,
                 'display': 'E',
                 'element_order': 1,
@@ -926,6 +927,7 @@ o3t = {
                 'label': 'E',
                 'pole': {'kind': 'none'},
                 'power_map': 'E',
+                'power_maps': {'11': 'E', '2': 'E'},
                 'size': 1
             },
             {
@@ -933,6 +935,7 @@ o3t = {
                 'angle': [1, 11],
                 'axis_order_n': 11,
                 'axis_type': 'principal',
+                'centralizer_order': 11,
                 'det': 1,
                 'display': '2C_{11}',
                 'element_order': 11,
@@ -941,6 +944,7 @@ o3t = {
                 'label': '2C_11',
                 'pole': {'cartesian': [Rational(0,1), Rational(0,1), Rational(1,1)], 'kind': 'axis'},
                 'power_map': 'C112',
+                'power_maps': {'11': 'E', '2': 'C112'},
                 'size': 2
             },
             {
@@ -948,6 +952,7 @@ o3t = {
                 'angle': [2, 11],
                 'axis_order_n': 11,
                 'axis_type': 'principal',
+                'centralizer_order': 11,
                 'det': 1,
                 'display': '2C_{11}^{2}',
                 'element_order': 11,
@@ -956,6 +961,7 @@ o3t = {
                 'label': '2C_11^2',
                 'pole': {'cartesian': [Rational(0,1), Rational(0,1), Rational(1,1)], 'kind': 'axis'},
                 'power_map': 'C114',
+                'power_maps': {'11': 'E', '2': 'C114'},
                 'size': 2
             },
             {
@@ -963,6 +969,7 @@ o3t = {
                 'angle': [3, 11],
                 'axis_order_n': 11,
                 'axis_type': 'principal',
+                'centralizer_order': 11,
                 'det': 1,
                 'display': '2C_{11}^{3}',
                 'element_order': 11,
@@ -971,6 +978,7 @@ o3t = {
                 'label': '2C_11^3',
                 'pole': {'cartesian': [Rational(0,1), Rational(0,1), Rational(1,1)], 'kind': 'axis'},
                 'power_map': 'C115',
+                'power_maps': {'11': 'E', '2': 'C115'},
                 'size': 2
             },
             {
@@ -978,6 +986,7 @@ o3t = {
                 'angle': [4, 11],
                 'axis_order_n': 11,
                 'axis_type': 'principal',
+                'centralizer_order': 11,
                 'det': 1,
                 'display': '2C_{11}^{4}',
                 'element_order': 11,
@@ -986,6 +995,7 @@ o3t = {
                 'label': '2C_11^4',
                 'pole': {'cartesian': [Rational(0,1), Rational(0,1), Rational(1,1)], 'kind': 'axis'},
                 'power_map': 'C113',
+                'power_maps': {'11': 'E', '2': 'C113'},
                 'size': 2
             },
             {
@@ -993,6 +1003,7 @@ o3t = {
                 'angle': [5, 11],
                 'axis_order_n': 11,
                 'axis_type': 'principal',
+                'centralizer_order': 11,
                 'det': 1,
                 'display': '2C_{11}^{5}',
                 'element_order': 11,
@@ -1001,6 +1012,7 @@ o3t = {
                 'label': '2C_11^5',
                 'pole': {'cartesian': [Rational(0,1), Rational(0,1), Rational(1,1)], 'kind': 'axis'},
                 'power_map': 'C11',
+                'power_maps': {'11': 'E', '2': 'C11'},
                 'size': 2
             },
             {
@@ -1008,6 +1020,7 @@ o3t = {
                 'angle': [0, 1],
                 'axis_order_n': 2,
                 'axis_type': 'vertical-mirror',
+                'centralizer_order': 2,
                 'det': -1,
                 'display': '11\\sigma_{v}',
                 'element_order': 2,
@@ -1016,6 +1029,7 @@ o3t = {
                 'label': '11sigma_v',
                 'pole': {'azimuth_turn': [0, 1], 'kind': 'plane_normal_in_xy'},
                 'power_map': 'E',
+                'power_maps': {'11': 'sv', '2': 'E'},
                 'size': 11
             }
         ],
@@ -3520,6 +3534,16 @@ o3t = {
         ],
         'alternative_names': [],
         'altmann_T': {'reason': 'not-in-source', 'value': None},
+        'automorphisms': {
+            'class_orbits': [['E'], ['C11', 'C112', 'C113', 'C114', 'C115'], ['sv']],
+            'induced_class_orbits': [['E'], ['C11'], ['C112'], ['C113'], ['C114'], ['C115'], ['sv']],
+            'induced_irrep_orbits': [['A1'], ['A2'], ['E1'], ['E2'], ['E3'], ['E4'], ['E5']],
+            'induced_order': 22,
+            'inner_order': 22,
+            'irrep_orbits': [['A1'], ['A2'], ['E1', 'E2', 'E3', 'E4', 'E5']],
+            'order': 110,
+            'outer_order': 5
+        },
         'center': {'index': 22, 'node': 'n00', 'o3_class': 'C1', 'order': 1, 'schoenflies': 'C_1'},
         'centralizer': {'normalizer_index': 22, 'schoenflies': 'C_2h'},
         'commutator_subgroup': {'index': 2, 'node': 'n02', 'o3_class': 'C11', 'order': 11, 'schoenflies': 'C_11'},
@@ -3581,6 +3605,7 @@ o3t = {
         },
         'rotation_subgroup': 'C_11',
         'schoenflies': 'C_11v',
+        'schur_multiplier': {'invariants': [], 'order': 1, 'other_classes': 0, 'spinor_class': 'trivial'},
         'type': 'III'
     },
     'invariants': {

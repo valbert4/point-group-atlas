@@ -840,6 +840,7 @@ o3t = <|
         "angle" -> {0, 1},
         "axis_order_n" -> 1,
         "axis_type" -> "identity",
+        "centralizer_order" -> 18,
         "det" -> 1,
         "display" -> "E",
         "element_order" -> 1,
@@ -848,6 +849,7 @@ o3t = <|
         "label" -> "E",
         "pole" -> <|"kind" -> "none"|>,
         "power_map" -> "E",
+        "power_maps" -> <|"2" -> "E", "3" -> "E"|>,
         "size" -> 1
       |>,
       <|
@@ -855,6 +857,7 @@ o3t = <|
         "angle" -> {1, 9},
         "axis_order_n" -> 9,
         "axis_type" -> "principal",
+        "centralizer_order" -> 9,
         "det" -> 1,
         "display" -> "2C_{9}",
         "element_order" -> 9,
@@ -863,6 +866,7 @@ o3t = <|
         "label" -> "2C_9",
         "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
         "power_map" -> "C92",
+        "power_maps" -> <|"2" -> "C92", "3" -> "C3"|>,
         "size" -> 2
       |>,
       <|
@@ -870,6 +874,7 @@ o3t = <|
         "angle" -> {2, 9},
         "axis_order_n" -> 9,
         "axis_type" -> "principal",
+        "centralizer_order" -> 9,
         "det" -> 1,
         "display" -> "2C_{9}^{2}",
         "element_order" -> 9,
@@ -878,6 +883,7 @@ o3t = <|
         "label" -> "2C_9^2",
         "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
         "power_map" -> "C94",
+        "power_maps" -> <|"2" -> "C94", "3" -> "C3"|>,
         "size" -> 2
       |>,
       <|
@@ -885,6 +891,7 @@ o3t = <|
         "angle" -> {1, 3},
         "axis_order_n" -> 3,
         "axis_type" -> "principal",
+        "centralizer_order" -> 9,
         "det" -> 1,
         "display" -> "2C_{3}",
         "element_order" -> 3,
@@ -893,6 +900,7 @@ o3t = <|
         "label" -> "2C_3",
         "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
         "power_map" -> "C3",
+        "power_maps" -> <|"2" -> "C3", "3" -> "E"|>,
         "size" -> 2
       |>,
       <|
@@ -900,6 +908,7 @@ o3t = <|
         "angle" -> {4, 9},
         "axis_order_n" -> 9,
         "axis_type" -> "principal",
+        "centralizer_order" -> 9,
         "det" -> 1,
         "display" -> "2C_{9}^{4}",
         "element_order" -> 9,
@@ -908,6 +917,7 @@ o3t = <|
         "label" -> "2C_9^4",
         "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
         "power_map" -> "C9",
+        "power_maps" -> <|"2" -> "C9", "3" -> "C3"|>,
         "size" -> 2
       |>,
       <|
@@ -915,6 +925,7 @@ o3t = <|
         "angle" -> {0, 1},
         "axis_order_n" -> 2,
         "axis_type" -> "vertical-mirror",
+        "centralizer_order" -> 2,
         "det" -> -1,
         "display" -> "9\\sigma_{v}",
         "element_order" -> 2,
@@ -923,6 +934,7 @@ o3t = <|
         "label" -> "9sigma_v",
         "pole" -> <|"azimuth_turn" -> {0, 1}, "kind" -> "plane_normal_in_xy"|>,
         "power_map" -> "E",
+        "power_maps" -> <|"2" -> "E", "3" -> "sv"|>,
         "size" -> 9
       |>
     },
@@ -2668,6 +2680,16 @@ o3t = <|
     },
     "alternative_names" -> {},
     "altmann_T" -> 57,
+    "automorphisms" -> <|
+      "class_orbits" -> {{"E"}, {"C9", "C92", "C94"}, {"C3"}, {"sv"}},
+      "induced_class_orbits" -> {{"E"}, {"C9"}, {"C92"}, {"C3"}, {"C94"}, {"sv"}},
+      "induced_irrep_orbits" -> {{"A1"}, {"A2"}, {"E1"}, {"E2"}, {"E3"}, {"E4"}},
+      "induced_order" -> 18,
+      "inner_order" -> 18,
+      "irrep_orbits" -> {{"A1"}, {"A2"}, {"E1", "E2", "E4"}, {"E3"}},
+      "order" -> 54,
+      "outer_order" -> 3
+    |>,
     "center" -> <|
       "index" -> 18,
       "node" -> "n00",
@@ -2746,6 +2768,7 @@ o3t = <|
     |>,
     "rotation_subgroup" -> "C_9",
     "schoenflies" -> "C_9v",
+    "schur_multiplier" -> <|"invariants" -> {}, "order" -> 1, "other_classes" -> 0, "spinor_class" -> "trivial"|>,
     "type" -> "III"
   |>,
   "invariants" -> <|

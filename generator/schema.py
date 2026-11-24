@@ -23,8 +23,9 @@ from . import names, serialize
 from .exact.value import is_exact
 
 # The objects whose keys are data (irrep ids and labels, class-space components and points,
-# monomials, the Lambda of a Greek alias) rather than field names.
+# monomials, the Lambda of a Greek alias, the primes of power_maps) rather than field names.
 MAP_PATHS = {
+    "$.character_table.classes[].power_maps",
     "$.cartesian_tensors.functions[].poly", "$.cartesian_tensors.spaces[].blocks[].basis[]",
     "$.cartesian_tensors.spaces[].multiplicities", "$.character_functions.irrep_families[].chi",
     "$.invariants.polynomials[].factors[]", "$.invariants.polynomials[].poly",
@@ -245,6 +246,7 @@ def schema_of(records, domain):
 # the sections): its data-keyed maps and the sections of the conventions that define its paths
 # (the files numbered as one).
 DOUBLE_MAP_PATHS = {
+    "$.character_table.classes[].power_maps",
     "$.subduction_parent.parities.g.increment", "$.subduction_parent.parities.g.residues[]",
     "$.subduction_parent.parities.g.table[]", "$.subduction_parent.parities.u.increment",
     "$.subduction_parent.parities.u.residues[]", "$.subduction_parent.parities.u.table[]",

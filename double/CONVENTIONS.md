@@ -23,7 +23,10 @@ $`U\,(\mathbf{r}\cdot\vec{\sigma})\,U^{\dagger} = (\mathbf{r}\,\mathsfit{R}(U)^{
 every point $`\mathbf{r}`$, and $`(U, \varepsilon)`$ covers $`\varepsilon\,\mathsfit{R}(U) \in \mathsf{O(3)}`$.
 The kernel is $`\{\mathsfit{E}, \bar{\mathsfit{E}}\}`$, $`\bar{\mathsfit{E}} = (-1, +1)`$. The lift $`(1, -1)`$
 of the inversion is central and of order 2, and a mirror lifts to two elements of order 4: the parent is the
-double group of the spin-1/2 literature [AH11].
+double group of the spin-1/2 literature [AH11]. The other double cover of $`\mathsf{O(3)}`$, in which a mirror
+lifts to elements of order 2 and the inversion to elements of order 4, is the parent of no record. It is
+isoclinic to $`\mathsf{Pin^{-}(3)}`$ [CCN+85, chapter 6, section 7]: a spinor character of a preimage in it is
+a spinor character of this catalogue multiplied by $`\mathrm{i}`$ on the improper classes.
 
 ### 20.2 Names
 
@@ -92,6 +95,9 @@ A preimage adds these fields, as in section 2.2, computed in $`\mathsf{2G}`$:
 - `gap_smallgroup_id`: GAP's `IdGroup` of its table.
 - `su2_subgroup`: $`\mathsf{2G} \cap \mathsf{SU(2)}`$, in place of `rotation_subgroup` (`"2C_3"` for `2C3v`).
 - `hk`, `product_form`, `center` and `commutator_subgroup`.
+- `schur_multiplier` and `automorphisms`, with $`\mathsf{Pin^{-}(3)}`$ in place of $`\mathsf{O(3)}`$, and without
+  `spinor_class` and `other_classes`. In the orbits of irrep ids, the vector irreps (section 23.1) come before
+  the spinor irreps.
 
 Since `olive`, `ihrig_golubitsky` and `orbifold` name $`\mathsf{O(3)}`$-conjugacy classes, a record of this
 catalogue repeats none of them. The records hold no Cartesian tensors, invariant polynomials in $`x`$, $`y`$,
@@ -188,8 +194,8 @@ way (section 29.1). The documents name these values at the end of their section 
 A class of $`\mathsf{G}`$ lifts to two classes of $`\mathsf{2G}`$, or to one class that contains both lifts, its
 size doubled. The two are the class of the canonical lifts $`(\mathsfit{g}, 0)`$ and, right after it, the class of
 the barred partners (`id` and `label` prefixed `b` and `bar`). The field `base_class` names the class of
-$`\mathsf{G}`$, whose geometry the record does not repeat, and `bar`, `su2_turn`, `element_order`, `power_map`,
-`inverse_class` and `ambivalent` are those of $`\mathsf{2G}`$.
+$`\mathsf{G}`$, whose geometry the record does not repeat, and `bar`, `su2_turn`, `element_order`,
+`centralizer_order`, `power_map`, `power_maps`, `inverse_class` and `ambivalent` are those of $`\mathsf{2G}`$.
 
 ## 23. Spinor irreps
 
@@ -284,6 +290,17 @@ $`\mathsf{T}`$ as in section 6.4:
 | `2Oh` | the same with `_g`, `_u` | the same with `^+`, `^-` | the same with `,g`, `,u` |
 
 The `U'` of [Gri61] for `2T` is the pair `E''`, `E'''`.
+
+### 23.5 The names of the classes and irreps of $`\mathsf{2I}`$
+
+The first table of [CCN+85] (section 6.6) also gives the spinor irreps of $`\mathsf{2I}`$, the characters
+$`\chi_6`$ to $`\chi_9`$. It gives their values on one preimage of each class of $`\mathsf{I}`$, of
+elements of order 1, 4, 3, 5 and 5, with `5A` the class of $`\mathsfit{C_{5}}`$ as in section 6.6. Under each name
+of [CCN+85], the table gives that preimage or the spinor irrep of this catalogue:
+
+| | `1A` | `2A` | `3A` | `5A` | `5B` | $`\chi_6`$ | $`\chi_7`$ | $`\chi_8`$ | $`\chi_9`$ |
+|---|---|---|---|---|---|---|---|---|---|
+| $`\mathsf{2I}`$ | $`\mathsfit{E}`$ | $`\mathsfit{30C_{2}}`$ | $`\mathsfit{20\bar{C}_{3}}`$ | $`\mathsfit{12\bar{C}_{5}}`$ | $`\mathsfit{12C_{5}^{2}}`$ | $`\mathrm{\scriptsize E}_{7/2}`$ | $`\mathrm{\scriptsize E}_{1/2}`$ | $`\mathrm{\scriptsize G}_{3/2}`$ | $`\mathrm{\scriptsize I}_{5/2}`$ |
 
 ## 24. Fusion and Clebsch–Gordan coefficients
 

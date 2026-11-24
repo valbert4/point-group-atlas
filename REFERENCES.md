@@ -36,6 +36,7 @@
 - Condon, E. U., and Shortley, G. H. (1935). *The Theory of Atomic Spectra*. Cambridge University Press, Cambridge; reprinted with corrections, 1951.
 - Conte, R., and Raynal, J. (1985). On a labeling for point group harmonics. I. Cubic group. *Journal of Mathematical Physics* 26(10), 2413–2440. https://doi.org/10.1063/1.526757
 - Conte, R., and Raynal, J. (1986). Erratum: On a labeling for point group harmonics. I and II [J. Math. Phys. 26, 2413, 2441 (1985)]. *Journal of Mathematical Physics* 27(4), 1169. https://doi.org/10.1063/1.527161
+- Conway, J. H., Curtis, R. T., Norton, S. P., Parker, R. A., and Wilson, R. A. (1985). *Atlas of Finite Groups: Maximal Subgroups and Ordinary Characters for Simple Groups*. With computational assistance from J. G. Thackray. Clarendon Press, Oxford. ISBN 0-19-853199-0.
 - Conway, J. H., and Smith, D. A. (2003). *On Quaternions and Octonions: Their Geometry, Arithmetic, and Symmetry*. A K Peters, Natick, MA. ISBN 1-56881-134-9.
 - Cotton, F. A. (1990). *Chemical Applications of Group Theory*, third edition. John Wiley & Sons, New York. ISBN 0-471-51094-7.
 - Cracknell, A. P., Davies, B. L., Miller, S. C., and Love, W. F. (1979). *Kronecker Product Tables*, Vol. 1: *General Introduction and Tables of Irreducible Representations of Space Groups*. IFI/Plenum, New York.

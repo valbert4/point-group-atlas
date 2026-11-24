@@ -6,12 +6,17 @@
         "ambivalent": true,
         "bar": false,
         "base_class": "E",
+        "centralizer_order": 28,
         "display": "E",
         "element_order": 1,
         "id": "E",
         "inverse_class": "E",
         "label": "E",
         "power_map": "E",
+        "power_maps": {
+          "2": "E",
+          "7": "E"
+        },
         "size": 1,
         "su2_turn": [
           0,
@@ -22,12 +27,17 @@
         "ambivalent": true,
         "bar": true,
         "base_class": "E",
+        "centralizer_order": 28,
         "display": "\\bar{E}",
         "element_order": 2,
         "id": "bE",
         "inverse_class": "bE",
         "label": "bar E",
         "power_map": "E",
+        "power_maps": {
+          "2": "E",
+          "7": "bE"
+        },
         "size": 1,
         "su2_turn": [
           1,
@@ -38,12 +48,17 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "C7",
+        "centralizer_order": 28,
         "display": "C_{7}",
         "element_order": 14,
         "id": "C7",
         "inverse_class": "C76",
         "label": "C_7",
         "power_map": "C72",
+        "power_maps": {
+          "2": "C72",
+          "7": "bE"
+        },
         "size": 1,
         "su2_turn": [
           1,
@@ -54,12 +69,17 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "C7",
+        "centralizer_order": 28,
         "display": "\\bar{C}_{7}",
         "element_order": 7,
         "id": "bC7",
         "inverse_class": "bC76",
         "label": "bar C_7",
         "power_map": "C72",
+        "power_maps": {
+          "2": "C72",
+          "7": "E"
+        },
         "size": 1,
         "su2_turn": [
           8,
@@ -70,12 +90,17 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "C72",
+        "centralizer_order": 28,
         "display": "C_{7}^{2}",
         "element_order": 7,
         "id": "C72",
         "inverse_class": "C75",
         "label": "C_7^2",
         "power_map": "bC74",
+        "power_maps": {
+          "2": "bC74",
+          "7": "E"
+        },
         "size": 1,
         "su2_turn": [
           2,
@@ -86,12 +111,17 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "C72",
+        "centralizer_order": 28,
         "display": "\\bar{C}_{7}^{2}",
         "element_order": 14,
         "id": "bC72",
         "inverse_class": "bC75",
         "label": "bar C_7^2",
         "power_map": "bC74",
+        "power_maps": {
+          "2": "bC74",
+          "7": "bE"
+        },
         "size": 1,
         "su2_turn": [
           9,
@@ -102,12 +132,17 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "C73",
+        "centralizer_order": 28,
         "display": "C_{7}^{3}",
         "element_order": 14,
         "id": "C73",
         "inverse_class": "C74",
         "label": "C_7^3",
         "power_map": "bC76",
+        "power_maps": {
+          "2": "bC76",
+          "7": "bE"
+        },
         "size": 1,
         "su2_turn": [
           3,
@@ -118,12 +153,17 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "C73",
+        "centralizer_order": 28,
         "display": "\\bar{C}_{7}^{3}",
         "element_order": 7,
         "id": "bC73",
         "inverse_class": "bC74",
         "label": "bar C_7^3",
         "power_map": "bC76",
+        "power_maps": {
+          "2": "bC76",
+          "7": "E"
+        },
         "size": 1,
         "su2_turn": [
           10,
@@ -134,12 +174,17 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "C74",
+        "centralizer_order": 28,
         "display": "C_{7}^{4}",
         "element_order": 14,
         "id": "C74",
         "inverse_class": "C73",
         "label": "C_7^4",
         "power_map": "bC7",
+        "power_maps": {
+          "2": "bC7",
+          "7": "bE"
+        },
         "size": 1,
         "su2_turn": [
           11,
@@ -150,12 +195,17 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "C74",
+        "centralizer_order": 28,
         "display": "\\bar{C}_{7}^{4}",
         "element_order": 7,
         "id": "bC74",
         "inverse_class": "bC73",
         "label": "bar C_7^4",
         "power_map": "bC7",
+        "power_maps": {
+          "2": "bC7",
+          "7": "E"
+        },
         "size": 1,
         "su2_turn": [
           4,
@@ -166,12 +216,17 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "C75",
+        "centralizer_order": 28,
         "display": "C_{7}^{5}",
         "element_order": 7,
         "id": "C75",
         "inverse_class": "C72",
         "label": "C_7^5",
         "power_map": "bC73",
+        "power_maps": {
+          "2": "bC73",
+          "7": "E"
+        },
         "size": 1,
         "su2_turn": [
           12,
@@ -182,12 +237,17 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "C75",
+        "centralizer_order": 28,
         "display": "\\bar{C}_{7}^{5}",
         "element_order": 14,
         "id": "bC75",
         "inverse_class": "bC72",
         "label": "bar C_7^5",
         "power_map": "bC73",
+        "power_maps": {
+          "2": "bC73",
+          "7": "bE"
+        },
         "size": 1,
         "su2_turn": [
           5,
@@ -198,12 +258,17 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "C76",
+        "centralizer_order": 28,
         "display": "C_{7}^{6}",
         "element_order": 14,
         "id": "C76",
         "inverse_class": "C7",
         "label": "C_7^6",
         "power_map": "C75",
+        "power_maps": {
+          "2": "C75",
+          "7": "bE"
+        },
         "size": 1,
         "su2_turn": [
           13,
@@ -214,12 +279,17 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "C76",
+        "centralizer_order": 28,
         "display": "\\bar{C}_{7}^{6}",
         "element_order": 7,
         "id": "bC76",
         "inverse_class": "bC7",
         "label": "bar C_7^6",
         "power_map": "C75",
+        "power_maps": {
+          "2": "C75",
+          "7": "E"
+        },
         "size": 1,
         "su2_turn": [
           6,
@@ -230,12 +300,17 @@
         "ambivalent": true,
         "bar": false,
         "base_class": "i",
+        "centralizer_order": 28,
         "display": "i",
         "element_order": 2,
         "id": "i",
         "inverse_class": "i",
         "label": "i",
         "power_map": "E",
+        "power_maps": {
+          "2": "E",
+          "7": "i"
+        },
         "size": 1,
         "su2_turn": [
           0,
@@ -246,12 +321,17 @@
         "ambivalent": true,
         "bar": true,
         "base_class": "i",
+        "centralizer_order": 28,
         "display": "\\bar{i}",
         "element_order": 2,
         "id": "bi",
         "inverse_class": "bi",
         "label": "bar i",
         "power_map": "E",
+        "power_maps": {
+          "2": "E",
+          "7": "bi"
+        },
         "size": 1,
         "su2_turn": [
           1,
@@ -262,12 +342,17 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "S14",
+        "centralizer_order": 28,
         "display": "S_{14}",
         "element_order": 14,
         "id": "S14",
         "inverse_class": "S1413",
         "label": "S_14",
         "power_map": "bC7",
+        "power_maps": {
+          "2": "bC7",
+          "7": "bi"
+        },
         "size": 1,
         "su2_turn": [
           11,
@@ -278,12 +363,17 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "S14",
+        "centralizer_order": 28,
         "display": "\\bar{S}_{14}",
         "element_order": 14,
         "id": "bS14",
         "inverse_class": "bS1413",
         "label": "bar S_14",
         "power_map": "bC7",
+        "power_maps": {
+          "2": "bC7",
+          "7": "i"
+        },
         "size": 1,
         "su2_turn": [
           4,
@@ -294,12 +384,17 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "S143",
+        "centralizer_order": 28,
         "display": "S_{14}^{3}",
         "element_order": 14,
         "id": "S143",
         "inverse_class": "S1411",
         "label": "S_14^3",
         "power_map": "bC73",
+        "power_maps": {
+          "2": "bC73",
+          "7": "i"
+        },
         "size": 1,
         "su2_turn": [
           12,
@@ -310,12 +405,17 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "S143",
+        "centralizer_order": 28,
         "display": "\\bar{S}_{14}^{3}",
         "element_order": 14,
         "id": "bS143",
         "inverse_class": "bS1411",
         "label": "bar S_14^3",
         "power_map": "bC73",
+        "power_maps": {
+          "2": "bC73",
+          "7": "bi"
+        },
         "size": 1,
         "su2_turn": [
           5,
@@ -326,12 +426,17 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "S145",
+        "centralizer_order": 28,
         "display": "S_{14}^{5}",
         "element_order": 14,
         "id": "S145",
         "inverse_class": "S149",
         "label": "S_14^5",
         "power_map": "C75",
+        "power_maps": {
+          "2": "C75",
+          "7": "bi"
+        },
         "size": 1,
         "su2_turn": [
           13,
@@ -342,12 +447,17 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "S145",
+        "centralizer_order": 28,
         "display": "\\bar{S}_{14}^{5}",
         "element_order": 14,
         "id": "bS145",
         "inverse_class": "bS149",
         "label": "bar S_14^5",
         "power_map": "C75",
+        "power_maps": {
+          "2": "C75",
+          "7": "i"
+        },
         "size": 1,
         "su2_turn": [
           6,
@@ -358,12 +468,17 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "S149",
+        "centralizer_order": 28,
         "display": "S_{14}^{9}",
         "element_order": 14,
         "id": "S149",
         "inverse_class": "S145",
         "label": "S_14^9",
         "power_map": "C72",
+        "power_maps": {
+          "2": "C72",
+          "7": "bi"
+        },
         "size": 1,
         "su2_turn": [
           1,
@@ -374,12 +489,17 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "S149",
+        "centralizer_order": 28,
         "display": "\\bar{S}_{14}^{9}",
         "element_order": 14,
         "id": "bS149",
         "inverse_class": "bS145",
         "label": "bar S_14^9",
         "power_map": "C72",
+        "power_maps": {
+          "2": "C72",
+          "7": "i"
+        },
         "size": 1,
         "su2_turn": [
           8,
@@ -390,12 +510,17 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "S1411",
+        "centralizer_order": 28,
         "display": "S_{14}^{11}",
         "element_order": 14,
         "id": "S1411",
         "inverse_class": "S143",
         "label": "S_14^11",
         "power_map": "bC74",
+        "power_maps": {
+          "2": "bC74",
+          "7": "i"
+        },
         "size": 1,
         "su2_turn": [
           2,
@@ -406,12 +531,17 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "S1411",
+        "centralizer_order": 28,
         "display": "\\bar{S}_{14}^{11}",
         "element_order": 14,
         "id": "bS1411",
         "inverse_class": "bS143",
         "label": "bar S_14^11",
         "power_map": "bC74",
+        "power_maps": {
+          "2": "bC74",
+          "7": "bi"
+        },
         "size": 1,
         "su2_turn": [
           9,
@@ -422,12 +552,17 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "S1413",
+        "centralizer_order": 28,
         "display": "S_{14}^{13}",
         "element_order": 14,
         "id": "S1413",
         "inverse_class": "S14",
         "label": "S_14^13",
         "power_map": "bC76",
+        "power_maps": {
+          "2": "bC76",
+          "7": "bi"
+        },
         "size": 1,
         "su2_turn": [
           3,
@@ -438,12 +573,17 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "S1413",
+        "centralizer_order": 28,
         "display": "\\bar{S}_{14}^{13}",
         "element_order": 14,
         "id": "bS1413",
         "inverse_class": "bS14",
         "label": "bar S_14^13",
         "power_map": "bC76",
+        "power_maps": {
+          "2": "bC76",
+          "7": "i"
+        },
         "size": 1,
         "su2_turn": [
           10,
@@ -39198,6 +39338,212 @@
     "abstract_type": "Z_14 x Z_2",
     "alternative_names": [],
     "altmann_T": 18,
+    "automorphisms": {
+      "class_orbits": [
+        [
+          "E"
+        ],
+        [
+          "bE",
+          "i",
+          "bi"
+        ],
+        [
+          "C7",
+          "bC72",
+          "C73",
+          "C74",
+          "bC75",
+          "C76",
+          "S14",
+          "bS14",
+          "S143",
+          "bS143",
+          "S145",
+          "bS145",
+          "S149",
+          "bS149",
+          "S1411",
+          "bS1411",
+          "S1413",
+          "bS1413"
+        ],
+        [
+          "bC7",
+          "C72",
+          "bC73",
+          "bC74",
+          "C75",
+          "bC76"
+        ]
+      ],
+      "induced_class_orbits": [
+        [
+          "E"
+        ],
+        [
+          "bE"
+        ],
+        [
+          "C7",
+          "C76"
+        ],
+        [
+          "bC7",
+          "bC76"
+        ],
+        [
+          "C72",
+          "C75"
+        ],
+        [
+          "bC72",
+          "bC75"
+        ],
+        [
+          "C73",
+          "C74"
+        ],
+        [
+          "bC73",
+          "bC74"
+        ],
+        [
+          "i"
+        ],
+        [
+          "bi"
+        ],
+        [
+          "S14",
+          "S1413"
+        ],
+        [
+          "bS14",
+          "bS1413"
+        ],
+        [
+          "S143",
+          "S1411"
+        ],
+        [
+          "bS143",
+          "bS1411"
+        ],
+        [
+          "S145",
+          "S149"
+        ],
+        [
+          "bS145",
+          "bS149"
+        ]
+      ],
+      "induced_irrep_orbits": [
+        [
+          "Ag"
+        ],
+        [
+          "1E1g",
+          "2E1g"
+        ],
+        [
+          "1E2g",
+          "2E2g"
+        ],
+        [
+          "1E3g",
+          "2E3g"
+        ],
+        [
+          "Au"
+        ],
+        [
+          "1E1u",
+          "2E1u"
+        ],
+        [
+          "1E2u",
+          "2E2u"
+        ],
+        [
+          "1E3u",
+          "2E3u"
+        ],
+        [
+          "A7hg"
+        ],
+        [
+          "1E1hg",
+          "2E1hg"
+        ],
+        [
+          "1E3hg",
+          "2E3hg"
+        ],
+        [
+          "1E5hg",
+          "2E5hg"
+        ],
+        [
+          "A7hu"
+        ],
+        [
+          "1E1hu",
+          "2E1hu"
+        ],
+        [
+          "1E3hu",
+          "2E3hu"
+        ],
+        [
+          "1E5hu",
+          "2E5hu"
+        ]
+      ],
+      "induced_order": 2,
+      "inner_order": 1,
+      "irrep_orbits": [
+        [
+          "Ag"
+        ],
+        [
+          "1E1g",
+          "2E1g",
+          "1E2g",
+          "2E2g",
+          "1E3g",
+          "2E3g"
+        ],
+        [
+          "Au",
+          "A7hg",
+          "A7hu"
+        ],
+        [
+          "1E1u",
+          "2E1u",
+          "1E2u",
+          "2E2u",
+          "1E3u",
+          "2E3u",
+          "1E1hg",
+          "2E1hg",
+          "1E3hg",
+          "2E3hg",
+          "1E5hg",
+          "2E5hg",
+          "1E1hu",
+          "2E1hu",
+          "1E3hu",
+          "2E3hu",
+          "1E5hu",
+          "2E5hu"
+        ]
+      ],
+      "order": 36,
+      "outer_order": 36
+    },
     "center": {
       "double_class": "2S14",
       "index": 1,
@@ -39521,6 +39867,12 @@
         "node": "n06",
         "symbol": "2C_7"
       }
+    },
+    "schur_multiplier": {
+      "invariants": [
+        2
+      ],
+      "order": 2
     },
     "su2_subgroup": "2C_7",
     "symbol": "2S_14"

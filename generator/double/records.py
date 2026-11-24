@@ -13,6 +13,7 @@ data its preimage's, with the spinor irreps renamed (section 27).
 """
 from .. import names, serialize
 from ..exact.cyclo import Cyc
+from ..tables import automorphisms as AU
 from ..tables import fusion, irrep_symbols
 from ..tables import kernels as KER
 from ..tables import lattice as LAT
@@ -122,8 +123,14 @@ def _irrep_json(ir, D, con, with_matrices=True):
 
 def character_table_block(C):
     """The classes of the preimage and its spinor irreps; the vector irreps are the covered
-    record's (vector_irreps), pulled back: chi(g, b) = chi(g), D(g, b) = D(g)."""
+    record's (vector_irreps), pulled back: chi(g, b) = chi(g), D(g, b) = D(g).  Each class also has
+    centralizer_order and power_maps (tables.automorphisms)."""
     classes = [{k: c[k] for k in CLASS_KEYS} for c in C.classes]
+    G = C.G
+    AU.class_fields(C.name, G.order, classes, G.mt, G.identity,
+                    [C.classes[C.cls_of[k]]["id"] for k in range(G.order)],
+                    {c["id"]: c["power_map"] for c in classes}, C.gkey,
+                    lambda x, p: AU.pin_power_key(G.det[x], G.su2_turn(x), p))
     spinors = [_irrep_json(ir, D, con) for ir, D, con in zip(C.irreps, C.mats, C.constructions)
                if ir["spinor"]]
     return {"class_count": len(classes), "classes": classes,
@@ -336,6 +343,27 @@ def _structure_node(C, lat, H, symbol_of):
     raise AssertionError("%s: the subgroup is not a node of the lattice" % C.name)
 
 
+def multiplier_and_automorphisms(C, v, centralizer):
+    """schur_multiplier and automorphisms of a preimage (tables.automorphisms), the automorphisms
+    acting on every irrep, the vector irreps first.  Asserts the class of the spinor irreps that
+    the record of G holds (rotation/CONVENTIONS.md section 2.2): trivial exactly when a spinor
+    irrep has dimension 1, which is when Ebar lies outside the commutator subgroup."""
+    G = C.G
+    spinor = C.G.L.rec["group"]["schur_multiplier"]["spinor_class"]
+    one = any(ir["spinor"] and ir["dim"] == 1 for ir in C.irreps)
+    outside = G.index[(0, 1)] not in LAT.commutator_subgroup(v)
+    if (spinor == "trivial") != one or one != outside:
+        raise AssertionError("%s: spinor class %s, a spinor irrep of dimension 1: %s, Ebar outside "
+                             "the commutator subgroup: %s" % (C.name, spinor, one, outside))
+    return {
+        "schur_multiplier": AU.schur_multiplier(C.name, False),
+        "automorphisms": AU.automorphisms(
+            C.name, G.mt, G.identity, [C.classes[C.cls_of[k]]["id"] for k in range(G.order)],
+            [c["id"] for c in C.classes], [(ir["id"], ir["chi"]) for ir in C.irreps], C.gkey,
+            centralizer["normalizer_index"]),
+    }
+
+
 def group_block(C, lat, emb):
     rec = C.G.L.rec
     g0 = rec["group"]
@@ -359,6 +387,7 @@ def group_block(C, lat, emb):
             "center": _structure_node(C, lat, LAT.center(v), None),
             "commutator_subgroup": _structure_node(C, lat, LAT.commutator_subgroup(v), None),
         })
+        out.update(multiplier_and_automorphisms(C, v, centralizer))
     else:
         out.update({"section_of": dbl(CORE.stem(C.base)),
                     "normalizer": normalizer, "centralizer": centralizer})

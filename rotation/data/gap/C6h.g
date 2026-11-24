@@ -1055,6 +1055,7 @@ o3t := rec(
         ("angle") := [ 0, 1 ],
         ("axis_order_n") := 1,
         ("axis_type") := "identity",
+        ("centralizer_order") := 12,
         ("det") := 1,
         ("display") := "E",
         ("element_order") := 1,
@@ -1063,6 +1064,7 @@ o3t := rec(
         ("label") := "E",
         ("pole") := rec( ("kind") := "none" ),
         ("power_map") := "E",
+        ("power_maps") := rec( ("2") := "E", ("3") := "E" ),
         ("size") := 1
       ),
       rec(
@@ -1070,6 +1072,7 @@ o3t := rec(
         ("angle") := [ 1, 6 ],
         ("axis_order_n") := 6,
         ("axis_type") := "principal",
+        ("centralizer_order") := 12,
         ("det") := 1,
         ("display") := "C_{6}",
         ("element_order") := 6,
@@ -1078,6 +1081,7 @@ o3t := rec(
         ("label") := "C_6",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "C3",
+        ("power_maps") := rec( ("2") := "C3", ("3") := "C2" ),
         ("size") := 1
       ),
       rec(
@@ -1085,6 +1089,7 @@ o3t := rec(
         ("angle") := [ 1, 3 ],
         ("axis_order_n") := 3,
         ("axis_type") := "principal",
+        ("centralizer_order") := 12,
         ("det") := 1,
         ("display") := "C_{3}",
         ("element_order") := 3,
@@ -1093,6 +1098,7 @@ o3t := rec(
         ("label") := "C_3",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "C32",
+        ("power_maps") := rec( ("2") := "C32", ("3") := "E" ),
         ("size") := 1
       ),
       rec(
@@ -1100,6 +1106,7 @@ o3t := rec(
         ("angle") := [ 1, 2 ],
         ("axis_order_n") := 2,
         ("axis_type") := "principal",
+        ("centralizer_order") := 12,
         ("det") := 1,
         ("display") := "C_{2}",
         ("element_order") := 2,
@@ -1108,6 +1115,7 @@ o3t := rec(
         ("label") := "C_2",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "E",
+        ("power_maps") := rec( ("2") := "E", ("3") := "C2" ),
         ("size") := 1
       ),
       rec(
@@ -1115,6 +1123,7 @@ o3t := rec(
         ("angle") := [ 2, 3 ],
         ("axis_order_n") := 3,
         ("axis_type") := "principal",
+        ("centralizer_order") := 12,
         ("det") := 1,
         ("display") := "C_{3}^{2}",
         ("element_order") := 3,
@@ -1123,6 +1132,7 @@ o3t := rec(
         ("label") := "C_3^2",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "C3",
+        ("power_maps") := rec( ("2") := "C3", ("3") := "E" ),
         ("size") := 1
       ),
       rec(
@@ -1130,6 +1140,7 @@ o3t := rec(
         ("angle") := [ 5, 6 ],
         ("axis_order_n") := 6,
         ("axis_type") := "principal",
+        ("centralizer_order") := 12,
         ("det") := 1,
         ("display") := "C_{6}^{5}",
         ("element_order") := 6,
@@ -1138,6 +1149,7 @@ o3t := rec(
         ("label") := "C_6^5",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "C32",
+        ("power_maps") := rec( ("2") := "C32", ("3") := "C2" ),
         ("size") := 1
       ),
       rec(
@@ -1145,6 +1157,7 @@ o3t := rec(
         ("angle") := [ 1, 2 ],
         ("axis_order_n") := 1,
         ("axis_type") := "inversion",
+        ("centralizer_order") := 12,
         ("det") := -1,
         ("display") := "i",
         ("element_order") := 2,
@@ -1153,6 +1166,7 @@ o3t := rec(
         ("label") := "i",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "E",
+        ("power_maps") := rec( ("2") := "E", ("3") := "i" ),
         ("size") := 1
       ),
       rec(
@@ -1160,6 +1174,7 @@ o3t := rec(
         ("angle") := [ 0, 1 ],
         ("axis_order_n") := 2,
         ("axis_type") := "horizontal-mirror",
+        ("centralizer_order") := 12,
         ("det") := -1,
         ("display") := "\\sigma_{h}",
         ("element_order") := 2,
@@ -1168,6 +1183,7 @@ o3t := rec(
         ("label") := "sigma_h",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "plane_normal" ),
         ("power_map") := "E",
+        ("power_maps") := rec( ("2") := "E", ("3") := "sh" ),
         ("size") := 1
       ),
       rec(
@@ -1175,6 +1191,7 @@ o3t := rec(
         ("angle") := [ 1, 6 ],
         ("axis_order_n") := 3,
         ("axis_type") := "principal",
+        ("centralizer_order") := 12,
         ("det") := -1,
         ("display") := "S_{6}",
         ("element_order") := 6,
@@ -1183,6 +1200,7 @@ o3t := rec(
         ("label") := "S_6",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "C3",
+        ("power_maps") := rec( ("2") := "C3", ("3") := "i" ),
         ("size") := 1
       ),
       rec(
@@ -1190,6 +1208,7 @@ o3t := rec(
         ("angle") := [ 1, 3 ],
         ("axis_order_n") := 6,
         ("axis_type") := "principal",
+        ("centralizer_order") := 12,
         ("det") := -1,
         ("display") := "S_{3}",
         ("element_order") := 6,
@@ -1198,6 +1217,7 @@ o3t := rec(
         ("label") := "S_3",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "C32",
+        ("power_maps") := rec( ("2") := "C32", ("3") := "sh" ),
         ("size") := 1
       ),
       rec(
@@ -1205,6 +1225,7 @@ o3t := rec(
         ("angle") := [ 2, 3 ],
         ("axis_order_n") := 6,
         ("axis_type") := "principal",
+        ("centralizer_order") := 12,
         ("det") := -1,
         ("display") := "S_{3}^{5}",
         ("element_order") := 6,
@@ -1213,6 +1234,7 @@ o3t := rec(
         ("label") := "S_3^5",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "C3",
+        ("power_maps") := rec( ("2") := "C3", ("3") := "sh" ),
         ("size") := 1
       ),
       rec(
@@ -1220,6 +1242,7 @@ o3t := rec(
         ("angle") := [ 5, 6 ],
         ("axis_order_n") := 3,
         ("axis_type") := "principal",
+        ("centralizer_order") := 12,
         ("det") := -1,
         ("display") := "S_{6}^{5}",
         ("element_order") := 6,
@@ -1228,6 +1251,7 @@ o3t := rec(
         ("label") := "S_6^5",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "C32",
+        ("power_maps") := rec( ("2") := "C32", ("3") := "i" ),
         ("size") := 1
       )
     ],
@@ -3802,6 +3826,44 @@ o3t := rec(
     ],
     ("alternative_names") := [],
     ("altmann_T") := 64,
+    ("automorphisms") := rec(
+      ("class_orbits") := [
+        [ "E" ],
+        [ "C6", "C65", "S6", "S3", "S35", "S65" ],
+        [ "C3", "C32" ],
+        [ "C2", "i", "sh" ]
+      ],
+      ("induced_class_orbits") := [
+        [ "E" ],
+        [ "C6", "C65" ],
+        [ "C3", "C32" ],
+        [ "C2" ],
+        [ "i" ],
+        [ "sh" ],
+        [ "S6", "S65" ],
+        [ "S3", "S35" ]
+      ],
+      ("induced_irrep_orbits") := [
+        [ "Ag" ],
+        [ "Bg" ],
+        [ "1E1g", "2E1g" ],
+        [ "1E2g", "2E2g" ],
+        [ "Au" ],
+        [ "Bu" ],
+        [ "1E1u", "2E1u" ],
+        [ "1E2u", "2E2u" ]
+      ],
+      ("induced_order") := 2,
+      ("inner_order") := 1,
+      ("irrep_orbits") := [
+        [ "Ag" ],
+        [ "Bg", "Au", "Bu" ],
+        [ "1E1g", "2E1g", "1E1u", "2E1u", "1E2u", "2E2u" ],
+        [ "1E2g", "2E2g" ]
+      ],
+      ("order") := 12,
+      ("outer_order") := 12
+    ),
     ("center") := rec(
       ("index") := 1,
       ("node") := "n09",
@@ -4003,6 +4065,12 @@ o3t := rec(
     ),
     ("rotation_subgroup") := "C_6",
     ("schoenflies") := "C_6h",
+    ("schur_multiplier") := rec(
+      ("invariants") := [ 2 ],
+      ("order") := 2,
+      ("other_classes") := 1,
+      ("spinor_class") := "trivial"
+    ),
     ("type") := "II"
   ),
   ("invariants") := rec(

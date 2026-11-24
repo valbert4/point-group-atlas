@@ -607,6 +607,7 @@ o3t = <|
         "angle" -> {0, 1},
         "axis_order_n" -> 1,
         "axis_type" -> "identity",
+        "centralizer_order" -> 1,
         "det" -> 1,
         "display" -> "E",
         "element_order" -> 1,
@@ -615,6 +616,7 @@ o3t = <|
         "label" -> "E",
         "pole" -> <|"kind" -> "none"|>,
         "power_map" -> "E",
+        "power_maps" -> <||>,
         "size" -> 1
       |>
     },
@@ -819,6 +821,16 @@ o3t = <|
     },
     "alternative_names" -> {},
     "altmann_T" -> 1,
+    "automorphisms" -> <|
+      "class_orbits" -> {{"E"}},
+      "induced_class_orbits" -> {{"E"}},
+      "induced_irrep_orbits" -> {{"A"}},
+      "induced_order" -> 1,
+      "inner_order" -> 1,
+      "irrep_orbits" -> {{"A"}},
+      "order" -> 1,
+      "outer_order" -> 1
+    |>,
     "center" -> <|
       "index" -> 1,
       "node" -> "n00",
@@ -873,6 +885,7 @@ o3t = <|
     |>,
     "rotation_subgroup" -> "C_1",
     "schoenflies" -> "C_1",
+    "schur_multiplier" -> <|"invariants" -> {}, "order" -> 1, "other_classes" -> 0, "spinor_class" -> "trivial"|>,
     "type" -> "I"
   |>,
   "invariants" -> <|

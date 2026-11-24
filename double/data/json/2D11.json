@@ -6,12 +6,17 @@
         "ambivalent": true,
         "bar": false,
         "base_class": "E",
+        "centralizer_order": 44,
         "display": "E",
         "element_order": 1,
         "id": "E",
         "inverse_class": "E",
         "label": "E",
         "power_map": "E",
+        "power_maps": {
+          "11": "E",
+          "2": "E"
+        },
         "size": 1,
         "su2_turn": [
           0,
@@ -22,12 +27,17 @@
         "ambivalent": true,
         "bar": true,
         "base_class": "E",
+        "centralizer_order": 44,
         "display": "\\bar{E}",
         "element_order": 2,
         "id": "bE",
         "inverse_class": "bE",
         "label": "bar E",
         "power_map": "E",
+        "power_maps": {
+          "11": "bE",
+          "2": "E"
+        },
         "size": 1,
         "su2_turn": [
           1,
@@ -38,12 +48,17 @@
         "ambivalent": true,
         "bar": false,
         "base_class": "C11",
+        "centralizer_order": 22,
         "display": "2C_{11}",
         "element_order": 22,
         "id": "C11",
         "inverse_class": "C11",
         "label": "2C_11",
         "power_map": "C112",
+        "power_maps": {
+          "11": "bE",
+          "2": "C112"
+        },
         "size": 2,
         "su2_turn": [
           1,
@@ -54,12 +69,17 @@
         "ambivalent": true,
         "bar": true,
         "base_class": "C11",
+        "centralizer_order": 22,
         "display": "2\\bar{C}_{11}",
         "element_order": 11,
         "id": "bC11",
         "inverse_class": "bC11",
         "label": "bar 2C_11",
         "power_map": "C112",
+        "power_maps": {
+          "11": "E",
+          "2": "C112"
+        },
         "size": 2,
         "su2_turn": [
           12,
@@ -70,12 +90,17 @@
         "ambivalent": true,
         "bar": false,
         "base_class": "C112",
+        "centralizer_order": 22,
         "display": "2C_{11}^{2}",
         "element_order": 11,
         "id": "C112",
         "inverse_class": "C112",
         "label": "2C_11^2",
         "power_map": "C114",
+        "power_maps": {
+          "11": "E",
+          "2": "C114"
+        },
         "size": 2,
         "su2_turn": [
           2,
@@ -86,12 +111,17 @@
         "ambivalent": true,
         "bar": true,
         "base_class": "C112",
+        "centralizer_order": 22,
         "display": "2\\bar{C}_{11}^{2}",
         "element_order": 22,
         "id": "bC112",
         "inverse_class": "bC112",
         "label": "bar 2C_11^2",
         "power_map": "C114",
+        "power_maps": {
+          "11": "bE",
+          "2": "C114"
+        },
         "size": 2,
         "su2_turn": [
           13,
@@ -102,12 +132,17 @@
         "ambivalent": true,
         "bar": false,
         "base_class": "C113",
+        "centralizer_order": 22,
         "display": "2C_{11}^{3}",
         "element_order": 22,
         "id": "C113",
         "inverse_class": "C113",
         "label": "2C_11^3",
         "power_map": "bC115",
+        "power_maps": {
+          "11": "bE",
+          "2": "bC115"
+        },
         "size": 2,
         "su2_turn": [
           3,
@@ -118,12 +153,17 @@
         "ambivalent": true,
         "bar": true,
         "base_class": "C113",
+        "centralizer_order": 22,
         "display": "2\\bar{C}_{11}^{3}",
         "element_order": 11,
         "id": "bC113",
         "inverse_class": "bC113",
         "label": "bar 2C_11^3",
         "power_map": "bC115",
+        "power_maps": {
+          "11": "E",
+          "2": "bC115"
+        },
         "size": 2,
         "su2_turn": [
           14,
@@ -134,12 +174,17 @@
         "ambivalent": true,
         "bar": false,
         "base_class": "C114",
+        "centralizer_order": 22,
         "display": "2C_{11}^{4}",
         "element_order": 11,
         "id": "C114",
         "inverse_class": "C114",
         "label": "2C_11^4",
         "power_map": "bC113",
+        "power_maps": {
+          "11": "E",
+          "2": "bC113"
+        },
         "size": 2,
         "su2_turn": [
           4,
@@ -150,12 +195,17 @@
         "ambivalent": true,
         "bar": true,
         "base_class": "C114",
+        "centralizer_order": 22,
         "display": "2\\bar{C}_{11}^{4}",
         "element_order": 22,
         "id": "bC114",
         "inverse_class": "bC114",
         "label": "bar 2C_11^4",
         "power_map": "bC113",
+        "power_maps": {
+          "11": "bE",
+          "2": "bC113"
+        },
         "size": 2,
         "su2_turn": [
           15,
@@ -166,12 +216,17 @@
         "ambivalent": true,
         "bar": false,
         "base_class": "C115",
+        "centralizer_order": 22,
         "display": "2C_{11}^{5}",
         "element_order": 22,
         "id": "C115",
         "inverse_class": "C115",
         "label": "2C_11^5",
         "power_map": "bC11",
+        "power_maps": {
+          "11": "bE",
+          "2": "bC11"
+        },
         "size": 2,
         "su2_turn": [
           5,
@@ -182,12 +237,17 @@
         "ambivalent": true,
         "bar": true,
         "base_class": "C115",
+        "centralizer_order": 22,
         "display": "2\\bar{C}_{11}^{5}",
         "element_order": 11,
         "id": "bC115",
         "inverse_class": "bC115",
         "label": "bar 2C_11^5",
         "power_map": "bC11",
+        "power_maps": {
+          "11": "E",
+          "2": "bC11"
+        },
         "size": 2,
         "su2_turn": [
           16,
@@ -198,12 +258,17 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "C2",
+        "centralizer_order": 4,
         "display": "11C_{2}",
         "element_order": 4,
         "id": "C2",
         "inverse_class": "bC2",
         "label": "11C_2",
         "power_map": "bE",
+        "power_maps": {
+          "11": "bC2",
+          "2": "bE"
+        },
         "size": 11,
         "su2_turn": [
           1,
@@ -214,12 +279,17 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "C2",
+        "centralizer_order": 4,
         "display": "11\\bar{C}_{2}",
         "element_order": 4,
         "id": "bC2",
         "inverse_class": "C2",
         "label": "bar 11C_2",
         "power_map": "bE",
+        "power_maps": {
+          "11": "C2",
+          "2": "bE"
+        },
         "size": 11,
         "su2_turn": [
           3,
@@ -51996,6 +52066,148 @@
       "reason": "not-in-source",
       "value": null
     },
+    "automorphisms": {
+      "class_orbits": [
+        [
+          "E"
+        ],
+        [
+          "bE"
+        ],
+        [
+          "C11",
+          "bC112",
+          "C113",
+          "bC114",
+          "C115"
+        ],
+        [
+          "bC11",
+          "C112",
+          "bC113",
+          "C114",
+          "bC115"
+        ],
+        [
+          "C2",
+          "bC2"
+        ]
+      ],
+      "induced_class_orbits": [
+        [
+          "E"
+        ],
+        [
+          "bE"
+        ],
+        [
+          "C11"
+        ],
+        [
+          "bC11"
+        ],
+        [
+          "C112"
+        ],
+        [
+          "bC112"
+        ],
+        [
+          "C113"
+        ],
+        [
+          "bC113"
+        ],
+        [
+          "C114"
+        ],
+        [
+          "bC114"
+        ],
+        [
+          "C115"
+        ],
+        [
+          "bC115"
+        ],
+        [
+          "C2",
+          "bC2"
+        ]
+      ],
+      "induced_irrep_orbits": [
+        [
+          "A1"
+        ],
+        [
+          "A2"
+        ],
+        [
+          "E1"
+        ],
+        [
+          "E2"
+        ],
+        [
+          "E3"
+        ],
+        [
+          "E4"
+        ],
+        [
+          "E5"
+        ],
+        [
+          "E1h"
+        ],
+        [
+          "E3h"
+        ],
+        [
+          "E5h"
+        ],
+        [
+          "E7h"
+        ],
+        [
+          "E9h"
+        ],
+        [
+          "1E11h",
+          "2E11h"
+        ]
+      ],
+      "induced_order": 44,
+      "inner_order": 22,
+      "irrep_orbits": [
+        [
+          "A1"
+        ],
+        [
+          "A2"
+        ],
+        [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5"
+        ],
+        [
+          "E1h",
+          "E3h",
+          "E5h",
+          "E7h",
+          "E9h"
+        ],
+        [
+          "1E11h",
+          "2E11h"
+        ]
+      ],
+      "order": 220,
+      "outer_order": 10
+    },
     "center": {
       "double_class": "2C1",
       "index": 22,
@@ -52077,6 +52289,10 @@
         "node": "n05",
         "symbol": "2D_11"
       }
+    },
+    "schur_multiplier": {
+      "invariants": [],
+      "order": 1
     },
     "su2_subgroup": "2D_11",
     "symbol": "2D_11"

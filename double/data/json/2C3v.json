@@ -6,12 +6,17 @@
         "ambivalent": true,
         "bar": false,
         "base_class": "E",
+        "centralizer_order": 12,
         "display": "E",
         "element_order": 1,
         "id": "E",
         "inverse_class": "E",
         "label": "E",
         "power_map": "E",
+        "power_maps": {
+          "2": "E",
+          "3": "E"
+        },
         "size": 1,
         "su2_turn": [
           0,
@@ -22,12 +27,17 @@
         "ambivalent": true,
         "bar": true,
         "base_class": "E",
+        "centralizer_order": 12,
         "display": "\\bar{E}",
         "element_order": 2,
         "id": "bE",
         "inverse_class": "bE",
         "label": "bar E",
         "power_map": "E",
+        "power_maps": {
+          "2": "E",
+          "3": "bE"
+        },
         "size": 1,
         "su2_turn": [
           1,
@@ -38,12 +48,17 @@
         "ambivalent": true,
         "bar": false,
         "base_class": "C3",
+        "centralizer_order": 6,
         "display": "2C_{3}",
         "element_order": 6,
         "id": "C3",
         "inverse_class": "C3",
         "label": "2C_3",
         "power_map": "bC3",
+        "power_maps": {
+          "2": "bC3",
+          "3": "bE"
+        },
         "size": 2,
         "su2_turn": [
           1,
@@ -54,12 +69,17 @@
         "ambivalent": true,
         "bar": true,
         "base_class": "C3",
+        "centralizer_order": 6,
         "display": "2\\bar{C}_{3}",
         "element_order": 3,
         "id": "bC3",
         "inverse_class": "bC3",
         "label": "bar 2C_3",
         "power_map": "bC3",
+        "power_maps": {
+          "2": "bC3",
+          "3": "E"
+        },
         "size": 2,
         "su2_turn": [
           4,
@@ -70,12 +90,17 @@
         "ambivalent": false,
         "bar": false,
         "base_class": "sv",
+        "centralizer_order": 4,
         "display": "3\\sigma_{v}",
         "element_order": 4,
         "id": "sv",
         "inverse_class": "bsv",
         "label": "3sigma_v",
         "power_map": "bE",
+        "power_maps": {
+          "2": "bE",
+          "3": "bsv"
+        },
         "size": 3,
         "su2_turn": [
           1,
@@ -86,12 +111,17 @@
         "ambivalent": false,
         "bar": true,
         "base_class": "sv",
+        "centralizer_order": 4,
         "display": "3\\bar{\\sigma}_{v}",
         "element_order": 4,
         "id": "bsv",
         "inverse_class": "sv",
         "label": "bar 3sigma_v",
         "power_map": "bE",
+        "power_maps": {
+          "2": "bE",
+          "3": "sv"
+        },
         "size": 3,
         "su2_turn": [
           3,
@@ -3235,6 +3265,84 @@
     "abstract_type": "Z_3 : Z_4",
     "alternative_names": [],
     "altmann_T": 51,
+    "automorphisms": {
+      "class_orbits": [
+        [
+          "E"
+        ],
+        [
+          "bE"
+        ],
+        [
+          "C3"
+        ],
+        [
+          "bC3"
+        ],
+        [
+          "sv",
+          "bsv"
+        ]
+      ],
+      "induced_class_orbits": [
+        [
+          "E"
+        ],
+        [
+          "bE"
+        ],
+        [
+          "C3"
+        ],
+        [
+          "bC3"
+        ],
+        [
+          "sv",
+          "bsv"
+        ]
+      ],
+      "induced_irrep_orbits": [
+        [
+          "A1"
+        ],
+        [
+          "A2"
+        ],
+        [
+          "E1"
+        ],
+        [
+          "E1h"
+        ],
+        [
+          "1E3h",
+          "2E3h"
+        ]
+      ],
+      "induced_order": 12,
+      "inner_order": 6,
+      "irrep_orbits": [
+        [
+          "A1"
+        ],
+        [
+          "A2"
+        ],
+        [
+          "E1"
+        ],
+        [
+          "E1h"
+        ],
+        [
+          "1E3h",
+          "2E3h"
+        ]
+      ],
+      "order": 12,
+      "outer_order": 2
+    },
     "center": {
       "double_class": "2C1",
       "index": 6,
@@ -3315,6 +3423,10 @@
         "node": "n04",
         "symbol": "2C_3"
       }
+    },
+    "schur_multiplier": {
+      "invariants": [],
+      "order": 1
     },
     "su2_subgroup": "2C_3",
     "symbol": "2C_3v"

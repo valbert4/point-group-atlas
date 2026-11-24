@@ -675,6 +675,7 @@ o3t = <|
         "angle" -> {0, 1},
         "axis_order_n" -> 1,
         "axis_type" -> "identity",
+        "centralizer_order" -> 4,
         "det" -> 1,
         "display" -> "E",
         "element_order" -> 1,
@@ -683,6 +684,7 @@ o3t = <|
         "label" -> "E",
         "pole" -> <|"kind" -> "none"|>,
         "power_map" -> "E",
+        "power_maps" -> <|"2" -> "E"|>,
         "size" -> 1
       |>,
       <|
@@ -690,6 +692,7 @@ o3t = <|
         "angle" -> {1, 2},
         "axis_order_n" -> 2,
         "axis_type" -> "principal",
+        "centralizer_order" -> 4,
         "det" -> 1,
         "display" -> "C_{2}",
         "element_order" -> 2,
@@ -698,6 +701,7 @@ o3t = <|
         "label" -> "C_2",
         "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
         "power_map" -> "E",
+        "power_maps" -> <|"2" -> "E"|>,
         "size" -> 1
       |>,
       <|
@@ -705,6 +709,7 @@ o3t = <|
         "angle" -> {1, 2},
         "axis_order_n" -> 1,
         "axis_type" -> "inversion",
+        "centralizer_order" -> 4,
         "det" -> -1,
         "display" -> "i",
         "element_order" -> 2,
@@ -713,6 +718,7 @@ o3t = <|
         "label" -> "i",
         "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "axis"|>,
         "power_map" -> "E",
+        "power_maps" -> <|"2" -> "E"|>,
         "size" -> 1
       |>,
       <|
@@ -720,6 +726,7 @@ o3t = <|
         "angle" -> {0, 1},
         "axis_order_n" -> 2,
         "axis_type" -> "horizontal-mirror",
+        "centralizer_order" -> 4,
         "det" -> -1,
         "display" -> "\\sigma_{h}",
         "element_order" -> 2,
@@ -728,6 +735,7 @@ o3t = <|
         "label" -> "sigma_h",
         "pole" -> <|"cartesian" -> {0, 0, 1}, "kind" -> "plane_normal"|>,
         "power_map" -> "E",
+        "power_maps" -> <|"2" -> "E"|>,
         "size" -> 1
       |>
     },
@@ -1241,6 +1249,16 @@ o3t = <|
     },
     "alternative_names" -> {<|"schoenflies" -> "D_1d", "source" -> Null|>},
     "altmann_T" -> 60,
+    "automorphisms" -> <|
+      "class_orbits" -> {{"E"}, {"C2", "i", "sh"}},
+      "induced_class_orbits" -> {{"E"}, {"C2"}, {"i"}, {"sh"}},
+      "induced_irrep_orbits" -> {{"Ag"}, {"Bg"}, {"Au"}, {"Bu"}},
+      "induced_order" -> 1,
+      "inner_order" -> 1,
+      "irrep_orbits" -> {{"Ag"}, {"Bg", "Au", "Bu"}},
+      "order" -> 6,
+      "outer_order" -> 6
+    |>,
     "center" -> <|
       "index" -> 1,
       "node" -> "n04",
@@ -1359,6 +1377,12 @@ o3t = <|
     |>,
     "rotation_subgroup" -> "C_2",
     "schoenflies" -> "C_2h",
+    "schur_multiplier" -> <|
+      "invariants" -> {2},
+      "order" -> 2,
+      "other_classes" -> 1,
+      "spinor_class" -> "trivial"
+    |>,
     "type" -> "II"
   |>,
   "invariants" -> <|

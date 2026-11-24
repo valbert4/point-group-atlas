@@ -298,6 +298,10 @@
                 "description": "See CONVENTIONS.md section 5.",
                 "type": "string"
               },
+              "centralizer_order": {
+                "description": "See CONVENTIONS.md section 5.",
+                "type": "integer"
+              },
               "det": {
                 "description": "See CONVENTIONS.md section 5.",
                 "type": "integer"
@@ -356,6 +360,14 @@
                 "description": "See CONVENTIONS.md section 5.",
                 "type": "string"
               },
+              "power_maps": {
+                "additionalProperties": {
+                  "description": "See CONVENTIONS.md section 5.",
+                  "type": "string"
+                },
+                "description": "See CONVENTIONS.md section 5.",
+                "type": "object"
+              },
               "size": {
                 "description": "See CONVENTIONS.md section 5.",
                 "type": "integer"
@@ -366,6 +378,7 @@
               "angle",
               "axis_order_n",
               "axis_type",
+              "centralizer_order",
               "det",
               "display",
               "element_order",
@@ -374,6 +387,7 @@
               "label",
               "pole",
               "power_map",
+              "power_maps",
               "size"
             ],
             "type": "object"
@@ -1623,6 +1637,87 @@
           ],
           "description": "See CONVENTIONS.md section 2."
         },
+        "automorphisms": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 2.",
+          "properties": {
+            "class_orbits": {
+              "description": "See CONVENTIONS.md section 2.",
+              "items": {
+                "description": "See CONVENTIONS.md section 2.",
+                "items": {
+                  "description": "See CONVENTIONS.md section 2.",
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "induced_class_orbits": {
+              "description": "See CONVENTIONS.md section 2.",
+              "items": {
+                "description": "See CONVENTIONS.md section 2.",
+                "items": {
+                  "description": "See CONVENTIONS.md section 2.",
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "induced_irrep_orbits": {
+              "description": "See CONVENTIONS.md section 2.",
+              "items": {
+                "description": "See CONVENTIONS.md section 2.",
+                "items": {
+                  "description": "See CONVENTIONS.md section 2.",
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "induced_order": {
+              "description": "See CONVENTIONS.md section 2.",
+              "type": "integer"
+            },
+            "inner_order": {
+              "description": "See CONVENTIONS.md section 2.",
+              "type": "integer"
+            },
+            "irrep_orbits": {
+              "description": "See CONVENTIONS.md section 2.",
+              "items": {
+                "description": "See CONVENTIONS.md section 2.",
+                "items": {
+                  "description": "See CONVENTIONS.md section 2.",
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "order": {
+              "description": "See CONVENTIONS.md section 2.",
+              "type": "integer"
+            },
+            "outer_order": {
+              "description": "See CONVENTIONS.md section 2.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "class_orbits",
+            "induced_class_orbits",
+            "induced_irrep_orbits",
+            "induced_order",
+            "inner_order",
+            "irrep_orbits",
+            "order",
+            "outer_order"
+          ],
+          "type": "object"
+        },
         "center": {
           "additionalProperties": false,
           "description": "See CONVENTIONS.md section 2.",
@@ -2254,6 +2349,39 @@
           "description": "See CONVENTIONS.md section 2.",
           "type": "string"
         },
+        "schur_multiplier": {
+          "additionalProperties": false,
+          "description": "See CONVENTIONS.md section 2.",
+          "properties": {
+            "invariants": {
+              "description": "See CONVENTIONS.md section 2.",
+              "items": {
+                "description": "See CONVENTIONS.md section 2.",
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "order": {
+              "description": "See CONVENTIONS.md section 2.",
+              "type": "integer"
+            },
+            "other_classes": {
+              "description": "See CONVENTIONS.md section 2.",
+              "type": "integer"
+            },
+            "spinor_class": {
+              "description": "See CONVENTIONS.md section 2.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "invariants",
+            "order",
+            "other_classes",
+            "spinor_class"
+          ],
+          "type": "object"
+        },
         "type": {
           "description": "See CONVENTIONS.md section 2.",
           "type": "string"
@@ -2264,6 +2392,7 @@
         "allowed_properties",
         "alternative_names",
         "altmann_T",
+        "automorphisms",
         "center",
         "centralizer",
         "commutator_subgroup",
@@ -2291,6 +2420,7 @@
         "product_form",
         "rotation_subgroup",
         "schoenflies",
+        "schur_multiplier",
         "type"
       ],
       "type": "object"

@@ -751,6 +751,7 @@ o3t := rec(
         ("angle") := [ 0, 1 ],
         ("axis_order_n") := 1,
         ("axis_type") := "identity",
+        ("centralizer_order") := 6,
         ("det") := 1,
         ("display") := "E",
         ("element_order") := 1,
@@ -759,6 +760,7 @@ o3t := rec(
         ("label") := "E",
         ("pole") := rec( ("kind") := "none" ),
         ("power_map") := "E",
+        ("power_maps") := rec( ("2") := "E", ("3") := "E" ),
         ("size") := 1
       ),
       rec(
@@ -766,6 +768,7 @@ o3t := rec(
         ("angle") := [ 1, 3 ],
         ("axis_order_n") := 3,
         ("axis_type") := "principal",
+        ("centralizer_order") := 3,
         ("det") := 1,
         ("display") := "2C_{3}",
         ("element_order") := 3,
@@ -774,6 +777,7 @@ o3t := rec(
         ("label") := "2C_3",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "C3",
+        ("power_maps") := rec( ("2") := "C3", ("3") := "E" ),
         ("size") := 2
       ),
       rec(
@@ -781,6 +785,7 @@ o3t := rec(
         ("angle") := [ 1, 2 ],
         ("axis_order_n") := 2,
         ("axis_type") := "perpendicular",
+        ("centralizer_order") := 2,
         ("det") := 1,
         ("display") := "3C_{2}",
         ("element_order") := 2,
@@ -789,6 +794,7 @@ o3t := rec(
         ("label") := "3C_2",
         ("pole") := rec( ("azimuth_turn") := [ 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "E",
+        ("power_maps") := rec( ("2") := "E", ("3") := "C2" ),
         ("size") := 3
       )
     ],
@@ -1379,6 +1385,16 @@ o3t := rec(
     ],
     ("alternative_names") := [],
     ("altmann_T") := 23,
+    ("automorphisms") := rec(
+      ("class_orbits") := [ [ "E" ], [ "C3" ], [ "C2" ] ],
+      ("induced_class_orbits") := [ [ "E" ], [ "C3" ], [ "C2" ] ],
+      ("induced_irrep_orbits") := [ [ "A1" ], [ "A2" ], [ "E1" ] ],
+      ("induced_order") := 6,
+      ("inner_order") := 6,
+      ("irrep_orbits") := [ [ "A1" ], [ "A2" ], [ "E1" ] ],
+      ("order") := 6,
+      ("outer_order") := 1
+    ),
     ("center") := rec(
       ("index") := 6,
       ("node") := "n00",
@@ -1453,6 +1469,12 @@ o3t := rec(
     ),
     ("rotation_subgroup") := "D_3",
     ("schoenflies") := "D_3",
+    ("schur_multiplier") := rec(
+      ("invariants") := [],
+      ("order") := 1,
+      ("other_classes") := 0,
+      ("spinor_class") := "trivial"
+    ),
     ("type") := "I"
   ),
   ("invariants") := rec(

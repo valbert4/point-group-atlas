@@ -3762,6 +3762,7 @@
         ],
         "axis_order_n": 1,
         "axis_type": "identity",
+        "centralizer_order": 22,
         "det": 1,
         "display": "E",
         "element_order": 1,
@@ -3772,6 +3773,10 @@
           "kind": "none"
         },
         "power_map": "E",
+        "power_maps": {
+          "11": "E",
+          "2": "E"
+        },
         "size": 1
       },
       {
@@ -3782,6 +3787,7 @@
         ],
         "axis_order_n": 11,
         "axis_type": "principal",
+        "centralizer_order": 11,
         "det": 1,
         "display": "2C_{11}",
         "element_order": 11,
@@ -3815,6 +3821,10 @@
           "kind": "axis"
         },
         "power_map": "C112",
+        "power_maps": {
+          "11": "E",
+          "2": "C112"
+        },
         "size": 2
       },
       {
@@ -3825,6 +3835,7 @@
         ],
         "axis_order_n": 11,
         "axis_type": "principal",
+        "centralizer_order": 11,
         "det": 1,
         "display": "2C_{11}^{2}",
         "element_order": 11,
@@ -3858,6 +3869,10 @@
           "kind": "axis"
         },
         "power_map": "C114",
+        "power_maps": {
+          "11": "E",
+          "2": "C114"
+        },
         "size": 2
       },
       {
@@ -3868,6 +3883,7 @@
         ],
         "axis_order_n": 11,
         "axis_type": "principal",
+        "centralizer_order": 11,
         "det": 1,
         "display": "2C_{11}^{3}",
         "element_order": 11,
@@ -3901,6 +3917,10 @@
           "kind": "axis"
         },
         "power_map": "C115",
+        "power_maps": {
+          "11": "E",
+          "2": "C115"
+        },
         "size": 2
       },
       {
@@ -3911,6 +3931,7 @@
         ],
         "axis_order_n": 11,
         "axis_type": "principal",
+        "centralizer_order": 11,
         "det": 1,
         "display": "2C_{11}^{4}",
         "element_order": 11,
@@ -3944,6 +3965,10 @@
           "kind": "axis"
         },
         "power_map": "C113",
+        "power_maps": {
+          "11": "E",
+          "2": "C113"
+        },
         "size": 2
       },
       {
@@ -3954,6 +3979,7 @@
         ],
         "axis_order_n": 11,
         "axis_type": "principal",
+        "centralizer_order": 11,
         "det": 1,
         "display": "2C_{11}^{5}",
         "element_order": 11,
@@ -3987,6 +4013,10 @@
           "kind": "axis"
         },
         "power_map": "C11",
+        "power_maps": {
+          "11": "E",
+          "2": "C11"
+        },
         "size": 2
       },
       {
@@ -3997,6 +4027,7 @@
         ],
         "axis_order_n": 2,
         "axis_type": "perpendicular",
+        "centralizer_order": 2,
         "det": 1,
         "display": "11C_{2}",
         "element_order": 2,
@@ -4011,6 +4042,10 @@
           "kind": "axis"
         },
         "power_map": "E",
+        "power_maps": {
+          "11": "C2",
+          "2": "E"
+        },
         "size": 11
       }
     ],
@@ -41110,6 +41145,88 @@
       "reason": "not-in-source",
       "value": null
     },
+    "automorphisms": {
+      "class_orbits": [
+        [
+          "E"
+        ],
+        [
+          "C11",
+          "C112",
+          "C113",
+          "C114",
+          "C115"
+        ],
+        [
+          "C2"
+        ]
+      ],
+      "induced_class_orbits": [
+        [
+          "E"
+        ],
+        [
+          "C11"
+        ],
+        [
+          "C112"
+        ],
+        [
+          "C113"
+        ],
+        [
+          "C114"
+        ],
+        [
+          "C115"
+        ],
+        [
+          "C2"
+        ]
+      ],
+      "induced_irrep_orbits": [
+        [
+          "A1"
+        ],
+        [
+          "A2"
+        ],
+        [
+          "E1"
+        ],
+        [
+          "E2"
+        ],
+        [
+          "E3"
+        ],
+        [
+          "E4"
+        ],
+        [
+          "E5"
+        ]
+      ],
+      "induced_order": 22,
+      "inner_order": 22,
+      "irrep_orbits": [
+        [
+          "A1"
+        ],
+        [
+          "A2"
+        ],
+        [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5"
+        ]
+      ],
+      "order": 110,
+      "outer_order": 5
+    },
     "center": {
       "index": 22,
       "node": "n00",
@@ -41225,6 +41342,12 @@
     },
     "rotation_subgroup": "D_11",
     "schoenflies": "D_11",
+    "schur_multiplier": {
+      "invariants": [],
+      "order": 1,
+      "other_classes": 0,
+      "spinor_class": "trivial"
+    },
     "type": "I"
   },
   "invariants": {

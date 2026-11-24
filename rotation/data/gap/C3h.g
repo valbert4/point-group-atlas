@@ -1055,6 +1055,7 @@ o3t := rec(
         ("angle") := [ 0, 1 ],
         ("axis_order_n") := 1,
         ("axis_type") := "identity",
+        ("centralizer_order") := 6,
         ("det") := 1,
         ("display") := "E",
         ("element_order") := 1,
@@ -1063,6 +1064,7 @@ o3t := rec(
         ("label") := "E",
         ("pole") := rec( ("kind") := "none" ),
         ("power_map") := "E",
+        ("power_maps") := rec( ("2") := "E", ("3") := "E" ),
         ("size") := 1
       ),
       rec(
@@ -1070,6 +1072,7 @@ o3t := rec(
         ("angle") := [ 1, 3 ],
         ("axis_order_n") := 3,
         ("axis_type") := "principal",
+        ("centralizer_order") := 6,
         ("det") := 1,
         ("display") := "C_{3}",
         ("element_order") := 3,
@@ -1078,6 +1081,7 @@ o3t := rec(
         ("label") := "C_3",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "C32",
+        ("power_maps") := rec( ("2") := "C32", ("3") := "E" ),
         ("size") := 1
       ),
       rec(
@@ -1085,6 +1089,7 @@ o3t := rec(
         ("angle") := [ 2, 3 ],
         ("axis_order_n") := 3,
         ("axis_type") := "principal",
+        ("centralizer_order") := 6,
         ("det") := 1,
         ("display") := "C_{3}^{2}",
         ("element_order") := 3,
@@ -1093,6 +1098,7 @@ o3t := rec(
         ("label") := "C_3^2",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "C3",
+        ("power_maps") := rec( ("2") := "C3", ("3") := "E" ),
         ("size") := 1
       ),
       rec(
@@ -1100,6 +1106,7 @@ o3t := rec(
         ("angle") := [ 0, 1 ],
         ("axis_order_n") := 2,
         ("axis_type") := "horizontal-mirror",
+        ("centralizer_order") := 6,
         ("det") := -1,
         ("display") := "\\sigma_{h}",
         ("element_order") := 2,
@@ -1108,6 +1115,7 @@ o3t := rec(
         ("label") := "sigma_h",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "plane_normal" ),
         ("power_map") := "E",
+        ("power_maps") := rec( ("2") := "E", ("3") := "sh" ),
         ("size") := 1
       ),
       rec(
@@ -1115,6 +1123,7 @@ o3t := rec(
         ("angle") := [ 1, 3 ],
         ("axis_order_n") := 6,
         ("axis_type") := "principal",
+        ("centralizer_order") := 6,
         ("det") := -1,
         ("display") := "S_{3}",
         ("element_order") := 6,
@@ -1123,6 +1132,7 @@ o3t := rec(
         ("label") := "S_3",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "C32",
+        ("power_maps") := rec( ("2") := "C32", ("3") := "sh" ),
         ("size") := 1
       ),
       rec(
@@ -1130,6 +1140,7 @@ o3t := rec(
         ("angle") := [ 2, 3 ],
         ("axis_order_n") := 6,
         ("axis_type") := "principal",
+        ("centralizer_order") := 6,
         ("det") := -1,
         ("display") := "S_{3}^{5}",
         ("element_order") := 6,
@@ -1138,6 +1149,7 @@ o3t := rec(
         ("label") := "S_3^5",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "C3",
+        ("power_maps") := rec( ("2") := "C3", ("3") := "sh" ),
         ("size") := 1
       )
     ],
@@ -2063,6 +2075,16 @@ o3t := rec(
     ],
     ("alternative_names") := [],
     ("altmann_T") := 61,
+    ("automorphisms") := rec(
+      ("class_orbits") := [ [ "E" ], [ "C3", "C32" ], [ "sh" ], [ "S3", "S35" ] ],
+      ("induced_class_orbits") := [ [ "E" ], [ "C3", "C32" ], [ "sh" ], [ "S3", "S35" ] ],
+      ("induced_irrep_orbits") := [ [ "Ap" ], [ "1E1p", "2E1p" ], [ "App" ], [ "1E1pp", "2E1pp" ] ],
+      ("induced_order") := 2,
+      ("inner_order") := 1,
+      ("irrep_orbits") := [ [ "Ap" ], [ "1E1p", "2E1p" ], [ "App" ], [ "1E1pp", "2E1pp" ] ],
+      ("order") := 2,
+      ("outer_order") := 2
+    ),
     ("center") := rec(
       ("index") := 1,
       ("node") := "n03",
@@ -2144,6 +2166,12 @@ o3t := rec(
     ),
     ("rotation_subgroup") := "C_3",
     ("schoenflies") := "C_3h",
+    ("schur_multiplier") := rec(
+      ("invariants") := [],
+      ("order") := 1,
+      ("other_classes") := 0,
+      ("spinor_class") := "trivial"
+    ),
     ("type") := "III"
   ),
   ("invariants") := rec(

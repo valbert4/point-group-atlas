@@ -16,7 +16,9 @@ directions in place of the orbifold (orbit_space); those of SO(3) and O(3) also 
 Clebsch-Gordan coefficients and the Wigner d matrices of their irreps for J <= 10, and those of the
 five axial continuous groups the subduction to their closed subgroups (tables.branching_continuous).  The bases
 section of T, Th, Td, O, Oh, I, Ih is read from the bases files of T, O, I; without those files
-these seven records are written without it and the stage exits with status 3.
+these seven records are written without it and the stage exits with status 3.  The group block of
+a finite record also holds its Schur multiplier and its automorphisms, and each class its centralizer
+order and power maps (tables.automorphisms).
 """
 import re
 import sys
@@ -38,6 +40,7 @@ from .tables import (branching_continuous, fundamental_domain, lattice, subducti
 from .tables import wigner
 from .tables import harmonics
 from .tables import orbifold as orbifold_block
+from .tables import automorphisms as AU
 
 J_MAX_SUBDUCTION = 20          # subduction_o3 tabulated for J <= 20 (finite groups)
 J_MAX_ENUMERATED = 10          # closed-form bases enumerated for J <= 10
@@ -1141,6 +1144,25 @@ def _axial_bases(table, irreps):
     return out
 
 
+def _multiplier_and_automorphisms(name, doc, chi):
+    """group.schur_multiplier, group.automorphisms and the centralizer_order and power_maps of each
+    class (tables.automorphisms), chi the characters of the irreps in the record's order."""
+    items = doc["elements"]["items"]
+    mt, e = doc["elements"]["multiplication_table"], doc["elements"]["identity_index"]
+    class_of = [it["class_id"] for it in items]
+    key = [AU.o3_key(it["det"], F(*it["angle"])) for it in items]
+    classes = doc["character_table"]["classes"]
+    AU.class_fields(name, doc["group"]["order"], classes, mt, e, class_of,
+                    {c["id"]: c["power_map"] for c in classes}, key,
+                    lambda x, p: AU.o3_power_key(items[x]["det"], F(*items[x]["angle"]), p))
+    g = doc["group"]
+    g["schur_multiplier"] = AU.schur_multiplier(name, True)
+    g["automorphisms"] = AU.automorphisms(
+        name, mt, e, class_of, [c["id"] for c in classes],
+        [(ir["id"], row) for ir, row in zip(doc["character_table"]["irreps"], chi)], key,
+        g["centralizer"]["normalizer_index"])
+
+
 def finite_record(name):
     """The record of a finite group, without the bases section for the exceptional groups."""
     b = TB.character_table(name)
@@ -1189,6 +1211,7 @@ def finite_record(name):
            "group": _group_block(name, b, classes, irreps, elements),
            "character_table": {"class_count": k, "classes": classes, "irreps": irreps},
            "elements": elements}
+    _multiplier_and_automorphisms(name, doc, chi)
     if b["kind"] == "axial":
         doc["subduction_basis"] = _axial_bases(b, irreps)
     emb = subduction_o3.embedding_from_tables(

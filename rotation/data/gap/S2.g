@@ -607,6 +607,7 @@ o3t := rec(
         ("angle") := [ 0, 1 ],
         ("axis_order_n") := 1,
         ("axis_type") := "identity",
+        ("centralizer_order") := 2,
         ("det") := 1,
         ("display") := "E",
         ("element_order") := 1,
@@ -615,6 +616,7 @@ o3t := rec(
         ("label") := "E",
         ("pole") := rec( ("kind") := "none" ),
         ("power_map") := "E",
+        ("power_maps") := rec( ("2") := "E" ),
         ("size") := 1
       ),
       rec(
@@ -622,6 +624,7 @@ o3t := rec(
         ("angle") := [ 1, 2 ],
         ("axis_order_n") := 1,
         ("axis_type") := "inversion",
+        ("centralizer_order") := 2,
         ("det") := -1,
         ("display") := "i",
         ("element_order") := 2,
@@ -630,6 +633,7 @@ o3t := rec(
         ("label") := "i",
         ("pole") := rec( ("cartesian") := [ 0, 0, 1 ], ("kind") := "axis" ),
         ("power_map") := "E",
+        ("power_maps") := rec( ("2") := "E" ),
         ("size") := 1
       )
     ],
@@ -903,6 +907,16 @@ o3t := rec(
     ],
     ("alternative_names") := [ rec( ("schoenflies") := "C_i", ("source") := fail ) ],
     ("altmann_T") := 11,
+    ("automorphisms") := rec(
+      ("class_orbits") := [ [ "E" ], [ "i" ] ],
+      ("induced_class_orbits") := [ [ "E" ], [ "i" ] ],
+      ("induced_irrep_orbits") := [ [ "Ag" ], [ "Au" ] ],
+      ("induced_order") := 1,
+      ("inner_order") := 1,
+      ("irrep_orbits") := [ [ "Ag" ], [ "Au" ] ],
+      ("order") := 1,
+      ("outer_order") := 1
+    ),
     ("center") := rec(
       ("index") := 1,
       ("node") := "n01",
@@ -957,6 +971,12 @@ o3t := rec(
     ),
     ("rotation_subgroup") := "C_1",
     ("schoenflies") := "S_2",
+    ("schur_multiplier") := rec(
+      ("invariants") := [],
+      ("order") := 1,
+      ("other_classes") := 0,
+      ("spinor_class") := "trivial"
+    ),
     ("type") := "II"
   ),
   ("invariants") := rec(

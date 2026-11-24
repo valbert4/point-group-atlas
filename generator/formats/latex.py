@@ -2046,8 +2046,9 @@ IDENTIFICATION_ROWS = (
 # Fields of the group block the table leaves out: the determinant character is boxed in the list
 # of irreps (finite groups) or of irrep families (axial continuous groups), and named in a
 # sentence for SO(3) and O(3); allowed_properties, up to nine lines, is in the records only
-# (CONVENTIONS section 13.2).
-IDENTIFICATION_UNSET = ("schoenflies_unicode", "determinant_character", "allowed_properties")
+# (CONVENTIONS section 13.2), and so are schur_multiplier and automorphisms (section 2.2).
+IDENTIFICATION_UNSET = ("schoenflies_unicode", "determinant_character", "allowed_properties",
+                        "schur_multiplier", "automorphisms")
 
 
 def section_identification(D):
