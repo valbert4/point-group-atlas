@@ -196,9 +196,9 @@ def exact_forms(node):
     return out
 
 
-def definitions(sqrt=False):
-    """$defs: the exact value and the structured null; the exact value has the alternative sqrt
-    only when `sqrt` (the records hold a sqrt value)."""
+def definitions(sqrt=False, reasons=None):
+    """$defs: the exact value and the structured null (its reasons NULL_REASONS, or `reasons`);
+    the exact value has the alternative sqrt only when `sqrt` (the records hold a sqrt value)."""
     rational = {"type": "array",
                 "prefixItems": [{"type": "integer"}, {"type": "integer", "minimum": 1}],
                 "items": False, "minItems": 2}
@@ -215,7 +215,8 @@ def definitions(sqrt=False):
                        "required": ["f", "M", "c"], "additionalProperties": False}]},
         "null": {"description": "A structured null. See CONVENTIONS.md section 8.",
                  "type": "object",
-                 "properties": {"reason": {"enum": NULL_REASONS}, "value": {"type": "null"}},
+                 "properties": {"reason": {"enum": reasons or NULL_REASONS},
+                                "value": {"type": "null"}},
                  "required": ["reason", "value"], "additionalProperties": False},
     }
     if sqrt:
@@ -350,6 +351,67 @@ def run_double():
         MAP_PATHS, SECTIONS = saved
 
 
+# The Magnetic catalogue (magnetic/schema/group.schema.json): its data-keyed maps, the sections of
+# its conventions that define its paths, and the reasons of its structured nulls.
+MAGNETIC_MAP_PATHS = {
+    "$.subduction_corepresentations.g[]",
+    "$.subduction_corepresentations.u[]",
+    "$.invariants.two_vectors.polynomials[].basis[]",
+}
+MAGNETIC_SECTIONS = [
+    ("$", "30"),
+    ("$.group", "30.4"),
+    ("$.group.images", "31.2"),
+    ("$.group.allowed_properties", "35"),
+    ("$.frame", "30.3"),
+    ("$.orbifold", "30.3"),
+    ("$.permutation_representations", "30.3"),
+    ("$.representative", "32.1"),
+    ("$.unitary_irreps", "32.1"),
+    ("$.corepresentations", "32.1"),
+    ("$.corepresentations[].N", "32.2"),
+    ("$.corepresentation_table", "33"),
+    ("$.subduction_o3", "33.1"),
+    ("$.subduction_corepresentations", "33.1"),
+    ("$.signs", "30.1"),
+    ("$.splitting", "33.1"),
+    ("$.symmetrized_powers", "34"),
+    ("$.invariants", "35.1"),
+]
+MAGNETIC_NULL_REASONS = sorted(NULL_REASONS + ["outside-the-catalogue"])
+MAGNETIC_TITLES = {"group": "Point Group Atlas magnetic point-group record"}
+MAGNETIC_TAGS = {"group": names.MAGNETIC_RECORD_TAG}
+
+
+def run_magnetic():
+    """The schema of the records of a magnetic catalogue present, schema/group.schema.json."""
+    import os
+    global MAP_PATHS, SECTIONS
+    saved = MAP_PATHS, SECTIONS
+    try:
+        MAP_PATHS, SECTIONS = MAGNETIC_MAP_PATHS, MAGNETIC_SECTIONS
+        present = [n for n in names.catalogue_names() if os.path.exists(names.record_path(n))]
+        records = [serialize.read_json(names.record_path(n)) for n in present]
+        for kind, tag in MAGNETIC_TAGS.items():
+            mine = [r for r in records if r["schema"] == tag]
+            if not mine:
+                continue
+            root = PathNode()
+            for rec in mine:
+                collect(rec, root, "$")
+            sch = node_schema(root, "$")
+            sch["properties"]["schema"] = {"const": tag, "description": description("$.schema")}
+            out = {"$schema": "https://json-schema.org/draft/2020-12/schema",
+                   "$defs": definitions("sqrt" in exact_forms(root), MAGNETIC_NULL_REASONS),
+                   "title": MAGNETIC_TITLES[kind]}
+            out.update(sch)
+            serialize.write_json(names.path("schema/%s.schema.json" % kind), out)
+        if len(records) != sum(r["schema"] in MAGNETIC_TAGS.values() for r in records):
+            raise ValueError("a record of %s with another schema" % names.CATALOGUE)
+    finally:
+        MAP_PATHS, SECTIONS = saved
+
+
 # The catalogue's files other than its records, and the repository's index.json with Rotation's:
 # each format (its schema tag less "point-group-atlas/" and the version) with its title, the
 # section of the catalogue's CONVENTIONS.md that defines it and its data-keyed maps; its schema,
@@ -373,7 +435,9 @@ FILE_FORMATS = {
     "double/pdf-numbers": ("Point Group Atlas numbers of the sections and displays of the "
                            "PDFs", "20.5", {"$.documents", "$.documents.*"}),
     "magnetic/pdf-numbers": ("Point Group Atlas numbers of the sections and displays of the "
-                             "PDFs", "30.4", {"$.documents", "$.documents.*"}),
+                             "PDFs", "30.5", {"$.documents", "$.documents.*"}),
+    "magnetic/groups": ("Point Group Atlas list of the magnetic point groups of the records",
+                        "30.5", {"$.aliases"}),
     "magnetic-double/pdf-numbers": ("Point Group Atlas numbers of the sections and displays of "
                                     "the PDFs", "18", {"$.documents", "$.documents.*"}),
 }
@@ -419,10 +483,7 @@ def run(args):
         run_double()
         return run_files()
     if names.CATALOGUE in names.MAGNETIC:
-        import os
-        # the schemas of the records come with the first records
-        if [n for n in names.catalogue_names() if os.path.exists(names.record_path(n))]:
-            raise NotImplementedError("%s: the schema of the records" % names.CATALOGUE)
+        run_magnetic()
         return run_files()
     for domain, group_names in (("finite", names.FINITE), ("continuous", names.CONTINUOUS)):
         records = (serialize.read_json(names.record_path(g)) for g in group_names)

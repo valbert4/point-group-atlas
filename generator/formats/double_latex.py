@@ -74,7 +74,7 @@ _READ = {}
 
 def record_of(catalogue, stem):
     """The record a pointer names; the name point_groups stands for the lattice file
-    data/point_groups.json (CONVENTIONS.pdf, section 20.3)."""
+    data/point_groups.json (CONVENTIONS.pdf, section 18.1)."""
     key = (catalogue, stem)
     if key not in _READ:
         _READ[key] = serialize.read_json(names.catalogue_path(

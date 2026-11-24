@@ -1015,7 +1015,7 @@ def split_cells(row, mark="&"):
 # base and AMS TeX.
 MARKDOWN_WORDS = set("""
 alpha beta gamma delta epsilon varepsilon zeta eta theta vartheta iota kappa lambda mu nu xi pi
-varpi rho varrho sigma varsigma tau upsilon phi varphi chi psi omega Gamma Delta Theta Lambda Xi
+varpi rho varrho sigma varsigma tau upsilon phi varphi chi psi omega Gamma Delta Theta varTheta Lambda Xi
 Pi Sigma Upsilon Phi Psi Omega mathsf mathrm mathbf mathbb mathit mathtt text texttt operatorname
 frac tfrac dfrac sqrt bar overline langle rangle lvert rvert vert mid bigl bigr Bigl Bigr left
 right times rtimes cong oplus otimes downarrow infty cos sin det dim min pmod bmod equiv le ge ne

@@ -943,7 +943,7 @@ The reality does not change over $`\mathbb{R}`$. In other words, the real matric
 over $`\mathbb{R}`$ form a copy of the real numbers, the complex numbers or the quaternions as $`\Gamma`$ is real, complex or
 pseudoreal. No irrep of the 98 groups is pseudoreal.
 
-The representations are vector representations, for which time reversal $`\Theta`$ has $`\Theta^2 = +1`$. Thus a real irrep keeps
+The representations are vector representations, for which time reversal $`\varTheta`$ has $`\varTheta^2 = +1`$. Thus a real irrep keeps
 its degeneracy, a pseudoreal one doubles it, and a complex one pairs with its conjugate, so that the
 degeneracy is the dimension of the irrep over $`\mathbb{R}`$.
 
@@ -2683,7 +2683,7 @@ of the axis $`(0, 0, 1)\, P(\mathsfit{Q})`$ of section 17.3. At $`p = -(-1)^J`$ 
 $`\det \mathsfit{Q}`$.
 
 A pointer `"rotation/<G>#<JSON pointer>"` names the value at the JSON pointer (RFC 6901) after `#` in the
-record `<G>`, as in section 20.3. The field `harmonics` has these fields:
+record `<G>`, as in section 18.1. The field `harmonics` has these fields:
 
 - `rule`: the sum above, as text.
 - `blocks`: the pointer to the blocks, `subduction_basis`.
@@ -3069,6 +3069,13 @@ every finite figure's vertices is computed and must be the record's group, with 
 drawn see-through, hidden edges dashed and hidden vertices hollow. Its viewpoint is 22° above the $`xy`$-plane
 (38° for a slab or a spindle), at the azimuth near 40° where the vertices stay clear of one another and of the
 edges in the picture.
+
+### 18.1 Pointers
+
+A pointer is the string `"<catalogue>/<name>#<JSON pointer>"`, with a JSON pointer (RFC 6901) after `#`. It names
+the value at that JSON pointer in the record `<name>` of the catalogue in the folder `<catalogue>`. An empty JSON
+pointer names the whole record (`"rotation/C3v#"`), and the name `point_groups` stands for the file
+`rotation/data/point_groups.json` (section 15).
 
 ## 19. Vibrational and electronic levels
 
@@ -3702,8 +3709,8 @@ This index lists the common notation of the documents and selected symbols of th
 | terms | the terms of the configuration of a row | 0.1 |
 | $`T(\mathsfit{g})`$ | the action of an element on polynomials | 13 |
 | $`\mathsf{T_{h}}`$ | $`\mathsf{T}`$ with the inversion | 3 |
-| $`\Theta`$ | time reversal | 7 |
 | $`\theta`$ | the phase of a character | 6 |
+| $`\varTheta`$ | time reversal | 7 |
 | $`\mathrm{tot}`$ | the normalization $`\sum_m \lvert e_m\rvert^2 F_m`$ of a basis vector | 14 |
 | $`\operatorname{tr}`$ | the trace | 0.1 |
 | $`U`$ | the unitary matrix from the rotation-diagonal to the real basis, $`D_{\mathrm{real}} = U D U^\dagger`$ | 9 |

@@ -12,7 +12,7 @@ from . import lint
 from .typeset import (NORMAL_GAP, PAIR_PREFIX, affine_J, angle, componentwise, grp, harmonic, irrep,
                       irrep_label, linked_group, mathify, monomial, negate, pair_name, visible)
 from .group import (IDENTIFICATION_ROWS, class_name, component_matrix, identification_cell,
-                    other_names)
+                    other_names, product_form_legend, reading_paragraph)
 from .representations import character_sum, one_dimensional_value
 from .subgroups import CONTINUOUS_DIAGRAM, point_tex, subgroup_displays, type_rank
 
@@ -44,6 +44,8 @@ class Document:
     # the group of Rotation that a document of Double covers; a document of Rotation covers none
     cover = None
     preimage = False
+    # the corepresentations of a document of Magnetic (magnetic_latex.Doc); none here
+    coreps = None
 
     def rotation_group(self):
         """The block group of the record of Rotation that the document is about or covers."""
@@ -288,6 +290,17 @@ class Document:
         """The cell of the field k, of value v, in the table of Names and structure; None for a
         field without a row."""
         return identification_cell(self, k, v)
+
+    def identification_legend(self, cells, continuous, classes):
+        """The sentences under the table of Names and structure: in a group of Double the group it
+        covers or is a section over and the fields read in Pin-(3) (reading_paragraph), in a group
+        of Rotation the fields it glosses (product_form_legend); `cells`, the cells of the table,
+        `continuous` whether the group is continuous and `classes` whether its center and
+        commutator subgroup are classes of its lattice."""
+        if self.cover:
+            reading_paragraph(self, cells, continuous, classes)
+        else:
+            product_form_legend(self, "hk" in cells, "lattices" in cells, classes)
 
     def element_tex(self, sym):
         """An element's symbol or its class label, as the record stores it, in math mode."""

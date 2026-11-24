@@ -121,8 +121,23 @@ def double_document(site, name):
     return S.Document(site, name, rec, group, S.web_parts(name, parts), reads, report.uses)
 
 
+def magnetic_document(site, name):
+    """The document of a record of Magnetic (magnetic_latex), named by its symbol, as the formats
+    stage renders it."""
+    from ..formats import magnetic_latex
+    rec = serialize.read_json(names.record_path(name))
+    reads, current = {}, [None]
+
+    def on_section(key):
+        current[0] = key
+    group = magnetic_latex.msym(rec["group"]["symbol"])
+    parts = magnetic_latex.sections(name, data.Reading(rec, reads, current), on_section)
+    report = lint.lint_document(name, [("title", magnetic_latex.title_lines(group))] + parts)
+    return S.Document(site, name, rec, group, S.web_parts(name, parts), reads, report.uses)
+
+
 def run(args):
-    if names.CATALOGUE in names.MAGNETIC:
+    if names.CATALOGUE == "magnetic-double":
         raise SystemExit("web: the site of the catalogue %s is not built yet" % names.CATALOGUE)
     out = output_folder(args.out)
     status, site = build(args, out)
@@ -135,10 +150,15 @@ def build(args, out, conditions=True):
     """Build the catalogue's volume into `out`; with `conditions`, copy the data files and
     hold it to the conditions of a build.  Gives the status and the Site."""
     double = names.CATALOGUE == "double"
+    magnetic = names.CATALOGUE == "magnetic"
     if double:
         from ..formats import double_notation
         notation.activate(double_notation.records())
-    groups = chosen(args.web_groups, names.DOUBLE_NAMES if double else names.NAMES)
+    if magnetic:
+        from ..formats import magnetic_notation, present
+        notation.activate(magnetic_notation.records())
+    groups = chosen(args.web_groups, names.DOUBLE_NAMES if double else
+                    present() if magnetic else names.NAMES)
     # what the build needs (index.json, KaTeX and node, latex and dvisvgm) before the old files go
     files = data.Files(serialize.read_json(names.repository_path("index.json")),
                        names.CATALOGUE, groups)
@@ -155,11 +175,12 @@ def build(args, out, conditions=True):
     site = S.Site(names.CATALOGUE, groups, renderer, out, files, diagrams,
                   "\n".join([notation.MACROS, latex.MACROS]))
     try:
-        point_groups = None if double else serialize.read_json(names.point_groups_lattice_path())
+        point_groups = (None if double or magnetic
+                        else serialize.read_json(names.point_groups_lattice_path()))
         documents = []
         for name in groups:
-            doc = (double_document(site, name) if double
-                   else rotation_document(site, name, point_groups))
+            doc = (double_document(site, name) if double else magnetic_document(site, name)
+                   if magnetic else rotation_document(site, name, point_groups))
             site.homes[name] = doc.home
             documents.append(doc)
         # every document converted first, so that its diagram compiles while the others convert
@@ -243,9 +264,12 @@ def volume_pdf(args, out):
     that the links name; none in a build of some --groups without --volume.  Gives its site
     path, or None."""
     from ..formats import double_volume, volume
-    module = double_volume if names.CATALOGUE == "double" else volume
     if args.web_groups and not args.volume:
         return None
+    if names.CATALOGUE == "magnetic":
+        from ..formats import magnetic_volume as module
+    else:
+        module = double_volume if names.CATALOGUE == "double" else volume
     path = "%s/%s" % (names.CATALOGUE, module.OUT)
     target = os.path.join(out, *path.split("/"))
     os.makedirs(os.path.dirname(target), exist_ok=True)

@@ -43,13 +43,10 @@ $`\mathsf{1C_{\mathnormal{N}}}`$ for the section $`\mathsf{C_{\mathnormal{N}}}`$
 
 ### 20.3 Pointers
 
-A pointer is the string `"<catalogue>/<name>#<JSON pointer>"`, with a JSON pointer (RFC 6901) after `#`. An
-empty JSON pointer names the whole record (`"rotation/C3v#"`), and the name `point_groups` stands for the file
-`rotation/data/point_groups.json` (section 15). A record of this catalogue repeats no value of a record of the
-point groups and names such a value by a pointer. The exceptions are the subgroup lattice (section 28.1), the
-`space` of a continuous fundamental domain (section 29.1) and the `index`, `normal` and `class_size` of a
-continuous subgroup (section 29.5). The pointer
-fields, named for what they replace, name these values:
+Pointers are as in section 18.1. A record of this catalogue repeats no value of a record of the point groups and
+names such a value by a pointer. The exceptions are the subgroup lattice (section 28.1), the `space` of a
+continuous fundamental domain (section 29.1) and the `index`, `normal` and `class_size` of a continuous subgroup
+(section 29.5). The pointer fields, named for what they replace, name these values:
 
 - `cover_of`, `image`, `preimage_of`, `vector_irreps`, `vector_families`, `vector_entry`, `vector_products`,
   `vector_rules`, `vector_subduction`, `integer_J`, `integer_j`, `orbifold`, `harmonics` and `orbit_space`:

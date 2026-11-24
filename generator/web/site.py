@@ -31,7 +31,8 @@ from . import data, figures, markdown, tex
 from . import math as wmath
 from .tex import Unknown, attr, esc
 
-VOLUME_SHORT = {"rotation": "Volume I", "double": "Volume II"}
+VOLUME_SHORT = {"rotation": "Volume I", "double": "Volume II", "magnetic": "Volume III",
+                "magnetic-double": "Volume IV"}
 FAMILY_HTML = {"Cn": "C<sub><i>N</i></sub>", "S2n": "S<sub>2<i>N</i></sub>",
                "Cnh": "C<sub><i>N</i>h</sub>", "Cnv": "C<sub><i>N</i>v</sub>",
                "Dn": "D<sub><i>N</i></sub>", "Dnh": "D<sub><i>N</i>h</sub>",
@@ -82,7 +83,10 @@ def family_html(family, catalogue):
 
 def placement(catalogue, stem):
     """Where a document stands in its volume: ("family", the family) or ("exceptional", None),
-    ("continuous", None) and, in Double, ("sections", None)."""
+    ("continuous", None) and, in Double, ("sections", None); in Magnetic where its point group G
+    stands in volume I."""
+    if catalogue == "magnetic":
+        return placement("rotation", stem.split("-")[0])
     if catalogue == "double":
         for kind, stems in (("sections", names.DOUBLE_SECTIONS),
                             ("exceptional", names.DOUBLE_EXCEPTIONAL),
@@ -315,7 +319,8 @@ class Site:
             return target
         path, _, frag = target.partition("#")
         repo = posixpath.normpath(posixpath.join(base, path))
-        m = re.fullmatch(r"(rotation|double)/%s/([A-Za-z0-9]+)\.pdf" % names.PDF_DIR, repo)
+        m = re.fullmatch(r"(rotation|double|magnetic)/%s/([A-Za-z0-9-]+)\.pdf" % names.PDF_DIR,
+                         repo)
         if m:
             cat, stem = m.groups()
             if cat != self.cat:
@@ -332,7 +337,7 @@ class Site:
                 raise Unknown("a link to %s#%s, a label that %s does not have" % (stem, frag,
                                                                                   stem))
             return "%s/%s/%s/#%s" % (cat, stem, key, frag)
-        m = re.fullmatch(r"(rotation|double)/CONVENTIONS\.pdf", repo)
+        m = re.fullmatch(r"(rotation|double|magnetic)/CONVENTIONS\.pdf", repo)
         if m:
             cat = m.group(1)
             n = re.fullmatch(r"conv\.(\d+)(?:\.\d+)*", frag) if frag else None
@@ -405,6 +410,9 @@ def web_parts(name, parts):
         if names.CATALOGUE == "double":
             from ..formats import double_latex
             t = double_latex.link_conventions(text)
+        elif names.CATALOGUE == "magnetic":
+            from ..formats import magnetic_latex
+            t = magnetic_latex.link_conventions(text)
         else:
             t = latex.link_conventions(latex.link_groups(text, name))
         t = conventions.link_citations(t, r"\href{../../../REFERENCES.pdf\#ref.%s}{%s}")
@@ -525,7 +533,8 @@ class Document:
             if d.startswith("conv:"):
                 n = d[5:]
                 top = n.split(".")[0]
-                cat = "double" if self.site.cat == "double" and int(top) >= 20 else "rotation"
+                cat = (self.site.cat if self.site.cat != "rotation" and int(top) >= 20
+                       else "rotation")
                 if self.site.exists("%s/conventions/%s/" % (cat, top)):
                     return "%s/conventions/%s/#conv.%s" % (cat, top, n)
         return None
@@ -736,7 +745,7 @@ class Notes:
         """The link of a section or subsection of the conventions ("7", "0.1") from this file;
         in volume II, sections 0 to 19 are volume I's, None where DIR does not hold them."""
         top = number.split(".")[0]
-        cat = "rotation" if self.site.cat == "double" and int(top) < 20 else self.site.cat
+        cat = "rotation" if self.site.cat != "rotation" and int(top) < 20 else self.site.cat
         target = "%s/conventions/%s/" % (cat, top)
         if cat != self.site.cat and not self.site.exists(target):
             return None
@@ -846,7 +855,15 @@ def write_references(site, markdown_text):
 
 # ---------------------------------------------------------------- the volume and the home
 def symbol_of(stem, catalogue="rotation"):
-    """The HTML symbol of a document of the catalogue."""
+    """The HTML symbol of a document of the catalogue: in Magnetic, G(H) or G1′ by its
+    stem."""
+    if catalogue == "magnetic":
+        g, h = stem.split("-")
+        inner = re.sub(r'^<span class="grp">|</span>$', "", symbol_of(g))
+        if h == "1p":
+            return '<span class="grp">%s1′</span>' % inner
+        return '<span class="grp">%s(%s)</span>' % (
+            inner, re.sub(r'^<span class="grp">|</span>$', "", symbol_of(h)))
     if catalogue == "double":
         from ..formats import double_latex
         fixed = {"SU2": "SU(2)", "Pinminus3": "Pin^-(3)"}
@@ -866,6 +883,8 @@ def write_volume(site):
         if stem in site.built:
             return '<a href="%s/">%s</a>' % (stem, symbol_of(stem, cat))
         return '<span class="unbuilt">%s</span>' % symbol_of(stem, cat)
+    if cat == "magnetic":
+        return write_magnetic_volume(site, cell)
     rows = []
     for family in names.FAMILIES:
         stems = [names.name_of(family, N) for N in range(1, names.N_MAX + 1)]
@@ -903,6 +922,56 @@ def write_volume(site):
                           grid, others, data.volume_box(site.data, here,
                                                         volume_pdf(site, here)),
                           rel(here, "references/")))
+    site.put(here, frame(here, "%s \u00b7 %s" % (style.VOLUMES[cat], style.TITLE), body, cat,
+                         [("", style.TITLE), (None, VOLUME_SHORT[cat])]))
+
+
+def write_magnetic_volume(site, cell):
+    """The volume of Magnetic: the conventions, the groups by their point group G, in the order of
+    volume I (the families, then the exceptional groups), the grey group G1′ first (built ones
+    linked); the references."""
+    cat, here = site.cat, site.cat + "/"
+    by_point_group = collections.OrderedDict()
+    for stem in names.MAGNETIC_NAMES:
+        by_point_group.setdefault(stem.split("-")[0], []).append(stem)
+    # the group of magnetic type II in its column, those of magnetic type III after it
+    width = 1 + max(len([x for x in stems if not x.endswith("-1p")])
+                    for stems in by_point_group.values())
+    rows, anchors = [], set()
+    for g, stems in by_point_group.items():
+        stems = [g + "-1p" if g + "-1p" in stems else None] + [x for x in stems
+                                                                if not x.endswith("-1p")]
+        kind, family = placement("rotation", g)
+        anchor = family or kind
+        first = "rotation/%s/" % g
+        point = ('<a href="%s">%s</a>' % (rel(here, first), symbol_of(g))
+                 if site.exists(first) else symbol_of(g))
+        rows.append('<tr%s><th>%s</th>%s</tr>' % (
+            "" if anchor in anchors else ' id="family-%s"' % anchor, point,
+            "".join("<td>%s</td>" % (cell(x) if x else "") for x in stems)
+            + "<td></td>" * (width - len(stems))))
+        anchors.add(anchor)
+    groups = ('<div class="scroll"><table class="families"><thead><tr><th>G</th><th>magnetic '
+              'type II</th><th colspan="%d">magnetic type III</th></tr></thead><tbody>%s</tbody>'
+              '</table></div>' % (width - 1, "".join(rows)))
+    first = "rotation/conventions/"
+    conventions_line = ('<p><a href="conventions/">Conventions</a>, sections 30 to 39: the '
+                        'records of this volume, with its <a href="conventions/notation/">'
+                        'index of notation</a>. Sections 0 to 19 are %s.</p>' % (
+                            '<a href="%s">those of volume I</a>' % rel(here, first)
+                            if site.exists(first) else "those of volume I"))
+    built, total = len(site.built), len(names.MAGNETIC_NAMES)
+    body = (mark("full", "one head") + '\n<h1 class="title">%s</h1>\n<h2>Conventions</h2>\n'
+            '%s\n<h2>Groups</h2>\n%s<p>A row is a point group G of volume I, with its group of '
+            'magnetic type II and its groups of magnetic type III. A group of magnetic type I is a '
+            'point group, and its document is in volume I.</p>\n%s\n%s\n<h2>References</h2>\n'
+            '<p><a href="%s">References</a></p>' % (
+                esc(style.VOLUMES[cat]), conventions_line,
+                "" if built == total else
+                '<p class="note">This build holds %d of the %d groups, and the others are listed '
+                'without links.</p>\n' % (built, total),
+                groups, data.volume_box(site.data, here, volume_pdf(site, here)),
+                rel(here, "references/")))
     site.put(here, frame(here, "%s \u00b7 %s" % (style.VOLUMES[cat], style.TITLE), body, cat,
                          [("", style.TITLE), (None, VOLUME_SHORT[cat])]))
 
@@ -951,6 +1020,14 @@ def home(volumes):
               '<span aria-hidden="true">\u27f6</span></div>')
     square = "".join([cell("rotation", titles["rotation"], notes["rotation"]), across,
                       cell("double", titles["double"], notes["double"])])
+    if any(cat in volumes for cat in names.MAGNETIC):
+        # the magnetic volumes below, time reversal from I to III and from II to IV
+        down = ('<div class="arrow down"><span aria-hidden="true">\u2193</span>'
+                '<span class="label">time reversal</span></div>')
+        square += "".join([down, "<div></div>", down,
+                           cell("magnetic", titles["magnetic"], notes["magnetic"]), across,
+                           cell("magnetic-double", titles["magnetic-double"],
+                                notes["magnetic-double"])])
     body = ('<div class="masthead">%s<h1 class="title"><svg class="titlegrid" %s</h1></div>\n'
             '<div class="square">%s</div>\n<p><a href="references/">References</a></p>'
             % (mark("full", "hero"), logo_svg("title.svg", "title"), square))

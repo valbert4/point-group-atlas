@@ -112,6 +112,7 @@ DOUBLE_LATTICE_TAG = "point-group-atlas/double/lattice/1"
 DOUBLE_BASES_TAG = "point-group-atlas/double/symmetry-adapted-basis/1"
 MAGNETIC_RECORD_TAG = "point-group-atlas/magnetic/group/1"
 MAGNETIC_DOUBLE_RECORD_TAG = "point-group-atlas/magnetic-double/group/1"
+MAGNETIC_GROUPS_TAG = "point-group-atlas/magnetic/groups/1"
 # data/pdf/numbers.json, the numbers that the PDFs print (formats/pdf.py)
 NUMBERS_TAG = "point-group-atlas/pdf-numbers/1"
 DOUBLE_NUMBERS_TAG = "point-group-atlas/double/pdf-numbers/1"
@@ -128,7 +129,7 @@ CATALOGUE = "rotation"
 # the double point groups by pointers and hold no bases files of their own.
 MAGNETIC = ("magnetic", "magnetic-double")
 # The name of a record in the literal channels (GAP, Wolfram, SymPy) of each catalogue.
-LITERAL = {"rotation": "o3t", "double": "o3d"}
+LITERAL = {"rotation": "o3t", "double": "o3d", "magnetic": "o3m"}
 
 
 def symbol_of(rec):
@@ -281,8 +282,13 @@ DOUBLE_TWOJ_MAX = 121          # and in the release: 2J = 23, 25, ..., 121
 
 
 # ---------------------------------------------------------------- the magnetic catalogues
-# The records of Magnetic and of Magnetic double, in the order of each catalogue: none so far.
-MAGNETIC_NAMES = ()
+# The records of Magnetic and of Magnetic double, in the order of each catalogue: for each G of
+# FINITE, G1' then each G(H) by the first node of H's O(3)-conjugacy class in the lattice of G.
+# Magnetic holds the 19 records of the pilot (the grey groups and the groups of magnetic type III
+# of C3v, D2h, D4h and Oh, and C4(C2), C4h(C2h), Th(T)); Magnetic double none so far.
+MAGNETIC_NAMES = ("C4-C2", "C4h-C2h", "C3v-1p", "C3v-C3", "D2h-1p", "D2h-D2", "D2h-C2h",
+                  "D2h-C2v", "D4h-1p", "D4h-D4", "D4h-C4h", "D4h-C4v", "D4h-D2h", "D4h-D2d",
+                  "Th-T", "Oh-1p", "Oh-O", "Oh-Th", "Oh-Td")
 MAGNETIC_DOUBLE_NAMES = ()
 
 

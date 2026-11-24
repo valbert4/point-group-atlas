@@ -1173,7 +1173,7 @@ IRREPS = (
       r"$\irr{e}_n \otimes \irr{e}_n$", r"\varepsilon", defined=("part:clebsch_gordan", "conv:10")),
     S("local.mirror.sigma", "local", r"\sigma", "the mirror of I_h, a class symbol of section 5",
       r"\sigma", scope="conventions|conv:5|", defined="conv:5"),
-    S("function.timereversal", "operator", r"\Theta", "time reversal", r"\Theta", r"\Theta^{#}",
+    S("function.timereversal", "operator", r"\varTheta", "time reversal", r"\varTheta", r"\varTheta^{#}",
       defined="conv:7"),
     S("operator.determinant.character", "irrep", r"\det_{\grp{G}}",
       r"the determinant character of $\grp{G}$, the one-dimensional irrep $g \mapsto \det g$",
@@ -2627,6 +2627,11 @@ def _expand_md(tex):
 # The documents of the scopes of the local records (lint.covers).
 def families():
     from .. import names
+    if names.CATALOGUE == "magnetic":
+        # the documents of the pilot are finite groups' (magnetic/CONVENTIONS.md section 30)
+        return {"conventions": {"CONVENTIONS"}, "references": {"REFERENCES"},
+                "finite": set(names.MAGNETIC_NAMES), "continuous": set(), "axial": set(),
+                "exceptional": set()}
     if names.CATALOGUE == "double":
         return {"conventions": {"CONVENTIONS"}, "references": {"REFERENCES"},
                 "finite": set(names.DOUBLE_FINITE), "continuous": set(names.DOUBLE_CONTINUOUS),

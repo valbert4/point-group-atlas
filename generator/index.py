@@ -5,10 +5,11 @@ or that it names, so that a site can serve each file on its own.
     catalogues   per catalogue: catalogue (its folder), title, parent (the group whose closed
                  subgroups it classifies) and files, those of its files that hold no one record:
                  the conventions, the lattice of the point-group classes and the schemas
-    records      per record: catalogue, stem (the name of its files), symbol (its schoenflies),
-                 type (its group.type), files (the record, its other formats, then the files that
-                 it names in the order they occur) and requires (the other records that it names,
-                 "<catalogue>/<stem>")
+    records      per record: catalogue, stem (the name of its files), symbol (its schoenflies, or
+                 its group.symbol in the later catalogues), type (its group.type; a Double
+                 record's covered group's, a magnetic record's point group G's), files (the
+                 record, its other formats, then the files that it names in the order they
+                 occur) and requires (the other records that it names, "<catalogue>/<stem>")
     files        the files at the root: the README, the references and the license
 
 A file is {format, path, bytes, sha256}, its path relative to the root.  A record names a file by
@@ -25,8 +26,8 @@ CATALOGUES = {"rotation": ("Point groups", "O(3)"),
               "double": ("Double point groups", "Pin^-(3)"),
               "magnetic": ("Magnetic point groups", "O(3) x C_2^T"),
               "magnetic-double": ("Magnetic double point groups", "Pin^-(3)1'")}
-# A pointer of a later catalogue's record: "<catalogue>/<stem>#<JSON pointer>" (the Double
-# catalogue's CONVENTIONS.md section 20.3), the stem a record's name (2C3v, C3v-C3, C3v-1p) or
+# A pointer of a later catalogue's record: "<catalogue>/<stem>#<JSON pointer>" (rotation/
+# CONVENTIONS.md section 18.1), the stem a record's name (2C3v, C3v-C3, C3v-1p) or
 # point_groups, which stands for the lattice file of the point groups.
 POINTER = re.compile(r"\A([a-z-]+)/([A-Za-z0-9_-]+)#")
 FORMATS = {".json": "json", ".g": "gap", ".wl": "wolfram", ".py": "sympy", ".tex": "latex",
@@ -73,6 +74,9 @@ def record_entry(catalogue, name):
     rec = serialize.read_json(names.record_path(name))
     files = [names.record_path(name), names.gap_path(name), names.wolfram_path(name),
              names.sympy_path(name), names.latex_path(name), names.pdf_path(name)]
+    if catalogue in names.MAGNETIC:
+        # a magnetic record's document comes with the magnetic profile of the documents
+        files = [p for p in files if os.path.exists(p)]
     requires = set()
     for rel in named(rec):
         if rel.startswith(names.RECORDS_DIR + "/"):
@@ -88,8 +92,11 @@ def record_entry(catalogue, name):
     if catalogue == "rotation":
         symbol, kind = rec["group"]["schoenflies"], rec["group"]["type"]
     elif catalogue in names.MAGNETIC:
-        raise ValueError("%s/%s: the index of a magnetic record is not defined yet"
-                         % (catalogue, name))
+        # a magnetic record's type is its point group G's; its magnetic type is its own
+        g = rec["group"]
+        symbol = g["symbol"]
+        kind = serialize.read_json(names.rotation_record_path(
+            POINTER.match(g["G"]).group(2)))["group"]["type"]
     else:
         # a Double record's type is its covered group's (cover_of), a section's its image's
         g = rec["group"]

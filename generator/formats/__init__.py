@@ -76,18 +76,27 @@ def run_double(args):
 
 
 def run_magnetic(args):
-    """The formats of a magnetic catalogue, in its registry: the records in data/json/, none so
-    far, then the notation of its conventions, when it has them, and of the references."""
-    from . import conventions, lint
+    """The formats of a magnetic catalogue, in its registry: the literal files of the records in
+    data/json/ (GAP, Wolfram Language, SymPy) and their documents, then the generated block of its
+    conventions (the index of notation) and the notation of its conventions, when it has them, and
+    of the references."""
+    from . import conventions, gap, lint, magnetic_latex, sympy, wolfram
     registry()
     built = present()
-    if built:
-        raise NotImplementedError("%s: the formats of %s" % (names.CATALOGUE, ", ".join(built)))
+    reports = []
+    for name in built:
+        rec = serialize.read_json(names.record_path(name))
+        serialize.write_text(names.gap_path(name), gap.render(name, rec))
+        serialize.write_text(names.wolfram_path(name), wolfram.render(name, rec))
+        serialize.write_text(names.sympy_path(name), sympy.render(name, rec))
+        if names.CATALOGUE == "magnetic":
+            serialize.write_text(names.latex_path(name), magnetic_latex.render(name, rec, reports))
     md = names.path("CONVENTIONS.md")
     if not os.path.exists(md):
-        print("%s: no records and no CONVENTIONS.md" % names.CATALOGUE)
+        print("%s: no CONVENTIONS.md" % names.CATALOGUE)
         return
-    reports = []
+    # the generated block of CONVENTIONS.md (the index of notation, in this registry)
+    conventions.write_generated()
     for path, render in ((md, conventions.render),
                          (names.repository_path("REFERENCES.md"), conventions.references_tex)):
         with open(path, encoding="utf-8") as fh:

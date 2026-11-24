@@ -98,16 +98,23 @@
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
-  "description": "See CONVENTIONS.md section 30.4.",
+  "description": "See CONVENTIONS.md section 30.5.",
   "properties": {
     "documents": {
-      "description": "See CONVENTIONS.md section 30.4.",
-      "maxProperties": 0,
+      "additionalProperties": {
+        "additionalProperties": {
+          "description": "See CONVENTIONS.md section 30.5.",
+          "type": "string"
+        },
+        "description": "See CONVENTIONS.md section 30.5.",
+        "type": "object"
+      },
+      "description": "See CONVENTIONS.md section 30.5.",
       "type": "object"
     },
     "schema": {
       "const": "point-group-atlas/magnetic/pdf-numbers/1",
-      "description": "See CONVENTIONS.md section 30.4."
+      "description": "See CONVENTIONS.md section 30.5."
     }
   },
   "required": [

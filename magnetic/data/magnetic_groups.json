@@ -1,0 +1,176 @@
+{
+  "aliases": {},
+  "counts": {
+    "classes": 19,
+    "magnetic_type_II": 4,
+    "magnetic_type_III": 15,
+    "records": 19
+  },
+  "magnetic_type_I": "rotation/point_groups#",
+  "records": [
+    {
+      "G": "C4",
+      "H": "C2",
+      "hermann_mauguin": "4'",
+      "id": "C4-C2",
+      "magnetic_type": "III",
+      "node": "n01",
+      "symbol": "C_4(C_2)"
+    },
+    {
+      "G": "C4h",
+      "H": "C2h",
+      "hermann_mauguin": "4'/m",
+      "id": "C4h-C2h",
+      "magnetic_type": "III",
+      "node": "n05",
+      "symbol": "C_4h(C_2h)"
+    },
+    {
+      "G": "C3v",
+      "hermann_mauguin": "3m1'",
+      "id": "C3v-1p",
+      "magnetic_type": "II",
+      "symbol": "C_3v1'"
+    },
+    {
+      "G": "C3v",
+      "H": "C3",
+      "hermann_mauguin": "3m'",
+      "id": "C3v-C3",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "C_3v(C_3)"
+    },
+    {
+      "G": "D2h",
+      "hermann_mauguin": "mmm1'",
+      "id": "D2h-1p",
+      "magnetic_type": "II",
+      "symbol": "D_2h1'"
+    },
+    {
+      "G": "D2h",
+      "H": "D2",
+      "hermann_mauguin": "m'm'm'",
+      "id": "D2h-D2",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "D_2h(D_2)"
+    },
+    {
+      "G": "D2h",
+      "H": "C2h",
+      "hermann_mauguin": "m'm'm",
+      "id": "D2h-C2h",
+      "magnetic_type": "III",
+      "node": "n09",
+      "symbol": "D_2h(C_2h)"
+    },
+    {
+      "G": "D2h",
+      "H": "C2v",
+      "hermann_mauguin": "m'mm",
+      "id": "D2h-C2v",
+      "magnetic_type": "III",
+      "node": "n10",
+      "symbol": "D_2h(C_2v)"
+    },
+    {
+      "G": "D4h",
+      "hermann_mauguin": "4/mmm1'",
+      "id": "D4h-1p",
+      "magnetic_type": "II",
+      "symbol": "D_4h1'"
+    },
+    {
+      "G": "D4h",
+      "H": "D4",
+      "hermann_mauguin": "4/m'm'm'",
+      "id": "D4h-D4",
+      "magnetic_type": "III",
+      "node": "n19",
+      "symbol": "D_4h(D_4)"
+    },
+    {
+      "G": "D4h",
+      "H": "C4h",
+      "hermann_mauguin": "4/mm'm'",
+      "id": "D4h-C4h",
+      "magnetic_type": "III",
+      "node": "n20",
+      "symbol": "D_4h(C_4h)"
+    },
+    {
+      "G": "D4h",
+      "H": "C4v",
+      "hermann_mauguin": "4/m'mm",
+      "id": "D4h-C4v",
+      "magnetic_type": "III",
+      "node": "n21",
+      "symbol": "D_4h(C_4v)"
+    },
+    {
+      "G": "D4h",
+      "H": "D2h",
+      "hermann_mauguin": "4'/mm'm",
+      "id": "D4h-D2h",
+      "magnetic_type": "III",
+      "node": "n22",
+      "symbol": "D_4h(D_2h)"
+    },
+    {
+      "G": "D4h",
+      "H": "D2d",
+      "hermann_mauguin": "4'/m'm'm",
+      "id": "D4h-D2d",
+      "magnetic_type": "III",
+      "node": "n23",
+      "symbol": "D_4h(D_2d)"
+    },
+    {
+      "G": "Th",
+      "H": "T",
+      "hermann_mauguin": "m'-3'",
+      "id": "Th-T",
+      "magnetic_type": "III",
+      "node": "n10",
+      "symbol": "T_h(T)"
+    },
+    {
+      "G": "Oh",
+      "hermann_mauguin": "m-3m1'",
+      "id": "Oh-1p",
+      "magnetic_type": "II",
+      "symbol": "O_h1'"
+    },
+    {
+      "G": "Oh",
+      "H": "O",
+      "hermann_mauguin": "m'-3'm'",
+      "id": "Oh-O",
+      "magnetic_type": "III",
+      "node": "n29",
+      "symbol": "O_h(O)"
+    },
+    {
+      "G": "Oh",
+      "H": "Th",
+      "hermann_mauguin": "m-3m'",
+      "id": "Oh-Th",
+      "magnetic_type": "III",
+      "node": "n30",
+      "symbol": "O_h(T_h)"
+    },
+    {
+      "G": "Oh",
+      "H": "Td",
+      "hermann_mauguin": "m'-3'm",
+      "id": "Oh-Td",
+      "magnetic_type": "III",
+      "node": "n31",
+      "symbol": "O_h(T_d)"
+    }
+  ],
+  "schema": "point-group-atlas/magnetic/groups/1"
+}

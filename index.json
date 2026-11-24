@@ -4,16 +4,16 @@
       "catalogue": "rotation",
       "files": [
         {
-          "bytes": 333967,
+          "bytes": 334372,
           "format": "markdown",
           "path": "rotation/CONVENTIONS.md",
-          "sha256": "bf1f774a87316f8379100f67a25ce3670a9d584c1280cbb031450a2dcebd4279"
+          "sha256": "573101505105f7e0cfd162304b28cb78b12a94b7059867206433bcec187e0a45"
         },
         {
-          "bytes": 810168,
+          "bytes": 810523,
           "format": "pdf",
           "path": "rotation/CONVENTIONS.pdf",
-          "sha256": "1c71889b9a23b4dde5af38857394ed6a397b7e1ba2ec9715dbb1f4d1fdb8a03a"
+          "sha256": "1e07867e37073c41d7af8c0b7d70132174aee1335ee80dbc56e80fe8c13d59fc"
         },
         {
           "bytes": 156100,
@@ -41,16 +41,16 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 81872,
+          "bytes": 81638,
           "format": "markdown",
           "path": "double/CONVENTIONS.md",
-          "sha256": "b5e936e7f914f443c44c40853ad70b3299dc45e42a39c5d34ba0fb1d713a2b0e"
+          "sha256": "6c7e27dd4e41342c1ca5bed09063090c67607900ca127c9c7ab62a0c2bee24de"
         },
         {
-          "bytes": 484867,
+          "bytes": 484432,
           "format": "pdf",
           "path": "double/CONVENTIONS.pdf",
-          "sha256": "3219b83501d078376de76646296dc6352f9770cd266032deb7bc3b77a176b7a4"
+          "sha256": "c46b9b8af041f58204c4e55b4dc3dea79b6cae66fc0d08ed4d2206ef43324683"
         },
         {
           "bytes": 85795,
@@ -84,16 +84,28 @@
       "catalogue": "magnetic",
       "files": [
         {
-          "bytes": 12952,
+          "bytes": 68401,
           "format": "markdown",
           "path": "magnetic/CONVENTIONS.md",
-          "sha256": "6d842f67d056dd343266a379a790c6ebf3da48aee2663e8342881039d0b46fdd"
+          "sha256": "f8619ec70c88bf2115d189f18d5d6754a91362f2d97a20795eec6b9940f688fa"
         },
         {
-          "bytes": 213496,
+          "bytes": 444757,
           "format": "pdf",
           "path": "magnetic/CONVENTIONS.pdf",
-          "sha256": "ce343198409329ec6be68e4862d7a78e051f0a73db88a5ab13ef29fa135e11b5"
+          "sha256": "77e145462e92120ab54648223d49a5a5bee9512aac519f5616d845de649ca1eb"
+        },
+        {
+          "bytes": 3563,
+          "format": "json",
+          "path": "magnetic/data/magnetic_groups.json",
+          "sha256": "d72483184e279889a929926292cc14ab061e1655e7e863aab4f03283b635dc32"
+        },
+        {
+          "bytes": 28148,
+          "format": "json",
+          "path": "magnetic/schema/group.schema.json",
+          "sha256": "4a6426dfead76400cf9fd292a33e8878093a069d3919f65dded985684e5b4c86"
         }
       ],
       "parent": "O(3) x C_2^T",
@@ -114,22 +126,22 @@
       "sha256": "0ff846d59888fb8184d65a5839a4d463b454c7c50c286ecfbfe50638e5f8fc91"
     },
     {
-      "bytes": 28160,
+      "bytes": 28432,
       "format": "markdown",
       "path": "REFERENCES.md",
-      "sha256": "1d15a7d2f95636c67319f80b9d40d717b2292a2986447adcaaa76f90ef734cf2"
+      "sha256": "b770f99a8c01667b8031b4e3d330b0d0718c0cd4b542e091de37556e003d4068"
     },
     {
-      "bytes": 180060,
+      "bytes": 180958,
       "format": "pdf",
       "path": "REFERENCES.pdf",
-      "sha256": "d7ae0749ef5b5a0a49172a7876e016b1b771db0c54f5d93b92076b03b62e6c34"
+      "sha256": "740ff3857eee7075c4cde48130881d7fad290942769abae5dbd924afa747637d"
     },
     {
-      "bytes": 48751,
+      "bytes": 49148,
       "format": "bibtex",
       "path": "references.bib",
-      "sha256": "182119ef65fef21db4d10688f3d5ed7655b3d9ee5c2a3f891bf90dbdf50651c1"
+      "sha256": "d61867b36c64c1c945c16fc0f8cf3facceae0969fe621391afc54e05123087f4"
     },
     {
       "bytes": 913,
@@ -11390,6 +11402,935 @@
       ],
       "stem": "Pinminus3",
       "symbol": "Pin^-(3)",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 30779,
+          "format": "json",
+          "path": "magnetic/data/json/C4-C2.json",
+          "sha256": "7657531323c4f7219d99b4f57b5a93794f2559920fdc73569c207fc48ff4a448"
+        },
+        {
+          "bytes": 14688,
+          "format": "gap",
+          "path": "magnetic/data/gap/C4-C2.g",
+          "sha256": "61c6d825524ab4450d32303ce47b27e516ff1fdbd01c3c6892cad5de0ebbca18"
+        },
+        {
+          "bytes": 13350,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/C4-C2.wl",
+          "sha256": "d8bb70269ec2034ac692432f4bcc73a486954a798e44f2cf2d8a34860ac72e1e"
+        },
+        {
+          "bytes": 17129,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/C4-C2.py",
+          "sha256": "8d8e17ea7ec8814b9f96afe40dcece422c6e592c7fdb7ff32ae79f8f3fca30ea"
+        },
+        {
+          "bytes": 37043,
+          "format": "latex",
+          "path": "magnetic/data/latex/C4-C2.tex",
+          "sha256": "92b15c04104d7a7709b175db3125a780b40ef1ddf37856e13287701465ec1142"
+        },
+        {
+          "bytes": 306467,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/C4-C2.pdf",
+          "sha256": "368dcd9886cdefd11ac5a66c6fa94de749d1075bbde898e0e4d8491ad5871f95"
+        }
+      ],
+      "requires": [
+        "rotation/C2",
+        "rotation/C4",
+        "rotation/S4"
+      ],
+      "stem": "C4-C2",
+      "symbol": "C_4(C_2)",
+      "type": "I"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 26785,
+          "format": "json",
+          "path": "magnetic/data/json/C4h-C2h.json",
+          "sha256": "2e3a420fd27dfd04779bd8945b40bcc9944b176b7cd903c0c7b8a09c83bdf1f1"
+        },
+        {
+          "bytes": 14274,
+          "format": "gap",
+          "path": "magnetic/data/gap/C4h-C2h.g",
+          "sha256": "bd53c9b0b87348117373fc8bbffcd3775e78ce3fb13c5a500244bdf05f4935f0"
+        },
+        {
+          "bytes": 12920,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/C4h-C2h.wl",
+          "sha256": "e1e5a074d27a3564ec91d44d3379b4e8cdf70724216c508a92372a78e95362f2"
+        },
+        {
+          "bytes": 15817,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/C4h-C2h.py",
+          "sha256": "70195fe0f5e8c09a0b654e2870bbbb657ada676f5a78e1280fa71df05f3b473b"
+        },
+        {
+          "bytes": 36942,
+          "format": "latex",
+          "path": "magnetic/data/latex/C4h-C2h.tex",
+          "sha256": "6ce4da88856db547f85ca3cc536301660a2a0ffb360c29c72bc532a2efa2a6ee"
+        },
+        {
+          "bytes": 315987,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/C4h-C2h.pdf",
+          "sha256": "ac5197a61940a9698116c2d575c773f0aefa647818ddc5956f07cfad3af19a23"
+        }
+      ],
+      "requires": [
+        "rotation/C2h",
+        "rotation/C4",
+        "rotation/C4h",
+        "rotation/S4"
+      ],
+      "stem": "C4h-C2h",
+      "symbol": "C_4h(C_2h)",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 19656,
+          "format": "json",
+          "path": "magnetic/data/json/C3v-1p.json",
+          "sha256": "8d6144243f17389b223dd9c64cad568c5e2edce022696b2b995029f120f49ae8"
+        },
+        {
+          "bytes": 8125,
+          "format": "gap",
+          "path": "magnetic/data/gap/C3v-1p.g",
+          "sha256": "772bc8171c7ce40d7965e1ce474151bc83286e008f04f81648f8a35a9c0322d4"
+        },
+        {
+          "bytes": 7611,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/C3v-1p.wl",
+          "sha256": "0cc1598ab661f75b690221b1d47ab5d8e811d0f477246874b46884c2e2afce1e"
+        },
+        {
+          "bytes": 10756,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/C3v-1p.py",
+          "sha256": "e614493e487e1c472f3a5ce68889ceee377ae9c00a70e62418b03b3f458239b4"
+        },
+        {
+          "bytes": 27718,
+          "format": "latex",
+          "path": "magnetic/data/latex/C3v-1p.tex",
+          "sha256": "9b521ff0f1f9ddb2e0f07da087833d0e576fe9cc898bebbad32ebec63820a69a"
+        },
+        {
+          "bytes": 305753,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/C3v-1p.pdf",
+          "sha256": "9f4907279cc49b14ece41454f6665349e615cf3f040452559d8718cbb1fb3706"
+        }
+      ],
+      "requires": [
+        "rotation/C3v",
+        "rotation/D3",
+        "rotation/D3d"
+      ],
+      "stem": "C3v-1p",
+      "symbol": "C_3v1'",
+      "type": "III"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 34222,
+          "format": "json",
+          "path": "magnetic/data/json/C3v-C3.json",
+          "sha256": "d52355f77cba690fa30b74bde00779947ae22372c715888406536bb49db207bc"
+        },
+        {
+          "bytes": 15885,
+          "format": "gap",
+          "path": "magnetic/data/gap/C3v-C3.g",
+          "sha256": "396ba2f8f1366fae1bc2e02aa7b977cda556dd9b9c96b29c0c38ed03b51d601b"
+        },
+        {
+          "bytes": 14664,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/C3v-C3.wl",
+          "sha256": "9c808ad28a019536a31d5d757a6464d851b4069951e2f69762454ab63e89d6a0"
+        },
+        {
+          "bytes": 20405,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/C3v-C3.py",
+          "sha256": "083ca1311cf5b10712c40e931573a617dcc1b40ce41249988d0afe174c13e9f8"
+        },
+        {
+          "bytes": 38613,
+          "format": "latex",
+          "path": "magnetic/data/latex/C3v-C3.tex",
+          "sha256": "45d8adc56753150a04edc8af8e78b95d7479447e2db4495af4f3f1995757cad6"
+        },
+        {
+          "bytes": 332785,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/C3v-C3.pdf",
+          "sha256": "a773c5627aecb8840abf1d245c865c918216188b1b4f0be93223b4ef60893c1f"
+        }
+      ],
+      "requires": [
+        "rotation/C3",
+        "rotation/C3v",
+        "rotation/D3"
+      ],
+      "stem": "C3v-C3",
+      "symbol": "C_3v(C_3)",
+      "type": "III"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 24517,
+          "format": "json",
+          "path": "magnetic/data/json/D2h-1p.json",
+          "sha256": "5665916f51b0c9dda5737f3ac99ea1e770173f08bbfd6c2f9591ce84f3c54a7f"
+        },
+        {
+          "bytes": 11770,
+          "format": "gap",
+          "path": "magnetic/data/gap/D2h-1p.g",
+          "sha256": "587c2845cfaed58148cdaffa7b4be0a50017b0f6c9270948773bf844d3047318"
+        },
+        {
+          "bytes": 10664,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/D2h-1p.wl",
+          "sha256": "d042c88629a1508f5f97493910def50c5a94cc0dcfaa1d62045d542ee5d0afe7"
+        },
+        {
+          "bytes": 13275,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/D2h-1p.py",
+          "sha256": "d9a2c0b7384135757542bf0f718bd719e93ced17fce40837d08318983cf01121"
+        },
+        {
+          "bytes": 29282,
+          "format": "latex",
+          "path": "magnetic/data/latex/D2h-1p.tex",
+          "sha256": "71a3353a42b5fcdff7495ecea3237a141979681ef485c7641d11016509840414"
+        },
+        {
+          "bytes": 297267,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/D2h-1p.pdf",
+          "sha256": "68d700c42a23216dd3e6a4e0f56691bd02aa30732a174028e7bd85a8bb6c0d82"
+        }
+      ],
+      "requires": [
+        "rotation/D2",
+        "rotation/D2h"
+      ],
+      "stem": "D2h-1p",
+      "symbol": "D_2h1'",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 27441,
+          "format": "json",
+          "path": "magnetic/data/json/D2h-D2.json",
+          "sha256": "e05de395607f4f50683dd433a57d907b19d75f87c5cc1ac7ed6d91083ba2908d"
+        },
+        {
+          "bytes": 13794,
+          "format": "gap",
+          "path": "magnetic/data/gap/D2h-D2.g",
+          "sha256": "f75f5e9ea0c63e84e484a935248162aee35bb8abf9fe2b214fbb69db3aa4f2a9"
+        },
+        {
+          "bytes": 12347,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/D2h-D2.wl",
+          "sha256": "b349e4580b412798c5b75ce1eacc5738a02f783389d9823f44f5ab266f5b5bb8"
+        },
+        {
+          "bytes": 15380,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/D2h-D2.py",
+          "sha256": "6b5e3b367502caf8ad742cf319718e38dc229b8bdfb5f0d2c2abf2aa0444ed96"
+        },
+        {
+          "bytes": 34904,
+          "format": "latex",
+          "path": "magnetic/data/latex/D2h-D2.tex",
+          "sha256": "32ac8df0c07418aed2ab444f9c66095b74416720f4c93ecf267003505d0df0be"
+        },
+        {
+          "bytes": 312621,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/D2h-D2.pdf",
+          "sha256": "2c6ad706b955f55352272a4fbcefd2e7f456276460df6670b10dabce6d078b81"
+        }
+      ],
+      "requires": [
+        "rotation/D2",
+        "rotation/D2h"
+      ],
+      "stem": "D2h-D2",
+      "symbol": "D_2h(D_2)",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 26111,
+          "format": "json",
+          "path": "magnetic/data/json/D2h-C2h.json",
+          "sha256": "d44b010bc44ad3fdbb06e2c06f3a7e7251d1508e0b6105c102da21d20a69a4bb"
+        },
+        {
+          "bytes": 14668,
+          "format": "gap",
+          "path": "magnetic/data/gap/D2h-C2h.g",
+          "sha256": "87bdb7e1accc0dc5f2de1050aa9d4c428d47aa12b0dad05b4d2a5ff9f89e440e"
+        },
+        {
+          "bytes": 13286,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/D2h-C2h.wl",
+          "sha256": "2cc726abe8f4eca8293b9b323729a6ed106c61a1de30fde50f439315c9fa4131"
+        },
+        {
+          "bytes": 16223,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/D2h-C2h.py",
+          "sha256": "f0c13a566baad8a0f42400cbd0b40aa859facdc3e47e2414bf8c47676b02754d"
+        },
+        {
+          "bytes": 36948,
+          "format": "latex",
+          "path": "magnetic/data/latex/D2h-C2h.tex",
+          "sha256": "893ccc5adf2376445485a506e54a118508850d351c827896b2864ef01273619d"
+        },
+        {
+          "bytes": 315613,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/D2h-C2h.pdf",
+          "sha256": "aafe29d69c2e3413d6adc6213602b6667addfabbc0f30237edb20599637c0a2c"
+        }
+      ],
+      "requires": [
+        "rotation/C2h",
+        "rotation/C2v",
+        "rotation/D2",
+        "rotation/D2h"
+      ],
+      "stem": "D2h-C2h",
+      "symbol": "D_2h(C_2h)",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 26744,
+          "format": "json",
+          "path": "magnetic/data/json/D2h-C2v.json",
+          "sha256": "8fd3778e4051277aa2caa379d71c62349aed769a78f2789f871923c322ad13c7"
+        },
+        {
+          "bytes": 13764,
+          "format": "gap",
+          "path": "magnetic/data/gap/D2h-C2v.g",
+          "sha256": "2541e38c170e52a72c460ada63e8bd2d6e18019c8deee17eb5ecf4fd4401369b"
+        },
+        {
+          "bytes": 12335,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/D2h-C2v.wl",
+          "sha256": "01641d50a47c6b730dd21fbf0df09ac9198d72a5b31eb76f69a560ee1bfc57a3"
+        },
+        {
+          "bytes": 15260,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/D2h-C2v.py",
+          "sha256": "62756c1c639a0c122ca042479ed30cf0a3d18fd7e8cfb6e051e752e73d50b0d3"
+        },
+        {
+          "bytes": 35347,
+          "format": "latex",
+          "path": "magnetic/data/latex/D2h-C2v.tex",
+          "sha256": "79a701cd636c893f92e662c54cf8ac521428231c83141d7f277d8eb19e2a0547"
+        },
+        {
+          "bytes": 312563,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/D2h-C2v.pdf",
+          "sha256": "b22a2446297b9a6f1a4c827ed18a176f4dfd100dab93eee0e9c83c9962f80456"
+        }
+      ],
+      "requires": [
+        "rotation/C2v",
+        "rotation/D2",
+        "rotation/D2h"
+      ],
+      "stem": "D2h-C2v",
+      "symbol": "D_2h(C_2v)",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 30086,
+          "format": "json",
+          "path": "magnetic/data/json/D4h-1p.json",
+          "sha256": "ebd7145c79e6fe7987ef939fc319a65de45685ea817d0a7d51326769fcb6a2a5"
+        },
+        {
+          "bytes": 13918,
+          "format": "gap",
+          "path": "magnetic/data/gap/D4h-1p.g",
+          "sha256": "408cfbe4bb7c83137c535878609365200bbf44664c1fe182fa4c3b36fd36140f"
+        },
+        {
+          "bytes": 12521,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/D4h-1p.wl",
+          "sha256": "7c8e7b313277146fb132d1d155d3da06581ddea87a7f4edb232366e77d82fcbc"
+        },
+        {
+          "bytes": 18366,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/D4h-1p.py",
+          "sha256": "1c7d70b7e7da49283a78cf917bdf35bad8ced4934fd5d3afa98c181ddd197ca6"
+        },
+        {
+          "bytes": 30350,
+          "format": "latex",
+          "path": "magnetic/data/latex/D4h-1p.tex",
+          "sha256": "2b9475efe5f5e550d68ac0bc479a73eb355e18018c9f16396624d7169110399d"
+        },
+        {
+          "bytes": 306478,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/D4h-1p.pdf",
+          "sha256": "70f40e49bf03a5ac78bd8798bff02af02764bc42f5ff0f0dffefa9041a806fff"
+        }
+      ],
+      "requires": [
+        "rotation/D4",
+        "rotation/D4h"
+      ],
+      "stem": "D4h-1p",
+      "symbol": "D_4h1'",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 30217,
+          "format": "json",
+          "path": "magnetic/data/json/D4h-D4.json",
+          "sha256": "119c8b122e7532b2b3dca7740c25911ef682cdfc7d7af1b71daa52844c1cbfed"
+        },
+        {
+          "bytes": 14876,
+          "format": "gap",
+          "path": "magnetic/data/gap/D4h-D4.g",
+          "sha256": "ca9fb9e0755fa74a9689b5e4c5113fd59c85e8ca8f7a6abd878c195dd833dd90"
+        },
+        {
+          "bytes": 13365,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/D4h-D4.wl",
+          "sha256": "49bc606c267e5f47e604498c1afe02aca330b9eae866643d04a7e5af4e2c3586"
+        },
+        {
+          "bytes": 16386,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/D4h-D4.py",
+          "sha256": "16a8a6362e5a4a2436b899e0785b15b9829a91ad24a8ad107412ae8c2ab04a0d"
+        },
+        {
+          "bytes": 35419,
+          "format": "latex",
+          "path": "magnetic/data/latex/D4h-D4.tex",
+          "sha256": "06d8a9968361d3a9f55916d5f877d10914f0821562cebaeffa44bfb5586600db"
+        },
+        {
+          "bytes": 322050,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/D4h-D4.pdf",
+          "sha256": "8b1e2b620221ae730473f4df01e0ba3e5054e1116f764362e6c5e0c02d62db20"
+        }
+      ],
+      "requires": [
+        "rotation/D4",
+        "rotation/D4h"
+      ],
+      "stem": "D4h-D4",
+      "symbol": "D_4h(D_4)",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 37458,
+          "format": "json",
+          "path": "magnetic/data/json/D4h-C4h.json",
+          "sha256": "125f9c4d7bd2bb49e452c2c781b1f7d878cd896343a6bf3d2c116d04702e1c4e"
+        },
+        {
+          "bytes": 19074,
+          "format": "gap",
+          "path": "magnetic/data/gap/D4h-C4h.g",
+          "sha256": "40c70eb77ddff646138a7eb2dd5df962b13ea0a30bb63fcac8a55ce9f75a526a"
+        },
+        {
+          "bytes": 17503,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/D4h-C4h.wl",
+          "sha256": "431f6d1c6c09996d50995c6765234bedbbc060d034c7f35b8da7a62538d849d3"
+        },
+        {
+          "bytes": 21436,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/D4h-C4h.py",
+          "sha256": "71890f0efbd4468419a2d041fa0c4e93507a64719006b046c78a4b6a5f11d191"
+        },
+        {
+          "bytes": 39589,
+          "format": "latex",
+          "path": "magnetic/data/latex/D4h-C4h.tex",
+          "sha256": "20b249c2bce142996be74a32792d88c7f4eea0b505294c95f478a1b2fc710e13"
+        },
+        {
+          "bytes": 317961,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/D4h-C4h.pdf",
+          "sha256": "d05385672e89ec5f91a44ea20a58973f543ef088aeba1aa12ec8eb01c6b47e53"
+        }
+      ],
+      "requires": [
+        "rotation/C4h",
+        "rotation/C4v",
+        "rotation/D4",
+        "rotation/D4h"
+      ],
+      "stem": "D4h-C4h",
+      "symbol": "D_4h(C_4h)",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 29173,
+          "format": "json",
+          "path": "magnetic/data/json/D4h-C4v.json",
+          "sha256": "44b2256bf499fc7af4be9c59c5599786eb7d36e58f2eb562757710e95cb1cf39"
+        },
+        {
+          "bytes": 14813,
+          "format": "gap",
+          "path": "magnetic/data/gap/D4h-C4v.g",
+          "sha256": "0ae2a2c3fb1dccf8de34b0f7d64c62861fc0315c7cf2e6c36870102a38ec68db"
+        },
+        {
+          "bytes": 13278,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/D4h-C4v.wl",
+          "sha256": "02f022b95b0ed217359e486725ced891587ac15e1bf3c3871a58a38d4c20ac70"
+        },
+        {
+          "bytes": 16195,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/D4h-C4v.py",
+          "sha256": "785f13ddb3e031abb2b8fb0c60e9e5bbd3481d5a836eba323bb899d542c06040"
+        },
+        {
+          "bytes": 35767,
+          "format": "latex",
+          "path": "magnetic/data/latex/D4h-C4v.tex",
+          "sha256": "783445b3318d9bedb96ffda7e24f629359342f10b214cfe5d61967f0c927940f"
+        },
+        {
+          "bytes": 321801,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/D4h-C4v.pdf",
+          "sha256": "b14d83d7db9c2eb6c4774c41ad22788e42623fc3f95f530e0d20f83337df1442"
+        }
+      ],
+      "requires": [
+        "rotation/C4v",
+        "rotation/D4",
+        "rotation/D4h"
+      ],
+      "stem": "D4h-C4v",
+      "symbol": "D_4h(C_4v)",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 29610,
+          "format": "json",
+          "path": "magnetic/data/json/D4h-D2h.json",
+          "sha256": "9ba2f4842415cc8e08959bba425a801dcbac6e2b49f2181c65cbcdd00f37c7e9"
+        },
+        {
+          "bytes": 16053,
+          "format": "gap",
+          "path": "magnetic/data/gap/D4h-D2h.g",
+          "sha256": "91ad5c99018e9bc967abd47ffc74b560617c4be7fc4d2b819df838790e7882f6"
+        },
+        {
+          "bytes": 14507,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/D4h-D2h.wl",
+          "sha256": "de85b5cf5ef69402c18c0005932c771db5a8a62ca6561631c70144a63a7eb601"
+        },
+        {
+          "bytes": 18068,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/D4h-D2h.py",
+          "sha256": "06c9d4952833e0efaa651ea09974d383510d5dddd436eebb1ba85794ccf9f567"
+        },
+        {
+          "bytes": 37978,
+          "format": "latex",
+          "path": "magnetic/data/latex/D4h-D2h.tex",
+          "sha256": "5dd8d52afebd6d236a7e85bf3fef32c88702cc88184c34812a627e5b20e3a390"
+        },
+        {
+          "bytes": 316923,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/D4h-D2h.pdf",
+          "sha256": "49bb586013992e332bccda8183efb8fb6722634490a5d8696465a1e34b18d4d9"
+        }
+      ],
+      "requires": [
+        "rotation/D2d",
+        "rotation/D2h",
+        "rotation/D4",
+        "rotation/D4h"
+      ],
+      "stem": "D4h-D2h",
+      "symbol": "D_4h(D_2h)",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 29679,
+          "format": "json",
+          "path": "magnetic/data/json/D4h-D2d.json",
+          "sha256": "862f5f599aa24b83985d6d6740c16a49ae6e4681ea4a3aba040d4529496326b4"
+        },
+        {
+          "bytes": 14782,
+          "format": "gap",
+          "path": "magnetic/data/gap/D4h-D2d.g",
+          "sha256": "772c7fb448cb5b3f0010bd8f76cd9067927ec150f093230b26113740584e69c1"
+        },
+        {
+          "bytes": 13246,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/D4h-D2d.wl",
+          "sha256": "3cf1ef40e6c1dd7ce3206384dc93c06d2fb8f745054016b27ef056215cf59d10"
+        },
+        {
+          "bytes": 16189,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/D4h-D2d.py",
+          "sha256": "3bc030affedd693211add6f34601bd57e1c8e18e3b8aa5f2b99496ed437011be"
+        },
+        {
+          "bytes": 35760,
+          "format": "latex",
+          "path": "magnetic/data/latex/D4h-D2d.tex",
+          "sha256": "a2e8bb43d5f24fa92d3abde7e23097c2446aee2a9302d91436a70ce1f9ead7a0"
+        },
+        {
+          "bytes": 321734,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/D4h-D2d.pdf",
+          "sha256": "3c0a3673a4354b5985ba5149be867f074272dfd2948f346986bb3e6d49e3cd76"
+        }
+      ],
+      "requires": [
+        "rotation/D2d",
+        "rotation/D4",
+        "rotation/D4h"
+      ],
+      "stem": "D4h-D2d",
+      "symbol": "D_4h(D_2d)",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 26350,
+          "format": "json",
+          "path": "magnetic/data/json/Th-T.json",
+          "sha256": "0800483927b773d286cfce032ee04d23249aaebd88898ccdb1e9892fa335ece8"
+        },
+        {
+          "bytes": 12923,
+          "format": "gap",
+          "path": "magnetic/data/gap/Th-T.g",
+          "sha256": "85cef01f2f76f30a1a02e5379f79be5f9ee16f97a8130fdc5d096c65c8a0d5d4"
+        },
+        {
+          "bytes": 11657,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/Th-T.wl",
+          "sha256": "83659f08145602f0135a6241f858b928706e4669975927744cc0aeb2af640a47"
+        },
+        {
+          "bytes": 15818,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/Th-T.py",
+          "sha256": "3fb5d6eabae52293db2d98eee73c59224e8b3d8cffcfca783447136814161c5a"
+        },
+        {
+          "bytes": 34735,
+          "format": "latex",
+          "path": "magnetic/data/latex/Th-T.tex",
+          "sha256": "8a90da1fbd7f0b0b375f02338e02de31aec62e0306e7ede451100716df89d4d1"
+        },
+        {
+          "bytes": 321741,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/Th-T.pdf",
+          "sha256": "5c30412a65630cbac51d6c9e2bd7d5b5e0215a490559657126efc3a25ee3cbb8"
+        }
+      ],
+      "requires": [
+        "rotation/T",
+        "rotation/Th"
+      ],
+      "stem": "Th-T",
+      "symbol": "T_h(T)",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 31808,
+          "format": "json",
+          "path": "magnetic/data/json/Oh-1p.json",
+          "sha256": "016ac95dccaea5b4101af76c9957f28f3582db02fec912eb4e63f2307f972a4b"
+        },
+        {
+          "bytes": 15479,
+          "format": "gap",
+          "path": "magnetic/data/gap/Oh-1p.g",
+          "sha256": "4a1607f9952e5df8e6940d0da90f72eaa21ad645421171ea1d7ffaac3bf250db"
+        },
+        {
+          "bytes": 13954,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/Oh-1p.wl",
+          "sha256": "3fd417b2beceece71b9dd247625ea1c5007df696294bae4db76917cee296eb53"
+        },
+        {
+          "bytes": 20227,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/Oh-1p.py",
+          "sha256": "5b69f05a9e0e4a89aa0e11cd00e97105f42ec3d218aab6057723d29429ddc51e"
+        },
+        {
+          "bytes": 30954,
+          "format": "latex",
+          "path": "magnetic/data/latex/Oh-1p.tex",
+          "sha256": "4a610c8f9b8f8106c1bf8ecbaf15eda1aae82210aca8d7d99f7bd55a859e176f"
+        },
+        {
+          "bytes": 307149,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/Oh-1p.pdf",
+          "sha256": "1c4045417d41a203d093b44bd91cd780fefbf8b280cce853ee59c0a2b3be5972"
+        }
+      ],
+      "requires": [
+        "rotation/O",
+        "rotation/Oh"
+      ],
+      "stem": "Oh-1p",
+      "symbol": "O_h1'",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 32828,
+          "format": "json",
+          "path": "magnetic/data/json/Oh-O.json",
+          "sha256": "21abd163c1d39c8fc0ed91188ca22c5c4f4af109328eacc3abf69feefee22684"
+        },
+        {
+          "bytes": 15480,
+          "format": "gap",
+          "path": "magnetic/data/gap/Oh-O.g",
+          "sha256": "dcc4ee5ccff02628abb79a1dbce900da97ced92f3063aa7c9315d6e484cb95e0"
+        },
+        {
+          "bytes": 13933,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/Oh-O.wl",
+          "sha256": "3a41998252f74ea2fdf51654aab79dbfa2bd3058fa93ed00d69c8a6978814317"
+        },
+        {
+          "bytes": 18118,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/Oh-O.py",
+          "sha256": "0471b0bb50993ee793b50dbd5878f002c13851270f019d25f333163175ed06ac"
+        },
+        {
+          "bytes": 34915,
+          "format": "latex",
+          "path": "magnetic/data/latex/Oh-O.tex",
+          "sha256": "8d4f9d0f122e4d4601fa4fd517d8afa79fd7ced51cc362f0a16c5f631070e857"
+        },
+        {
+          "bytes": 322188,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/Oh-O.pdf",
+          "sha256": "23db73e5d197b0a6d44e1d5077487a40ad4df9c95dd80dd3ed68d6e3faf3f84b"
+        }
+      ],
+      "requires": [
+        "rotation/O",
+        "rotation/Oh"
+      ],
+      "stem": "Oh-O",
+      "symbol": "O_h(O)",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 39461,
+          "format": "json",
+          "path": "magnetic/data/json/Oh-Th.json",
+          "sha256": "160416c3be30c04bef67c8887c6611d6d1a1342add065eaf8ae1e6e57e893383"
+        },
+        {
+          "bytes": 19062,
+          "format": "gap",
+          "path": "magnetic/data/gap/Oh-Th.g",
+          "sha256": "86faf21966b42b83ff9cc5d6e6255978d8eb5a97b20988f71606bd2581b0d172"
+        },
+        {
+          "bytes": 16482,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/Oh-Th.wl",
+          "sha256": "b4340b9863cf12b9b1bf05f47e4eede6fad0b5dbe58ce7bf4507eb2f05326cdd"
+        },
+        {
+          "bytes": 22195,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/Oh-Th.py",
+          "sha256": "7a84c7618610e26e51a0907c0f4c8a80809c05b1c88fc27a5fc1d93a76d2d789"
+        },
+        {
+          "bytes": 39546,
+          "format": "latex",
+          "path": "magnetic/data/latex/Oh-Th.tex",
+          "sha256": "68e9aa5208f8faec369d322d47dabacb231e13c3b66f40192e3324f7bbbfd690"
+        },
+        {
+          "bytes": 326570,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/Oh-Th.pdf",
+          "sha256": "8c9105ef54bf04409350ceb4f3ce7b1d2774016fbb7b1bf936fcb0d861466a84"
+        }
+      ],
+      "requires": [
+        "rotation/O",
+        "rotation/Oh",
+        "rotation/Td",
+        "rotation/Th"
+      ],
+      "stem": "Oh-Th",
+      "symbol": "O_h(T_h)",
+      "type": "II"
+    },
+    {
+      "catalogue": "magnetic",
+      "files": [
+        {
+          "bytes": 31361,
+          "format": "json",
+          "path": "magnetic/data/json/Oh-Td.json",
+          "sha256": "7bad819b175dbdfa39ec3956b7dc7a7ef5b4d2e22da8d83c7dc52ca6da12ac8c"
+        },
+        {
+          "bytes": 15244,
+          "format": "gap",
+          "path": "magnetic/data/gap/Oh-Td.g",
+          "sha256": "15b684637b4b1b3bd332cc2b25ef70dee5d7404c7c0b6c409a16be887f47c367"
+        },
+        {
+          "bytes": 13724,
+          "format": "wolfram",
+          "path": "magnetic/data/wolfram/Oh-Td.wl",
+          "sha256": "5dc0905893f3584d3ab44141dd01b5095bed99c4a8bf31f76333b97a16f2ba58"
+        },
+        {
+          "bytes": 17387,
+          "format": "sympy",
+          "path": "magnetic/data/sympy/Oh-Td.py",
+          "sha256": "02499a529012e60414a2dc68487030c8599fe7e4323673d1f25de0b40e9a0850"
+        },
+        {
+          "bytes": 35262,
+          "format": "latex",
+          "path": "magnetic/data/latex/Oh-Td.tex",
+          "sha256": "11651be098fb3c84de83f08795c5f343601f984046e5636bdebc86a17f9d8056"
+        },
+        {
+          "bytes": 322624,
+          "format": "pdf",
+          "path": "magnetic/data/pdf/Oh-Td.pdf",
+          "sha256": "c1ee533290b7e636690be29e2c2fc23179dbae6b5e0970c22b006a5cfc99966e"
+        }
+      ],
+      "requires": [
+        "rotation/O",
+        "rotation/Oh",
+        "rotation/Td"
+      ],
+      "stem": "Oh-Td",
+      "symbol": "O_h(T_d)",
       "type": "II"
     }
   ],

@@ -343,11 +343,20 @@ def volume_box(files, here, pdf=None):
         notes.append("The volume as one PDF%s holds the conventions, the documents of its groups, "
                      "the references and the index of notation." % (
                          " (%d sheets)" % pdf[3] if pdf[3] else ""))
-    notes.append("CONVENTIONS.pdf is CONVENTIONS.md typeset, the file <code>%s</code> holds the "
-                 "lattice of %s, and the schemas are those of this volume's records."
-                 % (esc(lattice), LATTICES[files.cat]))
+    if files.cat in LATTICES:
+        notes.append("CONVENTIONS.pdf is CONVENTIONS.md typeset, the file <code>%s</code> holds "
+                     "the lattice of %s, and the schemas are those of this volume's records."
+                     % (esc(lattice), LATTICES[files.cat]))
+    else:
+        notes.append("CONVENTIONS.pdf is CONVENTIONS.md typeset, the file <code>%s</code> lists "
+                     "the groups of this volume with their magnetic types and symbols, and the "
+                     "schemas are those of this volume's records." % esc(lattice))
     notes.append("The Data section of each group lists the group's own files.")
     out.append("<p>%s</p>" % " ".join(notes))
+    if files.cat not in RELEASES:
+        # a magnetic catalogue holds no bases of its own: its records name those of volume I
+        out.append("<p>%s</p>" % index_sentence(files))
+        return "\n".join(out)
     tag, which = RELEASES[files.cat]
     out.append('<p>The symmetry-adapted bases for %s, too large for the repository, are attached '
                'to its release <a href="%s/releases/tag/%s">%s</a>, one archive for each group. '

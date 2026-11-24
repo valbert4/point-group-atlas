@@ -7,8 +7,8 @@ from fractions import Fraction
 from .. import names
 from . import hasse
 from .typeset import (COMPONENT_ELEMENT, FAMILY, IMAGES_SIZE, SU2, TABLE_MAX_WIDTH, family_symbol,
-                      fill_width, grp, integers, irrep, irrep_label, listed, multiple, pi_multiple,
-                      polynomial_in_t, rotation_linked, snake_mark, tagged, visible)
+                      fill_width, grp, integers, irrep, irrep_label, labels_width, listed, multiple,
+                      pi_multiple, polynomial_in_t, rotation_linked, snake_mark, tagged, visible)
 
 
 # ---------------------------------------------------------------- Subgroup lattice
@@ -1361,7 +1361,11 @@ def section_subduction(D):
     (section_subduction_rules, section_subduction_rules_o3), an axial continuous group by the
     tables of its families (section_subduction_continuous), a finite group by a column for each
     class of subgroups, the settings of its classes of monomorphisms and the induction they give.
-    A section of Double has none: its preimage's document gives its columns, renamed."""
+    A section of Double has none: its preimage's document gives its columns, renamed.  A magnetic
+    record gives the splitting table, the restriction of the corepresentations of its grey parent
+    G1' (splitting_table), and a group of magnetic type II, its own grey group, none."""
+    if D.coreps is not None:
+        return splitting_table(D) if D.rec.get("splitting") else None
     if not D.cover or D.lattice is None:
         # a record of Rotation or a continuous one of Double (no lattice of its own): its keys
         # tell which descent it has; Double reads both keys, Rotation the second without rules
@@ -1400,6 +1404,25 @@ def section_subduction(D):
     # Double's records hold the blocks of the spinor irreps' entries; the vector irreps' are those
     # of the covered group
     D.w(induction_sentences(D, " of a spinor irrep" if D.cover else ""))
+
+
+def splitting_table(D):
+    """The splitting table of a magnetic group M of magnetic type III (CONVENTIONS.pdf, section
+    33.1): each irrep of G over R, a corepresentation of the grey group G1', restricted to M as a
+    sum of corepresentations of M, by the record's splitting."""
+    D.section("Descent of symmetry", "sections 12 and 33.1")
+    D.w(D.splitting_lead())
+    rows = [["irrep", r"$\restr{\Gamma}{%s}$" % D.sym]]
+    for entry in D.rec["splitting"]:
+        rows.append(["$%s$" % D.g_irrep(entry["irrep"]), "$%s$" % r" \oplus ".join(
+            multiple(t["multiplicity"], D.corep_label(D.corep_by_irrep(t["corepresentation"])))
+            for t in entry["terms"])])
+    D.w(r"{\small%s\begin{longtable}{@{}ll@{}}\toprule" % snake_mark(6.0, labels_width(rows,
+                                                                                    6.0)))
+    D.w(" & ".join(rows[0]) + r"\\\midrule\endhead")
+    for row in rows[1:]:
+        D.w(" & ".join(row) + r"\\")
+    D.w(r"\bottomrule\end{longtable}}")
 
 
 # The rows of the tables of a continuous group: the singleton families and the instances

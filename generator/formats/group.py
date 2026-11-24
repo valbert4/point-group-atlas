@@ -300,7 +300,8 @@ def section_identification(D):
     D.section("Names and structure", {"rotation": "sections 2, 3 and 12",
                                       "double": "sections 2, %s20 and %d" % (
                                           "12, " if product_form else "",
-                                          29 if continuous else 28)})
+                                          29 if continuous else 28),
+                                      "magnetic": "sections 2, 3, 6, 30 and 31.2"})
     themes = D.identification_rows()
     rows = [k for theme in themes for k in theme]
     stray = set(g) - set(rows) - set(IDENTIFICATION_UNSET)
@@ -338,10 +339,7 @@ def section_identification(D):
     # a finite group's center and commutator subgroup are nodes of its lattice, classes of the
     # table of section Subgroup lattice
     classes = all(k in cells and "node" in g[k] for k in ("center", "commutator_subgroup"))
-    if D.cover:
-        reading_paragraph(D, cells, continuous, classes)
-    else:
-        product_form_legend(D, "hk" in cells, "lattices" in cells, classes)
+    D.identification_legend(cells, continuous, classes)
     forms = g.get("product_form") or {}
     notes = (product_form_notes(D, forms.get("direct", []) + forms.get("semidirect", []),
                                 " ".join(lines)) if lines else "")

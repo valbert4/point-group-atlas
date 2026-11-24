@@ -191,6 +191,9 @@ def section_character_table(D):
     # note the key for the web stage
     if not ct or not D.cover and "elements" not in D.rec:
         return
+    if D.coreps is not None:
+        # a magnetic record: its corepresentations on the merged classes of its unitary half
+        return corepresentation_table(D, ct)
     D.section("Character table", {"rotation": "sections 6 and 7",
                                   "double": "sections 6, 7 and 23"})
     classes, irreps = ct["classes"], ct["irreps"]
@@ -218,6 +221,41 @@ def section_character_table(D):
                 D.w(r"\midrule")
                 first_spinor = False
             D.w(r"$%s$ & %s\\" % (irrep(ir["display"]), " & ".join("$%s$" % row[j] for j in part)))
+        D.w(r"\bottomrule\end{longtable}}")
+
+
+MERGED_EXTRA = 3
+
+
+def corepresentation_table(D, ct):
+    """The corepresentation table of a magnetic group M (CONVENTIONS.pdf, section 33): a row for
+    each corepresentation, by its constituents, a column for each merged class of the unitary half
+    H, the entries the characters, the sum of its constituents' characters; set in the fewest
+    parts that fit the line, as the character table."""
+    table = D.rec["corepresentation_table"]
+    D.section("Corepresentation table", "sections 5, 32.3 and 33")
+    D.w(D.corep_table_lead())
+    D.w(CONSTANTS)
+    columns = table["classes"]
+    coreps = [D.corep_by_irrep(row[0]) for row in table["rows"]]
+    heads = [D.merged_display(col) for col in columns]
+    cells = [[D.val(D.corep_character(c, col)) for col in columns] for c in coreps]
+    # a merged class is set as a union of classes, about MERGED_EXTRA characters wider for each
+    # union sign and its spaces than visible() counts
+    widths = [max(max(visible(row[j]) for row in cells),
+                  visible(heads[j]) + MERGED_EXTRA * (len(columns[j]) - 1)) + 3
+              for j in range(len(columns))]
+    for n in range(1, len(columns) + 1):
+        parts = chunks(list(range(len(columns))), -(-len(columns) // n))
+        if all(sum(widths[j] for j in part) + 8 <= CHARACTER_GRID_MAX_WIDTH for part in parts):
+            break
+    for part in parts:
+        # a grid of corepresentations and classes, read down its columns too: never copies
+        D.w(r"{\small\setlength{\tabcolsep}{4pt}%s\begin{longtable}{@{}l%s@{}}\toprule"
+            % (SNAKE_OFF, "c" * len(part)))
+        D.w(r"$%s$ & %s\\\midrule\endhead" % (D.sym, " & ".join("$%s$" % heads[j] for j in part)))
+        for c, row in zip(coreps, cells):
+            D.w(r"$%s$ & %s\\" % (D.corep_label(c), " & ".join("$%s$" % row[j] for j in part)))
         D.w(r"\bottomrule\end{longtable}}")
 
 
@@ -344,11 +382,15 @@ SYMBOL_SECTIONS = {"rotation": "section 6.5", "double": "sections 6.5 and 23.4"}
 def section_irreps(D):
     """The irreps, the first section of Representations in a finite document of every catalogue:
     their character, what they are where the record holds more than a group of Rotation
-    (irreps_lead), the legend, then their table, the spinor irreps below a rule."""
+    (irreps_lead), the legend, then their table, the spinor irreps below a rule.  A record that
+    holds corepresentations (Magnetic) gives the irreps of its unitary half with the
+    corepresentations they form (corepresentation_irreps)."""
     ct = D.rec.get("character_table")
     if not ct or "elements" not in D.rec:
         return
     irreps = ct["irreps"]
+    if D.coreps is not None:
+        return corepresentation_irreps(D, irreps)
     D.section("Irreducible representations",
               {"rotation": "sections 6 and 7", "double": "sections 6, 7 and 23"})
     D.w(character_pointer(D) + irreps_lead(D, irreps))
@@ -397,6 +439,47 @@ def section_irreps(D):
         if ir.get("spinor") and first_spinor:
             D.w(r"\midrule")
             first_spinor = False
+        D.w(" & ".join(row) + r"\\")
+    D.w(r"\bottomrule\end{longtable}}")
+
+
+CASES = {"a": "(a)", "b": "(b)", "c": "(c)"}
+
+
+def corepresentation_irreps(D, irreps):
+    """The irreps of the unitary half H of a magnetic group M, in the order of H's record, each
+    with its indicator under the antiunitary representative (magnetic type III), its case and the
+    corepresentation that it lies in, named by its irreps (CONVENTIONS.pdf, section 32): the table
+    of irreps of H's document with the corepresentations by their constituents, its kernels and
+    images left to that document."""
+    D.section("Irreducible representations",
+              "sections 6, 7 and 32.1" if D.grey else "sections 6, 7, 32.1 and 32.3")
+    D.rec.get("corepresentations")
+    symbols = irrep_symbols.entry("rotation", D.H) is not None
+    D.w(D.irreps_corep_lead(symbols))
+    D.w(LOOSE_PAR)
+    rows = [["irrep"] + (list(SYMBOL_HEAD_WORDS) if symbols else [])
+            + [r"$d$", r"$\fsind$", "reality", "conjugate"]
+            + ([] if D.grey else [r"$\iota$"]) + ["case", "corep"]]
+    for ir in irreps:
+        nu = ir["frobenius_schur"]
+        c = D.corep_by_irrep(ir["id"])
+        iota = None if D.grey else next(x["indicator"] for x in D.coreps
+                                        if ir["id"] in (x["irrep"], x.get("partner")))
+        rows.append(["$%s$" % irrep(ir["display"])]
+                    + (symbol_cells(ir) if symbols else [])
+                    + ["%d" % ir["dim"], "$%s$" % (("%+d" % nu) if nu else "0"), REALITY[nu],
+                       "$%s$" % D.irrep_id(ir["conjugate_of"]) if ir["conjugate_of"] is not None
+                       else "---"]
+                    + ([] if D.grey else ["$%s$" % (("%+d" % iota) if iota else "0")])
+                    + [CASES[c["case"]], "$%s$" % D.corep_label(c)])
+    sep = IRREPS_PAIRS_TABCOLSEP
+    D.w(r"{\small\renewcommand{\arraystretch}{%g}\setlength{\tabcolsep}{%gpt}%s"
+        r"\begin{longtable}{@{}l%srrll%sll@{}}\toprule"
+        % (DETBOX_STRETCH, sep, snake_mark(sep, labels_width(rows, sep)),
+           "l" * len(SYMBOL_HEAD_WORDS) if symbols else "", "" if D.grey else "r"))
+    D.w(" & ".join(rows[0]) + r"\\\midrule\endhead")
+    for row in rows[1:]:
         D.w(" & ".join(row) + r"\\")
     D.w(r"\bottomrule\end{longtable}}")
 

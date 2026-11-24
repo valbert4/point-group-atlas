@@ -78,6 +78,9 @@ def run(args):
         from . import present, registry
         registry()
         built = present()
+        if names.CATALOGUE in names.MAGNETIC:
+            # a magnetic record without its document yet (the magnetic profile writes them)
+            built = [n for n in built if os.path.exists(names.latex_path(n))]
     jobs = [(name, names.latex_path(name), names.pdf_path(name)) for name in built]
     jobs.sort(key=lambda job: -os.path.getsize(job[1]))         # the longest documents first
     numbers = {}

@@ -40,6 +40,7 @@
 - Conway, J. H., and Smith, D. A. (2003). *On Quaternions and Octonions: Their Geometry, Arithmetic, and Symmetry*. A K Peters, Natick, MA. ISBN 1-56881-134-9.
 - Cotton, F. A. (1990). *Chemical Applications of Group Theory*, third edition. John Wiley & Sons, New York. ISBN 0-471-51094-7.
 - Cracknell, A. P., Davies, B. L., Miller, S. C., and Love, W. F. (1979). *Kronecker Product Tables*, Vol. 1: *General Introduction and Tables of Irreducible Representations of Space Groups*. IFI/Plenum, New York.
+- Cracknell, A. P., and Sedaghat, A. K. (1972). The antisymmetrized squares and the symmetrized cubes of the irreducible corepresentations of the magnetic point groups. *Journal of Physics C: Solid State Physics* 5(9), 977–984. https://doi.org/10.1088/0022-3719/5/9/010
 - Decker, W., Greuel, G.-M., Pfister, G., and Schönemann, H. (2025). Singular 4-4-1 — A computer algebra system for polynomial computations. https://www.singular.uni-kl.de
 - Delsarte, P., Goethals, J. M., and Seidel, J. J. (1977). Spherical codes and designs. *Geometriae Dedicata* 6(3), 363–388. https://doi.org/10.1007/BF03187604
 - Desmier, P. E., and Sharp, R. T. (1979). Polynomial tensors for double point groups. *Journal of Mathematical Physics* 20(1), 74–82. https://doi.org/10.1063/1.523932

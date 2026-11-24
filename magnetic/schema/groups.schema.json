@@ -1,0 +1,201 @@
+{
+  "$defs": {
+    "exact": {
+      "description": "An exact value. See CONVENTIONS.md section 8.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "f": {
+              "const": "q"
+            },
+            "v": {
+              "items": false,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "minimum": 1,
+                  "type": "integer"
+                }
+              ],
+              "type": "array"
+            }
+          },
+          "required": [
+            "f",
+            "v"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "M": {
+              "minimum": 3,
+              "type": "integer"
+            },
+            "c": {
+              "items": {
+                "items": false,
+                "minItems": 2,
+                "prefixItems": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "minimum": 1,
+                    "type": "integer"
+                  }
+                ],
+                "type": "array"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "f": {
+              "const": "cyc"
+            }
+          },
+          "required": [
+            "f",
+            "M",
+            "c"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "null": {
+      "additionalProperties": false,
+      "description": "A structured null. See CONVENTIONS.md section 8.",
+      "properties": {
+        "reason": {
+          "enum": [
+            "continuous-group",
+            "depends-on-the-point",
+            "no-mirror",
+            "not-a-named-shape",
+            "not-a-rational-turn",
+            "not-a-regular-compound",
+            "not-defined-for-family",
+            "not-in-source",
+            "one-class-under-the-rotations"
+          ]
+        },
+        "value": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "reason",
+        "value"
+      ],
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "See CONVENTIONS.md section 30.5.",
+  "properties": {
+    "aliases": {
+      "description": "See CONVENTIONS.md section 30.5.",
+      "maxProperties": 0,
+      "type": "object"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 30.5.",
+      "properties": {
+        "classes": {
+          "description": "See CONVENTIONS.md section 30.5.",
+          "type": "integer"
+        },
+        "magnetic_type_II": {
+          "description": "See CONVENTIONS.md section 30.5.",
+          "type": "integer"
+        },
+        "magnetic_type_III": {
+          "description": "See CONVENTIONS.md section 30.5.",
+          "type": "integer"
+        },
+        "records": {
+          "description": "See CONVENTIONS.md section 30.5.",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "classes",
+        "magnetic_type_II",
+        "magnetic_type_III",
+        "records"
+      ],
+      "type": "object"
+    },
+    "magnetic_type_I": {
+      "description": "See CONVENTIONS.md section 30.5.",
+      "type": "string"
+    },
+    "records": {
+      "description": "See CONVENTIONS.md section 30.5.",
+      "items": {
+        "additionalProperties": false,
+        "description": "See CONVENTIONS.md section 30.5.",
+        "properties": {
+          "G": {
+            "description": "See CONVENTIONS.md section 30.5.",
+            "type": "string"
+          },
+          "H": {
+            "description": "See CONVENTIONS.md section 30.5.",
+            "type": "string"
+          },
+          "hermann_mauguin": {
+            "description": "See CONVENTIONS.md section 30.5.",
+            "type": "string"
+          },
+          "id": {
+            "description": "See CONVENTIONS.md section 30.5.",
+            "type": "string"
+          },
+          "magnetic_type": {
+            "description": "See CONVENTIONS.md section 30.5.",
+            "type": "string"
+          },
+          "node": {
+            "description": "See CONVENTIONS.md section 30.5.",
+            "type": "string"
+          },
+          "symbol": {
+            "description": "See CONVENTIONS.md section 30.5.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "G",
+          "hermann_mauguin",
+          "id",
+          "magnetic_type",
+          "symbol"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema": {
+      "const": "point-group-atlas/magnetic/groups/1",
+      "description": "See CONVENTIONS.md section 30.5."
+    }
+  },
+  "required": [
+    "aliases",
+    "counts",
+    "magnetic_type_I",
+    "records",
+    "schema"
+  ],
+  "title": "Point Group Atlas list of the magnetic point groups of the records",
+  "type": "object"
+}
