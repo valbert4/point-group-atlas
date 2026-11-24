@@ -1380,18 +1380,14 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \leavevmode\label{n:function.generating}\label{n:index.generating.variable}\label{n:function.generating.numerator}The multiplicity $b_\Gamma(J) = b_\Gamma(J, +1)$ is the number of blocks of $\Gamma$ at $J$, with the generating function
 \begin{equation}\label{e:gf}H_\Gamma(t) = \sum_{J\ge1/2} b_\Gamma(J)\,t^{2J} = P_\Gamma(t)/((1-t^{2})(1-t^{36})),\end{equation}
 summed over the half-integer $J$. \label{n:delimiter.floor}\label{n:local.floor.x}The floor $\lfloor x\rfloor$ is the greatest integer $\le x$. The listed residues are the $2m \bmod 27$ of the nonzero components of the vectors of $\Gamma$.
-{\small{\renewcommand{\arraystretch}{1.3}\begin{longtable}{@{}llll@{}}\toprule
-$\Gamma$ & $P_\Gamma(t)$ & $b_\Gamma(J)$ & $2m \bmod 27$\\\midrule\endhead
+{\small{\renewcommand{\arraystretch}{1.3}\begin{longtable}{@{}llll@{\hspace{18pt}}llll@{}}\toprule
+$\Gamma$ & $P_\Gamma(t)$ & $b_\Gamma(J)$ & $2m \bmod 27$ & $\Gamma$ & $P_\Gamma(t)$ & $b_\Gamma(J)$ & $2m \bmod 27$\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
-$\irr{e}_{1/2}$ & $t + t^{35}$ & $\bigl\lfloor\tfrac{2J}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+1}{36}\bigr\rfloor + 1$ & 1, 26\\*
-$\irr{e}_{3/2}$ & $t^{3} + t^{33}$ & $\bigl\lfloor\tfrac{2J+3}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+33}{36}\bigr\rfloor$ & 3, 24\\*
-$\irr{e}_{5/2}$ & $t^{5} + t^{31}$ & $\bigl\lfloor\tfrac{2J+5}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+31}{36}\bigr\rfloor$ & 5, 22\\*
-$\irr{e}_{7/2}$ & $t^{7} + t^{29}$ & $\bigl\lfloor\tfrac{2J+7}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+29}{36}\bigr\rfloor$ & 7, 20\\*
-$\irr{e}_{9/2}$ & $t^{9} + t^{27}$ & $\bigl\lfloor\tfrac{2J+9}{18}\bigr\rfloor$ & 9, 18\\*
-$\irr{e}_{11/2}$ & $t^{11} + t^{25}$ & $\bigl\lfloor\tfrac{2J+11}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+25}{36}\bigr\rfloor$ & 2, 11, 16, 25\\*
-$\irr{e}_{13/2}$ & $t^{13} + t^{23}$ & $\bigl\lfloor\tfrac{2J+13}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+23}{36}\bigr\rfloor$ & 4, 13, 14, 23\\*
-$\irr{e}_{15/2}$ & $t^{15} + t^{21}$ & $\bigl\lfloor\tfrac{2J+15}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+21}{36}\bigr\rfloor$ & 6, 12, 15, 21\\*
-$\irr{e}_{17/2}$ & $t^{17} + t^{19}$ & $\bigl\lfloor\tfrac{2J+17}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+19}{36}\bigr\rfloor$ & 8, 10, 17, 19\\
+$\irr{e}_{1/2}$ & $t + t^{35}$ & $\bigl\lfloor\tfrac{2J}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+1}{36}\bigr\rfloor + 1$ & 1, 26 & $\irr{e}_{11/2}$ & $t^{11} + t^{25}$ & $\bigl\lfloor\tfrac{2J+11}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+25}{36}\bigr\rfloor$ & 2, 11, 16, 25\\*
+$\irr{e}_{3/2}$ & $t^{3} + t^{33}$ & $\bigl\lfloor\tfrac{2J+3}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+33}{36}\bigr\rfloor$ & 3, 24 & $\irr{e}_{13/2}$ & $t^{13} + t^{23}$ & $\bigl\lfloor\tfrac{2J+13}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+23}{36}\bigr\rfloor$ & 4, 13, 14, 23\\*
+$\irr{e}_{5/2}$ & $t^{5} + t^{31}$ & $\bigl\lfloor\tfrac{2J+5}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+31}{36}\bigr\rfloor$ & 5, 22 & $\irr{e}_{15/2}$ & $t^{15} + t^{21}$ & $\bigl\lfloor\tfrac{2J+15}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+21}{36}\bigr\rfloor$ & 6, 12, 15, 21\\*
+$\irr{e}_{7/2}$ & $t^{7} + t^{29}$ & $\bigl\lfloor\tfrac{2J+7}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+29}{36}\bigr\rfloor$ & 7, 20 & $\irr{e}_{17/2}$ & $t^{17} + t^{19}$ & $\bigl\lfloor\tfrac{2J+17}{36}\bigr\rfloor + \bigl\lfloor\tfrac{2J+19}{36}\bigr\rfloor$ & 8, 10, 17, 19\\*
+$\irr{e}_{9/2}$ & $t^{9} + t^{27}$ & $\bigl\lfloor\tfrac{2J+9}{18}\bigr\rfloor$ & 9, 18 &  &  &  & \\
 \bottomrule\end{longtable}}}
 \needspace{122pt}
 \section{Symmetry-adapted bases}\label{s:bases}

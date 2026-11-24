@@ -219,6 +219,11 @@ th:last-child, td:last-child { padding-right: 0; }
 .c-c { text-align: center; }
 .c-r { text-align: right; }
 .c-p { min-width: 12em; }
+/* what the column specification prints between two columns (@{...}, the = of a table of rules):
+   a column of its own, the cells beside it without their space on that side, as in the PDF */
+td.sep, th.sep { padding-left: 0; padding-right: 0; }
+.to-sep { padding-right: 0; }
+.from-sep { padding-left: 0; }
 tr.rule > * { border-top: 0.6px solid var(--rule); }
 tr.space > * { padding-top: 0.55em; }
 .vl { border-left: 0.8px solid var(--rule); padding-left: 0.55em; }
@@ -229,6 +234,12 @@ table.families th, table.families td { text-align: center; padding: 0.2em 0.45em
 table.families tbody th { text-align: right; font-family: var(--sans); }
 p.family .what { font-family: var(--sans); font-weight: bold; margin-right: 0.6em; }
 p.family a, p.family .unbuilt { margin-right: 0.6em; }
+/* a long narrow table set as copies side by side, as in the PDF (latex.snake_plan): one band of
+   the copies, each with its head, centered; on a narrow screen they wrap below one another in
+   their order */
+.snake { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start;
+  gap: 0.8em 1.6em; margin: 0.8em 0; }
+.snake > .scroll { flex: 0 1 auto; min-width: 0; max-width: 100%; margin: 0; }
 .center { text-align: center; }
 .center > .scroll { display: inline-block; text-align: left; max-width: 100%; }
 .stack { display: inline-block; vertical-align: top; }

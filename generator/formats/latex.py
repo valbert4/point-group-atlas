@@ -102,13 +102,16 @@ FRACTION_STRETCH = 1.3
 FRACTION = re.compile(r"\\[dt]?frac(?![A-Za-z])")
 TABLE_EDGE = re.compile(r"\\(begin|end)\{(longtable|tabular)\}")
 MATRIX_ROW_GAP = "6pt"
-# A list-like table marked by snake_mark() is set as k copies side by side, SNAKE_GAP pt apart,
-# when k copies of its estimated width fit TEXT_WIDTH: the most copies up to SNAKE_MAX_COPIES with
-# at least SNAKE_MIN_ROWS rows each.  Its rows run down the first copy, then down the next, in
-# groups of about SNAKE_GROUP_LINES lines (a row that holds a matrix of r rows counts as
-# SNAKE_MATRIX_LINE * r lines) that do not break across sheets, the groups one below the other; a
-# run of rows joined by \\* (a block) stays in one copy.  CHAR_WIDTH (pt) is the width of a
-# character of visible() in a small table; estimated widths are scaled by SNAKE_SLACK.
+# A long narrow table is set as k copies side by side, SNAKE_GAP pt apart, by one rule
+# (snake_plan) that the PDF and the site share and that takes every table of its form, marked by
+# snake_mark() or not: the most copies, up to SNAKE_MAX_COPIES, of at least SNAKE_MIN_ROWS rows
+# each, whose estimated widths fit TEXT_WIDTH, unless the table is marked SNAKE_OFF.  In the PDF
+# its rows run down the first copy, then down the next, in groups of about SNAKE_GROUP_LINES lines
+# (a row that holds a matrix of r rows counts as SNAKE_MATRIX_LINE * r lines) that do not break
+# across sheets, the groups one below the other; the site, which has no sheets, sets the copies
+# as one band (snake_band).  A run of rows joined by \\* (a block) stays in one copy.  CHAR_WIDTH
+# (pt) is the width of a character of visible() in a small table, SNAKE_FONT the size (pt) of
+# each font that scales it; estimated widths are scaled by SNAKE_SLACK.
 # The cells of the row images of the subduction tables are scriptsize, IMAGES_SIZE times as wide
 # as in the font of the table; a mapping arrow with its spaces counts as three characters.
 IMAGES_SIZE = 0.75
@@ -119,6 +122,8 @@ SNAKE_GROUP_LINES = 12
 SNAKE_MATRIX_LINE = 0.9
 CHAR_WIDTH = 5.4
 SNAKE_SLACK = 1.1
+SNAKE_FONT = {"tiny": 5.0, "scriptsize": 7.0, "footnotesize": 8.0, "small": 9.0,
+              "normalsize": 10.0}
 # A table of labels with sub- and superscripts (the irreps, the multiplicities at half-integer J)
 # gives snake_mark its width by label_width: a character of a script counts SCRIPT_SHARE of
 # CHAR_WIDTH, a lowercase letter LOWER_WIDTH pt and an irrep letter (\irr) one character, an
@@ -131,7 +136,7 @@ SNAKE_RULE_SPACE = 1.5
 # A table of products of a document of Double (section_fusion) that would be one copy is set as
 # two, at a \tabcolsep of WRAP_TABCOLSEP pt and up to TIGHT_MARGIN into each margin, its
 # products a paragraph column as wide as the two other columns leave as TeX sets them (fill_width),
-# of at least WRAP_MIN_CHARS characters by their estimate; snake_table is told a copy
+# of at least WRAP_MIN_CHARS characters by their estimate; snake_plan is told a copy
 # WRAP_COPY_SLACK pt narrower than two copies allow in the text width, against rounding.
 WRAP_TABCOLSEP = 3.0
 WRAP_MIN_CHARS = 14
@@ -509,12 +514,49 @@ def stretch_fraction_tables(text):
 
 
 def snake_mark(tabcolsep=6.0, width=None):
-    """The mark that precedes \\begin{longtable} of a table whose rows stand alone, for
-    snake_tables: the table's \\tabcolsep (pt) and, when the emitter knows it, its width (pt)."""
+    """The mark that may precede \\begin{longtable} for snake_plan: the table's \\tabcolsep (pt)
+    and, when the emitter knows it, its width (pt), which then stands for the estimate.  A table
+    without a mark is sized at the \\tabcolsep and in the font in force (snake_context)."""
     return r"\snake{%g}{%s}" % (tabcolsep, "" if width is None else "%g" % width)
 
 
-SNAKE = re.compile(r"\\snake\{([\d.]+)\}\{([\d.]*)\}\\begin\{longtable\}\{")
+# The mark that keeps a longtable in one copy, whatever its form and length: a grid read down its
+# columns as much as along its rows, as the multiplication table and the character table are.
+SNAKE_OFF = r"\snake{off}{}"
+# A mark, at the end of the text before a \begin{longtable}.
+SNAKE = re.compile(r"\\snake\{(off|[\d.]+)\}\{([\d.]*)\}$")
+# What sets the \tabcolsep and the font in force at a point of the text: a \setlength of
+# \tabcolsep (in pt, or em of the font in force), a size command, the edges of an environment and
+# of a group; the other commands and control symbols are skipped.
+CONTEXT = re.compile(r"\\setlength\{\\tabcolsep\}\{([\d.]+)(pt|em)\}"
+                     r"|\\(tiny|scriptsize|footnotesize|small|normalsize)(?![A-Za-z])"
+                     r"|\\(begin|end)\{([^{}]*)\}|\\[A-Za-z]+|\\.|[{}]", re.S)
+
+
+def snake_context(text):
+    """{the offset of each \\begin{longtable} of the text: (its \\tabcolsep in pt, its font)}, as
+    TeX has them there: the last \\setlength of \\tabcolsep and the last size command in each
+    group and environment open at it, 6 pt and normalsize outside them."""
+    state, stack, out = (6.0, "normalsize"), [], {}
+    for m in CONTEXT.finditer(text):
+        sep, unit, size, edge, env = m.groups()
+        token = m.group(0)
+        if sep:
+            state = (float(sep) * (SNAKE_FONT[state[1]] if unit == "em" else 1.0), state[1])
+        elif size:
+            state = (state[0], size)
+        elif edge == "begin":
+            if env == "longtable":
+                out[m.start()] = state
+            stack.append(state)
+        elif edge == "end" or token == "}":
+            if stack:
+                state = stack.pop()
+        elif token == "{":
+            stack.append(state)
+    return out
+
+
 ROW_AFTER = re.compile(r"(?:\s|\\addlinespace(?:\[[^\]]*\])?|\\noalign\{(?:[^{}]|\{[^{}]*\})*\}"
                        r"|\\midrule(?:\[[^\]]*\])?|\\cmidrule(?:\([^)]*\))?\{[^{}]*\}"
                        r"|\\grouprule\{[^{}]*\}\{[^{}]*\}|\\groupspace\{[^{}]*\}"
@@ -646,39 +688,91 @@ def longtable_parts(table):
     return spec, lead, rows, head
 
 
-def snake_table(table, tabcolsep, width):
-    """The longtable `table` (from its column specification to \\end{longtable}) as copies side
-    by side, or unchanged when one copy is all that fits or its form is not that of
-    longtable_parts, with rows whose cells fill the columns or one \\multicolumn over all of
-    them."""
+SnakePlan = collections.namedtuple("SnakePlan", "spec lead head body copies units heights "
+                                                "groups")
+# What may follow a row of a table that snake_plan sets in copies: space and plain rules.
+SNAKE_AFTER = re.compile(r"\s|\\addlinespace(\[[^\]]*\])?|\\midrule|\\bottomrule")
+ANCHOR = re.compile(r"\\(label|hypertarget|phantomsection)(?![A-Za-z])")
+
+
+def snake_parts(table):
+    """(spec, lead, head, body) of the longtable `table` (from its column specification to
+    \\end{longtable}) when its form is one that copies take, else None: the form of
+    longtable_parts with one row of headings, or \\toprule, rows and \\bottomrule without a
+    heading (head None); its rows of table_rows, each filling the columns or one \\multicolumn
+    over all of them, nothing but space and \\midrule after a row, and the head, which every copy
+    repeats, without a \\multicolumn or an anchor."""
     parts = longtable_parts(table)
-    if parts is None or parts[3] != 1 or ("p{" in parts[0] and not (width and all(
+    if parts is None:
+        depth, k = 0, 0
+        for k, c in enumerate(table):
+            depth += (c == "{") - (c == "}")
+            if depth < 0:
+                break
+        spec, content = table[:k], table[k + 1:-len(r"\end{longtable}")]
+        text = content.lstrip()
+        if (not spec.startswith("@{}") or not spec.endswith("@{}")
+                or not text.startswith(r"\toprule")):
+            return None
+        lead = content[:len(content) - len(text)] + r"\toprule"
+        rows, tail = table_rows(text[len(r"\toprule"):])
+        if (not rows or tail.strip() or any(r"\endhead" in r[2] for r in rows)
+                or not rows[-1][2].rstrip().endswith(r"\bottomrule")):
+            return None
+        head, body = None, rows
+    else:
+        spec, lead, rows, heads = parts
+        if heads != 1:
+            return None
+        head, body = rows[0], rows[1:]
+        if any(SPAN.match(c) or ANCHOR.search(c) for c in head[0]):
+            return None
+    ncol = len(head[0]) if head else max(len(r[0]) for r in body)
+    for r in body:
+        span = SPAN.match(r[0][0])
+        if not (len(r[0]) == ncol and not any(SPAN.match(c) for c in r[0])) \
+                and not (len(r[0]) == 1 and span and int(span.group(1)) == ncol):
+            return None
+        if SNAKE_AFTER.sub("", r[2]):
+            return None
+    return spec, lead, head, body
+
+
+def snake_plan(table, tabcolsep=6.0, width=None, font="small"):
+    """The one rule by which the PDF (snake_tables) and the site (web/tex.py) set a longtable as
+    copies side by side: for `table`, from its column specification to \\end{longtable}, None
+    when it stays one copy, else its SnakePlan, its parts (snake_parts), the number of copies, the
+    units (runs of rows joined by \\*, which stay in one copy) with their heights in lines
+    (row_lines) and the groups of the PDF (snake_layout).
+    A table of the form of snake_parts (a paragraph column only of a width the emitter gives,
+    `width`) is set in copies when two copies of its estimated width fit TEXT_WIDTH: its width the
+    given `width`, or the sum of its columns' widest cells (cell_width, CHAR_WIDTH a character of
+    a small table, scaled to `font`) and 2 `tabcolsep` between each two columns, times
+    SNAKE_SLACK; the copies are the most, up to SNAKE_MAX_COPIES, that fit, of at least
+    SNAKE_MIN_ROWS rows each and of one unit or more, so that a table of fewer than
+    2 SNAKE_MIN_ROWS rows stays one copy, and at most as many as the first group of the PDF fills
+    (two at least)."""
+    parts = snake_parts(table)
+    if parts is None or ("p{" in parts[0] and not (width and all(
             re.fullmatch(r"[\d.]+pt|\\fillwidth", w)
             for w in re.findall(r"p\{([^{}]*)\}", parts[0])))):
-        return table
-    spec, _, rows, _ = parts
-    head, body = rows[0], rows[1:]
-    ncol = len(head[0])
+        return None
+    spec, lead, head, body = parts
+    ncol = len(head[0]) if head else max(len(r[0]) for r in body)
     spans = [SPAN.match(r[0][0]) for r in body]
-    # rows fill the columns, or are one \multicolumn over all of them; nothing but space and
-    # \midrule follows a row
-    if any(not (len(r[0]) == ncol and not any(SPAN.match(c) for c in r[0]))
-           and not (len(r[0]) == 1 and s and int(s.group(1)) == ncol)
-           for r, s in zip(body, spans)) or any(SPAN.match(c) for c in head[0]) \
-            or any(re.sub(r"\s|\\addlinespace(\[[^\]]*\])?|\\midrule|\\bottomrule", "", r[2])
-                   for r in body):
-        return table
-    columns_w = [max(cell_width(r[0][i]) for r in [head] + body if len(r[0]) == ncol)
+    columns_w = [max(cell_width(r[0][i]) for r in ([head] if head else []) + body
+                     if len(r[0]) == ncol)
                  for i in range(ncol)]
     chars = max([sum(columns_w)] + [cell_width(r[0][0]) for r, s in zip(body, spans) if s])
     if not width:
-        width = chars * CHAR_WIDTH + 2 * tabcolsep * (ncol - 1)
+        width = (chars * CHAR_WIDTH * (SNAKE_FONT[font] / SNAKE_FONT["small"])
+                 + 2 * tabcolsep * (ncol - 1))
     width *= SNAKE_SLACK
     copies = min(SNAKE_MAX_COPIES, len(body) // SNAKE_MIN_ROWS)
     while copies > 1 and copies * width + (copies - 1) * SNAKE_GAP > TEXT_WIDTH:
         copies -= 1
     if copies < 2:
-        return table
+        return None
     units = []
     for i, r in enumerate(body):
         if i and body[i - 1][1].startswith(r"\\*"):
@@ -687,18 +781,70 @@ def snake_table(table, tabcolsep, width):
             units.append([i])
     copies = min(copies, len(units))
     if copies < 2:
-        return table
+        return None
     heights = [sum(row_lines(body[i][0]) for i in u) for u in units]
-    inner = spec[3:-3]
-    gap = r"@{\hspace{%gpt}}" % SNAKE_GAP
     groups = snake_layout(units, heights, copies)
     while copies > 2 and len(groups[0]) < copies:
         copies -= 1
         groups = snake_layout(units, heights, copies)
-    out = [r"%s}" % gap.join([inner] * copies).join(["@{}", "@{}"]), "\\toprule\n",
-           " & ".join([" & ".join(x.strip() for x in head[0])] * copies),
-           "\\\\\\midrule\\endhead\n"]
-    for g, group in enumerate(groups):
+    return SnakePlan(spec, lead, head, body, copies, units, heights, groups)
+
+
+def snake_band(heights, copies):
+    """The units of a table set in `copies` copies as one band, as the site sets them: the units
+    (of the given heights) in order in exactly `copies` copies, the tallest copy as short as can
+    be, and each copy filled in turn up to that height while the units left fill the copies left,
+    as the PDF fills the copies of a group (snake_layout).  A table that the PDF sets in one group
+    thus has the same copies on the site.  Gives the units (indices) of each copy."""
+    n, eps = len(heights), 1e-6
+
+    def parts(cap):
+        """The heights of the copies that consecutive units fill up to cap."""
+        out, h = [], 0.0
+        for x in heights:
+            if h and h + x > cap + eps:
+                out.append(h)
+                h = 0.0
+            h += x
+        return out + [h]
+    # the least height of the tallest copy: a sum of consecutive heights
+    lo, hi = max(max(heights), sum(heights) / copies), sum(heights)
+    if len(parts(lo)) > copies:
+        while hi - lo > eps:
+            mid = (lo + hi) / 2
+            if len(parts(mid)) <= copies:
+                hi = mid
+            else:
+                lo = mid
+        lo = hi
+    cap = max(parts(lo))
+    out, i = [], 0
+    for c in range(copies):
+        col, h = [i], heights[i]
+        i += 1
+        # a unit joins the copy while it fits under cap and leaves a unit for each copy after
+        while i < n and h + heights[i] <= cap + eps and n - i - 1 >= copies - c - 1:
+            col.append(i)
+            h += heights[i]
+            i += 1
+        out.append(col)
+    out[-1] += list(range(i, n))
+    return out
+
+
+def snake_set(plan):
+    """The longtable of a SnakePlan, from its column specification to \\end{longtable}, as the
+    PDF sets it: the copies side by side under one row of their headings, their groups one below
+    the other between heavier rules."""
+    spec, head, body, copies, units = plan.spec, plan.head, plan.body, plan.copies, plan.units
+    ncol = len(head[0]) if head else max(len(r[0]) for r in body)
+    inner = spec[3:-3]
+    gap = r"@{\hspace{%gpt}}" % SNAKE_GAP
+    out = [r"%s}" % gap.join([inner] * copies).join(["@{}", "@{}"]), "\\toprule\n"]
+    if head:
+        out += [" & ".join([" & ".join(x.strip() for x in head[0])] * copies),
+                "\\\\\\midrule\\endhead\n"]
+    for g, group in enumerate(plan.groups):
         cols = [[i for u in col for i in units[u]] for col in group]
         lines = max(len(col) for col in cols)
         for line in range(lines):
@@ -723,19 +869,39 @@ def snake_table(table, tabcolsep, width):
             last = line == lines - 1
             out.append(" & ".join(cells) + ("\\\\" if last else "\\\\*")
                        + ("" if last else space + snake_rules(rules, copies, ncol)) + "\n")
-        out.append("\\midrule[\\heavyrulewidth]\n" if g < len(groups) - 1 else "\\bottomrule")
+        out.append("\\midrule[\\heavyrulewidth]\n" if g < len(plan.groups) - 1 else "\\bottomrule")
     return "".join(out) + r"\end{longtable}"
 
 
-def snake_tables(text):
-    """The text with each table marked by snake_mark() set by snake_table, and the marks
-    removed."""
-    out, last = [], 0
-    for m in SNAKE.finditer(text):
+def snake_scan(text):
+    """Each longtable of the text, in order, as (start, begin, end, plan): start the offset of its
+    mark (snake_mark, SNAKE_OFF) or of its \\begin{longtable}, begin the offset after
+    \\begin{longtable}{, end that after its \\end{longtable}, and plan snake_plan's for the
+    table: sized as its mark says, else at the \\tabcolsep and in the font in force
+    (snake_context); None for a table marked SNAKE_OFF.  The formats stage (snake_tables) and the
+    web stage (web/tex.py) both read the tables so."""
+    context = snake_context(text)
+    for m in re.finditer(r"\\begin\{longtable\}\{", text):
         end = text.index(r"\end{longtable}", m.end()) + len(r"\end{longtable}")
-        out += [text[last:m.start()], r"\begin{longtable}{",
-                snake_table(text[m.end():end], float(m.group(1)),
-                            float(m.group(2)) if m.group(2) else None)]
+        mark = SNAKE.search(text, max(0, m.start() - 40), m.start())
+        sep, font = context[m.start()]
+        if mark and mark.group(1) == "off":
+            plan = None
+        else:
+            width = float(mark.group(2)) if mark and mark.group(2) else None
+            plan = snake_plan(text[m.end():end], float(mark.group(1)) if mark else sep, width,
+                              font)
+        yield (mark.start() if mark else m.start()), m.end(), end, plan
+
+
+def snake_tables(text):
+    """The text with each longtable that snake_plan sets in copies set by snake_set, and the
+    marks of the rule (snake_mark, SNAKE_OFF) removed."""
+    out, last = [], 0
+    for start, begin, end, plan in snake_scan(text):
+        table = text[begin:end]
+        out += [text[last:start], r"\begin{longtable}{",
+                table if plan is None else snake_set(plan)]
         last = end
     return "".join(out + [text[last:]])
 
@@ -2314,10 +2480,11 @@ def section_multiplication(D):
              if (n + 1) * (digits * w + 0.2 * size) + 12 <= TEXT_WIDTH]
     D.w(multiplication_lead(n, bool(fonts)))
     if fonts:
+        # a grid of g and h: never copies side by side (SNAKE_OFF)
         D.w(r"{\%s\setlength{\tabcolsep}{0.1em}"
             r"\setlength{\LTleft}{-%gpt plus 1fill}\setlength{\LTright}{-%gpt plus 1fill}"
-            r"\begin{longtable}{@{}r|%s@{}}\toprule" % (fonts[0], TIGHT_MARGIN, TIGHT_MARGIN,
-                                                      "r" * n))
+            r"%s\begin{longtable}{@{}r|%s@{}}\toprule" % (fonts[0], TIGHT_MARGIN, TIGHT_MARGIN,
+                                                        SNAKE_OFF, "r" * n))
         D.w(r"$gh$ & " + " & ".join(str(j) for j in range(n)) + r"\\\midrule\endhead")
         for i, products in enumerate(el["multiplication_table"]):
             D.w(r"%d & %s\\" % (i, " & ".join(str(x) for x in products)))
@@ -2511,8 +2678,9 @@ def section_character_table(D):
         if all(sum(widths[j] for j in part) + 8 <= CHARACTER_GRID_MAX_WIDTH for part in parts):
             break
     for part in parts:
-        D.w(r"{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}l%s@{}}\toprule"
-            % ("c" * len(part)))
+        # a grid of irreps and classes, read down its columns too: never copies (SNAKE_OFF)
+        D.w(r"{\small\setlength{\tabcolsep}{4pt}%s\begin{longtable}{@{}l%s@{}}\toprule"
+            % (SNAKE_OFF, "c" * len(part)))
         D.w(r"$%s$ & %s\\\midrule\endhead" % (
             D.sym if D.cover else grp(D.rec["group"]["schoenflies"]),
             " & ".join(r"$\cls{%s}$" % D.class_display[classes[j]["id"]] for j in part)))
@@ -5190,9 +5358,9 @@ def fusion_grid(D, fus):
 
 def wrapped_copies(cells, tabcolsep=WRAP_TABCOLSEP):
     """For the table of products, the head row and the rows as cells (TeX): None when
-    snake_table sets it in two or more copies of its l columns, or when the paragraph column below
+    snake_plan sets it in two or more copies of its l columns, or when the paragraph column below
     would be narrower than WRAP_MIN_CHARS; otherwise (the TeX that sets \\fillwidth, the width of
-    the products as a paragraph column, the width of a copy in pt for snake_table), so that two
+    the products as a paragraph column, the width of a copy in pt for snake_plan), so that two
     copies at the given \\tabcolsep fill the text width and TIGHT_MARGIN of each margin, a product
     breaking over lines only where it must."""
     widths = [max(cell_width(r[k]) for r in cells) for k in range(3)]
@@ -9528,8 +9696,9 @@ def finish(name, parts, title=None, reports=None, linked=False):
     that hold a fraction stretched, and, where the catalogue does not link its own mentions of
     groups (Rotation), those mentions linked to their documents (`linked`)."""
     lint.lint_document(name, ([("title", title)] if title else []) + parts, reports)
-    text = PARAGRAPH_ANCHOR.sub(r"\\leavevmode\1", "\n".join(t for _, t in parts))
-    text = keep_headings(keep_rows(snake_tables(text)))
+    # the tables in copies section by section, as the site reads them (web/tex.py)
+    text = "\n".join(snake_tables(PARAGRAPH_ANCHOR.sub(r"\\leavevmode\1", t)) for _, t in parts)
+    text = keep_headings(keep_rows(text))
     text = stretch_fraction_tables(text)
     text = foot_rules(group_breaks(text))
     return link_groups(text, name) if linked else text

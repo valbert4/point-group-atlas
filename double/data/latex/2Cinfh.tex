@@ -318,105 +318,60 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \leavevmode\label{n:index.family}A rule is listed for every pair of families, of indices $n$ and $n'$, by the kinds of the factors, where a vector index is an integer and a spinor index a half-integer. The squares of the families follow, with the antisymmetric part in braces. The rules with two vector factors are those of \href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$} (\texttt{vector\symbol{95}rules}).
 \needspace{95pt}
 \paragraph{Products.}
-{\small\begin{longtable}{@{}l@{${}={}$}ll@{}}\toprule
-\multicolumn{3}{@{}l@{}}{\emph{two vector factors}}\\*
-$\irr{a}_{\ptag{g}}\irrprod \irr{a}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & \\
-$\irr{a}_{\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{g}}$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}$ & \\
-$\irr{a}_{\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{g}}$ & $\conjpair{2}\irr{e}_{n,\ptag{g}}$ & \\
-$\irr{a}_{\ptag{g}}\irrprod \irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & \\
-$\irr{a}_{\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}$ & \\
-$\irr{a}_{\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\conjpair{2}\irr{e}_{n,\ptag{u}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{g}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $n = n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \irr{a}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{u}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & $n = n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ & \\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \irr{a}_{\ptag{u}}$ & $\conjpair{2}\irr{e}_{n,\ptag{u}}$ & \\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & $n = n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{u}}$ & \\
-$\irr{a}_{\ptag{u}}\irrprod \irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ & \\
-$\irr{a}_{\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}$ & \\
-$\irr{a}_{\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\conjpair{2}\irr{e}_{n,\ptag{g}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{g}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ & $n = n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ & \\
-\multicolumn{3}{@{}l@{}}{\emph{a vector and a spinor factor}}\\*
-$\irr{a}_{\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{g}}$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}$ & \\
-$\irr{a}_{\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{g}}$ & $\conjpair{2}\irr{e}_{n,\ptag{g}}$ & \\
-$\irr{a}_{\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}$ & \\
-$\irr{a}_{\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\conjpair{2}\irr{e}_{n,\ptag{u}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{g}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{u}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ & \\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{u}}$ & \\
-$\irr{a}_{\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{g}}$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}$ & \\
-$\irr{a}_{\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{g}}$ & $\conjpair{2}\irr{e}_{n,\ptag{u}}$ & \\
-$\irr{a}_{\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}$ & \\
-$\irr{a}_{\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\conjpair{2}\irr{e}_{n,\ptag{g}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{u}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{g}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{u}}$ & \\
-$\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ & \\
-\multicolumn{3}{@{}l@{}}{\emph{two spinor factors}}\\*
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{g}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $n = n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{u}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & $n = n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ & \\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & $n = n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{u}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{g}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ & $n = n'$\\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ & \\
+{\small\begin{longtable}{@{}l@{${}={}$}ll@{\hspace{18pt}}l@{${}={}$}ll@{}}\toprule
+\multicolumn{3}{@{}l@{\hspace{18pt}}}{\emph{two vector factors}} & $\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \irr{a}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}$ & \\*
+$\irr{a}_{\ptag{g}}\irrprod \irr{a}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ &  & $\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{u}}$ & \\*
+$\irr{a}_{\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{g}}$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}$ &  & $\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$\\*
+$\irr{a}_{\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{g}}$ & $\conjpair{2}\irr{e}_{n,\ptag{g}}$ &  & $\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & $n = n'$\\*
+$\irr{a}_{\ptag{g}}\irrprod \irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ &  & $\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$\\*
+$\irr{a}_{\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ & \\*
+$\irr{a}_{\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\conjpair{2}\irr{e}_{n,\ptag{u}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \irr{a}_{\ptag{u}}$ & $\conjpair{2}\irr{e}_{n,\ptag{u}}$ & \\*
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{g}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$\\*
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$ & $\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & $n = n'$\\*
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $n = n'$ & $\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$\\*
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$ & $\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{u}}$ & \\
+\grouprule{0pt}{\heavyrulewidth}
+$\irr{a}_{\ptag{u}}\irrprod \irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ &  & $\irr{a}_{\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}$ & \\*
+$\irr{a}_{\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}$ &  & $\irr{a}_{\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\conjpair{2}\irr{e}_{n,\ptag{u}}$ & \\*
+$\irr{a}_{\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\conjpair{2}\irr{e}_{n,\ptag{g}}$ &  & $\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{g}}$ & \\*
+$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{g}}$ &  & $\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$\\*
+$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$\\*
+$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ & $n = n'$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{u}}$ & \\*
+$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$\\*
+$\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ &  & $\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$\\*
+\multicolumn{3}{@{}l@{\hspace{18pt}}}{\emph{a vector and a spinor factor}} & $\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$\\*
+$\irr{a}_{\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{g}}$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$\\*
+$\irr{a}_{\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{g}}$ & $\conjpair{2}\irr{e}_{n,\ptag{g}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ & \\
+\grouprule{0pt}{\heavyrulewidth}
+$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$\\*
+$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$\\*
+$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{u}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$\\*
+$\irr{a}_{\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{g}}$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$\\*
+$\irr{a}_{\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{g}}$ & $\conjpair{2}\irr{e}_{n,\ptag{u}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{u}}$ & \\*
+$\irr{a}_{\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$\\*
+$\irr{a}_{\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\conjpair{2}\irr{e}_{n,\ptag{g}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$\\*
+$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{u}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ & \\*
+$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$ & \multicolumn{3}{@{}l@{}}{\emph{two spinor factors}}\\*
+$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{g}}$ & \\*
+$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{g}}$ &  & $\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$\\
+\grouprule{0pt}{\heavyrulewidth}
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $n = n'$ & $\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & $n = n'$\\*
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$ & $\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$\\*
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{u}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{u}}$ & \\*
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n+n',\ptag{g}}$ & \\*
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & $n = n'$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{n-n',\ptag{g}}$ & $n > n'$\\*
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{u}}$ & $n < n'$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ & $n = n'$\\*
+$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ &  & $\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n'-n,\ptag{g}}$ & $n < n'$\\*
+$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n-n',\ptag{u}}$ & $n > n'$ & $\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ & \\
 \bottomrule\end{longtable}}
 \needspace{95pt}
 \paragraph{Squares.}
-{\small\begin{longtable}{@{}l@{${}={}$}ll@{}}\toprule
-\multicolumn{3}{@{}l@{}}{\emph{a vector family}}\\*
-$\irr{a}_{\ptag{g}}\irrprod \irr{a}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{g}}$ & $\conjpair{1}\irr{e}_{2n,\ptag{g}}$ & \\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{g}}$ & $\conjpair{2}\irr{e}_{2n,\ptag{g}}$ & \\
-$\irr{a}_{\ptag{u}}\irrprod \irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{2n,\ptag{g}}$ & \\
-$\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\conjpair{2}\irr{e}_{2n,\ptag{g}}$ & \\
-\multicolumn{3}{@{}l@{}}{\emph{a spinor family}}\\*
-$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{g}}$ & $\conjpair{1}\irr{e}_{2n,\ptag{g}}$ & \\
-$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{g}}$ & $\conjpair{2}\irr{e}_{2n,\ptag{g}}$ & \\
-$\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{2n,\ptag{g}}$ & \\
-$\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\conjpair{2}\irr{e}_{2n,\ptag{g}}$ & \\
+{\small\begin{longtable}{@{}l@{${}={}$}ll@{\hspace{18pt}}l@{${}={}$}ll@{\hspace{18pt}}l@{${}={}$}ll@{}}\toprule
+\multicolumn{3}{@{}l@{\hspace{18pt}}}{\emph{a vector family}} & $\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{2n,\ptag{g}}$ &  & $\conjpair{1}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{2n,\ptag{g}}$ & \\*
+$\irr{a}_{\ptag{g}}\irrprod \irr{a}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\conjpair{2}\irr{e}_{2n,\ptag{g}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\conjpair{2}\irr{e}_{2n,\ptag{g}}$ & \\*
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{g}}$ & $\conjpair{1}\irr{e}_{2n,\ptag{g}}$ &  & \multicolumn{3}{@{}l@{\hspace{18pt}}}{\emph{a spinor family}} &  &  & \\*
+$\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{g}}$ & $\conjpair{2}\irr{e}_{2n,\ptag{g}}$ &  & $\conjpair{1}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{g}}$ & $\conjpair{1}\irr{e}_{2n,\ptag{g}}$ &  &  &  & \\*
+$\irr{a}_{\ptag{u}}\irrprod \irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ &  & $\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{2}\irr{e}_{n,\ptag{g}}$ & $\conjpair{2}\irr{e}_{2n,\ptag{g}}$ &  &  &  & \\
 \bottomrule\end{longtable}}
 \needspace{78pt}
 \section{Clebsch--Gordan coefficients}\label{s:clebsch_gordan}

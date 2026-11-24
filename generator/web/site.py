@@ -632,7 +632,7 @@ class Document:
         for key, text in self.parts:
             self.key = key
             try:
-                out.append((key, conv.blocks(text)))
+                out.append((key, conv.section(text)))
             except Unknown as e:
                 raise Unknown("%s, section %s: %s" % (self.name, key, e))
         return out

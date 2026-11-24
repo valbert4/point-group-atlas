@@ -5,7 +5,8 @@ to nothing (the print layout: sizes, lengths, the measurements of fill_width, \n
 other one stops the build with an Unknown that names it, the document and the section, and its
 web form is then one line here.  The input is the text of latex.sections() after own_symbol and
 the link passes (link_groups, link_conventions, conventions.link_citations), before the print
-passes, so each table is one table.
+passes, so each table is one table; a long narrow table that the PDF sets as copies side by side
+(latex.snake_plan) is set here as the same copies, in one band (snake_copies).
 
 Formulas are not converted here: each is handed to the document's Context (formula()), which
 returns a placeholder; math.py renders them all at once and the placeholders take the MathML.
@@ -15,6 +16,8 @@ order, equations by section (numberwithin), each line of an align."""
 import html
 import re
 import unicodedata
+
+from ..formats import latex
 
 
 class Unknown(ValueError):
@@ -220,7 +223,7 @@ DROPPED = {
     "arraybackslash": 0, "centering": 0, "noindent": 0, "leavevmode": 0, "nobreak": 0,
     "allowbreak": 0, "signbreak": 0, "strut": 0,
     "needspace": 1, "cellmax": 1, "vspace": 1,
-    "snake": 2, "setlength": 2, "addtolength": 2, "renewcommand": 2,
+    "setlength": 2, "addtolength": 2, "renewcommand": 2,
 }
 # Assignments to TeX parameters, dropped up to the \relax that ends them.
 ASSIGNED = ("medmuskip", "thinmuskip", "thickmuskip")
@@ -584,12 +587,23 @@ class Converter:
         out.append(("block", self.table(spec, body, long=True)))
         return j
 
+    def e_snakecopies(self, tex, j, out, name):
+        # the copies of a long narrow table (snake_copies), side by side in one band
+        body, j = environment(tex, j, name)
+        items = []
+        self.walk(body, items)
+        if any(x[0] != "block" and (x[0] != "text" or x[1].strip()) for x in items):
+            raise Unknown("text between the copies of a table: %r" % body[:80])
+        out.append(("block", '<div class="snake">%s</div>'
+                    % "".join(x[1] for x in items if x[0] == "block")))
+        return j
+
     def e_tabular(self, tex, j, out, name):
         _, j = optional(tex, j)
         spec, j = argument(tex, j)
         body, j = environment(tex, j, name)
         cells = Table(self, spec, body, False)
-        if len(cells.columns) == 1 and not cells.marked:
+        if len(cells.columns) == 1 and not cells.marked and not any(cells.material):
             # a stack of lines in one column (a cell of a table, a product form)
             out.append(("text", '<span class="stack">%s</span>' % "".join(
                 '<span class="line">%s</span>' % "".join(c.html for c in row.cells)
@@ -602,6 +616,10 @@ class Converter:
         return Table(self, spec, body, long).html()
 
     # ------------------------------------------------------------ blocks
+    def section(self, tex):
+        """The HTML of a section's text: its blocks, each long narrow table in copies."""
+        return self.blocks(snake_copies(tex))
+
     def blocks(self, tex):
         """The HTML of a stretch of text with blocks: the runs of text between blocks are
         paragraphs (one after a display continues the paragraph of the display), a run-in heading
@@ -651,10 +669,40 @@ class Converter:
 ANCHORS_ONLY = re.compile(r'<span class="anchor" id="[^"]*"></span>')
 
 
+# ---------------------------------------------------------------- tables in copies
+def snake_copies(tex):
+    r"""The text of a section with each longtable that the PDF sets as copies side by side
+    (latex.snake_scan, which reads the tables as the formats stage does, and latex.snake_plan)
+    written as the same copies in one band (latex.snake_band): \begin{snakecopies}, a longtable
+    for each copy, with the table's head and the rows of the copy, and \end{snakecopies}.  The
+    rules and spaces between two rows stay within a copy, and the marks of the rule (snake_mark,
+    SNAKE_OFF) go."""
+    out, last = [], 0
+    for start, begin, end, plan in latex.snake_scan(tex):
+        out.append(tex[last:start])
+        last = end
+        if plan is None:
+            out.append(r"\begin{longtable}{" + tex[begin:end])
+            continue
+        head = "" if plan.head is None else "&".join(plan.head[0]) + plan.head[1] + plan.head[2]
+        copies = []
+        for units in latex.snake_band(plan.heights, plan.copies):
+            rows = [i for u in units for i in plan.units[u]]
+            text = "".join("&".join(plan.body[i][0]) + (
+                plan.body[i][1] + plan.body[i][2] if k < len(rows) - 1 else "\\\\\\bottomrule")
+                for k, i in enumerate(rows))
+            copies.append(r"\begin{longtable}{%s}%s%s%s\end{longtable}"
+                          % (plan.spec, plan.lead, head, text))
+        out.append(r"\begin{snakecopies}%s\end{snakecopies}" % "\n".join(copies))
+    return "".join(out + [tex[last:]])
+
+
 # ---------------------------------------------------------------- tables
 class Cell:
-    def __init__(self, html_text, align, span=1, rows=1):
+    def __init__(self, html_text, align, span=1, rows=1, edges=None):
         self.html, self.align, self.span, self.rows = html_text, align, span, rows
+        # a \multicolumn's own material at its left and right edges (Table.spec_parts)
+        self.edges = edges
 
 
 class Row:
@@ -663,23 +711,33 @@ class Row:
 
 
 class Table:
-    """A longtable or a tabular: its columns (alignment and vertical rules), its rows with the
-    rules and spaces above them, and the rows of its head: those before \\endhead or, in a table
-    without one, those between \\toprule and the first \\midrule (a tabular's column heads)."""
+    """A longtable or a tabular: its columns (alignment and vertical rules), what its
+    specification prints between them, its rows with the rules and spaces above them, and the
+    rows of its head: those before \\endhead or, in a table without one, those between \\toprule
+    and the first \\midrule (a tabular's column heads)."""
 
     def __init__(self, conv, spec, body, long):
         self.conv = conv
         self.long = long
-        self.columns = self.parse_spec(spec)
+        self.columns, material, declarations = self.spec_parts(spec)
+        # the HTML of what the specification prints at each boundary of the columns (@{...},
+        # !{...}): the = of a table of rules prints, a space (\hspace) does not; a declaration
+        # >{...} or <{...} must print nothing
+        self.material = [self.conv.inline(m) for m in material]
+        for d in declarations:
+            if self.conv.inline(d):
+                raise Unknown("the column declaration %r prints text" % d)
         self.rows, self.head = [], 0
         self.marked = False
         self.ended_head = False
         self.read(body)
 
     @staticmethod
-    def parse_spec(spec):
-        """[(alignment, rule before, rule after)] of a column specification."""
-        cols, i, rule = [], 0, False
+    def spec_parts(spec):
+        """The parts of a column specification: [(alignment, rule before, rule after)] of its
+        columns; the TeX that it prints at each boundary of the columns (@{...}, !{...}), before
+        the first, between two and after the last; and its declarations (>{...}, <{...})."""
+        cols, material, declarations, i, rule = [], [""], [], 0, False
         while i < len(spec):
             c = spec[i]
             if c in " \t\n":
@@ -689,25 +747,39 @@ class Table:
                     cols[-1] = (cols[-1][0], cols[-1][1], True)
                 rule = True
                 i += 1
-            elif c in "@!><":
-                _, i = group(spec, i + 1)
+            elif c in "@!":
+                body, i = group(spec, i + 1)
+                material[-1] += body
+            elif c in "><":
+                body, i = group(spec, i + 1)
+                declarations.append(body)
             elif c == "*":
                 count, i = group(spec, i + 1)
                 rep, i = group(spec, i)
                 for _ in range(int(count)):
-                    cols.extend(Table.parse_spec(rep))
+                    more, between, said = Table.spec_parts(rep)
+                    cols.extend(more)
+                    material[-1] += between[0]
+                    material.extend(between[1:])
+                    declarations.extend(said)
             elif c in ALIGN:
                 if c in "pmbX" and c != "X":
                     _, i = group(spec, i + 1)
                 else:
                     i += 1
                 cols.append((ALIGN[c], rule, False))
+                material.append("")
                 rule = False
             else:
                 raise Unknown("the column type %r in %r" % (c, spec))
         if rule and cols:
             cols[-1] = (cols[-1][0], cols[-1][1], True)
-        return cols
+        return cols, material, declarations
+
+    @staticmethod
+    def parse_spec(spec):
+        """[(alignment, rule before, rule after)] of a column specification."""
+        return Table.spec_parts(spec)[0]
 
     def read(self, body):
         i, n, marks = 0, len(body), []
@@ -790,15 +862,16 @@ class Table:
         out, col = [], 0
         for text in texts:
             t = text.strip()
-            span, rows, align = 1, 1, None
+            span, rows, align, edges = 1, 1, None, None
             m = re.match(r"\\multicolumn(?![A-Za-z])", t)
             if m:
                 count, k = argument(t, m.end())
                 spec, k = argument(t, k)
                 t, k = argument(t, k)
                 span = int(count)
-                cols = self.parse_spec(spec)
+                cols, material, _ = self.spec_parts(spec)
                 align = cols[0][0] if cols else "l"
+                edges = (self.conv.inline(material[0]), self.conv.inline(material[-1]))
                 t = t.strip()
             m = re.match(r"\\multirow(?![A-Za-z])", t)
             if m:
@@ -814,7 +887,7 @@ class Table:
                                 if x[0] in ("text", "block", "par")).strip()
             if any(x[0] in ("heading", "runin") for x in items):
                 raise Unknown("a heading in a table cell: %r" % t[:80])
-            out.append(Cell(re.sub(r"\s*\n\s*", " ", html_text), align, span, rows))
+            out.append(Cell(re.sub(r"\s*\n\s*", " ", html_text), align, span, rows, edges))
             col += span
         return out
 
@@ -836,6 +909,12 @@ class Table:
             row.cells = kept
 
     def html(self):
+        # a boundary of the columns where the specification prints is a column of its own, in
+        # every row as in the PDF: the table's material after a cell (before the first), a
+        # \multicolumn's own at its edges, nothing inside a cell that spans the boundary; the
+        # cells beside it keep no space on that side, as an @-expression leaves none
+        def sep(b):
+            return self.material[b] if b < len(self.material) else ""
         out = []
         for r, row in enumerate(self.rows):
             cls = []
@@ -845,8 +924,9 @@ class Table:
                 elif mark[0] == "space":
                     cls.append("space")
             cmid = [m[1] for m in row.marks if m[0] == "cmid"]
+            tag = "th" if r < self.head else "td"
             tds = []
-            for cell in row.cells:
+            for n, cell in enumerate(row.cells):
                 a = ["c-" + cell.align]
                 first, last = cell.col, cell.col + cell.span - 1
                 if first < len(self.columns) and self.columns[first][1]:
@@ -857,11 +937,22 @@ class Table:
                     lo, _, hi = rng.partition("-")
                     if int(lo) - 1 <= first and last <= int(hi or lo) - 1:
                         a.append("cmid")
-                tag = "th" if r < self.head else "td"
-                span = ' colspan="%d"' % cell.span if cell.span > 1 else ""
+                lead, trail = cell.edges or (sep(0), sep(last + 1))
+                if (first == 0 and lead and not sep(0)) or (trail and not sep(last + 1)):
+                    raise Unknown("a \\multicolumn prints at a boundary where its table does not")
+                if n == 0 and first == 0 and sep(0):
+                    tds.append('<%s class="sep">%s</%s>' % (tag, lead, tag))
+                if sep(first):
+                    a.append("from-sep")
+                if sep(last + 1):
+                    a.append("to-sep")
+                columns = cell.span + sum(1 for b in range(first + 1, last + 1) if sep(b))
+                span = ' colspan="%d"' % columns if columns > 1 else ""
                 rows = ' rowspan="%d"' % cell.rows if cell.rows > 1 else ""
                 tds.append('<%s class="%s"%s%s>%s</%s>' % (tag, " ".join(a), span, rows,
                                                             cell.html, tag))
+                if sep(last + 1):
+                    tds.append('<%s class="sep">%s</%s>' % (tag, trail, tag))
             out.append('<tr%s>%s</tr>' % (' class="%s"' % " ".join(cls) if cls else "",
                                            "".join(tds)))
         head, rest = "".join(out[:self.head]), "".join(out[self.head:])

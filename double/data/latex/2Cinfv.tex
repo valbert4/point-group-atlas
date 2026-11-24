@@ -309,22 +309,15 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \leavevmode\label{n:index.family}A rule is listed for every pair of families, of indices $n$ and $n'$, by the kinds of the factors, where a vector index is an integer and a spinor index a half-integer. The squares of the families follow, with the antisymmetric part in braces. The rules with two vector factors are those of \href{../../../rotation/data/pdf/Cinfv.pdf}{$\grp{C_{\infty v}}$} (\texttt{vector\symbol{95}rules}).
 \needspace{95pt}
 \paragraph{Products.}
-{\small\begin{longtable}{@{}l@{${}={}$}ll@{}}\toprule
-\multicolumn{3}{@{}l@{}}{\emph{two vector factors}}\\*
-$\irr{a}_{1}\irrprod \irr{a}_{1}$ & $\irr{a}_{1}$ & \\
-$\irr{a}_{1}\irrprod \irr{a}_{2}$ & $\irr{a}_{2}$ & \\
-$\irr{a}_{1}\irrprod \irr{e}_{n}$ & $\irr{e}_{n}$ & \\
-$\irr{a}_{2}\irrprod \irr{a}_{2}$ & $\irr{a}_{1}$ & \\
-$\irr{a}_{2}\irrprod \irr{e}_{n}$ & $\irr{e}_{n}$ & \\
-$\irr{e}_{n}\irrprod \irr{e}_{n'}$ & $\irr{e}_{n+n'}\oplus \irr{e}_{\lvert n-n'\rvert}$ & $n \ne n'$\\
-$\irr{e}_{n}\irrprod \irr{e}_{n'}$ & $\irr{a}_{1}\oplus \irr{a}_{2}\oplus \irr{e}_{2n'}$ & $n = n'$\\
-\multicolumn{3}{@{}l@{}}{\emph{a vector and a spinor factor}}\\*
-$\irr{a}_{1}\irrprod \irr{e}_{n}$ & $\irr{e}_{n}$ & \\
-$\irr{a}_{2}\irrprod \irr{e}_{n}$ & $\irr{e}_{n}$ & \\
-$\irr{e}_{n}\irrprod \irr{e}_{n'}$ & $\irr{e}_{n+n'}\oplus \irr{e}_{\lvert n-n'\rvert}$ & \\
-\multicolumn{3}{@{}l@{}}{\emph{two spinor factors}}\\*
-$\irr{e}_{n}\irrprod \irr{e}_{n'}$ & $\irr{e}_{n+n'}\oplus \irr{e}_{\lvert n-n'\rvert}$ & $n \ne n'$\\
-$\irr{e}_{n}\irrprod \irr{e}_{n'}$ & $\irr{a}_{1}\oplus \irr{a}_{2}\oplus \irr{e}_{2n'}$ & $n = n'$\\
+{\small\begin{longtable}{@{}l@{${}={}$}ll@{\hspace{18pt}}l@{${}={}$}ll@{}}\toprule
+\multicolumn{3}{@{}l@{\hspace{18pt}}}{\emph{two vector factors}} & \multicolumn{3}{@{}l@{}}{\emph{a vector and a spinor factor}}\\*
+$\irr{a}_{1}\irrprod \irr{a}_{1}$ & $\irr{a}_{1}$ &  & $\irr{a}_{1}\irrprod \irr{e}_{n}$ & $\irr{e}_{n}$ & \\*
+$\irr{a}_{1}\irrprod \irr{a}_{2}$ & $\irr{a}_{2}$ &  & $\irr{a}_{2}\irrprod \irr{e}_{n}$ & $\irr{e}_{n}$ & \\*
+$\irr{a}_{1}\irrprod \irr{e}_{n}$ & $\irr{e}_{n}$ &  & $\irr{e}_{n}\irrprod \irr{e}_{n'}$ & $\irr{e}_{n+n'}\oplus \irr{e}_{\lvert n-n'\rvert}$ & \\*
+$\irr{a}_{2}\irrprod \irr{a}_{2}$ & $\irr{a}_{1}$ &  & \multicolumn{3}{@{}l@{}}{\emph{two spinor factors}}\\*
+$\irr{a}_{2}\irrprod \irr{e}_{n}$ & $\irr{e}_{n}$ &  & $\irr{e}_{n}\irrprod \irr{e}_{n'}$ & $\irr{e}_{n+n'}\oplus \irr{e}_{\lvert n-n'\rvert}$ & $n \ne n'$\\*
+$\irr{e}_{n}\irrprod \irr{e}_{n'}$ & $\irr{e}_{n+n'}\oplus \irr{e}_{\lvert n-n'\rvert}$ & $n \ne n'$ & $\irr{e}_{n}\irrprod \irr{e}_{n'}$ & $\irr{a}_{1}\oplus \irr{a}_{2}\oplus \irr{e}_{2n'}$ & $n = n'$\\*
+$\irr{e}_{n}\irrprod \irr{e}_{n'}$ & $\irr{a}_{1}\oplus \irr{a}_{2}\oplus \irr{e}_{2n'}$ & $n = n'$ &  &  & \\
 \bottomrule\end{longtable}}
 \needspace{95pt}
 \paragraph{Squares.}
@@ -455,17 +448,13 @@ $\irr{e}_{4}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $
 $\irr{e}_{5}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}$ & $\irr{e}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{1}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$ & $\irr{e}_{4}$\\*
 $\irr{e}_{6}$ & $\irr{a}'\oplus \irr{a}''$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{1}$ & $\irr{a}_{1}\oplus \irr{a}_{2}$ & $\irr{e}_{1}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$\\
 \bottomrule\end{longtable}}
-{\small\begin{longtable}{@{}lccc@{}}\toprule
-subgrp & \href{2C10v.pdf}{$\grp{2C_{10v}}$} & \href{2C11v.pdf}{$\grp{2C_{11v}}$} & \href{2C12v.pdf}{$\grp{2C_{12v}}$}\\\midrule\endhead
+{\small\begin{longtable}{@{}lccc@{\hspace{18pt}}lccc@{}}\toprule
+subgrp & \href{2C10v.pdf}{$\grp{2C_{10v}}$} & \href{2C11v.pdf}{$\grp{2C_{11v}}$} & \href{2C12v.pdf}{$\grp{2C_{12v}}$} & subgrp & \href{2C10v.pdf}{$\grp{2C_{10v}}$} & \href{2C11v.pdf}{$\grp{2C_{11v}}$} & \href{2C12v.pdf}{$\grp{2C_{12v}}$}\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
-$\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$\\*
-$\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$\\*
-$\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$\\*
-$\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$\\*
-$\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$\\*
-$\irr{e}_{4}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$\\*
-$\irr{e}_{5}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{5}$ & $\irr{e}_{5}$\\*
-$\irr{e}_{6}$ & $\irr{e}_{4}$ & $\irr{e}_{5}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$\\
+$\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$\\*
+$\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$\\*
+$\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{5}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$ & $\irr{e}_{5}$ & $\irr{e}_{5}$\\*
+$\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{6}$ & $\irr{e}_{4}$ & $\irr{e}_{5}$ & $\irr{b}_{1}\oplus \irr{b}_{2}$\\
 \bottomrule\end{longtable}}
 
 \needspace{89pt}

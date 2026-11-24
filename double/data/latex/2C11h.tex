@@ -1060,31 +1060,20 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \leavevmode\label{n:function.generating}\label{n:index.generating.variable}\label{n:function.generating.numerator}The multiplicity $b_\Gamma(J) = b_\Gamma(J, +1)$ is the number of blocks of $\Gamma$ at $J$, with the generating function
 \begin{equation}\label{e:gf}H_\Gamma(t) = \sum_{J\ge1/2} b_\Gamma(J)\,t^{2J} = P_\Gamma(t)/((1-t^{2})(1-t^{44})),\end{equation}
 summed over the half-integer $J$. \label{n:delimiter.floor}\label{n:local.floor.x}The floor $\lfloor x\rfloor$ is the greatest integer $\le x$. The listed residues are the $2m \bmod 27$ of the nonzero components of the vectors of $\Gamma$.
-{\small{\renewcommand{\arraystretch}{1.3}\begin{longtable}{@{}llll@{}}\toprule
-$\Gamma$ & $P_\Gamma(t)$ & $b_\Gamma(J)$ & $2m \bmod 27$\\\midrule\endhead
+{\small{\renewcommand{\arraystretch}{1.3}\begin{longtable}{@{}llll@{\hspace{18pt}}llll@{}}\toprule
+$\Gamma$ & $P_\Gamma(t)$ & $b_\Gamma(J)$ & $2m \bmod 27$ & $\Gamma$ & $P_\Gamma(t)$ & $b_\Gamma(J)$ & $2m \bmod 27$\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
-$\irr{e}_{1/2}'$ & $t + t^{43}$ & $\bigl\lfloor\tfrac{2J}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+1}{44}\bigr\rfloor + 1$ & 1\\*
-$\irr{e}_{3/2}'$ & $t^{3} + t^{41}$ & $\bigl\lfloor\tfrac{2J+3}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+41}{44}\bigr\rfloor$ & 24\\
-$\irr{e}_{5/2}'$ & $t^{5} + t^{39}$ & $\bigl\lfloor\tfrac{2J+5}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+39}{44}\bigr\rfloor$ & 5\\
-$\irr{e}_{7/2}'$ & $t^{7} + t^{37}$ & $\bigl\lfloor\tfrac{2J+7}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+37}{44}\bigr\rfloor$ & 20\\
-$\irr{e}_{9/2}'$ & $t^{9} + t^{35}$ & $\bigl\lfloor\tfrac{2J+9}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+35}{44}\bigr\rfloor$ & 9\\
-$\irr{e}_{11/2}'$ & $t^{11} + t^{33}$ & $\bigl\lfloor\tfrac{2J+11}{22}\bigr\rfloor$ & 16\\
-$\irr{e}_{13/2}'$ & $t^{13} + t^{31}$ & $\bigl\lfloor\tfrac{2J+13}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+31}{44}\bigr\rfloor$ & 13\\
-$\irr{e}_{15/2}'$ & $t^{15} + t^{29}$ & $\bigl\lfloor\tfrac{2J+15}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+29}{44}\bigr\rfloor$ & 12\\
-$\irr{e}_{17/2}'$ & $t^{17} + t^{27}$ & $\bigl\lfloor\tfrac{2J+17}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+27}{44}\bigr\rfloor$ & 17\\
-$\irr{e}_{19/2}'$ & $t^{19} + t^{25}$ & $\bigl\lfloor\tfrac{2J+19}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+25}{44}\bigr\rfloor$ & 8, 25\\
-$\irr{e}_{21/2}'$ & $t^{21} + t^{23}$ & $\bigl\lfloor\tfrac{2J+21}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+23}{44}\bigr\rfloor$ & 4, 21\\
-$\irr{e}_{1/2}''$ & $t + t^{43}$ & $\bigl\lfloor\tfrac{2J}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+1}{44}\bigr\rfloor + 1$ & 26\\
-$\irr{e}_{3/2}''$ & $t^{3} + t^{41}$ & $\bigl\lfloor\tfrac{2J+3}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+41}{44}\bigr\rfloor$ & 3\\
-$\irr{e}_{5/2}''$ & $t^{5} + t^{39}$ & $\bigl\lfloor\tfrac{2J+5}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+39}{44}\bigr\rfloor$ & 22\\
-$\irr{e}_{7/2}''$ & $t^{7} + t^{37}$ & $\bigl\lfloor\tfrac{2J+7}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+37}{44}\bigr\rfloor$ & 7\\
-$\irr{e}_{9/2}''$ & $t^{9} + t^{35}$ & $\bigl\lfloor\tfrac{2J+9}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+35}{44}\bigr\rfloor$ & 18\\
-$\irr{e}_{11/2}''$ & $t^{11} + t^{33}$ & $\bigl\lfloor\tfrac{2J+11}{22}\bigr\rfloor$ & 11\\
-$\irr{e}_{13/2}''$ & $t^{13} + t^{31}$ & $\bigl\lfloor\tfrac{2J+13}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+31}{44}\bigr\rfloor$ & 14\\
-$\irr{e}_{15/2}''$ & $t^{15} + t^{29}$ & $\bigl\lfloor\tfrac{2J+15}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+29}{44}\bigr\rfloor$ & 15\\
-$\irr{e}_{17/2}''$ & $t^{17} + t^{27}$ & $\bigl\lfloor\tfrac{2J+17}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+27}{44}\bigr\rfloor$ & 10\\
-$\irr{e}_{19/2}''$ & $t^{19} + t^{25}$ & $\bigl\lfloor\tfrac{2J+19}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+25}{44}\bigr\rfloor$ & 2, 19\\*
-$\irr{e}_{21/2}''$ & $t^{21} + t^{23}$ & $\bigl\lfloor\tfrac{2J+21}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+23}{44}\bigr\rfloor$ & 6, 23\\
+$\irr{e}_{1/2}'$ & $t + t^{43}$ & $\bigl\lfloor\tfrac{2J}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+1}{44}\bigr\rfloor + 1$ & 1 & $\irr{e}_{1/2}''$ & $t + t^{43}$ & $\bigl\lfloor\tfrac{2J}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+1}{44}\bigr\rfloor + 1$ & 26\\*
+$\irr{e}_{3/2}'$ & $t^{3} + t^{41}$ & $\bigl\lfloor\tfrac{2J+3}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+41}{44}\bigr\rfloor$ & 24 & $\irr{e}_{3/2}''$ & $t^{3} + t^{41}$ & $\bigl\lfloor\tfrac{2J+3}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+41}{44}\bigr\rfloor$ & 3\\*
+$\irr{e}_{5/2}'$ & $t^{5} + t^{39}$ & $\bigl\lfloor\tfrac{2J+5}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+39}{44}\bigr\rfloor$ & 5 & $\irr{e}_{5/2}''$ & $t^{5} + t^{39}$ & $\bigl\lfloor\tfrac{2J+5}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+39}{44}\bigr\rfloor$ & 22\\*
+$\irr{e}_{7/2}'$ & $t^{7} + t^{37}$ & $\bigl\lfloor\tfrac{2J+7}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+37}{44}\bigr\rfloor$ & 20 & $\irr{e}_{7/2}''$ & $t^{7} + t^{37}$ & $\bigl\lfloor\tfrac{2J+7}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+37}{44}\bigr\rfloor$ & 7\\*
+$\irr{e}_{9/2}'$ & $t^{9} + t^{35}$ & $\bigl\lfloor\tfrac{2J+9}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+35}{44}\bigr\rfloor$ & 9 & $\irr{e}_{9/2}''$ & $t^{9} + t^{35}$ & $\bigl\lfloor\tfrac{2J+9}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+35}{44}\bigr\rfloor$ & 18\\*
+$\irr{e}_{11/2}'$ & $t^{11} + t^{33}$ & $\bigl\lfloor\tfrac{2J+11}{22}\bigr\rfloor$ & 16 & $\irr{e}_{11/2}''$ & $t^{11} + t^{33}$ & $\bigl\lfloor\tfrac{2J+11}{22}\bigr\rfloor$ & 11\\*
+$\irr{e}_{13/2}'$ & $t^{13} + t^{31}$ & $\bigl\lfloor\tfrac{2J+13}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+31}{44}\bigr\rfloor$ & 13 & $\irr{e}_{13/2}''$ & $t^{13} + t^{31}$ & $\bigl\lfloor\tfrac{2J+13}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+31}{44}\bigr\rfloor$ & 14\\*
+$\irr{e}_{15/2}'$ & $t^{15} + t^{29}$ & $\bigl\lfloor\tfrac{2J+15}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+29}{44}\bigr\rfloor$ & 12 & $\irr{e}_{15/2}''$ & $t^{15} + t^{29}$ & $\bigl\lfloor\tfrac{2J+15}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+29}{44}\bigr\rfloor$ & 15\\*
+$\irr{e}_{17/2}'$ & $t^{17} + t^{27}$ & $\bigl\lfloor\tfrac{2J+17}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+27}{44}\bigr\rfloor$ & 17 & $\irr{e}_{17/2}''$ & $t^{17} + t^{27}$ & $\bigl\lfloor\tfrac{2J+17}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+27}{44}\bigr\rfloor$ & 10\\*
+$\irr{e}_{19/2}'$ & $t^{19} + t^{25}$ & $\bigl\lfloor\tfrac{2J+19}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+25}{44}\bigr\rfloor$ & 8, 25 & $\irr{e}_{19/2}''$ & $t^{19} + t^{25}$ & $\bigl\lfloor\tfrac{2J+19}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+25}{44}\bigr\rfloor$ & 2, 19\\*
+$\irr{e}_{21/2}'$ & $t^{21} + t^{23}$ & $\bigl\lfloor\tfrac{2J+21}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+23}{44}\bigr\rfloor$ & 4, 21 & $\irr{e}_{21/2}''$ & $t^{21} + t^{23}$ & $\bigl\lfloor\tfrac{2J+21}{44}\bigr\rfloor + \bigl\lfloor\tfrac{2J+23}{44}\bigr\rfloor$ & 6, 23\\
 \bottomrule\end{longtable}}}
 \needspace{122pt}
 \section{Symmetry-adapted bases}\label{s:bases}

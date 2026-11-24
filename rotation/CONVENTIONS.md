@@ -215,8 +215,8 @@ The group documents (`data/latex` and `data/pdf`, section 18) set objects in the
 - exact values as rationals, square roots, cosines and sines of rational multiples of $`\pi`$, the golden ratio
   $`\varphi = \tfrac{1}{2}\bigl(1 + \sqrt{5}\bigr)`$ and roots of unity $`\zeta_n = \mathrm{e}^{2\pi\mathrm{i}/n}`$.
 
-A list may be set in two or three copies side by side. It then reads down each copy within a band of rows, and
-the bands, between heavier rules, follow one another.
+A long narrow table may be set in two or three copies side by side. It then reads down each copy within a band
+of rows, and the bands, between heavier rules, follow one another.
 
 A document defines the symbols and named constants not defined in section 0.1, each where it first uses it, and
 cites this document by section number. A work's citation, such as [Lax74, section 2.10], links to an entry of

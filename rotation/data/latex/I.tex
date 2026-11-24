@@ -475,7 +475,7 @@ $p = \pm 1$ & 1 & 0 & 0 & 0 & 0 & 0 & 13 & 0 & 0 & 0 & 21\\
 \section{Orbifold}\label{s:orbifold}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.17.6}{17.6} to \href{../../CONVENTIONS.pdf\#conv.17.8}{17.8}.
 The orbifold $\twosphere/\grp{I}$ is the set of the orbits of $\grp{I}$ on the sphere $\twosphere$ of the directions, each orbit marked by the class of the stabilizer of its directions. Its symbol is $\orbname{532}$, and it lies on a sphere, of area $\tfrac{1}{15}\pi$ and of Euler characteristic $\tfrac{1}{30}$.
-\leavevmode\label{n:head.stratum}\label{n:head.order.point}\label{n:head.direction}\label{n:head.stabilizer}\label{n:head.size.orbit}\label{n:head.shape}A row is a stratum, with the order of its point (order), its direction or the side of the region with an arc, and its stabilizer. Its orbit has the size and the shape of the figure of the stabilizer in section~\ref{s:permutation} (a dash where the shape depends on the point).
+\leavevmode\label{n:head.stratum}\label{n:head.order.point}\label{n:head.direction}\label{n:head.stabilizer}\label{n:head.size.orbit}\label{n:head.shape}A row is a stratum of the orbifold: a cone point, a corner, an arc of the mirror edge or the generic points. A row gives the order of its points, the direction of a point or the side of the region along an arc, and the stabilizer of its directions. Its orbit has the size and the shape of the figure of the stabilizer in section~\ref{s:permutation}. A dash marks a shape that depends on the direction.
 {\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lrllrl@{}}\toprule
 stratum & order & direction & stabilizer & size & shape\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
@@ -484,7 +484,7 @@ cone point & 3 & $\dirvec{1}{0}{1 + \goldenratio{}}$ & \href{C3.pdf}{$\grp{C_{3}
 cone point & 5 & $\dirvec{0}{1}{\goldenratio{}}$ & \href{C5.pdf}{$\grp{C_{5}}$} & 12 & icosahedron\\*
 generic &  &  & \href{C1.pdf}{$\grp{C_{1}}$} & 60 & ---\\
 \bottomrule\end{longtable}}
-\leavevmode\label{n:head.vertex.region}\label{n:head.angle}\label{n:head.normal.side}\label{n:head.partner}\label{n:head.sense}The region holds one direction of every orbit, more only on its boundary. A row is a vertex, with its direction and angle, and the side from it to the next vertex. It also gives the inward normal of the side's plane (normal), the index $k$ and the symbol (sym) of its element, its partner, itself on a mirror, and the sense of the gluing.
+\leavevmode\label{n:head.vertex.region}\label{n:head.angle}\label{n:head.normal.side}\label{n:head.partner}\label{n:head.sense}The region meets every orbit, and an orbit meets it more than once only on its boundary. A row is a vertex of the region together with the side that runs from it to the next vertex. A row gives the direction of the vertex, its angle and the inward normal of the side's plane. It also gives the element that carries the side onto its partner, by its index $k$ and its symbol (sym), then the partner and the sense of the gluing. A side on a mirror is its own partner, and its element is the reflection in that mirror.
 {\small\setlength{\tabcolsep}{4pt}{\renewcommand{\arraystretch}{1.3}\begin{longtable}{@{}rlllrlrl@{}}\toprule
 vertex & direction & angle & normal & $k$ & sym & partner & sense\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
@@ -493,7 +493,7 @@ vertex & direction & angle & normal & $k$ & sym & partner & sense\\\midrule\endh
 2 & $\dirvec{\goldenratio{}}{1}{1 + \goldenratio{}}$ & $\tfrac{\pi}{2}$ & $\dirvec{-1}{-1 - \goldenratio{}}{\goldenratio{}}$ & 6 & $\cls{C_{5}^{4}}$ & 3 & reversed\\*
 3 & $\dirvec{0}{1}{\goldenratio{}}$ & $\tfrac{2\pi}{5}$ & $\dirvec{1}{0}{0}$ & 5 & $\cls{C_{5}}$ & 2 & reversed\\
 \bottomrule\end{longtable}}}
-\leavevmode\label{n:element.presentation.generator}\label{n:local.presentation.brackets}The elements $\elt{g_{1}}$ of the side 0 and $\elt{g_{2}}$ of the side 2 generate $\grp{I}$, with the presentation (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.17.7}{17.7})
+\leavevmode\label{n:element.presentation.generator}\label{n:local.presentation.brackets}The elements $\elt{g_{1}}$ of side 0 and $\elt{g_{2}}$ of side 2 generate $\grp{I}$, with the presentation (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.17.7}{17.7})
 \begin{equation}\label{e:presentation}\langle \elt{g_{1}}, \elt{g_{2}} \mid (\elt{g_{2}}^{-1}\elt{g_{1}}^{-1})^{2}, \elt{g_{1}}^{3}, \elt{g_{2}}^{5} \rangle.\end{equation}
 
 Forgetting the turn about a direction sends the space $\grp{I}\backslash\grp{SO(3)}$ of section~\ref{s:fundamental_domain} onto this orbifold. In the orientation of \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.17.6}{17.6}, the space has the Seifert invariants $(-2;\ (2, 1), (3, 2), (5, 4))$ over the sphere, the Euler number $\tfrac{1}{30}$ and a first homology of order 1.
@@ -1125,17 +1125,13 @@ subgrp & $N$ & kernel & decomposition\\\midrule\endhead
 \section{Cycle types}\label{s:cycle_types}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.12.5}{12.5}.
 \leavevmode\label{n:local.cycle.type}\label{n:local.cycle.length}\label{n:local.cycle.count}The entry in the row of a class of subgroups and the column of a class of elements is the cycle type of $j \mapsto j'$ for these elements, written $\ell^{c}$ for $c$ cycles of length $\ell$. The cycles of length 1 are the copies that the element leaves in place, whose number is the character of $D$. \label{n:local.cycles}\label{n:local.states}With $c(g)$ cycles in all, $g$ has the character $q^{c(g)}$ on the $q^N$ products of one of $q$ states of each copy (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.12.5}{12.5}).
-{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lrccccc@{}}\toprule
-subgrp & $N$ & $\cls{E}$ & $\cls{12C_{5}}$ & $\cls{12C_{5}^{2}}$ & $\cls{20C_{3}}$ & $\cls{15C_{2}}$\\\midrule\endhead
+{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lrccccc@{\hspace{18pt}}lrccccc@{}}\toprule
+subgrp & $N$ & $\cls{E}$ & $\cls{12C_{5}}$ & $\cls{12C_{5}^{2}}$ & $\cls{20C_{3}}$ & $\cls{15C_{2}}$ & subgrp & $N$ & $\cls{E}$ & $\cls{12C_{5}}$ & $\cls{12C_{5}^{2}}$ & $\cls{20C_{3}}$ & $\cls{15C_{2}}$\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
-\href{C1.pdf}{$\grp{C_{1}}$} & 60 & $1^{60}$ & $5^{12}$ & $5^{12}$ & $3^{20}$ & $2^{30}$\\*
-\href{C2.pdf}{$\grp{C_{2}}$} & 30 & $1^{30}$ & $5^{6}$ & $5^{6}$ & $3^{10}$ & $1^{2}\,2^{14}$\\*
-\href{C3.pdf}{$\grp{C_{3}}$} & 20 & $1^{20}$ & $5^{4}$ & $5^{4}$ & $1^{2}\,3^{6}$ & $2^{10}$\\*
-\href{D2.pdf}{$\grp{D_{2}}$} & 15 & $1^{15}$ & $5^{3}$ & $5^{3}$ & $3^{5}$ & $1^{3}\,2^{6}$\\*
-\href{C5.pdf}{$\grp{C_{5}}$} & 12 & $1^{12}$ & $1^{2}\,5^{2}$ & $1^{2}\,5^{2}$ & $3^{4}$ & $2^{6}$\\*
-\href{D3.pdf}{$\grp{D_{3}}$} & 10 & $1^{10}$ & $5^{2}$ & $5^{2}$ & $1\,3^{3}$ & $1^{2}\,2^{4}$\\*
-\href{D5.pdf}{$\grp{D_{5}}$} & 6 & $1^{6}$ & $1\,5$ & $1\,5$ & $3^{2}$ & $1^{2}\,2^{2}$\\*
-\href{T.pdf}{$\grp{T}$} & 5 & $1^{5}$ & $5$ & $5$ & $1^{2}\,3$ & $1\,2^{2}$\\
+\href{C1.pdf}{$\grp{C_{1}}$} & 60 & $1^{60}$ & $5^{12}$ & $5^{12}$ & $3^{20}$ & $2^{30}$ & \href{C5.pdf}{$\grp{C_{5}}$} & 12 & $1^{12}$ & $1^{2}\,5^{2}$ & $1^{2}\,5^{2}$ & $3^{4}$ & $2^{6}$\\*
+\href{C2.pdf}{$\grp{C_{2}}$} & 30 & $1^{30}$ & $5^{6}$ & $5^{6}$ & $3^{10}$ & $1^{2}\,2^{14}$ & \href{D3.pdf}{$\grp{D_{3}}$} & 10 & $1^{10}$ & $5^{2}$ & $5^{2}$ & $1\,3^{3}$ & $1^{2}\,2^{4}$\\*
+\href{C3.pdf}{$\grp{C_{3}}$} & 20 & $1^{20}$ & $5^{4}$ & $5^{4}$ & $1^{2}\,3^{6}$ & $2^{10}$ & \href{D5.pdf}{$\grp{D_{5}}$} & 6 & $1^{6}$ & $1\,5$ & $1\,5$ & $3^{2}$ & $1^{2}\,2^{2}$\\*
+\href{D2.pdf}{$\grp{D_{2}}$} & 15 & $1^{15}$ & $5^{3}$ & $5^{3}$ & $3^{5}$ & $1^{3}\,2^{6}$ & \href{T.pdf}{$\grp{T}$} & 5 & $1^{5}$ & $5$ & $5$ & $1^{2}\,3$ & $1\,2^{2}$\\
 \bottomrule\end{longtable}}
 \needspace{177pt}
 \partbox{Angular momentum}

@@ -408,7 +408,7 @@ $p = +1$ & 1 & 0 & 5 & 0 & 9 & 0 & 13 & 15 & 34 & 19 & 42\\
 \section{Orbifold}\label{s:orbifold}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.17.6}{17.6} to \href{../../CONVENTIONS.pdf\#conv.17.8}{17.8}.
 The orbifold $\twosphere/\grp{D_{7d}}$ is the set of the orbits of $\grp{D_{7d}}$ on the sphere $\twosphere$ of the directions, each orbit marked by the class of the stabilizer of its directions. Its symbol is $\orbname{2{\ast}7}$, and it lies on a disk, of area $\tfrac{1}{7}\pi$ and of Euler characteristic $\tfrac{1}{14}$.
-\leavevmode\label{n:head.stratum}\label{n:head.order.point}\label{n:head.direction}\label{n:head.stabilizer}\label{n:head.size.orbit}\label{n:head.shape}A row is a stratum, with the order of its point (order), its direction or the side of the region with an arc, and its stabilizer. Its orbit has the size and the shape of the figure of the stabilizer in section~\ref{s:permutation} (a dash where the shape depends on the point).
+\leavevmode\label{n:head.stratum}\label{n:head.order.point}\label{n:head.direction}\label{n:head.stabilizer}\label{n:head.size.orbit}\label{n:head.shape}A row is a stratum of the orbifold: a cone point, a corner, an arc of the mirror edge or the generic points. A row gives the order of its points, the direction of a point or the side of the region along an arc, and the stabilizer of its directions. Its orbit has the size and the shape of the figure of the stabilizer in section~\ref{s:permutation}. A dash marks a shape that depends on the direction.
 {\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lrllrl@{}}\toprule
 stratum & order & direction & stabilizer & size & shape\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
@@ -418,7 +418,7 @@ mirror arc &  & side 0 & \href{C1v.pdf}{$\grp{C_{s}}$} & 14 & ---\\*
 mirror arc &  & side 3 & \href{C1v.pdf}{$\grp{C_{s}}$} & 14 & ---\\*
 generic &  &  & \href{C1.pdf}{$\grp{C_{1}}$} & 28 & ---\\
 \bottomrule\end{longtable}}
-\leavevmode\label{n:head.vertex.region}\label{n:head.angle}\label{n:head.normal.side}\label{n:head.partner}\label{n:head.sense}The region holds one direction of every orbit, more only on its boundary. A row is a vertex, with its direction and angle, and the side from it to the next vertex. It also gives the inward normal of the side's plane (normal), the index $k$ and the symbol (sym) of its element, its partner, itself on a mirror, and the sense of the gluing.
+\leavevmode\label{n:head.vertex.region}\label{n:head.angle}\label{n:head.normal.side}\label{n:head.partner}\label{n:head.sense}The region meets every orbit, and an orbit meets it more than once only on its boundary. A row is a vertex of the region together with the side that runs from it to the next vertex. A row gives the direction of the vertex, its angle and the inward normal of the side's plane. It also gives the element that carries the side onto its partner, by its index $k$ and its symbol (sym), then the partner and the sense of the gluing. A side on a mirror is its own partner, and its element is the reflection in that mirror.
 {\small\setlength{\tabcolsep}{4pt}{\renewcommand{\arraystretch}{1.3}\begin{longtable}{@{}rlllrlrl@{}}\toprule
 vertex & direction & angle & normal & $k$ & sym & partner & sense\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
@@ -427,7 +427,7 @@ vertex & direction & angle & normal & $k$ & sym & partner & sense\\\midrule\endh
 2 & $\dirvec{1}{0}{0}$ & $\pi$ & $\dirvec{0}{0}{1}$ & 7 & $\cls{C_{2}}$ & 1 & reversed\\*
 3 & $\dirvec{\sin\tfrac{4\pi}{7}}{-\cos\tfrac{4\pi}{7}}{0}$ & $\tfrac{\pi}{2}$ & $\dirvec{-\cos\tfrac{4\pi}{7}}{-\sin\tfrac{4\pi}{7}}{0}$ & 21 & $\cls{\sigma_{d}}$ & 3 & same\\
 \bottomrule\end{longtable}}}
-\leavevmode\label{n:element.presentation.generator}\label{n:local.presentation.brackets}The elements $\elt{s}$ of the side 0, $\elt{g_{1}}$ of the side 1 and $\elt{s'}$ of the side 3 generate $\grp{D_{7d}}$, with the presentation (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.17.7}{17.7})
+\leavevmode\label{n:element.presentation.generator}\label{n:local.presentation.brackets}The elements $\elt{s}$ of side 0, $\elt{g_{1}}$ of side 1 and $\elt{s'}$ of side 3 generate $\grp{D_{7d}}$, with the presentation (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.17.7}{17.7})
 \begin{equation}\label{e:presentation}\langle \elt{s}, \elt{g_{1}}, \elt{s'} \mid \elt{s}^{2}, \elt{s'}^{2}, (\elt{s'}\elt{s})^{7}, \elt{s}\elt{g_{1}}\elt{s'}\elt{g_{1}}^{-1}, \elt{g_{1}}^{2} \rangle.\end{equation}
 
 Forgetting the turn about a direction sends the space $\grp{D_{7}}\backslash\grp{SO(3)}$ of section~\ref{s:fundamental_domain} onto the orbifold of \href{D7.pdf}{$\grp{D_{7}}$}, which covers this one with 2 sheets. In the orientation of \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.17.6}{17.6}, the space has the Seifert invariants $(-2;\ (7, 6), (2, 1), (2, 1))$ over the sphere, the Euler number $\tfrac{1}{7}$ and a first homology of order 4.

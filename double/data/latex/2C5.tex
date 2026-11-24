@@ -441,19 +441,14 @@ subgrp & order & conjugates & normal & $\grp{N}_{\hairsp \grp{2C_{5}}}(\grp{H})$
 \section{Descent of symmetry}\label{s:subduction}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.12.2}{12.2}, \href{../../../rotation/CONVENTIONS.pdf\#conv.12.4}{12.4} and \href{../../CONVENTIONS.pdf\#conv.28}{28}.
 A column is a class of subgroups $\grp{H}$, in the order of the table of section~\ref{s:subgroups}. The row subgrp names it by its symbol, as in that table. The symbol links to the document of $\grp{H}$. The entry of row $\Gamma$ is $\restr{\Gamma}{\grp{H}}$, the restriction of $\Gamma$ along a monomorphism from the record of $\grp{H}$ onto the subgroup, as a sum of the irreps of $\grp{H}$. The monomorphism identifies the subgroup with its record, and $\grp{H}$ names both. The rows of the vector irreps of a preimage are those of \href{../../../rotation/data/pdf/C5.pdf}{$\grp{C_{5}}$} (\texttt{vector\symbol{95}subduction}). The column of a section, which the record does not store, is that of its preimage with the spinor irreps renamed (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.27}{27}).
-{\small\begin{longtable}{@{}lcc@{}}\toprule
-subgrp & \href{2C1.pdf}{$\grp{2C_{1}}$} & \href{C5.pdf}{$\grp{C_{5}}$}\\\midrule\endhead
+{\small\begin{longtable}{@{}lcc@{\hspace{18pt}}lcc@{}}\toprule
+subgrp & \href{2C1.pdf}{$\grp{2C_{1}}$} & \href{C5.pdf}{$\grp{C_{5}}$} & subgrp & \href{2C1.pdf}{$\grp{2C_{1}}$} & \href{C5.pdf}{$\grp{C_{5}}$}\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
-$\irr{a}$ & $\irr{a}$ & $\irr{a}$\\*
-$\conjpair{1}\irr{e}_{1}$ & $\irr{a}$ & $\conjpair{1}\irr{e}_{1}$\\*
-$\conjpair{2}\irr{e}_{1}$ & $\irr{a}$ & $\conjpair{2}\irr{e}_{1}$\\*
-$\conjpair{1}\irr{e}_{2}$ & $\irr{a}$ & $\conjpair{1}\irr{e}_{2}$\\*
-$\conjpair{2}\irr{e}_{2}$ & $\irr{a}$ & $\conjpair{2}\irr{e}_{2}$\\*
-$\irr{a}_{5/2}$ & $\irr{a}_{1/2}$ & $\irr{a}$\\*
-$\conjpair{1}\irr{e}_{1/2}$ & $\irr{a}_{1/2}$ & $\conjpair{2}\irr{e}_{2}$\\*
-$\conjpair{2}\irr{e}_{1/2}$ & $\irr{a}_{1/2}$ & $\conjpair{1}\irr{e}_{2}$\\*
-$\conjpair{1}\irr{e}_{3/2}$ & $\irr{a}_{1/2}$ & $\conjpair{2}\irr{e}_{1}$\\*
-$\conjpair{2}\irr{e}_{3/2}$ & $\irr{a}_{1/2}$ & $\conjpair{1}\irr{e}_{1}$\\
+$\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}_{5/2}$ & $\irr{a}_{1/2}$ & $\irr{a}$\\*
+$\conjpair{1}\irr{e}_{1}$ & $\irr{a}$ & $\conjpair{1}\irr{e}_{1}$ & $\conjpair{1}\irr{e}_{1/2}$ & $\irr{a}_{1/2}$ & $\conjpair{2}\irr{e}_{2}$\\*
+$\conjpair{2}\irr{e}_{1}$ & $\irr{a}$ & $\conjpair{2}\irr{e}_{1}$ & $\conjpair{2}\irr{e}_{1/2}$ & $\irr{a}_{1/2}$ & $\conjpair{1}\irr{e}_{2}$\\*
+$\conjpair{1}\irr{e}_{2}$ & $\irr{a}$ & $\conjpair{1}\irr{e}_{2}$ & $\conjpair{1}\irr{e}_{3/2}$ & $\irr{a}_{1/2}$ & $\conjpair{2}\irr{e}_{1}$\\*
+$\conjpair{2}\irr{e}_{2}$ & $\irr{a}$ & $\conjpair{2}\irr{e}_{2}$ & $\conjpair{2}\irr{e}_{3/2}$ & $\irr{a}_{1/2}$ & $\conjpair{1}\irr{e}_{1}$\\
 \bottomrule\end{longtable}}
 \leavevmode\label{n:irrep.Delta}Read down a column, a table gives induction (Frobenius reciprocity): $\Gamma$ occurs in $\Ind{\grp{H}}{\grp{2C_{5}}} \Lambda$ as often as $\Lambda$ occurs in the entry of row $\Gamma$. For every entry of a spinor irrep, the record holds the unitary matrix that carries $\restr{\Gamma}{\grp{H}}$ into the direct sum of the matrices of $\grp{H}$ (\texttt{subduction[].blocks}). For every class $\grp{H}$ it holds the left coset representatives (\texttt{transversal}). From both, $\Ind{\grp{H}}{\grp{2C_{5}}} \Lambda$ and its intertwiners follow as in \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.12.4}{12.4}.
 \needspace{190pt}

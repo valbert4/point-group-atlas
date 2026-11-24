@@ -305,31 +305,19 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \leavevmode\label{n:index.family}A rule is listed for every pair of families, of indices $n$ and $n'$, by the kinds of the factors, where a vector index is an integer and a spinor index a half-integer. The squares of the families follow, with the antisymmetric part in braces. The rules with two vector factors are those of \href{../../../rotation/data/pdf/Cinf.pdf}{$\grp{C_{\infty}}$} (\texttt{vector\symbol{95}rules}).
 \needspace{95pt}
 \paragraph{Products.}
-{\small\begin{longtable}{@{}l@{${}={}$}ll@{}}\toprule
-\multicolumn{3}{@{}l@{}}{\emph{two vector factors}}\\*
-$\irr{a}\irrprod \irr{a}$ & $\irr{a}$ & \\
-$\irr{a}\irrprod \conjpair{1}\irr{e}_{n}$ & $\conjpair{1}\irr{e}_{n}$ & \\
-$\irr{a}\irrprod \conjpair{2}\irr{e}_{n}$ & $\conjpair{2}\irr{e}_{n}$ & \\
-$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{1}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n+n'}$ & \\
-$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n-n'}$ & $n > n'$\\
-$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\irr{a}$ & $n = n'$\\
-$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n'-n}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n+n'}$ & \\
-\multicolumn{3}{@{}l@{}}{\emph{a vector and a spinor factor}}\\*
-$\irr{a}\irrprod \conjpair{1}\irr{e}_{n}$ & $\conjpair{1}\irr{e}_{n}$ & \\
-$\irr{a}\irrprod \conjpair{2}\irr{e}_{n}$ & $\conjpair{2}\irr{e}_{n}$ & \\
-$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{1}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n+n'}$ & \\
-$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n-n'}$ & $n > n'$\\
-$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n'-n}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n}\irrprod \conjpair{1}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n-n'}$ & $n > n'$\\
-$\conjpair{2}\irr{e}_{n}\irrprod \conjpair{1}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n'-n}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n+n'}$ & \\
-\multicolumn{3}{@{}l@{}}{\emph{two spinor factors}}\\*
-$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{1}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n+n'}$ & \\
-$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n-n'}$ & $n > n'$\\
-$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\irr{a}$ & $n = n'$\\
-$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n'-n}$ & $n < n'$\\
-$\conjpair{2}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n+n'}$ & \\
+{\small\begin{longtable}{@{}l@{${}={}$}ll@{\hspace{18pt}}l@{${}={}$}ll@{}}\toprule
+\multicolumn{3}{@{}l@{\hspace{18pt}}}{\emph{two vector factors}} & $\conjpair{1}\irr{e}_{n}\irrprod \conjpair{1}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n+n'}$ & \\*
+$\irr{a}\irrprod \irr{a}$ & $\irr{a}$ &  & $\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n-n'}$ & $n > n'$\\*
+$\irr{a}\irrprod \conjpair{1}\irr{e}_{n}$ & $\conjpair{1}\irr{e}_{n}$ &  & $\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n'-n}$ & $n < n'$\\*
+$\irr{a}\irrprod \conjpair{2}\irr{e}_{n}$ & $\conjpair{2}\irr{e}_{n}$ &  & $\conjpair{2}\irr{e}_{n}\irrprod \conjpair{1}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n-n'}$ & $n > n'$\\*
+$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{1}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n+n'}$ &  & $\conjpair{2}\irr{e}_{n}\irrprod \conjpair{1}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n'-n}$ & $n < n'$\\*
+$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n-n'}$ & $n > n'$ & $\conjpair{2}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n+n'}$ & \\*
+$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\irr{a}$ & $n = n'$ & \multicolumn{3}{@{}l@{}}{\emph{two spinor factors}}\\*
+$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n'-n}$ & $n < n'$ & $\conjpair{1}\irr{e}_{n}\irrprod \conjpair{1}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n+n'}$ & \\*
+$\conjpair{2}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n+n'}$ &  & $\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n-n'}$ & $n > n'$\\*
+\multicolumn{3}{@{}l@{\hspace{18pt}}}{\emph{a vector and a spinor factor}} & $\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\irr{a}$ & $n = n'$\\*
+$\irr{a}\irrprod \conjpair{1}\irr{e}_{n}$ & $\conjpair{1}\irr{e}_{n}$ &  & $\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n'-n}$ & $n < n'$\\*
+$\irr{a}\irrprod \conjpair{2}\irr{e}_{n}$ & $\conjpair{2}\irr{e}_{n}$ &  & $\conjpair{2}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n+n'}$ & \\
 \bottomrule\end{longtable}}
 \needspace{95pt}
 \paragraph{Squares.}

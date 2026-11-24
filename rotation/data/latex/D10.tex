@@ -396,7 +396,7 @@ $p = \pm 1$ & 1 & 0 & 5 & 0 & 9 & 0 & 13 & 0 & 17 & 0 & 42\\
 \section{Orbifold}\label{s:orbifold}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.17.6}{17.6} to \href{../../CONVENTIONS.pdf\#conv.17.8}{17.8}.
 The orbifold $\twosphere/\grp{D_{10}}$ is the set of the orbits of $\grp{D_{10}}$ on the sphere $\twosphere$ of the directions, each orbit marked by the class of the stabilizer of its directions. Its symbol is $\orbname{2210}$, and it lies on a sphere, of area $\tfrac{1}{5}\pi$ and of Euler characteristic $\tfrac{1}{10}$.
-\leavevmode\label{n:head.stratum}\label{n:head.order.point}\label{n:head.direction}\label{n:head.stabilizer}\label{n:head.size.orbit}\label{n:head.shape}A row is a stratum, with the order of its point (order), its direction or the side of the region with an arc, and its stabilizer. Its orbit has the size and the shape of the figure of the stabilizer in section~\ref{s:permutation} (a dash where the shape depends on the point).
+\leavevmode\label{n:head.stratum}\label{n:head.order.point}\label{n:head.direction}\label{n:head.stabilizer}\label{n:head.size.orbit}\label{n:head.shape}A row is a stratum of the orbifold: a cone point, a corner, an arc of the mirror edge or the generic points. A row gives the order of its points, the direction of a point or the side of the region along an arc, and the stabilizer of its directions. Its orbit has the size and the shape of the figure of the stabilizer in section~\ref{s:permutation}. A dash marks a shape that depends on the direction.
 {\small\setlength{\tabcolsep}{4pt}{\renewcommand{\arraystretch}{1.3}\begin{longtable}{@{}lrllrl@{}}\toprule
 stratum & order & direction & stabilizer & size & shape\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
@@ -405,7 +405,7 @@ cone point & 2 & $\dirvec{1}{0}{0}$ & \href{C2.pdf}{$\grp{C_{2}}$}\clsletter{b} 
 cone point & 2 & $\dirvec{\sin\tfrac{2\pi}{5}}{\tfrac{1}{2}(\goldenratio - 1)}{0}$ & \href{C2.pdf}{$\grp{C_{2}}$}\clsletter{c} & 10 & regular decagon\\*
 generic &  &  & \href{C1.pdf}{$\grp{C_{1}}$} & 20 & ---\\
 \bottomrule\end{longtable}}}
-\leavevmode\label{n:head.vertex.region}\label{n:head.angle}\label{n:head.normal.side}\label{n:head.partner}\label{n:head.sense}The region holds one direction of every orbit, more only on its boundary. A row is a vertex, with its direction and angle, and the side from it to the next vertex. It also gives the inward normal of the side's plane (normal), the index $k$ and the symbol (sym) of its element, its partner, itself on a mirror, and the sense of the gluing.
+\leavevmode\label{n:head.vertex.region}\label{n:head.angle}\label{n:head.normal.side}\label{n:head.partner}\label{n:head.sense}The region meets every orbit, and an orbit meets it more than once only on its boundary. A row is a vertex of the region together with the side that runs from it to the next vertex. A row gives the direction of the vertex, its angle and the inward normal of the side's plane. It also gives the element that carries the side onto its partner, by its index $k$ and its symbol (sym), then the partner and the sense of the gluing. A side on a mirror is its own partner, and its element is the reflection in that mirror.
 {\small\setlength{\tabcolsep}{4pt}{\renewcommand{\arraystretch}{1.3}\begin{longtable}{@{}rlllrlrl@{}}\toprule
 vertex & direction & angle & normal & $k$ & sym & partner & sense\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
@@ -414,7 +414,7 @@ vertex & direction & angle & normal & $k$ & sym & partner & sense\\\midrule\endh
 2 & $\dirvec{\sin\tfrac{2\pi}{5}}{\tfrac{1}{2}(\goldenratio - 1)}{0}$ & $\pi$ & $\dirvec{0}{0}{1}$ & 15 & $\cls{C_{2}}$ & 1 & reversed\\*
 3 & $\dirvec{\tfrac{1}{2}\goldenratio{}}{\sin\tfrac{4\pi}{5}}{0}$ & $\tfrac{\pi}{2}$ & $\dirvec{\sin\tfrac{4\pi}{5}}{-\tfrac{1}{2}\goldenratio{}}{0}$ & 2 & $\cls{C_{10}^{9}}$ & 0 & reversed\\
 \bottomrule\end{longtable}}}
-\leavevmode\label{n:element.presentation.generator}\label{n:local.presentation.brackets}The elements $\elt{g_{1}}$ of the side 0 and $\elt{g_{2}}$ of the side 1 generate $\grp{D_{10}}$, with the presentation (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.17.7}{17.7})
+\leavevmode\label{n:element.presentation.generator}\label{n:local.presentation.brackets}The elements $\elt{g_{1}}$ of side 0 and $\elt{g_{2}}$ of side 1 generate $\grp{D_{10}}$, with the presentation (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.17.7}{17.7})
 \begin{equation}\label{e:presentation}\langle \elt{g_{1}}, \elt{g_{2}} \mid \elt{g_{1}}^{-10}, (\elt{g_{1}}\elt{g_{2}}^{-1})^{2}, \elt{g_{2}}^{2} \rangle.\end{equation}
 
 Forgetting the turn about a direction sends the space $\grp{D_{10}}\backslash\grp{SO(3)}$ of section~\ref{s:fundamental_domain} onto this orbifold. In the orientation of \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.17.6}{17.6}, the space has the Seifert invariants $(-2;\ (10, 9), (2, 1), (2, 1))$ over the sphere, the Euler number $\tfrac{1}{10}$ and a first homology of order 4.
@@ -634,17 +634,13 @@ subgrp & order & conjugates & normal & $\grp{N}_{\hairsp \grp{D_{10}}}(\grp{H})$
 \section{Descent of symmetry}\label{s:subduction}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.12.2}{12.2} and \href{../../CONVENTIONS.pdf\#conv.12.4}{12.4}.
 A column is a class of subgroups $\grp{H}$, in the order of the table of section~\ref{s:subgroups}. The row subgrp names it by its symbol, as in that table, with the letter that distinguishes classes with the same symbol, which are not conjugate in $\grp{D_{10}}$. The symbol links to the document of $\grp{H}$. The entry of row $\Gamma$ is $\restr{\Gamma}{\grp{H}}$, the restriction of $\Gamma$ along a monomorphism from the record of $\grp{H}$ onto the subgroup, as a sum of the irreps of $\grp{H}$. The monomorphism identifies the subgroup with its record, and $\grp{H}$ names both. \label{n:group.normalizer.o3}\label{n:group.centralizer.o3}The record of $\grp{H}$ maps onto the subgroup in $\grpindex{\grp{N}}{\grp{C}}$ ways, $h \mapsto g h g^{-1}$ ($h \in \grp{H}$) for the $g \in \grp{O(3)}$ that carry $\grp{H}$ to it. Here $\grp{N}$ and $\grp{C}$ are the normalizer and centralizer of $\grp{H}$ in \href{O3.pdf}{$\grp{O(3)}$}. In the section Names and structure of the document of $\grp{H}$, the row centralizer gives $\grp{C}$ and the index $\grpindex{\grp{N}}{\grp{C}}$ (the index in the row normalizer is $\grpindex{\grp{N}}{\grp{H}}$). Two maps related by a conjugation in $\grp{D_{10}}$ give the same restriction. Thus the maps fall into $\grpindex{\grp{N}}{\grp{C}}/\grpindex{\grp{N}_{\hairsp \grp{D_{10}}}}{\grp{C}_{\hairsp \grp{D_{10}}}}$ classes, where $\grp{N}_{\hairsp \grp{D_{10}}}$ and $\grp{C}_{\hairsp \grp{D_{10}}}$ are the normalizer and centralizer of the subgroup in $\grp{D_{10}}$ (the table of section~\ref{s:subgroups}). \label{n:head.setting}A subgroup whose classes of maps give different tables has one column for each table: setting 1 for the stored monomorphism (\texttt{monomorphism}) and settings 2, 3, \dots{} for the \texttt{alternative\symbol{95}settings}. Each setting has the images of the generators of $\grp{H}$ (\texttt{setting}). \label{n:head.images}The row images gives, under each setting, each generator whose image differs between the settings, in their order, mapped to the class of $\grp{D_{10}}$ that contains its image. \label{n:element.generator.index}Each generator is written by the symbol of its class (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.5.1}{5.1}), and where two share a symbol, a superscript number in brackets gives the generator's index in the document of $\grp{H}$. \label{n:irrep.Delta}Each other setting is setting 1 with each irrep $\Lambda$ of $\grp{H}$ replaced by $\Lambda$ composed with one automorphism of $\grp{H}$ induced by a conjugation in \href{O3.pdf}{$\grp{O(3)}$} and by none in $\grp{D_{10}}$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.12.1}{12.1}).
-{\small\begin{longtable}{@{}lccc@{}}\toprule
-subgrp & \href{C2.pdf}{$\grp{C_{2}}$}\clsletter{a} & \href{C2.pdf}{$\grp{C_{2}}$}\clsletter{b} & \href{C2.pdf}{$\grp{C_{2}}$}\clsletter{c}\\\midrule\endhead
+{\small\begin{longtable}{@{}lccc@{\hspace{18pt}}lccc@{}}\toprule
+subgrp & \href{C2.pdf}{$\grp{C_{2}}$}\clsletter{a} & \href{C2.pdf}{$\grp{C_{2}}$}\clsletter{b} & \href{C2.pdf}{$\grp{C_{2}}$}\clsletter{c} & subgrp & \href{C2.pdf}{$\grp{C_{2}}$}\clsletter{a} & \href{C2.pdf}{$\grp{C_{2}}$}\clsletter{b} & \href{C2.pdf}{$\grp{C_{2}}$}\clsletter{c}\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
-$\irr{a}_{1}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$\\*
-$\irr{a}_{2}$ & $\irr{a}$ & $\irr{b}$ & $\irr{b}$\\*
-$\irr{b}_{1}$ & $\irr{b}$ & $\irr{a}$ & $\irr{b}$\\*
-$\irr{b}_{2}$ & $\irr{b}$ & $\irr{b}$ & $\irr{a}$\\*
-$\irr{e}_{1}$ & $2\,\irr{b}$ & $\irr{a}\oplus \irr{b}$ & $\irr{a}\oplus \irr{b}$\\*
-$\irr{e}_{2}$ & $2\,\irr{a}$ & $\irr{a}\oplus \irr{b}$ & $\irr{a}\oplus \irr{b}$\\*
-$\irr{e}_{3}$ & $2\,\irr{b}$ & $\irr{a}\oplus \irr{b}$ & $\irr{a}\oplus \irr{b}$\\*
-$\irr{e}_{4}$ & $2\,\irr{a}$ & $\irr{a}\oplus \irr{b}$ & $\irr{a}\oplus \irr{b}$\\
+$\irr{a}_{1}$ & $\irr{a}$ & $\irr{a}$ & $\irr{a}$ & $\irr{e}_{1}$ & $2\,\irr{b}$ & $\irr{a}\oplus \irr{b}$ & $\irr{a}\oplus \irr{b}$\\*
+$\irr{a}_{2}$ & $\irr{a}$ & $\irr{b}$ & $\irr{b}$ & $\irr{e}_{2}$ & $2\,\irr{a}$ & $\irr{a}\oplus \irr{b}$ & $\irr{a}\oplus \irr{b}$\\*
+$\irr{b}_{1}$ & $\irr{b}$ & $\irr{a}$ & $\irr{b}$ & $\irr{e}_{3}$ & $2\,\irr{b}$ & $\irr{a}\oplus \irr{b}$ & $\irr{a}\oplus \irr{b}$\\*
+$\irr{b}_{2}$ & $\irr{b}$ & $\irr{b}$ & $\irr{a}$ & $\irr{e}_{4}$ & $2\,\irr{a}$ & $\irr{a}\oplus \irr{b}$ & $\irr{a}\oplus \irr{b}$\\
 \bottomrule\end{longtable}}
 {\small\begin{longtable}{@{}lcccccc@{}}\toprule
 subgrp & \multicolumn{6}{c}{\href{D2.pdf}{$\grp{D_{2}}$}}\\\cmidrule(lr){2-7}
