@@ -4129,10 +4129,11 @@ def orbifold_strata(D, orb):
     row("generic", "", "", orb["generic"])
     D.w(D.define("head.stratum", "head.order.point", "head.direction", "head.stabilizer",
                  "head.size.orbit", "head.shape")
-        + r"A row is a stratum, with the order of its point (order), its direction or the side of "
-          r"the region with an arc, and its stabilizer. Its orbit has the size and the shape of "
-          r"the figure of the stabilizer in section~\ref{s:permutation} (a dash where the shape "
-          r"depends on the point).")
+        + r"A row is a stratum of the orbifold: a cone point, a corner, an arc of the mirror edge "
+          r"or the generic points. A row gives the order of its points, the direction of a point or "
+          r"the side of the region along an arc, and the stabilizer of its directions. Its orbit has "
+          r"the size and the shape of the figure of the stabilizer in section~\ref{s:permutation}. "
+          r"A dash marks a shape that depends on the direction.")
     D.w(r"{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lrllrl@{}}\toprule")
     D.w(r"stratum & order & direction & stabilizer & size & shape\\\midrule\endhead")
     for r in rows:
@@ -4152,10 +4153,13 @@ def orbifold_region(D, orb):
     sides = region["sides"]
     D.w(D.define("head.vertex.region", "head.angle", "head.normal.side", "head.partner",
                  "head.sense")
-        + r"The region holds one direction of every orbit, more only on its boundary. A row is a "
-          r"vertex, with its direction and angle, and the side from it to the next vertex. It also "
-          r"gives the inward normal of the side's plane (normal), the index $k$ and the symbol "
-          r"(sym) of its element, its partner, itself on a mirror, and the sense of the gluing.")
+        + r"The region meets every orbit, and an orbit meets it more than once only on its "
+          r"boundary. A row is a vertex of the region together with the side that runs from it to "
+          r"the next vertex. A row gives the direction of the vertex, its angle and the inward "
+          r"normal of the side's plane. It also gives the element that carries the side onto its "
+          r"partner, by its index $k$ and its symbol (sym), then the partner and the sense of the "
+          r"gluing. A side on a mirror is its own partner, and its element is the reflection in "
+          r"that mirror.")
     D.w(r"{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}rlllrlrl@{}}\toprule")
     D.w(r"vertex & direction & angle & normal & $k$ & sym & partner & sense\\\midrule\endhead")
     for i, (v, angle, s) in enumerate(zip(region["vertices"], region["angles"], sides)):
@@ -4178,7 +4182,7 @@ def orbifold_presentation(D, orb):
     D.w(D.define("element.presentation.generator", "local.presentation.brackets")
         + r"The %s %s %s $\grp{G}$, with the presentation (CONVENTIONS.pdf, section 17.7)"
         % ("elements" if len(letters) > 1 else "element",
-           listed([r"$%s$ of the side %d" % (letters[k], g["side"])
+           listed([r"$%s$ of side %d" % (letters[k], g["side"])
                    for k, g in enumerate(pres["generators"])]),
            "generate" if len(letters) > 1 else "generates"))
     D.equation("presentation", r"\langle %s \mid %s \rangle." % (
