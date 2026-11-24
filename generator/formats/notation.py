@@ -207,7 +207,8 @@ COMMAND_RECORDS = (
     C("typography.spectroscopic", "typography", r"\mathrm{#1}",
       r"a spectroscopic letter of an irrep of $\grp{SO(3)}$ or $\grp{O(3)}$: S, P, D, F, "
       r"$\dots$ for $J = 0, 1, 2, 3, \dots$",
-      "\\spec{*}*", command=r"\spec[1]{\mathrm{#1}}", arguments="g",
+      "\\spec{*}*", r"\mathrm{S}_{*}", r"\mathrm{S}^{*}", r"\mathrm{D}",
+      command=r"\spec[1]{\mathrm{#1}}", arguments="g",
       data_field="character_functions.irrep_families[].spectroscopic_alias",
       defined=("conv:16", "part:continuous_irreps"), index=True,
       pattern=r"\spec{<label:S>}"),
@@ -1085,7 +1086,8 @@ IRREPS = (
       defined=("part:subduction", "conv:12")),
     S("irrep.Gamma.factors", "irrep", r"\Gamma_1, \Gamma_2", "the two factors of a product of "
       "irreps", r"\Gamma_{#}", scope=("finite|fusion|", "finite|clebsch_gordan|",
-                                     "conventions|conv:10|", "conventions|conv:18|"), index=True,
+                                     "conventions|conv:10|", "conventions|conv:13.3|",
+                                     "conventions|conv:18|"), index=True,
       defined=("part:fusion", "part:clebsch_gordan", "conv:10")),
     S("irrep.lambda", "irrep", r"\lambda", "a one-dimensional irrep", r"\lambda", r"\lambda(.)",
       defined=("part:clebsch_gordan", "conv:9")),
@@ -1425,9 +1427,34 @@ CONVENTIONS_LETTERS = (
       "conjugate", r"\mathcal{J}", r"\mathcal{J}_{*}", scope="conventions|conv:10|",
       defined="conv:10"),
     S("local.tensor.T", "local", "T", "the tensor of a crossing rule, T_{mu1,mu2,nu}", "T",
-      "T_{*}", scope="conventions|conv:10|", defined="conv:10"),
+      "T_{*}", scope="conventions|conv:10.4|", defined="conv:10"),
     S("local.irrep.V", "local", "V", "the three-dimensional irrep of the rotations (the "
-      "trace character)", "V", scope="conventions|conv:10|", defined="conv:10"),
+      "trace character)", "V", scope="conventions|conv:10.4|", defined="conv:10"),
+    # the matrix elements of operators (section 10.8) and the crystal field (section 14.5)
+    S("local.operator.T", "local", r"T_{\mu_2}", "the operators that transform as the partners "
+      "of an irrep, or the components T^(k)_q of a tensor operator of rank k", "T", "T_{*}",
+      "T^{(*)}_{*}", "T^{(*)}", scope="conventions|conv:10.8|", defined="conv:10.8"),
+    S("local.reduced", "local", r"\langle \Gamma \| T \| \Gamma_1\rangle_\kappa",
+      "a reduced matrix element, of the copy kappa", r"\|", r"\rangle_{*}",
+      scope="conventions|conv:10.8|", defined="conv:10.8"),
+    S("local.momentum.prime", "local", "J', M'", "the angular momentum and the z component of "
+      "the ket of a matrix element", "J'", "M'", scope="conventions|conv:10.8|",
+      defined="conv:10.8"),
+    S("local.coefficient.V", "local", r"\bar{V}", "a coefficient of three angular momenta, the "
+      "3j symbol up to a sign", r"\bar", "V", scope="conventions|conv:10.8|",
+      defined="conv:10.8"),
+    S("local.parity.odd", "local", r"\mathrm{o}", "the superscript o of a term of odd parity in "
+      "atomic spectroscopy", r"\mathrm{o}", scope="conventions|conv:10.8|", defined="conv:10.8"),
+    S("local.rank.k", "local", "k", "the rank of a tensor operator or of a term of the crystal "
+      "field", "k", scope=("conventions|conv:10.8|", "conventions|conv:14.5|"),
+      defined=("conv:10.8", "conv:14.5")),
+    S("local.rank.q", "local", "q", "the component of a tensor operator of rank k", "q",
+      scope=("conventions|conv:10.8|", "conventions|conv:14.5|"),
+      defined=("conv:10.8", "conv:14.5")),
+    S("local.crystal.B", "local", "B^k_q", "a parameter of the crystal field, the coefficient "
+      "of C^(k)_q", "B^{*}_{*}", scope="conventions|conv:14.5|", defined="conv:14.5"),
+    S("local.tensor.C", "local", "C^{(k)}_q", "the tensor sqrt(4 pi/(2k + 1)) Y_k^q of rank k",
+      "C^{(*)}_{*}", scope="conventions|conv:14.5|", defined="conv:14.5"),
     # the harmonics on the orientation space, the orbifold of the directions and its region
     # (sections 17.5 to 17.8)
     S("local.harmonic.amplitudes", "local", "c", "the amplitudes of the kets of an invariant "

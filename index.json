@@ -4,16 +4,16 @@
       "catalogue": "rotation",
       "files": [
         {
-          "bytes": 319413,
+          "bytes": 330279,
           "format": "markdown",
           "path": "rotation/CONVENTIONS.md",
-          "sha256": "adf0b497b1ac53198197fd2e3a3dac18b3a46c92fc1813c1bad3b860a81f313c"
+          "sha256": "9c5fe6d60fb4446baa6a1e4a545433bcc3853d00dc99e4576e6f14996d364f4d"
         },
         {
-          "bytes": 793863,
+          "bytes": 806398,
           "format": "pdf",
           "path": "rotation/CONVENTIONS.pdf",
-          "sha256": "aab6fd6e20ed549466ccecebc29885887f577dcfa78bf91edcbb14f3baaedeb5"
+          "sha256": "c0f5e4bd752713f4ec1e014395cefbff7b2dbeed2b2512a4caf57c2c515c7bf7"
         },
         {
           "bytes": 156100,
@@ -41,16 +41,16 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 79602,
+          "bytes": 80174,
           "format": "markdown",
           "path": "double/CONVENTIONS.md",
-          "sha256": "e513e4113e04cfb69c2d84d42cc09fa6077e7814a3b02148f0df75cb89e7d098"
+          "sha256": "dee98ee75413dc7c2d6d6b0a1afa320cf83479ca9f16f0c7239a52f16b47c0a3"
         },
         {
-          "bytes": 481748,
+          "bytes": 482081,
           "format": "pdf",
           "path": "double/CONVENTIONS.pdf",
-          "sha256": "bd515ba3501f0340786f9586f5563648bed30bd6e9c28c206b094be7bfdf7ea8"
+          "sha256": "6dc7b83e107f79034ec5524107eeafb2b27529b67bcb02cf9a8b1f8fb3852e10"
         },
         {
           "bytes": 85795,
@@ -89,22 +89,22 @@
       "sha256": "0ff846d59888fb8184d65a5839a4d463b454c7c50c286ecfbfe50638e5f8fc91"
     },
     {
-      "bytes": 26707,
+      "bytes": 27359,
       "format": "markdown",
       "path": "REFERENCES.md",
-      "sha256": "c38d705a320e9c68af22735262629968439e5f42ea9e0fcaa1dac6e0873214b0"
+      "sha256": "a31c39c91cdd0f3a8f95cec09fc3724b1dad1a3caa020d41508c24312bcd2589"
     },
     {
-      "bytes": 178340,
+      "bytes": 179061,
       "format": "pdf",
       "path": "REFERENCES.pdf",
-      "sha256": "bbd2a9455311de5a7e305d62dbed865a7995cff27912a8026d2ab2ba49b3ec2d"
+      "sha256": "75cfe9257eb78290a98e760efad33348b2864dbacfa8bcd931c8872fd89ce747"
     },
     {
-      "bytes": 46135,
+      "bytes": 47257,
       "format": "bibtex",
       "path": "references.bib",
-      "sha256": "e3a3a94bde7cd062b3ab5ca30eaa5deca2e88c25a4034577bc84a59108426797"
+      "sha256": "1ebb16b62e116f51f44d2dffdd002d2ebaa7e11c1fc9c2eb65969dab99931684"
     },
     {
       "bytes": 913,

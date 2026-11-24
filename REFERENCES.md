@@ -17,6 +17,7 @@
 - Bartók, A. P., Kondor, R., and Csányi, G. (2013). On representing chemical environments. *Physical Review B* 87(18), 184115. https://doi.org/10.1103/PhysRevB.87.184115. arXiv:1209.3140
 - Benson, D. J. (1993). *Polynomial Invariants of Finite Groups*. London Mathematical Society Lecture Note Series 190. Cambridge University Press, Cambridge. ISBN 0-521-45886-2.
 - Besche, H. U., Eick, B., O'Brien, E., and Horn, M. (2024). SmallGrp, The GAP Small Groups Library, Version 1.5.4. GAP package. https://gap-packages.github.io/smallgrp/
+- Bethe, H. (1929). Termaufspaltung in Kristallen. *Annalen der Physik* 395(2), 133–208. https://doi.org/10.1002/andp.19293950202
 - Biedenharn, L. C., and Louck, J. D. (1981). *Angular Momentum in Quantum Physics: Theory and Application*. Encyclopedia of Mathematics and Its Applications 8. Addison-Wesley, Reading, MA; reissued by Cambridge University Press, Cambridge, 1984. ISBN 0-521-30228-5. https://doi.org/10.1017/CBO9780511759888
 - Bilbao Crystallographic Server (2026). Representations of the double point groups (REPRESENTATIONS DPG) and point group tables (POINT). https://cryst.ehu.es, pages retrieved in October and November 2026. Its pages carry the license CC BY-NC-SA 4.0, https://creativecommons.org/licenses/by-nc-sa/4.0/; the records take from them the labels of the irreps only.
 - Bouckaert, L. P., Smoluchowski, R., and Wigner, E. (1936). Theory of Brillouin zones and symmetry properties of wave functions in crystals. *Physical Review* 50(1), 58–67. https://doi.org/10.1103/PhysRev.50.58
@@ -46,6 +47,7 @@
 - Elcoro, L., Bradlyn, B., Wang, Z., Vergniory, M. G., Cano, J., Felser, C., Bernevig, B. A., Orobengoa, D., de la Flor, G., and Aroyo, M. I. (2017). Double crystallographic groups and their representations on the Bilbao Crystallographic Server. *Journal of Applied Crystallography* 50(5), 1457–1477. https://doi.org/10.1107/S1600576717011712
 - Etingof, P., Golberg, O., Hensel, S., Liu, T., Schwendner, A., Vaintrob, D., and Yudovina, E. (2011). *Introduction to Representation Theory*. Student Mathematical Library 59. American Mathematical Society, Providence, RI. ISBN 978-0-8218-5351-1. https://doi.org/10.1090/stml/059. Online version: https://math.mit.edu/~etingof/reprbook.pdf
 - Etxebarria, J., Perez-Mato, J. M., Tasci, E. S., and Elcoro, L. (2025). Crystal tensor properties of magnetic materials with and without spin–orbit coupling. Application of spin point groups as approximate symmetries. *Acta Crystallographica Section A* 81(4), 317–338. https://doi.org/10.1107/S2053273325004127. arXiv:2502.03934
+- Fano, U., and Racah, G. (1959). *Irreducible Tensorial Sets*. Pure and Applied Physics 4. Academic Press, New York.
 - Fox, K., and Ozier, I. (1970). Construction of tetrahedral harmonics. *The Journal of Chemical Physics* 52(10), 5044–5056. https://doi.org/10.1063/1.1672742
 - Fujita, S., and El-Basil, S. (2004). Graphical modeling of combinatorial chemistry. *Journal of Computer Chemistry, Japan* 3(3), 97–102. https://doi.org/10.2477/jccj.3.97
 - Gallego, S. V., Etxebarria, J., Elcoro, L., Tasci, E. S., and Perez-Mato, J. M. (2019). Automatic calculation of symmetry-adapted tensors in magnetic and non-magnetic materials: a new tool of the Bilbao Crystallographic Server. *Acta Crystallographica Section A* 75(3), 438–447. https://doi.org/10.1107/S2053273319001748
@@ -77,6 +79,7 @@
 - Jack, A., and Harrison, S. C. (1975). On the interpretation of small-angle X-ray solution scattering from spherical viruses. *Journal of Molecular Biology* 99(1), 15–25. https://doi.org/10.1016/S0022-2836(75)80155-0
 - Jahn, H. A., and Teller, E. (1937). Stability of polyatomic molecules in degenerate electronic states. I—Orbital degeneracy. *Proceedings of the Royal Society of London. Series A* 161(905), 220–235. https://doi.org/10.1098/rspa.1937.0142
 - Johansson, M., and Veryazov, V. (2017). Automatic procedure for generating symmetry adapted wavefunctions. *Journal of Cheminformatics* 9(1), 8. https://doi.org/10.1186/s13321-017-0193-3
+- Judd, B. R. (1963). *Operator Techniques in Atomic Spectroscopy*. McGraw-Hill, New York; republished with a new preface, Princeton Landmarks in Mathematics and Physics, Princeton University Press, Princeton, NJ, 1998. ISBN 0-691-05901-2. https://doi.org/10.1515/9781400864775
 - Khatua, S., and Ganesh, R. (2022). Berry phase in the rigid rotor: Emergent physics of odd antiferromagnets. *Physical Review B* 105(18), 184401. https://doi.org/10.1103/PhysRevB.105.184401. arXiv:2202.04096
 - Klein, F. (1884). *Vorlesungen über das Ikosaeder und die Auflösung der Gleichungen vom fünften Grade*. B. G. Teubner, Leipzig.
 - König, E., and Kremer, S. (1973). Symmetry coupling coefficients for point groups and the importance of Racah's lemma for the standardization of phase. *Theoretica Chimica Acta* 32(1), 27–40. https://doi.org/10.1007/BF01209413
@@ -123,6 +126,7 @@
 - Wilson, E. B., Decius, J. C., and Cross, P. C. (1955). *Molecular Vibrations: The Theory of Infrared and Raman Vibrational Spectra*. McGraw-Hill, New York.
 - Wolfram Research, Inc. (2026). Mathematica, Version 15.0.1. Champaign, IL.
 - Wormer, P. E. S. (2001). Tetrahedral harmonics revisited. *Molecular Physics* 99(23), 1973–1980. https://doi.org/10.1080/00268970110086318
+- Wybourne, B. G. (1965). *Spectroscopic Properties of Rare Earths*. Interscience Publishers (John Wiley & Sons), New York.
 - Wybourne, B. G. (1974). *Classical Groups for Physicists*. John Wiley & Sons, New York. ISBN 0-471-96505-7.
 - Yamanouchi, T. (1936). On the calculation of atomic energy levels. IV. *Proceedings of the Physico-Mathematical Society of Japan. 3rd Series* 18, 623–640. https://doi.org/10.11429/ppmsj1919.18.0_623
 - Yi, P.-N., Ozier, I., and Anderson, C. H. (1968). Theory of nuclear hyperfine interactions in spherical-top molecules. *Physical Review* 165(1), 92–109. https://doi.org/10.1103/PhysRev.165.92

@@ -301,6 +301,13 @@ angular momentum is `parent_twoJ`, and `separation` is `su2-parent` when parenta
 document sets the blocks of a product when each row of their coefficients fills at most four lines, and names
 the others.
 
+The theorem of section 10.8 holds in a preimage with its vector and spinor irreps, their matrices
+(section 23.3) and the blocks of this section. An operator of integer rank transforms as a vector irrep and
+joins kets of spinor irreps to kets of spinor irreps. In the irrep order of a preimage the vector irreps
+precede the spinor irreps, so the block of a vector operator between spinor kets is read with its rows
+permuted, as in section 10.8. In $`\mathsf{SU(2)}`$ the theorem takes the form of section 10.8 at half-integer $`J`$, with the
+coefficients of section 29.3.
+
 ## 25. Subduction
 
 ### 25.1 Subduction from the parent

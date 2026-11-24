@@ -1239,6 +1239,43 @@ is real when $`J_1 + J_2 + J`$ is even and imaginary when it is odd. If $`\maths
 $`b_\Gamma(J, (-1)^J) = 0`$ for the trivial irrep $`\Gamma`$ (section 11), and if $`\mathsf{G}`$ has an element of determinant $`-1`$, $`B_{J_1,J_2,J}(f) = 0`$ whenever
 $`J_1 + J_2 + J`$ is odd.
 
+### 10.8 Matrix elements of operators
+
+The operators $`T_{\mu_2}`$, $`\mu_2 = 1, 2, \dots, d_{\Gamma_2}`$, transform as the partners of an irrep $`\Gamma_2`$ when
+$`\mathsfit{g}\, T_{\mu_2}\, \mathsfit{g}^{-1} = \sum_\nu T_\nu\, D^{\Gamma_2}_{\nu,\mu_2}(\mathsfit{g})`$ for every element $`\mathsfit{g}`$, which acts on the states as on the kets (section 4.1). The
+components $`T^{(k)}_q`$ of a tensor operator of rank $`k`$ in the sense of Racah [Jud63, eq. 2-26] transform as the kets
+$`\bigl\lvert{}^{k}_{\,q}\bigr\rangle`$. Thus the amplitudes of a block of $`\Gamma_2`$ at $`J = k`$ (section 14) combine them into operators that transform as
+its partners. For kets of the irreps $`\Gamma_1`$ and $`\Gamma`$ that obey the partner law (section 9), the Wigner–Eckart theorem
+gives the matrix elements
+
+```math
+\bigl\langle{}^{\Gamma}_{\,\mu}\bigm\vert T_{\mu_2}\bigm\vert{}^{\Gamma_1}_{\,\mu_1}\bigr\rangle = d_\Gamma^{-1/2} \sum_\kappa \langle \Gamma \| T \| \Gamma_1\rangle_\kappa\, C[(\mu_1,\mu_2),\mu]^*,
+```
+
+where $`C`$ is the block of the copy $`\kappa`$ of $`\Gamma`$ in $`\Gamma_1 \otimes \Gamma_2`$ (section 10.3), the irrep of the ket first. The reduced
+matrix elements $`\langle \Gamma \| T \| \Gamma_1\rangle_\kappa`$ do not depend on the partners, and every matrix element is zero unless $`\Gamma`$ occurs
+in $`\Gamma_1 \otimes \Gamma_2`$. When $`\Gamma_2`$ precedes $`\Gamma_1`$ in irrep order, the record stores $`\Gamma_2 \otimes \Gamma_1`$, and the row $`(\mu_2, \mu_1)`$ of its block
+is the row $`(\mu_1, \mu_2)`$ of $`C`$. The factor $`d_\Gamma^{-1/2}`$ is the normalization of Racah [FR59, eq. 14.4]: over all the
+partners, the squared moduli of the matrix elements sum to $`\sum_\kappa \lvert\langle \Gamma \| T \| \Gamma_1\rangle_\kappa\rvert^2`$.
+
+Continuous groups. In $`\mathsf{SO(3)}`$ the theorem reads $`\bigl\langle{}^{J}_{\,M}\bigm\vert T^{(k)}_q\bigm\vert{}^{J'}_{\,M'}\bigr\rangle = (2J + 1)^{-1/2}\, \bigl\langle{}^{J'}_{\,M'}\,{}^{k}_{\,q}\bigm\vert{}^{J}_{\,M}\bigr\rangle\, \langle J \| T^{(k)} \| J'\rangle`$,
+with the coefficients of section 10.6, as in [FR59, eq. 14.4] and in [Jud63, eq. 2-27], which writes it with a
+3j symbol. For $`J' > k`$ the record holds the product in the other order, and
+$`\bigl\langle{}^{J'}_{\,M'}\,{}^{k}_{\,q}\bigm\vert{}^{J}_{\,M}\bigr\rangle = (-1)^{J'+k-J}\, \bigl\langle{}^{k}_{\,q}\,{}^{J'}_{\,M'}\bigm\vert{}^{J}_{\,M}\bigr\rangle`$. In $`\mathsf{O(3)}`$ the parities multiply as in section 10.6.
+
+Other works write these results in other conventions:
+
+- The rotation matrices of [FR59, eq. 5.2] are the transposes of those of `euler.d` (section 9): their entry
+  in row $`m'`$ and column $`m`$ is $`d^J_{m,m'}(\beta)`$.
+- The spherical harmonics of [FR59, eq. 5.18] are $`\mathrm{i}^J Y_J^m`$, and their coefficient $`\bar{V}`$ of three angular momenta
+  [FR59, eq. 10.11] is the 3j symbol of the same arguments times $`(-1)^{J_1+J_2+J}`$.
+- The works [FR59, eq. 13.7] and [Jud63, section 1-5] couple the spin before the orbit, which multiplies a
+  coupled state by the exchange sign $`(-1)^{J_1+J_2-J}`$ (section 25.4).
+- For a rotation by $`\phi`$ about $`z`$, the operator of [Jud63, eq. 2-18] multiplies $`\bigl\lvert{}^{J}_{\,M}\bigr\rangle`$ by $`\mathrm{e}^{-\mathrm{i}M\phi}`$, the inverse of the
+  action of section 4.1, and in the products of [Jud63, section 2-3] the right factor acts first.
+- Atomic spectroscopy writes the parity $`\mathrm{u}`$ of a term as a superscript o and keeps the right subscript for $`J`$:
+  the term $`{}^{4}\mathrm{S}_{\mathrm{u}}`$ (section 19) is $`{}^{4}\mathrm{S}^{\mathrm{o}}`$ there.
+
 ## 11. Subduction from $`\mathsf{O(3)}`$
 
 The irrep $`D^{(J,p)}`$ of $`\mathsf{O(3)}`$, of angular momentum $`J`$ and parity $`p = \chi(\mathsfit{i})/\dim`$, is $`p^{[\det \mathsfit{g} = -1]} D^{(J)}((\det \mathsfit{g})\,\mathsfit{g})`$ on $`\mathsfit{g}`$, with the
@@ -1528,6 +1565,25 @@ character $`q^{c(\mathsfit{g})}`$. In this character $`\Gamma`$ has the multipli
 the number of colorings of the points with $`q`$ colors up to $`\mathsf{G}`$. The displacements of the points, a vector at
 each, carry the character $`\chi(\mathsfit{g})\, \operatorname{tr} P(\mathsfit{g})`$.
 
+The atoms of a molecule lie on orbits of its point group, and the orbit of a point of stabilizer $`\mathsf{H}`$ carries the
+representation $`D`$ of the entry of $`\mathsf{H}`$ in `actions`. The displacements of all the atoms carry the sum of the
+characters $`\chi(\mathsfit{g})\, \operatorname{tr} P(\mathsfit{g})`$ of their orbits. The vibrations carry this sum minus the characters $`\operatorname{tr} P(\mathsfit{g})`$ of the
+translations and $`(\det \mathsfit{g})\, \operatorname{tr} P(\mathsfit{g})`$ of the rotations, whose irreps are those of `p_x`, `p_y`, `p_z` and of $`\mathrm{R}_x`$, $`\mathrm{R}_y`$,
+$`\mathrm{R}_z`$ (section 13). A linear molecule, whose atoms lie on its axis, has the rotations $`\mathrm{R}_x`$ and $`\mathrm{R}_y`$ only. The
+stretches of the bonds from an atom at the origin to the points of one orbit carry the representation $`D`$ of
+that orbit.
+
+A function $`f`$ evaluated at the points of an orbit gives the vector $`\sum_j f(\mathbf{r}_j)\, \lvert e_j\rangle`$, on which an element acts as
+on $`f`$: $`\mathsfit{g}`$ carries it to the vector of $`\mathsfit{g} f`$ (section 4.1). Thus functions that transform as the partners of an
+irrep $`\Gamma`$, such as a block of section 14, give the partners of a copy of $`\Gamma`$ in $`D`$ unless all their values are
+zero. These vectors are the symmetry-adapted combinations of the points. Hybrid orbitals directed at the
+points are built from an orthonormal basis of $`D`$ made of such combinations and from orthonormal orbitals that
+transform as these combinations do, one orbital for each. The polynomials of section 13 are not normalized: on the sphere, `d_z2` has $`\sqrt{3}`$ times the norm of `d_x2-y2`. The hybrid of the point $`\mathbf{r}_j`$ is the sum of these
+orbitals, each times the conjugate of the coefficient of $`\lvert e_j\rangle`$ in its combination. The $`N`$ hybrids are
+orthonormal, and $`\mathsfit{g}`$ carries the hybrid of $`\mathbf{r}_{j'}`$ to the hybrid of $`\mathbf{r}_j`$ as it carries $`\lvert e_{j'}\rangle`$ to $`\lvert e_j\rangle`$. In this way
+the orbitals `s`, `p_x`, `p_y`, `p_z` give the hybrids of the tetrahedron of $`\mathsf{T_{d}}`$ ($`\mathrm{\scriptsize A}_1 \oplus \mathrm{\scriptsize T}_2`$), and the orbitals
+`s`, `p_x`, `p_y`, `p_z`, `d_z2`, `d_x2-y2` the hybrids of the octahedron of $`\mathsf{O_{h}}`$ ($`\mathrm{\scriptsize A}_{1\mathrm{g}} \oplus \mathrm{\scriptsize E}_{\mathrm{g}} \oplus \mathrm{\scriptsize T}_{1\mathrm{u}}`$).
+
 ### 12.6 Figures
 
 For every class of subgroups $`\mathsf{H}`$ (every node of `subgroup_lattice`, in node order), the field
@@ -1768,6 +1824,25 @@ Every other time-even property of these works is allowed in every point group: i
 These properties include the dielectric and magnetic susceptibilities, the conductivities and the elastic,
 photoelastic and third-harmonic tensors.
 
+### 13.3 Selection rules
+
+An operator whose components transform as the partners of an irrep $`\Gamma_2`$ (section 10.8) joins a state of $`\Gamma_1`$ to a
+state of $`\Gamma`$ only when $`\Gamma`$ occurs in $`\Gamma_1 \otimes \Gamma_2`$ (`fusion`, section 10.1). The electric dipole moment transforms as
+`p_x`, `p_y`, `p_z` (the space `polar-1`) and the magnetic dipole moment as $`\mathrm{R}_x`$, $`\mathrm{R}_y`$, $`\mathrm{R}_z`$ (`axial-1`). The
+polarizability of Raman scattering, a symmetric tensor of rank 2, transforms as the functions of the sets `s`
+and `d` (`polar-2`).
+
+The vibrational ground state carries the trivial irrep. Thus one quantum of a mode of the irrep $`\Gamma`$ is infrared
+active when $`\Gamma`$ is an irrep of `polar-1` and Raman active when it is an irrep of `polar-2`. Two quanta of one
+degenerate mode carry the symmetric square of its irrep (`symmetric`), and one quantum in each of two modes
+carries the product of their irreps (`terms`). In a group that contains $`\mathsfit{i}`$, the irreps of `polar-1` are $`\mathrm{u}`$ and
+those of `polar-2` are $`\mathrm{g}`$, so no fundamental is both infrared and Raman active.
+
+Continuous groups. In $`\mathsf{O(3)}`$ the electric dipole moment carries $`D^{(1,-)}`$ and the magnetic dipole moment $`D^{(1,+)}`$.
+Each changes $`J`$ by 0 or $`\pm 1`$, never from 0 to 0, and the electric dipole moment also changes the parity. The
+electric dipole moment thus changes the $`J`$ of one electron, whose parity is $`(-1)^J`$, by $`\pm 1`$. In $`\mathsf{C_{\infty v}}`$ it carries
+$`\Sigma^+`$ along $`z`$ and $`\Pi`$ across it (section 16), $`\Sigma_{\mathrm{u}}^+`$ and $`\Pi_{\mathrm{u}}`$ in $`\mathsf{D_{\infty h}}`$, so it never joins $`\Sigma^+`$ to $`\Sigma^-`$.
+
 ## 14. Symmetry-adapted bases
 
 The kets $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ are the spherical harmonics, with the action of section 4: the inversion acts as $`(-1)^J`$, and an
@@ -1966,6 +2041,29 @@ are coprime integers. The amplitudes are unchanged ($`\mathrm{tot}`$ is computed
 `{m, e}`. However, when a vector has two or more components and every coefficient is a rational multiple of one
 irrational value, that value is the vector's `factor`. The vector's components are then `{m, q}` with
 $`e_m = \texttt{factor} \cdot q_m`$ ($`q_m = [n, d]`$, here always an integer).
+
+### 14.5 The crystal field
+
+The crystal field of a site of symmetry $`\mathsf{G}`$ [Bet29] is the operator $`\sum_{k,q} B^k_q\, C^{(k)}_q`$, summed over the electrons.
+In the normalization of Wybourne [Wyb65] its tensors are $`C^{(k)}_q = \sqrt{4\pi/(2k + 1)}\, Y_k^q`$ [Jud63, eq. 2-25], and it is
+hermitian when $`B^k_{-q} = (-1)^q\, (B^k_q)^*`$. These tensors transform as the kets $`\bigl\lvert{}^{k}_{\,q}\bigr\rangle`$ (section 10.8), so the field is
+invariant when at each rank $`k`$ the vector $`\sum_q B^k_q\, \bigl\lvert{}^{k}_{\,q}\bigr\rangle`$ is a combination of the blocks of the trivial irrep $`\Gamma`$ at
+$`J = k`$. These blocks are thus the crystal-field operators of the site. They number $`b_\Gamma(k, (-1)^k)`$ (section 11),
+and the field has as many real parameters at rank $`k`$. A field of one block has as its $`B^k_q`$ the amplitudes
+$`e_m \sqrt{F_m/\mathrm{tot}}`$ of the block (section 14) at $`m = q`$, times one factor. For example, the blocks of $`\mathsf{O_{h}}`$ at $`k = 4`$ and 6,
+of coefficients $`(1, 14, 1)`$ and $`(1, -2, 1)`$ on $`m = -4, 0, 4`$, give $`B^4_{\pm 4} = \sqrt{5/14}\, B^4_0`$ and $`B^6_{\pm 4} = -\sqrt{7/2}\, B^6_0`$.
+
+Within one shell, beside the constant at $`k = 0`$, the d electrons take the ranks $`k = 2, 4`$ and the f electrons
+$`k = 2, 4, 6`$ [Jud63, section 2-7]. Odd ranks occur only in a group without $`\mathsfit{i}`$, and they join configurations of
+opposite parity. Thus the field of one shell has 1 parameter for d electrons and 2 for f electrons in $`\mathsf{O_{h}}`$, 3
+and 6 in $`\mathsf{D_{3}}`$, and 2 and 3 in $`\mathsf{D_{4d}}`$. These counts hold in the frame of section 3. A rotation $`\mathsfit{R_{z}}(\phi)`$ maps $`\mathsf{C_{\mathnormal{N}}}`$, $`\mathsf{C_{\mathnormal{N}h}}`$
+and $`\mathsf{S_{2\mathnormal{N}}}`$ onto themselves and multiplies $`B^k_q`$ by $`\mathrm{e}^{\mathrm{i}q\phi}`$, so a choice of the azimuth of $`x`$ can make one complex $`B^k_q`$
+real. In $`\mathsf{C_{1}}`$ and $`\mathsf{C_{i}}`$ the rotations of the frame remove three parameters.
+
+The binary rotation $`\mathsfit{C_{2x}}`$ carries $`\bigl\lvert{}^{k}_{\,q}\bigr\rangle`$ to $`(-1)^k \bigl\lvert{}^{k}_{\,-q}\bigr\rangle`$ (section 14.1). With the hermiticity it makes $`B^k_q`$ real
+when $`k + q`$ is even and imaginary when $`k + q`$ is odd. Thus in the frame of section 3, with $`\mathsfit{C_{2}'}`$ along $`x`$, the
+fields of $`\mathsf{D_{3}}`$ and $`\mathsf{D_{3d}}`$ have imaginary $`B^4_3`$ and $`B^6_3`$, which the binary axes along $`y`$ of section 6.5 make real. The
+mirror $`\mathsfit{\sigma_{v}}(0)`$ of $`\mathsf{C_{\mathnormal{N}v}}`$ makes every $`B^k_q`$ real.
 
 ## 15. Subgroup lattices
 
@@ -2186,7 +2284,8 @@ The field `spectroscopic_alias` gives the spectroscopic letters of the families 
 $`\mathsf{O(3)}`$. It is an object from $`J = 0, 1, \dots, 10`$, written in decimal, to the alias of the
 family's instance $`J`$ (`"F"`, `"P_u"`, `"D_g"`). The alias is the letter `S`, `P`, `D`, `F`, `G`, `H`, `I`,
 `K`, `L`, `M`, `N` for $`J = 0, 1, \dots, 10`$ (no `J`), followed in $`\mathsf{O(3)}`$ by the subscript `g`
-when $`\chi(\mathsfit{i}) = +\dim`$ and `u` when $`\chi(\mathsfit{i}) = -\dim`$ (`chi_at_points.i`).
+when $`\chi(\mathsfit{i}) = +\dim`$ and `u` when $`\chi(\mathsfit{i}) = -\dim`$ (`chi_at_points.i`). The terms of the documents (section 19)
+continue the letters with `O` and `Q` for $`J = 11`$ and 12 [Jud63, section 1-4].
 
 ### 16.1 Subgroups and subduction
 
@@ -3161,7 +3260,9 @@ scaled basis $`\lvert m) = \sqrt{(J + m)!/(J - m)!}\,\lvert J, m\rangle`$, where
 $`L_+\lvert m) = \lvert m + 1)`$ and the invariant form keeps its coefficients. Thus a coefficient $`e`$ is a
 rational times a square root, a `sqrt` value (section 8). A vector is divided by the positive rational that
 makes the rational parts of its coefficients coprime integers, each coefficient written $`a\sqrt{s}`$ with
-$`s`$ a squarefree integer.
+$`s`$ a squarefree integer. The copies of a repeated term of a shell are in general not the states of definite
+seniority of Racah [Jud63, section 6-3]. Of the two $`{}^{2}\mathrm{D}`$ of three d electrons, the state of seniority 1 has the
+squared overlaps 3/10 and 7/10 with the first and the second copy.
 
 The documents set `subduction_unitary` in the part Vibrational and electronic levels: Subduction from
 $`\mathsf{U(\mathnormal{N})}`$ (the levels and their chains), Vibrational overtone levels, Overtone states,
