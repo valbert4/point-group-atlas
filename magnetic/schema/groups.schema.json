@@ -101,8 +101,11 @@
   "description": "See CONVENTIONS.md section 30.5.",
   "properties": {
     "aliases": {
+      "additionalProperties": {
+        "description": "See CONVENTIONS.md section 30.5.",
+        "type": "string"
+      },
       "description": "See CONVENTIONS.md section 30.5.",
-      "maxProperties": 0,
       "type": "object"
     },
     "counts": {

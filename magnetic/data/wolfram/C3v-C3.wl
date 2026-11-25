@@ -439,7 +439,7 @@ o3m = <|
       <|
         "magnetic_type" -> "III",
         "node" -> "n01",
-        "record" -> <|"reason" -> "outside-the-catalogue", "value" -> Null|>,
+        "record" -> "magnetic/C1v-C1#",
         "symbol" -> "C_1v(C_1)",
         "unitary" -> <|"member" -> 0, "node" -> "n00"|>
       |>,

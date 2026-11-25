@@ -770,11 +770,13 @@ ALIAS_GROUPS = ("Cinfv", "Dinfh")
 
 
 def alias_records():
-    """The records of the rows of the Greek aliases: one per alias of the records of ALIAS_GROUPS,
-    its meaning the irrep that it names (with its label)."""
+    """The records of the rows of the Greek aliases, of Rotation alone: one per alias of the records
+    of ALIAS_GROUPS, its meaning the irrep that it names (with its label)."""
+    if names.CATALOGUE != "rotation":
+        return ()
     places = next(r for r in notation.RECORDS if r.id == "irrep.alias.greek").defined
     out = []
-    for name in (ALIAS_GROUPS if names.CATALOGUE == "rotation" else ()):
+    for name in ALIAS_GROUPS:
         rec = serialize.read_json(names.record_path(name))
         group = latex.grp(rec["group"]["schoenflies"])
         for fam in rec["character_functions"]["irrep_families"]:

@@ -617,7 +617,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 2,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C1-1p#',
                 'symbol': "C_11'"
             },
             {
@@ -630,7 +630,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 2,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2-C1#',
                 'symbol': 'C_2(C_1)',
                 'unitary': {'member': 0, 'node': 'n00'}
             },
@@ -644,7 +644,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n106',
                 'order': 2,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2-C1#',
                 'symbol': 'C_2(C_1)',
                 'unitary': {'member': 0, 'node': 'n00'}
             },
@@ -658,7 +658,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n108',
                 'order': 2,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2-C1#',
                 'symbol': 'C_2(C_1)',
                 'unitary': {'member': 0, 'node': 'n00'}
             },
@@ -672,7 +672,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 2,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/S2-C1#',
                 'symbol': 'S_2(C_1)',
                 'unitary': {'member': 0, 'node': 'n00'}
             },
@@ -686,7 +686,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 2,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C1v-C1#',
                 'symbol': 'C_1v(C_1)',
                 'unitary': {'member': 0, 'node': 'n00'}
             },
@@ -700,7 +700,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n106',
                 'order': 2,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C1v-C1#',
                 'symbol': 'C_1v(C_1)',
                 'unitary': {'member': 0, 'node': 'n00'}
             },
@@ -714,7 +714,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n108',
                 'order': 2,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C1v-C1#',
                 'symbol': 'C_1v(C_1)',
                 'unitary': {'member': 0, 'node': 'n00'}
             },
@@ -871,7 +871,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2-1p#',
                 'symbol': "C_21'"
             },
             {
@@ -884,7 +884,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n106',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2-1p#',
                 'symbol': "C_21'"
             },
             {
@@ -897,7 +897,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n108',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2-1p#',
                 'symbol': "C_21'"
             },
             {
@@ -910,7 +910,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/S2-1p#',
                 'symbol': "S_21'"
             },
             {
@@ -923,7 +923,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C1v-1p#',
                 'symbol': "C_1v1'"
             },
             {
@@ -936,7 +936,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n106',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C1v-1p#',
                 'symbol': "C_1v1'"
             },
             {
@@ -949,7 +949,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n108',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C1v-1p#',
                 'symbol': "C_1v1'"
             },
             {
@@ -976,7 +976,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2-C2#',
                 'symbol': 'D_2(C_2)',
                 'unitary': {'member': 0, 'node': 'n01'}
             },
@@ -990,7 +990,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n106',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2-C2#',
                 'symbol': 'D_2(C_2)',
                 'unitary': {'member': 0, 'node': 'n02'}
             },
@@ -1004,7 +1004,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2-C2#',
                 'symbol': 'D_2(C_2)',
                 'unitary': {'member': 0, 'node': 'n01'}
             },
@@ -1018,7 +1018,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n108',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2-C2#',
                 'symbol': 'D_2(C_2)',
                 'unitary': {'member': 0, 'node': 'n03'}
             },
@@ -1032,7 +1032,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2h-C2#',
                 'symbol': 'C_2h(C_2)',
                 'unitary': {'member': 0, 'node': 'n01'}
             },
@@ -1046,7 +1046,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2h-S2#',
                 'symbol': 'C_2h(S_2)',
                 'unitary': {'member': 0, 'node': 'n04'}
             },
@@ -1060,7 +1060,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2h-C1v#',
                 'symbol': 'C_2h(C_1v)',
                 'unitary': {'member': 0, 'node': 'n05'}
             },
@@ -1074,7 +1074,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/S4-C2#',
                 'symbol': 'S_4(C_2)',
                 'unitary': {'member': 0, 'node': 'n01'}
             },
@@ -1088,7 +1088,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-C2#',
                 'symbol': 'C_2v(C_2)',
                 'unitary': {'member': 0, 'node': 'n01'}
             },
@@ -1102,7 +1102,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n106',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-C1v#',
                 'symbol': 'C_2v(C_1v)',
                 'unitary': {'member': 0, 'node': 'n06'}
             },
@@ -1116,7 +1116,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-C2#',
                 'symbol': 'C_2v(C_2)',
                 'unitary': {'member': 0, 'node': 'n01'}
             },
@@ -1130,7 +1130,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n108',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-C1v#',
                 'symbol': 'C_2v(C_1v)',
                 'unitary': {'member': 0, 'node': 'n07'}
             },
@@ -1144,7 +1144,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n106',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2h-C2#',
                 'symbol': 'C_2h(C_2)',
                 'unitary': {'member': 0, 'node': 'n02'}
             },
@@ -1158,7 +1158,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n106',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2h-S2#',
                 'symbol': 'C_2h(S_2)',
                 'unitary': {'member': 0, 'node': 'n04'}
             },
@@ -1172,7 +1172,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n106',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2h-C1v#',
                 'symbol': 'C_2h(C_1v)',
                 'unitary': {'member': 1, 'node': 'n06'}
             },
@@ -1186,7 +1186,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n106',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-C2#',
                 'symbol': 'C_2v(C_2)',
                 'unitary': {'member': 0, 'node': 'n02'}
             },
@@ -1200,7 +1200,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n106',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-C1v#',
                 'symbol': 'C_2v(C_1v)',
                 'unitary': {'member': 0, 'node': 'n05'}
             },
@@ -1214,7 +1214,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n106',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-C1v#',
                 'symbol': 'C_2v(C_1v)',
                 'unitary': {'member': 0, 'node': 'n06'}
             },
@@ -1228,7 +1228,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n108',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2h-C2#',
                 'symbol': 'C_2h(C_2)',
                 'unitary': {'member': 0, 'node': 'n03'}
             },
@@ -1242,7 +1242,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n108',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2h-S2#',
                 'symbol': 'C_2h(S_2)',
                 'unitary': {'member': 0, 'node': 'n04'}
             },
@@ -1256,7 +1256,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n108',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2h-C1v#',
                 'symbol': 'C_2h(C_1v)',
                 'unitary': {'member': 1, 'node': 'n07'}
             },
@@ -1270,7 +1270,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n108',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-C2#',
                 'symbol': 'C_2v(C_2)',
                 'unitary': {'member': 0, 'node': 'n03'}
             },
@@ -1284,7 +1284,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n108',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-C1v#',
                 'symbol': 'C_2v(C_1v)',
                 'unitary': {'member': 0, 'node': 'n05'}
             },
@@ -1298,7 +1298,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n108',
                 'order': 4,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-C1v#',
                 'symbol': 'C_2v(C_1v)',
                 'unitary': {'member': 0, 'node': 'n07'}
             },
@@ -1403,7 +1403,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C4-1p#',
                 'symbol': "C_41'"
             },
             {
@@ -1416,7 +1416,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2-1p#',
                 'symbol': "D_21'"
             },
             {
@@ -1429,7 +1429,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2-1p#',
                 'symbol': "D_21'"
             },
             {
@@ -1442,7 +1442,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2h-1p#',
                 'symbol': "C_2h1'"
             },
             {
@@ -1455,7 +1455,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/S4-1p#',
                 'symbol': "S_41'"
             },
             {
@@ -1468,7 +1468,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-1p#',
                 'symbol': "C_2v1'"
             },
             {
@@ -1481,7 +1481,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-1p#',
                 'symbol': "C_2v1'"
             },
             {
@@ -1494,7 +1494,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n106',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2h-1p#',
                 'symbol': "C_2h1'"
             },
             {
@@ -1507,7 +1507,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n106',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-1p#',
                 'symbol': "C_2v1'"
             },
             {
@@ -1520,7 +1520,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n108',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2h-1p#',
                 'symbol': "C_2h1'"
             },
             {
@@ -1533,7 +1533,7 @@ o3m = {
                 'normal': False,
                 'normalizer': 'n108',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-1p#',
                 'symbol': "C_2v1'"
             },
             {
@@ -1546,7 +1546,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D4-C4#',
                 'symbol': 'D_4(C_4)',
                 'unitary': {'member': 0, 'node': 'n08'}
             },
@@ -1560,7 +1560,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D4-D2#',
                 'symbol': 'D_4(D_2)',
                 'unitary': {'member': 0, 'node': 'n09'}
             },
@@ -1574,7 +1574,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D4-D2#',
                 'symbol': 'D_4(D_2)',
                 'unitary': {'member': 0, 'node': 'n10'}
             },
@@ -1588,7 +1588,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C4h-C4#',
                 'symbol': 'C_4h(C_4)',
                 'unitary': {'member': 0, 'node': 'n08'}
             },
@@ -1616,7 +1616,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C4h-S4#',
                 'symbol': 'C_4h(S_4)',
                 'unitary': {'member': 0, 'node': 'n12'}
             },
@@ -1630,7 +1630,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C4v-C4#',
                 'symbol': 'C_4v(C_4)',
                 'unitary': {'member': 0, 'node': 'n08'}
             },
@@ -1644,7 +1644,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C4v-C2v#',
                 'symbol': 'C_4v(C_2v)',
                 'unitary': {'member': 0, 'node': 'n13'}
             },
@@ -1658,7 +1658,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C4v-C2v#',
                 'symbol': 'C_4v(C_2v)',
                 'unitary': {'member': 0, 'node': 'n14'}
             },
@@ -1742,7 +1742,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2d-D2#',
                 'symbol': 'D_2d(D_2)',
                 'unitary': {'member': 0, 'node': 'n09'}
             },
@@ -1756,7 +1756,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2d-S4#',
                 'symbol': 'D_2d(S_4)',
                 'unitary': {'member': 0, 'node': 'n12'}
             },
@@ -1770,7 +1770,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2d-C2v#',
                 'symbol': 'D_2d(C_2v)',
                 'unitary': {'member': 0, 'node': 'n14'}
             },
@@ -1854,7 +1854,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2d-D2#',
                 'symbol': 'D_2d(D_2)',
                 'unitary': {'member': 0, 'node': 'n10'}
             },
@@ -1868,7 +1868,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2d-S4#',
                 'symbol': 'D_2d(S_4)',
                 'unitary': {'member': 0, 'node': 'n12'}
             },
@@ -1882,7 +1882,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 8,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2d-C2v#',
                 'symbol': 'D_2d(C_2v)',
                 'unitary': {'member': 0, 'node': 'n13'}
             },
@@ -1909,7 +1909,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 16,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D4-1p#',
                 'symbol': "D_41'"
             },
             {
@@ -1922,7 +1922,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 16,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C4h-1p#',
                 'symbol': "C_4h1'"
             },
             {
@@ -1935,7 +1935,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 16,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C4v-1p#',
                 'symbol': "C_4v1'"
             },
             {
@@ -1961,7 +1961,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 16,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2d-1p#',
                 'symbol': "D_2d1'"
             },
             {
@@ -1987,7 +1987,7 @@ o3m = {
                 'normal': True,
                 'normalizer': 'n117',
                 'order': 16,
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2d-1p#',
                 'symbol': "D_2d1'"
             },
             {

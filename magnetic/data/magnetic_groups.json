@@ -1,13 +1,62 @@
 {
-  "aliases": {},
+  "aliases": {
+    "C1h-1p": "C1v-1p",
+    "C1h-C1": "C1v-C1",
+    "D1-1p": "C2-1p",
+    "D1-C1": "C2-C1",
+    "D1d-1p": "C2h-1p",
+    "D1d-C1v": "C2h-C1v",
+    "D1d-C2": "C2h-C2",
+    "D1d-S2": "C2h-S2",
+    "D1h-1p": "C2v-1p",
+    "D1h-C1v": "C2v-C1v",
+    "D1h-C2": "C2v-C2"
+  },
   "counts": {
-    "classes": 19,
-    "magnetic_type_II": 4,
-    "magnetic_type_III": 15,
-    "records": 19
+    "classes": 245,
+    "magnetic_type_II": 91,
+    "magnetic_type_III": 165,
+    "records": 256
   },
   "magnetic_type_I": "rotation/point_groups#",
   "records": [
+    {
+      "G": "C1",
+      "hermann_mauguin": "11'",
+      "id": "C1-1p",
+      "magnetic_type": "II",
+      "symbol": "C_11'"
+    },
+    {
+      "G": "C2",
+      "hermann_mauguin": "21'",
+      "id": "C2-1p",
+      "magnetic_type": "II",
+      "symbol": "C_21'"
+    },
+    {
+      "G": "C2",
+      "H": "C1",
+      "hermann_mauguin": "2'",
+      "id": "C2-C1",
+      "magnetic_type": "III",
+      "node": "n00",
+      "symbol": "C_2(C_1)"
+    },
+    {
+      "G": "C3",
+      "hermann_mauguin": "31'",
+      "id": "C3-1p",
+      "magnetic_type": "II",
+      "symbol": "C_31'"
+    },
+    {
+      "G": "C4",
+      "hermann_mauguin": "41'",
+      "id": "C4-1p",
+      "magnetic_type": "II",
+      "symbol": "C_41'"
+    },
     {
       "G": "C4",
       "H": "C2",
@@ -18,6 +67,372 @@
       "symbol": "C_4(C_2)"
     },
     {
+      "G": "C5",
+      "hermann_mauguin": "51'",
+      "id": "C5-1p",
+      "magnetic_type": "II",
+      "symbol": "C_51'"
+    },
+    {
+      "G": "C6",
+      "hermann_mauguin": "61'",
+      "id": "C6-1p",
+      "magnetic_type": "II",
+      "symbol": "C_61'"
+    },
+    {
+      "G": "C6",
+      "H": "C3",
+      "hermann_mauguin": "6'",
+      "id": "C6-C3",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "C_6(C_3)"
+    },
+    {
+      "G": "C7",
+      "hermann_mauguin": "71'",
+      "id": "C7-1p",
+      "magnetic_type": "II",
+      "symbol": "C_71'"
+    },
+    {
+      "G": "C8",
+      "hermann_mauguin": "81'",
+      "id": "C8-1p",
+      "magnetic_type": "II",
+      "symbol": "C_81'"
+    },
+    {
+      "G": "C8",
+      "H": "C4",
+      "hermann_mauguin": "8'",
+      "id": "C8-C4",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "C_8(C_4)"
+    },
+    {
+      "G": "C9",
+      "hermann_mauguin": "91'",
+      "id": "C9-1p",
+      "magnetic_type": "II",
+      "symbol": "C_91'"
+    },
+    {
+      "G": "C10",
+      "hermann_mauguin": "101'",
+      "id": "C10-1p",
+      "magnetic_type": "II",
+      "symbol": "C_101'"
+    },
+    {
+      "G": "C10",
+      "H": "C5",
+      "hermann_mauguin": "10'",
+      "id": "C10-C5",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "C_10(C_5)"
+    },
+    {
+      "G": "C11",
+      "hermann_mauguin": "111'",
+      "id": "C11-1p",
+      "magnetic_type": "II",
+      "symbol": "C_111'"
+    },
+    {
+      "G": "C12",
+      "hermann_mauguin": "121'",
+      "id": "C12-1p",
+      "magnetic_type": "II",
+      "symbol": "C_121'"
+    },
+    {
+      "G": "C12",
+      "H": "C6",
+      "hermann_mauguin": "12'",
+      "id": "C12-C6",
+      "magnetic_type": "III",
+      "node": "n04",
+      "symbol": "C_12(C_6)"
+    },
+    {
+      "G": "S2",
+      "hermann_mauguin": "-11'",
+      "id": "S2-1p",
+      "magnetic_type": "II",
+      "symbol": "S_21'"
+    },
+    {
+      "G": "S2",
+      "H": "C1",
+      "hermann_mauguin": "-1'",
+      "id": "S2-C1",
+      "magnetic_type": "III",
+      "node": "n00",
+      "symbol": "S_2(C_1)"
+    },
+    {
+      "G": "S4",
+      "hermann_mauguin": "-41'",
+      "id": "S4-1p",
+      "magnetic_type": "II",
+      "symbol": "S_41'"
+    },
+    {
+      "G": "S4",
+      "H": "C2",
+      "hermann_mauguin": "-4'",
+      "id": "S4-C2",
+      "magnetic_type": "III",
+      "node": "n01",
+      "symbol": "S_4(C_2)"
+    },
+    {
+      "G": "S6",
+      "hermann_mauguin": "-31'",
+      "id": "S6-1p",
+      "magnetic_type": "II",
+      "symbol": "S_61'"
+    },
+    {
+      "G": "S6",
+      "H": "C3",
+      "hermann_mauguin": "-3'",
+      "id": "S6-C3",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "S_6(C_3)"
+    },
+    {
+      "G": "S8",
+      "hermann_mauguin": "-81'",
+      "id": "S8-1p",
+      "magnetic_type": "II",
+      "symbol": "S_81'"
+    },
+    {
+      "G": "S8",
+      "H": "C4",
+      "hermann_mauguin": "-8'",
+      "id": "S8-C4",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "S_8(C_4)"
+    },
+    {
+      "G": "S10",
+      "hermann_mauguin": "-51'",
+      "id": "S10-1p",
+      "magnetic_type": "II",
+      "symbol": "S_101'"
+    },
+    {
+      "G": "S10",
+      "H": "C5",
+      "hermann_mauguin": "-5'",
+      "id": "S10-C5",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "S_10(C_5)"
+    },
+    {
+      "G": "S12",
+      "hermann_mauguin": "-121'",
+      "id": "S12-1p",
+      "magnetic_type": "II",
+      "symbol": "S_121'"
+    },
+    {
+      "G": "S12",
+      "H": "C6",
+      "hermann_mauguin": "-12'",
+      "id": "S12-C6",
+      "magnetic_type": "III",
+      "node": "n04",
+      "symbol": "S_12(C_6)"
+    },
+    {
+      "G": "S14",
+      "hermann_mauguin": "-71'",
+      "id": "S14-1p",
+      "magnetic_type": "II",
+      "symbol": "S_141'"
+    },
+    {
+      "G": "S14",
+      "H": "C7",
+      "hermann_mauguin": "-7'",
+      "id": "S14-C7",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "S_14(C_7)"
+    },
+    {
+      "G": "S16",
+      "hermann_mauguin": "-161'",
+      "id": "S16-1p",
+      "magnetic_type": "II",
+      "symbol": "S_161'"
+    },
+    {
+      "G": "S16",
+      "H": "C8",
+      "hermann_mauguin": "-16'",
+      "id": "S16-C8",
+      "magnetic_type": "III",
+      "node": "n03",
+      "symbol": "S_16(C_8)"
+    },
+    {
+      "G": "S18",
+      "hermann_mauguin": "-91'",
+      "id": "S18-1p",
+      "magnetic_type": "II",
+      "symbol": "S_181'"
+    },
+    {
+      "G": "S18",
+      "H": "C9",
+      "hermann_mauguin": "-9'",
+      "id": "S18-C9",
+      "magnetic_type": "III",
+      "node": "n04",
+      "symbol": "S_18(C_9)"
+    },
+    {
+      "G": "S20",
+      "hermann_mauguin": "-201'",
+      "id": "S20-1p",
+      "magnetic_type": "II",
+      "symbol": "S_201'"
+    },
+    {
+      "G": "S20",
+      "H": "C10",
+      "hermann_mauguin": "-20'",
+      "id": "S20-C10",
+      "magnetic_type": "III",
+      "node": "n04",
+      "symbol": "S_20(C_10)"
+    },
+    {
+      "G": "S22",
+      "hermann_mauguin": "-111'",
+      "id": "S22-1p",
+      "magnetic_type": "II",
+      "symbol": "S_221'"
+    },
+    {
+      "G": "S22",
+      "H": "C11",
+      "hermann_mauguin": "-11'",
+      "id": "S22-C11",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "S_22(C_11)"
+    },
+    {
+      "G": "S24",
+      "hermann_mauguin": "-241'",
+      "id": "S24-1p",
+      "magnetic_type": "II",
+      "symbol": "S_241'"
+    },
+    {
+      "G": "S24",
+      "H": "C12",
+      "hermann_mauguin": "-24'",
+      "id": "S24-C12",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "S_24(C_12)"
+    },
+    {
+      "G": "C1h",
+      "hermann_mauguin": "m1'",
+      "id": "C1h-1p",
+      "magnetic_type": "II",
+      "symbol": "C_1h1'"
+    },
+    {
+      "G": "C1h",
+      "H": "C1",
+      "hermann_mauguin": "m'",
+      "id": "C1h-C1",
+      "magnetic_type": "III",
+      "node": "n00",
+      "symbol": "C_1h(C_1)"
+    },
+    {
+      "G": "C2h",
+      "hermann_mauguin": "2/m1'",
+      "id": "C2h-1p",
+      "magnetic_type": "II",
+      "symbol": "C_2h1'"
+    },
+    {
+      "G": "C2h",
+      "H": "C2",
+      "hermann_mauguin": "2/m'",
+      "id": "C2h-C2",
+      "magnetic_type": "III",
+      "node": "n01",
+      "symbol": "C_2h(C_2)"
+    },
+    {
+      "G": "C2h",
+      "H": "S2",
+      "hermann_mauguin": "2'/m'",
+      "id": "C2h-S2",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "C_2h(S_2)"
+    },
+    {
+      "G": "C2h",
+      "H": "C1v",
+      "hermann_mauguin": "2'/m",
+      "id": "C2h-C1v",
+      "magnetic_type": "III",
+      "node": "n03",
+      "symbol": "C_2h(C_1v)"
+    },
+    {
+      "G": "C3h",
+      "hermann_mauguin": "-61'",
+      "id": "C3h-1p",
+      "magnetic_type": "II",
+      "symbol": "C_3h1'"
+    },
+    {
+      "G": "C3h",
+      "H": "C3",
+      "hermann_mauguin": "-6'",
+      "id": "C3h-C3",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "C_3h(C_3)"
+    },
+    {
+      "G": "C4h",
+      "hermann_mauguin": "4/m1'",
+      "id": "C4h-1p",
+      "magnetic_type": "II",
+      "symbol": "C_4h1'"
+    },
+    {
+      "G": "C4h",
+      "H": "C4",
+      "hermann_mauguin": "4/m'",
+      "id": "C4h-C4",
+      "magnetic_type": "III",
+      "node": "n04",
+      "symbol": "C_4h(C_4)"
+    },
+    {
       "G": "C4h",
       "H": "C2h",
       "hermann_mauguin": "4'/m",
@@ -25,6 +440,256 @@
       "magnetic_type": "III",
       "node": "n05",
       "symbol": "C_4h(C_2h)"
+    },
+    {
+      "G": "C4h",
+      "H": "S4",
+      "hermann_mauguin": "4'/m'",
+      "id": "C4h-S4",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "C_4h(S_4)"
+    },
+    {
+      "G": "C5h",
+      "hermann_mauguin": "-101'",
+      "id": "C5h-1p",
+      "magnetic_type": "II",
+      "symbol": "C_5h1'"
+    },
+    {
+      "G": "C5h",
+      "H": "C5",
+      "hermann_mauguin": "-10'",
+      "id": "C5h-C5",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "C_5h(C_5)"
+    },
+    {
+      "G": "C6h",
+      "hermann_mauguin": "6/m1'",
+      "id": "C6h-1p",
+      "magnetic_type": "II",
+      "symbol": "C_6h1'"
+    },
+    {
+      "G": "C6h",
+      "H": "C6",
+      "hermann_mauguin": "6/m'",
+      "id": "C6h-C6",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "C_6h(C_6)"
+    },
+    {
+      "G": "C6h",
+      "H": "S6",
+      "hermann_mauguin": "6'/m'",
+      "id": "C6h-S6",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "C_6h(S_6)"
+    },
+    {
+      "G": "C6h",
+      "H": "C3h",
+      "hermann_mauguin": "6'/m",
+      "id": "C6h-C3h",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "C_6h(C_3h)"
+    },
+    {
+      "G": "C7h",
+      "hermann_mauguin": "-141'",
+      "id": "C7h-1p",
+      "magnetic_type": "II",
+      "symbol": "C_7h1'"
+    },
+    {
+      "G": "C7h",
+      "H": "C7",
+      "hermann_mauguin": "-14'",
+      "id": "C7h-C7",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "C_7h(C_7)"
+    },
+    {
+      "G": "C8h",
+      "hermann_mauguin": "8/m1'",
+      "id": "C8h-1p",
+      "magnetic_type": "II",
+      "symbol": "C_8h1'"
+    },
+    {
+      "G": "C8h",
+      "H": "C8",
+      "hermann_mauguin": "8/m'",
+      "id": "C8h-C8",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "C_8h(C_8)"
+    },
+    {
+      "G": "C8h",
+      "H": "C4h",
+      "hermann_mauguin": "8'/m",
+      "id": "C8h-C4h",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "C_8h(C_4h)"
+    },
+    {
+      "G": "C8h",
+      "H": "S8",
+      "hermann_mauguin": "8'/m'",
+      "id": "C8h-S8",
+      "magnetic_type": "III",
+      "node": "n09",
+      "symbol": "C_8h(S_8)"
+    },
+    {
+      "G": "C9h",
+      "hermann_mauguin": "-181'",
+      "id": "C9h-1p",
+      "magnetic_type": "II",
+      "symbol": "C_9h1'"
+    },
+    {
+      "G": "C9h",
+      "H": "C9",
+      "hermann_mauguin": "-18'",
+      "id": "C9h-C9",
+      "magnetic_type": "III",
+      "node": "n04",
+      "symbol": "C_9h(C_9)"
+    },
+    {
+      "G": "C10h",
+      "hermann_mauguin": "10/m1'",
+      "id": "C10h-1p",
+      "magnetic_type": "II",
+      "symbol": "C_10h1'"
+    },
+    {
+      "G": "C10h",
+      "H": "C10",
+      "hermann_mauguin": "10/m'",
+      "id": "C10h-C10",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "C_10h(C_10)"
+    },
+    {
+      "G": "C10h",
+      "H": "S10",
+      "hermann_mauguin": "10'/m'",
+      "id": "C10h-S10",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "C_10h(S_10)"
+    },
+    {
+      "G": "C10h",
+      "H": "C5h",
+      "hermann_mauguin": "10'/m",
+      "id": "C10h-C5h",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "C_10h(C_5h)"
+    },
+    {
+      "G": "C11h",
+      "hermann_mauguin": "-221'",
+      "id": "C11h-1p",
+      "magnetic_type": "II",
+      "symbol": "C_11h1'"
+    },
+    {
+      "G": "C11h",
+      "H": "C11",
+      "hermann_mauguin": "-22'",
+      "id": "C11h-C11",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "C_11h(C_11)"
+    },
+    {
+      "G": "C12h",
+      "hermann_mauguin": "12/m1'",
+      "id": "C12h-1p",
+      "magnetic_type": "II",
+      "symbol": "C_12h1'"
+    },
+    {
+      "G": "C12h",
+      "H": "C12",
+      "hermann_mauguin": "12/m'",
+      "id": "C12h-C12",
+      "magnetic_type": "III",
+      "node": "n12",
+      "symbol": "C_12h(C_12)"
+    },
+    {
+      "G": "C12h",
+      "H": "C6h",
+      "hermann_mauguin": "12'/m",
+      "id": "C12h-C6h",
+      "magnetic_type": "III",
+      "node": "n13",
+      "symbol": "C_12h(C_6h)"
+    },
+    {
+      "G": "C12h",
+      "H": "S12",
+      "hermann_mauguin": "12'/m'",
+      "id": "C12h-S12",
+      "magnetic_type": "III",
+      "node": "n14",
+      "symbol": "C_12h(S_12)"
+    },
+    {
+      "G": "C1v",
+      "hermann_mauguin": "m1'",
+      "id": "C1v-1p",
+      "magnetic_type": "II",
+      "symbol": "C_1v1'"
+    },
+    {
+      "G": "C1v",
+      "H": "C1",
+      "hermann_mauguin": "m'",
+      "id": "C1v-C1",
+      "magnetic_type": "III",
+      "node": "n00",
+      "symbol": "C_1v(C_1)"
+    },
+    {
+      "G": "C2v",
+      "hermann_mauguin": "mm21'",
+      "id": "C2v-1p",
+      "magnetic_type": "II",
+      "symbol": "C_2v1'"
+    },
+    {
+      "G": "C2v",
+      "H": "C2",
+      "hermann_mauguin": "m'm'2",
+      "id": "C2v-C2",
+      "magnetic_type": "III",
+      "node": "n01",
+      "symbol": "C_2v(C_2)"
+    },
+    {
+      "G": "C2v",
+      "H": "C1v",
+      "hermann_mauguin": "m'm2'",
+      "id": "C2v-C1v",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "C_2v(C_1v)"
     },
     {
       "G": "C3v",
@@ -41,6 +706,457 @@
       "magnetic_type": "III",
       "node": "n02",
       "symbol": "C_3v(C_3)"
+    },
+    {
+      "G": "C4v",
+      "hermann_mauguin": "4mm1'",
+      "id": "C4v-1p",
+      "magnetic_type": "II",
+      "symbol": "C_4v1'"
+    },
+    {
+      "G": "C4v",
+      "H": "C4",
+      "hermann_mauguin": "4m'm'",
+      "id": "C4v-C4",
+      "magnetic_type": "III",
+      "node": "n04",
+      "symbol": "C_4v(C_4)"
+    },
+    {
+      "G": "C4v",
+      "H": "C2v",
+      "hermann_mauguin": "4'm'm",
+      "id": "C4v-C2v",
+      "magnetic_type": "III",
+      "node": "n05",
+      "symbol": "C_4v(C_2v)"
+    },
+    {
+      "G": "C5v",
+      "hermann_mauguin": "5m1'",
+      "id": "C5v-1p",
+      "magnetic_type": "II",
+      "symbol": "C_5v1'"
+    },
+    {
+      "G": "C5v",
+      "H": "C5",
+      "hermann_mauguin": "5m'",
+      "id": "C5v-C5",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "C_5v(C_5)"
+    },
+    {
+      "G": "C6v",
+      "hermann_mauguin": "6mm1'",
+      "id": "C6v-1p",
+      "magnetic_type": "II",
+      "symbol": "C_6v1'"
+    },
+    {
+      "G": "C6v",
+      "H": "C6",
+      "hermann_mauguin": "6m'm'",
+      "id": "C6v-C6",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "C_6v(C_6)"
+    },
+    {
+      "G": "C6v",
+      "H": "C3v",
+      "hermann_mauguin": "6'mm'",
+      "id": "C6v-C3v",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "C_6v(C_3v)"
+    },
+    {
+      "G": "C7v",
+      "hermann_mauguin": "7m1'",
+      "id": "C7v-1p",
+      "magnetic_type": "II",
+      "symbol": "C_7v1'"
+    },
+    {
+      "G": "C7v",
+      "H": "C7",
+      "hermann_mauguin": "7m'",
+      "id": "C7v-C7",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "C_7v(C_7)"
+    },
+    {
+      "G": "C8v",
+      "hermann_mauguin": "8mm1'",
+      "id": "C8v-1p",
+      "magnetic_type": "II",
+      "symbol": "C_8v1'"
+    },
+    {
+      "G": "C8v",
+      "H": "C8",
+      "hermann_mauguin": "8m'm'",
+      "id": "C8v-C8",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "C_8v(C_8)"
+    },
+    {
+      "G": "C8v",
+      "H": "C4v",
+      "hermann_mauguin": "8'mm'",
+      "id": "C8v-C4v",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "C_8v(C_4v)"
+    },
+    {
+      "G": "C9v",
+      "hermann_mauguin": "9m1'",
+      "id": "C9v-1p",
+      "magnetic_type": "II",
+      "symbol": "C_9v1'"
+    },
+    {
+      "G": "C9v",
+      "H": "C9",
+      "hermann_mauguin": "9m'",
+      "id": "C9v-C9",
+      "magnetic_type": "III",
+      "node": "n04",
+      "symbol": "C_9v(C_9)"
+    },
+    {
+      "G": "C10v",
+      "hermann_mauguin": "10mm1'",
+      "id": "C10v-1p",
+      "magnetic_type": "II",
+      "symbol": "C_10v1'"
+    },
+    {
+      "G": "C10v",
+      "H": "C10",
+      "hermann_mauguin": "10m'm'",
+      "id": "C10v-C10",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "C_10v(C_10)"
+    },
+    {
+      "G": "C10v",
+      "H": "C5v",
+      "hermann_mauguin": "10'mm'",
+      "id": "C10v-C5v",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "C_10v(C_5v)"
+    },
+    {
+      "G": "C11v",
+      "hermann_mauguin": "11m1'",
+      "id": "C11v-1p",
+      "magnetic_type": "II",
+      "symbol": "C_11v1'"
+    },
+    {
+      "G": "C11v",
+      "H": "C11",
+      "hermann_mauguin": "11m'",
+      "id": "C11v-C11",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "C_11v(C_11)"
+    },
+    {
+      "G": "C12v",
+      "hermann_mauguin": "12mm1'",
+      "id": "C12v-1p",
+      "magnetic_type": "II",
+      "symbol": "C_12v1'"
+    },
+    {
+      "G": "C12v",
+      "H": "C12",
+      "hermann_mauguin": "12m'm'",
+      "id": "C12v-C12",
+      "magnetic_type": "III",
+      "node": "n12",
+      "symbol": "C_12v(C_12)"
+    },
+    {
+      "G": "C12v",
+      "H": "C6v",
+      "hermann_mauguin": "12'mm'",
+      "id": "C12v-C6v",
+      "magnetic_type": "III",
+      "node": "n13",
+      "symbol": "C_12v(C_6v)"
+    },
+    {
+      "G": "D1",
+      "hermann_mauguin": "21'",
+      "id": "D1-1p",
+      "magnetic_type": "II",
+      "symbol": "D_11'"
+    },
+    {
+      "G": "D1",
+      "H": "C1",
+      "hermann_mauguin": "2'",
+      "id": "D1-C1",
+      "magnetic_type": "III",
+      "node": "n00",
+      "symbol": "D_1(C_1)"
+    },
+    {
+      "G": "D2",
+      "hermann_mauguin": "2221'",
+      "id": "D2-1p",
+      "magnetic_type": "II",
+      "symbol": "D_21'"
+    },
+    {
+      "G": "D2",
+      "H": "C2",
+      "hermann_mauguin": "2'2'2",
+      "id": "D2-C2",
+      "magnetic_type": "III",
+      "node": "n01",
+      "symbol": "D_2(C_2)"
+    },
+    {
+      "G": "D3",
+      "hermann_mauguin": "321'",
+      "id": "D3-1p",
+      "magnetic_type": "II",
+      "symbol": "D_31'"
+    },
+    {
+      "G": "D3",
+      "H": "C3",
+      "hermann_mauguin": "32'",
+      "id": "D3-C3",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "D_3(C_3)"
+    },
+    {
+      "G": "D4",
+      "hermann_mauguin": "4221'",
+      "id": "D4-1p",
+      "magnetic_type": "II",
+      "symbol": "D_41'"
+    },
+    {
+      "G": "D4",
+      "H": "C4",
+      "hermann_mauguin": "42'2'",
+      "id": "D4-C4",
+      "magnetic_type": "III",
+      "node": "n04",
+      "symbol": "D_4(C_4)"
+    },
+    {
+      "G": "D4",
+      "H": "D2",
+      "hermann_mauguin": "4'22'",
+      "id": "D4-D2",
+      "magnetic_type": "III",
+      "node": "n05",
+      "symbol": "D_4(D_2)"
+    },
+    {
+      "G": "D5",
+      "hermann_mauguin": "521'",
+      "id": "D5-1p",
+      "magnetic_type": "II",
+      "symbol": "D_51'"
+    },
+    {
+      "G": "D5",
+      "H": "C5",
+      "hermann_mauguin": "52'",
+      "id": "D5-C5",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "D_5(C_5)"
+    },
+    {
+      "G": "D6",
+      "hermann_mauguin": "6221'",
+      "id": "D6-1p",
+      "magnetic_type": "II",
+      "symbol": "D_61'"
+    },
+    {
+      "G": "D6",
+      "H": "C6",
+      "hermann_mauguin": "62'2'",
+      "id": "D6-C6",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "D_6(C_6)"
+    },
+    {
+      "G": "D6",
+      "H": "D3",
+      "hermann_mauguin": "6'22'",
+      "id": "D6-D3",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "D_6(D_3)"
+    },
+    {
+      "G": "D7",
+      "hermann_mauguin": "721'",
+      "id": "D7-1p",
+      "magnetic_type": "II",
+      "symbol": "D_71'"
+    },
+    {
+      "G": "D7",
+      "H": "C7",
+      "hermann_mauguin": "72'",
+      "id": "D7-C7",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "D_7(C_7)"
+    },
+    {
+      "G": "D8",
+      "hermann_mauguin": "8221'",
+      "id": "D8-1p",
+      "magnetic_type": "II",
+      "symbol": "D_81'"
+    },
+    {
+      "G": "D8",
+      "H": "C8",
+      "hermann_mauguin": "82'2'",
+      "id": "D8-C8",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "D_8(C_8)"
+    },
+    {
+      "G": "D8",
+      "H": "D4",
+      "hermann_mauguin": "8'22'",
+      "id": "D8-D4",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "D_8(D_4)"
+    },
+    {
+      "G": "D9",
+      "hermann_mauguin": "921'",
+      "id": "D9-1p",
+      "magnetic_type": "II",
+      "symbol": "D_91'"
+    },
+    {
+      "G": "D9",
+      "H": "C9",
+      "hermann_mauguin": "92'",
+      "id": "D9-C9",
+      "magnetic_type": "III",
+      "node": "n04",
+      "symbol": "D_9(C_9)"
+    },
+    {
+      "G": "D10",
+      "hermann_mauguin": "10221'",
+      "id": "D10-1p",
+      "magnetic_type": "II",
+      "symbol": "D_101'"
+    },
+    {
+      "G": "D10",
+      "H": "C10",
+      "hermann_mauguin": "102'2'",
+      "id": "D10-C10",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "D_10(C_10)"
+    },
+    {
+      "G": "D10",
+      "H": "D5",
+      "hermann_mauguin": "10'22'",
+      "id": "D10-D5",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "D_10(D_5)"
+    },
+    {
+      "G": "D11",
+      "hermann_mauguin": "1121'",
+      "id": "D11-1p",
+      "magnetic_type": "II",
+      "symbol": "D_111'"
+    },
+    {
+      "G": "D11",
+      "H": "C11",
+      "hermann_mauguin": "112'",
+      "id": "D11-C11",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "D_11(C_11)"
+    },
+    {
+      "G": "D12",
+      "hermann_mauguin": "12221'",
+      "id": "D12-1p",
+      "magnetic_type": "II",
+      "symbol": "D_121'"
+    },
+    {
+      "G": "D12",
+      "H": "C12",
+      "hermann_mauguin": "122'2'",
+      "id": "D12-C12",
+      "magnetic_type": "III",
+      "node": "n12",
+      "symbol": "D_12(C_12)"
+    },
+    {
+      "G": "D12",
+      "H": "D6",
+      "hermann_mauguin": "12'22'",
+      "id": "D12-D6",
+      "magnetic_type": "III",
+      "node": "n13",
+      "symbol": "D_12(D_6)"
+    },
+    {
+      "G": "D1h",
+      "hermann_mauguin": "mm21'",
+      "id": "D1h-1p",
+      "magnetic_type": "II",
+      "symbol": "D_1h1'"
+    },
+    {
+      "G": "D1h",
+      "H": "C2",
+      "hermann_mauguin": "m'm'2",
+      "id": "D1h-C2",
+      "magnetic_type": "III",
+      "node": "n01",
+      "symbol": "D_1h(C_2)"
+    },
+    {
+      "G": "D1h",
+      "H": "C1v",
+      "hermann_mauguin": "m'm2'",
+      "id": "D1h-C1v",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "D_1h(C_1v)"
     },
     {
       "G": "D2h",
@@ -75,6 +1191,40 @@
       "magnetic_type": "III",
       "node": "n10",
       "symbol": "D_2h(C_2v)"
+    },
+    {
+      "G": "D3h",
+      "hermann_mauguin": "-6m21'",
+      "id": "D3h-1p",
+      "magnetic_type": "II",
+      "symbol": "D_3h1'"
+    },
+    {
+      "G": "D3h",
+      "H": "D3",
+      "hermann_mauguin": "-6'm'2",
+      "id": "D3h-D3",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "D_3h(D_3)"
+    },
+    {
+      "G": "D3h",
+      "H": "C3h",
+      "hermann_mauguin": "-6m'2'",
+      "id": "D3h-C3h",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "D_3h(C_3h)"
+    },
+    {
+      "G": "D3h",
+      "H": "C3v",
+      "hermann_mauguin": "-6'm2'",
+      "id": "D3h-C3v",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "D_3h(C_3v)"
     },
     {
       "G": "D4h",
@@ -129,6 +1279,772 @@
       "symbol": "D_4h(D_2d)"
     },
     {
+      "G": "D5h",
+      "hermann_mauguin": "-10m21'",
+      "id": "D5h-1p",
+      "magnetic_type": "II",
+      "symbol": "D_5h1'"
+    },
+    {
+      "G": "D5h",
+      "H": "D5",
+      "hermann_mauguin": "-10'm'2",
+      "id": "D5h-D5",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "D_5h(D_5)"
+    },
+    {
+      "G": "D5h",
+      "H": "C5h",
+      "hermann_mauguin": "-10m'2'",
+      "id": "D5h-C5h",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "D_5h(C_5h)"
+    },
+    {
+      "G": "D5h",
+      "H": "C5v",
+      "hermann_mauguin": "-10'm2'",
+      "id": "D5h-C5v",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "D_5h(C_5v)"
+    },
+    {
+      "G": "D6h",
+      "hermann_mauguin": "6/mmm1'",
+      "id": "D6h-1p",
+      "magnetic_type": "II",
+      "symbol": "D_6h1'"
+    },
+    {
+      "G": "D6h",
+      "H": "D6",
+      "hermann_mauguin": "6/m'm'm'",
+      "id": "D6h-D6",
+      "magnetic_type": "III",
+      "node": "n24",
+      "symbol": "D_6h(D_6)"
+    },
+    {
+      "G": "D6h",
+      "H": "C6h",
+      "hermann_mauguin": "6/mm'm'",
+      "id": "D6h-C6h",
+      "magnetic_type": "III",
+      "node": "n25",
+      "symbol": "D_6h(C_6h)"
+    },
+    {
+      "G": "D6h",
+      "H": "C6v",
+      "hermann_mauguin": "6/m'mm",
+      "id": "D6h-C6v",
+      "magnetic_type": "III",
+      "node": "n26",
+      "symbol": "D_6h(C_6v)"
+    },
+    {
+      "G": "D6h",
+      "H": "D3d",
+      "hermann_mauguin": "6'/m'mm'",
+      "id": "D6h-D3d",
+      "magnetic_type": "III",
+      "node": "n27",
+      "symbol": "D_6h(D_3d)"
+    },
+    {
+      "G": "D6h",
+      "H": "D3h",
+      "hermann_mauguin": "6'/mmm'",
+      "id": "D6h-D3h",
+      "magnetic_type": "III",
+      "node": "n28",
+      "symbol": "D_6h(D_3h)"
+    },
+    {
+      "G": "D7h",
+      "hermann_mauguin": "-14m21'",
+      "id": "D7h-1p",
+      "magnetic_type": "II",
+      "symbol": "D_7h1'"
+    },
+    {
+      "G": "D7h",
+      "H": "D7",
+      "hermann_mauguin": "-14'm'2",
+      "id": "D7h-D7",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "D_7h(D_7)"
+    },
+    {
+      "G": "D7h",
+      "H": "C7h",
+      "hermann_mauguin": "-14m'2'",
+      "id": "D7h-C7h",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "D_7h(C_7h)"
+    },
+    {
+      "G": "D7h",
+      "H": "C7v",
+      "hermann_mauguin": "-14'm2'",
+      "id": "D7h-C7v",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "D_7h(C_7v)"
+    },
+    {
+      "G": "D8h",
+      "hermann_mauguin": "8/mmm1'",
+      "id": "D8h-1p",
+      "magnetic_type": "II",
+      "symbol": "D_8h1'"
+    },
+    {
+      "G": "D8h",
+      "H": "D8",
+      "hermann_mauguin": "8/m'm'm'",
+      "id": "D8h-D8",
+      "magnetic_type": "III",
+      "node": "n30",
+      "symbol": "D_8h(D_8)"
+    },
+    {
+      "G": "D8h",
+      "H": "C8h",
+      "hermann_mauguin": "8/mm'm'",
+      "id": "D8h-C8h",
+      "magnetic_type": "III",
+      "node": "n31",
+      "symbol": "D_8h(C_8h)"
+    },
+    {
+      "G": "D8h",
+      "H": "C8v",
+      "hermann_mauguin": "8/m'mm",
+      "id": "D8h-C8v",
+      "magnetic_type": "III",
+      "node": "n32",
+      "symbol": "D_8h(C_8v)"
+    },
+    {
+      "G": "D8h",
+      "H": "D4h",
+      "hermann_mauguin": "8'/mmm'",
+      "id": "D8h-D4h",
+      "magnetic_type": "III",
+      "node": "n33",
+      "symbol": "D_8h(D_4h)"
+    },
+    {
+      "G": "D8h",
+      "H": "D4d",
+      "hermann_mauguin": "8'/m'mm'",
+      "id": "D8h-D4d",
+      "magnetic_type": "III",
+      "node": "n34",
+      "symbol": "D_8h(D_4d)"
+    },
+    {
+      "G": "D9h",
+      "hermann_mauguin": "-18m21'",
+      "id": "D9h-1p",
+      "magnetic_type": "II",
+      "symbol": "D_9h1'"
+    },
+    {
+      "G": "D9h",
+      "H": "D9",
+      "hermann_mauguin": "-18'm'2",
+      "id": "D9h-D9",
+      "magnetic_type": "III",
+      "node": "n11",
+      "symbol": "D_9h(D_9)"
+    },
+    {
+      "G": "D9h",
+      "H": "C9h",
+      "hermann_mauguin": "-18m'2'",
+      "id": "D9h-C9h",
+      "magnetic_type": "III",
+      "node": "n12",
+      "symbol": "D_9h(C_9h)"
+    },
+    {
+      "G": "D9h",
+      "H": "C9v",
+      "hermann_mauguin": "-18'm2'",
+      "id": "D9h-C9v",
+      "magnetic_type": "III",
+      "node": "n13",
+      "symbol": "D_9h(C_9v)"
+    },
+    {
+      "G": "D10h",
+      "hermann_mauguin": "10/mmm1'",
+      "id": "D10h-1p",
+      "magnetic_type": "II",
+      "symbol": "D_10h1'"
+    },
+    {
+      "G": "D10h",
+      "H": "D10",
+      "hermann_mauguin": "10/m'm'm'",
+      "id": "D10h-D10",
+      "magnetic_type": "III",
+      "node": "n24",
+      "symbol": "D_10h(D_10)"
+    },
+    {
+      "G": "D10h",
+      "H": "C10h",
+      "hermann_mauguin": "10/mm'm'",
+      "id": "D10h-C10h",
+      "magnetic_type": "III",
+      "node": "n25",
+      "symbol": "D_10h(C_10h)"
+    },
+    {
+      "G": "D10h",
+      "H": "C10v",
+      "hermann_mauguin": "10/m'mm",
+      "id": "D10h-C10v",
+      "magnetic_type": "III",
+      "node": "n26",
+      "symbol": "D_10h(C_10v)"
+    },
+    {
+      "G": "D10h",
+      "H": "D5d",
+      "hermann_mauguin": "10'/m'mm'",
+      "id": "D10h-D5d",
+      "magnetic_type": "III",
+      "node": "n27",
+      "symbol": "D_10h(D_5d)"
+    },
+    {
+      "G": "D10h",
+      "H": "D5h",
+      "hermann_mauguin": "10'/mmm'",
+      "id": "D10h-D5h",
+      "magnetic_type": "III",
+      "node": "n28",
+      "symbol": "D_10h(D_5h)"
+    },
+    {
+      "G": "D11h",
+      "hermann_mauguin": "-22m21'",
+      "id": "D11h-1p",
+      "magnetic_type": "II",
+      "symbol": "D_11h1'"
+    },
+    {
+      "G": "D11h",
+      "H": "D11",
+      "hermann_mauguin": "-22'm'2",
+      "id": "D11h-D11",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "D_11h(D_11)"
+    },
+    {
+      "G": "D11h",
+      "H": "C11h",
+      "hermann_mauguin": "-22m'2'",
+      "id": "D11h-C11h",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "D_11h(C_11h)"
+    },
+    {
+      "G": "D11h",
+      "H": "C11v",
+      "hermann_mauguin": "-22'm2'",
+      "id": "D11h-C11v",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "D_11h(C_11v)"
+    },
+    {
+      "G": "D12h",
+      "hermann_mauguin": "12/mmm1'",
+      "id": "D12h-1p",
+      "magnetic_type": "II",
+      "symbol": "D_12h1'"
+    },
+    {
+      "G": "D12h",
+      "H": "D12",
+      "hermann_mauguin": "12/m'm'm'",
+      "id": "D12h-D12",
+      "magnetic_type": "III",
+      "node": "n46",
+      "symbol": "D_12h(D_12)"
+    },
+    {
+      "G": "D12h",
+      "H": "C12h",
+      "hermann_mauguin": "12/mm'm'",
+      "id": "D12h-C12h",
+      "magnetic_type": "III",
+      "node": "n47",
+      "symbol": "D_12h(C_12h)"
+    },
+    {
+      "G": "D12h",
+      "H": "C12v",
+      "hermann_mauguin": "12/m'mm",
+      "id": "D12h-C12v",
+      "magnetic_type": "III",
+      "node": "n48",
+      "symbol": "D_12h(C_12v)"
+    },
+    {
+      "G": "D12h",
+      "H": "D6h",
+      "hermann_mauguin": "12'/mmm'",
+      "id": "D12h-D6h",
+      "magnetic_type": "III",
+      "node": "n49",
+      "symbol": "D_12h(D_6h)"
+    },
+    {
+      "G": "D12h",
+      "H": "D6d",
+      "hermann_mauguin": "12'/m'mm'",
+      "id": "D12h-D6d",
+      "magnetic_type": "III",
+      "node": "n50",
+      "symbol": "D_12h(D_6d)"
+    },
+    {
+      "G": "D1d",
+      "hermann_mauguin": "2/m1'",
+      "id": "D1d-1p",
+      "magnetic_type": "II",
+      "symbol": "D_1d1'"
+    },
+    {
+      "G": "D1d",
+      "H": "C2",
+      "hermann_mauguin": "2/m'",
+      "id": "D1d-C2",
+      "magnetic_type": "III",
+      "node": "n01",
+      "symbol": "D_1d(C_2)"
+    },
+    {
+      "G": "D1d",
+      "H": "S2",
+      "hermann_mauguin": "2'/m'",
+      "id": "D1d-S2",
+      "magnetic_type": "III",
+      "node": "n02",
+      "symbol": "D_1d(S_2)"
+    },
+    {
+      "G": "D1d",
+      "H": "C1v",
+      "hermann_mauguin": "2'/m",
+      "id": "D1d-C1v",
+      "magnetic_type": "III",
+      "node": "n03",
+      "symbol": "D_1d(C_1v)"
+    },
+    {
+      "G": "D2d",
+      "hermann_mauguin": "-42m1'",
+      "id": "D2d-1p",
+      "magnetic_type": "II",
+      "symbol": "D_2d1'"
+    },
+    {
+      "G": "D2d",
+      "H": "D2",
+      "hermann_mauguin": "-4'2m'",
+      "id": "D2d-D2",
+      "magnetic_type": "III",
+      "node": "n04",
+      "symbol": "D_2d(D_2)"
+    },
+    {
+      "G": "D2d",
+      "H": "S4",
+      "hermann_mauguin": "-42'm'",
+      "id": "D2d-S4",
+      "magnetic_type": "III",
+      "node": "n05",
+      "symbol": "D_2d(S_4)"
+    },
+    {
+      "G": "D2d",
+      "H": "C2v",
+      "hermann_mauguin": "-4'2'm",
+      "id": "D2d-C2v",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "D_2d(C_2v)"
+    },
+    {
+      "G": "D3d",
+      "hermann_mauguin": "-3m1'",
+      "id": "D3d-1p",
+      "magnetic_type": "II",
+      "symbol": "D_3d1'"
+    },
+    {
+      "G": "D3d",
+      "H": "D3",
+      "hermann_mauguin": "-3'm'",
+      "id": "D3d-D3",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "D_3d(D_3)"
+    },
+    {
+      "G": "D3d",
+      "H": "S6",
+      "hermann_mauguin": "-3m'",
+      "id": "D3d-S6",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "D_3d(S_6)"
+    },
+    {
+      "G": "D3d",
+      "H": "C3v",
+      "hermann_mauguin": "-3'm",
+      "id": "D3d-C3v",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "D_3d(C_3v)"
+    },
+    {
+      "G": "D4d",
+      "hermann_mauguin": "-82m1'",
+      "id": "D4d-1p",
+      "magnetic_type": "II",
+      "symbol": "D_4d1'"
+    },
+    {
+      "G": "D4d",
+      "H": "D4",
+      "hermann_mauguin": "-8'2m'",
+      "id": "D4d-D4",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "D_4d(D_4)"
+    },
+    {
+      "G": "D4d",
+      "H": "S8",
+      "hermann_mauguin": "-82'm'",
+      "id": "D4d-S8",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "D_4d(S_8)"
+    },
+    {
+      "G": "D4d",
+      "H": "C4v",
+      "hermann_mauguin": "-8'2'm",
+      "id": "D4d-C4v",
+      "magnetic_type": "III",
+      "node": "n09",
+      "symbol": "D_4d(C_4v)"
+    },
+    {
+      "G": "D5d",
+      "hermann_mauguin": "-5m1'",
+      "id": "D5d-1p",
+      "magnetic_type": "II",
+      "symbol": "D_5d1'"
+    },
+    {
+      "G": "D5d",
+      "H": "D5",
+      "hermann_mauguin": "-5'm'",
+      "id": "D5d-D5",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "D_5d(D_5)"
+    },
+    {
+      "G": "D5d",
+      "H": "S10",
+      "hermann_mauguin": "-5m'",
+      "id": "D5d-S10",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "D_5d(S_10)"
+    },
+    {
+      "G": "D5d",
+      "H": "C5v",
+      "hermann_mauguin": "-5'm",
+      "id": "D5d-C5v",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "D_5d(C_5v)"
+    },
+    {
+      "G": "D6d",
+      "hermann_mauguin": "-122m1'",
+      "id": "D6d-1p",
+      "magnetic_type": "II",
+      "symbol": "D_6d1'"
+    },
+    {
+      "G": "D6d",
+      "H": "D6",
+      "hermann_mauguin": "-12'2m'",
+      "id": "D6d-D6",
+      "magnetic_type": "III",
+      "node": "n12",
+      "symbol": "D_6d(D_6)"
+    },
+    {
+      "G": "D6d",
+      "H": "S12",
+      "hermann_mauguin": "-122'm'",
+      "id": "D6d-S12",
+      "magnetic_type": "III",
+      "node": "n13",
+      "symbol": "D_6d(S_12)"
+    },
+    {
+      "G": "D6d",
+      "H": "C6v",
+      "hermann_mauguin": "-12'2'm",
+      "id": "D6d-C6v",
+      "magnetic_type": "III",
+      "node": "n14",
+      "symbol": "D_6d(C_6v)"
+    },
+    {
+      "G": "D7d",
+      "hermann_mauguin": "-7m1'",
+      "id": "D7d-1p",
+      "magnetic_type": "II",
+      "symbol": "D_7d1'"
+    },
+    {
+      "G": "D7d",
+      "H": "D7",
+      "hermann_mauguin": "-7'm'",
+      "id": "D7d-D7",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "D_7d(D_7)"
+    },
+    {
+      "G": "D7d",
+      "H": "S14",
+      "hermann_mauguin": "-7m'",
+      "id": "D7d-S14",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "D_7d(S_14)"
+    },
+    {
+      "G": "D7d",
+      "H": "C7v",
+      "hermann_mauguin": "-7'm",
+      "id": "D7d-C7v",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "D_7d(C_7v)"
+    },
+    {
+      "G": "D8d",
+      "hermann_mauguin": "-162m1'",
+      "id": "D8d-1p",
+      "magnetic_type": "II",
+      "symbol": "D_8d1'"
+    },
+    {
+      "G": "D8d",
+      "H": "D8",
+      "hermann_mauguin": "-16'2m'",
+      "id": "D8d-D8",
+      "magnetic_type": "III",
+      "node": "n10",
+      "symbol": "D_8d(D_8)"
+    },
+    {
+      "G": "D8d",
+      "H": "S16",
+      "hermann_mauguin": "-162'm'",
+      "id": "D8d-S16",
+      "magnetic_type": "III",
+      "node": "n11",
+      "symbol": "D_8d(S_16)"
+    },
+    {
+      "G": "D8d",
+      "H": "C8v",
+      "hermann_mauguin": "-16'2'm",
+      "id": "D8d-C8v",
+      "magnetic_type": "III",
+      "node": "n12",
+      "symbol": "D_8d(C_8v)"
+    },
+    {
+      "G": "D9d",
+      "hermann_mauguin": "-9m1'",
+      "id": "D9d-1p",
+      "magnetic_type": "II",
+      "symbol": "D_9d1'"
+    },
+    {
+      "G": "D9d",
+      "H": "D9",
+      "hermann_mauguin": "-9'm'",
+      "id": "D9d-D9",
+      "magnetic_type": "III",
+      "node": "n11",
+      "symbol": "D_9d(D_9)"
+    },
+    {
+      "G": "D9d",
+      "H": "S18",
+      "hermann_mauguin": "-9m'",
+      "id": "D9d-S18",
+      "magnetic_type": "III",
+      "node": "n12",
+      "symbol": "D_9d(S_18)"
+    },
+    {
+      "G": "D9d",
+      "H": "C9v",
+      "hermann_mauguin": "-9'm",
+      "id": "D9d-C9v",
+      "magnetic_type": "III",
+      "node": "n13",
+      "symbol": "D_9d(C_9v)"
+    },
+    {
+      "G": "D10d",
+      "hermann_mauguin": "-202m1'",
+      "id": "D10d-1p",
+      "magnetic_type": "II",
+      "symbol": "D_10d1'"
+    },
+    {
+      "G": "D10d",
+      "H": "D10",
+      "hermann_mauguin": "-20'2m'",
+      "id": "D10d-D10",
+      "magnetic_type": "III",
+      "node": "n12",
+      "symbol": "D_10d(D_10)"
+    },
+    {
+      "G": "D10d",
+      "H": "S20",
+      "hermann_mauguin": "-202'm'",
+      "id": "D10d-S20",
+      "magnetic_type": "III",
+      "node": "n13",
+      "symbol": "D_10d(S_20)"
+    },
+    {
+      "G": "D10d",
+      "H": "C10v",
+      "hermann_mauguin": "-20'2'm",
+      "id": "D10d-C10v",
+      "magnetic_type": "III",
+      "node": "n14",
+      "symbol": "D_10d(C_10v)"
+    },
+    {
+      "G": "D11d",
+      "hermann_mauguin": "-11m1'",
+      "id": "D11d-1p",
+      "magnetic_type": "II",
+      "symbol": "D_11d1'"
+    },
+    {
+      "G": "D11d",
+      "H": "D11",
+      "hermann_mauguin": "-11'm'",
+      "id": "D11d-D11",
+      "magnetic_type": "III",
+      "node": "n06",
+      "symbol": "D_11d(D_11)"
+    },
+    {
+      "G": "D11d",
+      "H": "S22",
+      "hermann_mauguin": "-11m'",
+      "id": "D11d-S22",
+      "magnetic_type": "III",
+      "node": "n07",
+      "symbol": "D_11d(S_22)"
+    },
+    {
+      "G": "D11d",
+      "H": "C11v",
+      "hermann_mauguin": "-11'm",
+      "id": "D11d-C11v",
+      "magnetic_type": "III",
+      "node": "n08",
+      "symbol": "D_11d(C_11v)"
+    },
+    {
+      "G": "D12d",
+      "hermann_mauguin": "-242m1'",
+      "id": "D12d-1p",
+      "magnetic_type": "II",
+      "symbol": "D_12d1'"
+    },
+    {
+      "G": "D12d",
+      "H": "D12",
+      "hermann_mauguin": "-24'2m'",
+      "id": "D12d-D12",
+      "magnetic_type": "III",
+      "node": "n18",
+      "symbol": "D_12d(D_12)"
+    },
+    {
+      "G": "D12d",
+      "H": "S24",
+      "hermann_mauguin": "-242'm'",
+      "id": "D12d-S24",
+      "magnetic_type": "III",
+      "node": "n19",
+      "symbol": "D_12d(S_24)"
+    },
+    {
+      "G": "D12d",
+      "H": "C12v",
+      "hermann_mauguin": "-24'2'm",
+      "id": "D12d-C12v",
+      "magnetic_type": "III",
+      "node": "n20",
+      "symbol": "D_12d(C_12v)"
+    },
+    {
+      "G": "T",
+      "hermann_mauguin": "231'",
+      "id": "T-1p",
+      "magnetic_type": "II",
+      "symbol": "T1'"
+    },
+    {
+      "G": "Th",
+      "hermann_mauguin": "m-31'",
+      "id": "Th-1p",
+      "magnetic_type": "II",
+      "symbol": "T_h1'"
+    },
+    {
       "G": "Th",
       "H": "T",
       "hermann_mauguin": "m'-3'",
@@ -136,6 +2052,38 @@
       "magnetic_type": "III",
       "node": "n10",
       "symbol": "T_h(T)"
+    },
+    {
+      "G": "Td",
+      "hermann_mauguin": "-43m1'",
+      "id": "Td-1p",
+      "magnetic_type": "II",
+      "symbol": "T_d1'"
+    },
+    {
+      "G": "Td",
+      "H": "T",
+      "hermann_mauguin": "-4'3m'",
+      "id": "Td-T",
+      "magnetic_type": "III",
+      "node": "n09",
+      "symbol": "T_d(T)"
+    },
+    {
+      "G": "O",
+      "hermann_mauguin": "4321'",
+      "id": "O-1p",
+      "magnetic_type": "II",
+      "symbol": "O1'"
+    },
+    {
+      "G": "O",
+      "H": "T",
+      "hermann_mauguin": "4'32'",
+      "id": "O-T",
+      "magnetic_type": "III",
+      "node": "n09",
+      "symbol": "O(T)"
     },
     {
       "G": "Oh",
@@ -170,6 +2118,29 @@
       "magnetic_type": "III",
       "node": "n31",
       "symbol": "O_h(T_d)"
+    },
+    {
+      "G": "I",
+      "hermann_mauguin": "5321'",
+      "id": "I-1p",
+      "magnetic_type": "II",
+      "symbol": "I1'"
+    },
+    {
+      "G": "Ih",
+      "hermann_mauguin": "-5-3m1'",
+      "id": "Ih-1p",
+      "magnetic_type": "II",
+      "symbol": "I_h1'"
+    },
+    {
+      "G": "Ih",
+      "H": "I",
+      "hermann_mauguin": "-5'-3'm'",
+      "id": "Ih-I",
+      "magnetic_type": "III",
+      "node": "n20",
+      "symbol": "I_h(I)"
     }
   ],
   "schema": "point-group-atlas/magnetic/groups/1"

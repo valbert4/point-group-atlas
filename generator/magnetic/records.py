@@ -291,6 +291,12 @@ def run(args):
         return 0
     if names.CATALOGUE != CATALOGUE:
         raise NotImplementedError("%s: the records of %s" % (names.CATALOGUE, ", ".join(stems)))
+    for g in names.FINITE:
+        P = PT.point(g)
+        classes = tuple(dict.fromkeys(P.nodes[n]["o3_class"] for n in P.index2_nodes()))
+        if classes != names.halves(g):
+            raise AssertionError("%s: subgroups of index 2 of classes %s in its lattice, the "
+                                 "names have %s" % (g, classes, names.halves(g)))
     os.makedirs(names.path(names.RECORDS_DIR), exist_ok=True)
     for stem in stems:
         serialize.write_json(names.record_path(stem), record(stem))

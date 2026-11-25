@@ -221,7 +221,7 @@ o3m := rec(
         ("normal") := true,
         ("normalizer") := "n09",
         ("order") := 2,
-        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("record") := "magnetic/C1-1p#",
         ("symbol") := "C_11'"
       ),
       rec(
@@ -234,7 +234,7 @@ o3m := rec(
         ("normal") := false,
         ("normalizer") := "n05",
         ("order") := 2,
-        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("record") := "magnetic/C1v-C1#",
         ("symbol") := "C_1v(C_1)",
         ("unitary") := rec( ("member") := 0, ("node") := "n00" )
       ),
@@ -261,7 +261,7 @@ o3m := rec(
         ("normal") := false,
         ("normalizer") := "n05",
         ("order") := 4,
-        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("record") := "magnetic/C1v-1p#",
         ("symbol") := "C_1v1'"
       ),
       rec(
@@ -287,7 +287,7 @@ o3m := rec(
         ("normal") := true,
         ("normalizer") := "n09",
         ("order") := 6,
-        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("record") := "magnetic/C3-1p#",
         ("symbol") := "C_31'"
       ),
       rec(

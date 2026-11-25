@@ -79,7 +79,8 @@ def run_magnetic(args):
     """The formats of a magnetic catalogue, in its registry: the literal files of the records in
     data/json/ (GAP, Wolfram Language, SymPy) and their documents, then the generated block of its
     conventions (the index of notation) and the notation of its conventions, when it has them, and
-    of the references."""
+    of the references.  A build of part of the catalogue reports the records of the registry that
+    no document uses (lint rule L5) without stopping on them."""
     from . import conventions, gap, lint, magnetic_latex, sympy, wolfram
     registry()
     built = present()
@@ -101,7 +102,12 @@ def run_magnetic(args):
                          (names.repository_path("REFERENCES.md"), conventions.references_tex)):
         with open(path, encoding="utf-8") as fh:
             render(fh.read(), reports)
-    lint.lint_compendium(reports, partial=True)
+    partial = len(built) < len(names.catalogue_names())
+    findings = lint.lint_compendium(reports, partial=partial)
+    unused = sorted(f.record for f in findings if f.rule == "L5")
+    if partial and unused:
+        print("partial build (%d of %d records): %d records of the registry used by no document "
+              "built (L5, not enforced)" % (len(built), len(names.catalogue_names()), len(unused)))
 
 
 def run(args):

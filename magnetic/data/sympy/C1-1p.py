@@ -1,0 +1,255 @@
+# C1-1p (C_11'): data/json/C1-1p.json as a Python dict of SymPy values.
+from sympy import I, Rational, S, exp, pi
+
+o3m = {
+    'corepresentation_table': {'characters': [[Rational(1,1)]], 'classes': [['E']], 'rows': [['A']]},
+    'corepresentations': [
+        {
+            'N': 'rotation/C1#/clebsch_gordan/products/0/couplings/0',
+            'case': 'a',
+            'irrep': 'A'
+        }
+    ],
+    'group': {
+        'G': 'rotation/C1#',
+        'centralizer': {'normalizer_index': 1, 'symbol': "O(3)1'"},
+        'hermann_mauguin': "11'",
+        'images': {
+            'axial_even': {
+                'matrix': [
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)]
+                ],
+                'record': 'rotation/C1#'
+            },
+            'axial_odd': {
+                'matrix': [
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)]
+                ],
+                'record': 'rotation/S2#'
+            },
+            'polar_even': {
+                'matrix': [
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)]
+                ],
+                'record': 'rotation/C1#'
+            },
+            'polar_odd': {
+                'matrix': [
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)]
+                ],
+                'record': 'rotation/S2#'
+            }
+        },
+        'magnetic_type': 'II',
+        'normalizer': {'index': {'reason': 'continuous-group', 'value': None}, 'symbol': "O(3)1'"},
+        'symbol': "C_11'"
+    },
+    'invariants': {
+        'bases': 'rotation/C1#/subduction_basis',
+        'multipoles': [
+            {
+                'J': 0,
+                'kind': 'electric',
+                'multiplicity': 'rotation/C1#/subduction_o3/parities/g/table/0/A'
+            },
+            {
+                'J': 1,
+                'kind': 'electric',
+                'multiplicity': 'rotation/C1#/subduction_o3/parities/u/table/1/A'
+            },
+            {
+                'J': 2,
+                'kind': 'electric',
+                'multiplicity': 'rotation/C1#/subduction_o3/parities/g/table/2/A'
+            },
+            {
+                'J': 3,
+                'kind': 'electric',
+                'multiplicity': 'rotation/C1#/subduction_o3/parities/u/table/3/A'
+            },
+            {
+                'J': 4,
+                'kind': 'electric',
+                'multiplicity': 'rotation/C1#/subduction_o3/parities/g/table/4/A'
+            },
+            {
+                'J': 0,
+                'kind': 'electric-toroidal',
+                'multiplicity': 'rotation/C1#/subduction_o3/parities/u/table/0/A'
+            },
+            {
+                'J': 1,
+                'kind': 'electric-toroidal',
+                'multiplicity': 'rotation/C1#/subduction_o3/parities/g/table/1/A'
+            },
+            {
+                'J': 2,
+                'kind': 'electric-toroidal',
+                'multiplicity': 'rotation/C1#/subduction_o3/parities/u/table/2/A'
+            },
+            {
+                'J': 3,
+                'kind': 'electric-toroidal',
+                'multiplicity': 'rotation/C1#/subduction_o3/parities/g/table/3/A'
+            },
+            {
+                'J': 4,
+                'kind': 'electric-toroidal',
+                'multiplicity': 'rotation/C1#/subduction_o3/parities/u/table/4/A'
+            }
+        ],
+        'rings': {
+            'axial_even': 'rotation/C1#/invariants',
+            'axial_odd': 'rotation/S2#/invariants',
+            'polar_even': 'rotation/C1#/invariants',
+            'polar_odd': 'rotation/S2#/invariants'
+        },
+        'two_vectors': {
+            'counts': [
+                {'a': 1, 'b': 1, 'count': 0},
+                {'a': 1, 'b': 2, 'count': 18},
+                {'a': 1, 'b': 3, 'count': 0},
+                {'a': 1, 'b': 4, 'count': 45},
+                {'a': 1, 'b': 5, 'count': 0},
+                {'a': 2, 'b': 1, 'count': 0},
+                {'a': 2, 'b': 2, 'count': 36},
+                {'a': 2, 'b': 3, 'count': 0},
+                {'a': 2, 'b': 4, 'count': 90},
+                {'a': 3, 'b': 1, 'count': 0},
+                {'a': 3, 'b': 2, 'count': 60},
+                {'a': 3, 'b': 3, 'count': 0},
+                {'a': 4, 'b': 1, 'count': 0},
+                {'a': 4, 'b': 2, 'count': 90},
+                {'a': 5, 'b': 1, 'count': 0}
+            ],
+            'kinds': ['polar_even', 'axial_odd'],
+            'polynomials': [
+                {'a': 1, 'b': 1, 'basis': []},
+                {
+                    'a': 1,
+                    'b': 2,
+                    'basis': [
+                        {'1,0,0;2,0,0': Rational(1,1)},
+                        {'1,0,0;1,1,0': Rational(1,1)},
+                        {'1,0,0;1,0,1': Rational(1,1)},
+                        {'1,0,0;0,2,0': Rational(1,1)},
+                        {'1,0,0;0,1,1': Rational(1,1)},
+                        {'1,0,0;0,0,2': Rational(1,1)},
+                        {'0,1,0;2,0,0': Rational(1,1)},
+                        {'0,1,0;1,1,0': Rational(1,1)},
+                        {'0,1,0;1,0,1': Rational(1,1)},
+                        {'0,1,0;0,2,0': Rational(1,1)},
+                        {'0,1,0;0,1,1': Rational(1,1)},
+                        {'0,1,0;0,0,2': Rational(1,1)},
+                        {'0,0,1;2,0,0': Rational(1,1)},
+                        {'0,0,1;1,1,0': Rational(1,1)},
+                        {'0,0,1;1,0,1': Rational(1,1)},
+                        {'0,0,1;0,2,0': Rational(1,1)},
+                        {'0,0,1;0,1,1': Rational(1,1)},
+                        {'0,0,1;0,0,2': Rational(1,1)}
+                    ]
+                },
+                {'a': 1, 'b': 3, 'basis': []},
+                {'a': 2, 'b': 1, 'basis': []},
+                {
+                    'a': 2,
+                    'b': 2,
+                    'basis': [
+                        {'2,0,0;2,0,0': Rational(1,1)},
+                        {'2,0,0;1,1,0': Rational(1,1)},
+                        {'2,0,0;1,0,1': Rational(1,1)},
+                        {'2,0,0;0,2,0': Rational(1,1)},
+                        {'2,0,0;0,1,1': Rational(1,1)},
+                        {'2,0,0;0,0,2': Rational(1,1)},
+                        {'1,1,0;2,0,0': Rational(1,1)},
+                        {'1,1,0;1,1,0': Rational(1,1)},
+                        {'1,1,0;1,0,1': Rational(1,1)},
+                        {'1,1,0;0,2,0': Rational(1,1)},
+                        {'1,1,0;0,1,1': Rational(1,1)},
+                        {'1,1,0;0,0,2': Rational(1,1)},
+                        {'1,0,1;2,0,0': Rational(1,1)},
+                        {'1,0,1;1,1,0': Rational(1,1)},
+                        {'1,0,1;1,0,1': Rational(1,1)},
+                        {'1,0,1;0,2,0': Rational(1,1)},
+                        {'1,0,1;0,1,1': Rational(1,1)},
+                        {'1,0,1;0,0,2': Rational(1,1)},
+                        {'0,2,0;2,0,0': Rational(1,1)},
+                        {'0,2,0;1,1,0': Rational(1,1)},
+                        {'0,2,0;1,0,1': Rational(1,1)},
+                        {'0,2,0;0,2,0': Rational(1,1)},
+                        {'0,2,0;0,1,1': Rational(1,1)},
+                        {'0,2,0;0,0,2': Rational(1,1)},
+                        {'0,1,1;2,0,0': Rational(1,1)},
+                        {'0,1,1;1,1,0': Rational(1,1)},
+                        {'0,1,1;1,0,1': Rational(1,1)},
+                        {'0,1,1;0,2,0': Rational(1,1)},
+                        {'0,1,1;0,1,1': Rational(1,1)},
+                        {'0,1,1;0,0,2': Rational(1,1)},
+                        {'0,0,2;2,0,0': Rational(1,1)},
+                        {'0,0,2;1,1,0': Rational(1,1)},
+                        {'0,0,2;1,0,1': Rational(1,1)},
+                        {'0,0,2;0,2,0': Rational(1,1)},
+                        {'0,0,2;0,1,1': Rational(1,1)},
+                        {'0,0,2;0,0,2': Rational(1,1)}
+                    ]
+                },
+                {'a': 3, 'b': 1, 'basis': []}
+            ]
+        }
+    },
+    'permutation_representations': 'rotation/C1#/permutation_representations',
+    'schema': 'point-group-atlas/magnetic/group/1',
+    'subduction_corepresentations': {
+        'J_max': 6,
+        'g': [{'A': 1}, {'A': 3}, {'A': 5}, {'A': 7}, {'A': 9}, {'A': 11}, {'A': 13}],
+        'u': [{'A': 1}, {'A': 3}, {'A': 5}, {'A': 7}, {'A': 9}, {'A': 11}, {'A': 13}]
+    },
+    'subduction_o3': 'rotation/C1#/subduction_o3',
+    'subgroup_lattice': {
+        'nodes': [
+            {
+                'centralizer': 'n01',
+                'class_size': 1,
+                'covers': [],
+                'id': 'n00',
+                'magnetic_type': 'I',
+                'node': 'n00',
+                'normal': True,
+                'normalizer': 'n01',
+                'order': 1,
+                'record': 'rotation/C1#',
+                'symbol': 'C_1'
+            },
+            {
+                'centralizer': 'n01',
+                'class_size': 1,
+                'covers': ['n00'],
+                'id': 'n01',
+                'magnetic_type': 'II',
+                'node': 'n00',
+                'normal': True,
+                'normalizer': 'n01',
+                'order': 2,
+                'record': 'magnetic/C1-1p#',
+                'symbol': "C_11'"
+            }
+        ]
+    },
+    'symmetrized_powers': [
+        {
+            'antisymmetrized_square': [],
+            'corepresentation': 'A',
+            'symmetrized_cube': [{'corepresentation': 'A', 'multiplicity': 1}],
+            'symmetrized_square': [{'corepresentation': 'A', 'multiplicity': 1}]
+        }
+    ],
+    'unitary_irreps': 'rotation/C1#/character_table/irreps'
+}

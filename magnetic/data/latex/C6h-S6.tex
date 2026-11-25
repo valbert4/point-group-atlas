@@ -1,0 +1,424 @@
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=-1
+\documentclass[10pt,a4paper]{article}
+\usepackage{cmap}
+\usepackage[margin=1.8cm,headheight=14pt,headsep=10pt]{geometry}
+\usepackage[leqno]{amsmath}
+\usepackage{amssymb,booktabs,longtable,array,ragged2e,multicol,multirow,xcolor,fancyhdr,tikz}
+\definecolor{linkblue}{rgb}{0.08,0.33,0.58}
+\usepackage[colorlinks=true,linkcolor=linkblue,urlcolor=linkblue,citecolor=linkblue,
+  filecolor=linkblue,linktoc=all,pdfborder={0 0 0},bookmarksnumbered=true]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\setcounter{secnumdepth}{2}\setcounter{tocdepth}{2}
+\definecolor{partshade}{gray}{0.9}
+\definecolor{parttitle}{HTML}{7A1466}
+\definecolor{parttitlelight}{HTML}{D66EBC}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}{-3ex plus -1ex minus -.2ex}%
+  {1.2ex plus .2ex}{\normalfont\large\sffamily\bfseries\color{parttitle}}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}{-2.5ex plus -1ex minus -.2ex}%
+  {.8ex plus .2ex}{\normalfont\sffamily\bfseries\color{parttitle}}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}{-2ex plus -1ex minus -.2ex}%
+  {.6ex plus .2ex}{\normalfont\small\sffamily\bfseries\color{parttitle}}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}{1.5ex plus .5ex minus .2ex}{-1em}%
+  {\normalfont\small\sffamily\bfseries\color{parttitle}}}
+\renewcommand\tagform@[1]{\maketag@@@{\textsf{\bfseries\footnotesize (#1)}}}
+\renewcommand*\l@part[2]{\par\addvspace{1.6ex}\noindent{\sffamily\bfseries #1}\hfill
+  {\sffamily\bfseries #2}\par\nobreak}
+\newcommand\tocnumber{1.8em}
+\newcommand\tocline[4]{\par{\rightskip \tocnumber plus 1fil\relax\parfillskip -\rightskip
+  \noindent\hangindent\dimexpr#1+#2\relax\hspace*{#1}%
+  \@tempdima #2{\sffamily\small #3}\nobreak\leaders\hbox{$\m@th\mkern 4.5mu\hbox{.}%
+  \mkern 4.5mu$}\hfill\nobreak\hbox to \tocnumber{\hfil\sffamily\small #4}\par}}
+\renewcommand*\l@section[2]{\tocline{0em}{2.2em}{#1}{#2}}
+\renewcommand*\l@subsection[2]{\tocline{2.2em}{2.6em}{#1}{#2}}
+\newcommand\contentspage{{\setlength{\columnsep}{24pt}\begin{multicols}{2}\@starttoc{toc}%
+  \end{multicols}}}
+\newcounter{docpart}\@addtoreset{section}{docpart}
+\renewcommand\thesection{\ifnum\value{docpart}>0 \arabic{docpart}.\fi\arabic{section}}
+\renewcommand\theHsection{\arabic{docpart}.\arabic{section}}
+\newcommand\partnumber[1]{#1\enspace}
+\pdfstringdefDisableCommands{\def\partnumber#1{#1 }}
+\newcommand{\partbox}[1]{\par\addvspace{12pt}\refstepcounter{docpart}\phantomsection
+  \addcontentsline{toc}{part}{\protect\partnumber{\thedocpart}#1}%
+  \noindent\colorbox{partshade}{\makebox[%
+  \dimexpr\textwidth-2\fboxsep\relax]{\rule[-6pt]{0pt}{20pt}\Large\sffamily\bfseries%
+  \textcolor{parttitle}{\thedocpart\quad #1}}}\par\nobreak\@nobreaktrue\addvspace{2pt}}
+\newmarks\LTstartmarks\newcount\LTstartcount
+\let\LT@startplain\LT@start
+\def\LT@start{\global\advance\LTstartcount\@ne\LT@startplain
+  \marks\LTstartmarks{\the\LTstartcount}}
+\newmarks\LTgroupmarks
+\newcount\LTspacebreak\LTspacebreak=-1
+\newcount\LTrulebreak\LTrulebreak=-2
+\def\grouprule#1#2{\noalign{\marks\LTgroupmarks{\the\belowrulesep}\nobreak\vskip#1%
+  \vskip\aboverulesep}\multispan\LT@cols\unskip{\leaders\hrule\@height#2\hfill\kern\z@}\cr
+  \noalign{\penalty\LTrulebreak\vskip\belowrulesep\global\@lastruleclass\z@}}
+\def\groupspace#1{\noalign{\marks\LTgroupmarks{\the\dimexpr#1\relax}\penalty\LTspacebreak
+  \vskip#1\global\@lastruleclass\z@}}
+\def\LT@unskips{\unskip\unpenalty\unskip\unpenalty\unskip\unpenalty\unskip\unpenalty}
+\def\LT@groupcut{\ifnum\outputpenalty=\LTrulebreak
+  \setbox\@cclv\vbox{\unvbox\@cclv\setbox\z@\lastbox\LT@unskips}\fi}
+\def\LT@groupjoin{\ifnum\outputpenalty=\LTspacebreak\vskip-\botmarks\LTgroupmarks\relax\fi
+  \ifnum\outputpenalty=\LTrulebreak\vskip-\botmarks\LTgroupmarks\relax\fi}
+\let\LT@outputplain\LT@output
+\def\LT@output{\ifnum\outputpenalty<-\@Mi\LT@outputplain\else
+  \edef\LT@marka{\botmarks\LTstartmarks}\edef\LT@markb{\the\LTstartcount}%
+  \ifx\LT@marka\LT@markb\LT@groupcut\LT@outputplain\LT@groupjoin
+  \else\setbox\LT@head\box\voidb@x\LT@outputplain\fi\fi}
+\makeatother
+\newcommand{\needspace}[1]{\par\penalty-100\begingroup\dimen0=#1\relax\dimen2=\pagegoal
+  \advance\dimen2-\pagetotal\ifdim\dimen0>\dimen2\relax\ifdim\dimen2>0pt\vfil\break\fi\fi
+  \endgroup}
+\numberwithin{equation}{section}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace #1}}
+\renewcommand{\subsectionmark}[1]{}
+\fancyhead[R]{\small\textsc{\rightmark}\quad\thepage}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small\thepage}}
+\definecolor{atlasI}{HTML}{991A1A}\definecolor{atlasIl}{HTML}{EC6B60}
+\definecolor{atlasII}{HTML}{295A2C}\definecolor{atlasIIl}{HTML}{6C9F6D}
+\definecolor{atlasIII}{HTML}{7A1466}\definecolor{atlasIIIl}{HTML}{D66EBC}
+\definecolor{atlasIV}{HTML}{9B690B}\definecolor{atlasIVl}{HTML}{F2A618}
+\makeatletter
+\newcommand\atlas@full{%
+\fill[atlasIII] (0.0394,0.0163) -- (0.3978,0.0163) arc[start angle=0.668, end angle=13.836, radius=1.3979] -- cycle;
+\fill[atlasI] (-0.0163,0.0394) -- (-0.0163,0.3978) arc[start angle=90.668, end angle=103.836, radius=1.3979] -- cycle;
+\fill[atlasIV] (-0.0394,-0.0163) -- (-0.3978,-0.0163) arc[start angle=-179.332, end angle=-166.164, radius=1.3979] -- cycle;
+\fill[atlasII] (0.0163,-0.0394) -- (0.0163,-0.3978) arc[start angle=-89.332, end angle=-76.164, radius=1.3979] -- cycle;
+\fill[atlasIIIl] (0.0163,0.0394) -- (0.3343,0.3573) arc[start angle=76.164, end angle=89.332, radius=1.3979] -- cycle;
+\fill[atlasIl] (-0.0394,0.0163) -- (-0.3573,0.3343) arc[start angle=166.164, end angle=179.332, radius=1.3979] -- cycle;
+\fill[atlasIVl] (-0.0163,-0.0394) -- (-0.3343,-0.3573) arc[start angle=-103.836, end angle=-90.668, radius=1.3979] -- cycle;
+\fill[atlasIIl] (0.0394,-0.0163) -- (0.3573,-0.3343) arc[start angle=-13.836, end angle=-0.668, radius=1.3979] -- cycle;
+\fill[atlasIIIl] (0.4304,0.0163) -- (0.9598,0.0163) arc[start angle=46.637, end angle=73.849, radius=1.3979] arc[start angle=13.862, end angle=0.653, radius=1.4305] -- cycle;
+\fill[atlasIl] (-0.0163,0.4304) -- (-0.0163,0.9598) arc[start angle=136.637, end angle=163.849, radius=1.3979] arc[start angle=103.862, end angle=90.653, radius=1.4305] -- cycle;
+\fill[atlasIVl] (-0.4304,-0.0163) -- (-0.9598,-0.0163) arc[start angle=-133.363, end angle=-106.151, radius=1.3979] arc[start angle=-166.138, end angle=-179.347, radius=1.4305] -- cycle;
+\fill[atlasIIl] (0.0163,-0.4304) -- (0.0163,-0.9598) arc[start angle=-43.363, end angle=-16.151, radius=1.3979] arc[start angle=-76.138, end angle=-89.347, radius=1.4305] -- cycle;
+\fill[atlasIII] (0.0163,0.4304) arc[start angle=89.347, end angle=76.138, radius=1.4305] arc[start angle=16.151, end angle=43.363, radius=1.3979] -- cycle;
+\fill[atlasI] (-0.4304,0.0163) arc[start angle=179.347, end angle=166.138, radius=1.4305] arc[start angle=106.151, end angle=133.363, radius=1.3979] -- cycle;
+\fill[atlasIV] (-0.0163,-0.4304) arc[start angle=-90.653, end angle=-103.862, radius=1.4305] arc[start angle=-163.849, end angle=-136.637, radius=1.3979] -- cycle;
+\fill[atlasII] (0.4304,-0.0163) arc[start angle=-0.653, end angle=-13.862, radius=1.4305] arc[start angle=-73.849, end angle=-46.637, radius=1.3979] -- cycle;
+\fill[atlasIII] (0.9997,0.0232) arc[start angle=1.329, end angle=44.066, radius=1] -- (0.3973,0.3742) arc[start angle=73.875, end angle=45.664, radius=1.4305] -- cycle;
+\fill[atlasI] (-0.0232,0.9997) arc[start angle=91.329, end angle=134.066, radius=1] -- (-0.3742,0.3973) arc[start angle=163.875, end angle=135.664, radius=1.4305] -- cycle;
+\fill[atlasIV] (-0.9997,-0.0232) arc[start angle=-178.671, end angle=-135.934, radius=1] -- (-0.3973,-0.3742) arc[start angle=-106.125, end angle=-134.336, radius=1.4305] -- cycle;
+\fill[atlasII] (0.0232,-0.9997) arc[start angle=-88.671, end angle=-45.934, radius=1] -- (0.3742,-0.3973) arc[start angle=-16.125, end angle=-44.336, radius=1.4305] -- cycle;
+\fill[atlasIIIl] (0.0232,0.9997) arc[start angle=44.336, end angle=16.125, radius=1.4305] -- (0.6955,0.7185) arc[start angle=45.934, end angle=88.671, radius=1] -- cycle;
+\fill[atlasIl] (-0.9997,0.0232) arc[start angle=134.336, end angle=106.125, radius=1.4305] -- (-0.7185,0.6955) arc[start angle=135.934, end angle=178.671, radius=1] -- cycle;
+\fill[atlasIVl] (-0.0232,-0.9997) arc[start angle=-135.664, end angle=-163.875, radius=1.4305] -- (-0.6955,-0.7185) arc[start angle=-134.066, end angle=-91.329, radius=1] -- cycle;
+\fill[atlasIIl] (0.9997,-0.0232) arc[start angle=-45.664, end angle=-73.875, radius=1.4305] -- (0.7185,-0.6955) arc[start angle=-44.066, end angle=-1.329, radius=1] -- cycle;
+}
+\newcommand\atlas@draw[2]{\begin{tikzpicture}[x=\dimexpr(#1)/2\relax,y=\dimexpr(#1)/2\relax]
+\useasboundingbox (-1,-1) rectangle (1,1);#2\end{tikzpicture}}
+\newcommand\atlas@volume[1]{{%
+\colorlet{atlasI}{parttitle}\colorlet{atlasIl}{parttitlelight}%
+\colorlet{atlasII}{parttitle}\colorlet{atlasIIl}{parttitlelight}%
+\colorlet{atlasIII}{parttitle}\colorlet{atlasIIIl}{parttitlelight}%
+\colorlet{atlasIV}{parttitle}\colorlet{atlasIVl}{parttitlelight}%
+#1}}
+\newcommand\atlasmark[1]{\atlas@draw{#1}{\atlas@full}}
+\newcommand\volumemark[1]{\atlas@volume{\atlasmark{#1}}}
+\makeatother
+\fancypagestyle{opening}{\fancyhf{}\fancyfoot[C]{\small\thepage}%
+  \fancyhead[L]{\smash{\raisebox{-9.5mm}{\volumemark{12mm}}}}}
+\hypersetup{pdftitle={C6h-S6: Point Group Atlas, volume III: magnetic point groups}, pdfsubject={Point Group Atlas magnetic record C6h-S6, schema point-group-atlas/magnetic/group/1}}
+\fancyhead[L]{\small $\grp{C_{6h}}(\grp{S_{6}})$}
+\DeclareMathAlphabet{\mathelt}{OT1}{cmss}{m}{sl}
+\DeclareSymbolFont{eltgreek}{OML}{cmssm}{m}{it}
+\DeclareMathSymbol{\eltsigma}{\mathord}{eltgreek}{"1B}
+\DeclareSymbolFont{eltletters}{OT1}{cmss}{m}{sl}
+\DeclareMathSymbol{g}{\mathalpha}{eltletters}{`g}
+\DeclareMathSymbol{h}{\mathalpha}{eltletters}{`h}
+\DeclareMathSymbol{Q}{\mathalpha}{eltletters}{`Q}
+\DeclareMathSymbol{R}{\mathalpha}{eltletters}{`R}
+\DeclareMathSymbol{\xi}{\mathord}{eltgreek}{"18}
+\newcommand{\eltfont}[1]{{\let\sigma\eltsigma\mathelt{#1}}}
+\newcommand{\grp}[1]{\mathsf{#1}}
+\newcommand{\irr}[1]{\text{\normalfont\scshape #1}}
+\newcommand{\conjpair}[1]{{}^{#1}}
+\newcommand{\cls}[1]{\eltfont{#1}}
+\newcommand{\elt}[1]{\eltfont{#1}}
+\newcommand{\hmname}[1]{#1}
+\newcommand{\orbname}[1]{#1}
+\newcommand{\ptag}[1]{\mathrm{#1}}
+\newcommand{\nconj}[1]{{\scriptsize$\times#1$}}
+\newcommand{\clsletter}[1]{\,{\scriptsize\color{black!55}#1}}
+\newcommand{\restr}[2]{#1\!\downarrow#2}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\iunit}{\mathrm{i}}
+\newcommand{\expe}{\mathrm{e}}
+\newcommand{\goldenratio}{\varphi}
+\newcommand{\rootunity}[1]{\zeta_{#1}}
+\newcommand{\irrJp}[2]{D^{(#1,#2)}}
+\newcommand{\repD}[1]{D^{#1}}
+\newcommand{\irchar}[1]{\chi_{#1}}
+\newcommand{\fsind}{\nu_{\mathrm{FS}}}
+\newcommand{\irrprod}{\otimes}
+\newcommand{\intx}{\mu}
+\newcommand{\cgnorm}{\mathcal{N}}
+\newcommand{\jm}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
+\newcommand{\jahn}[1]{\mathrm{#1}}
+\newcommand{\fcell}{\mathcal{D}}
+\newcommand{\sympow}[2]{[#1^{#2}]}
+\newcommand{\altpow}[2]{\{#1^{#2}\}}
+\newcommand{\hairsp}{\mkern1mu}
+\newenvironment{romanlist}{\begin{enumerate}%
+\renewcommand{\labelenumi}{(\roman{enumi})}}%
+  {\end{enumerate}}
+\makeatletter
+\newenvironment{irmatrix}[1]{\null\,\vcenter\bgroup\Let@\restore@math@cr\default@tag
+  \baselineskip8\ex@ \lineskip3\ex@ \lineskiplimit\lineskip
+  \ialign\bgroup\hfil$\m@th\scriptstyle##$\hfil&&\hskip#1\hfil$\m@th\scriptstyle##$\hfil\crcr}%
+  {\crcr\egroup\egroup\,}
+\makeatother
+\newlength{\fillwidth}\newlength{\cellwidth}\newlength{\colwidth}
+\newcommand{\cellmax}[1]{\settowidth{\cellwidth}{#1}%
+  \ifdim\cellwidth>\colwidth\setlength{\colwidth}{\cellwidth}\fi}
+\newcommand{\fillcap}{\ifdim\colwidth<\fillwidth\setlength{\fillwidth}{\colwidth}\fi}
+\newcommand{\signbreak}{\penalty100\relax}
+\begin{document}
+\thispagestyle{opening}
+\begin{center}
+{\LARGE\sffamily\bfseries\color{parttitle}The $\grp{C_{6h}}(\grp{S_{6}})$ subgroup of $\grp{O(3)} \times \grp{C_{2}^{T}}$}
+\end{center}
+\contentspage
+\needspace{194pt}
+\partbox{The group}
+\section{Names and structure}\label{s:identification}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.0.1}{0.1}, \href{../../../rotation/CONVENTIONS.pdf\#conv.2}{2}, \href{../../../rotation/CONVENTIONS.pdf\#conv.3}{3}, \href{../../../rotation/CONVENTIONS.pdf\#conv.6}{6}, \href{../../CONVENTIONS.pdf\#conv.30}{30} and \href{../../CONVENTIONS.pdf\#conv.31.2}{31.2}.
+{\small\begin{longtable}{@{}ll@{}}\toprule
+\texttt{symbol} & $\grp{C_{6h}}(\grp{S_{6}})$\\
+\texttt{magnetic\symbol{95}type} & III\\
+\texttt{G} & \href{../../../rotation/data/pdf/C6h.pdf}{$\grp{C_{6h}}$}\\
+\texttt{H} & \href{../../../rotation/data/pdf/S6.pdf}{$\grp{S_{6}}$}, index 2\\
+\texttt{antiunitary\symbol{95}character} & $\irr{b}_{\ptag{g}}$\\
+\grouprule{0pt}{\lightrulewidth}
+\texttt{images.polar\symbol{95}even} & \href{../../../rotation/data/pdf/C6h.pdf}{$\grp{C_{6h}}$}\\
+\texttt{images.axial\symbol{95}even} & \href{../../../rotation/data/pdf/C6.pdf}{$\grp{C_{6}}$}\\
+\texttt{images.polar\symbol{95}odd} & \href{../../../rotation/data/pdf/C6h.pdf}{$\grp{C_{6h}}$}\\
+\texttt{images.axial\symbol{95}odd} & \href{../../../rotation/data/pdf/C3h.pdf}{$\grp{C_{3h}}$}\\
+\grouprule{0pt}{\lightrulewidth}
+\texttt{normalizer} & $\grp{D_{\infty h}1'}$\\
+\texttt{centralizer} & $\grp{C_{\infty h}1'}$, index 2 in the normalizer\\
+\grouprule{0pt}{\lightrulewidth}
+\texttt{hermann\symbol{95}mauguin} & $\hmname{6'/m'}$\\
+\texttt{orbifold} & $\orbname{6{\ast}}$ of \href{../../../rotation/data/pdf/C6h.pdf}{$\grp{C_{6h}}$}, $\orbname{3{\times}}$ of \href{../../../rotation/data/pdf/S6.pdf}{$\grp{S_{6}}$}\\
+\bottomrule\end{longtable}}
+The field \texttt{magnetic\symbol{95}type} is III, so $\grp{C_{6h}}(\grp{S_{6}})$ contains the elements of $\grp{S_{6}}$ and the products of time reversal $\varTheta$ with the other elements of $\grp{C_{6h}}$. The fields \texttt{G} and \texttt{H} name these groups by their records (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.30.3}{30.3}), and \texttt{antiunitary\symbol{95}character} names the irrep $\chi$ of $\grp{C_{6h}}$ with kernel $\grp{S_{6}}$. The four fields \texttt{images} name the groups by which the elements move a polar or an axial vector, even or odd under time reversal (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.2}{31.2}). Each names the record of its $\grp{O(3)}$-conjugacy class and the frame that carries that record onto the image. The fields \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{O(3)} \times \grp{C_{2}^{T}}$, and both groups are of magnetic type II. The field \texttt{orbifold} of the record gives the orbifold symbols of $\grp{C_{6h}}$ and of $\grp{S_{6}}$.
+\needspace{103pt}
+\section{Symmetry operations}\label{s:elements}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.5}{5}, \href{../../CONVENTIONS.pdf\#conv.30.1}{30.1}, \href{../../CONVENTIONS.pdf\#conv.30.3}{30.3} and \href{../../CONVENTIONS.pdf\#conv.32.1}{32.1}.
+\leavevmode\label{n:head.class}A row is a class of $\grp{C_{6h}}$. \label{n:index.element}\label{n:element.g}A row gives the indices $k$ of its elements, as in the section Symmetry operations of the document of \href{../../../rotation/data/pdf/C6h.pdf}{$\grp{C_{6h}}$}. It also gives the sign $\theta = \chi(g)$ of the element of $\grp{C_{6h}}(\grp{S_{6}})$ over each element $g$ of the class. An element of sign $-1$ is antiunitary, the product $\varTheta g$ of time reversal and an element $g$ of $\grp{C_{6h}}$ outside $\grp{S_{6}}$. As $\grp{C_{6h}}(\grp{S_{6}})$ is isomorphic to $\grp{C_{6h}}$, its classes are these, and its elements multiply as those of $\grp{C_{6h}}$ do, with their signs multiplied. The antiunitary representative $\elt{a}$ of the corepresentations (\texttt{representative}) is $\varTheta\elt{C_{6}}$, over the element of index 1. The field \texttt{frame} is the identity, so the elements of the record of $\grp{S_{6}}$ are those of $\grp{C_{6h}}$ with the same matrices.
+{\small\begin{longtable}{@{}llr@{\hspace{18pt}}llr@{\hspace{18pt}}llr@{}}\toprule
+class & $k$ & $\theta$ & class & $k$ & $\theta$ & class & $k$ & $\theta$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\cls{E}$ & 0 & $+1$ & $\cls{C_{3}^{2}}$ & 4 & $+1$ & $\cls{S_{6}}$ & 8 & $+1$\\*
+$\cls{C_{6}}$ & 1 & $-1$ & $\cls{C_{6}^{5}}$ & 5 & $-1$ & $\cls{S_{3}}$ & 9 & $-1$\\*
+$\cls{C_{3}}$ & 2 & $+1$ & $\cls{i}$ & 6 & $+1$ & $\cls{S_{3}^{5}}$ & 10 & $-1$\\*
+$\cls{C_{2}}$ & 3 & $-1$ & $\cls{\sigma_{h}}$ & 7 & $-1$ & $\cls{S_{6}^{5}}$ & 11 & $+1$\\
+\bottomrule\end{longtable}}
+\needspace{171pt}
+\partbox{Representations}
+\section{Irreducible representations}\label{s:irreps}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.6}{6}, \href{../../../rotation/CONVENTIONS.pdf\#conv.7}{7}, \href{../../CONVENTIONS.pdf\#conv.32.1}{32.1} and \href{../../CONVENTIONS.pdf\#conv.32.3}{32.3}.
+\leavevmode\label{n:irrep.Delta}A row is an irrep $\Lambda$ of $\grp{S_{6}}$, the subgroup of the unitary elements of $\grp{C_{6h}}(\grp{S_{6}})$, in the order of the section Irreducible representations of the document of \href{../../../rotation/data/pdf/S6.pdf}{$\grp{S_{6}}$}. \label{n:index.dimension}\label{n:index.frobenius}\label{n:head.irrep}\label{n:head.reality}\label{n:head.conjugate}A row gives its dimension $d$, its Frobenius--Schur indicator $\fsind$, its reality and its complex conjugate (conjugate, a dash for the others), as in that section. \label{n:head.bilbao}\label{n:irrep.alias.gamma}Bilbao is the irrep's symbol $\Gamma_n$ in the double point group tables of [\href{../../../REFERENCES.pdf\#ref.EBW+17}{EBW+17}] (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.6.5}{6.5}). \label{n:head.case.corep}\label{n:head.corep}A row also gives the indicator $\iota$ of $\Lambda$ under the representative $\elt{a}$, its case and the corepresentation that contains it (corep), named by its irreps. In case (a), $\iota = +1$ and $\Lambda$ alone forms the corepresentation. In case (b), $\iota = -1$ and two copies of $\Lambda$ form it. In case (c), $\iota = 0$ and $\Lambda$ forms it with its partner, another irrep.
+\setlength{\emergencystretch}{2em}\par\setlength{\emergencystretch}{0pt}
+{\small\renewcommand{\arraystretch}{1.25}\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}llrrllrll@{}}\toprule
+irrep & Bilbao & $d$ & $\fsind$ & reality & conjugate & $\iota$ & case & corep\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{\ptag{g}}$ & $\Gamma_{1}^{+}$ & 1 & $+1$ & real & --- & $+1$ & (a) & $\irr{a}_{\ptag{g}}$\\*
+$\conjpair{1}\irr{e}_{\ptag{g}}$ & $\Gamma_{2}^{+}$ & 1 & $0$ & complex & $\conjpair{2}\irr{e}_{\ptag{g}}$ & $0$ & (c) & $\conjpair{1}\irr{e}_{\ptag{g}}\,\conjpair{2}\irr{e}_{\ptag{g}}$\\*
+$\conjpair{2}\irr{e}_{\ptag{g}}$ & $\Gamma_{3}^{+}$ & 1 & $0$ & complex & $\conjpair{1}\irr{e}_{\ptag{g}}$ & $0$ & (c) & $\conjpair{1}\irr{e}_{\ptag{g}}\,\conjpair{2}\irr{e}_{\ptag{g}}$\\*
+$\irr{a}_{\ptag{u}}$ & $\Gamma_{1}^{-}$ & 1 & $+1$ & real & --- & $+1$ & (a) & $\irr{a}_{\ptag{u}}$\\*
+$\conjpair{1}\irr{e}_{\ptag{u}}$ & $\Gamma_{2}^{-}$ & 1 & $0$ & complex & $\conjpair{2}\irr{e}_{\ptag{u}}$ & $0$ & (c) & $\conjpair{1}\irr{e}_{\ptag{u}}\,\conjpair{2}\irr{e}_{\ptag{u}}$\\*
+$\conjpair{2}\irr{e}_{\ptag{u}}$ & $\Gamma_{3}^{-}$ & 1 & $0$ & complex & $\conjpair{1}\irr{e}_{\ptag{u}}$ & $0$ & (c) & $\conjpair{1}\irr{e}_{\ptag{u}}\,\conjpair{2}\irr{e}_{\ptag{u}}$\\
+\bottomrule\end{longtable}}
+\needspace{183pt}
+\section{Corepresentation table}\label{s:character_table}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.5}{5}, \href{../../CONVENTIONS.pdf\#conv.32.3}{32.3} and \href{../../CONVENTIONS.pdf\#conv.33}{33}.
+A row is a corepresentation of $\grp{C_{6h}}(\grp{S_{6}})$, named by its irreps (section~\ref{s:irreps}). A column is a merged class of $\grp{S_{6}}$, the union of a class and of its image under $h \mapsto \elt{a} h^{-1} \elt{a}^{-1}$. The entry of a row is the character of its corepresentation on the class, the sum of the characters of its irreps.
+{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lcccc@{}}\toprule
+$\grp{C_{6h}}(\grp{S_{6}})$ & $\cls{E}$ & $\cls{C_{3}} \cup \cls{C_{3}^{2}}$ & $\cls{i}$ & $\cls{S_{6}} \cup \cls{S_{6}^{5}}$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{\ptag{g}}$ & $1$ & $1$ & $1$ & $1$\\*
+$\conjpair{1}\irr{e}_{\ptag{g}}\,\conjpair{2}\irr{e}_{\ptag{g}}$ & $2$ & $-1$ & $2$ & $-1$\\*
+$\irr{a}_{\ptag{u}}$ & $1$ & $1$ & $-1$ & $-1$\\*
+$\conjpair{1}\irr{e}_{\ptag{u}}\,\conjpair{2}\irr{e}_{\ptag{u}}$ & $2$ & $-1$ & $-2$ & $1$\\
+\bottomrule\end{longtable}}
+\needspace{103pt}
+\section{Corepresentation matrices}\label{s:corep_matrices}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.9}{9} and \href{../../CONVENTIONS.pdf\#conv.32.2}{32.2}.
+A unitary element $h$ acts in a corepresentation $\mathcal{D}$ by the transposes $D^{\Lambda}(h)^{\top}$ of the matrices of its irreps $\Lambda$ (the section Representation matrices of the document of \href{../../../rotation/data/pdf/S6.pdf}{$\grp{S_{6}}$}). The representative $\elt{a} = \varTheta\elt{C_{6}}$ acts by a unitary matrix times the complex conjugation $K$.
+In case (a), $\mathcal{D}(\elt{a}) = NK$. In case (b), $\mathcal{D}(\elt{a}) = \left(\begin{smallmatrix} 0 & N \\ -N & 0 \end{smallmatrix}\right) K$. In case (c), $\mathcal{D}(\elt{a}) = \left(\begin{smallmatrix} 0 & D^{\Lambda}(\elt{a}^2)^{\top} \\ 1 & 0 \end{smallmatrix}\right) K$, with no matrix $N$.
+A row is a corepresentation, by its irreps. A row gives its case and its matrix $N$ (a dash in case (c)).
+{\small\begin{longtable}{@{}lll@{}}\toprule
+corep & case & $N$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{\ptag{g}}$ & (a) & $\left(\begin{irmatrix}{0.2778em}1\end{irmatrix}\right)$\\*
+$\conjpair{1}\irr{e}_{\ptag{g}}\,\conjpair{2}\irr{e}_{\ptag{g}}$ & (c) & ---\\
+$\irr{a}_{\ptag{u}}$ & (a) & $\left(\begin{irmatrix}{0.2778em}1\end{irmatrix}\right)$\\*
+$\conjpair{1}\irr{e}_{\ptag{u}}\,\conjpair{2}\irr{e}_{\ptag{u}}$ & (c) & ---\\
+\bottomrule\end{longtable}}
+\needspace{183pt}
+\section{Symmetrized powers}\label{s:symmetrized_powers}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.32.3}{32.3} and \href{../../CONVENTIONS.pdf\#conv.34}{34}.
+A row is a corepresentation $\mathcal{D}$ of $\grp{C_{6h}}(\grp{S_{6}})$, named by its irreps. \label{n:operator.power.symmetrized}\label{n:operator.power.antisymmetrized}A row gives the decompositions into corepresentations of its symmetrized square $\sympow{\mathcal{D}}{2}$, its antisymmetrized square $\altpow{\mathcal{D}}{2}$ and its symmetrized cube $\sympow{\mathcal{D}}{3}$. A power of dimension 0 has the entry 0.
+{\small\begin{longtable}{@{}llll@{}}\toprule
+corep & $\sympow{\mathcal{D}}{2}$ & $\altpow{\mathcal{D}}{2}$ & $\sympow{\mathcal{D}}{3}$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $0$ & $\irr{a}_{\ptag{g}}$\\*
+$\conjpair{1}\irr{e}_{\ptag{g}}\,\conjpair{2}\irr{e}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}} \oplus \conjpair{1}\irr{e}_{\ptag{g}}\,\conjpair{2}\irr{e}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $2\,\irr{a}_{\ptag{g}} \oplus \conjpair{1}\irr{e}_{\ptag{g}}\,\conjpair{2}\irr{e}_{\ptag{g}}$\\*
+$\irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ & $0$ & $\irr{a}_{\ptag{u}}$\\*
+$\conjpair{1}\irr{e}_{\ptag{u}}\,\conjpair{2}\irr{e}_{\ptag{u}}$ & $\irr{a}_{\ptag{g}} \oplus \conjpair{1}\irr{e}_{\ptag{g}}\,\conjpair{2}\irr{e}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $2\,\irr{a}_{\ptag{u}} \oplus \conjpair{1}\irr{e}_{\ptag{u}}\,\conjpair{2}\irr{e}_{\ptag{u}}$\\
+\bottomrule\end{longtable}}
+\needspace{171pt}
+\partbox{Subgroups}
+\section{Subgroup lattice}\label{s:subgroups}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.15}{15} and \href{../../CONVENTIONS.pdf\#conv.36}{36}.
+The diagram shows the conjugacy classes of subgroups, each joined to the classes of its maximal subgroups, and the orders increase upward. \label{n:index.conjugates.c}A normal subgroup is framed, and ${\times}c$ is the number $c > 1$ of conjugate subgroups. The table lists the classes by order, then by magnetic type, those of one symbol together. \label{n:head.subgroup}\label{n:head.magnetic.type}\label{n:head.order}\label{n:head.conjugates}\label{n:head.normal}A row gives the representative of a class of subgroups (subgrp), its magnetic type (type), its order, the number of subgroups in the class (conjugates) and whether the representative is normal. \label{n:head.normalizer}\label{n:head.centralizer}It also gives its normalizer and its centralizer in $\grp{C_{6h}}(\grp{S_{6}})$, by their classes. 
+\begin{center}
+\begin{tikzpicture}[x=1cm, y=1.500cm,
+  every node/.style={fill=white, font=\footnotesize, inner xsep=1.5pt, inner ysep=1.2pt, text height=5.6pt, text depth=1.6pt},
+  normal/.style={draw, line width=0.4pt}, cover/.style={black!50, line width=0.4pt}]
+\draw[cover] (0.00,0) -- (-0.68,1);
+\draw[cover] (0.00,0) -- (0.24,1);
+\draw[cover] (0.00,0) -- (-1.90,1);
+\draw[cover] (0.00,0) -- (1.18,2);
+\draw[cover] (-0.68,1) -- (-0.66,3);
+\draw[cover] (-0.68,1) -- (0.34,4);
+\draw[cover] (0.24,1) -- (-0.66,3);
+\draw[cover] (0.24,1) -- (1.28,4);
+\draw[cover] (-1.90,1) -- (-0.66,3);
+\draw[cover] (-1.90,1) -- (-1.01,4);
+\draw[cover] (1.18,2) -- (0.34,4);
+\draw[cover] (1.18,2) -- (1.28,4);
+\draw[cover] (1.18,2) -- (-1.01,4);
+\draw[cover] (-0.66,3) -- (0.00,5);
+\draw[cover] (0.34,4) -- (0.00,5);
+\draw[cover] (1.28,4) -- (0.00,5);
+\draw[cover] (-1.01,4) -- (0.00,5);
+\node[normal] (n00) at (0.00,0) {$\grp{C_{1}}$};
+\node[normal] (n01) at (-0.68,1) {$\grp{C_{2}}(\grp{C_{1}})$};
+\node[normal] (n02) at (0.24,1) {$\grp{C_{i}}$};
+\node[normal] (n03) at (-1.90,1) {$\grp{C_{s}}(\grp{C_{1}})$};
+\node[normal] (n04) at (1.18,2) {$\grp{C_{3}}$};
+\node[normal] (n05) at (-0.66,3) {$\grp{C_{2h}}(\grp{C_{i}})$};
+\node[normal] (n06) at (0.34,4) {$\grp{C_{6}}(\grp{C_{3}})$};
+\node[normal] (n07) at (1.28,4) {$\grp{S_{6}}$};
+\node[normal] (n08) at (-1.01,4) {$\grp{C_{3h}}(\grp{C_{3}})$};
+\node[normal] (n09) at (0.00,5) {$\grp{C_{6h}}(\grp{S_{6}})$};
+\end{tikzpicture}
+\end{center}
+{\small\begin{longtable}{@{}llrrlll@{}}\toprule
+subgrp & type & order & conjugates & normal & normalizer & centralizer\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\href{../../../rotation/data/pdf/C1.pdf}{$\grp{C_{1}}$} & I & 1 & 1 & yes & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$} & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$}\\*
+\href{../../../rotation/data/pdf/S2.pdf}{$\grp{C_{i}}$} & I & 2 & 1 & yes & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$} & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$}\\*
+\href{C2-C1.pdf}{$\grp{C_{2}}(\grp{C_{1}})$} & III & 2 & 1 & yes & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$} & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$}\\*
+\href{C1v-C1.pdf}{$\grp{C_{s}}(\grp{C_{1}})$} & III & 2 & 1 & yes & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$} & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$}\\*
+\href{../../../rotation/data/pdf/C3.pdf}{$\grp{C_{3}}$} & I & 3 & 1 & yes & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$} & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$}\\*
+\href{C2h-S2.pdf}{$\grp{C_{2h}}(\grp{C_{i}})$} & III & 4 & 1 & yes & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$} & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$}\\*
+\href{../../../rotation/data/pdf/S6.pdf}{$\grp{S_{6}}$} & I & 6 & 1 & yes & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$} & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$}\\*
+\href{C6-C3.pdf}{$\grp{C_{6}}(\grp{C_{3}})$} & III & 6 & 1 & yes & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$} & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$}\\*
+\href{C3h-C3.pdf}{$\grp{C_{3h}}(\grp{C_{3}})$} & III & 6 & 1 & yes & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$} & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$}\\*
+\href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$} & III & 12 & 1 & yes & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$} & \href{C6h-S6.pdf}{$\grp{C_{6h}}(\grp{S_{6}})$}\\
+\bottomrule\end{longtable}}
+\needspace{103pt}
+\section{Descent of symmetry}\label{s:subduction}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.12}{12} and \href{../../CONVENTIONS.pdf\#conv.33.1}{33.1}.
+A row is an irrep $\Gamma$ of \href{../../../rotation/data/pdf/C6h.pdf}{$\grp{C_{6h}}$} over $\mathbb{R}$, which is a corepresentation of \href{C6h-1p.pdf}{$\grp{C_{6h}1'}$} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.32.1}{32.1}). A complex-conjugate pair of irreps of $\grp{C_{6h}}$, such as $\conjpair{1}\irr{e}_{1\ptag{g}}$ and $\conjpair{2}\irr{e}_{1\ptag{g}}$, forms one irrep over $\mathbb{R}$, whose row is labeled $\irr{e}_{1\ptag{g}}$. A row gives the restriction of $\Gamma$ to $\grp{C_{6h}}(\grp{S_{6}})$ as a sum of corepresentations (section~\ref{s:irreps}). A corepresentation of $\grp{C_{6h}1'}$ splits in $\grp{C_{6h}}(\grp{S_{6}})$ exactly when its row has more than one term.
+{\small\begin{longtable}{@{}ll@{\hspace{18pt}}ll@{}}\toprule
+irrep & $\restr{\Gamma}{\grp{C_{6h}}(\grp{S_{6}})}$ & irrep & $\restr{\Gamma}{\grp{C_{6h}}(\grp{S_{6}})}$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $\irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{u}}$\\*
+$\irr{b}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $\irr{b}_{\ptag{u}}$ & $\irr{a}_{\ptag{u}}$\\*
+$\irr{e}_{1\ptag{g}}$ & $\conjpair{1}\irr{e}_{\ptag{g}}\,\conjpair{2}\irr{e}_{\ptag{g}}$ & $\irr{e}_{1\ptag{u}}$ & $\conjpair{1}\irr{e}_{\ptag{u}}\,\conjpair{2}\irr{e}_{\ptag{u}}$\\*
+$\irr{e}_{2\ptag{g}}$ & $\conjpair{1}\irr{e}_{\ptag{g}}\,\conjpair{2}\irr{e}_{\ptag{g}}$ & $\irr{e}_{2\ptag{u}}$ & $\conjpair{1}\irr{e}_{\ptag{u}}\,\conjpair{2}\irr{e}_{\ptag{u}}$\\
+\bottomrule\end{longtable}}
+\needspace{171pt}
+\partbox{Angular momentum}
+\section{Subduction from \texorpdfstring{$\grp{O(3)} \times \grp{C_{2}^{T}}$}{O(3) x C2T}}\label{s:subduction_o3}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.11}{11} and \href{../../CONVENTIONS.pdf\#conv.33.1}{33.1}.
+\leavevmode\label{n:index.J}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{O(3)} \times \grp{C_{2}^{T}}$ has angular momentum $J$ and parity $p$ ($\ptag{g}$ for $p = +1$, $\ptag{u}$ for $p = -1$), and time reversal acts on it as on its kets (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.1}{31.1}). A row is an angular momentum $J \le 6$. A row gives the multiplicity of each corepresentation of $\grp{C_{6h}}(\grp{S_{6}})$ in the restriction of $\irrJp{J}{p}$ to $\grp{C_{6h}}(\grp{S_{6}})$. A corepresentation occurs as often as its first irrep occurs in the restriction to $\grp{S_{6}}$ (the section Subduction from $\grp{O(3)}$ of the document of \href{../../../rotation/data/pdf/S6.pdf}{$\grp{S_{6}}$}), half as often in case (b).
+\needspace{149pt}
+\paragraph{Parity $\ptag{g}$ ($p = +1$).}
+{\small\begin{longtable}{@{}rrr@{}}\toprule
+$J$ & $\irr{a}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{\ptag{g}}\,\conjpair{2}\irr{e}_{\ptag{g}}$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+0 & 1 & 0\\*
+1 & 1 & 1\\*
+2 & 1 & 2\\*
+3 & 3 & 2\\*
+4 & 3 & 3\\*
+5 & 3 & 4\\*
+6 & 5 & 4\\
+\bottomrule\end{longtable}}
+\needspace{149pt}
+\paragraph{Parity $\ptag{u}$ ($p = -1$).}
+{\small\begin{longtable}{@{}rrr@{}}\toprule
+$J$ & $\irr{a}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{\ptag{u}}\,\conjpair{2}\irr{e}_{\ptag{u}}$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+0 & 1 & 0\\*
+1 & 1 & 1\\*
+2 & 1 & 2\\*
+3 & 3 & 2\\*
+4 & 3 & 3\\*
+5 & 3 & 4\\*
+6 & 5 & 4\\
+\bottomrule\end{longtable}}
+\needspace{171pt}
+\partbox{Tensors}
+\section{Tensors odd under time reversal}\label{s:time_odd}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10}{10}, \href{../../../rotation/CONVENTIONS.pdf\#conv.13.2}{13.2} and \href{../../CONVENTIONS.pdf\#conv.35}{35}.
+\leavevmode\label{n:head.name.property}A row is a tensor property odd under time reversal that $\grp{C_{6h}}(\grp{S_{6}})$ allows, by its Jahn symbol (name). \label{n:head.spaces}A row gives the spaces of Cartesian tensors in which its components are read (spaces), by their Jahn symbols in the section Isotypic components of the document of \href{../../../rotation/data/pdf/C6h.pdf}{$\grp{C_{6h}}$}. \label{n:head.properties}A row also gives the irrep of $\grp{C_{6h}}$ at which they are read and the properties in words. The irrep is $\chi$ where the spaces are those of the tensor, and $\chi \irrprod \det$ where they are those of the tensor without its axial factor e (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.35}{35}). The components that $\grp{C_{6h}}(\grp{S_{6}})$ allows are the copies of that irrep in those spaces.
+{\small\setlength{\fillwidth}{\textwidth}\addtolength{\fillwidth}{-6\tabcolsep}\setlength{\colwidth}{0pt}\cellmax{$\jahn{a\{V^{2}\}[V^{2}]}$}\cellmax{$\jahn{aV^{2}[V^{2}]}$}\cellmax{$\jahn{aeV[V^{2}]}$}\cellmax{$\jahn{ae[V^{2}]V}$}\cellmax{$\jahn{aV[V^{3}]}$}\cellmax{$\jahn{aeV^{3}}$}\cellmax{name}\cellmax{$\jahn{aV^{4}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{$\jahn{[V^{2}]}$ $\oplus$ $\jahn{eV}$ $\oplus$ $\jahn{e[V^{2}]V}$ $\oplus$ $\jahn{e[V^{2}]V}$ $\oplus$ $\jahn{[V^{2}]^{2}}$}\cellmax{$\jahn{V}$ $\oplus$ $\jahn{e[V^{2}]}$ $\oplus$ $\jahn{V[V^{2}]}$}\cellmax{$\jahn{e[V^{2}]V}$ $\oplus$ $\jahn{[V^{2}]^{2}}$}\cellmax{$\jahn{e[V^{2}]V}$}\cellmax{spaces}\cellmax{$\jahn{V[V^{2}]}$}\cellmax{$\jahn{V[V^{3}]}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{irrep}\cellmax{$\irr{b}_{\ptag{g}}$}\cellmax{$\irr{b}_{\ptag{u}}$}\addtolength{\fillwidth}{-\colwidth}\setlength{\colwidth}{0pt}\cellmax{the linear magneto-Seebeck effect, the linear magneto-Peltier effect, the real part of the second-order susceptibility of a magnetic dipole}\cellmax{the quadratic anomalous Hall effect, the quadratic magneto-optic Kerr effect, nonmutual optical activity}\cellmax{piezomagnetism, the real part of second-harmonic generation by a magnetic dipole}\cellmax{the imaginary part of second-harmonic generation induced by an electric field}\cellmax{linear magnetoresistance, the magneto-optic Kerr effect}\cellmax{the imaginary part of the third-order susceptibility}\cellmax{the imaginary part of third-harmonic generation}\cellmax{properties}\fillcap\begin{longtable}{@{}lll>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}\toprule
+name & spaces & irrep & properties\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\jahn{aeV[V^{2}]}$ & $\jahn{V[V^{2}]}$ & $\irr{b}_{\ptag{u}}$ & piezomagnetism, the real part of second-harmonic generation by a magnetic dipole\\*
+$\jahn{ae[V^{2}]V}$ & $\jahn{V[V^{2}]}$ & $\irr{b}_{\ptag{u}}$ & linear magnetoresistance, the magneto-optic Kerr effect\\
+$\jahn{aeV^{3}}$ & $\jahn{V}$ $\oplus$ $\jahn{e[V^{2}]}$ $\oplus$ $\jahn{V[V^{2}]}$ & $\irr{b}_{\ptag{u}}$ & the linear magneto-Seebeck effect, the linear magneto-Peltier effect, the real part of the second-order susceptibility of a magnetic dipole\\
+$\jahn{a\{V^{2}\}[V^{2}]}$ & $\jahn{e[V^{2}]V}$ & $\irr{b}_{\ptag{g}}$ & the quadratic anomalous Hall effect, the quadratic magneto-optic Kerr effect, nonmutual optical activity\\
+$\jahn{aV^{4}}$ & $\jahn{[V^{2}]}$ $\oplus$ $\jahn{eV}$ $\oplus$ $\jahn{e[V^{2}]V}$ $\oplus$ $\jahn{e[V^{2}]V}$ $\oplus$ $\jahn{[V^{2}]^{2}}$ & $\irr{b}_{\ptag{g}}$ & the imaginary part of the third-order susceptibility\\
+$\jahn{aV^{2}[V^{2}]}$ & $\jahn{e[V^{2}]V}$ $\oplus$ $\jahn{[V^{2}]^{2}}$ & $\irr{b}_{\ptag{g}}$ & the imaginary part of second-harmonic generation induced by an electric field\\*
+$\jahn{aV[V^{3}]}$ & $\jahn{V[V^{3}]}$ & $\irr{b}_{\ptag{g}}$ & the imaginary part of third-harmonic generation\\
+\bottomrule\end{longtable}}
+\needspace{195pt}
+\section{Multipoles}\label{s:multipoles}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.35.1}{35.1}.
+A row is a rank $J$. \label{n:head.multipole.electric}\label{n:head.multipole.electric.toroidal}\label{n:head.multipole.magnetic.toroidal}\label{n:head.multipole.magnetic}A row gives the number of independent multipoles of each kind that $\grp{C_{6h}}(\grp{S_{6}})$ allows. It is the multiplicity in $\irrJp{J}{p}$ of the trivial irrep of $\grp{C_{6h}}$ for the electric kinds and of $\chi$ for the magnetic kinds (the section Subduction from $\grp{O(3)}$ of the document of \href{../../../rotation/data/pdf/C6h.pdf}{$\grp{C_{6h}}$}).
+{\small\begin{longtable}{@{}rrrrr@{}}\toprule
+$J$ & electric & electric toroidal & magnetic toroidal & magnetic\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+0 & 1 & 0 & 0 & 0\\*
+1 & 0 & 1 & 0 & 0\\*
+2 & 1 & 0 & 0 & 0\\*
+3 & 0 & 1 & 0 & 2\\*
+4 & 1 & 0 & 2 & 0\\
+\bottomrule\end{longtable}}
+The electric entries at even $J$ and the magnetic entries at odd $J$ count the operators on a spin that $\grp{C_{6h}}(\grp{S_{6}})$ allows (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.35.1}{35.1}).
+\needspace{103pt}
+\section{Invariants}\label{s:invariants}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.31.2}{31.2} and \href{../../CONVENTIONS.pdf\#conv.35.1}{35.1}.
+The invariant polynomials of $\grp{C_{6h}}(\grp{S_{6}})$ in one vector of a kind are those of its image of that kind (section~\ref{s:identification}), in the section Invariant polynomials of the image's document (\texttt{rings}).
+\leavevmode\label{n:index.degree.polar}\label{n:index.degree.axial}A row is a degree $a$ in a polar vector even under time reversal. A row gives the number of linearly independent invariants of degree $a$ in it and $b$ in an axial vector odd under time reversal, for $a + b \le 6$.
+{\small\begin{longtable}{@{}rrrrrr@{}}\toprule
+$a$ & $b = 1$ & $b = 2$ & $b = 3$ & $b = 4$ & $b = 5$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+1 & 0 & 0 & 0 & 0 & 0\\*
+2 & 2 & 8 & 10 & 16 & \\*
+3 & 0 & 0 & 0 &  & \\*
+4 & 8 & 16 &  &  & \\*
+5 & 0 &  &  &  & \\
+\bottomrule\end{longtable}}
+\leavevmode\label{n:local.component.polar}\label{n:local.component.axial}The record holds their bases for $a + b \le 4$ (\texttt{polynomials}), in the components $u_{x}$, $u_{y}$, $u_{z}$ of the polar vector and $v_{x}$, $v_{y}$, $v_{z}$ of the axial vector. \label{n:head.polynomial}A row is an invariant of the reduced row echelon basis of its degrees (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.35.1}{35.1}). A row gives its degrees $a$ and $b$ and the invariant (polynomial).
+{\small\renewcommand{\arraystretch}{1.2}\begin{longtable}{@{}rrl@{\hspace{18pt}}rrl@{}}\toprule
+$a$ & $b$ & polynomial & $a$ & $b$ & polynomial\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+2 & 1 & $u_{x}^{2}v_{x} - 2u_{x}u_{y}v_{y} - u_{y}^{2}v_{x}$ & 2 & 2 & $u_{x}^{2}v_{z}^{2} + u_{y}^{2}v_{z}^{2}$\\*
+2 & 1 & $u_{x}^{2}v_{y} + 2u_{x}u_{y}v_{x} - u_{y}^{2}v_{y}$ & 2 & 2 & $u_{x}u_{z}v_{x}v_{z} + u_{y}u_{z}v_{y}v_{z}$\\*
+2 & 2 & $u_{x}^{2}v_{x}^{2} + 2u_{x}u_{y}v_{x}v_{y} + u_{y}^{2}v_{y}^{2}$ & 2 & 2 & $u_{x}u_{z}v_{y}v_{z} - u_{y}u_{z}v_{x}v_{z}$\\*
+2 & 2 & $u_{x}^{2}v_{x}v_{y} - u_{x}u_{y}v_{x}^{2} + u_{x}u_{y}v_{y}^{2} - u_{y}^{2}v_{x}v_{y}$ & 2 & 2 & $u_{z}^{2}v_{x}^{2} + u_{z}^{2}v_{y}^{2}$\\*
+2 & 2 & $u_{x}^{2}v_{y}^{2} - 2u_{x}u_{y}v_{x}v_{y} + u_{y}^{2}v_{x}^{2}$ & 2 & 2 & $u_{z}^{2}v_{z}^{2}$\\
+\bottomrule\end{longtable}}
+\end{document}

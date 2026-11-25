@@ -327,14 +327,14 @@ o3m = <|
       <|
         "magnetic_type" -> "III",
         "node" -> "n02",
-        "record" -> <|"reason" -> "outside-the-catalogue", "value" -> Null|>,
+        "record" -> "magnetic/S2-C1#",
         "symbol" -> "S_2(C_1)",
         "unitary" -> <|"member" -> 0, "node" -> "n00"|>
       |>,
       <|
         "magnetic_type" -> "III",
         "node" -> "n03",
-        "record" -> <|"reason" -> "outside-the-catalogue", "value" -> Null|>,
+        "record" -> "magnetic/C1v-C1#",
         "symbol" -> "C_1v(C_1)",
         "unitary" -> <|"member" -> 0, "node" -> "n00"|>
       |>,
@@ -353,21 +353,21 @@ o3m = <|
       <|
         "magnetic_type" -> "III",
         "node" -> "n06",
-        "record" -> <|"reason" -> "outside-the-catalogue", "value" -> Null|>,
+        "record" -> "magnetic/C2h-C2#",
         "symbol" -> "C_2h(C_2)",
         "unitary" -> <|"member" -> 0, "node" -> "n01"|>
       |>,
       <|
         "magnetic_type" -> "III",
         "node" -> "n07",
-        "record" -> <|"reason" -> "outside-the-catalogue", "value" -> Null|>,
+        "record" -> "magnetic/C2v-C2#",
         "symbol" -> "C_2v(C_2)",
         "unitary" -> <|"member" -> 0, "node" -> "n01"|>
       |>,
       <|
         "magnetic_type" -> "III",
         "node" -> "n08",
-        "record" -> <|"reason" -> "outside-the-catalogue", "value" -> Null|>,
+        "record" -> "magnetic/S6-C3#",
         "symbol" -> "S_6(C_3)",
         "unitary" -> <|"member" -> 0, "node" -> "n04"|>
       |>,

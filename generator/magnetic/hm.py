@@ -8,8 +8,9 @@ the principal axis).  A token names the class of one element of G, found by its 
 (rotation/CONVENTIONS.md section 4.2); H, a normal subgroup, holds the whole class or none of it.
 The two vertical mirror classes of an even N, and the two classes of horizontal 2-fold axes, are
 the class of the mirror with normal x (of the axis x) first, the other second.  A class of magnetic
-groups has one symbol: of the index-2 nodes of G in the O(3)-conjugacy class of H, the one whose
-primes fall earliest in the symbol (m'm2, not mm'2')."""
+groups has one symbol, where several index-2 nodes of G lie in the O(3)-conjugacy class of H: the
+one whose primes fall latest in the symbol (4'22', 6'/mmm'), and for the groups EARLIEST the one
+whose primes fall earliest (m'mm, 4'm'm, 4'/mm'm), as the crystallographic tables have them."""
 import math
 
 from .. import names
@@ -17,11 +18,11 @@ from . import geometry as GE
 
 Z, X, Y = (0.0, 0.0, 1.0), (1.0, 0.0, 0.0), (0.0, 1.0, 0.0)
 D111, D110 = (1.0, 1.0, 1.0), (1.0, 1.0, 0.0)
-CANONICAL = {"C1h": "C1v", "D1": "C2", "D1h": "C2v", "D1d": "C2h"}
+EARLIEST = ("C2v", "D2", "D2h", "C4v", "D4h")
 
 
 def canonical(stem):
-    return CANONICAL.get(stem, stem)
+    return names.CLASS_RECORD.get(stem, stem)
 
 
 def _rotation_turn(A):
@@ -184,13 +185,11 @@ def primed(P, inside):
 
 def magnetic_symbol(P, h_stem):
     """The magnetic Hermann-Mauguin symbol of the class G(H): over the index-2 nodes of G in the
-    O(3)-conjugacy class of H, the symbol whose primes fall earliest."""
-    best = None
+    O(3)-conjugacy class of H, the symbol whose primes fall latest, or earliest for the groups
+    EARLIEST."""
+    found = []
     for nid in P.index2_nodes():
-        if canonical(P.nodes[nid]["o3_class"]) != canonical(h_stem):
-            continue
-        inside = set(P.node_map(nid))
-        text, marks = primed(P, inside)
-        if best is None or marks > best[1]:
-            best = (text, marks)
-    return best[0]
+        if canonical(P.nodes[nid]["o3_class"]) == canonical(h_stem):
+            text, marks = primed(P, set(P.node_map(nid)))
+            found.append((marks, text))
+    return (max if canonical(P.stem) in EARLIEST else min)(found)[1]

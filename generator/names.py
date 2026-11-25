@@ -292,13 +292,35 @@ DOUBLE_TWOJ_MAX = 121          # and in the release: 2J = 23, 25, ..., 121
 
 
 # ---------------------------------------------------------------- the magnetic catalogues
+# The record that names the O(3)-conjugacy class of each N = 1 group whose class is another's
+# (rotation/CONVENTIONS.md section 15.2).
+CLASS_RECORD = {"C1h": "C1v", "D1": "C2", "D1d": "C2h", "D1h": "C2v"}
+
+
+def halves(G):
+    """The records of the subgroups of index 2 of a finite point group G, one for each
+    O(3)-conjugacy class, by the first node of the class in the lattice of G."""
+    if G in EXCEPTIONAL:
+        return {"Th": ("T",), "Td": ("T",), "O": ("T",), "Oh": ("O", "Th", "Td"),
+                "Ih": ("I",)}.get(G, ())
+    family, N = family_of(G)
+    out = [name_of(f, N) for f in {"Cn": (), "S2n": ("Cn",), "Cnh": ("Cn",), "Cnv": ("Cn",),
+                                   "Dn": ("Cn",), "Dnh": ("Dn", "Cnh", "Cnv"),
+                                   "Dnd": ("Dn", "S2n", "Cnv")}[family]]
+    if N % 2 == 0:
+        # the subgroups about half of the axis, k = N/2: two classes in C_Nh and D_Nh, which the
+        # lattice has in the order C_kh, S_N and D_kh, D_kd for k even and in the other for k odd
+        k = N // 2
+        out += {"Cn": ["C%d" % k], "Cnv": ["C%dv" % k], "Dn": ["D%d" % k],
+                "Cnh": ["C%dh" % k, "S%d" % N][::-1 if k % 2 else 1],
+                "Dnh": ["D%dh" % k, "D%dd" % k][::-1 if k % 2 else 1]}.get(family, [])
+    return tuple(dict.fromkeys(CLASS_RECORD.get(h, h) for h in out))
+
+
 # The records of Magnetic and of Magnetic double, in the order of each catalogue: for each G of
-# FINITE, G1' then each G(H) by the first node of H's O(3)-conjugacy class in the lattice of G.
-# Magnetic holds the 19 records of the pilot (the grey groups and the groups of magnetic type III
-# of C3v, D2h, D4h and Oh, and C4(C2), C4h(C2h), Th(T)); Magnetic double none so far.
-MAGNETIC_NAMES = ("C4-C2", "C4h-C2h", "C3v-1p", "C3v-C3", "D2h-1p", "D2h-D2", "D2h-C2h",
-                  "D2h-C2v", "D4h-1p", "D4h-D4", "D4h-C4h", "D4h-C4v", "D4h-D2h", "D4h-D2d",
-                  "Th-T", "Oh-1p", "Oh-O", "Oh-Th", "Oh-Td")
+# FINITE, G1' then each G(H) in the order of halves.  Magnetic holds the 256 records of the finite
+# groups, 91 of magnetic type II and 165 of magnetic type III; Magnetic double none so far.
+MAGNETIC_NAMES = tuple(G + "-" + h for G in FINITE for h in ("1p",) + halves(G))
 MAGNETIC_DOUBLE_NAMES = ()
 
 

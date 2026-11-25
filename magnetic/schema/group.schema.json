@@ -342,12 +342,22 @@
                   "type": "array"
                 },
                 "record": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "description": "See CONVENTIONS.md section 31.2."
+                },
+                "symbol": {
                   "description": "See CONVENTIONS.md section 31.2.",
                   "type": "string"
                 }
               },
               "required": [
-                "matrix",
                 "record"
               ],
               "type": "object"
@@ -369,12 +379,22 @@
                   "type": "array"
                 },
                 "record": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "description": "See CONVENTIONS.md section 31.2."
+                },
+                "symbol": {
                   "description": "See CONVENTIONS.md section 31.2.",
                   "type": "string"
                 }
               },
               "required": [
-                "matrix",
                 "record"
               ],
               "type": "object"
@@ -423,12 +443,22 @@
                   "type": "array"
                 },
                 "record": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "description": "See CONVENTIONS.md section 31.2."
+                },
+                "symbol": {
                   "description": "See CONVENTIONS.md section 31.2.",
                   "type": "string"
                 }
               },
               "required": [
-                "matrix",
                 "record"
               ],
               "type": "object"
@@ -533,20 +563,41 @@
           "description": "See CONVENTIONS.md section 35.1.",
           "properties": {
             "axial_even": {
-              "description": "See CONVENTIONS.md section 35.1.",
-              "type": "string"
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/null"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "description": "See CONVENTIONS.md section 35.1."
             },
             "axial_odd": {
-              "description": "See CONVENTIONS.md section 35.1.",
-              "type": "string"
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/null"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "description": "See CONVENTIONS.md section 35.1."
             },
             "polar_even": {
               "description": "See CONVENTIONS.md section 35.1.",
               "type": "string"
             },
             "polar_odd": {
-              "description": "See CONVENTIONS.md section 35.1.",
-              "type": "string"
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/null"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "description": "See CONVENTIONS.md section 35.1."
             }
           },
           "required": [
@@ -667,20 +718,41 @@
           "description": "See CONVENTIONS.md section 30.3.",
           "properties": {
             "axial_even": {
-              "description": "See CONVENTIONS.md section 30.3.",
-              "type": "string"
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/null"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "description": "See CONVENTIONS.md section 30.3."
             },
             "axial_odd": {
-              "description": "See CONVENTIONS.md section 30.3.",
-              "type": "string"
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/null"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "description": "See CONVENTIONS.md section 30.3."
             },
             "polar_even": {
               "description": "See CONVENTIONS.md section 30.3.",
               "type": "string"
             },
             "polar_odd": {
-              "description": "See CONVENTIONS.md section 30.3.",
-              "type": "string"
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/null"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "description": "See CONVENTIONS.md section 30.3."
             }
           },
           "required": [
@@ -884,15 +956,8 @@
                 "type": "integer"
               },
               "record": {
-                "anyOf": [
-                  {
-                    "$ref": "#/$defs/null"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ],
-                "description": "See CONVENTIONS.md section 36."
+                "description": "See CONVENTIONS.md section 36.",
+                "type": "string"
               },
               "symbol": {
                 "description": "See CONVENTIONS.md section 36.",

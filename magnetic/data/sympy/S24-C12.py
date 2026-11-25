@@ -1,0 +1,574 @@
+# S24-C12 (S_24(C_12)): data/json/S24-C12.json as a Python dict of SymPy values.
+from sympy import I, Rational, S, exp, pi
+
+o3m = {
+    'corepresentation_table': {
+        'characters': [
+            [
+                Rational(1,1),
+                Rational(1,1),
+                Rational(1,1),
+                Rational(1,1),
+                Rational(1,1),
+                Rational(1,1),
+                Rational(1,1)
+            ],
+            [
+                Rational(2,1),
+                Rational(-2,1),
+                Rational(2,1),
+                Rational(-2,1),
+                Rational(2,1),
+                Rational(-2,1),
+                Rational(2,1)
+            ],
+            [
+                Rational(2,1),
+                (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                Rational(1,1),
+                Rational(0,1),
+                Rational(-1,1),
+                (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                Rational(-2,1)
+            ],
+            [
+                Rational(2,1),
+                Rational(1,1),
+                Rational(-1,1),
+                Rational(-2,1),
+                Rational(-1,1),
+                Rational(1,1),
+                Rational(2,1)
+            ],
+            [
+                Rational(2,1),
+                Rational(0,1),
+                Rational(-2,1),
+                Rational(0,1),
+                Rational(2,1),
+                Rational(0,1),
+                Rational(-2,1)
+            ],
+            [
+                Rational(2,1),
+                Rational(-1,1),
+                Rational(-1,1),
+                Rational(2,1),
+                Rational(-1,1),
+                Rational(-1,1),
+                Rational(2,1)
+            ],
+            [
+                Rational(2,1),
+                (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                Rational(1,1),
+                Rational(0,1),
+                Rational(-1,1),
+                (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                Rational(-2,1)
+            ]
+        ],
+        'classes': [
+            ['E'],
+            ['C12', 'C1211'],
+            ['C6', 'C65'],
+            ['C4', 'C43'],
+            ['C3', 'C32'],
+            ['C125', 'C127'],
+            ['C2']
+        ],
+        'rows': [
+            ['A'],
+            ['B', 'B'],
+            ['1E1', '2E1'],
+            ['1E2', '2E2'],
+            ['1E3', '2E3'],
+            ['1E4', '2E4'],
+            ['1E5', '2E5']
+        ]
+    },
+    'corepresentations': [
+        {
+            'N': {'N': Rational(1,1), 'matrix': [[Rational(1,1)]]},
+            'case': 'a',
+            'indicator': 1,
+            'irrep': 'A'
+        },
+        {
+            'N': {'N': Rational(1,1), 'matrix': [[Rational(1,1)]]},
+            'case': 'b',
+            'indicator': -1,
+            'irrep': 'B'
+        },
+        {'case': 'c', 'indicator': 0, 'irrep': '1E1', 'partner': '2E1'},
+        {'case': 'c', 'indicator': 0, 'irrep': '1E2', 'partner': '2E2'},
+        {'case': 'c', 'indicator': 0, 'irrep': '1E3', 'partner': '2E3'},
+        {'case': 'c', 'indicator': 0, 'irrep': '1E4', 'partner': '2E4'},
+        {'case': 'c', 'indicator': 0, 'irrep': '1E5', 'partner': '2E5'}
+    ],
+    'frame': {
+        'matrix': [
+            [Rational(1,1), Rational(0,1), Rational(0,1)],
+            [Rational(0,1), Rational(1,1), Rational(0,1)],
+            [Rational(0,1), Rational(0,1), Rational(1,1)]
+        ],
+        'node': 'n06'
+    },
+    'group': {
+        'G': 'rotation/S24#',
+        'H': 'rotation/C12#',
+        'allowed_properties': [
+            {
+                'irrep': 'B',
+                'jahn': 'aV',
+                'properties': ['the toroidal moment'],
+                'spaces': ['polar-1']
+            },
+            {
+                'irrep': 'B',
+                'jahn': 'aeV2',
+                'properties': ['the linear magnetoelectric effect'],
+                'spaces': ['polar-1', 'axial-2']
+            },
+            {
+                'irrep': 'B',
+                'jahn': 'aV[V2]',
+                'properties': ['the piezotoroidic effect', 'the imaginary part of second-harmonic generation'],
+                'spaces': ['piezoelectric']
+            },
+            {
+                'irrep': 'B',
+                'jahn': 'a[V2]V',
+                'properties': ['spontaneous gyrotropic birefringence'],
+                'spaces': ['piezoelectric']
+            },
+            {
+                'irrep': 'B',
+                'jahn': 'aV3',
+                'properties': ['the imaginary part of the second-order susceptibility'],
+                'spaces': ['polar-1', 'axial-2', 'piezoelectric']
+            },
+            {
+                'irrep': 'B',
+                'jahn': 'aV{V2}',
+                'properties': ['the imaginary part of optical rectification'],
+                'spaces': ['polar-1', 'axial-2']
+            }
+        ],
+        'antiunitary_character': 'B',
+        'centralizer': {'normalizer_index': 2, 'symbol': "C_infh1'"},
+        'hermann_mauguin': "-24'",
+        'images': {
+            'axial_even': {'record': {'reason': 'outside-the-catalogue', 'value': None}, 'symbol': 'C_24'},
+            'axial_odd': {
+                'matrix': [
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)]
+                ],
+                'record': 'rotation/S24#'
+            },
+            'polar_even': {
+                'matrix': [
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)]
+                ],
+                'record': 'rotation/S24#'
+            },
+            'polar_odd': {'record': {'reason': 'outside-the-catalogue', 'value': None}, 'symbol': 'C_24'}
+        },
+        'magnetic_type': 'III',
+        'node': 'n06',
+        'normalizer': {'index': {'reason': 'continuous-group', 'value': None}, 'symbol': "D_infh1'"},
+        'symbol': 'S_24(C_12)'
+    },
+    'invariants': {
+        'bases': 'rotation/S24#/subduction_basis',
+        'multipoles': [
+            {
+                'J': 0,
+                'kind': 'electric',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/g/table/0/A'
+            },
+            {
+                'J': 1,
+                'kind': 'electric',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/u/table/1/A'
+            },
+            {
+                'J': 2,
+                'kind': 'electric',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/g/table/2/A'
+            },
+            {
+                'J': 3,
+                'kind': 'electric',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/u/table/3/A'
+            },
+            {
+                'J': 4,
+                'kind': 'electric',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/g/table/4/A'
+            },
+            {
+                'J': 0,
+                'kind': 'electric-toroidal',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/u/table/0/A'
+            },
+            {
+                'J': 1,
+                'kind': 'electric-toroidal',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/g/table/1/A'
+            },
+            {
+                'J': 2,
+                'kind': 'electric-toroidal',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/u/table/2/A'
+            },
+            {
+                'J': 3,
+                'kind': 'electric-toroidal',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/g/table/3/A'
+            },
+            {
+                'J': 4,
+                'kind': 'electric-toroidal',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/u/table/4/A'
+            },
+            {
+                'J': 0,
+                'kind': 'magnetic-toroidal',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/g/table/0/B'
+            },
+            {
+                'J': 1,
+                'kind': 'magnetic-toroidal',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/u/table/1/B'
+            },
+            {
+                'J': 2,
+                'kind': 'magnetic-toroidal',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/g/table/2/B'
+            },
+            {
+                'J': 3,
+                'kind': 'magnetic-toroidal',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/u/table/3/B'
+            },
+            {
+                'J': 4,
+                'kind': 'magnetic-toroidal',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/g/table/4/B'
+            },
+            {
+                'J': 0,
+                'kind': 'magnetic',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/u/table/0/B'
+            },
+            {
+                'J': 1,
+                'kind': 'magnetic',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/g/table/1/B'
+            },
+            {
+                'J': 2,
+                'kind': 'magnetic',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/u/table/2/B'
+            },
+            {
+                'J': 3,
+                'kind': 'magnetic',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/g/table/3/B'
+            },
+            {
+                'J': 4,
+                'kind': 'magnetic',
+                'multiplicity': 'rotation/S24#/subduction_o3/parities/u/table/4/B'
+            }
+        ],
+        'rings': {
+            'axial_even': {'reason': 'outside-the-catalogue', 'value': None},
+            'axial_odd': 'rotation/S24#/invariants',
+            'polar_even': 'rotation/S24#/invariants',
+            'polar_odd': {'reason': 'outside-the-catalogue', 'value': None}
+        },
+        'two_vectors': {
+            'counts': [
+                {'a': 1, 'b': 1, 'count': 3},
+                {'a': 1, 'b': 2, 'count': 0},
+                {'a': 1, 'b': 3, 'count': 6},
+                {'a': 1, 'b': 4, 'count': 0},
+                {'a': 1, 'b': 5, 'count': 9},
+                {'a': 2, 'b': 1, 'count': 0},
+                {'a': 2, 'b': 2, 'count': 8},
+                {'a': 2, 'b': 3, 'count': 0},
+                {'a': 2, 'b': 4, 'count': 14},
+                {'a': 3, 'b': 1, 'count': 6},
+                {'a': 3, 'b': 2, 'count': 0},
+                {'a': 3, 'b': 3, 'count': 16},
+                {'a': 4, 'b': 1, 'count': 0},
+                {'a': 4, 'b': 2, 'count': 14},
+                {'a': 5, 'b': 1, 'count': 9}
+            ],
+            'kinds': ['polar_even', 'axial_odd'],
+            'polynomials': [
+                {
+                    'a': 1,
+                    'b': 1,
+                    'basis': [
+                        {'0,1,0;0,1,0': Rational(1,1), '1,0,0;1,0,0': Rational(1,1)},
+                        {'0,1,0;1,0,0': Rational(-1,1), '1,0,0;0,1,0': Rational(1,1)},
+                        {'0,0,1;0,0,1': Rational(1,1)}
+                    ]
+                },
+                {'a': 1, 'b': 2, 'basis': []},
+                {
+                    'a': 1,
+                    'b': 3,
+                    'basis': [
+                        {
+                            '0,1,0;0,3,0': Rational(1,1),
+                            '0,1,0;2,1,0': Rational(1,1),
+                            '1,0,0;1,2,0': Rational(1,1),
+                            '1,0,0;3,0,0': Rational(1,1)
+                        },
+                        {
+                            '0,1,0;1,2,0': Rational(-1,1),
+                            '0,1,0;3,0,0': Rational(-1,1),
+                            '1,0,0;0,3,0': Rational(1,1),
+                            '1,0,0;2,1,0': Rational(1,1)
+                        },
+                        {'0,1,0;0,1,2': Rational(1,1), '1,0,0;1,0,2': Rational(1,1)},
+                        {'0,1,0;1,0,2': Rational(-1,1), '1,0,0;0,1,2': Rational(1,1)},
+                        {'0,0,1;0,2,1': Rational(1,1), '0,0,1;2,0,1': Rational(1,1)},
+                        {'0,0,1;0,0,3': Rational(1,1)}
+                    ]
+                },
+                {'a': 2, 'b': 1, 'basis': []},
+                {
+                    'a': 2,
+                    'b': 2,
+                    'basis': [
+                        {
+                            '0,2,0;0,2,0': Rational(1,1),
+                            '1,1,0;1,1,0': Rational(2,1),
+                            '2,0,0;2,0,0': Rational(1,1)
+                        },
+                        {
+                            '0,2,0;1,1,0': Rational(-1,1),
+                            '1,1,0;0,2,0': Rational(1,1),
+                            '1,1,0;2,0,0': Rational(-1,1),
+                            '2,0,0;1,1,0': Rational(1,1)
+                        },
+                        {
+                            '0,2,0;2,0,0': Rational(1,1),
+                            '1,1,0;1,1,0': Rational(-2,1),
+                            '2,0,0;0,2,0': Rational(1,1)
+                        },
+                        {'0,2,0;0,0,2': Rational(1,1), '2,0,0;0,0,2': Rational(1,1)},
+                        {'0,1,1;0,1,1': Rational(1,1), '1,0,1;1,0,1': Rational(1,1)},
+                        {'0,1,1;1,0,1': Rational(-1,1), '1,0,1;0,1,1': Rational(1,1)},
+                        {'0,0,2;0,2,0': Rational(1,1), '0,0,2;2,0,0': Rational(1,1)},
+                        {'0,0,2;0,0,2': Rational(1,1)}
+                    ]
+                },
+                {
+                    'a': 3,
+                    'b': 1,
+                    'basis': [
+                        {
+                            '0,3,0;0,1,0': Rational(1,1),
+                            '1,2,0;1,0,0': Rational(1,1),
+                            '2,1,0;0,1,0': Rational(1,1),
+                            '3,0,0;1,0,0': Rational(1,1)
+                        },
+                        {
+                            '0,3,0;1,0,0': Rational(-1,1),
+                            '1,2,0;0,1,0': Rational(1,1),
+                            '2,1,0;1,0,0': Rational(-1,1),
+                            '3,0,0;0,1,0': Rational(1,1)
+                        },
+                        {'0,2,1;0,0,1': Rational(1,1), '2,0,1;0,0,1': Rational(1,1)},
+                        {'0,1,2;0,1,0': Rational(1,1), '1,0,2;1,0,0': Rational(1,1)},
+                        {'0,1,2;1,0,0': Rational(-1,1), '1,0,2;0,1,0': Rational(1,1)},
+                        {'0,0,3;0,0,1': Rational(1,1)}
+                    ]
+                }
+            ]
+        }
+    },
+    'orbifold': {
+        'G': 'rotation/S24#/orbifold',
+        'H': 'rotation/C12#/orbifold',
+        'images': {
+            'axial_even': {'reason': 'outside-the-catalogue', 'value': None},
+            'axial_odd': 'rotation/S24#/orbifold',
+            'polar_even': 'rotation/S24#/orbifold',
+            'polar_odd': {'reason': 'outside-the-catalogue', 'value': None}
+        }
+    },
+    'permutation_representations': 'rotation/S24#/permutation_representations',
+    'representative': 12,
+    'schema': 'point-group-atlas/magnetic/group/1',
+    'signs': [
+        {'class': 'E', 'elements': [0], 'sign': 1},
+        {'class': 'C12', 'elements': [1], 'sign': 1},
+        {'class': 'C6', 'elements': [2], 'sign': 1},
+        {'class': 'C4', 'elements': [3], 'sign': 1},
+        {'class': 'C3', 'elements': [4], 'sign': 1},
+        {'class': 'C125', 'elements': [5], 'sign': 1},
+        {'class': 'C2', 'elements': [6], 'sign': 1},
+        {'class': 'C127', 'elements': [7], 'sign': 1},
+        {'class': 'C32', 'elements': [8], 'sign': 1},
+        {'class': 'C43', 'elements': [9], 'sign': 1},
+        {'class': 'C65', 'elements': [10], 'sign': 1},
+        {'class': 'C1211', 'elements': [11], 'sign': 1},
+        {'class': 'S24', 'elements': [12], 'sign': -1},
+        {'class': 'S8', 'elements': [13], 'sign': -1},
+        {'class': 'S245', 'elements': [14], 'sign': -1},
+        {'class': 'S247', 'elements': [15], 'sign': -1},
+        {'class': 'S83', 'elements': [16], 'sign': -1},
+        {'class': 'S2411', 'elements': [17], 'sign': -1},
+        {'class': 'S2413', 'elements': [18], 'sign': -1},
+        {'class': 'S85', 'elements': [19], 'sign': -1},
+        {'class': 'S2417', 'elements': [20], 'sign': -1},
+        {'class': 'S2419', 'elements': [21], 'sign': -1},
+        {'class': 'S87', 'elements': [22], 'sign': -1},
+        {'class': 'S2423', 'elements': [23], 'sign': -1}
+    ],
+    'splitting': [
+        {'irrep': 'A', 'terms': [{'corepresentation': 'A', 'multiplicity': 1}]},
+        {'irrep': 'B', 'terms': [{'corepresentation': 'A', 'multiplicity': 1}]},
+        {'irrep': '1E1', 'terms': [{'corepresentation': '1E1', 'multiplicity': 1}]},
+        {'irrep': '1E2', 'terms': [{'corepresentation': '1E2', 'multiplicity': 1}]},
+        {'irrep': '1E3', 'terms': [{'corepresentation': '1E3', 'multiplicity': 1}]},
+        {'irrep': '1E4', 'terms': [{'corepresentation': '1E4', 'multiplicity': 1}]},
+        {'irrep': '1E5', 'terms': [{'corepresentation': '1E5', 'multiplicity': 1}]},
+        {'irrep': '1E6', 'terms': [{'corepresentation': 'B', 'multiplicity': 1}]},
+        {'irrep': '1E7', 'terms': [{'corepresentation': '1E5', 'multiplicity': 1}]},
+        {'irrep': '1E8', 'terms': [{'corepresentation': '1E4', 'multiplicity': 1}]},
+        {'irrep': '1E9', 'terms': [{'corepresentation': '1E3', 'multiplicity': 1}]},
+        {'irrep': '1E10', 'terms': [{'corepresentation': '1E2', 'multiplicity': 1}]},
+        {'irrep': '1E11', 'terms': [{'corepresentation': '1E1', 'multiplicity': 1}]}
+    ],
+    'subduction_corepresentations': {
+        'J_max': 6,
+        'g': [
+            {'1E1': 0, '1E2': 0, '1E3': 0, '1E4': 0, '1E5': 0, 'A': 1, 'B': 0},
+            {'1E1': 1, '1E2': 0, '1E3': 0, '1E4': 0, '1E5': 0, 'A': 1, 'B': 0},
+            {'1E1': 1, '1E2': 1, '1E3': 0, '1E4': 0, '1E5': 0, 'A': 1, 'B': 0},
+            {'1E1': 1, '1E2': 1, '1E3': 1, '1E4': 0, '1E5': 0, 'A': 1, 'B': 0},
+            {'1E1': 1, '1E2': 1, '1E3': 1, '1E4': 1, '1E5': 0, 'A': 1, 'B': 0},
+            {'1E1': 1, '1E2': 1, '1E3': 1, '1E4': 1, '1E5': 1, 'A': 1, 'B': 0},
+            {'1E1': 1, '1E2': 1, '1E3': 1, '1E4': 1, '1E5': 1, 'A': 1, 'B': 1}
+        ],
+        'u': [
+            {'1E1': 0, '1E2': 0, '1E3': 0, '1E4': 0, '1E5': 0, 'A': 1, 'B': 0},
+            {'1E1': 1, '1E2': 0, '1E3': 0, '1E4': 0, '1E5': 0, 'A': 1, 'B': 0},
+            {'1E1': 1, '1E2': 1, '1E3': 0, '1E4': 0, '1E5': 0, 'A': 1, 'B': 0},
+            {'1E1': 1, '1E2': 1, '1E3': 1, '1E4': 0, '1E5': 0, 'A': 1, 'B': 0},
+            {'1E1': 1, '1E2': 1, '1E3': 1, '1E4': 1, '1E5': 0, 'A': 1, 'B': 0},
+            {'1E1': 1, '1E2': 1, '1E3': 1, '1E4': 1, '1E5': 1, 'A': 1, 'B': 0},
+            {'1E1': 1, '1E2': 1, '1E3': 1, '1E4': 1, '1E5': 1, 'A': 1, 'B': 1}
+        ]
+    },
+    'subduction_o3': 'rotation/C12#/subduction_o3',
+    'subgroup_lattice': {
+        'lattice': 'rotation/S24#/subgroup_lattice',
+        'nodes': [
+            {'magnetic_type': 'I', 'node': 'n00', 'record': 'rotation/C1#', 'symbol': 'C_1'},
+            {'magnetic_type': 'I', 'node': 'n01', 'record': 'rotation/C2#', 'symbol': 'C_2'},
+            {'magnetic_type': 'I', 'node': 'n02', 'record': 'rotation/C3#', 'symbol': 'C_3'},
+            {'magnetic_type': 'I', 'node': 'n03', 'record': 'rotation/C4#', 'symbol': 'C_4'},
+            {'magnetic_type': 'I', 'node': 'n04', 'record': 'rotation/C6#', 'symbol': 'C_6'},
+            {
+                'magnetic_type': 'III',
+                'node': 'n05',
+                'record': 'magnetic/S8-C4#',
+                'symbol': 'S_8(C_4)',
+                'unitary': {'member': 0, 'node': 'n03'}
+            },
+            {'magnetic_type': 'I', 'node': 'n06', 'record': 'rotation/C12#', 'symbol': 'C_12'},
+            {
+                'magnetic_type': 'III',
+                'node': 'n07',
+                'record': 'magnetic/S24-C12#',
+                'symbol': 'S_24(C_12)',
+                'unitary': {'member': 0, 'node': 'n06'}
+            }
+        ]
+    },
+    'symmetrized_powers': [
+        {
+            'antisymmetrized_square': [],
+            'corepresentation': 'A',
+            'symmetrized_cube': [{'corepresentation': 'A', 'multiplicity': 1}],
+            'symmetrized_square': [{'corepresentation': 'A', 'multiplicity': 1}]
+        },
+        {
+            'antisymmetrized_square': [{'corepresentation': 'A', 'multiplicity': 1}],
+            'corepresentation': 'B',
+            'symmetrized_cube': [{'corepresentation': 'B', 'multiplicity': 2}],
+            'symmetrized_square': [{'corepresentation': 'A', 'multiplicity': 3}]
+        },
+        {
+            'antisymmetrized_square': [{'corepresentation': 'A', 'multiplicity': 1}],
+            'corepresentation': '1E1',
+            'symmetrized_cube': [
+                {'corepresentation': '1E1', 'multiplicity': 1},
+                {'corepresentation': '1E3', 'multiplicity': 1}
+            ],
+            'symmetrized_square': [
+                {'corepresentation': 'A', 'multiplicity': 1},
+                {'corepresentation': '1E2', 'multiplicity': 1}
+            ]
+        },
+        {
+            'antisymmetrized_square': [{'corepresentation': 'A', 'multiplicity': 1}],
+            'corepresentation': '1E2',
+            'symmetrized_cube': [
+                {'corepresentation': 'B', 'multiplicity': 1},
+                {'corepresentation': '1E2', 'multiplicity': 1}
+            ],
+            'symmetrized_square': [
+                {'corepresentation': 'A', 'multiplicity': 1},
+                {'corepresentation': '1E4', 'multiplicity': 1}
+            ]
+        },
+        {
+            'antisymmetrized_square': [{'corepresentation': 'A', 'multiplicity': 1}],
+            'corepresentation': '1E3',
+            'symmetrized_cube': [{'corepresentation': '1E3', 'multiplicity': 2}],
+            'symmetrized_square': [
+                {'corepresentation': 'A', 'multiplicity': 1},
+                {'corepresentation': 'B', 'multiplicity': 1}
+            ]
+        },
+        {
+            'antisymmetrized_square': [{'corepresentation': 'A', 'multiplicity': 1}],
+            'corepresentation': '1E4',
+            'symmetrized_cube': [
+                {'corepresentation': 'A', 'multiplicity': 2},
+                {'corepresentation': '1E4', 'multiplicity': 1}
+            ],
+            'symmetrized_square': [
+                {'corepresentation': 'A', 'multiplicity': 1},
+                {'corepresentation': '1E4', 'multiplicity': 1}
+            ]
+        },
+        {
+            'antisymmetrized_square': [{'corepresentation': 'A', 'multiplicity': 1}],
+            'corepresentation': '1E5',
+            'symmetrized_cube': [
+                {'corepresentation': '1E3', 'multiplicity': 1},
+                {'corepresentation': '1E5', 'multiplicity': 1}
+            ],
+            'symmetrized_square': [
+                {'corepresentation': 'A', 'multiplicity': 1},
+                {'corepresentation': '1E2', 'multiplicity': 1}
+            ]
+        }
+    ],
+    'unitary_irreps': 'rotation/C12#/character_table/irreps'
+}

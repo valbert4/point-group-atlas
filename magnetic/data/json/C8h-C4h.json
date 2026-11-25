@@ -1,0 +1,1784 @@
+{
+  "corepresentation_table": {
+    "characters": [
+      [
+        {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        }
+      ],
+      [
+        {
+          "f": "q",
+          "v": [
+            2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            -2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            -2,
+            1
+          ]
+        }
+      ],
+      [
+        {
+          "f": "q",
+          "v": [
+            2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            0,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            -2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            -2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            0,
+            1
+          ]
+        }
+      ],
+      [
+        {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            -1,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            -1,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            -1,
+            1
+          ]
+        }
+      ],
+      [
+        {
+          "f": "q",
+          "v": [
+            2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            -2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            -2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            -2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            2,
+            1
+          ]
+        }
+      ],
+      [
+        {
+          "f": "q",
+          "v": [
+            2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            0,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            -2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            -2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            2,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            0,
+            1
+          ]
+        }
+      ]
+    ],
+    "classes": [
+      [
+        "E"
+      ],
+      [
+        "C4",
+        "C43"
+      ],
+      [
+        "C2"
+      ],
+      [
+        "i"
+      ],
+      [
+        "sh"
+      ],
+      [
+        "S4",
+        "S43"
+      ]
+    ],
+    "rows": [
+      [
+        "Ag"
+      ],
+      [
+        "Bg",
+        "Bg"
+      ],
+      [
+        "1E1g",
+        "2E1g"
+      ],
+      [
+        "Au"
+      ],
+      [
+        "Bu",
+        "Bu"
+      ],
+      [
+        "1E1u",
+        "2E1u"
+      ]
+    ]
+  },
+  "corepresentations": [
+    {
+      "N": {
+        "N": {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        },
+        "matrix": [
+          [
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            }
+          ]
+        ]
+      },
+      "case": "a",
+      "indicator": 1,
+      "irrep": "Ag"
+    },
+    {
+      "N": {
+        "N": {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        },
+        "matrix": [
+          [
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            }
+          ]
+        ]
+      },
+      "case": "b",
+      "indicator": -1,
+      "irrep": "Bg"
+    },
+    {
+      "case": "c",
+      "indicator": 0,
+      "irrep": "1E1g",
+      "partner": "2E1g"
+    },
+    {
+      "N": {
+        "N": {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        },
+        "matrix": [
+          [
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            }
+          ]
+        ]
+      },
+      "case": "a",
+      "indicator": 1,
+      "irrep": "Au"
+    },
+    {
+      "N": {
+        "N": {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        },
+        "matrix": [
+          [
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            }
+          ]
+        ]
+      },
+      "case": "b",
+      "indicator": -1,
+      "irrep": "Bu"
+    },
+    {
+      "case": "c",
+      "indicator": 0,
+      "irrep": "1E1u",
+      "partner": "2E1u"
+    }
+  ],
+  "frame": {
+    "matrix": [
+      [
+        {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            0,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            0,
+            1
+          ]
+        }
+      ],
+      [
+        {
+          "f": "q",
+          "v": [
+            0,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            0,
+            1
+          ]
+        }
+      ],
+      [
+        {
+          "f": "q",
+          "v": [
+            0,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            0,
+            1
+          ]
+        },
+        {
+          "f": "q",
+          "v": [
+            1,
+            1
+          ]
+        }
+      ]
+    ],
+    "node": "n08"
+  },
+  "group": {
+    "G": "rotation/C8h#",
+    "H": "rotation/C4h#",
+    "allowed_properties": [
+      {
+        "irrep": "Bg",
+        "jahn": "aV4",
+        "properties": [
+          "the imaginary part of the third-order susceptibility"
+        ],
+        "spaces": [
+          "polar-2",
+          "axial-1",
+          "electrogyration",
+          "electrogyration",
+          "photoelastic"
+        ]
+      },
+      {
+        "irrep": "Bg",
+        "jahn": "aV2[V2]",
+        "properties": [
+          "the imaginary part of second-harmonic generation induced by an electric field"
+        ],
+        "spaces": [
+          "electrogyration",
+          "photoelastic"
+        ]
+      },
+      {
+        "irrep": "Bg",
+        "jahn": "aV[V3]",
+        "properties": [
+          "the imaginary part of third-harmonic generation"
+        ],
+        "spaces": [
+          "third-harmonic"
+        ]
+      }
+    ],
+    "antiunitary_character": "Bg",
+    "centralizer": {
+      "normalizer_index": 2,
+      "symbol": "C_infh1'"
+    },
+    "hermann_mauguin": "8'/m",
+    "images": {
+      "axial_even": {
+        "matrix": [
+          [
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            }
+          ],
+          [
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            }
+          ],
+          [
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            }
+          ]
+        ],
+        "record": "rotation/C8#"
+      },
+      "axial_odd": {
+        "matrix": [
+          [
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            }
+          ],
+          [
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            }
+          ],
+          [
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            }
+          ]
+        ],
+        "record": "rotation/S8#"
+      },
+      "polar_even": {
+        "matrix": [
+          [
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            }
+          ],
+          [
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            }
+          ],
+          [
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            }
+          ]
+        ],
+        "record": "rotation/C8h#"
+      },
+      "polar_odd": {
+        "matrix": [
+          [
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            }
+          ],
+          [
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            }
+          ],
+          [
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            }
+          ]
+        ],
+        "record": "rotation/C8h#"
+      }
+    },
+    "magnetic_type": "III",
+    "node": "n08",
+    "normalizer": {
+      "index": {
+        "reason": "continuous-group",
+        "value": null
+      },
+      "symbol": "D_infh1'"
+    },
+    "symbol": "C_8h(C_4h)"
+  },
+  "invariants": {
+    "bases": "rotation/C8h#/subduction_basis",
+    "multipoles": [
+      {
+        "J": 0,
+        "kind": "electric",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/g/table/0/Ag"
+      },
+      {
+        "J": 1,
+        "kind": "electric",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/u/table/1/Ag"
+      },
+      {
+        "J": 2,
+        "kind": "electric",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/g/table/2/Ag"
+      },
+      {
+        "J": 3,
+        "kind": "electric",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/u/table/3/Ag"
+      },
+      {
+        "J": 4,
+        "kind": "electric",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/g/table/4/Ag"
+      },
+      {
+        "J": 0,
+        "kind": "electric-toroidal",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/u/table/0/Ag"
+      },
+      {
+        "J": 1,
+        "kind": "electric-toroidal",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/g/table/1/Ag"
+      },
+      {
+        "J": 2,
+        "kind": "electric-toroidal",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/u/table/2/Ag"
+      },
+      {
+        "J": 3,
+        "kind": "electric-toroidal",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/g/table/3/Ag"
+      },
+      {
+        "J": 4,
+        "kind": "electric-toroidal",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/u/table/4/Ag"
+      },
+      {
+        "J": 0,
+        "kind": "magnetic-toroidal",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/g/table/0/Bg"
+      },
+      {
+        "J": 1,
+        "kind": "magnetic-toroidal",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/u/table/1/Bg"
+      },
+      {
+        "J": 2,
+        "kind": "magnetic-toroidal",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/g/table/2/Bg"
+      },
+      {
+        "J": 3,
+        "kind": "magnetic-toroidal",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/u/table/3/Bg"
+      },
+      {
+        "J": 4,
+        "kind": "magnetic-toroidal",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/g/table/4/Bg"
+      },
+      {
+        "J": 0,
+        "kind": "magnetic",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/u/table/0/Bg"
+      },
+      {
+        "J": 1,
+        "kind": "magnetic",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/g/table/1/Bg"
+      },
+      {
+        "J": 2,
+        "kind": "magnetic",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/u/table/2/Bg"
+      },
+      {
+        "J": 3,
+        "kind": "magnetic",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/g/table/3/Bg"
+      },
+      {
+        "J": 4,
+        "kind": "magnetic",
+        "multiplicity": "rotation/C8h#/subduction_o3/parities/u/table/4/Bg"
+      }
+    ],
+    "rings": {
+      "axial_even": "rotation/C8#/invariants",
+      "axial_odd": "rotation/S8#/invariants",
+      "polar_even": "rotation/C8h#/invariants",
+      "polar_odd": "rotation/C8h#/invariants"
+    },
+    "two_vectors": {
+      "counts": [
+        {
+          "a": 1,
+          "b": 1,
+          "count": 0
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "count": 0
+        },
+        {
+          "a": 1,
+          "b": 3,
+          "count": 0
+        },
+        {
+          "a": 1,
+          "b": 4,
+          "count": 0
+        },
+        {
+          "a": 1,
+          "b": 5,
+          "count": 0
+        },
+        {
+          "a": 2,
+          "b": 1,
+          "count": 0
+        },
+        {
+          "a": 2,
+          "b": 2,
+          "count": 8
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "count": 4
+        },
+        {
+          "a": 2,
+          "b": 4,
+          "count": 14
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "count": 0
+        },
+        {
+          "a": 3,
+          "b": 2,
+          "count": 0
+        },
+        {
+          "a": 3,
+          "b": 3,
+          "count": 0
+        },
+        {
+          "a": 4,
+          "b": 1,
+          "count": 4
+        },
+        {
+          "a": 4,
+          "b": 2,
+          "count": 14
+        },
+        {
+          "a": 5,
+          "b": 1,
+          "count": 0
+        }
+      ],
+      "kinds": [
+        "polar_even",
+        "axial_odd"
+      ],
+      "polynomials": [
+        {
+          "a": 1,
+          "b": 1,
+          "basis": []
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "basis": []
+        },
+        {
+          "a": 1,
+          "b": 3,
+          "basis": []
+        },
+        {
+          "a": 2,
+          "b": 1,
+          "basis": []
+        },
+        {
+          "a": 2,
+          "b": 2,
+          "basis": [
+            {
+              "0,2,0;0,2,0": {
+                "f": "q",
+                "v": [
+                  1,
+                  1
+                ]
+              },
+              "1,1,0;1,1,0": {
+                "f": "q",
+                "v": [
+                  2,
+                  1
+                ]
+              },
+              "2,0,0;2,0,0": {
+                "f": "q",
+                "v": [
+                  1,
+                  1
+                ]
+              }
+            },
+            {
+              "0,2,0;1,1,0": {
+                "f": "q",
+                "v": [
+                  -1,
+                  1
+                ]
+              },
+              "1,1,0;0,2,0": {
+                "f": "q",
+                "v": [
+                  1,
+                  1
+                ]
+              },
+              "1,1,0;2,0,0": {
+                "f": "q",
+                "v": [
+                  -1,
+                  1
+                ]
+              },
+              "2,0,0;1,1,0": {
+                "f": "q",
+                "v": [
+                  1,
+                  1
+                ]
+              }
+            },
+            {
+              "0,2,0;2,0,0": {
+                "f": "q",
+                "v": [
+                  1,
+                  1
+                ]
+              },
+              "1,1,0;1,1,0": {
+                "f": "q",
+                "v": [
+                  -2,
+                  1
+                ]
+              },
+              "2,0,0;0,2,0": {
+                "f": "q",
+                "v": [
+                  1,
+                  1
+                ]
+              }
+            },
+            {
+              "0,2,0;0,0,2": {
+                "f": "q",
+                "v": [
+                  1,
+                  1
+                ]
+              },
+              "2,0,0;0,0,2": {
+                "f": "q",
+                "v": [
+                  1,
+                  1
+                ]
+              }
+            },
+            {
+              "0,1,1;0,1,1": {
+                "f": "q",
+                "v": [
+                  1,
+                  1
+                ]
+              },
+              "1,0,1;1,0,1": {
+                "f": "q",
+                "v": [
+                  1,
+                  1
+                ]
+              }
+            },
+            {
+              "0,1,1;1,0,1": {
+                "f": "q",
+                "v": [
+                  -1,
+                  1
+                ]
+              },
+              "1,0,1;0,1,1": {
+                "f": "q",
+                "v": [
+                  1,
+                  1
+                ]
+              }
+            },
+            {
+              "0,0,2;0,2,0": {
+                "f": "q",
+                "v": [
+                  1,
+                  1
+                ]
+              },
+              "0,0,2;2,0,0": {
+                "f": "q",
+                "v": [
+                  1,
+                  1
+                ]
+              }
+            },
+            {
+              "0,0,2;0,0,2": {
+                "f": "q",
+                "v": [
+                  1,
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "basis": []
+        }
+      ]
+    }
+  },
+  "orbifold": {
+    "G": "rotation/C8h#/orbifold",
+    "H": "rotation/C4h#/orbifold",
+    "images": {
+      "axial_even": "rotation/C8#/orbifold",
+      "axial_odd": "rotation/S8#/orbifold",
+      "polar_even": "rotation/C8h#/orbifold",
+      "polar_odd": "rotation/C8h#/orbifold"
+    }
+  },
+  "permutation_representations": "rotation/C8h#/permutation_representations",
+  "representative": 1,
+  "schema": "point-group-atlas/magnetic/group/1",
+  "signs": [
+    {
+      "class": "E",
+      "elements": [
+        0
+      ],
+      "sign": 1
+    },
+    {
+      "class": "C8",
+      "elements": [
+        1
+      ],
+      "sign": -1
+    },
+    {
+      "class": "C4",
+      "elements": [
+        2
+      ],
+      "sign": 1
+    },
+    {
+      "class": "C83",
+      "elements": [
+        3
+      ],
+      "sign": -1
+    },
+    {
+      "class": "C2",
+      "elements": [
+        4
+      ],
+      "sign": 1
+    },
+    {
+      "class": "C85",
+      "elements": [
+        5
+      ],
+      "sign": -1
+    },
+    {
+      "class": "C43",
+      "elements": [
+        6
+      ],
+      "sign": 1
+    },
+    {
+      "class": "C87",
+      "elements": [
+        7
+      ],
+      "sign": -1
+    },
+    {
+      "class": "i",
+      "elements": [
+        8
+      ],
+      "sign": 1
+    },
+    {
+      "class": "sh",
+      "elements": [
+        9
+      ],
+      "sign": 1
+    },
+    {
+      "class": "S8",
+      "elements": [
+        10
+      ],
+      "sign": -1
+    },
+    {
+      "class": "S4",
+      "elements": [
+        11
+      ],
+      "sign": 1
+    },
+    {
+      "class": "S83",
+      "elements": [
+        12
+      ],
+      "sign": -1
+    },
+    {
+      "class": "S85",
+      "elements": [
+        13
+      ],
+      "sign": -1
+    },
+    {
+      "class": "S43",
+      "elements": [
+        14
+      ],
+      "sign": 1
+    },
+    {
+      "class": "S87",
+      "elements": [
+        15
+      ],
+      "sign": -1
+    }
+  ],
+  "splitting": [
+    {
+      "irrep": "Ag",
+      "terms": [
+        {
+          "corepresentation": "Ag",
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "irrep": "Bg",
+      "terms": [
+        {
+          "corepresentation": "Ag",
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "irrep": "1E1g",
+      "terms": [
+        {
+          "corepresentation": "1E1g",
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "irrep": "1E2g",
+      "terms": [
+        {
+          "corepresentation": "Bg",
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "irrep": "1E3g",
+      "terms": [
+        {
+          "corepresentation": "1E1g",
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "irrep": "Au",
+      "terms": [
+        {
+          "corepresentation": "Au",
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "irrep": "Bu",
+      "terms": [
+        {
+          "corepresentation": "Au",
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "irrep": "1E1u",
+      "terms": [
+        {
+          "corepresentation": "1E1u",
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "irrep": "1E2u",
+      "terms": [
+        {
+          "corepresentation": "Bu",
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "irrep": "1E3u",
+      "terms": [
+        {
+          "corepresentation": "1E1u",
+          "multiplicity": 1
+        }
+      ]
+    }
+  ],
+  "subduction_corepresentations": {
+    "J_max": 6,
+    "g": [
+      {
+        "1E1g": 0,
+        "1E1u": 0,
+        "Ag": 1,
+        "Au": 0,
+        "Bg": 0,
+        "Bu": 0
+      },
+      {
+        "1E1g": 1,
+        "1E1u": 0,
+        "Ag": 1,
+        "Au": 0,
+        "Bg": 0,
+        "Bu": 0
+      },
+      {
+        "1E1g": 1,
+        "1E1u": 0,
+        "Ag": 1,
+        "Au": 0,
+        "Bg": 1,
+        "Bu": 0
+      },
+      {
+        "1E1g": 2,
+        "1E1u": 0,
+        "Ag": 1,
+        "Au": 0,
+        "Bg": 1,
+        "Bu": 0
+      },
+      {
+        "1E1g": 2,
+        "1E1u": 0,
+        "Ag": 3,
+        "Au": 0,
+        "Bg": 1,
+        "Bu": 0
+      },
+      {
+        "1E1g": 3,
+        "1E1u": 0,
+        "Ag": 3,
+        "Au": 0,
+        "Bg": 1,
+        "Bu": 0
+      },
+      {
+        "1E1g": 3,
+        "1E1u": 0,
+        "Ag": 3,
+        "Au": 0,
+        "Bg": 2,
+        "Bu": 0
+      }
+    ],
+    "u": [
+      {
+        "1E1g": 0,
+        "1E1u": 0,
+        "Ag": 0,
+        "Au": 1,
+        "Bg": 0,
+        "Bu": 0
+      },
+      {
+        "1E1g": 0,
+        "1E1u": 1,
+        "Ag": 0,
+        "Au": 1,
+        "Bg": 0,
+        "Bu": 0
+      },
+      {
+        "1E1g": 0,
+        "1E1u": 1,
+        "Ag": 0,
+        "Au": 1,
+        "Bg": 0,
+        "Bu": 1
+      },
+      {
+        "1E1g": 0,
+        "1E1u": 2,
+        "Ag": 0,
+        "Au": 1,
+        "Bg": 0,
+        "Bu": 1
+      },
+      {
+        "1E1g": 0,
+        "1E1u": 2,
+        "Ag": 0,
+        "Au": 3,
+        "Bg": 0,
+        "Bu": 1
+      },
+      {
+        "1E1g": 0,
+        "1E1u": 3,
+        "Ag": 0,
+        "Au": 3,
+        "Bg": 0,
+        "Bu": 1
+      },
+      {
+        "1E1g": 0,
+        "1E1u": 3,
+        "Ag": 0,
+        "Au": 3,
+        "Bg": 0,
+        "Bu": 2
+      }
+    ]
+  },
+  "subduction_o3": "rotation/C4h#/subduction_o3",
+  "subgroup_lattice": {
+    "lattice": "rotation/C8h#/subgroup_lattice",
+    "nodes": [
+      {
+        "magnetic_type": "I",
+        "node": "n00",
+        "record": "rotation/C1#",
+        "symbol": "C_1"
+      },
+      {
+        "magnetic_type": "I",
+        "node": "n01",
+        "record": "rotation/C2#",
+        "symbol": "C_2"
+      },
+      {
+        "magnetic_type": "I",
+        "node": "n02",
+        "record": "rotation/S2#",
+        "symbol": "S_2"
+      },
+      {
+        "magnetic_type": "I",
+        "node": "n03",
+        "record": "rotation/C1v#",
+        "symbol": "C_1v"
+      },
+      {
+        "magnetic_type": "I",
+        "node": "n04",
+        "record": "rotation/C4#",
+        "symbol": "C_4"
+      },
+      {
+        "magnetic_type": "I",
+        "node": "n05",
+        "record": "rotation/C2h#",
+        "symbol": "C_2h"
+      },
+      {
+        "magnetic_type": "I",
+        "node": "n06",
+        "record": "rotation/S4#",
+        "symbol": "S_4"
+      },
+      {
+        "magnetic_type": "III",
+        "node": "n07",
+        "record": "magnetic/C8-C4#",
+        "symbol": "C_8(C_4)",
+        "unitary": {
+          "member": 0,
+          "node": "n04"
+        }
+      },
+      {
+        "magnetic_type": "I",
+        "node": "n08",
+        "record": "rotation/C4h#",
+        "symbol": "C_4h"
+      },
+      {
+        "magnetic_type": "III",
+        "node": "n09",
+        "record": "magnetic/S8-C4#",
+        "symbol": "S_8(C_4)",
+        "unitary": {
+          "member": 0,
+          "node": "n04"
+        }
+      },
+      {
+        "magnetic_type": "III",
+        "node": "n10",
+        "record": "magnetic/C8h-C4h#",
+        "symbol": "C_8h(C_4h)",
+        "unitary": {
+          "member": 0,
+          "node": "n08"
+        }
+      }
+    ]
+  },
+  "symmetrized_powers": [
+    {
+      "antisymmetrized_square": [],
+      "corepresentation": "Ag",
+      "symmetrized_cube": [
+        {
+          "corepresentation": "Ag",
+          "multiplicity": 1
+        }
+      ],
+      "symmetrized_square": [
+        {
+          "corepresentation": "Ag",
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "antisymmetrized_square": [
+        {
+          "corepresentation": "Ag",
+          "multiplicity": 1
+        }
+      ],
+      "corepresentation": "Bg",
+      "symmetrized_cube": [
+        {
+          "corepresentation": "Bg",
+          "multiplicity": 2
+        }
+      ],
+      "symmetrized_square": [
+        {
+          "corepresentation": "Ag",
+          "multiplicity": 3
+        }
+      ]
+    },
+    {
+      "antisymmetrized_square": [
+        {
+          "corepresentation": "Ag",
+          "multiplicity": 1
+        }
+      ],
+      "corepresentation": "1E1g",
+      "symmetrized_cube": [
+        {
+          "corepresentation": "1E1g",
+          "multiplicity": 2
+        }
+      ],
+      "symmetrized_square": [
+        {
+          "corepresentation": "Ag",
+          "multiplicity": 1
+        },
+        {
+          "corepresentation": "Bg",
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "antisymmetrized_square": [],
+      "corepresentation": "Au",
+      "symmetrized_cube": [
+        {
+          "corepresentation": "Au",
+          "multiplicity": 1
+        }
+      ],
+      "symmetrized_square": [
+        {
+          "corepresentation": "Ag",
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "antisymmetrized_square": [
+        {
+          "corepresentation": "Ag",
+          "multiplicity": 1
+        }
+      ],
+      "corepresentation": "Bu",
+      "symmetrized_cube": [
+        {
+          "corepresentation": "Bu",
+          "multiplicity": 2
+        }
+      ],
+      "symmetrized_square": [
+        {
+          "corepresentation": "Ag",
+          "multiplicity": 3
+        }
+      ]
+    },
+    {
+      "antisymmetrized_square": [
+        {
+          "corepresentation": "Ag",
+          "multiplicity": 1
+        }
+      ],
+      "corepresentation": "1E1u",
+      "symmetrized_cube": [
+        {
+          "corepresentation": "1E1u",
+          "multiplicity": 2
+        }
+      ],
+      "symmetrized_square": [
+        {
+          "corepresentation": "Ag",
+          "multiplicity": 1
+        },
+        {
+          "corepresentation": "Bg",
+          "multiplicity": 1
+        }
+      ]
+    }
+  ],
+  "unitary_irreps": "rotation/C4h#/character_table/irreps"
+}

@@ -512,14 +512,14 @@ o3m = {
             {
                 'magnetic_type': 'III',
                 'node': 'n02',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2-C1#',
                 'symbol': 'C_2(C_1)',
                 'unitary': {'member': 0, 'node': 'n00'}
             },
             {
                 'magnetic_type': 'III',
                 'node': 'n03',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2-C1#',
                 'symbol': 'C_2(C_1)',
                 'unitary': {'member': 0, 'node': 'n00'}
             },
@@ -528,14 +528,14 @@ o3m = {
             {
                 'magnetic_type': 'III',
                 'node': 'n06',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C1v-C1#',
                 'symbol': 'C_1v(C_1)',
                 'unitary': {'member': 0, 'node': 'n00'}
             },
             {
                 'magnetic_type': 'III',
                 'node': 'n07',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C1v-C1#',
                 'symbol': 'C_1v(C_1)',
                 'unitary': {'member': 0, 'node': 'n00'}
             },
@@ -543,14 +543,14 @@ o3m = {
             {
                 'magnetic_type': 'III',
                 'node': 'n09',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2-C2#',
                 'symbol': 'D_2(C_2)',
                 'unitary': {'member': 0, 'node': 'n01'}
             },
             {
                 'magnetic_type': 'III',
                 'node': 'n10',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2-C2#',
                 'symbol': 'D_2(C_2)',
                 'unitary': {'member': 0, 'node': 'n01'}
             },
@@ -559,49 +559,49 @@ o3m = {
             {
                 'magnetic_type': 'III',
                 'node': 'n13',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-C2#',
                 'symbol': 'C_2v(C_2)',
                 'unitary': {'member': 0, 'node': 'n01'}
             },
             {
                 'magnetic_type': 'III',
                 'node': 'n14',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-C2#',
                 'symbol': 'C_2v(C_2)',
                 'unitary': {'member': 0, 'node': 'n01'}
             },
             {
                 'magnetic_type': 'III',
                 'node': 'n15',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2h-S2#',
                 'symbol': 'C_2h(S_2)',
                 'unitary': {'member': 0, 'node': 'n04'}
             },
             {
                 'magnetic_type': 'III',
                 'node': 'n16',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-C1v#',
                 'symbol': 'C_2v(C_1v)',
                 'unitary': {'member': 0, 'node': 'n05'}
             },
             {
                 'magnetic_type': 'III',
                 'node': 'n17',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2h-S2#',
                 'symbol': 'C_2h(S_2)',
                 'unitary': {'member': 0, 'node': 'n04'}
             },
             {
                 'magnetic_type': 'III',
                 'node': 'n18',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C2v-C1v#',
                 'symbol': 'C_2v(C_1v)',
                 'unitary': {'member': 0, 'node': 'n05'}
             },
             {
                 'magnetic_type': 'III',
                 'node': 'n19',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D4-C4#',
                 'symbol': 'D_4(C_4)',
                 'unitary': {'member': 0, 'node': 'n08'}
             },
@@ -609,7 +609,7 @@ o3m = {
             {
                 'magnetic_type': 'III',
                 'node': 'n21',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/C4v-C4#',
                 'symbol': 'C_4v(C_4)',
                 'unitary': {'member': 0, 'node': 'n08'}
             },
@@ -623,7 +623,7 @@ o3m = {
             {
                 'magnetic_type': 'III',
                 'node': 'n23',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2d-S4#',
                 'symbol': 'D_2d(S_4)',
                 'unitary': {'member': 0, 'node': 'n12'}
             },
@@ -637,7 +637,7 @@ o3m = {
             {
                 'magnetic_type': 'III',
                 'node': 'n25',
-                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'record': 'magnetic/D2d-S4#',
                 'symbol': 'D_2d(S_4)',
                 'unitary': {'member': 0, 'node': 'n12'}
             },

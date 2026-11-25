@@ -230,7 +230,7 @@ o3m = <|
         "normal" -> True,
         "normalizer" -> "n09",
         "order" -> 2,
-        "record" -> <|"reason" -> "outside-the-catalogue", "value" -> Null|>,
+        "record" -> "magnetic/C1-1p#",
         "symbol" -> "C_11'"
       |>,
       <|
@@ -243,7 +243,7 @@ o3m = <|
         "normal" -> False,
         "normalizer" -> "n05",
         "order" -> 2,
-        "record" -> <|"reason" -> "outside-the-catalogue", "value" -> Null|>,
+        "record" -> "magnetic/C1v-C1#",
         "symbol" -> "C_1v(C_1)",
         "unitary" -> <|"member" -> 0, "node" -> "n00"|>
       |>,
@@ -270,7 +270,7 @@ o3m = <|
         "normal" -> False,
         "normalizer" -> "n05",
         "order" -> 4,
-        "record" -> <|"reason" -> "outside-the-catalogue", "value" -> Null|>,
+        "record" -> "magnetic/C1v-1p#",
         "symbol" -> "C_1v1'"
       |>,
       <|
@@ -296,7 +296,7 @@ o3m = <|
         "normal" -> True,
         "normalizer" -> "n09",
         "order" -> 6,
-        "record" -> <|"reason" -> "outside-the-catalogue", "value" -> Null|>,
+        "record" -> "magnetic/C3-1p#",
         "symbol" -> "C_31'"
       |>,
       <|

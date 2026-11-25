@@ -1,0 +1,833 @@
+(* D5h-C5h (D_5h(C_5h)): data/json/D5h-C5h.json as a Wolfram Language association. *)
+o3m = <|
+  "corepresentation_table" -> <|
+    "characters" -> {
+      {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+      {
+        1,
+        Exp[2 Pi I/5],
+        Exp[2 Pi I 2/5],
+        Exp[2 Pi I 3/5],
+        (-1 + -1 Exp[2 Pi I/5] + -1 Exp[2 Pi I 2/5] + -1 Exp[2 Pi I 3/5]),
+        1,
+        Exp[2 Pi I/5],
+        Exp[2 Pi I 2/5],
+        Exp[2 Pi I 3/5],
+        (-1 + -1 Exp[2 Pi I/5] + -1 Exp[2 Pi I 2/5] + -1 Exp[2 Pi I 3/5])
+      },
+      {
+        1,
+        (-1 + -1 Exp[2 Pi I/5] + -1 Exp[2 Pi I 2/5] + -1 Exp[2 Pi I 3/5]),
+        Exp[2 Pi I 3/5],
+        Exp[2 Pi I 2/5],
+        Exp[2 Pi I/5],
+        1,
+        (-1 + -1 Exp[2 Pi I/5] + -1 Exp[2 Pi I 2/5] + -1 Exp[2 Pi I 3/5]),
+        Exp[2 Pi I 3/5],
+        Exp[2 Pi I 2/5],
+        Exp[2 Pi I/5]
+      },
+      {
+        1,
+        Exp[2 Pi I 2/5],
+        (-1 + -1 Exp[2 Pi I/5] + -1 Exp[2 Pi I 2/5] + -1 Exp[2 Pi I 3/5]),
+        Exp[2 Pi I/5],
+        Exp[2 Pi I 3/5],
+        1,
+        Exp[2 Pi I 2/5],
+        (-1 + -1 Exp[2 Pi I/5] + -1 Exp[2 Pi I 2/5] + -1 Exp[2 Pi I 3/5]),
+        Exp[2 Pi I/5],
+        Exp[2 Pi I 3/5]
+      },
+      {
+        1,
+        Exp[2 Pi I 3/5],
+        Exp[2 Pi I/5],
+        (-1 + -1 Exp[2 Pi I/5] + -1 Exp[2 Pi I 2/5] + -1 Exp[2 Pi I 3/5]),
+        Exp[2 Pi I 2/5],
+        1,
+        Exp[2 Pi I 3/5],
+        Exp[2 Pi I/5],
+        (-1 + -1 Exp[2 Pi I/5] + -1 Exp[2 Pi I 2/5] + -1 Exp[2 Pi I 3/5]),
+        Exp[2 Pi I 2/5]
+      },
+      {1, 1, 1, 1, 1, -1, -1, -1, -1, -1},
+      {
+        1,
+        Exp[2 Pi I/5],
+        Exp[2 Pi I 2/5],
+        Exp[2 Pi I 3/5],
+        (-1 + -1 Exp[2 Pi I/5] + -1 Exp[2 Pi I 2/5] + -1 Exp[2 Pi I 3/5]),
+        -1,
+        -1 Exp[2 Pi I/5],
+        -1 Exp[2 Pi I 2/5],
+        -1 Exp[2 Pi I 3/5],
+        (1 + Exp[2 Pi I/5] + Exp[2 Pi I 2/5] + Exp[2 Pi I 3/5])
+      },
+      {
+        1,
+        (-1 + -1 Exp[2 Pi I/5] + -1 Exp[2 Pi I 2/5] + -1 Exp[2 Pi I 3/5]),
+        Exp[2 Pi I 3/5],
+        Exp[2 Pi I 2/5],
+        Exp[2 Pi I/5],
+        -1,
+        (1 + Exp[2 Pi I/5] + Exp[2 Pi I 2/5] + Exp[2 Pi I 3/5]),
+        -1 Exp[2 Pi I 3/5],
+        -1 Exp[2 Pi I 2/5],
+        -1 Exp[2 Pi I/5]
+      },
+      {
+        1,
+        Exp[2 Pi I 2/5],
+        (-1 + -1 Exp[2 Pi I/5] + -1 Exp[2 Pi I 2/5] + -1 Exp[2 Pi I 3/5]),
+        Exp[2 Pi I/5],
+        Exp[2 Pi I 3/5],
+        -1,
+        -1 Exp[2 Pi I 2/5],
+        (1 + Exp[2 Pi I/5] + Exp[2 Pi I 2/5] + Exp[2 Pi I 3/5]),
+        -1 Exp[2 Pi I/5],
+        -1 Exp[2 Pi I 3/5]
+      },
+      {
+        1,
+        Exp[2 Pi I 3/5],
+        Exp[2 Pi I/5],
+        (-1 + -1 Exp[2 Pi I/5] + -1 Exp[2 Pi I 2/5] + -1 Exp[2 Pi I 3/5]),
+        Exp[2 Pi I 2/5],
+        -1,
+        -1 Exp[2 Pi I 3/5],
+        -1 Exp[2 Pi I/5],
+        (1 + Exp[2 Pi I/5] + Exp[2 Pi I 2/5] + Exp[2 Pi I 3/5]),
+        -1 Exp[2 Pi I 2/5]
+      }
+    },
+    "classes" -> {{"E"}, {"C5"}, {"C52"}, {"C53"}, {"C54"}, {"sh"}, {"S5"}, {"S57"}, {"S53"}, {"S59"}},
+    "rows" -> {
+      {"Ap"},
+      {"1E1p"},
+      {"2E1p"},
+      {"1E2p"},
+      {"2E2p"},
+      {"App"},
+      {"1E1pp"},
+      {"2E1pp"},
+      {"1E2pp"},
+      {"2E2pp"}
+    }
+  |>,
+  "corepresentations" -> {
+    <|
+      "N" -> <|"N" -> 1, "matrix" -> {{1}}|>,
+      "case" -> "a",
+      "indicator" -> 1,
+      "irrep" -> "Ap"
+    |>,
+    <|
+      "N" -> <|"N" -> 1, "matrix" -> {{1}}|>,
+      "case" -> "a",
+      "indicator" -> 1,
+      "irrep" -> "1E1p"
+    |>,
+    <|
+      "N" -> <|"N" -> 1, "matrix" -> {{1}}|>,
+      "case" -> "a",
+      "indicator" -> 1,
+      "irrep" -> "2E1p"
+    |>,
+    <|
+      "N" -> <|"N" -> 1, "matrix" -> {{1}}|>,
+      "case" -> "a",
+      "indicator" -> 1,
+      "irrep" -> "1E2p"
+    |>,
+    <|
+      "N" -> <|"N" -> 1, "matrix" -> {{1}}|>,
+      "case" -> "a",
+      "indicator" -> 1,
+      "irrep" -> "2E2p"
+    |>,
+    <|
+      "N" -> <|"N" -> 1, "matrix" -> {{1}}|>,
+      "case" -> "a",
+      "indicator" -> 1,
+      "irrep" -> "App"
+    |>,
+    <|
+      "N" -> <|"N" -> 1, "matrix" -> {{1}}|>,
+      "case" -> "a",
+      "indicator" -> 1,
+      "irrep" -> "1E1pp"
+    |>,
+    <|
+      "N" -> <|"N" -> 1, "matrix" -> {{1}}|>,
+      "case" -> "a",
+      "indicator" -> 1,
+      "irrep" -> "2E1pp"
+    |>,
+    <|
+      "N" -> <|"N" -> 1, "matrix" -> {{1}}|>,
+      "case" -> "a",
+      "indicator" -> 1,
+      "irrep" -> "1E2pp"
+    |>,
+    <|
+      "N" -> <|"N" -> 1, "matrix" -> {{1}}|>,
+      "case" -> "a",
+      "indicator" -> 1,
+      "irrep" -> "2E2pp"
+    |>
+  },
+  "frame" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "node" -> "n07"|>,
+  "group" -> <|
+    "G" -> "rotation/D5h#",
+    "H" -> "rotation/C5h#",
+    "allowed_properties" -> {
+      <|
+        "irrep" -> "A2p",
+        "jahn" -> "aeV",
+        "properties" -> {"the magnetization"},
+        "spaces" -> {"axial-1"}
+      |>,
+      <|
+        "irrep" -> "A2p",
+        "jahn" -> "a{V2}",
+        "properties" -> {
+          "the spontaneous Hall effect",
+          "the spontaneous Righi\:2013Leduc effect",
+          "the spontaneous Faraday effect"
+        },
+        "spaces" -> {"axial-1"}
+      |>,
+      <|
+        "irrep" -> "A2p",
+        "jahn" -> "aV2",
+        "properties" -> {
+          "the electrotoroidic effect",
+          "the spontaneous Nernst effect",
+          "the spontaneous Ettingshausen effect"
+        },
+        "spaces" -> {"polar-2", "axial-1"}
+      |>,
+      <|
+        "irrep" -> "A2pp",
+        "jahn" -> "aeV[V2]",
+        "properties" -> {
+          "piezomagnetism",
+          "the real part of second-harmonic generation by a magnetic dipole"
+        },
+        "spaces" -> {"piezoelectric"}
+      |>,
+      <|
+        "irrep" -> "A2pp",
+        "jahn" -> "ae[V2]V",
+        "properties" -> {"linear magnetoresistance", "the magneto-optic Kerr effect"},
+        "spaces" -> {"piezoelectric"}
+      |>,
+      <|
+        "irrep" -> "A2pp",
+        "jahn" -> "aeV3",
+        "properties" -> {
+          "the linear magneto-Seebeck effect",
+          "the linear magneto-Peltier effect",
+          "the real part of the second-order susceptibility of a magnetic dipole"
+        },
+        "spaces" -> {"polar-1", "axial-2", "piezoelectric"}
+      |>,
+      <|
+        "irrep" -> "A2p",
+        "jahn" -> "a{V2}[V2]",
+        "properties" -> {
+          "the quadratic anomalous Hall effect",
+          "the quadratic magneto-optic Kerr effect",
+          "nonmutual optical activity"
+        },
+        "spaces" -> {"electrogyration"}
+      |>,
+      <|
+        "irrep" -> "A2p",
+        "jahn" -> "aV4",
+        "properties" -> {"the imaginary part of the third-order susceptibility"},
+        "spaces" -> {"polar-2", "axial-1", "electrogyration", "electrogyration", "photoelastic"}
+      |>,
+      <|
+        "irrep" -> "A2p",
+        "jahn" -> "aV2[V2]",
+        "properties" -> {
+          "the imaginary part of second-harmonic generation induced by an electric field"
+        },
+        "spaces" -> {"electrogyration", "photoelastic"}
+      |>,
+      <|
+        "irrep" -> "A2p",
+        "jahn" -> "aV[V3]",
+        "properties" -> {"the imaginary part of third-harmonic generation"},
+        "spaces" -> {"third-harmonic"}
+      |>
+    },
+    "antiunitary_character" -> "A2p",
+    "centralizer" -> <|"normalizer_index" -> 10, "symbol" -> "C_2h1'"|>,
+    "hermann_mauguin" -> "-10m'2'",
+    "images" -> <|
+      "axial_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/D10#"|>,
+      "axial_odd" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/C10v#"|>,
+      "polar_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/D5h#"|>,
+      "polar_odd" -> <|
+        "matrix" -> {
+          {
+            (Exp[2 Pi I/20] + -1/2 Exp[2 Pi I 3/20] + 1/2 Exp[2 Pi I 5/20] + -1/2 Exp[2 Pi I 7/20]),
+            (-1/2 + -1/2 Exp[2 Pi I 2/5] + -1/2 Exp[2 Pi I 3/5]),
+            0
+          },
+          {
+            (1/2 + 1/2 Exp[2 Pi I 2/5] + 1/2 Exp[2 Pi I 3/5]),
+            (Exp[2 Pi I/20] + -1/2 Exp[2 Pi I 3/20] + 1/2 Exp[2 Pi I 5/20] + -1/2 Exp[2 Pi I 7/20]),
+            0
+          },
+          {0, 0, 1}
+        },
+        "record" -> "rotation/D5h#"
+      |>
+    |>,
+    "magnetic_type" -> "III",
+    "node" -> "n07",
+    "normalizer" -> <|"index" -> 4, "symbol" -> "D_10h1'"|>,
+    "symbol" -> "D_5h(C_5h)"
+  |>,
+  "invariants" -> <|
+    "bases" -> "rotation/D5h#/subduction_basis",
+    "multipoles" -> {
+      <|
+        "J" -> 0,
+        "kind" -> "electric",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/g/table/0/A1p"
+      |>,
+      <|
+        "J" -> 1,
+        "kind" -> "electric",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/u/table/1/A1p"
+      |>,
+      <|
+        "J" -> 2,
+        "kind" -> "electric",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/g/table/2/A1p"
+      |>,
+      <|
+        "J" -> 3,
+        "kind" -> "electric",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/u/table/3/A1p"
+      |>,
+      <|
+        "J" -> 4,
+        "kind" -> "electric",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/g/table/4/A1p"
+      |>,
+      <|
+        "J" -> 0,
+        "kind" -> "electric-toroidal",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/u/table/0/A1p"
+      |>,
+      <|
+        "J" -> 1,
+        "kind" -> "electric-toroidal",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/g/table/1/A1p"
+      |>,
+      <|
+        "J" -> 2,
+        "kind" -> "electric-toroidal",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/u/table/2/A1p"
+      |>,
+      <|
+        "J" -> 3,
+        "kind" -> "electric-toroidal",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/g/table/3/A1p"
+      |>,
+      <|
+        "J" -> 4,
+        "kind" -> "electric-toroidal",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/u/table/4/A1p"
+      |>,
+      <|
+        "J" -> 0,
+        "kind" -> "magnetic-toroidal",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/g/table/0/A2p"
+      |>,
+      <|
+        "J" -> 1,
+        "kind" -> "magnetic-toroidal",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/u/table/1/A2p"
+      |>,
+      <|
+        "J" -> 2,
+        "kind" -> "magnetic-toroidal",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/g/table/2/A2p"
+      |>,
+      <|
+        "J" -> 3,
+        "kind" -> "magnetic-toroidal",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/u/table/3/A2p"
+      |>,
+      <|
+        "J" -> 4,
+        "kind" -> "magnetic-toroidal",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/g/table/4/A2p"
+      |>,
+      <|
+        "J" -> 0,
+        "kind" -> "magnetic",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/u/table/0/A2p"
+      |>,
+      <|
+        "J" -> 1,
+        "kind" -> "magnetic",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/g/table/1/A2p"
+      |>,
+      <|
+        "J" -> 2,
+        "kind" -> "magnetic",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/u/table/2/A2p"
+      |>,
+      <|
+        "J" -> 3,
+        "kind" -> "magnetic",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/g/table/3/A2p"
+      |>,
+      <|
+        "J" -> 4,
+        "kind" -> "magnetic",
+        "multiplicity" -> "rotation/D5h#/subduction_o3/parities/u/table/4/A2p"
+      |>
+    },
+    "rings" -> <|
+      "axial_even" -> "rotation/D10#/invariants",
+      "axial_odd" -> "rotation/C10v#/invariants",
+      "polar_even" -> "rotation/D5h#/invariants",
+      "polar_odd" -> "rotation/D5h#/invariants"
+    |>,
+    "two_vectors" -> <|
+      "counts" -> {
+        <|"a" -> 1, "b" -> 1, "count" -> 0|>,
+        <|"a" -> 1, "b" -> 2, "count" -> 0|>,
+        <|"a" -> 1, "b" -> 3, "count" -> 0|>,
+        <|"a" -> 1, "b" -> 4, "count" -> 1|>,
+        <|"a" -> 1, "b" -> 5, "count" -> 2|>,
+        <|"a" -> 2, "b" -> 1, "count" -> 3|>,
+        <|"a" -> 2, "b" -> 2, "count" -> 6|>,
+        <|"a" -> 2, "b" -> 3, "count" -> 7|>,
+        <|"a" -> 2, "b" -> 4, "count" -> 10|>,
+        <|"a" -> 3, "b" -> 1, "count" -> 0|>,
+        <|"a" -> 3, "b" -> 2, "count" -> 1|>,
+        <|"a" -> 3, "b" -> 3, "count" -> 2|>,
+        <|"a" -> 4, "b" -> 1, "count" -> 5|>,
+        <|"a" -> 4, "b" -> 2, "count" -> 10|>,
+        <|"a" -> 5, "b" -> 1, "count" -> 2|>
+      },
+      "kinds" -> {"polar_even", "axial_odd"},
+      "polynomials" -> {
+        <|"a" -> 1, "b" -> 1, "basis" -> {}|>,
+        <|"a" -> 1, "b" -> 2, "basis" -> {}|>,
+        <|"a" -> 1, "b" -> 3, "basis" -> {}|>,
+        <|
+          "a" -> 2,
+          "b" -> 1,
+          "basis" -> {
+            <|"0,2,0;0,0,1" -> 1, "2,0,0;0,0,1" -> 1|>,
+            <|"0,1,1;0,1,0" -> 1, "1,0,1;1,0,0" -> 1|>,
+            <|"0,0,2;0,0,1" -> 1|>
+          }
+        |>,
+        <|
+          "a" -> 2,
+          "b" -> 2,
+          "basis" -> {
+            <|"0,2,0;0,2,0" -> 1, "1,1,0;1,1,0" -> 2, "2,0,0;2,0,0" -> 1|>,
+            <|"0,2,0;2,0,0" -> 1, "1,1,0;1,1,0" -> -2, "2,0,0;0,2,0" -> 1|>,
+            <|"0,2,0;0,0,2" -> 1, "2,0,0;0,0,2" -> 1|>,
+            <|"0,1,1;0,1,1" -> 1, "1,0,1;1,0,1" -> 1|>,
+            <|"0,0,2;0,2,0" -> 1, "0,0,2;2,0,0" -> 1|>,
+            <|"0,0,2;0,0,2" -> 1|>
+          }
+        |>,
+        <|"a" -> 3, "b" -> 1, "basis" -> {}|>
+      }
+    |>
+  |>,
+  "orbifold" -> <|
+    "G" -> "rotation/D5h#/orbifold",
+    "H" -> "rotation/C5h#/orbifold",
+    "images" -> <|
+      "axial_even" -> "rotation/D10#/orbifold",
+      "axial_odd" -> "rotation/C10v#/orbifold",
+      "polar_even" -> "rotation/D5h#/orbifold",
+      "polar_odd" -> "rotation/D5h#/orbifold"
+    |>
+  |>,
+  "permutation_representations" -> "rotation/D5h#/permutation_representations",
+  "representative" -> 5,
+  "schema" -> "point-group-atlas/magnetic/group/1",
+  "signs" -> {
+    <|"class" -> "E", "elements" -> {0}, "sign" -> 1|>,
+    <|"class" -> "C5", "elements" -> {1, 2}, "sign" -> 1|>,
+    <|"class" -> "C52", "elements" -> {3, 4}, "sign" -> 1|>,
+    <|"class" -> "C2", "elements" -> {5, 6, 7, 8, 9}, "sign" -> -1|>,
+    <|"class" -> "sh", "elements" -> {10}, "sign" -> 1|>,
+    <|"class" -> "S5", "elements" -> {11, 12}, "sign" -> 1|>,
+    <|"class" -> "S53", "elements" -> {13, 14}, "sign" -> 1|>,
+    <|"class" -> "sv", "elements" -> {15, 16, 17, 18, 19}, "sign" -> -1|>
+  },
+  "splitting" -> {
+    <|
+      "irrep" -> "A1p",
+      "terms" -> {<|"corepresentation" -> "Ap", "multiplicity" -> 1|>}
+    |>,
+    <|
+      "irrep" -> "A2p",
+      "terms" -> {<|"corepresentation" -> "Ap", "multiplicity" -> 1|>}
+    |>,
+    <|
+      "irrep" -> "E1p",
+      "terms" -> {
+        <|"corepresentation" -> "1E1p", "multiplicity" -> 1|>,
+        <|"corepresentation" -> "2E1p", "multiplicity" -> 1|>
+      }
+    |>,
+    <|
+      "irrep" -> "E2p",
+      "terms" -> {
+        <|"corepresentation" -> "1E2p", "multiplicity" -> 1|>,
+        <|"corepresentation" -> "2E2p", "multiplicity" -> 1|>
+      }
+    |>,
+    <|
+      "irrep" -> "A1pp",
+      "terms" -> {<|"corepresentation" -> "App", "multiplicity" -> 1|>}
+    |>,
+    <|
+      "irrep" -> "A2pp",
+      "terms" -> {<|"corepresentation" -> "App", "multiplicity" -> 1|>}
+    |>,
+    <|
+      "irrep" -> "E1pp",
+      "terms" -> {
+        <|"corepresentation" -> "1E1pp", "multiplicity" -> 1|>,
+        <|"corepresentation" -> "2E1pp", "multiplicity" -> 1|>
+      }
+    |>,
+    <|
+      "irrep" -> "E2pp",
+      "terms" -> {
+        <|"corepresentation" -> "1E2pp", "multiplicity" -> 1|>,
+        <|"corepresentation" -> "2E2pp", "multiplicity" -> 1|>
+      }
+    |>
+  },
+  "subduction_corepresentations" -> <|
+    "J_max" -> 6,
+    "g" -> {
+      <|
+        "1E1p" -> 0,
+        "1E1pp" -> 0,
+        "1E2p" -> 0,
+        "1E2pp" -> 0,
+        "2E1p" -> 0,
+        "2E1pp" -> 0,
+        "2E2p" -> 0,
+        "2E2pp" -> 0,
+        "Ap" -> 1,
+        "App" -> 0
+      |>,
+      <|
+        "1E1p" -> 0,
+        "1E1pp" -> 1,
+        "1E2p" -> 0,
+        "1E2pp" -> 0,
+        "2E1p" -> 0,
+        "2E1pp" -> 1,
+        "2E2p" -> 0,
+        "2E2pp" -> 0,
+        "Ap" -> 1,
+        "App" -> 0
+      |>,
+      <|
+        "1E1p" -> 0,
+        "1E1pp" -> 1,
+        "1E2p" -> 1,
+        "1E2pp" -> 0,
+        "2E1p" -> 0,
+        "2E1pp" -> 1,
+        "2E2p" -> 1,
+        "2E2pp" -> 0,
+        "Ap" -> 1,
+        "App" -> 0
+      |>,
+      <|
+        "1E1p" -> 0,
+        "1E1pp" -> 1,
+        "1E2p" -> 1,
+        "1E2pp" -> 1,
+        "2E1p" -> 0,
+        "2E1pp" -> 1,
+        "2E2p" -> 1,
+        "2E2pp" -> 1,
+        "Ap" -> 1,
+        "App" -> 0
+      |>,
+      <|
+        "1E1p" -> 1,
+        "1E1pp" -> 1,
+        "1E2p" -> 1,
+        "1E2pp" -> 1,
+        "2E1p" -> 1,
+        "2E1pp" -> 1,
+        "2E2p" -> 1,
+        "2E2pp" -> 1,
+        "Ap" -> 1,
+        "App" -> 0
+      |>,
+      <|
+        "1E1p" -> 1,
+        "1E1pp" -> 1,
+        "1E2p" -> 1,
+        "1E2pp" -> 1,
+        "2E1p" -> 1,
+        "2E1pp" -> 1,
+        "2E2p" -> 1,
+        "2E2pp" -> 1,
+        "Ap" -> 1,
+        "App" -> 2
+      |>,
+      <|
+        "1E1p" -> 2,
+        "1E1pp" -> 1,
+        "1E2p" -> 1,
+        "1E2pp" -> 1,
+        "2E1p" -> 2,
+        "2E1pp" -> 1,
+        "2E2p" -> 1,
+        "2E2pp" -> 1,
+        "Ap" -> 1,
+        "App" -> 2
+      |>
+    },
+    "u" -> {
+      <|
+        "1E1p" -> 0,
+        "1E1pp" -> 0,
+        "1E2p" -> 0,
+        "1E2pp" -> 0,
+        "2E1p" -> 0,
+        "2E1pp" -> 0,
+        "2E2p" -> 0,
+        "2E2pp" -> 0,
+        "Ap" -> 0,
+        "App" -> 1
+      |>,
+      <|
+        "1E1p" -> 1,
+        "1E1pp" -> 0,
+        "1E2p" -> 0,
+        "1E2pp" -> 0,
+        "2E1p" -> 1,
+        "2E1pp" -> 0,
+        "2E2p" -> 0,
+        "2E2pp" -> 0,
+        "Ap" -> 0,
+        "App" -> 1
+      |>,
+      <|
+        "1E1p" -> 1,
+        "1E1pp" -> 0,
+        "1E2p" -> 0,
+        "1E2pp" -> 1,
+        "2E1p" -> 1,
+        "2E1pp" -> 0,
+        "2E2p" -> 0,
+        "2E2pp" -> 1,
+        "Ap" -> 0,
+        "App" -> 1
+      |>,
+      <|
+        "1E1p" -> 1,
+        "1E1pp" -> 0,
+        "1E2p" -> 1,
+        "1E2pp" -> 1,
+        "2E1p" -> 1,
+        "2E1pp" -> 0,
+        "2E2p" -> 1,
+        "2E2pp" -> 1,
+        "Ap" -> 0,
+        "App" -> 1
+      |>,
+      <|
+        "1E1p" -> 1,
+        "1E1pp" -> 1,
+        "1E2p" -> 1,
+        "1E2pp" -> 1,
+        "2E1p" -> 1,
+        "2E1pp" -> 1,
+        "2E2p" -> 1,
+        "2E2pp" -> 1,
+        "Ap" -> 0,
+        "App" -> 1
+      |>,
+      <|
+        "1E1p" -> 1,
+        "1E1pp" -> 1,
+        "1E2p" -> 1,
+        "1E2pp" -> 1,
+        "2E1p" -> 1,
+        "2E1pp" -> 1,
+        "2E2p" -> 1,
+        "2E2pp" -> 1,
+        "Ap" -> 2,
+        "App" -> 1
+      |>,
+      <|
+        "1E1p" -> 1,
+        "1E1pp" -> 2,
+        "1E2p" -> 1,
+        "1E2pp" -> 1,
+        "2E1p" -> 1,
+        "2E1pp" -> 2,
+        "2E2p" -> 1,
+        "2E2pp" -> 1,
+        "Ap" -> 2,
+        "App" -> 1
+      |>
+    }
+  |>,
+  "subduction_o3" -> "rotation/C5h#/subduction_o3",
+  "subgroup_lattice" -> <|
+    "lattice" -> "rotation/D5h#/subgroup_lattice",
+    "nodes" -> {
+      <|
+        "magnetic_type" -> "I",
+        "node" -> "n00",
+        "record" -> "rotation/C1#",
+        "symbol" -> "C_1"
+      |>,
+      <|
+        "magnetic_type" -> "III",
+        "node" -> "n01",
+        "record" -> "magnetic/C2-C1#",
+        "symbol" -> "C_2(C_1)",
+        "unitary" -> <|"member" -> 0, "node" -> "n00"|>
+      |>,
+      <|
+        "magnetic_type" -> "I",
+        "node" -> "n02",
+        "record" -> "rotation/C1v#",
+        "symbol" -> "C_1v"
+      |>,
+      <|
+        "magnetic_type" -> "III",
+        "node" -> "n03",
+        "record" -> "magnetic/C1v-C1#",
+        "symbol" -> "C_1v(C_1)",
+        "unitary" -> <|"member" -> 0, "node" -> "n00"|>
+      |>,
+      <|
+        "magnetic_type" -> "III",
+        "node" -> "n04",
+        "record" -> "magnetic/C2v-C1v#",
+        "symbol" -> "C_2v(C_1v)",
+        "unitary" -> <|"member" -> 0, "node" -> "n02"|>
+      |>,
+      <|
+        "magnetic_type" -> "I",
+        "node" -> "n05",
+        "record" -> "rotation/C5#",
+        "symbol" -> "C_5"
+      |>,
+      <|
+        "magnetic_type" -> "III",
+        "node" -> "n06",
+        "record" -> "magnetic/D5-C5#",
+        "symbol" -> "D_5(C_5)",
+        "unitary" -> <|"member" -> 0, "node" -> "n05"|>
+      |>,
+      <|
+        "magnetic_type" -> "I",
+        "node" -> "n07",
+        "record" -> "rotation/C5h#",
+        "symbol" -> "C_5h"
+      |>,
+      <|
+        "magnetic_type" -> "III",
+        "node" -> "n08",
+        "record" -> "magnetic/C5v-C5#",
+        "symbol" -> "C_5v(C_5)",
+        "unitary" -> <|"member" -> 0, "node" -> "n05"|>
+      |>,
+      <|
+        "magnetic_type" -> "III",
+        "node" -> "n09",
+        "record" -> "magnetic/D5h-C5h#",
+        "symbol" -> "D_5h(C_5h)",
+        "unitary" -> <|"member" -> 0, "node" -> "n07"|>
+      |>
+    }
+  |>,
+  "symmetrized_powers" -> {
+    <|
+      "antisymmetrized_square" -> {},
+      "corepresentation" -> "Ap",
+      "symmetrized_cube" -> {<|"corepresentation" -> "Ap", "multiplicity" -> 1|>},
+      "symmetrized_square" -> {<|"corepresentation" -> "Ap", "multiplicity" -> 1|>}
+    |>,
+    <|
+      "antisymmetrized_square" -> {},
+      "corepresentation" -> "1E1p",
+      "symmetrized_cube" -> {<|"corepresentation" -> "2E2p", "multiplicity" -> 1|>},
+      "symmetrized_square" -> {<|"corepresentation" -> "1E2p", "multiplicity" -> 1|>}
+    |>,
+    <|
+      "antisymmetrized_square" -> {},
+      "corepresentation" -> "2E1p",
+      "symmetrized_cube" -> {<|"corepresentation" -> "1E2p", "multiplicity" -> 1|>},
+      "symmetrized_square" -> {<|"corepresentation" -> "2E2p", "multiplicity" -> 1|>}
+    |>,
+    <|
+      "antisymmetrized_square" -> {},
+      "corepresentation" -> "1E2p",
+      "symmetrized_cube" -> {<|"corepresentation" -> "1E1p", "multiplicity" -> 1|>},
+      "symmetrized_square" -> {<|"corepresentation" -> "2E1p", "multiplicity" -> 1|>}
+    |>,
+    <|
+      "antisymmetrized_square" -> {},
+      "corepresentation" -> "2E2p",
+      "symmetrized_cube" -> {<|"corepresentation" -> "2E1p", "multiplicity" -> 1|>},
+      "symmetrized_square" -> {<|"corepresentation" -> "1E1p", "multiplicity" -> 1|>}
+    |>,
+    <|
+      "antisymmetrized_square" -> {},
+      "corepresentation" -> "App",
+      "symmetrized_cube" -> {<|"corepresentation" -> "App", "multiplicity" -> 1|>},
+      "symmetrized_square" -> {<|"corepresentation" -> "Ap", "multiplicity" -> 1|>}
+    |>,
+    <|
+      "antisymmetrized_square" -> {},
+      "corepresentation" -> "1E1pp",
+      "symmetrized_cube" -> {<|"corepresentation" -> "2E2pp", "multiplicity" -> 1|>},
+      "symmetrized_square" -> {<|"corepresentation" -> "1E2p", "multiplicity" -> 1|>}
+    |>,
+    <|
+      "antisymmetrized_square" -> {},
+      "corepresentation" -> "2E1pp",
+      "symmetrized_cube" -> {<|"corepresentation" -> "1E2pp", "multiplicity" -> 1|>},
+      "symmetrized_square" -> {<|"corepresentation" -> "2E2p", "multiplicity" -> 1|>}
+    |>,
+    <|
+      "antisymmetrized_square" -> {},
+      "corepresentation" -> "1E2pp",
+      "symmetrized_cube" -> {<|"corepresentation" -> "1E1pp", "multiplicity" -> 1|>},
+      "symmetrized_square" -> {<|"corepresentation" -> "2E1p", "multiplicity" -> 1|>}
+    |>,
+    <|
+      "antisymmetrized_square" -> {},
+      "corepresentation" -> "2E2pp",
+      "symmetrized_cube" -> {<|"corepresentation" -> "2E1pp", "multiplicity" -> 1|>},
+      "symmetrized_square" -> {<|"corepresentation" -> "1E1p", "multiplicity" -> 1|>}
+    |>
+  },
+  "unitary_irreps" -> "rotation/C5h#/character_table/irreps"
+|>;

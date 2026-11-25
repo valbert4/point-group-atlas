@@ -1,0 +1,273 @@
+(* C2-1p (C_21'): data/json/C2-1p.json as a Wolfram Language association. *)
+o3m = <|
+  "corepresentation_table" -> <|
+    "characters" -> {{1, 1}, {1, -1}},
+    "classes" -> {{"E"}, {"C2"}},
+    "rows" -> {{"A"}, {"B"}}
+  |>,
+  "corepresentations" -> {
+    <|
+      "N" -> "rotation/C2#/clebsch_gordan/products/0/couplings/0",
+      "case" -> "a",
+      "irrep" -> "A"
+    |>,
+    <|
+      "N" -> "rotation/C2#/clebsch_gordan/products/2/couplings/0",
+      "case" -> "a",
+      "irrep" -> "B"
+    |>
+  },
+  "group" -> <|
+    "G" -> "rotation/C2#",
+    "centralizer" -> <|"normalizer_index" -> 1, "symbol" -> "D_infh1'"|>,
+    "hermann_mauguin" -> "21'",
+    "images" -> <|
+      "axial_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/C2#"|>,
+      "axial_odd" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/C2h#"|>,
+      "polar_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/C2#"|>,
+      "polar_odd" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/C2h#"|>
+    |>,
+    "magnetic_type" -> "II",
+    "normalizer" -> <|
+      "index" -> <|"reason" -> "continuous-group", "value" -> Null|>,
+      "symbol" -> "D_infh1'"
+    |>,
+    "symbol" -> "C_21'"
+  |>,
+  "invariants" -> <|
+    "bases" -> "rotation/C2#/subduction_basis",
+    "multipoles" -> {
+      <|
+        "J" -> 0,
+        "kind" -> "electric",
+        "multiplicity" -> "rotation/C2#/subduction_o3/parities/g/table/0/A"
+      |>,
+      <|
+        "J" -> 1,
+        "kind" -> "electric",
+        "multiplicity" -> "rotation/C2#/subduction_o3/parities/u/table/1/A"
+      |>,
+      <|
+        "J" -> 2,
+        "kind" -> "electric",
+        "multiplicity" -> "rotation/C2#/subduction_o3/parities/g/table/2/A"
+      |>,
+      <|
+        "J" -> 3,
+        "kind" -> "electric",
+        "multiplicity" -> "rotation/C2#/subduction_o3/parities/u/table/3/A"
+      |>,
+      <|
+        "J" -> 4,
+        "kind" -> "electric",
+        "multiplicity" -> "rotation/C2#/subduction_o3/parities/g/table/4/A"
+      |>,
+      <|
+        "J" -> 0,
+        "kind" -> "electric-toroidal",
+        "multiplicity" -> "rotation/C2#/subduction_o3/parities/u/table/0/A"
+      |>,
+      <|
+        "J" -> 1,
+        "kind" -> "electric-toroidal",
+        "multiplicity" -> "rotation/C2#/subduction_o3/parities/g/table/1/A"
+      |>,
+      <|
+        "J" -> 2,
+        "kind" -> "electric-toroidal",
+        "multiplicity" -> "rotation/C2#/subduction_o3/parities/u/table/2/A"
+      |>,
+      <|
+        "J" -> 3,
+        "kind" -> "electric-toroidal",
+        "multiplicity" -> "rotation/C2#/subduction_o3/parities/g/table/3/A"
+      |>,
+      <|
+        "J" -> 4,
+        "kind" -> "electric-toroidal",
+        "multiplicity" -> "rotation/C2#/subduction_o3/parities/u/table/4/A"
+      |>
+    },
+    "rings" -> <|
+      "axial_even" -> "rotation/C2#/invariants",
+      "axial_odd" -> "rotation/C2h#/invariants",
+      "polar_even" -> "rotation/C2#/invariants",
+      "polar_odd" -> "rotation/C2h#/invariants"
+    |>,
+    "two_vectors" -> <|
+      "counts" -> {
+        <|"a" -> 1, "b" -> 1, "count" -> 0|>,
+        <|"a" -> 1, "b" -> 2, "count" -> 8|>,
+        <|"a" -> 1, "b" -> 3, "count" -> 0|>,
+        <|"a" -> 1, "b" -> 4, "count" -> 21|>,
+        <|"a" -> 1, "b" -> 5, "count" -> 0|>,
+        <|"a" -> 2, "b" -> 1, "count" -> 0|>,
+        <|"a" -> 2, "b" -> 2, "count" -> 20|>,
+        <|"a" -> 2, "b" -> 3, "count" -> 0|>,
+        <|"a" -> 2, "b" -> 4, "count" -> 48|>,
+        <|"a" -> 3, "b" -> 1, "count" -> 0|>,
+        <|"a" -> 3, "b" -> 2, "count" -> 28|>,
+        <|"a" -> 3, "b" -> 3, "count" -> 0|>,
+        <|"a" -> 4, "b" -> 1, "count" -> 0|>,
+        <|"a" -> 4, "b" -> 2, "count" -> 48|>,
+        <|"a" -> 5, "b" -> 1, "count" -> 0|>
+      },
+      "kinds" -> {"polar_even", "axial_odd"},
+      "polynomials" -> {
+        <|"a" -> 1, "b" -> 1, "basis" -> {}|>,
+        <|
+          "a" -> 1,
+          "b" -> 2,
+          "basis" -> {
+            <|"1,0,0;1,0,1" -> 1|>,
+            <|"1,0,0;0,1,1" -> 1|>,
+            <|"0,1,0;1,0,1" -> 1|>,
+            <|"0,1,0;0,1,1" -> 1|>,
+            <|"0,0,1;2,0,0" -> 1|>,
+            <|"0,0,1;1,1,0" -> 1|>,
+            <|"0,0,1;0,2,0" -> 1|>,
+            <|"0,0,1;0,0,2" -> 1|>
+          }
+        |>,
+        <|"a" -> 1, "b" -> 3, "basis" -> {}|>,
+        <|"a" -> 2, "b" -> 1, "basis" -> {}|>,
+        <|
+          "a" -> 2,
+          "b" -> 2,
+          "basis" -> {
+            <|"2,0,0;2,0,0" -> 1|>,
+            <|"2,0,0;1,1,0" -> 1|>,
+            <|"2,0,0;0,2,0" -> 1|>,
+            <|"2,0,0;0,0,2" -> 1|>,
+            <|"1,1,0;2,0,0" -> 1|>,
+            <|"1,1,0;1,1,0" -> 1|>,
+            <|"1,1,0;0,2,0" -> 1|>,
+            <|"1,1,0;0,0,2" -> 1|>,
+            <|"1,0,1;1,0,1" -> 1|>,
+            <|"1,0,1;0,1,1" -> 1|>,
+            <|"0,2,0;2,0,0" -> 1|>,
+            <|"0,2,0;1,1,0" -> 1|>,
+            <|"0,2,0;0,2,0" -> 1|>,
+            <|"0,2,0;0,0,2" -> 1|>,
+            <|"0,1,1;1,0,1" -> 1|>,
+            <|"0,1,1;0,1,1" -> 1|>,
+            <|"0,0,2;2,0,0" -> 1|>,
+            <|"0,0,2;1,1,0" -> 1|>,
+            <|"0,0,2;0,2,0" -> 1|>,
+            <|"0,0,2;0,0,2" -> 1|>
+          }
+        |>,
+        <|"a" -> 3, "b" -> 1, "basis" -> {}|>
+      }
+    |>
+  |>,
+  "permutation_representations" -> "rotation/C2#/permutation_representations",
+  "schema" -> "point-group-atlas/magnetic/group/1",
+  "subduction_corepresentations" -> <|
+    "J_max" -> 6,
+    "g" -> {
+      <|"A" -> 1, "B" -> 0|>,
+      <|"A" -> 1, "B" -> 2|>,
+      <|"A" -> 3, "B" -> 2|>,
+      <|"A" -> 3, "B" -> 4|>,
+      <|"A" -> 5, "B" -> 4|>,
+      <|"A" -> 5, "B" -> 6|>,
+      <|"A" -> 7, "B" -> 6|>
+    },
+    "u" -> {
+      <|"A" -> 1, "B" -> 0|>,
+      <|"A" -> 1, "B" -> 2|>,
+      <|"A" -> 3, "B" -> 2|>,
+      <|"A" -> 3, "B" -> 4|>,
+      <|"A" -> 5, "B" -> 4|>,
+      <|"A" -> 5, "B" -> 6|>,
+      <|"A" -> 7, "B" -> 6|>
+    }
+  |>,
+  "subduction_o3" -> "rotation/C2#/subduction_o3",
+  "subgroup_lattice" -> <|
+    "nodes" -> {
+      <|
+        "centralizer" -> "n04",
+        "class_size" -> 1,
+        "covers" -> {},
+        "id" -> "n00",
+        "magnetic_type" -> "I",
+        "node" -> "n00",
+        "normal" -> True,
+        "normalizer" -> "n04",
+        "order" -> 1,
+        "record" -> "rotation/C1#",
+        "symbol" -> "C_1"
+      |>,
+      <|
+        "centralizer" -> "n04",
+        "class_size" -> 1,
+        "covers" -> {"n00"},
+        "id" -> "n01",
+        "magnetic_type" -> "I",
+        "node" -> "n01",
+        "normal" -> True,
+        "normalizer" -> "n04",
+        "order" -> 2,
+        "record" -> "rotation/C2#",
+        "symbol" -> "C_2"
+      |>,
+      <|
+        "centralizer" -> "n04",
+        "class_size" -> 1,
+        "covers" -> {"n00"},
+        "id" -> "n02",
+        "magnetic_type" -> "II",
+        "node" -> "n00",
+        "normal" -> True,
+        "normalizer" -> "n04",
+        "order" -> 2,
+        "record" -> "magnetic/C1-1p#",
+        "symbol" -> "C_11'"
+      |>,
+      <|
+        "centralizer" -> "n04",
+        "class_size" -> 1,
+        "covers" -> {"n00"},
+        "id" -> "n03",
+        "magnetic_type" -> "III",
+        "node" -> "n01",
+        "normal" -> True,
+        "normalizer" -> "n04",
+        "order" -> 2,
+        "record" -> "magnetic/C2-C1#",
+        "symbol" -> "C_2(C_1)",
+        "unitary" -> <|"member" -> 0, "node" -> "n00"|>
+      |>,
+      <|
+        "centralizer" -> "n04",
+        "class_size" -> 1,
+        "covers" -> {"n01", "n02", "n03"},
+        "id" -> "n04",
+        "magnetic_type" -> "II",
+        "node" -> "n01",
+        "normal" -> True,
+        "normalizer" -> "n04",
+        "order" -> 4,
+        "record" -> "magnetic/C2-1p#",
+        "symbol" -> "C_21'"
+      |>
+    }
+  |>,
+  "symmetrized_powers" -> {
+    <|
+      "antisymmetrized_square" -> {},
+      "corepresentation" -> "A",
+      "symmetrized_cube" -> {<|"corepresentation" -> "A", "multiplicity" -> 1|>},
+      "symmetrized_square" -> {<|"corepresentation" -> "A", "multiplicity" -> 1|>}
+    |>,
+    <|
+      "antisymmetrized_square" -> {},
+      "corepresentation" -> "B",
+      "symmetrized_cube" -> {<|"corepresentation" -> "B", "multiplicity" -> 1|>},
+      "symmetrized_square" -> {<|"corepresentation" -> "A", "multiplicity" -> 1|>}
+    |>
+  },
+  "unitary_irreps" -> "rotation/C2#/character_table/irreps"
+|>;

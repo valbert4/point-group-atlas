@@ -484,10 +484,9 @@ def by_signature():
             P = PT.point(g)
             k = signature(P.Pf)
             out.setdefault(k, []).append(g)
-        canon = {"C1h": "C1v", "D1": "C2", "D1h": "C2v", "D1d": "C2h"}
         _BY_SIGNATURE = {}
         for k, gs in out.items():
-            classes = {canon.get(g, g) for g in gs}
+            classes = {names.CLASS_RECORD.get(g, g) for g in gs}
             if len(classes) != 1:
                 raise AssertionError("two classes share a signature: %s" % gs)
             _BY_SIGNATURE[k] = classes.pop()

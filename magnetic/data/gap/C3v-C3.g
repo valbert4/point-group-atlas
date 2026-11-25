@@ -443,7 +443,7 @@ o3m := rec(
       rec(
         ("magnetic_type") := "III",
         ("node") := "n01",
-        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("record") := "magnetic/C1v-C1#",
         ("symbol") := "C_1v(C_1)",
         ("unitary") := rec( ("member") := 0, ("node") := "n00" )
       ),

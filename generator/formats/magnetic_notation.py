@@ -7,7 +7,8 @@ MAGNETIC: the records of this catalogue, each defined in a section of magnetic/C
 record whose glyph Rotation's registry gives another meaning (the sign theta, the character chi, the
 representative a, the matrices N and K) is local to this catalogue's sections of the conventions.
 REPLACE: the records of Rotation that this catalogue writes otherwise, time reversal as \varTheta.
-DROP: the records of Rotation for the features that this catalogue lacks, the levels of section 19.
+USED: the records of Rotation that the documents of this catalogue, its conventions or the
+references use; the index of notation of the catalogue has no other (lint rule L5).
 """
 from . import notation as N
 
@@ -154,6 +155,9 @@ MAGNETIC = (
       r"the antisymmetrized square of a corepresentation $\mathcal{D}$",
       command=r"\altpow[2]{\{#1^{#2}\}}", defined=("part:symmetrized_powers", "conv:34"),
       pattern=r"\altpow{<matrix:\mathcal{D}>}{<integer:2>}"),
+    # the band of a cited title, whose letter Rotation's registry gives the second partner index
+    S("local.references.band", "local", r"\nu", "the band of a cited title", r"\nu",
+      scope="references|refs|", defined="standard"),
     S("function.multiplicity.corep", "function", r"b_{\mathcal{D}}",
       r"the multiplicity of the corepresentation $\mathcal{D}$ in a representation of $\grp{M}$",
       r"b_{\mathcal{D}}", defined="conv:34"),
@@ -175,16 +179,47 @@ REPLACE = {"function.timereversal": {"glyph": r"\varTheta", "forms": (r"\varThet
                                "defined": ("part:orbitals", "part:invariants", "conv:0.1")}}
 
 
-# The records of Rotation for the vibrational and electronic levels (rotation/CONVENTIONS.md section
-# 19), which this catalogue does not have: those defined in that section and the parts of the levels
-# alone, and the heads of the tables of those parts.
-LEVELS = {"part:unitary", "part:overtones", "part:overtone_states", "part:terms",
-          "part:term_states", "e:molien", "conv:19"}
-DROP = tuple(r.id for r in N.BASE_RECORDS
-             if LEVELS & set(r.defined) and set(r.defined) <= LEVELS | {"conv:0.1"})
+# The records of Rotation that the documents of the 256 groups, the conventions of this catalogue or
+# the references use (lint rule L5 over the whole catalogue), in the order of Rotation's registry.
+USED = (
+    "typography.group", "typography.irrep", "irrep.pair", "typography.class",
+    "typography.element", "typography.hm", "typography.orbifold", "index.parity.tag",
+    "mark.conjugates", "mark.letter", "operator.restriction", "vector.axis",
+    "constant.imaginary", "constant.euler", "constant.golden", "constant.root", "irrep.o3",
+    "matrix.irrep", "function.character", "index.frobenius", "accent.conjugate.star",
+    "relation.product", "index.partner", "index.normalisation", "vector.ket", "number",
+    "delimiter.parenthesis", "delimiter.bracket", "delimiter.brace", "delimiter.lvert",
+    "delimiter.angle", "punctuation.comma", "punctuation.period", "arithmetic.plus",
+    "arithmetic.minus", "arithmetic.plusminus", "arithmetic.times", "arithmetic.solidus",
+    "arithmetic.fraction", "arithmetic.root", "arithmetic.sum", "relation.equal",
+    "relation.lessequal", "relation.greater", "relation.in", "relation.supset",
+    "operator.intersection", "operator.union", "operator.setminus", "relation.mapsto",
+    "operator.directsum", "constant.pi", "operator.determinant", "operator.cosine",
+    "operator.sine", "set.complex", "set.real", "mark.transpose", "matrix.display",
+    "word.formula", "group.G", "group.H", "group.schoenflies.cn", "group.schoenflies.cnh",
+    "group.schoenflies.cnv", "group.schoenflies.dn", "group.schoenflies.dnh",
+    "group.schoenflies.dnd", "group.schoenflies.s2n", "group.schoenflies.cs",
+    "group.schoenflies.ci", "group.schoenflies.t", "group.schoenflies.th",
+    "group.schoenflies.td", "group.schoenflies.o", "group.schoenflies.oh",
+    "group.schoenflies.i", "group.schoenflies.ih", "group.o3", "element.identity",
+    "element.inversion", "class.size", "element.inversion.class", "element.rotation",
+    "element.rotation.binary", "element.rotation.axis", "element.rotoreflection",
+    "element.mirror.h", "element.mirror.v", "element.mirror.d", "element.mirror.icosahedral",
+    "element.g", "element.h", "element.inverse", "element.power", "index.element",
+    "matrix.element", "angle.omega", "vector.coordinates", "irrep.letter.a", "irrep.letter.b",
+    "irrep.letter.e", "irrep.letter.t", "irrep.letter.g", "irrep.letter.h", "irrep.Gamma",
+    "irrep.Delta", "irrep.alias.gamma", "index.dimension", "index.parity",
+    "function.timereversal", "index.cg", "matrix.cg.exact", "index.J",
+    "index.m", "label.jahn", "hm.order", "hm.slash", "hm.mirror", "hm.bar", "orbifold.order",
+    "orbifold.mirror", "orbifold.cross", "local.references.groups", "index.conjugates.c",
+    "index.root.order", "local.dummy.g", "local.dummy.h", "head.class", "head.irrep",
+    "head.bilbao", "head.reality", "head.conjugate", "head.subgroup", "head.order",
+    "head.conjugates", "head.normal", "head.polynomial", "set.cell",
+)
 
 
 def records():
     """The registry of this catalogue."""
-    out, _ = N.extend(MAGNETIC, drop=DROP, replace=REPLACE)
+    out, _ = N.extend(MAGNETIC, drop=tuple(r.id for r in N.BASE_RECORDS if r.id not in USED),
+                      replace=REPLACE)
     return out
