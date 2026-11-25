@@ -3,4 +3,5 @@
 #   ragged2e, multicol, multirow, xcolor, fancyhdr, tikz, hyperref (the documents of volume II also
 #   nicefrac, the volume stage also accsupp),
 #   and the fonts of sansmathfonts (the element font "sans-oblique", generator/formats/notation.py)
+# Web stage: also fontTools >= 4.52 (removes hints from the fonts that the site serves)
 # Loading data/sympy/*.py needs SymPy; building the data does not.

@@ -4,16 +4,16 @@
       "catalogue": "rotation",
       "files": [
         {
-          "bytes": 334372,
+          "bytes": 334645,
           "format": "markdown",
           "path": "rotation/CONVENTIONS.md",
-          "sha256": "573101505105f7e0cfd162304b28cb78b12a94b7059867206433bcec187e0a45"
+          "sha256": "c47b537bc2d8b8cbd96a7b7f6efb1baa8729eac44e3ae39ab952c847f09870db"
         },
         {
-          "bytes": 810523,
+          "bytes": 811480,
           "format": "pdf",
           "path": "rotation/CONVENTIONS.pdf",
-          "sha256": "1e07867e37073c41d7af8c0b7d70132174aee1335ee80dbc56e80fe8c13d59fc"
+          "sha256": "61ee19836fcdc66fbacc9cece1dcf589bc1ac81f96e6553ebc933812aabb26a2"
         },
         {
           "bytes": 156100,
@@ -41,16 +41,16 @@
       "catalogue": "double",
       "files": [
         {
-          "bytes": 81638,
+          "bytes": 81713,
           "format": "markdown",
           "path": "double/CONVENTIONS.md",
-          "sha256": "6c7e27dd4e41342c1ca5bed09063090c67607900ca127c9c7ab62a0c2bee24de"
+          "sha256": "7b6966afa30269e60d7e09ffff4325578a2fd9f654dc7f2d1671610b9afa9fdd"
         },
         {
-          "bytes": 484432,
+          "bytes": 484467,
           "format": "pdf",
           "path": "double/CONVENTIONS.pdf",
-          "sha256": "c46b9b8af041f58204c4e55b4dc3dea79b6cae66fc0d08ed4d2206ef43324683"
+          "sha256": "bb3b994150ea58b5a225e3f02eed18b493708cc44a8413ffe05a010da3620f57"
         },
         {
           "bytes": 85795,
@@ -126,28 +126,28 @@
   ],
   "files": [
     {
-      "bytes": 19158,
+      "bytes": 23210,
       "format": "markdown",
       "path": "README.md",
-      "sha256": "0ff846d59888fb8184d65a5839a4d463b454c7c50c286ecfbfe50638e5f8fc91"
+      "sha256": "9d2f6baa3f345c54592276602f7b782fb1d5ca8dde5eea89ccf8753c3a2944db"
     },
     {
-      "bytes": 28630,
+      "bytes": 28799,
       "format": "markdown",
       "path": "REFERENCES.md",
-      "sha256": "c24b2f97d83bfb65a3b142b00df90d4a7a9d96a48f6e2f35d726a5f0714fb4f2"
+      "sha256": "af4677b8c59b6cddb1aa95a332df19c5b8b8dd234a6a17fdfb49b394d7c0627c"
     },
     {
-      "bytes": 181258,
+      "bytes": 181516,
       "format": "pdf",
       "path": "REFERENCES.pdf",
-      "sha256": "49e2bcab1553dc523639511e33b2094151b1ffecd212ac2a1199461a2155c9a1"
+      "sha256": "04abdb871ef7e412a5ccb15e4064d450e84dfe39d8c7edced82c0a3dc1c37bdb"
     },
     {
-      "bytes": 49589,
+      "bytes": 49865,
       "format": "bibtex",
       "path": "references.bib",
-      "sha256": "af458bc7db528d736223aa35fee3d5f886065d842ca0ddf2139b658ea067ced4"
+      "sha256": "1427a7a6c15d3a9ac5d4f85de3dcd542f0159cb12f6347ee2d84eb938222cc8f"
     },
     {
       "bytes": 913,

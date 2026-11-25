@@ -2,9 +2,10 @@
 
 This document defines the fields of the data of the point groups and, in section 0, the notation common to
 their documents. The file `double/CONVENTIONS.md` (sections 20 to 29) defines the fields of the data of the
-double point groups and its additions to the notation. The index of notation lists the common notation and
-selected symbols of the sections, each with the section that defines it. The records, the schemas and the LaTeX
-files refer to the sections by number.
+double point groups and its additions to the notation. The file `magnetic/CONVENTIONS.md` (sections 30 to 39)
+defines the fields of the data of the magnetic point groups and its additions to the notation. The index of
+notation lists the common notation and selected symbols of the sections, each with the section that defines it.
+The records, the schemas and the LaTeX files refer to the sections by number.
 
 ## 0. Notation
 
@@ -1314,7 +1315,8 @@ Other works write these results in other conventions:
 - The rotation matrices of [FR59, eq. 5.2] are the transposes of those of `euler.d` (section 9): their entry
   in row $`m'`$ and column $`m`$ is $`d^J_{m,m'}(\beta)`$.
 - The spherical harmonics of [FR59, eq. 5.18] are $`\mathrm{i}^J Y_J^m`$, and their coefficient $`\bar{V}`$ of three angular momenta
-  [FR59, eq. 10.11] is the 3j symbol of the same arguments times $`(-1)^{J_1+J_2+J}`$.
+  [FR59, eq. 10.11] is the 3j symbol of the same arguments times $`(-1)^{J_1+J_2+J}`$. The later work [FR96, eq. 3.49]
+  takes the harmonics $`\mathrm{i}^{-J} Y_J^m`$ and the 3j symbol itself [FR96, eq. 5.45].
 - The works [FR59, eq. 13.7] and [Jud63, section 1-5] couple the spin before the orbit, which multiplies a
   coupled state by the exchange sign $`(-1)^{J_1+J_2-J}`$ (section 25.4).
 - For a rotation by $`\phi`$ about $`z`$, the operator of [Jud63, eq. 2-18] multiplies $`\bigl\lvert{}^{J}_{\,M}\bigr\rangle`$ by $`\mathrm{e}^{-\mathrm{i}M\phi}`$, the inverse of the

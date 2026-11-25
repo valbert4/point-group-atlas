@@ -1,7 +1,8 @@
 # Point Group Atlas
 
-The atlas holds the point groups (volume I) in the folder `rotation/` and the double point groups (volume II)
-in the folder `double/`.
+The atlas holds the point groups (volume I) in the folder `rotation/`, the double point groups (volume II) in the
+folder `double/` and the magnetic point groups (volume III) in the folder `magnetic/`. The folder `magnetic-double/`
+is for the magnetic double point groups of volume IV, which the atlas does not hold yet.
 
 ## Volume I: point groups
 
@@ -149,6 +150,49 @@ one archive for each group, `<2G>_2J023-2J121.tar`, which unpacks in the folder 
 (`tar -xf 2I_2J023-2J121.tar -C double`). The stage `store --catalogue double --twoJ 23-121` also computes them,
 in about 13 h of CPU time for 2I.
 
+## Volume III: magnetic point groups
+
+The magnetic point groups are the closed subgroups of O(3) × C₂ᵀ up to conjugacy, where C₂ᵀ = {E, Θ} is the group
+of time reversal (magnetic/CONVENTIONS.md, sections 30 to 39). Over each point group G lie groups of three
+magnetic types:
+
+- G itself, of magnetic type I, the point group of volume I.
+- G1′ = G × C₂ᵀ, of magnetic type II, which contains time reversal (98 records, such as C3v-1p).
+- G(H), of magnetic type III, for a subgroup H of index 2 in G: the elements of H and the products of time
+  reversal with the other elements of G (172 records, one for each O(3)-conjugacy class of H, such as C3v-C3).
+
+The numbering of magnetic/CONVENTIONS.md continues those of rotation/CONVENTIONS.md and double/CONVENTIONS.md.
+Of the 270 records, 14 are those of the continuous groups, such as Cinfv-Cinf and O3-SO3. A record names each
+value that it takes from a record of the point groups by a pointer `"rotation/<G>#<JSON pointer>"`. It stores the
+values that it derives from them by a rule, such as the characters of its corepresentations.
+
+The record of each finite group and the files that it names hold these contents, by part of its document:
+
+- The group: the Schoenflies and magnetic Hermann–Mauguin symbols, the groups G and H, the groups by which the
+  elements move a polar or an axial vector even or odd under time reversal, and the normalizer and the centralizer
+  in O(3) × C₂ᵀ.
+- Representations: the corepresentations, each with its case (a), (b) or (c) and its matrix N, the
+  corepresentation table and the symmetrized powers.
+- Subgroups: the subgroup lattice with the magnetic type of each class of subgroups, and in magnetic type III the
+  restriction of each irrep of G over ℝ to the group.
+- Angular momentum: the restriction of each irrep of O(3) × C₂ᵀ to the group, for J ≤ 6.
+- Tensors: the tensor properties odd under time reversal that the group allows, its multipoles, and the invariant
+  polynomials of a polar vector even and an axial vector odd under time reversal.
+
+The record of each continuous group holds the same contents for its families of corepresentations, with their
+indicators as Haar integrals, and its closed subgroups in place of a subgroup lattice.
+
+### Files of volume III
+
+The files of the magnetic point groups are in the folder `magnetic/`.
+
+| path | content |
+|---|---|
+| `magnetic/data/json/<M>.json` | the record of each group (270), named `<G>-1p` for G1′ and `<G>-<H>` for G(H) |
+| `magnetic/data/gap/`, `wolfram/`, `sympy/`, `latex/`, `pdf/` | the record in the other formats, as for the point groups (the literal is bound to `o3m`) |
+| `magnetic/data/magnetic_groups.json` | each record with its magnetic type, its symbols, G and H, and the records of one class under two names (`aliases`) |
+| `magnetic/schema/` | JSON Schemas of the finite and the continuous records, and of the other files of the folder |
+
 ## Groups
 
 A point group is named by its Schoenflies symbol without underscores and parentheses:
@@ -166,11 +210,14 @@ A preimage takes the name of its image with the prefix 2 (2C3v), except SU2 and 
 and O3. A section keeps the name of its image (C3), with b appended in the second class over an S_2N with N odd
 (S6b).
 
+A magnetic point group takes the names of its point groups: `<G>-1p` for G1′ (C3v-1p) and `<G>-<H>` for G(H)
+(C3v-C3, O3-SO3).
+
 ## Formats
 
 - JSON: the records, from which every other format is generated.
-- GAP, Wolfram Language, SymPy: each record as one literal bound to `o3t`, or to `o3d` in volume II
-  (`Read("rotation/data/gap/T.g");`, `Get["rotation/data/wolfram/T.wl"]`,
+- GAP, Wolfram Language, SymPy: each record as one literal bound to `o3t`, to `o3d` in volume II and to `o3m` in
+  volume III (`Read("rotation/data/gap/T.g");`, `Get["rotation/data/wolfram/T.wl"]`,
   `runpy.run_path("rotation/data/sympy/T.py")`).
 - LaTeX and PDF: each record typeset with its subgroups (the subgroup lattice of a finite group as a table and a
   Hasse diagram, and the closed subgroups of a continuous group).
@@ -180,11 +227,12 @@ CONVENTIONS.md section 18 gives the details.
 
 ## Conventions
 
-The definitions the data need are in rotation/CONVENTIONS.md (sections 0 to 19, the point groups) and
-double/CONVENTIONS.md (sections 20 to 29, the double point groups), each also typeset as a PDF. Section 0 holds
-the common notation of the documents. The index of notation at the end of rotation/CONVENTIONS.md lists this
-notation and selected symbols of the sections, each with the section that defines it. Volume II has its own
-index of notation, at the end of double/CONVENTIONS.md.
+The definitions the data need are in rotation/CONVENTIONS.md (sections 0 to 19, the point groups),
+double/CONVENTIONS.md (sections 20 to 29, the double point groups) and magnetic/CONVENTIONS.md (sections 30 to 39,
+the magnetic point groups), each also typeset as a PDF. Section 0 holds the common notation of the documents. The
+index of notation at the end of rotation/CONVENTIONS.md lists this notation and selected symbols of the sections,
+each with the section that defines it. Volumes II and III have their own indexes of notation, at the ends of
+double/CONVENTIONS.md and magnetic/CONVENTIONS.md.
 
 Element names (E, i, C_2, 2C_3, S_24^7, σ_h, C_∞(φ)) are set in one font. The LaTeX writes them through the
 commands `\cls`, `\comp` and `\elt`, which all print `\eltfont`. In `generator/formats/notation.py`,
@@ -212,6 +260,7 @@ GitHub means changing `ELEMENT_MD` and replacing the marks in the prose of CONVE
 The build has these requirements (`requirements.txt`):
 
 - Python ≥ 3.12, with the standard library only.
+- for the web stage (the site), also fontTools ≥ 4.52, which removes hints from the fonts that the site serves.
 - for the PDF stage, `pdflatex` (TeX Live 2025) with the packages cmap, geometry, amsmath, amssymb, booktabs,
   longtable, array, ragged2e, multicol, multirow, xcolor, fancyhdr, tikz and hyperref. The documents of
   volume II also need nicefrac, and the volume stage also needs accsupp.
@@ -266,6 +315,15 @@ With `--catalogue double` the stages write in `double/`:
 The stage `volume --catalogue double` writes `point-group-atlas-double.pdf`, with the conventions of the point
 groups before those of the double point groups and a contents without figures. Its groups come as on the site:
 the preimages family by family, then the sections, the exceptional preimages and the continuous preimages.
+
+With `--catalogue magnetic` the stages write in `magnetic/`, from the records of the point groups:
+
+- `records`: all 270 records and `magnetic/data/magnetic_groups.json` (about 2 min).
+- `formats`, `pdf` and `schema`: as above.
+
+The stage `volume --catalogue magnetic` writes `point-group-atlas-magnetic.pdf`, with the conventions of the point
+groups before those of the magnetic point groups and a contents without figures. Its groups come as on the site,
+by their point group G in the order of volume I, each G1′ before the groups G(H).
 
 ## References
 

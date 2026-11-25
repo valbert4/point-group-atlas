@@ -2,13 +2,14 @@
 
 This document defines the fields of the records of the double point groups, the closed subgroups of
 $`\mathsf{Pin^{-}(3)}`$ up to conjugacy. It continues the conventions of the point groups
-(`rotation/CONVENTIONS.md`), and the files of conventions are numbered as one: sections 0 to 19 are in that file,
-sections 20 to 29 in this one. It cites the sections of that file by number and uses its notation, adding
-half-integer $`J`$ (section 25.1) and the tags of the spinor irreps (section 23.2). Its index of notation lists
-the notation of the documents of this catalogue, each symbol with the section that defines it. A record of this
-catalogue repeats no value that a record of the point groups holds (section 20.3), except its subgroup lattice,
-which it stores whole (section 28.1). The continuous records also repeat the `space` of a fundamental domain
-(section 29.1) and the `index`, `normal` and `class_size` of a continuous subgroup (section 29.5).
+(`rotation/CONVENTIONS.md`). The files of conventions are numbered as one: sections 0 to 19 are in that file,
+sections 20 to 29 in this one and sections 30 to 39 in `magnetic/CONVENTIONS.md`. It cites the sections of the
+conventions of the point groups by number and uses their notation, adding half-integer $`J`$ (section 25.1) and the
+tags of the spinor irreps (section 23.2). Its index of notation lists the notation of the documents of this
+catalogue, each symbol with the section that defines it. A record of this catalogue repeats no value that a record of
+the point groups holds (section 20.3), except its subgroup lattice, which it stores whole (section 28.1). The
+continuous records also repeat the `space` of a fundamental domain (section 29.1) and the `index`, `normal` and
+`class_size` of a continuous subgroup (section 29.5).
 
 ## 20. The parent and the records
 

@@ -112,13 +112,55 @@ def plain_markdown(text):
     return re.sub(r"\\[A-Za-z]+\s*", "", t).replace("\\", "").strip()
 
 
+# An inline formula with the text glued to it by no space or by a no-break space (TeX's ~): the
+# punctuation after it (a period, a comma, a closing bracket, a hyphen and its word), the opening
+# bracket before it, and the links and spans that hold the formula.  A browser may break a line on
+# either side of a formula, as of any atomic inline element, even beside such a sign or a no-break
+# space, so keep_together sets the formula and the text glued to it in one span that keeps them on
+# one line.
+TOGETHER = re.compile("(?P<pre>[^ \t\n\r\f<>\x00]*)(?P<open>(?:<(?:a|span)\\b[^>]*>)*)"
+                      "\x00(?P<k>\\d+)\x00(?P<close>(?:</(?:a|span)>)*)"
+                      "(?P<post>[^ \t\n\r\f<\x00]*)")
+OPENER = re.compile(r"<(a|span)\b[^>]*>")
+CLOSER = re.compile(r"</(a|span)>")
+
+
+def keep_together(text, formulas):
+    """The text with each inline formula and the text glued to it in one span of the class nowrap
+    (TOGETHER), as long as the span closes every element that it opens.  The text that a reader
+    sees stays the same."""
+    def one(m):
+        if formulas[int(m.group("k"))][1]:
+            return m.group(0)
+        opens = OPENER.findall(m.group("open"))
+        tags = [t.group(0) for t in OPENER.finditer(m.group("open"))]
+        closes = CLOSER.findall(m.group("close"))
+        # the elements that open and close around the formula; the others stay outside
+        n = 0
+        while n < min(len(opens), len(closes)) and opens[-1 - n] == closes[n]:
+            n += 1
+        outer_open = "".join(tags[:len(tags) - n])
+        core = ("".join(tags[len(tags) - n:]) + "\x00%s\x00" % m.group("k")
+                + "".join("</%s>" % c for c in closes[:n]))
+        outer_close = "".join("</%s>" % c for c in closes[n:])
+        pre, post = m.group("pre") or "", m.group("post")
+        before = "" if outer_open else pre
+        after = "" if outer_close else post
+        if not before and not after:
+            return m.group(0)
+        return ((pre if outer_open else "") + outer_open + '<span class="nowrap">' + before + core
+                + after + "</span>" + outer_close + (post if outer_close else ""))
+    return TOGETHER.sub(one, text)
+
+
 def fill(text, formulas, rendered):
-    """The text with the placeholder of each formula replaced by its MathML."""
+    """The text with the placeholder of each formula replaced by its MathML, each inline formula
+    kept on one line with the punctuation beside it (keep_together)."""
     def one(m):
         k = int(m.group(1))
         _, display, md = formulas[k]
         return wmath.mathml(rendered[k], md)
-    return PLACEHOLDER.sub(one, text)
+    return PLACEHOLDER.sub(one, keep_together(text, formulas))
 
 
 # ---------------------------------------------------------------- the frame
@@ -183,9 +225,10 @@ FAVICONS = ("favicon.svg",) + tuple("favicon-%s.svg" % c for c in names.CATALOGU
 # (1200 x 630), the mark beside the title on its grid, as on the home. The image's address carries
 # the first digits of its SHA-256, so that a site that keeps a copy of a preview fetches the image
 # again when it changes.
-DESCRIPTION = ("Exact tables of the 98 point groups and the 116 double point groups: characters, "
-               "irrep matrices, Clebsch–Gordan coefficients, descent of symmetry and "
-               "symmetry-adapted bases, with records in JSON, GAP, Wolfram Language and SymPy.")
+DESCRIPTION = ("Exact tables of the 98 point groups, the 116 double point groups and the 270 "
+               "magnetic point groups: characters, irrep matrices, corepresentations, "
+               "Clebsch–Gordan coefficients, descent of symmetry and symmetry-adapted bases, with "
+               "records in JSON, GAP, Wolfram Language and SymPy.")
 CARD = "social.png"
 CARD_ALT = "The mark and the title of the Point Group Atlas"
 LOGO_FILES = FAVICONS + (WORDMARK, CARD)

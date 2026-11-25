@@ -7,7 +7,7 @@ PDFs are built from: each section of a group's document is latex.sections() conv
 references their Markdown (markdown.py), all in the frame of site.py.  The site is written into
 DIR, outside the repository: DIR/<catalogue>/, DIR/references/, DIR/static/ (site.css,
 site.js, the tab icons and the title of the bar from logo/, and the fonts, STIX Two from TeX
-Live, with their license OFL.txt beside them) and the home
+Live with hints removed by fontTools, with their license OFL.txt beside them) and the home
 DIR/index.html; the data files are linked on GitHub at the commit (data.py); the volume as one
 PDF, as the volume stage builds it, is DIR/<catalogue>/<its file name> (--volume PDF serves a
 built one); a build replaces the files of its catalogue there.
@@ -32,6 +32,13 @@ import re
 import shutil
 import subprocess
 import sys
+import unicodedata
+
+try:
+    from fontTools.cffLib import CFFFontSet
+    from fontTools.ttLib import TTFont
+except ImportError:
+    CFFFontSet = TTFont = None
 
 from .. import names, serialize
 from ..formats import latex, lint, notation
@@ -71,15 +78,47 @@ def chosen(text, catalogue_names):
     return [g for g in catalogue_names if g in wanted]
 
 
+def unhinted(source, target):
+    """Write the OpenType font `source` to `target` without the hints that close gaps at some
+    sizes: a text font loses the alignment zones of its CFF outlines (its stem hints stay, which
+    keep the bar of e sharp), a math font the hints of its dotted letters only (i and j of each
+    alphabet), as the hinted extents of its other glyphs set the layout of the formulas.
+    Everything else is copied as it stands, so the glyphs, their advance widths, the features and
+    the names stay the same.  No date is written, so that each build gives the same bytes."""
+    with (TTFont(source, recalcBBoxes=False, recalcTimestamp=False) as font,
+          TTFont(source, recalcBBoxes=False, recalcTimestamp=False) as bare):
+        top = font["CFF "].cff.topDictIndex[0]
+        if "MATH" not in font:
+            top.Private.BlueValues = top.Private.OtherBlues = None
+            font.save(target, reorderTables=False)
+            return
+        outlines = bare["CFF "].cff
+        outlines.desubroutinize()
+        outlines.remove_hints()
+        plain = outlines.topDictIndex[0].CharStrings
+        dotted = {glyph for code, glyph in bare.getBestCmap().items()
+                  if unicodedata.normalize("NFKC", chr(code)) in ("i", "j")}
+        for glyph in bare.getGlyphOrder():
+            # the letter and its other forms (i.ssty, the i of scripts), the dotless ones left
+            if glyph.split(".")[0] in dotted and ".dotless" not in glyph:
+                top.CharStrings[glyph].setProgram(plain[glyph].program)
+        font.save(target, reorderTables=False)
+
+
 def fonts(out):
+    """The fonts of the stylesheet with their license.  The copies that the site serves have hints
+    removed (unhinted), since the hints make Windows (DirectWrite) join dots and accents to their
+    letters: in STIX Two Text at 17 px, the text, and in STIX Two Math the dots of i and j at 9
+    and 11 px, the scripts of info boxes and tables."""
     folder = os.path.join(out, "static", "fonts")
     os.makedirs(folder, exist_ok=True)
     for name in FONTS:
         found = subprocess.run(["kpsewhich", name], capture_output=True, text=True).stdout.strip()
         if not found:
             raise SystemExit("web: kpsewhich finds no %s (TeX Live's stix2-otf)" % name)
-        shutil.copyfile(found, os.path.join(folder, name))
-    # the SIL Open Font License of the fonts, which travels with every copy of them
+        unhinted(found, os.path.join(folder, name))
+    # the SIL Open Font License of the fonts, which travels with every copy of them; it lets the
+    # modified fonts keep their names (the one name that it reserves, TM Math, is none of them)
     shutil.copyfile(os.path.join(HERE, "OFL.txt"), os.path.join(folder, "OFL.txt"))
 
 
@@ -165,6 +204,10 @@ def build(args, out, conditions=True):
     lacking = [c for c in ("latex", "dvisvgm") if shutil.which(c) is None]
     if lacking:
         raise SystemExit("web: no %s on the PATH, which the diagrams need" % " or ".join(lacking))
+    # and fontTools, which removes hints from the fonts (unhinted)
+    if not hasattr(CFFFontSet, "remove_hints"):
+        raise SystemExit("web: %s has no fontTools of version 4.52 or later, which the fonts need "
+                         "(Debian's python3-fonttools, or fonttools from pip)" % sys.executable)
     renderer = wmath.Renderer(args.katex or KATEX, node=args.node, cache=args.cache)
     diagrams = figures.Figures(args.cache)
     # files/<catalogue>/ holds this catalogue's PDFs (data.PDF_FOLDER); the other catalogue's
@@ -282,10 +325,10 @@ def volume_pdf(args, out):
 
 
 def repeat(args, out, site):
-    """Condition 6: a second build into a folder beside DIR gives the same files.  The other
-    volume, which the links of this one reach, is there as hard links; the data files are not
-    copied again, nor the volume's PDF built again (the volume stage's own builds are the same
-    from the same commit)."""
+    """Condition 6: a second build into a folder beside DIR gives the same files and fonts.  The
+    other volume, which the links of this one reach, is there as hard links; the data files are
+    not copied again, nor the volume's PDF built again (the volume stage's own builds are the
+    same from the same commit)."""
     again = out.rstrip(os.sep) + ".again"
     shutil.rmtree(again, ignore_errors=True)
     os.makedirs(again)
@@ -299,7 +342,8 @@ def repeat(args, out, site):
         if site.volume_pdf:
             again_args.volume = os.path.join(out, *site.volume_pdf.split("/"))
         _, second = build(again_args, again, conditions=False)
-        paths = sorted(set(site.files) | set(second.files)) + maps.files(names.CATALOGUE)
+        paths = (sorted(set(site.files) | set(second.files)) + maps.files(names.CATALOGUE)
+                 + ["static/fonts/" + name for name in FONTS])
         differ = [p or "index.html" for p in paths if not same(file_of(out, p), file_of(again, p))]
     finally:
         shutil.rmtree(again, ignore_errors=True)

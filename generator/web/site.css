@@ -188,6 +188,8 @@ main > .logo + h1.title { margin-top: 0.55em; }
 
 /* math */
 math { font-family: "STIX Two Math", math; font-size: 1.04em; }
+/* an inline formula and the text glued to it, kept on one line (site.py, keep_together) */
+.nowrap { white-space: nowrap; }
 .irr { font-variant-caps: all-small-caps; font-style: normal; }
 math .irr { font-family: "STIX Two Text", serif; text-transform: none; }
 math .sfit { font-family: var(--sans); font-style: italic; text-transform: none; }
