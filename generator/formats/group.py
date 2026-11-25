@@ -301,7 +301,7 @@ def section_identification(D):
                                       "double": "sections 2, %s20 and %d" % (
                                           "12, " if product_form else "",
                                           29 if continuous else 28),
-                                      "magnetic": "sections 2, 3, 6, 30 and 31.2"})
+                                      "magnetic": D.identification_sections})
     themes = D.identification_rows()
     rows = [k for theme in themes for k in theme]
     stray = set(g) - set(rows) - set(IDENTIFICATION_UNSET)
@@ -328,7 +328,8 @@ def section_identification(D):
         if lines:
             cells["product_form"] = r"\begin{tabular}[t]{@{}l@{}}%s\end{tabular}" % r"\\".join(
                 lines)
-        D.w(D.define(*marks) + r"{\small\begin{longtable}{@{}ll@{}}\toprule")
+        D.w(D.define(*marks) + r"{\small%s\begin{longtable}{@{}ll@{}}\toprule"
+            % D.identification_mark)
     shown = [[k for k in theme if k in cells] for theme in themes]
     for i, theme in enumerate(t for t in shown if t):
         if i:

@@ -29,6 +29,9 @@ SUBJECT = ("Point Group Atlas, volume III: the conventions, the documents of the
 CONVENTIONS_DOCS = ("conventions", "conventionsmagnetic")
 ROTATION_CONVENTIONS_ENTRY = "Conventions of the point groups"
 MAGNETIC_CONVENTIONS_ENTRY = "Conventions of the magnetic point groups"
+# The cells to a row of the contents and the gap between two: the symbol of a group of magnetic
+# type III is longer than that of a point group.
+COLUMNS, GAP = 5, "18pt"
 # A link of a Magnetic document to another beside it, and to a document of Rotation.
 MAGNETIC_LINK = re.compile(r"\\href\{([\w-]+)\.pdf\}")
 ROTATION_LINK = DV.ROTATION_LINK
@@ -100,7 +103,7 @@ def bookmark(symbol):
 
 def render():
     """The LaTeX of the volume, and no files of figures ({}): the contents list the documents
-    without figures (double_volume.TEXT_CONTENTS)."""
+    without figures (double_volume.text_contents)."""
     stems = built()
     held = set(stems)
     # Rotation's conventions as Rotation's build sets them: its catalogue and its registry
@@ -118,7 +121,8 @@ def render():
     known |= known_magnetic
     parts = [r"\pdfinfoomitdate=1", r"\pdftrailerid{}", r"\pdfsuppressptexinfo=-1",
              r"\documentclass[10pt,a4paper]{article}", style.current(), macros(), latex.MACROS,
-             conventions.MACROS, V.MACROS, BLOCK_MACROS, V.TITLE_PACKAGES, DV.TEXT_CONTENTS,
+             conventions.MACROS, V.MACROS, BLOCK_MACROS, V.TITLE_PACKAGES,
+             DV.text_contents(COLUMNS, GAP),
              r"\expandafter\def\csname vol@text@%s\endcsname{}" % CONVENTIONS_DOCS[1],
              r"\hypersetup{pdftitle={%s},pdfsubject={%s}}"
              % (style.TITLES[names.CATALOGUE], SUBJECT),

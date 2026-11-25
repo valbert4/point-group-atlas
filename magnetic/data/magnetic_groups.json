@@ -13,10 +13,10 @@
     "D1h-C2": "C2v-C2"
   },
   "counts": {
-    "classes": 245,
-    "magnetic_type_II": 91,
-    "magnetic_type_III": 165,
-    "records": 256
+    "classes": 259,
+    "magnetic_type_II": 98,
+    "magnetic_type_III": 172,
+    "records": 270
   },
   "magnetic_type_I": "rotation/point_groups#",
   "records": [
@@ -2141,6 +2141,111 @@
       "magnetic_type": "III",
       "node": "n20",
       "symbol": "I_h(I)"
+    },
+    {
+      "G": "Cinf",
+      "hermann_mauguin": "inf1'",
+      "id": "Cinf-1p",
+      "magnetic_type": "II",
+      "symbol": "C_inf1'"
+    },
+    {
+      "G": "Cinfh",
+      "hermann_mauguin": "inf/m1'",
+      "id": "Cinfh-1p",
+      "magnetic_type": "II",
+      "symbol": "C_infh1'"
+    },
+    {
+      "G": "Cinfh",
+      "H": "Cinf",
+      "hermann_mauguin": "inf/m'",
+      "id": "Cinfh-Cinf",
+      "magnetic_type": "III",
+      "symbol": "C_infh(C_inf)"
+    },
+    {
+      "G": "Cinfv",
+      "hermann_mauguin": "infm1'",
+      "id": "Cinfv-1p",
+      "magnetic_type": "II",
+      "symbol": "C_infv1'"
+    },
+    {
+      "G": "Cinfv",
+      "H": "Cinf",
+      "hermann_mauguin": "infm'",
+      "id": "Cinfv-Cinf",
+      "magnetic_type": "III",
+      "symbol": "C_infv(C_inf)"
+    },
+    {
+      "G": "Dinf",
+      "hermann_mauguin": "inf21'",
+      "id": "Dinf-1p",
+      "magnetic_type": "II",
+      "symbol": "D_inf1'"
+    },
+    {
+      "G": "Dinf",
+      "H": "Cinf",
+      "hermann_mauguin": "inf2'",
+      "id": "Dinf-Cinf",
+      "magnetic_type": "III",
+      "symbol": "D_inf(C_inf)"
+    },
+    {
+      "G": "Dinfh",
+      "hermann_mauguin": "inf/mm1'",
+      "id": "Dinfh-1p",
+      "magnetic_type": "II",
+      "symbol": "D_infh1'"
+    },
+    {
+      "G": "Dinfh",
+      "H": "Dinf",
+      "hermann_mauguin": "inf/m'm'",
+      "id": "Dinfh-Dinf",
+      "magnetic_type": "III",
+      "symbol": "D_infh(D_inf)"
+    },
+    {
+      "G": "Dinfh",
+      "H": "Cinfh",
+      "hermann_mauguin": "inf/mm'",
+      "id": "Dinfh-Cinfh",
+      "magnetic_type": "III",
+      "symbol": "D_infh(C_infh)"
+    },
+    {
+      "G": "Dinfh",
+      "H": "Cinfv",
+      "hermann_mauguin": "inf/m'm",
+      "id": "Dinfh-Cinfv",
+      "magnetic_type": "III",
+      "symbol": "D_infh(C_infv)"
+    },
+    {
+      "G": "SO3",
+      "hermann_mauguin": "infinf1'",
+      "id": "SO3-1p",
+      "magnetic_type": "II",
+      "symbol": "SO(3)1'"
+    },
+    {
+      "G": "O3",
+      "hermann_mauguin": "infinfm1'",
+      "id": "O3-1p",
+      "magnetic_type": "II",
+      "symbol": "O(3)1'"
+    },
+    {
+      "G": "O3",
+      "H": "SO3",
+      "hermann_mauguin": "infinfm'",
+      "id": "O3-SO3",
+      "magnetic_type": "III",
+      "symbol": "O(3)(SO(3))"
     }
   ],
   "schema": "point-group-atlas/magnetic/groups/1"

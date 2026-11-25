@@ -2628,9 +2628,9 @@ def _expand_md(tex):
 def families():
     from .. import names
     if names.CATALOGUE == "magnetic":
-        # the documents of the catalogue are finite groups' (magnetic/CONVENTIONS.md section 30)
         return {"conventions": {"CONVENTIONS"}, "references": {"REFERENCES"},
-                "finite": set(names.MAGNETIC_NAMES), "continuous": set(), "axial": set(),
+                "finite": set(names.MAGNETIC_FINITE),
+                "continuous": set(names.MAGNETIC_CONTINUOUS), "axial": set(),
                 "exceptional": set()}
     if names.CATALOGUE == "double":
         return {"conventions": {"CONVENTIONS"}, "references": {"REFERENCES"},

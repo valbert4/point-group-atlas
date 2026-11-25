@@ -37,8 +37,8 @@ from .. import names
 from . import latex as L
 from .double_latex import follow, record_of, target
 from .subgroups import type_rank
-from .typeset import (CONSTANTS, ROTATION_PDF, fill_width, label_width, labels_width, mathify,
-                      multiple, rotation_linked, row_end, snake_mark)
+from .typeset import (CONSTANTS, ROTATION_PDF, SNAKE_OFF, fill_width, label_width, labels_width,
+                      mathify, multiple, rotation_linked, row_end, snake_mark)
 
 O3T = r"\grp{O(3)} \times \grp{C_{2}^{T}}"
 # The conventions of Rotation, relative to magnetic/data/pdf/.
@@ -55,28 +55,41 @@ MULTIPOLES = (("electric", "electric"), ("electric-toroidal", "electric toroidal
 
 
 # ---------------------------------------------------------------- symbols
+def halves_of(s):
+    """(G, H) of a symbol G(H), by its last pair of parentheses, or None for any other symbol: the
+    parentheses of SO(3) and O(3) hold a digit."""
+    if not s.endswith(")"):
+        return None
+    depth = 0
+    for k in range(len(s) - 1, -1, -1):
+        depth += (s[k] == ")") - (s[k] == "(")
+        if depth == 0:
+            return (s[:k], s[k + 1:-1]) if k and s[k + 1].isalpha() else None
+    return None
+
+
 def msym(s):
     r"""A symbol of the catalogue in math mode: C_3v(C_3) -> \grp{C_{3v}}(\grp{C_{3}}),
     O_h1' -> \grp{O_{h}1'}, C_infh1' -> \grp{C_{\infty h}1'}."""
     s = str(s)
     if s.endswith("1'"):
         return L.grp(s[:-2])[:-1] + "1'}"
-    m = re.fullmatch(r"(.+?)\((.+)\)", s)
-    if m:
-        return r"%s(%s)" % (L.grp(m.group(1)), L.grp(m.group(2)))
+    pair = halves_of(s)
+    if pair:
+        return r"%s(%s)" % (L.grp(pair[0]), L.grp(pair[1]))
     return L.grp(s)
 
 
 def stem_of(s):
     """The record name of a symbol of the catalogue: C_3v(C_3) -> C3v-C3, D_6h1' -> D6h-1p,
-    C_i1' -> S2-1p."""
+    C_i1' -> S2-1p, O(3)(SO(3)) -> O3-SO3."""
     def one(x):
-        return {"C_i": "S2", "C_s": "C1v"}.get(x, x.replace("_", ""))
+        return {"C_i": "S2", "C_s": "C1v"}.get(x) or re.sub(r"[_()]", "", x)
     s = str(s)
     if s.endswith("1'"):
         return one(s[:-2]) + "-1p"
-    m = re.fullmatch(r"(.+?)\((.+)\)", s)
-    return "%s-%s" % (one(m.group(1)), one(m.group(2))) if m else one(s)
+    pair = halves_of(s)
+    return "%s-%s" % (one(pair[0]), one(pair[1])) if pair else one(s)
 
 
 def mlinked(s):
@@ -144,6 +157,10 @@ class Doc(L.Document):
     and H, and what the sections take from this catalogue's records."""
 
     catalogue = "magnetic"
+    # the sections of the conventions that Names and structure cites, and the mark of its table, which
+    # stays in one copy in every document
+    identification_sections = "sections 2, 3, 6, 30 and 31.2"
+    identification_mark = SNAKE_OFF
 
     def __init__(self, rec, name):
         g = rec["group"]
@@ -200,6 +217,16 @@ class Doc(L.Document):
 
     def identification_legend(self, cells, continuous, classes):
         identification_legend(self)
+
+    def images_sentence(self):
+        """The sentence on the images in the legend of Names and structure."""
+        return (r"Each names the record of its $\grp{O(3)}$-conjugacy class and the frame that "
+                r"carries that record onto the image.")
+
+    def orbits_sentence(self):
+        """The sentence on the orbifolds of G and H, in magnetic type III."""
+        return (r"The field \texttt{orbifold} of the record gives the orbifold symbols of $%s$ "
+                r"and of $%s$." % (self.Gsym, self.Hsym))
 
     # Representations
     def corep_label(self, c):
@@ -437,13 +464,11 @@ def identification_legend(D):
     out.append(r"The four fields \texttt{images} name the groups by which the elements move a "
                r"polar or an axial vector, even or odd under time reversal (CONVENTIONS.pdf, "
                r"section 31.2).")
-    out.append(r"Each names the record of its $\grp{O(3)}$-conjugacy class and the frame that "
-               r"carries that record onto the image.")
+    out.append(D.images_sentence())
     out.append(r"The fields \texttt{normalizer} and \texttt{centralizer} are taken in $%s$, and "
                r"both groups are of magnetic type II." % O3T)
     if not D.grey:
-        out.append(r"The field \texttt{orbifold} of the record gives the orbifold symbols of $%s$ "
-                   r"and of $%s$." % (D.Gsym, D.Hsym))
+        out.append(D.orbits_sentence())
     D.w(" ".join(out))
 
 
@@ -687,7 +712,7 @@ def section_time_odd(D):
     for p in props:
         rows.append([r"$\jahn{%s}$" % JAHN[p["jahn"]],
                      r" $\oplus$ ".join(r"$\jahn{%s}$" % SPACE_JAHN[s] for s in p["spaces"]),
-                     "$%s$" % D.Gdoc.irrep_id(p["irrep"]),
+                     "$%s$" % D.g_irrep(p["irrep"]),
                      ", ".join(p["properties"])])
     head = ["name", "spaces", "irrep", "properties"]
     fill = fill_width([head] + rows, 3)
@@ -719,11 +744,15 @@ def section_multipoles(D):
     for r in rows:
         D.w(" & ".join(r) + r"\\")
     D.w(r"\bottomrule\end{longtable}}")
+    D.w(spin_sentence(D, kinds))
+
+
+def spin_sentence(D, kinds):
+    """The sentence on the operators on a spin, after the table of the multipoles."""
     if any(k == "magnetic" for k, _ in kinds):
-        D.w(r"The electric entries at even $J$ and the magnetic entries at odd $J$ count the "
-            r"operators on a spin that $%s$ allows (CONVENTIONS.pdf, section 35.1)." % D.sym)
-    else:
-        D.w(r"The electric entries at even $J$ count the operators on a spin that $%s$ allows "
+        return (r"The electric entries at even $J$ and the magnetic entries at odd $J$ count the "
+                r"operators on a spin that $%s$ allows (CONVENTIONS.pdf, section 35.1)." % D.sym)
+    return (r"The electric entries at even $J$ count the operators on a spin that $%s$ allows "
             r"(CONVENTIONS.pdf, section 35.1)." % D.sym)
 
 
@@ -819,7 +848,11 @@ PARTS = (
 
 
 def sections(name, rec, on_section=None):
-    """The sections of a document as [(key, text)] (latex.assemble)."""
+    """The sections of a document as [(key, text)] (latex.assemble), of a continuous group those of
+    magnetic_continuous."""
+    if rec["schema"] == names.MAGNETIC_CONTINUOUS_TAG:
+        from . import magnetic_continuous
+        return magnetic_continuous.sections(name, rec, on_section)
     return L.assemble(Doc(rec, name), PARTS, on_section)
 
 

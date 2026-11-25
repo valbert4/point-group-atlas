@@ -1,6 +1,7 @@
 """The records stage of the two magnetic catalogues, magnetic/ and magnetic-double/: the records of
-names.MAGNETIC_NAMES (magnetic/CONVENTIONS.md sections 30 to 36) in data/json/, then
-data/magnetic_groups.json; the catalogue magnetic-double has none so far.
+names.MAGNETIC_NAMES (magnetic/CONVENTIONS.md sections 30 to 37) in data/json/, then
+data/magnetic_groups.json; the catalogue magnetic-double has none so far.  This module makes the
+records of the finite groups, and continuous.py those of the continuous ones.
 
 A record of magnetic type III, <G>-<H>, stores what no record of the point groups holds: its
 magnetic symbols, magnetic type, character, normalizer and centralizer, its four images with their
@@ -22,6 +23,7 @@ import os
 
 from .. import names, serialize
 from . import CATALOGUE, pointer
+from . import continuous as CO
 from . import coreps as CR
 from . import geometry as GE
 from . import groups_file
@@ -297,9 +299,18 @@ def run(args):
         if classes != names.halves(g):
             raise AssertionError("%s: subgroups of index 2 of classes %s in its lattice, the "
                                  "names have %s" % (g, classes, names.halves(g)))
+    for g in names.CONTINUOUS:
+        block = "subduction_subgroups" if g not in names.SPHERICAL else "subgroup_classes"
+        have = {e["subgroup"]["o3_class"] for e in CO.point(g).rec[block]["continuous"]
+                if e.get("index") == 2 or (g, e["subgroup"]["o3_class"]) == ("O3", "SO3")}
+        if have != set(names.halves(g)):
+            raise AssertionError("%s: closed subgroups of index 2 of classes %s in its record, the "
+                                 "names have %s" % (g, sorted(have), names.halves(g)))
     os.makedirs(names.path(names.RECORDS_DIR), exist_ok=True)
+    # the records of SO(3)1' and O(3)1' read those of the finite groups, written before them
     for stem in stems:
-        serialize.write_json(names.record_path(stem), record(stem))
+        serialize.write_json(names.record_path(stem), CO.record(stem) if stem in
+                             names.MAGNETIC_CONTINUOUS else record(stem))
         print("wrote", names.relative(names.record_path(stem)))
     if all(os.path.exists(names.record_path(s)) for s in stems):
         groups_file.write()

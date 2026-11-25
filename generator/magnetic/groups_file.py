@@ -3,10 +3,10 @@
 data/double_groups.json the double point groups.
 
 One entry for each record, in the catalogue's order: its id (the record's name), its magnetic type,
-its symbols, the records of G and H and the node of H in the lattice of G.  The groups of magnetic
-type I are the point groups, named by a pointer to their list.  A record whose G is an N = 1 alias
-of rotation/data/point_groups.json has the class of another record, and `aliases` maps it to that
-record, the one whose G is the node of the alias there."""
+its symbols, the records of G and H and, for a finite group, the node of H in the lattice of G.  The
+groups of magnetic type I are the point groups, named by a pointer to their list.  A record whose G
+is an N = 1 alias of rotation/data/point_groups.json has the class of another record, and `aliases`
+maps it to that record, the one whose G is the node of the alias there."""
 from .. import names, serialize
 from . import pointer
 
@@ -26,7 +26,9 @@ def build():
         half = "1p"
         if "H" in g:
             H = g["H"].split("#")[0].split("/")[1]
-            e.update({"H": H, "node": g["node"]})
+            e["H"] = H
+            if "node" in g:
+                e["node"] = g["node"]
             if H in alias:
                 raise AssertionError("%s: H is an alias" % stem)
             half = H

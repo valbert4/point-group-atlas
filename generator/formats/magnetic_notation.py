@@ -17,9 +17,9 @@ S = N.entry
 SECTIONS = tuple("conventions|conv:%d|" % n for n in range(30, 40))
 # The parts of the documents of this catalogue (magnetic_latex.PARTS), where its records that
 # Rotation's registry gives another meaning hold too.
-PARTS = ("identification", "elements", "irreps", "character_table", "corep_matrices",
-         "symmetrized_powers", "subgroups", "subduction", "subduction_o3", "time_odd", "multipoles",
-         "invariants")
+PARTS = ("identification", "elements", "class_space", "irreps", "families", "character_table",
+         "corep_matrices", "symmetrized_powers", "subgroups", "subduction", "subduction_o3",
+         "time_odd", "multipoles", "invariants")
 DOCUMENTS = tuple("*|%s|" % k for k in ("title",) + PARTS)
 LOCAL = SECTIONS + DOCUMENTS
 H = N.entry
@@ -69,7 +69,8 @@ MAGNETIC = (
       r"the antiunitary representative of the record: $\varTheta$ in magnetic type II, and in "
       r"magnetic type III the antiunitary element over the element of least index of "
       r"$\grp{G} \setminus \grp{H}$", "a", "a^{#}", "a^{-#}",
-      scope=SECTIONS + ("*|elements|", "*|irreps|", "*|character_table|", "*|corep_matrices|"),
+      scope=SECTIONS + ("*|elements|", "*|class_space|", "*|irreps|", "*|families|",
+                        "*|character_table|", "*|corep_matrices|"),
       defined="conv:32.1", index=True),
     S("irrep.conjugate.antiunitary", "irrep", r"\Lambda^{\elt{a}}",
       r"the conjugate irrep of $\Lambda$, of matrices "
@@ -88,10 +89,10 @@ MAGNETIC = (
     # the heads of the tables of the documents
     H("head.case.corep", "head", "case",
       r"the case (a), (b) or (c) of an irrep or of a corepresentation", "case",
-      defined=("part:irreps", "part:corep_matrices", "conv:32.1")),
+      defined=("part:irreps", "part:families", "part:corep_matrices", "conv:32.1")),
     H("head.corep", "head", "corep",
       r"a corepresentation, named by its irreps, or the one that contains an irrep", "corep",
-      defined=("part:irreps", "part:corep_matrices", "conv:32.3")),
+      defined=("part:irreps", "part:families", "part:corep_matrices", "conv:32.3")),
     H("head.magnetic.type", "head", "type",
       r"the magnetic type of a subgroup, I, II or III", "type",
       defined=("part:subgroups", "conv:36")),
@@ -125,7 +126,7 @@ MAGNETIC = (
     S("matrix.corep.n", "matrix", "N",
       r"the unitary matrix of the representative in the cases (a) and (b), with "
       r"$D^{\Lambda}(\elt{h})^{\top} N = N\, D^{\Lambda^{\elt{a}}}(\elt{h})^{\top}$",
-      "N", "N^{*}", scope=SECTIONS + ("*|corep_matrices|",), defined="conv:32.2"),
+      "N", "N^{*}", "N_{*}", scope=SECTIONS + ("*|corep_matrices|",), defined="conv:32.2"),
     # the invariants in two vectors (section 35.1, which writes the degrees as field names)
     S("index.degree.polar", "index", "a",
       r"the degree of an invariant in the polar vector even under time reversal", "a",
@@ -143,8 +144,9 @@ MAGNETIC = (
       "v_{z}^{#}", scope=("*|invariants|",), defined=("part:invariants",)),
     # the subgroup lattices (section 36)
     S("group.subgroup.point", "group", r"\grp{K}",
-      r"a subgroup of $\grp{G}$, with $\grp{K}'$ a subgroup of index 2 in it", r"\grp{K}",
-      r"\grp{K}'", scope="conventions|conv:36|", defined="conv:36"),
+      r"a (closed) subgroup of $\grp{G}$, with $\grp{K}'$ a (closed) subgroup of index 2 in it",
+      r"\grp{K}", r"\grp{K}'", scope=("conventions|conv:36|", "conventions|conv:37|",
+                                     "continuous|subgroups|"), defined=("part:subgroups", "conv:36")),
     # the symmetrized powers (section 34)
     S("operator.power.symmetrized", "operator", r"[#1^{#2}]",
       r"the symmetrized square of a corepresentation $\mathcal{D}$, with "
@@ -158,6 +160,11 @@ MAGNETIC = (
     # the band of a cited title, whose letter Rotation's registry gives the second partner index
     S("local.references.band", "local", r"\nu", "the band of a cited title", r"\nu",
       scope="references|refs|", defined="standard"),
+    # the cubes of the corepresentations of the spherical groups (section 37.4)
+    S("index.cube", "index", r"c_K",
+      r"the multiplicity of $\irrJ{K}$ in the symmetrized cube of $\irrJ{J}$", r"c_{K}",
+      scope=SECTIONS + ("continuous|symmetrized_powers|",),
+      defined=("part:symmetrized_powers", "conv:37.4")),
     S("function.multiplicity.corep", "function", r"b_{\mathcal{D}}",
       r"the multiplicity of the corepresentation $\mathcal{D}$ in a representation of $\grp{M}$",
       r"b_{\mathcal{D}}", defined="conv:34"),
@@ -170,7 +177,21 @@ REPLACE = {"function.timereversal": {"glyph": r"\varTheta", "forms": (r"\varThet
                                      "defined": ("conv:30.1",)},
            # an irrep of the unitary half H, whose irreps a document lists with their
            # corepresentations
-           "irrep.Delta": {"defined": ("part:irreps", "part:subduction", "conv:12", "conv:32.1")},
+           "irrep.Delta": {"defined": ("part:irreps", "part:families", "part:subduction", "conv:12",
+                                       "conv:32.1")},
+           # the angle of a character of a corepresentation, in a document without a class space
+           "angle.phi": {"defined": ("part:class_space", "part:character_table", "conv:0.2")},
+           # the variable of the generating function of the cubes (section 37.4)
+           "index.generating.variable": {"defined": ("e:gf", "part:subduction",
+                                                     "part:symmetrized_powers", "conv:14")},
+           # the irreps of the table of tensors, the first of a continuous document's tables to name
+           # irreps and not families
+           "head.irrep": {"defined": ("part:irreps", "part:bases", "part:time_odd", "conv:0.1")},
+           # the members of the families of closed subgroups too (section 37.5)
+           "group.schoenflies.cn": {"forms": (r"\grp{C_{#}}", r"\grp{C_{\mathnormal{N}}}",
+                                              r"\grp{C_{#\mathnormal{N}}}")},
+           "group.schoenflies.cnh": {"forms": (r"\grp{C_{#h}}", r"\grp{C_{\mathnormal{N}h}}",
+                                               r"\grp{C_{#\mathnormal{N}h}}")},
            # a power of an element of the unitary half too (section 34)
            "element.power": {"forms": ("g^{#}", "g^{k}", "h^{#}")},
            # the polynomial of an invariant in two vectors too (section 35.1)
@@ -179,42 +200,47 @@ REPLACE = {"function.timereversal": {"glyph": r"\varTheta", "forms": (r"\varThet
                                "defined": ("part:orbitals", "part:invariants", "conv:0.1")}}
 
 
-# The records of Rotation that the documents of the 256 groups, the conventions of this catalogue or
+# The records of Rotation that the documents of the 270 groups, the conventions of this catalogue or
 # the references use (lint rule L5 over the whole catalogue), in the order of Rotation's registry.
 USED = (
     "typography.group", "typography.irrep", "irrep.pair", "typography.class",
-    "typography.element", "typography.hm", "typography.orbifold", "index.parity.tag",
-    "mark.conjugates", "mark.letter", "operator.restriction", "vector.axis",
-    "constant.imaginary", "constant.euler", "constant.golden", "constant.root", "irrep.o3",
-    "matrix.irrep", "function.character", "index.frobenius", "accent.conjugate.star",
+    "typography.component", "typography.element", "typography.hm", "typography.orbifold",
+    "index.parity.tag", "mark.conjugates", "mark.letter", "operator.restriction", "vector.axis",
+    "constant.imaginary", "constant.euler", "constant.golden", "constant.root", "irrep.so3",
+    "irrep.o3", "matrix.irrep", "function.character", "index.frobenius", "accent.conjugate.star",
     "relation.product", "index.partner", "index.normalisation", "vector.ket", "number",
     "delimiter.parenthesis", "delimiter.bracket", "delimiter.brace", "delimiter.lvert",
     "delimiter.angle", "punctuation.comma", "punctuation.period", "arithmetic.plus",
     "arithmetic.minus", "arithmetic.plusminus", "arithmetic.times", "arithmetic.solidus",
-    "arithmetic.fraction", "arithmetic.root", "arithmetic.sum", "relation.equal",
-    "relation.lessequal", "relation.greater", "relation.in", "relation.supset",
-    "operator.intersection", "operator.union", "operator.setminus", "relation.mapsto",
-    "operator.directsum", "constant.pi", "operator.determinant", "operator.cosine",
-    "operator.sine", "set.complex", "set.real", "mark.transpose", "matrix.display",
-    "word.formula", "group.G", "group.H", "group.schoenflies.cn", "group.schoenflies.cnh",
-    "group.schoenflies.cnv", "group.schoenflies.dn", "group.schoenflies.dnh",
-    "group.schoenflies.dnd", "group.schoenflies.s2n", "group.schoenflies.cs",
-    "group.schoenflies.ci", "group.schoenflies.t", "group.schoenflies.th",
-    "group.schoenflies.td", "group.schoenflies.o", "group.schoenflies.oh",
-    "group.schoenflies.i", "group.schoenflies.ih", "group.o3", "element.identity",
-    "element.inversion", "class.size", "element.inversion.class", "element.rotation",
-    "element.rotation.binary", "element.rotation.axis", "element.rotoreflection",
-    "element.mirror.h", "element.mirror.v", "element.mirror.d", "element.mirror.icosahedral",
-    "element.g", "element.h", "element.inverse", "element.power", "index.element",
-    "matrix.element", "angle.omega", "vector.coordinates", "irrep.letter.a", "irrep.letter.b",
+    "arithmetic.fraction", "arithmetic.root", "arithmetic.sum", "arithmetic.directsum",
+    "relation.equal", "relation.lessequal", "relation.greater", "relation.greaterequal",
+    "relation.in", "relation.supset", "operator.intersection", "operator.union",
+    "operator.setminus", "relation.mapsto", "operator.directsum", "dots", "constant.pi",
+    "constant.infinity", "operator.determinant", "operator.cosine", "operator.sine", "set.complex",
+    "set.real", "mark.transpose", "matrix.display", "function.delta", "word.formula", "group.G",
+    "group.H", "group.schoenflies.cn", "group.schoenflies.cnh", "group.schoenflies.cnv",
+    "group.schoenflies.dn", "group.schoenflies.dnh", "group.schoenflies.dnd",
+    "group.schoenflies.s2n", "group.schoenflies.cs", "group.schoenflies.ci", "group.schoenflies.t",
+    "group.schoenflies.th", "group.schoenflies.td", "group.schoenflies.o", "group.schoenflies.oh",
+    "group.schoenflies.i", "group.schoenflies.ih", "group.schoenflies.cinf",
+    "group.schoenflies.cinfh", "group.schoenflies.cinfv", "group.schoenflies.dinf",
+    "group.schoenflies.dinfh", "group.so3", "group.o3", "element.identity", "element.inversion",
+    "class.size", "element.inversion.class", "element.rotation", "element.rotation.binary",
+    "element.rotation.axis", "element.rotation.z", "element.binary.angle", "class.rotation.angle",
+    "element.rotoreflection", "element.mirror.h", "element.mirror.v", "element.mirror.d",
+    "element.mirror.angle", "element.mirror.icosahedral", "mark.atom", "element.g", "element.h",
+    "element.inverse", "element.power", "index.element", "matrix.element", "angle.omega",
+    "angle.phi", "angle.psi", "vector.coordinates", "irrep.letter.a", "irrep.letter.b",
     "irrep.letter.e", "irrep.letter.t", "irrep.letter.g", "irrep.letter.h", "irrep.Gamma",
-    "irrep.Delta", "irrep.alias.gamma", "index.dimension", "index.parity",
-    "function.timereversal", "index.cg", "matrix.cg.exact", "index.J",
+    "irrep.Delta", "irrep.alias.gamma", "index.dimension", "index.parity", "function.timereversal",
+    "index.cg", "matrix.cg.exact", "index.family", "index.generating.variable", "index.J",
     "index.m", "label.jahn", "hm.order", "hm.slash", "hm.mirror", "hm.bar", "orbifold.order",
-    "orbifold.mirror", "orbifold.cross", "local.references.groups", "index.conjugates.c",
-    "index.root.order", "local.dummy.g", "local.dummy.h", "head.class", "head.irrep",
-    "head.bilbao", "head.reality", "head.conjugate", "head.subgroup", "head.order",
-    "head.conjugates", "head.normal", "head.polynomial", "set.cell",
+    "orbifold.mirror", "orbifold.cross", "local.references.groups", "index.family.N",
+    "index.rule.k", "index.conjugates.c", "index.root.order", "local.dummy.m", "local.dummy.g",
+    "local.dummy.h", "local.dummy.n", "head.class", "head.irrep", "head.bilbao", "head.reality",
+    "head.conjugate", "head.subgroup", "head.order", "head.conjugates", "head.normal",
+    "head.index.family", "head.polynomial", "head.component", "head.element", "head.family.irreps",
+    "set.cell",
 )
 
 

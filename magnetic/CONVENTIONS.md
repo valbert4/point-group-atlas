@@ -46,7 +46,8 @@ elements of $`\mathsf{M}`$ over them.
 The record of a group $`\mathsf{G}(\mathsf{H})`$ of magnetic type III is named `<G>-<H>`, the names of the
 records of $`\mathsf{G}`$ and $`\mathsf{H}`$ (section 2.1) joined by a hyphen, such as `C3v-C3`. The record of a
 group $`\mathsf{G1'}`$ of magnetic type II is named `<G>-1p`, such as `C3v-1p`. A group of magnetic type I is
-the point group $`\mathsf{G}`$, and the record of $`\mathsf{G}`$ holds it.
+the point group $`\mathsf{G}`$, and the record of $`\mathsf{G}`$ holds it. The records of the continuous groups
+(section 37) are named alike, such as `Cinfv-Cinf` and `SO3-1p`.
 
 The magnetic Hermann–Mauguin symbol is the symbol of $`\mathsf{G}`$ (section 2.3) with a prime on each symbol of
 an axis or a mirror whose element lies in $`\mathsf{G} \setminus \mathsf{H}`$. In magnetic type II it is the
@@ -121,14 +122,15 @@ The files of this catalogue are in the folder `magnetic/`, laid out and written 
 - `data/gap/`, `data/wolfram/`, `data/sympy/`, `data/latex/` and `data/pdf/`: the records in the other formats,
   the literal of each GAP, Wolfram and SymPy file bound to `o3m`.
 - `data/magnetic_groups.json`: one entry for each record, with its `id` (the record's name), `magnetic_type`,
-  `symbol`, `hermann_mauguin` and `node` (section 30.4), and `G` and `H` as record names.
+  `symbol`, `hermann_mauguin` and `node` (section 30.4, a finite group), and `G` and `H` as record names.
 - `CONVENTIONS.pdf`.
 - `data/pdf/numbers.json`: the numbers that the PDFs print (section 18).
 - `schema/<format>.schema.json`: the JSON Schema of each format, derived from all its files.
 
 The file `data/magnetic_groups.json` also holds `magnetic_type_I`, the pointer to the point groups, and
-`aliases` (section 15.2). Their `schema` is `"point-group-atlas/magnetic/<format>/1"`, where `<format>` is
-`group` for a record, `groups` for that file and `pdf-numbers` for the numbers.
+`aliases` (section 15.2). Their `schema` is `"point-group-atlas/magnetic/<format>/1"`. Here `<format>` is
+`group` for the record of a finite group, `group-continuous` for that of a continuous group, `groups` for that file
+and `pdf-numbers` for the numbers.
 
 ## 31. Time reversal
 
@@ -431,6 +433,115 @@ and `unitary`, and each also has these fields:
 
 A document draws the lattice when it has at most 60 classes.
 
+## 37. Continuous groups
+
+The parent has 21 continuous closed subgroups up to conjugacy, seven of each magnetic type. Those of magnetic
+type I are the continuous point groups (section 16), and those of magnetic type II are their groups
+$`\mathsf{G1'}`$. The groups of magnetic type III are $`\mathsf{C_{\infty h}}(\mathsf{C_{\infty}})`$,
+$`\mathsf{C_{\infty v}}(\mathsf{C_{\infty}})`$, $`\mathsf{D_{\infty}}(\mathsf{C_{\infty}})`$,
+$`\mathsf{D_{\infty h}}(\mathsf{D_{\infty}})`$, $`\mathsf{D_{\infty h}}(\mathsf{C_{\infty h}})`$,
+$`\mathsf{D_{\infty h}}(\mathsf{C_{\infty v}})`$ and $`\mathsf{O(3)}(\mathsf{SO(3)})`$. The limiting symmetry groups
+of eight types of vectorlike physical quantities, one continuous group of the parent for each type, are listed in
+[Hli14]. The records of the groups of magnetic types II and III follow sections 30 to 36, with the changes of this
+section.
+
+### 37.1 The record
+
+A continuous record has `domain` = `"continuous"`, as in section 16. Its pointer fields name these values of the
+records of the point groups:
+
+- `unitary_irreps`, `class_space` and `subduction_o3`: the families of irreps of $`\mathsf{H}`$, its class space
+  (section 16) and its subduction from $`\mathsf{O(3)}`$, those of $`\mathsf{G}`$ in magnetic type II.
+- `subgroup` (in `group`, magnetic type III): the entry of $`\mathsf{H}`$ among the closed subgroups of
+  $`\mathsf{G}`$ (section 16.1). It takes the place of `node`.
+- `orbit_space` (magnetic type III): the fields `G`, `H` and `images`, the orbit spaces (section 17.8) of
+  $`\mathsf{G}`$, of $`\mathsf{H}`$ and of the four images.
+- `record` (in `group.images`), `rings` and `bases`: the values of sections 31.2 and 35.1.
+
+The field `antiunitary_character` is the id of the family of $`\chi`$, or its `family` and `index` in
+$`\mathsf{O(3)}`$, as `determinant_character` is in section 2.2. The four images are continuous point groups in the
+frames of their records, so the `matrix` of each image and of `frame` is the identity. The field `signs` (magnetic
+type III) has one entry for each component of the class space of $`\mathsf{G}`$, its `component` and the `sign`
+$`\theta`$ of the elements of $`\mathsf{M}`$ over it.
+
+### 37.2 Families of corepresentations
+
+The irreps of $`\mathsf{H}`$ form families, and so do the corepresentations. In magnetic type III the
+representative is the antiunitary element over the element at angle 0 of the first component of $`\mathsf{G}`$
+outside $`\mathsf{H}`$. The field `representative` holds its `component` and its `turn`. The indicator of
+$`\Lambda`$ is the Haar integral of $`\chi_{\Lambda}(\mathsfit{g}^2)`$ over the elements $`\mathsfit{g}`$ of
+$`\mathsf{G} \setminus \mathsf{H}`$, of mass 1, and over $`\mathsf{G}`$ in magnetic type II. It is the same for every
+index of a family, and no family is of case (b).
+
+Each entry of `corepresentations` has these fields:
+
+- `family`: the id of its first family of irreps, with the symbol of its index in `index` where it has one.
+- `case` and, in case (c), `partner`: the case and the id of the partner family, of the same index.
+- `indicator` (magnetic type III): `value`, $`\iota`$, and `integral`. The latter gives for each `component` of
+  $`\mathsf{G}`$ outside $`\mathsf{H}`$ its `mass` and the character `chi` at the squares of its elements, a
+  trigonometric polynomial in their angle (section 16).
+- `N` (case (a)): the matrix $`N`$ of section 32.2, the same for every index. Its `form` is `"diagonal"` or
+  `"anti-diagonal"`, with the entries `diag` or `antidiag` from its first row to its last.
+
+The basis of $`N`$ in a family of dimension 2 is the rotation-diagonal basis of section 9, where $`N`$ is the
+identity or exchanges the two vectors. For $`D^{(J)}`$ and $`D^{(J,p)}`$ the basis is the kets, and `antidiag` is the
+formula `"(-1)^(J-m), m = J, ..., -J"` of the entry in the row of $`m`$ and the column of $`-m`$.
+
+### 37.3 The corepresentation table
+
+The field `corepresentation_table` holds `classes`, `rows` and `characters`, as in section 33. An entry of `classes`
+is a `component` of the class space of $`\mathsf{H}`$, and its merged classes on an arc run over the coordinate from
+`t0` to `t1` (section 16). The characters of a row are a map from each component to a trigonometric polynomial in its
+angle.
+
+### 37.4 Restrictions and symmetrized powers
+
+A term of a decomposition has `corepresentation` (the id of its first family), `multiplicity` and, for a family with
+an index, `index`. This index is a number or a function of the index of the entry, such as `"2n"`. The entries of
+`splitting` and `symmetrized_powers` hold for every index. Those of `splitting` are the families of irreps of
+$`\mathsf{G}`$ over $`\mathbb{R}`$, with `irrep` and `index`. The field `subduction_corepresentations` lists in `g` and
+`u` the terms for each $`J`$ up to `J_max`, and its `rule` states them for every $`J`$, as in section 11.
+
+In $`\mathsf{SO(3)1'}`$, $`\mathsf{O(3)1'}`$ and $`\mathsf{O(3)}(\mathsf{SO(3)})`$, a term of a symmetrized power has
+`index_range` (`symbol`, `from`, `to` and `step`) in place of `index`. The multiplicity $`c_{K}`$ of $`D^{(K)}`$ in the
+symmetrized cube of $`D^{(J)}`$ is the coefficient of $`t^{3J-K}`$ in
+
+```math
+\frac{(1-t^{2J+1})(1-t^{2J+2})(1-t^{2J+3})}{(1-t^{2})(1-t^{3})},
+```
+
+and `cubes` lists the decompositions for $`J \le 4`$.
+
+### 37.5 Closed subgroups
+
+The closed subgroups of $`\mathsf{M}`$ are taken up to conjugation by its elements. They lie over the closed subgroups
+of $`\mathsf{G}`$ that its record holds (section 16.1), as the subgroups of section 36 lie over those of
+$`\mathsf{G}`$. The field `subgroup_classes` has these fields:
+
+- `classes`: the pointer to the closed subgroups of $`\mathsf{G}`$.
+- `continuous` and `finite`: the entries, other than $`\mathsf{M}`$. In magnetic type III there is one for each entry of
+  $`\mathsf{G}`$, in its order. In magnetic type II the entries over each $`\mathsf{K}`$ are $`\mathsf{K}`$,
+  $`\mathsf{K1'}`$ and the groups $`\mathsf{K}(\mathsf{K}')`$.
+- `edges`: the covering edges (section 15.1) of $`\mathsf{M}`$ and its continuous closed subgroups, by the names of their
+  records.
+
+Each entry has these fields:
+
+- `magnetic_type`, `symbol` and `record`, as in section 36. In an axial group the symbol names the members of the
+  families of section 16.1, which tells $`\mathsf{D_{2}}(\mathsf{D_{1}})`$ from $`\mathsf{D_{2}}(\mathsf{C_{2}})`$.
+  In the documents it has $`\mathsf{C_{s}}`$ for $`\mathsf{C_{1h}}`$ and $`\mathsf{C_{1v}}`$ and $`\mathsf{C_{i}}`$ for
+  $`\mathsf{S_{2}}`$, and gray letters distinguish the classes with one symbol that are not conjugate, as in section 36.
+- `unitary` (magnetic type III): the `family` and the `N` of its unitary elements, where they form a member of a family.
+- `normalizer` and `centralizer`: their symbols in $`\mathsf{M}`$, with `C_s` and `C_i` as in section 15.1.
+- `order`, `class_size` and `normal` (a group $`\mathsf{M}`$ of magnetic type II), as in section 16.1, and `group`, the
+  `family` and the `N` of $`\mathsf{K}`$.
+
+### 37.6 Multipoles and invariants
+
+An entry of `multipoles` (section 35.1) holds its `multiplicity` as a number. The field `every_rank` gives it for every
+rank, for each kind, as `"0"`, `"1"`, `"1 for J even"`, `"1 for J odd"` or `"1 for J = 0"`. The field `two_vectors` is as
+in section 35.1, its counts by Haar integrals.
+
 ## Index of notation
 
 This index lists the common notation of the documents and selected symbols of their sections, each with its meaning and the section of the conventions that defines it (0.1 for the common notation). The symbols that are not letters come first, then the others by letter, a Greek letter under its Latin name.
@@ -438,6 +549,7 @@ This index lists the common notation of the documents and selected symbols of th
 | Notation | Meaning | Defined |
 |---|---|---|
 | $`n/m`$ | an axis with a mirror perpendicular to it, $`n/m`$, in a `hermann_mauguin` symbol, as in $`2/m`$ (with $`\mathsf{C_{2h}}`$) | 2 |
+| $`\bigoplus`$ | a direct sum over an index | 0.1 |
 | $`\cap`$ | the intersection | 0.1 |
 | $`\cup`$ | the union | 0.1 |
 | $`\Gamma\!\downarrow\mathsf{H}`$ | the restriction of the irrep $`\Gamma`$ to the subgroup $`\mathsf{H}`$ | 12 |
@@ -465,26 +577,37 @@ This index lists the common notation of the documents and selected symbols of th
 | Bilbao | the symbol of an irrep in the double point group tables of [EBW+17] (`bilbao`) | 0.1 |
 | $`\mathbb{C}`$ | the complex numbers | 0.1 |
 | $`\mathsfit{C_2'}`$ | a binary rotation about a horizontal axis: $`\mathsfit{C_2'}`$ in the class of $`\mathsfit{C_{2x}}`$, $`\mathsfit{C_2''}`$ in the other | 5 |
+| $`\mathsfit{C_2'}(\psi)`$ | the binary rotation about the horizontal axis at the azimuth $`\psi`$ (the $`x`$ axis for $`\psi = 0`$) | 16 |
 | $`\mathsf{C_{2}^{T}}`$ | the group $`\{\mathsfit{E}, \varTheta\}`$ of time reversal, a factor of the parent $`\mathsf{O(3)} \times \mathsf{C_{2}^{T}}`$ | 30.1 |
 | case | the case (a), (b) or (c) of an irrep or of a corepresentation | 32.1 |
 | centralizer | the centralizer of a subgroup in the group, by its class | 36 |
 | $`\chi`$ | the one-dimensional real irrep of $`\mathsf{G}`$ with kernel $`\mathsf{H}`$, of value $`\theta`$ | 30.1 |
 | $`\chi_{\Gamma}(\mathsfit{g})`$ | the character of the irrep $`\Gamma`$ at the element $`\mathsfit{g}`$ | 6 |
 | $`\mathsf{C_{i}}`$ | the group of the inversion | 2 |
+| $`\mathsf{C_{\infty}}`$ | the rotations about $`z`$ | 3 |
+| $`\mathsf{C_{\infty h}}`$ | $`\mathsf{C_{\infty}}`$ with the horizontal mirror | 3 |
+| $`\mathsfit{C_{\infty}}(\phi)`$ | the rotation $`\mathsfit{R_z}(\phi)`$ as a point of the class space, on the arc of the rotations about $`z`$ | 16 |
+| $`\mathsf{C_{\infty v}}`$ | $`\mathsf{C_{\infty}}`$ with the vertical mirrors | 3 |
 | class | the class of an element, or a class | 0.1 |
 | $`\mathsf{C_{\mathnormal{N}}}`$ | the cyclic group of the $`N`$ rotations about $`z`$ | 3 |
 | $`\mathsf{C_{\mathnormal{N}h}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with the horizontal mirror | 3 |
 | $`\mathsfit{C_{\mathnormal{n}}^{\mathnormal{k}}}`$ | the rotation by $`2\pi k/n`$ about an axis, written $`\mathsfit{C_{\mathnormal{n}}}`$ when $`k = 1`$ | 5 |
 | $`\mathsf{C_{\mathnormal{N}v}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with $`N`$ vertical mirrors | 3 |
+| component | a component of the class space | 0.1 |
 | conjugate | the complex conjugate of a complex irrep or of a family of complex irreps | 0.1 |
 | conjugates | the number of subgroups conjugate to a subgroup $`\mathsf{H}`$ in $`\mathsf{G}`$ | 0.1 |
 | corep | a corepresentation, named by its irreps, or the one that contains an irrep | 32.3 |
+| $`\mathsfit{C}(\phi)`$ | the rotation by $`\phi`$ about $`z`$, or its class in $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$, the rotations by $`\phi`$ about any axis | 16 |
 | $`\mathsf{C_{s}}`$ | the group of one mirror | 2 |
 | $`\mathcal{D}`$ | the cell: the part of the fundamental domain $`\mathcal{F}`$ in $`\mathsf{SO(3)}`$, one element of every coset of $`\mathsf{G} \cap \mathsf{SO(3)}`$ | 17 |
+| $`D^{(J)}`$ | the irrep of $`\mathsf{SO(3)}`$ of angular momentum $`J`$ | 11 |
 | $`D^{\Gamma}(\mathsfit{g})`$ | the matrix of the irrep $`\Gamma`$ at the element $`\mathsfit{g}`$ | 9 |
 | $`D^{(J,p)}`$ | the irrep of $`\mathsf{O(3)}`$ of angular momentum $`J`$ and parity $`p`$, such as $`D^{(J,+)}`$ or $`D^{(J,-)}`$ | 11 |
 | $`d`$ | the dimension of an irrep | 9 |
+| $`\delta_{j,k}`$ | the Kronecker delta | 0.1 |
 | $`\det`$ | the determinant, of a matrix or of an element: $`\det \mathsfit{g} = \det P(\mathsfit{g})`$ | 0.1 |
+| $`\mathsf{D_{\infty}}`$ | $`\mathsf{C_{\infty}}`$ with the binary axes perpendicular to $`z`$ | 3 |
+| $`\mathsf{D_{\infty h}}`$ | $`\mathsf{D_{\infty}}`$ with the horizontal mirror | 3 |
 | $`\mathsf{D_{\mathnormal{N}}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with $`N`$ binary axes perpendicular to $`z`$ | 3 |
 | $`\mathsf{D_{\mathnormal{N}d}}`$ | $`\mathsf{D_{\mathnormal{N}}}`$ with $`N`$ dihedral mirrors | 3 |
 | $`\mathsf{D_{\mathnormal{N}h}}`$ | $`\mathsf{D_{\mathnormal{N}}}`$ with the horizontal mirror | 3 |
@@ -494,8 +617,10 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathrm{e}`$ | the base of the natural logarithm | 0.1 |
 | electric | the electric multipoles of a rank, by their number | 35.1 |
 | electric toroidal | the electric toroidal multipoles of a rank, by their number | 35.1 |
+| element | the element of a component at its angle | 0.1 |
 | $`\mathrm{e[V^{2}]}`$ | the Jahn symbol of a space of Cartesian tensors: V a polar vector, e an axial factor, a power the number of factors, brackets their symmetrized product, braces their antisymmetrized one | 13 |
 | $`F`$ | the exact rotation of the field `frame`, which carries the elements of the record of $`\mathsf{H}`$ to their images in $`\mathsf{G}`$ | 30.3 |
+| family | a family of irreps | 0.1 |
 | $`\mathsf{G}`$ | a group of this catalogue (a document names its own group) | 0.1 |
 | $`\mathrm{\scriptsize G}`$ | a four-dimensional irrep | 6 |
 | $`\mathsfit{g}`$ | an element of the group | 0.1 |
@@ -515,6 +640,8 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathrm{i}`$ | the imaginary unit | 0.1 |
 | $`\mathsfit{i}`$ | the inversion | 0.1 |
 | $`\mathsf{I_{h}}`$ | $`\mathsf{I}`$ with the inversion | 3 |
+| index | the range of the index of the irreps of a family, such as $`n \ge 1`$ | 0.1 |
+| $`\mathsfit{\infty\sigma_v}`$ | an atom of the class space: the class of all the $`\mathsfit{\sigma_v}(\psi)`$, or of all the $`\mathsfit{C_2'}(\psi)`$ | 0.1 |
 | $`\iota`$ | the indicator of an irrep of $`\mathsf{H}`$: $`+1`$, $`-1`$ or $`0`$ in the cases (a), (b) and (c) | 32.1 |
 | irrep | an irrep | 0.1 |
 | $`J`$ | the angular momentum, the degree of the spherical harmonics $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ | 0.1 |
@@ -529,8 +656,10 @@ This index lists the common notation of the documents and selected symbols of th
 | magnetic toroidal | the magnetic toroidal multipoles of a rank, by their number | 35.1 |
 | $`\mu`$ | the partner index of an irrep | 0.1 |
 | $`\mu_1, \mu_2`$ | the partners of the two factors of a product | 10 |
+| $`N`$ | the parameter of an axial family, the number of its rotations about the principal axis | 1 |
 | $`\mathcal{N}`$ | the normalization of a Clebsch–Gordan or subduction block $`\mathcal{E}/\sqrt{\mathcal{N}}`$ | 10 |
 | $`n`$ | the number of elements of a class, before its symbol, such as the 8 of $`\mathsfit{8C_3}`$ | 5 |
+| $`n`$ | the index of a family of irreps, with $`n`$ and $`n'`$ the indices of the two factors of a product | 16 |
 | name | a tensor property odd under time reversal, by its Jahn symbol | 35 |
 | normal | whether a subgroup is normal | 0.1 |
 | normalizer | the normalizer of a subgroup in the group, by its class | 36 |
@@ -542,10 +671,12 @@ This index lists the common notation of the documents and selected symbols of th
 | order | the order of a subgroup | 0.1 |
 | $`p`$ | the parity of an irrep of $`\mathsf{O(3)}`$: $`+1`$ ($`\mathrm{g}`$) or $`-1`$ ($`\mathrm{u}`$) | 11 |
 | $`P(\mathsfit{g})`$ | the $`3\times 3`$ matrix of the element $`\mathsfit{g}`$, acting on rows: $`\mathbf{r} \mapsto \mathbf{r}\, P(\mathsfit{g})`$ | 4 |
+| $`\phi`$ | a rotation angle, that of the arcs $`\mathsfit{C}(\phi)`$ and $`\mathsfit{i\,C}(\phi)`$ of the class space | 0.2 |
 | $`\varphi`$ | the golden ratio $`\tfrac{1}{2}\bigl(1 + \sqrt{5}\bigr)`$ | 0.1 |
 | $`\pi`$ | the ratio of a circle's circumference to its diameter | 0.1 |
 | polynomial | the polynomial in $`x`$, $`y`$, $`z`$ of a function or of an invariant, or in the components of two vectors | 0.1 |
 | properties | the tensor properties that a row names, in words | 35 |
+| $`\psi`$ | the azimuth of an element of an atom of the class space, $`\mathsfit{\sigma_v}(\psi)`$ or $`\mathsfit{C_2'}(\psi)`$ | 0.2 |
 | $`\mathbb{R}`$ | the real numbers | 0.1 |
 | reality | the reality of an irrep: real, pseudoreal or complex | 0.1 |
 | $`\mathsfit{R_{\mathbf{v}}}(\omega)`$ | the rotation by $`\omega`$ about the axis $`\mathbf{v}`$, counterclockwise as seen from its tip ($`\mathsfit{R_z}`$ and $`\mathsfit{R_y}`$ for $`\mathbf{v}`$ along $`z`$ and $`y`$), or the element with matrix $`P(\mathsfit{R_{\mathbf{v}}}(\omega))`$ | 4 |
@@ -554,11 +685,14 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathsfit{\sigma_d}`$ | a vertical mirror outside the class of $`\mathsfit{\sigma_v}(0)`$, or a diagonal mirror of $`\mathsf{T_{d}}`$ and $`\mathsf{O_{h}}`$ | 5 |
 | $`\mathsfit{\sigma_h}`$ | the horizontal mirror, in the $`xy`$ plane, or a mirror in a coordinate plane in $`\mathsf{T_{h}}`$ and $`\mathsf{O_{h}}`$ | 5 |
 | $`\mathsfit{\sigma_v}`$ | a vertical mirror, in the class of $`\mathsfit{\sigma_v}(0)`$ | 5 |
+| $`\mathsfit{\sigma_v}(\psi)`$ | the mirror in the vertical plane at the azimuth $`\psi`$ (the $`xz`$ plane for $`\psi = 0`$) | 16 |
 | $`\mathsfit{S_{\mathnormal{n}}^{\mathnormal{k}}}`$ | the rotoreflection: $`\mathsfit{C_{\mathnormal{n}}^{\mathnormal{k}}}`$ and the reflection in the plane normal to its axis ($`k`$ odd) | 5 |
+| $`\mathsf{SO(3)}`$ | the group of all rotations, with $`\mathsf{SO(2)}`$ the rotations about one axis and $`\mathsf{SO(\mathnormal{N})}`$ the rotations of $`N`$ dimensions | 3 |
 | spaces | the spaces of Cartesian tensors whose sum is the tensor of a property | 35 |
 | subgrp | a subgroup, the representative of its class | 0.1 |
 | $`\mathsf{T}`$ | the rotations of the tetrahedron | 3 |
 | $`\mathrm{\scriptsize T}`$ | a three-dimensional irrep | 6 |
+| $`t`$ | the variable of the generating functions | 14 |
 | $`\mathsf{T_{d}}`$ | the symmetries of the tetrahedron | 3 |
 | $`\mathsf{T_{h}}`$ | $`\mathsf{T}`$ with the inversion | 3 |
 | $`\varTheta`$ | time reversal | 30.1 |

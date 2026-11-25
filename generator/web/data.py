@@ -307,16 +307,20 @@ def data_box(files, stem, rec, group_link, here):
     from ..formats.latex import listed
     schema = "The schema of the record is %s" % files.link(
         schema_path(files.cat, rec), esc(schema_path(files.cat, rec).rsplit("/", 1)[1]))
-    # the list leaves out the groups of a subgroup lattice: the records of volumes I and II name
-    # them by their classes, a magnetic record by pointers, which its requires also holds
-    of_lattice = set(pointers(rec.get("subgroup_lattice")))
+    # the list leaves out the groups of a subgroup lattice, or the closed subgroups of a continuous
+    # group: the records of volumes I and II name them by their classes, a magnetic record by
+    # pointers, which its requires also holds
+    key, what = (("subgroup_classes", "closed subgroups")
+                 if rec["schema"] == names.MAGNETIC_CONTINUOUS_TAG
+                 else ("subgroup_lattice", "subgroup lattice"))
+    of_lattice = set(pointers(rec.get(key)))
     if of_lattice:
-        of_lattice -= set(pointers([v for k, v in rec.items() if k != "subgroup_lattice"]))
+        of_lattice -= set(pointers([v for k, v in rec.items() if k != key]))
     requires = files.requires.get(stem, [])
     named = [r for r in requires if r not in of_lattice]
     if named:
         schema += ", and %sthe record names %s" % (
-            "outside its subgroup lattice " if len(named) < len(requires) else "",
+            "outside its %s " % what if len(named) < len(requires) else "",
             listed([group_link(r) for r in named]))
     out.append("<p>%s. %s</p>" % (schema, index_sentence(files)))
     return "\n".join(out)

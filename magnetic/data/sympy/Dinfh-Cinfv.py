@@ -1,0 +1,1245 @@
+# Dinfh-Cinfv (D_infh(C_infv)): data/json/Dinfh-Cinfv.json as a Python dict of SymPy values.
+from sympy import I, Rational, S, exp, pi
+
+o3m = {
+    'class_space': 'rotation/Cinfv#/character_functions/class_space',
+    'corepresentation_table': {
+        'characters': [
+            {
+                'Cphi': {
+                    'f': 'trig',
+                    'terms': [
+                        {
+                            'cos': Rational(1,1),
+                            'harmonic': {'coefficient': 0, 'constant': 0},
+                            'sin': Rational(0,1)
+                        }
+                    ],
+                    'var': 'phi'
+                },
+                'sv': {
+                    'f': 'trig',
+                    'terms': [
+                        {
+                            'cos': Rational(1,1),
+                            'harmonic': {'coefficient': 0, 'constant': 0},
+                            'sin': Rational(0,1)
+                        }
+                    ],
+                    'var': 'phi'
+                }
+            },
+            {
+                'Cphi': {
+                    'f': 'trig',
+                    'terms': [
+                        {
+                            'cos': Rational(1,1),
+                            'harmonic': {'coefficient': 0, 'constant': 0},
+                            'sin': Rational(0,1)
+                        }
+                    ],
+                    'var': 'phi'
+                },
+                'sv': {
+                    'f': 'trig',
+                    'terms': [
+                        {
+                            'cos': Rational(-1,1),
+                            'harmonic': {'coefficient': 0, 'constant': 0},
+                            'sin': Rational(0,1)
+                        }
+                    ],
+                    'var': 'phi'
+                }
+            },
+            {
+                'Cphi': {
+                    'f': 'trig',
+                    'terms': [
+                        {
+                            'cos': Rational(2,1),
+                            'harmonic': {'coefficient': 1, 'constant': 0, 'index_symbol': 'n'},
+                            'sin': Rational(0,1)
+                        }
+                    ],
+                    'var': 'phi'
+                },
+                'sv': {'f': 'trig', 'terms': [], 'var': 'phi'}
+            }
+        ],
+        'classes': [{'component': 'Cphi', 't0': [0, 1], 't1': [1, 2]}, {'component': 'sv'}],
+        'rows': [['A1'], ['A2'], ['E']]
+    },
+    'corepresentations': [
+        {
+            'N': {'diag': ['1'], 'form': 'diagonal'},
+            'case': 'a',
+            'family': 'A1',
+            'indicator': {
+                'integral': [
+                    {
+                        'chi': {
+                            'f': 'trig',
+                            'terms': [
+                                {
+                                    'cos': Rational(1,1),
+                                    'harmonic': {'coefficient': 0, 'constant': 0},
+                                    'sin': Rational(0,1)
+                                }
+                            ],
+                            'var': 'phi'
+                        },
+                        'component': 'c2p',
+                        'mass': [1, 2]
+                    },
+                    {
+                        'chi': {
+                            'f': 'trig',
+                            'terms': [
+                                {
+                                    'cos': Rational(1,1),
+                                    'harmonic': {'coefficient': 0, 'constant': 0},
+                                    'sin': Rational(0,1)
+                                }
+                            ],
+                            'var': 'phi'
+                        },
+                        'component': 'iCphi',
+                        'mass': [1, 2]
+                    }
+                ],
+                'value': 1
+            }
+        },
+        {
+            'N': {'diag': ['1'], 'form': 'diagonal'},
+            'case': 'a',
+            'family': 'A2',
+            'indicator': {
+                'integral': [
+                    {
+                        'chi': {
+                            'f': 'trig',
+                            'terms': [
+                                {
+                                    'cos': Rational(1,1),
+                                    'harmonic': {'coefficient': 0, 'constant': 0},
+                                    'sin': Rational(0,1)
+                                }
+                            ],
+                            'var': 'phi'
+                        },
+                        'component': 'c2p',
+                        'mass': [1, 2]
+                    },
+                    {
+                        'chi': {
+                            'f': 'trig',
+                            'terms': [
+                                {
+                                    'cos': Rational(1,1),
+                                    'harmonic': {'coefficient': 0, 'constant': 0},
+                                    'sin': Rational(0,1)
+                                }
+                            ],
+                            'var': 'phi'
+                        },
+                        'component': 'iCphi',
+                        'mass': [1, 2]
+                    }
+                ],
+                'value': 1
+            }
+        },
+        {
+            'N': {'diag': ['1', '1'], 'form': 'diagonal'},
+            'case': 'a',
+            'family': 'E',
+            'index': 'n',
+            'indicator': {
+                'integral': [
+                    {
+                        'chi': {
+                            'f': 'trig',
+                            'terms': [
+                                {
+                                    'cos': Rational(2,1),
+                                    'harmonic': {'coefficient': 0, 'constant': 0},
+                                    'sin': Rational(0,1)
+                                }
+                            ],
+                            'var': 'phi'
+                        },
+                        'component': 'c2p',
+                        'mass': [1, 2]
+                    },
+                    {
+                        'chi': {
+                            'f': 'trig',
+                            'terms': [
+                                {
+                                    'cos': Rational(2,1),
+                                    'harmonic': {'coefficient': 2, 'constant': 0, 'index_symbol': 'n'},
+                                    'sin': Rational(0,1)
+                                }
+                            ],
+                            'var': 'phi'
+                        },
+                        'component': 'iCphi',
+                        'mass': [1, 2]
+                    }
+                ],
+                'value': 1
+            }
+        }
+    ],
+    'domain': 'continuous',
+    'frame': {
+        'matrix': [
+            [Rational(1,1), Rational(0,1), Rational(0,1)],
+            [Rational(0,1), Rational(1,1), Rational(0,1)],
+            [Rational(0,1), Rational(0,1), Rational(1,1)]
+        ]
+    },
+    'group': {
+        'G': 'rotation/Dinfh#',
+        'H': 'rotation/Cinfv#',
+        'allowed_properties': [
+            {
+                'irrep': 'A2u',
+                'jahn': 'aV',
+                'properties': ['the toroidal moment'],
+                'spaces': ['polar-1']
+            },
+            {
+                'irrep': 'A2u',
+                'jahn': 'aeV2',
+                'properties': ['the linear magnetoelectric effect'],
+                'spaces': ['polar-1', 'axial-2']
+            },
+            {
+                'irrep': 'A2u',
+                'jahn': 'aV[V2]',
+                'properties': ['the piezotoroidic effect', 'the imaginary part of second-harmonic generation'],
+                'spaces': ['piezoelectric']
+            },
+            {
+                'irrep': 'A2u',
+                'jahn': 'a[V2]V',
+                'properties': ['spontaneous gyrotropic birefringence'],
+                'spaces': ['piezoelectric']
+            },
+            {
+                'irrep': 'A2u',
+                'jahn': 'aV3',
+                'properties': ['the imaginary part of the second-order susceptibility'],
+                'spaces': ['polar-1', 'axial-2', 'piezoelectric']
+            },
+            {
+                'irrep': 'A2u',
+                'jahn': 'aV{V2}',
+                'properties': ['the imaginary part of optical rectification'],
+                'spaces': ['polar-1', 'axial-2']
+            }
+        ],
+        'antiunitary_character': 'A2u',
+        'centralizer': {
+            'normalizer_index': {'reason': 'continuous-group', 'value': None},
+            'symbol': "C_2h1'"
+        },
+        'hermann_mauguin': "inf/m'm",
+        'images': {
+            'axial_even': {
+                'matrix': [
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)]
+                ],
+                'record': 'rotation/Dinf#'
+            },
+            'axial_odd': {
+                'matrix': [
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)]
+                ],
+                'record': 'rotation/Dinfh#'
+            },
+            'polar_even': {
+                'matrix': [
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)]
+                ],
+                'record': 'rotation/Dinfh#'
+            },
+            'polar_odd': {
+                'matrix': [
+                    [Rational(1,1), Rational(0,1), Rational(0,1)],
+                    [Rational(0,1), Rational(1,1), Rational(0,1)],
+                    [Rational(0,1), Rational(0,1), Rational(1,1)]
+                ],
+                'record': 'rotation/Cinfv#'
+            }
+        },
+        'magnetic_type': 'III',
+        'normalizer': {'index': 2, 'symbol': "D_infh1'"},
+        'subgroup': 'rotation/Dinfh#/subduction_subgroups/continuous/2',
+        'symbol': 'D_infh(C_infv)'
+    },
+    'invariants': {
+        'bases': 'rotation/Dinfh#/subduction_basis',
+        'every_rank': {
+            'electric': '1 for J even',
+            'electric-toroidal': '0',
+            'magnetic': '0',
+            'magnetic-toroidal': '1 for J odd'
+        },
+        'multipoles': [
+            {'J': 0, 'kind': 'electric', 'multiplicity': 1},
+            {'J': 1, 'kind': 'electric', 'multiplicity': 0},
+            {'J': 2, 'kind': 'electric', 'multiplicity': 1},
+            {'J': 3, 'kind': 'electric', 'multiplicity': 0},
+            {'J': 4, 'kind': 'electric', 'multiplicity': 1},
+            {'J': 0, 'kind': 'electric-toroidal', 'multiplicity': 0},
+            {'J': 1, 'kind': 'electric-toroidal', 'multiplicity': 0},
+            {'J': 2, 'kind': 'electric-toroidal', 'multiplicity': 0},
+            {'J': 3, 'kind': 'electric-toroidal', 'multiplicity': 0},
+            {'J': 4, 'kind': 'electric-toroidal', 'multiplicity': 0},
+            {'J': 0, 'kind': 'magnetic-toroidal', 'multiplicity': 0},
+            {'J': 1, 'kind': 'magnetic-toroidal', 'multiplicity': 1},
+            {'J': 2, 'kind': 'magnetic-toroidal', 'multiplicity': 0},
+            {'J': 3, 'kind': 'magnetic-toroidal', 'multiplicity': 1},
+            {'J': 4, 'kind': 'magnetic-toroidal', 'multiplicity': 0},
+            {'J': 0, 'kind': 'magnetic', 'multiplicity': 0},
+            {'J': 1, 'kind': 'magnetic', 'multiplicity': 0},
+            {'J': 2, 'kind': 'magnetic', 'multiplicity': 0},
+            {'J': 3, 'kind': 'magnetic', 'multiplicity': 0},
+            {'J': 4, 'kind': 'magnetic', 'multiplicity': 0}
+        ],
+        'rings': {
+            'axial_even': 'rotation/Dinf#/invariants',
+            'axial_odd': 'rotation/Dinfh#/invariants',
+            'polar_even': 'rotation/Dinfh#/invariants',
+            'polar_odd': 'rotation/Cinfv#/invariants'
+        },
+        'two_vectors': {
+            'counts': [
+                {'a': 1, 'b': 1, 'count': 1},
+                {'a': 1, 'b': 2, 'count': 0},
+                {'a': 1, 'b': 3, 'count': 2},
+                {'a': 1, 'b': 4, 'count': 0},
+                {'a': 1, 'b': 5, 'count': 3},
+                {'a': 2, 'b': 1, 'count': 0},
+                {'a': 2, 'b': 2, 'count': 6},
+                {'a': 2, 'b': 3, 'count': 0},
+                {'a': 2, 'b': 4, 'count': 10},
+                {'a': 3, 'b': 1, 'count': 2},
+                {'a': 3, 'b': 2, 'count': 0},
+                {'a': 3, 'b': 3, 'count': 6},
+                {'a': 4, 'b': 1, 'count': 0},
+                {'a': 4, 'b': 2, 'count': 10},
+                {'a': 5, 'b': 1, 'count': 3}
+            ],
+            'kinds': ['polar_even', 'axial_odd'],
+            'polynomials': [
+                {
+                    'a': 1,
+                    'b': 1,
+                    'basis': [{'0,1,0;1,0,0': Rational(-1,1), '1,0,0;0,1,0': Rational(1,1)}]
+                },
+                {'a': 1, 'b': 2, 'basis': []},
+                {
+                    'a': 1,
+                    'b': 3,
+                    'basis': [
+                        {
+                            '0,1,0;1,2,0': Rational(-1,1),
+                            '0,1,0;3,0,0': Rational(-1,1),
+                            '1,0,0;0,3,0': Rational(1,1),
+                            '1,0,0;2,1,0': Rational(1,1)
+                        },
+                        {'0,1,0;1,0,2': Rational(-1,1), '1,0,0;0,1,2': Rational(1,1)}
+                    ]
+                },
+                {'a': 2, 'b': 1, 'basis': []},
+                {
+                    'a': 2,
+                    'b': 2,
+                    'basis': [
+                        {
+                            '0,2,0;0,2,0': Rational(1,1),
+                            '1,1,0;1,1,0': Rational(2,1),
+                            '2,0,0;2,0,0': Rational(1,1)
+                        },
+                        {
+                            '0,2,0;2,0,0': Rational(1,1),
+                            '1,1,0;1,1,0': Rational(-2,1),
+                            '2,0,0;0,2,0': Rational(1,1)
+                        },
+                        {'0,2,0;0,0,2': Rational(1,1), '2,0,0;0,0,2': Rational(1,1)},
+                        {'0,1,1;0,1,1': Rational(1,1), '1,0,1;1,0,1': Rational(1,1)},
+                        {'0,0,2;0,2,0': Rational(1,1), '0,0,2;2,0,0': Rational(1,1)},
+                        {'0,0,2;0,0,2': Rational(1,1)}
+                    ]
+                },
+                {
+                    'a': 3,
+                    'b': 1,
+                    'basis': [
+                        {
+                            '0,3,0;1,0,0': Rational(-1,1),
+                            '1,2,0;0,1,0': Rational(1,1),
+                            '2,1,0;1,0,0': Rational(-1,1),
+                            '3,0,0;0,1,0': Rational(1,1)
+                        },
+                        {'0,1,2;1,0,0': Rational(-1,1), '1,0,2;0,1,0': Rational(1,1)}
+                    ]
+                }
+            ]
+        }
+    },
+    'orbit_space': {
+        'G': 'rotation/Dinfh#/orbit_space',
+        'H': 'rotation/Cinfv#/orbit_space',
+        'images': {
+            'axial_even': 'rotation/Dinf#/orbit_space',
+            'axial_odd': 'rotation/Dinfh#/orbit_space',
+            'polar_even': 'rotation/Dinfh#/orbit_space',
+            'polar_odd': 'rotation/Cinfv#/orbit_space'
+        }
+    },
+    'representative': {'component': 'c2p', 'turn': [0, 1]},
+    'schema': 'point-group-atlas/magnetic/group-continuous/1',
+    'signs': [
+        {'component': 'Cphi', 'sign': 1},
+        {'component': 'c2p', 'sign': -1},
+        {'component': 'iCphi', 'sign': -1},
+        {'component': 'sv', 'sign': 1}
+    ],
+    'splitting': [
+        {'irrep': 'A1g', 'terms': [{'corepresentation': 'A1', 'multiplicity': 1}]},
+        {'irrep': 'A2g', 'terms': [{'corepresentation': 'A2', 'multiplicity': 1}]},
+        {
+            'index': 'n',
+            'irrep': 'Eg',
+            'terms': [{'corepresentation': 'E', 'index': 'n', 'multiplicity': 1}]
+        },
+        {'irrep': 'A1u', 'terms': [{'corepresentation': 'A2', 'multiplicity': 1}]},
+        {'irrep': 'A2u', 'terms': [{'corepresentation': 'A1', 'multiplicity': 1}]},
+        {
+            'index': 'n',
+            'irrep': 'Eu',
+            'terms': [{'corepresentation': 'E', 'index': 'n', 'multiplicity': 1}]
+        }
+    ],
+    'subduction_corepresentations': {
+        'J_max': 6,
+        'g': [
+            [{'corepresentation': 'A1', 'multiplicity': 1}],
+            [
+                {'corepresentation': 'A2', 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 1, 'multiplicity': 1}
+            ],
+            [
+                {'corepresentation': 'A1', 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 1, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 2, 'multiplicity': 1}
+            ],
+            [
+                {'corepresentation': 'A2', 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 1, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 2, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 3, 'multiplicity': 1}
+            ],
+            [
+                {'corepresentation': 'A1', 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 1, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 2, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 3, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 4, 'multiplicity': 1}
+            ],
+            [
+                {'corepresentation': 'A2', 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 1, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 2, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 3, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 4, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 5, 'multiplicity': 1}
+            ],
+            [
+                {'corepresentation': 'A1', 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 1, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 2, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 3, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 4, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 5, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 6, 'multiplicity': 1}
+            ]
+        ],
+        'rule': 'D^(J,p) | D_infh(C_infv) = [A_1 if p(-1)^J = +1 else A_2] + sum_{n=1..J} E_n',
+        'u': [
+            [{'corepresentation': 'A2', 'multiplicity': 1}],
+            [
+                {'corepresentation': 'A1', 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 1, 'multiplicity': 1}
+            ],
+            [
+                {'corepresentation': 'A2', 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 1, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 2, 'multiplicity': 1}
+            ],
+            [
+                {'corepresentation': 'A1', 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 1, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 2, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 3, 'multiplicity': 1}
+            ],
+            [
+                {'corepresentation': 'A2', 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 1, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 2, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 3, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 4, 'multiplicity': 1}
+            ],
+            [
+                {'corepresentation': 'A1', 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 1, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 2, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 3, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 4, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 5, 'multiplicity': 1}
+            ],
+            [
+                {'corepresentation': 'A2', 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 1, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 2, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 3, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 4, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 5, 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': 6, 'multiplicity': 1}
+            ]
+        ]
+    },
+    'subduction_o3': 'rotation/Cinfv#/subduction_o3',
+    'subgroup_classes': {
+        'classes': 'rotation/Dinfh#/subduction_subgroups',
+        'continuous': [
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'rotation/Cinf#',
+                'symbol': 'C_inf'
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/Cinfh-Cinf#',
+                'symbol': 'C_infh(C_inf)'
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'rotation/Cinfv#',
+                'symbol': 'C_infv'
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/Dinf-Cinf#',
+                'symbol': 'D_inf(C_inf)'
+            }
+        ],
+        'edges': [
+            {'lower': 'Cinf', 'upper': 'Cinfh-Cinf'},
+            {'lower': 'Cinf', 'upper': 'Cinfv'},
+            {'lower': 'Cinf', 'upper': 'Dinf-Cinf'},
+            {'lower': 'Cinfh-Cinf', 'upper': 'Dinfh-Cinfv'},
+            {'lower': 'Cinfv', 'upper': 'Dinfh-Cinfv'},
+            {'lower': 'Dinf-Cinf', 'upper': 'Dinfh-Cinfv'}
+        ],
+        'finite': [
+            {
+                'centralizer': 'D_infh(C_infv)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'rotation/C1#',
+                'symbol': 'C_1'
+            },
+            {
+                'centralizer': 'D_infh(C_infv)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'rotation/C2#',
+                'symbol': 'C_2'
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'rotation/C3#',
+                'symbol': 'C_3'
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'rotation/C4#',
+                'symbol': 'C_4'
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'rotation/C5#',
+                'symbol': 'C_5'
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'rotation/C6#',
+                'symbol': 'C_6'
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'rotation/C7#',
+                'symbol': 'C_7'
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'rotation/C8#',
+                'symbol': 'C_8'
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'rotation/C9#',
+                'symbol': 'C_9'
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'rotation/C10#',
+                'symbol': 'C_10'
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'rotation/C11#',
+                'symbol': 'C_11'
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'rotation/C12#',
+                'symbol': 'C_12'
+            },
+            {
+                'centralizer': 'D_infh(C_infv)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/S2-C1#',
+                'symbol': 'S_2(C_1)',
+                'unitary': {'N': 1, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/S4-C2#',
+                'symbol': 'S_4(C_2)',
+                'unitary': {'N': 2, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/S6-C3#',
+                'symbol': 'S_6(C_3)',
+                'unitary': {'N': 3, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/S8-C4#',
+                'symbol': 'S_8(C_4)',
+                'unitary': {'N': 4, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/S10-C5#',
+                'symbol': 'S_10(C_5)',
+                'unitary': {'N': 5, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/S12-C6#',
+                'symbol': 'S_12(C_6)',
+                'unitary': {'N': 6, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/S14-C7#',
+                'symbol': 'S_14(C_7)',
+                'unitary': {'N': 7, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/S16-C8#',
+                'symbol': 'S_16(C_8)',
+                'unitary': {'N': 8, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/S18-C9#',
+                'symbol': 'S_18(C_9)',
+                'unitary': {'N': 9, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/S20-C10#',
+                'symbol': 'S_20(C_10)',
+                'unitary': {'N': 10, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/S22-C11#',
+                'symbol': 'S_22(C_11)',
+                'unitary': {'N': 11, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/S24-C12#',
+                'symbol': 'S_24(C_12)',
+                'unitary': {'N': 12, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'D_infh(C_infv)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/C1h-C1#',
+                'symbol': 'C_1h(C_1)',
+                'unitary': {'N': 1, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'D_infh(C_infv)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/C2h-C2#',
+                'symbol': 'C_2h(C_2)',
+                'unitary': {'N': 2, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/C3h-C3#',
+                'symbol': 'C_3h(C_3)',
+                'unitary': {'N': 3, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/C4h-C4#',
+                'symbol': 'C_4h(C_4)',
+                'unitary': {'N': 4, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/C5h-C5#',
+                'symbol': 'C_5h(C_5)',
+                'unitary': {'N': 5, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/C6h-C6#',
+                'symbol': 'C_6h(C_6)',
+                'unitary': {'N': 6, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/C7h-C7#',
+                'symbol': 'C_7h(C_7)',
+                'unitary': {'N': 7, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/C8h-C8#',
+                'symbol': 'C_8h(C_8)',
+                'unitary': {'N': 8, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/C9h-C9#',
+                'symbol': 'C_9h(C_9)',
+                'unitary': {'N': 9, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/C10h-C10#',
+                'symbol': 'C_10h(C_10)',
+                'unitary': {'N': 10, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/C11h-C11#',
+                'symbol': 'C_11h(C_11)',
+                'unitary': {'N': 11, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_infh(C_inf)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_infh(C_infv)',
+                'record': 'magnetic/C12h-C12#',
+                'symbol': 'C_12h(C_12)',
+                'unitary': {'N': 12, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'D_2h(C_2v)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_2h(C_2v)',
+                'record': 'rotation/C1v#',
+                'symbol': 'C_1v'
+            },
+            {
+                'centralizer': 'D_2h(C_2v)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_4h(C_4v)',
+                'record': 'rotation/C2v#',
+                'symbol': 'C_2v'
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_6h(C_6v)',
+                'record': 'rotation/C3v#',
+                'symbol': 'C_3v'
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_8h(C_8v)',
+                'record': 'rotation/C4v#',
+                'symbol': 'C_4v'
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_10h(C_10v)',
+                'record': 'rotation/C5v#',
+                'symbol': 'C_5v'
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_12h(C_12v)',
+                'record': 'rotation/C6v#',
+                'symbol': 'C_6v'
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_14h(C_14v)',
+                'record': 'rotation/C7v#',
+                'symbol': 'C_7v'
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_16h(C_16v)',
+                'record': 'rotation/C8v#',
+                'symbol': 'C_8v'
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_18h(C_18v)',
+                'record': 'rotation/C9v#',
+                'symbol': 'C_9v'
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_20h(C_20v)',
+                'record': 'rotation/C10v#',
+                'symbol': 'C_10v'
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_22h(C_22v)',
+                'record': 'rotation/C11v#',
+                'symbol': 'C_11v'
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'I',
+                'normalizer': 'D_24h(C_24v)',
+                'record': 'rotation/C12v#',
+                'symbol': 'C_12v'
+            },
+            {
+                'centralizer': 'D_2h(C_2v)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_2h(C_2v)',
+                'record': 'magnetic/D1-C1#',
+                'symbol': 'D_1(C_1)',
+                'unitary': {'N': 1, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'D_2h(C_2v)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_4h(C_4v)',
+                'record': 'magnetic/D2-C2#',
+                'symbol': 'D_2(C_2)',
+                'unitary': {'N': 2, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_6h(C_6v)',
+                'record': 'magnetic/D3-C3#',
+                'symbol': 'D_3(C_3)',
+                'unitary': {'N': 3, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_8h(C_8v)',
+                'record': 'magnetic/D4-C4#',
+                'symbol': 'D_4(C_4)',
+                'unitary': {'N': 4, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_10h(C_10v)',
+                'record': 'magnetic/D5-C5#',
+                'symbol': 'D_5(C_5)',
+                'unitary': {'N': 5, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_12h(C_12v)',
+                'record': 'magnetic/D6-C6#',
+                'symbol': 'D_6(C_6)',
+                'unitary': {'N': 6, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_14h(C_14v)',
+                'record': 'magnetic/D7-C7#',
+                'symbol': 'D_7(C_7)',
+                'unitary': {'N': 7, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_16h(C_16v)',
+                'record': 'magnetic/D8-C8#',
+                'symbol': 'D_8(C_8)',
+                'unitary': {'N': 8, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_18h(C_18v)',
+                'record': 'magnetic/D9-C9#',
+                'symbol': 'D_9(C_9)',
+                'unitary': {'N': 9, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_20h(C_20v)',
+                'record': 'magnetic/D10-C10#',
+                'symbol': 'D_10(C_10)',
+                'unitary': {'N': 10, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_22h(C_22v)',
+                'record': 'magnetic/D11-C11#',
+                'symbol': 'D_11(C_11)',
+                'unitary': {'N': 11, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_24h(C_24v)',
+                'record': 'magnetic/D12-C12#',
+                'symbol': 'D_12(C_12)',
+                'unitary': {'N': 12, 'family': 'Cn'}
+            },
+            {
+                'centralizer': 'D_2h(C_2v)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_2h(C_2v)',
+                'record': 'magnetic/D1h-C1v#',
+                'symbol': 'D_1h(C_1v)',
+                'unitary': {'N': 1, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'D_2h(C_2v)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_4h(C_4v)',
+                'record': 'magnetic/D2h-C2v#',
+                'symbol': 'D_2h(C_2v)',
+                'unitary': {'N': 2, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_6h(C_6v)',
+                'record': 'magnetic/D3h-C3v#',
+                'symbol': 'D_3h(C_3v)',
+                'unitary': {'N': 3, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_8h(C_8v)',
+                'record': 'magnetic/D4h-C4v#',
+                'symbol': 'D_4h(C_4v)',
+                'unitary': {'N': 4, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_10h(C_10v)',
+                'record': 'magnetic/D5h-C5v#',
+                'symbol': 'D_5h(C_5v)',
+                'unitary': {'N': 5, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_12h(C_12v)',
+                'record': 'magnetic/D6h-C6v#',
+                'symbol': 'D_6h(C_6v)',
+                'unitary': {'N': 6, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_14h(C_14v)',
+                'record': 'magnetic/D7h-C7v#',
+                'symbol': 'D_7h(C_7v)',
+                'unitary': {'N': 7, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_16h(C_16v)',
+                'record': 'magnetic/D8h-C8v#',
+                'symbol': 'D_8h(C_8v)',
+                'unitary': {'N': 8, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_18h(C_18v)',
+                'record': 'magnetic/D9h-C9v#',
+                'symbol': 'D_9h(C_9v)',
+                'unitary': {'N': 9, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_20h(C_20v)',
+                'record': 'magnetic/D10h-C10v#',
+                'symbol': 'D_10h(C_10v)',
+                'unitary': {'N': 10, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_22h(C_22v)',
+                'record': 'magnetic/D11h-C11v#',
+                'symbol': 'D_11h(C_11v)',
+                'unitary': {'N': 11, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_24h(C_24v)',
+                'record': 'magnetic/D12h-C12v#',
+                'symbol': 'D_12h(C_12v)',
+                'unitary': {'N': 12, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'D_2h(C_2v)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_2h(C_2v)',
+                'record': 'magnetic/D1d-C1v#',
+                'symbol': 'D_1d(C_1v)',
+                'unitary': {'N': 1, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_4h(C_4v)',
+                'record': 'magnetic/D2d-C2v#',
+                'symbol': 'D_2d(C_2v)',
+                'unitary': {'N': 2, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_6h(C_6v)',
+                'record': 'magnetic/D3d-C3v#',
+                'symbol': 'D_3d(C_3v)',
+                'unitary': {'N': 3, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_8h(C_8v)',
+                'record': 'magnetic/D4d-C4v#',
+                'symbol': 'D_4d(C_4v)',
+                'unitary': {'N': 4, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_10h(C_10v)',
+                'record': 'magnetic/D5d-C5v#',
+                'symbol': 'D_5d(C_5v)',
+                'unitary': {'N': 5, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_12h(C_12v)',
+                'record': 'magnetic/D6d-C6v#',
+                'symbol': 'D_6d(C_6v)',
+                'unitary': {'N': 6, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_14h(C_14v)',
+                'record': 'magnetic/D7d-C7v#',
+                'symbol': 'D_7d(C_7v)',
+                'unitary': {'N': 7, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_16h(C_16v)',
+                'record': 'magnetic/D8d-C8v#',
+                'symbol': 'D_8d(C_8v)',
+                'unitary': {'N': 8, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_18h(C_18v)',
+                'record': 'magnetic/D9d-C9v#',
+                'symbol': 'D_9d(C_9v)',
+                'unitary': {'N': 9, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_20h(C_20v)',
+                'record': 'magnetic/D10d-C10v#',
+                'symbol': 'D_10d(C_10v)',
+                'unitary': {'N': 10, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_22h(C_22v)',
+                'record': 'magnetic/D11d-C11v#',
+                'symbol': 'D_11d(C_11v)',
+                'unitary': {'N': 11, 'family': 'Cnv'}
+            },
+            {
+                'centralizer': 'C_2h(C_2)',
+                'magnetic_type': 'III',
+                'normalizer': 'D_24h(C_24v)',
+                'record': 'magnetic/D12d-C12v#',
+                'symbol': 'D_12d(C_12v)',
+                'unitary': {'N': 12, 'family': 'Cnv'}
+            }
+        ]
+    },
+    'symmetrized_powers': [
+        {
+            'antisymmetrized_square': [],
+            'corepresentation': 'A1',
+            'symmetrized_cube': [{'corepresentation': 'A1', 'multiplicity': 1}],
+            'symmetrized_square': [{'corepresentation': 'A1', 'multiplicity': 1}]
+        },
+        {
+            'antisymmetrized_square': [],
+            'corepresentation': 'A2',
+            'symmetrized_cube': [{'corepresentation': 'A2', 'multiplicity': 1}],
+            'symmetrized_square': [{'corepresentation': 'A1', 'multiplicity': 1}]
+        },
+        {
+            'antisymmetrized_square': [{'corepresentation': 'A2', 'multiplicity': 1}],
+            'corepresentation': 'E',
+            'index': 'n',
+            'symmetrized_cube': [
+                {'corepresentation': 'E', 'index': 'n', 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': '3n', 'multiplicity': 1}
+            ],
+            'symmetrized_square': [
+                {'corepresentation': 'A1', 'multiplicity': 1},
+                {'corepresentation': 'E', 'index': '2n', 'multiplicity': 1}
+            ]
+        }
+    ],
+    'unitary_irreps': 'rotation/Cinfv#/character_functions/irrep_families'
+}

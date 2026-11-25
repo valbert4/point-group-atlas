@@ -351,8 +351,9 @@ def run_double():
         MAP_PATHS, SECTIONS = saved
 
 
-# The Magnetic catalogue (magnetic/schema/group.schema.json): its data-keyed maps, the sections of
-# its conventions that define its paths, and the reasons of its structured nulls.
+# The Magnetic catalogue (magnetic/schema/group.schema.json for the finite groups,
+# group-continuous.schema.json for the continuous ones): its data-keyed maps, the sections of its
+# conventions that define its paths, and the reasons of its structured nulls.
 MAGNETIC_MAP_PATHS = {
     "$.subduction_corepresentations.g[]",
     "$.subduction_corepresentations.u[]",
@@ -379,24 +380,56 @@ MAGNETIC_SECTIONS = [
     ("$.subgroup_lattice", "36"),
     ("$.invariants", "35.1"),
 ]
+MAGNETIC_CONTINUOUS_MAP_PATHS = {
+    "$.corepresentation_table.characters[]",
+    "$.invariants.every_rank",
+    "$.invariants.two_vectors.polynomials[].basis[]",
+}
+MAGNETIC_CONTINUOUS_SECTIONS = [
+    ("$", "37"),
+    ("$.group", "37.1"),
+    ("$.group.images", "31.2"),
+    ("$.group.allowed_properties", "35"),
+    ("$.class_space", "37.1"),
+    ("$.frame", "37.1"),
+    ("$.orbit_space", "37.1"),
+    ("$.representative", "37.2"),
+    ("$.unitary_irreps", "37.1"),
+    ("$.corepresentations", "37.2"),
+    ("$.corepresentation_table", "37.3"),
+    ("$.signs", "37.1"),
+    ("$.splitting", "37.4"),
+    ("$.subduction_o3", "37.1"),
+    ("$.subduction_corepresentations", "37.4"),
+    ("$.symmetrized_powers", "37.4"),
+    ("$.subgroup_classes", "37.5"),
+    ("$.invariants", "37.6"),
+]
 MAGNETIC_NULL_REASONS = sorted(NULL_REASONS + ["outside-the-catalogue"])
-MAGNETIC_TITLES = {"group": "Point Group Atlas magnetic point-group record"}
-MAGNETIC_TAGS = {"group": names.MAGNETIC_RECORD_TAG}
+MAGNETIC_TITLES = {"group": "Point Group Atlas magnetic point-group record",
+                   "group-continuous": "Point Group Atlas magnetic point-group record "
+                                       "(a continuous group)"}
+MAGNETIC_TAGS = {"group": names.MAGNETIC_RECORD_TAG,
+                 "group-continuous": names.MAGNETIC_CONTINUOUS_TAG}
 
 
 def run_magnetic():
-    """The schema of the records of a magnetic catalogue present, schema/group.schema.json."""
+    """The schemas of the records of a magnetic catalogue present, schema/group.schema.json and
+    schema/group-continuous.schema.json."""
     import os
     global MAP_PATHS, SECTIONS
     saved = MAP_PATHS, SECTIONS
     try:
-        MAP_PATHS, SECTIONS = MAGNETIC_MAP_PATHS, MAGNETIC_SECTIONS
         present = [n for n in names.catalogue_names() if os.path.exists(names.record_path(n))]
         records = [serialize.read_json(names.record_path(n)) for n in present]
         for kind, tag in MAGNETIC_TAGS.items():
             mine = [r for r in records if r["schema"] == tag]
             if not mine:
                 continue
+            if kind == "group-continuous":
+                MAP_PATHS, SECTIONS = MAGNETIC_CONTINUOUS_MAP_PATHS, MAGNETIC_CONTINUOUS_SECTIONS
+            else:
+                MAP_PATHS, SECTIONS = MAGNETIC_MAP_PATHS, MAGNETIC_SECTIONS
             root = PathNode()
             for rec in mine:
                 collect(rec, root, "$")

@@ -44,8 +44,11 @@ class Document:
     # the group of Rotation that a document of Double covers; a document of Rotation covers none
     cover = None
     preimage = False
-    # the corepresentations of a document of Magnetic (magnetic_latex.Doc); none here
+    # the corepresentations of a document of Magnetic (magnetic_latex.Doc), and, for its Names and
+    # structure, the sections of the conventions cited and the mark of the table; none here
     coreps = None
+    identification_sections = None
+    identification_mark = ""
 
     def rotation_group(self):
         """The block group of the record of Rotation that the document is about or covers."""

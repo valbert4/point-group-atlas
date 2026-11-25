@@ -121,6 +121,7 @@ DOUBLE_CONTINUOUS_TAG = "point-group-atlas/double/group-continuous/1"
 DOUBLE_LATTICE_TAG = "point-group-atlas/double/lattice/1"
 DOUBLE_BASES_TAG = "point-group-atlas/double/symmetry-adapted-basis/1"
 MAGNETIC_RECORD_TAG = "point-group-atlas/magnetic/group/1"
+MAGNETIC_CONTINUOUS_TAG = "point-group-atlas/magnetic/group-continuous/1"
 MAGNETIC_DOUBLE_RECORD_TAG = "point-group-atlas/magnetic-double/group/1"
 MAGNETIC_GROUPS_TAG = "point-group-atlas/magnetic/groups/1"
 # data/pdf/numbers.json, the numbers that the PDFs print (formats/pdf.py)
@@ -297,9 +298,17 @@ DOUBLE_TWOJ_MAX = 121          # and in the release: 2J = 23, 25, ..., 121
 CLASS_RECORD = {"C1h": "C1v", "D1": "C2", "D1d": "C2h", "D1h": "C2v"}
 
 
+# The records of the closed subgroups of index 2 of each continuous point group, in the order that
+# halves() has for the finite groups of its series.
+CONTINUOUS_HALVES = {"Cinfh": ("Cinf",), "Cinfv": ("Cinf",), "Dinf": ("Cinf",),
+                     "Dinfh": ("Dinf", "Cinfh", "Cinfv"), "O3": ("SO3",)}
+
+
 def halves(G):
-    """The records of the subgroups of index 2 of a finite point group G, one for each
-    O(3)-conjugacy class, by the first node of the class in the lattice of G."""
+    """The records of the (closed) subgroups of index 2 of a point group G, one for each
+    O(3)-conjugacy class, by the first node of the class in the lattice of a finite G."""
+    if G in CONTINUOUS:
+        return CONTINUOUS_HALVES.get(G, ())
     if G in EXCEPTIONAL:
         return {"Th": ("T",), "Td": ("T",), "O": ("T",), "Oh": ("O", "Th", "Td"),
                 "Ih": ("I",)}.get(G, ())
@@ -318,9 +327,12 @@ def halves(G):
 
 
 # The records of Magnetic and of Magnetic double, in the order of each catalogue: for each G of
-# FINITE, G1' then each G(H) in the order of halves.  Magnetic holds the 256 records of the finite
-# groups, 91 of magnetic type II and 165 of magnetic type III; Magnetic double none so far.
-MAGNETIC_NAMES = tuple(G + "-" + h for G in FINITE for h in ("1p",) + halves(G))
+# NAMES, G1' then each G(H) in the order of halves.  Magnetic holds the 256 records of the finite
+# groups, 91 of magnetic type II and 165 of magnetic type III, and the 14 of the continuous groups,
+# 7 of each; Magnetic double none so far.
+MAGNETIC_FINITE = tuple(G + "-" + h for G in FINITE for h in ("1p",) + halves(G))
+MAGNETIC_CONTINUOUS = tuple(G + "-" + h for G in CONTINUOUS for h in ("1p",) + halves(G))
+MAGNETIC_NAMES = MAGNETIC_FINITE + MAGNETIC_CONTINUOUS
 MAGNETIC_DOUBLE_NAMES = ()
 
 

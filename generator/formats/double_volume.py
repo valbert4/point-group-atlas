@@ -42,18 +42,24 @@ from . import volume as V
 # whichever is active when this module is imported (the web stage of Double imports it later)
 ROTATION_RECORDS = tuple(notation.BASE_RECORDS)
 OUT = "point-group-atlas-double.pdf"
-# The contents list the documents by symbol and first sheet in the cells of Rotation's pictorial
-# contents, without figures: a figure shows the symmetry of a group of O(3), which a preimage and
-# its sections share with their image.
-TEXT_CONTENTS = r"""\makeatletter
+
+
+def text_contents(columns, gap="6pt"):
+    """The contents list the documents by symbol and first sheet in the cells of Rotation's pictorial
+    contents, `columns` to a row with the gap between two cells, without figures: a figure shows the
+    symmetry of a group of O(3), which a preimage and its sections share with their image."""
+    return r"""\makeatletter
 \renewcommand\vol@cell[3]{%
   \ifnum\vol@cells=COLUMNS\relax\par\penalty0\addvspace{2pt}\vol@cells=0 \fi
   \ifnum\vol@cells=0 \noindent\fi
   \advance\vol@cells by 1
   \parbox[t]{\dimexpr\textwidth/COLUMNS\relax}{\centering
-    \hyperlink{#3}{\makebox[\dimexpr\textwidth/COLUMNS-6pt\relax]{\sffamily\small #1\hfill #2}}}%
+    \hyperlink{#3}{\makebox[\dimexpr\textwidth/COLUMNS-GAP\relax]{\sffamily\small #1\hfill #2}}}%
   \ignorespaces}
-\makeatother""".replace("COLUMNS", str(V.FIGURE_COLUMNS))
+\makeatother""".replace("COLUMNS", str(columns)).replace("GAP", gap)
+
+
+TEXT_CONTENTS = text_contents(V.FIGURE_COLUMNS)
 SUBJECT = ("Point Group Atlas, volume II: the conventions, the documents of the 116 double point "
            "groups, the references and the index of notation")
 # The documents of the two files of conventions in the volume (their \docmark names), each shown

@@ -117,7 +117,8 @@ def catalogue_entry(catalogue):
     elif catalogue in names.MAGNETIC:
         lattice = "data/%s_groups.json" % catalogue.replace("-", "_")
         files = [p for p in (names.path("CONVENTIONS.md"), names.path("CONVENTIONS.pdf"),
-                             names.path(lattice), names.path("schema/group.schema.json"))
+                             names.path(lattice), names.path("schema/group.schema.json"),
+                             names.path("schema/group-continuous.schema.json"))
                  if os.path.exists(p)]
     else:
         files = [p for p in (names.path("CONVENTIONS.md"), names.path("CONVENTIONS.pdf"),
