@@ -376,6 +376,7 @@ MAGNETIC_SECTIONS = [
     ("$.signs", "30.1"),
     ("$.splitting", "33.1"),
     ("$.symmetrized_powers", "34"),
+    ("$.subgroup_lattice", "36"),
     ("$.invariants", "35.1"),
 ]
 MAGNETIC_NULL_REASONS = sorted(NULL_REASONS + ["outside-the-catalogue"])

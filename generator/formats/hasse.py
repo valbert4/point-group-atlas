@@ -52,7 +52,9 @@ The factor keeps the crossings, and every line that passed beside a label passes
 it; the lines that meet labels are found again.
 
 The picture has x = 1 cm and y = the layer spacing.  The label widths are those of the symbols
-set as \grp{X_{sub}} in \footnotesize, with the letter and xc in \scriptsize.
+set as \grp{X_{sub}} in \footnotesize, with the letter and xc in \scriptsize; a symbol of a
+magnetic group is X1' or X(Y).  A caller may ask for a picture within MAX_WIDTH (the Magnetic
+catalogue does): one whose labels are wider is then scaled down to it, its labels with it.
 """
 from fractions import Fraction
 from math import fsum, sqrt
@@ -79,6 +81,8 @@ LETTER_PT = {"C": 5.43063, "D": 6.13898, "I": 2.36115, "O": 6.27788, "S": 4.7222
 SUBSCRIPT_PT = dict({str(d): 3.18755 for d in range(10)},
                     h=3.29171, v=3.02607, d=3.29171, s=2.44377, i=1.52085)
 SCRIPT_SPACE_PT = 0.5
+# The 1 and the prime of a symbol X1', and a parenthesis of X(Y), at \footnotesize.
+ONE_PT, PRIME_PT, PAREN_PT = 4.25079, 2.2, 3.30556
 DIGIT_PT = 3.98613
 THIN_PT = 1.41698
 TIMES_PT = 6.25002
@@ -123,6 +127,11 @@ def text(node, label, letter):
 
 
 def symbol_pt(schoenflies):
+    if schoenflies.endswith("1'"):
+        return symbol_pt(schoenflies[:-2]) + ONE_PT + PRIME_PT
+    if schoenflies.endswith(")"):
+        group, _, half = schoenflies[:-1].partition("(")
+        return symbol_pt(group) + symbol_pt(half) + 2 * PAREN_PT
     letter, _, sub = schoenflies.partition("_")
     width = fsum(LETTER_PT.get(ch, 6.0) for ch in letter)
     if sub:
@@ -627,14 +636,20 @@ def layout(lattice, aspect=None, both=False):
     return rank, spacing, x, over
 
 
-def tikz(lattice, label, aspect=None, both=False):
+def tikz(lattice, label, aspect=None, both=False, fit=False):
     """The lines of the Hasse diagram of a record's subgroup_lattice, in a center environment;
     label(node) is the subgroup symbol of a node in math mode, aspect widens the picture
-    (Widening, above), and both lays out both orderings and draws the better (Order within
-    layers)."""
+    (Widening, above), both lays out both orderings and draws the better (Order within layers),
+    and fit scales a picture wider than MAX_WIDTH down to it."""
     rank, spacing, x, over = layout(lattice, aspect, both)
     shown = letters(lattice)
-    lines = [r"\begin{center}", r"\begin{tikzpicture}[x=1cm, y=%.3fcm," % spacing]
+    scale = ""
+    if fit:
+        half = half_widths(lattice)
+        width = max(x[v] + half[v] for v in x) - min(x[v] - half[v] for v in x)
+        if width > MAX_WIDTH:
+            scale = "scale=%.3f, transform shape, " % (MAX_WIDTH / width)
+    lines = [r"\begin{center}", r"\begin{tikzpicture}[%sx=1cm, y=%.3fcm," % (scale, spacing)]
     lines += ["  " + style for style in STYLES]
     for edge in lattice["edges"]:
         lo, up = edge["lower"], edge["upper"]

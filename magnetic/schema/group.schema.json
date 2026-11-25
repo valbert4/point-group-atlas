@@ -829,6 +829,111 @@
       "description": "See CONVENTIONS.md section 33.1.",
       "type": "string"
     },
+    "subgroup_lattice": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 36.",
+      "properties": {
+        "lattice": {
+          "description": "See CONVENTIONS.md section 36.",
+          "type": "string"
+        },
+        "nodes": {
+          "description": "See CONVENTIONS.md section 36.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 36.",
+            "properties": {
+              "centralizer": {
+                "description": "See CONVENTIONS.md section 36.",
+                "type": "string"
+              },
+              "class_size": {
+                "description": "See CONVENTIONS.md section 36.",
+                "type": "integer"
+              },
+              "covers": {
+                "description": "See CONVENTIONS.md section 36.",
+                "items": {
+                  "description": "See CONVENTIONS.md section 36.",
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "id": {
+                "description": "See CONVENTIONS.md section 36.",
+                "type": "string"
+              },
+              "magnetic_type": {
+                "description": "See CONVENTIONS.md section 36.",
+                "type": "string"
+              },
+              "node": {
+                "description": "See CONVENTIONS.md section 36.",
+                "type": "string"
+              },
+              "normal": {
+                "description": "See CONVENTIONS.md section 36.",
+                "type": "boolean"
+              },
+              "normalizer": {
+                "description": "See CONVENTIONS.md section 36.",
+                "type": "string"
+              },
+              "order": {
+                "description": "See CONVENTIONS.md section 36.",
+                "type": "integer"
+              },
+              "record": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "description": "See CONVENTIONS.md section 36."
+              },
+              "symbol": {
+                "description": "See CONVENTIONS.md section 36.",
+                "type": "string"
+              },
+              "unitary": {
+                "additionalProperties": false,
+                "description": "See CONVENTIONS.md section 36.",
+                "properties": {
+                  "member": {
+                    "description": "See CONVENTIONS.md section 36.",
+                    "type": "integer"
+                  },
+                  "node": {
+                    "description": "See CONVENTIONS.md section 36.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "member",
+                  "node"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "magnetic_type",
+              "node",
+              "record",
+              "symbol"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "nodes"
+      ],
+      "type": "object"
+    },
     "symmetrized_powers": {
       "description": "See CONVENTIONS.md section 34.",
       "items": {
@@ -933,6 +1038,7 @@
     "schema",
     "subduction_corepresentations",
     "subduction_o3",
+    "subgroup_lattice",
     "symmetrized_powers",
     "unitary_irreps"
   ],

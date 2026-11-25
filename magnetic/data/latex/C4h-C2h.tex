@@ -321,6 +321,47 @@ $\irr{b}_{\ptag{u}}\,\irr{b}_{\ptag{u}}$ & $3\,\irr{a}_{\ptag{g}}$ & $\irr{a}_{\
 \bottomrule\end{longtable}}
 \needspace{171pt}
 \partbox{Subgroups}
+\section{Subgroup lattice}\label{s:subgroups}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.15}{15} and \href{../../CONVENTIONS.pdf\#conv.36}{36}.
+The diagram shows the conjugacy classes of subgroups, each joined to the classes of its maximal subgroups, and the orders increase upward. \label{n:index.conjugates.c}A normal subgroup is framed, and ${\times}c$ is the number $c > 1$ of conjugate subgroups. The table lists the classes by order, then by magnetic type, those of one symbol together. \label{n:head.subgroup}\label{n:head.magnetic.type}\label{n:head.order}\label{n:head.conjugates}\label{n:head.normal}A row gives the representative of a class of subgroups (subgrp), its magnetic type (type), its order, the number of subgroups in the class (conjugates) and whether the representative is normal. \label{n:head.normalizer}\label{n:head.centralizer}It also gives its normalizer and its centralizer in $\grp{C_{4h}}(\grp{C_{2h}})$, by their classes. 
+\begin{center}
+\begin{tikzpicture}[x=1cm, y=1.500cm,
+  every node/.style={fill=white, font=\footnotesize, inner xsep=1.5pt, inner ysep=1.2pt, text height=5.6pt, text depth=1.6pt},
+  normal/.style={draw, line width=0.4pt}, cover/.style={black!50, line width=0.4pt}]
+\draw[cover] (0.00,0) -- (-0.39,1);
+\draw[cover] (0.00,0) -- (0.91,1);
+\draw[cover] (0.00,0) -- (0.28,1);
+\draw[cover] (-0.39,1) -- (-0.19,2);
+\draw[cover] (-0.39,1) -- (0.82,2);
+\draw[cover] (-0.39,1) -- (-1.41,2);
+\draw[cover] (0.91,1) -- (0.82,2);
+\draw[cover] (0.28,1) -- (0.82,2);
+\draw[cover] (-0.19,2) -- (0.00,3);
+\draw[cover] (0.82,2) -- (0.00,3);
+\draw[cover] (-1.41,2) -- (0.00,3);
+\node[normal] (n00) at (0.00,0) {$\grp{C_{1}}$};
+\node[normal] (n01) at (-0.39,1) {$\grp{C_{2}}$};
+\node[normal] (n02) at (0.91,1) {$\grp{C_{i}}$};
+\node[normal] (n03) at (0.28,1) {$\grp{C_{s}}$};
+\node[normal] (n04) at (-0.19,2) {$\grp{C_{4}}(\grp{C_{2}})$};
+\node[normal] (n05) at (0.82,2) {$\grp{C_{2h}}$};
+\node[normal] (n06) at (-1.41,2) {$\grp{S_{4}}(\grp{C_{2}})$};
+\node[normal] (n07) at (0.00,3) {$\grp{C_{4h}}(\grp{C_{2h}})$};
+\end{tikzpicture}
+\end{center}
+{\small\begin{longtable}{@{}llrrlll@{}}\toprule
+subgrp & type & order & conjugates & normal & normalizer & centralizer\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\href{../../../rotation/data/pdf/C1.pdf}{$\grp{C_{1}}$} & I & 1 & 1 & yes & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$} & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$}\\*
+\href{../../../rotation/data/pdf/C2.pdf}{$\grp{C_{2}}$} & I & 2 & 1 & yes & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$} & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$}\\*
+\href{../../../rotation/data/pdf/S2.pdf}{$\grp{C_{i}}$} & I & 2 & 1 & yes & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$} & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$}\\*
+\href{../../../rotation/data/pdf/C1v.pdf}{$\grp{C_{s}}$} & I & 2 & 1 & yes & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$} & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$}\\*
+\href{../../../rotation/data/pdf/C2h.pdf}{$\grp{C_{2h}}$} & I & 4 & 1 & yes & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$} & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$}\\*
+\href{C4-C2.pdf}{$\grp{C_{4}}(\grp{C_{2}})$} & III & 4 & 1 & yes & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$} & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$}\\*
+$\grp{S_{4}}(\grp{C_{2}})$ & III & 4 & 1 & yes & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$} & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$}\\*
+\href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$} & III & 8 & 1 & yes & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$} & \href{C4h-C2h.pdf}{$\grp{C_{4h}}(\grp{C_{2h}})$}\\
+\bottomrule\end{longtable}}
+\needspace{103pt}
 \section{Descent of symmetry}\label{s:subduction}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.12}{12} and \href{../../CONVENTIONS.pdf\#conv.33.1}{33.1}.
 A row is an irrep $\Gamma$ of \href{../../../rotation/data/pdf/C4h.pdf}{$\grp{C_{4h}}$} over $\mathbb{R}$, which is a corepresentation of $\grp{C_{4h}1'}$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.32.1}{32.1}). A complex-conjugate pair of irreps of $\grp{C_{4h}}$, such as $\conjpair{1}\irr{e}_{\ptag{g}}$ and $\conjpair{2}\irr{e}_{\ptag{g}}$, forms one irrep over $\mathbb{R}$, whose row is labeled $\irr{e}_{\ptag{g}}$. A row gives the restriction of $\Gamma$ to $\grp{C_{4h}}(\grp{C_{2h}})$ as a sum of corepresentations (section~\ref{s:irreps}). A corepresentation of $\grp{C_{4h}1'}$ splits in $\grp{C_{4h}}(\grp{C_{2h}})$ exactly when its row has more than one term.

@@ -294,11 +294,12 @@ def samecls_sentence(group, section):
             r"(CONVENTIONS.pdf, section %s)." % (group, section))
 
 
-def row_gives(subject, count, which):
-    """The sentence on the first columns of a table of subgroups, in both volumes: a row gives
-    `subject`, its order, the number of subgroups `count` and whether `which` is normal."""
-    return (r"A row gives %s (subgrp), its order, the number of subgroups %s (conjugates) and "
-            r"whether %s is normal. " % (subject, count, which))
+def row_gives(subject, count, which, kind=""):
+    """The sentence on the first columns of a table of subgroups, in every volume: a row gives
+    `subject`, `kind` (volume III's magnetic type), its order, the number of subgroups `count` and
+    whether `which` is normal."""
+    return (r"A row gives %s (subgrp), %sits order, the number of subgroups %s (conjugates) and "
+            r"whether %s is normal. " % (subject, kind, count, which))
 
 
 def also_gives(subject, group, rest):
@@ -478,13 +479,14 @@ def lattice_diagram(D, conjugates):
             r"subgroups.")
 
 
-def gray_letter(D, conjugate=None):
-    """The sentences on the gray letters of the subgroup lattice, in both volumes, after a space;
-    `conjugate`, the group (a span) in which volume II's classes of one symbol are conjugate."""
+def gray_letter(D, conjugate=None, group=r"\grp{G}", uses=r" The table and the subduction tables "
+                r"of section~\ref{s:subduction} use the same letters."):
+    """The sentences on the gray letters of the subgroup lattice, in every volume, after a space;
+    `conjugate`, the group (a span) in which volume II's classes of one symbol are conjugate,
+    `group` the group of the document and `uses` the sentence on the other places of the letters."""
     return (" " + D.define("mark.letter") + r"A gray letter after a symbol distinguishes the "
-            r"classes of subgroups with that symbol, which are not conjugate in $\grp{G}$%s. The "
-            r"table and the subduction tables of section~\ref{s:subduction} use the same letters."
-            % (r" (they are conjugate in %s)" % conjugate if conjugate else ""))
+            r"classes of subgroups with that symbol, which are not conjugate in $%s$%s.%s"
+            % (group, r" (they are conjugate in %s)" % conjugate if conjugate else "", uses))
 
 
 def lattice_legend(D, order, group, section):
@@ -515,7 +517,10 @@ def section_subgroups(D):
     group, with its diagram and its table, or the closed subgroups of a continuous one
     (continuous_subgroups).  A record of Double names its classes of subgroups by the preimage or
     the section that each is (the document's lattice_view), ordered by the type of the image, a
-    preimage before a section, and its anchor of H opens the first sentence that uses it."""
+    preimage before a section, and its anchor of H opens the first sentence that uses it.  A
+    magnetic record has the lattice of its magnetic subgroups (magnetic_lattice)."""
+    if D.coreps is not None:
+        return magnetic_lattice(D)
     if not D.lattice and not D.cover:
         return
     if not D.lattice or "aliases" in D.lattice:
@@ -555,6 +560,52 @@ def section_subgroups(D):
             or "---"])
     D.w(r"{\small%s\begin{longtable}{@{}lrrlll>{\RaggedRight\arraybackslash}p{\fillwidth}@{}}"
         r"\toprule" % fill_width(rows, 6))
+    D.w(" & ".join(rows[0]) + r"\\\midrule\endhead")
+    for row in rows[1:]:
+        D.w(" & ".join(row) + r"\\")
+    D.w(r"\bottomrule\end{longtable}}")
+
+
+# The classes of a magnetic subgroup lattice up to which its document draws it.
+MAGNETIC_DIAGRAM_NODES = 60
+
+
+def magnetic_lattice(D):
+    """The subgroup lattice of a magnetic group M (CONVENTIONS.pdf, section 36): the diagram of a
+    lattice of at most MAGNETIC_DIAGRAM_NODES classes, then the table of the classes, by order, then
+    by magnetic type, each subgroup by its symbol linked to its record.  Its values are those of the
+    record, read through the document's lattice_view."""
+    lattice = D.lattice_view()
+    nodes = lattice["nodes"]
+    letter = hasse.letters(lattice)
+    drawn = len(nodes) <= MAGNETIC_DIAGRAM_NODES
+    D.section("Subgroup lattice", "sections 15 and 36")
+    D.w((lattice_diagram(D, any(node["class_size"] > 1 for node in nodes)) if drawn else
+         r"The lattice has more than %d classes and no diagram." % MAGNETIC_DIAGRAM_NODES)
+        + (gray_letter(D, group=D.sym, uses=r" The table uses the same letters." if drawn else "")
+           if letter else "")
+        + r" The table lists the classes by order, then by magnetic type, those of one symbol "
+          r"together. "
+        + D.define("head.subgroup", "head.magnetic.type", "head.order", "head.conjugates",
+                   "head.normal")
+        + row_gives("the representative of a class of subgroups", "in the class",
+                    "the representative", "its magnetic type (type), ")
+        + D.define("head.normalizer", "head.centralizer")
+        + also_gives("its normalizer and its centralizer", D.sym, ", by their classes"))
+    if drawn:
+        for line in hasse.tikz(lattice, lambda node: D.subgroup_tex(node["o3_schoenflies"]),
+                               fit=True):
+            D.w(line)
+    by_id = {node["id"]: node for node in nodes}
+
+    def named(node):
+        return D.lattice_link(node) + hasse.letter_tex(letter.get(node["id"]))
+    rows = [["subgrp", "type", "order", "conjugates", "normal", "normalizer", "centralizer"]]
+    for node in sorted(nodes, key=D.lattice_rank):
+        rows.append([named(node), node["magnetic_type"], "%d" % node["order"],
+                     "%d" % node["class_size"], "yes" if node["normal"] else "no",
+                     named(by_id[node["normalizer"]]), named(by_id[node["centralizer"]])])
+    D.w(r"{\small\begin{longtable}{@{}llrrlll@{}}\toprule")
     D.w(" & ".join(rows[0]) + r"\\\midrule\endhead")
     for row in rows[1:]:
         D.w(" & ".join(row) + r"\\")

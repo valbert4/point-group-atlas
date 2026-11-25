@@ -324,8 +324,140 @@ $\irr{b}_{1}$ & $\irr{a}_{1}$ & $0$ & $\irr{b}_{1}$\\*
 $\irr{b}_{2}$ & $\irr{a}_{1}$ & $0$ & $\irr{b}_{2}$\\*
 $\irr{e}$ & $\irr{a}_{1} \oplus \irr{b}_{1} \oplus \irr{b}_{2}$ & $\irr{a}_{2}$ & $2\,\irr{e}$\\
 \bottomrule\end{longtable}}
-\needspace{263pt}
+\needspace{171pt}
 \partbox{Subgroups}
+\section{Subgroup lattice}\label{s:subgroups}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.15}{15} and \href{../../CONVENTIONS.pdf\#conv.36}{36}.
+The diagram shows the conjugacy classes of subgroups, each joined to the classes of its maximal subgroups, and the orders increase upward. \label{n:index.conjugates.c}\label{n:mark.conjugates}A normal subgroup is framed, and ${\times}c$ is the number $c > 1$ of conjugate subgroups. \label{n:mark.letter}A gray letter after a symbol distinguishes the classes of subgroups with that symbol, which are not conjugate in $\grp{D_{4h}}(\grp{D_{4}})$. The table uses the same letters. The table lists the classes by order, then by magnetic type, those of one symbol together. \label{n:head.subgroup}\label{n:head.magnetic.type}\label{n:head.order}\label{n:head.conjugates}\label{n:head.normal}A row gives the representative of a class of subgroups (subgrp), its magnetic type (type), its order, the number of subgroups in the class (conjugates) and whether the representative is normal. \label{n:head.normalizer}\label{n:head.centralizer}It also gives its normalizer and its centralizer in $\grp{D_{4h}}(\grp{D_{4}})$, by their classes. 
+\begin{center}
+\begin{tikzpicture}[x=1cm, y=2.000cm,
+  every node/.style={fill=white, font=\footnotesize, inner xsep=1.5pt, inner ysep=1.2pt, text height=5.6pt, text depth=1.6pt},
+  normal/.style={draw, line width=0.4pt}, cover/.style={black!50, line width=0.4pt}]
+\draw[cover] (0.00,0) -- (-0.86,1);
+\draw[cover] (0.00,0) -- (2.91,1);
+\draw[cover] (0.00,0) -- (-2.98,1);
+\draw[cover] (0.00,0) -- (1.55,1);
+\draw[cover] (0.00,0) -- (0.27,1);
+\draw[cover] (0.00,0) -- (4.45,1);
+\draw[cover] (0.00,0) -- (-4.52,1);
+\draw[cover] (-0.86,1) -- (-1.41,2);
+\draw[cover] (-0.86,1) -- (2.11,2);
+\draw[cover] (-0.86,1) -- (-2.20,2);
+\draw[cover] (-0.86,1) -- (0.89,2);
+\draw[cover] (-0.86,1) -- (-0.47,2);
+\draw[cover] (-0.86,1) -- (3.31,2);
+\draw[cover] (-0.86,1) -- (-3.41,2);
+\draw[cover] (2.91,1) -- (2.11,2);
+\draw[cover] (2.91,1) -- (6.98,2);
+\draw[cover] (2.91,1) -- (5.04,2);
+\draw[cover] (-2.98,1) -- (-2.20,2);
+\draw[cover] (-2.98,1) -- (-5.14,2);
+\draw[cover] (-2.98,1) -- (-7.08,2);
+\draw[cover] (1.55,1) -- (0.89,2);
+\draw[cover] (1.55,1) -- (6.98,2);
+\draw[cover] (1.55,1) -- (-5.14,2);
+\draw[cover] (0.27,1) -- (0.89,2);
+\draw[cover] (0.27,1) -- (5.04,2);
+\draw[cover] (0.27,1) -- (-7.08,2);
+\draw[cover] (4.45,1) -- (3.31,2);
+\draw[cover] (4.45,1) -- (6.98,2);
+\draw[cover] (4.45,1) -- (5.04,2);
+\draw[cover] (-4.52,1) -- (-3.41,2);
+\draw[cover] (-4.52,1) -- (-5.14,2);
+\draw[cover] (-4.52,1) -- (-7.08,2);
+\draw[cover] (-1.41,2) -- (-0.12,3);
+\draw[cover] (-1.41,2) -- (0.90,3);
+\draw[cover] (-1.41,2) -- (-1.14,3);
+\draw[cover] (2.11,2) -- (-0.12,3);
+\draw[cover] (2.11,2) -- (3.95,3);
+\draw[cover] (2.11,2) -- (-2.60,3);
+\draw[cover] (-2.20,2) -- (-0.12,3);
+\draw[cover] (-2.20,2) -- (-4.18,3);
+\draw[cover] (-2.20,2) -- (2.37,3);
+\draw[cover] (0.89,2) -- (0.90,3);
+\draw[cover] (0.89,2) -- (3.95,3);
+\draw[cover] (0.89,2) -- (-4.18,3);
+\draw[cover] (-0.47,2) -- (0.90,3);
+\draw[cover] (-0.47,2) -- (-2.60,3);
+\draw[cover] (-0.47,2) -- (2.37,3);
+\draw[cover] (3.31,2) -- (-1.14,3);
+\draw[cover] (3.31,2) -- (3.95,3);
+\draw[cover] (3.31,2) -- (2.37,3);
+\draw[cover] (-3.41,2) -- (-1.14,3);
+\draw[cover] (-3.41,2) -- (-2.60,3);
+\draw[cover] (-3.41,2) -- (-4.18,3);
+\draw[cover] (6.98,2) -- (3.95,3);
+\draw[cover] (5.04,2) -- (3.95,3);
+\draw[cover] (-5.14,2) -- (-4.18,3);
+\draw[cover] (-7.08,2) -- (-4.18,3);
+\draw[cover] (-0.12,3) -- (0.00,4);
+\draw[cover] (0.90,3) -- (0.00,4);
+\draw[cover] (-1.14,3) -- (0.00,4);
+\draw[cover] (3.95,3) -- (0.00,4);
+\draw[cover] (-2.60,3) -- (0.00,4);
+\draw[cover] (-4.18,3) -- (0.00,4);
+\draw[cover] (2.37,3) -- (0.00,4);
+\node[normal] (n00) at (0.00,0) {$\grp{C_{1}}$};
+\node[normal] (n01) at (-0.86,1) {$\grp{C_{2}}$\clsletter{a}};
+\node (n02) at (2.91,1) {$\grp{C_{2}}$\clsletter{b}\,\nconj{2}};
+\node (n03) at (-2.98,1) {$\grp{C_{2}}$\clsletter{c}\,\nconj{2}};
+\node[normal] (n04) at (1.55,1) {$\grp{C_{i}}(\grp{C_{1}})$};
+\node[normal] (n05) at (0.27,1) {$\grp{C_{s}}(\grp{C_{1}})$\clsletter{a}};
+\node (n06) at (4.45,1) {$\grp{C_{s}}(\grp{C_{1}})$\clsletter{b}\,\nconj{2}};
+\node (n07) at (-4.52,1) {$\grp{C_{s}}(\grp{C_{1}})$\clsletter{c}\,\nconj{2}};
+\node[normal] (n08) at (-1.41,2) {$\grp{C_{4}}$};
+\node[normal] (n09) at (2.11,2) {$\grp{D_{2}}$\clsletter{a}};
+\node[normal] (n10) at (-2.20,2) {$\grp{D_{2}}$\clsletter{b}};
+\node[normal] (n11) at (0.89,2) {$\grp{C_{2h}}(\grp{C_{2}})$\clsletter{a}};
+\node[normal] (n12) at (-0.47,2) {$\grp{S_{4}}(\grp{C_{2}})$};
+\node[normal] (n13) at (3.31,2) {$\grp{C_{2v}}(\grp{C_{2}})$\clsletter{a}};
+\node[normal] (n14) at (-3.41,2) {$\grp{C_{2v}}(\grp{C_{2}})$\clsletter{b}};
+\node (n15) at (6.98,2) {$\grp{C_{2h}}(\grp{C_{2}})$\clsletter{b}\,\nconj{2}};
+\node (n16) at (5.04,2) {$\grp{C_{2v}}(\grp{C_{2}})$\clsletter{c}\,\nconj{2}};
+\node (n17) at (-5.14,2) {$\grp{C_{2h}}(\grp{C_{2}})$\clsletter{c}\,\nconj{2}};
+\node (n18) at (-7.08,2) {$\grp{C_{2v}}(\grp{C_{2}})$\clsletter{d}\,\nconj{2}};
+\node[normal] (n19) at (-0.12,3) {$\grp{D_{4}}$};
+\node[normal] (n20) at (0.90,3) {$\grp{C_{4h}}(\grp{C_{4}})$};
+\node[normal] (n21) at (-1.14,3) {$\grp{C_{4v}}(\grp{C_{4}})$};
+\node[normal] (n22) at (3.95,3) {$\grp{D_{2h}}(\grp{D_{2}})$\clsletter{a}};
+\node[normal] (n23) at (-2.60,3) {$\grp{D_{2d}}(\grp{D_{2}})$\clsletter{a}};
+\node[normal] (n24) at (-4.18,3) {$\grp{D_{2h}}(\grp{D_{2}})$\clsletter{b}};
+\node[normal] (n25) at (2.37,3) {$\grp{D_{2d}}(\grp{D_{2}})$\clsletter{b}};
+\node[normal] (n26) at (0.00,4) {$\grp{D_{4h}}(\grp{D_{4}})$};
+\end{tikzpicture}
+\end{center}
+{\small\begin{longtable}{@{}llrrlll@{}}\toprule
+subgrp & type & order & conjugates & normal & normalizer & centralizer\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\href{../../../rotation/data/pdf/C1.pdf}{$\grp{C_{1}}$} & I & 1 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$}\\*
+\href{../../../rotation/data/pdf/C2.pdf}{$\grp{C_{2}}$}\clsletter{a} & I & 2 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$}\\
+\href{../../../rotation/data/pdf/C2.pdf}{$\grp{C_{2}}$}\clsletter{b} & I & 2 & 2 & no & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{a} & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{a}\\
+\href{../../../rotation/data/pdf/C2.pdf}{$\grp{C_{2}}$}\clsletter{c} & I & 2 & 2 & no & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{b} & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{b}\\
+$\grp{C_{i}}(\grp{C_{1}})$ & III & 2 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$}\\
+$\grp{C_{s}}(\grp{C_{1}})$\clsletter{a} & III & 2 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$}\\
+$\grp{C_{s}}(\grp{C_{1}})$\clsletter{b} & III & 2 & 2 & no & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{a} & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{a}\\
+$\grp{C_{s}}(\grp{C_{1}})$\clsletter{c} & III & 2 & 2 & no & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{b} & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{b}\\
+\href{../../../rotation/data/pdf/C4.pdf}{$\grp{C_{4}}$} & I & 4 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & $\grp{C_{4h}}(\grp{C_{4}})$\\
+\href{../../../rotation/data/pdf/D2.pdf}{$\grp{D_{2}}$}\clsletter{a} & I & 4 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{a}\\
+\href{../../../rotation/data/pdf/D2.pdf}{$\grp{D_{2}}$}\clsletter{b} & I & 4 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{b}\\
+$\grp{S_{4}}(\grp{C_{2}})$ & III & 4 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & $\grp{C_{4h}}(\grp{C_{4}})$\\
+$\grp{C_{2h}}(\grp{C_{2}})$\clsletter{a} & III & 4 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$}\\
+$\grp{C_{2h}}(\grp{C_{2}})$\clsletter{b} & III & 4 & 2 & no & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{a} & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{a}\\
+$\grp{C_{2h}}(\grp{C_{2}})$\clsletter{c} & III & 4 & 2 & no & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{b} & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{b}\\
+$\grp{C_{2v}}(\grp{C_{2}})$\clsletter{a} & III & 4 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{a}\\
+$\grp{C_{2v}}(\grp{C_{2}})$\clsletter{b} & III & 4 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{b}\\
+$\grp{C_{2v}}(\grp{C_{2}})$\clsletter{c} & III & 4 & 2 & no & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{a} & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{a}\\
+$\grp{C_{2v}}(\grp{C_{2}})$\clsletter{d} & III & 4 & 2 & no & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{b} & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{b}\\
+\href{../../../rotation/data/pdf/D4.pdf}{$\grp{D_{4}}$} & I & 8 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & $\grp{C_{2h}}(\grp{C_{2}})$\clsletter{a}\\
+$\grp{C_{4h}}(\grp{C_{4}})$ & III & 8 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & $\grp{C_{4h}}(\grp{C_{4}})$\\
+$\grp{C_{4v}}(\grp{C_{4}})$ & III & 8 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & $\grp{C_{2h}}(\grp{C_{2}})$\clsletter{a}\\
+\href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{a} & III & 8 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{a}\\
+\href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{b} & III & 8 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & \href{D2h-D2.pdf}{$\grp{D_{2h}}(\grp{D_{2}})$}\clsletter{b}\\
+$\grp{D_{2d}}(\grp{D_{2}})$\clsletter{a} & III & 8 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & $\grp{C_{2h}}(\grp{C_{2}})$\clsletter{a}\\
+$\grp{D_{2d}}(\grp{D_{2}})$\clsletter{b} & III & 8 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & $\grp{C_{2h}}(\grp{C_{2}})$\clsletter{a}\\*
+\href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & III & 16 & 1 & yes & \href{D4h-D4.pdf}{$\grp{D_{4h}}(\grp{D_{4}})$} & $\grp{C_{2h}}(\grp{C_{2}})$\clsletter{a}\\
+\bottomrule\end{longtable}}
+\needspace{195pt}
 \section{Descent of symmetry}\label{s:subduction}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.12}{12} and \href{../../CONVENTIONS.pdf\#conv.33.1}{33.1}.
 A row is an irrep $\Gamma$ of \href{../../../rotation/data/pdf/D4h.pdf}{$\grp{D_{4h}}$} over $\mathbb{R}$, which is a corepresentation of \href{D4h-1p.pdf}{$\grp{D_{4h}1'}$} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.32.1}{32.1}). A row gives the restriction of $\Gamma$ to $\grp{D_{4h}}(\grp{D_{4}})$ as a sum of corepresentations (section~\ref{s:irreps}). A corepresentation of $\grp{D_{4h}1'}$ splits in $\grp{D_{4h}}(\grp{D_{4}})$ exactly when its row has more than one term.

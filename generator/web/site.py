@@ -607,7 +607,7 @@ class Document:
     def figure(self, body):
         """A diagram: its TikZ compiled to SVG (figures.py), each node of a group linked."""
         tikz = figures.linked_nodes(r"\begin{tikzpicture}" + body + r"\end{tikzpicture}",
-                                    self.site.cat, self.site.built, self.name)
+                                    self.site.cat, self.site.built, self.name, self.site.exists)
         key = self.site.diagrams.submit(self.site.preamble, tikz)
         return '<figure class="diagram"><div class="scroll">\x00F%s\x00</div></figure>' % key
 
@@ -694,7 +694,11 @@ class Document:
         # the info boxes add their formulas, so they are written before the rendering
         sections = [(key, INFO.sub(lambda m: self.info_html(int(m.group(1))), body))
                     for key, body in sections]
-        title_tex = latex.title_text(self.group, self.name)
+        if self.site.cat == "magnetic":
+            from ..formats import magnetic_latex
+            title_tex = magnetic_latex.title_text(self.group)
+        else:
+            title_tex = latex.title_text(self.group, self.name)
         heading = tex.Converter(self).inline(title_tex)
         rendered = self.site.render(self.formulas)
         stem = self.name

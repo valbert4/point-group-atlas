@@ -505,6 +505,170 @@ o3m = {
         ]
     },
     'subduction_o3': 'rotation/Th#/subduction_o3',
+    'subgroup_lattice': {
+        'lattice': 'rotation/Oh#/subgroup_lattice',
+        'nodes': [
+            {'magnetic_type': 'I', 'node': 'n00', 'record': 'rotation/C1#', 'symbol': 'C_1'},
+            {'magnetic_type': 'I', 'node': 'n01', 'record': 'rotation/C2#', 'symbol': 'C_2'},
+            {
+                'magnetic_type': 'III',
+                'node': 'n02',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'C_2(C_1)',
+                'unitary': {'member': 0, 'node': 'n00'}
+            },
+            {'magnetic_type': 'I', 'node': 'n03', 'record': 'rotation/S2#', 'symbol': 'S_2'},
+            {'magnetic_type': 'I', 'node': 'n04', 'record': 'rotation/C1v#', 'symbol': 'C_1v'},
+            {
+                'magnetic_type': 'III',
+                'node': 'n05',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'C_1v(C_1)',
+                'unitary': {'member': 0, 'node': 'n00'}
+            },
+            {'magnetic_type': 'I', 'node': 'n06', 'record': 'rotation/C3#', 'symbol': 'C_3'},
+            {
+                'magnetic_type': 'III',
+                'node': 'n07',
+                'record': 'magnetic/C4-C2#',
+                'symbol': 'C_4(C_2)',
+                'unitary': {'member': 0, 'node': 'n01'}
+            },
+            {'magnetic_type': 'I', 'node': 'n08', 'record': 'rotation/D2#', 'symbol': 'D_2'},
+            {
+                'magnetic_type': 'III',
+                'node': 'n09',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'D_2(C_2)',
+                'unitary': {'member': 0, 'node': 'n01'}
+            },
+            {'magnetic_type': 'I', 'node': 'n10', 'record': 'rotation/C2h#', 'symbol': 'C_2h'},
+            {
+                'magnetic_type': 'III',
+                'node': 'n11',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'S_4(C_2)',
+                'unitary': {'member': 0, 'node': 'n01'}
+            },
+            {'magnetic_type': 'I', 'node': 'n12', 'record': 'rotation/C2v#', 'symbol': 'C_2v'},
+            {
+                'magnetic_type': 'III',
+                'node': 'n13',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'C_2v(C_2)',
+                'unitary': {'member': 0, 'node': 'n01'}
+            },
+            {
+                'magnetic_type': 'III',
+                'node': 'n14',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'C_2h(S_2)',
+                'unitary': {'member': 0, 'node': 'n03'}
+            },
+            {
+                'magnetic_type': 'III',
+                'node': 'n15',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'C_2v(C_1v)',
+                'unitary': {'member': 1, 'node': 'n04'}
+            },
+            {
+                'magnetic_type': 'III',
+                'node': 'n16',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'D_3(C_3)',
+                'unitary': {'member': 0, 'node': 'n06'}
+            },
+            {'magnetic_type': 'I', 'node': 'n17', 'record': 'rotation/S6#', 'symbol': 'S_6'},
+            {
+                'magnetic_type': 'III',
+                'node': 'n18',
+                'record': 'magnetic/C3v-C3#',
+                'symbol': 'C_3v(C_3)',
+                'unitary': {'member': 0, 'node': 'n06'}
+            },
+            {
+                'magnetic_type': 'III',
+                'node': 'n19',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'D_4(D_2)',
+                'unitary': {'member': 0, 'node': 'n08'}
+            },
+            {
+                'magnetic_type': 'III',
+                'node': 'n20',
+                'record': 'magnetic/C4h-C2h#',
+                'symbol': 'C_4h(C_2h)',
+                'unitary': {'member': 0, 'node': 'n10'}
+            },
+            {
+                'magnetic_type': 'III',
+                'node': 'n21',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'C_4v(C_2v)',
+                'unitary': {'member': 0, 'node': 'n12'}
+            },
+            {'magnetic_type': 'I', 'node': 'n22', 'record': 'rotation/D2h#', 'symbol': 'D_2h'},
+            {
+                'magnetic_type': 'III',
+                'node': 'n23',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'D_2d(D_2)',
+                'unitary': {'member': 0, 'node': 'n08'}
+            },
+            {
+                'magnetic_type': 'III',
+                'node': 'n24',
+                'record': 'magnetic/D2h-C2h#',
+                'symbol': 'D_2h(C_2h)',
+                'unitary': {'member': 0, 'node': 'n10'}
+            },
+            {
+                'magnetic_type': 'III',
+                'node': 'n25',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'D_2d(C_2v)',
+                'unitary': {'member': 0, 'node': 'n12'}
+            },
+            {'magnetic_type': 'I', 'node': 'n26', 'record': 'rotation/T#', 'symbol': 'T'},
+            {
+                'magnetic_type': 'III',
+                'node': 'n27',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'D_3d(S_6)',
+                'unitary': {'member': 0, 'node': 'n17'}
+            },
+            {
+                'magnetic_type': 'III',
+                'node': 'n28',
+                'record': 'magnetic/D4h-D2h#',
+                'symbol': 'D_4h(D_2h)',
+                'unitary': {'member': 0, 'node': 'n22'}
+            },
+            {
+                'magnetic_type': 'III',
+                'node': 'n29',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'O(T)',
+                'unitary': {'member': 0, 'node': 'n26'}
+            },
+            {'magnetic_type': 'I', 'node': 'n30', 'record': 'rotation/Th#', 'symbol': 'T_h'},
+            {
+                'magnetic_type': 'III',
+                'node': 'n31',
+                'record': {'reason': 'outside-the-catalogue', 'value': None},
+                'symbol': 'T_d(T)',
+                'unitary': {'member': 0, 'node': 'n26'}
+            },
+            {
+                'magnetic_type': 'III',
+                'node': 'n32',
+                'record': 'magnetic/Oh-Th#',
+                'symbol': 'O_h(T_h)',
+                'unitary': {'member': 0, 'node': 'n30'}
+            }
+        ]
+    },
     'symmetrized_powers': [
         {
             'antisymmetrized_square': [],

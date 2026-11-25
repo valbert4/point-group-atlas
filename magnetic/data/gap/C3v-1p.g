@@ -183,6 +183,142 @@ o3m := rec(
     ]
   ),
   ("subduction_o3") := "rotation/C3v#/subduction_o3",
+  ("subgroup_lattice") := rec(
+    ("nodes") := [
+      rec(
+        ("centralizer") := "n09",
+        ("class_size") := 1,
+        ("covers") := [],
+        ("id") := "n00",
+        ("magnetic_type") := "I",
+        ("node") := "n00",
+        ("normal") := true,
+        ("normalizer") := "n09",
+        ("order") := 1,
+        ("record") := "rotation/C1#",
+        ("symbol") := "C_1"
+      ),
+      rec(
+        ("centralizer") := "n05",
+        ("class_size") := 3,
+        ("covers") := [ "n00" ],
+        ("id") := "n01",
+        ("magnetic_type") := "I",
+        ("node") := "n01",
+        ("normal") := false,
+        ("normalizer") := "n05",
+        ("order") := 2,
+        ("record") := "rotation/C1v#",
+        ("symbol") := "C_1v"
+      ),
+      rec(
+        ("centralizer") := "n09",
+        ("class_size") := 1,
+        ("covers") := [ "n00" ],
+        ("id") := "n02",
+        ("magnetic_type") := "II",
+        ("node") := "n00",
+        ("normal") := true,
+        ("normalizer") := "n09",
+        ("order") := 2,
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_11'"
+      ),
+      rec(
+        ("centralizer") := "n05",
+        ("class_size") := 3,
+        ("covers") := [ "n00" ],
+        ("id") := "n03",
+        ("magnetic_type") := "III",
+        ("node") := "n01",
+        ("normal") := false,
+        ("normalizer") := "n05",
+        ("order") := 2,
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_1v(C_1)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n00" )
+      ),
+      rec(
+        ("centralizer") := "n07",
+        ("class_size") := 1,
+        ("covers") := [ "n00" ],
+        ("id") := "n04",
+        ("magnetic_type") := "I",
+        ("node") := "n02",
+        ("normal") := true,
+        ("normalizer") := "n09",
+        ("order") := 3,
+        ("record") := "rotation/C3#",
+        ("symbol") := "C_3"
+      ),
+      rec(
+        ("centralizer") := "n05",
+        ("class_size") := 3,
+        ("covers") := [ "n01", "n02", "n03" ],
+        ("id") := "n05",
+        ("magnetic_type") := "II",
+        ("node") := "n01",
+        ("normal") := false,
+        ("normalizer") := "n05",
+        ("order") := 4,
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_1v1'"
+      ),
+      rec(
+        ("centralizer") := "n02",
+        ("class_size") := 1,
+        ("covers") := [ "n01", "n04" ],
+        ("id") := "n06",
+        ("magnetic_type") := "I",
+        ("node") := "n03",
+        ("normal") := true,
+        ("normalizer") := "n09",
+        ("order") := 6,
+        ("record") := "rotation/C3v#",
+        ("symbol") := "C_3v"
+      ),
+      rec(
+        ("centralizer") := "n07",
+        ("class_size") := 1,
+        ("covers") := [ "n02", "n04" ],
+        ("id") := "n07",
+        ("magnetic_type") := "II",
+        ("node") := "n02",
+        ("normal") := true,
+        ("normalizer") := "n09",
+        ("order") := 6,
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_31'"
+      ),
+      rec(
+        ("centralizer") := "n02",
+        ("class_size") := 1,
+        ("covers") := [ "n03", "n04" ],
+        ("id") := "n08",
+        ("magnetic_type") := "III",
+        ("node") := "n03",
+        ("normal") := true,
+        ("normalizer") := "n09",
+        ("order") := 6,
+        ("record") := "magnetic/C3v-C3#",
+        ("symbol") := "C_3v(C_3)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n02" )
+      ),
+      rec(
+        ("centralizer") := "n02",
+        ("class_size") := 1,
+        ("covers") := [ "n05", "n06", "n07", "n08" ],
+        ("id") := "n09",
+        ("magnetic_type") := "II",
+        ("node") := "n03",
+        ("normal") := true,
+        ("normalizer") := "n09",
+        ("order") := 12,
+        ("record") := "magnetic/C3v-1p#",
+        ("symbol") := "C_3v1'"
+      )
+    ]
+  ),
   ("symmetrized_powers") := [
     rec(
       ("antisymmetrized_square") := [],

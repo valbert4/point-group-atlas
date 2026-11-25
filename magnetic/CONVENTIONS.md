@@ -72,6 +72,7 @@ for what they replace, name these values of the records of the point groups:
   $`\mathsf{H}`$ and of the four images of section 31.2.
 - `record` (in `group.images`), `N` (magnetic type II), `rings`, `multiplicity` and `bases`: the values of
   sections 31.2, 32.2 and 35.1.
+- `lattice` (magnetic type III) and `record` (in `subgroup_lattice`): the values of section 36.
 
 The field `frame` is an exact rotation $`F`$ that carries the elements of the record of $`\mathsf{H}`$ to their
 images in $`\mathsf{G}`$. The matrix of the image of $`\mathsfit{h}`$ is $`F\, P(\mathsfit{h})\, F^{-1}`$, with
@@ -379,6 +380,53 @@ gives the `basis` of these invariants for a sum of degrees at most 4. It is the 
 monomials ordered by their keys descending, each vector scaled to coprime integer coordinates with a positive
 pivot, as in section 13.
 
+## 36. Subgroup lattices
+
+The subgroups of $`\mathsf{M}`$ are taken up to conjugation by its elements. The magnetic type of a subgroup
+(section 30.1) is I without antiunitary elements, II when $`\varTheta`$ is among them, and III otherwise. An element
+of $`\mathsf{M}`$ over $`\mathsfit{g}`$ conjugates a subgroup as $`\mathsfit{g}`$ does, since time reversal commutes
+with every element (section 30.1).
+
+In magnetic type III the projection of $`\mathsf{M}`$ onto $`\mathsf{G}`$ is an isomorphism. The subgroup over a
+subgroup $`\mathsf{K}`$ of $`\mathsf{G}`$ is $`\mathsf{K}`$ itself, of type I, when $`\mathsf{K} \le \mathsf{H}`$, and
+$`\mathsf{K}(\mathsf{K} \cap \mathsf{H})`$, of type III, otherwise. The subgroup lattice of $`\mathsf{M}`$ is thus
+that of $`\mathsf{G}`$ (section 15.1) with these groups at its nodes.
+
+In magnetic type II the subgroups over $`\mathsf{K}`$ are $`\mathsf{K}`$, of type I, $`\mathsf{K1'}`$, of type II, and
+$`\mathsf{K}(\mathsf{K}')`$, of type III, for each subgroup $`\mathsf{K}'`$ of index 2 in $`\mathsf{K}`$. Over the
+representative $`\mathsf{K}`$ of a node of $`\mathsf{G}`$, two groups $`\mathsf{K}(\mathsf{K}')`$ are conjugate exactly
+when the normalizer $`\mathsf{N}_{\mathsf{G}}(\mathsf{K})`$ carries one $`\mathsf{K}'`$ to the other.
+
+The symbol of a subgroup of type I is the `schoenflies` of the record of its $`\mathsf{O(3)}`$-conjugacy class.
+The symbol of a subgroup of type II or III is that of section 30.4, written with the `schoenflies` of the records of
+$`\mathsf{K}`$ and of its unitary elements, $`\mathsf{K} \cap \mathsf{H}`$ or $`\mathsf{K}'`$. In the documents, a
+node's symbol has $`\mathsf{C_{s}}`$ for $`\mathsf{C_{1v}}`$ and $`\mathsf{C_{i}}`$ for $`\mathsf{S_{2}}`$, as in
+section 15.1, and gray letters distinguish the classes with one symbol that are not conjugate.
+
+The field `subgroup_lattice` has `nodes`, one for each class. The representative of a class is the subgroup over the
+representative $`\mathsf{K}`$ of a node of $`\mathsf{G}`$. Each node has these fields:
+
+- `node`: the id of that node in the subgroup lattice of $`\mathsf{G}`$.
+- `magnetic_type`: `"I"`, `"II"` or `"III"`.
+- `symbol`: the symbol of the subgroup.
+- `record`: the pointer to the record of the subgroup, a record of the point groups in type I and of this catalogue
+  otherwise, or the null `outside-the-catalogue`.
+- `unitary` (type III): the subgroup of its unitary elements, as the id `node` of its class in the subgroup lattice of
+  $`\mathsf{G}`$ and its index `member` (from 0) among the `members` of that class.
+
+In magnetic type III the nodes follow those of $`\mathsf{G}`$ in order, and the field `lattice` of `subgroup_lattice`
+is the pointer to the lattice of $`\mathsf{G}`$. That lattice has the orders, the numbers of conjugates, the
+normalizers, the centralizers and the edges. In magnetic type II the nodes are sorted by order, magnetic type, `node`
+and `unitary`, and each also has these fields:
+
+- `id`: `n00`, `n01`, ….
+- `order`, `class_size`, `normal`: as in section 15.1.
+- `normalizer`, `centralizer`: the ids of the classes of the normalizer and the centralizer of the representative in
+  $`\mathsf{M}`$, both of type II.
+- `covers`: the ids of the classes that the class covers, the `lower` of its edges as in section 15.1.
+
+A document draws the lattice when it has at most 60 classes.
+
 ## Index of notation
 
 This index lists the common notation of the documents and selected symbols of their sections, each with its meaning and the section of the conventions that defines it (0.1 for the common notation). The symbols that are not letters come first, then the others by letter, a Greek letter under its Latin name.
@@ -478,6 +526,7 @@ This index lists the common notation of the documents and selected symbols of th
 | case | the case (a), (b) or (c) of an irrep or of a corepresentation | 32.1 |
 | $`c_\beta, s_\beta`$ | the cosine and the sine of $`\beta/2`$, half the second Euler angle | 9 |
 | $`\mathsf{CC}(2n)`$ | a hybrid $`\mathsf{CC}(2n)`$, $`\mathsf{CD}(n)`$, $`\mathsf{DD}(2n)`$ or $`\mathsf{TO}`$ in a `conway_smith` name (with `type` III) | 2 |
+| centralizer | the centralizer of a subgroup in the group, by its class | 36 |
 | $`\mathsf{C}_{\mathsf{G}}(\mathsf{H})`$ | the centralizer of $`\mathsf{H}`$ in $`\mathsf{G}`$ | 12 |
 | $`\chi`$ | the one-dimensional real irrep of $`\mathsf{G}`$ with kernel $`\mathsf{H}`$, of value $`\theta`$ | 30.1 |
 | $`\chi_{\Gamma}(\mathsfit{g})`$ | the character of the irrep $`\Gamma`$ at the element $`\mathsfit{g}`$ | 6 |
@@ -653,6 +702,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`n_K(J, q)`$ | the number of integers $`m \in [-J, J]`$ with $`m \equiv q \pmod{K}`$ | 14 |
 | normal | whether a subgroup is normal | 0.1 |
 | normal | the inward normal of the plane of a side of the region | 0.1 |
+| normalizer | the normalizer of a subgroup in the group, by its class | 36 |
 | $`N_p`$ | the order of the principal generator $`\mathsfit{g}_p`$, $`N`$ or $`2N`$ | 6 |
 | $`\nu`$ | a second partner index | 9 |
 | $`\nu_{\mathrm{FS}}`$ | the Frobenius–Schur indicator of an irrep: $`+1`$ (real), $`-1`$ (pseudoreal) or $`0`$ (complex) | 7 |
@@ -739,6 +789,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\varTheta`$ | time reversal | 30.1 |
 | $`\mathrm{tot}`$ | the normalization $`\sum_m \lvert e_m\rvert^2 F_m`$ of a basis vector | 14 |
 | $`\operatorname{tr}`$ | the trace | 0.1 |
+| type | the magnetic type of a subgroup, I, II or III | 36 |
 | $`U`$ | the unitary matrix from the rotation-diagonal to the real basis, $`D_{\mathrm{real}} = U D U^\dagger`$ | 9 |
 | $`U(\mathsfit{R})`$ | the rotation operator $`\mathrm{e}^{-\mathrm{i}\gamma J_z}\mathrm{e}^{-\mathrm{i}\beta J_y}\mathrm{e}^{-\mathrm{i}\alpha J_z}`$ of $`\mathsfit{R}`$, with $`\mathsfit{R}`$ acting on the kets as $`U(\mathsfit{R}^{-1})`$ | 9 |
 | $`\mathbf{v}`$ | the axis of an element, or the normal of its mirror | 4 |

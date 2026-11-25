@@ -319,8 +319,89 @@ $\irr{b}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $0$ & $\irr{b}_{\ptag{g}}$\\*
 $\irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ & $0$ & $\irr{a}_{\ptag{u}}$\\*
 $\irr{b}_{\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ & $0$ & $\irr{b}_{\ptag{u}}$\\
 \bottomrule\end{longtable}}
-\needspace{250pt}
+\needspace{171pt}
 \partbox{Subgroups}
+\section{Subgroup lattice}\label{s:subgroups}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.15}{15} and \href{../../CONVENTIONS.pdf\#conv.36}{36}.
+The diagram shows the conjugacy classes of subgroups, each joined to the classes of its maximal subgroups, and the orders increase upward. \label{n:index.conjugates.c}A normal subgroup is framed, and ${\times}c$ is the number $c > 1$ of conjugate subgroups. \label{n:mark.letter}A gray letter after a symbol distinguishes the classes of subgroups with that symbol, which are not conjugate in $\grp{D_{2h}}(\grp{C_{2h}})$. The table uses the same letters. The table lists the classes by order, then by magnetic type, those of one symbol together. \label{n:head.subgroup}\label{n:head.magnetic.type}\label{n:head.order}\label{n:head.conjugates}\label{n:head.normal}A row gives the representative of a class of subgroups (subgrp), its magnetic type (type), its order, the number of subgroups in the class (conjugates) and whether the representative is normal. \label{n:head.normalizer}\label{n:head.centralizer}It also gives its normalizer and its centralizer in $\grp{D_{2h}}(\grp{C_{2h}})$, by their classes. 
+\begin{center}
+\begin{tikzpicture}[x=1cm, y=1.900cm,
+  every node/.style={fill=white, font=\footnotesize, inner xsep=1.5pt, inner ysep=1.2pt, text height=5.6pt, text depth=1.6pt},
+  normal/.style={draw, line width=0.4pt}, cover/.style={black!50, line width=0.4pt}]
+\draw[cover] (0.00,0) -- (-1.96,1);
+\draw[cover] (0.00,0) -- (1.15,1);
+\draw[cover] (0.00,0) -- (-0.27,1);
+\draw[cover] (0.00,0) -- (2.17,1);
+\draw[cover] (0.00,0) -- (-1.30,1);
+\draw[cover] (0.00,0) -- (3.18,1);
+\draw[cover] (0.00,0) -- (-3.00,1);
+\draw[cover] (-1.96,1) -- (-1.14,2);
+\draw[cover] (-1.96,1) -- (-0.12,2);
+\draw[cover] (-1.96,1) -- (-2.43,2);
+\draw[cover] (1.15,1) -- (-1.14,2);
+\draw[cover] (1.15,1) -- (1.02,2);
+\draw[cover] (1.15,1) -- (2.50,2);
+\draw[cover] (-0.27,1) -- (-1.14,2);
+\draw[cover] (-0.27,1) -- (3.99,2);
+\draw[cover] (-0.27,1) -- (-3.85,2);
+\draw[cover] (2.17,1) -- (-0.12,2);
+\draw[cover] (2.17,1) -- (1.02,2);
+\draw[cover] (2.17,1) -- (3.99,2);
+\draw[cover] (-1.30,1) -- (-0.12,2);
+\draw[cover] (-1.30,1) -- (2.50,2);
+\draw[cover] (-1.30,1) -- (-3.85,2);
+\draw[cover] (3.18,1) -- (-2.43,2);
+\draw[cover] (3.18,1) -- (2.50,2);
+\draw[cover] (3.18,1) -- (3.99,2);
+\draw[cover] (-3.00,1) -- (-2.43,2);
+\draw[cover] (-3.00,1) -- (1.02,2);
+\draw[cover] (-3.00,1) -- (-3.85,2);
+\draw[cover] (-1.14,2) -- (0.00,3);
+\draw[cover] (-0.12,2) -- (0.00,3);
+\draw[cover] (-2.43,2) -- (0.00,3);
+\draw[cover] (1.02,2) -- (0.00,3);
+\draw[cover] (2.50,2) -- (0.00,3);
+\draw[cover] (3.99,2) -- (0.00,3);
+\draw[cover] (-3.85,2) -- (0.00,3);
+\node[normal] (n00) at (0.00,0) {$\grp{C_{1}}$};
+\node[normal] (n01) at (-1.96,1) {$\grp{C_{2}}$};
+\node[normal] (n02) at (1.15,1) {$\grp{C_{2}}(\grp{C_{1}})$\clsletter{a}};
+\node[normal] (n03) at (-0.27,1) {$\grp{C_{2}}(\grp{C_{1}})$\clsletter{b}};
+\node[normal] (n04) at (2.17,1) {$\grp{C_{i}}$};
+\node[normal] (n05) at (-1.30,1) {$\grp{C_{s}}$};
+\node[normal] (n06) at (3.18,1) {$\grp{C_{s}}(\grp{C_{1}})$\clsletter{a}};
+\node[normal] (n07) at (-3.00,1) {$\grp{C_{s}}(\grp{C_{1}})$\clsletter{b}};
+\node[normal] (n08) at (-1.14,2) {$\grp{D_{2}}(\grp{C_{2}})$};
+\node[normal] (n09) at (-0.12,2) {$\grp{C_{2h}}$};
+\node[normal] (n10) at (-2.43,2) {$\grp{C_{2v}}(\grp{C_{2}})$};
+\node[normal] (n11) at (1.02,2) {$\grp{C_{2h}}(\grp{C_{i}})$\clsletter{a}};
+\node[normal] (n12) at (2.50,2) {$\grp{C_{2v}}(\grp{C_{s}})$\clsletter{a}};
+\node[normal] (n13) at (3.99,2) {$\grp{C_{2h}}(\grp{C_{i}})$\clsletter{b}};
+\node[normal] (n14) at (-3.85,2) {$\grp{C_{2v}}(\grp{C_{s}})$\clsletter{b}};
+\node[normal] (n15) at (0.00,3) {$\grp{D_{2h}}(\grp{C_{2h}})$};
+\end{tikzpicture}
+\end{center}
+{\small\begin{longtable}{@{}llrrlll@{}}\toprule
+subgrp & type & order & conjugates & normal & normalizer & centralizer\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\href{../../../rotation/data/pdf/C1.pdf}{$\grp{C_{1}}$} & I & 1 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\*
+\href{../../../rotation/data/pdf/C2.pdf}{$\grp{C_{2}}$} & I & 2 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\
+\href{../../../rotation/data/pdf/S2.pdf}{$\grp{C_{i}}$} & I & 2 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\
+\href{../../../rotation/data/pdf/C1v.pdf}{$\grp{C_{s}}$} & I & 2 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\
+$\grp{C_{2}}(\grp{C_{1}})$\clsletter{a} & III & 2 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\
+$\grp{C_{2}}(\grp{C_{1}})$\clsletter{b} & III & 2 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\
+$\grp{C_{s}}(\grp{C_{1}})$\clsletter{a} & III & 2 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\
+$\grp{C_{s}}(\grp{C_{1}})$\clsletter{b} & III & 2 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\
+\href{../../../rotation/data/pdf/C2h.pdf}{$\grp{C_{2h}}$} & I & 4 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\
+$\grp{C_{2h}}(\grp{C_{i}})$\clsletter{a} & III & 4 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\
+$\grp{C_{2h}}(\grp{C_{i}})$\clsletter{b} & III & 4 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\
+$\grp{C_{2v}}(\grp{C_{2}})$ & III & 4 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\
+$\grp{C_{2v}}(\grp{C_{s}})$\clsletter{a} & III & 4 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\
+$\grp{C_{2v}}(\grp{C_{s}})$\clsletter{b} & III & 4 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\
+$\grp{D_{2}}(\grp{C_{2}})$ & III & 4 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\*
+\href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & III & 8 & 1 & yes & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$} & \href{D2h-C2h.pdf}{$\grp{D_{2h}}(\grp{C_{2h}})$}\\
+\bottomrule\end{longtable}}
+\needspace{183pt}
 \section{Descent of symmetry}\label{s:subduction}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.12}{12} and \href{../../CONVENTIONS.pdf\#conv.33.1}{33.1}.
 A row is an irrep $\Gamma$ of \href{../../../rotation/data/pdf/D2h.pdf}{$\grp{D_{2h}}$} over $\mathbb{R}$, which is a corepresentation of \href{D2h-1p.pdf}{$\grp{D_{2h}1'}$} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.32.1}{32.1}). A row gives the restriction of $\Gamma$ to $\grp{D_{2h}}(\grp{C_{2h}})$ as a sum of corepresentations (section~\ref{s:irreps}). A corepresentation of $\grp{D_{2h}1'}$ splits in $\grp{D_{2h}}(\grp{C_{2h}})$ exactly when its row has more than one term.

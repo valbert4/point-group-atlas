@@ -7,11 +7,12 @@ each section about H or G as M reads it, and leaves the data that the records of
 their documents, which it links (scope Q7): The group (Names and structure, and for magnetic type
 III Symmetry operations, the elements of G with their signs), Representations (the irreps of H
 with the corepresentations they form, the corepresentation table in place of the character table,
-the matrices N, the symmetrized powers of the corepresentations), Subgroups (Descent of symmetry,
-the splitting table from G1'), Angular momentum (Subduction from O(3) x C_2^T, the multiplicities
-of the corepresentations for J <= J_SHOWN), and Tensors (the properties odd under time reversal,
-the multipoles, the invariants of the four images and the counts and bases of the invariants in a
-polar and an axial vector).
+the matrices N, the symmetrized powers of the corepresentations), Subgroups (Subgroup lattice, the
+classes of subgroups with their magnetic types, and Descent of symmetry, the splitting table from
+G1'), Angular momentum (Subduction from O(3) x C_2^T, the multiplicities of the corepresentations
+for J <= J_SHOWN), and Tensors (the properties odd under time reversal, the multipoles, the
+invariants of the four images and the counts and bases of the invariants in a polar and an axial
+vector).
 
 A value of a document is a field of the record, or a value of a record that the record points to,
 which the document takes unchanged.  What follows from such values by a rule (the characters of the
@@ -35,8 +36,9 @@ import re
 from .. import names
 from . import latex as L
 from .double_latex import follow, record_of, target
-from .typeset import (CONSTANTS, fill_width, label_width, labels_width, mathify, multiple,
-                      rotation_linked, row_end, snake_mark)
+from .subgroups import type_rank
+from .typeset import (CONSTANTS, ROTATION_PDF, fill_width, label_width, labels_width, mathify,
+                      multiple, rotation_linked, row_end, snake_mark)
 
 O3T = r"\grp{O(3)} \times \grp{C_{2}^{T}}"
 # The conventions of Rotation, relative to magnetic/data/pdf/.
@@ -82,6 +84,18 @@ def mlinked(s):
     catalogue holds it."""
     stem, tex = stem_of(s), "$%s$" % msym(s)
     return r"\href{%s.pdf}{%s}" % (stem, tex) if stem in names.MAGNETIC_NAMES else tex
+
+
+def shown(s):
+    """A symbol of a record as the subgroup lattice writes it, with the names of volume I's
+    lattices: C_1v(C_1) -> C_s(C_1), S_2 -> C_i."""
+    return names.display_symbol(stem_of(s))
+
+
+def class_linked(stem):
+    """A point group by the name of its class in volume I's lattices (C_s for C1v), linked to its
+    document there."""
+    return r"\href{%s}{$%s$}" % (ROTATION_PDF % stem, L.grp(names.display_symbol(stem)))
 
 
 def hm_magnetic(v):
@@ -296,6 +310,47 @@ class Doc(L.Document):
         """An irrep of G, by its label over R for a complex pair."""
         return self.Gdoc.over_real(i)
 
+    def lattice_view(self):
+        """The subgroup lattice as hasse.py and the section Subgroup lattice read it: the record's
+        nodes with, in magnetic type III, the values of G's lattice that its pointer names (order,
+        conjugates, normalizer, centralizer, edges), each node's symbol (shown) under
+        o3_schoenflies."""
+        own = self.stored["subgroup_lattice"]
+        if "lattice" not in own:
+            return {"nodes": [dict(x, o3_schoenflies=shown(x["symbol"])) for x in own["nodes"]],
+                    "edges": [{"lower": a, "upper": x["id"]}
+                              for x in own["nodes"] for a in x["covers"]]}
+        of_g = follow(own["lattice"])
+        mine = {x["node"]: x for x in own["nodes"]}
+        return {"nodes": [dict(mine[nd["id"]], id=nd["id"], order=nd["order"],
+                               class_size=nd["class_size"], normal=nd["normal"],
+                               normalizer=nd["normalizer"]["node"],
+                               centralizer=nd["centralizer"]["node"],
+                               o3_schoenflies=shown(mine[nd["id"]]["symbol"]))
+                          for nd in of_g["nodes"]],
+                "edges": of_g["edges"]}
+
+    def subgroup_tex(self, symbol):
+        return msym(symbol)
+
+    def lattice_link(self, node):
+        """The symbol of a node of the subgroup lattice, linked to the document of the record that
+        the node names."""
+        tex = "$%s$" % msym(node["o3_schoenflies"])
+        if not isinstance(node["record"], str):
+            return tex
+        catalogue, stem, _ = target(node["record"])
+        return r"\href{%s}{%s}" % ((ROTATION_PDF if catalogue == "rotation" else "%s.pdf") % stem,
+                                   tex)
+
+    def lattice_rank(self, node):
+        """The place of a node in the table of the subgroup lattice: by order, then by magnetic
+        type, then by the types of its group and of its unitary half (subgroups.type_rank)."""
+        stem = stem_of(node["symbol"])
+        k, _, unitary = stem.partition("-")
+        return (node["order"], ("I", "II", "III").index(node["magnetic_type"]), type_rank(k),
+                type_rank(unitary) if node["magnetic_type"] == "III" else ())
+
 
 def add(a, b):
     """The sum of two exact values of the records."""
@@ -344,9 +399,8 @@ def identification_cell(D, k, v):
         if not isinstance(v["record"], str):
             # an image of axial order above 12, which no record of the point groups holds
             return "$%s$, outside the catalogue" % L.grp(v["symbol"])
-        stem = target(v["record"])[1]
-        return rotation_linked(stem) + ("" if identity(v["matrix"])
-                                        else ", frame " + D.matrix(v["matrix"]))
+        return class_linked(target(v["record"])[1]) + (
+            "" if identity(v["matrix"]) else ", frame " + D.matrix(v["matrix"]))
     if k == "normalizer":
         return mlinked(v["symbol"]) + (", index %d" % v["index"]
                                        if isinstance(v["index"], int) else "")
@@ -757,7 +811,7 @@ PARTS = (
                          ("character_table", L.section_character_table),
                          ("corep_matrices", section_corep_matrices),
                          ("symmetrized_powers", section_symmetrized_powers))),
-    ("Subgroups", (("subduction", L.section_subduction),)),
+    ("Subgroups", (("subgroups", L.section_subgroups), ("subduction", L.section_subduction))),
     ("Angular momentum", (("subduction_o3", section_subduction_parent),)),
     ("Tensors", (("time_odd", section_time_odd), ("multipoles", section_multipoles),
                  ("invariants", section_invariants))),

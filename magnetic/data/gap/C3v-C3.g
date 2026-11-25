@@ -431,6 +431,37 @@ o3m := rec(
     ]
   ),
   ("subduction_o3") := "rotation/C3#/subduction_o3",
+  ("subgroup_lattice") := rec(
+    ("lattice") := "rotation/C3v#/subgroup_lattice",
+    ("nodes") := [
+      rec(
+        ("magnetic_type") := "I",
+        ("node") := "n00",
+        ("record") := "rotation/C1#",
+        ("symbol") := "C_1"
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n01",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_1v(C_1)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n00" )
+      ),
+      rec(
+        ("magnetic_type") := "I",
+        ("node") := "n02",
+        ("record") := "rotation/C3#",
+        ("symbol") := "C_3"
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n03",
+        ("record") := "magnetic/C3v-C3#",
+        ("symbol") := "C_3v(C_3)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n02" )
+      )
+    ]
+  ),
   ("symmetrized_powers") := [
     rec(
       ("antisymmetrized_square") := [],

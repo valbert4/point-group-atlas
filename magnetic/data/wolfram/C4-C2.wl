@@ -391,6 +391,30 @@ o3m = <|
     }
   |>,
   "subduction_o3" -> "rotation/C2#/subduction_o3",
+  "subgroup_lattice" -> <|
+    "lattice" -> "rotation/C4#/subgroup_lattice",
+    "nodes" -> {
+      <|
+        "magnetic_type" -> "I",
+        "node" -> "n00",
+        "record" -> "rotation/C1#",
+        "symbol" -> "C_1"
+      |>,
+      <|
+        "magnetic_type" -> "I",
+        "node" -> "n01",
+        "record" -> "rotation/C2#",
+        "symbol" -> "C_2"
+      |>,
+      <|
+        "magnetic_type" -> "III",
+        "node" -> "n02",
+        "record" -> "magnetic/C4-C2#",
+        "symbol" -> "C_4(C_2)",
+        "unitary" -> <|"member" -> 0, "node" -> "n01"|>
+      |>
+    }
+  |>,
   "symmetrized_powers" -> {
     <|
       "antisymmetrized_square" -> {},

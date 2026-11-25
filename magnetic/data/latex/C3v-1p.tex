@@ -301,6 +301,58 @@ $\irr{a}_{2}$ & $\irr{a}_{1}$ & $0$ & $\irr{a}_{2}$\\*
 $\irr{e}$ & $\irr{a}_{1} \oplus \irr{e}$ & $\irr{a}_{2}$ & $\irr{a}_{1} \oplus \irr{a}_{2} \oplus \irr{e}$\\
 \bottomrule\end{longtable}}
 \needspace{171pt}
+\partbox{Subgroups}
+\section{Subgroup lattice}\label{s:subgroups}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.15}{15} and \href{../../CONVENTIONS.pdf\#conv.36}{36}.
+The diagram shows the conjugacy classes of subgroups, each joined to the classes of its maximal subgroups, and the orders increase upward. \label{n:index.conjugates.c}\label{n:mark.conjugates}A normal subgroup is framed, and ${\times}c$ is the number $c > 1$ of conjugate subgroups. The table lists the classes by order, then by magnetic type, those of one symbol together. \label{n:head.subgroup}\label{n:head.magnetic.type}\label{n:head.order}\label{n:head.conjugates}\label{n:head.normal}A row gives the representative of a class of subgroups (subgrp), its magnetic type (type), its order, the number of subgroups in the class (conjugates) and whether the representative is normal. \label{n:head.normalizer}\label{n:head.centralizer}It also gives its normalizer and its centralizer in $\grp{C_{3v}1'}$, by their classes. 
+\begin{center}
+\begin{tikzpicture}[x=1cm, y=1.500cm,
+  every node/.style={fill=white, font=\footnotesize, inner xsep=1.5pt, inner ysep=1.2pt, text height=5.6pt, text depth=1.6pt},
+  normal/.style={draw, line width=0.4pt}, cover/.style={black!50, line width=0.4pt}]
+\draw[cover] (0.00,0) -- (-0.89,1);
+\draw[cover] (0.00,0) -- (0.09,1);
+\draw[cover] (0.00,0) -- (-2.23,1);
+\draw[cover] (0.00,0) -- (1.16,2);
+\draw[cover] (-0.89,1) -- (-0.81,3);
+\draw[cover] (0.09,1) -- (-0.81,3);
+\draw[cover] (-2.23,1) -- (-0.81,3);
+\draw[cover] (-0.89,1) -- (0.22,4);
+\draw[cover] (1.16,2) -- (0.22,4);
+\draw[cover] (0.09,1) -- (1.06,4);
+\draw[cover] (1.16,2) -- (1.06,4);
+\draw[cover] (-2.23,1) -- (-1.09,4);
+\draw[cover] (1.16,2) -- (-1.09,4);
+\draw[cover] (-0.81,3) -- (0.00,5);
+\draw[cover] (0.22,4) -- (0.00,5);
+\draw[cover] (1.06,4) -- (0.00,5);
+\draw[cover] (-1.09,4) -- (0.00,5);
+\node[normal] (n00) at (0.00,0) {$\grp{C_{1}}$};
+\node (n01) at (-0.89,1) {$\grp{C_{s}}$\,\nconj{3}};
+\node[normal] (n02) at (0.09,1) {$\grp{C_{1}1'}$};
+\node (n03) at (-2.23,1) {$\grp{C_{s}}(\grp{C_{1}})$\,\nconj{3}};
+\node[normal] (n04) at (1.16,2) {$\grp{C_{3}}$};
+\node (n05) at (-0.81,3) {$\grp{C_{s}1'}$\,\nconj{3}};
+\node[normal] (n06) at (0.22,4) {$\grp{C_{3v}}$};
+\node[normal] (n07) at (1.06,4) {$\grp{C_{3}1'}$};
+\node[normal] (n08) at (-1.09,4) {$\grp{C_{3v}}(\grp{C_{3}})$};
+\node[normal] (n09) at (0.00,5) {$\grp{C_{3v}1'}$};
+\end{tikzpicture}
+\end{center}
+{\small\begin{longtable}{@{}llrrlll@{}}\toprule
+subgrp & type & order & conjugates & normal & normalizer & centralizer\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\href{../../../rotation/data/pdf/C1.pdf}{$\grp{C_{1}}$} & I & 1 & 1 & yes & \href{C3v-1p.pdf}{$\grp{C_{3v}1'}$} & \href{C3v-1p.pdf}{$\grp{C_{3v}1'}$}\\*
+\href{../../../rotation/data/pdf/C1v.pdf}{$\grp{C_{s}}$} & I & 2 & 3 & no & $\grp{C_{s}1'}$ & $\grp{C_{s}1'}$\\*
+$\grp{C_{1}1'}$ & II & 2 & 1 & yes & \href{C3v-1p.pdf}{$\grp{C_{3v}1'}$} & \href{C3v-1p.pdf}{$\grp{C_{3v}1'}$}\\*
+$\grp{C_{s}}(\grp{C_{1}})$ & III & 2 & 3 & no & $\grp{C_{s}1'}$ & $\grp{C_{s}1'}$\\*
+\href{../../../rotation/data/pdf/C3.pdf}{$\grp{C_{3}}$} & I & 3 & 1 & yes & \href{C3v-1p.pdf}{$\grp{C_{3v}1'}$} & $\grp{C_{3}1'}$\\*
+$\grp{C_{s}1'}$ & II & 4 & 3 & no & $\grp{C_{s}1'}$ & $\grp{C_{s}1'}$\\*
+\href{../../../rotation/data/pdf/C3v.pdf}{$\grp{C_{3v}}$} & I & 6 & 1 & yes & \href{C3v-1p.pdf}{$\grp{C_{3v}1'}$} & $\grp{C_{1}1'}$\\*
+$\grp{C_{3}1'}$ & II & 6 & 1 & yes & \href{C3v-1p.pdf}{$\grp{C_{3v}1'}$} & $\grp{C_{3}1'}$\\*
+\href{C3v-C3.pdf}{$\grp{C_{3v}}(\grp{C_{3}})$} & III & 6 & 1 & yes & \href{C3v-1p.pdf}{$\grp{C_{3v}1'}$} & $\grp{C_{1}1'}$\\*
+\href{C3v-1p.pdf}{$\grp{C_{3v}1'}$} & II & 12 & 1 & yes & \href{C3v-1p.pdf}{$\grp{C_{3v}1'}$} & $\grp{C_{1}1'}$\\
+\bottomrule\end{longtable}}
+\needspace{171pt}
 \partbox{Angular momentum}
 \section{Subduction from \texorpdfstring{$\grp{O(3)} \times \grp{C_{2}^{T}}$}{O(3) x C2T}}\label{s:subduction_o3}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.11}{11} and \href{../../CONVENTIONS.pdf\#conv.33.1}{33.1}.

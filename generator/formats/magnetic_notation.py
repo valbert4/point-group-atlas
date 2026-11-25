@@ -17,7 +17,7 @@ SECTIONS = tuple("conventions|conv:%d|" % n for n in range(30, 40))
 # The parts of the documents of this catalogue (magnetic_latex.PARTS), where its records that
 # Rotation's registry gives another meaning hold too.
 PARTS = ("identification", "elements", "irreps", "character_table", "corep_matrices",
-         "symmetrized_powers", "subduction", "subduction_o3", "time_odd", "multipoles",
+         "symmetrized_powers", "subgroups", "subduction", "subduction_o3", "time_odd", "multipoles",
          "invariants")
 DOCUMENTS = tuple("*|%s|" % k for k in ("title",) + PARTS)
 LOCAL = SECTIONS + DOCUMENTS
@@ -91,6 +91,15 @@ MAGNETIC = (
     H("head.corep", "head", "corep",
       r"a corepresentation, named by its irreps, or the one that contains an irrep", "corep",
       defined=("part:irreps", "part:corep_matrices", "conv:32.3")),
+    H("head.magnetic.type", "head", "type",
+      r"the magnetic type of a subgroup, I, II or III", "type",
+      defined=("part:subgroups", "conv:36")),
+    H("head.normalizer", "head", "normalizer",
+      "the normalizer of a subgroup in the group, by its class", "normalizer",
+      defined=("part:subgroups", "conv:36")),
+    H("head.centralizer", "head", "centralizer",
+      "the centralizer of a subgroup in the group, by its class", "centralizer",
+      defined=("part:subgroups", "conv:36")),
     H("head.name.property", "head", "name",
       "a tensor property odd under time reversal, by its Jahn symbol", "name",
       defined=("part:time_odd", "conv:35")),
@@ -131,6 +140,10 @@ MAGNETIC = (
       r"a component $v_x$, $v_y$ or $v_z$ of the axial vector odd under time reversal of the "
       r"invariants in two vectors", "v_{x}", "v_{y}", "v_{z}", "v_{x}^{#}", "v_{y}^{#}",
       "v_{z}^{#}", scope=("*|invariants|",), defined=("part:invariants",)),
+    # the subgroup lattices (section 36)
+    S("group.subgroup.point", "group", r"\grp{K}",
+      r"a subgroup of $\grp{G}$, with $\grp{K}'$ a subgroup of index 2 in it", r"\grp{K}",
+      r"\grp{K}'", scope="conventions|conv:36|", defined="conv:36"),
     # the symmetrized powers (section 34)
     S("operator.power.symmetrized", "operator", r"[#1^{#2}]",
       r"the symmetrized square of a corepresentation $\mathcal{D}$, with "

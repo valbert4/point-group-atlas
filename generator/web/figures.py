@@ -54,9 +54,36 @@ def double_symbol(tex):
     return re.sub(r"_\{([^{}]*)\}", r"_\1", s)
 
 
-def linked_nodes(tikz, catalogue, built, own):
+# A formula of one group alone in a node of Magnetic's diagrams: \grp{C_{2}}, \grp{C_{2}1'},
+# \grp{C_{2v}}(\grp{C_{2}}), its group and its unitary half.
+MAGNETIC_FORMULA = re.compile(r"\$\\grp\{((?:[^{}]|\{[^{}]*\})*)\}"
+                              r"(?:\(\\grp\{((?:[^{}]|\{[^{}]*\})*)\}\))?\$")
+
+
+def magnetic_place(m):
+    """The (catalogue, stem) of the group of a match of MAGNETIC_FORMULA: a point group, the
+    record of a group of magnetic type II or III."""
+    from ..formats import magnetic_latex
+
+    def plain(x):
+        return re.sub(r"_\{([^{}]*)\}", r"_\1", x).replace(r"\infty", "inf").replace(" ", "")
+    symbol = plain(m.group(1)) + ("(%s)" % plain(m.group(2)) if m.group(2) else "")
+    stem = magnetic_latex.stem_of(symbol)
+    return ("magnetic" if "-" in stem else "rotation"), stem
+
+
+def linked_nodes(tikz, catalogue, built, own, exists=None):
     """The TikZ with the group of each node, a formula of that group alone, linked to the
-    group's contents when the build holds it and it is not the document's own."""
+    group's contents when the build holds it and it is not the document's own; a point group of a
+    diagram of Magnetic when the site holds its contents (`exists`, of a path)."""
+    if catalogue == "magnetic":
+        def one(m):
+            cat, stem = magnetic_place(m)
+            path = "%s/%s/" % (cat, stem)
+            if stem == own or not (stem in built if cat == catalogue else exists(path)):
+                return m.group(0)
+            return r"\hosthref{%s%s}{%s}" % (HOST, path, m.group(0))
+        return NODE.sub(lambda line: MAGNETIC_FORMULA.sub(one, line.group(0)), tikz)
     if catalogue == "double":
         from ..formats import double_latex
         pattern = GROUP_FORMULA

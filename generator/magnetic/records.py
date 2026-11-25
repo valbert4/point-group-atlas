@@ -1,15 +1,16 @@
 """The records stage of the two magnetic catalogues, magnetic/ and magnetic-double/: the records of
-names.MAGNETIC_NAMES (magnetic/CONVENTIONS.md sections 30 to 35) in data/json/, then
+names.MAGNETIC_NAMES (magnetic/CONVENTIONS.md sections 30 to 36) in data/json/, then
 data/magnetic_groups.json; the catalogue magnetic-double has none so far.
 
 A record of magnetic type III, <G>-<H>, stores what no record of the point groups holds: its
 magnetic symbols, magnetic type, character, normalizer and centralizer, its four images with their
 frames, the representative a, the frame of the copy of H in G, the case, indicator, partner and N
 of each corepresentation, the merged classes and the constituents of its corepresentation table,
-the splitting table from G1', the tensor properties odd under time reversal and the invariants in
-two vectors.  It names every other value by a pointer into the records of G, of
-H and of its images.  A record of magnetic type II, <G>-1p, stores its symbols, normalizer,
-centralizer, images, the case, the partner and the constituents of each corepresentation and the
+the splitting table from G1', the magnetic type, symbol, record and unitary half of each node of
+its subgroup lattice, the tensor properties odd under time reversal and the invariants in two
+vectors.  It names every other value by a pointer into the records of G, of H and of its images.
+A record of magnetic type II, <G>-1p, stores its symbols, normalizer, centralizer, images, the
+case, the partner and the constituents of each corepresentation, its subgroup lattice and the
 invariants in two vectors, and names the N of each real irrep, the block irrep x irrep -> trivial
 of G, by a pointer.
 
@@ -26,6 +27,7 @@ from . import geometry as GE
 from . import groups_file
 from . import hm as HM
 from . import invariants as INV
+from . import lattice as LA
 from . import point as PT
 from . import tensors as TE
 
@@ -199,6 +201,7 @@ def record(stem):
         doc["orbifold"] = {"G": rot(g, "/orbifold"), "H": rot(h, "/orbifold"),
                            "images": {k: (rot(s, "/orbifold") if s else _null(OUTSIDE))
                                       for k, s in img.items()}}
+    doc["subgroup_lattice"] = LA.subgroup_lattice(M)
     doc["invariants"] = invariants(M, img)
     return doc
 

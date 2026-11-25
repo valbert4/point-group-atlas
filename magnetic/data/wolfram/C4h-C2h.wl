@@ -353,6 +353,62 @@ o3m = <|
     }
   |>,
   "subduction_o3" -> "rotation/C2h#/subduction_o3",
+  "subgroup_lattice" -> <|
+    "lattice" -> "rotation/C4h#/subgroup_lattice",
+    "nodes" -> {
+      <|
+        "magnetic_type" -> "I",
+        "node" -> "n00",
+        "record" -> "rotation/C1#",
+        "symbol" -> "C_1"
+      |>,
+      <|
+        "magnetic_type" -> "I",
+        "node" -> "n01",
+        "record" -> "rotation/C2#",
+        "symbol" -> "C_2"
+      |>,
+      <|
+        "magnetic_type" -> "I",
+        "node" -> "n02",
+        "record" -> "rotation/S2#",
+        "symbol" -> "S_2"
+      |>,
+      <|
+        "magnetic_type" -> "I",
+        "node" -> "n03",
+        "record" -> "rotation/C1v#",
+        "symbol" -> "C_1v"
+      |>,
+      <|
+        "magnetic_type" -> "III",
+        "node" -> "n04",
+        "record" -> "magnetic/C4-C2#",
+        "symbol" -> "C_4(C_2)",
+        "unitary" -> <|"member" -> 0, "node" -> "n01"|>
+      |>,
+      <|
+        "magnetic_type" -> "I",
+        "node" -> "n05",
+        "record" -> "rotation/C2h#",
+        "symbol" -> "C_2h"
+      |>,
+      <|
+        "magnetic_type" -> "III",
+        "node" -> "n06",
+        "record" -> <|"reason" -> "outside-the-catalogue", "value" -> Null|>,
+        "symbol" -> "S_4(C_2)",
+        "unitary" -> <|"member" -> 0, "node" -> "n01"|>
+      |>,
+      <|
+        "magnetic_type" -> "III",
+        "node" -> "n07",
+        "record" -> "magnetic/C4h-C2h#",
+        "symbol" -> "C_4h(C_2h)",
+        "unitary" -> <|"member" -> 0, "node" -> "n05"|>
+      |>
+    }
+  |>,
   "symmetrized_powers" -> {
     <|
       "antisymmetrized_square" -> {},

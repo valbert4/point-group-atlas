@@ -557,6 +557,192 @@ o3m := rec(
     ]
   ),
   ("subduction_o3") := "rotation/C4h#/subduction_o3",
+  ("subgroup_lattice") := rec(
+    ("lattice") := "rotation/D4h#/subgroup_lattice",
+    ("nodes") := [
+      rec(
+        ("magnetic_type") := "I",
+        ("node") := "n00",
+        ("record") := "rotation/C1#",
+        ("symbol") := "C_1"
+      ),
+      rec(
+        ("magnetic_type") := "I",
+        ("node") := "n01",
+        ("record") := "rotation/C2#",
+        ("symbol") := "C_2"
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n02",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_2(C_1)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n00" )
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n03",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_2(C_1)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n00" )
+      ),
+      rec(
+        ("magnetic_type") := "I",
+        ("node") := "n04",
+        ("record") := "rotation/S2#",
+        ("symbol") := "S_2"
+      ),
+      rec(
+        ("magnetic_type") := "I",
+        ("node") := "n05",
+        ("record") := "rotation/C1v#",
+        ("symbol") := "C_1v"
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n06",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_1v(C_1)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n00" )
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n07",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_1v(C_1)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n00" )
+      ),
+      rec(
+        ("magnetic_type") := "I",
+        ("node") := "n08",
+        ("record") := "rotation/C4#",
+        ("symbol") := "C_4"
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n09",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "D_2(C_2)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n01" )
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n10",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "D_2(C_2)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n01" )
+      ),
+      rec(
+        ("magnetic_type") := "I",
+        ("node") := "n11",
+        ("record") := "rotation/C2h#",
+        ("symbol") := "C_2h"
+      ),
+      rec(
+        ("magnetic_type") := "I",
+        ("node") := "n12",
+        ("record") := "rotation/S4#",
+        ("symbol") := "S_4"
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n13",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_2v(C_2)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n01" )
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n14",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_2v(C_2)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n01" )
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n15",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_2h(S_2)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n04" )
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n16",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_2v(C_1v)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n05" )
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n17",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_2h(S_2)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n04" )
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n18",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_2v(C_1v)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n05" )
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n19",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "D_4(C_4)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n08" )
+      ),
+      rec(
+        ("magnetic_type") := "I",
+        ("node") := "n20",
+        ("record") := "rotation/C4h#",
+        ("symbol") := "C_4h"
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n21",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "C_4v(C_4)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n08" )
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n22",
+        ("record") := "magnetic/D2h-C2h#",
+        ("symbol") := "D_2h(C_2h)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n11" )
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n23",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "D_2d(S_4)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n12" )
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n24",
+        ("record") := "magnetic/D2h-C2h#",
+        ("symbol") := "D_2h(C_2h)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n11" )
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n25",
+        ("record") := rec( ("reason") := "outside-the-catalogue", ("value") := fail ),
+        ("symbol") := "D_2d(S_4)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n12" )
+      ),
+      rec(
+        ("magnetic_type") := "III",
+        ("node") := "n26",
+        ("record") := "magnetic/D4h-C4h#",
+        ("symbol") := "D_4h(C_4h)",
+        ("unitary") := rec( ("member") := 0, ("node") := "n20" )
+      )
+    ]
+  ),
   ("symmetrized_powers") := [
     rec(
       ("antisymmetrized_square") := [],

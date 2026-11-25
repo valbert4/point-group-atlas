@@ -92,6 +92,16 @@ def display_schoenflies(name):
     return {"C1v": "C_s", "S2": "C_i"}.get(name) or schoenflies_of(name)
 
 
+def display_symbol(stem):
+    """The symbol of a group of Magnetic by its record's name, or of a point group by its own, with
+    the names of display_schoenflies for G and H: "C1v-C1" is "C_s(C_1)", "S2-1p" is "C_i1'"."""
+    group, _, half = stem.partition("-")
+    symbol = display_schoenflies(group)
+    if not half:
+        return symbol
+    return symbol + "1'" if half == "1p" else "%s(%s)" % (symbol, display_schoenflies(half))
+
+
 # ---------------------------------------------------------------- symmetry-adapted bases
 J_MAX = 60
 J_ENUMERATED = 10              # the bases files J <= 10 are in the repository
