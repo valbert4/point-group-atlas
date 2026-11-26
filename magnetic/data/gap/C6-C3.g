@@ -1,5 +1,83 @@
 # C6-C3 (C_6(C_3)): data/json/C6-C3.json as a GAP record.
 o3m := rec(
+  ("clebsch_gordan") := rec(
+    ("corepresentations") := [ "A", "1E1" ],
+    ("kind") := "table",
+    ("products") := [
+      rec(
+        ("a") := "A",
+        ("b") := "A",
+        ("couplings") := [
+          rec(
+            ("c") := "A",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C3#/clebsch_gordan/products/0/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "A",
+        ("b") := "1E1",
+        ("couplings") := [
+          rec(
+            ("c") := "1E1",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C3#/clebsch_gordan/products/1/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E1",
+        ("b") := "1E1",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := "A",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := -1*E(3), ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := -1*E(3), ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-symmetric"
+          ),
+          rec(
+            ("N") := 6,
+            ("c") := "A",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 2+E(3), ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := -2+-1*E(3), ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-antisymmetric"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := "1E1",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := E(3), ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      )
+    ]
+  ),
   ("corepresentation_table") := rec(
     ("characters") := [ [ 1, 1 ], [ 2, -1 ] ],
     ("classes") := [ [ "E" ], [ "C3", "C32" ] ],
@@ -15,6 +93,29 @@ o3m := rec(
     rec( ("case") := "c", ("indicator") := 0, ("irrep") := "1E1", ("partner") := "2E1" )
   ],
   ("frame") := rec( ("matrix") := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ], ("node") := "n02" ),
+  ("fusion") := rec(
+    ("corepresentations") := [ "A", "1E1" ],
+    ("products") := [
+      rec(
+        ("a") := "A",
+        ("b") := "A",
+        ("terms") := [ rec( ("corepresentation") := "A", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "A",
+        ("b") := "1E1",
+        ("terms") := [ rec( ("corepresentation") := "1E1", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "1E1",
+        ("b") := "1E1",
+        ("terms") := [
+          rec( ("corepresentation") := "A", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "1E1", ("multiplicity") := 1 )
+        ]
+      )
+    ]
+  ),
   ("group") := rec(
     ("G") := "rotation/C6#",
     ("H") := "rotation/C3#",

@@ -1,5 +1,50 @@
 # C1v-1p (C_1v1'): data/json/C1v-1p.json as a GAP record.
 o3m := rec(
+  ("clebsch_gordan") := rec(
+    ("corepresentations") := [ "Ap", "App" ],
+    ("kind") := "table",
+    ("products") := [
+      rec(
+        ("a") := "Ap",
+        ("b") := "Ap",
+        ("couplings") := [
+          rec(
+            ("c") := "Ap",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C1v#/clebsch_gordan/products/0/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Ap",
+        ("b") := "App",
+        ("couplings") := [
+          rec(
+            ("c") := "App",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C1v#/clebsch_gordan/products/1/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "App",
+        ("b") := "App",
+        ("couplings") := [
+          rec(
+            ("c") := "Ap",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C1v#/clebsch_gordan/products/2/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      )
+    ]
+  ),
   ("corepresentation_table") := rec(
     ("characters") := [ [ 1, 1 ], [ 1, -1 ] ],
     ("classes") := [ [ "E" ], [ "sv" ] ],
@@ -17,6 +62,26 @@ o3m := rec(
       ("irrep") := "App"
     )
   ],
+  ("fusion") := rec(
+    ("corepresentations") := [ "Ap", "App" ],
+    ("products") := [
+      rec(
+        ("a") := "Ap",
+        ("b") := "Ap",
+        ("terms") := [ rec( ("corepresentation") := "Ap", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Ap",
+        ("b") := "App",
+        ("terms") := [ rec( ("corepresentation") := "App", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "App",
+        ("b") := "App",
+        ("terms") := [ rec( ("corepresentation") := "Ap", ("multiplicity") := 1 ) ]
+      )
+    ]
+  ),
   ("group") := rec(
     ("G") := "rotation/C1v#",
     ("abstract_type") := "Z_2 x Z_2",

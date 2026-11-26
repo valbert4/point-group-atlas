@@ -1,5 +1,1334 @@
 # C8h-1p (C_8h1'): data/json/C8h-1p.json as a GAP record.
 o3m := rec(
+  ("clebsch_gordan") := rec(
+    ("corepresentations") := [ "Ag", "Bg", "1E1g", "1E2g", "1E3g", "Au", "Bu", "1E1u", "1E2u", "1E3u" ],
+    ("kind") := "table",
+    ("products") := [
+      rec(
+        ("a") := "Ag",
+        ("b") := "Ag",
+        ("couplings") := [
+          rec(
+            ("c") := "Ag",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/0/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "Bg",
+        ("couplings") := [
+          rec(
+            ("c") := "Bg",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/1/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "1E1g",
+        ("couplings") := [
+          rec(
+            ("c") := "1E1g",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/2/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "1E2g",
+        ("couplings") := [
+          rec(
+            ("c") := "1E2g",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/4/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "1E3g",
+        ("couplings") := [
+          rec(
+            ("c") := "1E3g",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/6/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "Au",
+        ("couplings") := [
+          rec(
+            ("c") := "Au",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/8/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "Bu",
+        ("couplings") := [
+          rec(
+            ("c") := "Bu",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/9/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "1E1u",
+        ("couplings") := [
+          rec(
+            ("c") := "1E1u",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/10/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "1E2u",
+        ("couplings") := [
+          rec(
+            ("c") := "1E2u",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/12/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "1E3u",
+        ("couplings") := [
+          rec(
+            ("c") := "1E3u",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/14/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "Bg",
+        ("couplings") := [
+          rec(
+            ("c") := "Ag",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/16/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "1E1g",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E3g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "1E2g",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E2g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "1E3g",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E1g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "Au",
+        ("couplings") := [
+          rec(
+            ("c") := "Bu",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/23/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "Bu",
+        ("couplings") := [
+          rec(
+            ("c") := "Au",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/24/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "1E1u",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E3u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "1E2u",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E2u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "1E3u",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E1u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "1E1g",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := "Ag",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-symmetric"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Ag",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-antisymmetric"
+          ),
+          rec(
+            ("c") := "1E2g",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/31/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "1E2g",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E1g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] )
+            ],
+            ("separation") := "unique"
+          ),
+          rec(
+            ("c") := "1E3g",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/33/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "1E3g",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := "Bg",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 1 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 2 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Bg",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 1 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 2 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := "1E2g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "Au",
+        ("couplings") := [
+          rec(
+            ("c") := "1E1u",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/37/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "Bu",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E3u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "1E1u",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := "Au",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Au",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("c") := "1E2u",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/39/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "1E2u",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E1u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] )
+            ],
+            ("separation") := "unique"
+          ),
+          rec(
+            ("c") := "1E3u",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/41/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "1E3u",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := "Bu",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 1 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 2 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Bu",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 1 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 2 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := "1E2u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E2g",
+        ("b") := "1E2g",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := "Ag",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-symmetric"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Ag",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-antisymmetric"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Bg",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 1 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 2 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-symmetric, row order"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Bg",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 1 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 2 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-symmetric, row order"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E2g",
+        ("b") := "1E3g",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E1g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] )
+            ],
+            ("separation") := "unique"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := "1E3g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E2g",
+        ("b") := "Au",
+        ("couplings") := [
+          rec(
+            ("c") := "1E2u",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/62/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E2g",
+        ("b") := "Bu",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E2u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E2g",
+        ("b") := "1E1u",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E1u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          ),
+          rec(
+            ("c") := "1E3u",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/64/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E2g",
+        ("b") := "1E2u",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := "Au",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Au",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Bu",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 1 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 2 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Bu",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 1 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 2 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E2g",
+        ("b") := "1E3u",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E1u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] )
+            ],
+            ("separation") := "unique"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := "1E3u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E3g",
+        ("b") := "1E3g",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := "Ag",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-symmetric"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Ag",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-antisymmetric"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := "1E2g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E3g",
+        ("b") := "Au",
+        ("couplings") := [
+          rec(
+            ("c") := "1E3u",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/83/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E3g",
+        ("b") := "Bu",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E1u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E3g",
+        ("b") := "1E1u",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := "Bu",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 1 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 2 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Bu",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 1 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 2 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := "1E2u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E3g",
+        ("b") := "1E2u",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E1u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := "1E3u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E3g",
+        ("b") := "1E3u",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := "Au",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Au",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := "1E2u",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Au",
+        ("b") := "Au",
+        ("couplings") := [
+          rec(
+            ("c") := "Ag",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/100/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Au",
+        ("b") := "Bu",
+        ("couplings") := [
+          rec(
+            ("c") := "Bg",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/101/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Au",
+        ("b") := "1E1u",
+        ("couplings") := [
+          rec(
+            ("c") := "1E1g",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/102/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Au",
+        ("b") := "1E2u",
+        ("couplings") := [
+          rec(
+            ("c") := "1E2g",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/104/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Au",
+        ("b") := "1E3u",
+        ("couplings") := [
+          rec(
+            ("c") := "1E3g",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/106/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Bu",
+        ("b") := "Bu",
+        ("couplings") := [
+          rec(
+            ("c") := "Ag",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/108/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Bu",
+        ("b") := "1E1u",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E3g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Bu",
+        ("b") := "1E2u",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E2g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Bu",
+        ("b") := "1E3u",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E1g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E1u",
+        ("b") := "1E1u",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := "Ag",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-symmetric"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Ag",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-antisymmetric"
+          ),
+          rec(
+            ("c") := "1E2g",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/115/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E1u",
+        ("b") := "1E2u",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E1g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] )
+            ],
+            ("separation") := "unique"
+          ),
+          rec(
+            ("c") := "1E3g",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C8h#/clebsch_gordan/products/117/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E1u",
+        ("b") := "1E3u",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := "Bg",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 1 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 2 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Bg",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 1 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 2 )
+                ]
+              )
+            ],
+            ("separation") := "row order"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := "1E2g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E2u",
+        ("b") := "1E2u",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := "Ag",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-symmetric"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Ag",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-antisymmetric"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Bg",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 1 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 2 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-symmetric, row order"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Bg",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 1 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 2 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-symmetric, row order"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E2u",
+        ("b") := "1E3u",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := "1E1g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] )
+            ],
+            ("separation") := "unique"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := "1E3g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "1E3u",
+        ("b") := "1E3u",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := "Ag",
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-symmetric"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := "Ag",
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-antisymmetric"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := "1E2g",
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      )
+    ]
+  ),
   ("corepresentation_table") := rec(
     ("characters") := [
       [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
@@ -66,6 +1395,349 @@ o3m := rec(
     rec( ("case") := "c", ("irrep") := "1E2u", ("partner") := "2E2u" ),
     rec( ("case") := "c", ("irrep") := "1E3u", ("partner") := "2E3u" )
   ],
+  ("fusion") := rec(
+    ("corepresentations") := [ "Ag", "Bg", "1E1g", "1E2g", "1E3g", "Au", "Bu", "1E1u", "1E2u", "1E3u" ],
+    ("products") := [
+      rec(
+        ("a") := "Ag",
+        ("b") := "Ag",
+        ("terms") := [ rec( ("corepresentation") := "Ag", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "Bg",
+        ("terms") := [ rec( ("corepresentation") := "Bg", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "1E1g",
+        ("terms") := [ rec( ("corepresentation") := "1E1g", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "1E2g",
+        ("terms") := [ rec( ("corepresentation") := "1E2g", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "1E3g",
+        ("terms") := [ rec( ("corepresentation") := "1E3g", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "Au",
+        ("terms") := [ rec( ("corepresentation") := "Au", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "Bu",
+        ("terms") := [ rec( ("corepresentation") := "Bu", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "1E1u",
+        ("terms") := [ rec( ("corepresentation") := "1E1u", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "1E2u",
+        ("terms") := [ rec( ("corepresentation") := "1E2u", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Ag",
+        ("b") := "1E3u",
+        ("terms") := [ rec( ("corepresentation") := "1E3u", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "Bg",
+        ("terms") := [ rec( ("corepresentation") := "Ag", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "1E1g",
+        ("terms") := [ rec( ("corepresentation") := "1E3g", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "1E2g",
+        ("terms") := [ rec( ("corepresentation") := "1E2g", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "1E3g",
+        ("terms") := [ rec( ("corepresentation") := "1E1g", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "Au",
+        ("terms") := [ rec( ("corepresentation") := "Bu", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "Bu",
+        ("terms") := [ rec( ("corepresentation") := "Au", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "1E1u",
+        ("terms") := [ rec( ("corepresentation") := "1E3u", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "1E2u",
+        ("terms") := [ rec( ("corepresentation") := "1E2u", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Bg",
+        ("b") := "1E3u",
+        ("terms") := [ rec( ("corepresentation") := "1E1u", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "1E1g",
+        ("terms") := [
+          rec( ("corepresentation") := "Ag", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "1E2g", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "1E2g",
+        ("terms") := [
+          rec( ("corepresentation") := "1E1g", ("multiplicity") := 1 ),
+          rec( ("corepresentation") := "1E3g", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "1E3g",
+        ("terms") := [
+          rec( ("corepresentation") := "Bg", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "1E2g", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "Au",
+        ("terms") := [ rec( ("corepresentation") := "1E1u", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "Bu",
+        ("terms") := [ rec( ("corepresentation") := "1E3u", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "1E1u",
+        ("terms") := [
+          rec( ("corepresentation") := "Au", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "1E2u", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "1E2u",
+        ("terms") := [
+          rec( ("corepresentation") := "1E1u", ("multiplicity") := 1 ),
+          rec( ("corepresentation") := "1E3u", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E1g",
+        ("b") := "1E3u",
+        ("terms") := [
+          rec( ("corepresentation") := "Bu", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "1E2u", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E2g",
+        ("b") := "1E2g",
+        ("terms") := [
+          rec( ("corepresentation") := "Ag", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "Bg", ("multiplicity") := 2 )
+        ]
+      ),
+      rec(
+        ("a") := "1E2g",
+        ("b") := "1E3g",
+        ("terms") := [
+          rec( ("corepresentation") := "1E1g", ("multiplicity") := 1 ),
+          rec( ("corepresentation") := "1E3g", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E2g",
+        ("b") := "Au",
+        ("terms") := [ rec( ("corepresentation") := "1E2u", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "1E2g",
+        ("b") := "Bu",
+        ("terms") := [ rec( ("corepresentation") := "1E2u", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "1E2g",
+        ("b") := "1E1u",
+        ("terms") := [
+          rec( ("corepresentation") := "1E1u", ("multiplicity") := 1 ),
+          rec( ("corepresentation") := "1E3u", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E2g",
+        ("b") := "1E2u",
+        ("terms") := [
+          rec( ("corepresentation") := "Au", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "Bu", ("multiplicity") := 2 )
+        ]
+      ),
+      rec(
+        ("a") := "1E2g",
+        ("b") := "1E3u",
+        ("terms") := [
+          rec( ("corepresentation") := "1E1u", ("multiplicity") := 1 ),
+          rec( ("corepresentation") := "1E3u", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E3g",
+        ("b") := "1E3g",
+        ("terms") := [
+          rec( ("corepresentation") := "Ag", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "1E2g", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E3g",
+        ("b") := "Au",
+        ("terms") := [ rec( ("corepresentation") := "1E3u", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "1E3g",
+        ("b") := "Bu",
+        ("terms") := [ rec( ("corepresentation") := "1E1u", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "1E3g",
+        ("b") := "1E1u",
+        ("terms") := [
+          rec( ("corepresentation") := "Bu", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "1E2u", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E3g",
+        ("b") := "1E2u",
+        ("terms") := [
+          rec( ("corepresentation") := "1E1u", ("multiplicity") := 1 ),
+          rec( ("corepresentation") := "1E3u", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E3g",
+        ("b") := "1E3u",
+        ("terms") := [
+          rec( ("corepresentation") := "Au", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "1E2u", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "Au",
+        ("b") := "Au",
+        ("terms") := [ rec( ("corepresentation") := "Ag", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Au",
+        ("b") := "Bu",
+        ("terms") := [ rec( ("corepresentation") := "Bg", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Au",
+        ("b") := "1E1u",
+        ("terms") := [ rec( ("corepresentation") := "1E1g", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Au",
+        ("b") := "1E2u",
+        ("terms") := [ rec( ("corepresentation") := "1E2g", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Au",
+        ("b") := "1E3u",
+        ("terms") := [ rec( ("corepresentation") := "1E3g", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Bu",
+        ("b") := "Bu",
+        ("terms") := [ rec( ("corepresentation") := "Ag", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Bu",
+        ("b") := "1E1u",
+        ("terms") := [ rec( ("corepresentation") := "1E3g", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Bu",
+        ("b") := "1E2u",
+        ("terms") := [ rec( ("corepresentation") := "1E2g", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Bu",
+        ("b") := "1E3u",
+        ("terms") := [ rec( ("corepresentation") := "1E1g", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "1E1u",
+        ("b") := "1E1u",
+        ("terms") := [
+          rec( ("corepresentation") := "Ag", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "1E2g", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E1u",
+        ("b") := "1E2u",
+        ("terms") := [
+          rec( ("corepresentation") := "1E1g", ("multiplicity") := 1 ),
+          rec( ("corepresentation") := "1E3g", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E1u",
+        ("b") := "1E3u",
+        ("terms") := [
+          rec( ("corepresentation") := "Bg", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "1E2g", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E2u",
+        ("b") := "1E2u",
+        ("terms") := [
+          rec( ("corepresentation") := "Ag", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "Bg", ("multiplicity") := 2 )
+        ]
+      ),
+      rec(
+        ("a") := "1E2u",
+        ("b") := "1E3u",
+        ("terms") := [
+          rec( ("corepresentation") := "1E1g", ("multiplicity") := 1 ),
+          rec( ("corepresentation") := "1E3g", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := "1E3u",
+        ("b") := "1E3u",
+        ("terms") := [
+          rec( ("corepresentation") := "Ag", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "1E2g", ("multiplicity") := 1 )
+        ]
+      )
+    ]
+  ),
   ("group") := rec(
     ("G") := "rotation/C8h#",
     ("abstract_type") := "Z_8 x Z_2 x Z_2",

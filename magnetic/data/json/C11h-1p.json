@@ -1,4 +1,5604 @@
 {
+  "clebsch_gordan": {
+    "corepresentations": [
+      "Ap",
+      "1E1p",
+      "1E2p",
+      "1E3p",
+      "1E4p",
+      "1E5p",
+      "App",
+      "1E1pp",
+      "1E2pp",
+      "1E3pp",
+      "1E4pp",
+      "1E5pp"
+    ],
+    "kind": "table",
+    "products": [
+      {
+        "a": "Ap",
+        "b": "Ap",
+        "couplings": [
+          {
+            "c": "Ap",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/0/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E1p",
+        "couplings": [
+          {
+            "c": "1E1p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/1/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E2p",
+        "couplings": [
+          {
+            "c": "1E2p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/3/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E3p",
+        "couplings": [
+          {
+            "c": "1E3p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/5/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E4p",
+        "couplings": [
+          {
+            "c": "1E4p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/7/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E5p",
+        "couplings": [
+          {
+            "c": "1E5p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/9/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "App",
+        "couplings": [
+          {
+            "c": "App",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/11/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E1pp",
+        "couplings": [
+          {
+            "c": "1E1pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/12/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E2pp",
+        "couplings": [
+          {
+            "c": "1E2pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/14/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E3pp",
+        "couplings": [
+          {
+            "c": "1E3pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/16/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E4pp",
+        "couplings": [
+          {
+            "c": "1E4pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/18/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E5pp",
+        "couplings": [
+          {
+            "c": "1E5pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/20/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E1p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-symmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-antisymmetric"
+          },
+          {
+            "c": "1E2p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/22/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E2p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E3p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/24/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E3p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E4p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/26/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E4p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E5p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/28/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E5p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E4p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E5p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "App",
+        "couplings": [
+          {
+            "c": "1E1pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/32/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E1pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "App",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "row order"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "App",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "row order"
+          },
+          {
+            "c": "1E2pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/33/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E2pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E3pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/35/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E3pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E4pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/37/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E4pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E5pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/39/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E5pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E4pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E5pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E2p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-symmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-antisymmetric"
+          },
+          {
+            "c": "1E4p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/63/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E3p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E5p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/65/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E4p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E5p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E5p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E4p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "App",
+        "couplings": [
+          {
+            "c": "1E2pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/71/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E1pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E3pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/72/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E2pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "App",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "row order"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "App",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "row order"
+          },
+          {
+            "c": "1E4pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/74/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E3pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E5pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/76/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E4pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E5pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E5pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E4pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E3p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-symmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-antisymmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E5p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E4p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E4p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E5p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "App",
+        "couplings": [
+          {
+            "c": "1E3pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/106/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E1pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E4pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/107/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E2pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E5pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/109/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E3pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "App",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "row order"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "App",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "row order"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E5pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E4pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E4pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E5pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "1E4p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-symmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-antisymmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "1E5p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "App",
+        "couplings": [
+          {
+            "c": "1E4pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/137/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "1E1pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E5pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/138/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "1E2pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E5pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "1E3pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E4pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "1E4pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "App",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "row order"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "App",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "row order"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "1E5pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E5p",
+        "b": "1E5p",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-symmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-antisymmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E5p",
+        "b": "App",
+        "couplings": [
+          {
+            "c": "1E5pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/164/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E5p",
+        "b": "1E1pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E4pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E5pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E5p",
+        "b": "1E2pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E4pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E5p",
+        "b": "1E3pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E5p",
+        "b": "1E4pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E5p",
+        "b": "1E5pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "App",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "row order"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "App",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "row order"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1pp",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "App",
+        "couplings": [
+          {
+            "c": "Ap",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/187/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "1E1pp",
+        "couplings": [
+          {
+            "c": "1E1p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/188/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "1E2pp",
+        "couplings": [
+          {
+            "c": "1E2p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/190/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "1E3pp",
+        "couplings": [
+          {
+            "c": "1E3p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/192/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "1E4pp",
+        "couplings": [
+          {
+            "c": "1E4p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/194/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "1E5pp",
+        "couplings": [
+          {
+            "c": "1E5p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/196/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1pp",
+        "b": "1E1pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-symmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-antisymmetric"
+          },
+          {
+            "c": "1E2p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/198/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1pp",
+        "b": "1E2pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E3p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/200/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1pp",
+        "b": "1E3pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E4p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/202/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1pp",
+        "b": "1E4pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E5p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/204/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1pp",
+        "b": "1E5pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E4p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E5p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E2pp",
+        "b": "1E2pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-symmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-antisymmetric"
+          },
+          {
+            "c": "1E4p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/217/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E2pp",
+        "b": "1E3pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "c": "1E5p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C11h#/clebsch_gordan/products/219/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E2pp",
+        "b": "1E4pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E5p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E2pp",
+        "b": "1E5pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E4p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E3pp",
+        "b": "1E3pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-symmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-antisymmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E5p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E3pp",
+        "b": "1E4pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E4p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E3pp",
+        "b": "1E5pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E4pp",
+        "b": "1E4pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-symmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-antisymmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E3p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E4pp",
+        "b": "1E5pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E2p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E5pp",
+        "b": "1E5pp",
+        "couplings": [
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-symmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                2,
+                1
+              ]
+            },
+            "c": "Ap",
+            "kappa": 2,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 1,
+                    "k": 2
+                  },
+                  {
+                    "e": {
+                      "M": 4,
+                      "c": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          -1,
+                          1
+                        ]
+                      ],
+                      "f": "cyc"
+                    },
+                    "i": 2,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "exchange-antisymmetric"
+          },
+          {
+            "N": {
+              "f": "q",
+              "v": [
+                1,
+                1
+              ]
+            },
+            "c": "1E1p",
+            "kappa": 1,
+            "partners": [
+              {
+                "mu": 1,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 2,
+                    "k": 2
+                  }
+                ]
+              },
+              {
+                "mu": 2,
+                "terms": [
+                  {
+                    "e": {
+                      "f": "q",
+                      "v": [
+                        1,
+                        1
+                      ]
+                    },
+                    "i": 1,
+                    "k": 1
+                  }
+                ]
+              }
+            ],
+            "separation": "unique"
+          }
+        ]
+      }
+    ]
+  },
   "corepresentation_table": {
     "characters": [
       [
@@ -5093,6 +10693,1024 @@
       "partner": "2E5pp"
     }
   ],
+  "fusion": {
+    "corepresentations": [
+      "Ap",
+      "1E1p",
+      "1E2p",
+      "1E3p",
+      "1E4p",
+      "1E5p",
+      "App",
+      "1E1pp",
+      "1E2pp",
+      "1E3pp",
+      "1E4pp",
+      "1E5pp"
+    ],
+    "products": [
+      {
+        "a": "Ap",
+        "b": "Ap",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E1p",
+        "terms": [
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E2p",
+        "terms": [
+          {
+            "corepresentation": "1E2p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E3p",
+        "terms": [
+          {
+            "corepresentation": "1E3p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E4p",
+        "terms": [
+          {
+            "corepresentation": "1E4p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E5p",
+        "terms": [
+          {
+            "corepresentation": "1E5p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "App",
+        "terms": [
+          {
+            "corepresentation": "App",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E1pp",
+        "terms": [
+          {
+            "corepresentation": "1E1pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E2pp",
+        "terms": [
+          {
+            "corepresentation": "1E2pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E3pp",
+        "terms": [
+          {
+            "corepresentation": "1E3pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E4pp",
+        "terms": [
+          {
+            "corepresentation": "1E4pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E5pp",
+        "terms": [
+          {
+            "corepresentation": "1E5pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E1p",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E2p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E2p",
+        "terms": [
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E3p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E3p",
+        "terms": [
+          {
+            "corepresentation": "1E2p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E4p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E4p",
+        "terms": [
+          {
+            "corepresentation": "1E3p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E5p",
+        "terms": [
+          {
+            "corepresentation": "1E4p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "App",
+        "terms": [
+          {
+            "corepresentation": "1E1pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E1pp",
+        "terms": [
+          {
+            "corepresentation": "App",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E2pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E2pp",
+        "terms": [
+          {
+            "corepresentation": "1E1pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E3pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E3pp",
+        "terms": [
+          {
+            "corepresentation": "1E2pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E4pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E4pp",
+        "terms": [
+          {
+            "corepresentation": "1E3pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E5pp",
+        "terms": [
+          {
+            "corepresentation": "1E4pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E2p",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E4p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E3p",
+        "terms": [
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E4p",
+        "terms": [
+          {
+            "corepresentation": "1E2p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E5p",
+        "terms": [
+          {
+            "corepresentation": "1E3p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E4p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "App",
+        "terms": [
+          {
+            "corepresentation": "1E2pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E1pp",
+        "terms": [
+          {
+            "corepresentation": "1E1pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E3pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E2pp",
+        "terms": [
+          {
+            "corepresentation": "App",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E4pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E3pp",
+        "terms": [
+          {
+            "corepresentation": "1E1pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E4pp",
+        "terms": [
+          {
+            "corepresentation": "1E2pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E2p",
+        "b": "1E5pp",
+        "terms": [
+          {
+            "corepresentation": "1E3pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E4pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E3p",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E5p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E4p",
+        "terms": [
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E4p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E5p",
+        "terms": [
+          {
+            "corepresentation": "1E2p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E3p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "App",
+        "terms": [
+          {
+            "corepresentation": "1E3pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E1pp",
+        "terms": [
+          {
+            "corepresentation": "1E2pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E4pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E2pp",
+        "terms": [
+          {
+            "corepresentation": "1E1pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E3pp",
+        "terms": [
+          {
+            "corepresentation": "App",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E5pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E4pp",
+        "terms": [
+          {
+            "corepresentation": "1E1pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E4pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E3p",
+        "b": "1E5pp",
+        "terms": [
+          {
+            "corepresentation": "1E2pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E3pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "1E4p",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E3p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "1E5p",
+        "terms": [
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E2p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "App",
+        "terms": [
+          {
+            "corepresentation": "1E4pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "1E1pp",
+        "terms": [
+          {
+            "corepresentation": "1E3pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "1E2pp",
+        "terms": [
+          {
+            "corepresentation": "1E2pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "1E3pp",
+        "terms": [
+          {
+            "corepresentation": "1E1pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E4pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "1E4pp",
+        "terms": [
+          {
+            "corepresentation": "App",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E3pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E4p",
+        "b": "1E5pp",
+        "terms": [
+          {
+            "corepresentation": "1E1pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E2pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E5p",
+        "b": "1E5p",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E5p",
+        "b": "App",
+        "terms": [
+          {
+            "corepresentation": "1E5pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E5p",
+        "b": "1E1pp",
+        "terms": [
+          {
+            "corepresentation": "1E4pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E5p",
+        "b": "1E2pp",
+        "terms": [
+          {
+            "corepresentation": "1E3pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E4pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E5p",
+        "b": "1E3pp",
+        "terms": [
+          {
+            "corepresentation": "1E2pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E3pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E5p",
+        "b": "1E4pp",
+        "terms": [
+          {
+            "corepresentation": "1E1pp",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E2pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E5p",
+        "b": "1E5pp",
+        "terms": [
+          {
+            "corepresentation": "App",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E1pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "App",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "1E1pp",
+        "terms": [
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "1E2pp",
+        "terms": [
+          {
+            "corepresentation": "1E2p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "1E3pp",
+        "terms": [
+          {
+            "corepresentation": "1E3p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "1E4pp",
+        "terms": [
+          {
+            "corepresentation": "1E4p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "1E5pp",
+        "terms": [
+          {
+            "corepresentation": "1E5p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1pp",
+        "b": "1E1pp",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E2p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1pp",
+        "b": "1E2pp",
+        "terms": [
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E3p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1pp",
+        "b": "1E3pp",
+        "terms": [
+          {
+            "corepresentation": "1E2p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E4p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1pp",
+        "b": "1E4pp",
+        "terms": [
+          {
+            "corepresentation": "1E3p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1pp",
+        "b": "1E5pp",
+        "terms": [
+          {
+            "corepresentation": "1E4p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E2pp",
+        "b": "1E2pp",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E4p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E2pp",
+        "b": "1E3pp",
+        "terms": [
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E2pp",
+        "b": "1E4pp",
+        "terms": [
+          {
+            "corepresentation": "1E2p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E5p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E2pp",
+        "b": "1E5pp",
+        "terms": [
+          {
+            "corepresentation": "1E3p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E4p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E3pp",
+        "b": "1E3pp",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E5p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E3pp",
+        "b": "1E4pp",
+        "terms": [
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E4p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E3pp",
+        "b": "1E5pp",
+        "terms": [
+          {
+            "corepresentation": "1E2p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E3p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E4pp",
+        "b": "1E4pp",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E3p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E4pp",
+        "b": "1E5pp",
+        "terms": [
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          },
+          {
+            "corepresentation": "1E2p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E5pp",
+        "b": "1E5pp",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 2
+          },
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          }
+        ]
+      }
+    ]
+  },
   "group": {
     "G": "rotation/C11h#",
     "abstract_type": "Z_22 x Z_2",

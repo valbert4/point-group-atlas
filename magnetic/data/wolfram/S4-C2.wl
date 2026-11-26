@@ -1,5 +1,97 @@
 (* S4-C2 (S_4(C_2)): data/json/S4-C2.json as a Wolfram Language association. *)
 o3m = <|
+  "clebsch_gordan" -> <|
+    "corepresentations" -> {"A", "B"},
+    "kind" -> "table",
+    "products" -> {
+      <|
+        "a" -> "A",
+        "b" -> "A",
+        "couplings" -> {
+          <|
+            "c" -> "A",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C2#/clebsch_gordan/products/0/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "B",
+        "couplings" -> {
+          <|
+            "c" -> "B",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C2#/clebsch_gordan/products/1/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B",
+        "b" -> "B",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "A",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>, <|"e" -> 1, "i" -> 2, "k" -> 2|>}
+              |>
+            },
+            "separation" -> "exchange-symmetric, row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "A",
+            "kappa" -> 2,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 1, "k" -> 1|>,
+                  <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2, "k" -> 2|>
+                }
+              |>
+            },
+            "separation" -> "exchange-symmetric, row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "A",
+            "kappa" -> 3,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 1, "k" -> 2|>,
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "exchange-symmetric, row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "A",
+            "kappa" -> 4,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "exchange-antisymmetric"
+          |>
+        }
+      |>
+    }
+  |>,
   "corepresentation_table" -> <|
     "characters" -> {{1, 1}, {2, -2}},
     "classes" -> {{"E"}, {"C2"}},
@@ -20,6 +112,26 @@ o3m = <|
     |>
   },
   "frame" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "node" -> "n01"|>,
+  "fusion" -> <|
+    "corepresentations" -> {"A", "B"},
+    "products" -> {
+      <|
+        "a" -> "A",
+        "b" -> "A",
+        "terms" -> {<|"corepresentation" -> "A", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "B",
+        "terms" -> {<|"corepresentation" -> "B", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "B",
+        "b" -> "B",
+        "terms" -> {<|"corepresentation" -> "A", "multiplicity" -> 4|>}
+      |>
+    }
+  |>,
   "group" -> <|
     "G" -> "rotation/S4#",
     "H" -> "rotation/C2#",

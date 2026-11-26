@@ -1,5 +1,50 @@
 (* C2h-S2 (C_2h(S_2)): data/json/C2h-S2.json as a Wolfram Language association. *)
 o3m = <|
+  "clebsch_gordan" -> <|
+    "corepresentations" -> {"Ag", "Au"},
+    "kind" -> "table",
+    "products" -> {
+      <|
+        "a" -> "Ag",
+        "b" -> "Ag",
+        "couplings" -> {
+          <|
+            "c" -> "Ag",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/S2#/clebsch_gordan/products/0/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "Au",
+        "couplings" -> {
+          <|
+            "c" -> "Au",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/S2#/clebsch_gordan/products/1/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Au",
+        "b" -> "Au",
+        "couplings" -> {
+          <|
+            "c" -> "Ag",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/S2#/clebsch_gordan/products/2/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>
+    }
+  |>,
   "corepresentation_table" -> <|
     "characters" -> {{1, 1}, {1, -1}},
     "classes" -> {{"E"}, {"i"}},
@@ -20,6 +65,26 @@ o3m = <|
     |>
   },
   "frame" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "node" -> "n02"|>,
+  "fusion" -> <|
+    "corepresentations" -> {"Ag", "Au"},
+    "products" -> {
+      <|
+        "a" -> "Ag",
+        "b" -> "Ag",
+        "terms" -> {<|"corepresentation" -> "Ag", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "Au",
+        "terms" -> {<|"corepresentation" -> "Au", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Au",
+        "b" -> "Au",
+        "terms" -> {<|"corepresentation" -> "Ag", "multiplicity" -> 1|>}
+      |>
+    }
+  |>,
   "group" -> <|
     "G" -> "rotation/C2h#",
     "H" -> "rotation/S2#",

@@ -14,7 +14,8 @@ type II):
 What a record states for every index is computed for one large index, and the computation for every
 index up to INDEX_LAST has to agree with it.
 
-The closed subgroups of M are in continuous_subgroups.py.
+The closed subgroups of M are in continuous_subgroups.py, the products of the corepresentations
+and their Clebsch-Gordan coefficients in continuous_clebsch_gordan.py.
 """
 from fractions import Fraction as F
 
@@ -36,6 +37,10 @@ CUBE_MAX = 4
 # The index that stands for every index of a family, and those that must agree with it.
 INDEX = 101
 INDEX_LAST = 12
+# N of D^(J) and D^(J,p) on the kets (section 37.2): time reversal (section 31.1) in SO(3)1' and
+# O(3)1', I Theta in O(3)(SO(3)).
+SPHERICAL_N_GREY = "(-1)^m, m = J, ..., -J"
+SPHERICAL_N_INVERSION = "(-1)^(J-m), m = J, ..., -J"
 MULTIPOLES = (("electric", "trivial", 0), ("electric-toroidal", "trivial", 1),
               ("magnetic-toroidal", "chi", 0), ("magnetic", "chi", 1))
 
@@ -309,10 +314,13 @@ class Magnetic:
         """The matrix N of a family of case (a) (section 37.2), the same for every index: 1 in
         dimension 1; on the rotation-diagonal basis of a family of dimension 2, the identity when a
         reverses the sense of rotation and the exchange of the two vectors otherwise; on the kets of
-        dimension 2J + 1, (-1)^(J-m) from m' = -m to m."""
+        dimension 2J + 1, the matrix by which the representative acts on them (section 31.1), from
+        m' = -m to m: time reversal, (-1)^m, in SO(3)1' and O(3)1'; I Theta, (-1)^(J-m), in
+        O(3)(SO(3)), the kets of D^(J) having the parity (-1)^J."""
         H = self.H
         if H.spherical:
-            return {"form": "anti-diagonal", "antidiag": "(-1)^(J-m), m = J, ..., -J"}
+            return {"form": "anti-diagonal",
+                    "antidiag": SPHERICAL_N_GREY if self.grey else SPHERICAL_N_INVERSION}
         d = H.family[f]["dim"]
         if d == 1:
             return {"form": "diagonal", "diag": ["1"]}
@@ -923,6 +931,7 @@ def two_vectors(M):
 # ---------------------------------------------------------------- the record
 def record(stem):
     """The record of a continuous group of the catalogue."""
+    from . import continuous_clebsch_gordan as CC
     from . import continuous_subgroups as CS
     g, h = stem.split("-", 1)
     h = None if h == "1p" else h
@@ -960,6 +969,7 @@ def record(stem):
     doc["corepresentations"] = entries
     doc["corepresentation_table"] = corepresentation_table(M, coreps)
     doc["symmetrized_powers"] = (spherical_powers if M.H.spherical else power_entries)(M, coreps)
+    doc["fusion"], doc["clebsch_gordan"] = CC.tables(M, coreps, symbol)
     doc["subduction_corepresentations"] = subduction(M, coreps, symbol)
     if not M.grey:
         doc["representative"] = {"component": M.a, "turn": [0, 1]}

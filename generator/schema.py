@@ -377,6 +377,8 @@ MAGNETIC_SECTIONS = [
     ("$.signs", "30.1"),
     ("$.splitting", "33.1"),
     ("$.symmetrized_powers", "34"),
+    ("$.fusion", "38"),
+    ("$.clebsch_gordan", "38"),
     ("$.subgroup_lattice", "36"),
     ("$.invariants", "35.1"),
 ]
@@ -402,6 +404,8 @@ MAGNETIC_CONTINUOUS_SECTIONS = [
     ("$.subduction_o3", "37.1"),
     ("$.subduction_corepresentations", "37.4"),
     ("$.symmetrized_powers", "37.4"),
+    ("$.fusion", "37.7"),
+    ("$.clebsch_gordan", "37.7"),
     ("$.subgroup_classes", "37.5"),
     ("$.invariants", "37.6"),
 ]

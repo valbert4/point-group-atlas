@@ -162,9 +162,11 @@
 \newcommand{\irchar}[1]{\chi_{#1}}
 \newcommand{\fsind}{\nu_{\mathrm{FS}}}
 \newcommand{\irrprod}{\otimes}
+\newcommand{\mult}{\kappa}
 \newcommand{\intx}{\mu}
 \newcommand{\cgnorm}{\mathcal{N}}
 \newcommand{\jm}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
+\newcommand{\prodket}[2]{\lvert {#1}\,{#2}\rangle}
 \newcommand{\jahn}[1]{\mathrm{#1}}
 \newcommand{\fcell}{\mathcal{D}}
 \newcommand{\sympow}[2]{[#1^{#2}]}
@@ -241,7 +243,7 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 A unitary element $h$ acts in a corepresentation $\mathcal{D}$ by the transposes $D^{\Lambda}(h)^{\top}$ of the matrices of its irreps $\Lambda$ (the section Representation matrices of the document of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}). The representative $\elt{a} = \varTheta$ acts by a unitary matrix times the complex conjugation $K$.
 In case (a), $\mathcal{D}(\elt{a}) = NK$.
 The matrix $N$ has the rows and columns of the kets $\jm{J}{m}$, $m = J, J-1, \dots, -J$, and the entries
-\begin{equation}\label{e:N}N_{m,m'} = (-1)^{J-m}\,\delta_{m',-m}.\end{equation}
+\begin{equation}\label{e:N}N_{m,m'} = (-1)^{m}\,\delta_{m',-m}.\end{equation}
 \needspace{148pt}
 \section{Symmetrized powers}\label{s:symmetrized_powers}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.32.3}{32.3}, \href{../../CONVENTIONS.pdf\#conv.34}{34} and \href{../../CONVENTIONS.pdf\#conv.37.4}{37.4}.
@@ -259,6 +261,16 @@ $J$ & $\sympow{\mathcal{D}}{3}$\\\midrule\endhead
 3 & $\irrJp{1}{p} \oplus 2\,\irrJp{3}{p} \oplus \irrJp{4}{p} \oplus \irrJp{5}{p} \oplus \irrJp{6}{p} \oplus \irrJp{7}{p} \oplus \irrJp{9}{p}$\\*
 4 & $\irrJp{0}{p} \oplus \irrJp{2}{p} \oplus \irrJp{3}{p} \oplus 2\,\irrJp{4}{p} \oplus \irrJp{5}{p} \oplus 2\,\irrJp{6}{p} \oplus \irrJp{7}{p} \oplus \irrJp{8}{p} \oplus \irrJp{9}{p} \oplus \irrJp{10}{p} \oplus \irrJp{12}{p}$\\
 \bottomrule\end{longtable}}
+\needspace{135pt}
+\section{Products of corepresentations}\label{s:fusion}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.2}{10.2} and \href{../../CONVENTIONS.pdf\#conv.37.7}{37.7}.
+\leavevmode\label{n:index.J12}The products of the families, of indices $J_1$ and $J_2$, decompose as
+\begin{align}\irrJp{J_1}{+}\irrprod \irrJp{J_2}{+} &= \bigoplus_{J=\lvert J_1-J_2\rvert}^{J_1+J_2} \irrJp{J}{+},\\\irrJp{J_1}{+}\irrprod \irrJp{J_2}{-} &= \bigoplus_{J=\lvert J_1-J_2\rvert}^{J_1+J_2} \irrJp{J}{-},\\\irrJp{J_1}{-}\irrprod \irrJp{J_2}{-} &= \bigoplus_{J=\lvert J_1-J_2\rvert}^{J_1+J_2} \irrJp{J}{+}.\end{align}
+The squares split into their symmetrized and antisymmetrized parts in section~\ref{s:symmetrized_powers}.
+\needspace{78pt}
+\section{Clebsch--Gordan coefficients}\label{s:clebsch_gordan}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.6}{10.6} and \href{../../CONVENTIONS.pdf\#conv.37.7}{37.7}.
+Each block of $\irrJp{J_1}{p_1}\irrprod\irrJp{J_2}{p_2}\to\irrJp{J}{p_1p_2}$ with $J_1 \le J_2 \le 10$ is that of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} times $\iunit$ when $J_1 + J_2 - J$ is odd and times 1 otherwise (\texttt{pointer}, \texttt{phase}), and the section Clebsch--Gordan coefficients of its document sets those with $J_1 \le J_2 \le 3$.
 \needspace{171pt}
 \partbox{Subgroups}
 \section{Closed subgroups}\label{s:subgroups}

@@ -4,7 +4,8 @@ r"""A record of a continuous group of Magnetic as a LaTeX document, magnetic/dat
 Its parts and sections are those of the finite documents of the catalogue (magnetic_latex.py), each
 in the form that a document of a continuous point group gives it: Class space in place of Symmetry
 operations, Families of irreps in place of Irreducible representations, the corepresentation table,
-the matrices N and the symmetrized powers by families, Closed subgroups in place of Subgroup
+the matrices N, the symmetrized powers, the products and the Clebsch-Gordan coefficients by
+families, Closed subgroups in place of Subgroup
 lattice, Descent of symmetry, Subduction from O(3)1', the properties odd under time reversal,
 the multipoles and the invariants.  A value of a document is a field of the record, or a value of a
 record that the record points to.  Doc is magnetic_latex.Doc for a record of families.
@@ -19,6 +20,7 @@ from .angular import SUBDUCTION_RULE
 from .double_latex import follow, record_of, target
 from .magnetic_latex import (IMAGES, MULTIPOLES, PARENT, PARENT_TEXT, POWERS, halves_of, mlinked,
                              msym, rotation_section, stem_of)
+from . import representations as R
 from .representations import CASES, DETBOX_STRETCH, dimension, family_index
 from .subgroups import (CONTINUOUS_DIAGRAM, CONTINUOUS_FAMILIES, ONE_MEMBER, affine_n,
                         also_gives, gray_letter, row_gives)
@@ -385,6 +387,13 @@ def section_character_table(D):
     D.w(r"\bottomrule\end{longtable}}")
 
 
+# The entries of the matrix N of the corepresentations D^(J) and D^(J,p), the record's formula of the
+# entry in the row of m and the column of -m (CONVENTIONS.md section 37.2), and its TeX: time reversal
+# on the kets in SO(3)1' and O(3)1', time reversal times the inversion in O(3)(SO(3)).
+SPHERICAL_N = {"(-1)^m, m = J, ..., -J": "(-1)^{m}",
+               "(-1)^(J-m), m = J, ..., -J": "(-1)^{J-m}"}
+
+
 def section_corep_matrices(D):
     """The matrix N of the representative in each family of corepresentations of case (a)
     (CONVENTIONS.md sections 32.2 and 37.2)."""
@@ -406,9 +415,10 @@ def section_corep_matrices(D):
     if D.spherical:
         D.w(r"The matrix $N$ has the rows and columns of the kets $\jm{J}{m}$, $m = J, J-1, \dots, "
             r"-J$, and the entries")
-        if {c["N"]["antidiag"] for c in D.coreps} != {"(-1)^(J-m), m = J, ..., -J"}:
-            raise ValueError("%s: the matrix N" % D.name)
-        D.equation("N", r"N_{m,m'} = (-1)^{J-m}\,\delta_{m',-m}.")
+        (formula,) = {c["N"]["antidiag"] for c in D.coreps}
+        if formula not in SPHERICAL_N:
+            raise ValueError("%s: the matrix N %s" % (D.name, formula))
+        D.equation("N", r"N_{m,m'} = %s\,\delta_{m',-m}." % SPHERICAL_N[formula])
         return
     D.w(r"A row is a family of corepresentations, by its irreps. A row gives its case and its "
         r"matrix $N$%s, which is the same for every index."
@@ -500,6 +510,146 @@ def spherical_powers(D, powers):
     for r in rows[1:]:
         D.w(" & ".join(r) + r"\\")
     D.w(r"\bottomrule\end{longtable}}")
+
+
+# ---------------------------------------------------------------- Representations: the products
+# The sentence on the squares after the rules of the products, whose parts the section Symmetrized
+# powers gives.
+SQUARES = (r"The squares split into their symmetrized and antisymmetrized parts in "
+           r"section~\ref{s:symmetrized_powers}.")
+
+
+def indexed(D, ref, both):
+    """The label of a corepresentation of a family law at its index, {corepresentation, index}, the
+    indices of the two factors written n and n' when both carry one (representations.factor_indices),
+    as volume I writes its family laws."""
+    i = ref.get("index")
+    return D.corep_tex(ref["corepresentation"], None if i is None else R.factor_indices(i, both))
+
+
+def condition_tex(cond, both):
+    """A condition of a family law as a formula, empty for "always": m > n -> n > n'."""
+    if cond == "always":
+        return ""
+    return R.factor_indices(cond, both).replace("==", "=").replace("!=", r"\ne")
+
+
+def rule_rows(D, rules):
+    """The rules of the record's fusion as (lhs, rhs, condition) formulas, a term of an index range
+    a direct sum over it (Doc.term_tex)."""
+    out = []
+    for r in rules:
+        both = "index" in r["a"] and "index" in r["b"]
+        terms = []
+        for t in r["terms"]:
+            if "index_range" in t:
+                terms.append(D.term_tex(t))
+            else:
+                terms.append(multiple(t["multiplicity"], indexed(D, t, both)))
+        out.append((r"%s\irrprod %s" % (indexed(D, r["a"], both), indexed(D, r["b"], both)),
+                    r"\oplus ".join(terms), condition_tex(r["condition"], both)))
+    return out
+
+
+def section_fusion(D):
+    """The products of the families of corepresentations, the record's family laws (CONVENTIONS.md
+    section 37.7), as volume I sets those of its families: a table of the rules with their
+    conditions, or for SO(3)1', O(3)1' and O(3)(SO(3)) a display; the squares are those of the
+    section Symmetrized powers."""
+    fus = D.stored["fusion"]
+    if fus["corepresentations"] != [c["family"] for c in D.coreps]:
+        raise ValueError("%s: the corepresentations of fusion are not those of the record" % D.name)
+    D.section("Products of corepresentations", "sections 10.2 and 37.7")
+    sym = fus["index_symbols"]
+    a, b = (index_tex(R.factor_indices(sym["a"])), index_tex(R.factor_indices(sym["b"])))
+    rows = rule_rows(D, fus["rules"])
+    if D.spherical:
+        D.w(D.define("index.J12") + r"The products of the families, of indices $%s$ and $%s$, "
+            r"decompose as" % (a, b))
+        R.rules_align(D, rows)
+        D.w(SQUARES)
+        return
+    D.w(r"A row is a rule for the products of two families of corepresentations. "
+        + D.define("index.family") + r"A row gives the product of the families, of indices $%s$ "
+        r"and $%s$, and its decomposition, with the condition on the indices where the rule has "
+        r"one. %s" % (a, b, SQUARES))
+    R.rules_table(D, [(None, rows)])
+
+
+def corep_dim(D, ref):
+    """The dimension of a corepresentation of an axial family law: that of its family, twice in case
+    (c)."""
+    c = D.corep_of[ref["corepresentation"]]
+    return D.families[c["family"]]["dim"] * (2 if c["case"] == "c" else 1)
+
+
+def section_clebsch_gordan(D):
+    """The Clebsch-Gordan coefficients of the families of corepresentations (CONVENTIONS.md section
+    37.7): for an axial group the record's blocks, as the finite documents set theirs, each with the
+    condition of its family law, a block of two factors of dimension 1 left out (its entry 1); for
+    SO(3)1', O(3)1' and O(3)(SO(3)) one sentence on the pointers to volume I's table, each of phase 1
+    and naming the coupling of its own irreps."""
+    cg = D.stored["clebsch_gordan"]
+    if D.spherical:
+        D.section("Clebsch--Gordan coefficients", "sections 10.6 and 37.7")
+        stems, phases = set(), set()
+        def J(label):
+            """The angular momentum of an instance label of the table, D^(3) or D^(13,+)."""
+            return int(re.fullmatch(r"D\^\((\d+)(?:,[+-])?\)", label).group(1))
+        for p in cg["products"]:
+            for c in p["couplings"]:
+                _, stem, tokens = target(c["pointer"])
+                hp = record_of("rotation", stem)["clebsch_gordan"]["products"][int(tokens[2])]
+                hc = follow(c["pointer"])
+                if (hp["a"], hp["b"], hc["c"], hc["kappa"]) != (p["a"], p["b"], c["c"], c["kappa"]):
+                    raise ValueError("%s: the pointer of %s x %s -> %s" % (D.name, p["a"], p["b"],
+                                                                           c["c"]))
+                stems.add(stem)
+                # the phase i on the couplings of odd J1 + J2 - J, or 1 on every coupling
+                phases.add((c["phase"], (J(p["a"]) + J(p["b"]) - J(c["c"])) % 2))
+        if phases not in ({("1", 0), ("1", 1)}, {("1", 0), ("i", 1)}):
+            raise ValueError("%s: phases that follow neither rule: %s" % (D.name, sorted(phases)))
+        (stem,) = stems
+        parity = "improper" in D.component_coset.values()
+        block = (r"\irrJp{J_1}{p_1}\irrprod\irrJp{J_2}{p_2}\to\irrJp{J}{p_1p_2}" if parity
+                 else r"\irrJ{J_1}\irrprod\irrJ{J_2}\to\irrJ{J}")
+        phase = (r"times $\iunit$ when $J_1 + J_2 - J$ is odd and times 1 otherwise"
+                 if ("i", 1) in phases else "with the phase 1")
+        D.w(r"Each block of $%s$ with $J_1 \le J_2 \le %d$ is that of %s %s "
+            r"(\texttt{pointer}, \texttt{phase}), and the section Clebsch--Gordan coefficients of its "
+            r"document sets those with $J_1 \le J_2 \le %d$." % (
+                block, cg["J_max_tabulated"], rotation_linked(stem), phase, R.CG_TYPESET_JMAX))
+        return
+    D.section("Clebsch--Gordan coefficients", "sections 10.3, 10.4, 37.7 and 38")
+    blocks, shown, ones, conditions = [], [], False, False
+    for p in cg["products"]:
+        both = "index" in p["a"] and "index" in p["b"]
+        cond = condition_tex(p["condition"], both)
+        for c in p["couplings"]:
+            if corep_dim(D, p["a"]) == corep_dim(D, p["b"]) == 1:
+                if c["N"] != ONE or [[(t["i"], t["k"], t["e"]) for t in q["terms"]]
+                                     for q in c["partners"]] != [[(1, 1, ONE)]]:
+                    raise ValueError("%s: a block of two factors of dimension 1 that is not (1)"
+                                     % D.name)
+                ones = True
+                continue
+            shown.append(c)
+            conditions |= bool(cond)
+            blocks.append((p, (indexed(D, p["a"], both), indexed(D, p["b"], both),
+                               indexed(D, c["c"], both)), c, cond))
+    if not blocks:
+        D.w(R.one_dimensional_sentence("corepresentation"))
+        return
+    ML.copy_sentences(D, "sections 37.7 and 38", " at every pair of indices of its family law")
+    D.w(r"The partners of a corepresentation of dimension 2 are the rotation-diagonal basis of its "
+        r"irrep, or its two irreps in case (c) (CONVENTIONS.pdf, section 37.2).")
+    ML.blocks_legend(D, shown, "".join([
+        r" A condition on $n$ and $n'$ follows the product where the block holds only under it."
+        if conditions else "",
+        r" A block whose two factors have dimension 1 is left out, and its one entry has the "
+        r"value 1."
+        if ones else ""]))
+    R.coupling_table(D, ML.blocks_of(D, blocks), ML.BLOCKS_HEAD)
 
 
 # ---------------------------------------------------------------- Subgroups: Closed subgroups
@@ -996,7 +1146,8 @@ PARTS = (
     ("Representations", (("families", section_families),
                          ("character_table", section_character_table),
                          ("corep_matrices", section_corep_matrices),
-                         ("symmetrized_powers", section_symmetrized_powers))),
+                         ("symmetrized_powers", section_symmetrized_powers),
+                         ("fusion", section_fusion), ("clebsch_gordan", section_clebsch_gordan))),
     ("Subgroups", (("subgroups", section_subgroups), ("subduction", section_subduction))),
     ("Angular momentum", (("subduction_o3", section_subduction_parent),)),
     ("Tensors", (("time_odd", ML.section_time_odd), ("multipoles", section_multipoles),

@@ -1,5 +1,953 @@
 (* C12h-C6h (C_12h(C_6h)): data/json/C12h-C6h.json as a Wolfram Language association. *)
 o3m = <|
+  "clebsch_gordan" -> <|
+    "corepresentations" -> {"Ag", "Bg", "1E1g", "1E2g", "Au", "Bu", "1E1u", "1E2u"},
+    "kind" -> "table",
+    "products" -> {
+      <|
+        "a" -> "Ag",
+        "b" -> "Ag",
+        "couplings" -> {
+          <|
+            "c" -> "Ag",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/0/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "Bg",
+        "couplings" -> {
+          <|
+            "c" -> "Bg",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/1/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "1E1g",
+        "couplings" -> {
+          <|
+            "c" -> "1E1g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/2/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "1E2g",
+        "couplings" -> {
+          <|
+            "c" -> "1E2g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/4/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "Au",
+        "couplings" -> {
+          <|
+            "c" -> "Au",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/6/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "Bu",
+        "couplings" -> {
+          <|
+            "c" -> "Bu",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/7/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "1E1u",
+        "couplings" -> {
+          <|
+            "c" -> "1E1u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/8/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "1E2u",
+        "couplings" -> {
+          <|
+            "c" -> "1E2u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/10/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Bg",
+        "b" -> "Bg",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "Ag",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>, <|"e" -> 1, "i" -> 2, "k" -> 2|>}
+              |>
+            },
+            "separation" -> "exchange-symmetric, row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "Ag",
+            "kappa" -> 2,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 1, "k" -> 1|>,
+                  <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2, "k" -> 2|>
+                }
+              |>
+            },
+            "separation" -> "exchange-symmetric, row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "Ag",
+            "kappa" -> 3,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 1, "k" -> 2|>,
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "exchange-symmetric, row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "Ag",
+            "kappa" -> 4,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "exchange-antisymmetric"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Bg",
+        "b" -> "1E1g",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "1E2g",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> Exp[2 Pi I/3], "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E2g",
+            "kappa" -> 2,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I/3], "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "row order"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Bg",
+        "b" -> "1E2g",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "1E1g",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E1g",
+            "kappa" -> 2,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> (-1 + -1 Exp[2 Pi I/3]), "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "row order"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Bg",
+        "b" -> "Au",
+        "couplings" -> {
+          <|
+            "c" -> "Bu",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/17/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Bg",
+        "b" -> "Bu",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "Au",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>, <|"e" -> 1, "i" -> 2, "k" -> 2|>}
+              |>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "Au",
+            "kappa" -> 2,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 1, "k" -> 1|>,
+                  <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2, "k" -> 2|>
+                }
+              |>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "Au",
+            "kappa" -> 3,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "Au",
+            "kappa" -> 4,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 1, "k" -> 2|>,
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "row order"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Bg",
+        "b" -> "1E1u",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "1E2u",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> Exp[2 Pi I/3], "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E2u",
+            "kappa" -> 2,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I/3], "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "row order"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Bg",
+        "b" -> "1E2u",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "1E1u",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E1u",
+            "kappa" -> 2,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> (-1 + -1 Exp[2 Pi I/3]), "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "row order"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E1g",
+        "b" -> "1E1g",
+        "couplings" -> {
+          <|
+            "N" -> 6,
+            "c" -> "Ag",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> (1 + -1 Exp[2 Pi I/3]), "i" -> 1, "k" -> 2|>,
+                  <|"e" -> (1 + -1 Exp[2 Pi I/3]), "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "exchange-symmetric"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "Ag",
+            "kappa" -> 2,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 1, "k" -> 2|>,
+                  <|"e" -> (-1 + -1 Exp[2 Pi I/3]), "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "exchange-antisymmetric"
+          |>,
+          <|
+            "c" -> "1E2g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/23/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E1g",
+        "b" -> "1E2g",
+        "couplings" -> {
+          <|
+            "c" -> "Bg",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/25/couplings/0",
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E1g",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I/3], "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E1g",
+        "b" -> "Au",
+        "couplings" -> {
+          <|
+            "c" -> "1E1u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/27/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E1g",
+        "b" -> "Bu",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "1E2u",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> Exp[2 Pi I/3], "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E2u",
+            "kappa" -> 2,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I/3], "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "row order"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E1g",
+        "b" -> "1E1u",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "Au",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> 1, "i" -> 1, "k" -> 2|>,
+                  <|"e" -> -1 Exp[2 Pi I/3], "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "Au",
+            "kappa" -> 2,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 1, "k" -> 2|>,
+                  <|"e" -> -1 Exp[2 Pi I/12], "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "c" -> "1E2u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/29/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E1g",
+        "b" -> "1E2u",
+        "couplings" -> {
+          <|
+            "c" -> "Bu",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/31/couplings/0",
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E1u",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I/3], "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E2g",
+        "b" -> "1E2g",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "Ag",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> -1 Exp[2 Pi I/3], "i" -> 1, "k" -> 2|>,
+                  <|"e" -> -1 Exp[2 Pi I/3], "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "exchange-symmetric"
+          |>,
+          <|
+            "N" -> 6,
+            "c" -> "Ag",
+            "kappa" -> 2,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> (2 + Exp[2 Pi I/3]), "i" -> 1, "k" -> 2|>,
+                  <|"e" -> (-2 + -1 Exp[2 Pi I/3]), "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "exchange-antisymmetric"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E2g",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> Exp[2 Pi I/3], "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E2g",
+        "b" -> "Au",
+        "couplings" -> {
+          <|
+            "c" -> "1E2u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/44/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E2g",
+        "b" -> "Bu",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "1E1u",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E1u",
+            "kappa" -> 2,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> (-1 + -1 Exp[2 Pi I/3]), "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "row order"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E2g",
+        "b" -> "1E1u",
+        "couplings" -> {
+          <|
+            "c" -> "Bu",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/46/couplings/0",
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E1u",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I/3], "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E2g",
+        "b" -> "1E2u",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "Au",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> 1, "i" -> 1, "k" -> 2|>,
+                  <|"e" -> (-1 + -1 Exp[2 Pi I/3]), "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "Au",
+            "kappa" -> 2,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 1, "k" -> 2|>,
+                  <|"e" -> (-1 Exp[2 Pi I/12] + Exp[2 Pi I 3/12]), "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E2u",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> Exp[2 Pi I/3], "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Au",
+        "b" -> "Au",
+        "couplings" -> {
+          <|
+            "c" -> "Ag",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/57/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Au",
+        "b" -> "Bu",
+        "couplings" -> {
+          <|
+            "c" -> "Bg",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/58/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Au",
+        "b" -> "1E1u",
+        "couplings" -> {
+          <|
+            "c" -> "1E1g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/59/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Au",
+        "b" -> "1E2u",
+        "couplings" -> {
+          <|
+            "c" -> "1E2g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/61/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Bu",
+        "b" -> "Bu",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "Ag",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>, <|"e" -> 1, "i" -> 2, "k" -> 2|>}
+              |>
+            },
+            "separation" -> "exchange-symmetric, row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "Ag",
+            "kappa" -> 2,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 1, "k" -> 1|>,
+                  <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2, "k" -> 2|>
+                }
+              |>
+            },
+            "separation" -> "exchange-symmetric, row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "Ag",
+            "kappa" -> 3,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 1, "k" -> 2|>,
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "exchange-symmetric, row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "Ag",
+            "kappa" -> 4,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "exchange-antisymmetric"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Bu",
+        "b" -> "1E1u",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "1E2g",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> Exp[2 Pi I/3], "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E2g",
+            "kappa" -> 2,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I/3], "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "row order"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Bu",
+        "b" -> "1E2u",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "1E1g",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 2, "k" -> 1|>}|>
+            },
+            "separation" -> "row order"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E1g",
+            "kappa" -> 2,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> (-1 + -1 Exp[2 Pi I/3]), "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "row order"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E1u",
+        "b" -> "1E1u",
+        "couplings" -> {
+          <|
+            "N" -> 6,
+            "c" -> "Ag",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> (1 + -1 Exp[2 Pi I/3]), "i" -> 1, "k" -> 2|>,
+                  <|"e" -> (1 + -1 Exp[2 Pi I/3]), "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "exchange-symmetric"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "Ag",
+            "kappa" -> 2,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 1, "k" -> 2|>,
+                  <|"e" -> (-1 + -1 Exp[2 Pi I/3]), "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "exchange-antisymmetric"
+          |>,
+          <|
+            "c" -> "1E2g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/68/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E1u",
+        "b" -> "1E2u",
+        "couplings" -> {
+          <|
+            "c" -> "Bg",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C6h#/clebsch_gordan/products/70/couplings/0",
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E1g",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I/3], "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E2u",
+        "b" -> "1E2u",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "Ag",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> -1 Exp[2 Pi I/3], "i" -> 1, "k" -> 2|>,
+                  <|"e" -> -1 Exp[2 Pi I/3], "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "exchange-symmetric"
+          |>,
+          <|
+            "N" -> 6,
+            "c" -> "Ag",
+            "kappa" -> 2,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> (2 + Exp[2 Pi I/3]), "i" -> 1, "k" -> 2|>,
+                  <|"e" -> (-2 + -1 Exp[2 Pi I/3]), "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "exchange-antisymmetric"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E2g",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> Exp[2 Pi I/3], "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>
+    }
+  |>,
   "corepresentation_table" -> <|
     "characters" -> {
       {1, 1, 1, 1, 1, 1, 1, 1},
@@ -54,6 +1002,221 @@ o3m = <|
     <|"case" -> "c", "indicator" -> 0, "irrep" -> "1E2u", "partner" -> "2E2u"|>
   },
   "frame" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "node" -> "n13"|>,
+  "fusion" -> <|
+    "corepresentations" -> {"Ag", "Bg", "1E1g", "1E2g", "Au", "Bu", "1E1u", "1E2u"},
+    "products" -> {
+      <|
+        "a" -> "Ag",
+        "b" -> "Ag",
+        "terms" -> {<|"corepresentation" -> "Ag", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "Bg",
+        "terms" -> {<|"corepresentation" -> "Bg", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "1E1g",
+        "terms" -> {<|"corepresentation" -> "1E1g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "1E2g",
+        "terms" -> {<|"corepresentation" -> "1E2g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "Au",
+        "terms" -> {<|"corepresentation" -> "Au", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "Bu",
+        "terms" -> {<|"corepresentation" -> "Bu", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "1E1u",
+        "terms" -> {<|"corepresentation" -> "1E1u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Ag",
+        "b" -> "1E2u",
+        "terms" -> {<|"corepresentation" -> "1E2u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Bg",
+        "b" -> "Bg",
+        "terms" -> {<|"corepresentation" -> "Ag", "multiplicity" -> 4|>}
+      |>,
+      <|
+        "a" -> "Bg",
+        "b" -> "1E1g",
+        "terms" -> {<|"corepresentation" -> "1E2g", "multiplicity" -> 2|>}
+      |>,
+      <|
+        "a" -> "Bg",
+        "b" -> "1E2g",
+        "terms" -> {<|"corepresentation" -> "1E1g", "multiplicity" -> 2|>}
+      |>,
+      <|
+        "a" -> "Bg",
+        "b" -> "Au",
+        "terms" -> {<|"corepresentation" -> "Bu", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Bg",
+        "b" -> "Bu",
+        "terms" -> {<|"corepresentation" -> "Au", "multiplicity" -> 4|>}
+      |>,
+      <|
+        "a" -> "Bg",
+        "b" -> "1E1u",
+        "terms" -> {<|"corepresentation" -> "1E2u", "multiplicity" -> 2|>}
+      |>,
+      <|
+        "a" -> "Bg",
+        "b" -> "1E2u",
+        "terms" -> {<|"corepresentation" -> "1E1u", "multiplicity" -> 2|>}
+      |>,
+      <|
+        "a" -> "1E1g",
+        "b" -> "1E1g",
+        "terms" -> {
+          <|"corepresentation" -> "Ag", "multiplicity" -> 2|>,
+          <|"corepresentation" -> "1E2g", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "1E1g",
+        "b" -> "1E2g",
+        "terms" -> {
+          <|"corepresentation" -> "Bg", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "1E1g", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "1E1g",
+        "b" -> "Au",
+        "terms" -> {<|"corepresentation" -> "1E1u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "1E1g",
+        "b" -> "Bu",
+        "terms" -> {<|"corepresentation" -> "1E2u", "multiplicity" -> 2|>}
+      |>,
+      <|
+        "a" -> "1E1g",
+        "b" -> "1E1u",
+        "terms" -> {
+          <|"corepresentation" -> "Au", "multiplicity" -> 2|>,
+          <|"corepresentation" -> "1E2u", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "1E1g",
+        "b" -> "1E2u",
+        "terms" -> {
+          <|"corepresentation" -> "Bu", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "1E1u", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "1E2g",
+        "b" -> "1E2g",
+        "terms" -> {
+          <|"corepresentation" -> "Ag", "multiplicity" -> 2|>,
+          <|"corepresentation" -> "1E2g", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "1E2g",
+        "b" -> "Au",
+        "terms" -> {<|"corepresentation" -> "1E2u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "1E2g",
+        "b" -> "Bu",
+        "terms" -> {<|"corepresentation" -> "1E1u", "multiplicity" -> 2|>}
+      |>,
+      <|
+        "a" -> "1E2g",
+        "b" -> "1E1u",
+        "terms" -> {
+          <|"corepresentation" -> "Bu", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "1E1u", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "1E2g",
+        "b" -> "1E2u",
+        "terms" -> {
+          <|"corepresentation" -> "Au", "multiplicity" -> 2|>,
+          <|"corepresentation" -> "1E2u", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "Au",
+        "b" -> "Au",
+        "terms" -> {<|"corepresentation" -> "Ag", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Au",
+        "b" -> "Bu",
+        "terms" -> {<|"corepresentation" -> "Bg", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Au",
+        "b" -> "1E1u",
+        "terms" -> {<|"corepresentation" -> "1E1g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Au",
+        "b" -> "1E2u",
+        "terms" -> {<|"corepresentation" -> "1E2g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Bu",
+        "b" -> "Bu",
+        "terms" -> {<|"corepresentation" -> "Ag", "multiplicity" -> 4|>}
+      |>,
+      <|
+        "a" -> "Bu",
+        "b" -> "1E1u",
+        "terms" -> {<|"corepresentation" -> "1E2g", "multiplicity" -> 2|>}
+      |>,
+      <|
+        "a" -> "Bu",
+        "b" -> "1E2u",
+        "terms" -> {<|"corepresentation" -> "1E1g", "multiplicity" -> 2|>}
+      |>,
+      <|
+        "a" -> "1E1u",
+        "b" -> "1E1u",
+        "terms" -> {
+          <|"corepresentation" -> "Ag", "multiplicity" -> 2|>,
+          <|"corepresentation" -> "1E2g", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "1E1u",
+        "b" -> "1E2u",
+        "terms" -> {
+          <|"corepresentation" -> "Bg", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "1E1g", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "1E2u",
+        "b" -> "1E2u",
+        "terms" -> {
+          <|"corepresentation" -> "Ag", "multiplicity" -> 2|>,
+          <|"corepresentation" -> "1E2g", "multiplicity" -> 1|>
+        }
+      |>
+    }
+  |>,
   "group" -> <|
     "G" -> "rotation/C12h#",
     "H" -> "rotation/C6h#",

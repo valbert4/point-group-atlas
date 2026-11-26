@@ -1,5 +1,50 @@
 (* D1-1p (D_11'): data/json/D1-1p.json as a Wolfram Language association. *)
 o3m = <|
+  "clebsch_gordan" -> <|
+    "corepresentations" -> {"A", "B"},
+    "kind" -> "table",
+    "products" -> {
+      <|
+        "a" -> "A",
+        "b" -> "A",
+        "couplings" -> {
+          <|
+            "c" -> "A",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D1#/clebsch_gordan/products/0/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "B",
+        "couplings" -> {
+          <|
+            "c" -> "B",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D1#/clebsch_gordan/products/1/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B",
+        "b" -> "B",
+        "couplings" -> {
+          <|
+            "c" -> "A",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D1#/clebsch_gordan/products/2/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>
+    }
+  |>,
   "corepresentation_table" -> <|
     "characters" -> {{1, 1}, {1, -1}},
     "classes" -> {{"E"}, {"C2"}},
@@ -17,6 +62,26 @@ o3m = <|
       "irrep" -> "B"
     |>
   },
+  "fusion" -> <|
+    "corepresentations" -> {"A", "B"},
+    "products" -> {
+      <|
+        "a" -> "A",
+        "b" -> "A",
+        "terms" -> {<|"corepresentation" -> "A", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "B",
+        "terms" -> {<|"corepresentation" -> "B", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "B",
+        "b" -> "B",
+        "terms" -> {<|"corepresentation" -> "A", "multiplicity" -> 1|>}
+      |>
+    }
+  |>,
   "group" -> <|
     "G" -> "rotation/D1#",
     "abstract_type" -> "Z_2 x Z_2",

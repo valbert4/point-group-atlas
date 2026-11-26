@@ -1,5 +1,89 @@
 (* D3-C3 (D_3(C_3)): data/json/D3-C3.json as a Wolfram Language association. *)
 o3m = <|
+  "clebsch_gordan" -> <|
+    "corepresentations" -> {"A", "1E1", "2E1"},
+    "kind" -> "table",
+    "products" -> {
+      <|
+        "a" -> "A",
+        "b" -> "A",
+        "couplings" -> {
+          <|
+            "c" -> "A",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C3#/clebsch_gordan/products/0/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "1E1",
+        "couplings" -> {
+          <|
+            "c" -> "1E1",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C3#/clebsch_gordan/products/1/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "2E1",
+        "couplings" -> {
+          <|
+            "c" -> "2E1",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C3#/clebsch_gordan/products/2/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E1",
+        "b" -> "1E1",
+        "couplings" -> {
+          <|
+            "c" -> "2E1",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C3#/clebsch_gordan/products/3/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E1",
+        "b" -> "2E1",
+        "couplings" -> {
+          <|
+            "c" -> "A",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C3#/clebsch_gordan/products/4/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "2E1",
+        "b" -> "2E1",
+        "couplings" -> {
+          <|
+            "c" -> "1E1",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C3#/clebsch_gordan/products/5/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>
+    }
+  |>,
   "corepresentation_table" -> <|
     "characters" -> {
       {1, 1, 1},
@@ -30,6 +114,41 @@ o3m = <|
     |>
   },
   "frame" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "node" -> "n02"|>,
+  "fusion" -> <|
+    "corepresentations" -> {"A", "1E1", "2E1"},
+    "products" -> {
+      <|
+        "a" -> "A",
+        "b" -> "A",
+        "terms" -> {<|"corepresentation" -> "A", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "1E1",
+        "terms" -> {<|"corepresentation" -> "1E1", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "2E1",
+        "terms" -> {<|"corepresentation" -> "2E1", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "1E1",
+        "b" -> "1E1",
+        "terms" -> {<|"corepresentation" -> "2E1", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "1E1",
+        "b" -> "2E1",
+        "terms" -> {<|"corepresentation" -> "A", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "2E1",
+        "b" -> "2E1",
+        "terms" -> {<|"corepresentation" -> "1E1", "multiplicity" -> 1|>}
+      |>
+    }
+  |>,
   "group" -> <|
     "G" -> "rotation/D3#",
     "H" -> "rotation/C3#",

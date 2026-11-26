@@ -2,6 +2,98 @@
 from sympy import I, Rational, S, exp, pi
 
 o3m = {
+    'clebsch_gordan': {
+        'corepresentations': ['A', 'B'],
+        'kind': 'table',
+        'products': [
+            {
+                'a': 'A',
+                'b': 'A',
+                'couplings': [
+                    {
+                        'c': 'A',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/C2#/clebsch_gordan/products/0/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A',
+                'b': 'B',
+                'couplings': [
+                    {
+                        'c': 'B',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/C2#/clebsch_gordan/products/1/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B',
+                'b': 'B',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'A',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}, {'e': Rational(1,1), 'i': 2, 'k': 2}]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric, row order'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'A',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 1},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 2}
+                                ]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric, row order'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'A',
+                        'kappa': 3,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric, row order'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'A',
+                        'kappa': 4,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(-1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-antisymmetric'
+                    }
+                ]
+            }
+        ]
+    },
     'corepresentation_table': {
         'characters': [[Rational(1,1), Rational(1,1)], [Rational(2,1), Rational(-2,1)]],
         'classes': [['E'], ['C2']],
@@ -28,6 +120,14 @@ o3m = {
             [Rational(0,1), Rational(0,1), Rational(1,1)]
         ],
         'node': 'n01'
+    },
+    'fusion': {
+        'corepresentations': ['A', 'B'],
+        'products': [
+            {'a': 'A', 'b': 'A', 'terms': [{'corepresentation': 'A', 'multiplicity': 1}]},
+            {'a': 'A', 'b': 'B', 'terms': [{'corepresentation': 'B', 'multiplicity': 1}]},
+            {'a': 'B', 'b': 'B', 'terms': [{'corepresentation': 'A', 'multiplicity': 4}]}
+        ]
     },
     'group': {
         'G': 'rotation/C4#',

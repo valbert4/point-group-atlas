@@ -162,9 +162,11 @@
 \newcommand{\irchar}[1]{\chi_{#1}}
 \newcommand{\fsind}{\nu_{\mathrm{FS}}}
 \newcommand{\irrprod}{\otimes}
+\newcommand{\mult}{\kappa}
 \newcommand{\intx}{\mu}
 \newcommand{\cgnorm}{\mathcal{N}}
 \newcommand{\jm}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
+\newcommand{\prodket}[2]{\lvert {#1}\,{#2}\rangle}
 \newcommand{\jahn}[1]{\mathrm{#1}}
 \newcommand{\fcell}{\mathcal{D}}
 \newcommand{\sympow}[2]{[#1^{#2}]}
@@ -266,6 +268,22 @@ $\irr{b}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $0$ & $\irr{b}_{\ptag{g}}$\\*
 $\irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ & $0$ & $\irr{a}_{\ptag{u}}$\\*
 $\irr{b}_{\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ & $0$ & $\irr{b}_{\ptag{u}}$\\
 \bottomrule\end{longtable}}
+\needspace{171pt}
+\section{Products of corepresentations}\label{s:fusion}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.1}{10.1}, \href{../../CONVENTIONS.pdf\#conv.34}{34} and \href{../../CONVENTIONS.pdf\#conv.38}{38}.
+\leavevmode\label{n:matrix.corep.factors}Every product $\mathcal{D}_1\irrprod\mathcal{D}_2$, equal to $\mathcal{D}_2\irrprod\mathcal{D}_1$, is one corepresentation, in row $\mathcal{D}_1$, column $\mathcal{D}_2$ for $\mathcal{D}_1 \le \mathcal{D}_2$ in the order of the corepresentation table (section~\ref{s:character_table}).
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}lcccc@{}}\toprule
+$\irrprod$ & $\irr{a}_{\ptag{g}}$ & $\irr{b}_{\ptag{g}}$ & $\irr{a}_{\ptag{u}}$ & $\irr{b}_{\ptag{u}}$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $\irr{b}_{\ptag{g}}$ & $\irr{a}_{\ptag{u}}$ & $\irr{b}_{\ptag{u}}$\\*
+$\irr{b}_{\ptag{g}}$ &  & $\irr{a}_{\ptag{g}}$ & $\irr{b}_{\ptag{u}}$ & $\irr{a}_{\ptag{u}}$\\*
+$\irr{a}_{\ptag{u}}$ &  &  & $\irr{a}_{\ptag{g}}$ & $\irr{b}_{\ptag{g}}$\\*
+$\irr{b}_{\ptag{u}}$ &  &  &  & $\irr{a}_{\ptag{g}}$\\
+\bottomrule\end{longtable}}
+\needspace{91pt}
+\section{Clebsch--Gordan coefficients}\label{s:clebsch_gordan}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.3}{10.3}, \href{../../../rotation/CONVENTIONS.pdf\#conv.10.4}{10.4} and \href{../../CONVENTIONS.pdf\#conv.38}{38}.
+\leavevmode\label{n:index.copy}The record names each copy $\mult$ of a corepresentation $\mathcal{D}$ in $\mathcal{D}_1\irrprod\mathcal{D}_2$ by a pointer to a block of the table of $\grp{C_{2h}}$ and a phase (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.38.2}{38.2}). That block is the copy $\mult$ of the first irrep of $\mathcal{D}$ in the product of the first irreps of $\mathcal{D}_1$ and $\mathcal{D}_2$, in the section Clebsch--Gordan coefficients of the document of \href{../../../rotation/data/pdf/C2h.pdf}{$\grp{C_{2h}}$}. Each copy has the phase 1.
 \needspace{171pt}
 \partbox{Subgroups}
 \section{Subgroup lattice}\label{s:subgroups}

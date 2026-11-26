@@ -162,9 +162,11 @@
 \newcommand{\irchar}[1]{\chi_{#1}}
 \newcommand{\fsind}{\nu_{\mathrm{FS}}}
 \newcommand{\irrprod}{\otimes}
+\newcommand{\mult}{\kappa}
 \newcommand{\intx}{\mu}
 \newcommand{\cgnorm}{\mathcal{N}}
 \newcommand{\jm}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
+\newcommand{\prodket}[2]{\lvert {#1}\,{#2}\rangle}
 \newcommand{\jahn}[1]{\mathrm{#1}}
 \newcommand{\fcell}{\mathcal{D}}
 \newcommand{\sympow}[2]{[#1^{#2}]}
@@ -272,6 +274,20 @@ $\irr{a}$ & $\irr{a}$ & $0$ & $\irr{a}$\\*
 $\conjpair{1}\irr{e}_{n}$ & $\conjpair{1}\irr{e}_{2n}$ & $0$ & $\conjpair{1}\irr{e}_{3n}$\\*
 $\conjpair{2}\irr{e}_{n}$ & $\conjpair{2}\irr{e}_{2n}$ & $0$ & $\conjpair{2}\irr{e}_{3n}$\\
 \bottomrule\end{longtable}}
+\needspace{165pt}
+\section{Products of corepresentations}\label{s:fusion}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.2}{10.2} and \href{../../CONVENTIONS.pdf\#conv.37.7}{37.7}.
+A row is a rule for the products of two families of corepresentations. A row gives the product of the families, of indices $n$ and $n'$, and its decomposition, with the condition on the indices where the rule has one. The squares split into their symmetrized and antisymmetrized parts in section~\ref{s:symmetrized_powers}.
+{\small\begin{longtable}{@{}l@{${}={}$}ll@{\hspace{18pt}}l@{${}={}$}ll@{}}\toprule
+$\irr{a}\irrprod \irr{a}$ & $\irr{a}$ &  & $\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n-n'}$ & $n > n'$\\*
+$\irr{a}\irrprod \conjpair{1}\irr{e}_{n}$ & $\conjpair{1}\irr{e}_{n}$ &  & $\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\irr{a}$ & $n = n'$\\*
+$\irr{a}\irrprod \conjpair{2}\irr{e}_{n}$ & $\conjpair{2}\irr{e}_{n}$ &  & $\conjpair{1}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n'-n}$ & $n < n'$\\*
+$\conjpair{1}\irr{e}_{n}\irrprod \conjpair{1}\irr{e}_{n'}$ & $\conjpair{1}\irr{e}_{n+n'}$ &  & $\conjpair{2}\irr{e}_{n}\irrprod \conjpair{2}\irr{e}_{n'}$ & $\conjpair{2}\irr{e}_{n+n'}$ & \\
+\bottomrule\end{longtable}}
+\needspace{66pt}
+\section{Clebsch--Gordan coefficients}\label{s:clebsch_gordan}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.3}{10.3}, \href{../../../rotation/CONVENTIONS.pdf\#conv.10.4}{10.4}, \href{../../CONVENTIONS.pdf\#conv.37.7}{37.7} and \href{../../CONVENTIONS.pdf\#conv.38}{38}.
+Every corepresentation has dimension 1: the characters multiply, and the coefficient has the value 1.
 \needspace{171pt}
 \partbox{Subgroups}
 \section{Closed subgroups}\label{s:subgroups}

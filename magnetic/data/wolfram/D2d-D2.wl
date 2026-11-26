@@ -1,5 +1,139 @@
 (* D2d-D2 (D_2d(D_2)): data/json/D2d-D2.json as a Wolfram Language association. *)
 o3m = <|
+  "clebsch_gordan" -> <|
+    "corepresentations" -> {"A", "B1", "B2"},
+    "kind" -> "table",
+    "products" -> {
+      <|
+        "a" -> "A",
+        "b" -> "A",
+        "couplings" -> {
+          <|
+            "c" -> "A",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D2#/clebsch_gordan/products/0/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "B1",
+        "couplings" -> {
+          <|
+            "c" -> "B1",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D2#/clebsch_gordan/products/1/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "B2",
+        "couplings" -> {
+          <|
+            "c" -> "B2",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D2#/clebsch_gordan/products/2/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "B1",
+        "couplings" -> {
+          <|
+            "c" -> "A",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D2#/clebsch_gordan/products/4/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "B2",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "B2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "B2",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "A",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>, <|"e" -> 1, "i" -> 2, "k" -> 2|>}
+              |>
+            },
+            "separation" -> "exchange-symmetric, row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "A",
+            "kappa" -> 2,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 1, "k" -> 1|>,
+                  <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2, "k" -> 2|>
+                }
+              |>
+            },
+            "separation" -> "exchange-symmetric, row order"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "B1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 1, "k" -> 2|>,
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "exchange-symmetric"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "B1",
+            "kappa" -> 2,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "exchange-antisymmetric"
+          |>
+        }
+      |>
+    }
+  |>,
   "corepresentation_table" -> <|
     "characters" -> {{1, 1, 1}, {1, 1, -1}, {2, -2, 0}},
     "classes" -> {{"E"}, {"C2"}, {"C2p", "C2pp"}},
@@ -21,6 +155,44 @@ o3m = <|
     <|"case" -> "c", "indicator" -> 0, "irrep" -> "B2", "partner" -> "B3"|>
   },
   "frame" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "node" -> "n04"|>,
+  "fusion" -> <|
+    "corepresentations" -> {"A", "B1", "B2"},
+    "products" -> {
+      <|
+        "a" -> "A",
+        "b" -> "A",
+        "terms" -> {<|"corepresentation" -> "A", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "B1",
+        "terms" -> {<|"corepresentation" -> "B1", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "B2",
+        "terms" -> {<|"corepresentation" -> "B2", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "B1",
+        "terms" -> {<|"corepresentation" -> "A", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "B1",
+        "b" -> "B2",
+        "terms" -> {<|"corepresentation" -> "B2", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "B2",
+        "b" -> "B2",
+        "terms" -> {
+          <|"corepresentation" -> "A", "multiplicity" -> 2|>,
+          <|"corepresentation" -> "B1", "multiplicity" -> 2|>
+        }
+      |>
+    }
+  |>,
   "group" -> <|
     "G" -> "rotation/D2d#",
     "H" -> "rotation/D2#",

@@ -1,5 +1,159 @@
 (* C5-1p (C_51'): data/json/C5-1p.json as a Wolfram Language association. *)
 o3m = <|
+  "clebsch_gordan" -> <|
+    "corepresentations" -> {"A", "1E1", "1E2"},
+    "kind" -> "table",
+    "products" -> {
+      <|
+        "a" -> "A",
+        "b" -> "A",
+        "couplings" -> {
+          <|
+            "c" -> "A",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C5#/clebsch_gordan/products/0/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "1E1",
+        "couplings" -> {
+          <|
+            "c" -> "1E1",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C5#/clebsch_gordan/products/1/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "1E2",
+        "couplings" -> {
+          <|
+            "c" -> "1E2",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C5#/clebsch_gordan/products/3/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E1",
+        "b" -> "1E1",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "A",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> 1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "exchange-symmetric"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "A",
+            "kappa" -> 2,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 1, "k" -> 2|>,
+                  <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "exchange-antisymmetric"
+          |>,
+          <|
+            "c" -> "1E2",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C5#/clebsch_gordan/products/5/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E1",
+        "b" -> "1E2",
+        "couplings" -> {
+          <|
+            "N" -> 1,
+            "c" -> "1E1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 1|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+            },
+            "separation" -> "unique"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E2",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "1E2",
+        "b" -> "1E2",
+        "couplings" -> {
+          <|
+            "N" -> 2,
+            "c" -> "A",
+            "kappa" -> 1,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> 1, "i" -> 2, "k" -> 1|>}
+              |>
+            },
+            "separation" -> "exchange-symmetric"
+          |>,
+          <|
+            "N" -> 2,
+            "c" -> "A",
+            "kappa" -> 2,
+            "partners" -> {
+              <|
+                "mu" -> 1,
+                "terms" -> {
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 1, "k" -> 2|>,
+                  <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2, "k" -> 1|>
+                }
+              |>
+            },
+            "separation" -> "exchange-antisymmetric"
+          |>,
+          <|
+            "N" -> 1,
+            "c" -> "1E1",
+            "kappa" -> 1,
+            "partners" -> {
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>
+            },
+            "separation" -> "unique"
+          |>
+        }
+      |>
+    }
+  |>,
   "corepresentation_table" -> <|
     "characters" -> {
       {1, 1, 1},
@@ -26,6 +180,50 @@ o3m = <|
     <|"case" -> "c", "irrep" -> "1E1", "partner" -> "2E1"|>,
     <|"case" -> "c", "irrep" -> "1E2", "partner" -> "2E2"|>
   },
+  "fusion" -> <|
+    "corepresentations" -> {"A", "1E1", "1E2"},
+    "products" -> {
+      <|
+        "a" -> "A",
+        "b" -> "A",
+        "terms" -> {<|"corepresentation" -> "A", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "1E1",
+        "terms" -> {<|"corepresentation" -> "1E1", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A",
+        "b" -> "1E2",
+        "terms" -> {<|"corepresentation" -> "1E2", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "1E1",
+        "b" -> "1E1",
+        "terms" -> {
+          <|"corepresentation" -> "A", "multiplicity" -> 2|>,
+          <|"corepresentation" -> "1E2", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "1E1",
+        "b" -> "1E2",
+        "terms" -> {
+          <|"corepresentation" -> "1E1", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "1E2", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "1E2",
+        "b" -> "1E2",
+        "terms" -> {
+          <|"corepresentation" -> "A", "multiplicity" -> 2|>,
+          <|"corepresentation" -> "1E1", "multiplicity" -> 1|>
+        }
+      |>
+    }
+  |>,
   "group" -> <|
     "G" -> "rotation/C5#",
     "abstract_type" -> "Z_10",

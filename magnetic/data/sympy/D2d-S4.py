@@ -2,6 +2,142 @@
 from sympy import I, Rational, S, exp, pi
 
 o3m = {
+    'clebsch_gordan': {
+        'corepresentations': ['A', 'B', '1E1', '2E1'],
+        'kind': 'table',
+        'products': [
+            {
+                'a': 'A',
+                'b': 'A',
+                'couplings': [
+                    {
+                        'c': 'A',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S4#/clebsch_gordan/products/0/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A',
+                'b': 'B',
+                'couplings': [
+                    {
+                        'c': 'B',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S4#/clebsch_gordan/products/1/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A',
+                'b': '1E1',
+                'couplings': [
+                    {
+                        'c': '1E1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S4#/clebsch_gordan/products/2/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A',
+                'b': '2E1',
+                'couplings': [
+                    {
+                        'c': '2E1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S4#/clebsch_gordan/products/3/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B',
+                'b': 'B',
+                'couplings': [
+                    {
+                        'c': 'A',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S4#/clebsch_gordan/products/4/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B',
+                'b': '1E1',
+                'couplings': [
+                    {
+                        'c': '2E1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S4#/clebsch_gordan/products/5/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B',
+                'b': '2E1',
+                'couplings': [
+                    {
+                        'c': '1E1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S4#/clebsch_gordan/products/6/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1',
+                'b': '1E1',
+                'couplings': [
+                    {
+                        'c': 'B',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S4#/clebsch_gordan/products/7/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1',
+                'b': '2E1',
+                'couplings': [
+                    {
+                        'c': 'A',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S4#/clebsch_gordan/products/8/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '2E1',
+                'b': '2E1',
+                'couplings': [
+                    {
+                        'c': 'B',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S4#/clebsch_gordan/products/9/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            }
+        ]
+    },
     'corepresentation_table': {
         'characters': [
             [Rational(1,1), Rational(1,1), Rational(1,1), Rational(1,1)],
@@ -55,6 +191,21 @@ o3m = {
             [Rational(0,1), Rational(0,1), Rational(1,1)]
         ],
         'node': 'n05'
+    },
+    'fusion': {
+        'corepresentations': ['A', 'B', '1E1', '2E1'],
+        'products': [
+            {'a': 'A', 'b': 'A', 'terms': [{'corepresentation': 'A', 'multiplicity': 1}]},
+            {'a': 'A', 'b': 'B', 'terms': [{'corepresentation': 'B', 'multiplicity': 1}]},
+            {'a': 'A', 'b': '1E1', 'terms': [{'corepresentation': '1E1', 'multiplicity': 1}]},
+            {'a': 'A', 'b': '2E1', 'terms': [{'corepresentation': '2E1', 'multiplicity': 1}]},
+            {'a': 'B', 'b': 'B', 'terms': [{'corepresentation': 'A', 'multiplicity': 1}]},
+            {'a': 'B', 'b': '1E1', 'terms': [{'corepresentation': '2E1', 'multiplicity': 1}]},
+            {'a': 'B', 'b': '2E1', 'terms': [{'corepresentation': '1E1', 'multiplicity': 1}]},
+            {'a': '1E1', 'b': '1E1', 'terms': [{'corepresentation': 'B', 'multiplicity': 1}]},
+            {'a': '1E1', 'b': '2E1', 'terms': [{'corepresentation': 'A', 'multiplicity': 1}]},
+            {'a': '2E1', 'b': '2E1', 'terms': [{'corepresentation': 'B', 'multiplicity': 1}]}
+        ]
     },
     'group': {
         'G': 'rotation/D2d#',

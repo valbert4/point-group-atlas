@@ -1,5 +1,591 @@
 (* D5d-1p (D_5d1'): data/json/D5d-1p.json as a Wolfram Language association. *)
 o3m = <|
+  "clebsch_gordan" -> <|
+    "corepresentations" -> {"A1g", "A2g", "E1g", "E2g", "A1u", "A2u", "E1u", "E2u"},
+    "kind" -> "table",
+    "products" -> {
+      <|
+        "a" -> "A1g",
+        "b" -> "A1g",
+        "couplings" -> {
+          <|
+            "c" -> "A1g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/0/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1g",
+        "b" -> "A2g",
+        "couplings" -> {
+          <|
+            "c" -> "A2g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/1/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1g",
+        "b" -> "E1g",
+        "couplings" -> {
+          <|
+            "c" -> "E1g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/2/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1g",
+        "b" -> "E2g",
+        "couplings" -> {
+          <|
+            "c" -> "E2g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/3/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1g",
+        "b" -> "A1u",
+        "couplings" -> {
+          <|
+            "c" -> "A1u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/4/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1g",
+        "b" -> "A2u",
+        "couplings" -> {
+          <|
+            "c" -> "A2u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/5/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1g",
+        "b" -> "E1u",
+        "couplings" -> {
+          <|
+            "c" -> "E1u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/6/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1g",
+        "b" -> "E2u",
+        "couplings" -> {
+          <|
+            "c" -> "E2u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/7/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2g",
+        "b" -> "A2g",
+        "couplings" -> {
+          <|
+            "c" -> "A1g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/8/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2g",
+        "b" -> "E1g",
+        "couplings" -> {
+          <|
+            "c" -> "E1g",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/9/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2g",
+        "b" -> "E2g",
+        "couplings" -> {
+          <|
+            "c" -> "E2g",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/10/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2g",
+        "b" -> "A1u",
+        "couplings" -> {
+          <|
+            "c" -> "A2u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/11/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2g",
+        "b" -> "A2u",
+        "couplings" -> {
+          <|
+            "c" -> "A1u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/12/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2g",
+        "b" -> "E1u",
+        "couplings" -> {
+          <|
+            "c" -> "E1u",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/13/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2g",
+        "b" -> "E2u",
+        "couplings" -> {
+          <|
+            "c" -> "E2u",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/14/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1g",
+        "b" -> "E1g",
+        "couplings" -> {
+          <|
+            "c" -> "A1g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/15/couplings/0",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "A2g",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/15/couplings/1",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "E2g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/15/couplings/2",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1g",
+        "b" -> "E2g",
+        "couplings" -> {
+          <|
+            "c" -> "E1g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/16/couplings/0",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "E2g",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/16/couplings/1",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1g",
+        "b" -> "A1u",
+        "couplings" -> {
+          <|
+            "c" -> "E1u",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/17/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1g",
+        "b" -> "A2u",
+        "couplings" -> {
+          <|
+            "c" -> "E1u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/18/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1g",
+        "b" -> "E1u",
+        "couplings" -> {
+          <|
+            "c" -> "A1u",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/19/couplings/0",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "A2u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/19/couplings/1",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "E2u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/19/couplings/2",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1g",
+        "b" -> "E2u",
+        "couplings" -> {
+          <|
+            "c" -> "E1u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/20/couplings/0",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "E2u",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/20/couplings/1",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E2g",
+        "b" -> "E2g",
+        "couplings" -> {
+          <|
+            "c" -> "A1g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/21/couplings/0",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "A2g",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/21/couplings/1",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "E1g",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/21/couplings/2",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E2g",
+        "b" -> "A1u",
+        "couplings" -> {
+          <|
+            "c" -> "E2u",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/22/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E2g",
+        "b" -> "A2u",
+        "couplings" -> {
+          <|
+            "c" -> "E2u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/23/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E2g",
+        "b" -> "E1u",
+        "couplings" -> {
+          <|
+            "c" -> "E1u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/24/couplings/0",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "E2u",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/24/couplings/1",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E2g",
+        "b" -> "E2u",
+        "couplings" -> {
+          <|
+            "c" -> "A1u",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/25/couplings/0",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "A2u",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/25/couplings/1",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "E1u",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/25/couplings/2",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1u",
+        "b" -> "A1u",
+        "couplings" -> {
+          <|
+            "c" -> "A1g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/26/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1u",
+        "b" -> "A2u",
+        "couplings" -> {
+          <|
+            "c" -> "A2g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/27/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1u",
+        "b" -> "E1u",
+        "couplings" -> {
+          <|
+            "c" -> "E1g",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/28/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A1u",
+        "b" -> "E2u",
+        "couplings" -> {
+          <|
+            "c" -> "E2g",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/29/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2u",
+        "b" -> "A2u",
+        "couplings" -> {
+          <|
+            "c" -> "A1g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/30/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2u",
+        "b" -> "E1u",
+        "couplings" -> {
+          <|
+            "c" -> "E1g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/31/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "A2u",
+        "b" -> "E2u",
+        "couplings" -> {
+          <|
+            "c" -> "E2g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/32/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1u",
+        "b" -> "E1u",
+        "couplings" -> {
+          <|
+            "c" -> "A1g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/33/couplings/0",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "A2g",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/33/couplings/1",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "E2g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/33/couplings/2",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E1u",
+        "b" -> "E2u",
+        "couplings" -> {
+          <|
+            "c" -> "E1g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/34/couplings/0",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "E2g",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/34/couplings/1",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "E2u",
+        "b" -> "E2u",
+        "couplings" -> {
+          <|
+            "c" -> "A1g",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/35/couplings/0",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "A2g",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/35/couplings/1",
+            "separation" -> "unique"
+          |>,
+          <|
+            "c" -> "E1g",
+            "kappa" -> 1,
+            "phase" -> "i",
+            "pointer" -> "rotation/D5d#/clebsch_gordan/products/35/couplings/2",
+            "separation" -> "unique"
+          |>
+        }
+      |>
+    }
+  |>,
   "corepresentation_table" -> <|
     "characters" -> {
       {1, 1, 1, 1, 1, 1, 1, 1},
@@ -92,6 +678,227 @@ o3m = <|
       "irrep" -> "E2u"
     |>
   },
+  "fusion" -> <|
+    "corepresentations" -> {"A1g", "A2g", "E1g", "E2g", "A1u", "A2u", "E1u", "E2u"},
+    "products" -> {
+      <|
+        "a" -> "A1g",
+        "b" -> "A1g",
+        "terms" -> {<|"corepresentation" -> "A1g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1g",
+        "b" -> "A2g",
+        "terms" -> {<|"corepresentation" -> "A2g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1g",
+        "b" -> "E1g",
+        "terms" -> {<|"corepresentation" -> "E1g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1g",
+        "b" -> "E2g",
+        "terms" -> {<|"corepresentation" -> "E2g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1g",
+        "b" -> "A1u",
+        "terms" -> {<|"corepresentation" -> "A1u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1g",
+        "b" -> "A2u",
+        "terms" -> {<|"corepresentation" -> "A2u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1g",
+        "b" -> "E1u",
+        "terms" -> {<|"corepresentation" -> "E1u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1g",
+        "b" -> "E2u",
+        "terms" -> {<|"corepresentation" -> "E2u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2g",
+        "b" -> "A2g",
+        "terms" -> {<|"corepresentation" -> "A1g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2g",
+        "b" -> "E1g",
+        "terms" -> {<|"corepresentation" -> "E1g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2g",
+        "b" -> "E2g",
+        "terms" -> {<|"corepresentation" -> "E2g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2g",
+        "b" -> "A1u",
+        "terms" -> {<|"corepresentation" -> "A2u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2g",
+        "b" -> "A2u",
+        "terms" -> {<|"corepresentation" -> "A1u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2g",
+        "b" -> "E1u",
+        "terms" -> {<|"corepresentation" -> "E1u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2g",
+        "b" -> "E2u",
+        "terms" -> {<|"corepresentation" -> "E2u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "E1g",
+        "b" -> "E1g",
+        "terms" -> {
+          <|"corepresentation" -> "A1g", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "A2g", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "E2g", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E1g",
+        "b" -> "E2g",
+        "terms" -> {
+          <|"corepresentation" -> "E1g", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "E2g", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E1g",
+        "b" -> "A1u",
+        "terms" -> {<|"corepresentation" -> "E1u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "E1g",
+        "b" -> "A2u",
+        "terms" -> {<|"corepresentation" -> "E1u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "E1g",
+        "b" -> "E1u",
+        "terms" -> {
+          <|"corepresentation" -> "A1u", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "A2u", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "E2u", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E1g",
+        "b" -> "E2u",
+        "terms" -> {
+          <|"corepresentation" -> "E1u", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "E2u", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E2g",
+        "b" -> "E2g",
+        "terms" -> {
+          <|"corepresentation" -> "A1g", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "A2g", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "E1g", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E2g",
+        "b" -> "A1u",
+        "terms" -> {<|"corepresentation" -> "E2u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "E2g",
+        "b" -> "A2u",
+        "terms" -> {<|"corepresentation" -> "E2u", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "E2g",
+        "b" -> "E1u",
+        "terms" -> {
+          <|"corepresentation" -> "E1u", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "E2u", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E2g",
+        "b" -> "E2u",
+        "terms" -> {
+          <|"corepresentation" -> "A1u", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "A2u", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "E1u", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "A1u",
+        "b" -> "A1u",
+        "terms" -> {<|"corepresentation" -> "A1g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1u",
+        "b" -> "A2u",
+        "terms" -> {<|"corepresentation" -> "A2g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1u",
+        "b" -> "E1u",
+        "terms" -> {<|"corepresentation" -> "E1g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A1u",
+        "b" -> "E2u",
+        "terms" -> {<|"corepresentation" -> "E2g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2u",
+        "b" -> "A2u",
+        "terms" -> {<|"corepresentation" -> "A1g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2u",
+        "b" -> "E1u",
+        "terms" -> {<|"corepresentation" -> "E1g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "A2u",
+        "b" -> "E2u",
+        "terms" -> {<|"corepresentation" -> "E2g", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "E1u",
+        "b" -> "E1u",
+        "terms" -> {
+          <|"corepresentation" -> "A1g", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "A2g", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "E2g", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E1u",
+        "b" -> "E2u",
+        "terms" -> {
+          <|"corepresentation" -> "E1g", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "E2g", "multiplicity" -> 1|>
+        }
+      |>,
+      <|
+        "a" -> "E2u",
+        "b" -> "E2u",
+        "terms" -> {
+          <|"corepresentation" -> "A1g", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "A2g", "multiplicity" -> 1|>,
+          <|"corepresentation" -> "E1g", "multiplicity" -> 1|>
+        }
+      |>
+    }
+  |>,
   "group" -> <|
     "G" -> "rotation/D5d#",
     "abstract_type" -> "Dih(20) x Z_2",

@@ -24,8 +24,8 @@ from . import volume as V
 
 ROTATION_RECORDS = DV.ROTATION_RECORDS
 OUT = "point-group-atlas-magnetic.pdf"
-SUBJECT = ("Point Group Atlas, volume III: the conventions, the documents of the magnetic point "
-           "groups, the references and the index of notation")
+SUBJECT = ("Point Group Atlas, volume III: the conventions, the documents of the 270 magnetic "
+           "point groups, the references and the index of notation")
 CONVENTIONS_DOCS = ("conventions", "conventionsmagnetic")
 ROTATION_CONVENTIONS_ENTRY = "Conventions of the point groups"
 MAGNETIC_CONVENTIONS_ENTRY = "Conventions of the magnetic point groups"

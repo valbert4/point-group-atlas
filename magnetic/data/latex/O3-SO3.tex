@@ -162,9 +162,11 @@
 \newcommand{\irchar}[1]{\chi_{#1}}
 \newcommand{\fsind}{\nu_{\mathrm{FS}}}
 \newcommand{\irrprod}{\otimes}
+\newcommand{\mult}{\kappa}
 \newcommand{\intx}{\mu}
 \newcommand{\cgnorm}{\mathcal{N}}
 \newcommand{\jm}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
+\newcommand{\prodket}[2]{\lvert {#1}\,{#2}\rangle}
 \newcommand{\jahn}[1]{\mathrm{#1}}
 \newcommand{\fcell}{\mathcal{D}}
 \newcommand{\sympow}[2]{[#1^{#2}]}
@@ -268,6 +270,16 @@ $J$ & $\sympow{\mathcal{D}}{3}$\\\midrule\endhead
 3 & $\irrJ{1} \oplus 2\,\irrJ{3} \oplus \irrJ{4} \oplus \irrJ{5} \oplus \irrJ{6} \oplus \irrJ{7} \oplus \irrJ{9}$\\*
 4 & $\irrJ{0} \oplus \irrJ{2} \oplus \irrJ{3} \oplus 2\,\irrJ{4} \oplus \irrJ{5} \oplus 2\,\irrJ{6} \oplus \irrJ{7} \oplus \irrJ{8} \oplus \irrJ{9} \oplus \irrJ{10} \oplus \irrJ{12}$\\
 \bottomrule\end{longtable}}
+\needspace{110pt}
+\section{Products of corepresentations}\label{s:fusion}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.2}{10.2} and \href{../../CONVENTIONS.pdf\#conv.37.7}{37.7}.
+\leavevmode\label{n:index.J12}The products of the families, of indices $J_1$ and $J_2$, decompose as
+\begin{align}\irrJ{J_1}\irrprod \irrJ{J_2} &= \bigoplus_{J=\lvert J_1-J_2\rvert}^{J_1+J_2} \irrJ{J}.\end{align}
+The squares split into their symmetrized and antisymmetrized parts in section~\ref{s:symmetrized_powers}.
+\needspace{78pt}
+\section{Clebsch--Gordan coefficients}\label{s:clebsch_gordan}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.6}{10.6} and \href{../../CONVENTIONS.pdf\#conv.37.7}{37.7}.
+Each block of $\irrJ{J_1}\irrprod\irrJ{J_2}\to\irrJ{J}$ with $J_1 \le J_2 \le 10$ is that of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$} with the phase 1 (\texttt{pointer}, \texttt{phase}), and the section Clebsch--Gordan coefficients of its document sets those with $J_1 \le J_2 \le 3$.
 \needspace{171pt}
 \partbox{Subgroups}
 \section{Closed subgroups}\label{s:subgroups}

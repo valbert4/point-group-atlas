@@ -17,13 +17,16 @@ of G, by a pointer.
 
 A record also stores every value that its document prints and that follows from the records of G
 and H by a rule: the characters of the corepresentations on the merged classes, the decompositions
-of their symmetrized powers, their multiplicities in D^(J,p) for J <= J_MAX, and in magnetic type
-III the signs of the elements by class."""
+of their symmetrized powers and of their products (`fusion`), their multiplicities in D^(J,p) for
+J <= J_MAX, and in magnetic type III the signs of the elements by class.  Its `clebsch_gordan`
+(clebsch_gordan.py) points to each copy that is a block of H's table times 1 or i and stores every
+other copy."""
 import os
 
 from .. import names, serialize
 from . import CATALOGUE, pointer
 from . import abstract as AB
+from . import clebsch_gordan as CGM
 from . import continuous as CO
 from . import coreps as CR
 from . import geometry as GE
@@ -168,7 +171,7 @@ def record(stem):
         dst = GE.Mats([G.P[x] for x in M.phi], [GE.pole_of(G.items[x]) for x in M.phi])
         doc["frame"] = {"node": M.node, "matrix": PT.as_json(GE.element_frame(src, dst))}
     coreps = M.corepresentations()
-    entries = []
+    entries, n_matrices = [], {}
     for entry in coreps:
         L, case, iota, partner = entry
         if M.grey:
@@ -191,6 +194,7 @@ def record(stem):
             else:
                 E, Nn = M.intertwiner(L)
                 e["N"] = {"matrix": PT.as_json(E), "N": Nn.to_json()}
+                n_matrices[L] = (E, Nn)
         entries.append(e)
     doc["corepresentations"] = entries
     merged = M.merged_classes()
@@ -198,6 +202,7 @@ def record(stem):
     doc["corepresentation_table"] = {"classes": merged, "rows": rows,
                                      "characters": characters(M.H, merged, rows)}
     doc["symmetrized_powers"] = M.symmetrized_powers(coreps)
+    doc["fusion"], doc["clebsch_gordan"] = CGM.tables(M, coreps, n_matrices)
     doc["subduction_corepresentations"] = subduction_corepresentations(M, coreps)
     if not M.grey:
         doc["signs"] = signs(M)

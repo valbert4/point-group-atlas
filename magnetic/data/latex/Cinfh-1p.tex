@@ -162,9 +162,11 @@
 \newcommand{\irchar}[1]{\chi_{#1}}
 \newcommand{\fsind}{\nu_{\mathrm{FS}}}
 \newcommand{\irrprod}{\otimes}
+\newcommand{\mult}{\kappa}
 \newcommand{\intx}{\mu}
 \newcommand{\cgnorm}{\mathcal{N}}
 \newcommand{\jm}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
+\newcommand{\prodket}[2]{\lvert {#1}\,{#2}\rangle}
 \newcommand{\jahn}[1]{\mathrm{#1}}
 \newcommand{\fcell}{\mathcal{D}}
 \newcommand{\sympow}[2]{[#1^{#2}]}
@@ -265,6 +267,131 @@ $\irr{a}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $0$ & $\irr{a}_{\ptag{g}}$\\*
 $\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}$ & $\irr{a}_{\ptag{g}} \oplus \conjpair{1}\irr{e}_{2n,\ptag{g}}\,\conjpair{2}\irr{e}_{2n,\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}} \oplus \conjpair{1}\irr{e}_{3n,\ptag{g}}\,\conjpair{2}\irr{e}_{3n,\ptag{g}}$\\*
 $\irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ & $0$ & $\irr{a}_{\ptag{u}}$\\*
 $\conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\irr{a}_{\ptag{g}} \oplus \conjpair{1}\irr{e}_{2n,\ptag{g}}\,\conjpair{2}\irr{e}_{2n,\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}} \oplus \conjpair{1}\irr{e}_{3n,\ptag{u}}\,\conjpair{2}\irr{e}_{3n,\ptag{u}}$\\
+\bottomrule\end{longtable}}
+\needspace{165pt}
+\section{Products of corepresentations}\label{s:fusion}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.2}{10.2} and \href{../../CONVENTIONS.pdf\#conv.37.7}{37.7}.
+A row is a rule for the products of two families of corepresentations. A row gives the product of the families, of indices $n$ and $n'$, and its decomposition, with the condition on the indices where the rule has one. The squares split into their symmetrized and antisymmetrized parts in section~\ref{s:symmetrized_powers}.
+{\small\begin{longtable}{@{}l@{${}={}$}ll@{}}\toprule
+$\irr{a}_{\ptag{g}}\irrprod \irr{a}_{\ptag{g}}$ & $\irr{a}_{\ptag{g}}$ & \\
+$\irr{a}_{\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}$ & \\
+$\irr{a}_{\ptag{g}}\irrprod \irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{u}}$ & \\
+$\irr{a}_{\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}$ & \\
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}\,\conjpair{2}\irr{e}_{n',\ptag{g}}$ & $\conjpair{1}\irr{e}_{\lvert n-n'\rvert,\ptag{g}}\,\conjpair{2}\irr{e}_{\lvert n-n'\rvert,\ptag{g}}\oplus \conjpair{1}\irr{e}_{n+n',\ptag{g}}\,\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ & $n \ne n'$\\
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}\,\conjpair{2}\irr{e}_{n',\ptag{g}}$ & $2\,\irr{a}_{\ptag{g}}\oplus \conjpair{1}\irr{e}_{2n',\ptag{g}}\,\conjpair{2}\irr{e}_{2n',\ptag{g}}$ & $n = n'$\\
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \irr{a}_{\ptag{u}}$ & $\conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}$ & \\
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{\lvert n-n'\rvert,\ptag{u}}\,\conjpair{2}\irr{e}_{\lvert n-n'\rvert,\ptag{u}}\oplus \conjpair{1}\irr{e}_{n+n',\ptag{u}}\,\conjpair{2}\irr{e}_{n+n',\ptag{u}}$ & $n \ne n'$\\
+$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}}$ & $2\,\irr{a}_{\ptag{u}}\oplus \conjpair{1}\irr{e}_{2n',\ptag{u}}\,\conjpair{2}\irr{e}_{2n',\ptag{u}}$ & $n = n'$\\
+$\irr{a}_{\ptag{u}}\irrprod \irr{a}_{\ptag{u}}$ & $\irr{a}_{\ptag{g}}$ & \\
+$\irr{a}_{\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}$ & $\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}$ & \\
+$\conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}}$ & $\conjpair{1}\irr{e}_{\lvert n-n'\rvert,\ptag{g}}\,\conjpair{2}\irr{e}_{\lvert n-n'\rvert,\ptag{g}}\oplus \conjpair{1}\irr{e}_{n+n',\ptag{g}}\,\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ & $n \ne n'$\\
+$\conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}}$ & $2\,\irr{a}_{\ptag{g}}\oplus \conjpair{1}\irr{e}_{2n',\ptag{g}}\,\conjpair{2}\irr{e}_{2n',\ptag{g}}$ & $n = n'$\\
+\bottomrule\end{longtable}}
+\needspace{103pt}
+\section{Clebsch--Gordan coefficients}\label{s:clebsch_gordan}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.3}{10.3}, \href{../../../rotation/CONVENTIONS.pdf\#conv.10.4}{10.4}, \href{../../CONVENTIONS.pdf\#conv.37.7}{37.7} and \href{../../CONVENTIONS.pdf\#conv.38}{38}.
+\leavevmode\label{n:matrix.corep.factors}\label{n:index.copy}\label{n:matrix.cg.stored}A copy $\mult$ of a corepresentation $\mathcal{D}$ in $\mathcal{D}_1\irrprod\mathcal{D}_2$ is a block $C$ of Clebsch--Gordan coefficients that satisfies two equations at every pair of indices of its family law (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../CONVENTIONS.pdf\#conv.37.7}{37.7} and \href{../../CONVENTIONS.pdf\#conv.38}{38}). \label{n:index.cg}It has a row for each pair $(\intx_1, \intx_2)$ of partners of $\mathcal{D}_1$ and $\mathcal{D}_2$, in Kronecker order, and a column for each partner $\intx$ of $\mathcal{D}$.
+The partners of a corepresentation of dimension 2 are the rotation-diagonal basis of its irrep, or its two irreps in case (c) (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.37.2}{37.2}).
+Each block is headed $\mathcal{D}_1\irrprod\mathcal{D}_2\to\mathcal{D}$, then $\mult$ where $\mathcal{D}$ occurs more than once in $\mathcal{D}_1\irrprod\mathcal{D}_2$, and a normalization $\cgnorm$. A condition on $n$ and $n'$ follows the product where the block holds only under it. A block whose two factors have dimension 1 is left out, and its one entry has the value 1. Row $\intx$ gives the nonzero entries of column $\intx$ of $\sqrt{\cgnorm}\,C$, so that their squared moduli sum to $\cgnorm$. \label{n:vector.ket.product}Each entry is written before $\prodket{\intx_1}{\intx_2}$, the product of the partners $\intx_1$ of $\mathcal{D}_1$ and $\intx_2$ of $\mathcal{D}_2$. Only $\mathcal{D}_1 \le \mathcal{D}_2$ is listed ($\mathcal{D}_2\irrprod\mathcal{D}_1$ exchanges $\intx_1$ and $\intx_2$).
+Where $\mathcal{D}$ occurs more than once, $\mult$ is followed by the rule that separates its copies (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.4}{10.4} and \href{../../CONVENTIONS.pdf\#conv.38.1}{38.1}). \label{n:abbreviation.exchange}The copies labeled exch.\ sym.\ and exch.\ anti.\ are symmetric and antisymmetric under the exchange of the two factors. The copies labeled row order are selected by the projection rule, in row order.
+The constant $\iunit$ is the imaginary unit.
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}r@{\hspace{8pt}}l@{}}\toprule
+$\intx$ & $\sqrt{\cgnorm}\,C$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\multicolumn{2}{@{}c@{}}{$\irr{a}_{\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}} \to \conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}$, \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{1}$\\*
+2 & $1\,\prodket{1}{2}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irr{a}_{\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}} \to \conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}$, \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{1}$\\*
+2 & $1\,\prodket{1}{2}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}\,\conjpair{2}\irr{e}_{n',\ptag{g}} \to \conjpair{1}\irr{e}_{n-n',\ptag{g}}\,\conjpair{2}\irr{e}_{n-n',\ptag{g}}$ ($n > n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{2}$\\*
+2 & $1\,\prodket{2}{1}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}\,\conjpair{2}\irr{e}_{n',\ptag{g}} \to \conjpair{1}\irr{e}_{n+n',\ptag{g}}\,\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ ($n > n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{1}$\\*
+2 & $1\,\prodket{2}{2}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}\,\conjpair{2}\irr{e}_{n',\ptag{g}} \to \irr{a}_{\ptag{g}}$ ($n = n'$), $\mult = 1$ (exch.\ sym.), \quad $\cgnorm = 2$}\\*
+1 & $1\,\prodket{1}{2}$ $+$ $1\,\prodket{2}{1}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}\,\conjpair{2}\irr{e}_{n',\ptag{g}} \to \irr{a}_{\ptag{g}}$ ($n = n'$), $\mult = 2$ (exch.\ anti.), \quad $\cgnorm = 2$}\\*
+1 & $\iunit{}\,\prodket{1}{2}$ $-\iunit{}\,\prodket{2}{1}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}\,\conjpair{2}\irr{e}_{n',\ptag{g}} \to \conjpair{1}\irr{e}_{2n',\ptag{g}}\,\conjpair{2}\irr{e}_{2n',\ptag{g}}$ ($n = n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{1}$\\*
+2 & $1\,\prodket{2}{2}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}\,\conjpair{2}\irr{e}_{n',\ptag{g}} \to \conjpair{1}\irr{e}_{n'-n,\ptag{g}}\,\conjpair{2}\irr{e}_{n'-n,\ptag{g}}$ ($n < n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{2}{1}$\\*
+2 & $1\,\prodket{1}{2}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{g}}\,\conjpair{2}\irr{e}_{n',\ptag{g}} \to \conjpair{1}\irr{e}_{n+n',\ptag{g}}\,\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ ($n < n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{1}$\\*
+2 & $1\,\prodket{2}{2}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \irr{a}_{\ptag{u}} \to \conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}$, \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{1}$\\*
+2 & $1\,\prodket{2}{1}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}} \to \conjpair{1}\irr{e}_{n-n',\ptag{u}}\,\conjpair{2}\irr{e}_{n-n',\ptag{u}}$ ($n > n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{2}$\\*
+2 & $1\,\prodket{2}{1}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}} \to \conjpair{1}\irr{e}_{n+n',\ptag{u}}\,\conjpair{2}\irr{e}_{n+n',\ptag{u}}$ ($n > n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{1}$\\*
+2 & $1\,\prodket{2}{2}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}} \to \irr{a}_{\ptag{u}}$ ($n = n'$), $\mult = 1$ (row order), \quad $\cgnorm = 2$}\\*
+1 & $1\,\prodket{1}{2}$ $+$ $1\,\prodket{2}{1}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}} \to \irr{a}_{\ptag{u}}$ ($n = n'$), $\mult = 2$ (row order), \quad $\cgnorm = 2$}\\*
+1 & $\iunit{}\,\prodket{1}{2}$ $-\iunit{}\,\prodket{2}{1}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}} \to \conjpair{1}\irr{e}_{2n',\ptag{u}}\,\conjpair{2}\irr{e}_{2n',\ptag{u}}$ ($n = n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{1}$\\*
+2 & $1\,\prodket{2}{2}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}} \to \conjpair{1}\irr{e}_{n'-n,\ptag{u}}\,\conjpair{2}\irr{e}_{n'-n,\ptag{u}}$ ($n < n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{2}{1}$\\*
+2 & $1\,\prodket{1}{2}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}} \to \conjpair{1}\irr{e}_{n+n',\ptag{u}}\,\conjpair{2}\irr{e}_{n+n',\ptag{u}}$ ($n < n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{1}$\\*
+2 & $1\,\prodket{2}{2}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\irr{a}_{\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}} \to \conjpair{1}\irr{e}_{n,\ptag{g}}\,\conjpair{2}\irr{e}_{n,\ptag{g}}$, \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{1}$\\*
+2 & $1\,\prodket{1}{2}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}} \to \conjpair{1}\irr{e}_{n-n',\ptag{g}}\,\conjpair{2}\irr{e}_{n-n',\ptag{g}}$ ($n > n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{2}$\\*
+2 & $1\,\prodket{2}{1}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}} \to \conjpair{1}\irr{e}_{n+n',\ptag{g}}\,\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ ($n > n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{1}$\\*
+2 & $1\,\prodket{2}{2}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}} \to \irr{a}_{\ptag{g}}$ ($n = n'$), $\mult = 1$ (exch.\ sym.), \quad $\cgnorm = 2$}\\*
+1 & $1\,\prodket{1}{2}$ $+$ $1\,\prodket{2}{1}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}} \to \irr{a}_{\ptag{g}}$ ($n = n'$), $\mult = 2$ (exch.\ anti.), \quad $\cgnorm = 2$}\\*
+1 & $\iunit{}\,\prodket{1}{2}$ $-\iunit{}\,\prodket{2}{1}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}} \to \conjpair{1}\irr{e}_{2n',\ptag{g}}\,\conjpair{2}\irr{e}_{2n',\ptag{g}}$ ($n = n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{1}$\\*
+2 & $1\,\prodket{2}{2}$\\
+\grouprule{2pt}{\lightrulewidth}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}} \to \conjpair{1}\irr{e}_{n'-n,\ptag{g}}\,\conjpair{2}\irr{e}_{n'-n,\ptag{g}}$ ($n < n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{2}{1}$\\*
+2 & $1\,\prodket{1}{2}$\\
+\groupspace{2pt}
+\multicolumn{2}{@{}c@{}}{$\conjpair{1}\irr{e}_{n,\ptag{u}}\,\conjpair{2}\irr{e}_{n,\ptag{u}}\irrprod \conjpair{1}\irr{e}_{n',\ptag{u}}\,\conjpair{2}\irr{e}_{n',\ptag{u}} \to \conjpair{1}\irr{e}_{n+n',\ptag{g}}\,\conjpair{2}\irr{e}_{n+n',\ptag{g}}$ ($n < n'$), \quad $\cgnorm = 1$}\\*
+1 & $1\,\prodket{1}{1}$\\*
+2 & $1\,\prodket{2}{2}$\\*
+\addlinespace[2pt]
 \bottomrule\end{longtable}}
 \needspace{171pt}
 \partbox{Subgroups}

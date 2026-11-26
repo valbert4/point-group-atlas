@@ -18,8 +18,8 @@ SECTIONS = tuple("conventions|conv:%d|" % n for n in range(30, 40))
 # The parts of the documents of this catalogue (magnetic_latex.PARTS), where its records that
 # Rotation's registry gives another meaning hold too.
 PARTS = ("identification", "elements", "class_space", "irreps", "families", "character_table",
-         "corep_matrices", "symmetrized_powers", "subgroups", "subduction", "subduction_o3",
-         "time_odd", "multipoles", "invariants")
+         "corep_matrices", "symmetrized_powers", "fusion", "clebsch_gordan", "subgroups",
+         "subduction", "subduction_o3", "time_odd", "multipoles", "invariants")
 DOCUMENTS = tuple("*|%s|" % k for k in ("title",) + PARTS)
 LOCAL = SECTIONS + DOCUMENTS
 H = N.entry
@@ -127,7 +127,8 @@ MAGNETIC = (
     S("matrix.corep.n", "matrix", "N",
       r"the unitary matrix of the representative in the cases (a) and (b), with "
       r"$D^{\Lambda}(\elt{h})^{\top} N = N\, D^{\Lambda^{\elt{a}}}(\elt{h})^{\top}$",
-      "N", "N^{*}", "N_{*}", scope=SECTIONS + ("*|corep_matrices|",), defined="conv:32.2"),
+      "N", "N^{*}", "N_{*}", "N^{-#}", scope=SECTIONS + ("*|corep_matrices|",),
+      defined="conv:32.2"),
     # the invariants in two vectors (section 35.1, which writes the degrees as field names)
     S("index.degree.polar", "index", "a",
       r"the degree of an invariant in the polar vector even under time reversal", "a",
@@ -166,6 +167,19 @@ MAGNETIC = (
       r"the multiplicity of $\irrJ{K}$ in the symmetrized cube of $\irrJ{J}$", r"c_{K}",
       scope=SECTIONS + ("continuous|symmetrized_powers|",),
       defined=("part:symmetrized_powers", "conv:37.4")),
+    # the products and their Clebsch-Gordan coefficients (sections 37.7 and 38)
+    S("matrix.corep.factors", "matrix", r"\mathcal{D}_1, \mathcal{D}_2",
+      r"the two factors of a product of corepresentations", r"\mathcal{D}_{#}",
+      r"\mathcal{D}_{#}(.)", scope=LOCAL, index=True,
+      defined=("part:fusion", "part:clebsch_gordan", "conv:38")),
+    S("matrix.corep.unitary", "matrix", "U",
+      r"the unitary part of the matrix of the representative in a corepresentation, "
+      r"$\mathcal{D}(\elt{a}) = UK$, with $U_1$ and $U_2$ those of two factors", "U", "U_{#}",
+      scope=SECTIONS, index=True, defined="conv:38"),
+    S("matrix.cg.first", "matrix", r"C_{\Lambda}",
+      r"the first $d_{\Lambda}$ columns of a Clebsch–Gordan block $C$ of a corepresentation, "
+      r"those of its first irrep $\Lambda$", r"C_{\Lambda}", scope=SECTIONS, index=True,
+      defined="conv:38"),
     S("function.multiplicity.corep", "function", r"b_{\mathcal{D}}",
       r"the multiplicity of the corepresentation $\mathcal{D}$ in a representation of $\grp{M}$",
       r"b_{\mathcal{D}}", defined="conv:34"),
@@ -193,6 +207,19 @@ REPLACE = {"function.timereversal": {"glyph": r"\varTheta", "forms": (r"\varThet
                                               r"\grp{C_{#\mathnormal{N}}}")},
            "group.schoenflies.cnh": {"forms": (r"\grp{C_{#h}}", r"\grp{C_{\mathnormal{N}h}}",
                                                r"\grp{C_{#\mathnormal{N}h}}")},
+           # the complex conjugate of a block too, in the equation of a copy of a corepresentation
+           # (section 38)
+           "matrix.cg.stored": {"forms": ("C", "C^{*}")},
+           # the copies of a corepresentation in a product too (section 38)
+           "index.copy": {"meaning": "the copy index of an irrep or of a corepresentation"},
+           # the separations of the copies of a corepresentation too (sections 10.4 and 38.1)
+           "abbreviation.exchange": {"meaning": "symmetric and antisymmetric under the exchange of "
+                                                "the two factors: the rule that distinguishes two "
+                                                "copies of an irrep or of a corepresentation in a "
+                                                "square"},
+           "abbreviation.crossing": {"meaning": "symmetric and antisymmetric under the crossing: the "
+                                                "rule that distinguishes two copies of an irrep or "
+                                                "of a corepresentation in a product"},
            # a power of an element of the unitary half too (section 34)
            "element.power": {"forms": ("g^{#}", "g^{k}", "h^{#}")},
            # the polynomial of an invariant in two vectors too (section 35.1)
@@ -236,7 +263,9 @@ USED = (
     "angle.phi", "angle.psi", "vector.coordinates", "irrep.letter.a", "irrep.letter.b",
     "irrep.letter.e", "irrep.letter.t", "irrep.letter.g", "irrep.letter.h", "irrep.Gamma",
     "irrep.Delta", "irrep.alias.gamma", "index.dimension", "index.parity", "function.timereversal",
-    "index.cg", "matrix.cg.exact", "index.family", "index.generating.variable", "index.J",
+    "index.cg", "index.copy", "matrix.cg.stored", "matrix.cg.exact", "index.J12", "index.family",
+    "vector.ket.product", "relation.to", "relation.less", "relation.unequal",
+    "abbreviation.exchange", "abbreviation.crossing", "index.generating.variable", "index.J",
     "index.m", "label.jahn", "hm.order", "hm.slash", "hm.mirror", "hm.bar", "orbifold.order",
     "orbifold.mirror", "orbifold.cross", "local.references.groups", "index.family.N",
     "index.rule.k", "index.conjugates.c", "index.root.order", "local.dummy.m", "local.dummy.g",

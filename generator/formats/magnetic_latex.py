@@ -7,7 +7,8 @@ each section about H or G as M reads it, and leaves the data that the records of
 their documents, which it links (scope Q7): The group (Names and structure, and for magnetic type
 III Symmetry operations, the elements of G with their signs), Representations (the irreps of H
 with the corepresentations they form, the corepresentation table in place of the character table,
-the matrices N, the symmetrized powers of the corepresentations), Subgroups (Subgroup lattice, the
+the matrices N, the symmetrized powers of the corepresentations, their products and their
+Clebsch-Gordan coefficients), Subgroups (Subgroup lattice, the
 classes of subgroups with their magnetic types, and Descent of symmetry, the splitting table from
 G1'), Angular momentum (Subduction from O(3)1', the multiplicities of the corepresentations
 for J <= J_SHOWN), and Tensors (the properties odd under time reversal, the multipoles, the
@@ -32,13 +33,16 @@ citation of the conventions names the one set of files numbered as one: sections
 Rotation's file, 30 and up to this catalogue's (link_conventions).
 """
 import re
+from collections import Counter
 
 from .. import names
 from . import latex as L
+from . import representations as R
 from .double_latex import follow, record_of, target
 from .subgroups import type_rank
-from .typeset import (CONSTANTS, ROTATION_PDF, SNAKE_OFF, abstract_type, fill_width, label_width,
-                      labels_width, mathify, multiple, rotation_linked, row_end, snake_mark)
+from .typeset import (CONSTANTS, ROTATION_PDF, SNAKE_MIN_ROWS, SNAKE_OFF, abstract_type, fill_width,
+                      label_width, labels_width, listed, mathify, multiple, rotation_linked, row_end,
+                      snake_mark)
 
 # The parent, the group O(3)1' of the record O3-1p (CONVENTIONS.md section 30.1), and its text in
 # the outline of a PDF.
@@ -656,6 +660,215 @@ def section_symmetrized_powers(D):
     D.w(r"\bottomrule\end{longtable}}")
 
 
+# ---------------------------------------------------------------- Representations: the products
+# The order of the corepresentations in the documents, that of the rows of the corepresentation table.
+COREP_ORDER = r"the order of the corepresentation table (section~\ref{s:character_table})"
+# The sentence on the copy that row order selects, after those of volume I's separations
+# (representations.SEPARATION_TAGS), with the rule of its tag.
+ROW_ORDER_TAG = ("row order", "The copies labeled row order are selected by the projection rule, in "
+                              "row order.")
+
+
+def section_fusion(D):
+    """The products of the corepresentations, the record's fusion (CONVENTIONS.md section 38), as
+    volume I sets its products: a grid where every product is one corepresentation, else the table
+    of the pairs, a square with its antisymmetrized square in braces, from the record's
+    symmetrized powers (section 34), which must add up to the square."""
+    fus = D.stored["fusion"]
+    order = [c["irrep"] for c in D.coreps]
+    if fus["corepresentations"] != order:
+        raise ValueError("%s: the corepresentations of fusion are not those of the record" % D.name)
+    D.section("Products of corepresentations", "sections 10.1, 34 and 38")
+
+    def label(i):
+        return D.corep_label(D.corep_of[i])
+    if all(len(p["terms"]) == 1 and p["terms"][0]["multiplicity"] == 1 for p in fus["products"]):
+        D.w(D.define("matrix.corep.factors")
+            + R.grid_sentence(r"\mathcal{D}", "corepresentation", COREP_ORDER))
+        product = {}
+        for p in fus["products"]:
+            product[(p["a"], p["b"])] = product[(p["b"], p["a"])] = (
+                p["terms"][0]["corepresentation"])
+        R.product_grid(D, order, product, label)
+        return
+    D.w(r"A row is a product of two corepresentations of $%s$. " % D.sym
+        + D.define("matrix.corep.factors")
+        + r"A row gives its factors $\mathcal{D}_1 \le \mathcal{D}_2$, in %s, and their product "
+          r"$\mathcal{D}_1\irrprod\mathcal{D}_2$, a square with its antisymmetric part in braces."
+        % COREP_ORDER)
+    powers = {x["corepresentation"]: x for x in D.stored["symmetrized_powers"]}
+    rows = []
+    for p in fus["products"]:
+        terms = [(t["corepresentation"], t["multiplicity"]) for t in p["terms"]]
+        anti = {}
+        if p["a"] == p["b"]:
+            anti = {t["corepresentation"]: t["multiplicity"]
+                    for t in powers[p["a"]]["antisymmetrized_square"]}
+            whole = Counter(anti)
+            whole.update({t["corepresentation"]: t["multiplicity"]
+                          for t in powers[p["a"]]["symmetrized_square"]})
+            if dict(whole) != dict(terms):
+                raise ValueError("%s: the powers of %s do not add up to its square" % (D.name,
+                                                                                       p["a"]))
+        rows.append((label(p["a"]), label(p["b"]), R.square_sum(terms, anti, label)))
+    R.product_table(D, rows, r"\mathcal{D}")
+
+
+def separation_rules(c):
+    """The rules that place a copy of a corepresentation: its separation's rule, as volume I's
+    (representations.separation_rules), and row order where the projection rule selects it."""
+    sep = c["separation"]
+    if sep == "unique":
+        return set()
+    return ({"row order"} if sep.endswith("row order") else set()) | (
+        set() if sep == "row order" else {sep.split(",")[0].rsplit("-", 1)[0]})
+
+
+def section_clebsch_gordan(D):
+    """The Clebsch-Gordan coefficients of the corepresentations, the record's clebsch_gordan
+    (CONVENTIONS.md section 38.2): the copies that a pointer names, with the couplings of phase i
+    by name, then the table of the blocks that the record stores, as volume I sets its blocks.  A
+    pointer must name the copy kappa of the first irrep of D in the product of the first irreps of
+    D1 and D2 in the table of H, as the sentences say."""
+    cg = D.stored["clebsch_gordan"]
+    if cg["corepresentations"] != [c["irrep"] for c in D.coreps]:
+        raise ValueError("%s: the corepresentations of clebsch_gordan are not those of the record"
+                         % D.name)
+    D.section("Clebsch--Gordan coefficients", "sections 10.3, 10.4 and 38")
+
+    def label(i):
+        return D.corep_label(D.corep_of[i])
+    stored, phase_i = [], []
+    for p in cg["products"]:
+        mult = Counter(c["c"] for c in p["couplings"])
+        for c in p["couplings"]:
+            if "pointer" not in c:
+                stored.append((p, c))
+                continue
+            _, stem, tokens = target(c["pointer"])
+            hp = record_of("rotation", stem)["clebsch_gordan"]["products"][int(tokens[2])]
+            hc = follow(c["pointer"])
+            if (stem != D.H or (hp["a"], hp["b"], hc["c"], hc["kappa"])
+                    != (p["a"], p["b"], c["c"], c["kappa"]) or c["phase"] not in ("1", "i")):
+                raise ValueError("%s: the pointer of %s x %s -> %s, %d names another block"
+                                 % (D.name, p["a"], p["b"], c["c"], c["kappa"]))
+            if c["phase"] == "i":
+                phase_i.append(r"$%s\irrprod %s\to %s$" % (label(p["a"]), label(p["b"]),
+                                                          label(c["c"]))
+                               + (r" ($\mult = %d$)" % c["kappa"] if mult[c["c"]] > 1 else ""))
+    block = (r"That block is the copy $\mult$ of the first irrep of $\mathcal{D}$ in the product of "
+             r"the first irreps of $\mathcal{D}_1$ and $\mathcal{D}_2$, in %s."
+             % rotation_section(D.H, "Clebsch--Gordan coefficients"))
+    if not stored:
+        # every copy is named by a pointer: the pointers alone, and no block is set
+        D.w(CONSTANTS)
+        D.w(" ".join([
+            D.define("matrix.corep.factors", "index.copy")
+            + r"The record names each copy $\mult$ of a corepresentation $\mathcal{D}$ in "
+              r"$\mathcal{D}_1\irrprod\mathcal{D}_2$ by a pointer to a block of the table of $%s$ "
+              r"and a phase (CONVENTIONS.pdf, section 38.2)." % D.Hsym, block,
+            phase_sentences(phase_i, "copies") if phase_i else r"Each copy has the phase 1."]))
+        return
+    copy_sentences(D, "section 38")
+    D.w(CONSTANTS)
+    D.w(" ".join([
+        r"A copy whose columns of the first irrep of $\mathcal{D}$ are a block of the table of $%s$ "
+        r"times 1 or $\iunit$ is named by a pointer to that block (CONVENTIONS.pdf, section 38.2)."
+        % D.Hsym, block,
+        phase_sentences(phase_i, "copies named by a pointer") if phase_i
+        else r"Each such copy has the phase 1.",
+        r"The table below sets every other copy."]))
+    blocks_legend(D, [c for _, c in stored])
+    R.coupling_table(D, blocks_of(D, [(p, (label(p["a"]), label(p["b"]), label(c["c"])), c, "")
+                                      for p, c in stored]), BLOCKS_HEAD)
+
+
+# The words of the couplings that one sentence of phase_sentences lists, at most (a coupling is one
+# word, two with its kappa), so that the sentence stays within 35 words.
+PHASE_WORDS = 26
+
+
+def phase_sentences(items, others):
+    """The sentences that list the couplings of phase i (TeX, each with its kappa where the copy is
+    one of several), and give the phase 1 to the `others`: one sentence for a short list, else the
+    list in sentences of at most PHASE_WORDS words of couplings each, then one on the others."""
+    def words(x):
+        return 2 if r"\mult" in x else 1
+    if sum(words(x) for x in items) <= PHASE_WORDS - 6:
+        return r"The phase is $\iunit$ for %s, and 1 for the other %s." % (listed(items), others)
+    parts, cur = [], []
+    for x in items:
+        if cur and sum(words(y) for y in cur) + words(x) > PHASE_WORDS:
+            parts.append(cur)
+            cur = []
+        cur.append(x)
+    parts.append(cur)
+    return " ".join([r"The phase is $\iunit$ for %s." % listed(parts[0])]
+                    + [r"The phase is also $\iunit$ for %s." % listed(x) for x in parts[1:]]
+                    + [r"Every other copy %s has the phase 1." % (
+                        "named by a pointer" if others != "copies" else "")]).replace(
+                            "copy  has", "copy has")
+
+
+def blocks_of(D, couplings):
+    """The blocks of the table of couplings [(product, labels, coupling, condition)]: each heading
+    without a trivial kappa, and a wide heading on two lines where that lets the table stand in two
+    copies (representations.coupling_block): every row and every line of every heading at most
+    SPLIT_HEADING characters, and rows enough for two copies of snake_plan."""
+    def width(blocks):
+        return max([sum(R.visible(t) + 1 for t in terms) + 4
+                    for _, _, rows in blocks for _, terms in rows]
+                   + [R.visible(x) for _, h, _ in blocks
+                      for x in (h if isinstance(h, tuple) else (h,))])
+    blocks = [R.coupling_block(D, p, labels, c, R.SEPARATION_SHORT[c["separation"]], cond,
+                               trivial=False) for p, labels, c, cond in couplings]
+    if width(blocks) <= R.SPLIT_HEADING:
+        return blocks
+    split = [R.coupling_block(D, p, labels, c, R.SEPARATION_SHORT[c["separation"]], cond,
+                              split=True, trivial=False) for p, labels, c, cond in couplings]
+    rows = sum(len(r) + (len(h) if isinstance(h, tuple) else 1) for _, h, r in split)
+    if width(split) <= R.SPLIT_HEADING and rows >= 2 * SNAKE_MIN_ROWS:
+        return split
+    return blocks
+
+
+# The heads of the columns of the table of the blocks.
+BLOCKS_HEAD = r"$\intx$ & $\sqrt{\cgnorm}\,C$"
+
+
+def copy_sentences(D, sections, where=""):
+    """The sentences that lead the Clebsch-Gordan coefficients of the corepresentations, of a finite
+    or a continuous group: a copy is a block C that satisfies two equations (`where` names the
+    indices at which those of a family law hold), its rows and its columns."""
+    D.w(D.define("matrix.corep.factors", "index.copy", "matrix.cg.stored")
+        + r"A copy $\mult$ of a corepresentation $\mathcal{D}$ in $\mathcal{D}_1\irrprod\mathcal{D}_2$ "
+          r"is a block $C$ of Clebsch--Gordan coefficients that satisfies two equations%s "
+          r"(CONVENTIONS.pdf, %s). " % (where, sections) + D.define("index.cg")
+        + r"It has a row for each pair $(\intx_1, \intx_2)$ of partners of $\mathcal{D}_1$ and "
+          r"$\mathcal{D}_2$, in Kronecker order, and a column for each partner $\intx$ of "
+          r"$\mathcal{D}$.")
+
+
+def blocks_legend(D, couplings, condition=""):
+    """The legend of the table of the blocks that a record stores, of a finite or a continuous
+    group: the heading of a block (with `condition`, the sentence on the condition of a family law),
+    its rows, then the rules that separate the copies of the couplings shown."""
+    D.w(R.heading_sentence(r"\mathcal{D}", trivial=False) + condition + " "
+        + r"Row $\intx$ gives the nonzero entries of column $\intx$ of $\sqrt{\cgnorm}\,C$, so "
+          r"that their squared moduli sum to $\cgnorm$. " + D.define("vector.ket.product")
+        + r"Each entry is written before $\prodket{\intx_1}{\intx_2}$, the product of the partners "
+          r"$\intx_1$ of $\mathcal{D}_1$ and $\intx_2$ of $\mathcal{D}_2$. Only "
+          r"$\mathcal{D}_1 \le \mathcal{D}_2$ is listed ($\mathcal{D}_2\irrprod\mathcal{D}_1$ "
+          r"exchanges $\intx_1$ and $\intx_2$).")
+    rules = set().union(*[separation_rules(c) for c in couplings])
+    shown = [D.define(R.SEPARATION_RECORD[rule]) + text for rule, text in R.SEPARATION_TAGS
+             if rule in rules] + ([ROW_ORDER_TAG[1]] if ROW_ORDER_TAG[0] in rules else [])
+    if shown:
+        D.w(r"Where $\mathcal{D}$ occurs more than once, $\mult$ is followed by the rule that "
+            r"separates its copies (CONVENTIONS.pdf, sections 10.4 and 38.1). " + " ".join(shown))
+    D.w(CONSTANTS)
+
+
 # ---------------------------------------------------------------- Angular momentum
 def section_subduction_parent(D):
     """The multiplicities of the corepresentations of M in D^(J,p) of O(3)1' for
@@ -869,7 +1082,8 @@ PARTS = (
     ("Representations", (("irreps", L.section_irreps),
                          ("character_table", L.section_character_table),
                          ("corep_matrices", section_corep_matrices),
-                         ("symmetrized_powers", section_symmetrized_powers))),
+                         ("symmetrized_powers", section_symmetrized_powers),
+                         ("fusion", section_fusion), ("clebsch_gordan", section_clebsch_gordan))),
     ("Subgroups", (("subgroups", L.section_subgroups), ("subduction", L.section_subduction))),
     ("Angular momentum", (("subduction_o3", section_subduction_parent),)),
     ("Tensors", (("time_odd", section_time_odd), ("multipoles", section_multipoles),

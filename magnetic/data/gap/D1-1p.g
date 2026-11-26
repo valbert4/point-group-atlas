@@ -1,5 +1,50 @@
 # D1-1p (D_11'): data/json/D1-1p.json as a GAP record.
 o3m := rec(
+  ("clebsch_gordan") := rec(
+    ("corepresentations") := [ "A", "B" ],
+    ("kind") := "table",
+    ("products") := [
+      rec(
+        ("a") := "A",
+        ("b") := "A",
+        ("couplings") := [
+          rec(
+            ("c") := "A",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/D1#/clebsch_gordan/products/0/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "A",
+        ("b") := "B",
+        ("couplings") := [
+          rec(
+            ("c") := "B",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/D1#/clebsch_gordan/products/1/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "B",
+        ("b") := "B",
+        ("couplings") := [
+          rec(
+            ("c") := "A",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/D1#/clebsch_gordan/products/2/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      )
+    ]
+  ),
   ("corepresentation_table") := rec(
     ("characters") := [ [ 1, 1 ], [ 1, -1 ] ],
     ("classes") := [ [ "E" ], [ "C2" ] ],
@@ -17,6 +62,26 @@ o3m := rec(
       ("irrep") := "B"
     )
   ],
+  ("fusion") := rec(
+    ("corepresentations") := [ "A", "B" ],
+    ("products") := [
+      rec(
+        ("a") := "A",
+        ("b") := "A",
+        ("terms") := [ rec( ("corepresentation") := "A", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "A",
+        ("b") := "B",
+        ("terms") := [ rec( ("corepresentation") := "B", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "B",
+        ("b") := "B",
+        ("terms") := [ rec( ("corepresentation") := "A", ("multiplicity") := 1 ) ]
+      )
+    ]
+  ),
   ("group") := rec(
     ("G") := "rotation/D1#",
     ("abstract_type") := "Z_2 x Z_2",

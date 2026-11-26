@@ -101,6 +101,141 @@
   "additionalProperties": false,
   "description": "See CONVENTIONS.md section 30.",
   "properties": {
+    "clebsch_gordan": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 38.",
+      "properties": {
+        "corepresentations": {
+          "description": "See CONVENTIONS.md section 38.",
+          "items": {
+            "description": "See CONVENTIONS.md section 38.",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "kind": {
+          "description": "See CONVENTIONS.md section 38.",
+          "type": "string"
+        },
+        "products": {
+          "description": "See CONVENTIONS.md section 38.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 38.",
+            "properties": {
+              "a": {
+                "description": "See CONVENTIONS.md section 38.",
+                "type": "string"
+              },
+              "b": {
+                "description": "See CONVENTIONS.md section 38.",
+                "type": "string"
+              },
+              "couplings": {
+                "description": "See CONVENTIONS.md section 38.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 38.",
+                  "properties": {
+                    "N": {
+                      "$ref": "#/$defs/exact",
+                      "description": "See CONVENTIONS.md section 38."
+                    },
+                    "c": {
+                      "description": "See CONVENTIONS.md section 38.",
+                      "type": "string"
+                    },
+                    "kappa": {
+                      "description": "See CONVENTIONS.md section 38.",
+                      "type": "integer"
+                    },
+                    "partners": {
+                      "description": "See CONVENTIONS.md section 38.",
+                      "items": {
+                        "additionalProperties": false,
+                        "description": "See CONVENTIONS.md section 38.",
+                        "properties": {
+                          "mu": {
+                            "description": "See CONVENTIONS.md section 38.",
+                            "type": "integer"
+                          },
+                          "terms": {
+                            "description": "See CONVENTIONS.md section 38.",
+                            "items": {
+                              "additionalProperties": false,
+                              "description": "See CONVENTIONS.md section 38.",
+                              "properties": {
+                                "e": {
+                                  "$ref": "#/$defs/exact",
+                                  "description": "See CONVENTIONS.md section 38."
+                                },
+                                "i": {
+                                  "description": "See CONVENTIONS.md section 38.",
+                                  "type": "integer"
+                                },
+                                "k": {
+                                  "description": "See CONVENTIONS.md section 38.",
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "e",
+                                "i",
+                                "k"
+                              ],
+                              "type": "object"
+                            },
+                            "type": "array"
+                          }
+                        },
+                        "required": [
+                          "mu",
+                          "terms"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "phase": {
+                      "description": "See CONVENTIONS.md section 38.",
+                      "type": "string"
+                    },
+                    "pointer": {
+                      "description": "See CONVENTIONS.md section 38.",
+                      "type": "string"
+                    },
+                    "separation": {
+                      "description": "See CONVENTIONS.md section 38.",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "c",
+                    "kappa",
+                    "separation"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "a",
+              "b",
+              "couplings"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "corepresentations",
+        "kind",
+        "products"
+      ],
+      "type": "object"
+    },
     "corepresentation_table": {
       "additionalProperties": false,
       "description": "See CONVENTIONS.md section 33.",
@@ -238,6 +373,72 @@
       "required": [
         "matrix",
         "node"
+      ],
+      "type": "object"
+    },
+    "fusion": {
+      "additionalProperties": false,
+      "description": "See CONVENTIONS.md section 38.",
+      "properties": {
+        "corepresentations": {
+          "description": "See CONVENTIONS.md section 38.",
+          "items": {
+            "description": "See CONVENTIONS.md section 38.",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "products": {
+          "description": "See CONVENTIONS.md section 38.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 38.",
+            "properties": {
+              "a": {
+                "description": "See CONVENTIONS.md section 38.",
+                "type": "string"
+              },
+              "b": {
+                "description": "See CONVENTIONS.md section 38.",
+                "type": "string"
+              },
+              "terms": {
+                "description": "See CONVENTIONS.md section 38.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "See CONVENTIONS.md section 38.",
+                  "properties": {
+                    "corepresentation": {
+                      "description": "See CONVENTIONS.md section 38.",
+                      "type": "string"
+                    },
+                    "multiplicity": {
+                      "description": "See CONVENTIONS.md section 38.",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "corepresentation",
+                    "multiplicity"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "a",
+              "b",
+              "terms"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "corepresentations",
+        "products"
       ],
       "type": "object"
     },
@@ -1139,8 +1340,10 @@
     }
   },
   "required": [
+    "clebsch_gordan",
     "corepresentation_table",
     "corepresentations",
+    "fusion",
     "group",
     "invariants",
     "permutation_representations",

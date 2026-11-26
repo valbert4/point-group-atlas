@@ -1,4 +1,145 @@
 {
+  "clebsch_gordan": {
+    "corepresentations": [
+      "A1p",
+      "A2p",
+      "A1pp",
+      "A2pp"
+    ],
+    "kind": "table",
+    "products": [
+      {
+        "a": "A1p",
+        "b": "A1p",
+        "couplings": [
+          {
+            "c": "A1p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/D1h#/clebsch_gordan/products/0/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "A1p",
+        "b": "A2p",
+        "couplings": [
+          {
+            "c": "A2p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/D1h#/clebsch_gordan/products/1/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "A1p",
+        "b": "A1pp",
+        "couplings": [
+          {
+            "c": "A1pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/D1h#/clebsch_gordan/products/2/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "A1p",
+        "b": "A2pp",
+        "couplings": [
+          {
+            "c": "A2pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/D1h#/clebsch_gordan/products/3/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "A2p",
+        "b": "A2p",
+        "couplings": [
+          {
+            "c": "A1p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/D1h#/clebsch_gordan/products/4/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "A2p",
+        "b": "A1pp",
+        "couplings": [
+          {
+            "c": "A2pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/D1h#/clebsch_gordan/products/5/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "A2p",
+        "b": "A2pp",
+        "couplings": [
+          {
+            "c": "A1pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/D1h#/clebsch_gordan/products/6/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "A1pp",
+        "b": "A1pp",
+        "couplings": [
+          {
+            "c": "A1p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/D1h#/clebsch_gordan/products/7/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "A1pp",
+        "b": "A2pp",
+        "couplings": [
+          {
+            "c": "A2p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/D1h#/clebsch_gordan/products/8/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "A2pp",
+        "b": "A2pp",
+        "couplings": [
+          {
+            "c": "A1p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/D1h#/clebsch_gordan/products/9/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      }
+    ]
+  },
   "corepresentation_table": {
     "characters": [
       [
@@ -173,6 +314,116 @@
       "irrep": "A2pp"
     }
   ],
+  "fusion": {
+    "corepresentations": [
+      "A1p",
+      "A2p",
+      "A1pp",
+      "A2pp"
+    ],
+    "products": [
+      {
+        "a": "A1p",
+        "b": "A1p",
+        "terms": [
+          {
+            "corepresentation": "A1p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "A1p",
+        "b": "A2p",
+        "terms": [
+          {
+            "corepresentation": "A2p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "A1p",
+        "b": "A1pp",
+        "terms": [
+          {
+            "corepresentation": "A1pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "A1p",
+        "b": "A2pp",
+        "terms": [
+          {
+            "corepresentation": "A2pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "A2p",
+        "b": "A2p",
+        "terms": [
+          {
+            "corepresentation": "A1p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "A2p",
+        "b": "A1pp",
+        "terms": [
+          {
+            "corepresentation": "A2pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "A2p",
+        "b": "A2pp",
+        "terms": [
+          {
+            "corepresentation": "A1pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "A1pp",
+        "b": "A1pp",
+        "terms": [
+          {
+            "corepresentation": "A1p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "A1pp",
+        "b": "A2pp",
+        "terms": [
+          {
+            "corepresentation": "A2p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "A2pp",
+        "b": "A2pp",
+        "terms": [
+          {
+            "corepresentation": "A1p",
+            "multiplicity": 1
+          }
+        ]
+      }
+    ]
+  },
   "group": {
     "G": "rotation/D1h#",
     "abstract_type": "Z_2 x Z_2 x Z_2",

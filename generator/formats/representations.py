@@ -51,7 +51,10 @@ SEPARATION_SHORT = {"unique": "", "exchange-symmetric": r"exch.\ sym.",
                     "crossing-symmetric": r"cross.\ sym.",
                     "crossing-antisymmetric": r"cross.\ anti.",
                     "so3-parent-lowest": "lowest parent",
-                    "so3-parent-complement": "complement"}
+                    "so3-parent-complement": "complement",
+                    # the copies of the corepresentations that row order selects (volume III)
+                    "row order": "row order",
+                    "exchange-symmetric, row order": r"exch.\ sym., row order"}
 # The records of the separation tags (notation.py, abbreviation.*), by rule.
 SEPARATION_RECORD = {"exchange": "abbreviation.exchange", "crossing": "abbreviation.crossing",
                      "so3-parent": "abbreviation.parent", "su2-parent": "abbreviation.parent.su2"}
@@ -1942,21 +1945,30 @@ def fusion_structured(D, r):
     return r"%s\irrprod %s" % lhs, rhs, cond
 
 
+def grid_sentence(factor, noun, order):
+    """The sentence that leads a grid of products, in volumes I and III: the symbol of the factors
+    (\\Gamma, \\mathcal{D}), what each product is and the order of the rows and columns."""
+    return (r"Every product $%s_1\irrprod%s_2$, equal to $%s_2\irrprod%s_1$, is one %s, in row "
+            r"$%s_1$, column $%s_2$ for $%s_1 \le %s_2$ in %s." % ((factor,) * 4 + (noun,)
+                                                                 + (factor,) * 4 + (order,)))
+
+
 def fusion_grid(D, fus):
-    """The fusion rules of a group whose every product is one irrep, as a grid: the product
-    a x b, a <= b in irrep order, in row a and column b, the columns split into chunks to fit the
-    line and each chunk with the rows that have a product in it."""
-    D.w(D.define("irrep.Gamma.factors")
-        + r"Every product $\Gamma_1\irrprod\Gamma_2$, equal to $\Gamma_2\irrprod\Gamma_1$, is one "
-          r"irrep, in row $\Gamma_1$, column $\Gamma_2$ for $\Gamma_1 \le \Gamma_2$ in irrep "
-          r"order.")
+    """The fusion rules of a group whose every product is one irrep, as a grid (product_grid)."""
+    D.w(D.define("irrep.Gamma.factors") + grid_sentence(r"\Gamma", "irrep", "irrep order"))
     product = {}
     for p in fus["products"]:
         product[(p["a"], p["b"])] = product[(p["b"], p["a"])] = p["terms"][0]["irrep"]
-    ids = D.irrep_order
+    product_grid(D, D.irrep_order, product, D.irrep_id)
+
+
+def product_grid(D, ids, product, label):
+    """A grid of products, each one irrep or corepresentation: the product a x b of the ids, a <= b
+    in their order, in row a and column b, `label` its label, the columns split into chunks to fit
+    the line and each chunk with the rows that have a product in it."""
     # an irrep label sets about GRID_LABEL of its visible() characters, and a cell has 3 pt of
     # padding on each side
-    width = getattr(D, "grid_label", GRID_LABEL) * max(visible(D.irrep_id(i)) for i in ids) + 1.2
+    width = getattr(D, "grid_label", GRID_LABEL) * max(visible(label(i)) for i in ids) + 1.2
     for n in range(1, len(ids) + 1):
         parts = chunks(ids, -(-len(ids) // n))
         if all(width * (len(part) + 1) <= TABLE_MAX_WIDTH for part in parts):
@@ -1964,11 +1976,11 @@ def fusion_grid(D, fus):
     for part in parts:
         D.w(r"{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}l%s@{}}\toprule"
             % ("c" * len(part)))
-        D.w(r"$\irrprod$ & %s\\\midrule\endhead" % " & ".join("$%s$" % D.irrep_id(b) for b in part))
+        D.w(r"$\irrprod$ & %s\\\midrule\endhead" % " & ".join("$%s$" % label(b) for b in part))
         rank = {x: k for k, x in enumerate(ids)}
         for a in ids[:rank[part[-1]] + 1]:
-            D.w(r"$%s$ & %s\\" % (D.irrep_id(a), " & ".join(
-                "$%s$" % D.irrep_id(product[(a, b)]) if rank[b] >= rank[a] else ""
+            D.w(r"$%s$ & %s\\" % (label(a), " & ".join(
+                "$%s$" % label(product[(a, b)]) if rank[b] >= rank[a] else ""
                 for b in part)))
         D.w(r"\bottomrule\end{longtable}}")
 
@@ -2055,6 +2067,71 @@ def spherical_fusion(D, fu):
         r"\bigoplus_{K=0,2,\dots,2J-1} %s\Bigr\}.\end{align}" % (s, s, k, k))
 
 
+def pairs_sentence(factor, order):
+    """The sentence that leads a table of products of irreps: the symbol of the factors and the order
+    of the pairs."""
+    return (r"Pairs $%s_1 \le %s_2$ in %s are listed, and a square $%s_1\irrprod%s_1$ has its "
+            r"antisymmetric part in braces." % (factor, factor, order, factor, factor))
+
+
+def square_sum(terms, anti, label):
+    """A decomposition [(id, multiplicity)] as a sum of labels, the antisymmetric part of each term
+    of a square ({id: multiplicity}) in braces after its symmetric part."""
+    parts = []
+    for i, mult in terms:
+        nb = anti.get(i, 0)
+        ns = mult - nb
+        if ns:
+            parts.append(multiple(ns, label(i)))
+        if nb:
+            parts.append(r"\{" + multiple(nb, label(i)) + r"\}")
+    return " \\oplus ".join(parts)
+
+
+def product_table(D, rows, factor):
+    """The table of the products [(a, b, a x b)] (TeX), in volumes I and III, headed by the symbol of
+    the factors: one copy of three columns, or two whose products break over lines
+    (wrapped_copies)."""
+    cells = ([[r"$%s_1$" % factor, r"$%s_2$" % factor, r"$%s_1 \irrprod %s_2$" % (factor, factor)]]
+             + [["$%s$" % c for c in r] for r in rows])
+    spec, fill = fill_columns(
+        [max(visible(r[0]) for r in rows), max(visible(r[1]) for r in rows),
+         max(visible(r[2]) for r in rows)], cells)
+    mark = snake_mark()
+    two = wrapped_copies(cells) if not fill else None
+    if two:
+        spec[2] = r">{\RaggedRight\arraybackslash}p{\fillwidth}"
+        mark = (r"\setlength{\tabcolsep}{%gpt}\setlength{\LTleft}{-%gpt plus 1fill}"
+                r"\setlength{\LTright}{-%gpt plus 1fill}%s%s" % (
+                    WRAP_TABCOLSEP, TIGHT_MARGIN, TIGHT_MARGIN, two[0],
+                    snake_mark(WRAP_TABCOLSEP, two[1])))
+    D.w(r"{\small%s%s\begin{longtable}{@{}%s@{}}\toprule" % (fill, mark, "".join(spec)))
+    D.w(" & ".join(cells[0]) + r"\\\midrule\endhead")
+    for r in rows:
+        D.w(r"$%s$ & $%s$ & $%s$\\" % r)
+    D.w(r"\bottomrule\end{longtable}}")
+
+
+def rules_align(D, rules):
+    """Rules [(lhs, rhs, condition)] (TeX) as one display: a comma after each, a period after the
+    last, in volumes I and III."""
+    D.w(r"\begin{align}%s.\end{align}" % r",\\".join(
+        r"%s &= %s%s" % (lhs, rhs, r",\quad %s" % cond if cond else "")
+        for lhs, rhs, cond in rules))
+
+
+def rules_table(D, groups):
+    """Rules (TeX) as a table lhs = rhs, condition, in volumes I and III: groups [(head or None,
+    [(lhs, rhs, condition)])], a head in italics before the rules of its group."""
+    D.w(r"{\small\begin{longtable}{@{}l@{${}={}$}ll@{}}\toprule")
+    for head, group in groups:
+        if head and group:
+            D.w(r"\multicolumn{3}{@{}l@{}}{\emph{%s}}\\*" % head)
+        for lhs, rhs, cond in group:
+            D.w(r"$%s$ & $%s$ & %s\\" % (lhs, rhs, "$%s$" % cond if cond else ""))
+    D.w(r"\bottomrule\end{longtable}}")
+
+
 def section_fusion(D):
     """The products of the irreps, in every catalogue: a grid where every product is one irrep,
     else the table of the pairs; in a continuous group the rules of the products of its families.
@@ -2073,40 +2150,13 @@ def section_fusion(D):
                                       for p in fus["products"]):
         return fusion_grid(D, fus)
     if fus["kind"] == "table":
-        D.w(D.define("irrep.Gamma.factors")
-            + r"Pairs $\Gamma_1 \le \Gamma_2$ in irrep order are listed, and a square "
-              r"$\Gamma_1\irrprod\Gamma_1$ has its antisymmetric part in braces.")
+        D.w(D.define("irrep.Gamma.factors") + pairs_sentence(r"\Gamma", "irrep order"))
         rows = []
         for p in fus["products"]:
             anti = {t["irrep"]: t["mult"] for t in p.get("antisymmetric", [])}
-            parts = []
-            for t in p["terms"]:
-                nb = anti.get(t["irrep"], 0)
-                ns = t["mult"] - nb
-                if ns:
-                    parts.append(multiple(ns, D.irrep_id(t["irrep"])))
-                if nb:
-                    parts.append(r"\{" + multiple(nb, D.irrep_id(t["irrep"])) + r"\}")
-            rows.append((D.irrep_id(p["a"]), D.irrep_id(p["b"]), " \\oplus ".join(parts)))
-        cells = ([[r"$\Gamma_1$", r"$\Gamma_2$", r"$\Gamma_1 \irrprod \Gamma_2$"]]
-                 + [["$%s$" % c for c in r] for r in rows])
-        spec, fill = fill_columns(
-            [max(visible(r[0]) for r in rows), max(visible(r[1]) for r in rows),
-             max(visible(r[2]) for r in rows)], cells)
-        mark = snake_mark()
-        two = wrapped_copies(cells) if not fill else None
-        if two:
-            spec[2] = r">{\RaggedRight\arraybackslash}p{\fillwidth}"
-            mark = (r"\setlength{\tabcolsep}{%gpt}\setlength{\LTleft}{-%gpt plus 1fill}"
-                    r"\setlength{\LTright}{-%gpt plus 1fill}%s%s" % (
-                        WRAP_TABCOLSEP, TIGHT_MARGIN, TIGHT_MARGIN, two[0],
-                        snake_mark(WRAP_TABCOLSEP, two[1])))
-        D.w(r"{\small%s%s\begin{longtable}{@{}%s@{}}\toprule" % (fill, mark, "".join(spec)))
-        D.w(r"$\Gamma_1$ & $\Gamma_2$ & $\Gamma_1 \irrprod \Gamma_2$\\\midrule\endhead")
-        for r in rows:
-            D.w(r"$%s$ & $%s$ & $%s$\\" % r)
-        D.w(r"\bottomrule\end{longtable}}")
-        return
+            rows.append((D.irrep_id(p["a"]), D.irrep_id(p["b"]), square_sum(
+                [(t["irrep"], t["mult"]) for t in p["terms"]], anti, D.irrep_id)))
+        return product_table(D, rows, r"\Gamma")
     vector = fus.get("vector_rules")
     if vector and D.spherical:
         return spherical_fusion(D, fus)
@@ -2129,12 +2179,8 @@ def section_fusion(D):
         D.w(r"\paragraph{%s.}" % title)
         if ranges:
             # direct sums over index ranges, with their limits above and below
-            # a comma after each rule, a period after the last
-            D.w(r"\begin{align}%s.\end{align}" % r",\\".join(
-                r"%s &= %s%s" % (lhs, rhs, r",\quad %s" % cond if cond else "")
-                for lhs, rhs, cond in (fusion_structured(D, r) for r in rules)))
+            rules_align(D, [fusion_structured(D, r) for r in rules])
             continue
-        D.w(r"{\small\begin{longtable}{@{}l@{${}={}$}ll@{}}\toprule")
         if not vector:
             groups = [(None, rules)]
         elif title == "Products":
@@ -2143,15 +2189,10 @@ def section_fusion(D):
                          for head, both in kinds])
         else:
             groups = [("a vector family", own["squares"]), ("a spinor family", rules)]
-        for head, group in groups:
-            if head and group:
-                D.w(r"\multicolumn{3}{@{}l@{}}{\emph{%s}}\\*" % head)
-            for r in group:
-                # the factors of a product take n and n' when both carry an index
-                lhs, rhs, cond = fusion_rule(factor_indices(
-                    r["display"], "index" in r.get("a", {}) and "index" in r.get("b", {})))
-                D.w(r"$%s$ & $%s$ & %s\\" % (lhs, rhs, "$%s$" % cond if cond else ""))
-        D.w(r"\bottomrule\end{longtable}}")
+        # the factors of a product take n and n' when both carry an index
+        rules_table(D, [(head, [fusion_rule(factor_indices(
+            r["display"], "index" in r.get("a", {}) and "index" in r.get("b", {})))
+            for r in group]) for head, group in groups])
 
 
 # ---------------------------------------------------------------- Clebsch--Gordan
@@ -2286,8 +2327,11 @@ def coupling_table(D, blocks, head):
     paragraph column when the widest row or heading exceeds TABLE_MAX_WIDTH; `head` is the row
     of column headings.  A block's heading is centered over its rows, set in centered lines of
     the paragraph column's width when it is wider than TABLE_MAX_WIDTH (a long normalization of
-    the Double catalogue)."""
-    width = max(max(visible(h) for _, h, _ in blocks),
+    the Double catalogue); a heading that is a tuple of strings is set as that many lines (volume
+    III's, coupling_block with split)."""
+    def lines(h):
+        return h if isinstance(h, tuple) else (h,)
+    width = max(max(visible(x) for _, h, _ in blocks for x in lines(h)),
                 max(sum(visible(t) + 1 for t in terms) + 4 for _, _, rows in blocks
                     for _, terms in rows))
     wrap = width > TABLE_MAX_WIDTH
@@ -2301,9 +2345,10 @@ def coupling_table(D, blocks, head):
         if last_product is not None and p is not last_product:
             D.w(r"\midrule")
         last_product = p
-        if wrap and visible(heading) > TABLE_MAX_WIDTH:
-            heading = r"\parbox{\fillwidth}{\centering %s}" % heading
-        D.w(r"\multicolumn{2}{@{}c@{}}{%s}\\*" % heading)
+        for line in lines(heading):
+            if wrap and visible(line) > TABLE_MAX_WIDTH:
+                line = r"\parbox{\fillwidth}{\centering %s}" % line
+            D.w(r"\multicolumn{2}{@{}c@{}}{%s}\\*" % line)
         # no break inside a block, nor between the last row and the bottom rule
         last = bi == len(blocks) - 1
         for mi, (label, terms) in enumerate(rows):
@@ -2519,6 +2564,13 @@ def spinor_couplings(c, flip, cover):
     return items
 
 
+def one_dimensional_sentence(noun):
+    """The sentence on the couplings of a continuous group whose every irrep (volumes I and II) or
+    corepresentation (volume III) has dimension 1."""
+    return (r"Every %s has dimension 1: the characters multiply, and the coefficient has the "
+            r"value 1." % noun)
+
+
 def family_couplings(D, cg):
     """The coupling rules of an axial group: where every irrep has dimension 1 (C_inf and C_inf_h,
     and their preimages) one sentence, with the g or u of the result where the record has that
@@ -2533,8 +2585,7 @@ def family_couplings(D, cg):
     families = list(D.families.values()) + (
         D.covered["character_functions"]["irrep_families"] if D.cover else [])
     if all(f["dim"] == 1 for f in families):
-        D.w(" ".join([r"Every irrep has dimension 1: the characters multiply, and the coefficient "
-                      r"has the value 1."]
+        D.w(" ".join([one_dimensional_sentence("irrep")]
                      + [GU_SENTENCE for r in cg["rules"] if r.endswith(GU_RULE)]
                      + ([products] if products else [])))
         # the code span at the end of the paragraph cannot break
@@ -2591,6 +2642,42 @@ def separation_tag(D, c):
     return ", ".join(x for x in (short, parent) if x)
 
 
+def heading_sentence(symbol, trivial=True):
+    """The sentence on the heading of a block, in volumes I and III: the symbol of the factors and
+    of the result (\\Gamma, \\mathcal{D}); with `trivial` false, the heading of a copy that occurs
+    once has no kappa (coupling_block)."""
+    if not trivial:
+        return (r"Each block is headed $%s_1\irrprod%s_2\to%s$, then $\mult$ where $%s$ occurs more "
+                r"than once in $%s_1\irrprod%s_2$, and a normalization $\cgnorm$." % ((symbol,) * 6))
+    return (r"Each block is headed $%s_1\irrprod%s_2\to%s$, $\mult$ (trivial when $%s$ occurs once "
+            r"in $%s_1\irrprod%s_2$) and a normalization $\cgnorm$." % ((symbol,) * 6))
+
+
+# The widest heading of a block (in visible characters) that coupling_block sets on one line when
+# asked to split: two copies of a table of blocks fit the line up to about this width.
+SPLIT_HEADING = 36
+
+
+def coupling_block(D, p, labels, c, tag, condition="", split=False, trivial=True):
+    """A block of the table of couplings (coupling_table) of the coupling c of the product p, in
+    volumes I and III: its heading, the labels (a, b, c) of its factors and of its result with the
+    condition on the indices of a family law when given, the copy kappa with its tag (trivial for a
+    unique copy, or nothing with `trivial` false) and N, and a row of partner terms for each
+    partner.  With `split`, a heading wider than SPLIT_HEADING is two lines, the product, then
+    kappa and N."""
+    head = r"$%s\irrprod %s \to %s$" % labels
+    if condition:
+        head += r" ($%s$)" % condition
+    if c["separation"] != "unique":
+        rest = r"$\mult = %d$ (%s), \quad " % (c["kappa"], tag)
+    else:
+        rest = r"$\mult$ trivial, \quad " if trivial else ""
+    rest += r"$\cgnorm = %s$" % D.val(c["N"])
+    one = head + (", " if trivial or c["separation"] != "unique" else r", \quad ") + rest
+    return p, ((head, rest) if split and visible(one) > SPLIT_HEADING else one), [
+        ("%d" % q["mu"], partner_terms(D, q["terms"])) for q in c["partners"]]
+
+
 def table_couplings(D, cg, left):
     """The blocks of the Clebsch-Gordan coefficients of a finite group, but those of the products
     `left` (ids): the coupled kets, the rules that separate the copies of an irrep, then a table
@@ -2620,9 +2707,7 @@ def table_couplings(D, cg, left):
                      r"\cgck{\Gamma_1}{\intx_1}{\Gamma_2}{\intx_2}{\Gamma}{\intx}{\mult}\;"
                      r"\irket{\Gamma_1}{\intx_1}\irket{\Gamma_2}{\intx_2},")
     D.w(r"where $\intx_1$, $\intx_2$ and $\intx$ are counted from 1. "
-        + D.define("index.normalisation") + r"Each block is headed "
-        r"$\Gamma_1\irrprod\Gamma_2\to\Gamma$, $\mult$ (trivial when $\Gamma$ occurs once in "
-        r"$\Gamma_1\irrprod\Gamma_2$) and a normalization $\cgnorm$. "
+        + D.define("index.normalisation") + heading_sentence(r"\Gamma") + " "
         + D.define("vector.ket.product") + r"Row $\intx$ gives the nonzero terms of "
         r"$\sqrt{\cgnorm}\,\cgket{\Gamma}{\intx}{\mult}$, each coefficient times "
         r"$\sqrt{\cgnorm}$, with $\prodket{\intx_1}{\intx_2}$ for "
@@ -2650,15 +2735,8 @@ def table_couplings(D, cg, left):
         if p in one:
             continue
         for c in p["couplings"]:
-            head = r"$%s\irrprod %s \to %s$" % (D.irrep_id(p["a"]), D.irrep_id(p["b"]),
-                                              D.irrep_id(c["c"]))
-            if c["separation"] != "unique":
-                head += r", $\mult = %d$ (%s)" % (c["kappa"], separation_tag(D, c))
-            else:
-                head += r", $\mult$ trivial"
-            head += r", \quad $\cgnorm = %s$" % D.val(c["N"])
-            rows = [("%d" % q["mu"], partner_terms(D, q["terms"])) for q in c["partners"]]
-            blocks.append((p, head, rows))
+            blocks.append(coupling_block(D, p, (D.irrep_id(p["a"]), D.irrep_id(p["b"]),
+                                                D.irrep_id(c["c"])), c, separation_tag(D, c)))
     if blocks:
         coupling_table(D, blocks, r"$\intx$ & $\sqrt{\cgnorm}\,\cgket{\Gamma}{\intx}{\mult}$")
 

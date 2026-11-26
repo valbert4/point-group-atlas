@@ -2,6 +2,232 @@
 from sympy import I, Rational, S, exp, pi
 
 o3m = {
+    'clebsch_gordan': {
+        'corepresentations': ['Ag', '1E1g', 'Au', '1E1u'],
+        'kind': 'table',
+        'products': [
+            {
+                'a': 'Ag',
+                'b': 'Ag',
+                'couplings': [
+                    {
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S6#/clebsch_gordan/products/0/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E1g',
+                'couplings': [
+                    {
+                        'c': '1E1g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S6#/clebsch_gordan/products/1/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': 'Au',
+                'couplings': [
+                    {
+                        'c': 'Au',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S6#/clebsch_gordan/products/3/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E1u',
+                'couplings': [
+                    {
+                        'c': '1E1u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S6#/clebsch_gordan/products/4/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E1g',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'exchange-antisymmetric'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': 'Au',
+                'couplings': [
+                    {
+                        'c': '1E1u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S6#/clebsch_gordan/products/8/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E1u',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Au',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'row order'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Au',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'row order'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Au',
+                'b': 'Au',
+                'couplings': [
+                    {
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S6#/clebsch_gordan/products/15/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Au',
+                'b': '1E1u',
+                'couplings': [
+                    {
+                        'c': '1E1g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S6#/clebsch_gordan/products/16/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1u',
+                'b': '1E1u',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'exchange-antisymmetric'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            }
+        ]
+    },
     'corepresentation_table': {
         'characters': [
             [Rational(1,1), Rational(1,1), Rational(1,1), Rational(1,1)],
@@ -26,6 +252,58 @@ o3m = {
         },
         {'case': 'c', 'irrep': '1E1u', 'partner': '2E1u'}
     ],
+    'fusion': {
+        'corepresentations': ['Ag', '1E1g', 'Au', '1E1u'],
+        'products': [
+            {'a': 'Ag', 'b': 'Ag', 'terms': [{'corepresentation': 'Ag', 'multiplicity': 1}]},
+            {
+                'a': 'Ag',
+                'b': '1E1g',
+                'terms': [{'corepresentation': '1E1g', 'multiplicity': 1}]
+            },
+            {'a': 'Ag', 'b': 'Au', 'terms': [{'corepresentation': 'Au', 'multiplicity': 1}]},
+            {
+                'a': 'Ag',
+                'b': '1E1u',
+                'terms': [{'corepresentation': '1E1u', 'multiplicity': 1}]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E1g',
+                'terms': [
+                    {'corepresentation': 'Ag', 'multiplicity': 2},
+                    {'corepresentation': '1E1g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': 'Au',
+                'terms': [{'corepresentation': '1E1u', 'multiplicity': 1}]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E1u',
+                'terms': [
+                    {'corepresentation': 'Au', 'multiplicity': 2},
+                    {'corepresentation': '1E1u', 'multiplicity': 1}
+                ]
+            },
+            {'a': 'Au', 'b': 'Au', 'terms': [{'corepresentation': 'Ag', 'multiplicity': 1}]},
+            {
+                'a': 'Au',
+                'b': '1E1u',
+                'terms': [{'corepresentation': '1E1g', 'multiplicity': 1}]
+            },
+            {
+                'a': '1E1u',
+                'b': '1E1u',
+                'terms': [
+                    {'corepresentation': 'Ag', 'multiplicity': 2},
+                    {'corepresentation': '1E1g', 'multiplicity': 1}
+                ]
+            }
+        ]
+    },
     'group': {
         'G': 'rotation/S6#',
         'abstract_type': 'Z_6 x Z_2',

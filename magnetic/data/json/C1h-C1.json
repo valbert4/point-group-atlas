@@ -1,4 +1,25 @@
 {
+  "clebsch_gordan": {
+    "corepresentations": [
+      "A"
+    ],
+    "kind": "table",
+    "products": [
+      {
+        "a": "A",
+        "b": "A",
+        "couplings": [
+          {
+            "c": "A",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C1#/clebsch_gordan/products/0/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      }
+    ]
+  },
   "corepresentation_table": {
     "characters": [
       [
@@ -122,6 +143,23 @@
       ]
     ],
     "node": "n00"
+  },
+  "fusion": {
+    "corepresentations": [
+      "A"
+    ],
+    "products": [
+      {
+        "a": "A",
+        "b": "A",
+        "terms": [
+          {
+            "corepresentation": "A",
+            "multiplicity": 1
+          }
+        ]
+      }
+    ]
   },
   "group": {
     "G": "rotation/C1h#",

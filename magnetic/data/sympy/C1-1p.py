@@ -2,6 +2,25 @@
 from sympy import I, Rational, S, exp, pi
 
 o3m = {
+    'clebsch_gordan': {
+        'corepresentations': ['A'],
+        'kind': 'table',
+        'products': [
+            {
+                'a': 'A',
+                'b': 'A',
+                'couplings': [
+                    {
+                        'c': 'A',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/C1#/clebsch_gordan/products/0/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            }
+        ]
+    },
     'corepresentation_table': {'characters': [[Rational(1,1)]], 'classes': [['E']], 'rows': [['A']]},
     'corepresentations': [
         {
@@ -10,6 +29,10 @@ o3m = {
             'irrep': 'A'
         }
     ],
+    'fusion': {
+        'corepresentations': ['A'],
+        'products': [{'a': 'A', 'b': 'A', 'terms': [{'corepresentation': 'A', 'multiplicity': 1}]}]
+    },
     'group': {
         'G': 'rotation/C1#',
         'abstract_type': 'Z_2',

@@ -1,6 +1,157 @@
 # Cinfh-Cinf (C_infh(C_inf)): data/json/Cinfh-Cinf.json as a GAP record.
 o3m := rec(
   ("class_space") := "rotation/Cinf#/character_functions/class_space",
+  ("clebsch_gordan") := rec(
+    ("corepresentations") := [ "A", "1E" ],
+    ("group") := "C_infh(C_inf)",
+    ("kind") := "family-law",
+    ("products") := [
+      rec(
+        ("a") := rec( ("corepresentation") := "A" ),
+        ("b") := rec( ("corepresentation") := "A" ),
+        ("condition") := "always",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := rec( ("corepresentation") := "A" ),
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := rec( ("corepresentation") := "A" ),
+        ("b") := rec( ("corepresentation") := "1E", ("index") := "n" ),
+        ("condition") := "always",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := rec( ("corepresentation") := "1E", ("index") := "n" ),
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := rec( ("corepresentation") := "1E", ("index") := "m" ),
+        ("b") := rec( ("corepresentation") := "1E", ("index") := "n" ),
+        ("condition") := "m > n",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := rec( ("corepresentation") := "1E", ("index") := "m-n" ),
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] )
+            ],
+            ("separation") := "unique"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := rec( ("corepresentation") := "1E", ("index") := "m+n" ),
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 2 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := rec( ("corepresentation") := "1E", ("index") := "m" ),
+        ("b") := rec( ("corepresentation") := "1E", ("index") := "n" ),
+        ("condition") := "m == n",
+        ("couplings") := [
+          rec(
+            ("N") := 2,
+            ("c") := rec( ("corepresentation") := "A" ),
+            ("kappa") := 1,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := 1, ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := 1, ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-symmetric"
+          ),
+          rec(
+            ("N") := 2,
+            ("c") := rec( ("corepresentation") := "A" ),
+            ("kappa") := 2,
+            ("partners") := [
+              rec(
+                ("mu") := 1,
+                ("terms") := [
+                  rec( ("e") := E(4), ("i") := 1, ("k") := 2 ),
+                  rec( ("e") := -1*E(4), ("i") := 2, ("k") := 1 )
+                ]
+              )
+            ],
+            ("separation") := "exchange-antisymmetric"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := rec( ("corepresentation") := "1E", ("index") := "2n" ),
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 2 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := rec( ("corepresentation") := "1E", ("index") := "m" ),
+        ("b") := rec( ("corepresentation") := "1E", ("index") := "n" ),
+        ("condition") := "m < n",
+        ("couplings") := [
+          rec(
+            ("N") := 1,
+            ("c") := rec( ("corepresentation") := "1E", ("index") := "n-m" ),
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 2 ) ] )
+            ],
+            ("separation") := "unique"
+          ),
+          rec(
+            ("N") := 1,
+            ("c") := rec( ("corepresentation") := "1E", ("index") := "m+n" ),
+            ("kappa") := 1,
+            ("partners") := [
+              rec( ("mu") := 1, ("terms") := [ rec( ("e") := 1, ("i") := 1, ("k") := 1 ) ] ),
+              rec( ("mu") := 2, ("terms") := [ rec( ("e") := 1, ("i") := 2, ("k") := 2 ) ] )
+            ],
+            ("separation") := "unique"
+          )
+        ]
+      )
+    ],
+    ("rules") := [
+      "e1, e2 and f1, f2: the bases of the two factors in the stored form (the rotation-diagonal basis of section 9, or the two irreps of a pair, section 37.2); |1>, |2>: the partners of the result, C = E/sqrt(N) (section 38)",
+      "every block satisfies (D1(h) (x) D2(h)) C = C D(h) for h in H and (U1 (x) U2) C = C* U for the representative, U = N in case (a) and ((0, 1), (1, 0)) on the two irreps of a pair in case (c); its rows and coefficients are the same at every index pair of its condition",
+      "the rule of section 38: in a square the exchange-symmetric copies first, then the antisymmetric ones; otherwise row order; at multiplicity 1 the first nonzero entry of column 1 has a positive real part or is i times a positive number (case a), or is positive (case c)",
+      "A (x) A: A |1> = e1 f1",
+      "A (x) 1E_n 2E_n: 1E_n 2E_n |1> = e1 f1, |2> = e1 f2",
+      "1E_m 2E_m (x) 1E_n 2E_n, m > n: 1E_(m-n) 2E_(m-n) |1> = e1 f2, |2> = e2 f1; 1E_(m+n) 2E_(m+n) |1> = e1 f1, |2> = e2 f2",
+      "1E_m 2E_m (x) 1E_n 2E_n, m == n: A (kappa 1, exchange-symmetric) |1> = (e1 f2 + e2 f1)/sqrt2; A (kappa 2, exchange-antisymmetric) |1> = (i e1 f2 - i e2 f1)/sqrt2; 1E_2n 2E_2n |1> = e1 f1, |2> = e2 f2",
+      "1E_m 2E_m (x) 1E_n 2E_n, m < n: 1E_(n-m) 2E_(n-m) |1> = e2 f1, |2> = e1 f2; 1E_(m+n) 2E_(m+n) |1> = e1 f1, |2> = e2 f2"
+    ]
+  ),
   ("corepresentation_table") := rec(
     ("characters") := [
       rec(
@@ -88,6 +239,45 @@ o3m := rec(
   ],
   ("domain") := "continuous",
   ("frame") := rec( ("matrix") := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ] ),
+  ("fusion") := rec(
+    ("condition_grammar") := [ "always", "m == n", "m != n", "m > n", "m < n" ],
+    ("corepresentations") := [ "A", "1E" ],
+    ("index_grammar") := [ "m", "n", "m+n", "m-n", "n-m", "|m-n|", "2n" ],
+    ("index_symbols") := rec( ("a") := "m", ("b") := "n", ("square") := "n" ),
+    ("kind") := "family-law",
+    ("rules") := [
+      rec(
+        ("a") := rec( ("corepresentation") := "A" ),
+        ("b") := rec( ("corepresentation") := "A" ),
+        ("condition") := "always",
+        ("terms") := [ rec( ("corepresentation") := "A", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := rec( ("corepresentation") := "A" ),
+        ("b") := rec( ("corepresentation") := "1E", ("index") := "n" ),
+        ("condition") := "always",
+        ("terms") := [ rec( ("corepresentation") := "1E", ("index") := "n", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := rec( ("corepresentation") := "1E", ("index") := "m" ),
+        ("b") := rec( ("corepresentation") := "1E", ("index") := "n" ),
+        ("condition") := "m != n",
+        ("terms") := [
+          rec( ("corepresentation") := "1E", ("index") := "|m-n|", ("multiplicity") := 1 ),
+          rec( ("corepresentation") := "1E", ("index") := "m+n", ("multiplicity") := 1 )
+        ]
+      ),
+      rec(
+        ("a") := rec( ("corepresentation") := "1E", ("index") := "m" ),
+        ("b") := rec( ("corepresentation") := "1E", ("index") := "n" ),
+        ("condition") := "m == n",
+        ("terms") := [
+          rec( ("corepresentation") := "A", ("multiplicity") := 2 ),
+          rec( ("corepresentation") := "1E", ("index") := "2n", ("multiplicity") := 1 )
+        ]
+      )
+    ]
+  ),
   ("group") := rec(
     ("G") := "rotation/Cinfh#",
     ("H") := "rotation/Cinf#",

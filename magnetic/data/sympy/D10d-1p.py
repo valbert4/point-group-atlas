@@ -2,6 +2,1608 @@
 from sympy import I, Rational, S, exp, pi
 
 o3m = {
+    'clebsch_gordan': {
+        'corepresentations': ['A1', 'A2', 'B1', 'B2', 'E1', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7', 'E8', 'E9'],
+        'kind': 'table',
+        'products': [
+            {
+                'a': 'A1',
+                'b': 'A1',
+                'couplings': [
+                    {
+                        'c': 'A1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/0/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A1',
+                'b': 'A2',
+                'couplings': [
+                    {
+                        'c': 'A2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/1/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A1',
+                'b': 'B1',
+                'couplings': [
+                    {
+                        'c': 'B1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/2/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A1',
+                'b': 'B2',
+                'couplings': [
+                    {
+                        'c': 'B2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/3/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A1',
+                'b': 'E1',
+                'couplings': [
+                    {
+                        'c': 'E1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/4/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A1',
+                'b': 'E2',
+                'couplings': [
+                    {
+                        'c': 'E2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/5/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A1',
+                'b': 'E3',
+                'couplings': [
+                    {
+                        'c': 'E3',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/6/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A1',
+                'b': 'E4',
+                'couplings': [
+                    {
+                        'c': 'E4',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/7/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A1',
+                'b': 'E5',
+                'couplings': [
+                    {
+                        'c': 'E5',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/8/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A1',
+                'b': 'E6',
+                'couplings': [
+                    {
+                        'c': 'E6',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/9/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A1',
+                'b': 'E7',
+                'couplings': [
+                    {
+                        'c': 'E7',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/10/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A1',
+                'b': 'E8',
+                'couplings': [
+                    {
+                        'c': 'E8',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/11/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A1',
+                'b': 'E9',
+                'couplings': [
+                    {
+                        'c': 'E9',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/12/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A2',
+                'b': 'A2',
+                'couplings': [
+                    {
+                        'c': 'A1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/13/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A2',
+                'b': 'B1',
+                'couplings': [
+                    {
+                        'c': 'B2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/14/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A2',
+                'b': 'B2',
+                'couplings': [
+                    {
+                        'c': 'B1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/15/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A2',
+                'b': 'E1',
+                'couplings': [
+                    {
+                        'c': 'E1',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/16/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A2',
+                'b': 'E2',
+                'couplings': [
+                    {
+                        'c': 'E2',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/17/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A2',
+                'b': 'E3',
+                'couplings': [
+                    {
+                        'c': 'E3',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/18/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A2',
+                'b': 'E4',
+                'couplings': [
+                    {
+                        'c': 'E4',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/19/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A2',
+                'b': 'E5',
+                'couplings': [
+                    {
+                        'c': 'E5',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/20/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A2',
+                'b': 'E6',
+                'couplings': [
+                    {
+                        'c': 'E6',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/21/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A2',
+                'b': 'E7',
+                'couplings': [
+                    {
+                        'c': 'E7',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/22/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A2',
+                'b': 'E8',
+                'couplings': [
+                    {
+                        'c': 'E8',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/23/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'A2',
+                'b': 'E9',
+                'couplings': [
+                    {
+                        'c': 'E9',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/24/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B1',
+                'b': 'B1',
+                'couplings': [
+                    {
+                        'c': 'A1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/25/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B1',
+                'b': 'B2',
+                'couplings': [
+                    {
+                        'c': 'A2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/26/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B1',
+                'b': 'E1',
+                'couplings': [
+                    {
+                        'c': 'E9',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/27/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B1',
+                'b': 'E2',
+                'couplings': [
+                    {
+                        'c': 'E8',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/28/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B1',
+                'b': 'E3',
+                'couplings': [
+                    {
+                        'c': 'E7',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/29/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B1',
+                'b': 'E4',
+                'couplings': [
+                    {
+                        'c': 'E6',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/30/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B1',
+                'b': 'E5',
+                'couplings': [
+                    {
+                        'c': 'E5',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/31/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B1',
+                'b': 'E6',
+                'couplings': [
+                    {
+                        'c': 'E4',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/32/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B1',
+                'b': 'E7',
+                'couplings': [
+                    {
+                        'c': 'E3',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/33/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B1',
+                'b': 'E8',
+                'couplings': [
+                    {
+                        'c': 'E2',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/34/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B1',
+                'b': 'E9',
+                'couplings': [
+                    {
+                        'c': 'E1',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/35/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B2',
+                'b': 'B2',
+                'couplings': [
+                    {
+                        'c': 'A1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/36/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B2',
+                'b': 'E1',
+                'couplings': [
+                    {
+                        'c': 'E9',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/37/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B2',
+                'b': 'E2',
+                'couplings': [
+                    {
+                        'c': 'E8',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/38/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B2',
+                'b': 'E3',
+                'couplings': [
+                    {
+                        'c': 'E7',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/39/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B2',
+                'b': 'E4',
+                'couplings': [
+                    {
+                        'c': 'E6',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/40/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B2',
+                'b': 'E5',
+                'couplings': [
+                    {
+                        'c': 'E5',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/41/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B2',
+                'b': 'E6',
+                'couplings': [
+                    {
+                        'c': 'E4',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/42/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B2',
+                'b': 'E7',
+                'couplings': [
+                    {
+                        'c': 'E3',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/43/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B2',
+                'b': 'E8',
+                'couplings': [
+                    {
+                        'c': 'E2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/44/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'B2',
+                'b': 'E9',
+                'couplings': [
+                    {
+                        'c': 'E1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/45/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E1',
+                'couplings': [
+                    {
+                        'c': 'A1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/46/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'A2',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/46/couplings/1',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/46/couplings/2',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E2',
+                'couplings': [
+                    {
+                        'c': 'E1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/47/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E3',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/47/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E3',
+                'couplings': [
+                    {
+                        'c': 'E2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/48/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E4',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/48/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E4',
+                'couplings': [
+                    {
+                        'c': 'E3',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/49/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E5',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/49/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E5',
+                'couplings': [
+                    {
+                        'c': 'E4',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/50/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E6',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/50/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E6',
+                'couplings': [
+                    {
+                        'c': 'E5',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/51/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E7',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/51/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E7',
+                'couplings': [
+                    {
+                        'c': 'E6',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/52/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E8',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/52/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E8',
+                'couplings': [
+                    {
+                        'c': 'E7',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/53/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E9',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/53/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E9',
+                'couplings': [
+                    {
+                        'c': 'B1',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/54/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'B2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/54/couplings/1',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E8',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/54/couplings/2',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E2',
+                'couplings': [
+                    {
+                        'c': 'A1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/55/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'A2',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/55/couplings/1',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E4',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/55/couplings/2',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E3',
+                'couplings': [
+                    {
+                        'c': 'E1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/56/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E5',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/56/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E4',
+                'couplings': [
+                    {
+                        'c': 'E2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/57/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E6',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/57/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E5',
+                'couplings': [
+                    {
+                        'c': 'E3',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/58/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E7',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/58/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E6',
+                'couplings': [
+                    {
+                        'c': 'E4',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/59/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E8',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/59/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E7',
+                'couplings': [
+                    {
+                        'c': 'E5',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/60/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E9',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/60/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E8',
+                'couplings': [
+                    {
+                        'c': 'B1',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/61/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'B2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/61/couplings/1',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E6',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/61/couplings/2',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E9',
+                'couplings': [
+                    {
+                        'c': 'E7',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/62/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E9',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/62/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E3',
+                'b': 'E3',
+                'couplings': [
+                    {
+                        'c': 'A1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/63/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'A2',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/63/couplings/1',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E6',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/63/couplings/2',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E3',
+                'b': 'E4',
+                'couplings': [
+                    {
+                        'c': 'E1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/64/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E7',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/64/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E3',
+                'b': 'E5',
+                'couplings': [
+                    {
+                        'c': 'E2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/65/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E8',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/65/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E3',
+                'b': 'E6',
+                'couplings': [
+                    {
+                        'c': 'E3',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/66/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E9',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/66/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E3',
+                'b': 'E7',
+                'couplings': [
+                    {
+                        'c': 'B1',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/67/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'B2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/67/couplings/1',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E4',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/67/couplings/2',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E3',
+                'b': 'E8',
+                'couplings': [
+                    {
+                        'c': 'E5',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/68/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E9',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/68/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E3',
+                'b': 'E9',
+                'couplings': [
+                    {
+                        'c': 'E6',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/69/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E8',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/69/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E4',
+                'b': 'E4',
+                'couplings': [
+                    {
+                        'c': 'A1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/70/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'A2',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/70/couplings/1',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E8',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/70/couplings/2',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E4',
+                'b': 'E5',
+                'couplings': [
+                    {
+                        'c': 'E1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/71/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E9',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/71/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E4',
+                'b': 'E6',
+                'couplings': [
+                    {
+                        'c': 'B1',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/72/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'B2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/72/couplings/1',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E2',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/72/couplings/2',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E4',
+                'b': 'E7',
+                'couplings': [
+                    {
+                        'c': 'E3',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/73/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E9',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/73/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E4',
+                'b': 'E8',
+                'couplings': [
+                    {
+                        'c': 'E4',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/74/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E8',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/74/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E4',
+                'b': 'E9',
+                'couplings': [
+                    {
+                        'c': 'E5',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/75/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E7',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/75/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E5',
+                'b': 'E5',
+                'couplings': [
+                    {
+                        'c': 'A1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/76/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'A2',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/76/couplings/1',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'B1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/76/couplings/2',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'B2',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/76/couplings/3',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E5',
+                'b': 'E6',
+                'couplings': [
+                    {
+                        'c': 'E1',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/77/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E9',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/77/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E5',
+                'b': 'E7',
+                'couplings': [
+                    {
+                        'c': 'E2',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/78/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E8',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/78/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E5',
+                'b': 'E8',
+                'couplings': [
+                    {
+                        'c': 'E3',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/79/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E7',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/79/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E5',
+                'b': 'E9',
+                'couplings': [
+                    {
+                        'c': 'E4',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/80/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E6',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/80/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E6',
+                'b': 'E6',
+                'couplings': [
+                    {
+                        'c': 'A1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/81/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'A2',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/81/couplings/1',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E8',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/81/couplings/2',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E6',
+                'b': 'E7',
+                'couplings': [
+                    {
+                        'c': 'E1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/82/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E7',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/82/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E6',
+                'b': 'E8',
+                'couplings': [
+                    {
+                        'c': 'E2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/83/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E6',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/83/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E6',
+                'b': 'E9',
+                'couplings': [
+                    {
+                        'c': 'E3',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/84/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E5',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/84/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E7',
+                'b': 'E7',
+                'couplings': [
+                    {
+                        'c': 'A1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/85/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'A2',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/85/couplings/1',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E6',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/85/couplings/2',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E7',
+                'b': 'E8',
+                'couplings': [
+                    {
+                        'c': 'E1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/86/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E5',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/86/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E7',
+                'b': 'E9',
+                'couplings': [
+                    {
+                        'c': 'E2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/87/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E4',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/87/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E8',
+                'b': 'E8',
+                'couplings': [
+                    {
+                        'c': 'A1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/88/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'A2',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/88/couplings/1',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E4',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/88/couplings/2',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E8',
+                'b': 'E9',
+                'couplings': [
+                    {
+                        'c': 'E1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/89/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E3',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/89/couplings/1',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'E9',
+                'b': 'E9',
+                'couplings': [
+                    {
+                        'c': 'A1',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/90/couplings/0',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'A2',
+                        'kappa': 1,
+                        'phase': 'i',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/90/couplings/1',
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': 'E2',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/D10d#/clebsch_gordan/products/90/couplings/2',
+                        'separation': 'unique'
+                    }
+                ]
+            }
+        ]
+    },
     'corepresentation_table': {
         'characters': [
             [
@@ -298,6 +1900,431 @@ o3m = {
             'irrep': 'E9'
         }
     ],
+    'fusion': {
+        'corepresentations': ['A1', 'A2', 'B1', 'B2', 'E1', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7', 'E8', 'E9'],
+        'products': [
+            {'a': 'A1', 'b': 'A1', 'terms': [{'corepresentation': 'A1', 'multiplicity': 1}]},
+            {'a': 'A1', 'b': 'A2', 'terms': [{'corepresentation': 'A2', 'multiplicity': 1}]},
+            {'a': 'A1', 'b': 'B1', 'terms': [{'corepresentation': 'B1', 'multiplicity': 1}]},
+            {'a': 'A1', 'b': 'B2', 'terms': [{'corepresentation': 'B2', 'multiplicity': 1}]},
+            {'a': 'A1', 'b': 'E1', 'terms': [{'corepresentation': 'E1', 'multiplicity': 1}]},
+            {'a': 'A1', 'b': 'E2', 'terms': [{'corepresentation': 'E2', 'multiplicity': 1}]},
+            {'a': 'A1', 'b': 'E3', 'terms': [{'corepresentation': 'E3', 'multiplicity': 1}]},
+            {'a': 'A1', 'b': 'E4', 'terms': [{'corepresentation': 'E4', 'multiplicity': 1}]},
+            {'a': 'A1', 'b': 'E5', 'terms': [{'corepresentation': 'E5', 'multiplicity': 1}]},
+            {'a': 'A1', 'b': 'E6', 'terms': [{'corepresentation': 'E6', 'multiplicity': 1}]},
+            {'a': 'A1', 'b': 'E7', 'terms': [{'corepresentation': 'E7', 'multiplicity': 1}]},
+            {'a': 'A1', 'b': 'E8', 'terms': [{'corepresentation': 'E8', 'multiplicity': 1}]},
+            {'a': 'A1', 'b': 'E9', 'terms': [{'corepresentation': 'E9', 'multiplicity': 1}]},
+            {'a': 'A2', 'b': 'A2', 'terms': [{'corepresentation': 'A1', 'multiplicity': 1}]},
+            {'a': 'A2', 'b': 'B1', 'terms': [{'corepresentation': 'B2', 'multiplicity': 1}]},
+            {'a': 'A2', 'b': 'B2', 'terms': [{'corepresentation': 'B1', 'multiplicity': 1}]},
+            {'a': 'A2', 'b': 'E1', 'terms': [{'corepresentation': 'E1', 'multiplicity': 1}]},
+            {'a': 'A2', 'b': 'E2', 'terms': [{'corepresentation': 'E2', 'multiplicity': 1}]},
+            {'a': 'A2', 'b': 'E3', 'terms': [{'corepresentation': 'E3', 'multiplicity': 1}]},
+            {'a': 'A2', 'b': 'E4', 'terms': [{'corepresentation': 'E4', 'multiplicity': 1}]},
+            {'a': 'A2', 'b': 'E5', 'terms': [{'corepresentation': 'E5', 'multiplicity': 1}]},
+            {'a': 'A2', 'b': 'E6', 'terms': [{'corepresentation': 'E6', 'multiplicity': 1}]},
+            {'a': 'A2', 'b': 'E7', 'terms': [{'corepresentation': 'E7', 'multiplicity': 1}]},
+            {'a': 'A2', 'b': 'E8', 'terms': [{'corepresentation': 'E8', 'multiplicity': 1}]},
+            {'a': 'A2', 'b': 'E9', 'terms': [{'corepresentation': 'E9', 'multiplicity': 1}]},
+            {'a': 'B1', 'b': 'B1', 'terms': [{'corepresentation': 'A1', 'multiplicity': 1}]},
+            {'a': 'B1', 'b': 'B2', 'terms': [{'corepresentation': 'A2', 'multiplicity': 1}]},
+            {'a': 'B1', 'b': 'E1', 'terms': [{'corepresentation': 'E9', 'multiplicity': 1}]},
+            {'a': 'B1', 'b': 'E2', 'terms': [{'corepresentation': 'E8', 'multiplicity': 1}]},
+            {'a': 'B1', 'b': 'E3', 'terms': [{'corepresentation': 'E7', 'multiplicity': 1}]},
+            {'a': 'B1', 'b': 'E4', 'terms': [{'corepresentation': 'E6', 'multiplicity': 1}]},
+            {'a': 'B1', 'b': 'E5', 'terms': [{'corepresentation': 'E5', 'multiplicity': 1}]},
+            {'a': 'B1', 'b': 'E6', 'terms': [{'corepresentation': 'E4', 'multiplicity': 1}]},
+            {'a': 'B1', 'b': 'E7', 'terms': [{'corepresentation': 'E3', 'multiplicity': 1}]},
+            {'a': 'B1', 'b': 'E8', 'terms': [{'corepresentation': 'E2', 'multiplicity': 1}]},
+            {'a': 'B1', 'b': 'E9', 'terms': [{'corepresentation': 'E1', 'multiplicity': 1}]},
+            {'a': 'B2', 'b': 'B2', 'terms': [{'corepresentation': 'A1', 'multiplicity': 1}]},
+            {'a': 'B2', 'b': 'E1', 'terms': [{'corepresentation': 'E9', 'multiplicity': 1}]},
+            {'a': 'B2', 'b': 'E2', 'terms': [{'corepresentation': 'E8', 'multiplicity': 1}]},
+            {'a': 'B2', 'b': 'E3', 'terms': [{'corepresentation': 'E7', 'multiplicity': 1}]},
+            {'a': 'B2', 'b': 'E4', 'terms': [{'corepresentation': 'E6', 'multiplicity': 1}]},
+            {'a': 'B2', 'b': 'E5', 'terms': [{'corepresentation': 'E5', 'multiplicity': 1}]},
+            {'a': 'B2', 'b': 'E6', 'terms': [{'corepresentation': 'E4', 'multiplicity': 1}]},
+            {'a': 'B2', 'b': 'E7', 'terms': [{'corepresentation': 'E3', 'multiplicity': 1}]},
+            {'a': 'B2', 'b': 'E8', 'terms': [{'corepresentation': 'E2', 'multiplicity': 1}]},
+            {'a': 'B2', 'b': 'E9', 'terms': [{'corepresentation': 'E1', 'multiplicity': 1}]},
+            {
+                'a': 'E1',
+                'b': 'E1',
+                'terms': [
+                    {'corepresentation': 'A1', 'multiplicity': 1},
+                    {'corepresentation': 'A2', 'multiplicity': 1},
+                    {'corepresentation': 'E2', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E2',
+                'terms': [
+                    {'corepresentation': 'E1', 'multiplicity': 1},
+                    {'corepresentation': 'E3', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E3',
+                'terms': [
+                    {'corepresentation': 'E2', 'multiplicity': 1},
+                    {'corepresentation': 'E4', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E4',
+                'terms': [
+                    {'corepresentation': 'E3', 'multiplicity': 1},
+                    {'corepresentation': 'E5', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E5',
+                'terms': [
+                    {'corepresentation': 'E4', 'multiplicity': 1},
+                    {'corepresentation': 'E6', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E6',
+                'terms': [
+                    {'corepresentation': 'E5', 'multiplicity': 1},
+                    {'corepresentation': 'E7', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E7',
+                'terms': [
+                    {'corepresentation': 'E6', 'multiplicity': 1},
+                    {'corepresentation': 'E8', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E8',
+                'terms': [
+                    {'corepresentation': 'E7', 'multiplicity': 1},
+                    {'corepresentation': 'E9', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E1',
+                'b': 'E9',
+                'terms': [
+                    {'corepresentation': 'B1', 'multiplicity': 1},
+                    {'corepresentation': 'B2', 'multiplicity': 1},
+                    {'corepresentation': 'E8', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E2',
+                'terms': [
+                    {'corepresentation': 'A1', 'multiplicity': 1},
+                    {'corepresentation': 'A2', 'multiplicity': 1},
+                    {'corepresentation': 'E4', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E3',
+                'terms': [
+                    {'corepresentation': 'E1', 'multiplicity': 1},
+                    {'corepresentation': 'E5', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E4',
+                'terms': [
+                    {'corepresentation': 'E2', 'multiplicity': 1},
+                    {'corepresentation': 'E6', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E5',
+                'terms': [
+                    {'corepresentation': 'E3', 'multiplicity': 1},
+                    {'corepresentation': 'E7', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E6',
+                'terms': [
+                    {'corepresentation': 'E4', 'multiplicity': 1},
+                    {'corepresentation': 'E8', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E7',
+                'terms': [
+                    {'corepresentation': 'E5', 'multiplicity': 1},
+                    {'corepresentation': 'E9', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E8',
+                'terms': [
+                    {'corepresentation': 'B1', 'multiplicity': 1},
+                    {'corepresentation': 'B2', 'multiplicity': 1},
+                    {'corepresentation': 'E6', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E2',
+                'b': 'E9',
+                'terms': [
+                    {'corepresentation': 'E7', 'multiplicity': 1},
+                    {'corepresentation': 'E9', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E3',
+                'b': 'E3',
+                'terms': [
+                    {'corepresentation': 'A1', 'multiplicity': 1},
+                    {'corepresentation': 'A2', 'multiplicity': 1},
+                    {'corepresentation': 'E6', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E3',
+                'b': 'E4',
+                'terms': [
+                    {'corepresentation': 'E1', 'multiplicity': 1},
+                    {'corepresentation': 'E7', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E3',
+                'b': 'E5',
+                'terms': [
+                    {'corepresentation': 'E2', 'multiplicity': 1},
+                    {'corepresentation': 'E8', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E3',
+                'b': 'E6',
+                'terms': [
+                    {'corepresentation': 'E3', 'multiplicity': 1},
+                    {'corepresentation': 'E9', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E3',
+                'b': 'E7',
+                'terms': [
+                    {'corepresentation': 'B1', 'multiplicity': 1},
+                    {'corepresentation': 'B2', 'multiplicity': 1},
+                    {'corepresentation': 'E4', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E3',
+                'b': 'E8',
+                'terms': [
+                    {'corepresentation': 'E5', 'multiplicity': 1},
+                    {'corepresentation': 'E9', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E3',
+                'b': 'E9',
+                'terms': [
+                    {'corepresentation': 'E6', 'multiplicity': 1},
+                    {'corepresentation': 'E8', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E4',
+                'b': 'E4',
+                'terms': [
+                    {'corepresentation': 'A1', 'multiplicity': 1},
+                    {'corepresentation': 'A2', 'multiplicity': 1},
+                    {'corepresentation': 'E8', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E4',
+                'b': 'E5',
+                'terms': [
+                    {'corepresentation': 'E1', 'multiplicity': 1},
+                    {'corepresentation': 'E9', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E4',
+                'b': 'E6',
+                'terms': [
+                    {'corepresentation': 'B1', 'multiplicity': 1},
+                    {'corepresentation': 'B2', 'multiplicity': 1},
+                    {'corepresentation': 'E2', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E4',
+                'b': 'E7',
+                'terms': [
+                    {'corepresentation': 'E3', 'multiplicity': 1},
+                    {'corepresentation': 'E9', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E4',
+                'b': 'E8',
+                'terms': [
+                    {'corepresentation': 'E4', 'multiplicity': 1},
+                    {'corepresentation': 'E8', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E4',
+                'b': 'E9',
+                'terms': [
+                    {'corepresentation': 'E5', 'multiplicity': 1},
+                    {'corepresentation': 'E7', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E5',
+                'b': 'E5',
+                'terms': [
+                    {'corepresentation': 'A1', 'multiplicity': 1},
+                    {'corepresentation': 'A2', 'multiplicity': 1},
+                    {'corepresentation': 'B1', 'multiplicity': 1},
+                    {'corepresentation': 'B2', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E5',
+                'b': 'E6',
+                'terms': [
+                    {'corepresentation': 'E1', 'multiplicity': 1},
+                    {'corepresentation': 'E9', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E5',
+                'b': 'E7',
+                'terms': [
+                    {'corepresentation': 'E2', 'multiplicity': 1},
+                    {'corepresentation': 'E8', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E5',
+                'b': 'E8',
+                'terms': [
+                    {'corepresentation': 'E3', 'multiplicity': 1},
+                    {'corepresentation': 'E7', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E5',
+                'b': 'E9',
+                'terms': [
+                    {'corepresentation': 'E4', 'multiplicity': 1},
+                    {'corepresentation': 'E6', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E6',
+                'b': 'E6',
+                'terms': [
+                    {'corepresentation': 'A1', 'multiplicity': 1},
+                    {'corepresentation': 'A2', 'multiplicity': 1},
+                    {'corepresentation': 'E8', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E6',
+                'b': 'E7',
+                'terms': [
+                    {'corepresentation': 'E1', 'multiplicity': 1},
+                    {'corepresentation': 'E7', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E6',
+                'b': 'E8',
+                'terms': [
+                    {'corepresentation': 'E2', 'multiplicity': 1},
+                    {'corepresentation': 'E6', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E6',
+                'b': 'E9',
+                'terms': [
+                    {'corepresentation': 'E3', 'multiplicity': 1},
+                    {'corepresentation': 'E5', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E7',
+                'b': 'E7',
+                'terms': [
+                    {'corepresentation': 'A1', 'multiplicity': 1},
+                    {'corepresentation': 'A2', 'multiplicity': 1},
+                    {'corepresentation': 'E6', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E7',
+                'b': 'E8',
+                'terms': [
+                    {'corepresentation': 'E1', 'multiplicity': 1},
+                    {'corepresentation': 'E5', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E7',
+                'b': 'E9',
+                'terms': [
+                    {'corepresentation': 'E2', 'multiplicity': 1},
+                    {'corepresentation': 'E4', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E8',
+                'b': 'E8',
+                'terms': [
+                    {'corepresentation': 'A1', 'multiplicity': 1},
+                    {'corepresentation': 'A2', 'multiplicity': 1},
+                    {'corepresentation': 'E4', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E8',
+                'b': 'E9',
+                'terms': [
+                    {'corepresentation': 'E1', 'multiplicity': 1},
+                    {'corepresentation': 'E3', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': 'E9',
+                'b': 'E9',
+                'terms': [
+                    {'corepresentation': 'A1', 'multiplicity': 1},
+                    {'corepresentation': 'A2', 'multiplicity': 1},
+                    {'corepresentation': 'E2', 'multiplicity': 1}
+                ]
+            }
+        ]
+    },
     'group': {
         'G': 'rotation/D10d#',
         'abstract_type': 'Dih(40) x Z_2',

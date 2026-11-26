@@ -1,5 +1,50 @@
 # D1d-C1v (D_1d(C_1v)): data/json/D1d-C1v.json as a GAP record.
 o3m := rec(
+  ("clebsch_gordan") := rec(
+    ("corepresentations") := [ "Ap", "App" ],
+    ("kind") := "table",
+    ("products") := [
+      rec(
+        ("a") := "Ap",
+        ("b") := "Ap",
+        ("couplings") := [
+          rec(
+            ("c") := "Ap",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C1v#/clebsch_gordan/products/0/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "Ap",
+        ("b") := "App",
+        ("couplings") := [
+          rec(
+            ("c") := "App",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C1v#/clebsch_gordan/products/1/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "App",
+        ("b") := "App",
+        ("couplings") := [
+          rec(
+            ("c") := "Ap",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/C1v#/clebsch_gordan/products/2/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      )
+    ]
+  ),
   ("corepresentation_table") := rec(
     ("characters") := [ [ 1, 1 ], [ 1, -1 ] ],
     ("classes") := [ [ "E" ], [ "sv" ] ],
@@ -20,6 +65,26 @@ o3m := rec(
     )
   ],
   ("frame") := rec( ("matrix") := [ [ 0, 1, 0 ], [ -1, 0, 0 ], [ 0, 0, 1 ] ], ("node") := "n03" ),
+  ("fusion") := rec(
+    ("corepresentations") := [ "Ap", "App" ],
+    ("products") := [
+      rec(
+        ("a") := "Ap",
+        ("b") := "Ap",
+        ("terms") := [ rec( ("corepresentation") := "Ap", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "Ap",
+        ("b") := "App",
+        ("terms") := [ rec( ("corepresentation") := "App", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "App",
+        ("b") := "App",
+        ("terms") := [ rec( ("corepresentation") := "Ap", ("multiplicity") := 1 ) ]
+      )
+    ]
+  ),
   ("group") := rec(
     ("G") := "rotation/D1d#",
     ("H") := "rotation/C1v#",

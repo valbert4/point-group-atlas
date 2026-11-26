@@ -1,5 +1,50 @@
 (* D1d-C1v (D_1d(C_1v)): data/json/D1d-C1v.json as a Wolfram Language association. *)
 o3m = <|
+  "clebsch_gordan" -> <|
+    "corepresentations" -> {"Ap", "App"},
+    "kind" -> "table",
+    "products" -> {
+      <|
+        "a" -> "Ap",
+        "b" -> "Ap",
+        "couplings" -> {
+          <|
+            "c" -> "Ap",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C1v#/clebsch_gordan/products/0/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "Ap",
+        "b" -> "App",
+        "couplings" -> {
+          <|
+            "c" -> "App",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C1v#/clebsch_gordan/products/1/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>,
+      <|
+        "a" -> "App",
+        "b" -> "App",
+        "couplings" -> {
+          <|
+            "c" -> "Ap",
+            "kappa" -> 1,
+            "phase" -> "1",
+            "pointer" -> "rotation/C1v#/clebsch_gordan/products/2/couplings/0",
+            "separation" -> "unique"
+          |>
+        }
+      |>
+    }
+  |>,
   "corepresentation_table" -> <|
     "characters" -> {{1, 1}, {1, -1}},
     "classes" -> {{"E"}, {"sv"}},
@@ -20,6 +65,26 @@ o3m = <|
     |>
   },
   "frame" -> <|"matrix" -> {{0, 1, 0}, {-1, 0, 0}, {0, 0, 1}}, "node" -> "n03"|>,
+  "fusion" -> <|
+    "corepresentations" -> {"Ap", "App"},
+    "products" -> {
+      <|
+        "a" -> "Ap",
+        "b" -> "Ap",
+        "terms" -> {<|"corepresentation" -> "Ap", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "Ap",
+        "b" -> "App",
+        "terms" -> {<|"corepresentation" -> "App", "multiplicity" -> 1|>}
+      |>,
+      <|
+        "a" -> "App",
+        "b" -> "App",
+        "terms" -> {<|"corepresentation" -> "Ap", "multiplicity" -> 1|>}
+      |>
+    }
+  |>,
   "group" -> <|
     "G" -> "rotation/D1d#",
     "H" -> "rotation/C1v#",

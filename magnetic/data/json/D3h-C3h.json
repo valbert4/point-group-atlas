@@ -1,4 +1,290 @@
 {
+  "clebsch_gordan": {
+    "corepresentations": [
+      "Ap",
+      "1E1p",
+      "2E1p",
+      "App",
+      "1E1pp",
+      "2E1pp"
+    ],
+    "kind": "table",
+    "products": [
+      {
+        "a": "Ap",
+        "b": "Ap",
+        "couplings": [
+          {
+            "c": "Ap",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/0/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E1p",
+        "couplings": [
+          {
+            "c": "1E1p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/1/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "2E1p",
+        "couplings": [
+          {
+            "c": "2E1p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/2/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "App",
+        "couplings": [
+          {
+            "c": "App",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/3/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E1pp",
+        "couplings": [
+          {
+            "c": "1E1pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/4/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "2E1pp",
+        "couplings": [
+          {
+            "c": "2E1pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/5/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E1p",
+        "couplings": [
+          {
+            "c": "2E1p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/6/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "2E1p",
+        "couplings": [
+          {
+            "c": "Ap",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/7/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "App",
+        "couplings": [
+          {
+            "c": "1E1pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/8/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E1pp",
+        "couplings": [
+          {
+            "c": "2E1pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/9/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "2E1pp",
+        "couplings": [
+          {
+            "c": "App",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/10/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "2E1p",
+        "b": "2E1p",
+        "couplings": [
+          {
+            "c": "1E1p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/11/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "2E1p",
+        "b": "App",
+        "couplings": [
+          {
+            "c": "2E1pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/12/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "2E1p",
+        "b": "1E1pp",
+        "couplings": [
+          {
+            "c": "App",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/13/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "2E1p",
+        "b": "2E1pp",
+        "couplings": [
+          {
+            "c": "1E1pp",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/14/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "App",
+        "couplings": [
+          {
+            "c": "Ap",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/15/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "1E1pp",
+        "couplings": [
+          {
+            "c": "1E1p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/16/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "2E1pp",
+        "couplings": [
+          {
+            "c": "2E1p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/17/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1pp",
+        "b": "1E1pp",
+        "couplings": [
+          {
+            "c": "2E1p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/18/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "1E1pp",
+        "b": "2E1pp",
+        "couplings": [
+          {
+            "c": "Ap",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/19/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      },
+      {
+        "a": "2E1pp",
+        "b": "2E1pp",
+        "couplings": [
+          {
+            "c": "1E1p",
+            "kappa": 1,
+            "phase": "1",
+            "pointer": "rotation/C3h#/clebsch_gordan/products/20/couplings/0",
+            "separation": "unique"
+          }
+        ]
+      }
+    ]
+  },
   "corepresentation_table": {
     "characters": [
       [
@@ -644,6 +930,228 @@
       ]
     ],
     "node": "n07"
+  },
+  "fusion": {
+    "corepresentations": [
+      "Ap",
+      "1E1p",
+      "2E1p",
+      "App",
+      "1E1pp",
+      "2E1pp"
+    ],
+    "products": [
+      {
+        "a": "Ap",
+        "b": "Ap",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E1p",
+        "terms": [
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "2E1p",
+        "terms": [
+          {
+            "corepresentation": "2E1p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "App",
+        "terms": [
+          {
+            "corepresentation": "App",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "1E1pp",
+        "terms": [
+          {
+            "corepresentation": "1E1pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "Ap",
+        "b": "2E1pp",
+        "terms": [
+          {
+            "corepresentation": "2E1pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E1p",
+        "terms": [
+          {
+            "corepresentation": "2E1p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "2E1p",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "App",
+        "terms": [
+          {
+            "corepresentation": "1E1pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "1E1pp",
+        "terms": [
+          {
+            "corepresentation": "2E1pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1p",
+        "b": "2E1pp",
+        "terms": [
+          {
+            "corepresentation": "App",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "2E1p",
+        "b": "2E1p",
+        "terms": [
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "2E1p",
+        "b": "App",
+        "terms": [
+          {
+            "corepresentation": "2E1pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "2E1p",
+        "b": "1E1pp",
+        "terms": [
+          {
+            "corepresentation": "App",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "2E1p",
+        "b": "2E1pp",
+        "terms": [
+          {
+            "corepresentation": "1E1pp",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "App",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "1E1pp",
+        "terms": [
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "App",
+        "b": "2E1pp",
+        "terms": [
+          {
+            "corepresentation": "2E1p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1pp",
+        "b": "1E1pp",
+        "terms": [
+          {
+            "corepresentation": "2E1p",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "1E1pp",
+        "b": "2E1pp",
+        "terms": [
+          {
+            "corepresentation": "Ap",
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "a": "2E1pp",
+        "b": "2E1pp",
+        "terms": [
+          {
+            "corepresentation": "1E1p",
+            "multiplicity": 1
+          }
+        ]
+      }
+    ]
   },
   "group": {
     "G": "rotation/D3h#",

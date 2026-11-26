@@ -1,5 +1,141 @@
 # D1h-1p (D_1h1'): data/json/D1h-1p.json as a GAP record.
 o3m := rec(
+  ("clebsch_gordan") := rec(
+    ("corepresentations") := [ "A1p", "A2p", "A1pp", "A2pp" ],
+    ("kind") := "table",
+    ("products") := [
+      rec(
+        ("a") := "A1p",
+        ("b") := "A1p",
+        ("couplings") := [
+          rec(
+            ("c") := "A1p",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/D1h#/clebsch_gordan/products/0/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "A1p",
+        ("b") := "A2p",
+        ("couplings") := [
+          rec(
+            ("c") := "A2p",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/D1h#/clebsch_gordan/products/1/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "A1p",
+        ("b") := "A1pp",
+        ("couplings") := [
+          rec(
+            ("c") := "A1pp",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/D1h#/clebsch_gordan/products/2/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "A1p",
+        ("b") := "A2pp",
+        ("couplings") := [
+          rec(
+            ("c") := "A2pp",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/D1h#/clebsch_gordan/products/3/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "A2p",
+        ("b") := "A2p",
+        ("couplings") := [
+          rec(
+            ("c") := "A1p",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/D1h#/clebsch_gordan/products/4/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "A2p",
+        ("b") := "A1pp",
+        ("couplings") := [
+          rec(
+            ("c") := "A2pp",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/D1h#/clebsch_gordan/products/5/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "A2p",
+        ("b") := "A2pp",
+        ("couplings") := [
+          rec(
+            ("c") := "A1pp",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/D1h#/clebsch_gordan/products/6/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "A1pp",
+        ("b") := "A1pp",
+        ("couplings") := [
+          rec(
+            ("c") := "A1p",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/D1h#/clebsch_gordan/products/7/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "A1pp",
+        ("b") := "A2pp",
+        ("couplings") := [
+          rec(
+            ("c") := "A2p",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/D1h#/clebsch_gordan/products/8/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      ),
+      rec(
+        ("a") := "A2pp",
+        ("b") := "A2pp",
+        ("couplings") := [
+          rec(
+            ("c") := "A1p",
+            ("kappa") := 1,
+            ("phase") := "1",
+            ("pointer") := "rotation/D1h#/clebsch_gordan/products/9/couplings/0",
+            ("separation") := "unique"
+          )
+        ]
+      )
+    ]
+  ),
   ("corepresentation_table") := rec(
     ("characters") := [ [ 1, 1, 1, 1 ], [ 1, -1, 1, -1 ], [ 1, 1, -1, -1 ], [ 1, -1, -1, 1 ] ],
     ("classes") := [ [ "E" ], [ "C2" ], [ "sh" ], [ "sv" ] ],
@@ -27,6 +163,61 @@ o3m := rec(
       ("irrep") := "A2pp"
     )
   ],
+  ("fusion") := rec(
+    ("corepresentations") := [ "A1p", "A2p", "A1pp", "A2pp" ],
+    ("products") := [
+      rec(
+        ("a") := "A1p",
+        ("b") := "A1p",
+        ("terms") := [ rec( ("corepresentation") := "A1p", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "A1p",
+        ("b") := "A2p",
+        ("terms") := [ rec( ("corepresentation") := "A2p", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "A1p",
+        ("b") := "A1pp",
+        ("terms") := [ rec( ("corepresentation") := "A1pp", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "A1p",
+        ("b") := "A2pp",
+        ("terms") := [ rec( ("corepresentation") := "A2pp", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "A2p",
+        ("b") := "A2p",
+        ("terms") := [ rec( ("corepresentation") := "A1p", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "A2p",
+        ("b") := "A1pp",
+        ("terms") := [ rec( ("corepresentation") := "A2pp", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "A2p",
+        ("b") := "A2pp",
+        ("terms") := [ rec( ("corepresentation") := "A1pp", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "A1pp",
+        ("b") := "A1pp",
+        ("terms") := [ rec( ("corepresentation") := "A1p", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "A1pp",
+        ("b") := "A2pp",
+        ("terms") := [ rec( ("corepresentation") := "A2p", ("multiplicity") := 1 ) ]
+      ),
+      rec(
+        ("a") := "A2pp",
+        ("b") := "A2pp",
+        ("terms") := [ rec( ("corepresentation") := "A1p", ("multiplicity") := 1 ) ]
+      )
+    ]
+  ),
   ("group") := rec(
     ("G") := "rotation/D1h#",
     ("abstract_type") := "Z_2 x Z_2 x Z_2",

@@ -505,8 +505,12 @@ Each entry of `corepresentations` has these fields:
   `"anti-diagonal"`, with the entries `diag` or `antidiag` from its first row to its last.
 
 The basis of $`N`$ in a family of dimension 2 is the rotation-diagonal basis of section 9, where $`N`$ is the
-identity or exchanges the two vectors. For $`D^{(J)}`$ and $`D^{(J,p)}`$ the basis is the kets, and `antidiag` is the
-formula `"(-1)^(J-m), m = J, ..., -J"` of the entry in the row of $`m`$ and the column of $`-m`$.
+identity or exchanges the two vectors. For $`D^{(J)}`$ and $`D^{(J,p)}`$ the basis is the kets, and $`N`$ is the
+matrix by which the representative acts on them (section 31.1). This rule replaces that of section 32.2 for magnetic
+type II, which is the rule of the finite groups. In $`\mathsf{SO(3)1'}`$ and $`\mathsf{O(3)1'}`$ the representative
+is $`\varTheta`$, and `antidiag` is the formula `"(-1)^m, m = J, ..., -J"` of the entry in the row of $`m`$ and the
+column of $`-m`$. In $`\mathsf{O(3)}(\mathsf{SO(3)})`$ the representative is $`\varTheta\mathsfit{i}`$ and the kets
+of $`D^{(J)}`$ have the parity $`(-1)^J`$, so `antidiag` is `"(-1)^(J-m), m = J, ..., -J"`.
 
 ### 37.3 The corepresentation table
 
@@ -563,6 +567,126 @@ An entry of `multipoles` (section 35.1) holds its `multiplicity` as a number. Th
 rank, for each kind, as `"0"`, `"1"`, `"1 for J even"`, `"1 for J odd"` or `"1 for J = 0"`. The field `two_vectors` is as
 in section 35.1, its counts by Haar integrals.
 
+### 37.7 Products and Clebsch–Gordan coefficients
+
+The field `fusion` of a continuous group (`kind` `"family-law"`) holds the family laws of the products, with
+`corepresentations` (the family ids), `rules`, and `index_symbols`, `index_grammar` and `condition_grammar` as in
+section 10.2. A rule has `a` and `b`, each a `corepresentation` with its `index` where it has one, and `condition`
+and `terms`, each term as in section 37.4.
+
+The field `clebsch_gordan` of an axial group (`kind` `"family-law"`) has `group`, `corepresentations`, `products`
+and `rules`, the couplings in words. A product has `a`, `b`, `condition` and `couplings`, and a coupling is a
+stored coupling of section 38.2 whose `c` is a `corepresentation` with its `index`. Its block holds at every pair of
+indices that meets the condition, in the bases of section 37.2. The rule of section 38.1 selects the copies, without
+inheritance from the rules of section 10.5.
+
+In $`\mathsf{SO(3)1'}`$, $`\mathsf{O(3)1'}`$ and $`\mathsf{O(3)}(\mathsf{SO(3)})`$ the rules of `fusion` state
+$`D^{(J_1)} \otimes D^{(J_2)} = \bigoplus_{J=\lvert J_1-J_2\rvert}^{J_1+J_2} D^{(J)}`$, and in $`\mathsf{O(3)1'}`$
+the terms have the parity $`p_1 p_2`$. Their `clebsch_gordan` (`kind` `"table"`) has the layout of section 10.6, with
+`corepresentations` in the place of `irreps`. Each coupling is a pointer to the block of section 10.6 in the record
+`SO3`, or `O3` in $`\mathsf{O(3)1'}`$, with its phase. The second equation of section 38, with the matrix $`N`$ of
+section 37.2, makes that phase $`\mathrm{i}`$ for the couplings of odd $`J_1 + J_2 - J`$ in $`\mathsf{SO(3)1'}`$
+and $`\mathsf{O(3)1'}`$, and 1 for every other coupling.
+
+A document of an axial group sets the rules of `fusion` and the blocks of `clebsch_gordan`. A document of
+$`\mathsf{SO(3)1'}`$, $`\mathsf{O(3)1'}`$ or $`\mathsf{O(3)}(\mathsf{SO(3)})`$ sets the rules of `fusion`, names
+the tables of section 10.6 that hold its blocks and states the rule of their phases.
+
+## 38. Products and Clebsch–Gordan coefficients
+
+The product $`\mathcal{D}_{1} \otimes \mathcal{D}_{2}`$ of two corepresentations of $`\mathsf{M}`$ is a
+representation of $`\mathsf{M}`$. A unitary element acts on it by the Kronecker product of the matrices of
+section 32.2, and the representative $`\mathsfit{a}`$ by $`U_{1} \otimes U_{2}`$ times $`K`$, where
+$`\mathcal{D}_{1}(\mathsfit{a}) = U_{1} K`$ and $`\mathcal{D}_{2}(\mathsfit{a}) = U_{2} K`$. Its decomposition
+into corepresentations follows from the characters on $`\mathsf{H}`$ by the formula of section 34. The field
+`fusion` of a finite group has these fields:
+
+- `corepresentations`: the ids of the corepresentations, those of their first irreps, in the order of
+  `corepresentations` (section 32.1).
+- `products`: one for each pair $`\mathcal{D}_{1} \le \mathcal{D}_{2}`$ in that order, with `a` and `b`, the ids
+  of $`\mathcal{D}_{1}`$ and $`\mathcal{D}_{2}`$, and `terms`. A term is a `corepresentation` and its
+  `multiplicity`, which is never 0, and the terms follow the same order.
+
+A copy of a corepresentation $`\mathcal{D}`$ in $`\mathcal{D}_{1} \otimes \mathcal{D}_{2}`$ is a block $`C`$ of
+$`d_{1} d_{2}`$ rows and $`d`$ columns, where $`d_{1}`$, $`d_{2}`$ and $`d`$ are the dimensions of
+$`\mathcal{D}_{1}`$, $`\mathcal{D}_{2}`$ and $`\mathcal{D}`$. Its rows $`(\mu_1, \mu_2)`$ are in the Kronecker
+order of section 10.3, and the block satisfies
+
+```math
+(\mathcal{D}_{1}(\mathsfit{h})^{\top} \otimes \mathcal{D}_{2}(\mathsfit{h})^{\top})\, C = C\, \mathcal{D}(\mathsfit{h})^{\top} \quad \text{for every } \mathsfit{h} \in \mathsf{H}, \qquad (U_{1} \otimes U_{2})\, C = C^{*} U,
+```
+
+where $`\mathcal{D}(\mathsfit{a}) = U K`$. The first equation is that of section 10.3, with the transposes of the
+matrices of section 32.2 in the place of those of section 9. The blocks of one product form a unitary matrix.
+
+The first $`d_{\Lambda}`$ columns $`C_{\Lambda}`$ of a copy are those of the first irrep $`\Lambda`$ of
+$`\mathcal{D}`$, and they form a copy of $`\Lambda`$ in the restriction of the product to $`\mathsf{H}`$. The second
+equation gives the other columns from them. In case (b) the columns of the second $`\Lambda`$ are
+$`-((U_{1} \otimes U_{2})\, C_{\Lambda} N^{-1})^{*}`$, and in case (c) those of $`\Lambda^{\mathsfit{a}}`$ are
+$`((U_{1} \otimes U_{2})\, C_{\Lambda})^{*}`$.
+
+### 38.1 The copies
+
+The copies of $`\mathcal{D}`$ in a product form one part, or two when $`\mathcal{D}_{1} = \mathcal{D}_{2}`$: the
+copies symmetric under the exchange of the two factors, $`C[(\mu_1, \mu_2), \mu] = C[(\mu_2, \mu_1), \mu]`$, then
+the antisymmetric ones. The first of these rules that applies selects the copies of a part:
+
+1. Inheritance. A part of two copies is inherited when every copy of $`\Lambda`$ in the restriction to
+   $`\mathsf{H}`$ lies on the rows of one pair of irreps of $`\mathcal{D}_{1}`$ and $`\mathcal{D}_{2}`$. The
+   product of that pair must hold $`\Lambda`$ twice in the table of $`\mathsf{H}`$ (section 10.3). The copies are
+   then the two blocks of that table, in its order and with the separations of section 10.4, each times its phase.
+2. Row order. Otherwise the projection rule selects the copies one by one.
+
+The phase of a block of the table of $`\mathsf{H}`$ is 1 in case (c). In case (a) it is the phase of positive real
+part, or $`\mathrm{i}`$, with which the block satisfies the second equation.
+
+The projection rule takes the unit columns in row order. Column 1 of the next copy is the normalized projection of
+the first unit column with a nonzero projection on the allowed columns. These are the columns 1 of the blocks of the
+part that satisfy both equations and are orthogonal to the copies already selected. Orthogonal means over
+$`\mathbb{C}`$ in case (c). In case (b) it means over $`\mathbb{H}`$: the allowed columns are also orthogonal to
+the column $`d_{\Lambda} + 1`$ of each earlier copy. In case (a) it means over $`\mathbb{R}`$, and $`\mathrm{i}`$ times each unit column
+follows it. The two equations give the other columns of the copy.
+
+At multiplicity one a copy is unique up to a sign in case (a), a unit quaternion in case (b) and a phase in case
+(c). The projection rule fixes it by these forms:
+
+- Case (a): the first nonzero entry of column 1 has a positive real part, or is $`\mathrm{i}`$ times a positive
+  number.
+- Case (b): column 1 is real and positive in its first nonzero row, and column $`d_{\Lambda} + 1`$ is 0 in that
+  row.
+- Case (c): the first nonzero entry of column 1 is real and positive, as in section 10.3.
+
+A block is stored as $`\mathcal{E}/\sqrt{\mathcal{N}}`$ with the scale of section 10.3, $`\mathcal{E}`$ a positive
+rational multiple of the block, so its phase is that of the copy. Every copy of case (a) has the form of its case at
+multiplicity one, and the phase of section 10.3 holds in the cases (b) and (c). The field `separation` of a copy takes these values:
+
+- `"unique"`: $`\mathcal{D}`$ occurs once in the product.
+- `"exchange-symmetric"` and `"exchange-antisymmetric"`: the one copy of its part, or an inherited copy as in
+  section 10.4.
+- `"crossing-symmetric"`, `"crossing-antisymmetric"`, `"so3-parent-lowest"` and `"so3-parent-complement"`: an
+  inherited copy, as in section 10.4.
+- `"row order"`: a copy of the projection rule in the one part of the product.
+- `"exchange-symmetric, row order"`: a copy of the projection rule in the symmetric part.
+
+### 38.2 The field `clebsch_gordan`
+
+The field `clebsch_gordan` of a finite group (`kind` `"table"`) has `corepresentations`, as in `fusion`, and
+`products` in the order of `fusion.products`. A product has `a`, `b` and `couplings`, one for each copy, by
+$`\mathcal{D}`$ in the order of the corepresentations and then by $`\kappa`$. A coupling has `c`, the id of
+$`\mathcal{D}`$, `kappa` ($`\kappa = 1, 2, \dots`$) and `separation`, and then one of these pairs of fields:
+
+- `pointer` and `phase`: a copy whose columns $`C_{\Lambda}`$ are a block of the table of $`\mathsf{H}`$ times 1
+  or $`\mathrm{i}`$, on the rows of the first irreps of $`\mathcal{D}_{1}`$ and $`\mathcal{D}_{2}`$. These
+  columns are 0 on the other rows. The pointer names the coupling of that block in the record of $`\mathsf{H}`$ (section 30.3),
+  and the phase is `"1"` or `"i"`.
+- `N` and `partners`: every other copy, stored as in section 10.3 with all its columns.
+
+The second equation gives the other columns of a copy that a pointer names, as in section 38. A document sets the
+products in a table, each square with its antisymmetrized square in braces (section 34). It sets every block that its
+record stores, with $`\kappa`$ and the separation where $`\mathcal{D}`$ occurs more than once. A copy that a pointer
+names is not set: the document names the section of the document of $`\mathsf{H}`$ that sets its block, and it lists
+the couplings of phase $`\mathrm{i}`$.
+
 ## Index of notation
 
 This index lists the common notation of the documents and selected symbols of their sections, each with its meaning and the section of the conventions that defines it (0.1 for the common notation). The symbols that are not letters come first, then the others by letter, a Greek letter under its Latin name.
@@ -582,6 +706,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\in`$ | an element of | 0.1 |
 | $`\le`$ | less than or equal to, also of irreps in their order and of classes of subgroups by inclusion | 0.1 |
 | $`\mapsto`$ | maps to | 0.1 |
+| $`\to`$ | a product coupled to an irrep (as in $`\Gamma_1 \otimes \Gamma_2 \to \Gamma`$), a limit, a map or a rename | 0.1 |
 | $`\ast`$ | a mirror in an `orbifold` symbol, as in $`2{\ast}`$ (with $`\mathsf{C_{2h}}`$) | 2 |
 | $`\bar{n}`$ | the rotoinversion bar over an axis order in a `hermann_mauguin` symbol, as in $`\bar{4}`$ (with $`\mathsf{S_{4}}`$) | 2 |
 | $`{}^{1}\mathrm{\scriptsize E}`$ | the member 1 or 2 of a complex-conjugate pair of irreps, as a left superscript | 6 |
@@ -591,6 +716,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`[\mathcal{D}^{2}]`$ | the symmetrized square of a corepresentation $`\mathcal{D}`$, with $`[\mathcal{D}^{3}]`$ its symmetrized cube | 34 |
 | $`\{ \}`$ | braces: a set, or the antisymmetric part of a square $`\Gamma \otimes \Gamma`$ | 0.1 |
 | $`\{\mathcal{D}^{2}\}`$ | the antisymmetrized square of a corepresentation $`\mathcal{D}`$ | 34 |
+| $`\lvert {\mu_1}\,{\mu_2}\rangle`$ | the product $`\bigl\lvert{}^{\Gamma_1}_{\,\mu_1}\bigr\rangle\bigl\lvert{}^{\Gamma_2}_{\,\mu_2}\bigr\rangle`$ of two partners, or $`\bigl\lvert{}^{J_1}_{\,m_1}\bigr\rangle\bigl\lvert{}^{J_2}_{\,m_2}\bigr\rangle`$ of two kets | 0.1 |
 | $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ | the ket of angular momentum $`J`$ and $`z`$ component $`m`$, a spherical harmonic | 0.1 |
 | $`\mathrm{\scriptsize A}`$ | a one-dimensional irrep, with $`\chi(\mathsfit{g}_p) = +1`$ in an axial group | 6 |
 | $`\mathsfit{a}`$ | the antiunitary representative of the record: $`\varTheta`$ in magnetic type II, and in magnetic type III the antiunitary element over the element of least index of $`\mathsf{G} \setminus \mathsf{H}`$ | 32.1 |
@@ -598,6 +724,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathrm{\scriptsize B}`$ | a one-dimensional irrep of an axial group with $`\chi(\mathsfit{g}_p) = -1`$, except for the small-$`N`$ renames | 6 |
 | $`b_{\mathcal{D}}`$ | the multiplicity of the corepresentation $`\mathcal{D}`$ in a representation of $`\mathsf{M}`$ | 34 |
 | Bilbao | the symbol of an irrep in the double point group tables of [EBW+17] (`bilbao`) | 0.1 |
+| $`C`$ | the block of Clebsch–Gordan coefficients of a coupling, $`C = \mathcal{E}/\sqrt{\mathcal{N}}`$ | 10 |
 | $`\mathbb{C}`$ | the complex numbers | 0.1 |
 | $`\mathsfit{C_2'}`$ | a binary rotation about a horizontal axis: $`\mathsfit{C_2'}`$ in the class of $`\mathsfit{C_{2x}}`$, $`\mathsfit{C_2''}`$ in the other | 5 |
 | $`\mathsfit{C_2'}(\psi)`$ | the binary rotation about the horizontal axis at the azimuth $`\psi`$ (the $`x`$ axis for $`\psi = 0`$) | 16 |
@@ -610,6 +737,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathsf{C_{\infty h}}`$ | $`\mathsf{C_{\infty}}`$ with the horizontal mirror | 3 |
 | $`\mathsfit{C_{\infty}}(\phi)`$ | the rotation $`\mathsfit{R_z}(\phi)`$ as a point of the class space, on the arc of the rotations about $`z`$ | 16 |
 | $`\mathsf{C_{\infty v}}`$ | $`\mathsf{C_{\infty}}`$ with the vertical mirrors | 3 |
+| $`C_{\Lambda}`$ | the first $`d_{\Lambda}`$ columns of a Clebsch–Gordan block $`C`$ of a corepresentation, those of its first irrep $`\Lambda`$ | 38 |
 | class | the class of an element, or a class | 0.1 |
 | $`\mathsf{C_{\mathnormal{N}}}`$ | the cyclic group of the $`N`$ rotations about $`z`$ | 3 |
 | $`\mathsf{C_{\mathnormal{N}h}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with the horizontal mirror | 3 |
@@ -620,12 +748,14 @@ This index lists the common notation of the documents and selected symbols of th
 | conjugates | the number of subgroups conjugate to a subgroup $`\mathsf{H}`$ in $`\mathsf{G}`$ | 0.1 |
 | corep | a corepresentation, named by its irreps, or the one that contains an irrep | 32.3 |
 | $`\mathsfit{C}(\phi)`$ | the rotation by $`\phi`$ about $`z`$, or its class in $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$, the rotations by $`\phi`$ about any axis | 16 |
+| cross. sym., cross. anti. | symmetric and antisymmetric under the crossing: the rule that distinguishes two copies of an irrep or of a corepresentation in a product | 0.1 |
 | $`\mathsf{C_{s}}`$ | the group of one mirror | 2 |
 | $`\mathcal{D}`$ | the cell: the part of the fundamental domain $`\mathcal{F}`$ in $`\mathsf{SO(3)}`$, one element of every coset of $`\mathsf{G} \cap \mathsf{SO(3)}`$ | 17 |
 | $`D^{(J)}`$ | the irrep of $`\mathsf{SO(3)}`$ of angular momentum $`J`$ | 11 |
 | $`D^{\Gamma}(\mathsfit{g})`$ | the matrix of the irrep $`\Gamma`$ at the element $`\mathsfit{g}`$ | 9 |
 | $`D^{(J,p)}`$ | the irrep of $`\mathsf{O(3)}`$ of angular momentum $`J`$ and parity $`p`$, such as $`D^{(J,+)}`$ or $`D^{(J,-)}`$ | 11 |
 | $`d`$ | the dimension of an irrep | 9 |
+| $`\mathcal{D}_1, \mathcal{D}_2`$ | the two factors of a product of corepresentations | 38 |
 | $`\delta_{j,k}`$ | the Kronecker delta | 0.1 |
 | $`\det`$ | the determinant, of a matrix or of an element: $`\det \mathsfit{g} = \det P(\mathsfit{g})`$ | 0.1 |
 | $`\mathsf{Dih_{\mathnormal{n}}}`$ | the dihedral group of order $`n`$ | 2 |
@@ -642,6 +772,7 @@ This index lists the common notation of the documents and selected symbols of th
 | electric toroidal | the electric toroidal multipoles of a rank, by their number | 35.1 |
 | element | the element of a component at its angle | 0.1 |
 | $`\mathrm{e[V^{2}]}`$ | the Jahn symbol of a space of Cartesian tensors: V a polar vector, e an axial factor, a power the number of factors, brackets their symmetrized product, braces their antisymmetrized one | 13 |
+| exch. sym., exch. anti. | symmetric and antisymmetric under the exchange of the two factors: the rule that distinguishes two copies of an irrep or of a corepresentation in a square | 0.1 |
 | $`F`$ | the exact rotation of the field `frame`, which carries the elements of the record of $`\mathsf{H}`$ to their images in $`\mathsf{G}`$ | 30.3 |
 | family | a family of irreps | 0.1 |
 | $`\mathsf{G}`$ | a group of this catalogue (a document names its own group) | 0.1 |
@@ -668,7 +799,9 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\iota`$ | the indicator of an irrep of $`\mathsf{H}`$: $`+1`$, $`-1`$ or $`0`$ in the cases (a), (b) and (c) | 32.1 |
 | irrep | an irrep | 0.1 |
 | $`J`$ | the angular momentum, the degree of the spherical harmonics $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ | 0.1 |
+| $`J_1, J_2`$ | the angular momenta of the two factors of a product, or the indices of their families | 10 |
 | $`k`$ | the index of an element (from 0) | 9 |
+| $`\kappa`$ | the copy index of an irrep or of a corepresentation | 0.1 |
 | $`\Lambda`$ | an irrep of a subgroup | 12 |
 | $`\Lambda^{\mathsfit{a}}`$ | the conjugate irrep of $`\Lambda`$, of matrices $`D^{\Lambda}(\mathsfit{a}\mathsfit{h}\mathsfit{a}^{-1})^{*}`$ | 32.1 |
 | $`\mathsf{M}`$ | a magnetic point group, a closed subgroup of the parent $`\mathsf{O(3)1'}`$ | 30.1 |
@@ -721,6 +854,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathsf{T_{h}}`$ | $`\mathsf{T}`$ with the inversion | 3 |
 | $`\varTheta`$ | time reversal | 30.1 |
 | type | the magnetic type of a subgroup, I, II or III | 36 |
+| $`U`$ | the unitary part of the matrix of the representative in a corepresentation, $`\mathcal{D}(\mathsfit{a}) = UK`$, with $`U_1`$ and $`U_2`$ those of two factors | 38 |
 | $`\mathbf{v}`$ | the axis of an element, or the normal of its mirror | 4 |
 | $`x, y, z`$ | the coordinates of a point and the coordinate axes, or the variables of the polynomials | 4 |
 | $`\mathsf{Z_{\mathnormal{n}}}`$ | the cyclic group of order $`n`$ | 2 |

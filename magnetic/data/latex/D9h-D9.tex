@@ -162,9 +162,11 @@
 \newcommand{\irchar}[1]{\chi_{#1}}
 \newcommand{\fsind}{\nu_{\mathrm{FS}}}
 \newcommand{\irrprod}{\otimes}
+\newcommand{\mult}{\kappa}
 \newcommand{\intx}{\mu}
 \newcommand{\cgnorm}{\mathcal{N}}
 \newcommand{\jm}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
+\newcommand{\prodket}[2]{\lvert {#1}\,{#2}\rangle}
 \newcommand{\jahn}[1]{\mathrm{#1}}
 \newcommand{\fcell}{\mathcal{D}}
 \newcommand{\sympow}[2]{[#1^{#2}]}
@@ -290,6 +292,26 @@ $\irr{e}_{2}$ & $\irr{a}_{1} \oplus \irr{e}_{4}$ & $\irr{a}_{2}$ & $\irr{e}_{2} 
 $\irr{e}_{3}$ & $\irr{a}_{1} \oplus \irr{e}_{3}$ & $\irr{a}_{2}$ & $\irr{a}_{1} \oplus \irr{a}_{2} \oplus \irr{e}_{3}$\\*
 $\irr{e}_{4}$ & $\irr{a}_{1} \oplus \irr{e}_{1}$ & $\irr{a}_{2}$ & $\irr{e}_{3} \oplus \irr{e}_{4}$\\
 \bottomrule\end{longtable}}
+\needspace{207pt}
+\section{Products of corepresentations}\label{s:fusion}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.1}{10.1}, \href{../../CONVENTIONS.pdf\#conv.34}{34} and \href{../../CONVENTIONS.pdf\#conv.38}{38}.
+A row is a product of two corepresentations of $\grp{D_{9h}}(\grp{D_{9}})$. \label{n:matrix.corep.factors}A row gives its factors $\mathcal{D}_1 \le \mathcal{D}_2$, in the order of the corepresentation table (section~\ref{s:character_table}), and their product $\mathcal{D}_1\irrprod\mathcal{D}_2$, a square with its antisymmetric part in braces.
+{\small\begin{longtable}{@{}lll@{\hspace{18pt}}lll@{\hspace{18pt}}lll@{}}\toprule
+$\mathcal{D}_1$ & $\mathcal{D}_2$ & $\mathcal{D}_1 \irrprod \mathcal{D}_2$ & $\mathcal{D}_1$ & $\mathcal{D}_2$ & $\mathcal{D}_1 \irrprod \mathcal{D}_2$ & $\mathcal{D}_1$ & $\mathcal{D}_2$ & $\mathcal{D}_1 \irrprod \mathcal{D}_2$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{2}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{4}$ & $\irr{e}_{3} \oplus \irr{e}_{4}$\\*
+$\irr{a}_{1}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{a}_{1} \oplus \{\irr{a}_{2}\} \oplus \irr{e}_{4}$\\*
+$\irr{a}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{a}_{2}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{2}$ & $\irr{e}_{3}$ & $\irr{e}_{1} \oplus \irr{e}_{4}$\\*
+$\irr{a}_{1}$ & $\irr{e}_{2}$ & $\irr{e}_{2}$ & $\irr{a}_{2}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$ & $\irr{e}_{2}$ & $\irr{e}_{4}$ & $\irr{e}_{2} \oplus \irr{e}_{3}$\\*
+$\irr{a}_{1}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{1}$ & $\irr{e}_{1}$ & $\irr{a}_{1} \oplus \{\irr{a}_{2}\} \oplus \irr{e}_{2}$ & $\irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{a}_{1} \oplus \{\irr{a}_{2}\} \oplus \irr{e}_{3}$\\*
+$\irr{a}_{1}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$ & $\irr{e}_{1}$ & $\irr{e}_{2}$ & $\irr{e}_{1} \oplus \irr{e}_{3}$ & $\irr{e}_{3}$ & $\irr{e}_{4}$ & $\irr{e}_{1} \oplus \irr{e}_{2}$\\*
+$\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{1}$ & $\irr{e}_{1}$ & $\irr{e}_{3}$ & $\irr{e}_{2} \oplus \irr{e}_{4}$ & $\irr{e}_{4}$ & $\irr{e}_{4}$ & $\irr{a}_{1} \oplus \{\irr{a}_{2}\} \oplus \irr{e}_{1}$\\
+\bottomrule\end{longtable}}
+\needspace{103pt}
+\section{Clebsch--Gordan coefficients}\label{s:clebsch_gordan}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.3}{10.3}, \href{../../../rotation/CONVENTIONS.pdf\#conv.10.4}{10.4} and \href{../../CONVENTIONS.pdf\#conv.38}{38}.
+The constant $\iunit$ is the imaginary unit.
+\leavevmode\label{n:index.copy}The record names each copy $\mult$ of a corepresentation $\mathcal{D}$ in $\mathcal{D}_1\irrprod\mathcal{D}_2$ by a pointer to a block of the table of $\grp{D_{9}}$ and a phase (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.38.2}{38.2}). That block is the copy $\mult$ of the first irrep of $\mathcal{D}$ in the product of the first irreps of $\mathcal{D}_1$ and $\mathcal{D}_2$, in the section Clebsch--Gordan coefficients of the document of \href{../../../rotation/data/pdf/D9.pdf}{$\grp{D_{9}}$}. The phase is $\iunit$ for $\irr{a}_{2}\irrprod \irr{e}_{1}\to \irr{e}_{1}$, $\irr{a}_{2}\irrprod \irr{e}_{2}\to \irr{e}_{2}$, $\irr{a}_{2}\irrprod \irr{e}_{3}\to \irr{e}_{3}$, $\irr{a}_{2}\irrprod \irr{e}_{4}\to \irr{e}_{4}$, $\irr{e}_{1}\irrprod \irr{e}_{1}\to \irr{a}_{2}$, $\irr{e}_{2}\irrprod \irr{e}_{2}\to \irr{a}_{2}$, $\irr{e}_{3}\irrprod \irr{e}_{3}\to \irr{a}_{2}$ and $\irr{e}_{4}\irrprod \irr{e}_{4}\to \irr{a}_{2}$, and 1 for the other copies.
 \needspace{171pt}
 \partbox{Subgroups}
 \section{Subgroup lattice}\label{s:subgroups}

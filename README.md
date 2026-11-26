@@ -172,7 +172,8 @@ The record of each finite group and the files that it names hold these contents,
   GAP identifier, the groups by which the elements move a polar or an axial vector even or odd under time reversal,
   and the normalizer and the centralizer in O(3)1′.
 - Representations: the corepresentations, each with its case (a), (b) or (c) and its matrix N, the
-  corepresentation table and the symmetrized powers.
+  corepresentation table, the symmetrized powers, and the products with their Clebsch–Gordan coefficients. A copy
+  whose first columns are a block of the table of H times 1 or i is a pointer to that block with its phase.
 - Subgroups: the subgroup lattice with the magnetic type of each class of subgroups, and in magnetic type III the
   restriction of each irrep of G over ℝ to the group.
 - Angular momentum: the restriction of each irrep of O(3)1′ to the group, for J ≤ 6.
@@ -318,7 +319,7 @@ the preimages family by family, then the sections, the exceptional preimages and
 
 With `--catalogue magnetic` the stages write in `magnetic/`, from the records of the point groups:
 
-- `records`: all 270 records and `magnetic/data/magnetic_groups.json` (about 2 min).
+- `records`: all 270 records and `magnetic/data/magnetic_groups.json` (about 5 min).
 - `formats`, `pdf` and `schema`: as above.
 
 The stage `volume --catalogue magnetic` writes `point-group-atlas-magnetic.pdf`, with the conventions of the point

@@ -2,6 +2,1357 @@
 from sympy import I, Rational, S, exp, pi
 
 o3m = {
+    'clebsch_gordan': {
+        'corepresentations': ['Ag', '1E1g', '1E2g', '1E3g', '1E4g', 'Au', '1E1u', '1E2u', '1E3u', '1E4u'],
+        'kind': 'table',
+        'products': [
+            {
+                'a': 'Ag',
+                'b': 'Ag',
+                'couplings': [
+                    {
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/0/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E1g',
+                'couplings': [
+                    {
+                        'c': '1E1g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/1/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E2g',
+                'couplings': [
+                    {
+                        'c': '1E2g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/3/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E3g',
+                'couplings': [
+                    {
+                        'c': '1E3g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/5/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E4g',
+                'couplings': [
+                    {
+                        'c': '1E4g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/7/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': 'Au',
+                'couplings': [
+                    {
+                        'c': 'Au',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/9/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E1u',
+                'couplings': [
+                    {
+                        'c': '1E1u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/10/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E2u',
+                'couplings': [
+                    {
+                        'c': '1E2u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/12/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E3u',
+                'couplings': [
+                    {
+                        'c': '1E3u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/14/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E4u',
+                'couplings': [
+                    {
+                        'c': '1E4u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/16/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E1g',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'exchange-antisymmetric'
+                    },
+                    {
+                        'c': '1E2g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/18/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E2g',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': '1E3g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/20/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E3g',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E2g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': '1E4g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/22/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E4g',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E3g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E4g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': 'Au',
+                'couplings': [
+                    {
+                        'c': '1E1u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/26/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E1u',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Au',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'row order'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Au',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'row order'
+                    },
+                    {
+                        'c': '1E2u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/27/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E2u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': '1E3u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/29/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E3u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E2u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': '1E4u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/31/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E4u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E3u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E4u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': '1E2g',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'exchange-antisymmetric'
+                    },
+                    {
+                        'c': '1E4g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/51/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': '1E3g',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E4g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': '1E4g',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E2g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E3g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': 'Au',
+                'couplings': [
+                    {
+                        'c': '1E2u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/57/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': '1E1u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': '1E3u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/58/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': '1E2u',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Au',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'row order'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Au',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'row order'
+                    },
+                    {
+                        'c': '1E4u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/60/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': '1E3u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E4u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': '1E4u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E2u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E3u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E3g',
+                'b': '1E3g',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'exchange-antisymmetric'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E3g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E3g',
+                'b': '1E4g',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E2g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E3g',
+                'b': 'Au',
+                'couplings': [
+                    {
+                        'c': '1E3u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/84/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E3g',
+                'b': '1E1u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E2u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': '1E4u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/85/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E3g',
+                'b': '1E2u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E4u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E3g',
+                'b': '1E3u',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Au',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'row order'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Au',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'row order'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E3u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E3g',
+                'b': '1E4u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E2u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E4g',
+                'b': '1E4g',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'exchange-antisymmetric'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E4g',
+                'b': 'Au',
+                'couplings': [
+                    {
+                        'c': '1E4u',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/107/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E4g',
+                'b': '1E1u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E3u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E4u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E4g',
+                'b': '1E2u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E2u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E3u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E4g',
+                'b': '1E3u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E2u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E4g',
+                'b': '1E4u',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Au',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'row order'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Au',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'row order'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1u',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Au',
+                'b': 'Au',
+                'couplings': [
+                    {
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/126/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Au',
+                'b': '1E1u',
+                'couplings': [
+                    {
+                        'c': '1E1g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/127/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Au',
+                'b': '1E2u',
+                'couplings': [
+                    {
+                        'c': '1E2g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/129/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Au',
+                'b': '1E3u',
+                'couplings': [
+                    {
+                        'c': '1E3g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/131/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': 'Au',
+                'b': '1E4u',
+                'couplings': [
+                    {
+                        'c': '1E4g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/133/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1u',
+                'b': '1E1u',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'exchange-antisymmetric'
+                    },
+                    {
+                        'c': '1E2g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/135/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1u',
+                'b': '1E2u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': '1E3g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/137/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1u',
+                'b': '1E3u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E2g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'c': '1E4g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/139/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E1u',
+                'b': '1E4u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E3g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E4g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E2u',
+                'b': '1E2u',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'exchange-antisymmetric'
+                    },
+                    {
+                        'c': '1E4g',
+                        'kappa': 1,
+                        'phase': '1',
+                        'pointer': 'rotation/S18#/clebsch_gordan/products/150/couplings/0',
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E2u',
+                'b': '1E3u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E4g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E2u',
+                'b': '1E4u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E2g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E3g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E3u',
+                'b': '1E3u',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'exchange-antisymmetric'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E3g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E3u',
+                'b': '1E4u',
+                'couplings': [
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 1}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}]}
+                        ],
+                        'separation': 'unique'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E2g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            },
+            {
+                'a': '1E4u',
+                'b': '1E4u',
+                'couplings': [
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 1,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [{'e': Rational(1,1), 'i': 1, 'k': 2}, {'e': Rational(1,1), 'i': 2, 'k': 1}]
+                            }
+                        ],
+                        'separation': 'exchange-symmetric'
+                    },
+                    {
+                        'N': Rational(2,1),
+                        'c': 'Ag',
+                        'kappa': 2,
+                        'partners': [
+                            {
+                                'mu': 1,
+                                'terms': [
+                                    {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1, 'k': 2},
+                                    {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2, 'k': 1}
+                                ]
+                            }
+                        ],
+                        'separation': 'exchange-antisymmetric'
+                    },
+                    {
+                        'N': Rational(1,1),
+                        'c': '1E1g',
+                        'kappa': 1,
+                        'partners': [
+                            {'mu': 1, 'terms': [{'e': Rational(1,1), 'i': 2, 'k': 2}]},
+                            {'mu': 2, 'terms': [{'e': Rational(1,1), 'i': 1, 'k': 1}]}
+                        ],
+                        'separation': 'unique'
+                    }
+                ]
+            }
+        ]
+    },
     'corepresentation_table': {
         'characters': [
             [
@@ -170,6 +1521,382 @@ o3m = {
         {'case': 'c', 'irrep': '1E3u', 'partner': '2E3u'},
         {'case': 'c', 'irrep': '1E4u', 'partner': '2E4u'}
     ],
+    'fusion': {
+        'corepresentations': ['Ag', '1E1g', '1E2g', '1E3g', '1E4g', 'Au', '1E1u', '1E2u', '1E3u', '1E4u'],
+        'products': [
+            {'a': 'Ag', 'b': 'Ag', 'terms': [{'corepresentation': 'Ag', 'multiplicity': 1}]},
+            {
+                'a': 'Ag',
+                'b': '1E1g',
+                'terms': [{'corepresentation': '1E1g', 'multiplicity': 1}]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E2g',
+                'terms': [{'corepresentation': '1E2g', 'multiplicity': 1}]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E3g',
+                'terms': [{'corepresentation': '1E3g', 'multiplicity': 1}]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E4g',
+                'terms': [{'corepresentation': '1E4g', 'multiplicity': 1}]
+            },
+            {'a': 'Ag', 'b': 'Au', 'terms': [{'corepresentation': 'Au', 'multiplicity': 1}]},
+            {
+                'a': 'Ag',
+                'b': '1E1u',
+                'terms': [{'corepresentation': '1E1u', 'multiplicity': 1}]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E2u',
+                'terms': [{'corepresentation': '1E2u', 'multiplicity': 1}]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E3u',
+                'terms': [{'corepresentation': '1E3u', 'multiplicity': 1}]
+            },
+            {
+                'a': 'Ag',
+                'b': '1E4u',
+                'terms': [{'corepresentation': '1E4u', 'multiplicity': 1}]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E1g',
+                'terms': [
+                    {'corepresentation': 'Ag', 'multiplicity': 2},
+                    {'corepresentation': '1E2g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E2g',
+                'terms': [
+                    {'corepresentation': '1E1g', 'multiplicity': 1},
+                    {'corepresentation': '1E3g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E3g',
+                'terms': [
+                    {'corepresentation': '1E2g', 'multiplicity': 1},
+                    {'corepresentation': '1E4g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E4g',
+                'terms': [
+                    {'corepresentation': '1E3g', 'multiplicity': 1},
+                    {'corepresentation': '1E4g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': 'Au',
+                'terms': [{'corepresentation': '1E1u', 'multiplicity': 1}]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E1u',
+                'terms': [
+                    {'corepresentation': 'Au', 'multiplicity': 2},
+                    {'corepresentation': '1E2u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E2u',
+                'terms': [
+                    {'corepresentation': '1E1u', 'multiplicity': 1},
+                    {'corepresentation': '1E3u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E3u',
+                'terms': [
+                    {'corepresentation': '1E2u', 'multiplicity': 1},
+                    {'corepresentation': '1E4u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E1g',
+                'b': '1E4u',
+                'terms': [
+                    {'corepresentation': '1E3u', 'multiplicity': 1},
+                    {'corepresentation': '1E4u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': '1E2g',
+                'terms': [
+                    {'corepresentation': 'Ag', 'multiplicity': 2},
+                    {'corepresentation': '1E4g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': '1E3g',
+                'terms': [
+                    {'corepresentation': '1E1g', 'multiplicity': 1},
+                    {'corepresentation': '1E4g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': '1E4g',
+                'terms': [
+                    {'corepresentation': '1E2g', 'multiplicity': 1},
+                    {'corepresentation': '1E3g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': 'Au',
+                'terms': [{'corepresentation': '1E2u', 'multiplicity': 1}]
+            },
+            {
+                'a': '1E2g',
+                'b': '1E1u',
+                'terms': [
+                    {'corepresentation': '1E1u', 'multiplicity': 1},
+                    {'corepresentation': '1E3u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': '1E2u',
+                'terms': [
+                    {'corepresentation': 'Au', 'multiplicity': 2},
+                    {'corepresentation': '1E4u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': '1E3u',
+                'terms': [
+                    {'corepresentation': '1E1u', 'multiplicity': 1},
+                    {'corepresentation': '1E4u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E2g',
+                'b': '1E4u',
+                'terms': [
+                    {'corepresentation': '1E2u', 'multiplicity': 1},
+                    {'corepresentation': '1E3u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E3g',
+                'b': '1E3g',
+                'terms': [
+                    {'corepresentation': 'Ag', 'multiplicity': 2},
+                    {'corepresentation': '1E3g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E3g',
+                'b': '1E4g',
+                'terms': [
+                    {'corepresentation': '1E1g', 'multiplicity': 1},
+                    {'corepresentation': '1E2g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E3g',
+                'b': 'Au',
+                'terms': [{'corepresentation': '1E3u', 'multiplicity': 1}]
+            },
+            {
+                'a': '1E3g',
+                'b': '1E1u',
+                'terms': [
+                    {'corepresentation': '1E2u', 'multiplicity': 1},
+                    {'corepresentation': '1E4u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E3g',
+                'b': '1E2u',
+                'terms': [
+                    {'corepresentation': '1E1u', 'multiplicity': 1},
+                    {'corepresentation': '1E4u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E3g',
+                'b': '1E3u',
+                'terms': [
+                    {'corepresentation': 'Au', 'multiplicity': 2},
+                    {'corepresentation': '1E3u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E3g',
+                'b': '1E4u',
+                'terms': [
+                    {'corepresentation': '1E1u', 'multiplicity': 1},
+                    {'corepresentation': '1E2u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E4g',
+                'b': '1E4g',
+                'terms': [
+                    {'corepresentation': 'Ag', 'multiplicity': 2},
+                    {'corepresentation': '1E1g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E4g',
+                'b': 'Au',
+                'terms': [{'corepresentation': '1E4u', 'multiplicity': 1}]
+            },
+            {
+                'a': '1E4g',
+                'b': '1E1u',
+                'terms': [
+                    {'corepresentation': '1E3u', 'multiplicity': 1},
+                    {'corepresentation': '1E4u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E4g',
+                'b': '1E2u',
+                'terms': [
+                    {'corepresentation': '1E2u', 'multiplicity': 1},
+                    {'corepresentation': '1E3u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E4g',
+                'b': '1E3u',
+                'terms': [
+                    {'corepresentation': '1E1u', 'multiplicity': 1},
+                    {'corepresentation': '1E2u', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E4g',
+                'b': '1E4u',
+                'terms': [
+                    {'corepresentation': 'Au', 'multiplicity': 2},
+                    {'corepresentation': '1E1u', 'multiplicity': 1}
+                ]
+            },
+            {'a': 'Au', 'b': 'Au', 'terms': [{'corepresentation': 'Ag', 'multiplicity': 1}]},
+            {
+                'a': 'Au',
+                'b': '1E1u',
+                'terms': [{'corepresentation': '1E1g', 'multiplicity': 1}]
+            },
+            {
+                'a': 'Au',
+                'b': '1E2u',
+                'terms': [{'corepresentation': '1E2g', 'multiplicity': 1}]
+            },
+            {
+                'a': 'Au',
+                'b': '1E3u',
+                'terms': [{'corepresentation': '1E3g', 'multiplicity': 1}]
+            },
+            {
+                'a': 'Au',
+                'b': '1E4u',
+                'terms': [{'corepresentation': '1E4g', 'multiplicity': 1}]
+            },
+            {
+                'a': '1E1u',
+                'b': '1E1u',
+                'terms': [
+                    {'corepresentation': 'Ag', 'multiplicity': 2},
+                    {'corepresentation': '1E2g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E1u',
+                'b': '1E2u',
+                'terms': [
+                    {'corepresentation': '1E1g', 'multiplicity': 1},
+                    {'corepresentation': '1E3g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E1u',
+                'b': '1E3u',
+                'terms': [
+                    {'corepresentation': '1E2g', 'multiplicity': 1},
+                    {'corepresentation': '1E4g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E1u',
+                'b': '1E4u',
+                'terms': [
+                    {'corepresentation': '1E3g', 'multiplicity': 1},
+                    {'corepresentation': '1E4g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E2u',
+                'b': '1E2u',
+                'terms': [
+                    {'corepresentation': 'Ag', 'multiplicity': 2},
+                    {'corepresentation': '1E4g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E2u',
+                'b': '1E3u',
+                'terms': [
+                    {'corepresentation': '1E1g', 'multiplicity': 1},
+                    {'corepresentation': '1E4g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E2u',
+                'b': '1E4u',
+                'terms': [
+                    {'corepresentation': '1E2g', 'multiplicity': 1},
+                    {'corepresentation': '1E3g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E3u',
+                'b': '1E3u',
+                'terms': [
+                    {'corepresentation': 'Ag', 'multiplicity': 2},
+                    {'corepresentation': '1E3g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E3u',
+                'b': '1E4u',
+                'terms': [
+                    {'corepresentation': '1E1g', 'multiplicity': 1},
+                    {'corepresentation': '1E2g', 'multiplicity': 1}
+                ]
+            },
+            {
+                'a': '1E4u',
+                'b': '1E4u',
+                'terms': [
+                    {'corepresentation': 'Ag', 'multiplicity': 2},
+                    {'corepresentation': '1E1g', 'multiplicity': 1}
+                ]
+            }
+        ]
+    },
     'group': {
         'G': 'rotation/S18#',
         'abstract_type': 'Z_18 x Z_2',

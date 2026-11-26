@@ -162,9 +162,11 @@
 \newcommand{\irchar}[1]{\chi_{#1}}
 \newcommand{\fsind}{\nu_{\mathrm{FS}}}
 \newcommand{\irrprod}{\otimes}
+\newcommand{\mult}{\kappa}
 \newcommand{\intx}{\mu}
 \newcommand{\cgnorm}{\mathcal{N}}
 \newcommand{\jm}[2]{\bigl\lvert{}^{#1}_{\,#2}\bigr\rangle}
+\newcommand{\prodket}[2]{\lvert {#1}\,{#2}\rangle}
 \newcommand{\jahn}[1]{\mathrm{#1}}
 \newcommand{\fcell}{\mathcal{D}}
 \newcommand{\sympow}[2]{[#1^{#2}]}
@@ -277,6 +279,41 @@ corep & $\sympow{\mathcal{D}}{2}$ & $\altpow{\mathcal{D}}{2}$ & $\sympow{\mathca
 $\irr{a}_{1}$ & $\irr{a}_{1}$ & $0$ & $\irr{a}_{1}$\\*
 $\irr{a}_{2}$ & $\irr{a}_{1}$ & $0$ & $\irr{a}_{2}$\\*
 $\irr{b}_{1}\,\irr{b}_{2}$ & $2\,\irr{a}_{1} \oplus \irr{a}_{2}$ & $\irr{a}_{2}$ & $2\,\irr{b}_{1}\,\irr{b}_{2}$\\
+\bottomrule\end{longtable}}
+\needspace{195pt}
+\section{Products of corepresentations}\label{s:fusion}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.1}{10.1}, \href{../../CONVENTIONS.pdf\#conv.34}{34} and \href{../../CONVENTIONS.pdf\#conv.38}{38}.
+A row is a product of two corepresentations of $\grp{C_{4v}}(\grp{C_{2v}})$. \label{n:matrix.corep.factors}A row gives its factors $\mathcal{D}_1 \le \mathcal{D}_2$, in the order of the corepresentation table (section~\ref{s:character_table}), and their product $\mathcal{D}_1\irrprod\mathcal{D}_2$, a square with its antisymmetric part in braces.
+{\small\begin{longtable}{@{}lll@{}}\toprule
+$\mathcal{D}_1$ & $\mathcal{D}_2$ & $\mathcal{D}_1 \irrprod \mathcal{D}_2$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+$\irr{a}_{1}$ & $\irr{a}_{1}$ & $\irr{a}_{1}$\\*
+$\irr{a}_{1}$ & $\irr{a}_{2}$ & $\irr{a}_{2}$\\*
+$\irr{a}_{1}$ & $\irr{b}_{1}\,\irr{b}_{2}$ & $\irr{b}_{1}\,\irr{b}_{2}$\\*
+$\irr{a}_{2}$ & $\irr{a}_{2}$ & $\irr{a}_{1}$\\*
+$\irr{a}_{2}$ & $\irr{b}_{1}\,\irr{b}_{2}$ & $\irr{b}_{1}\,\irr{b}_{2}$\\*
+$\irr{b}_{1}\,\irr{b}_{2}$ & $\irr{b}_{1}\,\irr{b}_{2}$ & $2\,\irr{a}_{1} \oplus \irr{a}_{2} \oplus \{\irr{a}_{2}\}$\\
+\bottomrule\end{longtable}}
+\needspace{103pt}
+\section{Clebsch--Gordan coefficients}\label{s:clebsch_gordan}
+Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.3}{10.3}, \href{../../../rotation/CONVENTIONS.pdf\#conv.10.4}{10.4} and \href{../../CONVENTIONS.pdf\#conv.38}{38}.
+\leavevmode\label{n:index.copy}\label{n:matrix.cg.stored}A copy $\mult$ of a corepresentation $\mathcal{D}$ in $\mathcal{D}_1\irrprod\mathcal{D}_2$ is a block $C$ of Clebsch--Gordan coefficients that satisfies two equations (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.38}{38}). \label{n:index.cg}It has a row for each pair $(\intx_1, \intx_2)$ of partners of $\mathcal{D}_1$ and $\mathcal{D}_2$, in Kronecker order, and a column for each partner $\intx$ of $\mathcal{D}$.
+The constant $\iunit$ is the imaginary unit.
+A copy whose columns of the first irrep of $\mathcal{D}$ are a block of the table of $\grp{C_{2v}}$ times 1 or $\iunit$ is named by a pointer to that block (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.38.2}{38.2}). That block is the copy $\mult$ of the first irrep of $\mathcal{D}$ in the product of the first irreps of $\mathcal{D}_1$ and $\mathcal{D}_2$, in the section Clebsch--Gordan coefficients of the document of \href{../../../rotation/data/pdf/C2v.pdf}{$\grp{C_{2v}}$}. Each such copy has the phase 1. The table below sets every other copy.
+Each block is headed $\mathcal{D}_1\irrprod\mathcal{D}_2\to\mathcal{D}$, then $\mult$ where $\mathcal{D}$ occurs more than once in $\mathcal{D}_1\irrprod\mathcal{D}_2$, and a normalization $\cgnorm$. Row $\intx$ gives the nonzero entries of column $\intx$ of $\sqrt{\cgnorm}\,C$, so that their squared moduli sum to $\cgnorm$. \label{n:vector.ket.product}Each entry is written before $\prodket{\intx_1}{\intx_2}$, the product of the partners $\intx_1$ of $\mathcal{D}_1$ and $\intx_2$ of $\mathcal{D}_2$. Only $\mathcal{D}_1 \le \mathcal{D}_2$ is listed ($\mathcal{D}_2\irrprod\mathcal{D}_1$ exchanges $\intx_1$ and $\intx_2$).
+Where $\mathcal{D}$ occurs more than once, $\mult$ is followed by the rule that separates its copies (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.10.4}{10.4} and \href{../../CONVENTIONS.pdf\#conv.38.1}{38.1}). \label{n:abbreviation.exchange}The copies labeled exch.\ sym.\ and exch.\ anti.\ are symmetric and antisymmetric under the exchange of the two factors. The copies labeled row order are selected by the projection rule, in row order.
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}r@{\hspace{8pt}}l@{\hspace{18pt}}r@{\hspace{8pt}}l@{}}\toprule
+$\intx$ & $\sqrt{\cgnorm}\,C$ & $\intx$ & $\sqrt{\cgnorm}\,C$\\\midrule\endhead
+\bottomrule\endfoot\endlastfoot
+\multicolumn{2}{@{}c@{\hspace{18pt}}}{$\irr{a}_{2}\irrprod \irr{b}_{1}\,\irr{b}_{2} \to \irr{b}_{1}\,\irr{b}_{2}$, \quad $\cgnorm = 1$} & \multicolumn{2}{@{}c@{}}{$\irr{b}_{1}\,\irr{b}_{2}\irrprod \irr{b}_{1}\,\irr{b}_{2} \to \irr{a}_{2}$}\\*
+1 & $1\,\prodket{1}{2}$ & \multicolumn{2}{@{}c@{}}{$\mult = 1$ (exch.\ sym.), \quad $\cgnorm = 2$}\\*
+2 & $-1\,\prodket{1}{1}$ & 1 & $\iunit{}\,\prodket{1}{2}$ $+$ $\iunit{}\,\prodket{2}{1}$\\*\addlinespace[2pt]\noalign{\vskip 1.5pt}\multispan{2}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{2}\\*\noalign{\vskip 1.5pt}
+\multicolumn{2}{@{}c@{\hspace{18pt}}}{$\irr{b}_{1}\,\irr{b}_{2}\irrprod \irr{b}_{1}\,\irr{b}_{2} \to \irr{a}_{1}$} & \multicolumn{2}{@{}c@{}}{$\irr{b}_{1}\,\irr{b}_{2}\irrprod \irr{b}_{1}\,\irr{b}_{2} \to \irr{a}_{2}$}\\*
+\multicolumn{2}{@{}c@{\hspace{18pt}}}{$\mult = 1$ (exch.\ sym., row order), \quad $\cgnorm = 2$} & \multicolumn{2}{@{}c@{}}{$\mult = 2$ (exch.\ anti.), \quad $\cgnorm = 2$}\\*
+1 & $1\,\prodket{1}{1}$ $+$ $1\,\prodket{2}{2}$ & 1 & $1\,\prodket{1}{2}$ $-1\,\prodket{2}{1}$\\*\addlinespace[2pt]
+\multicolumn{2}{@{}c@{\hspace{18pt}}}{$\irr{b}_{1}\,\irr{b}_{2}\irrprod \irr{b}_{1}\,\irr{b}_{2} \to \irr{a}_{1}$} &  & \\*
+\multicolumn{2}{@{}c@{\hspace{18pt}}}{$\mult = 2$ (exch.\ sym., row order), \quad $\cgnorm = 2$} &  & \\*
+1 & $\iunit{}\,\prodket{1}{1}$ $-\iunit{}\,\prodket{2}{2}$ &  & \\
 \bottomrule\end{longtable}}
 \needspace{171pt}
 \partbox{Subgroups}
