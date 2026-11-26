@@ -46,7 +46,10 @@ o3m := rec(
   ],
   ("group") := rec(
     ("G") := "rotation/C9v#",
+    ("abstract_type") := "Dih(36)",
+    ("alternative_names") := [ rec( ("source") := "ChenGuLiuWen2013", ("symbol") := "C_9v x Z_2^T" ) ],
     ("centralizer") := rec( ("normalizer_index") := 18, ("symbol") := "C_2h1'" ),
+    ("gap_smallgroup_id") := [ 36, 4 ],
     ("hermann_mauguin") := "9m1'",
     ("images") := rec(
       ("axial_even") := rec(

@@ -1,7 +1,7 @@
 # Conventions
 
-This document defines the conventions of the records of the magnetic point groups, the closed subgroups of
-$`\mathsf{O(3)} \times \mathsf{C_{2}^{T}}`$ up to conjugacy. It continues the conventions of the point groups
+This document defines the conventions of the records of the magnetic point groups, the closed subgroups of the
+parent $`\mathsf{O(3)1'}`$ up to conjugacy (section 30.1). It continues the conventions of the point groups
 (`rotation/CONVENTIONS.md`). The files of conventions are numbered as one: sections 0 to 19 are in that file,
 sections 20 to 29 in `double/CONVENTIONS.md` and sections 30 to 39 in this one. It cites the sections of the
 conventions of the point groups by number and uses their notation, adding time reversal (section 30.1) and the
@@ -13,9 +13,11 @@ of its corepresentations (section 33).
 
 ### 30.1 The parent
 
-The parent $`\mathsf{O(3)} \times \mathsf{C_{2}^{T}}`$ is the group of the elements of $`\mathsf{O(3)}`$ and of
-their products with time reversal $`\varTheta`$, where $`\mathsf{C_{2}^{T}} = \{\mathsfit{E}, \varTheta\}`$. An
-element $`\mathsfit{g}`$ of $`\mathsf{O(3)}`$ is unitary, and $`\varTheta\mathsfit{g}`$ is antiunitary. The sign
+The parent $`\mathsf{O(3)1'}`$ is the group of the elements of $`\mathsf{O(3)}`$ and of their products with time
+reversal $`\varTheta`$. It is the group of the record `O3-1p`, and section 30.2 gives its Hermann–Mauguin symbol.
+Its record lists every class of closed subgroups (section 37.5), and it stands at their top as $`\mathsf{O(3)}`$
+stands at the top of the lattice of the point groups (section 15.2). An element $`\mathsfit{g}`$ of $`\mathsf{O(3)}`$
+is unitary, and $`\varTheta\mathsfit{g}`$ is antiunitary. The sign
 $`\theta`$ of an element of the parent is $`+1`$ for a unitary element and $`-1`$ for an antiunitary one. Time
 reversal commutes with every element of $`\mathsf{O(3)}`$, because it acts on a function by complex conjugation
 (section 31.1) and an element of $`\mathsf{O(3)}`$ acts through its real matrix $`P(\mathsfit{g})`$
@@ -28,8 +30,8 @@ occur in $`\mathsf{M}`$, alone or with $`\varTheta`$, form the point group $`\ma
 $`\mathsf{M}`$ takes one of three values:
 
 - Magnetic type I: $`\mathsf{M} = \mathsf{H} = \mathsf{G}`$, a group without antiunitary elements.
-- Magnetic type II: $`\mathsf{M} = \mathsf{G} \times \mathsf{C_{2}^{T}}`$, written $`\mathsf{G1'}`$, which
-  contains $`\varTheta`$.
+- Magnetic type II: $`\mathsf{M} = \mathsf{G} \times \{\mathsfit{E}, \varTheta\}`$, written $`\mathsf{G1'}`$,
+  which contains $`\varTheta`$.
 - Magnetic type III: $`\mathsf{M} = \mathsf{H} \cup \varTheta(\mathsf{G} \setminus \mathsf{H})`$, written
   $`\mathsf{G}(\mathsf{H})`$, for a subgroup $`\mathsf{H}`$ of index 2 in $`\mathsf{G}`$.
 
@@ -52,13 +54,17 @@ the point group $`\mathsf{G}`$, and the record of $`\mathsf{G}`$ holds it. The r
 The magnetic Hermann–Mauguin symbol is the symbol of $`\mathsf{G}`$ (section 2.3) with a prime on each symbol of
 an axis or a mirror whose element lies in $`\mathsf{G} \setminus \mathsf{H}`$. In magnetic type II it is the
 symbol of $`\mathsf{G}`$ with $`1'`$ appended. Thus $`\mathsf{C_{3v}}(\mathsf{C_{3}})`$ is $`3m'`$,
-$`\mathsf{C_{4}}(\mathsf{C_{2}})`$ is $`4'`$ and $`\mathsf{C_{3v}1'}`$ is $`3m1'`$. When $`\mathsf{G}`$ holds
+$`\mathsf{C_{4}}(\mathsf{C_{2}})`$ is $`4'`$, $`\mathsf{C_{3v}1'}`$ is $`3m1'`$ and the parent $`\mathsf{O(3)1'}`$ is
+$`\infty\infty m1'`$. When $`\mathsf{G}`$ holds
 several subgroups of index 2 in the $`\mathsf{O(3)}`$-conjugacy class of $`\mathsf{H}`$, the symbol is the one
 whose primes stand latest, such as $`4'22'`$ for $`\mathsf{D_{4}}(\mathsf{D_{2}})`$ and $`6'/mmm'`$ for
 $`\mathsf{D_{6h}}(\mathsf{D_{3h}})`$. For $`\mathsf{C_{2v}}`$, $`\mathsf{D_{2}}`$, $`\mathsf{D_{2h}}`$,
 $`\mathsf{C_{4v}}`$ and $`\mathsf{D_{4h}}`$ it is the one whose primes stand earliest, such as $`m'mm`$ for
 $`\mathsf{D_{2h}}(\mathsf{C_{2v}})`$ and $`4'/mm'm`$ for $`\mathsf{D_{4h}}(\mathsf{D_{2h}})`$. For the crystallographic
 groups, these are the symbols of the crystallographic tables.
+
+In condensed-matter physics $`\mathsf{G1'}`$ is written $`\mathsf{G} \times \mathsf{Z_{2}^{T}}`$, with
+$`\mathsf{Z_{2}^{T}} = \{\mathsfit{E}, \varTheta\}`$ [CGLW13].
 
 ### 30.3 Pointers
 
@@ -101,17 +107,28 @@ The `group` block of a record of this catalogue has these fields:
 - `node` (magnetic type III): the id of the node of $`\mathsf{H}`$ in the subgroup lattice of $`\mathsf{G}`$, the
   first node of its $`\mathsf{O(3)}`$-conjugacy class.
 - `antiunitary_character` (magnetic type III): the id of $`\chi`$ among the irreps of $`\mathsf{G}`$.
+- `abstract_type` and `gap_smallgroup_id`: the isomorphism class of $`\mathsf{M}`$ and its identifier, as in
+  section 2.2, the second the null `continuous-group` for a continuous group. A value equal to that of the record of
+  $`\mathsf{G}`$ is the pointer to it. In magnetic type III both fields are such pointers, since the map that fixes
+  the elements of $`\mathsf{H}`$ and takes each other element $`\mathsfit{g}`$ of $`\mathsf{G}`$ to
+  $`\varTheta\mathsfit{g}`$ is an isomorphism of $`\mathsf{G}`$ onto $`\mathsf{M}`$. In magnetic type II,
+  $`\mathsf{M}`$ is isomorphic to $`\mathsf{G} \times \mathsf{Z_{2}}`$. A finite abelian $`\mathsf{M}`$ is written by
+  its invariant factors (`"Z_4 x Z_2"` for $`\mathsf{C_{4}1'}`$). A finite $`\mathsf{M}`$ with an element of order
+  $`\lvert \mathsf{M}\rvert/2`$ is written `"Dih(n)"`, with $`n = \lvert \mathsf{M}\rvert`$ (`"Dih(12)"` for
+  $`\mathsf{C_{3v}1'}`$). Any other $`\mathsf{M}`$ is written as the `abstract_type` of $`\mathsf{G}`$ followed by
+  `" x Z_2"` (`"Dih(8) x Z_2"` for $`\mathsf{C_{4v}1'}`$, `"SO(3) x Z_2"` for $`\mathsf{SO(3)1'}`$).
+- `alternative_names` (magnetic type II): the name $`\mathsf{G} \times \mathsf{Z_{2}^{T}}`$ of section 30.2, as an
+  object with the `symbol`, such as `"C_4v x Z_2^T"`, and the `source`, the key of the entry of references.bib.
 - `normalizer`, `centralizer`: the normalizer and the centralizer of $`\mathsf{M}`$ in the parent, each with its
   `symbol`, and with `index` and `normalizer_index` as in section 2.2.
 - `images`: the four images of section 31.2.
 - `allowed_properties` (magnetic type III): the tensor properties odd under time reversal that $`\mathsf{M}`$
   allows (section 35).
 
-In magnetic type III the normalizer of $`\mathsf{M}`$ is the stabilizer of $`\chi`$ in the normalizer of
-$`\mathsf{G}`$ in $`\mathsf{O(3)}`$, times $`\mathsf{C_{2}^{T}}`$, and the centralizer of $`\mathsf{M}`$ is the
-centralizer of $`\mathsf{G}`$ times $`\mathsf{C_{2}^{T}}`$. In magnetic type II both groups are those of
-$`\mathsf{G}`$ times $`\mathsf{C_{2}^{T}}`$. Each is a group of magnetic type II, and its `symbol` ends in
-`1'`. The field `index` is the index of $`\mathsf{M}`$ in its normalizer, or the null `continuous-group`, and
+In magnetic type III the normalizer of $`\mathsf{M}`$ is the group of magnetic type II over the stabilizer of $`\chi`$
+in the normalizer of $`\mathsf{G}`$ in $`\mathsf{O(3)}`$. The centralizer of $`\mathsf{M}`$ is the group of magnetic
+type II over the centralizer of $`\mathsf{G}`$. In magnetic type II both groups are those of magnetic type II over the
+normalizer and the centralizer of $`\mathsf{G}`$. Thus the `symbol` of each ends in `1'`. The field `index` is the index of $`\mathsf{M}`$ in its normalizer, or the null `continuous-group`, and
 `normalizer_index` is the index of the centralizer in the normalizer.
 
 ### 30.5 Files
@@ -143,8 +160,9 @@ function such as $`z`$ is even under time reversal.
 
 ### 31.2 The four images
 
-A vector is polar or axial, and even or odd under time reversal. The element of the parent of sign $`\theta`$
-over $`\mathsfit{g}`$ moves a vector $`\mathbf{x}`$, a row like a point (section 4.1), to one of four rows:
+A vector is polar or axial, and even or odd under time reversal [BD68, section 2.6]. The element of the parent of
+sign $`\theta`$ over $`\mathsfit{g}`$ moves a vector $`\mathbf{x}`$, a row like a point (section 4.1), to one of
+four rows:
 
 - $`\mathbf{x}\, P(\mathsfit{g})`$ for a polar vector even under time reversal, such as a position or an
   electric dipole.
@@ -177,8 +195,8 @@ $`\mathbf{m} \mapsto \theta\, (\det \mathsfit{g})\, P(\mathsfit{g})^{\top} \math
 A group $`\mathsf{M}`$ of magnetic type II or III has an antiunitary representative $`\mathsfit{a}`$, named in
 its record. The representative is $`\varTheta`$ in magnetic type II, and in magnetic type III the antiunitary
 element over the element of least index of $`\mathsf{G} \setminus \mathsf{H}`$. The field `representative` holds
-the index of that element. Its corepresentations are built from the irreps $`\Lambda`$ of $`\mathsf{H}`$, with
-their matrices $`D^{\Lambda}(\mathsfit{h})`$ of section 9.
+the index of that element. Its corepresentations [Wig59, chapter 26] are built from the irreps $`\Lambda`$ of
+$`\mathsf{H}`$, with their matrices $`D^{\Lambda}(\mathsfit{h})`$ of section 9.
 
 The conjugate irrep $`\Lambda^{\mathsfit{a}}`$ of $`\Lambda`$ has the matrices
 $`D^{\Lambda^{\mathsfit{a}}}(\mathsfit{h}) = D^{\Lambda}(\mathsfit{a}\mathsfit{h}\mathsfit{a}^{-1})^{*}`$, where
@@ -190,7 +208,7 @@ multiplication table of $`\mathsf{G}`$ (section 4.1). The indicator of $`\Lambda
 ```
 
 the sum over $`\mathsf{G}`$ in magnetic type II, where it is the Frobenius–Schur indicator $`\nu_{\mathrm{FS}}`$
-of section 7. It gives the case of $`\Lambda`$:
+of section 7. It gives the case of $`\Lambda`$ [DW62a]:
 
 - Case (a), $`\iota = +1`$: $`\Lambda^{\mathsfit{a}}`$ is equivalent to $`\Lambda`$, and $`\Lambda`$ alone forms
   a corepresentation of the same dimension.
@@ -263,7 +281,9 @@ merged classes of $`\mathsf{H}`$, each the union of a class and of its image und
 $`\mathsfit{h} \mapsto \mathsfit{a}\mathsfit{h}^{-1}\mathsfit{a}^{-1}`$. Its rows are the corepresentations, and
 its entries are their characters. The field `corepresentation_table` holds `classes`, each merged class as a list
 of class ids of $`\mathsf{H}`$ in their order, and `rows`, the irreps of each corepresentation. Its `characters`
-give for each row the character on each merged class, as an exact value (section 8).
+give for each row the character on each merged class, as an exact value (section 8). The corepresentations of the
+58 crystallographic groups of magnetic type III are tabulated in [Cra66], and their double-valued ones in [CW67],
+which also corrects Table VI of [Cra66].
 
 ### 33.1 Restrictions
 
@@ -307,7 +327,8 @@ b_{\mathcal{D}} = \frac{\sum_{\mathsfit{h} \in \mathsf{H}} \chi_{\mathcal{D}'}(\
 ```
 
 with the denominator $`\lvert \mathsf{H}\rvert`$, $`4\lvert \mathsf{H}\rvert`$ or $`2\lvert \mathsf{H}\rvert`$
-in the cases (a), (b) and (c). The antisymmetrized square of a corepresentation of dimension 1 is zero.
+in the cases (a), (b) and (c) [BD68, eqs. 5.8 to 5.10]. The antisymmetrized square of a corepresentation of
+dimension 1 is zero.
 
 The field `symmetrized_powers` lists the corepresentations in the order of `corepresentations`. Each entry has
 `corepresentation`, the id of its first irrep, and the decompositions of its powers in `symmetrized_square`,
@@ -557,6 +578,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\otimes`$ | the tensor product of irreps, of representations and of their matrices | 10 |
 | $`m \times n`$ | multiplication, or the size of a matrix of $`m`$ rows and $`n`$ columns | 0.1 |
 | $`\times`$ | a cross-cap in an `orbifold` symbol, as in $`2{\times}`$ (with $`\mathsf{S_{4}}`$) | 2 |
+| $`\mathsf{H_{1}} \times \mathsf{H_{2}}`$ | the direct product of groups | 0.1 |
 | $`\in`$ | an element of | 0.1 |
 | $`\le`$ | less than or equal to, also of irreps in their order and of classes of subgroups by inclusion | 0.1 |
 | $`\mapsto`$ | maps to | 0.1 |
@@ -572,13 +594,13 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ | the ket of angular momentum $`J`$ and $`z`$ component $`m`$, a spherical harmonic | 0.1 |
 | $`\mathrm{\scriptsize A}`$ | a one-dimensional irrep, with $`\chi(\mathsfit{g}_p) = +1`$ in an axial group | 6 |
 | $`\mathsfit{a}`$ | the antiunitary representative of the record: $`\varTheta`$ in magnetic type II, and in magnetic type III the antiunitary element over the element of least index of $`\mathsf{G} \setminus \mathsf{H}`$ | 32.1 |
+| $`\mathsf{Alt_{\mathnormal{n}}}`$ | the alternating group of degree $`n`$ | 2 |
 | $`\mathrm{\scriptsize B}`$ | a one-dimensional irrep of an axial group with $`\chi(\mathsfit{g}_p) = -1`$, except for the small-$`N`$ renames | 6 |
 | $`b_{\mathcal{D}}`$ | the multiplicity of the corepresentation $`\mathcal{D}`$ in a representation of $`\mathsf{M}`$ | 34 |
 | Bilbao | the symbol of an irrep in the double point group tables of [EBW+17] (`bilbao`) | 0.1 |
 | $`\mathbb{C}`$ | the complex numbers | 0.1 |
 | $`\mathsfit{C_2'}`$ | a binary rotation about a horizontal axis: $`\mathsfit{C_2'}`$ in the class of $`\mathsfit{C_{2x}}`$, $`\mathsfit{C_2''}`$ in the other | 5 |
 | $`\mathsfit{C_2'}(\psi)`$ | the binary rotation about the horizontal axis at the azimuth $`\psi`$ (the $`x`$ axis for $`\psi = 0`$) | 16 |
-| $`\mathsf{C_{2}^{T}}`$ | the group $`\{\mathsfit{E}, \varTheta\}`$ of time reversal, a factor of the parent $`\mathsf{O(3)} \times \mathsf{C_{2}^{T}}`$ | 30.1 |
 | case | the case (a), (b) or (c) of an irrep or of a corepresentation | 32.1 |
 | centralizer | the centralizer of a subgroup in the group, by its class | 36 |
 | $`\chi`$ | the one-dimensional real irrep of $`\mathsf{G}`$ with kernel $`\mathsf{H}`$, of value $`\theta`$ | 30.1 |
@@ -606,6 +628,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`d`$ | the dimension of an irrep | 9 |
 | $`\delta_{j,k}`$ | the Kronecker delta | 0.1 |
 | $`\det`$ | the determinant, of a matrix or of an element: $`\det \mathsfit{g} = \det P(\mathsfit{g})`$ | 0.1 |
+| $`\mathsf{Dih_{\mathnormal{n}}}`$ | the dihedral group of order $`n`$ | 2 |
 | $`\mathsf{D_{\infty}}`$ | $`\mathsf{C_{\infty}}`$ with the binary axes perpendicular to $`z`$ | 3 |
 | $`\mathsf{D_{\infty h}}`$ | $`\mathsf{D_{\infty}}`$ with the horizontal mirror | 3 |
 | $`\mathsf{D_{\mathnormal{N}}}`$ | $`\mathsf{C_{\mathnormal{N}}}`$ with $`N`$ binary axes perpendicular to $`z`$ | 3 |
@@ -625,7 +648,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathrm{\scriptsize G}`$ | a four-dimensional irrep | 6 |
 | $`\mathsfit{g}`$ | an element of the group | 0.1 |
 | $`\mathsfit{g}^{k}`$ | the $`k`$-th power of $`\mathsfit{g}`$ | 0.1 |
-| $`\mathsf{G1'}`$ | the group $`\mathsf{G} \times \mathsf{C_{2}^{T}}`$ of magnetic type II | 30.1 |
+| $`\mathsf{G1'}`$ | the group $`\mathsf{G} \times \{\mathsfit{E}, \varTheta\}`$ of magnetic type II, with $`\mathsf{O(3)1'}`$ the parent | 30.1 |
 | $`\mathsfit{g}^{-1}`$ | the inverse of $`\mathsfit{g}`$ | 0.1 |
 | $`\Gamma`$ | an irrep of $`\mathsf{G}`$, with $`\Gamma'`$ an irrep of the parent record $`\mathsf{T}`$, $`\mathsf{O}`$ or $`\mathsf{I}`$ whose bases a derived record relabels | 6 |
 | $`\mathsf{G}(\mathsf{H})`$ | the group $`\mathsf{H} \cup \varTheta(\mathsf{G} \setminus \mathsf{H})`$ of magnetic type III | 30.1 |
@@ -648,7 +671,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`k`$ | the index of an element (from 0) | 9 |
 | $`\Lambda`$ | an irrep of a subgroup | 12 |
 | $`\Lambda^{\mathsfit{a}}`$ | the conjugate irrep of $`\Lambda`$, of matrices $`D^{\Lambda}(\mathsfit{a}\mathsfit{h}\mathsfit{a}^{-1})^{*}`$ | 32.1 |
-| $`\mathsf{M}`$ | a magnetic point group, a closed subgroup of $`\mathsf{O(3)} \times \mathsf{C_{2}^{T}}`$ | 30.1 |
+| $`\mathsf{M}`$ | a magnetic point group, a closed subgroup of the parent $`\mathsf{O(3)1'}`$ | 30.1 |
 | $`m`$ | a mirror plane in a `hermann_mauguin` symbol, as in $`2/m`$ (with $`\mathsf{C_{2h}}`$) | 2 |
 | $`m`$ | the $`z`$ component of the angular momentum | 4 |
 | $`\mathbf{m}`$ | a magnetic moment, an axial vector odd under time reversal | 31.2 |
@@ -690,6 +713,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathsf{SO(3)}`$ | the group of all rotations, with $`\mathsf{SO(2)}`$ the rotations about one axis and $`\mathsf{SO(\mathnormal{N})}`$ the rotations of $`N`$ dimensions | 3 |
 | spaces | the spaces of Cartesian tensors whose sum is the tensor of a property | 35 |
 | subgrp | a subgroup, the representative of its class | 0.1 |
+| $`\mathsf{Sym_{\mathnormal{n}}}`$ | the symmetric group of degree $`n`$ | 2 |
 | $`\mathsf{T}`$ | the rotations of the tetrahedron | 3 |
 | $`\mathrm{\scriptsize T}`$ | a three-dimensional irrep | 6 |
 | $`t`$ | the variable of the generating functions | 14 |
@@ -699,4 +723,6 @@ This index lists the common notation of the documents and selected symbols of th
 | type | the magnetic type of a subgroup, I, II or III | 36 |
 | $`\mathbf{v}`$ | the axis of an element, or the normal of its mirror | 4 |
 | $`x, y, z`$ | the coordinates of a point and the coordinate axes, or the variables of the polynomials | 4 |
+| $`\mathsf{Z_{\mathnormal{n}}}`$ | the cyclic group of order $`n`$ | 2 |
+| $`\mathsf{Z_{2}^{T}}`$ | the group $`\{\mathsfit{E}, \varTheta\}`$ of time reversal, in the name $`\mathsf{G} \times \mathsf{Z_{2}^{T}}`$ of $`\mathsf{G1'}`$ in condensed-matter physics | 30.2 |
 | $`\zeta_{n}`$ | the root of unity $`\mathrm{e}^{2\pi\mathrm{i}/n}`$ | 0.1 |

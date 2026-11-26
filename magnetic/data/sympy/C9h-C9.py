@@ -54,6 +54,7 @@ o3m = {
     'group': {
         'G': 'rotation/C9h#',
         'H': 'rotation/C9#',
+        'abstract_type': 'rotation/C9h#/group/abstract_type',
         'allowed_properties': [
             {
                 'irrep': 'App',
@@ -94,6 +95,7 @@ o3m = {
         ],
         'antiunitary_character': 'App',
         'centralizer': {'normalizer_index': 2, 'symbol': "C_infh1'"},
+        'gap_smallgroup_id': 'rotation/C9h#/group/gap_smallgroup_id',
         'hermann_mauguin': "-18'",
         'images': {
             'axial_even': {'record': {'reason': 'outside-the-catalogue', 'value': None}, 'symbol': 'C_18'},

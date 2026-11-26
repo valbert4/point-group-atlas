@@ -232,7 +232,10 @@ o3m := rec(
   ],
   ("group") := rec(
     ("G") := "rotation/D12h#",
+    ("abstract_type") := "Dih(24) x Z_2 x Z_2",
+    ("alternative_names") := [ rec( ("source") := "ChenGuLiuWen2013", ("symbol") := "D_12h x Z_2^T" ) ],
     ("centralizer") := rec( ("normalizer_index") := 24, ("symbol") := "C_2h1'" ),
+    ("gap_smallgroup_id") := [ 96, 207 ],
     ("hermann_mauguin") := "12/mmm1'",
     ("images") := rec(
       ("axial_even") := rec(

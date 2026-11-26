@@ -315,7 +315,8 @@ are entries of REFERENCES.pdf. Every other field follows from the record by the 
   classes the symbol is the string that spglib returns for the point group of a crystal [TST24].
 - `alternative_names`: the other symbols of the $`\mathsf{O(3)}`$-conjugacy class of $`\mathsf{G}`$, each an object
   `{"schoenflies": S, "source": null}`. Its `source` is null for a name of the Schoenflies system and the key
-  of the entry of references.bib for an author's own symbol (no record has one). For odd $`N`$ the group
+  of the entry of references.bib for an author's own symbol (no record has one). No `alternative_names` lists
+  the symbol `D_nv` that [Gri61, section 6.3] writes for $`\mathsf{D_{\mathnormal{N}d}}`$. For odd $`N`$ the group
   $`\mathsf{S_{2\mathnormal{N}}} = \mathsf{C_{\mathnormal{N}}} \times \mathsf{C_{i}}`$ (section 3) is also written $`\mathsf{C_{\mathnormal{N}i}}`$. The symbols are the conventional name of
   the class when it is not `schoenflies` (section 2.1), $`\mathsf{C_{\mathnormal{N}i}}`$ for odd $`N \ge 3`$, then, without
   repeats, the `schoenflies` of the records of `o3_conjugates`:
@@ -726,6 +727,9 @@ The symbol is a function of $`\det`$ and the turn $`p/q`$ in lowest terms:
 
 The number of classes is `class_count`.
 
+The class `2C_2'` of $`\mathsf{D_{4}}`$ in [Gri61, Table A 3] is the class $`\mathsfit{2C_{2}''}`$ of the diagonal
+axes here, and [Gri61, Table A 5] writes `6C_2'` for the class $`\mathsfit{6C_{2}}`$ of $`\mathsf{O}`$.
+
 ### 5.3 Class order
 
 The order of `character_table.classes` is the order of every list of characters. Axial groups order their
@@ -925,6 +929,11 @@ exchange `5A` and `5B` (section 2.2), and here `5A` is the class of $`\mathsfit{
 |---|---|---|---|---|---|---|---|---|---|---|
 | $`\mathsf{I}`$ | $`\mathsfit{E}`$ | $`\mathsfit{15C_{2}}`$ | $`\mathsfit{20C_{3}}`$ | $`\mathsfit{12C_{5}}`$ | $`\mathsfit{12C_{5}^{2}}`$ | $`\mathrm{\scriptsize A}`$ | $`\mathrm{\scriptsize T}_2`$ | $`\mathrm{\scriptsize T}_1`$ | $`\mathrm{\scriptsize G}`$ | $`\mathrm{\scriptsize H}`$ |
 
+The work [Gri61, Table A 10] writes $`\mathsf{K}`$ for $`\mathsf{I}`$ and $`\mathsf{K_{h}}`$ for $`\mathsf{I_{h}}`$,
+and names the irreps of $`\mathsf{K}`$ as here, except `U` for $`\mathrm{\scriptsize G}`$ and `V` for $`\mathrm{\scriptsize H}`$
+[Gri61, Table A 7]. Its $`\mathsf{K}`$ and $`\mathsf{K_{h}}`$ differ from those of `alternative_names` (section 2.2), the
+symbols of $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$.
+
 ## 7. Reality of irreps
 
 The field `frobenius_schur` is the Frobenius–Schur indicator $`\nu_{\mathrm{FS}} = \lvert \mathsf{G}\rvert^{-1} \sum_{\mathsfit{g}} \chi(\mathsfit{g}^2)`$, computed with `power_map` and the
@@ -942,7 +951,8 @@ Thus every irrep over $`\mathbb{C}`$ lies in exactly one irrep over $`\mathbb{R}
 complexification). Every irrep over $`\mathbb{R}`$ comes from one real irrep, one complex pair or one pseudoreal irrep.
 The reality does not change over $`\mathbb{R}`$. In other words, the real matrices commuting with every matrix of that irrep
 over $`\mathbb{R}`$ form a copy of the real numbers, the complex numbers or the quaternions as $`\Gamma`$ is real, complex or
-pseudoreal. No irrep of the 98 groups is pseudoreal.
+pseudoreal. No irrep of the 98 groups is pseudoreal. The categories 1, 2 and 3 of [Gri61, section 8.6] are
+the irreps with $`\nu_{\mathrm{FS}} = +1`$, $`-1`$ and $`0`$ [Gri61, eq. 8.28].
 
 The representations are vector representations, for which time reversal $`\varTheta`$ has $`\varTheta^2 = +1`$. Thus a real irrep keeps
 its degeneracy, a pseudoreal one doubles it, and a complex one pairs with its conjugate, so that the
@@ -1152,6 +1162,9 @@ The `fusion` of a finite group (`kind` `"table"`) has these fields:
     a prefix. On the diagonal the antisymmetric part of each term is in braces after its symmetric part
     (`"A_1 + {A_2} + B_1 + B_2"` for $`\mathrm{\scriptsize E} \otimes \mathrm{\scriptsize E}`$ of $`\mathsf{C_{4v}}`$).
 
+In [Gri61, section 8.6] the symmetric square of an irrep is `[Gamma^2]`, and its antisymmetric square, in braces
+in `display`, is `(Gamma^2)`.
+
 ### 10.2 Fusion, continuous groups
 
 The `fusion` of a continuous group (`kind` `"family-law"`) has these fields:
@@ -1319,8 +1332,11 @@ Other works write these results in other conventions:
   takes the harmonics $`\mathrm{i}^{-J} Y_J^m`$ and the 3j symbol itself [FR96, eq. 5.45].
 - The works [FR59, eq. 13.7] and [Jud63, section 1-5] couple the spin before the orbit, which multiplies a
   coupled state by the exchange sign $`(-1)^{J_1+J_2-J}`$ (section 25.4).
-- For a rotation by $`\phi`$ about $`z`$, the operator of [Jud63, eq. 2-18] multiplies $`\bigl\lvert{}^{J}_{\,M}\bigr\rangle`$ by $`\mathrm{e}^{-\mathrm{i}M\phi}`$, the inverse of the
-  action of section 4.1, and in the products of [Jud63, section 2-3] the right factor acts first.
+- For a rotation by $`\phi`$ about $`z`$, the operators of [Jud63, eq. 2-18] and [Gri61, eq. 6.32] multiply $`\bigl\lvert{}^{J}_{\,M}\bigr\rangle`$ by
+  $`\mathrm{e}^{-\mathrm{i}M\phi}`$, the inverse of the action of section 4.1. In the products of [Jud63, section 2-3] the right factor
+  acts first.
+- In [Gri61, eqs. 8.31 and 9.23] a matrix element is the reduced matrix element times a coupling coefficient, the
+  irrep of the operator first, with no factor $`d_\Gamma^{-1/2}`$.
 - Atomic spectroscopy writes the parity $`\mathrm{u}`$ of a term as a superscript o and keeps the right subscript for $`J`$:
   the term $`{}^{4}\mathrm{S}_{\mathrm{u}}`$ (section 19) is $`{}^{4}\mathrm{S}^{\mathrm{o}}`$ there.
 
@@ -1607,7 +1623,12 @@ the left coset of the inverse of $`\mathsfit{\xi}_j`$. Each orbit has these fiel
     the two azimuths of a pair more than a quarter turn apart.
 
 The character $`\chi(\mathsfit{g})`$ of $`D`$ is the number of points fixed by $`\mathsfit{g}`$. The multiplicity of $`\Gamma`$ in $`D`$ is $`\frac{1}{\lvert\mathsf{G}\rvert} \sum_{\mathsfit{g}} \chi(\mathsfit{g})\, \chi_\Gamma(\mathsfit{g})^*`$, equal
-to that of the trivial irrep of $`\mathsf{H}`$ in $`\Gamma\!\downarrow \mathsf{H}`$ (section 12.4). The number of cycles of $`\mathsfit{g}`$ is $`c(\mathsfit{g})`$, and the $`q^N`$
+to that of the trivial irrep of $`\mathsf{H}`$ in $`\Gamma\!\downarrow \mathsf{H}`$ (section 12.4). This multiplicity is the dimension of the space of
+the vectors of $`\Gamma`$ that $`\mathsf{H}`$ fixes. Thus some nonzero vector of $`\Gamma`$ has the stabilizer $`\mathsf{H}`$ exactly when $`\Gamma`$ occurs
+in the permutation representation of $`\mathsf{H}`$, and more often than in that of every class of subgroups that contain $`\mathsf{H}`$
+properly. The permutation representation of $`\mathsf{H}`$ is that of its orbit, or of its figure of section 12.6. For a
+nontrivial $`\Gamma`$ these stabilizers are its kernel and its epikernels [CV89], the symmetries that a distortion of
+symmetry $`\Gamma`$ can leave. The number of cycles of $`\mathsfit{g}`$ is $`c(\mathsfit{g})`$, and the $`q^N`$
 products of one of $`q`$ states of each point (one nuclear spin state of each atom, for instance) carry the
 character $`q^{c(\mathsfit{g})}`$. In this character $`\Gamma`$ has the multiplicity $`\frac{1}{\lvert\mathsf{G}\rvert} \sum_{\mathsfit{g}} q^{c(\mathsfit{g})}\, \chi_\Gamma(\mathsfit{g})^*`$, which for the trivial irrep is
 the number of colorings of the points with $`q`$ colors up to $`\mathsf{G}`$. The displacements of the points, a vector at
@@ -1885,6 +1906,14 @@ active when $`\Gamma`$ is an irrep of `polar-1` and Raman active when it is an i
 degenerate mode carry the symmetric square of its irrep (`symmetric`), and one quantum in each of two modes
 carries the product of their irreps (`terms`). In a group that contains $`\mathsfit{i}`$, the irreps of `polar-1` are $`\mathrm{u}`$ and
 those of `polar-2` are $`\mathrm{g}`$, so no fundamental is both infrared and Raman active.
+
+Inside the level of a real irrep $`\Gamma`$ (`frobenius_schur` $`+1`$), the components of an operator even under time reversal
+carry the irreps of the symmetric square of $`\Gamma`$ (`symmetric`). Those of an operator odd under time reversal carry
+the irreps of the antisymmetric square of $`\Gamma`$ (`antisymmetric`) [Ceu22, section 3.4]. Inside the level of a
+pseudoreal spinor irrep (volume II) the two squares exchange [Jah38], [BC72, section 4.8]. Thus the displacements
+that split a degenerate orbital level of a real irrep in first order, the Jahn–Teller modes [JT37], carry the irreps
+of its symmetric square other than the trivial one. No displacement splits a spinor level of dimension 2 in first
+order.
 
 Continuous groups. In $`\mathsf{O(3)}`$ the electric dipole moment carries $`D^{(1,-)}`$ and the magnetic dipole moment $`D^{(1,+)}`$.
 Each changes $`J`$ by 0 or $`\pm 1`$, never from 0 to 0, and the electric dipole moment also changes the parity. The
@@ -3097,7 +3126,9 @@ $`\mathbb{S}_{[v]}\Gamma = \operatorname{Sym}^{v}\Gamma`$. Without spin–orbit 
 spin $`S`$ fill the two-column shapes $`\lambda = [2^{n/2-S}, 1^{2S}]`$, whose restrictions are the terms
 $`{}^{2S+1}\Lambda`$ of the configuration $`\Gamma^{n}`$. For $`n \le N`$ the one column $`[1^{n}]`$,
 $`\Lambda^{n}\Gamma`$, contains the terms of the highest spin, $`S = n/2`$. A shape of electrons has at most
-two columns: three or more would need three or more states for each orbital.
+two columns: three or more would need three or more states for each orbital. The work [Gri61, section 6.6.2]
+writes one-electron irreps in lowercase, the configuration $`\Gamma^{n}`$ of $`\mathrm{\scriptsize T}_2`$ as `t_2^n` and a
+configuration of two levels as `t_2^m e^n` [Gri61, section 9.1].
 
 The level has one invariant quadratic form $`r^2`$, and $`H_{\ell}`$ consists of the states of $`\ell`$ quanta
 that the invariant Laplacian annihilates, the harmonic polynomials of degree $`\ell`$ in the partners of the

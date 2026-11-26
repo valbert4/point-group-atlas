@@ -23,6 +23,7 @@
 - Bouckaert, L. P., Smoluchowski, R., and Wigner, E. (1936). Theory of Brillouin zones and symmetry properties of wave functions in crystals. *Physical Review* 50(1), 58–67. https://doi.org/10.1103/PhysRev.50.58
 - Boyle, L. L., and Ożgo, Z. (1973). Icosahedral irreducible tensors and their applications. *International Journal of Quantum Chemistry* 7(2), 383–404. https://doi.org/10.1002/qua.560070219
 - Bradley, C. J., and Cracknell, A. P. (1972). *The Mathematical Theory of Symmetry in Solids: Representation Theory for Point Groups and Space Groups*. Clarendon Press, Oxford; paperback with corrections, Oxford Classic Texts in the Physical Sciences, Oxford University Press, Oxford, 2010. ISBN 978-0-19-958258-7. https://doi.org/10.1093/oso/9780199582587.001.0001
+- Bradley, C. J., and Davies, B. L. (1968). Magnetic groups and their corepresentations. *Reviews of Modern Physics* 40(2), 359–379. https://doi.org/10.1103/RevModPhys.40.359
 - Brown, E. (1968). Aspects of group theory in electron dynamics. In *Solid State Physics* 22, edited by F. Seitz, D. Turnbull, and H. Ehrenreich, 313–408. Academic Press, New York. https://doi.org/10.1016/S0081-1947(08)60033-8
 - Bunker, P. R. (1979). The spin double groups of molecular symmetry groups. In *The Permutation Group in Physics and Chemistry*, edited by J. Hinze, Lecture Notes in Chemistry 12, 38–56. Springer, Berlin. https://doi.org/10.1007/978-3-642-93124-6_4
 - Bunker, P. R., and Jensen, P. (1998). *Molecular Symmetry and Spectroscopy*, second edition. NRC Research Press, Ottawa; e-book edition, 2012. ISBN 0-660-19628-X.
@@ -30,8 +31,11 @@
 - Camporesi, R. (1990). Harmonic analysis and propagators on homogeneous spaces. *Physics Reports* 196(1–2), 1–134. https://doi.org/10.1016/0370-1573(90)90120-Q
 - Ceccherini-Silberstein, T., Machì, A., Scarabotti, F., and Tolli, F. (2009). Induced representations and Mackey theory. *Journal of Mathematical Sciences* 156(1), 11–28. https://doi.org/10.1007/s10958-008-9254-5
 - Ceulemans, A. J. (2013). *Group Theory Applied to Chemistry*. Theoretical Chemistry and Computational Modelling. Springer, Dordrecht. ISBN 978-94-007-6862-8. https://doi.org/10.1007/978-94-007-6863-5
+- Ceulemans, A. (2022). *The Theory of the Jahn–Teller Effect: When a Boson Meets a Fermion*. Springer, Cham. ISBN 978-3-031-09527-6. https://doi.org/10.1007/978-3-031-09528-3
 - Ceulemans, A., and Fowler, P. W. (1990). The Jahn–Teller instability of fivefold degenerate states in icosahedral molecules. *The Journal of Chemical Physics* 93(2), 1221–1234. https://doi.org/10.1063/1.459187
+- Ceulemans, A., and Vanquickenborne, L. G. (1989). The epikernel principle. In *Stereochemistry and Bonding*, Structure and Bonding 71, 125–159. Springer, Berlin. https://doi.org/10.1007/3-540-50775-2_4
 - Cheah, J. (2022). Real McKay correspondence: KR-theory of graded Kleinian groups. MMath dissertation, University of Warwick. arXiv:2210.03924 [math.RT]. https://arxiv.org/abs/2210.03924
+- Chen, X., Gu, Z.-C., Liu, Z.-X., and Wen, X.-G. (2013). Symmetry protected topological orders and the group cohomology of their symmetry group. *Physical Review B* 87(15), 155114. https://doi.org/10.1103/PhysRevB.87.155114. arXiv:1106.4772
 - Cohan, N. V. (1958). The spherical harmonics with the symmetry of the icosahedral group. *Mathematical Proceedings of the Cambridge Philosophical Society* 54(1), 28–38. https://doi.org/10.1017/S0305004100033156
 - Condon, E. U., and Shortley, G. H. (1935). *The Theory of Atomic Spectra*. Cambridge University Press, Cambridge; reprinted with corrections, 1951.
 - Conte, R., and Raynal, J. (1985). On a labeling for point group harmonics. I. Cubic group. *Journal of Mathematical Physics* 26(10), 2413–2440. https://doi.org/10.1063/1.526757
@@ -39,14 +43,18 @@
 - Conway, J. H., Curtis, R. T., Norton, S. P., Parker, R. A., and Wilson, R. A. (1985). *Atlas of Finite Groups: Maximal Subgroups and Ordinary Characters for Simple Groups*. With computational assistance from J. G. Thackray. Clarendon Press, Oxford. ISBN 0-19-853199-0.
 - Conway, J. H., and Smith, D. A. (2003). *On Quaternions and Octonions: Their Geometry, Arithmetic, and Symmetry*. A K Peters, Natick, MA. ISBN 1-56881-134-9.
 - Cotton, F. A. (1990). *Chemical Applications of Group Theory*, third edition. John Wiley & Sons, New York. ISBN 0-471-51094-7.
+- Cracknell, A. P. (1966). Corepresentations of magnetic point groups. *Progress of Theoretical Physics* 35(2), 196–213. https://doi.org/10.1143/PTP.35.196
 - Cracknell, A. P., Davies, B. L., Miller, S. C., and Love, W. F. (1979). *Kronecker Product Tables*, Vol. 1: *General Introduction and Tables of Irreducible Representations of Space Groups*. IFI/Plenum, New York.
 - Cracknell, A. P., and Sedaghat, A. K. (1972). The antisymmetrized squares and the symmetrized cubes of the irreducible corepresentations of the magnetic point groups. *Journal of Physics C: Solid State Physics* 5(9), 977–984. https://doi.org/10.1088/0022-3719/5/9/010
+- Cracknell, A. P., and Wong, K. C. (1967). Double-valued corepresentations of magnetic point groups. *Australian Journal of Physics* 20(2), 173–188. https://doi.org/10.1071/PH670173
 - Decker, W., Greuel, G.-M., Pfister, G., and Schönemann, H. (2025). Singular 4-4-1 — A computer algebra system for polynomial computations. https://www.singular.uni-kl.de
 - Delsarte, P., Goethals, J. M., and Seidel, J. J. (1977). Spherical codes and designs. *Geometriae Dedicata* 6(3), 363–388. https://doi.org/10.1007/BF03187604
 - Desmier, P. E., and Sharp, R. T. (1979). Polynomial tensors for double point groups. *Journal of Mathematical Physics* 20(1), 74–82. https://doi.org/10.1063/1.523932
+- Dimmock, J. O., and Wheeler, R. G. (1962). Irreducible representations of magnetic groups. *Journal of Physics and Chemistry of Solids* 23(6), 729–741. https://doi.org/10.1016/0022-3697(62)90531-0
+- Dimmock, J. O., and Wheeler, R. G. (1962). Symmetry properties of wave functions in magnetic crystals. *Physical Review* 127(2), 391–404. https://doi.org/10.1103/PhysRev.127.391
 - Dresselhaus, M. S. (2002). Applications of group theory to the physics of solids. Lecture notes, MIT courses 8.510J and 6.734J, Spring 2002. Massachusetts Institute of Technology, Cambridge, MA. https://web.mit.edu/course/6/6.734j/www/group-full02.pdf
 - Dresselhaus, M. S., Dresselhaus, G., and Eklund, P. C. (1996). *Science of Fullerenes and Carbon Nanotubes*. Academic Press, San Diego. ISBN 0-12-221820-5. https://doi.org/10.1016/B978-0-12-221820-0.X5000-X
-- Elcoro, L., Bradlyn, B., Wang, Z., Vergniory, M. G., Cano, J., Felser, C., Bernevig, B. A., Orobengoa, D., de la Flor, G., and Aroyo, M. I. (2017). Double crystallographic groups and their representations on the Bilbao Crystallographic Server. *Journal of Applied Crystallography* 50(5), 1457–1477. https://doi.org/10.1107/S1600576717011712
+- Elcoro, L., Bradlyn, B., Wang, Z., Vergniory, M. G., Cano, J., Felser, C., Bernevig, B. A., Orobengoa, D., de la Flor, G., and Aroyo, M. I. (2017). Double crystallographic groups and their representations on the Bilbao Crystallographic Server. *Journal of Applied Crystallography* 50(5), 1457–1477. https://doi.org/10.1107/S1600576717011712. arXiv:1706.09272
 - Etingof, P., Golberg, O., Hensel, S., Liu, T., Schwendner, A., Vaintrob, D., and Yudovina, E. (2011). *Introduction to Representation Theory*. Student Mathematical Library 59. American Mathematical Society, Providence, RI. ISBN 978-0-8218-5351-1. https://doi.org/10.1090/stml/059. Online version: https://math.mit.edu/~etingof/reprbook.pdf
 - Etxebarria, J., Perez-Mato, J. M., Tasci, E. S., and Elcoro, L. (2025). Crystal tensor properties of magnetic materials with and without spin–orbit coupling. Application of spin point groups as approximate symmetries. *Acta Crystallographica Section A* 81(4), 317–338. https://doi.org/10.1107/S2053273325004127. arXiv:2502.03934
 - Fano, U., and Racah, G. (1959). *Irreducible Tensorial Sets*. Pure and Applied Physics 4. Academic Press, New York.
@@ -81,9 +89,11 @@
 - Ihrig, E., and Golubitsky, M. (1984). Pattern selection with O(3) symmetry. *Physica D: Nonlinear Phenomena* 13(1–2), 1–33. https://doi.org/10.1016/0167-2789(84)90268-9
 - Ikeno, H. (2026). pointgroup-tables, commit f7101f7 of 18 September 2026. GitHub repository. https://github.com/hydeik/pointgroup-tables/tree/f7101f7
 - Jack, A., and Harrison, S. C. (1975). On the interpretation of small-angle X-ray solution scattering from spherical viruses. *Journal of Molecular Biology* 99(1), 15–25. https://doi.org/10.1016/S0022-2836(75)80155-0
+- Jahn, H. A. (1938). Stability of polyatomic molecules in degenerate electronic states. II—Spin degeneracy. *Proceedings of the Royal Society of London. Series A* 164(916), 117–131. https://doi.org/10.1098/rspa.1938.0008
 - Jahn, H. A., and Teller, E. (1937). Stability of polyatomic molecules in degenerate electronic states. I—Orbital degeneracy. *Proceedings of the Royal Society of London. Series A* 161(905), 220–235. https://doi.org/10.1098/rspa.1937.0142
 - Johansson, M., and Veryazov, V. (2017). Automatic procedure for generating symmetry adapted wavefunctions. *Journal of Cheminformatics* 9(1), 8. https://doi.org/10.1186/s13321-017-0193-3
 - Judd, B. R. (1963). *Operator Techniques in Atomic Spectroscopy*. McGraw-Hill, New York; republished with a new preface, Princeton Landmarks in Mathematics and Physics, Princeton University Press, Princeton, NJ, 1998. ISBN 0-691-05901-2. https://doi.org/10.1515/9781400864775
+- Judd, B. R. (1982). Group theory for the Jahn–Teller effect. *Physica A: Statistical Mechanics and its Applications* 114(1–3), 19–27. https://doi.org/10.1016/0378-4371(82)90256-4
 - Khatua, S., and Ganesh, R. (2022). Berry phase in the rigid rotor: Emergent physics of odd antiferromagnets. *Physical Review B* 105(18), 184401. https://doi.org/10.1103/PhysRevB.105.184401. arXiv:2202.04096
 - Klein, F. (1884). *Vorlesungen über das Ikosaeder und die Auflösung der Gleichungen vom fünften Grade*. B. G. Teubner, Leipzig.
 - König, E., and Kremer, S. (1973). Symmetry coupling coefficients for point groups and the importance of Racah's lemma for the standardization of phase. *Theoretica Chimica Acta* 32(1), 27–40. https://doi.org/10.1007/BF01209413
@@ -129,6 +139,7 @@
 - Vilenkin, N. Ja. (1968). *Special Functions and the Theory of Group Representations*. Translations of Mathematical Monographs 22. American Mathematical Society, Providence, RI.
 - Vilenkin, N. Ja., and Klimyk, A. U. (1991). *Representation of Lie Groups and Special Functions, Volume 1: Simplest Lie Groups, Special Functions and Integral Transforms*. Mathematics and Its Applications (Soviet Series) 72. Kluwer Academic Publishers, Dordrecht. ISBN 0-7923-1466-2.
 - Wiegmann, P. B. (1989). Multivalued functionals and geometrical approach for quantization of relativistic particles and strings. *Nuclear Physics B* 323(2), 311–329. https://doi.org/10.1016/0550-3213(89)90144-2
+- Wigner, E. P. (1959). *Group Theory and Its Application to the Quantum Mechanics of Atomic Spectra*, expanded and improved edition, translated from the German by J. J. Griffin. Pure and Applied Physics 5. Academic Press, New York.
 - Wilson, E. B., Decius, J. C., and Cross, P. C. (1955). *Molecular Vibrations: The Theory of Infrared and Raman Vibrational Spectra*. McGraw-Hill, New York.
 - Wolfram Research, Inc. (2026). Mathematica, Version 15.0.1. Champaign, IL.
 - Wormer, P. E. S. (2001). Tetrahedral harmonics revisited. *Molecular Physics* 99(23), 1973–1980. https://doi.org/10.1080/00268970110086318

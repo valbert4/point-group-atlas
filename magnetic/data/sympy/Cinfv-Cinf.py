@@ -138,6 +138,7 @@ o3m = {
     'group': {
         'G': 'rotation/Cinfv#',
         'H': 'rotation/Cinf#',
+        'abstract_type': 'rotation/Cinfv#/group/abstract_type',
         'allowed_properties': [
             {
                 'irrep': 'A2',
@@ -256,6 +257,7 @@ o3m = {
             'normalizer_index': {'reason': 'continuous-group', 'value': None},
             'symbol': "C_2h1'"
         },
+        'gap_smallgroup_id': 'rotation/Cinfv#/group/gap_smallgroup_id',
         'hermann_mauguin': "infm'",
         'images': {
             'axial_even': {

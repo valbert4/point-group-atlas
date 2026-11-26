@@ -190,6 +190,12 @@ main > .logo + h1.title { margin-top: 0.55em; }
 math { font-family: "STIX Two Math", math; font-size: 1.04em; }
 /* an inline formula and the text glued to it, kept on one line (site.py, keep_together) */
 .nowrap { white-space: nowrap; }
+/* a long one, which scrolls in a box of its own on a narrower line (site.py, WIDE_EM); a flex box
+   keeps the baseline of its text, and the padding keeps the ink of its glyphs inside it */
+.wide { display: inline-flex; align-items: baseline; max-width: 100%; overflow-x: auto;
+  overflow-y: hidden; padding: 0.2em 0; margin: -0.2em 0; vertical-align: baseline; }
+/* a long name in code breaks rather than run past the line */
+p code, li code, h1 code, h2 code, h3 code, h4 code { overflow-wrap: break-word; }
 .irr { font-variant-caps: all-small-caps; font-style: normal; }
 math .irr { font-family: "STIX Two Text", serif; text-transform: none; }
 math .sfit { font-family: var(--sans); font-style: italic; text-transform: none; }
@@ -236,6 +242,10 @@ table.families th, table.families td { text-align: center; padding: 0.2em 0.45em
 table.families tbody th { text-align: right; font-family: var(--sans); }
 p.family .what { font-family: var(--sans); font-weight: bold; margin-right: 0.6em; }
 p.family a, p.family .unbuilt { margin-right: 0.6em; }
+/* the groups of volume III, a row for each point group, under the heading of its block */
+p.family + .scroll { margin-top: 0.3em; }
+.scroll > table.groups { margin-left: 0; }
+table.groups td { text-align: left; padding: 0.15em 1.1em 0.15em 0; }
 /* a long narrow table set as copies side by side, as in the PDF (latex.snake_plan): one band of
    the copies, each with its head, centered; on a narrow screen they wrap below one another in
    their order */
@@ -292,5 +302,8 @@ ol.roman > li::before { content: "(" counter(item, lower-roman) ")"; position: a
 ol.alpha > li::before { content: "(" counter(item, lower-alpha) ")"; position: absolute;
   left: -2.4em; width: 2em; text-align: right; }
 ol.labelled { list-style: none; padding-left: 0; }
-ol.labelled > li { display: grid; grid-template-columns: 6.2em 1fr; gap: 0.6em; margin: 0.35em 0; }
+ol.labelled > li { display: grid; grid-template-columns: 6.2em minmax(0, 1fr); gap: 0.6em;
+  margin: 0.35em 0; }
+/* a long address in an entry breaks rather than run past a narrow line */
+ol.labelled .entry { overflow-wrap: anywhere; }
 ol.labelled .label { font-family: var(--sans); font-size: 0.9em; }

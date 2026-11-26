@@ -42,9 +42,11 @@ o3m = <|
   "group" -> <|
     "G" -> "rotation/C12v#",
     "H" -> "rotation/C6v#",
+    "abstract_type" -> "rotation/C12v#/group/abstract_type",
     "allowed_properties" -> {},
     "antiunitary_character" -> "B1",
     "centralizer" -> <|"normalizer_index" -> 12, "symbol" -> "C_2h1'"|>,
+    "gap_smallgroup_id" -> "rotation/C12v#/group/gap_smallgroup_id",
     "hermann_mauguin" -> "12'mm'",
     "images" -> <|
       "axial_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/D12#"|>,

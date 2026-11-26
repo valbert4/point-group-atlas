@@ -45,6 +45,7 @@ o3m = {
     'group': {
         'G': 'rotation/D2d#',
         'H': 'rotation/C2v#',
+        'abstract_type': 'rotation/D2d#/group/abstract_type',
         'allowed_properties': [
             {
                 'irrep': 'B2',
@@ -150,6 +151,7 @@ o3m = {
         ],
         'antiunitary_character': 'B2',
         'centralizer': {'normalizer_index': 4, 'symbol': "C_2h1'"},
+        'gap_smallgroup_id': 'rotation/D2d#/group/gap_smallgroup_id',
         'hermann_mauguin': "-4'2'm",
         'images': {
             'axial_even': {

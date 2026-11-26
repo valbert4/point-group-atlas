@@ -24,6 +24,7 @@ import re
 import subprocess
 import unicodedata
 import urllib.parse
+import xml.etree.ElementTree as ET
 
 from .. import names
 from ..formats import conventions, latex, lint, notation, style, volume
@@ -125,12 +126,57 @@ OPENER = re.compile(r"<(a|span)\b[^>]*>")
 CLOSER = re.compile(r"</(a|span)>")
 
 
-def keep_together(text, formulas):
+# The rough width of a formula in em, from its MathML (formula_em): a character of a token, more
+# for an operator spaced as a relation or a binary operator, less in a script; a fraction as wide
+# as its wider part, a matrix as its widest row.
+GLYPH_EM, SCRIPT_SCALE, SPACED_EM = 0.55, 0.7, 0.5
+SPACED = set("=+\u2212-\u2295\u2297\u00d7\u2264\u2265<>\u2208\u2192\u21a6\u2245\u2282\u2286"
+             "\u222a\u2229\u22c5\u00b1\u2213\u223c\u2248\u2260\u2261\u2218")
+SCRIPTED = {"msub": 1, "msup": 1, "munder": 1, "mover": 1, "msubsup": 2, "munderover": 2,
+            "mmultiscripts": 4}
+# An inline formula estimated wider than this, with the text glued to it, scrolls in a box of its
+# own on a line narrower than itself (keep_together; site.css, .wide): at 390 px the line holds
+# about 20 em of a formula.
+WIDE_EM = 13.0
+
+
+def formula_em(mathml):
+    """The rough width in em of the MathML of a formula, its annotation left out."""
+    def width(node, scale):
+        tag = node.tag.rsplit("}", 1)[-1]
+        if tag in ("annotation", "annotation-xml"):
+            return 0.0
+        text = (node.text or "").strip()
+        if tag in ("mi", "mn", "mtext", "ms"):
+            return scale * GLYPH_EM * len(text)
+        if tag == "mo":
+            return scale * (GLYPH_EM * len(text) + (SPACED_EM if text in SPACED else 0.0))
+        kids = list(node)
+        if tag in SCRIPTED and kids:
+            return width(kids[0], scale) + max(
+                [width(k, scale * SCRIPT_SCALE) for k in kids[1:]] or [0.0])
+        if tag == "mfrac" and len(kids) == 2:
+            return max(width(kids[0], scale * 0.85), width(kids[1], scale * 0.85)) + 0.2 * scale
+        if tag in ("msqrt", "mroot"):
+            return sum(width(k, scale) for k in kids) + 0.8 * scale
+        if tag == "mtable":
+            return max([sum(width(c, scale) + 0.5 * scale for c in row) for row in kids] or [0.0])
+        return sum(width(k, scale) for k in kids)
+    try:
+        root = ET.fromstring(mathml)
+    except ET.ParseError:
+        return 0.0
+    return width(root, 1.0)
+
+
+def keep_together(text, formulas, wide=frozenset()):
     """The text with each inline formula and the text glued to it in one span of the class nowrap
-    (TOGETHER), as long as the span closes every element that it opens.  The text that a reader
-    sees stays the same."""
+    (TOGETHER), as long as the span closes every element that it opens; a formula of `wide`, with
+    the text glued to it, in a span of the classes nowrap and wide even without such text.  The
+    text that a reader sees stays the same."""
     def one(m):
-        if formulas[int(m.group("k"))][1]:
+        k = int(m.group("k"))
+        if formulas[k][1]:
             return m.group(0)
         opens = OPENER.findall(m.group("open"))
         tags = [t.group(0) for t in OPENER.finditer(m.group("open"))]
@@ -146,21 +192,23 @@ def keep_together(text, formulas):
         pre, post = m.group("pre") or "", m.group("post")
         before = "" if outer_open else pre
         after = "" if outer_close else post
-        if not before and not after:
+        if not before and not after and k not in wide:
             return m.group(0)
-        return ((pre if outer_open else "") + outer_open + '<span class="nowrap">' + before + core
+        return ((pre if outer_open else "") + outer_open
+                + '<span class="%s">' % ("nowrap wide" if k in wide else "nowrap") + before + core
                 + after + "</span>" + outer_close + (post if outer_close else ""))
     return TOGETHER.sub(one, text)
 
 
 def fill(text, formulas, rendered):
     """The text with the placeholder of each formula replaced by its MathML, each inline formula
-    kept on one line with the punctuation beside it (keep_together)."""
-    def one(m):
-        k = int(m.group(1))
-        _, display, md = formulas[k]
-        return wmath.mathml(rendered[k], md)
-    return PLACEHOLDER.sub(one, keep_together(text, formulas))
+    kept on one line with the punctuation beside it (keep_together), and one estimated wider than
+    WIDE_EM in a box that scrolls when the line is narrower."""
+    maths = {}
+    for k in {int(x) for x in PLACEHOLDER.findall(text)}:
+        maths[k] = wmath.mathml(rendered[k], formulas[k][2])
+    wide = {k for k, x in maths.items() if not formulas[k][1] and formula_em(x) > WIDE_EM}
+    return PLACEHOLDER.sub(lambda m: maths[int(m.group(1))], keep_together(text, formulas, wide))
 
 
 # ---------------------------------------------------------------- the frame
@@ -224,11 +272,11 @@ FAVICONS = ("favicon.svg",) + tuple("favicon-%s.svg" % c for c in names.CATALOGU
 # Mastodon read): the file's title and address, one description of the atlas, and logo/social.png
 # (1200 x 630), the mark beside the title on its grid, as on the home. The image's address carries
 # the first digits of its SHA-256, so that a site that keeps a copy of a preview fetches the image
-# again when it changes.
-DESCRIPTION = ("Exact tables of the 98 point groups, the 116 double point groups and the 270 "
-               "magnetic point groups: characters, irrep matrices, corepresentations, "
-               "Clebsch–Gordan coefficients, descent of symmetry and symmetry-adapted bases, with "
-               "records in JSON, GAP, Wolfram Language and SymPy.")
+# again when it changes.  The description stays under 200 characters, which the previews show
+# whole.
+DESCRIPTION = ("Exact tables of the 98 point groups, 116 double point groups and 270 magnetic "
+               "point groups: characters, Clebsch–Gordan coefficients and bases, in JSON, GAP, "
+               "Wolfram Language and SymPy.")
 CARD = "social.png"
 CARD_ALT = "The mark and the title of the Point Group Atlas"
 LOGO_FILES = FAVICONS + (WORDMARK, CARD)
@@ -974,33 +1022,30 @@ def write_volume(site):
 
 
 def write_magnetic_volume(site, cell):
-    """The volume of Magnetic: the conventions, the groups by their point group G, in the order of
-    volume I (the families, then the exceptional groups), the grey group G1′ first (built ones
-    linked); the references."""
+    """The volume of Magnetic: the conventions; the groups under the blocks of the contents of the
+    volume PDF (magnetic_volume.block_of: the families of volume I, then the exceptional and the
+    continuous groups), in its words and order, a row for each point group G with its grey group
+    G1′ first (built ones linked); the references."""
+    from ..formats import magnetic_volume
     cat, here = site.cat, site.cat + "/"
-    by_point_group = collections.OrderedDict()
+    blocks = collections.OrderedDict()
     for stem in names.MAGNETIC_NAMES:
-        by_point_group.setdefault(stem.split("-")[0], []).append(stem)
-    # the group of magnetic type II in its column, those of magnetic type III after it
-    width = 1 + max(len([x for x in stems if not x.endswith("-1p")])
-                    for stems in by_point_group.values())
-    rows, anchors = [], set()
-    for g, stems in by_point_group.items():
-        stems = [g + "-1p" if g + "-1p" in stems else None] + [x for x in stems
-                                                                if not x.endswith("-1p")]
-        kind, family = placement("rotation", g)
-        anchor = family or kind
-        first = "rotation/%s/" % g
-        point = ('<a href="%s">%s</a>' % (rel(here, first), symbol_of(g))
-                 if site.exists(first) else symbol_of(g))
-        rows.append('<tr%s><th>%s</th>%s</tr>' % (
-            "" if anchor in anchors else ' id="family-%s"' % anchor, point,
-            "".join("<td>%s</td>" % (cell(x) if x else "") for x in stems)
-            + "<td></td>" * (width - len(stems))))
-        anchors.add(anchor)
-    groups = ('<div class="scroll"><table class="families"><thead><tr><th>G</th><th>magnetic '
-              'type II</th><th colspan="%d">magnetic type III</th></tr></thead><tbody>%s</tbody>'
-              '</table></div>' % (width - 1, "".join(rows)))
+        rows = blocks.setdefault(magnetic_volume.block_of(stem), collections.OrderedDict())
+        rows.setdefault(stem.split("-")[0], []).append(stem)
+    lists = []
+    for block, rows in blocks.items():
+        # the group of magnetic type II first, those of magnetic type III after it
+        rows = [sorted(stems, key=lambda x: not x.endswith("-1p")) for stems in rows.values()]
+        width = max(len(stems) for stems in rows)
+        title = ('The <span class="grp">%s</span> family' % FAMILY_HTML[block]
+                 if block in FAMILY_HTML else "The %s groups" % block)
+        lists.append('<p class="family" id="family-%s"><span class="what">%s</span></p>\n'
+                     '<div class="scroll"><table class="families groups"><tbody>%s</tbody>'
+                     '</table></div>' % (block, title, "".join(
+                         "<tr>%s</tr>" % ("".join("<td>%s</td>" % cell(x) for x in stems)
+                                          + "<td></td>" * (width - len(stems)))
+                         for stems in rows)))
+    groups = "\n".join(lists)
     first = "rotation/conventions/"
     conventions_line = ('<p><a href="conventions/">Conventions</a>, sections 30 to 39: the '
                         'records of this volume, with its <a href="conventions/notation/">'
@@ -1009,9 +1054,11 @@ def write_magnetic_volume(site, cell):
                             if site.exists(first) else "those of volume I"))
     built, total = len(site.built), len(names.MAGNETIC_NAMES)
     body = (mark("full", "one head") + '\n<h1 class="title">%s</h1>\n<h2>Conventions</h2>\n'
-            '%s\n<h2>Groups</h2>\n%s<p>A row is a point group G of volume I, with its group of '
-            'magnetic type II and its groups of magnetic type III. A group of magnetic type I is a '
-            'point group, and its document is in volume I.</p>\n%s\n%s\n<h2>References</h2>\n'
+            '%s\n<h2>Groups</h2>\n%s<p>A row holds the groups with one point group '
+            '<span class="grp">G</span> of volume I: <span class="grp">G1′</span>, of magnetic '
+            'type II, and then the groups <span class="grp">G(H)</span> of magnetic type III. The '
+            'rows stand in the order of volume I. A group of magnetic type I is a point group, and '
+            'its document is in volume I.</p>\n%s\n%s\n<h2>References</h2>\n'
             '<p><a href="%s">References</a></p>' % (
                 esc(style.VOLUMES[cat]), conventions_line,
                 "" if built == total else

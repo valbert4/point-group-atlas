@@ -160,6 +160,7 @@ INDEX = "index.json"
 IDENTIFICATION_TABLE = "generator/data/identification.json"
 SMALLGROUP_IDS_TABLE = "generator/data/smallgroup_ids.json"
 DOUBLE_IDENTIFICATION_TABLE = "generator/data/double_identification.json"
+MAGNETIC_IDENTIFICATION_TABLE = "generator/data/magnetic_identification.json"
 IRREP_SYMBOLS_TABLE = "generator/data/irrep_symbols.json"
 MULTIPLIER_AUTOMORPHISMS_TABLE = "generator/data/multiplier_automorphisms.json"
 

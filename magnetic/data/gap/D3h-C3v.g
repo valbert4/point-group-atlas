@@ -29,6 +29,7 @@ o3m := rec(
   ("group") := rec(
     ("G") := "rotation/D3h#",
     ("H") := "rotation/C3v#",
+    ("abstract_type") := "rotation/D3h#/group/abstract_type",
     ("allowed_properties") := [
       rec(
         ("irrep") := "A2pp",
@@ -124,6 +125,7 @@ o3m := rec(
     ],
     ("antiunitary_character") := "A2pp",
     ("centralizer") := rec( ("normalizer_index") := 6, ("symbol") := "C_2h1'" ),
+    ("gap_smallgroup_id") := "rotation/D3h#/group/gap_smallgroup_id",
     ("hermann_mauguin") := "-6'm2'",
     ("images") := rec(
       ("axial_even") := rec(

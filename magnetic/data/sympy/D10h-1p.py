@@ -414,7 +414,10 @@ o3m = {
     ],
     'group': {
         'G': 'rotation/D10h#',
+        'abstract_type': 'Dih(20) x Z_2 x Z_2',
+        'alternative_names': [{'source': 'ChenGuLiuWen2013', 'symbol': 'D_10h x Z_2^T'}],
         'centralizer': {'normalizer_index': 20, 'symbol': "C_2h1'"},
+        'gap_smallgroup_id': [80, 51],
         'hermann_mauguin': "10/mmm1'",
         'images': {
             'axial_even': {

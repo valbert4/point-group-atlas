@@ -81,6 +81,7 @@ o3m := rec(
   ("group") := rec(
     ("G") := "rotation/O3#",
     ("H") := "rotation/SO3#",
+    ("abstract_type") := "rotation/O3#/group/abstract_type",
     ("allowed_properties") := [
       rec(
         ("irrep") := rec( ("family") := "Du", ("index") := 0 ),
@@ -106,6 +107,7 @@ o3m := rec(
       ("normalizer_index") := rec( ("reason") := "continuous-group", ("value") := fail ),
       ("symbol") := "C_i1'"
     ),
+    ("gap_smallgroup_id") := "rotation/O3#/group/gap_smallgroup_id",
     ("hermann_mauguin") := "infinfm'",
     ("images") := rec(
       ("axial_even") := rec(

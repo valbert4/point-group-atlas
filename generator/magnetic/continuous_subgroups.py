@@ -11,8 +11,8 @@ it that fixes K', and the centralizers are C_G(K)1'.
 An axial group is computed as its set of elements in the frame of D_inf_h, each (whether it reflects
 the plane, its angle in turns, its sign on z).  A subgroup of SO(3) or O(3) is named by the record
 of its O(3)-conjugacy class: two subgroups of index 2 of K are carried to each other by the
-normalizer of K exactly when they have one class (names.halves), and the normalizer of K(K') in O(3)
-x C_2^T is in its record (section 30.4).
+normalizer of K exactly when they have one class (names.halves), and the normalizer of K(K') in
+O(3)1' is in its record (section 30.4).
 """
 import re
 from fractions import Fraction as F
@@ -371,7 +371,7 @@ def spherical_black_white(M):
 
 
 def point_part(M, symbol):
-    """The point group of the symbol of a normalizer in O(3) x C_2^T, read in G: its rotations in
+    """The point group of the symbol of a normalizer in O(3)1', read in G: its rotations in
     SO(3)."""
     stem = stem_of_symbol(symbol[:-2])
     return stem if M.G.stem == "O3" else rotations(stem)

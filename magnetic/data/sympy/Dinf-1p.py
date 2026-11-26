@@ -84,10 +84,13 @@ o3m = {
     'domain': 'continuous',
     'group': {
         'G': 'rotation/Dinf#',
+        'abstract_type': 'O(2) x Z_2',
+        'alternative_names': [{'source': 'ChenGuLiuWen2013', 'symbol': 'D_inf x Z_2^T'}],
         'centralizer': {
             'normalizer_index': {'reason': 'continuous-group', 'value': None},
             'symbol': "C_2h1'"
         },
+        'gap_smallgroup_id': 'rotation/Dinf#/group/gap_smallgroup_id',
         'hermann_mauguin': "inf21'",
         'images': {
             'axial_even': {

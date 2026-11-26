@@ -54,7 +54,10 @@ o3m = {
     ],
     'group': {
         'G': 'rotation/I#',
+        'abstract_type': 'A_5 x Z_2',
+        'alternative_names': [{'source': 'ChenGuLiuWen2013', 'symbol': 'I x Z_2^T'}],
         'centralizer': {'normalizer_index': 60, 'symbol': "C_i1'"},
+        'gap_smallgroup_id': [120, 35],
         'hermann_mauguin': "5321'",
         'images': {
             'axial_even': {

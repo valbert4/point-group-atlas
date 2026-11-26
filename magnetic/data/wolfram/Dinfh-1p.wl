@@ -221,10 +221,13 @@ o3m = <|
   "domain" -> "continuous",
   "group" -> <|
     "G" -> "rotation/Dinfh#",
+    "abstract_type" -> "O(2) x Z_2 x Z_2",
+    "alternative_names" -> {<|"source" -> "ChenGuLiuWen2013", "symbol" -> "D_infh x Z_2^T"|>},
     "centralizer" -> <|
       "normalizer_index" -> <|"reason" -> "continuous-group", "value" -> Null|>,
       "symbol" -> "C_2h1'"
     |>,
+    "gap_smallgroup_id" -> "rotation/Dinfh#/group/gap_smallgroup_id",
     "hermann_mauguin" -> "inf/mm1'",
     "images" -> <|
       "axial_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/Dinf#"|>,

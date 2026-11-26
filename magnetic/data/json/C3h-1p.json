@@ -179,10 +179,21 @@
   ],
   "group": {
     "G": "rotation/C3h#",
+    "abstract_type": "Z_6 x Z_2",
+    "alternative_names": [
+      {
+        "source": "ChenGuLiuWen2013",
+        "symbol": "C_3h x Z_2^T"
+      }
+    ],
     "centralizer": {
       "normalizer_index": 2,
       "symbol": "C_infh1'"
     },
+    "gap_smallgroup_id": [
+      12,
+      5
+    ],
     "hermann_mauguin": "-61'",
     "images": {
       "axial_even": {

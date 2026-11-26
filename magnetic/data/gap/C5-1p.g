@@ -20,7 +20,10 @@ o3m := rec(
   ],
   ("group") := rec(
     ("G") := "rotation/C5#",
+    ("abstract_type") := "Z_10",
+    ("alternative_names") := [ rec( ("source") := "ChenGuLiuWen2013", ("symbol") := "C_5 x Z_2^T" ) ],
     ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "C_infh1'" ),
+    ("gap_smallgroup_id") := [ 10, 2 ],
     ("hermann_mauguin") := "51'",
     ("images") := rec(
       ("axial_even") := rec(

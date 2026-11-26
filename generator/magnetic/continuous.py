@@ -20,6 +20,7 @@ from fractions import Fraction as F
 
 from .. import names, serialize
 from ..exact.cyclo import Cyc, csum
+from . import abstract as AB
 from . import invariants as INV
 from . import pointer
 from . import tensors as TE
@@ -460,8 +461,8 @@ def images(M):
 
 
 def normalizer_centralizer(M):
-    """N(M) and C(M) in O(3) x C_2^T (section 30.4).  The kernel H of chi is the only closed
-    subgroup of its class and index 2 in G that N(G) can carry it to, so N(M) = N(G) x C_2^T."""
+    """N(M) and C(M) in O(3)1' (section 30.4).  The kernel H of chi is the only closed
+    subgroup of its class and index 2 in G that N(G) can carry it to, so N(M) = N(G)1'."""
     ng, cg = M.G.group["normalizer"], M.G.group["centralizer"]
     return ({"index": ng["index"] * (1 if M.grey else 2), "symbol": ng["schoenflies"] + "1'"},
             {"normalizer_index": cg["normalizer_index"], "symbol": cg["schoenflies"] + "1'"})
@@ -932,6 +933,7 @@ def record(stem):
     if not M.grey:
         grp.update({"H": rot(h), "subgroup": entry_of_h(M),
                     "antiunitary_character": reference(M.G, *M.chi)})
+    grp.update(AB.identification(stem, M.grey, g, M.G.group, None))
     grp["normalizer"], grp["centralizer"] = normalizer_centralizer(M)
     grp["images"], img = images(M)
     if not M.grey:

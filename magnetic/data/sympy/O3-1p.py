@@ -133,10 +133,13 @@ o3m = {
     'domain': 'continuous',
     'group': {
         'G': 'rotation/O3#',
+        'abstract_type': 'SO(3) x Z_2 x Z_2',
+        'alternative_names': [{'source': 'ChenGuLiuWen2013', 'symbol': 'O(3) x Z_2^T'}],
         'centralizer': {
             'normalizer_index': {'reason': 'continuous-group', 'value': None},
             'symbol': "C_i1'"
         },
+        'gap_smallgroup_id': 'rotation/O3#/group/gap_smallgroup_id',
         'hermann_mauguin': "infinfm1'",
         'images': {
             'axial_even': {

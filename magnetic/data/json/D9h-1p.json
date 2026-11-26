@@ -2003,10 +2003,21 @@
   ],
   "group": {
     "G": "rotation/D9h#",
+    "abstract_type": "Dih(36) x Z_2",
+    "alternative_names": [
+      {
+        "source": "ChenGuLiuWen2013",
+        "symbol": "D_9h x Z_2^T"
+      }
+    ],
     "centralizer": {
       "normalizer_index": 18,
       "symbol": "C_2h1'"
     },
+    "gap_smallgroup_id": [
+      72,
+      17
+    ],
     "hermann_mauguin": "-18m21'",
     "images": {
       "axial_even": {

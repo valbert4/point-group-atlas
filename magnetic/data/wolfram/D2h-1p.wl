@@ -58,7 +58,10 @@ o3m = <|
   },
   "group" -> <|
     "G" -> "rotation/D2h#",
+    "abstract_type" -> "Z_2 x Z_2 x Z_2 x Z_2",
+    "alternative_names" -> {<|"source" -> "ChenGuLiuWen2013", "symbol" -> "D_2h x Z_2^T"|>},
     "centralizer" -> <|"normalizer_index" -> 6, "symbol" -> "D_2h1'"|>,
+    "gap_smallgroup_id" -> {16, 14},
     "hermann_mauguin" -> "mmm1'",
     "images" -> <|
       "axial_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/D2#"|>,

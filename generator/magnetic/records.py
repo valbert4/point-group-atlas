@@ -23,6 +23,7 @@ import os
 
 from .. import names, serialize
 from . import CATALOGUE, pointer
+from . import abstract as AB
 from . import continuous as CO
 from . import coreps as CR
 from . import geometry as GE
@@ -98,9 +99,9 @@ def images(M):
 
 # ---------------------------------------------------------------- normalizer and centralizer
 def normalizer_centralizer(M):
-    """The normalizer N(M) and the centralizer C(M) in O(3) x C_2^T, each a group of magnetic type
-    II: N(M) = Stab_N(G)(chi) x C_2^T, C(M) = C(G) x C_2^T for magnetic type III, and N(G) x C_2^T,
-    C(G) x C_2^T for magnetic type II (rotation/CONVENTIONS.md section 2.2 for N(G), C(G))."""
+    """The normalizer N(M) and the centralizer C(M) in O(3)1', each a group of magnetic type II:
+    N(M) = Stab_N(G)(chi)1', C(M) = C(G)1' for magnetic type III, and N(G)1', C(G)1' for magnetic
+    type II (rotation/CONVENTIONS.md section 2.2 for N(G), C(G))."""
     G = M.G
     ng, cg = G.group["normalizer"], G.group["centralizer"]
     if M.grey:
@@ -151,6 +152,7 @@ def record(stem):
         grp["symbol"] = "%s(%s)" % (G.group["schoenflies"], M.H.group["schoenflies"])
         grp["hermann_mauguin"] = HM.magnetic_symbol(G, h)
         grp.update({"H": rot(h), "node": M.node, "antiunitary_character": M.chi})
+    grp.update(AB.identification(stem, M.grey, g, G.group, G.mt))
     grp["normalizer"], grp["centralizer"] = normalizer_centralizer(M)
     grp["images"], img = images(M)
     if not M.grey:
@@ -238,7 +240,7 @@ def regrouped(table, coreps):
 
 
 def subduction_corepresentations(M, coreps):
-    """The multiplicity of each corepresentation in D^(J,p) of O(3) x C_2^T restricted to M, for
+    """The multiplicity of each corepresentation in D^(J,p) of O(3)1' restricted to M, for
     J <= J_MAX at both parities, from the subduction of H (G for a grey group) by the rule of
     section 33.1."""
     so = M.H.rec["subduction_o3"]["parities"]

@@ -28,7 +28,10 @@ o3m = <|
   },
   "group" -> <|
     "G" -> "rotation/S8#",
+    "abstract_type" -> "Z_8 x Z_2",
+    "alternative_names" -> {<|"source" -> "ChenGuLiuWen2013", "symbol" -> "S_8 x Z_2^T"|>},
     "centralizer" -> <|"normalizer_index" -> 2, "symbol" -> "C_infh1'"|>,
+    "gap_smallgroup_id" -> {16, 5},
     "hermann_mauguin" -> "-81'",
     "images" -> <|
       "axial_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/C8#"|>,

@@ -251,10 +251,21 @@
   ],
   "group": {
     "G": "rotation/Td#",
+    "abstract_type": "S_4 x Z_2",
+    "alternative_names": [
+      {
+        "source": "ChenGuLiuWen2013",
+        "symbol": "T_d x Z_2^T"
+      }
+    ],
     "centralizer": {
       "normalizer_index": 24,
       "symbol": "C_i1'"
     },
+    "gap_smallgroup_id": [
+      48,
+      48
+    ],
     "hermann_mauguin": "-43m1'",
     "images": {
       "axial_even": {

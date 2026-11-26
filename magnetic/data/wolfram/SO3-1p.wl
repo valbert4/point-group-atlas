@@ -41,10 +41,13 @@ o3m = <|
   "domain" -> "continuous",
   "group" -> <|
     "G" -> "rotation/SO3#",
+    "abstract_type" -> "SO(3) x Z_2",
+    "alternative_names" -> {<|"source" -> "ChenGuLiuWen2013", "symbol" -> "SO(3) x Z_2^T"|>},
     "centralizer" -> <|
       "normalizer_index" -> <|"reason" -> "continuous-group", "value" -> Null|>,
       "symbol" -> "C_i1'"
     |>,
+    "gap_smallgroup_id" -> "rotation/SO3#/group/gap_smallgroup_id",
     "hermann_mauguin" -> "infinf1'",
     "images" -> <|
       "axial_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/SO3#"|>,

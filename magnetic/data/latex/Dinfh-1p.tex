@@ -143,8 +143,13 @@
 \newcommand{\hmname}[1]{#1}
 \newcommand{\orbname}[1]{#1}
 \newcommand{\ptag}[1]{\mathrm{#1}}
+\newcommand{\dirprod}{\times}
 \newcommand{\nconj}[1]{{\scriptsize$\times#1$}}
 \newcommand{\clsletter}[1]{\,{\scriptsize\color{black!55}#1}}
+\newcommand{\Cyc}[1]{\grp{Z_{#1}}}
+\newcommand{\Dih}[1]{\grp{Dih_{#1}}}
+\newcommand{\Alt}[1]{\grp{Alt_{#1}}}
+\newcommand{\Sym}[1]{\grp{Sym_{#1}}}
 \newcommand{\restr}[2]{#1\!\downarrow#2}
 \newcommand{\vv}{\mathbf{v}}
 \newcommand{\iunit}{\mathrm{i}}
@@ -182,7 +187,7 @@
 \begin{document}
 \thispagestyle{opening}
 \begin{center}
-{\LARGE\sffamily\bfseries\color{parttitle}The $\grp{D_{\infty h}1'}$ subgroup of $\grp{O(3)} \times \grp{C_{2}^{T}}$}
+{\LARGE\sffamily\bfseries\color{parttitle}The $\grp{D_{\infty h}1'}$ subgroup of $\grp{O(3)1'}$}
 \end{center}
 \contentspage
 \needspace{194pt}
@@ -194,6 +199,8 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \texttt{magnetic\symbol{95}type} & II\\
 \texttt{G} & \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$}\\
 \grouprule{0pt}{\lightrulewidth}
+\texttt{abstract\symbol{95}type} & $\grp{O(2)}\dirprod\Cyc{2}\dirprod\Cyc{2}$\\
+\grouprule{0pt}{\lightrulewidth}
 \texttt{images.polar\symbol{95}even} & \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$}\\
 \texttt{images.axial\symbol{95}even} & \href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$}\\
 \texttt{images.polar\symbol{95}odd} & \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$}\\
@@ -202,9 +209,10 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \texttt{normalizer} & \href{Dinfh-1p.pdf}{$\grp{D_{\infty h}1'}$}, index 1\\
 \texttt{centralizer} & \href{C2h-1p.pdf}{$\grp{C_{2h}1'}$}\\
 \grouprule{0pt}{\lightrulewidth}
+\texttt{alternative\symbol{95}names} & $\grp{D_{\infty h}} \dirprod \grp{Z_{2}^{T}}$\\
 \texttt{hermann\symbol{95}mauguin} & $\hmname{\infty /mm1'}$\\
 \bottomrule\end{longtable}}
-The field \texttt{magnetic\symbol{95}type} is II, so $\grp{D_{\infty h}1'}$ contains the elements of $\grp{D_{\infty h}}$ and their products with time reversal $\varTheta$. The field \texttt{G} names $\grp{D_{\infty h}}$ by its record (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.30.3}{30.3}). The four fields \texttt{images} name the groups by which the elements move a polar or an axial vector, even or odd under time reversal (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.2}{31.2}). Each names the record of its $\grp{O(3)}$-conjugacy class, and its frame is the identity. The fields \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{O(3)} \times \grp{C_{2}^{T}}$, and both groups are of magnetic type II.
+The field \texttt{magnetic\symbol{95}type} is II, so $\grp{D_{\infty h}1'}$ contains the elements of $\grp{D_{\infty h}}$ and their products with time reversal $\varTheta$. The field \texttt{G} names $\grp{D_{\infty h}}$ by its record (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.30.3}{30.3}). The four fields \texttt{images} name the groups by which the elements move a polar or an axial vector, even or odd under time reversal (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.2}{31.2}). Each names the record of its $\grp{O(3)}$-conjugacy class, and its frame is the identity. The fields \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{O(3)1'}$, and both groups are of magnetic type II. \label{n:group.timereversal}The field \texttt{alternative\symbol{95}names} gives the name of $\grp{D_{\infty h}1'}$ in condensed-matter physics [\href{../../../REFERENCES.pdf\#ref.CGLW13}{CGLW13}], where $\grp{Z_{2}^{T}}$ is the group of order 2 that time reversal $\varTheta$ generates.
 \needspace{171pt}
 \partbox{Representations}
 \section{Families of irreps}\label{s:families}
@@ -269,7 +277,7 @@ $\irr{e}_{n,\ptag{u}}$ & $\irr{a}_{1\ptag{g}} \oplus \irr{e}_{2n,\ptag{g}}$ & $\
 \section{Closed subgroups}\label{s:subgroups}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.15.2}{15.2}, \href{../../../rotation/CONVENTIONS.pdf\#conv.16.1}{16.1}, \href{../../CONVENTIONS.pdf\#conv.36}{36} and \href{../../CONVENTIONS.pdf\#conv.37.5}{37.5}.
 \leavevmode\label{n:group.subgroup.point}Over a closed subgroup $\grp{K}$ of $\grp{D_{\infty h}}$ (the section Closed subgroups of the document of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$}) lie $\grp{K}$, of magnetic type I, $\grp{K1'}$, of magnetic type II, and the groups $\grp{K}(\grp{K}')$ of magnetic type III. The group $\grp{K}'$ is a closed subgroup of index 2 in $\grp{K}$, taken up to conjugation by the normalizer of $\grp{K}$ in $\grp{D_{\infty h}}$. In the diagram of the continuous closed subgroups, each group links to its document, and a line joins a group to a maximal closed subgroup among the groups of the diagram.
-\begin{center}\begin{tikzpicture}[x=1cm, y=1cm, every node/.style={fill=white, font=\footnotesize, inner sep=1.5pt}]
+\begin{center}\begin{tikzpicture}[x=1cm, y=1cm, every node/.style={fill=white, font=\small, inner sep=2pt}]
 \draw[black!50, line width=0.4pt] (0,0) -- (0,1.7);
 \draw[black!50, line width=0.4pt] (0,0) -- (-7.6,1.7);
 \draw[black!50, line width=0.4pt] (0,1.7) -- (-5.067,3.4);
@@ -305,22 +313,22 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \draw[black!50, line width=0.4pt] (2.533,3.4) -- (0,5.1);
 \draw[black!50, line width=0.4pt] (5.067,3.4) -- (0,5.1);
 \draw[black!50, line width=0.4pt] (7.6,3.4) -- (0,5.1);
-\node at (0,0) {\href{../../../rotation/data/pdf/Cinf.pdf}{$\grp{C_{\infty}}$}};
-\node at (-7.6,1.7) {\href{../../../rotation/data/pdf/Cinfh.pdf}{$\grp{C_{\infty h}}$}};
-\node at (-5.067,1.7) {\href{../../../rotation/data/pdf/Cinfv.pdf}{$\grp{C_{\infty v}}$}};
-\node at (-2.533,1.7) {\href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$}};
-\node at (0,1.7) {\href{Cinf-1p.pdf}{$\grp{C_{\infty}1'}$}};
-\node at (2.533,1.7) {\href{Cinfh-Cinf.pdf}{$\grp{C_{\infty h}}(\grp{C_{\infty}})$}};
-\node at (5.067,1.7) {\href{Cinfv-Cinf.pdf}{$\grp{C_{\infty v}}(\grp{C_{\infty}})$}};
-\node at (7.6,1.7) {\href{Dinf-Cinf.pdf}{$\grp{D_{\infty}}(\grp{C_{\infty}})$}};
-\node at (-7.6,3.4) {\href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$}};
-\node at (-5.067,3.4) {\href{Cinfh-1p.pdf}{$\grp{C_{\infty h}1'}$}};
-\node at (-2.533,3.4) {\href{Cinfv-1p.pdf}{$\grp{C_{\infty v}1'}$}};
-\node at (0,3.4) {\href{Dinf-1p.pdf}{$\grp{D_{\infty}1'}$}};
-\node at (2.533,3.4) {\href{Dinfh-Dinf.pdf}{$\grp{D_{\infty h}}(\grp{D_{\infty}})$}};
-\node at (5.067,3.4) {\href{Dinfh-Cinfh.pdf}{$\grp{D_{\infty h}}(\grp{C_{\infty h}})$}};
-\node at (7.6,3.4) {\href{Dinfh-Cinfv.pdf}{$\grp{D_{\infty h}}(\grp{C_{\infty v}})$}};
-\node at (0,5.1) {$\grp{D_{\infty h}1'}$};
+\node at (0,0) {\href{../../../rotation/data/pdf/Cinf.pdf}{\textcolor{black}{$\grp{C_{\infty}}$}}};
+\node at (0,1.7) {\href{Cinf-1p.pdf}{\textcolor{black}{$\grp{C_{\infty}1'}$}}};
+\node at (-7.6,1.7) {\href{../../../rotation/data/pdf/Cinfh.pdf}{\textcolor{black}{$\grp{C_{\infty h}}$}}};
+\node at (-5.067,3.4) {\href{Cinfh-1p.pdf}{\textcolor{black}{$\grp{C_{\infty h}1'}$}}};
+\node at (2.533,1.7) {\href{Cinfh-Cinf.pdf}{\textcolor{black}{$\grp{C_{\infty h}}(\grp{C_{\infty}})$}}};
+\node at (-5.067,1.7) {\href{../../../rotation/data/pdf/Cinfv.pdf}{\textcolor{black}{$\grp{C_{\infty v}}$}}};
+\node at (-2.533,3.4) {\href{Cinfv-1p.pdf}{\textcolor{black}{$\grp{C_{\infty v}1'}$}}};
+\node at (5.067,1.7) {\href{Cinfv-Cinf.pdf}{\textcolor{black}{$\grp{C_{\infty v}}(\grp{C_{\infty}})$}}};
+\node at (-2.533,1.7) {\href{../../../rotation/data/pdf/Dinf.pdf}{\textcolor{black}{$\grp{D_{\infty}}$}}};
+\node at (0,3.4) {\href{Dinf-1p.pdf}{\textcolor{black}{$\grp{D_{\infty}1'}$}}};
+\node at (7.6,1.7) {\href{Dinf-Cinf.pdf}{\textcolor{black}{$\grp{D_{\infty}}(\grp{C_{\infty}})$}}};
+\node at (-7.6,3.4) {\href{../../../rotation/data/pdf/Dinfh.pdf}{\textcolor{black}{$\grp{D_{\infty h}}$}}};
+\node at (2.533,3.4) {\href{Dinfh-Dinf.pdf}{\textcolor{black}{$\grp{D_{\infty h}}(\grp{D_{\infty}})$}}};
+\node at (5.067,3.4) {\href{Dinfh-Cinfh.pdf}{\textcolor{black}{$\grp{D_{\infty h}}(\grp{C_{\infty h}})$}}};
+\node at (7.6,3.4) {\href{Dinfh-Cinfv.pdf}{\textcolor{black}{$\grp{D_{\infty h}}(\grp{C_{\infty v}})$}}};
+\node at (0,5.1) {\textcolor{black}{$\grp{D_{\infty h}1'}$}};
 \end{tikzpicture}\end{center}
 The table lists the closed subgroups other than $\grp{D_{\infty h}1'}$ up to conjugacy in $\grp{D_{\infty h}1'}$, one in each row: the continuous subgroups, then those over the members of each family. \label{n:index.family.N}A row with $N$ in its symbol stands for every $N$ of its range, and its entries are functions of $N$. \label{n:mark.letter}A gray letter after a symbol distinguishes the classes of subgroups with that symbol, which are not conjugate in $\grp{D_{\infty h}1'}$. \label{n:head.subgroup}\label{n:head.magnetic.type}\label{n:head.order}\label{n:head.conjugates}\label{n:head.normal}A row gives the representative of a class of subgroups (subgrp), its magnetic type (type), its order, the number of subgroups in the class (conjugates) and whether the representative is normal. \label{n:head.normalizer}\label{n:head.centralizer}It also gives its normalizer and its centralizer in $\grp{D_{\infty h}1'}$. The record holds the members with $N \le 12$ (\texttt{subgroup\symbol{95}classes}), and the section Closed subgroups of the document of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$} gives other names of some members with $N = 1$.
 {\small\begin{longtable}{@{}llrrlll@{}}\toprule
@@ -429,9 +437,9 @@ $\grp{D_{\mathnormal{N}d}}(\grp{C_{\mathnormal{N}v}})$, $N \ge 2$ & III & $4N$ &
 \bottomrule\end{longtable}}
 \needspace{208pt}
 \partbox{Angular momentum}
-\section{Subduction from \texorpdfstring{$\grp{O(3)} \times \grp{C_{2}^{T}}$}{O(3) x C2T}}\label{s:subduction_o3}
+\section{Subduction from \texorpdfstring{$\grp{O(3)1'}$}{O(3)1\unichar{8242}}}\label{s:subduction_o3}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.11}{11}, \href{../../../rotation/CONVENTIONS.pdf\#conv.12}{12}, \href{../../CONVENTIONS.pdf\#conv.33.1}{33.1} and \href{../../CONVENTIONS.pdf\#conv.37.4}{37.4}.
-\leavevmode\label{n:index.J}\label{n:index.parity}\label{n:index.rule.k}The irrep $\irrJp{J}{p}$ of $\grp{O(3)} \times \grp{C_{2}^{T}}$ has angular momentum $J$ and parity $p$ ($\ptag{g}$ for $p = +1$, $\ptag{u}$ for $p = -1$), and time reversal acts on it as on its kets (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.1}{31.1}). A corepresentation occurs in its restriction to $\grp{D_{\infty h}1'}$ as often as its first irrep occurs in the restriction to $\grp{D_{\infty h}}$ (the section Subduction from $\grp{O(3)}$ of the document of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$}). For every $J$,
+\leavevmode\label{n:index.J}\label{n:index.parity}\label{n:index.rule.k}The irrep $\irrJp{J}{p}$ of $\grp{O(3)1'}$ has angular momentum $J$ and parity $p$ ($\ptag{g}$ for $p = +1$, $\ptag{u}$ for $p = -1$), and time reversal acts on it as on its kets (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.1}{31.1}). A corepresentation occurs in its restriction to $\grp{D_{\infty h}1'}$ as often as its first irrep occurs in the restriction to $\grp{D_{\infty h}}$ (the section Subduction from $\grp{O(3)}$ of the document of \href{../../../rotation/data/pdf/Dinfh.pdf}{$\grp{D_{\infty h}}$}). For every $J$,
 \begin{equation}\label{e:o3rule}\begin{aligned}\restr{\irrJp{J}{+}}{\grp{D_{\infty h}1'}} &= \irr{a}_{k,\ptag{g}}\oplus\bigoplus_{n=1}^{J}\irr{e}_{n,\ptag{g}},\\\restr{\irrJp{J}{-}}{\grp{D_{\infty h}1'}} &= \irr{a}_{k,\ptag{u}}\oplus\bigoplus_{n=1}^{J}\irr{e}_{n,\ptag{u}},\quad k = 1 \text{ if } J \text{ is even},\ 2 \text{ if it is odd}.\end{aligned}\end{equation}
 A row is an angular momentum $J \le 6$. A row gives the restriction of $\irrJp{J}{p}$ to $\grp{D_{\infty h}1'}$.
 \needspace{149pt}

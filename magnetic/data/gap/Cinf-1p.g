@@ -44,7 +44,10 @@ o3m := rec(
   ("domain") := "continuous",
   ("group") := rec(
     ("G") := "rotation/Cinf#",
+    ("abstract_type") := "SO(2) x Z_2",
+    ("alternative_names") := [ rec( ("source") := "ChenGuLiuWen2013", ("symbol") := "C_inf x Z_2^T" ) ],
     ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "C_infh1'" ),
+    ("gap_smallgroup_id") := "rotation/Cinf#/group/gap_smallgroup_id",
     ("hermann_mauguin") := "inf1'",
     ("images") := rec(
       ("axial_even") := rec(

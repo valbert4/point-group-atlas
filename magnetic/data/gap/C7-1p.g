@@ -22,7 +22,10 @@ o3m := rec(
   ],
   ("group") := rec(
     ("G") := "rotation/C7#",
+    ("abstract_type") := "Z_14",
+    ("alternative_names") := [ rec( ("source") := "ChenGuLiuWen2013", ("symbol") := "C_7 x Z_2^T" ) ],
     ("centralizer") := rec( ("normalizer_index") := 2, ("symbol") := "C_infh1'" ),
+    ("gap_smallgroup_id") := [ 14, 2 ],
     ("hermann_mauguin") := "71'",
     ("images") := rec(
       ("axial_even") := rec(

@@ -24,7 +24,10 @@ o3m = <|
   },
   "group" -> <|
     "G" -> "rotation/C3v#",
+    "abstract_type" -> "Dih(12)",
+    "alternative_names" -> {<|"source" -> "ChenGuLiuWen2013", "symbol" -> "C_3v x Z_2^T"|>},
     "centralizer" -> <|"normalizer_index" -> 6, "symbol" -> "C_2h1'"|>,
+    "gap_smallgroup_id" -> {12, 4},
     "hermann_mauguin" -> "3m1'",
     "images" -> <|
       "axial_even" -> <|

@@ -152,12 +152,12 @@ in about 13 h of CPU time for 2I.
 
 ## Volume III: magnetic point groups
 
-The magnetic point groups are the closed subgroups of O(3) × C₂ᵀ up to conjugacy, where C₂ᵀ = {E, Θ} is the group
-of time reversal (magnetic/CONVENTIONS.md, sections 30 to 39). Over each point group G lie groups of three
-magnetic types:
+The magnetic point groups are the closed subgroups of the parent O(3)1′ up to conjugacy, the group of the elements
+of O(3) and of their products with time reversal Θ (magnetic/CONVENTIONS.md, sections 30 to 39). Over each point
+group G lie groups of three magnetic types:
 
 - G itself, of magnetic type I, the point group of volume I.
-- G1′ = G × C₂ᵀ, of magnetic type II, which contains time reversal (98 records, such as C3v-1p).
+- G1′ = G × {E, Θ}, of magnetic type II, which contains time reversal (98 records, such as C3v-1p).
 - G(H), of magnetic type III, for a subgroup H of index 2 in G: the elements of H and the products of time
   reversal with the other elements of G (172 records, one for each O(3)-conjugacy class of H, such as C3v-C3).
 
@@ -168,14 +168,14 @@ values that it derives from them by a rule, such as the characters of its corepr
 
 The record of each finite group and the files that it names hold these contents, by part of its document:
 
-- The group: the Schoenflies and magnetic Hermann–Mauguin symbols, the groups G and H, the groups by which the
-  elements move a polar or an axial vector even or odd under time reversal, and the normalizer and the centralizer
-  in O(3) × C₂ᵀ.
+- The group: the Schoenflies and magnetic Hermann–Mauguin symbols, the groups G and H, the abstract group and its
+  GAP identifier, the groups by which the elements move a polar or an axial vector even or odd under time reversal,
+  and the normalizer and the centralizer in O(3)1′.
 - Representations: the corepresentations, each with its case (a), (b) or (c) and its matrix N, the
   corepresentation table and the symmetrized powers.
 - Subgroups: the subgroup lattice with the magnetic type of each class of subgroups, and in magnetic type III the
   restriction of each irrep of G over ℝ to the group.
-- Angular momentum: the restriction of each irrep of O(3) × C₂ᵀ to the group, for J ≤ 6.
+- Angular momentum: the restriction of each irrep of O(3)1′ to the group, for J ≤ 6.
 - Tensors: the tensor properties odd under time reversal that the group allows, its multipoles, and the invariant
   polynomials of a polar vector even and an axial vector odd under time reversal.
 

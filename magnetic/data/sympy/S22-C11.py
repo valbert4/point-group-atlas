@@ -87,6 +87,7 @@ o3m = {
     'group': {
         'G': 'rotation/S22#',
         'H': 'rotation/C11#',
+        'abstract_type': 'rotation/S22#/group/abstract_type',
         'allowed_properties': [
             {
                 'irrep': 'Au',
@@ -127,6 +128,7 @@ o3m = {
         ],
         'antiunitary_character': 'Au',
         'centralizer': {'normalizer_index': 2, 'symbol': "C_infh1'"},
+        'gap_smallgroup_id': 'rotation/S22#/group/gap_smallgroup_id',
         'hermann_mauguin': "-11'",
         'images': {
             'axial_even': {

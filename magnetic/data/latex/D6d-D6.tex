@@ -143,8 +143,13 @@
 \newcommand{\hmname}[1]{#1}
 \newcommand{\orbname}[1]{#1}
 \newcommand{\ptag}[1]{\mathrm{#1}}
+\newcommand{\dirprod}{\times}
 \newcommand{\nconj}[1]{{\scriptsize$\times#1$}}
 \newcommand{\clsletter}[1]{\,{\scriptsize\color{black!55}#1}}
+\newcommand{\Cyc}[1]{\grp{Z_{#1}}}
+\newcommand{\Dih}[1]{\grp{Dih_{#1}}}
+\newcommand{\Alt}[1]{\grp{Alt_{#1}}}
+\newcommand{\Sym}[1]{\grp{Sym_{#1}}}
 \newcommand{\restr}[2]{#1\!\downarrow#2}
 \newcommand{\vv}{\mathbf{v}}
 \newcommand{\iunit}{\mathrm{i}}
@@ -182,7 +187,7 @@
 \begin{document}
 \thispagestyle{opening}
 \begin{center}
-{\LARGE\sffamily\bfseries\color{parttitle}The $\grp{D_{6d}}(\grp{D_{6}})$ subgroup of $\grp{O(3)} \times \grp{C_{2}^{T}}$}
+{\LARGE\sffamily\bfseries\color{parttitle}The $\grp{D_{6d}}(\grp{D_{6}})$ subgroup of $\grp{O(3)1'}$}
 \end{center}
 \contentspage
 \needspace{194pt}
@@ -196,6 +201,8 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \texttt{H} & \href{../../../rotation/data/pdf/D6.pdf}{$\grp{D_{6}}$}, index 2\\
 \texttt{antiunitary\symbol{95}character} & $\irr{b}_{1}$\\
 \grouprule{0pt}{\lightrulewidth}
+\texttt{abstract\symbol{95}type} & $\Dih{24}$\\
+\grouprule{0pt}{\lightrulewidth}
 \texttt{images.polar\symbol{95}even} & \href{../../../rotation/data/pdf/D6d.pdf}{$\grp{D_{6d}}$}\\
 \texttt{images.axial\symbol{95}even} & \href{../../../rotation/data/pdf/D12.pdf}{$\grp{D_{12}}$}\\
 \texttt{images.polar\symbol{95}odd} & \href{../../../rotation/data/pdf/D12.pdf}{$\grp{D_{12}}$}\\
@@ -204,10 +211,11 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \texttt{normalizer} & \href{D12h-1p.pdf}{$\grp{D_{12h}1'}$}, index 4\\
 \texttt{centralizer} & \href{C2h-1p.pdf}{$\grp{C_{2h}1'}$}, index 12 in the normalizer\\
 \grouprule{0pt}{\lightrulewidth}
+\texttt{gap\symbol{95}smallgroup\symbol{95}id} & [24, 6]\\
 \texttt{hermann\symbol{95}mauguin} & $\hmname{\overline{12}'2m'}$\\
 \texttt{orbifold} & $\orbname{2{\ast}6}$ of \href{../../../rotation/data/pdf/D6d.pdf}{$\grp{D_{6d}}$}, $\orbname{226}$ of \href{../../../rotation/data/pdf/D6.pdf}{$\grp{D_{6}}$}\\
 \bottomrule\end{longtable}}
-The field \texttt{magnetic\symbol{95}type} is III, so $\grp{D_{6d}}(\grp{D_{6}})$ contains the elements of $\grp{D_{6}}$ and the products of time reversal $\varTheta$ with the other elements of $\grp{D_{6d}}$. The fields \texttt{G} and \texttt{H} name these groups by their records (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.30.3}{30.3}), and \texttt{antiunitary\symbol{95}character} names the irrep $\chi$ of $\grp{D_{6d}}$ with kernel $\grp{D_{6}}$. The four fields \texttt{images} name the groups by which the elements move a polar or an axial vector, even or odd under time reversal (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.2}{31.2}). Each names the record of its $\grp{O(3)}$-conjugacy class and the frame that carries that record onto the image. The fields \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{O(3)} \times \grp{C_{2}^{T}}$, and both groups are of magnetic type II. The field \texttt{orbifold} of the record gives the orbifold symbols of $\grp{D_{6d}}$ and of $\grp{D_{6}}$.
+The field \texttt{magnetic\symbol{95}type} is III, so $\grp{D_{6d}}(\grp{D_{6}})$ contains the elements of $\grp{D_{6}}$ and the products of time reversal $\varTheta$ with the other elements of $\grp{D_{6d}}$. The fields \texttt{G} and \texttt{H} name these groups by their records (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.30.3}{30.3}), and \texttt{antiunitary\symbol{95}character} names the irrep $\chi$ of $\grp{D_{6d}}$ with kernel $\grp{D_{6}}$. The four fields \texttt{images} name the groups by which the elements move a polar or an axial vector, even or odd under time reversal (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.2}{31.2}). Each names the record of its $\grp{O(3)}$-conjugacy class and the frame that carries that record onto the image. The fields \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{O(3)1'}$, and both groups are of magnetic type II. The field \texttt{orbifold} of the record gives the orbifold symbols of $\grp{D_{6d}}$ and of $\grp{D_{6}}$.
 \needspace{103pt}
 \section{Symmetry operations}\label{s:elements}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.5}{5}, \href{../../CONVENTIONS.pdf\#conv.30.1}{30.1}, \href{../../CONVENTIONS.pdf\#conv.30.3}{30.3} and \href{../../CONVENTIONS.pdf\#conv.32.1}{32.1}.
@@ -373,9 +381,9 @@ $\irr{e}_{1}$ & $\irr{e}_{1}$ &  & \\
 \bottomrule\end{longtable}}
 \needspace{171pt}
 \partbox{Angular momentum}
-\section{Subduction from \texorpdfstring{$\grp{O(3)} \times \grp{C_{2}^{T}}$}{O(3) x C2T}}\label{s:subduction_o3}
+\section{Subduction from \texorpdfstring{$\grp{O(3)1'}$}{O(3)1\unichar{8242}}}\label{s:subduction_o3}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.11}{11} and \href{../../CONVENTIONS.pdf\#conv.33.1}{33.1}.
-\leavevmode\label{n:index.J}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{O(3)} \times \grp{C_{2}^{T}}$ has angular momentum $J$ and parity $p$ ($\ptag{g}$ for $p = +1$, $\ptag{u}$ for $p = -1$), and time reversal acts on it as on its kets (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.1}{31.1}). A row is an angular momentum $J \le 6$. A row gives the multiplicity of each corepresentation of $\grp{D_{6d}}(\grp{D_{6}})$ in the restriction of $\irrJp{J}{p}$ to $\grp{D_{6d}}(\grp{D_{6}})$. A corepresentation occurs as often as its first irrep occurs in the restriction to $\grp{D_{6}}$ (the section Subduction from $\grp{O(3)}$ of the document of \href{../../../rotation/data/pdf/D6.pdf}{$\grp{D_{6}}$}), half as often in case (b).
+\leavevmode\label{n:index.J}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{O(3)1'}$ has angular momentum $J$ and parity $p$ ($\ptag{g}$ for $p = +1$, $\ptag{u}$ for $p = -1$), and time reversal acts on it as on its kets (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.1}{31.1}). A row is an angular momentum $J \le 6$. A row gives the multiplicity of each corepresentation of $\grp{D_{6d}}(\grp{D_{6}})$ in the restriction of $\irrJp{J}{p}$ to $\grp{D_{6d}}(\grp{D_{6}})$. A corepresentation occurs as often as its first irrep occurs in the restriction to $\grp{D_{6}}$ (the section Subduction from $\grp{O(3)}$ of the document of \href{../../../rotation/data/pdf/D6.pdf}{$\grp{D_{6}}$}), half as often in case (b).
 \needspace{162pt}
 \paragraph{Parity $\ptag{g}$ and $\ptag{u}$ ($p = \pm1$).}
 Every element of $\grp{D_{6}}$ is a rotation, so one table gives both parities.

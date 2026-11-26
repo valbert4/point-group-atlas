@@ -20,7 +20,10 @@ o3m = <|
   },
   "group" -> <|
     "G" -> "rotation/S4#",
+    "abstract_type" -> "Z_4 x Z_2",
+    "alternative_names" -> {<|"source" -> "ChenGuLiuWen2013", "symbol" -> "S_4 x Z_2^T"|>},
     "centralizer" -> <|"normalizer_index" -> 2, "symbol" -> "C_infh1'"|>,
+    "gap_smallgroup_id" -> {8, 2},
     "hermann_mauguin" -> "-41'",
     "images" -> <|
       "axial_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/C4#"|>,

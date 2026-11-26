@@ -25,6 +25,7 @@ o3m = <|
   "group" -> <|
     "G" -> "rotation/C6h#",
     "H" -> "rotation/C6#",
+    "abstract_type" -> "rotation/C6h#/group/abstract_type",
     "allowed_properties" -> {
       <|
         "irrep" -> "Au",
@@ -65,6 +66,7 @@ o3m = <|
     },
     "antiunitary_character" -> "Au",
     "centralizer" -> <|"normalizer_index" -> 2, "symbol" -> "C_infh1'"|>,
+    "gap_smallgroup_id" -> "rotation/C6h#/group/gap_smallgroup_id",
     "hermann_mauguin" -> "6/m'",
     "images" -> <|
       "axial_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/C6#"|>,

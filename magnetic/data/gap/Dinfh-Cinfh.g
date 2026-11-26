@@ -405,6 +405,7 @@ o3m := rec(
   ("group") := rec(
     ("G") := "rotation/Dinfh#",
     ("H") := "rotation/Cinfh#",
+    ("abstract_type") := "rotation/Dinfh#/group/abstract_type",
     ("allowed_properties") := [
       rec(
         ("irrep") := "A2g",
@@ -493,6 +494,7 @@ o3m := rec(
       ("normalizer_index") := rec( ("reason") := "continuous-group", ("value") := fail ),
       ("symbol") := "C_2h1'"
     ),
+    ("gap_smallgroup_id") := "rotation/Dinfh#/group/gap_smallgroup_id",
     ("hermann_mauguin") := "inf/mm'",
     ("images") := rec(
       ("axial_even") := rec(

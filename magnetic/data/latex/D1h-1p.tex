@@ -143,8 +143,13 @@
 \newcommand{\hmname}[1]{#1}
 \newcommand{\orbname}[1]{#1}
 \newcommand{\ptag}[1]{\mathrm{#1}}
+\newcommand{\dirprod}{\times}
 \newcommand{\nconj}[1]{{\scriptsize$\times#1$}}
 \newcommand{\clsletter}[1]{\,{\scriptsize\color{black!55}#1}}
+\newcommand{\Cyc}[1]{\grp{Z_{#1}}}
+\newcommand{\Dih}[1]{\grp{Dih_{#1}}}
+\newcommand{\Alt}[1]{\grp{Alt_{#1}}}
+\newcommand{\Sym}[1]{\grp{Sym_{#1}}}
 \newcommand{\restr}[2]{#1\!\downarrow#2}
 \newcommand{\vv}{\mathbf{v}}
 \newcommand{\iunit}{\mathrm{i}}
@@ -182,7 +187,7 @@
 \begin{document}
 \thispagestyle{opening}
 \begin{center}
-{\LARGE\sffamily\bfseries\color{parttitle}The $\grp{D_{1h}1'}$ subgroup of $\grp{O(3)} \times \grp{C_{2}^{T}}$}
+{\LARGE\sffamily\bfseries\color{parttitle}The $\grp{D_{1h}1'}$ subgroup of $\grp{O(3)1'}$}
 \end{center}
 \contentspage
 \needspace{194pt}
@@ -194,6 +199,8 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \texttt{magnetic\symbol{95}type} & II\\
 \texttt{G} & \href{../../../rotation/data/pdf/D1h.pdf}{$\grp{D_{1h}}$}\\
 \grouprule{0pt}{\lightrulewidth}
+\texttt{abstract\symbol{95}type} & $\Cyc{2}\dirprod\Cyc{2}\dirprod\Cyc{2}$\\
+\grouprule{0pt}{\lightrulewidth}
 \texttt{images.polar\symbol{95}even} & \href{../../../rotation/data/pdf/C2v.pdf}{$\grp{C_{2v}}$}, frame $\left(\begin{irmatrix}{0.2778em}0 & 0 & -1\\0 & 1 & 0\\1 & 0 & 0\end{irmatrix}\right)$\\
 \texttt{images.axial\symbol{95}even} & \href{../../../rotation/data/pdf/D2.pdf}{$\grp{D_{2}}$}\\
 \texttt{images.polar\symbol{95}odd} & \href{../../../rotation/data/pdf/D2h.pdf}{$\grp{D_{2h}}$}\\
@@ -202,9 +209,11 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \texttt{normalizer} & \href{D4h-1p.pdf}{$\grp{D_{4h}1'}$}, index 4\\
 \texttt{centralizer} & \href{D2h-1p.pdf}{$\grp{D_{2h}1'}$}, index 2 in the normalizer\\
 \grouprule{0pt}{\lightrulewidth}
+\texttt{alternative\symbol{95}names} & $\grp{D_{1h}} \dirprod \grp{Z_{2}^{T}}$\\
+\texttt{gap\symbol{95}smallgroup\symbol{95}id} & [8, 5]\\
 \texttt{hermann\symbol{95}mauguin} & $\hmname{mm21'}$\\
 \bottomrule\end{longtable}}
-The field \texttt{magnetic\symbol{95}type} is II, so $\grp{D_{1h}1'}$ contains the elements of $\grp{D_{1h}}$ and their products with time reversal $\varTheta$. The field \texttt{G} names $\grp{D_{1h}}$ by its record (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.30.3}{30.3}). The four fields \texttt{images} name the groups by which the elements move a polar or an axial vector, even or odd under time reversal (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.2}{31.2}). Each names the record of its $\grp{O(3)}$-conjugacy class and the frame that carries that record onto the image. The fields \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{O(3)} \times \grp{C_{2}^{T}}$, and both groups are of magnetic type II.
+The field \texttt{magnetic\symbol{95}type} is II, so $\grp{D_{1h}1'}$ contains the elements of $\grp{D_{1h}}$ and their products with time reversal $\varTheta$. The field \texttt{G} names $\grp{D_{1h}}$ by its record (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.30.3}{30.3}). The four fields \texttt{images} name the groups by which the elements move a polar or an axial vector, even or odd under time reversal (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.2}{31.2}). Each names the record of its $\grp{O(3)}$-conjugacy class and the frame that carries that record onto the image. The fields \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{O(3)1'}$, and both groups are of magnetic type II. \label{n:group.timereversal}The field \texttt{alternative\symbol{95}names} gives the name of $\grp{D_{1h}1'}$ in condensed-matter physics [\href{../../../REFERENCES.pdf\#ref.CGLW13}{CGLW13}], where $\grp{Z_{2}^{T}}$ is the group of order 2 that time reversal $\varTheta$ generates.
 \needspace{171pt}
 \partbox{Representations}
 \section{Irreducible representations}\label{s:irreps}
@@ -341,9 +350,9 @@ subgrp & type & order & conjugates & normal & normalizer & centralizer\\\midrule
 \bottomrule\end{longtable}}
 \needspace{171pt}
 \partbox{Angular momentum}
-\section{Subduction from \texorpdfstring{$\grp{O(3)} \times \grp{C_{2}^{T}}$}{O(3) x C2T}}\label{s:subduction_o3}
+\section{Subduction from \texorpdfstring{$\grp{O(3)1'}$}{O(3)1\unichar{8242}}}\label{s:subduction_o3}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.11}{11} and \href{../../CONVENTIONS.pdf\#conv.33.1}{33.1}.
-\leavevmode\label{n:index.J}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{O(3)} \times \grp{C_{2}^{T}}$ has angular momentum $J$ and parity $p$ ($\ptag{g}$ for $p = +1$, $\ptag{u}$ for $p = -1$), and time reversal acts on it as on its kets (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.1}{31.1}). A row is an angular momentum $J \le 6$. A row gives the multiplicity of each corepresentation of $\grp{D_{1h}1'}$ in the restriction of $\irrJp{J}{p}$ to $\grp{D_{1h}1'}$. A corepresentation occurs as often as its first irrep occurs in the restriction to $\grp{D_{1h}}$ (the section Subduction from $\grp{O(3)}$ of the document of \href{../../../rotation/data/pdf/D1h.pdf}{$\grp{D_{1h}}$}), half as often in case (b).
+\leavevmode\label{n:index.J}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{O(3)1'}$ has angular momentum $J$ and parity $p$ ($\ptag{g}$ for $p = +1$, $\ptag{u}$ for $p = -1$), and time reversal acts on it as on its kets (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.1}{31.1}). A row is an angular momentum $J \le 6$. A row gives the multiplicity of each corepresentation of $\grp{D_{1h}1'}$ in the restriction of $\irrJp{J}{p}$ to $\grp{D_{1h}1'}$. A corepresentation occurs as often as its first irrep occurs in the restriction to $\grp{D_{1h}}$ (the section Subduction from $\grp{O(3)}$ of the document of \href{../../../rotation/data/pdf/D1h.pdf}{$\grp{D_{1h}}$}), half as often in case (b).
 \needspace{149pt}
 \paragraph{Parity $\ptag{g}$ ($p = +1$).}
 {\small\begin{longtable}{@{}rrrrr@{}}\toprule

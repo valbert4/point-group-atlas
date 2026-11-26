@@ -92,7 +92,10 @@ o3m := rec(
   ],
   ("group") := rec(
     ("G") := "rotation/Ih#",
+    ("abstract_type") := "A_5 x Z_2 x Z_2",
+    ("alternative_names") := [ rec( ("source") := "ChenGuLiuWen2013", ("symbol") := "I_h x Z_2^T" ) ],
     ("centralizer") := rec( ("normalizer_index") := 60, ("symbol") := "C_i1'" ),
+    ("gap_smallgroup_id") := [ 240, 190 ],
     ("hermann_mauguin") := "-5-3m1'",
     ("images") := rec(
       ("axial_even") := rec(

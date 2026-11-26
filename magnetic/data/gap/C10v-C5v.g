@@ -40,9 +40,11 @@ o3m := rec(
   ("group") := rec(
     ("G") := "rotation/C10v#",
     ("H") := "rotation/C5v#",
+    ("abstract_type") := "rotation/C10v#/group/abstract_type",
     ("allowed_properties") := [],
     ("antiunitary_character") := "B1",
     ("centralizer") := rec( ("normalizer_index") := 10, ("symbol") := "C_2h1'" ),
+    ("gap_smallgroup_id") := "rotation/C10v#/group/gap_smallgroup_id",
     ("hermann_mauguin") := "10'mm'",
     ("images") := rec(
       ("axial_even") := rec(

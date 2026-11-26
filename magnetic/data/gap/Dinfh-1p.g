@@ -285,10 +285,13 @@ o3m := rec(
   ("domain") := "continuous",
   ("group") := rec(
     ("G") := "rotation/Dinfh#",
+    ("abstract_type") := "O(2) x Z_2 x Z_2",
+    ("alternative_names") := [ rec( ("source") := "ChenGuLiuWen2013", ("symbol") := "D_infh x Z_2^T" ) ],
     ("centralizer") := rec(
       ("normalizer_index") := rec( ("reason") := "continuous-group", ("value") := fail ),
       ("symbol") := "C_2h1'"
     ),
+    ("gap_smallgroup_id") := "rotation/Dinfh#/group/gap_smallgroup_id",
     ("hermann_mauguin") := "inf/mm1'",
     ("images") := rec(
       ("axial_even") := rec(

@@ -143,8 +143,13 @@
 \newcommand{\hmname}[1]{#1}
 \newcommand{\orbname}[1]{#1}
 \newcommand{\ptag}[1]{\mathrm{#1}}
+\newcommand{\dirprod}{\times}
 \newcommand{\nconj}[1]{{\scriptsize$\times#1$}}
 \newcommand{\clsletter}[1]{\,{\scriptsize\color{black!55}#1}}
+\newcommand{\Cyc}[1]{\grp{Z_{#1}}}
+\newcommand{\Dih}[1]{\grp{Dih_{#1}}}
+\newcommand{\Alt}[1]{\grp{Alt_{#1}}}
+\newcommand{\Sym}[1]{\grp{Sym_{#1}}}
 \newcommand{\restr}[2]{#1\!\downarrow#2}
 \newcommand{\vv}{\mathbf{v}}
 \newcommand{\iunit}{\mathrm{i}}
@@ -182,7 +187,7 @@
 \begin{document}
 \thispagestyle{opening}
 \begin{center}
-{\LARGE\sffamily\bfseries\color{parttitle}The $\grp{I_{h}}(\grp{I})$ subgroup of $\grp{O(3)} \times \grp{C_{2}^{T}}$}
+{\LARGE\sffamily\bfseries\color{parttitle}The $\grp{I_{h}}(\grp{I})$ subgroup of $\grp{O(3)1'}$}
 \end{center}
 \contentspage
 \needspace{194pt}
@@ -196,6 +201,8 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \texttt{H} & \href{../../../rotation/data/pdf/I.pdf}{$\grp{I}$}, index 2\\
 \texttt{antiunitary\symbol{95}character} & $\irr{a}_{\ptag{u}}$\\
 \grouprule{0pt}{\lightrulewidth}
+\texttt{abstract\symbol{95}type} & $\Alt{5}\dirprod\Cyc{2}$\\
+\grouprule{0pt}{\lightrulewidth}
 \texttt{images.polar\symbol{95}even} & \href{../../../rotation/data/pdf/Ih.pdf}{$\grp{I_{h}}$}\\
 \texttt{images.axial\symbol{95}even} & \href{../../../rotation/data/pdf/I.pdf}{$\grp{I}$}\\
 \texttt{images.polar\symbol{95}odd} & \href{../../../rotation/data/pdf/I.pdf}{$\grp{I}$}\\
@@ -204,10 +211,11 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \texttt{normalizer} & \href{Ih-1p.pdf}{$\grp{I_{h}1'}$}, index 2\\
 \texttt{centralizer} & \href{S2-1p.pdf}{$\grp{C_{i}1'}$}, index 60 in the normalizer\\
 \grouprule{0pt}{\lightrulewidth}
+\texttt{gap\symbol{95}smallgroup\symbol{95}id} & [120, 35]\\
 \texttt{hermann\symbol{95}mauguin} & $\hmname{\bar{5}'\bar{3}'m'}$\\
 \texttt{orbifold} & $\orbname{{\ast}532}$ of \href{../../../rotation/data/pdf/Ih.pdf}{$\grp{I_{h}}$}, $\orbname{532}$ of \href{../../../rotation/data/pdf/I.pdf}{$\grp{I}$}\\
 \bottomrule\end{longtable}}
-The field \texttt{magnetic\symbol{95}type} is III, so $\grp{I_{h}}(\grp{I})$ contains the elements of $\grp{I}$ and the products of time reversal $\varTheta$ with the other elements of $\grp{I_{h}}$. The fields \texttt{G} and \texttt{H} name these groups by their records (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.30.3}{30.3}), and \texttt{antiunitary\symbol{95}character} names the irrep $\chi$ of $\grp{I_{h}}$ with kernel $\grp{I}$. The four fields \texttt{images} name the groups by which the elements move a polar or an axial vector, even or odd under time reversal (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.2}{31.2}). Each names the record of its $\grp{O(3)}$-conjugacy class and the frame that carries that record onto the image. The fields \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{O(3)} \times \grp{C_{2}^{T}}$, and both groups are of magnetic type II. The field \texttt{orbifold} of the record gives the orbifold symbols of $\grp{I_{h}}$ and of $\grp{I}$.
+The field \texttt{magnetic\symbol{95}type} is III, so $\grp{I_{h}}(\grp{I})$ contains the elements of $\grp{I}$ and the products of time reversal $\varTheta$ with the other elements of $\grp{I_{h}}$. The fields \texttt{G} and \texttt{H} name these groups by their records (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.30.3}{30.3}), and \texttt{antiunitary\symbol{95}character} names the irrep $\chi$ of $\grp{I_{h}}$ with kernel $\grp{I}$. The four fields \texttt{images} name the groups by which the elements move a polar or an axial vector, even or odd under time reversal (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.2}{31.2}). Each names the record of its $\grp{O(3)}$-conjugacy class and the frame that carries that record onto the image. The fields \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{O(3)1'}$, and both groups are of magnetic type II. The field \texttt{orbifold} of the record gives the orbifold symbols of $\grp{I_{h}}$ and of $\grp{I}$.
 \needspace{103pt}
 \section{Symmetry operations}\label{s:elements}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.5}{5}, \href{../../CONVENTIONS.pdf\#conv.30.1}{30.1}, \href{../../CONVENTIONS.pdf\#conv.30.3}{30.3} and \href{../../CONVENTIONS.pdf\#conv.32.1}{32.1}.
@@ -404,9 +412,9 @@ $\irr{h}_{\ptag{g}}$ & $\irr{h}$ & $\irr{h}_{\ptag{u}}$ & $\irr{h}$\\
 \bottomrule\end{longtable}}
 \needspace{171pt}
 \partbox{Angular momentum}
-\section{Subduction from \texorpdfstring{$\grp{O(3)} \times \grp{C_{2}^{T}}$}{O(3) x C2T}}\label{s:subduction_o3}
+\section{Subduction from \texorpdfstring{$\grp{O(3)1'}$}{O(3)1\unichar{8242}}}\label{s:subduction_o3}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.11}{11} and \href{../../CONVENTIONS.pdf\#conv.33.1}{33.1}.
-\leavevmode\label{n:index.J}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{O(3)} \times \grp{C_{2}^{T}}$ has angular momentum $J$ and parity $p$ ($\ptag{g}$ for $p = +1$, $\ptag{u}$ for $p = -1$), and time reversal acts on it as on its kets (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.1}{31.1}). A row is an angular momentum $J \le 6$. A row gives the multiplicity of each corepresentation of $\grp{I_{h}}(\grp{I})$ in the restriction of $\irrJp{J}{p}$ to $\grp{I_{h}}(\grp{I})$. A corepresentation occurs as often as its first irrep occurs in the restriction to $\grp{I}$ (the section Subduction from $\grp{O(3)}$ of the document of \href{../../../rotation/data/pdf/I.pdf}{$\grp{I}$}), half as often in case (b).
+\leavevmode\label{n:index.J}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{O(3)1'}$ has angular momentum $J$ and parity $p$ ($\ptag{g}$ for $p = +1$, $\ptag{u}$ for $p = -1$), and time reversal acts on it as on its kets (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.1}{31.1}). A row is an angular momentum $J \le 6$. A row gives the multiplicity of each corepresentation of $\grp{I_{h}}(\grp{I})$ in the restriction of $\irrJp{J}{p}$ to $\grp{I_{h}}(\grp{I})$. A corepresentation occurs as often as its first irrep occurs in the restriction to $\grp{I}$ (the section Subduction from $\grp{O(3)}$ of the document of \href{../../../rotation/data/pdf/I.pdf}{$\grp{I}$}), half as often in case (b).
 \needspace{162pt}
 \paragraph{Parity $\ptag{g}$ and $\ptag{u}$ ($p = \pm1$).}
 Every element of $\grp{I}$ is a rotation, so one table gives both parities.

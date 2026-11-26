@@ -114,6 +114,7 @@ o3m = <|
   "group" -> <|
     "G" -> "rotation/Dinf#",
     "H" -> "rotation/Cinf#",
+    "abstract_type" -> "rotation/Dinf#/group/abstract_type",
     "allowed_properties" -> {
       <|
         "irrep" -> "A2",
@@ -238,6 +239,7 @@ o3m = <|
       "normalizer_index" -> <|"reason" -> "continuous-group", "value" -> Null|>,
       "symbol" -> "C_2h1'"
     |>,
+    "gap_smallgroup_id" -> "rotation/Dinf#/group/gap_smallgroup_id",
     "hermann_mauguin" -> "inf2'",
     "images" -> <|
       "axial_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/Dinf#"|>,

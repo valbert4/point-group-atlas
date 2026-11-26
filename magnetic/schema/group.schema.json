@@ -253,6 +253,10 @@
           "description": "See CONVENTIONS.md section 30.4.",
           "type": "string"
         },
+        "abstract_type": {
+          "description": "See CONVENTIONS.md section 30.4.",
+          "type": "string"
+        },
         "allowed_properties": {
           "description": "See CONVENTIONS.md section 35.",
           "items": {
@@ -294,6 +298,29 @@
           },
           "type": "array"
         },
+        "alternative_names": {
+          "description": "See CONVENTIONS.md section 30.4.",
+          "items": {
+            "additionalProperties": false,
+            "description": "See CONVENTIONS.md section 30.4.",
+            "properties": {
+              "source": {
+                "description": "See CONVENTIONS.md section 30.4.",
+                "type": "string"
+              },
+              "symbol": {
+                "description": "See CONVENTIONS.md section 30.4.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "source",
+              "symbol"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
         "antiunitary_character": {
           "description": "See CONVENTIONS.md section 30.4.",
           "type": "string"
@@ -316,6 +343,21 @@
             "symbol"
           ],
           "type": "object"
+        },
+        "gap_smallgroup_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "items": {
+                "description": "See CONVENTIONS.md section 30.4.",
+                "type": "integer"
+              },
+              "type": "array"
+            }
+          ],
+          "description": "See CONVENTIONS.md section 30.4."
         },
         "hermann_mauguin": {
           "description": "See CONVENTIONS.md section 30.4.",
@@ -513,7 +555,9 @@
       },
       "required": [
         "G",
+        "abstract_type",
         "centralizer",
+        "gap_smallgroup_id",
         "hermann_mauguin",
         "images",
         "magnetic_type",

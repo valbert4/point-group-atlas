@@ -40,6 +40,7 @@ o3m = <|
   "group" -> <|
     "G" -> "rotation/C7h#",
     "H" -> "rotation/C7#",
+    "abstract_type" -> "rotation/C7h#/group/abstract_type",
     "allowed_properties" -> {
       <|
         "irrep" -> "App",
@@ -80,6 +81,7 @@ o3m = <|
     },
     "antiunitary_character" -> "App",
     "centralizer" -> <|"normalizer_index" -> 2, "symbol" -> "C_infh1'"|>,
+    "gap_smallgroup_id" -> "rotation/C7h#/group/gap_smallgroup_id",
     "hermann_mauguin" -> "-14'",
     "images" -> <|
       "axial_even" -> <|

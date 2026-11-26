@@ -136,7 +136,10 @@ o3m = <|
   },
   "group" -> <|
     "G" -> "rotation/D7d#",
+    "abstract_type" -> "Dih(28) x Z_2",
+    "alternative_names" -> {<|"source" -> "ChenGuLiuWen2013", "symbol" -> "D_7d x Z_2^T"|>},
     "centralizer" -> <|"normalizer_index" -> 14, "symbol" -> "C_2h1'"|>,
+    "gap_smallgroup_id" -> {56, 12},
     "hermann_mauguin" -> "-7m1'",
     "images" -> <|
       "axial_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/D7#"|>,

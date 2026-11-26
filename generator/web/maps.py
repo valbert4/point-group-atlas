@@ -63,8 +63,8 @@ def llms(volumes, index):
     lines = ["# %s" % style.TITLE, "", "> %s" % DESCRIPTION, "",
              "The point groups are closed subgroups of O(3), the double point groups closed "
              "subgroups of Pin\u207b(3) and the magnetic point groups closed subgroups of "
-             "O(3) \u00d7 C\u2082\u1d40. Here C\u2082\u1d40 = {E, \u0398} is the group of time "
-             "reversal. The tables come from the records of the repository.", "",
+             "O(3)1\u2032, the group of the elements of O(3) and of their products with time "
+             "reversal \u0398. The tables come from the records of the repository.", "",
              "Each group has a file for each section of its document, with its formulas in MathML "
              "and their TeX. Its record is in the repository on GitHub, in JSON, GAP, Wolfram "
              "Language and SymPy. %s The file sitemap.json maps the site by volume, group and "

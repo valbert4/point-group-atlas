@@ -60,7 +60,10 @@ o3m = {
     ],
     'group': {
         'G': 'rotation/D7#',
+        'abstract_type': 'Dih(28)',
+        'alternative_names': [{'source': 'ChenGuLiuWen2013', 'symbol': 'D_7 x Z_2^T'}],
         'centralizer': {'normalizer_index': 14, 'symbol': "C_2h1'"},
+        'gap_smallgroup_id': [28, 3],
         'hermann_mauguin': "721'",
         'images': {
             'axial_even': {

@@ -37,8 +37,10 @@ the preimage of `G` is named `2G` (`2C3v`), except `SU2` for `SO3` and `Pinminus
 name of its image (`C3`), with `b` appended in the second class over an $`\mathsf{S_{2\mathnormal{N}}}`$ with
 $`N`$ odd (`S6b`). The preimages of the records of one $`\mathsf{O(3)}`$-conjugacy class (`o3_conjugates`,
 section 2.1) form one class of subgroups of $`\mathsf{Pin^{-}(3)}`$. Other works mark the double group of
-$`\mathsf{G}`$ with a dagger [BC72], a tilde [AH11], a prime [Ham62, Lax74, Tin64] or a left superscript d
-[EBW+17]. They title its tables with the Schoenflies and Hermann–Mauguin symbols of $`\mathsf{G}`$. For a group
+$`\mathsf{G}`$ with a dagger [BC72], a tilde [AH11], a prime [Ham62, Lax74, Tin64], a star [Gri61, section 6.9] or
+a left superscript d [EBW+17]. They title its tables with the Schoenflies and Hermann–Mauguin symbols of
+$`\mathsf{G}`$. The work [Gri61, section 6.9] also writes `R` for $`\bar{\mathsfit{E}}`$ and `U_2 x S` for
+$`\mathsf{Pin^{-}(3)}`$, where `S` contains the identity and the lift $`(1, -1)`$ of the inversion. For a group
 $`\mathsf{G}`$ of type I, the $`\mathsf{2G}`$ of this catalogue is that of [CS03], which writes
 $`\mathsf{1C_{\mathnormal{N}}}`$ for the section $`\mathsf{C_{\mathnormal{N}}}`$.
 
@@ -277,17 +279,30 @@ the opposite orientation of a work's frame, the complex pairs of spinor irreps o
 `2D1`, `2D1d`, `2C4`, `2S4`, `2C4h`, `2C3`, `2S6`, `2C6`, `2C3h`, `2C6h`, `2D3`, `2C3v`, `2D3d`, `2T` and `2Th`
 would exchange their symbols. The rule of section 6.5 fixes them.
 
-The spinor labels of [Gri61] for the cubic groups (also in [PT83]), by characters, with $`\mathsfit{4C_{3}}`$ of
-$`\mathsf{T}`$ as in section 6.4:
+The spinor labels of [Gri61, Tables A 8 and A 11] (for the cubic groups also in [PT83]), by characters, with
+$`\mathsfit{4C_{3}}`$ of $`\mathsf{T}`$ as in section 6.4:
 
 | | [Gri61] | `bethe` | `label` |
 |---|---|---|---|
+| `2D2` | `E'` | $`\Gamma_{5}`$ | `E_1/2` |
+| `2D3` | `E'`, `rho_1`, `rho_2` | $`\Gamma_{4}`$, $`\Gamma_{5}`$, $`\Gamma_{6}`$ | `E_1/2`, `1E_3/2`, `2E_3/2` |
+| `2D4` | `E'`, `E''` | $`\Gamma_{6}`$, $`\Gamma_{7}`$ | `E_1/2`, `E_3/2` |
+| `2D5` | `E'`, `E''` | — | `E_1/2`, `E_3/2` |
+| | `rho_1`, `rho_2` | — | `1E_5/2`, `2E_5/2` |
+| `2D6` | `E'`, `E''`, `E'''` | $`\Gamma_{7}`$, $`\Gamma_{8}`$, $`\Gamma_{9}`$ | `E_1/2`, `E_5/2`, `E_3/2` |
 | `2T` | `E'`, `E''`, `E'''` | $`\Gamma_{5}`$, $`\Gamma_{6}`$, $`\Gamma_{7}`$ | `E_1/2`, `1G_3/2`, `2G_3/2` |
 | `2Th` | the same with `_g`, `_u` | the same with `^+`, `^-` | the same with `,g`, `,u` |
 | `2O`, `2Td` | `E'`, `E''`, `U'` | $`\Gamma_{6}`$, $`\Gamma_{7}`$, $`\Gamma_{8}`$ | `E_1/2`, `E_5/2`, `G_3/2` |
 | `2Oh` | the same with `_g`, `_u` | the same with `^+`, `^-` | the same with `,g`, `,u` |
+| `2I` | `E'`, `E''` | — | `E_1/2`, `E_7/2` |
+| | `U'`, `W'` | — | `G_3/2`, `I_5/2` |
 
-The `U'` of [Gri61] for `2T` is the pair `E''`, `E'''`.
+The `U'` of [Gri61] for `2T` is the pair `E''`, `E'''`, and its `E''` for `2D3` and `E'''` for `2D5` are the pairs
+`rho_1`, `rho_2`. Its classes `3C_2'` of `2D3` and `5C_2` of `2D5` are read as those of the canonical lifts
+(section 21.1), as in its matrices of `2D3` [Gri61, Table A 16]. The primes of [Gri61] mark its two-valued
+irreps, the spinor irreps here [Gri61, Table A 11], unlike the tags `'` and `''` of section 23.2. Its operation
+$`\mathsfit{g}`$ acts on kets as $`\mathsfit{g}^{-1}`$ does in section 26.1 [Gri61, eq. 6.32], so its states of a
+complex label carry the conjugate of the matched `label` (`2G_3/2` for `E''` of `2T`).
 
 ### 23.5 The names of the classes and irreps of $`\mathsf{2I}`$
 

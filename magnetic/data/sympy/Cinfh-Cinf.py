@@ -99,6 +99,7 @@ o3m = {
     'group': {
         'G': 'rotation/Cinfh#',
         'H': 'rotation/Cinf#',
+        'abstract_type': 'rotation/Cinfh#/group/abstract_type',
         'allowed_properties': [
             {
                 'irrep': 'Au',
@@ -139,6 +140,7 @@ o3m = {
         ],
         'antiunitary_character': 'Au',
         'centralizer': {'normalizer_index': 2, 'symbol': "C_infh1'"},
+        'gap_smallgroup_id': 'rotation/Cinfh#/group/gap_smallgroup_id',
         'hermann_mauguin': "inf/m'",
         'images': {
             'axial_even': {

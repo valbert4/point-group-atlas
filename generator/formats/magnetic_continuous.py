@@ -5,23 +5,23 @@ Its parts and sections are those of the finite documents of the catalogue (magne
 in the form that a document of a continuous point group gives it: Class space in place of Symmetry
 operations, Families of irreps in place of Irreducible representations, the corepresentation table,
 the matrices N and the symmetrized powers by families, Closed subgroups in place of Subgroup
-lattice, Descent of symmetry, Subduction from O(3) x C_2^T, the properties odd under time reversal,
+lattice, Descent of symmetry, Subduction from O(3)1', the properties odd under time reversal,
 the multipoles and the invariants.  A value of a document is a field of the record, or a value of a
 record that the record points to.  Doc is magnetic_latex.Doc for a record of families.
 """
 import re
 
-from .. import names
+from .. import names, serialize
 from . import hasse
 from . import latex as L
 from . import magnetic_latex as ML
 from .angular import SUBDUCTION_RULE
 from .double_latex import follow, record_of, target
-from .magnetic_latex import (IMAGES, MULTIPOLES, O3T, POWERS, halves_of, mlinked, msym,
-                             rotation_section, stem_of)
+from .magnetic_latex import (IMAGES, MULTIPOLES, PARENT, PARENT_TEXT, POWERS, halves_of, mlinked,
+                             msym, rotation_section, stem_of)
 from .representations import CASES, DETBOX_STRETCH, dimension, family_index
-from .subgroups import (CONTINUOUS_FAMILIES, ONE_MEMBER, affine_n, also_gives, gray_letter,
-                        row_gives)
+from .subgroups import (CONTINUOUS_DIAGRAM, CONTINUOUS_FAMILIES, ONE_MEMBER, affine_n,
+                        also_gives, gray_letter, row_gives)
 from .typeset import (CONSTANTS, ROTATION_PDF, index_tex, irrep_label, labels_width, multiple,
                       negate, pi_multiple, rotation_linked, row_end, snake_mark)
 
@@ -172,9 +172,10 @@ def orbit_space_cell(space):
 # ---------------------------------------------------------------- The group
 ROWS = (
     ("symbol", "magnetic_type", "G", "H", "subgroup", "antiunitary_character"),
+    ("abstract_type",),
     tuple("images." + key for key, _, _ in IMAGES),
     ("normalizer", "centralizer"),
-    ("hermann_mauguin", "orbit_space"),
+    ("alternative_names", "gap_smallgroup_id", "hermann_mauguin", "orbit_space"),
 )
 
 
@@ -772,20 +773,31 @@ def section_subgroups(D):
     D.w(r"\bottomrule\end{longtable}}")
 
 
-# The layout of the diagram of the continuous closed subgroups (cm): the distance of two ranks, the
-# greatest distance of two groups of a rank and the greatest width of a rank.
+# The diagram of the continuous closed subgroups. Where M is isomorphic to a group of volume I, each
+# group stands at the place (subgroups.CONTINUOUS_DIAGRAM) of its image in volume I's diagram: in
+# magnetic type III, M = G(H) is isomorphic to G, the subgroup over K to K; in magnetic type II with
+# -1 not in G, Theta -> -1 carries G1' onto G x C_i, K1' to K x C_i (TIMES_INVERSION) and K(K') to
+# K' u (-1)(K \ K') (TWISTED).  The groups G1' with -1 in G have ranks (cm): the distance of two
+# ranks, the greatest distance of two groups of a rank and the greatest width of a rank.
+TIMES_INVERSION = {"Cinf": "Cinfh", "Cinfv": "Dinfh", "Dinf": "Dinfh", "SO3": "O3"}
+TWISTED = {"Cinfv-Cinf": "Dinf", "Dinf-Cinf": "Cinfv"}
 RANK_HEIGHT, NODE_SPACE, RANK_WIDTH = 1.7, 2.6, 15.2
 
 
-def diagram(D, edges):
-    """The diagram of the continuous closed subgroups of M and of M itself, the record's edges: a
-    rank for each length of the longest chain below a group, the groups of a rank in the order of
-    the record, each linked to its document."""
-    nodes = []
-    for e in edges:
-        for k in ("lower", "upper"):
-            if e[k] not in nodes:
-                nodes.append(e[k])
+def volume_one(D, n):
+    """The group of volume I whose place in its diagram the subgroup n of M takes, or None when M
+    is a grey group G1' with -1 in G."""
+    K, _, rest = n.partition("-")
+    if not D.grey:
+        return K
+    if D.G not in TIMES_INVERSION:
+        return None
+    return K if not rest else TIMES_INVERSION[K] if rest == "1p" else TWISTED[n]
+
+
+def ranked_places(nodes, edges):
+    """The places of the groups of a diagram by ranks: a rank for each length of the longest chain
+    below a group, the groups of a rank in the order of the catalogue."""
     below = {n: [e["lower"] for e in edges if e["upper"] == n] for n in nodes}
     rank = {}
 
@@ -802,16 +814,40 @@ def diagram(D, edges):
     for r, row in ranks.items():
         step = min(NODE_SPACE, RANK_WIDTH / max(1, len(row) - 1)) if len(row) > 1 else 0
         for k, n in enumerate(row):
-            places[n] = (step * (k - (len(row) - 1) / 2), RANK_HEIGHT * r)
+            places[n] = (round(step * (k - (len(row) - 1) / 2), 3), round(RANK_HEIGHT * r, 3))
+    return places
+
+
+def diagram(D, edges):
+    """The diagram of the continuous closed subgroups of M and of M itself, the record's edges,
+    each group linked to its document, drawn as volume I draws its own (subgroups.diagram_lines):
+    at the places of volume I where M is isomorphic to a group of volume I (volume_one), and by
+    ranks otherwise."""
+    nodes = []
+    for e in edges:
+        for k in ("lower", "upper"):
+            if e[k] not in nodes:
+                nodes.append(e[k])
+    images = {n: volume_one(D, n) for n in nodes}
+    if None in images.values():
+        places = ranked_places(nodes, edges)
+    else:
+        places = {n: CONTINUOUS_DIAGRAM[images[n]] for n in nodes}
+        lattice = serialize.read_json(names.repository_path("rotation/data/point_groups.json"))
+        own = {(x["lower"], x["upper"]) for x in lattice["edges"]
+               if x["lower"] in images.values() and x["upper"] in images.values()}
+        if (len(set(images.values())) != len(nodes)
+                or {(images[e["lower"]], images[e["upper"]]) for e in edges} != own):
+            raise ValueError("%s: the diagram is not that of its image in volume I" % D.name)
     D.w(r"\begin{center}\begin{tikzpicture}[x=1cm, y=1cm, every node/.style={fill=white, "
-        r"font=\footnotesize, inner sep=1.5pt}]")
+        r"font=\small, inner sep=2pt}]")
     for e in edges:
         D.w(r"\draw[black!50, line width=0.4pt] (%g,%g) -- (%g,%g);" % (
-            *(round(v, 3) for v in places[e["lower"]]), *(round(v, 3) for v in places[e["upper"]])))
-    for n, (x, y) in places.items():
-        tex = "$%s$" % msym(names.display_symbol(n))
+            *places[e["lower"]], *places[e["upper"]]))
+    for n in nodes:
+        tex = r"\textcolor{black}{$%s$}" % msym(names.display_symbol(n))
         href = (ROTATION_PDF if n in names.CONTINUOUS else "%s.pdf") % n
-        D.w(r"\node at (%g,%g) {%s};" % (round(x, 3), round(y, 3), tex if n == D.name else
+        D.w(r"\node at (%g,%g) {%s};" % (*places[n], tex if n == D.name else
                                          r"\href{%s}{%s}" % (href, tex)))
     D.w(r"\end{tikzpicture}\end{center}")
 
@@ -880,10 +916,10 @@ def rule_tex(D):
 
 
 def section_subduction_parent(D):
-    """The restriction of D^(J,p) of O(3) x C_2^T to M: the rule for every J, and the
+    """The restriction of D^(J,p) of O(3)1' to M: the rule for every J, and the
     corepresentations for J up to the record's J_max (CONVENTIONS.md sections 33.1 and 37.4)."""
     stored = D.stored["subduction_corepresentations"]
-    D.section(r"Subduction from \texorpdfstring{$%s$}{O(3) x C2T}" % O3T,
+    D.section(r"Subduction from \texorpdfstring{$%s$}{%s}" % (PARENT, PARENT_TEXT),
               "sections 11, %s33.1 and 37.4" % ("12, " if D.grey else ""))
     rule = rule_tex(D)
     D.w(D.define("index.J", "index.parity", *(["index.rule.k"] if "k = 1" in rule else []))
@@ -892,7 +928,7 @@ def section_subduction_parent(D):
           r"its kets (CONVENTIONS.pdf, section 31.1). A corepresentation occurs in its restriction "
           r"to $%s$ as often as its first irrep occurs in the restriction to $%s$ (%s). For every "
           r"$J$,"
-        % (O3T, D.sym, D.Hsym, rotation_section(D.H, r"Subduction from $\grp{O(3)}$")))
+        % (PARENT, D.sym, D.Hsym, rotation_section(D.H, r"Subduction from $\grp{O(3)}$")))
     D.equation("o3rule", r"\begin{aligned}%s\end{aligned}" % (rule + ".") if r"\\" in rule
                else rule + ".")
     if D.spherical:

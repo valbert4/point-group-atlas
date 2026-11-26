@@ -92,7 +92,10 @@ o3m = <|
   },
   "group" -> <|
     "G" -> "rotation/C11v#",
+    "abstract_type" -> "Dih(44)",
+    "alternative_names" -> {<|"source" -> "ChenGuLiuWen2013", "symbol" -> "C_11v x Z_2^T"|>},
     "centralizer" -> <|"normalizer_index" -> 22, "symbol" -> "C_2h1'"|>,
+    "gap_smallgroup_id" -> {44, 3},
     "hermann_mauguin" -> "11m1'",
     "images" -> <|
       "axial_even" -> <|

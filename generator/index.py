@@ -24,7 +24,7 @@ from . import names, serialize
 
 CATALOGUES = {"rotation": ("Point groups", "O(3)"),
               "double": ("Double point groups", "Pin^-(3)"),
-              "magnetic": ("Magnetic point groups", "O(3) x C_2^T"),
+              "magnetic": ("Magnetic point groups", "O(3)1'"),
               "magnetic-double": ("Magnetic double point groups", "Pin^-(3)1'")}
 # A pointer of a later catalogue's record: "<catalogue>/<stem>#<JSON pointer>" (rotation/
 # CONVENTIONS.md section 18.1), the stem a record's name (2C3v, C3v-C3, C3v-1p) or

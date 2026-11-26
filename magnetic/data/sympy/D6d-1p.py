@@ -156,7 +156,10 @@ o3m = {
     ],
     'group': {
         'G': 'rotation/D6d#',
+        'abstract_type': 'Dih(24) x Z_2',
+        'alternative_names': [{'source': 'ChenGuLiuWen2013', 'symbol': 'D_6d x Z_2^T'}],
         'centralizer': {'normalizer_index': 12, 'symbol': "C_2h1'"},
+        'gap_smallgroup_id': [48, 36],
         'hermann_mauguin': "-122m1'",
         'images': {
             'axial_even': {

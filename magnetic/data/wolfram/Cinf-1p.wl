@@ -36,7 +36,10 @@ o3m = <|
   "domain" -> "continuous",
   "group" -> <|
     "G" -> "rotation/Cinf#",
+    "abstract_type" -> "SO(2) x Z_2",
+    "alternative_names" -> {<|"source" -> "ChenGuLiuWen2013", "symbol" -> "C_inf x Z_2^T"|>},
     "centralizer" -> <|"normalizer_index" -> 2, "symbol" -> "C_infh1'"|>,
+    "gap_smallgroup_id" -> "rotation/Cinf#/group/gap_smallgroup_id",
     "hermann_mauguin" -> "inf1'",
     "images" -> <|
       "axial_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/Cinf#"|>,

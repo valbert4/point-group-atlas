@@ -46,7 +46,10 @@ o3m = {
     ],
     'group': {
         'G': 'rotation/C5v#',
+        'abstract_type': 'Dih(20)',
+        'alternative_names': [{'source': 'ChenGuLiuWen2013', 'symbol': 'C_5v x Z_2^T'}],
         'centralizer': {'normalizer_index': 10, 'symbol': "C_2h1'"},
+        'gap_smallgroup_id': [20, 4],
         'hermann_mauguin': "5m1'",
         'images': {
             'axial_even': {

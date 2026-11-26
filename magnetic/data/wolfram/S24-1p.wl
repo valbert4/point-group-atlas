@@ -184,7 +184,10 @@ o3m = <|
   },
   "group" -> <|
     "G" -> "rotation/S24#",
+    "abstract_type" -> "Z_24 x Z_2",
+    "alternative_names" -> {<|"source" -> "ChenGuLiuWen2013", "symbol" -> "S_24 x Z_2^T"|>},
     "centralizer" -> <|"normalizer_index" -> 2, "symbol" -> "C_infh1'"|>,
+    "gap_smallgroup_id" -> {48, 23},
     "hermann_mauguin" -> "-241'",
     "images" -> <|
       "axial_even" -> <|

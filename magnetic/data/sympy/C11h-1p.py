@@ -226,7 +226,10 @@ o3m = {
     ],
     'group': {
         'G': 'rotation/C11h#',
+        'abstract_type': 'Z_22 x Z_2',
+        'alternative_names': [{'source': 'ChenGuLiuWen2013', 'symbol': 'C_11h x Z_2^T'}],
         'centralizer': {'normalizer_index': 2, 'symbol': "C_infh1'"},
+        'gap_smallgroup_id': [44, 4],
         'hermann_mauguin': "-221'",
         'images': {
             'axial_even': {'record': {'reason': 'outside-the-catalogue', 'value': None}, 'symbol': 'C_22'},

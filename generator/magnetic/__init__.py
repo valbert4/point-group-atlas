@@ -1,4 +1,4 @@
-"""The magnetic point groups: the closed subgroups of O(3) x C_2^T up to conjugacy
+"""The magnetic point groups: the closed subgroups of O(3)1' up to conjugacy
 (magnetic/CONVENTIONS.md, sections 30 to 39), and their preimages and sections in Pin-(3)1'
 (magnetic-double/, sections 40 to 49).
 

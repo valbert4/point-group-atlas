@@ -90,7 +90,10 @@ o3m = {
     ],
     'group': {
         'G': 'rotation/C9v#',
+        'abstract_type': 'Dih(36)',
+        'alternative_names': [{'source': 'ChenGuLiuWen2013', 'symbol': 'C_9v x Z_2^T'}],
         'centralizer': {'normalizer_index': 18, 'symbol': "C_2h1'"},
+        'gap_smallgroup_id': [36, 4],
         'hermann_mauguin': "9m1'",
         'images': {
             'axial_even': {

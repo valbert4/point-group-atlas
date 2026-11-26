@@ -148,7 +148,10 @@ o3m = {
     ],
     'group': {
         'G': 'rotation/S16#',
+        'abstract_type': 'Z_16 x Z_2',
+        'alternative_names': [{'source': 'ChenGuLiuWen2013', 'symbol': 'S_16 x Z_2^T'}],
         'centralizer': {'normalizer_index': 2, 'symbol': "C_infh1'"},
+        'gap_smallgroup_id': [32, 16],
         'hermann_mauguin': "-161'",
         'images': {
             'axial_even': {'record': {'reason': 'outside-the-catalogue', 'value': None}, 'symbol': 'C_16'},

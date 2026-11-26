@@ -9,7 +9,7 @@ III Symmetry operations, the elements of G with their signs), Representations (t
 with the corepresentations they form, the corepresentation table in place of the character table,
 the matrices N, the symmetrized powers of the corepresentations), Subgroups (Subgroup lattice, the
 classes of subgroups with their magnetic types, and Descent of symmetry, the splitting table from
-G1'), Angular momentum (Subduction from O(3) x C_2^T, the multiplicities of the corepresentations
+G1'), Angular momentum (Subduction from O(3)1', the multiplicities of the corepresentations
 for J <= J_SHOWN), and Tensors (the properties odd under time reversal, the multipoles, the
 invariants of the four images and the counts and bases of the invariants in a polar and an axial
 vector).
@@ -37,10 +37,16 @@ from .. import names
 from . import latex as L
 from .double_latex import follow, record_of, target
 from .subgroups import type_rank
-from .typeset import (CONSTANTS, ROTATION_PDF, SNAKE_OFF, fill_width, label_width, labels_width,
-                      mathify, multiple, rotation_linked, row_end, snake_mark)
+from .typeset import (CONSTANTS, ROTATION_PDF, SNAKE_OFF, abstract_type, fill_width, label_width,
+                      labels_width, mathify, multiple, rotation_linked, row_end, snake_mark)
 
-O3T = r"\grp{O(3)} \times \grp{C_{2}^{T}}"
+# The parent, the group O(3)1' of the record O3-1p (CONVENTIONS.md section 30.1), and its text in
+# the outline of a PDF.
+PARENT, PARENT_TEXT = r"\grp{O(3)1'}", r"O(3)1\unichar{8242}"
+# The group {E, Theta} in the name G x Z_2^T of a group G1' in condensed-matter physics, which the
+# field alternative_names gives (CONVENTIONS.md section 30.2), and the label of its source in
+# REFERENCES.md (the key abstract.SOURCE of references.bib).
+TIME_REVERSAL, CONDENSED = r"\grp{Z_{2}^{T}}", "CGLW13"
 # The conventions of Rotation, relative to magnetic/data/pdf/.
 ROTATION_CONVENTIONS = "../../../rotation/CONVENTIONS.pdf"
 # The multiplicities of the corepresentations in D^(J,p) are those of the record, J <= J_SHOWN
@@ -394,9 +400,10 @@ def same_value(a, b):
 # ---------------------------------------------------------------- The group: Names and structure
 ROWS = (
     ("symbol", "magnetic_type", "G", "H", "node", "antiunitary_character"),
+    ("abstract_type",),
     tuple("images." + key for key, _, _ in IMAGES),
     ("normalizer", "centralizer"),
-    ("hermann_mauguin", "orbifold"),
+    ("alternative_names", "gap_smallgroup_id", "hermann_mauguin", "orbifold"),
 )
 
 
@@ -422,6 +429,14 @@ def identification_cell(D, k, v):
         return None
     if k == "antiunitary_character":
         return "$%s$" % D.Gdoc.irrep_id(v)
+    # the abstract type and the identifier of M, or pointers to those of G that it has
+    if k == "abstract_type":
+        return "$%s$" % abstract_type(follow(v) if v.startswith("rotation/") else v)
+    if k == "gap_smallgroup_id":
+        v = follow(v) if isinstance(v, str) else v
+        return None if L.omitted(v) else "[%s]" % ", ".join(str(x) for x in v)
+    if k == "alternative_names":
+        return ", ".join(condensed_name(a["symbol"]) for a in v)
     if k.startswith("images."):
         if not isinstance(v["record"], str):
             # an image of axial order above 12, which no record of the point groups holds
@@ -441,6 +456,15 @@ def identification_cell(D, k, v):
             orbifold_cell(follow(follow(v["G"])["symbol"])), rotation_linked(D.G),
             orbifold_cell(follow(follow(v["H"])["symbol"])), rotation_linked(D.H))
     raise ValueError("%s: no cell for the field %s" % (D.name, k))
+
+
+def condensed_name(symbol):
+    r"""A name G x Z_2^T of a group G1' in condensed-matter physics as a formula:
+    C_4v x Z_2^T -> $\grp{C_{4v}} \dirprod \grp{Z_{2}^{T}}$."""
+    g, sep, rest = symbol.partition(" x ")
+    if (sep, rest) != (" x ", "Z_2^T"):
+        raise ValueError("the name %r is not G x Z_2^T" % symbol)
+    return r"$%s \dirprod %s$" % (L.grp(g), TIME_REVERSAL)
 
 
 def orbifold_cell(symbol):
@@ -466,7 +490,12 @@ def identification_legend(D):
                r"section 31.2).")
     out.append(D.images_sentence())
     out.append(r"The fields \texttt{normalizer} and \texttt{centralizer} are taken in $%s$, and "
-               r"both groups are of magnetic type II." % O3T)
+               r"both groups are of magnetic type II." % PARENT)
+    if D.grey:
+        out.append(D.define("group.timereversal")
+                   + r"The field \texttt{alternative\symbol{95}names} gives the name of $%s$ in "
+                     r"condensed-matter physics [%s], where $%s$ is the group of order 2 that time "
+                     r"reversal $\varTheta$ generates." % (D.sym, CONDENSED, TIME_REVERSAL))
     if not D.grey:
         out.append(D.orbits_sentence())
     D.w(" ".join(out))
@@ -629,11 +658,12 @@ def section_symmetrized_powers(D):
 
 # ---------------------------------------------------------------- Angular momentum
 def section_subduction_parent(D):
-    """The multiplicities of the corepresentations of M in D^(J,p) of O(3) x C_2^T for
+    """The multiplicities of the corepresentations of M in D^(J,p) of O(3)1' for
     J <= J_SHOWN, the record's, which follow from those of the irreps of H (CONVENTIONS.md section
     33.1)."""
     so = follow(D.stored["subduction_o3"])
-    D.section(r"Subduction from \texorpdfstring{$%s$}{O(3) x C2T}" % O3T, "sections 11 and 33.1")
+    D.section(r"Subduction from \texorpdfstring{$%s$}{%s}" % (PARENT, PARENT_TEXT),
+              "sections 11 and 33.1")
     pars = so["parities"]
     same = pars["g"] == pars["u"]
     D.w(D.define("index.J", "index.parity")
@@ -643,7 +673,7 @@ def section_subduction_parent(D):
         r"row gives the multiplicity of each corepresentation of $%s$ in the restriction of "
         r"$\irrJp{J}{p}$ to $%s$. A corepresentation occurs as often as its first irrep occurs in "
         r"the restriction to $%s$ (%s), half as often in case (b)." % (
-            O3T, J_SHOWN, D.sym, D.sym, D.Hsym, rotation_section(D.H, r"Subduction from "
+            PARENT, J_SHOWN, D.sym, D.sym, D.Hsym, rotation_section(D.H, r"Subduction from "
                                                                      r"$\grp{O(3)}$")))
     stored = D.stored["subduction_corepresentations"]
     if stored["J_max"] != J_SHOWN:
@@ -876,7 +906,11 @@ def link_conventions(text):
 
 
 def title_text(group):
-    return r"The $%s$ subgroup of $%s$" % (group, O3T)
+    r"""The title of a document: The $\grp{C_{3v}}(\grp{C_{3}})$ subgroup of $\grp{O(3)1'}$; for
+    the parent itself, The group $\grp{O(3)1'}$."""
+    if group == PARENT:
+        return r"The group $%s$" % group
+    return r"The $%s$ subgroup of $%s$" % (group, PARENT)
 
 
 def title_lines(group):

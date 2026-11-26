@@ -143,8 +143,13 @@
 \newcommand{\hmname}[1]{#1}
 \newcommand{\orbname}[1]{#1}
 \newcommand{\ptag}[1]{\mathrm{#1}}
+\newcommand{\dirprod}{\times}
 \newcommand{\nconj}[1]{{\scriptsize$\times#1$}}
 \newcommand{\clsletter}[1]{\,{\scriptsize\color{black!55}#1}}
+\newcommand{\Cyc}[1]{\grp{Z_{#1}}}
+\newcommand{\Dih}[1]{\grp{Dih_{#1}}}
+\newcommand{\Alt}[1]{\grp{Alt_{#1}}}
+\newcommand{\Sym}[1]{\grp{Sym_{#1}}}
 \newcommand{\restr}[2]{#1\!\downarrow#2}
 \newcommand{\vv}{\mathbf{v}}
 \newcommand{\iunit}{\mathrm{i}}
@@ -182,7 +187,7 @@
 \begin{document}
 \thispagestyle{opening}
 \begin{center}
-{\LARGE\sffamily\bfseries\color{parttitle}The $\grp{O(3)}(\grp{SO(3)})$ subgroup of $\grp{O(3)} \times \grp{C_{2}^{T}}$}
+{\LARGE\sffamily\bfseries\color{parttitle}The $\grp{O(3)}(\grp{SO(3)})$ subgroup of $\grp{O(3)1'}$}
 \end{center}
 \contentspage
 \needspace{194pt}
@@ -196,6 +201,8 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \texttt{H} & \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}, index 2\\
 \texttt{antiunitary\symbol{95}character} & $\irrJp{0}{-}$\\
 \grouprule{0pt}{\lightrulewidth}
+\texttt{abstract\symbol{95}type} & $\grp{SO(3)}\dirprod\Cyc{2}$\\
+\grouprule{0pt}{\lightrulewidth}
 \texttt{images.polar\symbol{95}even} & \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}\\
 \texttt{images.axial\symbol{95}even} & \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}\\
 \texttt{images.polar\symbol{95}odd} & \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}\\
@@ -207,7 +214,7 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 \texttt{hermann\symbol{95}mauguin} & $\hmname{\infty \infty m'}$\\
 \texttt{orbit\symbol{95}space} & point of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}, point of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}\\
 \bottomrule\end{longtable}}
-The field \texttt{magnetic\symbol{95}type} is III, so $\grp{O(3)}(\grp{SO(3)})$ contains the elements of $\grp{SO(3)}$ and the products of time reversal $\varTheta$ with the other elements of $\grp{O(3)}$. The fields \texttt{G} and \texttt{H} name these groups by their records (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.30.3}{30.3}), and \texttt{antiunitary\symbol{95}character} names the irrep $\chi$ of $\grp{O(3)}$ with kernel $\grp{SO(3)}$. The four fields \texttt{images} name the groups by which the elements move a polar or an axial vector, even or odd under time reversal (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.2}{31.2}). Each names the record of its $\grp{O(3)}$-conjugacy class, and its frame is the identity. The fields \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{O(3)} \times \grp{C_{2}^{T}}$, and both groups are of magnetic type II. The field \texttt{orbit\symbol{95}space} names the orbit spaces of the directions under $\grp{O(3)}$ and under $\grp{SO(3)}$, each a point.
+The field \texttt{magnetic\symbol{95}type} is III, so $\grp{O(3)}(\grp{SO(3)})$ contains the elements of $\grp{SO(3)}$ and the products of time reversal $\varTheta$ with the other elements of $\grp{O(3)}$. The fields \texttt{G} and \texttt{H} name these groups by their records (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.30.3}{30.3}), and \texttt{antiunitary\symbol{95}character} names the irrep $\chi$ of $\grp{O(3)}$ with kernel $\grp{SO(3)}$. The four fields \texttt{images} name the groups by which the elements move a polar or an axial vector, even or odd under time reversal (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.2}{31.2}). Each names the record of its $\grp{O(3)}$-conjugacy class, and its frame is the identity. The fields \texttt{normalizer} and \texttt{centralizer} are taken in $\grp{O(3)1'}$, and both groups are of magnetic type II. The field \texttt{orbit\symbol{95}space} names the orbit spaces of the directions under $\grp{O(3)}$ and under $\grp{SO(3)}$, each a point.
 \needspace{103pt}
 \section{Class space}\label{s:class_space}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.4}{4}, \href{../../../rotation/CONVENTIONS.pdf\#conv.16}{16}, \href{../../CONVENTIONS.pdf\#conv.30.1}{30.1}, \href{../../CONVENTIONS.pdf\#conv.32.1}{32.1} and \href{../../CONVENTIONS.pdf\#conv.37.1}{37.1}.
@@ -266,23 +273,23 @@ $J$ & $\sympow{\mathcal{D}}{3}$\\\midrule\endhead
 \section{Closed subgroups}\label{s:subgroups}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.15.2}{15.2}, \href{../../../rotation/CONVENTIONS.pdf\#conv.16.1}{16.1}, \href{../../CONVENTIONS.pdf\#conv.36}{36} and \href{../../CONVENTIONS.pdf\#conv.37.5}{37.5}.
 \leavevmode\label{n:group.subgroup.point}Over a closed subgroup $\grp{K}$ of $\grp{O(3)}$ (the section Closed subgroups of the document of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$}) lies one subgroup. It is $\grp{K}$, of magnetic type I, for $\grp{K}$ in $\grp{SO(3)}$, and $\grp{K}(\grp{K} \cap \grp{SO(3)})$, of magnetic type III, for any other $\grp{K}$. In the diagram of the continuous closed subgroups, each group links to its document, and a line joins a group to a maximal closed subgroup among the groups of the diagram.
-\begin{center}\begin{tikzpicture}[x=1cm, y=1cm, every node/.style={fill=white, font=\footnotesize, inner sep=1.5pt}]
-\draw[black!50, line width=0.4pt] (0,0) -- (0,1.7);
-\draw[black!50, line width=0.4pt] (0,0) -- (2.6,1.7);
-\draw[black!50, line width=0.4pt] (0,0) -- (-2.6,1.7);
-\draw[black!50, line width=0.4pt] (0,1.7) -- (1.3,3.4);
-\draw[black!50, line width=0.4pt] (2.6,1.7) -- (1.3,3.4);
-\draw[black!50, line width=0.4pt] (-2.6,1.7) -- (1.3,3.4);
-\draw[black!50, line width=0.4pt] (-2.6,1.7) -- (-1.3,3.4);
-\draw[black!50, line width=0.4pt] (1.3,3.4) -- (0,5.1);
-\draw[black!50, line width=0.4pt] (-1.3,3.4) -- (0,5.1);
-\node at (0,0) {\href{../../../rotation/data/pdf/Cinf.pdf}{$\grp{C_{\infty}}$}};
-\node at (-2.6,1.7) {\href{../../../rotation/data/pdf/Dinf.pdf}{$\grp{D_{\infty}}$}};
-\node at (0,1.7) {\href{Cinfh-Cinf.pdf}{$\grp{C_{\infty h}}(\grp{C_{\infty}})$}};
-\node at (2.6,1.7) {\href{Cinfv-Cinf.pdf}{$\grp{C_{\infty v}}(\grp{C_{\infty}})$}};
-\node at (-1.3,3.4) {\href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}};
-\node at (1.3,3.4) {\href{Dinfh-Dinf.pdf}{$\grp{D_{\infty h}}(\grp{D_{\infty}})$}};
-\node at (0,5.1) {$\grp{O(3)}(\grp{SO(3)})$};
+\begin{center}\begin{tikzpicture}[x=1cm, y=1cm, every node/.style={fill=white, font=\small, inner sep=2pt}]
+\draw[black!50, line width=0.4pt] (0,0) -- (-2.4,1.4);
+\draw[black!50, line width=0.4pt] (0,0) -- (0,1.4);
+\draw[black!50, line width=0.4pt] (0,0) -- (2.4,1.4);
+\draw[black!50, line width=0.4pt] (-2.4,1.4) -- (0,2.8);
+\draw[black!50, line width=0.4pt] (0,1.4) -- (0,2.8);
+\draw[black!50, line width=0.4pt] (2.4,1.4) -- (0,2.8);
+\draw[black!50, line width=0.4pt] (2.4,1.4) -- (2.4,2.8);
+\draw[black!50, line width=0.4pt] (0,2.8) -- (1.2,4.2);
+\draw[black!50, line width=0.4pt] (2.4,2.8) -- (1.2,4.2);
+\node at (0,0) {\href{../../../rotation/data/pdf/Cinf.pdf}{\textcolor{black}{$\grp{C_{\infty}}$}}};
+\node at (-2.4,1.4) {\href{Cinfh-Cinf.pdf}{\textcolor{black}{$\grp{C_{\infty h}}(\grp{C_{\infty}})$}}};
+\node at (0,1.4) {\href{Cinfv-Cinf.pdf}{\textcolor{black}{$\grp{C_{\infty v}}(\grp{C_{\infty}})$}}};
+\node at (2.4,1.4) {\href{../../../rotation/data/pdf/Dinf.pdf}{\textcolor{black}{$\grp{D_{\infty}}$}}};
+\node at (0,2.8) {\href{Dinfh-Dinf.pdf}{\textcolor{black}{$\grp{D_{\infty h}}(\grp{D_{\infty}})$}}};
+\node at (2.4,2.8) {\href{../../../rotation/data/pdf/SO3.pdf}{\textcolor{black}{$\grp{SO(3)}$}}};
+\node at (1.2,4.2) {\textcolor{black}{$\grp{O(3)}(\grp{SO(3)})$}};
 \end{tikzpicture}\end{center}
 The table lists the closed subgroups other than $\grp{O(3)}(\grp{SO(3)})$ up to conjugacy in $\grp{O(3)}(\grp{SO(3)})$, one in each row: the continuous subgroups, then those over the members of each family, then those over the exceptional groups. \label{n:index.family.N}A row with $N$ in its symbol stands for every $N$ of its range, and its entries are functions of $N$. \label{n:head.subgroup}\label{n:head.magnetic.type}\label{n:head.order}\label{n:head.conjugates}\label{n:head.normal}A row gives the representative of a class of subgroups (subgrp), its magnetic type (type), its order, the number of subgroups in the class (conjugates) and whether the representative is normal. \label{n:head.normalizer}\label{n:head.centralizer}It also gives its normalizer and its centralizer in $\grp{O(3)}(\grp{SO(3)})$. The record holds the members with $N \le 12$ (\texttt{subgroup\symbol{95}classes}), and the section Closed subgroups of the document of \href{../../../rotation/data/pdf/O3.pdf}{$\grp{O(3)}$} gives other names of some members with $N = 1$.
 {\small\begin{longtable}{@{}llrrlll@{}}\toprule
@@ -337,9 +344,9 @@ $\irrJp{J}{-}$ & $\irrJ{J}$\\
 \bottomrule\end{longtable}}
 \needspace{171pt}
 \partbox{Angular momentum}
-\section{Subduction from \texorpdfstring{$\grp{O(3)} \times \grp{C_{2}^{T}}$}{O(3) x C2T}}\label{s:subduction_o3}
+\section{Subduction from \texorpdfstring{$\grp{O(3)1'}$}{O(3)1\unichar{8242}}}\label{s:subduction_o3}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.11}{11}, \href{../../CONVENTIONS.pdf\#conv.33.1}{33.1} and \href{../../CONVENTIONS.pdf\#conv.37.4}{37.4}.
-\leavevmode\label{n:index.J}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{O(3)} \times \grp{C_{2}^{T}}$ has angular momentum $J$ and parity $p$ ($\ptag{g}$ for $p = +1$, $\ptag{u}$ for $p = -1$), and time reversal acts on it as on its kets (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.1}{31.1}). A corepresentation occurs in its restriction to $\grp{O(3)}(\grp{SO(3)})$ as often as its first irrep occurs in the restriction to $\grp{SO(3)}$ (the section Subduction from $\grp{O(3)}$ of the document of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}). For every $J$,
+\leavevmode\label{n:index.J}\label{n:index.parity}The irrep $\irrJp{J}{p}$ of $\grp{O(3)1'}$ has angular momentum $J$ and parity $p$ ($\ptag{g}$ for $p = +1$, $\ptag{u}$ for $p = -1$), and time reversal acts on it as on its kets (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.31.1}{31.1}). A corepresentation occurs in its restriction to $\grp{O(3)}(\grp{SO(3)})$ as often as its first irrep occurs in the restriction to $\grp{SO(3)}$ (the section Subduction from $\grp{O(3)}$ of the document of \href{../../../rotation/data/pdf/SO3.pdf}{$\grp{SO(3)}$}). For every $J$,
 \begin{equation}\label{e:o3rule}\restr{\irrJp{J}{p}}{\grp{O(3)}(\grp{SO(3)})} = \irrJ{J}\quad\text{for both } p.\end{equation}
 The record also holds the restrictions for $J \le 6$ (\texttt{subduction\symbol{95}corepresentations}).
 \needspace{171pt}

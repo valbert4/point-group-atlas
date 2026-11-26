@@ -26,15 +26,12 @@ H = N.entry
 
 MAGNETIC = (
     # the parent and the groups (section 30.1)
-    S("group.timereversal", "group", r"\grp{C_{2}^{T}}",
-      r"the group $\{\elt{E}, \varTheta\}$ of time reversal, a factor of the parent "
-      r"$\grp{O(3)} \times \grp{C_{2}^{T}}$", r"\grp{C_{#}^{T}}", defined="conv:30.1"),
     S("group.magnetic", "group", r"\grp{M}",
-      r"a magnetic point group, a closed subgroup of $\grp{O(3)} \times \grp{C_{2}^{T}}$",
-      r"\grp{M}", defined="conv:30.1"),
-    S("group.magnetic.gray", "group", r"\grp{G1'}",
-      r"the group $\grp{G} \times \grp{C_{2}^{T}}$ of magnetic type II", r"\grp{*#'}",
+      r"a magnetic point group, a closed subgroup of the parent $\grp{O(3)1'}$", r"\grp{M}",
       defined="conv:30.1"),
+    S("group.magnetic.gray", "group", r"\grp{G1'}",
+      r"the group $\grp{G} \times \{\elt{E}, \varTheta\}$ of magnetic type II, with "
+      r"$\grp{O(3)1'}$ the parent", r"\grp{*#'}", defined="conv:30.1"),
     S("group.magnetic.blackwhite", "group", r"\grp{G}(\grp{H})",
       r"the group $\grp{H} \cup \varTheta(\grp{G} \setminus \grp{H})$ of magnetic type III",
       r"\grp{*}(.)", scope=LOCAL, defined="conv:30.1", index=True),
@@ -48,6 +45,10 @@ MAGNETIC = (
       r"the one-dimensional real irrep of $\grp{G}$ with kernel $\grp{H}$, of value $\theta$",
       r"\chi", r"\chi(.)", scope=LOCAL, defined="conv:30.1", index=True),
     # names (section 30.2)
+    S("group.timereversal", "group", r"\grp{Z_{2}^{T}}",
+      r"the group $\{\elt{E}, \varTheta\}$ of time reversal, in the name "
+      r"$\grp{G} \dirprod \grp{Z_{2}^{T}}$ of $\grp{G1'}$ in condensed-matter physics",
+      r"\grp{Z_{#}^{T}}", defined=("part:identification", "conv:30.2")),
     S("mark.hm.prime", "mark", r"'",
       r"the prime of a symbol of an axis or a mirror whose element lies in "
       r"$\grp{G} \setminus \grp{H}$, in a magnetic Hermann–Mauguin symbol, and $1'$ in magnetic "
@@ -208,7 +209,9 @@ USED = (
     "index.parity.tag", "mark.conjugates", "mark.letter", "operator.restriction", "vector.axis",
     "constant.imaginary", "constant.euler", "constant.golden", "constant.root", "irrep.so3",
     "irrep.o3", "matrix.irrep", "function.character", "index.frobenius", "accent.conjugate.star",
-    "relation.product", "index.partner", "index.normalisation", "vector.ket", "number",
+    "relation.product", "relation.direct", "group.abstract.cyclic", "group.abstract.dihedral",
+    "group.abstract.alternating", "group.abstract.symmetric", "index.partner",
+    "index.normalisation", "vector.ket", "number",
     "delimiter.parenthesis", "delimiter.bracket", "delimiter.brace", "delimiter.lvert",
     "delimiter.angle", "punctuation.comma", "punctuation.period", "arithmetic.plus",
     "arithmetic.minus", "arithmetic.plusminus", "arithmetic.times", "arithmetic.solidus",

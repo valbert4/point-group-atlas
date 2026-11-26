@@ -82,7 +82,10 @@ o3m = {
     ],
     'group': {
         'G': 'rotation/Th#',
+        'abstract_type': 'A_4 x Z_2 x Z_2',
+        'alternative_names': [{'source': 'ChenGuLiuWen2013', 'symbol': 'T_h x Z_2^T'}],
         'centralizer': {'normalizer_index': 24, 'symbol': "C_i1'"},
+        'gap_smallgroup_id': [48, 49],
         'hermann_mauguin': "m-31'",
         'images': {
             'axial_even': {

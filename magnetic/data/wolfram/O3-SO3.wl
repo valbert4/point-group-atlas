@@ -73,6 +73,7 @@ o3m = <|
   "group" -> <|
     "G" -> "rotation/O3#",
     "H" -> "rotation/SO3#",
+    "abstract_type" -> "rotation/O3#/group/abstract_type",
     "allowed_properties" -> {
       <|
         "irrep" -> <|"family" -> "Du", "index" -> 0|>,
@@ -98,6 +99,7 @@ o3m = <|
       "normalizer_index" -> <|"reason" -> "continuous-group", "value" -> Null|>,
       "symbol" -> "C_i1'"
     |>,
+    "gap_smallgroup_id" -> "rotation/O3#/group/gap_smallgroup_id",
     "hermann_mauguin" -> "infinfm'",
     "images" -> <|
       "axial_even" -> <|"matrix" -> {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}, "record" -> "rotation/SO3#"|>,
