@@ -17207,180 +17207,6 @@
         {
           "J": 3,
           "dim": 1,
-          "irrep": "A_2u",
-          "irrep_id": "A2u",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 0,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 0
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 3,
-          "dim": 2,
-          "irrep": "E_1u",
-          "irrep_id": "E1u",
-          "kappa": 1,
-          "kind": "partner_pair",
-          "seed_m": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": 1
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "J": 3,
-          "dim": 2,
-          "irrep": "E_1u",
-          "irrep_id": "E1u",
-          "kappa": 2,
-          "kind": "partner_pair",
-          "seed_m": 2,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 2
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "J": 3,
-          "dim": 1,
-          "irrep": "A_2u",
-          "irrep_id": "A2u",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 3,
-          "dim": 1,
           "irrep": "A_1u",
           "irrep_id": "A1u",
           "kappa": 1,
@@ -17416,10 +17242,10 @@
           ]
         },
         {
-          "J": 4,
+          "J": 3,
           "dim": 1,
-          "irrep": "A_1g",
-          "irrep_id": "A1g",
+          "irrep": "A_2u",
+          "irrep_id": "A2u",
           "kappa": 1,
           "kind": "single_ket",
           "seed_m": 0,
@@ -17443,10 +17269,61 @@
           ]
         },
         {
-          "J": 4,
+          "J": 3,
+          "dim": 1,
+          "irrep": "A_2u",
+          "irrep_id": "A2u",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 3,
           "dim": 2,
-          "irrep": "E_1g",
-          "irrep_id": "E1g",
+          "irrep": "E_1u",
+          "irrep_id": "E1u",
           "kappa": 1,
           "kind": "partner_pair",
           "seed_m": 1,
@@ -17484,10 +17361,10 @@
           ]
         },
         {
-          "J": 4,
+          "J": 3,
           "dim": 2,
-          "irrep": "E_1g",
-          "irrep_id": "E1g",
+          "irrep": "E_1u",
+          "irrep_id": "E1u",
           "kappa": 2,
           "kind": "partner_pair",
           "seed_m": 2,
@@ -17535,6 +17412,33 @@
                 }
               ],
               "mu": 2
+            }
+          ]
+        },
+        {
+          "J": 4,
+          "dim": 1,
+          "irrep": "A_1g",
+          "irrep_id": "A1g",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": 0,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 0
+                }
+              ],
+              "mu": 1
             }
           ]
         },
@@ -17631,6 +17535,102 @@
           "dim": 2,
           "irrep": "E_1g",
           "irrep_id": "E1g",
+          "kappa": 1,
+          "kind": "partner_pair",
+          "seed_m": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": 1
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "J": 4,
+          "dim": 2,
+          "irrep": "E_1g",
+          "irrep_id": "E1g",
+          "kappa": 2,
+          "kind": "partner_pair",
+          "seed_m": 2,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 2
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "J": 4,
+          "dim": 2,
+          "irrep": "E_1g",
+          "irrep_id": "E1g",
           "kappa": 3,
           "kind": "partner_pair",
           "seed_m": 4,
@@ -17684,6 +17684,43 @@
         {
           "J": 5,
           "dim": 1,
+          "irrep": "A_1u",
+          "irrep_id": "A1u",
+          "kappa": 1,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 5,
+          "dim": 1,
           "irrep": "A_2u",
           "irrep_id": "A2u",
           "kappa": 1,
@@ -17702,6 +17739,57 @@
                     ]
                   },
                   "m": 0
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 5,
+          "dim": 1,
+          "irrep": "A_2u",
+          "irrep_id": "A2u",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -3
                 }
               ],
               "mu": 1
@@ -17801,94 +17889,6 @@
                 }
               ],
               "mu": 2
-            }
-          ]
-        },
-        {
-          "J": 5,
-          "dim": 1,
-          "irrep": "A_2u",
-          "irrep_id": "A2u",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 5,
-          "dim": 1,
-          "irrep": "A_1u",
-          "irrep_id": "A1u",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
             }
           ]
         },
@@ -18017,6 +18017,182 @@
         },
         {
           "J": 6,
+          "dim": 1,
+          "irrep": "A_1g",
+          "irrep_id": "A1g",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 6,
+          "dim": 1,
+          "irrep": "A_1g",
+          "irrep_id": "A1g",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 6,
+          "dim": 1,
+          "irrep": "A_2g",
+          "irrep_id": "A2g",
+          "kappa": 1,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 6,
+          "dim": 1,
+          "irrep": "A_2g",
+          "irrep_id": "A2g",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 6,
           "dim": 2,
           "irrep": "E_1g",
           "irrep_id": "E1g",
@@ -18108,94 +18284,6 @@
                 }
               ],
               "mu": 2
-            }
-          ]
-        },
-        {
-          "J": 6,
-          "dim": 1,
-          "irrep": "A_1g",
-          "irrep_id": "A1g",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 6,
-          "dim": 1,
-          "irrep": "A_2g",
-          "irrep_id": "A2g",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
             }
           ]
         },
@@ -18296,14 +18384,14 @@
           ]
         },
         {
-          "J": 6,
+          "J": 7,
           "dim": 1,
-          "irrep": "A_1g",
-          "irrep_id": "A1g",
-          "kappa": 3,
+          "irrep": "A_1u",
+          "irrep_id": "A1u",
+          "kappa": 1,
           "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": 1,
+          "seed_m": 3,
+          "seed_sign": -1,
           "vectors": [
             {
               "components": [
@@ -18315,17 +18403,17 @@
                       1
                     ]
                   },
-                  "m": 6
+                  "m": 3
                 },
                 {
                   "e": {
                     "f": "q",
                     "v": [
-                      1,
+                      -1,
                       1
                     ]
                   },
-                  "m": -6
+                  "m": -3
                 }
               ],
               "mu": 1
@@ -18333,10 +18421,10 @@
           ]
         },
         {
-          "J": 6,
+          "J": 7,
           "dim": 1,
-          "irrep": "A_2g",
-          "irrep_id": "A2g",
+          "irrep": "A_1u",
+          "irrep_id": "A1u",
           "kappa": 2,
           "kind": "pm_pair",
           "seed_m": 6,
@@ -18412,6 +18500,94 @@
         },
         {
           "J": 7,
+          "dim": 1,
+          "irrep": "A_2u",
+          "irrep_id": "A2u",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 7,
+          "dim": 1,
+          "irrep": "A_2u",
+          "irrep_id": "A2u",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 7,
           "dim": 2,
           "irrep": "E_1u",
           "irrep_id": "E1u",
@@ -18508,94 +18684,6 @@
         },
         {
           "J": 7,
-          "dim": 1,
-          "irrep": "A_2u",
-          "irrep_id": "A2u",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
-          "irrep": "A_1u",
-          "irrep_id": "A1u",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
           "dim": 2,
           "irrep": "E_1u",
           "irrep_id": "E1u",
@@ -18687,94 +18775,6 @@
                 }
               ],
               "mu": 2
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
-          "irrep": "A_2u",
-          "irrep_id": "A2u",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
-          "irrep": "A_1u",
-          "irrep_id": "A1u",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
             }
           ]
         },
@@ -18848,6 +18848,182 @@
         },
         {
           "J": 8,
+          "dim": 1,
+          "irrep": "A_1g",
+          "irrep_id": "A1g",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "A_1g",
+          "irrep_id": "A1g",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "A_2g",
+          "irrep_id": "A2g",
+          "kappa": 1,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "A_2g",
+          "irrep_id": "A2g",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
           "dim": 2,
           "irrep": "E_1g",
           "irrep_id": "E1g",
@@ -18944,94 +19120,6 @@
         },
         {
           "J": 8,
-          "dim": 1,
-          "irrep": "A_1g",
-          "irrep_id": "A1g",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "A_2g",
-          "irrep_id": "A2g",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
           "dim": 2,
           "irrep": "E_1g",
           "irrep_id": "E1g",
@@ -19123,94 +19211,6 @@
                 }
               ],
               "mu": 2
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "A_1g",
-          "irrep_id": "A1g",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "A_2g",
-          "irrep_id": "A2g",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
             }
           ]
         },
@@ -19313,6 +19313,131 @@
         {
           "J": 9,
           "dim": 1,
+          "irrep": "A_1u",
+          "irrep_id": "A1u",
+          "kappa": 1,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "A_1u",
+          "irrep_id": "A1u",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "A_1u",
+          "irrep_id": "A1u",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 9,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 9
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -9
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
           "irrep": "A_2u",
           "irrep_id": "A2u",
           "kappa": 1,
@@ -19331,6 +19456,145 @@
                     ]
                   },
                   "m": 0
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "A_2u",
+          "irrep_id": "A2u",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "A_2u",
+          "irrep_id": "A2u",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "A_2u",
+          "irrep_id": "A2u",
+          "kappa": 4,
+          "kind": "pm_pair",
+          "seed_m": 9,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 9
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -9
                 }
               ],
               "mu": 1
@@ -19435,94 +19699,6 @@
         },
         {
           "J": 9,
-          "dim": 1,
-          "irrep": "A_2u",
-          "irrep_id": "A2u",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "A_1u",
-          "irrep_id": "A1u",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
           "dim": 2,
           "irrep": "E_1u",
           "irrep_id": "E1u",
@@ -19614,94 +19790,6 @@
                 }
               ],
               "mu": 2
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "A_2u",
-          "irrep_id": "A2u",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "A_1u",
-          "irrep_id": "A1u",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
             }
           ]
         },
@@ -19802,10 +19890,125 @@
           ]
         },
         {
-          "J": 9,
+          "J": 10,
           "dim": 1,
-          "irrep": "A_2u",
-          "irrep_id": "A2u",
+          "irrep": "A_1g",
+          "irrep_id": "A1g",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": 0,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 0
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A_1g",
+          "irrep_id": "A1g",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A_1g",
+          "irrep_id": "A1g",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A_1g",
+          "irrep_id": "A1g",
           "kappa": 4,
           "kind": "pm_pair",
           "seed_m": 9,
@@ -19853,10 +20056,98 @@
           ]
         },
         {
-          "J": 9,
+          "J": 10,
           "dim": 1,
-          "irrep": "A_1u",
-          "irrep_id": "A1u",
+          "irrep": "A_2g",
+          "irrep_id": "A2g",
+          "kappa": 1,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A_2g",
+          "irrep_id": "A2g",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A_2g",
+          "irrep_id": "A2g",
           "kappa": 3,
           "kind": "pm_pair",
           "seed_m": 9,
@@ -19883,33 +20174,6 @@
                     ]
                   },
                   "m": -9
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "A_1g",
-          "irrep_id": "A1g",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 0,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 0
                 }
               ],
               "mu": 1
@@ -20014,94 +20278,6 @@
         },
         {
           "J": 10,
-          "dim": 1,
-          "irrep": "A_1g",
-          "irrep_id": "A1g",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "A_2g",
-          "irrep_id": "A2g",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
           "dim": 2,
           "irrep": "E_1g",
           "irrep_id": "E1g",
@@ -20198,94 +20374,6 @@
         },
         {
           "J": 10,
-          "dim": 1,
-          "irrep": "A_1g",
-          "irrep_id": "A1g",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "A_2g",
-          "irrep_id": "A2g",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
           "dim": 2,
           "irrep": "E_1g",
           "irrep_id": "E1g",
@@ -20377,94 +20465,6 @@
                 }
               ],
               "mu": 2
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "A_1g",
-          "irrep_id": "A1g",
-          "kappa": 4,
-          "kind": "pm_pair",
-          "seed_m": 9,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 9
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -9
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "A_2g",
-          "irrep_id": "A2g",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 9,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 9
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -9
-                }
-              ],
-              "mu": 1
             }
           ]
         },

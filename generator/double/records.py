@@ -208,6 +208,10 @@ def bases_block(C, period, doc):
         for b in B.blocks(twoJ):
             blocks.append(B.block_json(twoJ, b))
     TRD.adapt_axial(blocks, doc)
+    # the blocks of one 2J by the record's irrep order, then kappa (rotation CONVENTIONS.md section
+    # 14.1, rule 5), kappa keeping the order of their construction
+    order = [ir["id"] for ir in spinors]
+    blocks.sort(key=lambda b: (b["twoJ"], order.index(b["irrep_id"]), b["kappa"]))
     S = SUB.Subduction(G.order, C.classes, spinors)
     top = max(8 * period + 1, 49)
     mult = {k: S.row(k, Cyc.one()) for k in range(1, top + 1, 2)}

@@ -1777,41 +1777,6 @@ o3t = {
                 {
                     'J': 2,
                     'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 1,
-                    'kind': 'pm_pair',
-                    'seed_m': 1,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 1},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -1}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 2,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 2,
-                    'kind': 'pm_pair',
-                    'seed_m': 1,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 1}, {'e': Rational(-1,1), 'm': -1}],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 2,
-                    'dim': 1,
                     'irrep': 'A_g',
                     'irrep_id': 'Ag',
                     'kappa': 2,
@@ -1840,6 +1805,41 @@ o3t = {
                                 {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 2},
                                 {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'm': -2}
                             ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 2,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 1,
+                    'kind': 'pm_pair',
+                    'seed_m': 1,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 1},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -1}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 2,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 2,
+                    'kind': 'pm_pair',
+                    'seed_m': 1,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 1}, {'e': Rational(-1,1), 'm': -1}],
                             'mu': 1
                         }
                     ]
@@ -1857,41 +1857,6 @@ o3t = {
                 {
                     'J': 3,
                     'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
-                    'kappa': 1,
-                    'kind': 'pm_pair',
-                    'seed_m': 1,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 1},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -1}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 3,
-                    'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
-                    'kappa': 2,
-                    'kind': 'pm_pair',
-                    'seed_m': 1,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 1}, {'e': Rational(-1,1), 'm': -1}],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 3,
-                    'dim': 1,
                     'irrep': 'A_u',
                     'irrep_id': 'Au',
                     'kappa': 2,
@@ -1920,6 +1885,41 @@ o3t = {
                                 {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 2},
                                 {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'm': -2}
                             ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 3,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 1,
+                    'kind': 'pm_pair',
+                    'seed_m': 1,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 1},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -1}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 3,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 2,
+                    'kind': 'pm_pair',
+                    'seed_m': 1,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 1}, {'e': Rational(-1,1), 'm': -1}],
                             'mu': 1
                         }
                     ]
@@ -1972,41 +1972,6 @@ o3t = {
                 {
                     'J': 4,
                     'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 1,
-                    'kind': 'pm_pair',
-                    'seed_m': 1,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 1},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -1}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 4,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 2,
-                    'kind': 'pm_pair',
-                    'seed_m': 1,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 1}, {'e': Rational(-1,1), 'm': -1}],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 4,
-                    'dim': 1,
                     'irrep': 'A_g',
                     'irrep_id': 'Ag',
                     'kappa': 2,
@@ -2035,41 +2000,6 @@ o3t = {
                                 {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 2},
                                 {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'm': -2}
                             ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 4,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 3,
-                    'kind': 'pm_pair',
-                    'seed_m': 3,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 3},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -3}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 4,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 4,
-                    'kind': 'pm_pair',
-                    'seed_m': 3,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 3}, {'e': Rational(-1,1), 'm': -3}],
                             'mu': 1
                         }
                     ]
@@ -2110,20 +2040,10 @@ o3t = {
                     ]
                 },
                 {
-                    'J': 5,
+                    'J': 4,
                     'dim': 1,
-                    'irrep': 'A_u',
-                    'irrep_id': 'Au',
-                    'kappa': 1,
-                    'kind': 'single_ket',
-                    'seed_m': 0,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'm': 0}], 'mu': 1}]
-                },
-                {
-                    'J': 5,
-                    'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
                     'kappa': 1,
                     'kind': 'pm_pair',
                     'seed_m': 1,
@@ -2139,10 +2059,10 @@ o3t = {
                     ]
                 },
                 {
-                    'J': 5,
+                    'J': 4,
                     'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
                     'kappa': 2,
                     'kind': 'pm_pair',
                     'seed_m': 1,
@@ -2153,6 +2073,51 @@ o3t = {
                             'mu': 1
                         }
                     ]
+                },
+                {
+                    'J': 4,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 3,
+                    'kind': 'pm_pair',
+                    'seed_m': 3,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 3},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -3}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 4,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 4,
+                    'kind': 'pm_pair',
+                    'seed_m': 3,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 3}, {'e': Rational(-1,1), 'm': -3}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 5,
+                    'dim': 1,
+                    'irrep': 'A_u',
+                    'irrep_id': 'Au',
+                    'kappa': 1,
+                    'kind': 'single_ket',
+                    'seed_m': 0,
+                    'vectors': [{'components': [{'e': Rational(1,1), 'm': 0}], 'mu': 1}]
                 },
                 {
                     'J': 5,
@@ -2192,41 +2157,6 @@ o3t = {
                 {
                     'J': 5,
                     'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
-                    'kappa': 3,
-                    'kind': 'pm_pair',
-                    'seed_m': 3,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 3},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -3}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 5,
-                    'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
-                    'kappa': 4,
-                    'kind': 'pm_pair',
-                    'seed_m': 3,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 3}, {'e': Rational(-1,1), 'm': -3}],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 5,
-                    'dim': 1,
                     'irrep': 'A_u',
                     'irrep_id': 'Au',
                     'kappa': 4,
@@ -2255,6 +2185,76 @@ o3t = {
                                 {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 4},
                                 {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'm': -4}
                             ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 5,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 1,
+                    'kind': 'pm_pair',
+                    'seed_m': 1,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 1},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -1}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 5,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 2,
+                    'kind': 'pm_pair',
+                    'seed_m': 1,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 1}, {'e': Rational(-1,1), 'm': -1}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 5,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 3,
+                    'kind': 'pm_pair',
+                    'seed_m': 3,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 3},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -3}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 5,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 4,
+                    'kind': 'pm_pair',
+                    'seed_m': 3,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 3}, {'e': Rational(-1,1), 'm': -3}],
                             'mu': 1
                         }
                     ]
@@ -2307,41 +2307,6 @@ o3t = {
                 {
                     'J': 6,
                     'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 1,
-                    'kind': 'pm_pair',
-                    'seed_m': 1,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 1},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -1}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 6,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 2,
-                    'kind': 'pm_pair',
-                    'seed_m': 1,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 1}, {'e': Rational(-1,1), 'm': -1}],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 6,
-                    'dim': 1,
                     'irrep': 'A_g',
                     'irrep_id': 'Ag',
                     'kappa': 2,
@@ -2377,41 +2342,6 @@ o3t = {
                 {
                     'J': 6,
                     'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 3,
-                    'kind': 'pm_pair',
-                    'seed_m': 3,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 3},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -3}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 6,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 4,
-                    'kind': 'pm_pair',
-                    'seed_m': 3,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 3}, {'e': Rational(-1,1), 'm': -3}],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 6,
-                    'dim': 1,
                     'irrep': 'A_g',
                     'irrep_id': 'Ag',
                     'kappa': 4,
@@ -2440,41 +2370,6 @@ o3t = {
                                 {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 4},
                                 {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'm': -4}
                             ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 6,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 5,
-                    'kind': 'pm_pair',
-                    'seed_m': 5,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 5},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -5}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 6,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 6,
-                    'kind': 'pm_pair',
-                    'seed_m': 5,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 5}, {'e': Rational(-1,1), 'm': -5}],
                             'mu': 1
                         }
                     ]
@@ -2515,20 +2410,10 @@ o3t = {
                     ]
                 },
                 {
-                    'J': 7,
+                    'J': 6,
                     'dim': 1,
-                    'irrep': 'A_u',
-                    'irrep_id': 'Au',
-                    'kappa': 1,
-                    'kind': 'single_ket',
-                    'seed_m': 0,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'm': 0}], 'mu': 1}]
-                },
-                {
-                    'J': 7,
-                    'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
                     'kappa': 1,
                     'kind': 'pm_pair',
                     'seed_m': 1,
@@ -2544,10 +2429,10 @@ o3t = {
                     ]
                 },
                 {
-                    'J': 7,
+                    'J': 6,
                     'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
                     'kappa': 2,
                     'kind': 'pm_pair',
                     'seed_m': 1,
@@ -2558,6 +2443,86 @@ o3t = {
                             'mu': 1
                         }
                     ]
+                },
+                {
+                    'J': 6,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 3,
+                    'kind': 'pm_pair',
+                    'seed_m': 3,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 3},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -3}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 6,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 4,
+                    'kind': 'pm_pair',
+                    'seed_m': 3,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 3}, {'e': Rational(-1,1), 'm': -3}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 6,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 5,
+                    'kind': 'pm_pair',
+                    'seed_m': 5,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 5},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -5}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 6,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 6,
+                    'kind': 'pm_pair',
+                    'seed_m': 5,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 5}, {'e': Rational(-1,1), 'm': -5}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 1,
+                    'irrep': 'A_u',
+                    'irrep_id': 'Au',
+                    'kappa': 1,
+                    'kind': 'single_ket',
+                    'seed_m': 0,
+                    'vectors': [{'components': [{'e': Rational(1,1), 'm': 0}], 'mu': 1}]
                 },
                 {
                     'J': 7,
@@ -2590,41 +2555,6 @@ o3t = {
                                 {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 2},
                                 {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'm': -2}
                             ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 7,
-                    'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
-                    'kappa': 3,
-                    'kind': 'pm_pair',
-                    'seed_m': 3,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 3},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -3}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 7,
-                    'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
-                    'kappa': 4,
-                    'kind': 'pm_pair',
-                    'seed_m': 3,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 3}, {'e': Rational(-1,1), 'm': -3}],
                             'mu': 1
                         }
                     ]
@@ -2667,41 +2597,6 @@ o3t = {
                 {
                     'J': 7,
                     'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
-                    'kappa': 5,
-                    'kind': 'pm_pair',
-                    'seed_m': 5,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 5},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -5}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 7,
-                    'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
-                    'kappa': 6,
-                    'kind': 'pm_pair',
-                    'seed_m': 5,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 5}, {'e': Rational(-1,1), 'm': -5}],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 7,
-                    'dim': 1,
                     'irrep': 'A_u',
                     'irrep_id': 'Au',
                     'kappa': 6,
@@ -2730,6 +2625,111 @@ o3t = {
                                 {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 6},
                                 {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'm': -6}
                             ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 1,
+                    'kind': 'pm_pair',
+                    'seed_m': 1,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 1},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -1}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 2,
+                    'kind': 'pm_pair',
+                    'seed_m': 1,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 1}, {'e': Rational(-1,1), 'm': -1}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 3,
+                    'kind': 'pm_pair',
+                    'seed_m': 3,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 3},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -3}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 4,
+                    'kind': 'pm_pair',
+                    'seed_m': 3,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 3}, {'e': Rational(-1,1), 'm': -3}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 5,
+                    'kind': 'pm_pair',
+                    'seed_m': 5,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 5},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -5}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 6,
+                    'kind': 'pm_pair',
+                    'seed_m': 5,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 5}, {'e': Rational(-1,1), 'm': -5}],
                             'mu': 1
                         }
                     ]
@@ -2782,41 +2782,6 @@ o3t = {
                 {
                     'J': 8,
                     'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 1,
-                    'kind': 'pm_pair',
-                    'seed_m': 1,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 1},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -1}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 8,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 2,
-                    'kind': 'pm_pair',
-                    'seed_m': 1,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 1}, {'e': Rational(-1,1), 'm': -1}],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 8,
-                    'dim': 1,
                     'irrep': 'A_g',
                     'irrep_id': 'Ag',
                     'kappa': 2,
@@ -2845,41 +2810,6 @@ o3t = {
                                 {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 2},
                                 {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'm': -2}
                             ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 8,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 3,
-                    'kind': 'pm_pair',
-                    'seed_m': 3,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 3},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -3}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 8,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 4,
-                    'kind': 'pm_pair',
-                    'seed_m': 3,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 3}, {'e': Rational(-1,1), 'm': -3}],
                             'mu': 1
                         }
                     ]
@@ -2922,41 +2852,6 @@ o3t = {
                 {
                     'J': 8,
                     'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 5,
-                    'kind': 'pm_pair',
-                    'seed_m': 5,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 5},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -5}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 8,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 6,
-                    'kind': 'pm_pair',
-                    'seed_m': 5,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 5}, {'e': Rational(-1,1), 'm': -5}],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 8,
-                    'dim': 1,
                     'irrep': 'A_g',
                     'irrep_id': 'Ag',
                     'kappa': 6,
@@ -2985,41 +2880,6 @@ o3t = {
                                 {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 6},
                                 {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'm': -6}
                             ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 8,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 7,
-                    'kind': 'pm_pair',
-                    'seed_m': 7,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 7},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -7}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 8,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 8,
-                    'kind': 'pm_pair',
-                    'seed_m': 7,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 7}, {'e': Rational(-1,1), 'm': -7}],
                             'mu': 1
                         }
                     ]
@@ -3060,20 +2920,10 @@ o3t = {
                     ]
                 },
                 {
-                    'J': 9,
+                    'J': 8,
                     'dim': 1,
-                    'irrep': 'A_u',
-                    'irrep_id': 'Au',
-                    'kappa': 1,
-                    'kind': 'single_ket',
-                    'seed_m': 0,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'm': 0}], 'mu': 1}]
-                },
-                {
-                    'J': 9,
-                    'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
                     'kappa': 1,
                     'kind': 'pm_pair',
                     'seed_m': 1,
@@ -3089,10 +2939,10 @@ o3t = {
                     ]
                 },
                 {
-                    'J': 9,
+                    'J': 8,
                     'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
                     'kappa': 2,
                     'kind': 'pm_pair',
                     'seed_m': 1,
@@ -3103,6 +2953,121 @@ o3t = {
                             'mu': 1
                         }
                     ]
+                },
+                {
+                    'J': 8,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 3,
+                    'kind': 'pm_pair',
+                    'seed_m': 3,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 3},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -3}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 8,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 4,
+                    'kind': 'pm_pair',
+                    'seed_m': 3,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 3}, {'e': Rational(-1,1), 'm': -3}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 8,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 5,
+                    'kind': 'pm_pair',
+                    'seed_m': 5,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 5},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -5}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 8,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 6,
+                    'kind': 'pm_pair',
+                    'seed_m': 5,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 5}, {'e': Rational(-1,1), 'm': -5}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 8,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 7,
+                    'kind': 'pm_pair',
+                    'seed_m': 7,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 7},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -7}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 8,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 8,
+                    'kind': 'pm_pair',
+                    'seed_m': 7,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 7}, {'e': Rational(-1,1), 'm': -7}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 1,
+                    'irrep': 'A_u',
+                    'irrep_id': 'Au',
+                    'kappa': 1,
+                    'kind': 'single_ket',
+                    'seed_m': 0,
+                    'vectors': [{'components': [{'e': Rational(1,1), 'm': 0}], 'mu': 1}]
                 },
                 {
                     'J': 9,
@@ -3135,41 +3100,6 @@ o3t = {
                                 {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 2},
                                 {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'm': -2}
                             ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 9,
-                    'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
-                    'kappa': 3,
-                    'kind': 'pm_pair',
-                    'seed_m': 3,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 3},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -3}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 9,
-                    'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
-                    'kappa': 4,
-                    'kind': 'pm_pair',
-                    'seed_m': 3,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 3}, {'e': Rational(-1,1), 'm': -3}],
                             'mu': 1
                         }
                     ]
@@ -3212,41 +3142,6 @@ o3t = {
                 {
                     'J': 9,
                     'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
-                    'kappa': 5,
-                    'kind': 'pm_pair',
-                    'seed_m': 5,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 5},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -5}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 9,
-                    'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
-                    'kappa': 6,
-                    'kind': 'pm_pair',
-                    'seed_m': 5,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 5}, {'e': Rational(-1,1), 'm': -5}],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 9,
-                    'dim': 1,
                     'irrep': 'A_u',
                     'irrep_id': 'Au',
                     'kappa': 6,
@@ -3282,41 +3177,6 @@ o3t = {
                 {
                     'J': 9,
                     'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
-                    'kappa': 7,
-                    'kind': 'pm_pair',
-                    'seed_m': 7,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 7},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -7}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 9,
-                    'dim': 1,
-                    'irrep': 'B_u',
-                    'irrep_id': 'Bu',
-                    'kappa': 8,
-                    'kind': 'pm_pair',
-                    'seed_m': 7,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 7}, {'e': Rational(-1,1), 'm': -7}],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 9,
-                    'dim': 1,
                     'irrep': 'A_u',
                     'irrep_id': 'Au',
                     'kappa': 8,
@@ -3345,6 +3205,146 @@ o3t = {
                                 {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 8},
                                 {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'm': -8}
                             ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 1,
+                    'kind': 'pm_pair',
+                    'seed_m': 1,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 1},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -1}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 2,
+                    'kind': 'pm_pair',
+                    'seed_m': 1,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 1}, {'e': Rational(-1,1), 'm': -1}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 3,
+                    'kind': 'pm_pair',
+                    'seed_m': 3,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 3},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -3}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 4,
+                    'kind': 'pm_pair',
+                    'seed_m': 3,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 3}, {'e': Rational(-1,1), 'm': -3}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 5,
+                    'kind': 'pm_pair',
+                    'seed_m': 5,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 5},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -5}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 6,
+                    'kind': 'pm_pair',
+                    'seed_m': 5,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 5}, {'e': Rational(-1,1), 'm': -5}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 7,
+                    'kind': 'pm_pair',
+                    'seed_m': 7,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 7},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -7}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 1,
+                    'irrep': 'B_u',
+                    'irrep_id': 'Bu',
+                    'kappa': 8,
+                    'kind': 'pm_pair',
+                    'seed_m': 7,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 7}, {'e': Rational(-1,1), 'm': -7}],
                             'mu': 1
                         }
                     ]
@@ -3397,41 +3397,6 @@ o3t = {
                 {
                     'J': 10,
                     'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 1,
-                    'kind': 'pm_pair',
-                    'seed_m': 1,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 1},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -1}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 10,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 2,
-                    'kind': 'pm_pair',
-                    'seed_m': 1,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 1}, {'e': Rational(-1,1), 'm': -1}],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 10,
-                    'dim': 1,
                     'irrep': 'A_g',
                     'irrep_id': 'Ag',
                     'kappa': 2,
@@ -3460,41 +3425,6 @@ o3t = {
                                 {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 2},
                                 {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'm': -2}
                             ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 10,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 3,
-                    'kind': 'pm_pair',
-                    'seed_m': 3,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 3},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -3}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 10,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 4,
-                    'kind': 'pm_pair',
-                    'seed_m': 3,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 3}, {'e': Rational(-1,1), 'm': -3}],
                             'mu': 1
                         }
                     ]
@@ -3537,41 +3467,6 @@ o3t = {
                 {
                     'J': 10,
                     'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 5,
-                    'kind': 'pm_pair',
-                    'seed_m': 5,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 5},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -5}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 10,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 6,
-                    'kind': 'pm_pair',
-                    'seed_m': 5,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 5}, {'e': Rational(-1,1), 'm': -5}],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 10,
-                    'dim': 1,
                     'irrep': 'A_g',
                     'irrep_id': 'Ag',
                     'kappa': 6,
@@ -3607,41 +3502,6 @@ o3t = {
                 {
                     'J': 10,
                     'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 7,
-                    'kind': 'pm_pair',
-                    'seed_m': 7,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 7},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -7}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 10,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 8,
-                    'kind': 'pm_pair',
-                    'seed_m': 7,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 7}, {'e': Rational(-1,1), 'm': -7}],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 10,
-                    'dim': 1,
                     'irrep': 'A_g',
                     'irrep_id': 'Ag',
                     'kappa': 8,
@@ -3670,41 +3530,6 @@ o3t = {
                                 {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 8},
                                 {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'm': -8}
                             ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 10,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 9,
-                    'kind': 'pm_pair',
-                    'seed_m': 9,
-                    'seed_sign': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 9},
-                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -9}
-                            ],
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 10,
-                    'dim': 1,
-                    'irrep': 'B_g',
-                    'irrep_id': 'Bg',
-                    'kappa': 10,
-                    'kind': 'pm_pair',
-                    'seed_m': 9,
-                    'seed_sign': -1,
-                    'vectors': [
-                        {
-                            'components': [{'e': Rational(1,1), 'm': 9}, {'e': Rational(-1,1), 'm': -9}],
                             'mu': 1
                         }
                     ]
@@ -3740,6 +3565,181 @@ o3t = {
                                 {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 10},
                                 {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'm': -10}
                             ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 1,
+                    'kind': 'pm_pair',
+                    'seed_m': 1,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 1},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -1}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 2,
+                    'kind': 'pm_pair',
+                    'seed_m': 1,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 1}, {'e': Rational(-1,1), 'm': -1}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 3,
+                    'kind': 'pm_pair',
+                    'seed_m': 3,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 3},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -3}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 4,
+                    'kind': 'pm_pair',
+                    'seed_m': 3,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 3}, {'e': Rational(-1,1), 'm': -3}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 5,
+                    'kind': 'pm_pair',
+                    'seed_m': 5,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 5},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -5}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 6,
+                    'kind': 'pm_pair',
+                    'seed_m': 5,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 5}, {'e': Rational(-1,1), 'm': -5}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 7,
+                    'kind': 'pm_pair',
+                    'seed_m': 7,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 7},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -7}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 8,
+                    'kind': 'pm_pair',
+                    'seed_m': 7,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 7}, {'e': Rational(-1,1), 'm': -7}],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 9,
+                    'kind': 'pm_pair',
+                    'seed_m': 9,
+                    'seed_sign': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': 9},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'm': -9}
+                            ],
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 10,
+                    'dim': 1,
+                    'irrep': 'B_g',
+                    'irrep_id': 'Bg',
+                    'kappa': 10,
+                    'kind': 'pm_pair',
+                    'seed_m': 9,
+                    'seed_sign': -1,
+                    'vectors': [
+                        {
+                            'components': [{'e': Rational(1,1), 'm': 9}, {'e': Rational(-1,1), 'm': -9}],
                             'mu': 1
                         }
                     ]

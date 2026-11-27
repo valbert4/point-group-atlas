@@ -18315,6 +18315,19 @@ o3d = {
                 },
                 {
                     'dim': 2,
+                    'irrep': 'E_15/2',
+                    'irrep_id': 'E15h',
+                    'kappa': 2,
+                    'kind': 'partner_pair',
+                    'seed_twoM': 21,
+                    'twoJ': 21,
+                    'vectors': [
+                        {'components': [{'e': Rational(1,1), 'twoM': 21}], 'mu': 1},
+                        {'components': [{'e': Rational(-1,1), 'twoM': -21}], 'mu': 2}
+                    ]
+                },
+                {
+                    'dim': 2,
                     'irrep': 'E_17/2',
                     'irrep_id': 'E17h',
                     'kappa': 1,
@@ -18337,19 +18350,6 @@ o3d = {
                     'vectors': [
                         {'components': [{'e': Rational(1,1), 'twoM': 19}], 'mu': 1},
                         {'components': [{'e': Rational(1,1), 'twoM': -19}], 'mu': 2}
-                    ]
-                },
-                {
-                    'dim': 2,
-                    'irrep': 'E_15/2',
-                    'irrep_id': 'E15h',
-                    'kappa': 2,
-                    'kind': 'partner_pair',
-                    'seed_twoM': 21,
-                    'twoJ': 21,
-                    'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 21}], 'mu': 1},
-                        {'components': [{'e': Rational(-1,1), 'twoM': -21}], 'mu': 2}
                     ]
                 }
             ],

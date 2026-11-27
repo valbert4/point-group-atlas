@@ -1148,6 +1148,9 @@ def _axial_bases(table, irreps):
                                     label_map=lab_map, id_map=id_map)
     order = {ir["id"]: i for i, ir in enumerate(irreps)}
     out["closed_form"]["multiplicity"].sort(key=lambda x: order[x["irrep_id"]])
+    # the blocks of one J by the record's irrep order, then kappa (CONVENTIONS.md section 14.1,
+    # rule 5); kappa keeps the order of their construction
+    out["enumerated"]["blocks"].sort(key=lambda b: (b["J"], order[b["irrep_id"]], b["kappa"]))
     return out
 
 

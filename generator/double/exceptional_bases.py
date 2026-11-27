@@ -367,6 +367,8 @@ def record_block(C, pointer, mult, period):
             blocks.append({"twoJ": twoJ, "irrep": mulliken[b["irrep"]], "irrep_id": b["irrep"],
                            "kappa": b["copy"], "dim": b["dim"],
                            "vectors": [_record_vector(v) for v in b["vectors"]]})
+    order = [ir["id"] for ir in C.irreps]
+    blocks.sort(key=lambda b: (b["twoJ"], order.index(b["irrep_id"]), b["kappa"]))
     for twoJ in range(1, TWOJ_FILES + 1, 2):
         for ir in spinors:
             if counts.get((twoJ, ir["id"]), 0) != mult(ir["id"], twoJ):

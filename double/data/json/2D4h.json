@@ -19589,88 +19589,6 @@
         },
         {
           "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 1,
-          "kind": "partner_pair",
-          "seed_twoM": 3,
-          "twoJ": 7,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -3
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 3
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 2,
-          "kind": "partner_pair",
-          "seed_twoM": 5,
-          "twoJ": 7,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 5
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -5
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
           "irrep": "E_1/2,g",
           "irrep_id": "E1hg",
           "kappa": 2,
@@ -19712,6 +19630,88 @@
         },
         {
           "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 1,
+          "kind": "partner_pair",
+          "seed_twoM": 3,
+          "twoJ": 7,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -3
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 3
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 2,
+          "kind": "partner_pair",
+          "seed_twoM": 5,
+          "twoJ": 7,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 5
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -5
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
           "irrep": "E_1/2,g",
           "irrep_id": "E1hg",
           "kappa": 1,
@@ -19745,88 +19745,6 @@
                     ]
                   },
                   "twoM": 1
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 1,
-          "kind": "partner_pair",
-          "seed_twoM": 3,
-          "twoJ": 9,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -3
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "twoM": 3
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 2,
-          "kind": "partner_pair",
-          "seed_twoM": 5,
-          "twoJ": 9,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 5
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "twoM": -5
                 }
               ],
               "mu": 2
@@ -19917,6 +19835,88 @@
         },
         {
           "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 1,
+          "kind": "partner_pair",
+          "seed_twoM": 3,
+          "twoJ": 9,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -3
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "twoM": 3
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 2,
+          "kind": "partner_pair",
+          "seed_twoM": 5,
+          "twoJ": 9,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 5
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "twoM": -5
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
           "irrep": "E_1/2,g",
           "irrep_id": "E1hg",
           "kappa": 1,
@@ -19950,88 +19950,6 @@
                     ]
                   },
                   "twoM": 1
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 1,
-          "kind": "partner_pair",
-          "seed_twoM": 3,
-          "twoJ": 11,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -3
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 3
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 2,
-          "kind": "partner_pair",
-          "seed_twoM": 5,
-          "twoJ": 11,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 5
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -5
                 }
               ],
               "mu": 2
@@ -20114,6 +20032,88 @@
                     ]
                   },
                   "twoM": 9
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 1,
+          "kind": "partner_pair",
+          "seed_twoM": 3,
+          "twoJ": 11,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -3
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 3
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 2,
+          "kind": "partner_pair",
+          "seed_twoM": 5,
+          "twoJ": 11,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 5
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -5
                 }
               ],
               "mu": 2
@@ -20204,88 +20204,6 @@
         },
         {
           "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 1,
-          "kind": "partner_pair",
-          "seed_twoM": 3,
-          "twoJ": 13,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -3
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "twoM": 3
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 2,
-          "kind": "partner_pair",
-          "seed_twoM": 5,
-          "twoJ": 13,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 5
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "twoM": -5
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
           "irrep": "E_1/2,g",
           "irrep_id": "E1hg",
           "kappa": 2,
@@ -20360,6 +20278,88 @@
                     ]
                   },
                   "twoM": 9
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 1,
+          "kind": "partner_pair",
+          "seed_twoM": 3,
+          "twoJ": 13,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -3
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "twoM": 3
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 2,
+          "kind": "partner_pair",
+          "seed_twoM": 5,
+          "twoJ": 13,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 5
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "twoM": -5
                 }
               ],
               "mu": 2
@@ -20491,88 +20491,6 @@
         },
         {
           "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 1,
-          "kind": "partner_pair",
-          "seed_twoM": 3,
-          "twoJ": 15,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -3
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 3
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 2,
-          "kind": "partner_pair",
-          "seed_twoM": 5,
-          "twoJ": 15,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 5
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -5
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
           "irrep": "E_1/2,g",
           "irrep_id": "E1hg",
           "kappa": 2,
@@ -20647,88 +20565,6 @@
                     ]
                   },
                   "twoM": 9
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 3,
-          "kind": "partner_pair",
-          "seed_twoM": 11,
-          "twoJ": 15,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -11
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 11
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 4,
-          "kind": "partner_pair",
-          "seed_twoM": 13,
-          "twoJ": 15,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 13
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -13
                 }
               ],
               "mu": 2
@@ -20778,6 +20614,170 @@
         },
         {
           "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 1,
+          "kind": "partner_pair",
+          "seed_twoM": 3,
+          "twoJ": 15,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -3
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 3
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 2,
+          "kind": "partner_pair",
+          "seed_twoM": 5,
+          "twoJ": 15,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 5
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -5
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 3,
+          "kind": "partner_pair",
+          "seed_twoM": 11,
+          "twoJ": 15,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -11
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 11
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 4,
+          "kind": "partner_pair",
+          "seed_twoM": 13,
+          "twoJ": 15,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 13
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -13
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
           "irrep": "E_1/2,g",
           "irrep_id": "E1hg",
           "kappa": 1,
@@ -20811,88 +20811,6 @@
                     ]
                   },
                   "twoM": 1
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 1,
-          "kind": "partner_pair",
-          "seed_twoM": 3,
-          "twoJ": 17,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -3
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "twoM": 3
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 2,
-          "kind": "partner_pair",
-          "seed_twoM": 5,
-          "twoJ": 17,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 5
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "twoM": -5
                 }
               ],
               "mu": 2
@@ -20975,88 +20893,6 @@
                     ]
                   },
                   "twoM": 9
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 3,
-          "kind": "partner_pair",
-          "seed_twoM": 11,
-          "twoJ": 17,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -11
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "twoM": 11
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 4,
-          "kind": "partner_pair",
-          "seed_twoM": 13,
-          "twoJ": 17,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 13
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "twoM": -13
                 }
               ],
               "mu": 2
@@ -21147,6 +20983,170 @@
         },
         {
           "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 1,
+          "kind": "partner_pair",
+          "seed_twoM": 3,
+          "twoJ": 17,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -3
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "twoM": 3
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 2,
+          "kind": "partner_pair",
+          "seed_twoM": 5,
+          "twoJ": 17,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 5
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "twoM": -5
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 3,
+          "kind": "partner_pair",
+          "seed_twoM": 11,
+          "twoJ": 17,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -11
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "twoM": 11
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 4,
+          "kind": "partner_pair",
+          "seed_twoM": 13,
+          "twoJ": 17,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 13
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "twoM": -13
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
           "irrep": "E_1/2,g",
           "irrep_id": "E1hg",
           "kappa": 1,
@@ -21180,88 +21180,6 @@
                     ]
                   },
                   "twoM": 1
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 1,
-          "kind": "partner_pair",
-          "seed_twoM": 3,
-          "twoJ": 19,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -3
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 3
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 2,
-          "kind": "partner_pair",
-          "seed_twoM": 5,
-          "twoJ": 19,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 5
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -5
                 }
               ],
               "mu": 2
@@ -21352,88 +21270,6 @@
         },
         {
           "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 3,
-          "kind": "partner_pair",
-          "seed_twoM": 11,
-          "twoJ": 19,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -11
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 11
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 4,
-          "kind": "partner_pair",
-          "seed_twoM": 13,
-          "twoJ": 19,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 13
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -13
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
           "irrep": "E_1/2,g",
           "irrep_id": "E1hg",
           "kappa": 4,
@@ -21508,6 +21344,170 @@
                     ]
                   },
                   "twoM": 17
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 1,
+          "kind": "partner_pair",
+          "seed_twoM": 3,
+          "twoJ": 19,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -3
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 3
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 2,
+          "kind": "partner_pair",
+          "seed_twoM": 5,
+          "twoJ": 19,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 5
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -5
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 3,
+          "kind": "partner_pair",
+          "seed_twoM": 11,
+          "twoJ": 19,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -11
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 11
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 4,
+          "kind": "partner_pair",
+          "seed_twoM": 13,
+          "twoJ": 19,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 13
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -13
                 }
               ],
               "mu": 2
@@ -21598,88 +21598,6 @@
         },
         {
           "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 1,
-          "kind": "partner_pair",
-          "seed_twoM": 3,
-          "twoJ": 21,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -3
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "twoM": 3
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 2,
-          "kind": "partner_pair",
-          "seed_twoM": 5,
-          "twoJ": 21,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 5
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "twoM": -5
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
           "irrep": "E_1/2,g",
           "irrep_id": "E1hg",
           "kappa": 2,
@@ -21762,88 +21680,6 @@
         },
         {
           "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 3,
-          "kind": "partner_pair",
-          "seed_twoM": 11,
-          "twoJ": 21,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": -11
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "twoM": 11
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
-          "irrep": "E_3/2,g",
-          "irrep_id": "E3hg",
-          "kappa": 4,
-          "kind": "partner_pair",
-          "seed_twoM": 13,
-          "twoJ": 21,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "twoM": 13
-                }
-              ],
-              "mu": 1
-            },
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "twoM": -13
-                }
-              ],
-              "mu": 2
-            }
-          ]
-        },
-        {
-          "dim": 2,
           "irrep": "E_1/2,g",
           "irrep_id": "E1hg",
           "kappa": 4,
@@ -21918,6 +21754,170 @@
                     ]
                   },
                   "twoM": 17
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 1,
+          "kind": "partner_pair",
+          "seed_twoM": 3,
+          "twoJ": 21,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -3
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "twoM": 3
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 2,
+          "kind": "partner_pair",
+          "seed_twoM": 5,
+          "twoJ": 21,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 5
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "twoM": -5
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 3,
+          "kind": "partner_pair",
+          "seed_twoM": 11,
+          "twoJ": 21,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": -11
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "twoM": 11
+                }
+              ],
+              "mu": 2
+            }
+          ]
+        },
+        {
+          "dim": 2,
+          "irrep": "E_3/2,g",
+          "irrep_id": "E3hg",
+          "kappa": 4,
+          "kind": "partner_pair",
+          "seed_twoM": 13,
+          "twoJ": 21,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "twoM": 13
+                }
+              ],
+              "mu": 1
+            },
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "twoM": -13
                 }
               ],
               "mu": 2

@@ -29768,16 +29768,6 @@ o3d = {
                 },
                 {
                     'dim': 1,
-                    'irrep': '2E_13/2',
-                    'irrep_id': '2E13h',
-                    'kappa': 1,
-                    'kind': 'single_ket',
-                    'seed_twoM': 13,
-                    'twoJ': 13,
-                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 13}], 'mu': 1}]
-                },
-                {
-                    'dim': 1,
                     'irrep': '1E_13/2',
                     'irrep_id': '1E13h',
                     'kappa': 1,
@@ -29785,6 +29775,16 @@ o3d = {
                     'seed_twoM': -13,
                     'twoJ': 13,
                     'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -13}], 'mu': 1}]
+                },
+                {
+                    'dim': 1,
+                    'irrep': '2E_13/2',
+                    'irrep_id': '2E13h',
+                    'kappa': 1,
+                    'kind': 'single_ket',
+                    'seed_twoM': 13,
+                    'twoJ': 13,
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 13}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -29908,16 +29908,6 @@ o3d = {
                 },
                 {
                     'dim': 1,
-                    'irrep': '2E_13/2',
-                    'irrep_id': '2E13h',
-                    'kappa': 1,
-                    'kind': 'single_ket',
-                    'seed_twoM': 13,
-                    'twoJ': 15,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 13}], 'mu': 1}]
-                },
-                {
-                    'dim': 1,
                     'irrep': '1E_13/2',
                     'irrep_id': '1E13h',
                     'kappa': 1,
@@ -29928,13 +29918,13 @@ o3d = {
                 },
                 {
                     'dim': 1,
-                    'irrep': '2E_15/2',
-                    'irrep_id': '2E15h',
+                    'irrep': '2E_13/2',
+                    'irrep_id': '2E13h',
                     'kappa': 1,
                     'kind': 'single_ket',
-                    'seed_twoM': 15,
+                    'seed_twoM': 13,
                     'twoJ': 15,
-                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 15}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 13}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -29945,6 +29935,16 @@ o3d = {
                     'seed_twoM': -15,
                     'twoJ': 15,
                     'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -15}], 'mu': 1}]
+                },
+                {
+                    'dim': 1,
+                    'irrep': '2E_15/2',
+                    'irrep_id': '2E15h',
+                    'kappa': 1,
+                    'kind': 'single_ket',
+                    'seed_twoM': 15,
+                    'twoJ': 15,
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 15}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -30068,16 +30068,6 @@ o3d = {
                 },
                 {
                     'dim': 1,
-                    'irrep': '2E_13/2',
-                    'irrep_id': '2E13h',
-                    'kappa': 1,
-                    'kind': 'single_ket',
-                    'seed_twoM': 13,
-                    'twoJ': 17,
-                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 13}], 'mu': 1}]
-                },
-                {
-                    'dim': 1,
                     'irrep': '1E_13/2',
                     'irrep_id': '1E13h',
                     'kappa': 1,
@@ -30088,13 +30078,13 @@ o3d = {
                 },
                 {
                     'dim': 1,
-                    'irrep': '2E_15/2',
-                    'irrep_id': '2E15h',
+                    'irrep': '2E_13/2',
+                    'irrep_id': '2E13h',
                     'kappa': 1,
                     'kind': 'single_ket',
-                    'seed_twoM': 15,
+                    'seed_twoM': 13,
                     'twoJ': 17,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 15}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 13}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -30108,13 +30098,13 @@ o3d = {
                 },
                 {
                     'dim': 1,
-                    'irrep': '2E_17/2',
-                    'irrep_id': '2E17h',
+                    'irrep': '2E_15/2',
+                    'irrep_id': '2E15h',
                     'kappa': 1,
                     'kind': 'single_ket',
-                    'seed_twoM': 17,
+                    'seed_twoM': 15,
                     'twoJ': 17,
-                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 17}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 15}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -30125,6 +30115,16 @@ o3d = {
                     'seed_twoM': -17,
                     'twoJ': 17,
                     'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -17}], 'mu': 1}]
+                },
+                {
+                    'dim': 1,
+                    'irrep': '2E_17/2',
+                    'irrep_id': '2E17h',
+                    'kappa': 1,
+                    'kind': 'single_ket',
+                    'seed_twoM': 17,
+                    'twoJ': 17,
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 17}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -30248,6 +30248,16 @@ o3d = {
                 },
                 {
                     'dim': 1,
+                    'irrep': '1E_13/2',
+                    'irrep_id': '1E13h',
+                    'kappa': 1,
+                    'kind': 'single_ket',
+                    'seed_twoM': -13,
+                    'twoJ': 19,
+                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -13}], 'mu': 1}]
+                },
+                {
+                    'dim': 1,
                     'irrep': '2E_13/2',
                     'irrep_id': '2E13h',
                     'kappa': 1,
@@ -30258,13 +30268,13 @@ o3d = {
                 },
                 {
                     'dim': 1,
-                    'irrep': '1E_13/2',
-                    'irrep_id': '1E13h',
+                    'irrep': '1E_15/2',
+                    'irrep_id': '1E15h',
                     'kappa': 1,
                     'kind': 'single_ket',
-                    'seed_twoM': -13,
+                    'seed_twoM': -15,
                     'twoJ': 19,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -13}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -15}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -30278,13 +30288,13 @@ o3d = {
                 },
                 {
                     'dim': 1,
-                    'irrep': '1E_15/2',
-                    'irrep_id': '1E15h',
+                    'irrep': '1E_17/2',
+                    'irrep_id': '1E17h',
                     'kappa': 1,
                     'kind': 'single_ket',
-                    'seed_twoM': -15,
+                    'seed_twoM': -17,
                     'twoJ': 19,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -15}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -17}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -30298,13 +30308,13 @@ o3d = {
                 },
                 {
                     'dim': 1,
-                    'irrep': '1E_17/2',
-                    'irrep_id': '1E17h',
+                    'irrep': '1E_19/2',
+                    'irrep_id': '1E19h',
                     'kappa': 1,
                     'kind': 'single_ket',
-                    'seed_twoM': -17,
+                    'seed_twoM': -19,
                     'twoJ': 19,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -17}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -19}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -30315,16 +30325,6 @@ o3d = {
                     'seed_twoM': 19,
                     'twoJ': 19,
                     'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 19}], 'mu': 1}]
-                },
-                {
-                    'dim': 1,
-                    'irrep': '1E_19/2',
-                    'irrep_id': '1E19h',
-                    'kappa': 1,
-                    'kind': 'single_ket',
-                    'seed_twoM': -19,
-                    'twoJ': 19,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -19}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -30448,16 +30448,6 @@ o3d = {
                 },
                 {
                     'dim': 1,
-                    'irrep': '2E_13/2',
-                    'irrep_id': '2E13h',
-                    'kappa': 1,
-                    'kind': 'single_ket',
-                    'seed_twoM': 13,
-                    'twoJ': 21,
-                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 13}], 'mu': 1}]
-                },
-                {
-                    'dim': 1,
                     'irrep': '1E_13/2',
                     'irrep_id': '1E13h',
                     'kappa': 1,
@@ -30468,13 +30458,13 @@ o3d = {
                 },
                 {
                     'dim': 1,
-                    'irrep': '2E_15/2',
-                    'irrep_id': '2E15h',
+                    'irrep': '2E_13/2',
+                    'irrep_id': '2E13h',
                     'kappa': 1,
                     'kind': 'single_ket',
-                    'seed_twoM': 15,
+                    'seed_twoM': 13,
                     'twoJ': 21,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 15}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 13}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -30488,13 +30478,13 @@ o3d = {
                 },
                 {
                     'dim': 1,
-                    'irrep': '2E_17/2',
-                    'irrep_id': '2E17h',
+                    'irrep': '2E_15/2',
+                    'irrep_id': '2E15h',
                     'kappa': 1,
                     'kind': 'single_ket',
-                    'seed_twoM': 17,
+                    'seed_twoM': 15,
                     'twoJ': 21,
-                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 17}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 15}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -30508,13 +30498,13 @@ o3d = {
                 },
                 {
                     'dim': 1,
-                    'irrep': '2E_19/2',
-                    'irrep_id': '2E19h',
+                    'irrep': '2E_17/2',
+                    'irrep_id': '2E17h',
                     'kappa': 1,
                     'kind': 'single_ket',
-                    'seed_twoM': 19,
+                    'seed_twoM': 17,
                     'twoJ': 21,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 19}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 17}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -30528,13 +30518,13 @@ o3d = {
                 },
                 {
                     'dim': 1,
-                    'irrep': '2E_21/2',
-                    'irrep_id': '2E21h',
+                    'irrep': '2E_19/2',
+                    'irrep_id': '2E19h',
                     'kappa': 1,
                     'kind': 'single_ket',
-                    'seed_twoM': 21,
+                    'seed_twoM': 19,
                     'twoJ': 21,
-                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 21}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 19}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -30545,6 +30535,16 @@ o3d = {
                     'seed_twoM': -21,
                     'twoJ': 21,
                     'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -21}], 'mu': 1}]
+                },
+                {
+                    'dim': 1,
+                    'irrep': '2E_21/2',
+                    'irrep_id': '2E21h',
+                    'kappa': 1,
+                    'kind': 'single_ket',
+                    'seed_twoM': 21,
+                    'twoJ': 21,
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 21}], 'mu': 1}]
                 }
             ],
             'twoJ_max': 21,

@@ -2050,9 +2050,10 @@ $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ or a pair $`\bigl\lvert{}^{J}_{\,m}\bigr
    such pairs and kets with $`m = 0`$. In $`\mathsf{G} = \mathsf{A}`$ the kets $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ and $`\bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$, $`m > 0`$, of one character of $`\mathsf{A}`$ give two
    pairs. Otherwise they carry the two irreps of a complex pair, whose blocks are the ket of the first irrep with $`e = 1`$ and
    the ket of its partner with $`e = (-1)^m`$.
-5. Block order: by $`J`$, then by $`\lvert m\rvert`$ ascending, with $`+m`$ before $`-m`$ when $`\mathsf{G}`$ has no flip (below). At
-   one $`\lvert m\rvert`$, pairs with $`s = +1`$ precede $`s = -1`$. The index $`\kappa`$ counts the blocks of one irrep at one $`J`$
-   in this order.
+5. Block order: by $`J`$, then by irrep in the record's order, then by $`\kappa`$. The index $`\kappa`$ counts the blocks of one
+   irrep at one $`J`$ by $`\lvert m\rvert`$ ascending, with $`+m`$ before $`-m`$ when $`\mathsf{G}`$ has no flip (below), and at one $`\lvert m\rvert`$
+   the pair with $`s = +1`$ before $`s = -1`$. For a continuous group the irreps are its instances, by their `index` (section 16),
+   null first, and then by family.
 6. Parity. The blocks are those of $`\eta = (-1)^J`$. At $`\eta = -(-1)^J`$ a block keeps its kets, and its label becomes
    $`\Gamma \otimes \det_{\mathsf{G}}`$ (`parity_label_map`), where $`\det_{\mathsf{G}}`$ is the determinant character, $`\mathsfit{g} \mapsto \det \mathsfit{g}`$. Rule 4 is then applied again at
    that $`\eta`$ and can change the partner order, the sign of $`v_2`$ and the factor $`\mathrm{i}`$.
@@ -2166,9 +2167,9 @@ record's irrep order. Their $`e_m`$, $`r_m`$, `copy`, `dim` and components are o
 ### 14.4 The records' blocks, $`J \le 10`$
 
 The field `subduction_basis.enumerated` of an exceptional record (`J_min` 0, `J_max` 10, `block_count`, `vector_count`)
-holds the vectors of the files for $`J \le 10`$. Its blocks of one $`J`$ follow the irrep order of $`\mathsf{T}`$, $`\mathsf{O}`$ or $`\mathsf{I}`$ (for $`\mathsf{T_{h}}`$,
-$`\mathsf{T_{d}}`$, $`\mathsf{O_{h}}`$ and $`\mathsf{I_{h}}`$ the parent record's order, relabeled), then $`\kappa`$. Each block has `J`, `irrep` (the irrep's `label`),
-`display` (the irrep's `display`, section 6.2), `kappa`, `dim` and `vectors`. The values are in their minimal field, and
+holds the vectors of the files for $`J \le 10`$. Its blocks of one $`J`$ follow the record's irrep order, then $`\kappa`$. Each
+block has `J`, `irrep` (the irrep's `label`), `display` (the irrep's `display`, section 6.2), `kappa`, `dim` and
+`vectors`. The values are in their minimal field, and
 each vector is the file's vector divided by a positive rational, so that the coordinates of its coefficients
 are coprime integers. The amplitudes are unchanged ($`\mathrm{tot}`$ is computed from the vector's own $`e_m`$). A component is
 `{m, e}`. However, when a vector has two or more components and every coefficient is a rational multiple of one

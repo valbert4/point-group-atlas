@@ -254,7 +254,11 @@ def build(name, record, parent=None):
         lmap = label_maps(parent, record)
         inter = intertwiners(parent, record, lmap)
         factors = time_reversal.derived_factors(parent, record, lmap, inter)
-    blocks = _blocks(low_blocks(src), lmap, disp, inter, factors)
+    # the blocks of one J by the record's irrep order, then kappa: a derived record relabels its
+    # parent's blocks, whose order may differ (CONVENTIONS.md sections 14.1 and 14.4)
+    order = [ir["label"] for ir in record["character_table"]["irreps"]]
+    blocks = sorted(_blocks(low_blocks(src), lmap, disp, inter, factors),
+                    key=lambda b: (b["J"], order.index(b["irrep"]), b["kappa"]))
     block_count, vector_count = bases_summary.full_set_counts(record, names.J_MAX)
     node = {
         "status": "enumerated",

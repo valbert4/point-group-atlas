@@ -9318,6 +9318,19 @@ o3d = {
                 },
                 {
                     'dim': 2,
+                    'irrep': 'E_9/2',
+                    'irrep_id': 'E9h',
+                    'kappa': 2,
+                    'kind': 'partner_pair',
+                    'seed_twoM': 15,
+                    'twoJ': 15,
+                    'vectors': [
+                        {'components': [{'e': Rational(1,1), 'twoM': 15}], 'mu': 1},
+                        {'components': [{'e': Rational(-1,1), 'twoM': -15}], 'mu': 2}
+                    ]
+                },
+                {
+                    'dim': 2,
                     'irrep': 'E_11/2',
                     'irrep_id': 'E11h',
                     'kappa': 1,
@@ -9340,19 +9353,6 @@ o3d = {
                     'vectors': [
                         {'components': [{'e': Rational(1,1), 'twoM': 13}], 'mu': 1},
                         {'components': [{'e': Rational(1,1), 'twoM': -13}], 'mu': 2}
-                    ]
-                },
-                {
-                    'dim': 2,
-                    'irrep': 'E_9/2',
-                    'irrep_id': 'E9h',
-                    'kappa': 2,
-                    'kind': 'partner_pair',
-                    'seed_twoM': 15,
-                    'twoJ': 15,
-                    'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 15}], 'mu': 1},
-                        {'components': [{'e': Rational(-1,1), 'twoM': -15}], 'mu': 2}
                     ]
                 },
                 {
@@ -9409,6 +9409,19 @@ o3d = {
                 },
                 {
                     'dim': 2,
+                    'irrep': 'E_7/2',
+                    'irrep_id': 'E7h',
+                    'kappa': 2,
+                    'kind': 'partner_pair',
+                    'seed_twoM': 17,
+                    'twoJ': 17,
+                    'vectors': [
+                        {'components': [{'e': Rational(1,1), 'twoM': 17}], 'mu': 1},
+                        {'components': [{'e': Rational(-1,1), 'twoM': -17}], 'mu': 2}
+                    ]
+                },
+                {
+                    'dim': 2,
                     'irrep': 'E_9/2',
                     'irrep_id': 'E9h',
                     'kappa': 1,
@@ -9418,6 +9431,19 @@ o3d = {
                     'vectors': [
                         {'components': [{'e': Rational(1,1), 'twoM': -9}], 'mu': 1},
                         {'components': [{'e': Rational(1,1), 'twoM': 9}], 'mu': 2}
+                    ]
+                },
+                {
+                    'dim': 2,
+                    'irrep': 'E_9/2',
+                    'irrep_id': 'E9h',
+                    'kappa': 2,
+                    'kind': 'partner_pair',
+                    'seed_twoM': 15,
+                    'twoJ': 17,
+                    'vectors': [
+                        {'components': [{'e': Rational(1,1), 'twoM': 15}], 'mu': 1},
+                        {'components': [{'e': Rational(1,1), 'twoM': -15}], 'mu': 2}
                     ]
                 },
                 {
@@ -9444,32 +9470,6 @@ o3d = {
                     'vectors': [
                         {'components': [{'e': Rational(1,1), 'twoM': 13}], 'mu': 1},
                         {'components': [{'e': Rational(-1,1), 'twoM': -13}], 'mu': 2}
-                    ]
-                },
-                {
-                    'dim': 2,
-                    'irrep': 'E_9/2',
-                    'irrep_id': 'E9h',
-                    'kappa': 2,
-                    'kind': 'partner_pair',
-                    'seed_twoM': 15,
-                    'twoJ': 17,
-                    'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 15}], 'mu': 1},
-                        {'components': [{'e': Rational(1,1), 'twoM': -15}], 'mu': 2}
-                    ]
-                },
-                {
-                    'dim': 2,
-                    'irrep': 'E_7/2',
-                    'irrep_id': 'E7h',
-                    'kappa': 2,
-                    'kind': 'partner_pair',
-                    'seed_twoM': 17,
-                    'twoJ': 17,
-                    'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 17}], 'mu': 1},
-                        {'components': [{'e': Rational(-1,1), 'twoM': -17}], 'mu': 2}
                     ]
                 },
                 {
@@ -9513,6 +9513,19 @@ o3d = {
                 },
                 {
                     'dim': 2,
+                    'irrep': 'E_5/2',
+                    'irrep_id': 'E5h',
+                    'kappa': 2,
+                    'kind': 'partner_pair',
+                    'seed_twoM': 19,
+                    'twoJ': 19,
+                    'vectors': [
+                        {'components': [{'e': Rational(1,1), 'twoM': 19}], 'mu': 1},
+                        {'components': [{'e': Rational(-1,1), 'twoM': -19}], 'mu': 2}
+                    ]
+                },
+                {
+                    'dim': 2,
                     'irrep': 'E_7/2',
                     'irrep_id': 'E7h',
                     'kappa': 1,
@@ -9526,6 +9539,19 @@ o3d = {
                 },
                 {
                     'dim': 2,
+                    'irrep': 'E_7/2',
+                    'irrep_id': 'E7h',
+                    'kappa': 2,
+                    'kind': 'partner_pair',
+                    'seed_twoM': 17,
+                    'twoJ': 19,
+                    'vectors': [
+                        {'components': [{'e': Rational(1,1), 'twoM': 17}], 'mu': 1},
+                        {'components': [{'e': Rational(1,1), 'twoM': -17}], 'mu': 2}
+                    ]
+                },
+                {
+                    'dim': 2,
                     'irrep': 'E_9/2',
                     'irrep_id': 'E9h',
                     'kappa': 1,
@@ -9535,6 +9561,19 @@ o3d = {
                     'vectors': [
                         {'components': [{'e': Rational(1,1), 'twoM': -9}], 'mu': 1},
                         {'components': [{'e': Rational(-1,1), 'twoM': 9}], 'mu': 2}
+                    ]
+                },
+                {
+                    'dim': 2,
+                    'irrep': 'E_9/2',
+                    'irrep_id': 'E9h',
+                    'kappa': 2,
+                    'kind': 'partner_pair',
+                    'seed_twoM': 15,
+                    'twoJ': 19,
+                    'vectors': [
+                        {'components': [{'e': Rational(1,1), 'twoM': 15}], 'mu': 1},
+                        {'components': [{'e': Rational(-1,1), 'twoM': -15}], 'mu': 2}
                     ]
                 },
                 {
@@ -9565,45 +9604,6 @@ o3d = {
                 },
                 {
                     'dim': 2,
-                    'irrep': 'E_9/2',
-                    'irrep_id': 'E9h',
-                    'kappa': 2,
-                    'kind': 'partner_pair',
-                    'seed_twoM': 15,
-                    'twoJ': 19,
-                    'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 15}], 'mu': 1},
-                        {'components': [{'e': Rational(-1,1), 'twoM': -15}], 'mu': 2}
-                    ]
-                },
-                {
-                    'dim': 2,
-                    'irrep': 'E_7/2',
-                    'irrep_id': 'E7h',
-                    'kappa': 2,
-                    'kind': 'partner_pair',
-                    'seed_twoM': 17,
-                    'twoJ': 19,
-                    'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 17}], 'mu': 1},
-                        {'components': [{'e': Rational(1,1), 'twoM': -17}], 'mu': 2}
-                    ]
-                },
-                {
-                    'dim': 2,
-                    'irrep': 'E_5/2',
-                    'irrep_id': 'E5h',
-                    'kappa': 2,
-                    'kind': 'partner_pair',
-                    'seed_twoM': 19,
-                    'twoJ': 19,
-                    'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 19}], 'mu': 1},
-                        {'components': [{'e': Rational(-1,1), 'twoM': -19}], 'mu': 2}
-                    ]
-                },
-                {
-                    'dim': 2,
                     'irrep': 'E_1/2',
                     'irrep_id': 'E1h',
                     'kappa': 1,
@@ -9630,6 +9630,19 @@ o3d = {
                 },
                 {
                     'dim': 2,
+                    'irrep': 'E_3/2',
+                    'irrep_id': 'E3h',
+                    'kappa': 2,
+                    'kind': 'partner_pair',
+                    'seed_twoM': 21,
+                    'twoJ': 21,
+                    'vectors': [
+                        {'components': [{'e': Rational(1,1), 'twoM': 21}], 'mu': 1},
+                        {'components': [{'e': Rational(-1,1), 'twoM': -21}], 'mu': 2}
+                    ]
+                },
+                {
+                    'dim': 2,
                     'irrep': 'E_5/2',
                     'irrep_id': 'E5h',
                     'kappa': 1,
@@ -9639,6 +9652,19 @@ o3d = {
                     'vectors': [
                         {'components': [{'e': Rational(1,1), 'twoM': -5}], 'mu': 1},
                         {'components': [{'e': Rational(1,1), 'twoM': 5}], 'mu': 2}
+                    ]
+                },
+                {
+                    'dim': 2,
+                    'irrep': 'E_5/2',
+                    'irrep_id': 'E5h',
+                    'kappa': 2,
+                    'kind': 'partner_pair',
+                    'seed_twoM': 19,
+                    'twoJ': 21,
+                    'vectors': [
+                        {'components': [{'e': Rational(1,1), 'twoM': 19}], 'mu': 1},
+                        {'components': [{'e': Rational(1,1), 'twoM': -19}], 'mu': 2}
                     ]
                 },
                 {
@@ -9656,6 +9682,19 @@ o3d = {
                 },
                 {
                     'dim': 2,
+                    'irrep': 'E_7/2',
+                    'irrep_id': 'E7h',
+                    'kappa': 2,
+                    'kind': 'partner_pair',
+                    'seed_twoM': 17,
+                    'twoJ': 21,
+                    'vectors': [
+                        {'components': [{'e': Rational(1,1), 'twoM': 17}], 'mu': 1},
+                        {'components': [{'e': Rational(-1,1), 'twoM': -17}], 'mu': 2}
+                    ]
+                },
+                {
+                    'dim': 2,
                     'irrep': 'E_9/2',
                     'irrep_id': 'E9h',
                     'kappa': 1,
@@ -9665,6 +9704,19 @@ o3d = {
                     'vectors': [
                         {'components': [{'e': Rational(1,1), 'twoM': -9}], 'mu': 1},
                         {'components': [{'e': Rational(1,1), 'twoM': 9}], 'mu': 2}
+                    ]
+                },
+                {
+                    'dim': 2,
+                    'irrep': 'E_9/2',
+                    'irrep_id': 'E9h',
+                    'kappa': 2,
+                    'kind': 'partner_pair',
+                    'seed_twoM': 15,
+                    'twoJ': 21,
+                    'vectors': [
+                        {'components': [{'e': Rational(1,1), 'twoM': 15}], 'mu': 1},
+                        {'components': [{'e': Rational(1,1), 'twoM': -15}], 'mu': 2}
                     ]
                 },
                 {
@@ -9691,58 +9743,6 @@ o3d = {
                     'vectors': [
                         {'components': [{'e': Rational(1,1), 'twoM': 13}], 'mu': 1},
                         {'components': [{'e': Rational(-1,1), 'twoM': -13}], 'mu': 2}
-                    ]
-                },
-                {
-                    'dim': 2,
-                    'irrep': 'E_9/2',
-                    'irrep_id': 'E9h',
-                    'kappa': 2,
-                    'kind': 'partner_pair',
-                    'seed_twoM': 15,
-                    'twoJ': 21,
-                    'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 15}], 'mu': 1},
-                        {'components': [{'e': Rational(1,1), 'twoM': -15}], 'mu': 2}
-                    ]
-                },
-                {
-                    'dim': 2,
-                    'irrep': 'E_7/2',
-                    'irrep_id': 'E7h',
-                    'kappa': 2,
-                    'kind': 'partner_pair',
-                    'seed_twoM': 17,
-                    'twoJ': 21,
-                    'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 17}], 'mu': 1},
-                        {'components': [{'e': Rational(-1,1), 'twoM': -17}], 'mu': 2}
-                    ]
-                },
-                {
-                    'dim': 2,
-                    'irrep': 'E_5/2',
-                    'irrep_id': 'E5h',
-                    'kappa': 2,
-                    'kind': 'partner_pair',
-                    'seed_twoM': 19,
-                    'twoJ': 21,
-                    'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 19}], 'mu': 1},
-                        {'components': [{'e': Rational(1,1), 'twoM': -19}], 'mu': 2}
-                    ]
-                },
-                {
-                    'dim': 2,
-                    'irrep': 'E_3/2',
-                    'irrep_id': 'E3h',
-                    'kappa': 2,
-                    'kind': 'partner_pair',
-                    'seed_twoM': 21,
-                    'twoJ': 21,
-                    'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 21}], 'mu': 1},
-                        {'components': [{'e': Rational(-1,1), 'twoM': -21}], 'mu': 2}
                     ]
                 }
             ],

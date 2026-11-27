@@ -10,9 +10,10 @@ and |J,-m>, m > 0, the two kets span an E-type block (partner_pair) in a group w
 G = A they are the blocks of the two irreps of a complex pair (single_ket); when the characters
 agree they give two one-dimensional blocks |J,m> + s |J,-m>, s = +-1 (pm_pair); m = 0 is a single
 ket.  A vector is written by its coefficients e_m, normalized as in CONVENTIONS.md
-section 14.  The blocks run over m = 0..J; kappa numbers the copies of an irrep at one J.  At the
-other parity, eta = -(-1)^J, a block keeps its kets and its label is multiplied by det_G
-(parity_label_map).
+section 14.  The blocks run over m = 0..J; kappa numbers the copies of an irrep at one J in this
+order, and the records list the blocks of one J by irrep, then kappa (CONVENTIONS.md section 14.1,
+rule 5; a continuous group's instances by their index n, then by family).  At the other parity,
+eta = -(-1)^J, a block keeps its kets and its label is multiplied by det_G (parity_label_map).
 
 Time reversal, Theta |J,m> = (-1)^m |J,-m> (complex conjugation of r^J Y_J^m), acts on every block
 by the matrix N of its irrep (the identity on a one-dimensional real irrep, the exchange of the two
@@ -598,10 +599,14 @@ def _closed_form(fam, parity_map, LM):
     }
 
 
-def _enumerated(fam, N, jmax, LM, ID):
+def _enumerated(fam, N, jmax, LM, ID, rank=None):
+    """The blocks of J = 0..jmax, those of one J in the order of blocks() or, with `rank` (the place
+    of a block's irrep in the record's order), by irrep and then kappa, which keeps the order of
+    blocks() (CONVENTIONS.md section 14.1, rule 5)."""
     bl, nvec = [], 0
     for J in range(0, jmax + 1):
-        for b in blocks(fam, N, J):
+        bs = blocks(fam, N, J)
+        for b in (sorted(bs, key=lambda b: (rank(b), b["kappa"])) if rank else bs):
             bl.append(_block_json(b, J, LM, ID))
             nvec += len(b["vectors"])
     return {"J_min": 0, "J_max": jmax, "block_count": len(bl), "vector_count": nvec,
@@ -630,6 +635,7 @@ def basis_payload(fam, N, jmax=6, table=None, label_map=None, id_map=None):
     cf["self_conjugacy_condition"] = selfconj_condition(fam, N)
     cf["multiplicity"] = [{"irrep": LM(lab), "irrep_id": ID(lab), "even": e, "odd": o}
                           for lab, (e, o) in multiplicity_formulas(fam, N, labels).items()]
+    # in the order of blocks(): the record puts them in its own irrep order (records._axial_bases)
     return {"status": "closed-form", "closed_form": cf,
             "enumerated": _enumerated(fam, N, jmax, LM, ID)}
 
@@ -672,6 +678,9 @@ def continuous_payload(group, families, jmax=6):
         gf.append(dict(key, numerator=num, denominator=den))
         am.append(dict(key, m=m))
     cf["multiplicity"] = mult
+    # the instances by their index n (the |m| of their kets), then in the order of the families
+    order = [f["label_template"] for f in families]
     return {"status": "closed-form", "closed_form": cf,
             "generating_function": {"families": gf}, "allowed_m": {"families": am},
-            "enumerated": _enumerated(fam, INF, jmax, LM, ID)}
+            "enumerated": _enumerated(fam, INF, jmax, LM, ID, lambda b: (
+                abs(b["seed_m"]), order.index(_pretty_label(family_template(b["irrep"])))))}

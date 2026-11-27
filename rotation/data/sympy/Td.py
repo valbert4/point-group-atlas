@@ -4045,35 +4045,6 @@ o3t = {
                 {
                     'J': 3,
                     'dim': 3,
-                    'display': 'T_{2}',
-                    'irrep': 'T_2',
-                    'kappa': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': Rational(1,1), 'm': -3},
-                                {'e': Rational(-3,1), 'm': -1},
-                                {'e': Rational(3,1), 'm': 1},
-                                {'e': Rational(-1,1), 'm': 3}
-                            ],
-                            'mu': 1
-                        },
-                        {
-                            'components': [
-                                {'m': -3, 'q': [1, 1]},
-                                {'m': -1, 'q': [3, 1]},
-                                {'m': 1, 'q': [3, 1]},
-                                {'m': 3, 'q': [1, 1]}
-                            ],
-                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
-                            'mu': 2
-                        },
-                        {'components': [{'e': Rational(1,1), 'm': 0}], 'mu': 3}
-                    ]
-                },
-                {
-                    'J': 3,
-                    'dim': 3,
                     'display': 'T_{1}',
                     'irrep': 'T_1',
                     'kappa': 1,
@@ -4101,6 +4072,35 @@ o3t = {
                             'components': [{'e': Rational(-1,1), 'm': -2}, {'e': Rational(-1,1), 'm': 2}],
                             'mu': 3
                         }
+                    ]
+                },
+                {
+                    'J': 3,
+                    'dim': 3,
+                    'display': 'T_{2}',
+                    'irrep': 'T_2',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -3},
+                                {'e': Rational(-3,1), 'm': -1},
+                                {'e': Rational(3,1), 'm': 1},
+                                {'e': Rational(-1,1), 'm': 3}
+                            ],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -3, 'q': [1, 1]},
+                                {'m': -1, 'q': [3, 1]},
+                                {'m': 1, 'q': [3, 1]},
+                                {'m': 3, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {'components': [{'e': Rational(1,1), 'm': 0}], 'mu': 3}
                     ]
                 },
                 {
@@ -4245,6 +4245,42 @@ o3t = {
                 {
                     'J': 5,
                     'dim': 3,
+                    'display': 'T_{1}',
+                    'irrep': 'T_1',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -5},
+                                {'e': Rational(3,1), 'm': -3},
+                                {'e': Rational(-14,1), 'm': -1},
+                                {'e': Rational(14,1), 'm': 1},
+                                {'e': Rational(-3,1), 'm': 3},
+                                {'e': Rational(-1,1), 'm': 5}
+                            ],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -5, 'q': [1, 1]},
+                                {'m': -3, 'q': [-3, 1]},
+                                {'m': -1, 'q': [-14, 1]},
+                                {'m': 1, 'q': [-14, 1]},
+                                {'m': 3, 'q': [-3, 1]},
+                                {'m': 5, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [{'e': Rational(-1,1), 'm': -2}, {'e': Rational(-1,1), 'm': 2}],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 5,
+                    'dim': 3,
                     'display': 'T_{2}',
                     'irrep': 'T_2',
                     'kappa': 1,
@@ -4314,42 +4350,6 @@ o3t = {
                                 {'e': Rational(14,1), 'm': 0},
                                 {'e': Rational(-3,1), 'm': 4}
                             ],
-                            'mu': 3
-                        }
-                    ]
-                },
-                {
-                    'J': 5,
-                    'dim': 3,
-                    'display': 'T_{1}',
-                    'irrep': 'T_1',
-                    'kappa': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': Rational(1,1), 'm': -5},
-                                {'e': Rational(3,1), 'm': -3},
-                                {'e': Rational(-14,1), 'm': -1},
-                                {'e': Rational(14,1), 'm': 1},
-                                {'e': Rational(-3,1), 'm': 3},
-                                {'e': Rational(-1,1), 'm': 5}
-                            ],
-                            'mu': 1
-                        },
-                        {
-                            'components': [
-                                {'m': -5, 'q': [1, 1]},
-                                {'m': -3, 'q': [-3, 1]},
-                                {'m': -1, 'q': [-14, 1]},
-                                {'m': 1, 'q': [-14, 1]},
-                                {'m': 3, 'q': [-3, 1]},
-                                {'m': 5, 'q': [1, 1]}
-                            ],
-                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
-                            'mu': 2
-                        },
-                        {
-                            'components': [{'e': Rational(-1,1), 'm': -2}, {'e': Rational(-1,1), 'm': 2}],
                             'mu': 3
                         }
                     ]
@@ -4622,90 +4622,6 @@ o3t = {
                 {
                     'J': 7,
                     'dim': 3,
-                    'display': 'T_{2}',
-                    'irrep': 'T_2',
-                    'kappa': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': Rational(1,1), 'm': -7},
-                                {'e': Rational(14,1), 'm': -3},
-                                {'e': Rational(-49,1), 'm': -1},
-                                {'e': Rational(49,1), 'm': 1},
-                                {'e': Rational(-14,1), 'm': 3},
-                                {'e': Rational(-1,1), 'm': 7}
-                            ],
-                            'mu': 1
-                        },
-                        {
-                            'components': [
-                                {'m': -7, 'q': [1, 1]},
-                                {'m': -3, 'q': [14, 1]},
-                                {'m': -1, 'q': [49, 1]},
-                                {'m': 1, 'q': [49, 1]},
-                                {'m': 3, 'q': [14, 1]},
-                                {'m': 7, 'q': [1, 1]}
-                            ],
-                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
-                            'mu': 2
-                        },
-                        {
-                            'components': [
-                                {'e': Rational(7,1), 'm': -4},
-                                {'e': Rational(50,1), 'm': 0},
-                                {'e': Rational(7,1), 'm': 4}
-                            ],
-                            'mu': 3
-                        }
-                    ]
-                },
-                {
-                    'J': 7,
-                    'dim': 3,
-                    'display': 'T_{2}',
-                    'irrep': 'T_2',
-                    'kappa': 2,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': Rational(1,1), 'm': -7},
-                                {'e': Rational(-107,1), 'm': -5},
-                                {'e': Rational(121,1), 'm': -3},
-                                {'e': Rational(165,1), 'm': -1},
-                                {'e': Rational(-165,1), 'm': 1},
-                                {'e': Rational(-121,1), 'm': 3},
-                                {'e': Rational(107,1), 'm': 5},
-                                {'e': Rational(-1,1), 'm': 7}
-                            ],
-                            'mu': 1
-                        },
-                        {
-                            'components': [
-                                {'m': -7, 'q': [1, 1]},
-                                {'m': -5, 'q': [107, 1]},
-                                {'m': -3, 'q': [121, 1]},
-                                {'m': -1, 'q': [-165, 1]},
-                                {'m': 1, 'q': [-165, 1]},
-                                {'m': 3, 'q': [121, 1]},
-                                {'m': 5, 'q': [107, 1]},
-                                {'m': 7, 'q': [1, 1]}
-                            ],
-                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
-                            'mu': 2
-                        },
-                        {
-                            'components': [
-                                {'e': Rational(-25,1), 'm': -4},
-                                {'e': Rational(66,1), 'm': 0},
-                                {'e': Rational(-25,1), 'm': 4}
-                            ],
-                            'mu': 3
-                        }
-                    ]
-                },
-                {
-                    'J': 7,
-                    'dim': 3,
                     'display': 'T_{1}',
                     'irrep': 'T_1',
                     'kappa': 1,
@@ -4784,6 +4700,90 @@ o3t = {
                                 {'e': Rational(-11,1), 'm': -2},
                                 {'e': Rational(-11,1), 'm': 2},
                                 {'e': Rational(-5,1), 'm': 6}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 3,
+                    'display': 'T_{2}',
+                    'irrep': 'T_2',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -7},
+                                {'e': Rational(14,1), 'm': -3},
+                                {'e': Rational(-49,1), 'm': -1},
+                                {'e': Rational(49,1), 'm': 1},
+                                {'e': Rational(-14,1), 'm': 3},
+                                {'e': Rational(-1,1), 'm': 7}
+                            ],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -7, 'q': [1, 1]},
+                                {'m': -3, 'q': [14, 1]},
+                                {'m': -1, 'q': [49, 1]},
+                                {'m': 1, 'q': [49, 1]},
+                                {'m': 3, 'q': [14, 1]},
+                                {'m': 7, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(7,1), 'm': -4},
+                                {'e': Rational(50,1), 'm': 0},
+                                {'e': Rational(7,1), 'm': 4}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 7,
+                    'dim': 3,
+                    'display': 'T_{2}',
+                    'irrep': 'T_2',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -7},
+                                {'e': Rational(-107,1), 'm': -5},
+                                {'e': Rational(121,1), 'm': -3},
+                                {'e': Rational(165,1), 'm': -1},
+                                {'e': Rational(-165,1), 'm': 1},
+                                {'e': Rational(-121,1), 'm': 3},
+                                {'e': Rational(107,1), 'm': 5},
+                                {'e': Rational(-1,1), 'm': 7}
+                            ],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -7, 'q': [1, 1]},
+                                {'m': -5, 'q': [107, 1]},
+                                {'m': -3, 'q': [121, 1]},
+                                {'m': -1, 'q': [-165, 1]},
+                                {'m': 1, 'q': [-165, 1]},
+                                {'m': 3, 'q': [121, 1]},
+                                {'m': 5, 'q': [107, 1]},
+                                {'m': 7, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-25,1), 'm': -4},
+                                {'e': Rational(66,1), 'm': 0},
+                                {'e': Rational(-25,1), 'm': 4}
                             ],
                             'mu': 3
                         }
@@ -5083,25 +5083,6 @@ o3t = {
                 {
                     'J': 9,
                     'dim': 1,
-                    'display': 'A_{2}',
-                    'irrep': 'A_2',
-                    'kappa': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'m': -8, 'q': [1, 1]},
-                                {'m': -4, 'q': [-34, 1]},
-                                {'m': 4, 'q': [34, 1]},
-                                {'m': 8, 'q': [-1, 1]}
-                            ],
-                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
-                            'mu': 1
-                        }
-                    ]
-                },
-                {
-                    'J': 9,
-                    'dim': 1,
                     'display': 'A_{1}',
                     'irrep': 'A_1',
                     'kappa': 1,
@@ -5112,6 +5093,25 @@ o3t = {
                                 {'m': -2, 'q': [-3, 1]},
                                 {'m': 2, 'q': [3, 1]},
                                 {'m': 6, 'q': [-1, 1]}
+                            ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 1
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 1,
+                    'display': 'A_{2}',
+                    'irrep': 'A_2',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'m': -8, 'q': [1, 1]},
+                                {'m': -4, 'q': [-34, 1]},
+                                {'m': 4, 'q': [34, 1]},
+                                {'m': 8, 'q': [-1, 1]}
                             ],
                             'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
@@ -5150,6 +5150,100 @@ o3t = {
                                 {'e': Rational(1,1), 'm': 8}
                             ],
                             'mu': 2
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 3,
+                    'display': 'T_{1}',
+                    'irrep': 'T_1',
+                    'kappa': 1,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -9},
+                                {'e': Rational(-15,1), 'm': -5},
+                                {'e': Rational(77,1), 'm': -3},
+                                {'e': Rational(-165,1), 'm': -1},
+                                {'e': Rational(165,1), 'm': 1},
+                                {'e': Rational(-77,1), 'm': 3},
+                                {'e': Rational(15,1), 'm': 5},
+                                {'e': Rational(-1,1), 'm': 9}
+                            ],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -9, 'q': [1, 1]},
+                                {'m': -5, 'q': [-15, 1]},
+                                {'m': -3, 'q': [-77, 1]},
+                                {'m': -1, 'q': [-165, 1]},
+                                {'m': 1, 'q': [-165, 1]},
+                                {'m': 3, 'q': [-77, 1]},
+                                {'m': 5, 'q': [-15, 1]},
+                                {'m': 9, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-1,1), 'm': -6},
+                                {'e': Rational(-63,1), 'm': -2},
+                                {'e': Rational(-63,1), 'm': 2},
+                                {'e': Rational(-1,1), 'm': 6}
+                            ],
+                            'mu': 3
+                        }
+                    ]
+                },
+                {
+                    'J': 9,
+                    'dim': 3,
+                    'display': 'T_{1}',
+                    'irrep': 'T_1',
+                    'kappa': 2,
+                    'vectors': [
+                        {
+                            'components': [
+                                {'e': Rational(1,1), 'm': -9},
+                                {'e': Rational(167,1), 'm': -7},
+                                {'e': Rational(820,1), 'm': -5},
+                                {'e': Rational(-1092,1), 'm': -3},
+                                {'e': Rational(-2002,1), 'm': -1},
+                                {'e': Rational(2002,1), 'm': 1},
+                                {'e': Rational(1092,1), 'm': 3},
+                                {'e': Rational(-820,1), 'm': 5},
+                                {'e': Rational(-167,1), 'm': 7},
+                                {'e': Rational(-1,1), 'm': 9}
+                            ],
+                            'mu': 1
+                        },
+                        {
+                            'components': [
+                                {'m': -9, 'q': [1, 1]},
+                                {'m': -7, 'q': [-167, 1]},
+                                {'m': -5, 'q': [820, 1]},
+                                {'m': -3, 'q': [1092, 1]},
+                                {'m': -1, 'q': [-2002, 1]},
+                                {'m': 1, 'q': [-2002, 1]},
+                                {'m': 3, 'q': [1092, 1]},
+                                {'m': 5, 'q': [820, 1]},
+                                {'m': 7, 'q': [-167, 1]},
+                                {'m': 9, 'q': [1, 1]}
+                            ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                            'mu': 2
+                        },
+                        {
+                            'components': [
+                                {'e': Rational(-21,1), 'm': -6},
+                                {'e': Rational(13,1), 'm': -2},
+                                {'e': Rational(13,1), 'm': 2},
+                                {'e': Rational(-21,1), 'm': 6}
+                            ],
+                            'mu': 3
                         }
                     ]
                 },
@@ -5286,100 +5380,6 @@ o3t = {
                                 {'e': Rational(286,1), 'm': 0},
                                 {'e': Rational(-84,1), 'm': 4},
                                 {'e': Rational(5,1), 'm': 8}
-                            ],
-                            'mu': 3
-                        }
-                    ]
-                },
-                {
-                    'J': 9,
-                    'dim': 3,
-                    'display': 'T_{1}',
-                    'irrep': 'T_1',
-                    'kappa': 1,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': Rational(1,1), 'm': -9},
-                                {'e': Rational(-15,1), 'm': -5},
-                                {'e': Rational(77,1), 'm': -3},
-                                {'e': Rational(-165,1), 'm': -1},
-                                {'e': Rational(165,1), 'm': 1},
-                                {'e': Rational(-77,1), 'm': 3},
-                                {'e': Rational(15,1), 'm': 5},
-                                {'e': Rational(-1,1), 'm': 9}
-                            ],
-                            'mu': 1
-                        },
-                        {
-                            'components': [
-                                {'m': -9, 'q': [1, 1]},
-                                {'m': -5, 'q': [-15, 1]},
-                                {'m': -3, 'q': [-77, 1]},
-                                {'m': -1, 'q': [-165, 1]},
-                                {'m': 1, 'q': [-165, 1]},
-                                {'m': 3, 'q': [-77, 1]},
-                                {'m': 5, 'q': [-15, 1]},
-                                {'m': 9, 'q': [1, 1]}
-                            ],
-                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
-                            'mu': 2
-                        },
-                        {
-                            'components': [
-                                {'e': Rational(-1,1), 'm': -6},
-                                {'e': Rational(-63,1), 'm': -2},
-                                {'e': Rational(-63,1), 'm': 2},
-                                {'e': Rational(-1,1), 'm': 6}
-                            ],
-                            'mu': 3
-                        }
-                    ]
-                },
-                {
-                    'J': 9,
-                    'dim': 3,
-                    'display': 'T_{1}',
-                    'irrep': 'T_1',
-                    'kappa': 2,
-                    'vectors': [
-                        {
-                            'components': [
-                                {'e': Rational(1,1), 'm': -9},
-                                {'e': Rational(167,1), 'm': -7},
-                                {'e': Rational(820,1), 'm': -5},
-                                {'e': Rational(-1092,1), 'm': -3},
-                                {'e': Rational(-2002,1), 'm': -1},
-                                {'e': Rational(2002,1), 'm': 1},
-                                {'e': Rational(1092,1), 'm': 3},
-                                {'e': Rational(-820,1), 'm': 5},
-                                {'e': Rational(-167,1), 'm': 7},
-                                {'e': Rational(-1,1), 'm': 9}
-                            ],
-                            'mu': 1
-                        },
-                        {
-                            'components': [
-                                {'m': -9, 'q': [1, 1]},
-                                {'m': -7, 'q': [-167, 1]},
-                                {'m': -5, 'q': [820, 1]},
-                                {'m': -3, 'q': [1092, 1]},
-                                {'m': -1, 'q': [-2002, 1]},
-                                {'m': 1, 'q': [-2002, 1]},
-                                {'m': 3, 'q': [1092, 1]},
-                                {'m': 5, 'q': [820, 1]},
-                                {'m': 7, 'q': [-167, 1]},
-                                {'m': 9, 'q': [1, 1]}
-                            ],
-                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
-                            'mu': 2
-                        },
-                        {
-                            'components': [
-                                {'e': Rational(-21,1), 'm': -6},
-                                {'e': Rational(13,1), 'm': -2},
-                                {'e': Rational(13,1), 'm': 2},
-                                {'e': Rational(-21,1), 'm': 6}
                             ],
                             'mu': 3
                         }

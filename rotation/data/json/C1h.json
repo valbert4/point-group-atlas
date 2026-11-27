@@ -4430,32 +4430,6 @@
         {
           "J": 1,
           "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 0,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 0
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 1,
-          "dim": 1,
           "irrep": "A'",
           "irrep_id": "Ap",
           "kappa": 1,
@@ -4542,10 +4516,10 @@
           ]
         },
         {
-          "J": 2,
+          "J": 1,
           "dim": 1,
-          "irrep": "A'",
-          "irrep_id": "Ap",
+          "irrep": "A''",
+          "irrep_id": "App",
           "kappa": 1,
           "kind": "single_ket",
           "seed_m": 0,
@@ -4570,63 +4544,11 @@
         {
           "J": 2,
           "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
+          "irrep": "A'",
+          "irrep_id": "Ap",
           "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 1,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 1
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 2,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 1,
-          "seed_sign": -1,
+          "kind": "single_ket",
+          "seed_m": 0,
           "vectors": [
             {
               "components": [
@@ -4638,17 +4560,7 @@
                       1
                     ]
                   },
-                  "m": 1
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -1
+                  "m": 0
                 }
               ],
               "mu": 1
@@ -4744,13 +4656,65 @@
           ]
         },
         {
-          "J": 3,
+          "J": 2,
           "dim": 1,
           "irrep": "A''",
           "irrep_id": "App",
           "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 0,
+          "kind": "pm_pair",
+          "seed_m": 1,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 1
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 2,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 1,
+          "seed_sign": -1,
           "vectors": [
             {
               "components": [
@@ -4762,7 +4726,17 @@
                       1
                     ]
                   },
-                  "m": 0
+                  "m": 1
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -1
                 }
               ],
               "mu": 1
@@ -4851,94 +4825,6 @@
                     ]
                   },
                   "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 3,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 3,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -2
                 }
               ],
               "mu": 1
@@ -5034,10 +4920,10 @@
           ]
         },
         {
-          "J": 4,
+          "J": 3,
           "dim": 1,
-          "irrep": "A'",
-          "irrep_id": "Ap",
+          "irrep": "A''",
+          "irrep_id": "App",
           "kappa": 1,
           "kind": "single_ket",
           "seed_m": 0,
@@ -5060,65 +4946,14 @@
           ]
         },
         {
-          "J": 4,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 1,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 1
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 4,
+          "J": 3,
           "dim": 1,
           "irrep": "A''",
           "irrep_id": "App",
           "kappa": 2,
           "kind": "pm_pair",
-          "seed_m": 1,
-          "seed_sign": -1,
+          "seed_m": 2,
+          "seed_sign": 1,
           "vectors": [
             {
               "components": [
@@ -5130,17 +4965,94 @@
                       1
                     ]
                   },
-                  "m": 1
+                  "m": 2
                 },
                 {
                   "e": {
                     "f": "q",
                     "v": [
-                      -1,
+                      1,
                       1
                     ]
                   },
-                  "m": -1
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 3,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 4,
+          "dim": 1,
+          "irrep": "A'",
+          "irrep_id": "Ap",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": 0,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 0
                 }
               ],
               "mu": 1
@@ -5229,94 +5141,6 @@
                     "f": "cyc"
                   },
                   "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 4,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 4,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 4,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -3
                 }
               ],
               "mu": 1
@@ -5412,13 +5236,65 @@
           ]
         },
         {
-          "J": 5,
+          "J": 4,
           "dim": 1,
           "irrep": "A''",
           "irrep_id": "App",
           "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 0,
+          "kind": "pm_pair",
+          "seed_m": 1,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 1
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 4,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 1,
+          "seed_sign": -1,
           "vectors": [
             {
               "components": [
@@ -5430,7 +5306,105 @@
                       1
                     ]
                   },
-                  "m": 0
+                  "m": 1
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 4,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 4,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 4,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -3
                 }
               ],
               "mu": 1
@@ -5528,94 +5502,6 @@
         {
           "J": 5,
           "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 5,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 5,
-          "dim": 1,
           "irrep": "A'",
           "irrep_id": "Ap",
           "kappa": 3,
@@ -5695,94 +5581,6 @@
                     ]
                   },
                   "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 5,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 4,
-          "kind": "pm_pair",
-          "seed_m": 4,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 4
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -4
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 5,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 5,
-          "kind": "pm_pair",
-          "seed_m": 4,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 4
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -4
                 }
               ],
               "mu": 1
@@ -5878,6 +5676,208 @@
           ]
         },
         {
+          "J": 5,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": 0,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 0
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 5,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 5,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 5,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 4,
+          "kind": "pm_pair",
+          "seed_m": 4,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 4
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -4
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 5,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 5,
+          "kind": "pm_pair",
+          "seed_m": 4,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 4
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -4
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
           "J": 6,
           "dim": 1,
           "irrep": "A'",
@@ -5906,94 +5906,6 @@
         {
           "J": 6,
           "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 1,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 1
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 6,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 1,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 1
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 6,
-          "dim": 1,
           "irrep": "A'",
           "irrep_id": "Ap",
           "kappa": 2,
@@ -6082,94 +5994,6 @@
         {
           "J": 6,
           "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 6,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 4,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 6,
-          "dim": 1,
           "irrep": "A'",
           "irrep_id": "Ap",
           "kappa": 4,
@@ -6249,94 +6073,6 @@
                     "f": "cyc"
                   },
                   "m": -4
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 6,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 5,
-          "kind": "pm_pair",
-          "seed_m": 5,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 5
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -5
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 6,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 6,
-          "kind": "pm_pair",
-          "seed_m": 5,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 5
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -5
                 }
               ],
               "mu": 1
@@ -6432,13 +6168,65 @@
           ]
         },
         {
-          "J": 7,
+          "J": 6,
           "dim": 1,
           "irrep": "A''",
           "irrep_id": "App",
           "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 0,
+          "kind": "pm_pair",
+          "seed_m": 1,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 1
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 6,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 1,
+          "seed_sign": -1,
           "vectors": [
             {
               "components": [
@@ -6450,7 +6238,193 @@
                       1
                     ]
                   },
-                  "m": 0
+                  "m": 1
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 6,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 6,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 4,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 6,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 5,
+          "kind": "pm_pair",
+          "seed_m": 5,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 5
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 6,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 6,
+          "kind": "pm_pair",
+          "seed_m": 5,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 5
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -5
                 }
               ],
               "mu": 1
@@ -6548,94 +6522,6 @@
         {
           "J": 7,
           "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
           "irrep": "A'",
           "irrep_id": "Ap",
           "kappa": 3,
@@ -6724,94 +6610,6 @@
         {
           "J": 7,
           "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 4,
-          "kind": "pm_pair",
-          "seed_m": 4,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 4
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -4
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 5,
-          "kind": "pm_pair",
-          "seed_m": 4,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 4
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -4
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
           "irrep": "A'",
           "irrep_id": "Ap",
           "kappa": 5,
@@ -6891,94 +6689,6 @@
                     ]
                   },
                   "m": -5
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 6,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 7,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -6
                 }
               ],
               "mu": 1
@@ -7074,6 +6784,296 @@
           ]
         },
         {
+          "J": 7,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": 0,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 0
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 7,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 7,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 7,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 4,
+          "kind": "pm_pair",
+          "seed_m": 4,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 4
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -4
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 7,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 5,
+          "kind": "pm_pair",
+          "seed_m": 4,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 4
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -4
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 7,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 6,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 7,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 7,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
           "J": 8,
           "dim": 1,
           "irrep": "A'",
@@ -7102,94 +7102,6 @@
         {
           "J": 8,
           "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 1,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 1
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 1,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 1
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
           "irrep": "A'",
           "irrep_id": "Ap",
           "kappa": 2,
@@ -7269,94 +7181,6 @@
                     "f": "cyc"
                   },
                   "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 4,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -3
                 }
               ],
               "mu": 1
@@ -7454,94 +7278,6 @@
         {
           "J": 8,
           "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 5,
-          "kind": "pm_pair",
-          "seed_m": 5,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 5
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -5
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 6,
-          "kind": "pm_pair",
-          "seed_m": 5,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 5
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -5
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
           "irrep": "A'",
           "irrep_id": "Ap",
           "kappa": 6,
@@ -7621,94 +7357,6 @@
                     "f": "cyc"
                   },
                   "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 7,
-          "kind": "pm_pair",
-          "seed_m": 7,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 7
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -7
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 8,
-          "kind": "pm_pair",
-          "seed_m": 7,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 7
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -7
                 }
               ],
               "mu": 1
@@ -7804,13 +7452,65 @@
           ]
         },
         {
-          "J": 9,
+          "J": 8,
           "dim": 1,
           "irrep": "A''",
           "irrep_id": "App",
           "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 0,
+          "kind": "pm_pair",
+          "seed_m": 1,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 1
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 1,
+          "seed_sign": -1,
           "vectors": [
             {
               "components": [
@@ -7822,7 +7522,281 @@
                       1
                     ]
                   },
-                  "m": 0
+                  "m": 1
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 4,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 5,
+          "kind": "pm_pair",
+          "seed_m": 5,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 5
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 6,
+          "kind": "pm_pair",
+          "seed_m": 5,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 5
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 7,
+          "kind": "pm_pair",
+          "seed_m": 7,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 7
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -7
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 8,
+          "kind": "pm_pair",
+          "seed_m": 7,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 7
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -7
                 }
               ],
               "mu": 1
@@ -7920,94 +7894,6 @@
         {
           "J": 9,
           "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
           "irrep": "A'",
           "irrep_id": "Ap",
           "kappa": 3,
@@ -8087,94 +7973,6 @@
                     ]
                   },
                   "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 4,
-          "kind": "pm_pair",
-          "seed_m": 4,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 4
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -4
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 5,
-          "kind": "pm_pair",
-          "seed_m": 4,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 4
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -4
                 }
               ],
               "mu": 1
@@ -8272,94 +8070,6 @@
         {
           "J": 9,
           "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 6,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 7,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
           "irrep": "A'",
           "irrep_id": "Ap",
           "kappa": 7,
@@ -8439,94 +8149,6 @@
                     ]
                   },
                   "m": -7
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 8,
-          "kind": "pm_pair",
-          "seed_m": 8,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 8
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -8
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 9,
-          "kind": "pm_pair",
-          "seed_m": 8,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 8
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -8
                 }
               ],
               "mu": 1
@@ -8622,6 +8244,384 @@
           ]
         },
         {
+          "J": 9,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": 0,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 0
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 4,
+          "kind": "pm_pair",
+          "seed_m": 4,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 4
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -4
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 5,
+          "kind": "pm_pair",
+          "seed_m": 4,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 4
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -4
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 6,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 7,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 8,
+          "kind": "pm_pair",
+          "seed_m": 8,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 8
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -8
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 9,
+          "kind": "pm_pair",
+          "seed_m": 8,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 8
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -8
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
           "J": 10,
           "dim": 1,
           "irrep": "A'",
@@ -8650,94 +8650,6 @@
         {
           "J": 10,
           "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 1,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 1
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 1,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 1
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
           "irrep": "A'",
           "irrep_id": "Ap",
           "kappa": 2,
@@ -8817,94 +8729,6 @@
                     "f": "cyc"
                   },
                   "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 4,
-          "kind": "pm_pair",
-          "seed_m": 3,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -3
                 }
               ],
               "mu": 1
@@ -9002,94 +8826,6 @@
         {
           "J": 10,
           "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 5,
-          "kind": "pm_pair",
-          "seed_m": 5,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 5
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -5
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 6,
-          "kind": "pm_pair",
-          "seed_m": 5,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 5
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -5
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
           "irrep": "A'",
           "irrep_id": "Ap",
           "kappa": 6,
@@ -9178,94 +8914,6 @@
         {
           "J": 10,
           "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 7,
-          "kind": "pm_pair",
-          "seed_m": 7,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 7
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -7
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 8,
-          "kind": "pm_pair",
-          "seed_m": 7,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 7
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -7
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
           "irrep": "A'",
           "irrep_id": "Ap",
           "kappa": 8,
@@ -9345,94 +8993,6 @@
                     "f": "cyc"
                   },
                   "m": -8
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 9,
-          "kind": "pm_pair",
-          "seed_m": 9,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 9
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -9
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "A''",
-          "irrep_id": "App",
-          "kappa": 10,
-          "kind": "pm_pair",
-          "seed_m": 9,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 9
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -9
                 }
               ],
               "mu": 1
@@ -9521,6 +9081,446 @@
                     "f": "cyc"
                   },
                   "m": -10
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 1,
+          "kind": "pm_pair",
+          "seed_m": 1,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 1
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 1,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 1
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 4,
+          "kind": "pm_pair",
+          "seed_m": 3,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 3
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 5,
+          "kind": "pm_pair",
+          "seed_m": 5,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 5
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 6,
+          "kind": "pm_pair",
+          "seed_m": 5,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 5
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 7,
+          "kind": "pm_pair",
+          "seed_m": 7,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 7
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -7
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 8,
+          "kind": "pm_pair",
+          "seed_m": 7,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 7
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -7
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 9,
+          "kind": "pm_pair",
+          "seed_m": 9,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 9
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -9
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "A''",
+          "irrep_id": "App",
+          "kappa": 10,
+          "kind": "pm_pair",
+          "seed_m": 9,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 9
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -9
                 }
               ],
               "mu": 1

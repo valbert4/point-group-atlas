@@ -1155,7 +1155,8 @@ def bases_block(base, fams):
     blocks = []
     for twoJ in range(1, TWOJ_ENUMERATED + 1, 2):
         J = F(twoJ, 2)
-        for f, x in subduced(base, fams, twoJ, 1):
+        # the instances by their index, then by family (rotation CONVENTIONS.md section 14.1, rule 5)
+        for f, x in sorted(subduced(base, fams, twoJ, 1), key=lambda fx: (fx[1], fams.index(fx[0]))):
             k = int(2 * x)
             b = {"twoJ": twoJ, "irrep": f.label(x), "irrep_id": instance_id(f, x), "kappa": 1}
             if spherical:

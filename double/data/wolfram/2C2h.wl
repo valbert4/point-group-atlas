@@ -1927,6 +1927,16 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
+          "irrep" -> "1E_1/2,g",
+          "irrep_id" -> "1E1hg",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -3,
+          "twoJ" -> 3,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -3|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
           "irrep" -> "2E_1/2,g",
           "irrep_id" -> "2E1hg",
           "kappa" -> 1,
@@ -1949,21 +1959,31 @@ o3d = <|
           "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 1,
+          "twoJ" -> 5,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 1|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "1E_1/2,g",
+          "irrep_id" -> "1E1hg",
           "kappa" -> 2,
           "kind" -> "single_ket",
           "seed_twoM" -> -3,
-          "twoJ" -> 3,
+          "twoJ" -> 5,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
-          "kappa" -> 1,
+          "kappa" -> 3,
           "kind" -> "single_ket",
-          "seed_twoM" -> 1,
+          "seed_twoM" -> 5,
           "twoJ" -> 5,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 1|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 5|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -1987,26 +2007,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "1E_1/2,g",
-          "irrep_id" -> "1E1hg",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -3,
-          "twoJ" -> 5,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -3|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "1E_1/2,g",
-          "irrep_id" -> "1E1hg",
-          "kappa" -> 3,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 5,
-          "twoJ" -> 5,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 5|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "2E_1/2,g",
           "irrep_id" -> "2E1hg",
           "kappa" -> 3,
@@ -2027,26 +2027,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -1,
-          "twoJ" -> 7,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 3,
-          "twoJ" -> 7,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 3|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
           "kappa" -> 2,
@@ -2064,6 +2044,36 @@ o3d = <|
           "seed_twoM" -> 5,
           "twoJ" -> 7,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "1E_1/2,g",
+          "irrep_id" -> "1E1hg",
+          "kappa" -> 4,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -7,
+          "twoJ" -> 7,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -7|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -1,
+          "twoJ" -> 7,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -1|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 3,
+          "twoJ" -> 7,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2089,41 +2099,11 @@ o3d = <|
           "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
-          "kappa" -> 4,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -7,
-          "twoJ" -> 7,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -7|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "1E_1/2,g",
-          "irrep_id" -> "1E1hg",
           "kappa" -> 1,
           "kind" -> "single_ket",
           "seed_twoM" -> 1,
           "twoJ" -> 9,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -1,
-          "twoJ" -> 9,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 3,
-          "twoJ" -> 9,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2144,6 +2124,46 @@ o3d = <|
           "seed_twoM" -> 5,
           "twoJ" -> 9,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "1E_1/2,g",
+          "irrep_id" -> "1E1hg",
+          "kappa" -> 4,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -7,
+          "twoJ" -> 9,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -7|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "1E_1/2,g",
+          "irrep_id" -> "1E1hg",
+          "kappa" -> 5,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 9,
+          "twoJ" -> 9,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 9|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -1,
+          "twoJ" -> 9,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 3,
+          "twoJ" -> 9,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2167,26 +2187,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "1E_1/2,g",
-          "irrep_id" -> "1E1hg",
-          "kappa" -> 4,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -7,
-          "twoJ" -> 9,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -7|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "1E_1/2,g",
-          "irrep_id" -> "1E1hg",
-          "kappa" -> 5,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 9,
-          "twoJ" -> 9,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 9|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "2E_1/2,g",
           "irrep_id" -> "2E1hg",
           "kappa" -> 5,
@@ -2204,26 +2204,6 @@ o3d = <|
           "seed_twoM" -> 1,
           "twoJ" -> 11,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -1,
-          "twoJ" -> 11,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 3,
-          "twoJ" -> 11,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2247,26 +2227,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 3,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -5,
-          "twoJ" -> 11,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -5|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 4,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 7,
-          "twoJ" -> 11,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 7|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
           "kappa" -> 4,
@@ -2284,6 +2244,56 @@ o3d = <|
           "seed_twoM" -> 9,
           "twoJ" -> 11,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 9|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "1E_1/2,g",
+          "irrep_id" -> "1E1hg",
+          "kappa" -> 6,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -11,
+          "twoJ" -> 11,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -11|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -1,
+          "twoJ" -> 11,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -1|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 3,
+          "twoJ" -> 11,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 3|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 3,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -5,
+          "twoJ" -> 11,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 4,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 7,
+          "twoJ" -> 11,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 7|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2309,41 +2319,11 @@ o3d = <|
           "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
-          "kappa" -> 6,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -11,
-          "twoJ" -> 11,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -11|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "1E_1/2,g",
-          "irrep_id" -> "1E1hg",
           "kappa" -> 1,
           "kind" -> "single_ket",
           "seed_twoM" -> 1,
           "twoJ" -> 13,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -1,
-          "twoJ" -> 13,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 3,
-          "twoJ" -> 13,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2367,26 +2347,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 3,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -5,
-          "twoJ" -> 13,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 4,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 7,
-          "twoJ" -> 13,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 7|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
           "kappa" -> 4,
@@ -2404,6 +2364,66 @@ o3d = <|
           "seed_twoM" -> 9,
           "twoJ" -> 13,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 9|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "1E_1/2,g",
+          "irrep_id" -> "1E1hg",
+          "kappa" -> 6,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -11,
+          "twoJ" -> 13,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -11|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "1E_1/2,g",
+          "irrep_id" -> "1E1hg",
+          "kappa" -> 7,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 13,
+          "twoJ" -> 13,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 13|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -1,
+          "twoJ" -> 13,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 3,
+          "twoJ" -> 13,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 3|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 3,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -5,
+          "twoJ" -> 13,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 4,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 7,
+          "twoJ" -> 13,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 7|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2427,26 +2447,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "1E_1/2,g",
-          "irrep_id" -> "1E1hg",
-          "kappa" -> 6,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -11,
-          "twoJ" -> 13,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -11|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "1E_1/2,g",
-          "irrep_id" -> "1E1hg",
-          "kappa" -> 7,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 13,
-          "twoJ" -> 13,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 13|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "2E_1/2,g",
           "irrep_id" -> "2E1hg",
           "kappa" -> 7,
@@ -2464,26 +2464,6 @@ o3d = <|
           "seed_twoM" -> 1,
           "twoJ" -> 15,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -1,
-          "twoJ" -> 15,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 3,
-          "twoJ" -> 15,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2507,26 +2487,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 3,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -5,
-          "twoJ" -> 15,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -5|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 4,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 7,
-          "twoJ" -> 15,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 7|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
           "kappa" -> 4,
@@ -2547,26 +2507,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 5,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -9,
-          "twoJ" -> 15,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -9|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 6,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 11,
-          "twoJ" -> 15,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 11|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
           "kappa" -> 6,
@@ -2584,6 +2524,76 @@ o3d = <|
           "seed_twoM" -> 13,
           "twoJ" -> 15,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 13|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "1E_1/2,g",
+          "irrep_id" -> "1E1hg",
+          "kappa" -> 8,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -15,
+          "twoJ" -> 15,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -15|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -1,
+          "twoJ" -> 15,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -1|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 3,
+          "twoJ" -> 15,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 3|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 3,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -5,
+          "twoJ" -> 15,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 4,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 7,
+          "twoJ" -> 15,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 7|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 5,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -9,
+          "twoJ" -> 15,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -9|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 6,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 11,
+          "twoJ" -> 15,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 11|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2609,41 +2619,11 @@ o3d = <|
           "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
-          "kappa" -> 8,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -15,
-          "twoJ" -> 15,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -15|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "1E_1/2,g",
-          "irrep_id" -> "1E1hg",
           "kappa" -> 1,
           "kind" -> "single_ket",
           "seed_twoM" -> 1,
           "twoJ" -> 17,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -1,
-          "twoJ" -> 17,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 3,
-          "twoJ" -> 17,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2667,26 +2647,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 3,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -5,
-          "twoJ" -> 17,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 4,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 7,
-          "twoJ" -> 17,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 7|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
           "kappa" -> 4,
@@ -2707,26 +2667,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 5,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -9,
-          "twoJ" -> 17,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -9|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 6,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 11,
-          "twoJ" -> 17,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
           "kappa" -> 6,
@@ -2744,6 +2684,86 @@ o3d = <|
           "seed_twoM" -> 13,
           "twoJ" -> 17,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 13|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "1E_1/2,g",
+          "irrep_id" -> "1E1hg",
+          "kappa" -> 8,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -15,
+          "twoJ" -> 17,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -15|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "1E_1/2,g",
+          "irrep_id" -> "1E1hg",
+          "kappa" -> 9,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 17,
+          "twoJ" -> 17,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 17|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -1,
+          "twoJ" -> 17,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 3,
+          "twoJ" -> 17,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 3|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 3,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -5,
+          "twoJ" -> 17,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 4,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 7,
+          "twoJ" -> 17,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 7|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 5,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -9,
+          "twoJ" -> 17,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -9|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 6,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 11,
+          "twoJ" -> 17,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2767,26 +2787,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "1E_1/2,g",
-          "irrep_id" -> "1E1hg",
-          "kappa" -> 8,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -15,
-          "twoJ" -> 17,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -15|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "1E_1/2,g",
-          "irrep_id" -> "1E1hg",
-          "kappa" -> 9,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 17,
-          "twoJ" -> 17,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 17|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "2E_1/2,g",
           "irrep_id" -> "2E1hg",
           "kappa" -> 9,
@@ -2804,26 +2804,6 @@ o3d = <|
           "seed_twoM" -> 1,
           "twoJ" -> 19,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -1,
-          "twoJ" -> 19,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 3,
-          "twoJ" -> 19,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2847,26 +2827,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 3,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -5,
-          "twoJ" -> 19,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -5|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 4,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 7,
-          "twoJ" -> 19,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 7|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
           "kappa" -> 4,
@@ -2884,26 +2844,6 @@ o3d = <|
           "seed_twoM" -> 9,
           "twoJ" -> 19,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 9|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 5,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -9,
-          "twoJ" -> 19,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -9|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 6,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 11,
-          "twoJ" -> 19,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 11|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2927,26 +2867,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 7,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -13,
-          "twoJ" -> 19,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -13|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 8,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 15,
-          "twoJ" -> 19,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 15|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
           "kappa" -> 8,
@@ -2964,6 +2884,96 @@ o3d = <|
           "seed_twoM" -> 17,
           "twoJ" -> 19,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 17|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "1E_1/2,g",
+          "irrep_id" -> "1E1hg",
+          "kappa" -> 10,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -19,
+          "twoJ" -> 19,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -19|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -1,
+          "twoJ" -> 19,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -1|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 3,
+          "twoJ" -> 19,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 3|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 3,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -5,
+          "twoJ" -> 19,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 4,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 7,
+          "twoJ" -> 19,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 7|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 5,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -9,
+          "twoJ" -> 19,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -9|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 6,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 11,
+          "twoJ" -> 19,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 11|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 7,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -13,
+          "twoJ" -> 19,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -13|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 8,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 15,
+          "twoJ" -> 19,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> 15|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2989,41 +2999,11 @@ o3d = <|
           "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
-          "kappa" -> 10,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -19,
-          "twoJ" -> 19,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -19|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "1E_1/2,g",
-          "irrep_id" -> "1E1hg",
           "kappa" -> 1,
           "kind" -> "single_ket",
           "seed_twoM" -> 1,
           "twoJ" -> 21,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -1,
-          "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 3,
-          "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -3047,26 +3027,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 3,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -5,
-          "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 4,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 7,
-          "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 7|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
           "kappa" -> 4,
@@ -3084,26 +3044,6 @@ o3d = <|
           "seed_twoM" -> 9,
           "twoJ" -> 21,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 9|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 5,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -9,
-          "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -9|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 6,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 11,
-          "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -3127,26 +3067,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 7,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -13,
-          "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -13|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 8,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 15,
-          "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 15|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
           "kappa" -> 8,
@@ -3167,26 +3087,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 9,
-          "kind" -> "single_ket",
-          "seed_twoM" -> -17,
-          "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -17|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
-          "irrep" -> "2E_1/2,g",
-          "irrep_id" -> "2E1hg",
-          "kappa" -> 10,
-          "kind" -> "single_ket",
-          "seed_twoM" -> 19,
-          "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 19|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "dim" -> 1,
           "irrep" -> "1E_1/2,g",
           "irrep_id" -> "1E1hg",
           "kappa" -> 10,
@@ -3204,6 +3104,106 @@ o3d = <|
           "seed_twoM" -> 21,
           "twoJ" -> 21,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 21|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -1,
+          "twoJ" -> 21,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 3,
+          "twoJ" -> 21,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 3|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 3,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -5,
+          "twoJ" -> 21,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 4,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 7,
+          "twoJ" -> 21,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 7|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 5,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -9,
+          "twoJ" -> 21,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -9|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 6,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 11,
+          "twoJ" -> 21,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 7,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -13,
+          "twoJ" -> 21,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -13|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 8,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 15,
+          "twoJ" -> 21,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 15|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 9,
+          "kind" -> "single_ket",
+          "seed_twoM" -> -17,
+          "twoJ" -> 21,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -17|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "dim" -> 1,
+          "irrep" -> "2E_1/2,g",
+          "irrep_id" -> "2E1hg",
+          "kappa" -> 10,
+          "kind" -> "single_ket",
+          "seed_twoM" -> 19,
+          "twoJ" -> 21,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> 19|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,

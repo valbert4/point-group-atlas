@@ -13836,58 +13836,6 @@
         {
           "J": 2,
           "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 2,
-          "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 2,
-          "dim": 1,
           "irrep": "B_g",
           "irrep_id": "Bg",
           "kappa": 1,
@@ -13967,6 +13915,58 @@
                     "f": "cyc"
                   },
                   "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 2,
+          "dim": 1,
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 2,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -1
                 }
               ],
               "mu": 1
@@ -14002,58 +14002,6 @@
         {
           "J": 3,
           "dim": 1,
-          "irrep": "1E_1u",
-          "irrep_id": "1E1u",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 3,
-          "dim": 1,
-          "irrep": "2E_1u",
-          "irrep_id": "2E1u",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 3,
-          "dim": 1,
           "irrep": "B_u",
           "irrep_id": "Bu",
           "kappa": 1,
@@ -14142,11 +14090,11 @@
         {
           "J": 3,
           "dim": 1,
-          "irrep": "2E_1u",
-          "irrep_id": "2E1u",
-          "kappa": 2,
+          "irrep": "1E_1u",
+          "irrep_id": "1E1u",
+          "kappa": 1,
           "kind": "single_ket",
-          "seed_m": 3,
+          "seed_m": 1,
           "vectors": [
             {
               "components": [
@@ -14154,11 +14102,11 @@
                   "e": {
                     "f": "q",
                     "v": [
-                      -1,
+                      1,
                       1
                     ]
                   },
-                  "m": 3
+                  "m": 1
                 }
               ],
               "mu": 1
@@ -14185,6 +14133,58 @@
                     ]
                   },
                   "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 3,
+          "dim": 1,
+          "irrep": "2E_1u",
+          "irrep_id": "2E1u",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 3,
+          "dim": 1,
+          "irrep": "2E_1u",
+          "irrep_id": "2E1u",
+          "kappa": 2,
+          "kind": "single_ket",
+          "seed_m": 3,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": 3
                 }
               ],
               "mu": 1
@@ -14211,198 +14211,6 @@
                     ]
                   },
                   "m": 0
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 4,
-          "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 4,
-          "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 4,
-          "dim": 1,
-          "irrep": "B_g",
-          "irrep_id": "Bg",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 4,
-          "dim": 1,
-          "irrep": "B_g",
-          "irrep_id": "Bg",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 4,
-          "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 2,
-          "kind": "single_ket",
-          "seed_m": 3,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 4,
-          "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 2,
-          "kind": "single_ket",
-          "seed_m": -3,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -3
                 }
               ],
               "mu": 1
@@ -14498,88 +14306,10 @@
           ]
         },
         {
-          "J": 5,
+          "J": 4,
           "dim": 1,
-          "irrep": "A_u",
-          "irrep_id": "Au",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 0,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 0
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 5,
-          "dim": 1,
-          "irrep": "1E_1u",
-          "irrep_id": "1E1u",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 5,
-          "dim": 1,
-          "irrep": "2E_1u",
-          "irrep_id": "2E1u",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 5,
-          "dim": 1,
-          "irrep": "B_u",
-          "irrep_id": "Bu",
+          "irrep": "B_g",
+          "irrep_id": "Bg",
           "kappa": 1,
           "kind": "pm_pair",
           "seed_m": 2,
@@ -14613,10 +14343,10 @@
           ]
         },
         {
-          "J": 5,
+          "J": 4,
           "dim": 1,
-          "irrep": "B_u",
-          "irrep_id": "Bu",
+          "irrep": "B_g",
+          "irrep_id": "Bg",
           "kappa": 2,
           "kind": "pm_pair",
           "seed_m": 2,
@@ -14664,10 +14394,88 @@
           ]
         },
         {
-          "J": 5,
+          "J": 4,
           "dim": 1,
-          "irrep": "2E_1u",
-          "irrep_id": "2E1u",
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 4,
+          "dim": 1,
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 2,
+          "kind": "single_ket",
+          "seed_m": -3,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 4,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 4,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
           "kappa": 2,
           "kind": "single_ket",
           "seed_m": 3,
@@ -14692,11 +14500,11 @@
         {
           "J": 5,
           "dim": 1,
-          "irrep": "1E_1u",
-          "irrep_id": "1E1u",
-          "kappa": 2,
+          "irrep": "A_u",
+          "irrep_id": "Au",
+          "kappa": 1,
           "kind": "single_ket",
-          "seed_m": -3,
+          "seed_m": 0,
           "vectors": [
             {
               "components": [
@@ -14708,7 +14516,7 @@
                       1
                     ]
                   },
-                  "m": -3
+                  "m": 0
                 }
               ],
               "mu": 1
@@ -14797,6 +14605,146 @@
                     "f": "cyc"
                   },
                   "m": -4
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 5,
+          "dim": 1,
+          "irrep": "B_u",
+          "irrep_id": "Bu",
+          "kappa": 1,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 5,
+          "dim": 1,
+          "irrep": "B_u",
+          "irrep_id": "Bu",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 5,
+          "dim": 1,
+          "irrep": "1E_1u",
+          "irrep_id": "1E1u",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 5,
+          "dim": 1,
+          "irrep": "1E_1u",
+          "irrep_id": "1E1u",
+          "kappa": 2,
+          "kind": "single_ket",
+          "seed_m": -3,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -3
                 }
               ],
               "mu": 1
@@ -14823,6 +14771,58 @@
                     ]
                   },
                   "m": 5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 5,
+          "dim": 1,
+          "irrep": "2E_1u",
+          "irrep_id": "2E1u",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 5,
+          "dim": 1,
+          "irrep": "2E_1u",
+          "irrep_id": "2E1u",
+          "kappa": 2,
+          "kind": "single_ket",
+          "seed_m": 3,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": 3
                 }
               ],
               "mu": 1
@@ -14884,198 +14884,6 @@
         {
           "J": 6,
           "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 6,
-          "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 6,
-          "dim": 1,
-          "irrep": "B_g",
-          "irrep_id": "Bg",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 6,
-          "dim": 1,
-          "irrep": "B_g",
-          "irrep_id": "Bg",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 6,
-          "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 2,
-          "kind": "single_ket",
-          "seed_m": 3,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 6,
-          "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 2,
-          "kind": "single_ket",
-          "seed_m": -3,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 6,
-          "dim": 1,
           "irrep": "A_g",
           "irrep_id": "Ag",
           "kappa": 2,
@@ -15164,11 +14972,12 @@
         {
           "J": 6,
           "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 3,
-          "kind": "single_ket",
-          "seed_m": 5,
+          "irrep": "B_g",
+          "irrep_id": "Bg",
+          "kappa": 1,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": 1,
           "vectors": [
             {
               "components": [
@@ -15180,7 +14989,17 @@
                       1
                     ]
                   },
-                  "m": 5
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -2
                 }
               ],
               "mu": 1
@@ -15190,23 +15009,48 @@
         {
           "J": 6,
           "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 3,
-          "kind": "single_ket",
-          "seed_m": -5,
+          "irrep": "B_g",
+          "irrep_id": "Bg",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": -1,
           "vectors": [
             {
               "components": [
                 {
                   "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
                   },
-                  "m": -5
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -2
                 }
               ],
               "mu": 1
@@ -15302,6 +15146,162 @@
           ]
         },
         {
+          "J": 6,
+          "dim": 1,
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 6,
+          "dim": 1,
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 2,
+          "kind": "single_ket",
+          "seed_m": -3,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 6,
+          "dim": 1,
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 3,
+          "kind": "single_ket",
+          "seed_m": 5,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 6,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 6,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
+          "kappa": 2,
+          "kind": "single_ket",
+          "seed_m": 3,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": 3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 6,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
+          "kappa": 3,
+          "kind": "single_ket",
+          "seed_m": -5,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
           "J": 7,
           "dim": 1,
           "irrep": "A_u",
@@ -15330,198 +15330,6 @@
         {
           "J": 7,
           "dim": 1,
-          "irrep": "1E_1u",
-          "irrep_id": "1E1u",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
-          "irrep": "2E_1u",
-          "irrep_id": "2E1u",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
-          "irrep": "B_u",
-          "irrep_id": "Bu",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
-          "irrep": "B_u",
-          "irrep_id": "Bu",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
-          "irrep": "2E_1u",
-          "irrep_id": "2E1u",
-          "kappa": 2,
-          "kind": "single_ket",
-          "seed_m": 3,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
-          "irrep": "1E_1u",
-          "irrep_id": "1E1u",
-          "kappa": 2,
-          "kind": "single_ket",
-          "seed_m": -3,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 7,
-          "dim": 1,
           "irrep": "A_u",
           "irrep_id": "Au",
           "kappa": 2,
@@ -15610,11 +15418,12 @@
         {
           "J": 7,
           "dim": 1,
-          "irrep": "1E_1u",
-          "irrep_id": "1E1u",
-          "kappa": 3,
-          "kind": "single_ket",
-          "seed_m": 5,
+          "irrep": "B_u",
+          "irrep_id": "Bu",
+          "kappa": 1,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": 1,
           "vectors": [
             {
               "components": [
@@ -15626,7 +15435,17 @@
                       1
                     ]
                   },
-                  "m": 5
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -2
                 }
               ],
               "mu": 1
@@ -15636,23 +15455,48 @@
         {
           "J": 7,
           "dim": 1,
-          "irrep": "2E_1u",
-          "irrep_id": "2E1u",
-          "kappa": 3,
-          "kind": "single_ket",
-          "seed_m": -5,
+          "irrep": "B_u",
+          "irrep_id": "Bu",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": -1,
           "vectors": [
             {
               "components": [
                 {
                   "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
                   },
-                  "m": -5
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -2
                 }
               ],
               "mu": 1
@@ -15750,11 +15594,11 @@
         {
           "J": 7,
           "dim": 1,
-          "irrep": "2E_1u",
-          "irrep_id": "2E1u",
-          "kappa": 4,
+          "irrep": "1E_1u",
+          "irrep_id": "1E1u",
+          "kappa": 1,
           "kind": "single_ket",
-          "seed_m": 7,
+          "seed_m": 1,
           "vectors": [
             {
               "components": [
@@ -15762,11 +15606,63 @@
                   "e": {
                     "f": "q",
                     "v": [
-                      -1,
+                      1,
                       1
                     ]
                   },
-                  "m": 7
+                  "m": 1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 7,
+          "dim": 1,
+          "irrep": "1E_1u",
+          "irrep_id": "1E1u",
+          "kappa": 2,
+          "kind": "single_ket",
+          "seed_m": -3,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 7,
+          "dim": 1,
+          "irrep": "1E_1u",
+          "irrep_id": "1E1u",
+          "kappa": 3,
+          "kind": "single_ket",
+          "seed_m": 5,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 5
                 }
               ],
               "mu": 1
@@ -15800,6 +15696,110 @@
           ]
         },
         {
+          "J": 7,
+          "dim": 1,
+          "irrep": "2E_1u",
+          "irrep_id": "2E1u",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 7,
+          "dim": 1,
+          "irrep": "2E_1u",
+          "irrep_id": "2E1u",
+          "kappa": 2,
+          "kind": "single_ket",
+          "seed_m": 3,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": 3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 7,
+          "dim": 1,
+          "irrep": "2E_1u",
+          "irrep_id": "2E1u",
+          "kappa": 3,
+          "kind": "single_ket",
+          "seed_m": -5,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 7,
+          "dim": 1,
+          "irrep": "2E_1u",
+          "irrep_id": "2E1u",
+          "kappa": 4,
+          "kind": "single_ket",
+          "seed_m": 7,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": 7
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
           "J": 8,
           "dim": 1,
           "irrep": "A_g",
@@ -15828,198 +15828,6 @@
         {
           "J": 8,
           "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "B_g",
-          "irrep_id": "Bg",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "B_g",
-          "irrep_id": "Bg",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 2,
-          "kind": "single_ket",
-          "seed_m": 3,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 2,
-          "kind": "single_ket",
-          "seed_m": -3,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
           "irrep": "A_g",
           "irrep_id": "Ag",
           "kappa": 2,
@@ -16099,198 +15907,6 @@
                     "f": "cyc"
                   },
                   "m": -4
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 3,
-          "kind": "single_ket",
-          "seed_m": 5,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 5
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 3,
-          "kind": "single_ket",
-          "seed_m": -5,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -5
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "B_g",
-          "irrep_id": "Bg",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "B_g",
-          "irrep_id": "Bg",
-          "kappa": 4,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 4,
-          "kind": "single_ket",
-          "seed_m": 7,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": 7
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 8,
-          "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 4,
-          "kind": "single_ket",
-          "seed_m": -7,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -7
                 }
               ],
               "mu": 1
@@ -16386,6 +16002,390 @@
           ]
         },
         {
+          "J": 8,
+          "dim": 1,
+          "irrep": "B_g",
+          "irrep_id": "Bg",
+          "kappa": 1,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "B_g",
+          "irrep_id": "Bg",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "B_g",
+          "irrep_id": "Bg",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "B_g",
+          "irrep_id": "Bg",
+          "kappa": 4,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 2,
+          "kind": "single_ket",
+          "seed_m": -3,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 3,
+          "kind": "single_ket",
+          "seed_m": 5,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 4,
+          "kind": "single_ket",
+          "seed_m": -7,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -7
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
+          "kappa": 2,
+          "kind": "single_ket",
+          "seed_m": 3,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": 3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
+          "kappa": 3,
+          "kind": "single_ket",
+          "seed_m": -5,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 8,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
+          "kappa": 4,
+          "kind": "single_ket",
+          "seed_m": 7,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": 7
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
           "J": 9,
           "dim": 1,
           "irrep": "A_u",
@@ -16414,198 +16414,6 @@
         {
           "J": 9,
           "dim": 1,
-          "irrep": "1E_1u",
-          "irrep_id": "1E1u",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "2E_1u",
-          "irrep_id": "2E1u",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "B_u",
-          "irrep_id": "Bu",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "B_u",
-          "irrep_id": "Bu",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "2E_1u",
-          "irrep_id": "2E1u",
-          "kappa": 2,
-          "kind": "single_ket",
-          "seed_m": 3,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "1E_1u",
-          "irrep_id": "1E1u",
-          "kappa": 2,
-          "kind": "single_ket",
-          "seed_m": -3,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
           "irrep": "A_u",
           "irrep_id": "Au",
           "kappa": 2,
@@ -16685,198 +16493,6 @@
                     "f": "cyc"
                   },
                   "m": -4
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "1E_1u",
-          "irrep_id": "1E1u",
-          "kappa": 3,
-          "kind": "single_ket",
-          "seed_m": 5,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 5
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "2E_1u",
-          "irrep_id": "2E1u",
-          "kappa": 3,
-          "kind": "single_ket",
-          "seed_m": -5,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -5
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "B_u",
-          "irrep_id": "Bu",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "B_u",
-          "irrep_id": "Bu",
-          "kappa": 4,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "2E_1u",
-          "irrep_id": "2E1u",
-          "kappa": 4,
-          "kind": "single_ket",
-          "seed_m": 7,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": 7
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 9,
-          "dim": 1,
-          "irrep": "1E_1u",
-          "irrep_id": "1E1u",
-          "kappa": 4,
-          "kind": "single_ket",
-          "seed_m": -7,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -7
                 }
               ],
               "mu": 1
@@ -16965,6 +16581,286 @@
                     "f": "cyc"
                   },
                   "m": -8
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "B_u",
+          "irrep_id": "Bu",
+          "kappa": 1,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "B_u",
+          "irrep_id": "Bu",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "B_u",
+          "irrep_id": "Bu",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "B_u",
+          "irrep_id": "Bu",
+          "kappa": 4,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "1E_1u",
+          "irrep_id": "1E1u",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "1E_1u",
+          "irrep_id": "1E1u",
+          "kappa": 2,
+          "kind": "single_ket",
+          "seed_m": -3,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "1E_1u",
+          "irrep_id": "1E1u",
+          "kappa": 3,
+          "kind": "single_ket",
+          "seed_m": 5,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "1E_1u",
+          "irrep_id": "1E1u",
+          "kappa": 4,
+          "kind": "single_ket",
+          "seed_m": -7,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -7
                 }
               ],
               "mu": 1
@@ -16991,6 +16887,110 @@
                     ]
                   },
                   "m": 9
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "2E_1u",
+          "irrep_id": "2E1u",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "2E_1u",
+          "irrep_id": "2E1u",
+          "kappa": 2,
+          "kind": "single_ket",
+          "seed_m": 3,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": 3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "2E_1u",
+          "irrep_id": "2E1u",
+          "kappa": 3,
+          "kind": "single_ket",
+          "seed_m": -5,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 9,
+          "dim": 1,
+          "irrep": "2E_1u",
+          "irrep_id": "2E1u",
+          "kappa": 4,
+          "kind": "single_ket",
+          "seed_m": 7,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": 7
                 }
               ],
               "mu": 1
@@ -17052,198 +17052,6 @@
         {
           "J": 10,
           "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 1,
-          "kind": "single_ket",
-          "seed_m": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -1
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "B_g",
-          "irrep_id": "Bg",
-          "kappa": 1,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "B_g",
-          "irrep_id": "Bg",
-          "kappa": 2,
-          "kind": "pm_pair",
-          "seed_m": 2,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 2
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -2
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 2,
-          "kind": "single_ket",
-          "seed_m": 3,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": 3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 2,
-          "kind": "single_ket",
-          "seed_m": -3,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -3
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
           "irrep": "A_g",
           "irrep_id": "Ag",
           "kappa": 2,
@@ -17323,198 +17131,6 @@
                     "f": "cyc"
                   },
                   "m": -4
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 3,
-          "kind": "single_ket",
-          "seed_m": 5,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 5
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 3,
-          "kind": "single_ket",
-          "seed_m": -5,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": -5
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "B_g",
-          "irrep_id": "Bg",
-          "kappa": 3,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": 1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "B_g",
-          "irrep_id": "Bg",
-          "kappa": 4,
-          "kind": "pm_pair",
-          "seed_m": 6,
-          "seed_sign": -1,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": 6
-                },
-                {
-                  "e": {
-                    "M": 4,
-                    "c": [
-                      [
-                        0,
-                        1
-                      ],
-                      [
-                        -1,
-                        1
-                      ]
-                    ],
-                    "f": "cyc"
-                  },
-                  "m": -6
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 4,
-          "kind": "single_ket",
-          "seed_m": 7,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      -1,
-                      1
-                    ]
-                  },
-                  "m": 7
-                }
-              ],
-              "mu": 1
-            }
-          ]
-        },
-        {
-          "J": 10,
-          "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 4,
-          "kind": "single_ket",
-          "seed_m": -7,
-          "vectors": [
-            {
-              "components": [
-                {
-                  "e": {
-                    "f": "q",
-                    "v": [
-                      1,
-                      1
-                    ]
-                  },
-                  "m": -7
                 }
               ],
               "mu": 1
@@ -17612,11 +17228,12 @@
         {
           "J": 10,
           "dim": 1,
-          "irrep": "1E_1g",
-          "irrep_id": "1E1g",
-          "kappa": 5,
-          "kind": "single_ket",
-          "seed_m": 9,
+          "irrep": "B_g",
+          "irrep_id": "Bg",
+          "kappa": 1,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": 1,
           "vectors": [
             {
               "components": [
@@ -17628,7 +17245,17 @@
                       1
                     ]
                   },
-                  "m": 9
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -2
                 }
               ],
               "mu": 1
@@ -17638,11 +17265,63 @@
         {
           "J": 10,
           "dim": 1,
-          "irrep": "2E_1g",
-          "irrep_id": "2E1g",
-          "kappa": 5,
-          "kind": "single_ket",
-          "seed_m": -9,
+          "irrep": "B_g",
+          "irrep_id": "Bg",
+          "kappa": 2,
+          "kind": "pm_pair",
+          "seed_m": 2,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 2
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -2
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "B_g",
+          "irrep_id": "Bg",
+          "kappa": 3,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": 1,
           "vectors": [
             {
               "components": [
@@ -17650,11 +17329,72 @@
                   "e": {
                     "f": "q",
                     "v": [
-                      -1,
+                      1,
                       1
                     ]
                   },
-                  "m": -9
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -6
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "B_g",
+          "irrep_id": "Bg",
+          "kappa": 4,
+          "kind": "pm_pair",
+          "seed_m": 6,
+          "seed_sign": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": 6
+                },
+                {
+                  "e": {
+                    "M": 4,
+                    "c": [
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        -1,
+                        1
+                      ]
+                    ],
+                    "f": "cyc"
+                  },
+                  "m": -6
                 }
               ],
               "mu": 1
@@ -17743,6 +17483,266 @@
                     "f": "cyc"
                   },
                   "m": -10
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": 1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 2,
+          "kind": "single_ket",
+          "seed_m": -3,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 3,
+          "kind": "single_ket",
+          "seed_m": 5,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 4,
+          "kind": "single_ket",
+          "seed_m": -7,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": -7
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "1E_1g",
+          "irrep_id": "1E1g",
+          "kappa": 5,
+          "kind": "single_ket",
+          "seed_m": 9,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      1,
+                      1
+                    ]
+                  },
+                  "m": 9
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
+          "kappa": 1,
+          "kind": "single_ket",
+          "seed_m": -1,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -1
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
+          "kappa": 2,
+          "kind": "single_ket",
+          "seed_m": 3,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": 3
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
+          "kappa": 3,
+          "kind": "single_ket",
+          "seed_m": -5,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -5
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
+          "kappa": 4,
+          "kind": "single_ket",
+          "seed_m": 7,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": 7
+                }
+              ],
+              "mu": 1
+            }
+          ]
+        },
+        {
+          "J": 10,
+          "dim": 1,
+          "irrep": "2E_1g",
+          "irrep_id": "2E1g",
+          "kappa": 5,
+          "kind": "single_ket",
+          "seed_m": -9,
+          "vectors": [
+            {
+              "components": [
+                {
+                  "e": {
+                    "f": "q",
+                    "v": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "m": -9
                 }
               ],
               "mu": 1

@@ -4974,6 +4974,16 @@ o3t = <|
         <|
           "J" -> 6,
           "dim" -> 1,
+          "irrep" -> "1E_5",
+          "irrep_id" -> "1E5",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> -6,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -6|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 6,
+          "dim" -> 1,
           "irrep" -> "2E_5",
           "irrep_id" -> "2E5",
           "kappa" -> 1,
@@ -4992,16 +5002,6 @@ o3t = <|
           "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 6|>}, "mu" -> 1|>}
         |>,
         <|
-          "J" -> 6,
-          "dim" -> 1,
-          "irrep" -> "1E_5",
-          "irrep_id" -> "1E5",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> -6,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -6|>}, "mu" -> 1|>}
-        |>,
-        <|
           "J" -> 7,
           "dim" -> 1,
           "irrep" -> "A",
@@ -5084,6 +5084,16 @@ o3t = <|
         <|
           "J" -> 7,
           "dim" -> 1,
+          "irrep" -> "1E_4",
+          "irrep_id" -> "1E4",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> -7,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -7|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 7,
+          "dim" -> 1,
           "irrep" -> "2E_4",
           "irrep_id" -> "2E4",
           "kappa" -> 1,
@@ -5094,12 +5104,32 @@ o3t = <|
         <|
           "J" -> 7,
           "dim" -> 1,
+          "irrep" -> "2E_4",
+          "irrep_id" -> "2E4",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> 7,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> 7|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 7,
+          "dim" -> 1,
           "irrep" -> "1E_5",
           "irrep_id" -> "1E5",
           "kappa" -> 1,
           "kind" -> "single_ket",
           "seed_m" -> 5,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 7,
+          "dim" -> 1,
+          "irrep" -> "1E_5",
+          "irrep_id" -> "1E5",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> -6,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -6|>}, "mu" -> 1|>}
         |>,
         <|
           "J" -> 7,
@@ -5120,36 +5150,6 @@ o3t = <|
           "kind" -> "single_ket",
           "seed_m" -> 6,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 6|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 7,
-          "dim" -> 1,
-          "irrep" -> "1E_5",
-          "irrep_id" -> "1E5",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> -6,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -6|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 7,
-          "dim" -> 1,
-          "irrep" -> "2E_4",
-          "irrep_id" -> "2E4",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> 7,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> 7|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 7,
-          "dim" -> 1,
-          "irrep" -> "1E_4",
-          "irrep_id" -> "1E4",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> -7,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -7|>}, "mu" -> 1|>}
         |>,
         <|
           "J" -> 8,
@@ -5214,92 +5214,22 @@ o3t = <|
         <|
           "J" -> 8,
           "dim" -> 1,
+          "irrep" -> "1E_3",
+          "irrep_id" -> "1E3",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> -8,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -8|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 1,
           "irrep" -> "2E_3",
           "irrep_id" -> "2E3",
           "kappa" -> 1,
           "kind" -> "single_ket",
           "seed_m" -> -3,
           "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> -3|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 8,
-          "dim" -> 1,
-          "irrep" -> "1E_4",
-          "irrep_id" -> "1E4",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> 4,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 4|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 8,
-          "dim" -> 1,
-          "irrep" -> "2E_4",
-          "irrep_id" -> "2E4",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> -4,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -4|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 8,
-          "dim" -> 1,
-          "irrep" -> "1E_5",
-          "irrep_id" -> "1E5",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> 5,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 5|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 8,
-          "dim" -> 1,
-          "irrep" -> "2E_5",
-          "irrep_id" -> "2E5",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> -5,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> -5|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 8,
-          "dim" -> 1,
-          "irrep" -> "2E_5",
-          "irrep_id" -> "2E5",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> 6,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 6|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 8,
-          "dim" -> 1,
-          "irrep" -> "1E_5",
-          "irrep_id" -> "1E5",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> -6,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -6|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 8,
-          "dim" -> 1,
-          "irrep" -> "2E_4",
-          "irrep_id" -> "2E4",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> 7,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> 7|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 8,
-          "dim" -> 1,
-          "irrep" -> "1E_4",
-          "irrep_id" -> "1E4",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> -7,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -7|>}, "mu" -> 1|>}
         |>,
         <|
           "J" -> 8,
@@ -5314,12 +5244,82 @@ o3t = <|
         <|
           "J" -> 8,
           "dim" -> 1,
-          "irrep" -> "1E_3",
-          "irrep_id" -> "1E3",
+          "irrep" -> "1E_4",
+          "irrep_id" -> "1E4",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 4,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 4|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 1,
+          "irrep" -> "1E_4",
+          "irrep_id" -> "1E4",
           "kappa" -> 2,
           "kind" -> "single_ket",
-          "seed_m" -> -8,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -8|>}, "mu" -> 1|>}
+          "seed_m" -> -7,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -7|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 1,
+          "irrep" -> "2E_4",
+          "irrep_id" -> "2E4",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> -4,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -4|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 1,
+          "irrep" -> "2E_4",
+          "irrep_id" -> "2E4",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> 7,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> 7|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 1,
+          "irrep" -> "1E_5",
+          "irrep_id" -> "1E5",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 5,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 1,
+          "irrep" -> "1E_5",
+          "irrep_id" -> "1E5",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> -6,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -6|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 1,
+          "irrep" -> "2E_5",
+          "irrep_id" -> "2E5",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> -5,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> -5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 8,
+          "dim" -> 1,
+          "irrep" -> "2E_5",
+          "irrep_id" -> "2E5",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> 6,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 6|>}, "mu" -> 1|>}
         |>,
         <|
           "J" -> 9,
@@ -5364,132 +5364,22 @@ o3t = <|
         <|
           "J" -> 9,
           "dim" -> 1,
+          "irrep" -> "1E_2",
+          "irrep_id" -> "1E2",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> -9,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -9|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
           "irrep" -> "2E_2",
           "irrep_id" -> "2E2",
           "kappa" -> 1,
           "kind" -> "single_ket",
           "seed_m" -> -2,
           "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -2|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 9,
-          "dim" -> 1,
-          "irrep" -> "1E_3",
-          "irrep_id" -> "1E3",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> 3,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 3|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 9,
-          "dim" -> 1,
-          "irrep" -> "2E_3",
-          "irrep_id" -> "2E3",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> -3,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> -3|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 9,
-          "dim" -> 1,
-          "irrep" -> "1E_4",
-          "irrep_id" -> "1E4",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> 4,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 4|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 9,
-          "dim" -> 1,
-          "irrep" -> "2E_4",
-          "irrep_id" -> "2E4",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> -4,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -4|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 9,
-          "dim" -> 1,
-          "irrep" -> "1E_5",
-          "irrep_id" -> "1E5",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> 5,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 5|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 9,
-          "dim" -> 1,
-          "irrep" -> "2E_5",
-          "irrep_id" -> "2E5",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> -5,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> -5|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 9,
-          "dim" -> 1,
-          "irrep" -> "2E_5",
-          "irrep_id" -> "2E5",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> 6,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 6|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 9,
-          "dim" -> 1,
-          "irrep" -> "1E_5",
-          "irrep_id" -> "1E5",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> -6,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -6|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 9,
-          "dim" -> 1,
-          "irrep" -> "2E_4",
-          "irrep_id" -> "2E4",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> 7,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> 7|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 9,
-          "dim" -> 1,
-          "irrep" -> "1E_4",
-          "irrep_id" -> "1E4",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> -7,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -7|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 9,
-          "dim" -> 1,
-          "irrep" -> "2E_3",
-          "irrep_id" -> "2E3",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> 8,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 8|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 9,
-          "dim" -> 1,
-          "irrep" -> "1E_3",
-          "irrep_id" -> "1E3",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> -8,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -8|>}, "mu" -> 1|>}
         |>,
         <|
           "J" -> 9,
@@ -5504,12 +5394,122 @@ o3t = <|
         <|
           "J" -> 9,
           "dim" -> 1,
-          "irrep" -> "1E_2",
-          "irrep_id" -> "1E2",
+          "irrep" -> "1E_3",
+          "irrep_id" -> "1E3",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 3,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 3|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
+          "irrep" -> "1E_3",
+          "irrep_id" -> "1E3",
           "kappa" -> 2,
           "kind" -> "single_ket",
-          "seed_m" -> -9,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -9|>}, "mu" -> 1|>}
+          "seed_m" -> -8,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -8|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
+          "irrep" -> "2E_3",
+          "irrep_id" -> "2E3",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> -3,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> -3|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
+          "irrep" -> "2E_3",
+          "irrep_id" -> "2E3",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> 8,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 8|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
+          "irrep" -> "1E_4",
+          "irrep_id" -> "1E4",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 4,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 4|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
+          "irrep" -> "1E_4",
+          "irrep_id" -> "1E4",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> -7,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -7|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
+          "irrep" -> "2E_4",
+          "irrep_id" -> "2E4",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> -4,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -4|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
+          "irrep" -> "2E_4",
+          "irrep_id" -> "2E4",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> 7,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> 7|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
+          "irrep" -> "1E_5",
+          "irrep_id" -> "1E5",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 5,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
+          "irrep" -> "1E_5",
+          "irrep_id" -> "1E5",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> -6,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -6|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
+          "irrep" -> "2E_5",
+          "irrep_id" -> "2E5",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> -5,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> -5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 9,
+          "dim" -> 1,
+          "irrep" -> "2E_5",
+          "irrep_id" -> "2E5",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> 6,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 6|>}, "mu" -> 1|>}
         |>,
         <|
           "J" -> 10,
@@ -5534,172 +5534,22 @@ o3t = <|
         <|
           "J" -> 10,
           "dim" -> 1,
+          "irrep" -> "1E_1",
+          "irrep_id" -> "1E1",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> -10,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -10|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
           "irrep" -> "2E_1",
           "irrep_id" -> "2E1",
           "kappa" -> 1,
           "kind" -> "single_ket",
           "seed_m" -> -1,
           "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> -1|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "1E_2",
-          "irrep_id" -> "1E2",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> 2,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 2|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "2E_2",
-          "irrep_id" -> "2E2",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> -2,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -2|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "1E_3",
-          "irrep_id" -> "1E3",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> 3,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 3|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "2E_3",
-          "irrep_id" -> "2E3",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> -3,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> -3|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "1E_4",
-          "irrep_id" -> "1E4",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> 4,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 4|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "2E_4",
-          "irrep_id" -> "2E4",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> -4,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -4|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "1E_5",
-          "irrep_id" -> "1E5",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> 5,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 5|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "2E_5",
-          "irrep_id" -> "2E5",
-          "kappa" -> 1,
-          "kind" -> "single_ket",
-          "seed_m" -> -5,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> -5|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "2E_5",
-          "irrep_id" -> "2E5",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> 6,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 6|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "1E_5",
-          "irrep_id" -> "1E5",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> -6,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -6|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "2E_4",
-          "irrep_id" -> "2E4",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> 7,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> 7|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "1E_4",
-          "irrep_id" -> "1E4",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> -7,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -7|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "2E_3",
-          "irrep_id" -> "2E3",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> 8,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 8|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "1E_3",
-          "irrep_id" -> "1E3",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> -8,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -8|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "2E_2",
-          "irrep_id" -> "2E2",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> 9,
-          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> 9|>}, "mu" -> 1|>}
-        |>,
-        <|
-          "J" -> 10,
-          "dim" -> 1,
-          "irrep" -> "1E_2",
-          "irrep_id" -> "1E2",
-          "kappa" -> 2,
-          "kind" -> "single_ket",
-          "seed_m" -> -9,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -9|>}, "mu" -> 1|>}
         |>,
         <|
           "J" -> 10,
@@ -5714,12 +5564,162 @@ o3t = <|
         <|
           "J" -> 10,
           "dim" -> 1,
-          "irrep" -> "1E_1",
-          "irrep_id" -> "1E1",
+          "irrep" -> "1E_2",
+          "irrep_id" -> "1E2",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 2,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 2|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "1E_2",
+          "irrep_id" -> "1E2",
           "kappa" -> 2,
           "kind" -> "single_ket",
-          "seed_m" -> -10,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -10|>}, "mu" -> 1|>}
+          "seed_m" -> -9,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -9|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "2E_2",
+          "irrep_id" -> "2E2",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> -2,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -2|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "2E_2",
+          "irrep_id" -> "2E2",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> 9,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> 9|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "1E_3",
+          "irrep_id" -> "1E3",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 3,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 3|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "1E_3",
+          "irrep_id" -> "1E3",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> -8,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -8|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "2E_3",
+          "irrep_id" -> "2E3",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> -3,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> -3|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "2E_3",
+          "irrep_id" -> "2E3",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> 8,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 8|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "1E_4",
+          "irrep_id" -> "1E4",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 4,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 4|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "1E_4",
+          "irrep_id" -> "1E4",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> -7,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -7|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "2E_4",
+          "irrep_id" -> "2E4",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> -4,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -4|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "2E_4",
+          "irrep_id" -> "2E4",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> 7,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> 7|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "1E_5",
+          "irrep_id" -> "1E5",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> 5,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "1E_5",
+          "irrep_id" -> "1E5",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> -6,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> -6|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "2E_5",
+          "irrep_id" -> "2E5",
+          "kappa" -> 1,
+          "kind" -> "single_ket",
+          "seed_m" -> -5,
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "m" -> -5|>}, "mu" -> 1|>}
+        |>,
+        <|
+          "J" -> 10,
+          "dim" -> 1,
+          "irrep" -> "2E_5",
+          "irrep_id" -> "2E5",
+          "kappa" -> 2,
+          "kind" -> "single_ket",
+          "seed_m" -> 6,
+          "vectors" -> {<|"components" -> {<|"e" -> 1, "m" -> 6|>}, "mu" -> 1|>}
         |>
       },
       "vector_count" -> 121

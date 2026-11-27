@@ -6163,19 +6163,16 @@ o3d := rec(
           ]
         ),
         rec(
-          ("dim") := 1,
-          ("irrep") := "2E_5/2,g",
-          ("irrep_id") := "2E5hg",
-          ("kappa") := 1,
-          ("kind") := "pm_pair",
-          ("seed_sign") := 1,
-          ("seed_twoM") := 5,
+          ("dim") := 2,
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
+          ("kappa") := 2,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 7,
           ("twoJ") := 7,
           ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := -1, ("twoM") := 5 ), rec( ("e") := -1, ("twoM") := -5 ) ],
-              ("mu") := 1
-            )
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -7 ) ], ("mu") := 2 )
           ]
         ),
         rec(
@@ -6195,16 +6192,19 @@ o3d := rec(
           ]
         ),
         rec(
-          ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 2,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 7,
+          ("dim") := 1,
+          ("irrep") := "2E_5/2,g",
+          ("irrep_id") := "2E5hg",
+          ("kappa") := 1,
+          ("kind") := "pm_pair",
+          ("seed_sign") := 1,
+          ("seed_twoM") := 5,
           ("twoJ") := 7,
           ("vectors") := [
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -7 ) ], ("mu") := 2 )
+            rec(
+              ("components") := [ rec( ("e") := -1, ("twoM") := 5 ), rec( ("e") := -1, ("twoM") := -5 ) ],
+              ("mu") := 1
+            )
           ]
         ),
         rec(
@@ -6222,6 +6222,19 @@ o3d := rec(
         ),
         rec(
           ("dim") := 2,
+          ("irrep") := "E_1/2,g",
+          ("irrep_id") := "E1hg",
+          ("kappa") := 2,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 9,
+          ("twoJ") := 9,
+          ("vectors") := [
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 9 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -9 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 2,
           ("irrep") := "E_3/2,g",
           ("irrep_id") := "E3hg",
           ("kappa") := 1,
@@ -6231,6 +6244,19 @@ o3d := rec(
           ("vectors") := [
             rec( ("components") := [ rec( ("e") := 1, ("twoM") := -3 ) ], ("mu") := 1 ),
             rec( ("components") := [ rec( ("e") := -1, ("twoM") := 3 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 2,
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
+          ("kappa") := 2,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 7,
+          ("twoJ") := 9,
+          ("vectors") := [
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := -7 ) ], ("mu") := 2 )
           ]
         ),
         rec(
@@ -6267,32 +6293,6 @@ o3d := rec(
         ),
         rec(
           ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 2,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 7,
-          ("twoJ") := 9,
-          ("vectors") := [
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := -7 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 2,
-          ("irrep") := "E_1/2,g",
-          ("irrep_id") := "E1hg",
-          ("kappa") := 2,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 9,
-          ("twoJ") := 9,
-          ("vectors") := [
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 9 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -9 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 2,
           ("irrep") := "E_1/2,g",
           ("irrep_id") := "E1hg",
           ("kappa") := 1,
@@ -6302,64 +6302,6 @@ o3d := rec(
           ("vectors") := [
             rec( ("components") := [ rec( ("e") := 1, ("twoM") := -1 ) ], ("mu") := 1 ),
             rec( ("components") := [ rec( ("e") := -1, ("twoM") := 1 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 1,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 3,
-          ("twoJ") := 11,
-          ("vectors") := [
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -3 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 3 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 1,
-          ("irrep") := "2E_5/2,g",
-          ("irrep_id") := "2E5hg",
-          ("kappa") := 1,
-          ("kind") := "pm_pair",
-          ("seed_sign") := 1,
-          ("seed_twoM") := 5,
-          ("twoJ") := 11,
-          ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := -1, ("twoM") := 5 ), rec( ("e") := -1, ("twoM") := -5 ) ],
-              ("mu") := 1
-            )
-          ]
-        ),
-        rec(
-          ("dim") := 1,
-          ("irrep") := "1E_5/2,g",
-          ("irrep_id") := "1E5hg",
-          ("kappa") := 1,
-          ("kind") := "pm_pair",
-          ("seed_sign") := -1,
-          ("seed_twoM") := 5,
-          ("twoJ") := 11,
-          ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := 5 ), rec( ("e") := -1, ("twoM") := -5 ) ],
-              ("mu") := 1
-            )
-          ]
-        ),
-        rec(
-          ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 2,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 7,
-          ("twoJ") := 11,
-          ("vectors") := [
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -7 ) ], ("mu") := 2 )
           ]
         ),
         rec(
@@ -6390,28 +6332,28 @@ o3d := rec(
         ),
         rec(
           ("dim") := 2,
-          ("irrep") := "E_1/2,g",
-          ("irrep_id") := "E1hg",
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
           ("kappa") := 1,
           ("kind") := "partner_pair",
-          ("seed_twoM") := 1,
-          ("twoJ") := 13,
+          ("seed_twoM") := 3,
+          ("twoJ") := 11,
           ("vectors") := [
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -1 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 1 ) ], ("mu") := 2 )
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -3 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 3 ) ], ("mu") := 2 )
           ]
         ),
         rec(
           ("dim") := 2,
           ("irrep") := "E_3/2,g",
           ("irrep_id") := "E3hg",
-          ("kappa") := 1,
+          ("kappa") := 2,
           ("kind") := "partner_pair",
-          ("seed_twoM") := 3,
-          ("twoJ") := 13,
+          ("seed_twoM") := 7,
+          ("twoJ") := 11,
           ("vectors") := [
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -3 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := -1, ("twoM") := 3 ) ], ("mu") := 2 )
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -7 ) ], ("mu") := 2 )
           ]
         ),
         rec(
@@ -6420,12 +6362,12 @@ o3d := rec(
           ("irrep_id") := "1E5hg",
           ("kappa") := 1,
           ("kind") := "pm_pair",
-          ("seed_sign") := 1,
+          ("seed_sign") := -1,
           ("seed_twoM") := 5,
-          ("twoJ") := 13,
+          ("twoJ") := 11,
           ("vectors") := [
             rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := 5 ), rec( ("e") := 1, ("twoM") := -5 ) ],
+              ("components") := [ rec( ("e") := 1, ("twoM") := 5 ), rec( ("e") := -1, ("twoM") := -5 ) ],
               ("mu") := 1
             )
           ]
@@ -6436,27 +6378,27 @@ o3d := rec(
           ("irrep_id") := "2E5hg",
           ("kappa") := 1,
           ("kind") := "pm_pair",
-          ("seed_sign") := -1,
+          ("seed_sign") := 1,
           ("seed_twoM") := 5,
-          ("twoJ") := 13,
+          ("twoJ") := 11,
           ("vectors") := [
             rec(
-              ("components") := [ rec( ("e") := -1, ("twoM") := 5 ), rec( ("e") := 1, ("twoM") := -5 ) ],
+              ("components") := [ rec( ("e") := -1, ("twoM") := 5 ), rec( ("e") := -1, ("twoM") := -5 ) ],
               ("mu") := 1
             )
           ]
         ),
         rec(
           ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 2,
+          ("irrep") := "E_1/2,g",
+          ("irrep_id") := "E1hg",
+          ("kappa") := 1,
           ("kind") := "partner_pair",
-          ("seed_twoM") := 7,
+          ("seed_twoM") := 1,
           ("twoJ") := 13,
           ("vectors") := [
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := -7 ) ], ("mu") := 2 )
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -1 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 1 ) ], ("mu") := 2 )
           ]
         ),
         rec(
@@ -6489,6 +6431,32 @@ o3d := rec(
           ("dim") := 2,
           ("irrep") := "E_3/2,g",
           ("irrep_id") := "E3hg",
+          ("kappa") := 1,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 3,
+          ("twoJ") := 13,
+          ("vectors") := [
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -3 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := -1, ("twoM") := 3 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 2,
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
+          ("kappa") := 2,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 7,
+          ("twoJ") := 13,
+          ("vectors") := [
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := -7 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 2,
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
           ("kappa") := 3,
           ("kind") := "partner_pair",
           ("seed_twoM") := 13,
@@ -6496,6 +6464,38 @@ o3d := rec(
           ("vectors") := [
             rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -13 ) ], ("mu") := 1 ),
             rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := 13 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 1,
+          ("irrep") := "1E_5/2,g",
+          ("irrep_id") := "1E5hg",
+          ("kappa") := 1,
+          ("kind") := "pm_pair",
+          ("seed_sign") := 1,
+          ("seed_twoM") := 5,
+          ("twoJ") := 13,
+          ("vectors") := [
+            rec(
+              ("components") := [ rec( ("e") := 1, ("twoM") := 5 ), rec( ("e") := 1, ("twoM") := -5 ) ],
+              ("mu") := 1
+            )
+          ]
+        ),
+        rec(
+          ("dim") := 1,
+          ("irrep") := "2E_5/2,g",
+          ("irrep_id") := "2E5hg",
+          ("kappa") := 1,
+          ("kind") := "pm_pair",
+          ("seed_sign") := -1,
+          ("seed_twoM") := 5,
+          ("twoJ") := 13,
+          ("vectors") := [
+            rec(
+              ("components") := [ rec( ("e") := -1, ("twoM") := 5 ), rec( ("e") := 1, ("twoM") := -5 ) ],
+              ("mu") := 1
+            )
           ]
         ),
         rec(
@@ -6509,64 +6509,6 @@ o3d := rec(
           ("vectors") := [
             rec( ("components") := [ rec( ("e") := 1, ("twoM") := -1 ) ], ("mu") := 1 ),
             rec( ("components") := [ rec( ("e") := -1, ("twoM") := 1 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 1,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 3,
-          ("twoJ") := 15,
-          ("vectors") := [
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -3 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 3 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 1,
-          ("irrep") := "2E_5/2,g",
-          ("irrep_id") := "2E5hg",
-          ("kappa") := 1,
-          ("kind") := "pm_pair",
-          ("seed_sign") := 1,
-          ("seed_twoM") := 5,
-          ("twoJ") := 15,
-          ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := -1, ("twoM") := 5 ), rec( ("e") := -1, ("twoM") := -5 ) ],
-              ("mu") := 1
-            )
-          ]
-        ),
-        rec(
-          ("dim") := 1,
-          ("irrep") := "1E_5/2,g",
-          ("irrep_id") := "1E5hg",
-          ("kappa") := 1,
-          ("kind") := "pm_pair",
-          ("seed_sign") := -1,
-          ("seed_twoM") := 5,
-          ("twoJ") := 15,
-          ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := 5 ), rec( ("e") := -1, ("twoM") := -5 ) ],
-              ("mu") := 1
-            )
-          ]
-        ),
-        rec(
-          ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 2,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 7,
-          ("twoJ") := 15,
-          ("vectors") := [
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -7 ) ], ("mu") := 2 )
           ]
         ),
         rec(
@@ -6593,6 +6535,32 @@ o3d := rec(
           ("vectors") := [
             rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -11 ) ], ("mu") := 1 ),
             rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := 11 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 2,
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
+          ("kappa") := 1,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 3,
+          ("twoJ") := 15,
+          ("vectors") := [
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -3 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 3 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 2,
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
+          ("kappa") := 2,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 7,
+          ("twoJ") := 15,
+          ("vectors") := [
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -7 ) ], ("mu") := 2 )
           ]
         ),
         rec(
@@ -6610,16 +6578,16 @@ o3d := rec(
         ),
         rec(
           ("dim") := 1,
-          ("irrep") := "2E_5/2,g",
-          ("irrep_id") := "2E5hg",
-          ("kappa") := 2,
+          ("irrep") := "1E_5/2,g",
+          ("irrep_id") := "1E5hg",
+          ("kappa") := 1,
           ("kind") := "pm_pair",
-          ("seed_sign") := 1,
-          ("seed_twoM") := 15,
+          ("seed_sign") := -1,
+          ("seed_twoM") := 5,
           ("twoJ") := 15,
           ("vectors") := [
             rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := 15 ), rec( ("e") := 1, ("twoM") := -15 ) ],
+              ("components") := [ rec( ("e") := 1, ("twoM") := 5 ), rec( ("e") := -1, ("twoM") := -5 ) ],
               ("mu") := 1
             )
           ]
@@ -6641,6 +6609,38 @@ o3d := rec(
           ]
         ),
         rec(
+          ("dim") := 1,
+          ("irrep") := "2E_5/2,g",
+          ("irrep_id") := "2E5hg",
+          ("kappa") := 1,
+          ("kind") := "pm_pair",
+          ("seed_sign") := 1,
+          ("seed_twoM") := 5,
+          ("twoJ") := 15,
+          ("vectors") := [
+            rec(
+              ("components") := [ rec( ("e") := -1, ("twoM") := 5 ), rec( ("e") := -1, ("twoM") := -5 ) ],
+              ("mu") := 1
+            )
+          ]
+        ),
+        rec(
+          ("dim") := 1,
+          ("irrep") := "2E_5/2,g",
+          ("irrep_id") := "2E5hg",
+          ("kappa") := 2,
+          ("kind") := "pm_pair",
+          ("seed_sign") := 1,
+          ("seed_twoM") := 15,
+          ("twoJ") := 15,
+          ("vectors") := [
+            rec(
+              ("components") := [ rec( ("e") := 1, ("twoM") := 15 ), rec( ("e") := 1, ("twoM") := -15 ) ],
+              ("mu") := 1
+            )
+          ]
+        ),
+        rec(
           ("dim") := 2,
           ("irrep") := "E_1/2,g",
           ("irrep_id") := "E1hg",
@@ -6651,64 +6651,6 @@ o3d := rec(
           ("vectors") := [
             rec( ("components") := [ rec( ("e") := 1, ("twoM") := -1 ) ], ("mu") := 1 ),
             rec( ("components") := [ rec( ("e") := 1, ("twoM") := 1 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 1,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 3,
-          ("twoJ") := 17,
-          ("vectors") := [
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -3 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := -1, ("twoM") := 3 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 1,
-          ("irrep") := "1E_5/2,g",
-          ("irrep_id") := "1E5hg",
-          ("kappa") := 1,
-          ("kind") := "pm_pair",
-          ("seed_sign") := 1,
-          ("seed_twoM") := 5,
-          ("twoJ") := 17,
-          ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := 5 ), rec( ("e") := 1, ("twoM") := -5 ) ],
-              ("mu") := 1
-            )
-          ]
-        ),
-        rec(
-          ("dim") := 1,
-          ("irrep") := "2E_5/2,g",
-          ("irrep_id") := "2E5hg",
-          ("kappa") := 1,
-          ("kind") := "pm_pair",
-          ("seed_sign") := -1,
-          ("seed_twoM") := 5,
-          ("twoJ") := 17,
-          ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := -1, ("twoM") := 5 ), rec( ("e") := 1, ("twoM") := -5 ) ],
-              ("mu") := 1
-            )
-          ]
-        ),
-        rec(
-          ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 2,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 7,
-          ("twoJ") := 17,
-          ("vectors") := [
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := -7 ) ], ("mu") := 2 )
           ]
         ),
         rec(
@@ -6741,6 +6683,32 @@ o3d := rec(
           ("dim") := 2,
           ("irrep") := "E_3/2,g",
           ("irrep_id") := "E3hg",
+          ("kappa") := 1,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 3,
+          ("twoJ") := 17,
+          ("vectors") := [
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -3 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := -1, ("twoM") := 3 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 2,
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
+          ("kappa") := 2,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 7,
+          ("twoJ") := 17,
+          ("vectors") := [
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := -7 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 2,
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
           ("kappa") := 3,
           ("kind") := "partner_pair",
           ("seed_twoM") := 13,
@@ -6748,38 +6716,6 @@ o3d := rec(
           ("vectors") := [
             rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -13 ) ], ("mu") := 1 ),
             rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := 13 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 1,
-          ("irrep") := "1E_5/2,g",
-          ("irrep_id") := "1E5hg",
-          ("kappa") := 2,
-          ("kind") := "pm_pair",
-          ("seed_sign") := 1,
-          ("seed_twoM") := 15,
-          ("twoJ") := 17,
-          ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := 15 ), rec( ("e") := 1, ("twoM") := -15 ) ],
-              ("mu") := 1
-            )
-          ]
-        ),
-        rec(
-          ("dim") := 1,
-          ("irrep") := "2E_5/2,g",
-          ("irrep_id") := "2E5hg",
-          ("kappa") := 2,
-          ("kind") := "pm_pair",
-          ("seed_sign") := -1,
-          ("seed_twoM") := 15,
-          ("twoJ") := 17,
-          ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := 15 ), rec( ("e") := -1, ("twoM") := -15 ) ],
-              ("mu") := 1
-            )
           ]
         ),
         rec(
@@ -6796,6 +6732,70 @@ o3d := rec(
           ]
         ),
         rec(
+          ("dim") := 1,
+          ("irrep") := "1E_5/2,g",
+          ("irrep_id") := "1E5hg",
+          ("kappa") := 1,
+          ("kind") := "pm_pair",
+          ("seed_sign") := 1,
+          ("seed_twoM") := 5,
+          ("twoJ") := 17,
+          ("vectors") := [
+            rec(
+              ("components") := [ rec( ("e") := 1, ("twoM") := 5 ), rec( ("e") := 1, ("twoM") := -5 ) ],
+              ("mu") := 1
+            )
+          ]
+        ),
+        rec(
+          ("dim") := 1,
+          ("irrep") := "1E_5/2,g",
+          ("irrep_id") := "1E5hg",
+          ("kappa") := 2,
+          ("kind") := "pm_pair",
+          ("seed_sign") := 1,
+          ("seed_twoM") := 15,
+          ("twoJ") := 17,
+          ("vectors") := [
+            rec(
+              ("components") := [ rec( ("e") := 1, ("twoM") := 15 ), rec( ("e") := 1, ("twoM") := -15 ) ],
+              ("mu") := 1
+            )
+          ]
+        ),
+        rec(
+          ("dim") := 1,
+          ("irrep") := "2E_5/2,g",
+          ("irrep_id") := "2E5hg",
+          ("kappa") := 1,
+          ("kind") := "pm_pair",
+          ("seed_sign") := -1,
+          ("seed_twoM") := 5,
+          ("twoJ") := 17,
+          ("vectors") := [
+            rec(
+              ("components") := [ rec( ("e") := -1, ("twoM") := 5 ), rec( ("e") := 1, ("twoM") := -5 ) ],
+              ("mu") := 1
+            )
+          ]
+        ),
+        rec(
+          ("dim") := 1,
+          ("irrep") := "2E_5/2,g",
+          ("irrep_id") := "2E5hg",
+          ("kappa") := 2,
+          ("kind") := "pm_pair",
+          ("seed_sign") := -1,
+          ("seed_twoM") := 15,
+          ("twoJ") := 17,
+          ("vectors") := [
+            rec(
+              ("components") := [ rec( ("e") := 1, ("twoM") := 15 ), rec( ("e") := -1, ("twoM") := -15 ) ],
+              ("mu") := 1
+            )
+          ]
+        ),
+        rec(
           ("dim") := 2,
           ("irrep") := "E_1/2,g",
           ("irrep_id") := "E1hg",
@@ -6806,64 +6806,6 @@ o3d := rec(
           ("vectors") := [
             rec( ("components") := [ rec( ("e") := 1, ("twoM") := -1 ) ], ("mu") := 1 ),
             rec( ("components") := [ rec( ("e") := -1, ("twoM") := 1 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 1,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 3,
-          ("twoJ") := 19,
-          ("vectors") := [
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -3 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 3 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 1,
-          ("irrep") := "2E_5/2,g",
-          ("irrep_id") := "2E5hg",
-          ("kappa") := 1,
-          ("kind") := "pm_pair",
-          ("seed_sign") := 1,
-          ("seed_twoM") := 5,
-          ("twoJ") := 19,
-          ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := -1, ("twoM") := 5 ), rec( ("e") := -1, ("twoM") := -5 ) ],
-              ("mu") := 1
-            )
-          ]
-        ),
-        rec(
-          ("dim") := 1,
-          ("irrep") := "1E_5/2,g",
-          ("irrep_id") := "1E5hg",
-          ("kappa") := 1,
-          ("kind") := "pm_pair",
-          ("seed_sign") := -1,
-          ("seed_twoM") := 5,
-          ("twoJ") := 19,
-          ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := 5 ), rec( ("e") := -1, ("twoM") := -5 ) ],
-              ("mu") := 1
-            )
-          ]
-        ),
-        rec(
-          ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 2,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 7,
-          ("twoJ") := 19,
-          ("vectors") := [
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -7 ) ], ("mu") := 2 )
           ]
         ),
         rec(
@@ -6890,64 +6832,6 @@ o3d := rec(
           ("vectors") := [
             rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -11 ) ], ("mu") := 1 ),
             rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := 11 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 3,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 13,
-          ("twoJ") := 19,
-          ("vectors") := [
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -13 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 13 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 1,
-          ("irrep") := "2E_5/2,g",
-          ("irrep_id") := "2E5hg",
-          ("kappa") := 2,
-          ("kind") := "pm_pair",
-          ("seed_sign") := 1,
-          ("seed_twoM") := 15,
-          ("twoJ") := 19,
-          ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := 15 ), rec( ("e") := 1, ("twoM") := -15 ) ],
-              ("mu") := 1
-            )
-          ]
-        ),
-        rec(
-          ("dim") := 1,
-          ("irrep") := "1E_5/2,g",
-          ("irrep_id") := "1E5hg",
-          ("kappa") := 2,
-          ("kind") := "pm_pair",
-          ("seed_sign") := -1,
-          ("seed_twoM") := 15,
-          ("twoJ") := 19,
-          ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := 15 ), rec( ("e") := -1, ("twoM") := -15 ) ],
-              ("mu") := 1
-            )
-          ]
-        ),
-        rec(
-          ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 4,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 17,
-          ("twoJ") := 19,
-          ("vectors") := [
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 17 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -17 ) ], ("mu") := 2 )
           ]
         ),
         rec(
@@ -6965,28 +6849,54 @@ o3d := rec(
         ),
         rec(
           ("dim") := 2,
-          ("irrep") := "E_1/2,g",
-          ("irrep_id") := "E1hg",
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
           ("kappa") := 1,
           ("kind") := "partner_pair",
-          ("seed_twoM") := 1,
-          ("twoJ") := 21,
+          ("seed_twoM") := 3,
+          ("twoJ") := 19,
           ("vectors") := [
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -1 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 1 ) ], ("mu") := 2 )
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -3 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 3 ) ], ("mu") := 2 )
           ]
         ),
         rec(
           ("dim") := 2,
           ("irrep") := "E_3/2,g",
           ("irrep_id") := "E3hg",
-          ("kappa") := 1,
+          ("kappa") := 2,
           ("kind") := "partner_pair",
-          ("seed_twoM") := 3,
-          ("twoJ") := 21,
+          ("seed_twoM") := 7,
+          ("twoJ") := 19,
           ("vectors") := [
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -3 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := -1, ("twoM") := 3 ) ], ("mu") := 2 )
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -7 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 2,
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
+          ("kappa") := 3,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 13,
+          ("twoJ") := 19,
+          ("vectors") := [
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -13 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 13 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 2,
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
+          ("kappa") := 4,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 17,
+          ("twoJ") := 19,
+          ("vectors") := [
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 17 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -17 ) ], ("mu") := 2 )
           ]
         ),
         rec(
@@ -6995,12 +6905,28 @@ o3d := rec(
           ("irrep_id") := "1E5hg",
           ("kappa") := 1,
           ("kind") := "pm_pair",
-          ("seed_sign") := 1,
+          ("seed_sign") := -1,
           ("seed_twoM") := 5,
-          ("twoJ") := 21,
+          ("twoJ") := 19,
           ("vectors") := [
             rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := 5 ), rec( ("e") := 1, ("twoM") := -5 ) ],
+              ("components") := [ rec( ("e") := 1, ("twoM") := 5 ), rec( ("e") := -1, ("twoM") := -5 ) ],
+              ("mu") := 1
+            )
+          ]
+        ),
+        rec(
+          ("dim") := 1,
+          ("irrep") := "1E_5/2,g",
+          ("irrep_id") := "1E5hg",
+          ("kappa") := 2,
+          ("kind") := "pm_pair",
+          ("seed_sign") := -1,
+          ("seed_twoM") := 15,
+          ("twoJ") := 19,
+          ("vectors") := [
+            rec(
+              ("components") := [ rec( ("e") := 1, ("twoM") := 15 ), rec( ("e") := -1, ("twoM") := -15 ) ],
               ("mu") := 1
             )
           ]
@@ -7011,27 +6937,43 @@ o3d := rec(
           ("irrep_id") := "2E5hg",
           ("kappa") := 1,
           ("kind") := "pm_pair",
-          ("seed_sign") := -1,
+          ("seed_sign") := 1,
           ("seed_twoM") := 5,
-          ("twoJ") := 21,
+          ("twoJ") := 19,
           ("vectors") := [
             rec(
-              ("components") := [ rec( ("e") := -1, ("twoM") := 5 ), rec( ("e") := 1, ("twoM") := -5 ) ],
+              ("components") := [ rec( ("e") := -1, ("twoM") := 5 ), rec( ("e") := -1, ("twoM") := -5 ) ],
+              ("mu") := 1
+            )
+          ]
+        ),
+        rec(
+          ("dim") := 1,
+          ("irrep") := "2E_5/2,g",
+          ("irrep_id") := "2E5hg",
+          ("kappa") := 2,
+          ("kind") := "pm_pair",
+          ("seed_sign") := 1,
+          ("seed_twoM") := 15,
+          ("twoJ") := 19,
+          ("vectors") := [
+            rec(
+              ("components") := [ rec( ("e") := 1, ("twoM") := 15 ), rec( ("e") := 1, ("twoM") := -15 ) ],
               ("mu") := 1
             )
           ]
         ),
         rec(
           ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 2,
+          ("irrep") := "E_1/2,g",
+          ("irrep_id") := "E1hg",
+          ("kappa") := 1,
           ("kind") := "partner_pair",
-          ("seed_twoM") := 7,
+          ("seed_twoM") := 1,
           ("twoJ") := 21,
           ("vectors") := [
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := -7 ) ], ("mu") := 2 )
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -1 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 1 ) ], ("mu") := 2 )
           ]
         ),
         rec(
@@ -7058,64 +7000,6 @@ o3d := rec(
           ("vectors") := [
             rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -11 ) ], ("mu") := 1 ),
             rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 11 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 3,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 13,
-          ("twoJ") := 21,
-          ("vectors") := [
-            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -13 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := 13 ) ], ("mu") := 2 )
-          ]
-        ),
-        rec(
-          ("dim") := 1,
-          ("irrep") := "1E_5/2,g",
-          ("irrep_id") := "1E5hg",
-          ("kappa") := 2,
-          ("kind") := "pm_pair",
-          ("seed_sign") := 1,
-          ("seed_twoM") := 15,
-          ("twoJ") := 21,
-          ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := 15 ), rec( ("e") := 1, ("twoM") := -15 ) ],
-              ("mu") := 1
-            )
-          ]
-        ),
-        rec(
-          ("dim") := 1,
-          ("irrep") := "2E_5/2,g",
-          ("irrep_id") := "2E5hg",
-          ("kappa") := 2,
-          ("kind") := "pm_pair",
-          ("seed_sign") := -1,
-          ("seed_twoM") := 15,
-          ("twoJ") := 21,
-          ("vectors") := [
-            rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := 15 ), rec( ("e") := -1, ("twoM") := -15 ) ],
-              ("mu") := 1
-            )
-          ]
-        ),
-        rec(
-          ("dim") := 2,
-          ("irrep") := "E_3/2,g",
-          ("irrep_id") := "E3hg",
-          ("kappa") := 4,
-          ("kind") := "partner_pair",
-          ("seed_twoM") := 17,
-          ("twoJ") := 21,
-          ("vectors") := [
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 17 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := -1, ("twoM") := -17 ) ], ("mu") := 2 )
           ]
         ),
         rec(
@@ -7142,6 +7026,122 @@ o3d := rec(
           ("vectors") := [
             rec( ("components") := [ rec( ("e") := 1, ("twoM") := -21 ) ], ("mu") := 1 ),
             rec( ("components") := [ rec( ("e") := 1, ("twoM") := 21 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 2,
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
+          ("kappa") := 1,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 3,
+          ("twoJ") := 21,
+          ("vectors") := [
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -3 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := -1, ("twoM") := 3 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 2,
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
+          ("kappa") := 2,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 7,
+          ("twoJ") := 21,
+          ("vectors") := [
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 7 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := -7 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 2,
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
+          ("kappa") := 3,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 13,
+          ("twoJ") := 21,
+          ("vectors") := [
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -13 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := 13 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 2,
+          ("irrep") := "E_3/2,g",
+          ("irrep_id") := "E3hg",
+          ("kappa") := 4,
+          ("kind") := "partner_pair",
+          ("seed_twoM") := 17,
+          ("twoJ") := 21,
+          ("vectors") := [
+            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 17 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := -1, ("twoM") := -17 ) ], ("mu") := 2 )
+          ]
+        ),
+        rec(
+          ("dim") := 1,
+          ("irrep") := "1E_5/2,g",
+          ("irrep_id") := "1E5hg",
+          ("kappa") := 1,
+          ("kind") := "pm_pair",
+          ("seed_sign") := 1,
+          ("seed_twoM") := 5,
+          ("twoJ") := 21,
+          ("vectors") := [
+            rec(
+              ("components") := [ rec( ("e") := 1, ("twoM") := 5 ), rec( ("e") := 1, ("twoM") := -5 ) ],
+              ("mu") := 1
+            )
+          ]
+        ),
+        rec(
+          ("dim") := 1,
+          ("irrep") := "1E_5/2,g",
+          ("irrep_id") := "1E5hg",
+          ("kappa") := 2,
+          ("kind") := "pm_pair",
+          ("seed_sign") := 1,
+          ("seed_twoM") := 15,
+          ("twoJ") := 21,
+          ("vectors") := [
+            rec(
+              ("components") := [ rec( ("e") := 1, ("twoM") := 15 ), rec( ("e") := 1, ("twoM") := -15 ) ],
+              ("mu") := 1
+            )
+          ]
+        ),
+        rec(
+          ("dim") := 1,
+          ("irrep") := "2E_5/2,g",
+          ("irrep_id") := "2E5hg",
+          ("kappa") := 1,
+          ("kind") := "pm_pair",
+          ("seed_sign") := -1,
+          ("seed_twoM") := 5,
+          ("twoJ") := 21,
+          ("vectors") := [
+            rec(
+              ("components") := [ rec( ("e") := -1, ("twoM") := 5 ), rec( ("e") := 1, ("twoM") := -5 ) ],
+              ("mu") := 1
+            )
+          ]
+        ),
+        rec(
+          ("dim") := 1,
+          ("irrep") := "2E_5/2,g",
+          ("irrep_id") := "2E5hg",
+          ("kappa") := 2,
+          ("kind") := "pm_pair",
+          ("seed_sign") := -1,
+          ("seed_twoM") := 15,
+          ("twoJ") := 21,
+          ("vectors") := [
+            rec(
+              ("components") := [ rec( ("e") := 1, ("twoM") := 15 ), rec( ("e") := -1, ("twoM") := -15 ) ],
+              ("mu") := 1
+            )
           ]
         )
       ],

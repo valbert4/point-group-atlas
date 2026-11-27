@@ -3589,6 +3589,19 @@ o3d = <|
         |>,
         <|
           "dim" -> 2,
+          "irrep" -> "E_5/2",
+          "irrep_id" -> "E5h",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 11,
+          "twoJ" -> 11,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "twoM" -> -11|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
           "irrep" -> "E_7/2",
           "irrep_id" -> "E7h",
           "kappa" -> 1,
@@ -3611,19 +3624,6 @@ o3d = <|
           "vectors" -> {
             <|"components" -> {<|"e" -> 1, "twoM" -> 9|>}, "mu" -> 1|>,
             <|"components" -> {<|"e" -> 1, "twoM" -> -9|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_5/2",
-          "irrep_id" -> "E5h",
-          "kappa" -> 2,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 11,
-          "twoJ" -> 11,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> -11|>}, "mu" -> 2|>
           }
         |>,
         <|
@@ -3654,6 +3654,19 @@ o3d = <|
         |>,
         <|
           "dim" -> 2,
+          "irrep" -> "E_3/2",
+          "irrep_id" -> "E3h",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 13,
+          "twoJ" -> 13,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> 13|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "twoM" -> -13|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
           "irrep" -> "E_5/2",
           "irrep_id" -> "E5h",
           "kappa" -> 1,
@@ -3663,6 +3676,19 @@ o3d = <|
           "vectors" -> {
             <|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>,
             <|"components" -> {<|"e" -> 1, "twoM" -> 5|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_5/2",
+          "irrep_id" -> "E5h",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 11,
+          "twoJ" -> 13,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "twoM" -> -11|>}, "mu" -> 2|>
           }
         |>,
         <|
@@ -3689,32 +3715,6 @@ o3d = <|
           "vectors" -> {
             <|"components" -> {<|"e" -> 1, "twoM" -> 9|>}, "mu" -> 1|>,
             <|"components" -> {<|"e" -> -1, "twoM" -> -9|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_5/2",
-          "irrep_id" -> "E5h",
-          "kappa" -> 2,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 11,
-          "twoJ" -> 13,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> 1, "twoM" -> -11|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_3/2",
-          "irrep_id" -> "E3h",
-          "kappa" -> 2,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 13,
-          "twoJ" -> 13,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 13|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> -13|>}, "mu" -> 2|>
           }
         |>,
         <|
@@ -3732,6 +3732,19 @@ o3d = <|
         |>,
         <|
           "dim" -> 2,
+          "irrep" -> "E_1/2",
+          "irrep_id" -> "E1h",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 15,
+          "twoJ" -> 15,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> 15|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "twoM" -> -15|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
           "irrep" -> "E_3/2",
           "irrep_id" -> "E3h",
           "kappa" -> 1,
@@ -3745,6 +3758,19 @@ o3d = <|
         |>,
         <|
           "dim" -> 2,
+          "irrep" -> "E_3/2",
+          "irrep_id" -> "E3h",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 13,
+          "twoJ" -> 15,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> 13|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "twoM" -> -13|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
           "irrep" -> "E_5/2",
           "irrep_id" -> "E5h",
           "kappa" -> 1,
@@ -3754,6 +3780,19 @@ o3d = <|
           "vectors" -> {
             <|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>,
             <|"components" -> {<|"e" -> -1, "twoM" -> 5|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_5/2",
+          "irrep_id" -> "E5h",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 11,
+          "twoJ" -> 15,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "twoM" -> -11|>}, "mu" -> 2|>
           }
         |>,
         <|
@@ -3784,45 +3823,6 @@ o3d = <|
         |>,
         <|
           "dim" -> 2,
-          "irrep" -> "E_5/2",
-          "irrep_id" -> "E5h",
-          "kappa" -> 2,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 11,
-          "twoJ" -> 15,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> -11|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_3/2",
-          "irrep_id" -> "E3h",
-          "kappa" -> 2,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 13,
-          "twoJ" -> 15,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 13|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> 1, "twoM" -> -13|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_1/2",
-          "irrep_id" -> "E1h",
-          "kappa" -> 2,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 15,
-          "twoJ" -> 15,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 15|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> -15|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
           "irrep" -> "E_1/2",
           "irrep_id" -> "E1h",
           "kappa" -> 1,
@@ -3832,84 +3832,6 @@ o3d = <|
           "vectors" -> {
             <|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>,
             <|"components" -> {<|"e" -> 1, "twoM" -> 1|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_3/2",
-          "irrep_id" -> "E3h",
-          "kappa" -> 1,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 3,
-          "twoJ" -> 17,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> -3|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> 3|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_5/2",
-          "irrep_id" -> "E5h",
-          "kappa" -> 1,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 5,
-          "twoJ" -> 17,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> 1, "twoM" -> 5|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_7/2",
-          "irrep_id" -> "E7h",
-          "kappa" -> 1,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 7,
-          "twoJ" -> 17,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> -7|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> 7|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_7/2",
-          "irrep_id" -> "E7h",
-          "kappa" -> 2,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 9,
-          "twoJ" -> 17,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 9|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> -9|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_5/2",
-          "irrep_id" -> "E5h",
-          "kappa" -> 2,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 11,
-          "twoJ" -> 17,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> 1, "twoM" -> -11|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_3/2",
-          "irrep_id" -> "E3h",
-          "kappa" -> 2,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 13,
-          "twoJ" -> 17,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 13|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> -13|>}, "mu" -> 2|>
           }
         |>,
         <|
@@ -3940,80 +3862,15 @@ o3d = <|
         |>,
         <|
           "dim" -> 2,
-          "irrep" -> "E_1/2",
-          "irrep_id" -> "E1h",
-          "kappa" -> 1,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 1,
-          "twoJ" -> 19,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> 1|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
           "irrep" -> "E_3/2",
           "irrep_id" -> "E3h",
           "kappa" -> 1,
           "kind" -> "partner_pair",
           "seed_twoM" -> 3,
-          "twoJ" -> 19,
+          "twoJ" -> 17,
           "vectors" -> {
             <|"components" -> {<|"e" -> 1, "twoM" -> -3|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> 1, "twoM" -> 3|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_5/2",
-          "irrep_id" -> "E5h",
-          "kappa" -> 1,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 5,
-          "twoJ" -> 19,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> 5|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_7/2",
-          "irrep_id" -> "E7h",
-          "kappa" -> 1,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 7,
-          "twoJ" -> 19,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> -7|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> 1, "twoM" -> 7|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_7/2",
-          "irrep_id" -> "E7h",
-          "kappa" -> 2,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 9,
-          "twoJ" -> 19,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 9|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> 1, "twoM" -> -9|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_5/2",
-          "irrep_id" -> "E5h",
-          "kappa" -> 2,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 11,
-          "twoJ" -> 19,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> -11|>}, "mu" -> 2|>
+            <|"components" -> {<|"e" -> -1, "twoM" -> 3|>}, "mu" -> 2|>
           }
         |>,
         <|
@@ -4023,10 +3880,75 @@ o3d = <|
           "kappa" -> 2,
           "kind" -> "partner_pair",
           "seed_twoM" -> 13,
-          "twoJ" -> 19,
+          "twoJ" -> 17,
           "vectors" -> {
             <|"components" -> {<|"e" -> 1, "twoM" -> 13|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> 1, "twoM" -> -13|>}, "mu" -> 2|>
+            <|"components" -> {<|"e" -> -1, "twoM" -> -13|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_5/2",
+          "irrep_id" -> "E5h",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 5,
+          "twoJ" -> 17,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "twoM" -> 5|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_5/2",
+          "irrep_id" -> "E5h",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 11,
+          "twoJ" -> 17,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "twoM" -> -11|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_7/2",
+          "irrep_id" -> "E7h",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 7,
+          "twoJ" -> 17,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> -7|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "twoM" -> 7|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_7/2",
+          "irrep_id" -> "E7h",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 9,
+          "twoJ" -> 17,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> 9|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "twoM" -> -9|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_1/2",
+          "irrep_id" -> "E1h",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 1,
+          "twoJ" -> 19,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "twoM" -> 1|>}, "mu" -> 2|>
           }
         |>,
         <|
@@ -4059,6 +3981,32 @@ o3d = <|
           "dim" -> 2,
           "irrep" -> "E_3/2",
           "irrep_id" -> "E3h",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 3,
+          "twoJ" -> 19,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> -3|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "twoM" -> 3|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_3/2",
+          "irrep_id" -> "E3h",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 13,
+          "twoJ" -> 19,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> 13|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "twoM" -> -13|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_3/2",
+          "irrep_id" -> "E3h",
           "kappa" -> 3,
           "kind" -> "partner_pair",
           "seed_twoM" -> 19,
@@ -4066,6 +4014,58 @@ o3d = <|
           "vectors" -> {
             <|"components" -> {<|"e" -> 1, "twoM" -> -19|>}, "mu" -> 1|>,
             <|"components" -> {<|"e" -> 1, "twoM" -> 19|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_5/2",
+          "irrep_id" -> "E5h",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 5,
+          "twoJ" -> 19,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "twoM" -> 5|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_5/2",
+          "irrep_id" -> "E5h",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 11,
+          "twoJ" -> 19,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "twoM" -> -11|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_7/2",
+          "irrep_id" -> "E7h",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 7,
+          "twoJ" -> 19,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> -7|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "twoM" -> 7|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_7/2",
+          "irrep_id" -> "E7h",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 9,
+          "twoJ" -> 19,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> 9|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "twoM" -> -9|>}, "mu" -> 2|>
           }
         |>,
         <|
@@ -4079,84 +4079,6 @@ o3d = <|
           "vectors" -> {
             <|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>,
             <|"components" -> {<|"e" -> 1, "twoM" -> 1|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_3/2",
-          "irrep_id" -> "E3h",
-          "kappa" -> 1,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 3,
-          "twoJ" -> 21,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> -3|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> 3|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_5/2",
-          "irrep_id" -> "E5h",
-          "kappa" -> 1,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 5,
-          "twoJ" -> 21,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> 1, "twoM" -> 5|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_7/2",
-          "irrep_id" -> "E7h",
-          "kappa" -> 1,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 7,
-          "twoJ" -> 21,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> -7|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> 7|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_7/2",
-          "irrep_id" -> "E7h",
-          "kappa" -> 2,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 9,
-          "twoJ" -> 21,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 9|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> -9|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_5/2",
-          "irrep_id" -> "E5h",
-          "kappa" -> 2,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 11,
-          "twoJ" -> 21,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> 1, "twoM" -> -11|>}, "mu" -> 2|>
-          }
-        |>,
-        <|
-          "dim" -> 2,
-          "irrep" -> "E_3/2",
-          "irrep_id" -> "E3h",
-          "kappa" -> 2,
-          "kind" -> "partner_pair",
-          "seed_twoM" -> 13,
-          "twoJ" -> 21,
-          "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 13|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> -1, "twoM" -> -13|>}, "mu" -> 2|>
           }
         |>,
         <|
@@ -4189,6 +4111,32 @@ o3d = <|
           "dim" -> 2,
           "irrep" -> "E_3/2",
           "irrep_id" -> "E3h",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 3,
+          "twoJ" -> 21,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> -3|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "twoM" -> 3|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_3/2",
+          "irrep_id" -> "E3h",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 13,
+          "twoJ" -> 21,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> 13|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "twoM" -> -13|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_3/2",
+          "irrep_id" -> "E3h",
           "kappa" -> 3,
           "kind" -> "partner_pair",
           "seed_twoM" -> 19,
@@ -4202,6 +4150,32 @@ o3d = <|
           "dim" -> 2,
           "irrep" -> "E_5/2",
           "irrep_id" -> "E5h",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 5,
+          "twoJ" -> 21,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "twoM" -> 5|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_5/2",
+          "irrep_id" -> "E5h",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 11,
+          "twoJ" -> 21,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> 11|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> 1, "twoM" -> -11|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_5/2",
+          "irrep_id" -> "E5h",
           "kappa" -> 3,
           "kind" -> "partner_pair",
           "seed_twoM" -> 21,
@@ -4209,6 +4183,32 @@ o3d = <|
           "vectors" -> {
             <|"components" -> {<|"e" -> 1, "twoM" -> -21|>}, "mu" -> 1|>,
             <|"components" -> {<|"e" -> 1, "twoM" -> 21|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_7/2",
+          "irrep_id" -> "E7h",
+          "kappa" -> 1,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 7,
+          "twoJ" -> 21,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> -7|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "twoM" -> 7|>}, "mu" -> 2|>
+          }
+        |>,
+        <|
+          "dim" -> 2,
+          "irrep" -> "E_7/2",
+          "irrep_id" -> "E7h",
+          "kappa" -> 2,
+          "kind" -> "partner_pair",
+          "seed_twoM" -> 9,
+          "twoJ" -> 21,
+          "vectors" -> {
+            <|"components" -> {<|"e" -> 1, "twoM" -> 9|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> -1, "twoM" -> -9|>}, "mu" -> 2|>
           }
         |>
       },

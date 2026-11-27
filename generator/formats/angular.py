@@ -534,7 +534,15 @@ FLIP = {True: r"$\elt{C_{2x}}$",
 # the row of the table of cases, and the block of all the kets at J of the spherical groups
 # (restriction, the range of J and p, the block's irrep).
 ABELIAN_BLOCKS = (r"The subgroup %s acts diagonally on the kets, and $\grp{G} = \grp{A}$: every "
-                  r"ket is a block. Blocks are ordered by $J$, then $|m|$, $+m$ before $-m$.")
+                  r"ket is a block. Blocks are ordered by $J$, then irrep, then $|m|$%s.")
+# its tie-break, where a real spinor irrep holds both kets of one |m|
+ABELIAN_TIE = r", $+m$ before $-m$"
+# The order of the blocks of a finite group (CONVENTIONS.md section 14.1, rule 5): by J, irrep and
+# copy, the copies of one irrep at one J by |m| (a clause after it a slot); a continuous group of
+# volume I, whose instances in this order are those of |m|, keeps the sentence by |m|
+# (CONTINUOUS_ORDER).
+BLOCK_ORDER = r"ordered by $J$, then irrep, then $|m|$%s"
+CONTINUOUS_ORDER = r"ordered by $J$, then $|m|$%s"
 # Double's closed forms at half-integer J (CONVENTIONS.md section 26.2): the ket of the second irrep
 # of a complex pair, the pairs of copies of a real irrep, the pair of a second irrep (its factor a
 # slot) and the reason of these factors (section 26.1)
@@ -613,7 +621,7 @@ def bases_construction_closed(D, sb):
         # every ket is a block, as that sentence says, so there is no table of cases; the kets of
         # the second irrep of a complex pair and those of a real irrep follow time reversal
         fs = {ir["frobenius_schur"] for ir in D.rec["character_table"]["irreps"] if ir["spinor"]}
-        D.w(D.define("group.A") + ABELIAN_BLOCKS % subgroup
+        D.w(D.define("group.A") + ABELIAN_BLOCKS % (subgroup, ABELIAN_TIE if 1 in fs else "")
             + ((" " + SPINOR_COMPLEX_KET) if 0 in fs else "")
             + ((" " + SPINOR_REAL_PAIR) if 1 in fs else "")
             + (" " + SPINOR_REASON if fs & {0, 1} else ""))
@@ -659,11 +667,11 @@ def bases_construction_closed(D, sb):
                          r"$\jm{J}{m}$ and $\jm{J}{-m}$, and they give two one-dimensional "
                          r"blocks $\jm{J}{m} + s\,\jm{J}{-m}$, %s.%s" % (pair, partner_text))
             D.w(text + r" " + SPINOR_REASON
-                + r" The index $\mult$ counts the blocks of one irrep at one $J$.")
+                + r" Blocks are ordered by $J$, then irrep, then $|m|$.")
         else:
             two, pairs = two_dimensional(D), pairs_occur(sb)
-            order = r"ordered by $J$, then $|m|$%s" % (r", a pair with $s = +1$ first"
-                                                       if pairs else "")
+            order = (CONTINUOUS_ORDER % (r", a pair with $s = +1$ first" if pairs else "")
+                     if D.families else BLOCK_ORDER % "")
             if two:
                 # the order of the blocks after their construction (the flip, the block, its
                 # partners)
@@ -749,16 +757,22 @@ def rotation_closed(D, sb, cf, subgroup):
             text += " " + PAIR_FACTOR % (r"Otherwise they" if cplx else
                                          r"For $m > 0$ the kets $\jm{J}{m}$ and $\jm{J}{-m}$")
             text += " " + FACTOR_REASON
-        text += (r" Blocks are ordered by $J$, then $|m|$%s%s (CONVENTIONS.pdf, section 14.1)." % (
-            r", $+m$ before $-m$" if cplx else "", r", a pair with $s = +1$ first" if pairs else ""))
+        if D.families:
+            order = CONTINUOUS_ORDER % ((r", $+m$ before $-m$" if cplx else "")
+                                        + (r", a pair with $s = +1$ first" if pairs else ""))
+        else:
+            # two copies of one irrep at one |m| are a pair of each sign: the kets m and -m of a
+            # complex pair carry its two irreps
+            order = BLOCK_ORDER % (r", a pair with $s = +1$ first" if pairs else "")
+        text += r" Blocks are %s (CONVENTIONS.pdf, section 14.1)." % order
         D.w(text)
     else:
         c2x = cf["flip"] == "C_2x"
         text = (D.define("group.A", "function.character.abelian") + INDEX_TWO % subgroup + " "
                 + D.define(*(() if c2x else ("element.mirror.angle",)))
                 + r"The flip %s sends $m$ to $-m$. " % FLIP[c2x])
-        order = r"ordered by $J$, then $|m|$%s" % (r", a pair with $s = +1$ first"
-                                                   if pairs else "")
+        order = (CONTINUOUS_ORDER % (r", a pair with $s = +1$ first" if pairs else "")
+                 if D.families else BLOCK_ORDER % "")
         pair = (" " + PAIR_FACTOR % r"Kets $\jm{J}{m}$ and $\jm{J}{-m}$ of one character of "
                 r"$\grp{A}$") if pairs else ""
         reason = (" " + FACTOR_REASON) if two_i or pairs else ""

@@ -16,10 +16,11 @@ axes, else (sigma_v(xz), 0)) maps |j, m> to phi_m |j, -m>.  For m > 0 (|m| ascen
                   half-integer j), the s of argument in [0, pi) first;
     single_ket    |j, 0> (integer j), and every ket when 2G = A (+m before -m).
 
-kappa counts the blocks of one irrep at one 2J in this order.  A vector is written by its
-coefficients e_m (v = tot^-1/2 sum_m e_m sqrt(F_m) |j, m>, F_m = (j+m)! (j-m)!), each of modulus
-1, so tot = |e|^2 F_m summed.  At the other parity, -p, a block keeps its kets and its label is
-G (x) det_G, the partner order and c set again by the rule above.
+kappa counts the blocks of one irrep at one 2J in this order, and the records list the blocks
+of one 2J by irrep, then kappa (Rotation's CONVENTIONS section 14.1, rule 5).  A vector is
+written by its coefficients e_m (v = tot^-1/2 sum_m e_m sqrt(F_m) |j, m>, F_m = (j+m)!
+(j-m)!), each of modulus 1, so tot = |e|^2 F_m summed.  At the other parity, -p, a block keeps
+its kets and its label is G (x) det_G, the partner order and c set again by the rule above.
 """
 from math import lcm
 
