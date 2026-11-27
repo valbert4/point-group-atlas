@@ -33,9 +33,21 @@ before it (Gram-Schmidt, as in section 14.2, under the inner product in which th
 states and the determinants are orthonormal: sum e^* e' F, F = v_1! ... v_N!, or sum e^* e'), so
 that copy 1 is the echelon vector; partner mu is (d/|G|) sum_g D^Lambda_(mu,1)(g)^* g applied to
 partner 1.  The copies in different r^(2k) H_l are orthogonal already, H_l being orthogonal to
-r^2 times the states of l - 2 quanta.  Each vector is then divided by a positive rational so that
-the coordinates of its coefficients are coprime integers (section 14.4); the states are
-unchanged.
+r^2 times the states of l - 2 quanta.
+
+Time reversal (CONVENTIONS.md section 19, bases.time_reversal): it acts on the partners of the
+level, and on the creation operators of the quanta and of the electrons, by the level's matrix N,
+Theta a+_mu = sum_nu a+_nu N_(nu,mu), and on the coefficients by complex conjugation; the spin is a
+spectator.  The copies of a real irrep Lambda in a space are then those of the rule R1 in the real
+coordinates of the space's coordinates in their order (the real form of tau, its reduced row
+echelon basis over R, Gram-Schmidt, the phase form), so that Theta acts on each by N^Lambda; the
+copies of the first irrep of a complex pair keep the rule above, with the sign of the phase form,
+and those of its partner are their images under Theta.  The arithmetic of this step runs in
+Q(zeta_M'), M' = lcm(M, 4), which holds i.
+
+Each vector is then divided by a positive rational so that the coordinates of its coefficients
+are coprime integers (section 14.4), in the power basis of Q(zeta_M), or of Q(zeta_M') for a vector
+with a coefficient outside Q(zeta_M); the states are unchanged.
 
 The arithmetic is that of one field Q(zeta_M) (exact/field.py), M the least common multiple of the
 conductors of the group's irrep matrices, and the partner law is asserted on a generating set of
@@ -45,6 +57,7 @@ from fractions import Fraction as F
 from itertools import combinations
 from math import factorial, gcd, lcm, prod
 
+from ..bases import time_reversal as TR
 from ..exact.cyclo import Cyc
 from ..exact.field import Elem, Field
 
@@ -97,14 +110,22 @@ class Setting:
                      for i, mats in raw.items()}
         self.trivial = next(ir["id"] for ir in self.irreps
                             if all(Cyc.from_json(x) == Cyc.one() for x in ir["chi"]))
+        # time reversal: the field with i, the case of each irrep and the level's N
+        self.K2 = self.K if M % 4 == 0 else Field(lcm(M, 4))
+        self.R = TR.Arith(self.K2)
+        self.kinds = TR.pairs(rec)
         self._json = {}
 
     def value(self, x):
-        """The exact value of an element of the field, at its minimal conductor."""
-        key = (x.n, x.d)
+        """The exact value of an element of the field or of K2, at its minimal conductor."""
+        key = (x.K.M, x.n, x.d)
         if key not in self._json:
             self._json[key] = x.to_cyc().to_json()
         return self._json[key]
+
+    def lift(self, x):
+        """An element of K as an element of K2."""
+        return x if self.K2 is self.K else self.K2.from_cyc(x.to_cyc())
 
 
 # ---------------------------------------------------------------- linear algebra
@@ -379,14 +400,46 @@ def spin_raising(N, src, dst, K):
 
 
 # ---------------------------------------------------------------- the blocks
-def blocks(S, acts, spaces, where, weights):
+def _time_reversed(S, irrep, key, copies, theta, weights, firsts):
+    """The copies of the irrep in one space adapted to time reversal (the module docstring): the
+    given copies (Gram-Schmidt, lists over K) become lists over K2; theta is time reversal on a
+    list over K2; firsts holds the copies of the first irrep of each complex pair by space."""
+    K2, R = S.K2, S.R
+    keys = list(range(len(weights)))
+    w2 = [S.lift(w) for w in weights]
+    given = [[{k: S.lift(x) for k, x in enumerate(v) if not x.is_zero()} for v in cp]
+             for cp in copies]
+
+    def th(v):
+        out = theta([v.get(k, K2.zero) for k in keys])
+        return {k: x for k, x in enumerate(out) if not x.is_zero()}
+
+    kind = S.kinds[irrep]
+    if kind[0] == "a":
+        new = [vs for _, vs in TR.adapted(R, given, kind[1][0], kind[1][1], keys, th,
+                                            lambda k: w2[k])]
+    elif kind[0] == "c":
+        new = [vs for _, vs in TR.phase_form(R, given, keys)]
+        firsts[(key, irrep)] = new
+    else:
+        src = firsts[(key, kind[1])]
+        if len(src) != len(given):
+            raise AssertionError("%s: %d copies of %s, %d of its partner" % (
+                key, len(given), irrep, len(src)))
+        new = [[th(v) for v in cp] for cp in src]
+    return [[[v.get(k, K2.zero) for k in keys] for v in cp] for cp in new]
+
+
+def blocks(S, acts, spaces, where, weights, theta):
     """The blocks of every irrep in each space: spaces is [(key, vectors, expected)], the vectors
     in the coordinates of acts (acts[g] the matrices of the elements), expected
     {irrep id: number of copies} and weights the norms of the coordinates (inner()); the result is
     {key: [(irrep, kappa, partners)]}, the irreps in their order, the copies of an irrep in a space
-    orthogonal, which is asserted on every partner."""
+    orthogonal, which is asserted on every partner; theta is time reversal on a vector over K2, to
+    which the copies are then adapted (_time_reversed), their partners lists over K2."""
     K = S.K
     out = {key: [] for key, _, _ in spaces}
+    firsts = {}
     for ir in S.irreps:
         i, d = ir["id"], ir["dim"]
         D = S.mats[i]
@@ -423,17 +476,53 @@ def blocks(S, acts, spaces, where, weights):
                             raise AssertionError("%s, %s: copies %d and %d of %s are not "
                                                  "orthogonal" % (where, key, lam, kappa, i))
                 copies.append(vecs)
+            final = _time_reversed(S, i, key, copies, theta, weights, firsts)
+            for kappa, vecs in enumerate(final, 1):
                 out[key].append((ir, kappa, vecs))
     return out
 
 
+def level_n(S, level):
+    """The matrix N of the level's irrep over K2, N[pi[mu]][mu] = sigma[mu]."""
+    pi, sigma = S.kinds[level][1]
+    K2 = S.K2
+    N = [[K2.zero] * len(pi) for _ in pi]
+    for mu, (r, sg) in enumerate(zip(pi, sigma)):
+        N[r][mu] = K2.rational(sg)
+    return N
+
+
+def _theta(A, K2):
+    """Time reversal on the coordinates: x -> A conj(x)."""
+    def theta(x):
+        return _matvec(A, [y.conjugate() for y in x], K2)
+    return theta
+
+
+def _in_field(S, v):
+    """The vector (a list over K2) over the matrices' field K when every coefficient lies in K, so that
+    its coprime coordinates are those of K's power basis as before time reversal; otherwise over K2."""
+    if S.K2 is S.K:
+        return v, S.K
+    out = []
+    for x in v:
+        c = x.to_cyc().minimal()
+        if S.K.M % c.M:
+            return v, S.K2
+        out.append(S.K.from_cyc(c))
+    return out, S.K
+
+
 def _block_json(S, ir, kappa, vecs, keys, key_json, extra):
     out = dict(extra)
+    vectors = []
+    for mu, v in enumerate(vecs, 1):
+        w, K = _in_field(S, v)
+        vectors.append({"mu": mu, "components": [dict(key_json(keys[k]), e=S.value(x))
+                                                 for k, x in enumerate(coprime(w, K))
+                                                 if not x.is_zero()]})
     out.update({"irrep": ir["label"], "irrep_id": ir["id"], "kappa": kappa, "dim": ir["dim"],
-                "vectors": [{"mu": mu, "components": [
-                    dict(key_json(keys[k]), e=S.value(x))
-                    for k, x in enumerate(coprime(v, S.K)) if not x.is_zero()]}
-                    for mu, v in enumerate(vecs, 1)]})
+                "vectors": vectors})
     return out
 
 
@@ -450,10 +539,12 @@ def quadratic_form(S, mats, N):
     return {basis[k]: x for k, x in enumerate(found[0]) if not x.is_zero()}
 
 
-def symmetric_bases(S, mats, N, harmonic_table, vmax):
+def symmetric_bases(S, mats, N, harmonic_table, vmax, level):
     """The overtone blocks for v = 0 .. vmax, l = v, v - 2, ..., in each r^(2k) H_l the copies of
-    the irreps that harmonic_table[l] = {irrep id: h(l)} gives."""
+    the irreps that harmonic_table[l] = {irrep id: h(l)} gives; level the id of the level's
+    irrep, whose N gives time reversal on the quanta."""
     K = S.K
+    NL = level_n(S, level)
     r2 = quadratic_form(S, mats, N)
     B = [[K.zero] * N for _ in range(N)]
     half = K.rational(F(1, 2))
@@ -482,7 +573,8 @@ def symmetric_bases(S, mats, N, harmonic_table, vmax):
                 vectors.append(vec)
             spaces.append((l, vectors, harmonic_table[l]))
         weights = [K.rational(prod(factorial(a) for a in b)) for b in basis]
-        got = blocks(S, acts, spaces, "Sym^%d" % v, weights)
+        theta = _theta(symmetric_matrix(NL, N, basis, S.K2), S.K2)
+        got = blocks(S, acts, spaces, "Sym^%d" % v, weights, theta)
         for l, _, _ in spaces:
             for ir, kappa, vecs in got[l]:
                 out.append(_block_json(S, ir, kappa, vecs, basis, lambda q: {"quanta": list(q)},
@@ -490,8 +582,9 @@ def symmetric_bases(S, mats, N, harmonic_table, vmax):
     return out
 
 
-def two_column_bases(S, mats, N, n, twoS, table):
-    """The blocks of the term table of n electrons of spin S, at M_S = S."""
+def two_column_bases(S, mats, N, n, twoS, table, level):
+    """The blocks of the term table of n electrons of spin S, at M_S = S; level the id of the
+    level's irrep, whose N gives time reversal on the orbitals (the spin a spectator)."""
     K = S.K
     basis = determinants(N, n, twoS)
     if not basis:
@@ -508,6 +601,7 @@ def two_column_bases(S, mats, N, n, twoS, table):
     def key(det):
         return {"determinant": [[so[p][0] + 1, so[p][1]] for p in det]}
 
+    theta = _theta(wedge_matrix(level_n(S, level), N, basis, S.K2), S.K2)
     got = blocks(S, acts, [(0, space, table)], "n = %d, 2S = %d" % (n, twoS),
-                 [K.one] * len(basis))
+                 [K.one] * len(basis), theta)
     return [_block_json(S, ir, kappa, vecs, basis, key, {}) for ir, kappa, vecs in got[0]]

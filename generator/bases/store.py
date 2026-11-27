@@ -10,7 +10,9 @@ multiplicity of Gamma in D^(J).  The copies kappa = 1, 2, ... of Gamma are the v
 a basis of that range in the e-basis (exact_fields: the reduced-row-echelon basis for T and O, the
 basis of exact_fields.cyc_column_space for I), and the partners of copy kappa are
 v_j = P_j s_kappa, so that D^(J)(g) v_i = sum_j D^Gamma(g)_{ji} v_j for every element g.  The file
-holds their Gram-Schmidt orthogonalisation (orthonormal.py), so that the copies are orthonormal.
+holds their Gram-Schmidt orthogonalisation (orthonormal.py), so that the copies are orthonormal, then
+the copies adapted to time reversal (time_reversal.py): those of a real irrep by the rule R1 and
+the phase form, those of the second irrep of a complex pair the images of the first's.
 
 A vector sum_m w_m e_m is written in the kets |J, m> as the pairs (e_m, r_m) = (w_m, F_m / tot),
 F_m = (J + m)! (J - m)!, tot = sum_m |w_m|^2 F_m, over the m with w_m != 0: its amplitude on
@@ -27,7 +29,7 @@ from .. import names, serialize
 from ..exact import value
 from ..exact.cyclo import Cyc, csum
 from . import exact_fields as X
-from . import orthonormal
+from . import orthonormal, time_reversal
 
 
 def _weights(J):
@@ -187,7 +189,8 @@ def write_bases(task):
     record = serialize.read_json(names.record_path(G))
     doc = {"J": J, "blocks": (icosahedral_blocks if G == "I" else cubic_blocks)(record, J),
            "group": G, "schema": names.BASES_TAG}
-    doc["blocks"] = blocks = orthonormal.orthonormal_blocks(doc)
+    doc["blocks"] = orthonormal.orthonormal_blocks(doc)
+    doc["blocks"] = blocks = time_reversal.adapted_bases(doc, record, orthonormal.FIELD[G])
     serialize.write_json_gz(names.bases_path(G, J), doc)
     return names.relative(names.bases_path(G, J)), len(blocks)
 

@@ -130946,7 +130946,7 @@ o3t = {
                 'D^(8)': 'D^(8)',
                 'D^(9)': 'D^(9)'
             },
-            'parity_rule': 'D^(J,-(-1)^J)|G = (D^(J,(-1)^J)|G) (x) det_G: at the other parity a block keeps its kets and its label is multiplied by det_G (parity_label_map); inside a 2-D block the partner order and the sign of mu = 2 are set by rule 4 at that parity (CONVENTIONS.md section 14.1)',
+            'parity_rule': 'D^(J,-(-1)^J)|G = (D^(J,(-1)^J)|G) (x) det_G: at the other parity a block keeps its kets and its label is multiplied by det_G (parity_label_map); inside a 2-D block the partner order, the sign of mu = 2 and the factor i are set by rule 4 at that parity (CONVENTIONS.md section 14.1)',
             'self_conjugacy_condition': {'reason': 'not-defined-for-family', 'value': None},
             'structure_theorem': 'D^(J,p)|SO(3) = D^(J) (O(3): D^(J,p)): the 2J+1 kets |J,m> are the partners of one block, mu = J - m + 1'
         },
@@ -131583,6 +131583,7 @@ o3t = {
                                                 {'e': -sqrt(Rational(6,1)), 'quanta': [1, 1, 1, 0, 0]},
                                                 {'e': Rational(1,1), 'quanta': [0, 3, 0, 0, 0]}
                                             ],
+                                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                             'mu': 1
                                         }
                                     ]
@@ -131655,6 +131656,7 @@ o3t = {
                                                 {'e': -sqrt(Rational(6,1)), 'quanta': [2, 1, 1, 0, 0]},
                                                 {'e': Rational(1,1), 'quanta': [1, 3, 0, 0, 0]}
                                             ],
+                                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                             'mu': 1
                                         }
                                     ]
@@ -132703,7 +132705,11 @@ o3t = {
                                             'J': 1,
                                             'kappa': 1,
                                             'vectors': [
-                                                {'components': [{'determinant': [[1, 1], [2, 1]], 'e': Rational(1,1)}], 'mu': 1}
+                                                {
+                                                    'components': [{'determinant': [[1, 1], [2, 1]], 'e': Rational(1,1)}],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                                    'mu': 1
+                                                }
                                             ]
                                         }
                                     ],
@@ -132721,6 +132727,7 @@ o3t = {
                                             'vectors': [
                                                 {
                                                     'components': [{'determinant': [[1, 1], [1, -1], [2, 1]], 'e': Rational(1,1)}],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -132753,6 +132760,7 @@ o3t = {
                                             'vectors': [
                                                 {
                                                     'components': [{'determinant': [[1, 1], [2, 1], [3, 1]], 'e': Rational(1,1)}],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -132805,6 +132813,7 @@ o3t = {
                                             'vectors': [
                                                 {
                                                     'components': [{'determinant': [[1, 1], [1, -1], [2, 1], [3, 1]], 'e': Rational(1,1)}],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -132946,7 +132955,11 @@ o3t = {
                                             'J': 3,
                                             'kappa': 1,
                                             'vectors': [
-                                                {'components': [{'determinant': [[1, 1], [2, 1]], 'e': Rational(1,1)}], 'mu': 1}
+                                                {
+                                                    'components': [{'determinant': [[1, 1], [2, 1]], 'e': Rational(1,1)}],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                                    'mu': 1
+                                                }
                                             ]
                                         },
                                         {
@@ -132958,6 +132971,7 @@ o3t = {
                                                         {'determinant': [[1, 1], [4, 1]], 'e': Rational(2,1)},
                                                         {'determinant': [[2, 1], [3, 1]], 'e': -sqrt(Rational(6,1))}
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -132977,6 +132991,7 @@ o3t = {
                                             'vectors': [
                                                 {
                                                     'components': [{'determinant': [[1, 1], [1, -1], [2, 1]], 'e': Rational(1,1)}],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133005,6 +133020,7 @@ o3t = {
                                                         {'determinant': [[1, 1], [2, -1], [3, 1]], 'e': -sqrt(Rational(6,1))},
                                                         {'determinant': [[1, -1], [2, 1], [3, 1]], 'e': sqrt(Rational(24,1))}
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133056,6 +133072,7 @@ o3t = {
                                                         {'determinant': [[2, 1], [2, -1], [4, 1]], 'e': Rational(9,1)},
                                                         {'determinant': [[2, 1], [3, 1], [3, -1]], 'e': Rational(9,1)}
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133081,6 +133098,7 @@ o3t = {
                                             'vectors': [
                                                 {
                                                     'components': [{'determinant': [[1, 1], [2, 1], [3, 1]], 'e': Rational(1,1)}],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133094,6 +133112,7 @@ o3t = {
                                                         {'determinant': [[1, 1], [2, 1], [5, 1]], 'e': Rational(3,1)},
                                                         {'determinant': [[1, 1], [3, 1], [4, 1]], 'e': -sqrt(Rational(6,1))}
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133138,11 +133157,11 @@ o3t = {
                                             'vectors': [
                                                 {
                                                     'components': [
-                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [4, -1]], 'e': Rational(-3,1)},
-                                                        {'determinant': [[1, 1], [1, -1], [2, -1], [4, 1]], 'e': Rational(3,1)},
-                                                        {'determinant': [[1, 1], [1, -1], [3, 1], [3, -1]], 'e': Rational(5,1)},
-                                                        {'determinant': [[1, 1], [2, 1], [2, -1], [3, -1]], 'e': sqrt(Rational(6,1))},
-                                                        {'determinant': [[1, -1], [2, 1], [2, -1], [3, 1]], 'e': -sqrt(Rational(6,1))}
+                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [4, -1]], 'e': Rational(3,1)},
+                                                        {'determinant': [[1, 1], [1, -1], [2, -1], [4, 1]], 'e': Rational(-3,1)},
+                                                        {'determinant': [[1, 1], [1, -1], [3, 1], [3, -1]], 'e': Rational(-5,1)},
+                                                        {'determinant': [[1, 1], [2, 1], [2, -1], [3, -1]], 'e': -sqrt(Rational(6,1))},
+                                                        {'determinant': [[1, -1], [2, 1], [2, -1], [3, 1]], 'e': sqrt(Rational(6,1))}
                                                     ],
                                                     'mu': 1
                                                 }
@@ -133163,6 +133182,7 @@ o3t = {
                                                         {'determinant': [[1, -1], [2, 1], [2, -1], [4, 1]], 'e': Rational(-3,1)},
                                                         {'determinant': [[1, -1], [2, 1], [3, 1], [3, -1]], 'e': Rational(-3,1)}
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133193,16 +133213,16 @@ o3t = {
                                             'vectors': [
                                                 {
                                                     'components': [
-                                                        {'determinant': [[1, 1], [1, -1], [3, 1], [5, -1]], 'e': -sqrt(Rational(6,1))},
-                                                        {'determinant': [[1, 1], [1, -1], [3, -1], [5, 1]], 'e': sqrt(Rational(6,1))},
-                                                        {'determinant': [[1, 1], [1, -1], [4, 1], [4, -1]], 'e': Rational(6,1)},
-                                                        {'determinant': [[1, 1], [2, 1], [2, -1], [5, -1]], 'e': Rational(-3,1)},
-                                                        {'determinant': [[1, 1], [2, -1], [3, 1], [4, -1]], 'e': -sqrt(Rational(6,1))},
-                                                        {'determinant': [[1, 1], [2, -1], [3, -1], [4, 1]], 'e': sqrt(Rational(6,1))},
-                                                        {'determinant': [[1, -1], [2, 1], [2, -1], [5, 1]], 'e': Rational(3,1)},
-                                                        {'determinant': [[1, -1], [2, 1], [3, 1], [4, -1]], 'e': sqrt(Rational(6,1))},
-                                                        {'determinant': [[1, -1], [2, 1], [3, -1], [4, 1]], 'e': -sqrt(Rational(6,1))},
-                                                        {'determinant': [[2, 1], [2, -1], [3, 1], [3, -1]], 'e': Rational(6,1)}
+                                                        {'determinant': [[1, 1], [1, -1], [3, 1], [5, -1]], 'e': sqrt(Rational(6,1))},
+                                                        {'determinant': [[1, 1], [1, -1], [3, -1], [5, 1]], 'e': -sqrt(Rational(6,1))},
+                                                        {'determinant': [[1, 1], [1, -1], [4, 1], [4, -1]], 'e': Rational(-6,1)},
+                                                        {'determinant': [[1, 1], [2, 1], [2, -1], [5, -1]], 'e': Rational(3,1)},
+                                                        {'determinant': [[1, 1], [2, -1], [3, 1], [4, -1]], 'e': sqrt(Rational(6,1))},
+                                                        {'determinant': [[1, 1], [2, -1], [3, -1], [4, 1]], 'e': -sqrt(Rational(6,1))},
+                                                        {'determinant': [[1, -1], [2, 1], [2, -1], [5, 1]], 'e': Rational(-3,1)},
+                                                        {'determinant': [[1, -1], [2, 1], [3, 1], [4, -1]], 'e': -sqrt(Rational(6,1))},
+                                                        {'determinant': [[1, -1], [2, 1], [3, -1], [4, 1]], 'e': sqrt(Rational(6,1))},
+                                                        {'determinant': [[2, 1], [2, -1], [3, 1], [3, -1]], 'e': Rational(-6,1)}
                                                     ],
                                                     'mu': 1
                                                 }
@@ -133279,6 +133299,7 @@ o3t = {
                                             'vectors': [
                                                 {
                                                     'components': [{'determinant': [[1, 1], [1, -1], [2, 1], [3, 1]], 'e': Rational(1,1)}],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133306,6 +133327,7 @@ o3t = {
                                                         {'determinant': [[1, 1], [2, 1], [2, -1], [4, 1]], 'e': Rational(1,1)},
                                                         {'determinant': [[1, 1], [2, 1], [3, 1], [3, -1]], 'e': Rational(1,1)}
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133316,11 +133338,12 @@ o3t = {
                                             'vectors': [
                                                 {
                                                     'components': [
-                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [5, 1]], 'e': -sqrt(Rational(24,1))},
-                                                        {'determinant': [[1, 1], [1, -1], [3, 1], [4, 1]], 'e': Rational(6,1)},
-                                                        {'determinant': [[1, 1], [2, 1], [2, -1], [4, 1]], 'e': sqrt(Rational(6,1))},
-                                                        {'determinant': [[1, 1], [2, 1], [3, 1], [3, -1]], 'e': sqrt(Rational(6,1))}
+                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [5, 1]], 'e': sqrt(Rational(24,1))},
+                                                        {'determinant': [[1, 1], [1, -1], [3, 1], [4, 1]], 'e': Rational(-6,1)},
+                                                        {'determinant': [[1, 1], [2, 1], [2, -1], [4, 1]], 'e': -sqrt(Rational(6,1))},
+                                                        {'determinant': [[1, 1], [2, 1], [3, 1], [3, -1]], 'e': -sqrt(Rational(6,1))}
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133355,6 +133378,7 @@ o3t = {
                                                         {'determinant': [[1, -1], [2, 1], [3, 1], [5, 1]], 'e': sqrt(Rational(24,1))},
                                                         {'determinant': [[2, 1], [2, -1], [3, 1], [4, 1]], 'e': sqrt(Rational(24,1))}
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133374,6 +133398,7 @@ o3t = {
                                                         {'determinant': [[1, -1], [2, 1], [3, 1], [5, 1]], 'e': Rational(-3,1)},
                                                         {'determinant': [[2, 1], [2, -1], [3, 1], [4, 1]], 'e': Rational(-3,1)}
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133433,6 +133458,7 @@ o3t = {
                                                         {'determinant': [[1, 1], [1, -1], [2, 1], [2, -1], [4, 1]], 'e': Rational(1,1)},
                                                         {'determinant': [[1, 1], [1, -1], [2, 1], [3, 1], [3, -1]], 'e': Rational(1,1)}
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133466,14 +133492,14 @@ o3t = {
                                                     'components': [
                                                         {
                                                             'determinant': [[1, 1], [1, -1], [2, 1], [2, -1], [5, 1]],
-                                                            'e': -sqrt(Rational(486,1))
+                                                            'e': sqrt(Rational(486,1))
                                                         },
-                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [3, 1], [4, -1]], 'e': Rational(38,1)},
-                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [3, -1], [4, 1]], 'e': Rational(-10,1)},
-                                                        {'determinant': [[1, 1], [1, -1], [2, -1], [3, 1], [4, 1]], 'e': Rational(-28,1)},
+                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [3, 1], [4, -1]], 'e': Rational(-38,1)},
+                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [3, -1], [4, 1]], 'e': Rational(10,1)},
+                                                        {'determinant': [[1, 1], [1, -1], [2, -1], [3, 1], [4, 1]], 'e': Rational(28,1)},
                                                         {
                                                             'determinant': [[1, 1], [2, 1], [2, -1], [3, 1], [3, -1]],
-                                                            'e': sqrt(Rational(3456,1))
+                                                            'e': -sqrt(Rational(3456,1))
                                                         }
                                                     ],
                                                     'mu': 1
@@ -133497,6 +133523,7 @@ o3t = {
                                                         {'determinant': [[1, 1], [2, 1], [2, -1], [3, -1], [4, 1]], 'e': Rational(2,1)},
                                                         {'determinant': [[1, -1], [2, 1], [2, -1], [3, 1], [4, 1]], 'e': Rational(-4,1)}
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133509,31 +133536,32 @@ o3t = {
                                                     'components': [
                                                         {
                                                             'determinant': [[1, 1], [1, -1], [2, 1], [3, 1], [5, -1]],
-                                                            'e': -sqrt(Rational(384,1))
+                                                            'e': sqrt(Rational(384,1))
                                                         },
                                                         {
                                                             'determinant': [[1, 1], [1, -1], [2, 1], [3, -1], [5, 1]],
-                                                            'e': sqrt(Rational(96,1))
+                                                            'e': -sqrt(Rational(96,1))
                                                         },
-                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [4, 1], [4, -1]], 'e': Rational(18,1)},
+                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [4, 1], [4, -1]], 'e': Rational(-18,1)},
                                                         {
                                                             'determinant': [[1, 1], [1, -1], [2, -1], [3, 1], [5, 1]],
-                                                            'e': sqrt(Rational(96,1))
+                                                            'e': -sqrt(Rational(96,1))
                                                         },
-                                                        {'determinant': [[1, 1], [1, -1], [3, 1], [3, -1], [4, 1]], 'e': Rational(12,1)},
+                                                        {'determinant': [[1, 1], [1, -1], [3, 1], [3, -1], [4, 1]], 'e': Rational(-12,1)},
                                                         {
                                                             'determinant': [[1, 1], [2, 1], [2, -1], [3, 1], [4, -1]],
-                                                            'e': sqrt(Rational(6,1))
+                                                            'e': -sqrt(Rational(6,1))
                                                         },
                                                         {
                                                             'determinant': [[1, 1], [2, 1], [2, -1], [3, -1], [4, 1]],
-                                                            'e': sqrt(Rational(6,1))
+                                                            'e': -sqrt(Rational(6,1))
                                                         },
                                                         {
                                                             'determinant': [[1, -1], [2, 1], [2, -1], [3, 1], [4, 1]],
-                                                            'e': -sqrt(Rational(24,1))
+                                                            'e': sqrt(Rational(24,1))
                                                         }
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133569,29 +133597,29 @@ o3t = {
                                             'vectors': [
                                                 {
                                                     'components': [
-                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [4, 1], [5, -1]], 'e': Rational(-6,1)},
-                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [4, -1], [5, 1]], 'e': Rational(16,1)},
-                                                        {'determinant': [[1, 1], [1, -1], [2, -1], [4, 1], [5, 1]], 'e': Rational(-10,1)},
+                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [4, 1], [5, -1]], 'e': Rational(6,1)},
+                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [4, -1], [5, 1]], 'e': Rational(-16,1)},
+                                                        {'determinant': [[1, 1], [1, -1], [2, -1], [4, 1], [5, 1]], 'e': Rational(10,1)},
                                                         {
                                                             'determinant': [[1, 1], [1, -1], [3, 1], [4, 1], [4, -1]],
-                                                            'e': sqrt(Rational(384,1))
+                                                            'e': -sqrt(Rational(384,1))
                                                         },
                                                         {
                                                             'determinant': [[1, 1], [2, 1], [2, -1], [3, 1], [5, -1]],
-                                                            'e': -sqrt(Rational(54,1))
+                                                            'e': sqrt(Rational(54,1))
                                                         },
                                                         {
                                                             'determinant': [[1, 1], [2, 1], [2, -1], [3, -1], [5, 1]],
-                                                            'e': sqrt(Rational(384,1))
+                                                            'e': -sqrt(Rational(384,1))
                                                         },
-                                                        {'determinant': [[1, 1], [2, 1], [2, -1], [4, 1], [4, -1]], 'e': Rational(2,1)},
-                                                        {'determinant': [[1, 1], [2, 1], [3, 1], [3, -1], [4, -1]], 'e': Rational(-4,1)},
-                                                        {'determinant': [[1, 1], [2, -1], [3, 1], [3, -1], [4, 1]], 'e': Rational(14,1)},
+                                                        {'determinant': [[1, 1], [2, 1], [2, -1], [4, 1], [4, -1]], 'e': Rational(-2,1)},
+                                                        {'determinant': [[1, 1], [2, 1], [3, 1], [3, -1], [4, -1]], 'e': Rational(4,1)},
+                                                        {'determinant': [[1, 1], [2, -1], [3, 1], [3, -1], [4, 1]], 'e': Rational(-14,1)},
                                                         {
                                                             'determinant': [[1, -1], [2, 1], [2, -1], [3, 1], [5, 1]],
-                                                            'e': -sqrt(Rational(150,1))
+                                                            'e': sqrt(Rational(150,1))
                                                         },
-                                                        {'determinant': [[1, -1], [2, 1], [3, 1], [3, -1], [4, 1]], 'e': Rational(-10,1)}
+                                                        {'determinant': [[1, -1], [2, 1], [3, 1], [3, -1], [4, 1]], 'e': Rational(10,1)}
                                                     ],
                                                     'mu': 1
                                                 }
@@ -133603,25 +133631,25 @@ o3t = {
                                             'vectors': [
                                                 {
                                                     'components': [
-                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [4, 1], [5, -1]], 'e': Rational(-2,1)},
-                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [4, -1], [5, 1]], 'e': Rational(-3,1)},
-                                                        {'determinant': [[1, 1], [1, -1], [2, -1], [4, 1], [5, 1]], 'e': Rational(5,1)},
-                                                        {'determinant': [[1, 1], [1, -1], [3, 1], [3, -1], [5, 1]], 'e': Rational(5,1)},
+                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [4, 1], [5, -1]], 'e': Rational(2,1)},
+                                                        {'determinant': [[1, 1], [1, -1], [2, 1], [4, -1], [5, 1]], 'e': Rational(3,1)},
+                                                        {'determinant': [[1, 1], [1, -1], [2, -1], [4, 1], [5, 1]], 'e': Rational(-5,1)},
+                                                        {'determinant': [[1, 1], [1, -1], [3, 1], [3, -1], [5, 1]], 'e': Rational(-5,1)},
                                                         {
                                                             'determinant': [[1, 1], [1, -1], [3, 1], [4, 1], [4, -1]],
-                                                            'e': sqrt(Rational(6,1))
-                                                        },
-                                                        {
-                                                            'determinant': [[1, 1], [2, 1], [2, -1], [3, 1], [5, -1]],
                                                             'e': -sqrt(Rational(6,1))
                                                         },
                                                         {
-                                                            'determinant': [[1, 1], [2, 1], [2, -1], [3, -1], [5, 1]],
+                                                            'determinant': [[1, 1], [2, 1], [2, -1], [3, 1], [5, -1]],
                                                             'e': sqrt(Rational(6,1))
                                                         },
-                                                        {'determinant': [[1, 1], [2, 1], [2, -1], [4, 1], [4, -1]], 'e': Rational(4,1)},
-                                                        {'determinant': [[1, 1], [2, 1], [3, 1], [3, -1], [4, -1]], 'e': Rational(2,1)},
-                                                        {'determinant': [[1, 1], [2, -1], [3, 1], [3, -1], [4, 1]], 'e': Rational(-2,1)}
+                                                        {
+                                                            'determinant': [[1, 1], [2, 1], [2, -1], [3, -1], [5, 1]],
+                                                            'e': -sqrt(Rational(6,1))
+                                                        },
+                                                        {'determinant': [[1, 1], [2, 1], [2, -1], [4, 1], [4, -1]], 'e': Rational(-4,1)},
+                                                        {'determinant': [[1, 1], [2, 1], [3, 1], [3, -1], [4, -1]], 'e': Rational(-2,1)},
+                                                        {'determinant': [[1, 1], [2, -1], [3, 1], [3, -1], [4, 1]], 'e': Rational(2,1)}
                                                     ],
                                                     'mu': 1
                                                 }
@@ -133666,6 +133694,7 @@ o3t = {
                                                         },
                                                         {'determinant': [[2, 1], [2, -1], [3, 1], [3, -1], [4, 1]], 'e': Rational(18,1)}
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133747,6 +133776,7 @@ o3t = {
                                                         {'determinant': [[1, 1], [1, -1], [2, 1], [3, 1], [5, 1]], 'e': Rational(1,1)},
                                                         {'determinant': [[1, 1], [2, 1], [2, -1], [3, 1], [4, 1]], 'e': Rational(1,1)}
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133785,6 +133815,7 @@ o3t = {
                                                         },
                                                         {'determinant': [[1, 1], [2, 1], [3, 1], [4, 1], [4, -1]], 'e': Rational(2,1)}
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133867,23 +133898,23 @@ o3t = {
                                                     'components': [
                                                         {
                                                             'determinant': [[1, 1], [1, -1], [2, 1], [2, -1], [3, 1], [5, -1]],
-                                                            'e': -sqrt(Rational(6,1))
-                                                        },
-                                                        {
-                                                            'determinant': [[1, 1], [1, -1], [2, 1], [2, -1], [3, -1], [5, 1]],
                                                             'e': sqrt(Rational(6,1))
                                                         },
                                                         {
+                                                            'determinant': [[1, 1], [1, -1], [2, 1], [2, -1], [3, -1], [5, 1]],
+                                                            'e': -sqrt(Rational(6,1))
+                                                        },
+                                                        {
                                                             'determinant': [[1, 1], [1, -1], [2, 1], [2, -1], [4, 1], [4, -1]],
-                                                            'e': Rational(5,1)
+                                                            'e': Rational(-5,1)
                                                         },
                                                         {
                                                             'determinant': [[1, 1], [1, -1], [2, 1], [3, 1], [3, -1], [4, -1]],
-                                                            'e': Rational(3,1)
+                                                            'e': Rational(-3,1)
                                                         },
                                                         {
                                                             'determinant': [[1, 1], [1, -1], [2, -1], [3, 1], [3, -1], [4, 1]],
-                                                            'e': Rational(-3,1)
+                                                            'e': Rational(3,1)
                                                         }
                                                     ],
                                                     'mu': 1
@@ -133929,6 +133960,7 @@ o3t = {
                                                             'e': Rational(-6,1)
                                                         }
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -133992,39 +134024,39 @@ o3t = {
                                                     'components': [
                                                         {
                                                             'determinant': [[1, 1], [1, -1], [2, 1], [2, -1], [5, 1], [5, -1]],
-                                                            'e': -sqrt(Rational(6,1))
-                                                        },
-                                                        {
-                                                            'determinant': [[1, 1], [1, -1], [2, 1], [3, 1], [4, -1], [5, -1]],
-                                                            'e': Rational(2,1)
-                                                        },
-                                                        {
-                                                            'determinant': [[1, 1], [1, -1], [2, 1], [3, -1], [4, -1], [5, 1]],
-                                                            'e': Rational(-2,1)
-                                                        },
-                                                        {
-                                                            'determinant': [[1, 1], [1, -1], [2, -1], [3, 1], [4, 1], [5, -1]],
-                                                            'e': Rational(-2,1)
-                                                        },
-                                                        {
-                                                            'determinant': [[1, 1], [1, -1], [2, -1], [3, -1], [4, 1], [5, 1]],
-                                                            'e': Rational(2,1)
-                                                        },
-                                                        {
-                                                            'determinant': [[1, 1], [2, 1], [2, -1], [3, 1], [3, -1], [5, -1]],
                                                             'e': sqrt(Rational(6,1))
                                                         },
                                                         {
-                                                            'determinant': [[1, 1], [2, 1], [2, -1], [3, -1], [4, 1], [4, -1]],
+                                                            'determinant': [[1, 1], [1, -1], [2, 1], [3, 1], [4, -1], [5, -1]],
+                                                            'e': Rational(-2,1)
+                                                        },
+                                                        {
+                                                            'determinant': [[1, 1], [1, -1], [2, 1], [3, -1], [4, -1], [5, 1]],
                                                             'e': Rational(2,1)
                                                         },
                                                         {
-                                                            'determinant': [[1, -1], [2, 1], [2, -1], [3, 1], [3, -1], [5, 1]],
+                                                            'determinant': [[1, 1], [1, -1], [2, -1], [3, 1], [4, 1], [5, -1]],
+                                                            'e': Rational(2,1)
+                                                        },
+                                                        {
+                                                            'determinant': [[1, 1], [1, -1], [2, -1], [3, -1], [4, 1], [5, 1]],
+                                                            'e': Rational(-2,1)
+                                                        },
+                                                        {
+                                                            'determinant': [[1, 1], [2, 1], [2, -1], [3, 1], [3, -1], [5, -1]],
                                                             'e': -sqrt(Rational(6,1))
                                                         },
                                                         {
-                                                            'determinant': [[1, -1], [2, 1], [2, -1], [3, 1], [4, 1], [4, -1]],
+                                                            'determinant': [[1, 1], [2, 1], [2, -1], [3, -1], [4, 1], [4, -1]],
                                                             'e': Rational(-2,1)
+                                                        },
+                                                        {
+                                                            'determinant': [[1, -1], [2, 1], [2, -1], [3, 1], [3, -1], [5, 1]],
+                                                            'e': sqrt(Rational(6,1))
+                                                        },
+                                                        {
+                                                            'determinant': [[1, -1], [2, 1], [2, -1], [3, 1], [4, 1], [4, -1]],
+                                                            'e': Rational(2,1)
                                                         }
                                                     ],
                                                     'mu': 1
@@ -134110,67 +134142,67 @@ o3t = {
                                                     'components': [
                                                         {
                                                             'determinant': [[1, 1], [1, -1], [2, 1], [4, -1], [5, 1], [5, -1]],
-                                                            'e': Rational(-9,1)
-                                                        },
-                                                        {
-                                                            'determinant': [[1, 1], [1, -1], [2, -1], [4, 1], [5, 1], [5, -1]],
                                                             'e': Rational(9,1)
                                                         },
                                                         {
+                                                            'determinant': [[1, 1], [1, -1], [2, -1], [4, 1], [5, 1], [5, -1]],
+                                                            'e': Rational(-9,1)
+                                                        },
+                                                        {
                                                             'determinant': [[1, 1], [1, -1], [3, 1], [3, -1], [5, 1], [5, -1]],
-                                                            'e': Rational(11,1)
+                                                            'e': Rational(-11,1)
                                                         },
                                                         {
                                                             'determinant': [[1, 1], [1, -1], [3, 1], [4, 1], [4, -1], [5, -1]],
-                                                            'e': sqrt(Rational(6,1))
+                                                            'e': -sqrt(Rational(6,1))
                                                         },
                                                         {
                                                             'determinant': [[1, 1], [1, -1], [3, -1], [4, 1], [4, -1], [5, 1]],
-                                                            'e': -sqrt(Rational(6,1))
-                                                        },
-                                                        {
-                                                            'determinant': [[1, 1], [2, 1], [2, -1], [3, -1], [5, 1], [5, -1]],
                                                             'e': sqrt(Rational(6,1))
                                                         },
                                                         {
-                                                            'determinant': [[1, 1], [2, 1], [2, -1], [4, 1], [4, -1], [5, -1]],
-                                                            'e': Rational(12,1)
-                                                        },
-                                                        {
-                                                            'determinant': [[1, 1], [2, 1], [3, 1], [3, -1], [4, -1], [5, -1]],
-                                                            'e': Rational(12,1)
-                                                        },
-                                                        {
-                                                            'determinant': [[1, 1], [2, -1], [3, 1], [3, -1], [4, 1], [5, -1]],
-                                                            'e': Rational(-10,1)
-                                                        },
-                                                        {
-                                                            'determinant': [[1, 1], [2, -1], [3, 1], [3, -1], [4, -1], [5, 1]],
-                                                            'e': Rational(-2,1)
-                                                        },
-                                                        {
-                                                            'determinant': [[1, -1], [2, 1], [2, -1], [3, 1], [5, 1], [5, -1]],
+                                                            'determinant': [[1, 1], [2, 1], [2, -1], [3, -1], [5, 1], [5, -1]],
                                                             'e': -sqrt(Rational(6,1))
                                                         },
                                                         {
-                                                            'determinant': [[1, -1], [2, 1], [2, -1], [4, 1], [4, -1], [5, 1]],
+                                                            'determinant': [[1, 1], [2, 1], [2, -1], [4, 1], [4, -1], [5, -1]],
                                                             'e': Rational(-12,1)
                                                         },
                                                         {
-                                                            'determinant': [[1, -1], [2, 1], [3, 1], [3, -1], [4, 1], [5, -1]],
-                                                            'e': Rational(-2,1)
+                                                            'determinant': [[1, 1], [2, 1], [3, 1], [3, -1], [4, -1], [5, -1]],
+                                                            'e': Rational(-12,1)
                                                         },
                                                         {
-                                                            'determinant': [[1, -1], [2, 1], [3, 1], [3, -1], [4, -1], [5, 1]],
-                                                            'e': Rational(-10,1)
+                                                            'determinant': [[1, 1], [2, -1], [3, 1], [3, -1], [4, 1], [5, -1]],
+                                                            'e': Rational(10,1)
                                                         },
                                                         {
-                                                            'determinant': [[1, -1], [2, -1], [3, 1], [3, -1], [4, 1], [5, 1]],
+                                                            'determinant': [[1, 1], [2, -1], [3, 1], [3, -1], [4, -1], [5, 1]],
+                                                            'e': Rational(2,1)
+                                                        },
+                                                        {
+                                                            'determinant': [[1, -1], [2, 1], [2, -1], [3, 1], [5, 1], [5, -1]],
+                                                            'e': sqrt(Rational(6,1))
+                                                        },
+                                                        {
+                                                            'determinant': [[1, -1], [2, 1], [2, -1], [4, 1], [4, -1], [5, 1]],
                                                             'e': Rational(12,1)
                                                         },
                                                         {
+                                                            'determinant': [[1, -1], [2, 1], [3, 1], [3, -1], [4, 1], [5, -1]],
+                                                            'e': Rational(2,1)
+                                                        },
+                                                        {
+                                                            'determinant': [[1, -1], [2, 1], [3, 1], [3, -1], [4, -1], [5, 1]],
+                                                            'e': Rational(10,1)
+                                                        },
+                                                        {
+                                                            'determinant': [[1, -1], [2, -1], [3, 1], [3, -1], [4, 1], [5, 1]],
+                                                            'e': Rational(-12,1)
+                                                        },
+                                                        {
                                                             'determinant': [[2, 1], [2, -1], [3, 1], [3, -1], [4, 1], [4, -1]],
-                                                            'e': Rational(8,1)
+                                                            'e': Rational(-8,1)
                                                         }
                                                     ],
                                                     'mu': 1
@@ -134203,6 +134235,7 @@ o3t = {
                                                             'e': Rational(1,1)
                                                         }
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -134245,6 +134278,7 @@ o3t = {
                                                             'e': Rational(1,1)
                                                         }
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -134272,6 +134306,7 @@ o3t = {
                                                             'e': -sqrt(Rational(24,1))
                                                         }
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -134346,6 +134381,7 @@ o3t = {
                                                             'e': Rational(3,1)
                                                         }
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -134389,6 +134425,7 @@ o3t = {
                                                             'e': -sqrt(Rational(216,1))
                                                         }
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -134443,6 +134480,7 @@ o3t = {
                                                             'e': Rational(1,1)
                                                         }
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -134489,6 +134527,7 @@ o3t = {
                                                             'e': sqrt(Rational(6,1))
                                                         }
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -134594,6 +134633,7 @@ o3t = {
                                                             'e': Rational(12,1)
                                                         }
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -134624,6 +134664,7 @@ o3t = {
                                                             'e': Rational(1,1)
                                                         }
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -134643,6 +134684,7 @@ o3t = {
                                                             'e': -sqrt(Rational(6,1))
                                                         }
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -134745,6 +134787,7 @@ o3t = {
                                                             'e': Rational(1,1)
                                                         }
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]
@@ -134764,6 +134807,7 @@ o3t = {
                                                             'e': -sqrt(Rational(6,1))
                                                         }
                                                     ],
+                                                    'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                     'mu': 1
                                                 }
                                             ]

@@ -3,14 +3,23 @@
 
 The kets are the spherical harmonics: eta = (-1)^J below.  A = G n C_infh acts diagonally on the
 kets |J, m>: R_z(phi) |J,m> = exp(i m phi) |J,m>, sigma_h |J,m> = eta (-1)^m |J,m>,
-i |J,m> = eta |J,m>.  Either G = A (C_N, S_2N, C_Nh: every ket is a basis vector) or [G : A] = 2
-and a flip psi (C_2x or sigma_v(xz)) sends m to -m: C_2(a) |J,m> = (-1)^J exp(2 i m a) |J,-m>,
-sigma_v(a) |J,m> = eta (-1)^(J+m) exp(2 i m a) |J,-m>.  Then m and -m span an E-type block
-(partner_pair), or, when the characters of m and -m agree, two one-dimensional blocks
-e_m = 1, e_-m = +-1 (pm_pair), and m = 0 a single ket.  A vector is written by its coefficients
-e_m (every one +1 or -1), normalized as in CONVENTIONS.md section 14.  The blocks run over
-m = 0..J; kappa numbers the copies of an irrep at one J.  At the other parity, eta = -(-1)^J, a
-block keeps its kets and its label is multiplied by det_G (parity_label_map).
+i |J,m> = eta |J,m>.  Either G = A (C_N, S_2N, C_Nh) or [G : A] = 2 and a flip psi (C_2x or
+sigma_v(xz)) sends m to -m: C_2(a) |J,m> = (-1)^J exp(2 i m a) |J,-m>,
+sigma_v(a) |J,m> = eta (-1)^(J+m) exp(2 i m a) |J,-m>.  When A has different characters on |J,m>
+and |J,-m>, m > 0, the two kets span an E-type block (partner_pair) in a group with a flip, and in
+G = A they are the blocks of the two irreps of a complex pair (single_ket); when the characters
+agree they give two one-dimensional blocks |J,m> + s |J,-m>, s = +-1 (pm_pair); m = 0 is a single
+ket.  A vector is written by its coefficients e_m, normalized as in CONVENTIONS.md
+section 14.  The blocks run over m = 0..J; kappa numbers the copies of an irrep at one J.  At the
+other parity, eta = -(-1)^J, a block keeps its kets and its label is multiplied by det_G
+(parity_label_map).
+
+Time reversal, Theta |J,m> = (-1)^m |J,-m> (complex conjugation of r^J Y_J^m), acts on every block
+by the matrix N of its irrep (the identity on a one-dimensional real irrep, the exchange of the two
+partners of an E-type irrep) or, on the block of the first irrep of a complex pair, gives the
+block of its partner at the same J and kappa: a pair or a two-dimensional block is multiplied by
+i when s (or c, the sign of its second partner) is not (-1)^m (time_reversal_factor), and the ket
+of the partner of a complex pair is (-1)^m |J,-m> (CONVENTIONS.md section 14.1, rule 4).
 """
 import re
 from fractions import Fraction as F
@@ -23,6 +32,7 @@ INF = "inf"
 
 ONE = Cyc.rational(1)
 NONE = Cyc.rational(-1)
+IUNIT = Cyc.zeta(4)
 
 
 def _pm1(k):
@@ -37,20 +47,24 @@ CONT_FAMILY = {"Cinf": "Cn", "Cinfh": "Cnh", "Cinfv": "Cnv", "Dinf": "Dn", "Dinf
 
 
 def selfconj_condition(fam, N):
-    if fam in ABELIAN_FAMILIES:
-        return "always (G is abelian; there is no flip)"
+    """When A has the same character on |J,m> and |J,-m>."""
     if N == INF:
         return "m = 0"
-    return "m = 0 (mod N)" if fam == "Dnd" else "2m = 0 (mod N)"
+    return "m = 0 (mod N)" if fam in ("Dnd", "S2n") else "2m = 0 (mod N)"
 
 
 def is_selfconj(fam, N, m):
     """Whether |J,m> and |J,-m> carry the same character of A."""
-    if fam in ABELIAN_FAMILIES:
-        return True
     if N == INF:
         return m == 0
-    return (m % N == 0) if fam == "Dnd" else ((2 * m) % N == 0)
+    return (m % N == 0) if fam in ("Dnd", "S2n") else ((2 * m) % N == 0)
+
+
+def time_reversal_factor(x, m):
+    """The factor of rule 4 (CONVENTIONS.md section 14.1): 1 when x, the sign s of a pair or c of
+    the second partner of a two-dimensional block, is (-1)^m, else i, so that time reversal,
+    Theta |J,m> = (-1)^m |J,-m>, acts on the block by the matrix N of its irrep."""
+    return ONE if x == _pm1(m) else IUNIT
 
 
 def _cn_base(N, m):
@@ -160,26 +174,46 @@ def _partner_m1(fam, N, eta, m, k, a):
 
 
 def _partner_pair(fam, N, J, eta, m, label):
-    """mu = 1: |J,m_1>; mu = 2: c |J,-m_1>, c = (-1)^(J+a) (flip C_2x) or eta (-1)^(J+m)
-    (flip sigma_v)."""
+    """mu = 1: f |J,m_1>; mu = 2: f c |J,-m_1>, c = (-1)^(J+a) (flip C_2x) or eta (-1)^(J+m)
+    (flip sigma_v), f = time_reversal_factor(c, m_1)."""
     k, a = monomial_ka(fam, N, label)
     m1 = _partner_m1(fam, N, eta, m, k, a)
     c = _pm1(J + a) if FLIP[fam] == "C_2x" else eta * _pm1(J + m)
-    return [{m1: ONE}, {-m1: (ONE if c > 0 else NONE)}]
+    lam = time_reversal_factor(c, m1)
+    return [{m1: lam}, {-m1: lam * (ONE if c > 0 else NONE)}]
+
+
+def _pm_pair(m, s):
+    """f (|J,m> + s |J,-m>), f = time_reversal_factor(s, m)."""
+    lam = time_reversal_factor(s, m)
+    return {m: lam, -m: lam * (ONE if s > 0 else NONE)}
 
 
 def blocks(fam, N, J, eta=None):
     """The blocks of D^(J, eta) restricted to the group, eta = (-1)^J unless given, in the order
-    m = 0..J (single kets +m before -m, pm pairs s = +1 before s = -1)."""
+    m = 0..J (single kets +m before -m, pm pairs s = +1 before s = -1).  In G = A the kets m and
+    -m of a complex pair carry its two irreps: the ket of the first irrep (label 1E...) has e = 1
+    and that of its partner e = (-1)^m, the image of the first under time reversal."""
     if eta is None:
         eta = _pm1(J)
     out = []
     for m in range(0, J + 1):
         if fam in ABELIAN_FAMILIES:
-            for mm in ([0] if m == 0 else [m, -m]):
-                out.append(dict(irrep=block_label(fam, N, J, eta, mm, None),
-                                kind="single_ket", dim=1, seed_m=mm, seed_sign=None,
-                                vectors=[{mm: ONE}]))
+            if m == 0:
+                out.append(dict(irrep=block_label(fam, N, J, eta, 0, None),
+                                kind="single_ket", dim=1, seed_m=0, seed_sign=None,
+                                vectors=[{0: ONE}]))
+            elif is_selfconj(fam, N, m):
+                lab = block_label(fam, N, J, eta, m, None)
+                for s in (1, -1):
+                    out.append(dict(irrep=lab, kind="pm_pair", dim=1, seed_m=m, seed_sign=s,
+                                    vectors=[_pm_pair(m, s)]))
+            else:
+                labs = {mm: block_label(fam, N, J, eta, mm, None) for mm in (m, -m)}
+                for mm in (m, -m):
+                    e = ONE if labs[mm].startswith("1") else (ONE if m % 2 == 0 else NONE)
+                    out.append(dict(irrep=labs[mm], kind="single_ket", dim=1, seed_m=mm,
+                                    seed_sign=None, vectors=[{mm: e}]))
             continue
         if not is_selfconj(fam, N, m):
             lab = block_label(fam, N, J, eta, m, None)
@@ -193,7 +227,7 @@ def blocks(fam, N, J, eta=None):
             for s in (1, -1):
                 out.append(dict(irrep=block_label(fam, N, J, eta, m, s),
                                 kind="pm_pair", dim=1, seed_m=m, seed_sign=s,
-                                vectors=[{m: ONE, -m: (ONE if s > 0 else NONE)}]))
+                                vectors=[_pm_pair(m, s)]))
     seen = {}
     for b in out:
         seen[b["irrep"]] = seen.get(b["irrep"], 0) + 1
@@ -343,16 +377,18 @@ def _default_ident(s):
 
 PARITY_RULE = ("D^(J,-(-1)^J)|G = (D^(J,(-1)^J)|G) (x) det_G: at the other parity a block keeps "
                "its kets and its label is multiplied by det_G (parity_label_map); inside a 2-D "
-               "block the partner order and the sign of mu = 2 are set by rule 4 at that parity "
-               "(CONVENTIONS.md section 14.1)")
+               "block the partner order, the sign of mu = 2 and the factor i are set by rule 4 "
+               "at that parity (CONVENTIONS.md section 14.1)")
 
 BLOCK_CASES = [
-    {"case": "G abelian (there is no flip)", "kind": "single_ket", "dim": 1,
-     "vectors": "|J,m>"},
-    {"case": "chi_m != chi_-m", "kind": "partner_pair", "dim": 2,
-     "vectors": "mu = 1: |J,m_1>; mu = 2: c |J,-m_1>, c = +1 or -1 (CONVENTIONS.md section 14.1)"},
+    {"case": "chi_m != chi_-m, G abelian", "kind": "single_ket", "dim": 1,
+     "vectors": "|J,m> for the first irrep of a complex pair, (-1)^m |J,m> for its partner "
+                "(CONVENTIONS.md section 14.1)"},
+    {"case": "chi_m != chi_-m, G not abelian", "kind": "partner_pair", "dim": 2,
+     "vectors": "mu = 1: |J,m_1>; mu = 2: c |J,-m_1>, c = +1 or -1, both times i when "
+                "c != (-1)^m_1 (CONVENTIONS.md section 14.1)"},
     {"case": "chi_m = chi_-m, m > 0", "kind": "pm_pair", "dim": 1,
-     "vectors": "|J,m> + s |J,-m>, s = +1 and s = -1"},
+     "vectors": "|J,m> + s |J,-m>, s = +1 and s = -1, times i when s != (-1)^m"},
     {"case": "m = 0", "kind": "single_ket", "dim": 1, "vectors": "|J,0>"},
 ]
 

@@ -857,11 +857,15 @@ def _o3_check_family_gf(key, N, rename, natural):
 
 def _o3_check_kets(family, N, sumspec, spec, rename):
     """Each block of the enumerated bases of the member's record (at p = (-1)^J): the irrep that
-    the rule gives its ket, or its pair of kets."""
+    the rule gives its ket, or its pair of kets.  Where the rule runs over m = -J..J (a group
+    G = A), the two pairs of the kets m and -m (s = +1, -1) stand for the kets m and -m, which
+    carry the same irrep."""
     rec = serialize.read_json(names.record_path(names.name_of(family, N)))
     want, got = {}, {}
     for b in rec["subduction_basis"]["enumerated"]["blocks"]:
         key = (b["J"], b["seed_m"] if sumspec["from"] == "-J" else abs(b["seed_m"]))
+        if sumspec["from"] == "-J" and b["kind"] == "pm_pair" and b["seed_sign"] == -1:
+            key = (b["J"], -b["seed_m"])
         want.setdefault(key, {}).setdefault(b["irrep_id"], 0)
         want[key][b["irrep_id"]] += 1
     for (J, m) in want:

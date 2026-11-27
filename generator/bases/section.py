@@ -12,7 +12,9 @@ R(g) = det(g) g in the parent, so a parent block of irrep k at J carries
 A(g) = det(g)^J D^k(R(g)), and t = l_even[k] (J even) or l_odd[k] (J odd) is the irrep of the
 derived group with that character.  Where A(g) differs from D^t(g), the partners are
 w_i = sum_k S_ki v_k with A(g) S = S D^t(g), S = sum_g A(g) X D^t(g^-1) for the first matrix unit
-X that gives a nonzero sum, scaled so that its first nonzero entry (row-major) is 1.
+X that gives a nonzero sum, scaled so that its first nonzero entry (row-major) is 1.  A block of a
+real irrep is then multiplied by the factor 1 or i that makes time reversal act on it by the
+derived irrep's N, with the sign of the phase form (time_reversal.derived_factors, section 14.3).
 """
 import json
 import math
@@ -21,6 +23,7 @@ from fractions import Fraction as F
 from .. import names, serialize
 from ..exact.cyclo import Cyc
 from ..tables import bases_summary
+from . import time_reversal
 from ..tables.clebsch_gordan import inv as cyc_inverse
 
 J_ENUMERATED = names.J_ENUMERATED
@@ -203,9 +206,10 @@ def low_blocks(group):
     return _LOW[group]
 
 
-def _blocks(low, lmap, disp, inter):
+def _blocks(low, lmap, disp, inter, factors=None):
     """The enumerated blocks, J <= 10, relabelled by the label maps and combined with the
-    intertwiners."""
+    intertwiners, a block of a real irrep then times the factor lam (1 or i, with the sign of the
+    phase form) of time_reversal.derived_factors."""
     out = []
     for J in range(J_ENUMERATED + 1):
         for b in low[J]:
@@ -216,6 +220,14 @@ def _blocks(low, lmap, disp, inter):
                 S = (inter or {}).get(par, {}).get(name)
                 if S is not None:
                     b = dict(b, vectors=_apply_intertwiner(J, b["vectors"], S))
+                lam = factors[par][name]
+                if S is not None or lam != Cyc.one():
+                    lam = lam * Cyc.rational(time_reversal.phase_sign(b["vectors"], lam))
+                    if lam != Cyc.one():
+                        b = dict(b, vectors=[
+                            {"mu": v["mu"], "components": [
+                                dict(c, e=(Cyc.from_json(c["e"]) * lam).to_json())
+                                for c in v["components"]]} for v in b["vectors"]])
             vecs = [{"mu": v["mu"],
                      "components": [{"m": c["m"], "e": canon(c["e"])} for c in v["components"]]}
                     for v in b["vectors"]]
@@ -237,11 +249,12 @@ def build(name, record, parent=None):
     record of the group its bases are computed from (Th, Td, Oh, Ih)."""
     src = names.DERIVED_FROM.get(name, name)
     disp = {ir["label"]: ir["display"] for ir in record["character_table"]["irreps"]}
-    lmap = inter = None
+    lmap = inter = factors = None
     if parent is not None:
         lmap = label_maps(parent, record)
         inter = intertwiners(parent, record, lmap)
-    blocks = _blocks(low_blocks(src), lmap, disp, inter)
+        factors = time_reversal.derived_factors(parent, record, lmap, inter)
+    blocks = _blocks(low_blocks(src), lmap, disp, inter, factors)
     block_count, vector_count = bases_summary.full_set_counts(record, names.J_MAX)
     node = {
         "status": "enumerated",

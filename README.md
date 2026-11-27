@@ -299,9 +299,10 @@ of T, O and I that is present. The stage `store` computes the files of T, O and 
 
 The command `all --with-store` builds everything from scratch for J = 0, 1, …, 60, in this order: records,
 store, records again, then the other stages. The store is the costly stage: about 10 min of CPU time for T
-and O together and about 13 h for I, of which J = 60 alone takes about 50 min. A job of I at high J needs about
-1.2 GB of memory, and 4 jobs take about 3.5 h. The stage `store --J 11-60` followed by `bases` reproduces the
-release archives.
+and O together and about 14 h for I, of which J = 60 alone takes about 55 min. The adaptation of the copies to time
+reversal (CONVENTIONS.md section 14.2) is about 1 h of the time of I and 4 min of that of J = 60. A job of I at high J
+needs about 1.2 GB of memory, and 4 jobs take about 3.8 h. The stage `store --J 11-60` followed by `bases` reproduces
+the release archives.
 
 Without the bases of T, O and I for J ≤ 10, the stage `records` writes the seven exceptional records without
 `subduction_basis` and exits with status 3. In that case the command `all` (without `--with-store`) writes

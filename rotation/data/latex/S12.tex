@@ -679,56 +679,65 @@ $\conjpair{2}\irr{e}_{5}$ & $t^{2} + t^{5} + t^{7} + t^{12}$ & $n_{12}(J,1)$ & $
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.14.1}{14.1}.
 \leavevmode\label{n:index.m}\label{n:vector.ket}The kets $\jm{J}{m}$ are the spherical harmonics (the inversion acts as $(-1)^J$). \label{n:index.ketcoefficient}\label{n:vector.basis.symmetry}\label{n:index.ketweight}\label{n:index.total}A vector is listed by its coefficients $e_m$:
 \begin{equation}\label{e:ket}v = \frac{1}{\sqrt{\mathrm{tot}}}\sum_m e_m\sqrt{F_m}\;\jm{J}{m},\qquad F_m = (J+m)!\,(J-m)!,\qquad \mathrm{tot} = \sum_m |e_m|^2F_m,\end{equation}
-so a vector here is a single ket, $e_m = 1$, of amplitude 1.
-\leavevmode\label{n:group.A}The subgroup $\grp{A} = \grp{S_{12}}\cap\grp{C_{\infty h}}$ acts diagonally on the kets, and $\grp{S_{12}} = \grp{A}$: every ket is a block. Blocks are ordered by $J$, then $|m|$, $+m$ before $-m$.
+\leavevmode\label{n:index.pair.sign}so a single ket has amplitude $\pm1$, and from $J = 6$ on a pair $\jm{J}{m} + s\,\jm{J}{-m}$, $s = \pm1$, has amplitudes $\tfrac{1}{2}\sqrt{2}$ and $\tfrac{1}{2}s\sqrt{2}$, or these times $\iunit$. Each $e_m$ is $\pm1$ or $\pm\iunit$.
+\leavevmode\label{n:group.A}\label{n:function.character.abelian}The subgroup $\grp{A} = \grp{S_{12}}\cap\grp{C_{\infty h}}$ acts diagonally on the kets, on $\jm{J}{m}$ by the character $\chiA(m)$, and $\grp{S_{12}} = \grp{A}$. For $m > 0$, when $\chiA(m) \ne \chiA(-m)$, the kets $\jm{J}{m}$ and $\jm{J}{-m}$ are the blocks of the two irreps of a complex pair: the block of the first irrep has $e = 1$, and that of its partner $e = (-1)^m$, so that time reversal takes the first to the second. Otherwise they give two one-dimensional blocks $\jm{J}{m} + s\,\jm{J}{-m}$, $s = \pm1$, the one with $s = -(-1)^m$ times $\iunit$. The factor $\iunit$ makes each block adapted to time reversal (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.14}{14}). Blocks are ordered by $J$, then $|m|$, $+m$ before $-m$, a pair with $s = +1$ first (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.14.1}{14.1}).
+\leavevmode\label{n:head.case}\label{n:head.partners}The table lists every case of block, its dimension $d$ and its partners in order.
+\begin{center}\begin{tabular}{@{}lrl@{}}\toprule
+case & $d$ & partners\\\midrule
+$\chiA(m) \ne \chiA(-m)$, first irrep of a pair & 1 & $\jm{J}{m}$\\
+$\chiA(m) \ne \chiA(-m)$, its partner & 1 & $(-1)^m\jm{J}{m}$\\
+$\chiA(m) = \chiA(-m)$, $m > 0$, $s = (-1)^m$ & 1 & $\jm{J}{m} + s\,\jm{J}{-m}$\\
+$\chiA(m) = \chiA(-m)$, $m > 0$, $s = -(-1)^m$ & 1 & $\iunit(\jm{J}{m} + s\,\jm{J}{-m})$\\
+$m = 0$ & 1 & $\jm{J}{0}$\\
+\bottomrule\end{tabular}\end{center}
 The bases have 121 blocks and 121 vectors at $J = 0, 1, \dots, 10$. \label{n:index.copy}\label{n:head.vector}A row gives a vector of a block at $J$: the block's irrep and copy index $\mult$, the partner index $\intx$ and the vector.
 {\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}rlrr@{\hspace{4pt}}l@{\hspace{18pt}}rlrr@{\hspace{4pt}}l@{\hspace{18pt}}rlrr@{\hspace{4pt}}l@{}}\toprule
 $J$ & irrep & $\mult$ & $\intx$ & vector & $J$ & irrep & $\mult$ & $\intx$ & vector & $J$ & irrep & $\mult$ & $\intx$ & vector\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
-0 & $\irr{a}$ & 1 & 1 & $\jm{0}{0}$ & 3 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $\jm{3}{-1}$ & 4 & $\conjpair{1}\irr{e}_{3}$ & 1 & 1 & $\jm{4}{-3}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5} & \multispan{5}\\*\noalign{\vskip 1.5pt}
+0 & $\irr{a}$ & 1 & 1 & $\jm{0}{0}$ & 3 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $-\jm{3}{-1}$ & 4 & $\conjpair{1}\irr{e}_{3}$ & 1 & 1 & $\jm{4}{-3}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5} & \multispan{5}\\*\noalign{\vskip 1.5pt}
 1 & $\irr{b}$ & 1 & 1 & $\jm{1}{0}$ & 3 & $\conjpair{2}\irr{e}_{4}$ & 1 & 1 & $\jm{3}{2}$ & 4 & $\conjpair{1}\irr{e}_{4}$ & 1 & 1 & $\jm{4}{4}$\\*
 1 & $\conjpair{1}\irr{e}_{1}$ & 1 & 1 & $\jm{1}{1}$ & 3 & $\conjpair{1}\irr{e}_{4}$ & 1 & 1 & $\jm{3}{-2}$ & 4 & $\conjpair{2}\irr{e}_{4}$ & 1 & 1 & $\jm{4}{-4}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
-1 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $\jm{1}{-1}$ & 3 & $\conjpair{1}\irr{e}_{3}$ & 1 & 1 & $\jm{3}{3}$ & 5 & $\irr{b}$ & 1 & 1 & $\jm{5}{0}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5} & \multispan{5}\\*\noalign{\vskip 1.5pt}
-2 & $\irr{a}$ & 1 & 1 & $\jm{2}{0}$ & 3 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $\jm{3}{-3}$ & 5 & $\conjpair{1}\irr{e}_{1}$ & 1 & 1 & $\jm{5}{1}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
-2 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $\jm{2}{1}$ & 4 & $\irr{a}$ & 1 & 1 & $\jm{4}{0}$ & 5 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $\jm{5}{-1}$\\*
-2 & $\conjpair{1}\irr{e}_{5}$ & 1 & 1 & $\jm{2}{-1}$ & 4 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $\jm{4}{1}$ & 5 & $\conjpair{2}\irr{e}_{4}$ & 1 & 1 & $\jm{5}{2}$\\*
+1 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $-\jm{1}{-1}$ & 3 & $\conjpair{1}\irr{e}_{3}$ & 1 & 1 & $\jm{3}{3}$ & 5 & $\irr{b}$ & 1 & 1 & $\jm{5}{0}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5} & \multispan{5}\\*\noalign{\vskip 1.5pt}
+2 & $\irr{a}$ & 1 & 1 & $\jm{2}{0}$ & 3 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $-\jm{3}{-3}$ & 5 & $\conjpair{1}\irr{e}_{1}$ & 1 & 1 & $\jm{5}{1}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
+2 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $-\jm{2}{1}$ & 4 & $\irr{a}$ & 1 & 1 & $\jm{4}{0}$ & 5 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $-\jm{5}{-1}$\\*
+2 & $\conjpair{1}\irr{e}_{5}$ & 1 & 1 & $\jm{2}{-1}$ & 4 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $-\jm{4}{1}$ & 5 & $\conjpair{2}\irr{e}_{4}$ & 1 & 1 & $\jm{5}{2}$\\*
 2 & $\conjpair{1}\irr{e}_{2}$ & 1 & 1 & $\jm{2}{2}$ & 4 & $\conjpair{1}\irr{e}_{5}$ & 1 & 1 & $\jm{4}{-1}$ & 5 & $\conjpair{1}\irr{e}_{4}$ & 1 & 1 & $\jm{5}{-2}$\\*
 2 & $\conjpair{2}\irr{e}_{2}$ & 1 & 1 & $\jm{2}{-2}$ & 4 & $\conjpair{1}\irr{e}_{2}$ & 1 & 1 & $\jm{4}{2}$ & 5 & $\conjpair{1}\irr{e}_{3}$ & 1 & 1 & $\jm{5}{3}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5} & \multispan{5}\\*\noalign{\vskip 1.5pt}
-3 & $\irr{b}$ & 1 & 1 & $\jm{3}{0}$ & 4 & $\conjpair{2}\irr{e}_{2}$ & 1 & 1 & $\jm{4}{-2}$ & 5 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $\jm{5}{-3}$\\*
-3 & $\conjpair{1}\irr{e}_{1}$ & 1 & 1 & $\jm{3}{1}$ & 4 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $\jm{4}{3}$ & 5 & $\conjpair{2}\irr{e}_{2}$ & 1 & 1 & $\jm{5}{4}$\\
+3 & $\irr{b}$ & 1 & 1 & $\jm{3}{0}$ & 4 & $\conjpair{2}\irr{e}_{2}$ & 1 & 1 & $\jm{4}{-2}$ & 5 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $-\jm{5}{-3}$\\*
+3 & $\conjpair{1}\irr{e}_{1}$ & 1 & 1 & $\jm{3}{1}$ & 4 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $-\jm{4}{3}$ & 5 & $\conjpair{2}\irr{e}_{2}$ & 1 & 1 & $\jm{5}{4}$\\
 \grouprule{0pt}{\heavyrulewidth}
-5 & $\conjpair{1}\irr{e}_{2}$ & 1 & 1 & $\jm{5}{-4}$ & 6 & $\conjpair{2}\irr{e}_{4}$ & 1 & 1 & $\jm{6}{-4}$ & 7 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $\jm{7}{-3}$\\*
-5 & $\conjpair{1}\irr{e}_{5}$ & 1 & 1 & $\jm{5}{5}$ & 6 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $\jm{6}{5}$ & 7 & $\conjpair{2}\irr{e}_{2}$ & 1 & 1 & $\jm{7}{4}$\\*
-5 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $\jm{5}{-5}$ & 6 & $\conjpair{1}\irr{e}_{1}$ & 1 & 1 & $\jm{6}{-5}$ & 7 & $\conjpair{1}\irr{e}_{2}$ & 1 & 1 & $\jm{7}{-4}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5} & \multispan{5}\\*\noalign{\vskip 1.5pt}
-6 & $\irr{a}$ & 1 & 1 & $\jm{6}{0}$ & 6 & $\irr{b}$ & 1 & 1 & $\jm{6}{6}$ & 7 & $\conjpair{1}\irr{e}_{5}$ & 1 & 1 & $\jm{7}{5}$\\*
-6 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $\jm{6}{1}$ & 6 & $\irr{b}$ & 2 & 1 & $\jm{6}{-6}$ & 7 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $\jm{7}{-5}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
-6 & $\conjpair{1}\irr{e}_{5}$ & 1 & 1 & $\jm{6}{-1}$ & 7 & $\irr{b}$ & 1 & 1 & $\jm{7}{0}$ & 7 & $\irr{a}$ & 1 & 1 & $\jm{7}{6}$\\*
-6 & $\conjpair{1}\irr{e}_{2}$ & 1 & 1 & $\jm{6}{2}$ & 7 & $\conjpair{1}\irr{e}_{1}$ & 1 & 1 & $\jm{7}{1}$ & 7 & $\irr{a}$ & 2 & 1 & $\jm{7}{-6}$\\*
-6 & $\conjpair{2}\irr{e}_{2}$ & 1 & 1 & $\jm{6}{-2}$ & 7 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $\jm{7}{-1}$ & 7 & $\conjpair{2}\irr{e}_{5}$ & 2 & 1 & $\jm{7}{7}$\\*
-6 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $\jm{6}{3}$ & 7 & $\conjpair{2}\irr{e}_{4}$ & 1 & 1 & $\jm{7}{2}$ & 7 & $\conjpair{1}\irr{e}_{5}$ & 2 & 1 & $\jm{7}{-7}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
+5 & $\conjpair{1}\irr{e}_{2}$ & 1 & 1 & $\jm{5}{-4}$ & 6 & $\conjpair{2}\irr{e}_{4}$ & 1 & 1 & $\jm{6}{-4}$ & 7 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $-\jm{7}{-3}$\\*
+5 & $\conjpair{1}\irr{e}_{5}$ & 1 & 1 & $\jm{5}{5}$ & 6 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $-\jm{6}{5}$ & 7 & $\conjpair{2}\irr{e}_{2}$ & 1 & 1 & $\jm{7}{4}$\\*
+5 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $-\jm{5}{-5}$ & 6 & $\conjpair{1}\irr{e}_{1}$ & 1 & 1 & $\jm{6}{-5}$ & 7 & $\conjpair{1}\irr{e}_{2}$ & 1 & 1 & $\jm{7}{-4}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5} & \multispan{5}\\*\noalign{\vskip 1.5pt}
+6 & $\irr{a}$ & 1 & 1 & $\jm{6}{0}$ & 6 & $\irr{b}$ & 1 & 1 & $\jm{6}{6}$ $+$ $\jm{6}{-6}$ & 7 & $\conjpair{1}\irr{e}_{5}$ & 1 & 1 & $\jm{7}{5}$\\*
+6 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $-\jm{6}{1}$ & 6 & $\irr{b}$ & 2 & 1 & $\iunit{}\,\jm{6}{6}$ $-\iunit{}\,\jm{6}{-6}$ & 7 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $-\jm{7}{-5}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
+6 & $\conjpair{1}\irr{e}_{5}$ & 1 & 1 & $\jm{6}{-1}$ & 7 & $\irr{b}$ & 1 & 1 & $\jm{7}{0}$ & 7 & $\irr{a}$ & 1 & 1 & $\jm{7}{6}$ $+$ $\jm{7}{-6}$\\*
+6 & $\conjpair{1}\irr{e}_{2}$ & 1 & 1 & $\jm{6}{2}$ & 7 & $\conjpair{1}\irr{e}_{1}$ & 1 & 1 & $\jm{7}{1}$ & 7 & $\irr{a}$ & 2 & 1 & $\iunit{}\,\jm{7}{6}$ $-\iunit{}\,\jm{7}{-6}$\\*
+6 & $\conjpair{2}\irr{e}_{2}$ & 1 & 1 & $\jm{6}{-2}$ & 7 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $-\jm{7}{-1}$ & 7 & $\conjpair{2}\irr{e}_{5}$ & 2 & 1 & $-\jm{7}{7}$\\*
+6 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $-\jm{6}{3}$ & 7 & $\conjpair{2}\irr{e}_{4}$ & 1 & 1 & $\jm{7}{2}$ & 7 & $\conjpair{1}\irr{e}_{5}$ & 2 & 1 & $\jm{7}{-7}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
 6 & $\conjpair{1}\irr{e}_{3}$ & 1 & 1 & $\jm{6}{-3}$ & 7 & $\conjpair{1}\irr{e}_{4}$ & 1 & 1 & $\jm{7}{-2}$ & 8 & $\irr{a}$ & 1 & 1 & $\jm{8}{0}$\\*
-6 & $\conjpair{1}\irr{e}_{4}$ & 1 & 1 & $\jm{6}{4}$ & 7 & $\conjpair{1}\irr{e}_{3}$ & 1 & 1 & $\jm{7}{3}$ & 8 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $\jm{8}{1}$\\
+6 & $\conjpair{1}\irr{e}_{4}$ & 1 & 1 & $\jm{6}{4}$ & 7 & $\conjpair{1}\irr{e}_{3}$ & 1 & 1 & $\jm{7}{3}$ & 8 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $-\jm{8}{1}$\\
 \grouprule{0pt}{\heavyrulewidth}
 8 & $\conjpair{1}\irr{e}_{5}$ & 1 & 1 & $\jm{8}{-1}$ & 8 & $\conjpair{1}\irr{e}_{1}$ & 2 & 1 & $\jm{8}{7}$ & 9 & $\conjpair{2}\irr{e}_{2}$ & 1 & 1 & $\jm{9}{4}$\\*
-8 & $\conjpair{1}\irr{e}_{2}$ & 1 & 1 & $\jm{8}{2}$ & 8 & $\conjpair{2}\irr{e}_{1}$ & 2 & 1 & $\jm{8}{-7}$ & 9 & $\conjpair{1}\irr{e}_{2}$ & 1 & 1 & $\jm{9}{-4}$\\*
+8 & $\conjpair{1}\irr{e}_{2}$ & 1 & 1 & $\jm{8}{2}$ & 8 & $\conjpair{2}\irr{e}_{1}$ & 2 & 1 & $-\jm{8}{-7}$ & 9 & $\conjpair{1}\irr{e}_{2}$ & 1 & 1 & $\jm{9}{-4}$\\*
 8 & $\conjpair{2}\irr{e}_{2}$ & 1 & 1 & $\jm{8}{-2}$ & 8 & $\conjpair{2}\irr{e}_{4}$ & 2 & 1 & $\jm{8}{8}$ & 9 & $\conjpair{1}\irr{e}_{5}$ & 1 & 1 & $\jm{9}{5}$\\*
-8 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $\jm{8}{3}$ & 8 & $\conjpair{1}\irr{e}_{4}$ & 2 & 1 & $\jm{8}{-8}$ & 9 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $\jm{9}{-5}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
-8 & $\conjpair{1}\irr{e}_{3}$ & 1 & 1 & $\jm{8}{-3}$ & 9 & $\irr{b}$ & 1 & 1 & $\jm{9}{0}$ & 9 & $\irr{a}$ & 1 & 1 & $\jm{9}{6}$\\*
-8 & $\conjpair{1}\irr{e}_{4}$ & 1 & 1 & $\jm{8}{4}$ & 9 & $\conjpair{1}\irr{e}_{1}$ & 1 & 1 & $\jm{9}{1}$ & 9 & $\irr{a}$ & 2 & 1 & $\jm{9}{-6}$\\*
-8 & $\conjpair{2}\irr{e}_{4}$ & 1 & 1 & $\jm{8}{-4}$ & 9 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $\jm{9}{-1}$ & 9 & $\conjpair{2}\irr{e}_{5}$ & 2 & 1 & $\jm{9}{7}$\\*
-8 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $\jm{8}{5}$ & 9 & $\conjpair{2}\irr{e}_{4}$ & 1 & 1 & $\jm{9}{2}$ & 9 & $\conjpair{1}\irr{e}_{5}$ & 2 & 1 & $\jm{9}{-7}$\\*
+8 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $-\jm{8}{3}$ & 8 & $\conjpair{1}\irr{e}_{4}$ & 2 & 1 & $\jm{8}{-8}$ & 9 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $-\jm{9}{-5}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
+8 & $\conjpair{1}\irr{e}_{3}$ & 1 & 1 & $\jm{8}{-3}$ & 9 & $\irr{b}$ & 1 & 1 & $\jm{9}{0}$ & 9 & $\irr{a}$ & 1 & 1 & $\jm{9}{6}$ $+$ $\jm{9}{-6}$\\*
+8 & $\conjpair{1}\irr{e}_{4}$ & 1 & 1 & $\jm{8}{4}$ & 9 & $\conjpair{1}\irr{e}_{1}$ & 1 & 1 & $\jm{9}{1}$ & 9 & $\irr{a}$ & 2 & 1 & $\iunit{}\,\jm{9}{6}$ $-\iunit{}\,\jm{9}{-6}$\\*
+8 & $\conjpair{2}\irr{e}_{4}$ & 1 & 1 & $\jm{8}{-4}$ & 9 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $-\jm{9}{-1}$ & 9 & $\conjpair{2}\irr{e}_{5}$ & 2 & 1 & $-\jm{9}{7}$\\*
+8 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $-\jm{8}{5}$ & 9 & $\conjpair{2}\irr{e}_{4}$ & 1 & 1 & $\jm{9}{2}$ & 9 & $\conjpair{1}\irr{e}_{5}$ & 2 & 1 & $\jm{9}{-7}$\\*
 8 & $\conjpair{1}\irr{e}_{1}$ & 1 & 1 & $\jm{8}{-5}$ & 9 & $\conjpair{1}\irr{e}_{4}$ & 1 & 1 & $\jm{9}{-2}$ & 9 & $\conjpair{1}\irr{e}_{2}$ & 2 & 1 & $\jm{9}{8}$\\*
-8 & $\irr{b}$ & 1 & 1 & $\jm{8}{6}$ & 9 & $\conjpair{1}\irr{e}_{3}$ & 1 & 1 & $\jm{9}{3}$ & 9 & $\conjpair{2}\irr{e}_{2}$ & 2 & 1 & $\jm{9}{-8}$\\*
-8 & $\irr{b}$ & 2 & 1 & $\jm{8}{-6}$ & 9 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $\jm{9}{-3}$ & 9 & $\conjpair{2}\irr{e}_{3}$ & 2 & 1 & $\jm{9}{9}$\\
+8 & $\irr{b}$ & 1 & 1 & $\jm{8}{6}$ $+$ $\jm{8}{-6}$ & 9 & $\conjpair{1}\irr{e}_{3}$ & 1 & 1 & $\jm{9}{3}$ & 9 & $\conjpair{2}\irr{e}_{2}$ & 2 & 1 & $\jm{9}{-8}$\\*
+8 & $\irr{b}$ & 2 & 1 & $\iunit{}\,\jm{8}{6}$ $-\iunit{}\,\jm{8}{-6}$ & 9 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $-\jm{9}{-3}$ & 9 & $\conjpair{2}\irr{e}_{3}$ & 2 & 1 & $-\jm{9}{9}$\\
 \grouprule{0pt}{\heavyrulewidth}
 9 & $\conjpair{1}\irr{e}_{3}$ & 2 & 1 & $\jm{9}{-9}$ & 10 & $\conjpair{1}\irr{e}_{4}$ & 1 & 1 & $\jm{10}{4}$ & 10 & $\conjpair{2}\irr{e}_{4}$ & 2 & 1 & $\jm{10}{8}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5} & \multispan{5}\\*\noalign{\vskip 1.5pt}
 10 & $\irr{a}$ & 1 & 1 & $\jm{10}{0}$ & 10 & $\conjpair{2}\irr{e}_{4}$ & 1 & 1 & $\jm{10}{-4}$ & 10 & $\conjpair{1}\irr{e}_{4}$ & 2 & 1 & $\jm{10}{-8}$\\*
-10 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $\jm{10}{1}$ & 10 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $\jm{10}{5}$ & 10 & $\conjpair{1}\irr{e}_{3}$ & 2 & 1 & $\jm{10}{9}$\\*
-10 & $\conjpair{1}\irr{e}_{5}$ & 1 & 1 & $\jm{10}{-1}$ & 10 & $\conjpair{1}\irr{e}_{1}$ & 1 & 1 & $\jm{10}{-5}$ & 10 & $\conjpair{2}\irr{e}_{3}$ & 2 & 1 & $\jm{10}{-9}$\\*
-10 & $\conjpair{1}\irr{e}_{2}$ & 1 & 1 & $\jm{10}{2}$ & 10 & $\irr{b}$ & 1 & 1 & $\jm{10}{6}$ & 10 & $\conjpair{2}\irr{e}_{2}$ & 2 & 1 & $\jm{10}{10}$\\*
-10 & $\conjpair{2}\irr{e}_{2}$ & 1 & 1 & $\jm{10}{-2}$ & 10 & $\irr{b}$ & 2 & 1 & $\jm{10}{-6}$ & 10 & $\conjpair{1}\irr{e}_{2}$ & 2 & 1 & $\jm{10}{-10}$\\*
-10 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $\jm{10}{3}$ & 10 & $\conjpair{1}\irr{e}_{1}$ & 2 & 1 & $\jm{10}{7}$ &  &  &  &  & \\*
-10 & $\conjpair{1}\irr{e}_{3}$ & 1 & 1 & $\jm{10}{-3}$ & 10 & $\conjpair{2}\irr{e}_{1}$ & 2 & 1 & $\jm{10}{-7}$ &  &  &  &  & \\
+10 & $\conjpair{2}\irr{e}_{5}$ & 1 & 1 & $-\jm{10}{1}$ & 10 & $\conjpair{2}\irr{e}_{1}$ & 1 & 1 & $-\jm{10}{5}$ & 10 & $\conjpair{1}\irr{e}_{3}$ & 2 & 1 & $\jm{10}{9}$\\*
+10 & $\conjpair{1}\irr{e}_{5}$ & 1 & 1 & $\jm{10}{-1}$ & 10 & $\conjpair{1}\irr{e}_{1}$ & 1 & 1 & $\jm{10}{-5}$ & 10 & $\conjpair{2}\irr{e}_{3}$ & 2 & 1 & $-\jm{10}{-9}$\\*
+10 & $\conjpair{1}\irr{e}_{2}$ & 1 & 1 & $\jm{10}{2}$ & 10 & $\irr{b}$ & 1 & 1 & $\jm{10}{6}$ $+$ $\jm{10}{-6}$ & 10 & $\conjpair{2}\irr{e}_{2}$ & 2 & 1 & $\jm{10}{10}$\\*
+10 & $\conjpair{2}\irr{e}_{2}$ & 1 & 1 & $\jm{10}{-2}$ & 10 & $\irr{b}$ & 2 & 1 & $\iunit{}\,\jm{10}{6}$ $-\iunit{}\,\jm{10}{-6}$ & 10 & $\conjpair{1}\irr{e}_{2}$ & 2 & 1 & $\jm{10}{-10}$\\*
+10 & $\conjpair{2}\irr{e}_{3}$ & 1 & 1 & $-\jm{10}{3}$ & 10 & $\conjpair{1}\irr{e}_{1}$ & 2 & 1 & $\jm{10}{7}$ &  &  &  &  & \\*
+10 & $\conjpair{1}\irr{e}_{3}$ & 1 & 1 & $\jm{10}{-3}$ & 10 & $\conjpair{2}\irr{e}_{1}$ & 2 & 1 & $-\jm{10}{-7}$ &  &  &  &  & \\
 \bottomrule\end{longtable}}
 \needspace{220pt}
 \partbox{Tensors}

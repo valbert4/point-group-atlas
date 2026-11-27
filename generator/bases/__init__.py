@@ -12,7 +12,8 @@ from .. import names, serialize
 @functools.lru_cache(maxsize=None)
 def _label_maps(name):
     from . import derived
-    return derived.label_maps(serialize.read_json(names.record_path(name)))
+    return derived.label_maps(serialize.read_json(names.record_path(name)),
+                              serialize.read_json(names.record_path(names.DERIVED_FROM[name])))
 
 
 def write_files(task):

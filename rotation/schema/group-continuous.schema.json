@@ -5542,6 +5542,10 @@
                                           },
                                           "type": "array"
                                         },
+                                        "factor": {
+                                          "$ref": "#/$defs/exact",
+                                          "description": "See CONVENTIONS.md section 19."
+                                        },
                                         "mu": {
                                           "description": "See CONVENTIONS.md section 19.",
                                           "type": "integer"
@@ -6027,6 +6031,10 @@
                                                   "type": "object"
                                                 },
                                                 "type": "array"
+                                              },
+                                              "factor": {
+                                                "$ref": "#/$defs/exact",
+                                                "description": "See CONVENTIONS.md section 19."
                                               },
                                               "mu": {
                                                 "description": "See CONVENTIONS.md section 19.",

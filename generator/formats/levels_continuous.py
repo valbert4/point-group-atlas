@@ -238,15 +238,18 @@ def section_overtone_states(D):
         + D.define("vector.occupation", "local.quanta.partner")
         + r"The state $\occ{v_1 \dots v_N}$ has $v_1, \dots, v_N$ quanta in the partners "
           r"$\ket{J, J}, \dots, \ket{J, -J}$ in turn. A coefficient is that of the monomial in the "
-          r"creation operators, a rational times a square root.")
+          r"creation operators, a rational times a square root. A state with $vJ - J'$ odd carries "
+          r"the factor $\iunit$, so that its copy is adapted to time reversal "
+          r"(CONVENTIONS.pdf, section 19).")
     rows = []
     for b in lv["symmetric"]["bases"]:
         rows.append(LV.band(r"$\Gamma = \irrJ{%d}$" % b["J"]))
         for blk in b["blocks"]:
-            comps = blk["vectors"][0]["components"]
+            vec = blk["vectors"][0]
             rows.append((["%d" % blk["v"], "%d" % blk["l"], "$%s$" % so3_label(blk["J"]),
                           "%d" % blk["kappa"]], (b["J"], blk["v"], blk["l"]), id(blk),
-                         [LV.vector_terms(D, comps, LV.occupation_ket)]))
+                         [LV.vector_terms(D, vec["components"], LV.occupation_ket,
+                                          vec.get("factor"))]))
     LV.basis_table(D, "rrlr", r"$v$ & $\ell$ & irrep & $\mult$ & vector", rows)
 
 
@@ -325,7 +328,9 @@ def section_terms(D):
           r"are written in determinants of the orbitals $\ket{l, m}$, which are the partners "
           r"$1, \dots, 2l + 1$ for $m = l, \dots, -l$. The file named by the record's "
           r"\texttt{bases\symbol{95}location} holds the states of the f shell, and the record "
-          r"holds the states for $n > 2l + 1$." % L.listed(
+          r"holds the states for $n > 2l + 1$. A state with $nl - J'$ odd carries the factor "
+          r"$\iunit$, so that its copy is adapted to time reversal "
+          r"(CONVENTIONS.pdf, section 19)." % L.listed(
               [SHELL_LETTER[l] for l in TERM_STATES_SET]))
     rows = []
     for l in TERM_STATES_SET:
@@ -340,5 +345,6 @@ def section_terms(D):
                               str(blk["kappa"])], (l, t["n"]), (l, t["n"], t["twoS"], blk["J"],
                                                                blk["kappa"]),
                              [LV.vector_terms(D, blk["vectors"][0]["components"],
-                                              LV.determinant_ket)]))
+                                              LV.determinant_ket,
+                                              blk["vectors"][0].get("factor"))]))
     LV.basis_table(D, "rrlr", r"$n$ & $2S + 1$ & irrep & $\mult$ & vector", rows)

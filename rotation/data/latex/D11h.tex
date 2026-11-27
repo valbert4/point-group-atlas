@@ -1242,13 +1242,14 @@ $\irr{e}_{5}''$ & $t^{6} + t^{7}$ & $n_{22}(J,5)$ & $n_{22}(J,6)$ & 5, 17 & 6, 1
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.14.1}{14.1}.
 \leavevmode\label{n:index.m}\label{n:vector.ket}The kets $\jm{J}{m}$ are the spherical harmonics (the inversion acts as $(-1)^J$). \label{n:index.ketcoefficient}\label{n:vector.basis.symmetry}\label{n:index.ketweight}\label{n:index.total}A vector is listed by its coefficients $e_m$:
 \begin{equation}\label{e:ket}v = \frac{1}{\sqrt{\mathrm{tot}}}\sum_m e_m\sqrt{F_m}\;\jm{J}{m},\qquad F_m = (J+m)!\,(J-m)!,\qquad \mathrm{tot} = \sum_m |e_m|^2F_m,\end{equation}
-\leavevmode\label{n:index.pair.sign}so a single ket has amplitude $\pm1$, and from $J = 11$ on a pair $\jm{J}{m} + s\,\jm{J}{-m}$, $s = \pm1$, has amplitudes $\tfrac{1}{2}\sqrt{2}$ and $\tfrac{1}{2}s\sqrt{2}$. Each $e_m$ is $+1$, except that it may be $-1$ on the second partner of a two-dimensional block and on $\jm{J}{-m}$ in a pair with $s = -1$.
-\leavevmode\label{n:group.A}\label{n:function.character.abelian}The subgroup $\grp{A} = \grp{D_{11h}}\cap\grp{C_{\infty h}}$ acts diagonally on the kets, on $\jm{J}{m}$ by the character $\chiA(m)$, and $\grpindex{\grp{D_{11h}}}{\grp{A}} = 2$. The flip $\elt{C_{2x}}$ sends $m$ to $-m$. \label{n:index.partner.sign}By the rule of \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.14.1}{14.1}, a two-dimensional block has $e = +1$ on partner 1 and $e = c = \pm1$ on partner 2. Its first partner is $v_1 = \jm{J}{m}$ with $m \equiv -\ell \pmod{11}$, and the second $v_2 = c\,\jm{J}{-m}$ with $c = (-1)^{J+\delta}$, where $(\ell, \delta)$ are the parameters of the block's irrep (section~\ref{s:irreps2}). Blocks are ordered by $J$, then $|m|$, a pair with $s = +1$ first.
+\leavevmode\label{n:index.pair.sign}so a single ket has amplitude $\pm1$, and from $J = 11$ on a pair $\jm{J}{m} + s\,\jm{J}{-m}$, $s = \pm1$, has amplitudes $\tfrac{1}{2}\sqrt{2}$ and $\tfrac{1}{2}s\sqrt{2}$, or these times $\iunit$. Each $e_m$ is $\pm1$ or $\pm\iunit$.
+\leavevmode\label{n:group.A}\label{n:function.character.abelian}The subgroup $\grp{A} = \grp{D_{11h}}\cap\grp{C_{\infty h}}$ acts diagonally on the kets, on $\jm{J}{m}$ by the character $\chiA(m)$, and $\grpindex{\grp{D_{11h}}}{\grp{A}} = 2$. The flip $\elt{C_{2x}}$ sends $m$ to $-m$. \label{n:index.partner.sign}By the rule of \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.14.1}{14.1}, a two-dimensional block has $e = +1$ on partner 1 and $e = c = \pm1$ on partner 2. Its first partner is $v_1 = \jm{J}{m}$ with $m \equiv -\ell \pmod{11}$, and the second $v_2 = c\,\jm{J}{-m}$ with $c = (-1)^{J+\delta}$, where $(\ell, \delta)$ are the parameters of the block's irrep (section~\ref{s:irreps2}). Kets $\jm{J}{m}$ and $\jm{J}{-m}$ of one character of $\grp{A}$ give two one-dimensional blocks $\jm{J}{m} + s\,\jm{J}{-m}$, $s = \pm1$, the one with $s = -(-1)^m$ times $\iunit$. The factor $\iunit$ makes each block adapted to time reversal (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.14}{14}). Blocks are ordered by $J$, then $|m|$, a pair with $s = +1$ first.
 \leavevmode\label{n:head.case}\label{n:head.partners}The table lists every case of block, its dimension $d$ and its partners in order.
 \begin{center}\begin{tabular}{@{}lrl@{}}\toprule
 case & $d$ & partners\\\midrule
 $\chiA(m) \ne \chiA(-m)$ & 2 & $\jm{J}{m}$;\ $c\,\jm{J}{-m}$\\
-$\chiA(m) = \chiA(-m)$, $m > 0$ & 1 & $\jm{J}{m} + s\,\jm{J}{-m}$, $s = \pm1$\\
+$\chiA(m) = \chiA(-m)$, $m > 0$, $s = (-1)^m$ & 1 & $\jm{J}{m} + s\,\jm{J}{-m}$\\
+$\chiA(m) = \chiA(-m)$, $m > 0$, $s = -(-1)^m$ & 1 & $\iunit(\jm{J}{m} + s\,\jm{J}{-m})$\\
 $m = 0$ & 1 & $\jm{J}{0}$\\
 \bottomrule\end{tabular}\end{center}
 The bases have 66 blocks and 121 vectors at $J = 0, 1, \dots, 10$. \label{n:head.vector}A row gives a vector of a block at $J$: the block's irrep and copy index $\mult$, the partner index $\intx$ and the vector.
@@ -1841,36 +1842,36 @@ $n$ & $2S + 1$ & irrep & $\mult$ & $\intx$ & vector & $n$ & $2S + 1$ & irrep & $
 1 & 2 & $\irr{e}_{1}'$ & 1 & 1 & $\sdet{1}$ & 2 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{1\,\bar{2}}$ $-$ $\sdet{\bar{1}\,2}$\\*
 1 & 2 & $\irr{e}_{1}'$ & 1 & 2 & $\sdet{2}$ & 2 & 1 & $\irr{e}_{4}'$ & 1 & 1 & $\sdet{1\,\bar{1}}$\\*\noalign{\vskip 1.5pt}\multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{6}\\*\noalign{\vskip 1.5pt}
 2 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{1\,\bar{2}}$ $-$ $\sdet{\bar{1}\,2}$ & 2 & 1 & $\irr{e}_{4}'$ & 1 & 2 & $\sdet{2\,\bar{2}}$\\*
-2 & 1 & $\irr{e}_{2}'$ & 1 & 1 & $\sdet{1\,\bar{1}}$ & 2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\sdet{1\,2}$\\*\noalign{\vskip 1.5pt}\multispan{6} & \multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
+2 & 1 & $\irr{e}_{2}'$ & 1 & 1 & $\sdet{1\,\bar{1}}$ & 2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\iunit{}\,\sdet{1\,2}$\\*\noalign{\vskip 1.5pt}\multispan{6} & \multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
 2 & 1 & $\irr{e}_{2}'$ & 1 & 2 & $\sdet{2\,\bar{2}}$ & \multicolumn{6}{@{}c@{}}{$\Gamma = \irr{e}_{3}'$}\\*
-2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\sdet{1\,2}$ & 0 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{\,}$\\*\noalign{\vskip 1.5pt}\multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
+2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\iunit{}\,\sdet{1\,2}$ & 0 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{\,}$\\*\noalign{\vskip 1.5pt}\multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
 \multicolumn{6}{@{}c@{\hspace{18pt}}}{$\Gamma = \irr{e}_{2}'$} & 1 & 2 & $\irr{e}_{3}'$ & 1 & 1 & $\sdet{1}$\\*
 0 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{\,}$ & 1 & 2 & $\irr{e}_{3}'$ & 1 & 2 & $\sdet{2}$\\*\noalign{\vskip 1.5pt}\multispan{6} & \multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
  &  &  &  &  &  & 2 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{1\,\bar{2}}$ $-$ $\sdet{\bar{1}\,2}$\\
 \grouprule{0pt}{\heavyrulewidth}
 2 & 1 & $\irr{e}_{5}'$ & 1 & 1 & $\sdet{2\,\bar{2}}$ & \multicolumn{6}{@{}c@{}}{$\Gamma = \irr{e}_{5}'$}\\*
 2 & 1 & $\irr{e}_{5}'$ & 1 & 2 & $\sdet{1\,\bar{1}}$ & 0 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{\,}$\\*\noalign{\vskip 1.5pt}\multispan{6} & \multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
-2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\sdet{1\,2}$ & 1 & 2 & $\irr{e}_{5}'$ & 1 & 1 & $\sdet{1}$\\*\noalign{\vskip 1.5pt}\multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{6}\\*\noalign{\vskip 1.5pt}
+2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\iunit{}\,\sdet{1\,2}$ & 1 & 2 & $\irr{e}_{5}'$ & 1 & 1 & $\sdet{1}$\\*\noalign{\vskip 1.5pt}\multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{6}\\*\noalign{\vskip 1.5pt}
 \multicolumn{6}{@{}c@{\hspace{18pt}}}{$\Gamma = \irr{e}_{4}'$} & 1 & 2 & $\irr{e}_{5}'$ & 1 & 2 & $\sdet{2}$\\*\noalign{\vskip 1.5pt}\multispan{6} & \multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
 0 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{\,}$ & 2 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{1\,\bar{2}}$ $-$ $\sdet{\bar{1}\,2}$\\*\noalign{\vskip 1.5pt}\multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{6}\\*\noalign{\vskip 1.5pt}
 1 & 2 & $\irr{e}_{4}'$ & 1 & 1 & $\sdet{1}$ & 2 & 1 & $\irr{e}_{1}'$ & 1 & 1 & $\sdet{2\,\bar{2}}$\\*
 1 & 2 & $\irr{e}_{4}'$ & 1 & 2 & $\sdet{2}$ & 2 & 1 & $\irr{e}_{1}'$ & 1 & 2 & $\sdet{1\,\bar{1}}$\\*\noalign{\vskip 1.5pt}\multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{6}\\*\noalign{\vskip 1.5pt}
-2 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{1\,\bar{2}}$ $-$ $\sdet{\bar{1}\,2}$ & 2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\sdet{1\,2}$\\*\noalign{\vskip 1.5pt}\multispan{6} & \multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
+2 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{1\,\bar{2}}$ $-$ $\sdet{\bar{1}\,2}$ & 2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\iunit{}\,\sdet{1\,2}$\\*\noalign{\vskip 1.5pt}\multispan{6} & \multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
 2 & 1 & $\irr{e}_{3}'$ & 1 & 1 & $\sdet{2\,\bar{2}}$ & \multicolumn{6}{@{}c@{}}{$\Gamma = \irr{e}_{1}''$}\\*
 2 & 1 & $\irr{e}_{3}'$ & 1 & 2 & $\sdet{1\,\bar{1}}$ & 0 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{\,}$\\*
-2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\sdet{1\,2}$ &  &  &  &  &  & \\
+2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\iunit{}\,\sdet{1\,2}$ &  &  &  &  &  & \\
 \grouprule{0pt}{\heavyrulewidth}
 1 & 2 & $\irr{e}_{1}''$ & 1 & 1 & $\sdet{1}$ & 2 & 1 & $\irr{e}_{4}'$ & 1 & 1 & $\sdet{1\,\bar{1}}$\\*
 1 & 2 & $\irr{e}_{1}''$ & 1 & 2 & $\sdet{2}$ & 2 & 1 & $\irr{e}_{4}'$ & 1 & 2 & $\sdet{2\,\bar{2}}$\\*\noalign{\vskip 1.5pt}\multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{6}\\*\noalign{\vskip 1.5pt}
-2 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{1\,\bar{2}}$ $-$ $\sdet{\bar{1}\,2}$ & 2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\sdet{1\,2}$\\*\noalign{\vskip 1.5pt}\multispan{6} & \multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
+2 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{1\,\bar{2}}$ $-$ $\sdet{\bar{1}\,2}$ & 2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\iunit{}\,\sdet{1\,2}$\\*\noalign{\vskip 1.5pt}\multispan{6} & \multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
 2 & 1 & $\irr{e}_{2}'$ & 1 & 1 & $\sdet{1\,\bar{1}}$ & \multicolumn{6}{@{}c@{}}{$\Gamma = \irr{e}_{3}''$}\\*
 2 & 1 & $\irr{e}_{2}'$ & 1 & 2 & $\sdet{2\,\bar{2}}$ & 0 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{\,}$\\*\noalign{\vskip 1.5pt}\multispan{6} & \multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
-2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\sdet{1\,2}$ & 1 & 2 & $\irr{e}_{3}''$ & 1 & 1 & $\sdet{1}$\\*\noalign{\vskip 1.5pt}\multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{6}\\*\noalign{\vskip 1.5pt}
+2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\iunit{}\,\sdet{1\,2}$ & 1 & 2 & $\irr{e}_{3}''$ & 1 & 1 & $\sdet{1}$\\*\noalign{\vskip 1.5pt}\multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{6}\\*\noalign{\vskip 1.5pt}
 \multicolumn{6}{@{}c@{\hspace{18pt}}}{$\Gamma = \irr{e}_{2}''$} & 1 & 2 & $\irr{e}_{3}''$ & 1 & 2 & $\sdet{2}$\\*\noalign{\vskip 1.5pt}\multispan{6} & \multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
 0 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{\,}$ & 2 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{1\,\bar{2}}$ $-$ $\sdet{\bar{1}\,2}$\\*\noalign{\vskip 1.5pt}\multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{6}\\*\noalign{\vskip 1.5pt}
 1 & 2 & $\irr{e}_{2}''$ & 1 & 1 & $\sdet{1}$ & 2 & 1 & $\irr{e}_{5}'$ & 1 & 1 & $\sdet{2\,\bar{2}}$\\*
 1 & 2 & $\irr{e}_{2}''$ & 1 & 2 & $\sdet{2}$ & 2 & 1 & $\irr{e}_{5}'$ & 1 & 2 & $\sdet{1\,\bar{1}}$\\*\noalign{\vskip 1.5pt}\multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{6}\\*\noalign{\vskip 1.5pt}
-2 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{1\,\bar{2}}$ $-$ $\sdet{\bar{1}\,2}$ & 2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\sdet{1\,2}$\\
+2 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{1\,\bar{2}}$ $-$ $\sdet{\bar{1}\,2}$ & 2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\iunit{}\,\sdet{1\,2}$\\
 \grouprule{0pt}{\heavyrulewidth}
 \multicolumn{6}{@{}c@{\hspace{18pt}}}{$\Gamma = \irr{e}_{4}''$} & \multicolumn{6}{@{}c@{}}{$\Gamma = \irr{e}_{5}''$}\\*
 0 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{\,}$ & 0 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{\,}$\\*\noalign{\vskip 1.5pt}\multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{6}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
@@ -1879,6 +1880,6 @@ $n$ & $2S + 1$ & irrep & $\mult$ & $\intx$ & vector & $n$ & $2S + 1$ & irrep & $
 2 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{1\,\bar{2}}$ $-$ $\sdet{\bar{1}\,2}$ & 2 & 1 & $\irr{a}_{1}'$ & 1 & 1 & $\sdet{1\,\bar{2}}$ $-$ $\sdet{\bar{1}\,2}$\\*
 2 & 1 & $\irr{e}_{3}'$ & 1 & 1 & $\sdet{2\,\bar{2}}$ & 2 & 1 & $\irr{e}_{1}'$ & 1 & 1 & $\sdet{2\,\bar{2}}$\\*
 2 & 1 & $\irr{e}_{3}'$ & 1 & 2 & $\sdet{1\,\bar{1}}$ & 2 & 1 & $\irr{e}_{1}'$ & 1 & 2 & $\sdet{1\,\bar{1}}$\\*
-2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\sdet{1\,2}$ & 2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\sdet{1\,2}$\\
+2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\iunit{}\,\sdet{1\,2}$ & 2 & 3 & $\irr{a}_{2}'$ & 1 & 1 & $\iunit{}\,\sdet{1\,2}$\\
 \bottomrule\end{longtable}}
 \end{document}

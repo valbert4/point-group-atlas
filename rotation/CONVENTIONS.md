@@ -1940,6 +1940,22 @@ irrep $`\Gamma`$ of dimension $`d`$, and obeys the partner law
 where $`D^\Gamma`$ are the matrices of section 9. The index $`\kappa`$ (`kappa`, or `copy` in the bases files) numbers the copies of
 $`\Gamma`$ at one $`J`$. In $`\mathsf{T_{h}}`$, $`\mathsf{O_{h}}`$, $`\mathsf{I_{h}}`$ and the other groups containing $`\mathsfit{i}`$, the irreps are $`\mathrm{g}`$ at even $`J`$ and $`\mathrm{u}`$ at odd $`J`$.
 
+Time reversal $`\varTheta`$ acts on a function by complex conjugation (section 31.1), and on the kets as
+$`\varTheta \bigl\lvert{}^{J}_{\,m}\bigr\rangle = (-1)^m \bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$. It replaces each coefficient $`e_m`$ of a vector by
+$`(-1)^m`$ times the conjugate of $`e_{-m}`$ and keeps its $`\mathrm{tot}`$. Every block of the bases of this catalogue, in its
+records and in its files, is adapted to time reversal in one of two ways:
+
+- A block of a real irrep $`\Gamma`$ (section 7) has $`\varTheta v_\mu = \sum_\nu v_\nu N_{\nu,\mu}`$, with the matrix $`N`$ of section 32.2. In a
+  finite group it is $`\sqrt{d}`$ times the block of $`\Gamma \otimes \Gamma`$ into the trivial irrep (section 10.3), with its row $`(\mu_1, \mu_2)`$
+  as row $`\mu_1`$ and column $`\mu_2`$. In a continuous group it is that of section 37.2, on the kets of $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$ the
+  matrix of $`\varTheta`$ itself.
+- The block of the second irrep of a complex pair (section 6.4) at $`J`$ and $`\kappa`$ is $`\varTheta`$ applied to the block of the
+  first irrep at the same $`J`$ and $`\kappa`$, partner by partner.
+
+The first nonzero coefficient of partner 1, in the order of its components, has a positive real part or is $`\mathrm{i}`$ times a
+positive number (the phase form of section 38.1). This form holds in the blocks of the real irreps and of the first irreps
+of the complex pairs.
+
 Every `subduction_basis` holds two summaries of the multiplicities $`b_\Gamma(J) = b_\Gamma(J, (-1)^J)`$ (section 11), the number
 of blocks of $`\Gamma`$ at $`J`$:
 
@@ -2001,16 +2017,20 @@ $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ or a pair $`\bigl\lvert{}^{J}_{\,m}\bigr
 
    Here $`v_1`$ has $`e = +1`$, and the partner law forces $`v_2 = c \bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$, where $`c = (-1)^{J+\delta}`$ in $`\mathsf{D_{\mathnormal{N}}}`$, $`\mathsf{D_{\mathnormal{N}h}}`$, $`\mathsf{D_{\mathnormal{N}d}}`$, $`\mathsf{D_{\infty}}`$, $`\mathsf{D_{\infty h}}`$
    (flip $`\mathsfit{C_{2x}}`$) and $`c = \eta (-1)^{J+m}`$ in $`\mathsf{C_{\mathnormal{N}v}}`$, $`\mathsf{C_{\infty v}}`$ (flip $`\mathsfit{\sigma_{v}}(0)`$). A pair is $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle + s \bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$ with $`m > 0`$ ($`e_m = 1`$,
-   $`e_{-m} = s`$), and every other single ket has $`e = +1`$. Every $`e`$ is therefore $`+1`$ or $`-1`$, and $`-1`$ occurs only on $`v_2`$ of
-   an $`\mathrm{\scriptsize E}`$ block and on the $`s = -1`$ member of a pair. As the conjugate of $`\bigl\langle\mathbf{r}\bigm\vert{}^{J}_{\,m}\bigr\rangle = r^J Y_J^m`$ is $`(-1)^m \bigl\langle\mathbf{r}\bigm\vert{}^{J}_{\,-m}\bigr\rangle`$, a
-   pair is $`2 \operatorname{Re}(r^J Y_J^m)`$ when $`s = (-1)^m`$ and $`2\mathrm{i} \operatorname{Im}(r^J Y_J^m)`$ when $`s = -(-1)^m`$: a real solid harmonic, in the second
-   case times $`\mathrm{i}`$. Up to constant factors, the functions of section 13 are such pairs and kets with $`m = 0`$.
+   $`e_{-m} = s`$), and every other single ket has $`e = +1`$. Both partners of a two-dimensional block are then multiplied by $`\mathrm{i}`$
+   when $`c = -(-1)^m`$, and a pair when $`s = -(-1)^m`$, so that time reversal acts on the block as in section 14.
+   Every $`e`$ is therefore $`\pm1`$ or $`\pm\mathrm{i}`$. As the conjugate of $`\bigl\langle\mathbf{r}\bigm\vert{}^{J}_{\,m}\bigr\rangle = r^J Y_J^m`$ is $`(-1)^m \bigl\langle\mathbf{r}\bigm\vert{}^{J}_{\,-m}\bigr\rangle`$, a
+   pair is $`2 \operatorname{Re}(r^J Y_J^m)`$ when $`s = (-1)^m`$ and $`2\mathrm{i} \operatorname{Im}(r^J Y_J^m)`$ when $`s = -(-1)^m`$, so with its factor $`\mathrm{i}`$
+   it is $`-2 \operatorname{Im}(r^J Y_J^m)`$. Every pair is thus a real solid harmonic. Up to constant factors, the functions of section 13 are
+   such pairs and kets with $`m = 0`$. In $`\mathsf{G} = \mathsf{A}`$ the kets $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ and $`\bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$, $`m > 0`$, of one character of $`\mathsf{A}`$ give two
+   pairs. Otherwise they carry the two irreps of a complex pair, whose blocks are the ket of the first irrep with $`e = 1`$ and
+   the ket of its partner with $`e = (-1)^m`$.
 5. Block order: by $`J`$, then by $`\lvert m\rvert`$ ascending, with $`+m`$ before $`-m`$ when $`\mathsf{G}`$ has no flip (below). At
    one $`\lvert m\rvert`$, pairs with $`s = +1`$ precede $`s = -1`$. The index $`\kappa`$ counts the blocks of one irrep at one $`J`$
    in this order.
 6. Parity. The blocks are those of $`\eta = (-1)^J`$. At $`\eta = -(-1)^J`$ a block keeps its kets, and its label becomes
    $`\Gamma \otimes \det_{\mathsf{G}}`$ (`parity_label_map`), where $`\det_{\mathsf{G}}`$ is the determinant character, $`\mathsfit{g} \mapsto \det \mathsfit{g}`$. Rule 4 is then applied again at
-   that $`\eta`$ and can change the partner order and the sign of $`v_2`$.
+   that $`\eta`$ and can change the partner order, the sign of $`v_2`$ and the factor $`\mathrm{i}`$.
 
 In $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$ the restriction of $`D^{(J,(-1)^J)}`$ is irreducible, so the $`2J + 1`$ kets of one $`J`$ form one block, of
 `kind` `"all_kets"`: $`v_\mu = \bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ with $`\mu = J - m + 1`$ (the order of section 9) and every $`e = +1`$. Its irrep is $`D^{(J)}`$ in
@@ -2026,13 +2046,13 @@ The field `closed_form` gives the basis for every $`J`$ and $`N`$ of the family:
   or null `not-defined-for-family` when $`\mathsf{G} = \mathsf{A}`$) and `self_conjugacy_condition` (when $`\mathsf{A}`$ has the same character on
   $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ and $`\bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$). All four are null `not-defined-for-family` in $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$.
 - `cases`: the kinds of block, `{case, kind, dim, vectors}`:
-  - `single_ket`: one ket.
+  - `single_ket`: one ket, $`\bigl\lvert{}^{J}_{\,0}\bigr\rangle`$ or, in $`\mathsf{G} = \mathsf{A}`$, the ket of an irrep of a complex pair.
   - `partner_pair`: a two-dimensional block (rule 4).
-  - `pm_pair`: a pair $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle \pm \bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$, one block for each sign.
+  - `pm_pair`: a pair $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle \pm \bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$ (rule 4), one block for each sign.
   - `all_kets`: the $`2J + 1`$ kets of $`J`$, in $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$.
 - `multiplicity`: $`b_\Gamma(J)`$ as a formula in $`J`$ for `even` and `odd` $`J`$, by irrep (`irrep` its Mulliken label and `irrep_id`
   its id, in irrep order) or, for a continuous group, by family (`family` and `label_template`). A formula is a
-  sum of the terms `floor(J/b)`, `floor((J+a)/b)`, `n_K(J,q)` and an integer (or `0`), where
+  sum of the terms `floor(J/b)`, `floor((J+a)/b)`, `n_K(J,q)` and an integer (or `0`), where `n_K(J,q)` is this count:
 
   ```math
   n_K(J, q) = \lfloor (J - q)/K \rfloor + \lfloor (J + q)/K \rfloor + 1 = \#\{m \in [-J, J] : m \equiv q \pmod{K}\};
@@ -2054,7 +2074,7 @@ The field `enumerated` lists the blocks for $`J =`$ `J_min`, …, `J_max` ($`0, 
 - `kappa`, `dim` and `kind`.
 - `seed_m`: the ket's $`m`$ for a single ket, $`\lvert m\rvert`$ otherwise.
 - `seed_sign`: $`s`$ of a pair, 1 for the $`m = 0`$ ket when $`\mathsf{G} \ne \mathsf{A}`$, absent otherwise.
-- `vectors`: for each $`\mu`$, `components` `{m, e}` with $`e = \pm 1`$, ordered by $`\lvert m\rvert`$, then $`+m`$ before $`-m`$.
+- `vectors`: for each $`\mu`$, `components` `{m, e}` with $`e = \pm 1`$ or $`\pm\mathrm{i}`$, ordered by $`\lvert m\rvert`$, then $`+m`$ before $`-m`$.
 
 In $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$, which have 11 blocks and 121 vectors, `seed_m` and `seed_sign` are absent.
 
@@ -2072,7 +2092,7 @@ or computed by the generator.
   block have the same $`\mathrm{tot}`$. The scale of the $`e_m`$ of a vector is free: a positive rational factor cancels in $`r_m`$.
 - $`e_m`$ and $`r_m`$ are exact values not reduced to their minimal field. For $`\mathsf{T}`$, $`\mathsf{T_{h}}`$, $`\mathsf{T_{d}}`$, $`\mathsf{O}`$ and $`\mathsf{O_{h}}`$ every $`e_m`$ is a `cyc`
   with $`\mathcal{M} = 12`$ (also when it lies in a smaller field), and every $`r_m`$ is a `q`. For $`\mathsf{I}`$ and $`\mathsf{I_{h}}`$, $`e_m`$ is a `q` or a `cyc`
-  with $`\mathcal{M} \in \{3, 4, 5, 12, 20, 60\}`$, and $`r_m`$ is a `q` or a `cyc` with $`\mathcal{M} \in \{5, 20, 60\}`$. Every `cyc` is in the reduced power
+  with $`\mathcal{M} \in \{3, 4, 5, 12, 20, 60\}`$, and $`r_m`$ is a `q` or a `cyc` with $`\mathcal{M} \in \{5, 12, 20, 60\}`$. Every `cyc` is in the reduced power
   basis (`len(c)` $`= \deg \Phi_{\mathcal{M}}`$).
 - Partner law: $`D^{(J)}(\mathsfit{g})\, v_\mu = \sum_\nu D^\Gamma_{\nu,\mu}(\mathsfit{g})\, v_\nu`$ for every element, with the record's matrices.
 - Copies: $`v_{\kappa,1}`$ is vector $`\kappa`$ of the reduced row echelon basis of the range of $`P^\Gamma_{1,1} = \sum_{\mathsfit{g}} D^\Gamma_{1,1}(\mathsfit{g})^*\, D^{(J)}(\mathsfit{g})`$, in
@@ -2083,6 +2103,13 @@ or computed by the generator.
   Partner $`\mu`$ of copy $`\kappa`$ is thus, up to that factor, $`\sum_{\lambda \le \kappa} a_\lambda v_{\lambda,\mu}`$, with the same $`a_\lambda`$ for every partner
   and $`a_\kappa`$ a positive rational. Partner 1 of copy $`\kappa`$ has a positive rational coefficient at the pivot of $`v_{\kappa,1}`$, where the
   copies before it are zero.
+- Time reversal: the files of this catalogue hold these copies adapted to time reversal (section 14). For a real irrep, the
+  vectors of the range of $`P^\Gamma_{1,1}`$ that are partner 1 of an adapted block form a real vector space, the real form of the
+  range. Its coordinates are $`\operatorname{Re} e_m`$ and $`\operatorname{Im} e_m`$, ordered from $`m = -J`$ with the real part first. Its reduced row
+  echelon basis over $`\mathbb{R}`$ takes the place of the basis above, with the same Gram–Schmidt orthogonalization and real
+  $`a_\lambda`$. A copy of a real irrep or of the first irrep of a complex pair is then multiplied by $`\pm1`$, the sign of the phase
+  form of the first nonzero coefficient of its partner 1. The copies of the second irrep of a complex pair are those of
+  the first under time reversal.
 - The blocks are orthonormal: each copy within itself, the copies of one irrep to one another, and the blocks
   of different irreps.
 
@@ -2104,7 +2131,9 @@ the irrep with the character of these matrices. Where they equal the record's $`
 are the parent record's. Otherwise the entry of $`\Gamma`$ in `intertwiner.l_even` or `intertwiner.l_odd` is the exact
 matrix $`S`$ with $`(\det \mathsfit{g})^J D^{\Gamma'}((\det \mathsfit{g})\, \mathsfit{g})\, S = S\, D^\Gamma(\mathsfit{g})`$ for every $`\mathsfit{g}`$, and partner $`\mu`$ becomes $`w_\mu = \sum_\nu S_{\nu,\mu} v_\nu`$. The first
 nonzero entry (row-major) of $`S`$ is 1, and $`S^\dagger S`$ is a positive rational multiple of $`1`$. The matrix $`S`$ occurs only
-for the $`\mathrm{\scriptsize E}`$ of $`\mathsf{T_{d}}`$ at odd $`J`$, where $`S = \operatorname{diag}(1, -1)`$ negates partner 2. The blocks are then put in the derived
+for the $`\mathrm{\scriptsize E}`$ of $`\mathsf{T_{d}}`$ at odd $`J`$, where $`S = \operatorname{diag}(1, -1)`$ negates partner 2. A block of a real irrep is then
+multiplied by $`\pm1`$ or $`\pm\mathrm{i}`$, the factor that makes time reversal act on it as in section 14 and keeps its phase form.
+This factor is $`\pm\mathrm{i}`$ for the $`\mathrm{\scriptsize E}`$ of $`\mathsf{T_{d}}`$ at odd $`J`$ and 1 otherwise. The blocks are then put in the derived
 record's irrep order. Their $`e_m`$, $`r_m`$, `copy`, `dim` and components are otherwise the parent record's.
 
 ### 14.4 The records' blocks, $`J \le 10`$
@@ -2116,7 +2145,7 @@ $`\mathsf{T_{d}}`$, $`\mathsf{O_{h}}`$ and $`\mathsf{I_{h}}`$ the parent record'
 each vector is the file's vector divided by a positive rational, so that the coordinates of its coefficients
 are coprime integers. The amplitudes are unchanged ($`\mathrm{tot}`$ is computed from the vector's own $`e_m`$). A component is
 `{m, e}`. However, when a vector has two or more components and every coefficient is a rational multiple of one
-irrational value, that value is the vector's `factor`. The vector's components are then `{m, q}` with
+value that is not rational, that value is the vector's `factor`. The vector's components are then `{m, q}` with
 $`e_m = \texttt{factor} \cdot q_m`$ ($`q_m = [n, d]`$, here always an integer).
 
 ### 14.5 The crystal field
@@ -2127,7 +2156,8 @@ hermitian when $`B^k_{-q} = (-1)^q\, (B^k_q)^*`$. These tensors transform as the
 invariant when at each rank $`k`$ the vector $`\sum_q B^k_q\, \bigl\lvert{}^{k}_{\,q}\bigr\rangle`$ is a combination of the blocks of the trivial irrep $`\Gamma`$ at
 $`J = k`$. These blocks are thus the crystal-field operators of the site. They number $`b_\Gamma(k, (-1)^k)`$ (section 11),
 and the field has as many real parameters at rank $`k`$. A field of one block has as its $`B^k_q`$ the amplitudes
-$`e_m \sqrt{F_m/\mathrm{tot}}`$ of the block (section 14) at $`m = q`$, times one factor. For example, the blocks of $`\mathsf{O_{h}}`$ at $`k = 4`$ and 6,
+$`e_m \sqrt{F_m/\mathrm{tot}}`$ of the block (section 14) at $`m = q`$, times one factor. The block is invariant under time reversal
+(section 14), so this field is hermitian when the factor is real. For example, the blocks of $`\mathsf{O_{h}}`$ at $`k = 4`$ and 6,
 of coefficients $`(1, 14, 1)`$ and $`(1, -2, 1)`$ on $`m = -4, 0, 4`$, give $`B^4_{\pm 4} = \sqrt{5/14}\, B^4_0`$ and $`B^6_{\pm 4} = -\sqrt{7/2}\, B^6_0`$.
 
 Within one shell, beside the constant at $`k = 0`$, the d electrons take the ranks $`k = 2, 4`$ and the f electrons
@@ -3192,8 +3222,8 @@ with these fields:
     and `element_map`: $`u\,D^\Gamma(\mathsfit{g})\,u^{-1} = P(k)`$, the matrix of section 4 of the element
     $`k`$ = `element_map[g]` of that record. Here $`u`$ is 1 when the matrices of the level are those of the
     record's elements. Otherwise $`u`$ realizes the first assignment of images to the
-    generators of $`\mathsf{G}`$ (in the record's element order) that a conjugation realizes, and its first
-    nonzero entry (row-major) is 1. The
+    generators of $`\mathsf{G}`$ (in the record's element order) that a conjugation realizes, and 1 is its first
+    nonzero entry (row-major). The
     states of harmonic degree $`\ell`$ carry $`D^{(\ell,(-1)^{\ell})}`$ restricted to the image (section 11),
     pulled back by `element_map`.
   - For $`N \ge 4`$ (the $`\mathrm{\scriptsize G}`$ and $`\mathrm{\scriptsize H}`$ of $`\mathsf{I}`$ and
@@ -3262,15 +3292,24 @@ In both bases the states are symmetry-adapted linear combinations (SALCs) of the
 determinants. The copies of $`\Lambda`$ are orthonormal in the inner product that makes the occupation states
 and the determinants orthonormal. Each copy lies in one $`r^{v-\ell} H_{\ell}`$ for $`v`$ quanta, and for
 $`n`$ electrons in the states of spin $`S`$ among the determinants of spin projection $`S`$, the kernel of the
-spin raising operator. In the coordinates ordered with the $`(v_1, \dots, v_N)`$ descending lexicographically
-($`\lvert v, 0, \dots, 0\rangle`$ first) and the determinants by their lists ascending, the range of
+spin raising operator. Time reversal acts on the partners of the level as on a block of its irrep (section 14),
+and so on the creation operators of the quanta and of the electrons. On a state it also conjugates the
+coefficients, and on a determinant it acts on the orbitals only, the spin a spectator (section 33.1). The coordinates
+of a space are ordered with the $`(v_1, \dots, v_N)`$ descending lexicographically ($`\lvert v, 0, \dots, 0\rangle`$
+first) and the determinants by their lists ascending. In these coordinates the range of
 $`P^\Lambda_{1,1} = \sum_{\mathsfit{g} \in \mathsf{G}} D^\Lambda_{1,1}(\mathsfit{g})^{*}\, \mathsfit{g}`$ on
-each such space has a reduced row echelon basis. Up to a positive rational factor, partner 1 of copy
-$`\kappa`$ is vector $`\kappa`$ of this basis ($`\kappa`$ ascending with the pivot) minus its projections on
-the copies before it. This subtraction, the Gram–Schmidt orthogonalization of section 14.2, leaves copy 1
-unchanged. Partner $`\mu`$ is $`P^\Lambda_{\mu,1}`$ applied to partner 1. Each vector is then divided by the
+each such space has a reduced row echelon basis, over $`\mathbb{C}`$ for the first irrep of a complex pair. For a real
+irrep it is the basis over $`\mathbb{R}`$ of the real form of this range, as in section 14.2. The real form holds the vectors
+that are partner 1 of a copy adapted to time reversal, and its coordinates are the real and imaginary parts of those
+of the space. Up to a positive
+rational factor, partner 1 of copy $`\kappa`$ is vector $`\kappa`$ of this basis ($`\kappa`$ ascending with the pivot) minus
+its projections on the copies before it. This subtraction, the Gram–Schmidt orthogonalization of section 14.2,
+leaves copy 1 unchanged. Each copy is then multiplied by $`\pm1`$, the sign that puts its first nonzero coefficient in
+the phase form of section 14. Partner $`\mu`$ is $`P^\Lambda_{\mu,1}`$ applied to partner 1, and the copies of the second
+irrep of a complex pair are those of the first under time reversal. Each vector is then divided by the
 positive rational that makes the power-basis coordinates of its coefficients coprime integers, as in
-section 14.4. The copies in different $`r^{v-\ell} H_{\ell}`$ are orthogonal already, $`H_{\ell}`$ being
+section 14.4. These coordinates are those of the cyclotomic field of the irrep matrices of the group, with $`\mathrm{i}`$
+adjoined for a vector that holds a coefficient outside it. The copies in different $`r^{v-\ell} H_{\ell}`$ are orthogonal already, $`H_{\ell}`$ being
 orthogonal to $`r^2`$ times the states of $`\ell - 2`$ quanta.
 
 The states of $`v`$ quanta apply to any coordinates $`q_1, \dots, q_N`$ of a degenerate mode that the group
@@ -3278,7 +3317,7 @@ maps linearly among themselves: normal coordinates, and symmetrized internal coo
 these internal coordinates (bond lengths, bond angles) although they are not linear in the positions of the
 nuclei. The creation operators of an oscillator in these coordinates transform as the coordinates. If they
 transform by $`W\,D^\Gamma(\mathsfit{g})\,W^{-1}`$ with $`W`$ unitary (for example, real Cartesian components
-of a mode of dimension 2), the states are those of $`\operatorname{Sym}^{v}`$ of $`W`$ applied to the stored states. By
+of a mode of dimension 2), the states are the stored states transformed by $`\operatorname{Sym}^{v}`$ of $`W`$. By
 Schur's lemma $`W`$ is unique up to a factor.
 
 A coordinate that the group maps affinely, a torsion angle $`\tau \mapsto \pm\tau + c`$, enters through the
@@ -3319,7 +3358,8 @@ $`\mathrm{\scriptsize E}_n`$ are complex pairs. Each entry of `levels` is a fami
     $`\mathrm{\scriptsize E}_{(v_2 - v_1)n}`$ when $`v_2 > v_1`$ and $`\mathrm{\scriptsize A}_{1}`$ when
     $`v_1 = v_2`$, in $`r^{2\min(v_1, v_2)} H_\ell`$ with $`\ell = \lvert v_1 - v_2\rvert`$.
   - `two_column`: the six shapes of $`n \le 4`$ electrons, with `table` and `bases` as in the finite records,
-    the blocks naming `family` and `index`.
+    the blocks naming `family` and `index`. Time reversal exchanges the two partners of the level, and the state
+    of $`\mathrm{\scriptsize A}_{2}`$ carries the factor $`\mathrm{i}`$.
 - $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$, the families $`D^{(J)}`$ ($`D^{(J,+)}`$, $`D^{(J,-)}`$),
   $`J \ge 1`$, whose image is $`\mathsf{SO(3)}`$ ($`\mathsf{O(3)}`$ for $`D^{(J,-)}`$):
   - `symmetric.rule`: Cayley and Sylvester's rule, $`\operatorname{Sym}^{v}D^{(J)}`$ containing $`D^{(J')}`$
@@ -3329,12 +3369,12 @@ $`\mathrm{\scriptsize E}_n`$ are complex pairs. Each entry of `levels` is a fami
     of terms `{J, mult}`, with `parity` $`p^{v}`$ ($`p^{\ell}`$) in $`\mathsf{O(3)}`$. The harmonic table of
     $`J = 2`$ is the rule $`J' = 2k, 2k - 2, 2k - 3, \dots, k`$ above.
   - `symmetric.bases`: for $`J = 1`$ and 2 and $`v \le 4`$, the highest-weight states, partner 1 ($`m = J'`$)
-    of each copy of $`D^{(J')}`$ in each $`r^{v-\ell} H_{\ell}`$, with `v`, `l`, `J`, `kappa` and one vector
-    of `quanta` and `e`.
+    of each copy of $`D^{(J')}`$ in each $`r^{v-\ell} H_{\ell}`$. Each has `v`, `l`, `J`, `kappa` and one vector
+    of `quanta` and `e`, with `factor` when $`vJ - J'`$ is odd.
   - `two_column.shells`: for $`l = 1, 2, 3`$ (the p, d and f shells), the shapes of every $`n`$ with `table`
     and `bases`, the highest-weight states ($`M_L = J'`$, $`M_S = S`$) of each copy of each term. Each state
-    has `J`, `kappa` and one vector of `determinant` and `e`, the orbital of partner $`\mu`$ being
-    $`\lvert l, l - \mu + 1\rangle`$. For the f shell, `bases_location` replaces `bases` and names the file
+    has `J`, `kappa` and one vector of `determinant` and `e`, with `factor` when $`nl - J'`$ is odd, the
+    orbital of partner $`\mu`$ being $`\lvert l, l - \mu + 1\rangle`$. For the f shell, `bases_location` replaces `bases` and names the file
     `data/subduction_unitary/SO3/f.json.gz` that holds its states, `{schema, group, l, shapes}`, each shape
     with `n`, `twoS` and `bases`. The record of $`\mathsf{O(3)}`$ shares it, its blocks at the parity
     $`p^{n}`$ of the family, the product of the parities of the electrons, whatever the $`J'`$ of the term
@@ -3350,9 +3390,16 @@ $`s`$ a squarefree integer. The copies of a repeated term of a shell are in gene
 seniority of Racah [Jud63, section 6-3]. Of the two $`{}^{2}\mathrm{D}`$ of three d electrons, the state of seniority 1 has the
 squared overlaps 3/10 and 7/10 with the first and the second copy.
 
-The documents set `subduction_unitary` in the part Vibrational and electronic levels: Subduction from
-$`\mathsf{U(\mathnormal{N})}`$ (the levels and their chains), Vibrational overtone levels, Overtone states,
-Electronic terms and Term states. The section Vibrational overtone levels sets the denominators, the
+Time reversal acts on the kets of $`D^{(J')}`$ by the matrix $`N`$ of section 37.2. A real state of $`v`$ quanta of
+$`D^{(J)}`$ gives by lowering a copy adapted to time reversal when $`vJ - J'`$ is even. When $`vJ - J'`$ is odd, the real
+form of the copy rule holds $`\mathrm{i}`$ times the real states of the space. The vector then has the field `factor`, the `cyc` value
+$`\mathrm{i}`$ (section 8), and the state is $`\mathrm{i}`$ times the sum of its components. The same holds for a term of $`n`$
+electrons of the shell $`l`$ with the parity of $`nl - J'`$. Every state of this section is thus adapted to time reversal and
+has the phase form of section 14.
+
+The documents set `subduction_unitary` in five sections of the part Vibrational and electronic levels: Subduction
+from $`\mathsf{U(\mathnormal{N})}`$ (the levels and their chains), Vibrational overtone levels, Overtone states,
+Electronic terms and Term states, in this order. The section Vibrational overtone levels sets the denominators, the
 numerators with $`\Delta_\Lambda`$, and the irreps of $`\operatorname{Sym}^{v}\Gamma`$ for $`v \le 12`$, with
 those of $`H_{\ell}`$ at $`\ell = v`$ in the same row. The states of the levels, the terms of the levels and
 the states of the terms are each one table. In each, a centered row across the columns names the level of

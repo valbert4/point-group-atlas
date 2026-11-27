@@ -22,7 +22,12 @@ r^(v - l) H_l) and of the terms of the p, d and f shells (at M_S = S), those of 
 data/subduction_unitary/SO3/f.json.gz, which O(3) shares at the parity p^n; the copies by the rule of
 section 19, the reduced row echelon basis of the range of P_11 in the coordinates of the
 monomials (descending) or of the determinants (ascending), each vector less its projections on
-the copies before it (Gram-Schmidt, so that the copies are orthonormal; the axial terms too).  The
+the copies before it (Gram-Schmidt, so that the copies are orthonormal; the axial terms too).  Time
+reversal acts on the orbitals of the axial terms as the exchange of the partners, which keeps every
+state but that of A_2, set times i (section 19).  A highest-weight state of SO(3) and O(3) has the
+sign that makes its first coefficient positive, and the factor i (the vector's `factor`) when
+vJ - J' (nl - J' for a term) is odd, so that time reversal acts on the copy that lowering gives by
+the matrix of D^(J'), (-1)^m on the anti-diagonal (section 19).  The
 arithmetic is rational in the basis |m) = sqrt((J + m)!/(J - m)!) |J, m>, in which
 L_+ |m) = |m + 1) and the invariant form keeps its coefficients; the inner product of the states
 is there sum x x' w, w the square of the factor that takes a coordinate to the basis |J, m> (times
@@ -211,6 +216,12 @@ def _q(x):
     return {"f": "q", "v": [x.numerator, x.denominator]}
 
 
+def _iq(x):
+    """The exact value i x of a rational x."""
+    x = F(x)
+    return {"f": "cyc", "M": 4, "c": [[0, 1], [x.numerator, x.denominator]]}
+
+
 def _axial_term_blocks(n, twoS, p):
     """The states of n electrons of spin S at M_S = S in E_n, by irrep: partner 1 of E_(kn) has
     the weight -k (each electron in partner 1 counts -1, in partner 2 +1), A_1 and A_2 the weight 0
@@ -264,11 +275,18 @@ def _axial_term_blocks(n, twoS, p):
             for kappa, r in enumerate(ref, 1):
                 r = _coprime_rational(r)
                 vectors = [r] if base != "E" else [r, swap(r)]
+                # time reversal acts on the orbitals as the swap (N of E_n exchanges the
+                # partners), so on a rational vector as swap: a block of A_2 is odd and is set
+                # times i (section 19), the others are adapted as they are
+                odd = base != "E" and swap(r) == [-x for x in r]
+                if base != "E" and not odd and swap(r) != r:
+                    raise AssertionError("a term state of %s is not closed under time reversal"
+                                         % base)
                 block = {"family": _axial_family(base, p, parity), "kappa": kappa,
                          "dim": len(vectors),
                          "vectors": [{"mu": mu, "components": [
                              {"determinant": [[so[q][0] + 1, so[q][1]] for q in basis[i]],
-                              "e": _q(x)} for i, x in enumerate(vec) if x]}
+                              "e": _iq(x) if odd else _q(x)} for i, x in enumerate(vec) if x]}
                              for mu, vec in enumerate(vectors, 1)]}
                 if k is not None:
                     block["index"] = _index(k)
@@ -470,6 +488,23 @@ def _monomials(N, v):
     return [(a,) + rest for a in range(v, -1, -1) for rest in _monomials(N - 1, v - a)]
 
 
+# The factor i of a highest-weight state whose copy time reversal would otherwise take to minus its
+# image under N (section 19): the cyc value i, held by the vector, whose coefficients stay q or sqrt.
+IUNIT = {"f": "cyc", "M": 4, "c": [[0, 1], [1, 1]]}
+
+
+def _state_vector(norm, odd, component):
+    """The vector of a highest-weight state from its coefficients (i, c, s), c sqrt(s) in the
+    order of the coordinates: the sign that makes the first coefficient positive (the phase form
+    of section 14), and the factor i when the copy is odd under time reversal, vJ - J' (nl - J')
+    odd (section 19)."""
+    sign = -1 if norm[0][1] < 0 else 1
+    vec = {"mu": 1, "components": [component(i, sign * c, s) for i, c, s in norm]}
+    if odd:
+        vec["factor"] = dict(IUNIT)
+    return vec
+
+
 def _so3_overtone_blocks(J, vmax, parity):
     """The highest-weight states of v <= vmax quanta in D^(J), in each r^(v-l) H_l, by L descending:
     in the scaled partners b_mu = alpha_m a+_mu (m = J - mu + 1), L_+ b_mu = b_(mu - 1),
@@ -566,9 +601,9 @@ def _so3_overtone_blocks(J, vmax, parity):
                     norm = _normalize([r], scale2, [p])[0]
                     out.append({"v": v, "l": l, "J": L, "kappa": kappa,
                                 **({"parity": parity ** v} if parity is not None else {}),
-                                "vectors": [{"mu": 1, "components": [
-                                    {"quanta": list(basis[i]), "e": _value(c, s)}
-                                    for i, c, s in norm]}]})
+                                "vectors": [_state_vector(
+                                    norm, (v * J - L) % 2,
+                                    lambda i, c, s: {"quanta": list(basis[i]), "e": _value(c, s)})]})
     return out
 
 
@@ -630,9 +665,11 @@ def _term_blocks(l, n, twoS):
         for kappa, (r, p) in enumerate(zip(ref, piv), 1):
             norm = _normalize([r], scale2, [p])[0]
             out.append({"J": L, "kappa": kappa,
-                        "vectors": [{"mu": 1, "components": [
-                            {"determinant": [[l - so[q][0] + 1, so[q][1]] for q in basis[i]],
-                             "e": _value(c, s)} for i, c, s in norm]}]})
+                        "vectors": [_state_vector(
+                            norm, (n * l - L) % 2,
+                            lambda i, c, s: {"determinant": [[l - so[q][0] + 1, so[q][1]]
+                                                             for q in basis[i]],
+                                             "e": _value(c, s)})]})
     return out
 
 

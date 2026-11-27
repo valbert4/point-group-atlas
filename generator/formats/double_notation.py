@@ -54,7 +54,7 @@ DROP = (
 # overtones, the electronic terms, the coset and Euler-angle details of the finite documents, and
 # the words, operators and heads that only Rotation's documents print.
 DROP_UNUSED = (
-    "irrep.alias.point",
+    "irrep.alias.point", "matrix.reversal",
     "typography.spectroscopic", "group.abstract.dihedral", "head.level",
     "group.abstract.alternating", "accent.conjugate.star", "operator.degree",
     "function.matrixelement", "function.cg.parity",

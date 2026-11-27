@@ -1266,6 +1266,10 @@ PRODUCTS = (
       defined=("part:bases", "conv:14")),
     S("index.partner.sign", "index", "c", "the sign of the second partner of a "
       "two-dimensional block", "c", "c_{m}", defined=("part:bases", "conv:14")),
+    S("matrix.reversal", "matrix", r"N_{\nu,\mu}",
+      r"the matrix by which time reversal acts on a block of a real irrep $\Gamma$, $\sqrt{d}$ "
+      r"times the block of $\Gamma \otimes \Gamma$ into the trivial irrep (section 32.2)", "N_{*}",
+      scope="conventions|conv:14|", defined="conv:14"),
     S("index.eta", "index", r"\eta",
       "the sign by which the inversion acts on the kets, $(-1)^J$ on the spherical harmonics",
       r"\eta", r"\eta(.)", defined=("part:bases", "conv:14")),

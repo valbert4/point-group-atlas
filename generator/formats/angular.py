@@ -4,7 +4,7 @@ in Double), Multiplicities and allowed m, and Symmetry-adapted bases.
 import re
 from fractions import Fraction
 
-from .. import names
+from .. import names, serialize
 from ..exact.value import rat
 from .typeset import (CONSTANTS, GRID_LABEL, LOOSE_PAR, SU2, TABLE_MAX_WIDTH, VECTOR_LINE,
                       VECTOR_LINES, VECTOR_LINES_TEXT, chunks, code, fill_columns, fill_width, grp,
@@ -361,10 +361,25 @@ def residues_cell(rs):
 
 
 def pairs_occur(sb):
-    """Whether a vector of the closed-form bases can be a pair |J,m> + s|J,-m>, m > 0: only when
-    G has a flip and the flip fixes some m > 0 (the self-conjugacy condition is not m = 0)."""
-    cf = sb.get("closed_form") or {}
-    return cf.get("abelian_index") == 2 and cf.get("self_conjugacy_condition") != "m = 0"
+    """Whether a vector of Rotation's closed-form bases can be a pair |J,m> + s|J,-m>, m > 0: when
+    A has the same character on |J,m> and |J,-m> for some m > 0 (the self-conjugacy condition is
+    not m = 0)."""
+    cond = (sb.get("closed_form") or {}).get("self_conjugacy_condition")
+    return isinstance(cond, str) and cond != "m = 0"
+
+
+def has_factor_i(sb, kinds):
+    """Whether a stored closed-form block of one of the kinds carries the factor i (a coefficient
+    that is not rational)."""
+    return any(b["kind"] in kinds and c["e"].get("f") != "q"
+               for b in sb["enumerated"]["blocks"] for v in b["vectors"] for c in v["components"])
+
+
+def complex_kets(sb):
+    """Whether the closed-form bases of a group G = A hold kets of complex pairs (a ket of m != 0
+    is a block)."""
+    return any(b["kind"] == "single_ket" and b["seed_m"] != 0
+               for b in sb["enumerated"]["blocks"])
 
 
 def first_pair(D, sb):
@@ -486,24 +501,27 @@ def bases_reading(D, sb):
     if not closed:
         D.w((D.define("index.factor.c") if half else
              D.define("index.factor.c", "index.multiplicity.copies")) + "so " + AMPLITUDE)
-    elif all_kets(sb) or (not half and sb["closed_form"]["abelian_index"] == 1):
+    elif all_kets(sb):
         D.w(ONE_KET)
     elif half:
         D.w(r"so every $e_m$ here is $\pm 1$%s." % (
             r", or $\pm\iunit$ in a pair" if sb["closed_form"]["flip"] == "sigma_v" else ""))
     else:
+        # the amplitudes of the single kets: 1, the signs of the partners and of the kets of complex
+        # pairs, and i where a two-dimensional block carries it (rule 4 of section 14.1)
         two, pairs = two_dimensional(D), pairs_occur(sb)
-        minus = ([r"on the second partner of a two-dimensional block"] if two else []) + (
-            [r"on $\jm{J}{-m}$ in a pair with $s = -1$"] if pairs else [])
+        signs = two or complex_kets(sb)
+        single_i = has_factor_i(sb, ("partner_pair",))
         first = first_pair(D, sb) if pairs else None
         D.w(D.define(*(["index.pair.sign"] if pairs else [])) +
-            r"so a single ket has amplitude %s%s. Each $e_m$ is $+1$, except that it may be $-1$ "
-            r"%s." % (
-                r"$\pm1$" if two else "1",
+            r"so a single ket has amplitude %s%s. Each $e_m$ is %s." % (
+                r"$\pm1$ or $\pm\iunit$" if single_i else r"$\pm1$" if signs else "1",
                 r", and %sa pair $\jm{J}{m} + s\,\jm{J}{-m}$, $s = \pm1$, has amplitudes "
-                r"$\tfrac{1}{2}\sqrt{2}$ and $\tfrac{1}{2}s\sqrt{2}$"
+                r"$\tfrac{1}{2}\sqrt{2}$ and $\tfrac{1}{2}s\sqrt{2}$, or these times $\iunit$"
                 % (r"from $J = %d$ on " % first if first and first > 1 else "")
-                if pairs else "", " and ".join(minus)))
+                if pairs else "",
+                r"$\pm1$ or $\pm\iunit$" if single_i or pairs else
+                r"$\pm1$" if signs else "1"))
 
 
 # The flip of the axial bases: the binary rotation about x or the mirror in the xz plane.
@@ -573,6 +591,11 @@ def bases_construction_closed(D, sb):
         return
     subgroup = (r"$\grp{A}$ of the elements over $\grp{C_{\infty h}}$" if half
                 else r"$\grp{A} = \grp{G}\cap\grp{C_{\infty h}}$")
+    if not half:
+        rows = rotation_closed(D, sb, cf, subgroup)
+        if rows:
+            case_table(D, rows)
+        return
     if cf["abelian_index"] == 1:
         D.w(D.define("group.A") + ABELIAN_BLOCKS % subgroup)
         # every ket is a block, as that sentence says, so there is no table of cases
@@ -640,6 +663,87 @@ def bases_construction_closed(D, sb):
             D.w(relabeled(D, [(D.irrep_of_label(a), D.irrep_of_label(b)) for a, b in moved]))
 
 
+# Rotation's closed forms in a group G = A (the subgroup a slot), and the factor i of rule 4 of
+# section 14.1 (CONVENTIONS.md), which makes time reversal act on a block as section 14 requires.
+INDEX_ONE = (r"The subgroup %s acts diagonally on the kets, on $\jm{J}{m}$ by the character "
+             r"$\chiA(m)$, and $\grp{G} = \grp{A}$.")
+COMPLEX_KETS = (r"For $m > 0$, when $\chiA(m) \ne \chiA(-m)$, the kets $\jm{J}{m}$ and "
+                r"$\jm{J}{-m}$ are the blocks of the two irreps of a complex pair: the block of the "
+                r"first irrep has $e = 1$, and that of its partner $e = (-1)^m$, so that time "
+                r"reversal takes the first to the second.")
+PAIR_FACTOR = (r"%s give two one-dimensional blocks $\jm{J}{m} + s\,\jm{J}{-m}$, $s = \pm1$, "
+               r"the one with $s = -(-1)^m$ times $\iunit$.")
+FACTOR_REASON = (r"The factor $\iunit$ makes each block adapted to time reversal (CONVENTIONS.pdf, "
+                 r"section 14).")
+
+
+def _with_i(block):
+    """Whether a closed-form block carries the factor i (rule 4)."""
+    return any(c["e"].get("f") != "q" for v in block["vectors"] for c in v["components"])
+
+
+def rotation_closed(D, sb, cf, subgroup):
+    """How Rotation's closed-form blocks are built: by the subgroup A, the flip, the partners of a
+    two-dimensional block and the factor i of rule 4 (CONVENTIONS.md section 14.1); returns the
+    rows of the table of cases."""
+    blocks = sb["enumerated"]["blocks"]
+    two, pairs = two_dimensional(D), pairs_occur(sb)
+    pp = [b for b in blocks if b["kind"] == "partner_pair"]
+    two_i, two_plain = any(map(_with_i, pp)), not all(map(_with_i, pp))
+    rows = []
+    if cf["abelian_index"] == 1:
+        cplx = complex_kets(sb)
+        text = D.define("group.A", "function.character.abelian") + INDEX_ONE % subgroup
+        if cplx:
+            text += " " + COMPLEX_KETS
+            rows += [r"$\chiA(m) \ne \chiA(-m)$, first irrep of a pair & 1 & $\jm{J}{m}$",
+                     r"$\chiA(m) \ne \chiA(-m)$, its partner & 1 & $(-1)^m\jm{J}{m}$"]
+        if pairs:
+            text += " " + PAIR_FACTOR % (r"Otherwise they" if cplx else
+                                         r"For $m > 0$ the kets $\jm{J}{m}$ and $\jm{J}{-m}$")
+            text += " " + FACTOR_REASON
+        text += (r" Blocks are ordered by $J$, then $|m|$%s%s (CONVENTIONS.pdf, section 14.1)." % (
+            r", $+m$ before $-m$" if cplx else "", r", a pair with $s = +1$ first" if pairs else ""))
+        D.w(text)
+    else:
+        c2x = cf["flip"] == "C_2x"
+        text = (D.define("group.A", "function.character.abelian") + INDEX_TWO % subgroup + " "
+                + D.define(*(() if c2x else ("element.mirror.angle",)))
+                + r"The flip %s sends $m$ to $-m$. " % FLIP[c2x])
+        order = r"ordered by $J$, then $|m|$%s" % (r", a pair with $s = +1$ first"
+                                                   if pairs else "")
+        pair = (" " + PAIR_FACTOR % r"Kets $\jm{J}{m}$ and $\jm{J}{-m}$ of one character of "
+                r"$\grp{A}$") if pairs else ""
+        reason = (" " + FACTOR_REASON) if two_i or pairs else ""
+        if two:
+            text += (D.define("index.partner.sign")
+                     + r"By the rule of CONVENTIONS.pdf, section 14.1, a two-dimensional "
+                     r"block has $e = +1$ on partner 1 and $e = c = \pm1$ on partner 2%s. "
+                     % (r", both times $\iunit$ when $c = -(-1)^m$" if two_i else "")
+                     + partner_rule(D) + pair + reason + " Blocks are " + order + ".")
+        else:
+            text += (r"Every irrep is one-dimensional, so a block is one ket%s.%s%s Blocks are %s "
+                     r"(CONVENTIONS.pdf, section 14.1)." % (r" or a pair" if pairs else "", pair,
+                                                            reason, order))
+        D.w(text)
+        if two and two_plain and two_i:
+            rows += [r"$\chiA(m) \ne \chiA(-m)$, $c = (-1)^m$ & 2 & $\jm{J}{m}$;\ "
+                     r"$c\,\jm{J}{-m}$",
+                     r"$\chiA(m) \ne \chiA(-m)$, $c = -(-1)^m$ & 2 & $\iunit\jm{J}{m}$;\ "
+                     r"$\iunit c\,\jm{J}{-m}$"]
+        elif two:
+            rows.append(r"$\chiA(m) \ne \chiA(-m)$ & 2 & $%s\jm{J}{m}$;\ $%sc\,\jm{J}{-m}$"
+                        % ((r"\iunit", r"\iunit ") if two_i else ("", "")))
+    if pairs:
+        rows += [r"$\chiA(m) = \chiA(-m)$, $m > 0$, $s = (-1)^m$ & 1 & "
+                 r"$\jm{J}{m} + s\,\jm{J}{-m}$",
+                 r"$\chiA(m) = \chiA(-m)$, $m > 0$, $s = -(-1)^m$ & 1 & "
+                 r"$\iunit(\jm{J}{m} + s\,\jm{J}{-m})$"]
+    if rows:
+        rows.append(r"$m = 0$ & 1 & $\jm{J}{0}$")
+    return rows
+
+
 # The copies of the exceptional groups and preimages in both volumes, around the display of the
 # projector: its lead-in and the Gram--Schmidt rule after it, each with a slot for an anchor.
 GRAM_SCHMIDT = (r"The copies of $\Gamma$ at $J$ are orthonormal. %sIn the coordinates $e_m$, "
@@ -649,6 +753,16 @@ GRAM_SCHMIDT = (r"The copies of $\Gamma$ at $J$ are orthonormal. %sIn the coordi
                 r"each partner-1 vector is its basis vector minus its projections on the copies "
                 r"before it (Gram--Schmidt). Partner $\intx$ is $P^\Gamma_{\intx,1}$ applied to "
                 r"partner 1.")
+
+
+# Rotation's copies of the exceptional groups after Gram--Schmidt (CONVENTIONS.md section 14.2): the real form
+# for a real irrep, the sign of the phase form, the second irrep of a complex pair by time reversal.
+REAL_FORM = (r"The copies are adapted to time reversal (CONVENTIONS.pdf, section 14.2). For a real irrep the "
+             r"basis is that over $\mathbb{R}$ of the vectors of the range that time reversal keeps with "
+             r"the matrix of the irrep, in the real and imaginary parts of the $e_m$. Each copy then has the "
+             r"sign that gives its first coefficient a positive real part, or makes it $\iunit$ times a "
+             r"positive number. The copies of the second irrep of a complex pair are those of the first under "
+             r"time reversal.")
 
 
 def det_moved(D):
@@ -681,7 +795,7 @@ def bases_construction_enumerated(D, sb):
         D.w(GRAM_SCHMIDT[0] % D.define("matrix.projector"))
         D.equation("projector", r"P^\Gamma_{1,1} = \sum_g \conj{\repD{\Gamma}_{1,1}(g)}\,"
                                 r"%s(g)," % (r"\irrJp{J}{+1}" if half else r"\irrJ{J}"))
-        D.w(GRAM_SCHMIDT[1] % D.define("index.copy"))
+        D.w(GRAM_SCHMIDT[1] % D.define("index.copy") + ("" if half else " " + REAL_FORM))
         return
     # Double's records name the group (2T, 2O, 2I), Rotation's its Schoenflies symbol
     parent = grp(cf["group"] if half else names.schoenflies_of(cf["group"]))
@@ -721,6 +835,9 @@ def bases_construction_enumerated(D, sb):
             D.w(relabeled(D, [(D.irrep_id(a), D.irrep_id(b)) for a, b in moved]))
         return
     inter = cf["intertwiner"]
+    from ..bases import time_reversal
+    factors = time_reversal.derived_factors(
+        serialize.read_json(names.record_path(cf["group"])), D.rec, cf, inter)
     n = 0
     for par in ("l_even", "l_odd"):
         for label, S in sorted(inter[par].items()):
@@ -730,6 +847,13 @@ def bases_construction_enumerated(D, sb):
                 r"$w_\intx = \sum_\nu S_{\nu,\intx} v_\nu$, where $v$ are the partners of $%s$ "
                 r"and" % ("even" if par == "l_even" else "odd", D.irrep_of_label(label), parent))
             D.equation("intertwiner%d" % n, r"S = %s." % D.display_matrix(S))
+    times_i = [(par, label) for par in ("l_even", "l_odd") for label in sorted(factors[par])
+               if factors[par][label] != factors[par][label].one()]
+    for par, label in times_i:
+        D.w(r"At %s $J$ the blocks of $%s$ are also multiplied by $\iunit$ or $-\iunit$, so that they "
+            r"are adapted to time reversal (CONVENTIONS.pdf, section 14.3). The "
+            r"sign gives their first coefficient a positive real part, or makes it $\iunit$ times a "
+            r"positive number." % ("even" if par == "l_even" else "odd", D.irrep_of_label(label)))
 
 
 # The legend of the multiplicities in both volumes: the lead of the display of the generating

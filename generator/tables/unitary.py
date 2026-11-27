@@ -556,11 +556,13 @@ def levels_location(name, irrep_id):
     return "%s/%s/%s.json.gz" % (names.LEVELS_DIR, name, irrep_id)
 
 
-def _states(S, mats, N, sym, terms):
+def _states(S, level, N, sym, terms):
     vmax = LB.v_max(N)
+    mats = S.mats[level]
     return ({"v_max": vmax,
-             "blocks": LB.symmetric_bases(S, mats, N, sym["harmonic"]["table"], vmax)},
-            [LB.two_column_bases(S, mats, N, t["n"], t["twoS"], t["table"]) for t in terms])
+             "blocks": LB.symmetric_bases(S, mats, N, sym["harmonic"]["table"], vmax, level)},
+            [LB.two_column_bases(S, mats, N, t["n"], t["twoS"], t["table"], level)
+             for t in terms])
 
 
 def _derived(doc, parent_name, parent, ir, sym, terms):
@@ -627,7 +629,6 @@ def attach(doc, name, exceptional=None):
     out = []
     for level in lvs:
         ir = level.ir
-        mats = S.mats[ir["id"]]
         sym = symmetric_block(level)
         terms = two_column_block(level)
         entry = {"irrep": ir["label"], "irrep_id": ir["id"], "dim": level.N, "symmetric": sym,
@@ -646,7 +647,7 @@ def attach(doc, name, exceptional=None):
         if level.N >= FILE_DIM and parent is not None:
             states = _derived(doc, parent_name, parent, ir, sym, terms)
         else:
-            states = _states(S, mats, level.N, sym, terms)
+            states = _states(S, ir["id"], level.N, sym, terms)
         if level.N >= FILE_DIM:
             location = levels_location(name, ir["id"])
             serialize.write_json_gz(names.path(location), {
@@ -672,6 +673,6 @@ def _parent_states(name, rec, irrep_id):
     if (name, irrep_id) not in _CACHE:
         level = next(lv for lv in levels(Group(rec)) if lv.ir["id"] == irrep_id)
         S = LB.Setting(rec)
-        _CACHE[(name, irrep_id)] = _states(S, S.mats[irrep_id], level.N, symmetric_block(level),
+        _CACHE[(name, irrep_id)] = _states(S, irrep_id, level.N, symmetric_block(level),
                                            two_column_block(level))
     return _CACHE[(name, irrep_id)]

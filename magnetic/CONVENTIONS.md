@@ -156,7 +156,9 @@ and `pdf-numbers` for the numbers.
 Time reversal acts on a function by complex conjugation. On the kets of section 4.1, with their Condon–Shortley
 phases, it is therefore
 $`\varTheta \bigl\lvert{}^{J}_{\,m}\bigr\rangle = (-1)^m \bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$, and a real
-function such as $`z`$ is even under time reversal.
+function such as $`z`$ is even under time reversal. Every block of the symmetry-adapted bases of section 14 carries
+the corepresentation of its irrep in $`\mathsf{G1'}`$. Time reversal acts on a block of a real irrep by the matrix $`N`$
+(sections 32.2 and 37.2). It takes a block of the first irrep of a complex pair to the block of its partner.
 
 ### 31.2 The four images
 
@@ -383,7 +385,7 @@ alone and in one pair. It has these fields:
 - `multipoles`: one entry for each kind of multipole and each rank up to 4, with `kind`, `J` (the rank) and
   `multiplicity`, the pointer to its multiplicity in the field `subduction_o3` of $`\mathsf{G}`$ (section 11).
 - `bases`: the pointer to the symmetry-adapted bases of $`\mathsf{G}`$ (section 14), whose blocks give the forms
-  of the multipoles.
+  of the multipoles, each a hermitian operator.
 - `two_vectors`: the invariants in a polar vector even under time reversal and an axial vector odd under time
   reversal, such as an electric polarization and a magnetization, with `kinds`, `counts` and `polynomials`.
 

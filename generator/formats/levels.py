@@ -113,9 +113,11 @@ def heading(D, lv, several):
         D.w(r"\paragraph{The level $%s$.}" % name(D, lv))
 
 
-def vector_terms(D, comps, ket):
+def vector_terms(D, comps, ket, factor=None):
     """The pieces of a vector: each coefficient with its ket, the terms joined by + and - set
-    alike, a coefficient that is a sum in parentheses, a coefficient 1 not written."""
+    alike, a coefficient that is a sum in parentheses, a coefficient 1 not written; with a factor
+    (the factor i of a state of SO(3), O(3), CONVENTIONS.md section 19), factor (...), or the factor
+    before the one term of a vector of one component."""
     out = []
     for c in comps:
         tex, compound = D.factor(c["e"])
@@ -131,6 +133,11 @@ def vector_terms(D, comps, ket):
         else:
             e = tex + r"\,"
         out.append(r"$%s%s$" % (e, ket(c)))
+    if factor is not None and len(out) == 1:
+        out[0] = r"$%s\,%s" % (D.coefficient(factor), out[0][1:])
+    elif factor is not None:
+        out[0] = r"$%s\,(%s" % (D.coefficient(factor), out[0][1:])
+        out[-1] = out[-1][:-1] + ")$"
     return out
 
 
