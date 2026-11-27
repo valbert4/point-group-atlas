@@ -1,4 +1,5 @@
 (* D5d (D_5d): data/json/D5d.json as a Wolfram Language association. *)
+(* Matrices act on row vectors and a product applies its left factor first (CONVENTIONS.md, section 4.3, for column vectors). *)
 o3t = <|
   "cartesian_tensors" -> <|
     "functions" -> {

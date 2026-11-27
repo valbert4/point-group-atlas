@@ -6,6 +6,7 @@ same as a list of links in Markdown.  Every path is a site path, relative to the
 is a URL on GitHub at the commit the site is built from (data.Files.url), a PDF its copy in the
 site (data.Files.address)."""
 import os
+import re
 
 from .. import names, serialize
 from ..formats import style
@@ -53,10 +54,32 @@ def write(site, documents, out):
     serialize.write_text(os.path.join(out, "llms.txt"), llms(volumes, site.data.url("index.json")))
 
 
+def primer(text):
+    """The primer of the README's section Conventions, the conventions that a program or an agent needs first:
+    the paragraph before the section's numbered list, a blank line and the list, as lines; None when the section
+    has no numbered list.  llms.txt copies these lines, so that it and the README cannot differ."""
+    sec = re.search(r"\n## Conventions\n(.*?)(?=\n## )", text, re.S)
+    if not sec:
+        return None
+    lines = sec.group(1).split("\n")
+    start = next((k for k, line in enumerate(lines) if line.startswith("1. ")), None)
+    if start is None or start < 2 or lines[start - 1] != "":
+        return None
+    first = start - 2
+    while first > 0 and lines[first - 1] != "":
+        first -= 1
+    out = lines[first:start]
+    for line in lines[start:]:
+        if not (re.match(r"\d+\. ", line) or line.startswith("   ")):
+            break
+        out.append(line)
+    return out
+
+
 def llms(volumes, index):
-    """llms.txt: the atlas (site.DESCRIPTION, the description of every file of the site), its
-    volumes, the indexes of notation, the conventions and the data, and each group with its JSON;
-    `index` the URL of index.json."""
+    """llms.txt: the atlas (site.DESCRIPTION, the description of every file of the site), the
+    primer of the README's section Conventions (primer), its volumes, the indexes of notation, the
+    conventions and the data, and each group with its JSON; `index` the URL of index.json."""
     from ..formats.latex import listed
     from .data import INDEX_JSON, index_text
     from .site import DESCRIPTION
@@ -68,8 +91,12 @@ def llms(volumes, index):
              "Each group has a file for each section of its document, with its formulas in MathML "
              "and their TeX. Its record is in the repository on GitHub, in JSON, GAP, Wolfram "
              "Language and SymPy. %s The file sitemap.json maps the site by volume, group and "
-             "section." % index_text("index.json of the repository"), "",
-             "## Volumes", ""]
+             "section." % index_text("index.json of the repository"), ""]
+    with open(names.repository_path("README.md"), encoding="utf-8") as fh:
+        conventions = primer(fh.read())
+    if conventions:
+        lines += ["## Conventions", ""] + conventions + [""]
+    lines += ["## Volumes", ""]
     for v in volumes:
         n = len(v["groups"])
         held = ["its conventions", "%d group%s" % (n, "" if n == 1 else "s"), "its references"]

@@ -1,4 +1,5 @@
 (* S6b (S_6b): data/json/S6b.json as a Wolfram Language association. *)
+(* Matrices act on row vectors and a product applies its left factor first (CONVENTIONS.md, section 4.3, for column vectors). *)
 o3d = <|
   "elements" -> <|"count" -> 6, "lift_bits" -> {0, 1, 1, 1, 0, 0}|>,
   "group" -> <|

@@ -1,4 +1,5 @@
 # S6 (S_6): data/json/S6.json as a GAP record.
+# Matrices act on row vectors and a product applies its left factor first (CONVENTIONS.md, section 4.3, for column vectors).
 o3d := rec(
   ("elements") := rec( ("count") := 6, ("lift_bits") := [ 0, 1, 1, 0, 1, 1 ] ),
   ("group") := rec(

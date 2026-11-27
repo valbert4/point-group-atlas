@@ -1,4 +1,5 @@
 # 2C4 (2C_4): data/json/2C4.json as a Python dict of SymPy values.
+# Matrices act on row vectors and a product applies its left factor first (CONVENTIONS.md, section 4.3, for column vectors).
 from sympy import I, Rational, S, exp, pi
 
 o3d = {

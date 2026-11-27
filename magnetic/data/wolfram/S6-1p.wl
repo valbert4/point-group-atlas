@@ -1,4 +1,5 @@
 (* S6-1p (S_61'): data/json/S6-1p.json as a Wolfram Language association. *)
+(* Matrices of elements act on row vectors, a product of elements applies its left factor first, and a corepresentation is written in the order of operators (CONVENTIONS.md, sections 4.3 and 32.2). *)
 o3m = <|
   "clebsch_gordan" -> <|
     "corepresentations" -> {"Ag", "1E1g", "Au", "1E1u"},

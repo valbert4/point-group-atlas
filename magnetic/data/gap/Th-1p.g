@@ -1,4 +1,5 @@
 # Th-1p (T_h1'): data/json/Th-1p.json as a GAP record.
+# Matrices of elements act on row vectors, a product of elements applies its left factor first, and a corepresentation is written in the order of operators (CONVENTIONS.md, sections 4.3 and 32.2).
 o3m := rec(
   ("clebsch_gordan") := rec(
     ("corepresentations") := [ "Ag", "1Eg", "Tg", "Au", "1Eu", "Tu" ],

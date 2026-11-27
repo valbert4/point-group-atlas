@@ -1,4 +1,5 @@
 # D7d-1p (D_7d1'): data/json/D7d-1p.json as a GAP record.
+# Matrices of elements act on row vectors, a product of elements applies its left factor first, and a corepresentation is written in the order of operators (CONVENTIONS.md, sections 4.3 and 32.2).
 o3m := rec(
   ("clebsch_gordan") := rec(
     ("corepresentations") := [ "A1g", "A2g", "E1g", "E2g", "E3g", "A1u", "A2u", "E1u", "E2u", "E3u" ],

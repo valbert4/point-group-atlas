@@ -250,8 +250,8 @@ It is unique up to a phase. In magnetic type III the record holds it as $`N = \m
 with the phase and the scale of section 10.3, in the fields `matrix` ($`\mathcal{E}`$) and `N` ($`\mathcal{N}`$)
 of `N`. In magnetic type II it is $`\sqrt{d}`$ times the block of
 $`\Lambda \otimes \Lambda`$ into the trivial irrep (section 10.3), with row $`(\mu_1, \mu_2)`$ of the block as
-row $`\mu_1`$ and column $`\mu_2`$ of $`N`$. The record then names that block by a pointer. The representative
-acts as follows in the three cases:
+row $`\mu_1`$ and column $`\mu_2`$ of $`N`$. This block is real, and the record names it by a pointer. The
+representative acts as follows in the three cases:
 
 - Case (a): $`\mathcal{D}(\mathsfit{h}) = D^{\Lambda}(\mathsfit{h})^{\top}`$ and
   $`\mathcal{D}(\mathsfit{a}) = N K`$.
@@ -265,6 +265,10 @@ acts as follows in the three cases:
 
 Every other antiunitary element is $`\mathsfit{h}\mathsfit{a}`$, the product that applies $`\mathsfit{h}`$
 first, with $`\mathcal{D}(\mathsfit{h}\mathsfit{a}) = \mathcal{D}(\mathsfit{a})\, \mathcal{D}(\mathsfit{h})`$.
+
+Where a function moves with the points (section 4.3), the corepresentation on the same kets is the complex
+conjugate of $`\mathcal{D}`$: a unitary element $`\mathsfit{h}`$ acts by $`D^{\Lambda}(\mathsfit{h})^{\dagger}`$, and
+$`N^{*}`$ replaces $`N`$.
 
 ### 32.3 Labels
 
@@ -712,6 +716,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\ast`$ | a mirror in an `orbifold` symbol, as in $`2{\ast}`$ (with $`\mathsf{C_{2h}}`$) | 2 |
 | $`\bar{n}`$ | the rotoinversion bar over an axis order in a `hermann_mauguin` symbol, as in $`\bar{4}`$ (with $`\mathsf{S_{4}}`$) | 2 |
 | $`{}^{1}\mathrm{\scriptsize E}`$ | the member 1 or 2 of a complex-conjugate pair of irreps, as a left superscript | 6 |
+| $`U^{\dagger}`$ | the conjugate transpose | 0.1 |
 | $`P(\mathsfit{g})^{\top}`$ | the transpose | 0.1 |
 | $`\left(\begin{smallmatrix} 0 & -1 \\ 1 & 0 \end{smallmatrix}\right)`$ | a matrix, in parentheses: in script size in tables and in the prose, in text size in displays | 0.1 |
 | $`[ ]`$ | brackets: an interval, or a stored array or an entry of one, such as $`C[(\mu_1,\mu_2),\mu]`$ | 0.1 |
@@ -774,6 +779,7 @@ This index lists the common notation of the documents and selected symbols of th
 | electric toroidal | the electric toroidal multipoles of a rank, by their number | 35.1 |
 | element | the element of a component at its angle | 0.1 |
 | $`\mathrm{e[V^{2}]}`$ | the Jahn symbol of a space of Cartesian tensors: V a polar vector, e an axial factor, a power the number of factors, brackets their symmetrized product, braces their antisymmetrized one | 13 |
+| even, odd | the columns for even and for odd angular momentum $`J`$ | 0.1 |
 | exch. sym., exch. anti. | symmetric and antisymmetric under the exchange of the two factors: the rule that distinguishes two copies of an irrep or of a corepresentation in a square | 0.1 |
 | $`F`$ | the exact rotation of the field `frame`, which carries the elements of the record of $`\mathsf{H}`$ to their images in $`\mathsf{G}`$ | 30.3 |
 | family | a family of irreps | 0.1 |
@@ -812,6 +818,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\mathbf{m}`$ | a magnetic moment, an axial vector odd under time reversal | 31.2 |
 | magnetic | the magnetic multipoles of a rank, by their number | 35.1 |
 | magnetic toroidal | the magnetic toroidal multipoles of a rank, by their number | 35.1 |
+| $`n \bmod N`$ | the residue of $`n`$ modulo $`N`$ in $`0, 1, \dots, N - 1`$ | 0.1 |
 | $`\mu`$ | the partner index of an irrep | 0.1 |
 | $`\mu_1, \mu_2`$ | the partners of the two factors of a product | 10 |
 | $`N`$ | the parameter of an axial family, the number of its rotations about the principal axis | 1 |

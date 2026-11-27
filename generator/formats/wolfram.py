@@ -5,7 +5,7 @@ rational, a sum of terms c Exp[2 Pi I k/M] or a signed square root Sqrt[|p|/q].
 """
 from .. import names
 from ..exact.value import to_wolfram
-from .literal import C_ESCAPES, Dialect, literal
+from .literal import C_ESCAPES, Dialect, convention_line, literal
 
 
 def wolfram_string(s):
@@ -29,8 +29,9 @@ WOLFRAM = Dialect(indent="  ", value=to_wolfram, string=wolfram_string, null="Nu
 
 
 def render(name, rec):
-    """The text of data/wolfram/<name>.wl: a one-line comment, then o3t = <the record>; (o3d in the
-    catalogue double)"""
-    return ("(* %s (%s): data/json/%s.json as a Wolfram Language association. *)\n"
-            % (name, names.symbol_of(rec), name)
+    """The text of data/wolfram/<name>.wl: two comment lines, the record and the convention of its
+    matrices and products (literal.convention_line), then o3t = <the record>; (o3d in the catalogue
+    double)"""
+    return ("(* %s (%s): data/json/%s.json as a Wolfram Language association. *)\n(* %s *)\n"
+            % (name, names.symbol_of(rec), name, convention_line(names.CATALOGUE))
             + names.LITERAL[names.CATALOGUE] + " = " + literal(rec, WOLFRAM) + ";\n")

@@ -1,4 +1,5 @@
 # Dinfh-Cinfv (D_infh(C_infv)): data/json/Dinfh-Cinfv.json as a GAP record.
+# Matrices of elements act on row vectors, a product of elements applies its left factor first, and a corepresentation is written in the order of operators (CONVENTIONS.md, sections 4.3 and 32.2).
 o3m := rec(
   ("class_space") := "rotation/Cinfv#/character_functions/class_space",
   ("clebsch_gordan") := rec(

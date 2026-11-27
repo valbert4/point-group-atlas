@@ -151,7 +151,7 @@ index $`k`$ of the record of $`\mathsf{G}`$ (`base`, `bar`), and $`\bar{\mathsfi
 Each element has these fields:
 
 - `matrix`: the transpose of the $`\mathsf{SU(2)}`$ part, so that the matrices compose like $`P(\mathsfit{g})`$
-  (section 4.1).
+  (sections 4.1 and 4.3).
 - `parity`: $`\det \mathsfit{g}`$.
 - `su2_turn`: $`\tau = \omega/2\pi`$ of the $`\mathsf{SU(2)}`$ part $`\tilde{R}_{\mathbf{v}}(\omega)`$.
 - `euler_sign`: the $`s`$ with
@@ -435,7 +435,9 @@ An element $`(U, \varepsilon)`$ acts on the kets $`\bigl\lvert{}^{J}_{\,m}\bigr\
 $`D^{J}(U)^{\dagger}`$, times $`p`$ when $`\varepsilon = -1`$, where $`D^{J}`$ is the Wigner matrix of
 section 9. At integer $`J`$ with $`p = (-1)^J`$ this action is that of section 4.1 on the spherical harmonics
 (at the other parity, that action times $`\varepsilon`$). The element $`\bar{\mathsfit{E}}`$ multiplies a ket
-by $`(-1)^{2J}`$.
+by $`(-1)^{2J}`$. Where a function moves with the points (section 4.3), $`(U, \varepsilon)`$ has the matrix $`U`$, the transpose
+of `matrix`, and acts on these kets by $`D^{J}(U)`$, times $`p`$ when $`\varepsilon = -1`$. In that convention the
+product of the pairs of section 20.1 applies its right factor first.
 
 Time reversal $`\varTheta`$ acts on the kets of half-integer $`J`$ as
 $`\varTheta \bigl\lvert{}^{J}_{\,m}\bigr\rangle = (-1)^{J-m} \bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$, an antiunitary map with

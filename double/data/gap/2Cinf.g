@@ -1,4 +1,5 @@
 # 2Cinf (2C_inf): data/json/2Cinf.json as a GAP record.
+# Matrices act on row vectors and a product applies its left factor first (CONVENTIONS.md, section 4.3, for column vectors).
 o3d := rec(
   ("character_functions") := rec(
     ("class_space") := rec(

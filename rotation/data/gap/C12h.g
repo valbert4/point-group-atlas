@@ -1,4 +1,5 @@
 # C12h (C_12h): data/json/C12h.json as a GAP record.
+# Matrices act on row vectors and a product applies its left factor first (CONVENTIONS.md, section 4.3, for column vectors).
 o3t := rec(
   ("cartesian_tensors") := rec(
     ("functions") := [

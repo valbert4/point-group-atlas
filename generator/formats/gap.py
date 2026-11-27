@@ -8,7 +8,7 @@ number of conductor up to 4|p|q.
 """
 from .. import names
 from ..exact.value import to_gap
-from .literal import C_ESCAPES, Dialect, literal
+from .literal import C_ESCAPES, Dialect, convention_line, literal
 
 
 def gap_string(s):
@@ -31,8 +31,8 @@ GAP = Dialect(indent="  ", value=to_gap, string=gap_string, null="fail", true="t
 
 
 def render(name, rec):
-    """The text of data/gap/<name>.g: a one-line header, then o3t := <the record>; (o3d in the
-    catalogue double)"""
-    return ("# %s (%s): data/json/%s.json as a GAP record.\n"
-            % (name, names.symbol_of(rec), name)
+    """The text of data/gap/<name>.g: a header of two comment lines, the record and the convention of its
+    matrices and products (literal.convention_line), then o3t := <the record>; (o3d in the catalogue double)"""
+    return ("# %s (%s): data/json/%s.json as a GAP record.\n# %s\n"
+            % (name, names.symbol_of(rec), name, convention_line(names.CATALOGUE))
             + names.LITERAL[names.CATALOGUE] + " := " + literal(rec, GAP) + ";\n")

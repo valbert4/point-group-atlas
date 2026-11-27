@@ -1,4 +1,5 @@
 # 2D9d (2D_9d): data/json/2D9d.json as a Python dict of SymPy values.
+# Matrices act on row vectors and a product applies its left factor first (CONVENTIONS.md, section 4.3, for column vectors).
 from sympy import I, Rational, S, exp, pi
 
 o3d = {

@@ -175,6 +175,67 @@ def character_sentence(irreps, spinor=False):
                 r"two rows" if any(ir["conjugate_of"] is not None for ir in irreps) else ""))
 
 
+# Where a function moves with the points (rotation CONVENTIONS.md section 4.3), the two rows of a complex-conjugate
+# pair exchange their characters: the sentence after the legend of a table of characters that has such a pair, in
+# every catalogue, with the rows it names and its clause on the m of their kets, which stands where those m
+# distinguish the two irreps of every pair.
+EXCHANGE = r"Where a function moves with the points (CONVENTIONS.pdf, section 4.3), %s exchange%s."
+EXCHANGE_ROWS = "the two rows of a pair"
+EXCHANGE_M = r", and the $m$ of their kets (section~\ref{s:multiplicities}) distinguishes them"
+# The clause in a document of Double whose table also has a pair of vector irreps, whose kets at integer J are those of
+# the document of G (the section Symmetry-adapted bases): G linked as there.
+EXCHANGE_M_VECTOR = (r", and the $m$ of their kets (section~\ref{s:multiplicities}, and at integer $J$ the "
+                     r"document of %s) distinguishes them")
+
+
+def exchange_sentence(rows=EXCHANGE_ROWS, clause=EXCHANGE_M):
+    """The sentence on the two rows of a complex-conjugate pair (EXCHANGE)."""
+    return EXCHANGE % (rows, clause)
+
+
+def allowed_values(sb):
+    """{irrep or family id: what the stored allowed_m gives for its kets} of a subduction_basis (rotation CONVENTIONS.md
+    section 14): the residues at even and odd J (volume I), the residues of 2m (volume II), the m of a family (a
+    continuous record); None for an id whose kets the field lists no residue of (a spinor irrep of the parity -1)."""
+    am = (sb or {}).get("allowed_m") or {}
+    out = {}
+    for e in am.get("residues", []):
+        if "even" in e:
+            value, listed = (tuple(e["even"]), tuple(e["odd"])), bool(e["even"] or e["odd"])
+        else:
+            value, listed = tuple(e["residues"]), bool(e["residues"])
+        out[e["irrep_id"]] = value if listed else None
+    for e in am.get("families", []):
+        out[e["family"]] = e.get("m", e.get("twoM"))
+    return out
+
+
+def pairs_distinguished(pairs, values):
+    """Whether the kets' m distinguish the two irreps of every complex-conjugate pair [(first, second)]: their
+    values of allowed_values differ, or one of them lists no residue."""
+    return all(values.get(a) is None or values.get(b) is None or values[a] != values[b] for a, b in pairs)
+
+
+def exchange_clause(D, pairs, values, vector):
+    """The clause of the sentence on the pairs (EXCHANGE): none unless the m of the kets distinguish every pair, the
+    pointer to the section Multiplicities and allowed m, and in a document of Double with a pair of vector irreps
+    (`vector`) also to the document of G, whose values of allowed_m join `values` for those pairs."""
+    if vector:
+        from .double_latex import record_of
+        values = dict(values, **allowed_values(record_of("rotation", D.cover).get("subduction_basis")))
+    if not pairs_distinguished(pairs, values):
+        return ""
+    return EXCHANGE_M_VECTOR % rotation_linked(D.cover) if vector else EXCHANGE_M
+
+
+def complex_pairs(items, key="id"):
+    """The complex-conjugate pairs [(first, second)] of a list of irreps or families, in its order."""
+    order = [x[key] for x in items]
+    return [(x[key], x["conjugate_of"]) for x in items
+            if x.get("conjugate_of") is not None and x["conjugate_of"] in order
+            and order.index(x[key]) < order.index(x["conjugate_of"])]
+
+
 # A character of the form 2 cos(k pi/n) or 2 sin(k pi/n) sets about this many characters more
 # than visible() counts (a spinor character table, at \small): -2 cos(5 pi/24) is 37.9 pt wide.
 # The estimate of Double's character tables (section_character_table).
@@ -201,6 +262,15 @@ def section_character_table(D):
                                   "double": "sections 6, 7 and 23"})
     classes, irreps = ct["classes"], ct["irreps"]
     D.w(character_sentence(irreps, spinor=any(ir.get("spinor") for ir in irreps)))
+    # the sentence on the pairs of the table; a section of Double, whose document has no section
+    # Multiplicities and allowed m, has it without the clause on the m of the kets
+    pairs = complex_pairs(irreps)
+    if pairs and D.catalogue == "double" and not D.preimage:
+        D.w(exchange_sentence(clause=""))
+    elif pairs:
+        vector = D.catalogue == "double" and any(not D.spinor[a] for a, _ in pairs)
+        D.w(exchange_sentence(clause=exchange_clause(
+            D, pairs, allowed_values(D.rec.get("subduction_basis")), vector)))
     D.w(CONSTANTS)
     cells = [[D.val(x) for x in ir["chi"]] for ir in irreps]
     width = character_width if D.cover else visible
@@ -238,6 +308,11 @@ def corepresentation_table(D, ct):
     table = D.rec["corepresentation_table"]
     D.section("Corepresentation table", "sections 5, 32.3 and 33")
     D.w(D.corep_table_lead())
+    # the residues of m of the rows whose character is not real, as volume I's section Multiplicities
+    # and allowed m gives them, in two columns after the classes of the last part
+    residues, modulus, apart = D.corep_residues()
+    if residues:
+        D.w(D.corep_residues_lead(modulus, apart))
     D.w(CONSTANTS)
     columns = table["classes"]
     coreps = [D.corep_by_irrep(row[0]) for row in table["rows"]]
@@ -248,18 +323,33 @@ def corepresentation_table(D, ct):
     widths = [max(max(visible(row[j]) for row in cells),
                   visible(heads[j]) + MERGED_EXTRA * (len(columns[j]) - 1)) + 3
               for j in range(len(columns))]
+    m_heads = [r"$m \bmod %d$, $J$ even" % modulus, r"$J$ odd"] if residues else []
+    m_cells = [[residues_text(residues[c["irrep"]][0]), residues_text(residues[c["irrep"]][1])]
+               if c["irrep"] in residues else ["---", "---"] for c in coreps] if residues else []
+    extra = sum(max([visible(h)] + [visible(r[k]) for r in m_cells]) + 3
+                for k, h in enumerate(m_heads))
     for n in range(1, len(columns) + 1):
         parts = chunks(list(range(len(columns))), -(-len(columns) // n))
-        if all(sum(widths[j] for j in part) + 8 <= CHARACTER_GRID_MAX_WIDTH for part in parts):
+        if all(sum(widths[j] for j in part) + 8 + (extra if k == len(parts) - 1 else 0)
+               <= CHARACTER_GRID_MAX_WIDTH for k, part in enumerate(parts)):
             break
-    for part in parts:
+    for k, part in enumerate(parts):
+        last = m_heads if k == len(parts) - 1 else []
         # a grid of corepresentations and classes, read down its columns too: never copies
-        D.w(r"{\small\setlength{\tabcolsep}{4pt}%s\begin{longtable}{@{}l%s@{}}\toprule"
-            % (SNAKE_OFF, "c" * len(part)))
-        D.w(r"$%s$ & %s\\\midrule\endhead" % (D.sym, " & ".join("$%s$" % heads[j] for j in part)))
-        for c, row in zip(coreps, cells):
-            D.w(r"$%s$ & %s\\" % (D.corep_label(c), " & ".join("$%s$" % row[j] for j in part)))
+        D.w(r"{\small\setlength{\tabcolsep}{4pt}%s\begin{longtable}{@{}l%s%s@{}}\toprule"
+            % (SNAKE_OFF, "c" * len(part), "l" * len(last)))
+        D.w(r"$%s$ & %s\\\midrule\endhead"
+            % (D.sym, " & ".join(["$%s$" % heads[j] for j in part] + last)))
+        for c, row, m in zip(coreps, cells, m_cells or [[]] * len(coreps)):
+            D.w(r"$%s$ & %s\\" % (D.corep_label(c), " & ".join(["$%s$" % row[j] for j in part]
+                                                             + (m if last else []))))
         D.w(r"\bottomrule\end{longtable}}")
+
+
+def residues_text(rs):
+    """A cell of residues of m, as the section Multiplicities and allowed m sets them: the residues, or a dash
+    for none."""
+    return ", ".join(map(str, rs)) if rs else "---"
 
 
 def character_pointer(D):
@@ -1387,8 +1477,16 @@ def section_families(D):
     # the characters on the components, in the angle of the rotation (of the lift in a preimage)
     chars = (r"A row also gives the family's character on each component, in the angle %s."
              % (r"$\omega$ of the lift" if D.cover else r"$\phi$ of the rotation"))
+    # the two rows of a complex-conjugate pair, which exchange where a function moves with the points
+    exchange = []
+    family_pairs = complex_pairs(families) + complex_pairs(spinors)
+    if family_pairs:
+        # in a preimage the families of G are its vector families
+        exchange = [exchange_sentence(clause=exchange_clause(
+            D, family_pairs, allowed_values(D.rec.get("subduction_basis")),
+            bool(spinors and complex_pairs(families))))]
     if spinors:
-        legend += [D.define("head.image") + IMAGE_FRAME + ".", chars]
+        legend += [D.define("head.image") + IMAGE_FRAME + ".", chars] + exchange
         # a vector family of one irrep has a dash for its index, a real family for its conjugate
         if any(family_index(f) == "---" for f in families) or any(
                 pairs and not f.get("conjugate_of") for f in families + spinors):
@@ -1409,7 +1507,7 @@ def section_families(D):
             legend.append(r"As $2n$ is odd, the kernel of a spinor instance $n$ is a section "
                           r"(CONVENTIONS.pdf, section 27).")
     else:
-        legend += [D.define("head.image") + family_image_sentence(D, families), chars]
+        legend += [D.define("head.image") + family_image_sentence(D, families), chars] + exchange
     legend.append(irreps_over_real(D, realities))
     # the determinant character: of G, on the elements that cover g, in a preimage
     of, cover_g = ((r"of %s" % rotation_linked(D.cover), r" on the elements that cover $g$")

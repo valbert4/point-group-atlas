@@ -1,4 +1,5 @@
 # D3d-S6 (D_3d(S_6)): data/json/D3d-S6.json as a Python dict of SymPy values.
+# Matrices of elements act on row vectors, a product of elements applies its left factor first, and a corepresentation is written in the order of operators (CONVENTIONS.md, sections 4.3 and 32.2).
 from sympy import I, Rational, S, exp, pi
 
 o3m = {

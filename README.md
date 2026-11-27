@@ -235,6 +235,53 @@ index of notation at the end of rotation/CONVENTIONS.md lists this notation and 
 each with the section that defines it. Volumes II and III have their own indexes of notation, at the ends of
 double/CONVENTIONS.md and magnetic/CONVENTIONS.md.
 
+A program or an AI agent that reads the records needs these ten conventions first, each with its sections in
+CONVENTIONS.md:
+
+1. Points are rows: an element g moves the point r to r P(g), and `multiplication_table[g][h]` is the element that
+   applies g first, then h. On column vectors the matrices are P(g)ᵀ, with every product in the reverse order
+   (sections 4.1 and 4.3).
+2. An element acts on a function at the moved point, (g f)(r) = f(r P(g)). On the kets |J m⟩ it acts by U(g⁻¹) of
+   section 9, so R_z(φ)|J m⟩ = e^(imφ)|J m⟩ (sections 4.1 and 9).
+3. Irrep matrices multiply as D(g) D(h) = D(gh). Where a function moves with the points, the same kets carry D(g)†
+   and the characters χ(g)*, so the two rows of a complex pair exchange (section 4.3). The residues of m distinguish
+   the two irreps of a pair whose kets have unequal residues (sections 4.3 and 14).
+4. Where a function moves with the points, the zyz Euler angles of an element are (γ, β, α) of its `euler`, in this
+   order (section 4.3).
+5. In volume II, `matrix` is the transpose of the SU(2) part, and (U, ε) acts on the spinor kets by D^J(U)†, times
+   p when ε = −1 (sections 21.2 and 26.1).
+6. Time reversal Θ is the complex conjugation of a function in all three volumes. On the kets Θ|J m⟩ =
+   (−1)^m |J −m⟩, and (−1)^(J−m) |J −m⟩ on the spinor kets. Every block of the symmetry-adapted bases is adapted to
+   it (sections 14, 26.1 and 31).
+7. Every value is exact, a q, sqrt or cyc value (section 8). The power-basis sum of a cyc value can cancel up to 17
+   digits, so a program evaluates it in high precision.
+8. The copies of an irrep follow the echelon rule from m = −J and are exact in the files. In floating point that
+   step is ill-conditioned, with a condition number of about 10⁸ for O at J = 60, so a program reads the files
+   (section 14.2).
+9. In a work that lets a function move with the points, the functions with the `bethe` or `bilbao` symbol of a
+   complex irrep are those of its conjugate (section 6.5).
+10. A program takes its numbers from the records in JSON, GAP, Wolfram Language or SymPy. The PDFs and the site set
+    only part of each record, in typeset form.
+
+The records keep one convention throughout, while many works and programs write a point as a column and let a
+function move with the points. Section 4.3 of rotation/CONVENTIONS.md gives the dictionary between the two, which
+changes no stored value. In SymPy, this function reads the tables of a record in that convention:
+
+```python
+def common(rec):
+    """The element-level tables of a record where a function moves with the points (CONVENTIONS.md, section 4.3)."""
+    els = rec["elements"]["items"]; mt = rec["elements"]["multiplication_table"]
+    S = [Matrix(e["matrix"]).T for e in els]                      # the matrix of g on a column
+    after = lambda g, h: mt[h][g]                                 # the element that applies h first, then g
+    D = {i["id"]: [Matrix(m).H for m in i["matrices"]["by_element"]] for i in rec["character_table"]["irreps"]}
+    chi = {i["id"]: [conjugate(c) for c in i["chi"]] for i in rec["character_table"]["irreps"]}
+    euler = [(e["euler"]["gamma"], e["euler"]["beta"], e["euler"]["alpha"]) for e in els]
+    return S, after, D, chi, euler
+```
+
+It needs `from sympy import Matrix, conjugate` and a record of the point groups, such as
+`runpy.run_path("rotation/data/sympy/T.py")["o3t"]`.
+
 Element names (E, i, C_2, 2C_3, S_24^7, σ_h, C_∞(φ)) are set in one font. The LaTeX writes them through the
 commands `\cls`, `\comp` and `\elt`, which all print `\eltfont`. In `generator/formats/notation.py`,
 `ELEMENT_FONT` picks the font among these values:

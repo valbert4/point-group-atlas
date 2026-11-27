@@ -1,4 +1,5 @@
 (* I (I): data/json/I.json as a Wolfram Language association. *)
+(* Matrices act on row vectors and a product applies its left factor first (CONVENTIONS.md, section 4.3, for column vectors). *)
 o3t = <|
   "cartesian_tensors" -> <|
     "functions" -> {

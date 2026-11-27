@@ -608,7 +608,7 @@ P(\mathsfit{g})\, P(\mathsfit{h}) = P(\mathsfit{g}\mathsfit{h}), \qquad \mathsfi
 
 The rotation $`\mathsfit{R_{z}}(\phi)`$ by $`\phi`$ about $`z`$ has the matrix
 $`P(\mathsfit{R_{z}}(\phi)) = \left(\begin{smallmatrix} \cos\phi & \sin\phi & 0 \\ -\sin\phi & \cos\phi & 0 \\ 0 & 0 & 1 \end{smallmatrix}\right)`$. A library that uses column vectors
-works with the transposes $`P(\mathsfit{g})^{\top}`$ and reverses every product.
+works with the transposes $`P(\mathsfit{g})^{\top}`$ and reverses every product (section 4.3).
 
 The field `elements.items[]` lists the elements, and `index` is the position in the list and the key by which
 every other field names an element. The entry `multiplication_table[g][h]` is the index of the element whose
@@ -671,6 +671,29 @@ to `operation` in this list:
   and vertical mirrors by increasing azimuth. This azimuth, in $`[0, 1/2)`$, is that of the axis or the
   horizontal direction in the mirror plane. Within a class of an exceptional group, the elements with the same
   pole are adjacent, by increasing `angle`.
+
+### 4.3 Functions that move with the points
+
+Many works write a point as a column and let a function move with the points [BC72, AH11]. The elements, poles and
+angles of this section are the same in these works, which have these conventions:
+
+- the matrix $`P(\mathsfit{g})^{\top}`$ on a column, and the product that applies its right factor first. Their product
+  of $`\mathsfit{g}`$ and $`\mathsfit{h}`$, with $`\mathsfit{h}`$ first, is the element `multiplication_table[h][g]`.
+- the action $`(\mathsfit{g} f)(\mathbf{r}) = f(\mathbf{r}\, P(\mathsfit{g}^{-1}))`$. Their operator of $`\mathsfit{g}`$ is the operator of $`\mathsfit{g}^{-1}`$ of
+  section 4.1, so a rotation $`\mathsfit{R}`$ acts on the kets by $`U(\mathsfit{R})`$ of section 9 and
+  $`\mathsfit{R_{z}}(\phi) \bigl\lvert{}^{J}_{\,m}\bigr\rangle = \mathrm{e}^{-\mathrm{i}m\phi} \bigl\lvert{}^{J}_{\,m}\bigr\rangle`$.
+- the matrix $`D^\Gamma(\mathsfit{g})^\dagger`$ of an irrep and the character $`\chi_\Gamma(\mathsfit{g})^*`$, for the same partner kets and the
+  same partner law (sections 6 and 9).
+- the Euler angles $`(\gamma, \beta, \alpha)`$ of `euler`, in this order.
+
+The kets of a block, the coupling coefficients, the invariants and the levels are the same in both, and an irrep
+keeps its name and its kets. Thus the two irreps of a complex pair exchange their characters, and with them their
+symbols of section 6.5. The $`m`$ of a ket is the same in both, so the residues of `allowed_m` (section 14)
+distinguish the two irreps of a pair whose kets have unequal residues.
+
+In other words, with $`P(\mathsfit{g})`$ read on a column and each product read from the right, every stored matrix,
+character and table entry holds in these works for the inverses of its elements. GAP, SymPy and Wolfram multiply
+permutations as this catalogue does (section 12.5), and GAP lets a matrix act on a row.
 
 ## 5. Conjugacy classes
 
@@ -886,6 +909,8 @@ A work's symbol names the irrep whose characters equal the work's on its operati
 is the element with the same matrix in the frame of section 3. An operation of another frame is carried by a
 rotation that takes the axis it names, with its sign, to the pole of the element that names its class
 (section 5.2). This rotation also takes the principal axis to $`z`$ (the axis b of the monoclinic tables of `bilbao`).
+In a work that lets a function move with the points (section 4.3), the functions with the symbol of a complex irrep
+are those of its conjugate.
 
 The records `C1v`, `D1`, `D1h` and `D1d` take the symbols of `C1h`, `C2`, `C2v` and `C2h` through the cyclic permutation
 $`x \to y \to z \to x`$ (its inverse for `C1v`). This permutation is the setting of the elements of `D1h` in the lattice of
@@ -1115,7 +1140,7 @@ D_{m',m}(\mathsfit{g}) = p^{[\det \mathsfit{g} = -1]}\, \mathrm{e}^{\mathrm{i}m'
 ```
 
 that is $`p^{[\det \mathsfit{g} = -1]} D^J(\mathsfit{R})^\dagger`$, with $`D^J_{m',m}(\mathsfit{R}) = \bigl\langle{}^{J}_{\,m'}\bigm\vert U(\mathsfit{R})\bigm\vert{}^{J}_{\,m}\bigr\rangle`$ and $`U(\mathsfit{R}) = \mathrm{e}^{-\mathrm{i}\gamma J_z} \mathrm{e}^{-\mathrm{i}\beta J_y} \mathrm{e}^{-\mathrm{i}\alpha J_z}`$ ($`J_y`$ and $`J_z`$ the components of the angular
-momentum operator about $`y`$ and $`z`$), because $`\mathsfit{R}`$ acts on the kets as $`U(\mathsfit{R}^{-1})`$ (section 4.1). For the rotoreflection
+momentum operator about $`y`$ and $`z`$), because $`\mathsfit{R}`$ acts on the kets as $`U(\mathsfit{R}^{-1})`$ (sections 4.1 and 4.3). For the rotoreflection
 $`\mathsfit{S_{\mathbf{v}}}(\omega)`$ of section 4.2, $`\mathsfit{R} = \mathsfit{R_{\mathbf{v}}}(\omega + \pi)`$. From the angle $`\phi`$ and the unit axis $`\hat{\mathbf{v}} = \mathbf{v}/\lVert\mathbf{v}\rVert = (\hat{v}_x, \hat{v}_y, \hat{v}_z)`$ of the rotation $`\mathsfit{R_{\mathbf{v}}}(\phi)`$
 (`angle_axis.relation`), in the Cayley–Klein form, with $`a = \cos(\phi/2) + \mathrm{i}\hat{v}_z \sin(\phi/2)`$ and $`b = (\hat{v}_y + \mathrm{i}\hat{v}_x) \sin(\phi/2)`$:
 
@@ -1334,7 +1359,7 @@ Other works write these results in other conventions:
   coupled state by the exchange sign $`(-1)^{J_1+J_2-J}`$ (section 25.4).
 - For a rotation by $`\phi`$ about $`z`$, the operators of [Jud63, eq. 2-18] and [Gri61, eq. 6.32] multiply $`\bigl\lvert{}^{J}_{\,M}\bigr\rangle`$ by
   $`\mathrm{e}^{-\mathrm{i}M\phi}`$, the inverse of the action of section 4.1. In the products of [Jud63, section 2-3] the right factor
-  acts first.
+  acts first, as in section 4.3.
 - In [Gri61, eqs. 8.31 and 9.23] a matrix element is the reduced matrix element times a coupling coefficient, the
   irrep of the operator first, with no factor $`d_\Gamma^{-1/2}`$.
 - Atomic spectroscopy writes the parity $`\mathrm{u}`$ of a term as a superscript o and keeps the right subscript for $`J`$:
@@ -2083,7 +2108,7 @@ In $`\mathsf{SO(3)}`$ and $`\mathsf{O(3)}`$, which have 11 blocks and 121 vector
 The file `data/symmetry_adapted_bases/<G>/J<JJJ>.json.gz` ($`J = 0, 1, \dots, 60`$, `<JJJ>` three digits) holds the bases
 of $`D^{(J)}`$ restricted to $`\mathsf{G}`$ with the action of section 4: `{J, blocks, group, schema}`. The repository holds the
 files $`J = 0, 1, \dots, 10`$, and the files $`J = 11, 12, \dots, 60`$ of every group are distributed separately (README.md)
-or computed by the generator.
+or computed exactly by the generator.
 
 - `blocks` follow the record's irrep order, then `copy` $`\kappa = 1, 2, \dots`$. Each block has `J`, `copy`, `dim`, `irrep` (the
   record's irrep id), `label` (its `label`) and `vectors`, ordered by $`\mu`$ (`mu`) $`= 1, 2, \dots, d`$.
@@ -2102,7 +2127,9 @@ or computed by the generator.
   $`e`$-coordinates $`e_m`$, $`e'_m`$ of two vectors. Its coefficients are computed on partner 1, and it leaves copy 1 unchanged.
   Partner $`\mu`$ of copy $`\kappa`$ is thus, up to that factor, $`\sum_{\lambda \le \kappa} a_\lambda v_{\lambda,\mu}`$, with the same $`a_\lambda`$ for every partner
   and $`a_\kappa`$ a positive rational. Partner 1 of copy $`\kappa`$ has a positive rational coefficient at the pivot of $`v_{\kappa,1}`$, where the
-  copies before it are zero.
+  copies before it are zero. The files are exact, while in floating point the echelon step loses about as many
+  digits as the decimal logarithm of the condition number of its pivot rows. At $`J = 60`$ this number is about a
+  hundred million for $`\mathsf{O}`$, 2500 for $`\mathsf{I}`$ and 3 for $`\mathsf{T}`$.
 - Time reversal: the files of this catalogue hold these copies adapted to time reversal (section 14). For a real irrep, the
   vectors of the range of $`P^\Gamma_{1,1}`$ that are partner 1 of an adapted block form a real vector space, the real form of the
   range. Its coordinates are $`\operatorname{Re} e_m`$ and $`\operatorname{Im} e_m`$, ordered from $`m = -J`$ with the real part first. Its reduced row
@@ -2981,7 +3008,8 @@ JSON is written as `json.dumps(obj, indent=2, sort_keys=True, ensure_ascii=True)
 sorted, two-space indent, ASCII (the `∞` of `schoenflies_unicode` is the escape `\u221e`), LF line endings. A
 `.json.gz` file is the gzip stream of those bytes, with no file name and modification time 0.
 
-The GAP, Wolfram and SymPy files hold the record as one literal bound to `o3t`, after a one-line comment. Keys
+The GAP, Wolfram and SymPy files hold the record as one literal bound to `o3t`, after two comment lines. The first
+names the record, and the second gives the action of its matrices and the order of its products (section 4.3). Keys
 are in sorted order, strings are escaped to ASCII, and a structured null stays an object with its reason:
 
 | JSON | GAP | Wolfram | SymPy |

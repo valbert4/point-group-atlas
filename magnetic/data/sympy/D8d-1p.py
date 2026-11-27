@@ -1,4 +1,5 @@
 # D8d-1p (D_8d1'): data/json/D8d-1p.json as a Python dict of SymPy values.
+# Matrices of elements act on row vectors, a product of elements applies its left factor first, and a corepresentation is written in the order of operators (CONVENTIONS.md, sections 4.3 and 32.2).
 from sympy import I, Rational, S, exp, pi
 
 o3m = {

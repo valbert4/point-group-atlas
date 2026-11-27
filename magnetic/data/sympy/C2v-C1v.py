@@ -1,4 +1,5 @@
 # C2v-C1v (C_2v(C_1v)): data/json/C2v-C1v.json as a Python dict of SymPy values.
+# Matrices of elements act on row vectors, a product of elements applies its left factor first, and a corepresentation is written in the order of operators (CONVENTIONS.md, sections 4.3 and 32.2).
 from sympy import I, Rational, S, exp, pi
 
 o3m = {

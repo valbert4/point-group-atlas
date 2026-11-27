@@ -371,20 +371,59 @@ def section_character_table(D):
                   + r"The entry of a row is the character of its corepresentations on the classes, "
                     r"the sum of the characters of its irreps, in the angle $\phi$ of the "
                     r"rotation.")
+    # the m of the kets of the rows whose character is not real, as the section Multiplicities and
+    # allowed m of the document of H gives them (rotation CONVENTIONS.md section 4.3)
+    m_of = continuous_m(D, table)
+    if m_of:
+        # the m distinguish the two rows of every pair of rows with complex-conjugate characters
+        chars = {row[0]: ch for row, ch in zip(table["rows"], table["characters"])}
+        conj = {k: {c: conjugate_trig(t) if isinstance(t, dict) and t.get("f") == "trig" else t
+                    for c, t in chars[k].items()} for k in m_of}
+        partner = {a: [b for b in m_of if chars[b] == conj[a]] for a in m_of}
+        if any(len(v) != 1 for v in partner.values()):
+            raise ValueError("%s: a row whose character is not real without one row of the conjugate "
+                             "character" % D.name)
+        apart = all(m_of[a] != m_of[v[0]] for a, v in partner.items())
+        legend += [r"For a row whose character is not real, the column $m$ gives the $m$ of the kets of "
+                   r"its irreps (a dash for the other rows).",
+                   r"These values follow %s." % ML.rotation_section(D.H, r"Multiplicities and allowed $m$"),
+                   R.exchange_sentence("two rows with complex-conjugate characters",
+                                       ", and these $m$ distinguish them" if apart else "")]
     D.w(" ".join(legend))
     D.w(CONSTANTS)
     comps = [x["component"] for x in table["classes"]]
-    rows = [["$%s$" % D.sym, "index"] + ["$%s$" % component(D, c) for c in comps]]
+    rows = [["$%s$" % D.sym, "index"] + ["$%s$" % component(D, c) for c in comps]
+            + (["$m$"] if m_of else [])]
     for row, chars in zip(table["rows"], table["characters"]):
         c = D.corep_of[row[0]]
         rows.append(["$%s$" % D.corep_label(c), family_index(D.families[row[0]])]
-                    + ["$%s$" % character(D, chars[x], x) for x in comps])
+                    + ["$%s$" % character(D, chars[x], x) for x in comps]
+                    + (["$%s$" % m_of[row[0]] if row[0] in m_of else "---"] if m_of else []))
     D.w(r"{\small%s\begin{longtable}{@{}ll%s@{}}\toprule" % (
-        snake_mark(6.0, labels_width(rows, 6.0)), "l" * len(comps)))
+        snake_mark(6.0, labels_width(rows, 6.0)), "l" * (len(comps) + bool(m_of))))
     D.w(" & ".join(rows[0]) + r"\\\midrule\endhead")
     for row in rows[1:]:
         D.w(" & ".join(row) + r"\\")
     D.w(r"\bottomrule\end{longtable}}")
+
+
+def continuous_m(D, table):
+    """{first family id: the TeX of the m of its kets} of the rows of the corepresentation table whose
+    character is not real (a coefficient of a term is not real), the m that the record of H gives its
+    families (allowed_m)."""
+    from ..exact.value import to_float
+    fam = {f["family"]: f["m"] for f in D.Hrec["subduction_basis"]["allowed_m"]["families"]}
+    out = {}
+    for row, chars in zip(table["rows"], table["characters"]):
+        terms = [u for v in chars.values() if isinstance(v, dict) and v.get("f") == "trig"
+                 for u in v["terms"]]
+        if any(abs(complex(to_float(u[k])).imag) > 1e-9 or (k == "sin" and complex(to_float(u[k])) != 0)
+               for u in terms for k in ("cos", "sin")):
+            ms = [fam[i] for i in row]
+            if len(set(ms)) != 1:
+                raise ValueError("%s: the irreps of the row of %s have the m %s" % (D.name, row[0], ms))
+            out[row[0]] = ms[0].replace(" ", "")
+    return out
 
 
 # The entries of the matrix N of the corepresentations D^(J) and D^(J,p), the record's formula of the
@@ -412,6 +451,7 @@ def section_corep_matrices(D):
         r". In case (c), $\mathcal{D}(\elt{a}) = \left(\begin{smallmatrix} 0 & "
         r"D^{\Lambda}(\elt{a}^2)^{\top} \\ 1 & 0 \end{smallmatrix}\right) K$, with no matrix $N$"
         if joined else ""))
+    D.w(ML.COMPLEX_CONJUGATE)
     if D.spherical:
         D.w(r"The matrix $N$ has the rows and columns of the kets $\jm{J}{m}$, $m = J, J-1, \dots, "
             r"-J$, and the entries")

@@ -199,6 +199,9 @@ REPLACE = {"function.timereversal": {"glyph": r"\varTheta", "forms": (r"\varThet
            # the variable of the generating function of the cubes (section 37.4)
            "index.generating.variable": {"defined": ("e:gf", "part:subduction",
                                                      "part:symmetrized_powers", "conv:14")},
+           # the columns of the residues of m in the corepresentation table, for the rows whose
+           # character is not real (rotation CONVENTIONS.md section 4.3)
+           "head.parity": {"defined": ("part:multiplicities", "part:character_table", "conv:0.1")},
            # the irreps of the table of tensors, the first of a continuous document's tables to name
            # irreps and not families
            "head.irrep": {"defined": ("part:irreps", "part:bases", "part:time_odd", "conv:0.1")},
@@ -244,11 +247,11 @@ USED = (
     "arithmetic.minus", "arithmetic.plusminus", "arithmetic.times", "arithmetic.solidus",
     "arithmetic.fraction", "arithmetic.root", "arithmetic.sum", "arithmetic.directsum",
     "relation.equal", "relation.lessequal", "relation.greater", "relation.greaterequal",
-    "relation.in", "relation.supset", "operator.intersection", "operator.union",
-    "operator.setminus", "relation.mapsto", "operator.directsum", "dots", "constant.pi",
+    "operator.modulo", "relation.in", "relation.supset", "operator.intersection",
+    "operator.union", "operator.setminus", "relation.mapsto", "operator.directsum", "dots", "constant.pi",
     "constant.infinity", "operator.determinant", "operator.cosine", "operator.sine", "set.complex",
-    "set.real", "mark.transpose", "matrix.display", "function.delta", "word.formula", "group.G",
-    "group.H", "group.schoenflies.cn", "group.schoenflies.cnh", "group.schoenflies.cnv",
+    "set.real", "mark.transpose", "mark.adjoint", "matrix.display", "function.delta", "word.formula",
+    "group.G", "group.H", "group.schoenflies.cn", "group.schoenflies.cnh", "group.schoenflies.cnv",
     "group.schoenflies.dn", "group.schoenflies.dnh", "group.schoenflies.dnd",
     "group.schoenflies.s2n", "group.schoenflies.cs", "group.schoenflies.ci", "group.schoenflies.t",
     "group.schoenflies.th", "group.schoenflies.td", "group.schoenflies.o", "group.schoenflies.oh",
@@ -271,8 +274,8 @@ USED = (
     "index.rule.k", "index.conjugates.c", "index.root.order", "local.dummy.m", "local.dummy.g",
     "local.dummy.h", "local.dummy.n", "head.class", "head.irrep", "head.bilbao", "head.reality",
     "head.conjugate", "head.subgroup", "head.order", "head.conjugates", "head.normal",
-    "head.index.family", "head.polynomial", "head.component", "head.element", "head.family.irreps",
-    "set.cell",
+    "head.index.family", "head.parity", "head.polynomial", "head.component", "head.element",
+    "head.family.irreps", "set.cell",
 )
 
 

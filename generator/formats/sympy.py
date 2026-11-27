@@ -6,7 +6,7 @@ a signed square root sqrt(Rational(|p|,q)).
 """
 from .. import names
 from ..exact.value import to_sympy
-from .literal import Dialect, literal
+from .literal import Dialect, convention_line, literal
 
 
 def python_string(s):
@@ -21,8 +21,9 @@ SYMPY = Dialect(indent="    ", value=to_sympy, string=python_string, null="None"
 
 
 def render(name, rec):
-    """The text of data/sympy/<name>.py: a one-line comment, the SymPy import (of sqrt too when
-    the record holds a sqrt value), then o3t = <the record> (o3d in the catalogue double)"""
+    """The text of data/sympy/<name>.py: two comment lines, the record and the convention of its
+    matrices and products (literal.convention_line), the SymPy import (of sqrt too when the record holds
+    a sqrt value), then o3t = <the record> (o3d in the catalogue double)"""
     forms = set()
 
     def value(v):
@@ -31,7 +32,7 @@ def render(name, rec):
 
     body = literal(rec, SYMPY._replace(value=value))
     imports = "I, Rational, S, exp, pi" + (", sqrt" if "sqrt" in forms else "")
-    return ("# %s (%s): data/json/%s.json as a Python dict of SymPy values.\n"
-            % (name, names.symbol_of(rec), name)
+    return ("# %s (%s): data/json/%s.json as a Python dict of SymPy values.\n# %s\n"
+            % (name, names.symbol_of(rec), name, convention_line(names.CATALOGUE))
             + "from sympy import %s\n\n" % imports
             + names.LITERAL[names.CATALOGUE] + " = " + body + "\n")

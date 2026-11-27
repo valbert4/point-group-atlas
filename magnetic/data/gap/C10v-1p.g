@@ -1,4 +1,5 @@
 # C10v-1p (C_10v1'): data/json/C10v-1p.json as a GAP record.
+# Matrices of elements act on row vectors, a product of elements applies its left factor first, and a corepresentation is written in the order of operators (CONVENTIONS.md, sections 4.3 and 32.2).
 o3m := rec(
   ("clebsch_gordan") := rec(
     ("corepresentations") := [ "A1", "A2", "B1", "B2", "E1", "E2", "E3", "E4" ],

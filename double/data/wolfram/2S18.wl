@@ -1,4 +1,5 @@
 (* 2S18 (2S_18): data/json/2S18.json as a Wolfram Language association. *)
+(* Matrices act on row vectors and a product applies its left factor first (CONVENTIONS.md, section 4.3, for column vectors). *)
 o3d = <|
   "character_table" -> <|
     "class_count" -> 36,

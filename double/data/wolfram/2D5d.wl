@@ -1,4 +1,5 @@
 (* 2D5d (2D_5d): data/json/2D5d.json as a Wolfram Language association. *)
+(* Matrices act on row vectors and a product applies its left factor first (CONVENTIONS.md, section 4.3, for column vectors). *)
 o3d = <|
   "character_table" -> <|
     "class_count" -> 16,

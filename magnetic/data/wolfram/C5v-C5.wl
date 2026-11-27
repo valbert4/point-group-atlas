@@ -1,4 +1,5 @@
 (* C5v-C5 (C_5v(C_5)): data/json/C5v-C5.json as a Wolfram Language association. *)
+(* Matrices of elements act on row vectors, a product of elements applies its left factor first, and a corepresentation is written in the order of operators (CONVENTIONS.md, sections 4.3 and 32.2). *)
 o3m = <|
   "clebsch_gordan" -> <|
     "corepresentations" -> {"A", "1E1", "2E1", "1E2", "2E2"},

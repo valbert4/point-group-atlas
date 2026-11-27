@@ -1,4 +1,5 @@
 # S22 (S_22): data/json/S22.json as a GAP record.
+# Matrices act on row vectors and a product applies its left factor first (CONVENTIONS.md, section 4.3, for column vectors).
 o3d := rec(
   ("elements") := rec(
     ("count") := 22,

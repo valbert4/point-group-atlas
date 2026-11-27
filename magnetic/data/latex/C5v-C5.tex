@@ -248,24 +248,26 @@ $\conjpair{2}\irr{e}_{1}$ & 1 & $0$ & complex & $\conjpair{1}\irr{e}_{1}$ & $+1$
 $\conjpair{1}\irr{e}_{2}$ & 1 & $0$ & complex & $\conjpair{2}\irr{e}_{2}$ & $+1$ & (a) & $\conjpair{1}\irr{e}_{2}$\\*
 $\conjpair{2}\irr{e}_{2}$ & 1 & $0$ & complex & $\conjpair{1}\irr{e}_{2}$ & $+1$ & (a) & $\conjpair{2}\irr{e}_{2}$\\
 \bottomrule\end{longtable}}
-\needspace{195pt}
+\needspace{103pt}
 \section{Corepresentation table}\label{s:character_table}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.5}{5}, \href{../../CONVENTIONS.pdf\#conv.32.3}{32.3} and \href{../../CONVENTIONS.pdf\#conv.33}{33}.
 A row is a corepresentation of $\grp{C_{5v}}(\grp{C_{5}})$, named by its irreps (section~\ref{s:irreps}). A column is a merged class of $\grp{C_{5}}$, the union of a class and of its image under $h \mapsto \elt{a} h^{-1} \elt{a}^{-1}$. The entry of a row is the character of its corepresentation on the class, the sum of the characters of its irreps.
-{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lccccc@{}}\toprule
-$\grp{C_{5v}}(\grp{C_{5}})$ & $\cls{E}$ & $\cls{C_{5}}$ & $\cls{C_{5}^{2}}$ & $\cls{C_{5}^{3}}$ & $\cls{C_{5}^{4}}$\\\midrule\endhead
+\leavevmode\label{n:head.parity}The listed residues are the $m \bmod 5$ of the kets of the irreps of a row whose character is not real (a dash for the other rows). These residues follow the section Multiplicities and allowed $m$ of the document of \href{../../../rotation/data/pdf/C5.pdf}{$\grp{C_{5}}$}. Where a function moves with the points (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.4.3}{4.3}), two rows with complex-conjugate characters exchange, and these residues distinguish them.
+{\small\setlength{\tabcolsep}{4pt}\begin{longtable}{@{}lcccccll@{}}\toprule
+$\grp{C_{5v}}(\grp{C_{5}})$ & $\cls{E}$ & $\cls{C_{5}}$ & $\cls{C_{5}^{2}}$ & $\cls{C_{5}^{3}}$ & $\cls{C_{5}^{4}}$ & $m \bmod 5$, $J$ even & $J$ odd\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
-$\irr{a}$ & $1$ & $1$ & $1$ & $1$ & $1$\\*
-$\conjpair{1}\irr{e}_{1}$ & $1$ & $\rootunity{5}$ & $\rootunity{5}^{2}$ & $\rootunity{5}^{3}$ & $\rootunity{5}^{4}$\\*
-$\conjpair{2}\irr{e}_{1}$ & $1$ & $\rootunity{5}^{4}$ & $\rootunity{5}^{3}$ & $\rootunity{5}^{2}$ & $\rootunity{5}$\\*
-$\conjpair{1}\irr{e}_{2}$ & $1$ & $\rootunity{5}^{2}$ & $\rootunity{5}^{4}$ & $\rootunity{5}$ & $\rootunity{5}^{3}$\\*
-$\conjpair{2}\irr{e}_{2}$ & $1$ & $\rootunity{5}^{3}$ & $\rootunity{5}$ & $\rootunity{5}^{4}$ & $\rootunity{5}^{2}$\\
+$\irr{a}$ & $1$ & $1$ & $1$ & $1$ & $1$ & --- & ---\\*
+$\conjpair{1}\irr{e}_{1}$ & $1$ & $\rootunity{5}$ & $\rootunity{5}^{2}$ & $\rootunity{5}^{3}$ & $\rootunity{5}^{4}$ & 1 & 1\\*
+$\conjpair{2}\irr{e}_{1}$ & $1$ & $\rootunity{5}^{4}$ & $\rootunity{5}^{3}$ & $\rootunity{5}^{2}$ & $\rootunity{5}$ & 4 & 4\\*
+$\conjpair{1}\irr{e}_{2}$ & $1$ & $\rootunity{5}^{2}$ & $\rootunity{5}^{4}$ & $\rootunity{5}$ & $\rootunity{5}^{3}$ & 2 & 2\\*
+$\conjpair{2}\irr{e}_{2}$ & $1$ & $\rootunity{5}^{3}$ & $\rootunity{5}$ & $\rootunity{5}^{4}$ & $\rootunity{5}^{2}$ & 3 & 3\\
 \bottomrule\end{longtable}}
 \needspace{103pt}
 \section{Corepresentation matrices}\label{s:corep_matrices}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../../../rotation/CONVENTIONS.pdf\#conv.9}{9} and \href{../../CONVENTIONS.pdf\#conv.32.2}{32.2}.
 A unitary element $h$ acts in a corepresentation $\mathcal{D}$ by the transposes $D^{\Lambda}(h)^{\top}$ of the matrices of its irreps $\Lambda$ (the section Representation matrices of the document of \href{../../../rotation/data/pdf/C5.pdf}{$\grp{C_{5}}$}). The representative $\elt{a} = \varTheta\elt{\sigma_{v}}$ acts by a unitary matrix times the complex conjugation $K$.
 In case (a), $\mathcal{D}(\elt{a}) = NK$. In case (b), $\mathcal{D}(\elt{a}) = \left(\begin{smallmatrix} 0 & N \\ -N & 0 \end{smallmatrix}\right) K$. In case (c), $\mathcal{D}(\elt{a}) = \left(\begin{smallmatrix} 0 & D^{\Lambda}(\elt{a}^2)^{\top} \\ 1 & 0 \end{smallmatrix}\right) K$, with no matrix $N$.
+Where a function moves with the points (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.4.3}{4.3}), the corepresentation on the same kets is the complex conjugate of $\mathcal{D}$: a unitary element $h$ acts by $D^{\Lambda}(h)^{\dagger}$, and $N^{*}$ replaces $N$.
 A row is a corepresentation, by its irreps. A row gives its case and its matrix $N$ (a dash in case (c)).
 {\small\begin{longtable}{@{}lll@{}}\toprule
 corep & case & $N$\\\midrule\endhead

@@ -1,4 +1,5 @@
 (* C3 (C_3): data/json/C3.json as a Wolfram Language association. *)
+(* Matrices act on row vectors and a product applies its left factor first (CONVENTIONS.md, section 4.3, for column vectors). *)
 o3d = <|
   "elements" -> <|"count" -> 3, "lift_bits" -> {0, 1, 1}|>,
   "group" -> <|

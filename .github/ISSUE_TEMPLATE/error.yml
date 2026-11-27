@@ -6,6 +6,7 @@ body:
     attributes:
       value: |
         One error per report, please. The site's "Report an error" link fills in the address and the version.
+        A character that is the complex conjugate of another table's, or a matrix that is the transpose or the adjoint of another table's, may follow from the convention of CONVENTIONS.md section 4.3 and not be an error.
   - type: input
     id: address
     attributes:

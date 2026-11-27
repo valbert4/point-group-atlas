@@ -1,4 +1,5 @@
 (* C11h-1p (C_11h1'): data/json/C11h-1p.json as a Wolfram Language association. *)
+(* Matrices of elements act on row vectors, a product of elements applies its left factor first, and a corepresentation is written in the order of operators (CONVENTIONS.md, sections 4.3 and 32.2). *)
 o3m = <|
   "clebsch_gordan" -> <|
     "corepresentations" -> {"Ap", "1E1p", "1E2p", "1E3p", "1E4p", "1E5p", "App", "1E1pp", "1E2pp", "1E3pp", "1E4pp", "1E5pp"},

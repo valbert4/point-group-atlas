@@ -1,4 +1,5 @@
 (* D3d-S6 (D_3d(S_6)): data/json/D3d-S6.json as a Wolfram Language association. *)
+(* Matrices of elements act on row vectors, a product of elements applies its left factor first, and a corepresentation is written in the order of operators (CONVENTIONS.md, sections 4.3 and 32.2). *)
 o3m = <|
   "clebsch_gordan" -> <|
     "corepresentations" -> {"Ag", "1E1g", "2E1g", "Au", "1E1u", "2E1u"},

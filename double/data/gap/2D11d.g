@@ -1,4 +1,5 @@
 # 2D11d (2D_11d): data/json/2D11d.json as a GAP record.
+# Matrices act on row vectors and a product applies its left factor first (CONVENTIONS.md, section 4.3, for column vectors).
 o3d := rec(
   ("character_table") := rec(
     ("class_count") := 28,

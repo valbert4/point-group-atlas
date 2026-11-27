@@ -59,6 +59,12 @@ J_SHOWN = 6
 # The kinds of vector of the four images (CONVENTIONS.md section 31.2), in the order of the record.
 IMAGES = (("polar_even", "polar", "even"), ("axial_even", "axial", "even"),
           ("polar_odd", "polar", "odd"), ("axial_odd", "axial", "odd"))
+# Where a function moves with the points (rotation CONVENTIONS.md section 4.3), the corepresentation on the same kets
+# is the complex conjugate of the one written (CONVENTIONS.md section 32.2): the sentence of the legend of the
+# corepresentation matrices of every document of this catalogue.
+COMPLEX_CONJUGATE = (r"Where a function moves with the points (CONVENTIONS.pdf, section 4.3), the "
+                     r"corepresentation on the same kets is the complex conjugate of $\mathcal{D}$: a unitary "
+                     r"element $h$ acts by $D^{\Lambda}(h)^{\dagger}$, and $N^{*}$ replaces $N$.")
 # The kinds of multipole (CONVENTIONS.md section 35.1), in the order of the record.
 MULTIPOLES = (("electric", "electric"), ("electric-toroidal", "electric toroidal"),
               ("magnetic-toroidal", "magnetic toroidal"), ("magnetic", "magnetic"))
@@ -318,6 +324,42 @@ class Doc(L.Document):
                 r"a row is the character of its corepresentation on the class, the sum of the "
                 r"characters of its irreps." % (self.sym, self.Hsym, merged))
 
+    def corep_residues(self):
+        """The rows of the corepresentation table whose character is not real, with the residues of the m of the
+        kets of their irreps as the record of H lists them (allowed_m, rotation CONVENTIONS.md section 14): {first
+        irrep id: (the residues at even J, at odd J)}, the modulus, and whether these residues distinguish the two
+        rows of every pair of rows with complex-conjugate characters."""
+        from ..exact.value import to_float
+        table = self.stored["corepresentation_table"]
+        am = self.Hrec["subduction_basis"]["allowed_m"]
+        res = {e["irrep_id"]: e for e in am["residues"]}
+        values = [[complex(to_float(x)) for x in chars] for chars in table["characters"]]
+        out, partner = {}, {}
+        for k, (row, chars) in enumerate(zip(table["rows"], values)):
+            if all(abs(z.imag) < 1e-9 for z in chars):
+                continue
+            out[row[0]] = (sorted({q for i in row for q in res[i]["even"]}),
+                           sorted({q for i in row for q in res[i]["odd"]}))
+            mate = [table["rows"][j][0] for j, other in enumerate(values)
+                    if all(abs(a.conjugate() - b) < 1e-9 for a, b in zip(chars, other))]
+            if len(mate) != 1:
+                raise ValueError("%s: the row of %s has %d rows of the conjugate character"
+                                 % (self.name, row[0], len(mate)))
+            partner[row[0]] = mate[0]
+        apart = all(out[a] != out[b] for a, b in partner.items())
+        return out, am["modulus"], apart
+
+    def corep_residues_lead(self, modulus, apart):
+        """The legend of the columns of residues of the corepresentation table, and the sentence on the two rows
+        of complex-conjugate characters, which exchange where a function moves with the points."""
+        return " ".join([
+            self.define("head.parity")
+            + r"The listed residues are the $m \bmod %d$ of the kets of the irreps of a row whose character is "
+              r"not real (a dash for the other rows)." % modulus,
+            r"These residues follow %s." % rotation_section(self.H, r"Multiplicities and allowed $m$"),
+            R.exchange_sentence("two rows with complex-conjugate characters",
+                                ", and these residues distinguish them" if apart else "")])
+
     def splitting_lead(self):
         """The legend of the splitting table (subgroups.splitting_table): what a row is, how a
         complex-conjugate pair of irreps of G is labeled where G has one, what a row gives."""
@@ -572,6 +614,7 @@ def section_corep_matrices(D):
         r"\begin{smallmatrix} 0 & N \\ -N & 0 \end{smallmatrix}\right) K$. In case (c), "
         r"$\mathcal{D}(\elt{a}) = \left(\begin{smallmatrix} 0 & "
         r"D^{\Lambda}(\elt{a}^2)^{\top} \\ 1 & 0 \end{smallmatrix}\right) K$, with no matrix $N$.")
+    D.w(COMPLEX_CONJUGATE)
     D.w(r"A row is a corepresentation, by its irreps. A row gives its case and its matrix $N$ (a "
         r"dash in case (c)).")
     D.w(CONSTANTS)

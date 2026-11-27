@@ -1,4 +1,5 @@
 (* D8h-D4h (D_8h(D_4h)): data/json/D8h-D4h.json as a Wolfram Language association. *)
+(* Matrices of elements act on row vectors, a product of elements applies its left factor first, and a corepresentation is written in the order of operators (CONVENTIONS.md, sections 4.3 and 32.2). *)
 o3m = <|
   "clebsch_gordan" -> <|
     "corepresentations" -> {"A1g", "A2g", "B1g", "E1g", "A1u", "A2u", "B1u", "E1u"},
