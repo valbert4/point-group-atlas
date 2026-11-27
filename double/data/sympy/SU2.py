@@ -1144,17 +1144,17 @@ o3d = {
                         'vectors': [
                             {
                                 'components': [
-                                    {'c': Rational(-1,1), 'function': 'p_x', 'twoMs': -1},
-                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_y', 'twoMs': -1},
-                                    {'c': Rational(-1,1), 'function': 'p_z', 'twoMs': 1}
+                                    {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_x', 'twoMs': -1},
+                                    {'c': Rational(-1,1), 'function': 'p_y', 'twoMs': -1},
+                                    {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_z', 'twoMs': 1}
                                 ],
                                 'twoM': 1
                             },
                             {
                                 'components': [
-                                    {'c': Rational(-1,1), 'function': 'p_x', 'twoMs': 1},
-                                    {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_y', 'twoMs': 1},
-                                    {'c': Rational(1,1), 'function': 'p_z', 'twoMs': -1}
+                                    {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_x', 'twoMs': 1},
+                                    {'c': Rational(1,1), 'function': 'p_y', 'twoMs': 1},
+                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_z', 'twoMs': -1}
                                 ],
                                 'twoM': -1
                             }
@@ -1166,31 +1166,31 @@ o3d = {
                         'vectors': [
                             {
                                 'components': [
-                                    {'c': Rational(-1,1), 'function': 'p_x', 'twoMs': 1},
-                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_y', 'twoMs': 1}
+                                    {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_x', 'twoMs': 1},
+                                    {'c': Rational(-1,1), 'function': 'p_y', 'twoMs': 1}
                                 ],
                                 'twoM': 3
                             },
                             {
                                 'components': [
-                                    {'c': Rational(-1,1), 'function': 'p_x', 'twoMs': -1},
-                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_y', 'twoMs': -1},
-                                    {'c': Rational(2,1), 'function': 'p_z', 'twoMs': 1}
+                                    {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_x', 'twoMs': -1},
+                                    {'c': Rational(-1,1), 'function': 'p_y', 'twoMs': -1},
+                                    {'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_z', 'twoMs': 1}
                                 ],
                                 'twoM': 1
                             },
                             {
                                 'components': [
-                                    {'c': Rational(1,1), 'function': 'p_x', 'twoMs': 1},
-                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_y', 'twoMs': 1},
-                                    {'c': Rational(2,1), 'function': 'p_z', 'twoMs': -1}
+                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_x', 'twoMs': 1},
+                                    {'c': Rational(-1,1), 'function': 'p_y', 'twoMs': 1},
+                                    {'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_z', 'twoMs': -1}
                                 ],
                                 'twoM': -1
                             },
                             {
                                 'components': [
-                                    {'c': Rational(1,1), 'function': 'p_x', 'twoMs': -1},
-                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_y', 'twoMs': -1}
+                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_x', 'twoMs': -1},
+                                    {'c': Rational(-1,1), 'function': 'p_y', 'twoMs': -1}
                                 ],
                                 'twoM': -3
                             }
@@ -1310,61 +1310,77 @@ o3d = {
                         'vectors': [
                             {
                                 'components': [
-                                    {'c': Rational(-1,1), 'function': 'f_z(x2-y2)', 'twoMs': 1},
-                                    {'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': 1},
-                                    {'c': Rational(-1,1), 'function': 'f_x(x2-3y2)', 'twoMs': -1},
                                     {
-                                        'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
-                                        'function': 'f_y(3x2-y2)',
+                                        'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                        'function': 'f_z(x2-y2)',
+                                        'twoMs': 1
+                                    },
+                                    {'c': Rational(-2,1), 'function': 'f_xyz', 'twoMs': 1},
+                                    {
+                                        'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                        'function': 'f_x(x2-3y2)',
                                         'twoMs': -1
-                                    }
+                                    },
+                                    {'c': Rational(-1,1), 'function': 'f_y(3x2-y2)', 'twoMs': -1}
                                 ],
                                 'twoM': 5
                             },
                             {
                                 'components': [
-                                    {'c': Rational(1,1), 'function': 'f_xz2', 'twoMs': 1},
-                                    {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_yz2', 'twoMs': 1},
-                                    {'c': Rational(5,1), 'function': 'f_z(x2-y2)', 'twoMs': -1},
-                                    {'c': (Rational(10,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': -1}
+                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xz2', 'twoMs': 1},
+                                    {'c': Rational(1,1), 'function': 'f_yz2', 'twoMs': 1},
+                                    {
+                                        'c': (Rational(-5,1)*exp(2*pi*I*Rational(1,4))),
+                                        'function': 'f_z(x2-y2)',
+                                        'twoMs': -1
+                                    },
+                                    {'c': Rational(10,1), 'function': 'f_xyz', 'twoMs': -1}
                                 ],
                                 'twoM': 3
                             },
                             {
                                 'components': [
-                                    {'c': Rational(-1,1), 'function': 'f_z3', 'twoMs': 1},
-                                    {'c': Rational(-1,1), 'function': 'f_xz2', 'twoMs': -1},
-                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_yz2', 'twoMs': -1}
+                                    {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_z3', 'twoMs': 1},
+                                    {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xz2', 'twoMs': -1},
+                                    {'c': Rational(-1,1), 'function': 'f_yz2', 'twoMs': -1}
                                 ],
                                 'twoM': 1
                             },
                             {
                                 'components': [
-                                    {'c': Rational(1,1), 'function': 'f_z3', 'twoMs': -1},
-                                    {'c': Rational(-1,1), 'function': 'f_xz2', 'twoMs': 1},
-                                    {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_yz2', 'twoMs': 1}
+                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_z3', 'twoMs': -1},
+                                    {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xz2', 'twoMs': 1},
+                                    {'c': Rational(1,1), 'function': 'f_yz2', 'twoMs': 1}
                                 ],
                                 'twoM': -1
                             },
                             {
                                 'components': [
-                                    {'c': Rational(1,1), 'function': 'f_xz2', 'twoMs': -1},
-                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_yz2', 'twoMs': -1},
-                                    {'c': Rational(-5,1), 'function': 'f_z(x2-y2)', 'twoMs': 1},
-                                    {'c': (Rational(10,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': 1}
+                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xz2', 'twoMs': -1},
+                                    {'c': Rational(-1,1), 'function': 'f_yz2', 'twoMs': -1},
+                                    {
+                                        'c': (Rational(5,1)*exp(2*pi*I*Rational(1,4))),
+                                        'function': 'f_z(x2-y2)',
+                                        'twoMs': 1
+                                    },
+                                    {'c': Rational(10,1), 'function': 'f_xyz', 'twoMs': 1}
                                 ],
                                 'twoM': -3
                             },
                             {
                                 'components': [
-                                    {'c': Rational(1,1), 'function': 'f_z(x2-y2)', 'twoMs': -1},
-                                    {'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': -1},
-                                    {'c': Rational(-1,1), 'function': 'f_x(x2-3y2)', 'twoMs': 1},
+                                    {
+                                        'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                                        'function': 'f_z(x2-y2)',
+                                        'twoMs': -1
+                                    },
+                                    {'c': Rational(-2,1), 'function': 'f_xyz', 'twoMs': -1},
                                     {
                                         'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
-                                        'function': 'f_y(3x2-y2)',
+                                        'function': 'f_x(x2-3y2)',
                                         'twoMs': 1
-                                    }
+                                    },
+                                    {'c': Rational(1,1), 'function': 'f_y(3x2-y2)', 'twoMs': 1}
                                 ],
                                 'twoM': -5
                             }
@@ -1376,87 +1392,99 @@ o3d = {
                         'vectors': [
                             {
                                 'components': [
-                                    {'c': Rational(-1,1), 'function': 'f_x(x2-3y2)', 'twoMs': 1},
                                     {
-                                        'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
-                                        'function': 'f_y(3x2-y2)',
+                                        'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                        'function': 'f_x(x2-3y2)',
                                         'twoMs': 1
-                                    }
+                                    },
+                                    {'c': Rational(-1,1), 'function': 'f_y(3x2-y2)', 'twoMs': 1}
                                 ],
                                 'twoM': 7
                             },
                             {
                                 'components': [
-                                    {'c': Rational(6,1), 'function': 'f_z(x2-y2)', 'twoMs': 1},
-                                    {'c': (Rational(12,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': 1},
-                                    {'c': Rational(-1,1), 'function': 'f_x(x2-3y2)', 'twoMs': -1},
                                     {
-                                        'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
-                                        'function': 'f_y(3x2-y2)',
+                                        'c': (Rational(-6,1)*exp(2*pi*I*Rational(1,4))),
+                                        'function': 'f_z(x2-y2)',
+                                        'twoMs': 1
+                                    },
+                                    {'c': Rational(12,1), 'function': 'f_xyz', 'twoMs': 1},
+                                    {
+                                        'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                        'function': 'f_x(x2-3y2)',
                                         'twoMs': -1
-                                    }
+                                    },
+                                    {'c': Rational(-1,1), 'function': 'f_y(3x2-y2)', 'twoMs': -1}
                                 ],
                                 'twoM': 5
                             },
                             {
                                 'components': [
-                                    {'c': Rational(-1,1), 'function': 'f_xz2', 'twoMs': 1},
-                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_yz2', 'twoMs': 1},
-                                    {'c': Rational(2,1), 'function': 'f_z(x2-y2)', 'twoMs': -1},
-                                    {'c': (Rational(4,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': -1}
+                                    {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xz2', 'twoMs': 1},
+                                    {'c': Rational(-1,1), 'function': 'f_yz2', 'twoMs': 1},
+                                    {
+                                        'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))),
+                                        'function': 'f_z(x2-y2)',
+                                        'twoMs': -1
+                                    },
+                                    {'c': Rational(4,1), 'function': 'f_xyz', 'twoMs': -1}
                                 ],
                                 'twoM': 3
                             },
                             {
                                 'components': [
-                                    {'c': Rational(4,1), 'function': 'f_z3', 'twoMs': 1},
-                                    {'c': Rational(-3,1), 'function': 'f_xz2', 'twoMs': -1},
-                                    {'c': (Rational(-3,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_yz2', 'twoMs': -1}
+                                    {'c': (Rational(-4,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_z3', 'twoMs': 1},
+                                    {'c': (Rational(3,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xz2', 'twoMs': -1},
+                                    {'c': Rational(-3,1), 'function': 'f_yz2', 'twoMs': -1}
                                 ],
                                 'twoM': 1
                             },
                             {
                                 'components': [
-                                    {'c': Rational(4,1), 'function': 'f_z3', 'twoMs': -1},
-                                    {'c': Rational(3,1), 'function': 'f_xz2', 'twoMs': 1},
-                                    {'c': (Rational(-3,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_yz2', 'twoMs': 1}
+                                    {'c': (Rational(-4,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_z3', 'twoMs': -1},
+                                    {'c': (Rational(-3,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xz2', 'twoMs': 1},
+                                    {'c': Rational(-3,1), 'function': 'f_yz2', 'twoMs': 1}
                                 ],
                                 'twoM': -1
                             },
                             {
                                 'components': [
-                                    {'c': Rational(1,1), 'function': 'f_xz2', 'twoMs': -1},
-                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_yz2', 'twoMs': -1},
-                                    {'c': Rational(2,1), 'function': 'f_z(x2-y2)', 'twoMs': 1},
-                                    {'c': (Rational(-4,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': 1}
+                                    {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xz2', 'twoMs': -1},
+                                    {'c': Rational(-1,1), 'function': 'f_yz2', 'twoMs': -1},
+                                    {
+                                        'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))),
+                                        'function': 'f_z(x2-y2)',
+                                        'twoMs': 1
+                                    },
+                                    {'c': Rational(-4,1), 'function': 'f_xyz', 'twoMs': 1}
                                 ],
                                 'twoM': -3
                             },
                             {
                                 'components': [
-                                    {'c': Rational(6,1), 'function': 'f_z(x2-y2)', 'twoMs': -1},
                                     {
-                                        'c': (Rational(-12,1)*exp(2*pi*I*Rational(1,4))),
-                                        'function': 'f_xyz',
+                                        'c': (Rational(-6,1)*exp(2*pi*I*Rational(1,4))),
+                                        'function': 'f_z(x2-y2)',
                                         'twoMs': -1
                                     },
-                                    {'c': Rational(1,1), 'function': 'f_x(x2-3y2)', 'twoMs': 1},
+                                    {'c': Rational(-12,1), 'function': 'f_xyz', 'twoMs': -1},
                                     {
                                         'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
-                                        'function': 'f_y(3x2-y2)',
+                                        'function': 'f_x(x2-3y2)',
                                         'twoMs': 1
-                                    }
+                                    },
+                                    {'c': Rational(-1,1), 'function': 'f_y(3x2-y2)', 'twoMs': 1}
                                 ],
                                 'twoM': -5
                             },
                             {
                                 'components': [
-                                    {'c': Rational(1,1), 'function': 'f_x(x2-3y2)', 'twoMs': -1},
                                     {
                                         'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
-                                        'function': 'f_y(3x2-y2)',
+                                        'function': 'f_x(x2-3y2)',
                                         'twoMs': -1
-                                    }
+                                    },
+                                    {'c': Rational(-1,1), 'function': 'f_y(3x2-y2)', 'twoMs': -1}
                                 ],
                                 'twoM': -7
                             }

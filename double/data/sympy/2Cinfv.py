@@ -1006,15 +1006,15 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_yz', 'twoMs': 1},
-                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': 1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': 1},
+                                            {'c': Rational(-1,1), 'function': 'd_zx', 'twoMs': 1}
                                         ],
                                         'mu': 1
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_yz', 'twoMs': -1},
-                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': -1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': -1},
+                                            {'c': Rational(1,1), 'function': 'd_zx', 'twoMs': -1}
                                         ],
                                         'mu': 2
                                     }
@@ -1028,15 +1028,15 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_yz', 'twoMs': -1},
-                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': -1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': -1},
+                                            {'c': Rational(-1,1), 'function': 'd_zx', 'twoMs': -1}
                                         ],
                                         'mu': 1
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(-1,1), 'function': 'd_yz', 'twoMs': 1},
-                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': 1}
+                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': 1},
+                                            {'c': Rational(-1,1), 'function': 'd_zx', 'twoMs': 1}
                                         ],
                                         'mu': 2
                                     }

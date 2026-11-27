@@ -240,14 +240,19 @@ The matrices of a spinor irrep obey section 9 in the element order of section 21
 `construction`:
 
 1. `linear`: the character, for dimension 1.
-2. `wigner`: the action of section 26.1 at the $`2J`$ of `twoJ` and the first parity `parity`, $`+1`$ before
+2. `conjugate`: the complex conjugates of the matrices of the first irrep `from` of a complex pair, for its second
+   irrep in dimension above 1. These irreps are $`{}^2\mathrm{\scriptsize G}_{3/2}`$ of $`\mathsf{2T}`$ and its two parities in $`\mathsf{2T_{h}}`$.
+3. `wigner`: the action of section 26.1 at the $`2J`$ of `twoJ` and the first parity `parity`, $`+1`$ before
    $`-1`$, at which the kets of `twoM` carry the irrep. These kets are $`\bigl\lvert{}^{J}_{\,\mp J}\bigr\rangle`$
    for dimension 2 of an axial group and all the kets for dimension $`2J + 1`$.
-3. `twist`: the matrices of the spinor irrep `from` times the one-dimensional irrep `by`.
-4. `galois`: the matrices of `from` with the automorphism
+4. `twist`: the matrices of the spinor irrep `from` times the one-dimensional irrep `by`.
+5. `galois`: the matrices of `from` with the automorphism
    $`\zeta_{\mathcal{M}} \mapsto \zeta_{\mathcal{M}}^{\texttt{sigma}}`$ applied entrywise, $`\mathcal{M} =`$
    `conductor`. Here `sigma` is the least exponent whose matrices carry the irrep, first among those
    that fix $`\mathrm{i}`$ and $`\zeta_3`$ (when the field of the entries contains them), then among all.
+
+The second irrep of every complex pair thus has the conjugate matrices of its first irrep, in dimension 1 its
+character. Time reversal then takes a block of the first irrep to a block of the second (section 26.1).
 
 A document writes the matrices of an irrep, or those of section 21.2, over a common rational factor when doing
 so makes the widest of them at least a fifth narrower. Each entry is then an integer times a square root times a
@@ -397,6 +402,15 @@ built as the blocks of section 26.3. Here $`(\mathsfit{g}, b)`$ acts by $`\maths
 (section 4.1) and by section 26.1 on the spin. The coordinates are in the order of the functions, $`u`$ before
 $`v`$ for each, and each copy's partners $`\mu`$ follow the partner law with the record's matrices.
 
+Time reversal conjugates the coefficients and sends $`f u`$ to $`f v`$ and $`f v`$ to $`-f u`$, each $`f`$ being real.
+In the level of a real irrep $`\Gamma`$ the copies are adapted as the blocks of section 26.1. In case (a) they come
+from the real form of section 14.2, and in case (b) they come in pairs. The first copy of a pair is the next copy of
+the reduced row echelon basis less its projections on the pairs before it, in the phase form. Time reversal
+takes the level of the first irrep $`\Gamma`$ of a complex pair onto the level of its partner. The copies in the
+first level have the phase form. The copy $`v^{(2)}`$ of the second level is the image of the copy $`v^{(1)}`$ of the
+first with the same $`\kappa`$. It has $`\varTheta v^{(1)} = v^{(2)} N`$ in case (a) and $`\varTheta v^{(1)} = -v^{(2)} N`$ in case (b). In
+case (c) it is $`\varTheta v^{(1)}`$, a copy of the partner of $`\Lambda`$.
+
 Continuous groups. The axial continuous preimages $`\mathsf{2C_{\infty}}`$, …, $`\mathsf{2D_{\infty h}}`$ give
 the LS form of $`\mathsf{2C_{12}}`$, $`\mathsf{2C_{12h}}`$, $`\mathsf{2C_{12v}}`$, $`\mathsf{2D_{12}}`$,
 $`\mathsf{2D_{12h}}`$ respectively, whose irreps of index at most $`\tfrac{7}{2}`$ are the restrictions of the
@@ -406,7 +420,10 @@ $`\lvert l\,j\,m\rangle = \sum \langle l\, m_l\, \tfrac{1}{2}\, m_s \vert j\, m\
 The sum uses the kets $`\lvert l\, m_l\rangle`$ of section 4 and the coefficients of section 29.3 in this order
 of the factors (its tables put the spin first, and
 $`\langle l\, m_l\, \tfrac{1}{2}\, m_s \vert j\, m\rangle = (-1)^{l+1/2-j} \langle \tfrac{1}{2}\, m_s\, l\, m_l \vert j\, m\rangle`$).
-The record `Pinminus3` names these states with the parity $`(-1)^l`$ (`parity_rule`).
+As $`\varTheta \lvert l\, j\, m\rangle = (-1)^{l} (-1)^{j-m} \lvert l\, j\, -m\rangle`$, a state of odd $`l`$ is multiplied by $`-\mathrm{i}`$, so that
+every state is adapted to time reversal (section 26.1). The state $`m = j`$ of each subshell, its partner 1, then has the
+phase form of section 14. The record `Pinminus3`
+names these states with the parity $`(-1)^l`$ (`parity_rule`).
 
 The documents set the spin–orbitals for $`l \le 2`$.
 
@@ -420,6 +437,24 @@ section 9. At integer $`J`$ with $`p = (-1)^J`$ this action is that of section 4
 (at the other parity, that action times $`\varepsilon`$). The element $`\bar{\mathsfit{E}}`$ multiplies a ket
 by $`(-1)^{2J}`$.
 
+Time reversal $`\varTheta`$ acts on the kets of half-integer $`J`$ as
+$`\varTheta \bigl\lvert{}^{J}_{\,m}\bigr\rangle = (-1)^{J-m} \bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$, an antiunitary map with
+$`\varTheta^2 = -1`$. It replaces each coefficient $`e_m`$ of section 14 by $`(-1)^{J+m}`$ times the conjugate of $`e_{-m}`$.
+With $`\varTheta`$ adjoined to the preimage, a spinor irrep $`\Lambda`$ of indicator $`\nu_{\mathrm{FS}} = -1`$, 1 or 0 falls in the case
+(a), (b) or (c) of section 32.2. Every block of the bases at half-integer $`J`$, in the records and in the files, is
+adapted to time reversal by its case:
+
+- Case (a): $`\varTheta v_\mu = \sum_\nu v_\nu N_{\nu,\mu}`$. In a finite preimage the matrix $`N`$ is $`\sqrt{d}`$ times the block of
+  $`\Lambda \otimes \Lambda`$ into the trivial irrep (section 24), with its row $`(\mu_1, \mu_2)`$ as row $`\mu_1`$ and column $`\mu_2`$. In a
+  continuous preimage it is the matrix of $`\varTheta`$ on the kets of section 29.2.
+- Case (b): the copies $`\kappa`$ and $`\kappa + 1`$, $`\kappa`$ odd, are a pair $`v^{(1)}`$, $`v^{(2)}`$ with
+  $`\varTheta v^{(1)} = -v^{(2)} N`$ and $`\varTheta v^{(2)} = v^{(1)} N`$.
+- Case (c): the block of the second irrep of a complex pair at $`J`$ and $`\kappa`$ is $`\varTheta`$ applied to the block of the
+  first irrep there, partner by partner.
+
+The first nonzero coefficient of partner 1 has the phase form of section 14. This holds in the blocks of case (a),
+in the first block of each pair and in the blocks of the first irreps of the complex pairs.
+
 ### 26.2 Bases
 
 At integer $`J`$ the bases of `subduction_basis` are those of $`\mathsf{G}`$ (`integer_J`). At half-integer
@@ -427,11 +462,21 @@ $`J`$ the field `subduction_basis` gives the bases as in section 14, with $`2J`$
 and $`m`$ (`twoJ`, `twoM`, `seed_twoM`). It gives the closed form of an axial preimage, its blocks for
 $`2J \le 21`$, the multiplicities, the generating function in $`t^{2J}`$ and the allowed $`2m`$.
 
+The closed forms adapt their blocks to time reversal (section 26.1) by these rules, written in `cases`:
+
+- A two-dimensional block $`\bigl\lvert{}^{J}_{\,m_1}\bigr\rangle`$, $`c\,\bigl\lvert{}^{J}_{\,-m_1}\bigr\rangle`$ has $`c = \pm 1`$, and both partners are
+  multiplied by $`\mathrm{i}`$ when $`c = (-1)^{J-m_1}`$.
+- The block of the second irrep of a complex pair is the image of the first irrep's: the ket
+  $`(-1)^{J+m}\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$, or a pair $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle + s\,\bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$ times $`(-1)^{J-m}`$ and the conjugate of $`s`$.
+- In a preimage with $`\mathsf{2G} = \mathsf{A}`$ the kets $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ and $`\bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$, $`m > 0`$, of a real irrep give the pair
+  of copies $`\bigl\lvert{}^{J}_{\,m}\bigr\rangle`$ and $`-(-1)^{J-m}\bigl\lvert{}^{J}_{\,-m}\bigr\rangle`$.
+
 ### 26.3 The exceptional preimages
 
 The bases of $`\mathsf{2T}`$, $`\mathsf{2O}`$ and $`\mathsf{2I}`$ at half-integer $`J`$ are built as in
 section 14.2, with the action of section 26.1 at $`p = +1`$ written on the coefficients $`e_m`$ of
-section 14. On these coefficients it has no square roots.
+section 14. On these coefficients it has no square roots. As there, the copies of an irrep of case (a) come from
+the real form of the range, and those of $`{}^2\mathrm{\scriptsize G}_{3/2}`$ of $`\mathsf{2T}`$ are those of $`{}^1\mathrm{\scriptsize G}_{3/2}`$ under time reversal.
 
 The files `data/symmetry_adapted_bases/<2G>/2J<JJJ>.json.gz` ($`2J = 1, 3, \dots, 121`$) hold
 `{twoJ, blocks, group, schema}` (`schema` `"point-group-atlas/double/symmetry-adapted-basis/1"`), with `twoJ`
@@ -665,12 +710,13 @@ A continuous record has these fields:
   `Pinminus3`) the levels $`J = \lvert J_1 - S\rvert, \dots, J_1 + S`$ of a term of an orbital level of
   angular momentum $`J_1`$.
 - `subduction_basis`: the bases at half-integer $`J`$ and $`p = +1`$:
-  - In `2Cinf` and `2Cinfh` each ket is a block.
+  - In `2Cinf` and `2Cinfh` each ket is a block: $`\lvert{}^{J}_{\,m}\rangle`$ of `1E_m` for $`m > 0`$, and
+    $`(-1)^{J+m}\lvert{}^{J}_{\,m}\rangle`$ of `2E_n`, $`n = -m`$, for $`m < 0`$, the image of the first under time reversal.
   - In `2Cinfv`, `2Dinf` and `2Dinfh` the block `E_n` has the partners $`\lvert{}^{J}_{\,-n}\rangle`$ and
     $`(-1)^{J-n}\lvert{}^{J}_{\,n}\rangle`$.
   - In `SU2` and `Pinminus3` the $`2J+1`$ kets are the partners of one block.
 
-  It lists the blocks for $`2J \le 21`$ (`enumerated`). The multiplicity of a `g` or `u` family names both
+  These blocks are adapted to time reversal (section 26.1). It lists the blocks for $`2J \le 21`$ (`enumerated`). The multiplicity of a `g` or `u` family names both
   parities, and its generating function and allowed $`2m`$ are those at the parity that carries it (`parity`).
 - `invariants`: the binary forms of section 26.4 and the Molien series of the spinor irreps (`molien`). The
   series are given by family in an axial preimage, with the complex-conjugate pairs of `2Cinf` and `2Cinfh`
@@ -986,6 +1032,7 @@ This index lists the common notation of the documents and selected symbols of th
 | $`\tau`$ | the turn $`\omega/2\pi \in [0, 2)`$ of the lift $`\tilde{\mathsfit{R}}_{\mathbf{v}}(\omega)`$ of an element's rotation part (the field `su2_turn`) | 21 |
 | $`\mathsf{T_{d}}`$ | the symmetries of the tetrahedron | 3 |
 | $`\mathsf{T_{h}}`$ | $`\mathsf{T}`$ with the inversion | 3 |
+| $`\varTheta`$ | time reversal | 7 |
 | $`\mathrm{tot}`$ | the normalization $`\sum_m \lvert e_m\rvert^2 F_m`$ of a basis vector | 14 |
 | $`\operatorname{tr}`$ | the trace | 0.1 |
 | $`U(\mathsfit{g})`$ | the canonical lift of the element $`\mathsfit{g}`$ of a point group to $`\mathsf{SU(2)}`$, the lift of its rotation part of nonnegative scalar part, with $`U`$, $`V`$ elements of $`\mathsf{SU(2)}`$ | 21 |

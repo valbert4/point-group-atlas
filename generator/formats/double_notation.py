@@ -54,7 +54,7 @@ DROP = (
 # overtones, the electronic terms, the coset and Euler-angle details of the finite documents, and
 # the words, operators and heads that only Rotation's documents print.
 DROP_UNUSED = (
-    "irrep.alias.point", "matrix.reversal",
+    "irrep.alias.point",
     "typography.spectroscopic", "group.abstract.dihedral", "head.level",
     "group.abstract.alternating", "accent.conjugate.star", "operator.degree",
     "function.matrixelement", "function.cg.parity",
@@ -74,7 +74,7 @@ DROP_UNUSED = (
     "vector.coordinate.index", "vector.radius", "angle.omega.min",
     "component.angle", "function.basis", "index.alias.xi", "matrix.real", "index.planar.phase",
     "index.planar.zsign",
-    "index.harmonic", "local.mirror.sigma", "function.timereversal",
+    "index.harmonic", "local.mirror.sigma",
     "matrix.cg.exact", "function.multiplicity.subgroup", "function.count", "index.modulus.K",
     "index.residue.r", "vector.basis.derived", "index.eta", "index.amplitude",
     "operator.angularmomentum",
@@ -112,6 +112,12 @@ DROP_UNUSED = (
 
 # ---------------------------------------------------------------- the records read anew
 REPLACE = {
+    # time reversal on the spinor kets (section 26.1) and its matrix on a block of case (a)
+    "matrix.reversal": {"meaning": r"the matrix by which time reversal acts on a block of a spinor irrep "
+                                   r"$\Lambda$ of case (a), $\sqrt{d}$ times the block of $\Lambda \otimes "
+                                   r"\Lambda$ into the trivial irrep in a finite preimage (section 32.2)",
+                        "scope": ("conventions|conv:26|", "conventions|conv:25|"),
+                        "defined": ("conv:26",)},
     # the documents place an object by a lift of Q (section 21.3), written with mark.lift
     "element.placement": {"meaning": r"an element of $\grp{O(3)}$, the placement of an object, "
                                      r"with $\grp{G}Q$ its coset and with its lifts placing the "

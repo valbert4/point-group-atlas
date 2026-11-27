@@ -505,7 +505,8 @@ def bases_reading(D, sb):
         D.w(ONE_KET)
     elif half:
         D.w(r"so every $e_m$ here is $\pm 1$%s." % (
-            r", or $\pm\iunit$ in a pair" if sb["closed_form"]["flip"] == "sigma_v" else ""))
+            r" or $\pm\iunit$" if any(c["e"].get("f") != "q" for b in sb["enumerated"]["blocks"]
+                                       for v in b["vectors"] for c in v["components"]) else ""))
     else:
         # the amplitudes of the single kets: 1, the signs of the partners and of the kets of complex
         # pairs, and i where a two-dimensional block carries it (rule 4 of section 14.1)
@@ -534,6 +535,18 @@ FLIP = {True: r"$\elt{C_{2x}}$",
 # (restriction, the range of J and p, the block's irrep).
 ABELIAN_BLOCKS = (r"The subgroup %s acts diagonally on the kets, and $\grp{G} = \grp{A}$: every "
                   r"ket is a block. Blocks are ordered by $J$, then $|m|$, $+m$ before $-m$.")
+# Double's closed forms at half-integer J (CONVENTIONS.md section 26.2): the ket of the second irrep
+# of a complex pair, the pairs of copies of a real irrep, the pair of a second irrep (its factor a
+# slot) and the reason of these factors (section 26.1)
+SPINOR_COMPLEX_KET = (r"The block of the second irrep of a complex pair is "
+                      r"$(-1)^{J+m}\jm{J}{m}$, the image of the first irrep's $\jm{J}{-m}$ under "
+                      r"time reversal.")
+SPINOR_REAL_PAIR = (r"The kets $\jm{J}{m}$ and $\jm{J}{-m}$, $m > 0$, of a real irrep give the pair "
+                    r"of copies $\jm{J}{m}$ and $-(-1)^{J-m}\jm{J}{-m}$.")
+SPINOR_PAIR_PARTNER = (r"The second irrep of a complex pair has the pair $%s$ in place of "
+                       r"$\jm{J}{m} + s\,\jm{J}{-m}$, the image of the first irrep's pair under time "
+                       r"reversal.")
+SPINOR_REASON = (r"These blocks are adapted to time reversal (CONVENTIONS.pdf, section 26.1).")
 INDEX_TWO = (r"The subgroup %s acts diagonally on the kets, on $\jm{J}{m}$ by the character "
              r"$\chiA(m)$, and $\grpindex{\grp{G}}{\grp{A}} = 2$.")
 CASE_LEGEND = r"The table lists every case of block, its dimension $d$ and its partners in order."
@@ -597,8 +610,13 @@ def bases_construction_closed(D, sb):
             case_table(D, rows)
         return
     if cf["abelian_index"] == 1:
-        D.w(D.define("group.A") + ABELIAN_BLOCKS % subgroup)
-        # every ket is a block, as that sentence says, so there is no table of cases
+        # every ket is a block, as that sentence says, so there is no table of cases; the kets of
+        # the second irrep of a complex pair and those of a real irrep follow time reversal
+        fs = {ir["frobenius_schur"] for ir in D.rec["character_table"]["irreps"] if ir["spinor"]}
+        D.w(D.define("group.A") + ABELIAN_BLOCKS % subgroup
+            + ((" " + SPINOR_COMPLEX_KET) if 0 in fs else "")
+            + ((" " + SPINOR_REAL_PAIR) if 1 in fs else "")
+            + (" " + SPINOR_REASON if fs & {0, 1} else ""))
         rows = []
     else:
         c2x = cf["flip"] == "C_2x"
@@ -609,8 +627,19 @@ def bases_construction_closed(D, sb):
         if half:
             two = any(ir["dim"] == 2 for ir in D.rec["character_table"]["irreps"] if ir["spinor"])
             pairs = True
+            two_i = has_factor_i(sb, ("partner_pair",))
+            two_plain = any(b["kind"] == "partner_pair" and not any(
+                c["e"].get("f") != "q" for v in b["vectors"] for c in v["components"])
+                for b in sb["enumerated"]["blocks"])
             pair = (r"$s = \pm 1$ ($s = +1$ first)" if c2x else
                     r"$s = \pm\iunit$ ($s = +\iunit$ first)")
+            # the pair of the second irrep of a complex pair (the one-dimensional spinor irreps):
+            # (-1)^(J-m) times the conjugate of s times the pair, written out with s^2 = +-1
+            partner = (r"(-1)^{J-m}(s\,\jm{J}{m} + \jm{J}{-m})" if c2x
+                       else r"(-1)^{J-m}(-s\,\jm{J}{m} + \jm{J}{-m})")
+            partner_rows = any(ir["dim"] == 1 for ir in D.rec["character_table"]["irreps"]
+                               if ir["spinor"])
+            partner_text = (" " + SPINOR_PAIR_PARTNER % partner) if partner_rows else ""
             if two:
                 # the partners in a sentence of their own, as in partner_rule; the anchor of c
                 # opens that sentence, which first writes c
@@ -619,16 +648,18 @@ def bases_construction_closed(D, sb):
                          + D.define("index.partner.sign")
                          + r"Its first partner is $v_1 = \jm{J}{m_1}$, the ket on which $\grp{A}$ "
                          r"acts as $\repD{\Gamma}_{1,1}(k)$, $k \in \grp{A}$, and the second "
-                         r"$v_2 = c\,\jm{J}{-m_1}$ by the partner law (\ref{e:partner}). "
+                         r"$v_2 = c\,\jm{J}{-m_1}$ by the partner law (\ref{e:partner})%s. " % (
+                             r", both times $\iunit$ when $c = (-1)^{J-m_1}$" if two_i else "")
                          + D.define("index.pair.sign")
                          + r"Otherwise these kets give two one-dimensional blocks "
-                         r"$\jm{J}{m} + s\,\jm{J}{-m}$, %s." % pair)
+                         r"$\jm{J}{m} + s\,\jm{J}{-m}$, %s.%s" % (pair, partner_text))
             else:
                 text += (D.define("index.pair.sign")
                          + r"For $m > 0$ by increasing $m$, $\grp{A}$ acts in the same way on "
                          r"$\jm{J}{m}$ and $\jm{J}{-m}$, and they give two one-dimensional "
-                         r"blocks $\jm{J}{m} + s\,\jm{J}{-m}$, %s." % pair)
-            D.w(text + r" The index $\mult$ counts the blocks of one irrep at one $J$.")
+                         r"blocks $\jm{J}{m} + s\,\jm{J}{-m}$, %s.%s" % (pair, partner_text))
+            D.w(text + r" " + SPINOR_REASON
+                + r" The index $\mult$ counts the blocks of one irrep at one $J$.")
         else:
             two, pairs = two_dimensional(D), pairs_occur(sb)
             order = r"ordered by $J$, then $|m|$%s" % (r", a pair with $s = +1$ first"
@@ -647,11 +678,27 @@ def bases_construction_closed(D, sb):
             D.w(text)
         # the first partner of a two-dimensional block is |J m_1> in Double; a pair has s = +-1,
         # or s = +-i under the canonical lift of a mirror; m = 0 at integer J only
-        rows = ([r"$\chiA(m) \ne \chiA(-m)$ & 2 & $\jm{J}{%s}$;\ $c\,\jm{J}{-%s}$"
-                 % (("m_1",) * 2 if half else ("m",) * 2)] if two else []) + (
-            [r"$\chiA(m) = \chiA(-m)$, $m > 0$ & 1 & $\jm{J}{m} + s\,\jm{J}{-m}$, $s = %s$"
-             % (r"\pm\iunit" if half and not c2x else r"\pm1")] if pairs else []) + (
-            [] if half else [r"$m = 0$ & 1 & $\jm{J}{0}$"])
+        if half:
+            # the spinor rows: the factor i of the two-dimensional blocks (CONVENTIONS.md section
+            # 26.2) and the pair of the second irrep of a complex pair
+            rows = []
+            if two and two_plain:
+                rows.append(r"$\chiA(m) \ne \chiA(-m)$%s & 2 & $\jm{J}{m_1}$;\ $c\,\jm{J}{-m_1}$"
+                            % (r", $c = -(-1)^{J-m_1}$" if two_i else ""))
+            if two and two_i:
+                rows.append(r"$\chiA(m) \ne \chiA(-m)$%s & 2 & $\iunit\jm{J}{m_1}$;\ "
+                            r"$\iunit c\,\jm{J}{-m_1}$" % (r", $c = (-1)^{J-m_1}$" if two_plain
+                                                             else ""))
+            s_values = r"\pm\iunit" if not c2x else r"\pm1"
+            rows.append(r"$\chiA(m) = \chiA(-m)$, $m > 0$%s & 1 & $\jm{J}{m} + s\,\jm{J}{-m}$, "
+                        r"$s = %s$" % (", first irrep" if partner_rows else "", s_values))
+            if partner_rows:
+                rows.append(r"$\chiA(m) = \chiA(-m)$, $m > 0$, its partner & 1 & $%s$" % partner)
+        else:
+            rows = ([r"$\chiA(m) \ne \chiA(-m)$ & 2 & $\jm{J}{m}$;\ $c\,\jm{J}{-m}$"]
+                    if two else []) + (
+                [r"$\chiA(m) = \chiA(-m)$, $m > 0$ & 1 & $\jm{J}{m} + s\,\jm{J}{-m}$, $s = \pm1$"]
+                if pairs else []) + [r"$m = 0$ & 1 & $\jm{J}{0}$"]
     if rows:
         case_table(D, rows)
     if half:
@@ -765,6 +812,16 @@ REAL_FORM = (r"The copies are adapted to time reversal (CONVENTIONS.pdf, section
              r"time reversal.")
 
 
+# Double's copies of 2T, 2O, 2I after Gram--Schmidt (CONVENTIONS.md sections 26.1 and 26.3): the real
+# form of an irrep of case (a), the sign of the phase form, the G pair of 2T (a slot)
+REAL_FORM_SPINOR = (r"The copies are adapted to time reversal (CONVENTIONS.pdf, sections 26.1 and 26.3). "
+                    r"For a pseudoreal irrep the basis is that over $\mathbb{R}$ of the vectors of the "
+                    r"range that time reversal keeps with the matrix of section 26.1, in the real and "
+                    r"imaginary parts of the $e_m$. Each copy then has the sign that gives its first "
+                    r"coefficient a positive real part, or makes it $\iunit$ times a positive number.%s")
+SPINOR_G_PAIR = r" The copies of $%s$ are those of $%s$ under time reversal."
+
+
 def det_moved(D):
     """[(Gamma, Gamma x det)] for the spinor irreps that the determinant moves, in irrep order:
     at the parity -1 a block of Gamma is one of Gamma x det."""
@@ -795,7 +852,15 @@ def bases_construction_enumerated(D, sb):
         D.w(GRAM_SCHMIDT[0] % D.define("matrix.projector"))
         D.equation("projector", r"P^\Gamma_{1,1} = \sum_g \conj{\repD{\Gamma}_{1,1}(g)}\,"
                                 r"%s(g)," % (r"\irrJp{J}{+1}" if half else r"\irrJ{J}"))
-        D.w(GRAM_SCHMIDT[1] % D.define("index.copy") + ("" if half else " " + REAL_FORM))
+        g_pair = ""
+        if half:
+            firsts = [ir for ir in D.rec["character_table"]["irreps"]
+                      if ir["spinor"] and ir["frobenius_schur"] == 0 and ir["dim"] > 1
+                      and ir["id"].startswith("1")]
+            g_pair = "".join(SPINOR_G_PAIR % (D.irrep_id(ir["conjugate_of"]), D.irrep_id(ir["id"]))
+                             for ir in firsts)
+        D.w(GRAM_SCHMIDT[1] % D.define("index.copy") + " "
+            + (REAL_FORM_SPINOR % g_pair if half else REAL_FORM))
         return
     # Double's records name the group (2T, 2O, 2I), Rotation's its Schoenflies symbol
     parent = grp(cf["group"] if half else names.schoenflies_of(cf["group"]))
@@ -1201,9 +1266,11 @@ def ket_blocks(D, blocks):
 # PARITY_RULE, the bases at p = -1 (closed_form.parity_rule); ALL_KETS, the one case of SU(2) and
 # Pin-(3), which set what SO(3) and O(3) set.
 BASES_CASE = {
-    "|J,m>: 1E_m for m > 0, 2E_-m for m < 0":
-        r"every ket $\jm{J}{m}$ is a block, of $\conjpair{1}\irr{e}_{m%s}$ for $m > 0$ and of "
-        r"$\conjpair{2}\irr{e}_{-m%s}$ for $m < 0$",
+    "|J,m>: 1E_m for m > 0; (-1)^(J+m) |J,m>: 2E_-m for m < 0, the image of |J,-m> under time "
+    "reversal":
+        r"every ket is a block, $\jm{J}{m}$ of $\conjpair{1}\irr{e}_{m%s}$ for $m > 0$ and "
+        r"$(-1)^{J+m}\jm{J}{m}$ of $\conjpair{2}\irr{e}_{-m%s}$ for $m < 0$, the image of the first "
+        r"under time reversal (CONVENTIONS.pdf, section 29.4)",
     "mu = 1: |J,-n>; mu = 2: (-1)^(J-n) |J,n>":
         r"the block of $\irr{e}_{n%s}$, $n = \tfrac{1}{2}, \tfrac{3}{2}, \dots, J$, has the "
         r"partners $\jm{J}{-n}$ and $(-1)^{J-n}\jm{J}{n}$",

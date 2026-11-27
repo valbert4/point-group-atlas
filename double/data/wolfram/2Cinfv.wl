@@ -1009,15 +1009,15 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_yz", "twoMs" -> 1|>,
-                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_zx", "twoMs" -> 1|>
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_yz", "twoMs" -> 1|>,
+                      <|"c" -> -1, "function" -> "d_zx", "twoMs" -> 1|>
                     },
                     "mu" -> 1
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_yz", "twoMs" -> -1|>,
-                      <|"c" -> -1 Exp[2 Pi I/4], "function" -> "d_zx", "twoMs" -> -1|>
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_yz", "twoMs" -> -1|>,
+                      <|"c" -> 1, "function" -> "d_zx", "twoMs" -> -1|>
                     },
                     "mu" -> 2
                   |>
@@ -1031,15 +1031,15 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_yz", "twoMs" -> -1|>,
-                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_zx", "twoMs" -> -1|>
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_yz", "twoMs" -> -1|>,
+                      <|"c" -> -1, "function" -> "d_zx", "twoMs" -> -1|>
                     },
                     "mu" -> 1
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> -1, "function" -> "d_yz", "twoMs" -> 1|>,
-                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_zx", "twoMs" -> 1|>
+                      <|"c" -> -1 Exp[2 Pi I/4], "function" -> "d_yz", "twoMs" -> 1|>,
+                      <|"c" -> -1, "function" -> "d_zx", "twoMs" -> 1|>
                     },
                     "mu" -> 2
                   |>

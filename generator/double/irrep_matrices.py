@@ -12,8 +12,13 @@ records: D(x) D(y) = D(xy), xy read from the multiplication table (Rotation's CO
     twist     D = D^from (x) lambda, lambda a one-dimensional irrep;
     galois    D = sigma_t(D^from) entrywise, sigma_t: zeta_M -> zeta_M^t, M the conductor of the
               entries of D^from, t the least that works among those fixing i and zeta_3 when
-              they lie in Q(zeta_M) (E_7/2 of 2I: sqrt 5 -> -sqrt 5), then the least.
-The constructions are tried in this order, twist and galois from the spinor irreps already built.
+              they lie in Q(zeta_M) (E_7/2 of 2I: sqrt 5 -> -sqrt 5), then the least;
+    conjugate the second irrep of a complex pair of dimension above 1 (2G_3/2 of 2T, 2G_3/2,g and
+              2G_3/2,u of 2T_h): D = conj(D^from), from the first irrep of the pair, so that time
+              reversal takes a copy of the first irrep to one of the second (section 26.1).
+The constructions are tried in this order, conjugate first for such an irrep, twist and galois from
+the spinor irreps already built.  The second irrep of every complex pair thus has the conjugate
+matrices of its first (for dimension 1, its character).
 """
 from math import gcd
 
@@ -145,6 +150,11 @@ def build(G, classes, irreps):
         elif ir["dim"] == 1:
             D = [[[chi_of(x)]] for x in range(G.order)]
             con = {"method": "linear"}
+        elif ir.get("conjugate_of") is not None and any(
+                irreps[j]["id"] == ir["conjugate_of"] for j in built):
+            j = next(j for j in built if irreps[j]["id"] == ir["conjugate_of"])
+            D = [[[x.conjugate() for x in row] for row in built[j][y]] for y in range(G.order)]
+            con = {"method": "conjugate", "from": ir["conjugate_of"]}
         elif axial and ir["dim"] == 2:
             D, con = _wigner(G, ir, chi_of,
                              lambda twoJ, order: [order.index(-twoJ), order.index(twoJ)])

@@ -108192,8 +108192,14 @@ o3d = <|
                 "irrep_id" -> "E1h",
                 "kappa" -> 1,
                 "vectors" -> {
-                  <|"components" -> {<|"c" -> 1, "function" -> "s", "twoMs" -> 1|>}, "mu" -> 1|>,
-                  <|"components" -> {<|"c" -> 1, "function" -> "s", "twoMs" -> -1|>}, "mu" -> 2|>
+                  <|
+                    "components" -> {<|"c" -> Exp[2 Pi I/4], "function" -> "s", "twoMs" -> 1|>},
+                    "mu" -> 1
+                  |>,
+                  <|
+                    "components" -> {<|"c" -> Exp[2 Pi I/4], "function" -> "s", "twoMs" -> -1|>},
+                    "mu" -> 2
+                  |>
                 }
               |>
             },
@@ -108294,35 +108300,35 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_x2-y2", "twoMs" -> -1|>,
-                      <|"c" -> 2 Exp[2 Pi I/4], "function" -> "d_xy", "twoMs" -> -1|>,
-                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_yz", "twoMs" -> 1|>,
-                      <|"c" -> 1, "function" -> "d_zx", "twoMs" -> 1|>
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_x2-y2", "twoMs" -> -1|>,
+                      <|"c" -> -2, "function" -> "d_xy", "twoMs" -> -1|>,
+                      <|"c" -> -1, "function" -> "d_yz", "twoMs" -> 1|>,
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_zx", "twoMs" -> 1|>
                     },
                     "mu" -> 1
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> -1, "function" -> "d_z2", "twoMs" -> 1|>,
-                      <|"c" -> -3 Exp[2 Pi I/4], "function" -> "d_yz", "twoMs" -> -1|>,
-                      <|"c" -> -3, "function" -> "d_zx", "twoMs" -> -1|>
+                      <|"c" -> -1 Exp[2 Pi I/4], "function" -> "d_z2", "twoMs" -> 1|>,
+                      <|"c" -> 3, "function" -> "d_yz", "twoMs" -> -1|>,
+                      <|"c" -> -3 Exp[2 Pi I/4], "function" -> "d_zx", "twoMs" -> -1|>
                     },
                     "mu" -> 2
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_z2", "twoMs" -> -1|>,
-                      <|"c" -> 3 Exp[2 Pi I/4], "function" -> "d_yz", "twoMs" -> 1|>,
-                      <|"c" -> -3, "function" -> "d_zx", "twoMs" -> 1|>
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_z2", "twoMs" -> -1|>,
+                      <|"c" -> -3, "function" -> "d_yz", "twoMs" -> 1|>,
+                      <|"c" -> -3 Exp[2 Pi I/4], "function" -> "d_zx", "twoMs" -> 1|>
                     },
                     "mu" -> 3
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> -1, "function" -> "d_x2-y2", "twoMs" -> 1|>,
-                      <|"c" -> 2 Exp[2 Pi I/4], "function" -> "d_xy", "twoMs" -> 1|>,
-                      <|"c" -> -1 Exp[2 Pi I/4], "function" -> "d_yz", "twoMs" -> -1|>,
-                      <|"c" -> 1, "function" -> "d_zx", "twoMs" -> -1|>
+                      <|"c" -> -1 Exp[2 Pi I/4], "function" -> "d_x2-y2", "twoMs" -> 1|>,
+                      <|"c" -> -2, "function" -> "d_xy", "twoMs" -> 1|>,
+                      <|"c" -> 1, "function" -> "d_yz", "twoMs" -> -1|>,
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_zx", "twoMs" -> -1|>
                     },
                     "mu" -> 4
                   |>
@@ -108336,49 +108342,49 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_x2-y2", "twoMs" -> 1|>,
-                      <|"c" -> 2 Exp[2 Pi I/4], "function" -> "d_xy", "twoMs" -> 1|>
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_x2-y2", "twoMs" -> 1|>,
+                      <|"c" -> -2, "function" -> "d_xy", "twoMs" -> 1|>
                     },
                     "mu" -> 1
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_x2-y2", "twoMs" -> -1|>,
-                      <|"c" -> 2 Exp[2 Pi I/4], "function" -> "d_xy", "twoMs" -> -1|>,
-                      <|"c" -> -4 Exp[2 Pi I/4], "function" -> "d_yz", "twoMs" -> 1|>,
-                      <|"c" -> -4, "function" -> "d_zx", "twoMs" -> 1|>
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_x2-y2", "twoMs" -> -1|>,
+                      <|"c" -> -2, "function" -> "d_xy", "twoMs" -> -1|>,
+                      <|"c" -> 4, "function" -> "d_yz", "twoMs" -> 1|>,
+                      <|"c" -> -4 Exp[2 Pi I/4], "function" -> "d_zx", "twoMs" -> 1|>
                     },
                     "mu" -> 2
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_z2", "twoMs" -> 1|>,
-                      <|"c" -> -2 Exp[2 Pi I/4], "function" -> "d_yz", "twoMs" -> -1|>,
-                      <|"c" -> -2, "function" -> "d_zx", "twoMs" -> -1|>
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_z2", "twoMs" -> 1|>,
+                      <|"c" -> 2, "function" -> "d_yz", "twoMs" -> -1|>,
+                      <|"c" -> -2 Exp[2 Pi I/4], "function" -> "d_zx", "twoMs" -> -1|>
                     },
                     "mu" -> 3
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_z2", "twoMs" -> -1|>,
-                      <|"c" -> -2 Exp[2 Pi I/4], "function" -> "d_yz", "twoMs" -> 1|>,
-                      <|"c" -> 2, "function" -> "d_zx", "twoMs" -> 1|>
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_z2", "twoMs" -> -1|>,
+                      <|"c" -> 2, "function" -> "d_yz", "twoMs" -> 1|>,
+                      <|"c" -> 2 Exp[2 Pi I/4], "function" -> "d_zx", "twoMs" -> 1|>
                     },
                     "mu" -> 4
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_x2-y2", "twoMs" -> 1|>,
-                      <|"c" -> -2 Exp[2 Pi I/4], "function" -> "d_xy", "twoMs" -> 1|>,
-                      <|"c" -> -4 Exp[2 Pi I/4], "function" -> "d_yz", "twoMs" -> -1|>,
-                      <|"c" -> 4, "function" -> "d_zx", "twoMs" -> -1|>
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_x2-y2", "twoMs" -> 1|>,
+                      <|"c" -> 2, "function" -> "d_xy", "twoMs" -> 1|>,
+                      <|"c" -> 4, "function" -> "d_yz", "twoMs" -> -1|>,
+                      <|"c" -> 4 Exp[2 Pi I/4], "function" -> "d_zx", "twoMs" -> -1|>
                     },
                     "mu" -> 5
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_x2-y2", "twoMs" -> -1|>,
-                      <|"c" -> -2 Exp[2 Pi I/4], "function" -> "d_xy", "twoMs" -> -1|>
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_x2-y2", "twoMs" -> -1|>,
+                      <|"c" -> 2, "function" -> "d_xy", "twoMs" -> -1|>
                     },
                     "mu" -> 6
                   |>
@@ -108923,8 +108929,8 @@ o3d = <|
           "kappa" -> 1,
           "twoJ" -> 1,
           "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 1|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 2|>
+            <|"components" -> {<|"e" -> Exp[2 Pi I/4], "twoM" -> 1|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> Exp[2 Pi I/4], "twoM" -> -1|>}, "mu" -> 2|>
           }
         |>,
         <|
@@ -108934,16 +108940,10 @@ o3d = <|
           "kappa" -> 1,
           "twoJ" -> 3,
           "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 3|>}, "mu" -> 1|>,
-            <|
-              "components" -> {<|"e" -> (2 Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "twoM" -> 1|>},
-              "mu" -> 2
-            |>,
-            <|
-              "components" -> {<|"e" -> (2 Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "twoM" -> -1|>},
-              "mu" -> 3
-            |>,
-            <|"components" -> {<|"e" -> 1, "twoM" -> -3|>}, "mu" -> 4|>
+            <|"components" -> {<|"e" -> Exp[2 Pi I/4], "twoM" -> 3|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> 1|>}, "mu" -> 2|>,
+            <|"components" -> {<|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> -1|>}, "mu" -> 3|>,
+            <|"components" -> {<|"e" -> Exp[2 Pi I/4], "twoM" -> -3|>}, "mu" -> 4|>
           }
         |>,
         <|
@@ -108953,15 +108953,20 @@ o3d = <|
           "kappa" -> 1,
           "twoJ" -> 5,
           "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 5|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> Exp[2 Pi I/4], "twoM" -> 5|>}, "mu" -> 1|>,
             <|
-              "components" -> {<|"e" -> (-1 + -2 Exp[2 Pi I 2/5] + -2 Exp[2 Pi I 3/5]), "twoM" -> 3|>},
+              "components" -> {
+                <|
+                  "e" -> (2 Exp[2 Pi I 3/20] + -1 Exp[2 Pi I 5/20] + 2 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>
+              },
               "mu" -> 2
             |>,
             <|
               "components" -> {
                 <|
-                  "e" -> (2 Exp[2 Pi I/40] + 2 Exp[2 Pi I 3/40] + -1 Exp[2 Pi I 5/40] + -2 Exp[2 Pi I 7/40] + 2 Exp[2 Pi I 9/40] + -1 Exp[2 Pi I 15/40]),
+                  "e" -> (2 Exp[2 Pi I/40] + -2 Exp[2 Pi I 3/40] + -1 Exp[2 Pi I 5/40] + 2 Exp[2 Pi I 7/40] + 2 Exp[2 Pi I 9/40] + Exp[2 Pi I 15/40]),
                   "twoM" -> 1
                 |>
               },
@@ -108970,17 +108975,22 @@ o3d = <|
             <|
               "components" -> {
                 <|
-                  "e" -> (2 Exp[2 Pi I/40] + 2 Exp[2 Pi I 3/40] + -1 Exp[2 Pi I 5/40] + -2 Exp[2 Pi I 7/40] + 2 Exp[2 Pi I 9/40] + -1 Exp[2 Pi I 15/40]),
+                  "e" -> (2 Exp[2 Pi I/40] + -2 Exp[2 Pi I 3/40] + -1 Exp[2 Pi I 5/40] + 2 Exp[2 Pi I 7/40] + 2 Exp[2 Pi I 9/40] + Exp[2 Pi I 15/40]),
                   "twoM" -> -1
                 |>
               },
               "mu" -> 4
             |>,
             <|
-              "components" -> {<|"e" -> (-1 + -2 Exp[2 Pi I 2/5] + -2 Exp[2 Pi I 3/5]), "twoM" -> -3|>},
+              "components" -> {
+                <|
+                  "e" -> (2 Exp[2 Pi I 3/20] + -1 Exp[2 Pi I 5/20] + 2 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>
+              },
               "mu" -> 5
             |>,
-            <|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 6|>
+            <|"components" -> {<|"e" -> Exp[2 Pi I/4], "twoM" -> -5|>}, "mu" -> 6|>
           }
         |>,
         <|
@@ -108992,19 +109002,31 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 5, "twoM" -> -7|>,
-                <|"e" -> (7 + 14 Exp[2 Pi I 2/5] + 14 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> 35, "twoM" -> 1|>,
-                <|"e" -> (-7 + -14 Exp[2 Pi I 2/5] + -14 Exp[2 Pi I 3/5]), "twoM" -> 5|>
+                <|"e" -> 5 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (-14 Exp[2 Pi I 3/20] + 7 Exp[2 Pi I 5/20] + -14 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> 35 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (14 Exp[2 Pi I 3/20] + -7 Exp[2 Pi I 5/20] + 14 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (7 + 14 Exp[2 Pi I 2/5] + 14 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> -35, "twoM" -> -1|>,
-                <|"e" -> (-7 + -14 Exp[2 Pi I 2/5] + -14 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> -5, "twoM" -> 7|>
+                <|
+                  "e" -> (-14 Exp[2 Pi I 3/20] + 7 Exp[2 Pi I 5/20] + -14 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> -35 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (14 Exp[2 Pi I 3/20] + -7 Exp[2 Pi I 5/20] + 14 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> -5 Exp[2 Pi I/4], "twoM" -> 7|>
               },
               "mu" -> 2
             |>
@@ -109019,32 +109041,44 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -7|>,
-                <|"e" -> (-21 + -42 Exp[2 Pi I 2/5] + -42 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> -35, "twoM" -> 1|>,
-                <|"e" -> (1 + 2 Exp[2 Pi I 2/5] + 2 Exp[2 Pi I 3/5]), "twoM" -> 5|>
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (42 Exp[2 Pi I 3/20] + -21 Exp[2 Pi I 5/20] + 42 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> -35 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (-2 Exp[2 Pi I 3/20] + Exp[2 Pi I 5/20] + -2 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> -35, "twoM" -> -5|>,
-                <|"e" -> (-35 + -70 Exp[2 Pi I 2/5] + -70 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> 15, "twoM" -> 3|>,
-                <|"e" -> (-1 + -2 Exp[2 Pi I 2/5] + -2 Exp[2 Pi I 3/5]), "twoM" -> 7|>
+                <|"e" -> -35 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (70 Exp[2 Pi I 3/20] + -35 Exp[2 Pi I 5/20] + 70 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (2 Exp[2 Pi I 3/20] + -1 Exp[2 Pi I 5/20] + 2 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>
               },
               "mu" -> 2
             |>,
             <|
               "components" -> {
-                <|"e" -> (5 Exp[2 Pi I/8] + -5 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
+                <|"e" -> (5 Exp[2 Pi I/8] + 5 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
                 <|
-                  "e" -> (-42 Exp[2 Pi I/40] + -42 Exp[2 Pi I 3/40] + 21 Exp[2 Pi I 5/40] + 42 Exp[2 Pi I 7/40] + -42 Exp[2 Pi I 9/40] + 21 Exp[2 Pi I 15/40]),
+                  "e" -> (-42 Exp[2 Pi I/40] + 42 Exp[2 Pi I 3/40] + 21 Exp[2 Pi I 5/40] + -42 Exp[2 Pi I 7/40] + -42 Exp[2 Pi I 9/40] + -21 Exp[2 Pi I 15/40]),
                   "twoM" -> -3
                 |>,
-                <|"e" -> (-25 Exp[2 Pi I/8] + 25 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
+                <|"e" -> (-25 Exp[2 Pi I/8] + -25 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
                 <|
-                  "e" -> (-14 Exp[2 Pi I/40] + -14 Exp[2 Pi I 3/40] + 7 Exp[2 Pi I 5/40] + 14 Exp[2 Pi I 7/40] + -14 Exp[2 Pi I 9/40] + 7 Exp[2 Pi I 15/40]),
+                  "e" -> (-14 Exp[2 Pi I/40] + 14 Exp[2 Pi I 3/40] + 7 Exp[2 Pi I 5/40] + -14 Exp[2 Pi I 7/40] + -14 Exp[2 Pi I 9/40] + -7 Exp[2 Pi I 15/40]),
                   "twoM" -> 5
                 |>
               },
@@ -109053,33 +109087,45 @@ o3d = <|
             <|
               "components" -> {
                 <|
-                  "e" -> (14 Exp[2 Pi I/40] + 14 Exp[2 Pi I 3/40] + -7 Exp[2 Pi I 5/40] + -14 Exp[2 Pi I 7/40] + 14 Exp[2 Pi I 9/40] + -7 Exp[2 Pi I 15/40]),
+                  "e" -> (14 Exp[2 Pi I/40] + -14 Exp[2 Pi I 3/40] + -7 Exp[2 Pi I 5/40] + 14 Exp[2 Pi I 7/40] + 14 Exp[2 Pi I 9/40] + 7 Exp[2 Pi I 15/40]),
                   "twoM" -> -5
                 |>,
-                <|"e" -> (25 Exp[2 Pi I/8] + -25 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
+                <|"e" -> (25 Exp[2 Pi I/8] + 25 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
                 <|
-                  "e" -> (42 Exp[2 Pi I/40] + 42 Exp[2 Pi I 3/40] + -21 Exp[2 Pi I 5/40] + -42 Exp[2 Pi I 7/40] + 42 Exp[2 Pi I 9/40] + -21 Exp[2 Pi I 15/40]),
+                  "e" -> (42 Exp[2 Pi I/40] + -42 Exp[2 Pi I 3/40] + -21 Exp[2 Pi I 5/40] + 42 Exp[2 Pi I 7/40] + 42 Exp[2 Pi I 9/40] + 21 Exp[2 Pi I 15/40]),
                   "twoM" -> 3
                 |>,
-                <|"e" -> (-5 Exp[2 Pi I/8] + 5 Exp[2 Pi I 3/8]), "twoM" -> 7|>
+                <|"e" -> (-5 Exp[2 Pi I/8] + -5 Exp[2 Pi I 3/8]), "twoM" -> 7|>
               },
               "mu" -> 4
             |>,
             <|
               "components" -> {
-                <|"e" -> (1 + 2 Exp[2 Pi I 2/5] + 2 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> -15, "twoM" -> -3|>,
-                <|"e" -> (35 + 70 Exp[2 Pi I 2/5] + 70 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> 35, "twoM" -> 5|>
+                <|
+                  "e" -> (-2 Exp[2 Pi I 3/20] + Exp[2 Pi I 5/20] + -2 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> -15 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (-70 Exp[2 Pi I 3/20] + 35 Exp[2 Pi I 5/20] + -70 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> 35 Exp[2 Pi I/4], "twoM" -> 5|>
               },
               "mu" -> 5
             |>,
             <|
               "components" -> {
-                <|"e" -> (-1 + -2 Exp[2 Pi I 2/5] + -2 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> 35, "twoM" -> -1|>,
-                <|"e" -> (21 + 42 Exp[2 Pi I 2/5] + 42 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> -15, "twoM" -> 7|>
+                <|
+                  "e" -> (2 Exp[2 Pi I 3/20] + -1 Exp[2 Pi I 5/20] + 2 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> 35 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (-42 Exp[2 Pi I 3/20] + 21 Exp[2 Pi I 5/20] + -42 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> -15 Exp[2 Pi I/4], "twoM" -> 7|>
               },
               "mu" -> 6
             |>
@@ -109094,28 +109140,34 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 5, "twoM" -> -9|>,
-                <|"e" -> (-12 + -24 Exp[2 Pi I 2/5] + -24 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> -42, "twoM" -> -1|>,
-                <|"e" -> (4 + 8 Exp[2 Pi I 2/5] + 8 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> -3, "twoM" -> 7|>
+                <|"e" -> 5 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (24 Exp[2 Pi I 3/20] + -12 Exp[2 Pi I 5/20] + 24 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> -42 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (-8 Exp[2 Pi I 3/20] + 4 Exp[2 Pi I 5/20] + -8 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> -3 Exp[2 Pi I/4], "twoM" -> 7|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
                 <|
-                  "e" -> (18 Exp[2 Pi I/60] + -18 Exp[2 Pi I 5/60] + -36 Exp[2 Pi I 7/60] + -18 Exp[2 Pi I 9/60] + -18 Exp[2 Pi I 11/60] + 36 Exp[2 Pi I 13/60] + 27 Exp[2 Pi I 15/60]),
+                  "e" -> (27 + -36 Exp[2 Pi I/15] + -18 Exp[2 Pi I 2/15] + 18 Exp[2 Pi I 3/15] + -36 Exp[2 Pi I 4/15] + 18 Exp[2 Pi I 5/15] + -18 Exp[2 Pi I 7/15]),
                   "twoM" -> -7
                 |>,
-                <|"e" -> (168 Exp[2 Pi I/12] + -84 Exp[2 Pi I 3/12]), "twoM" -> -3|>,
+                <|"e" -> (84 + 168 Exp[2 Pi I/3]), "twoM" -> -3|>,
                 <|
-                  "e" -> (-36 Exp[2 Pi I/60] + 36 Exp[2 Pi I 5/60] + 72 Exp[2 Pi I 7/60] + 36 Exp[2 Pi I 9/60] + 36 Exp[2 Pi I 11/60] + -72 Exp[2 Pi I 13/60] + -54 Exp[2 Pi I 15/60]),
+                  "e" -> (-54 + 72 Exp[2 Pi I/15] + 36 Exp[2 Pi I 2/15] + -36 Exp[2 Pi I 3/15] + 72 Exp[2 Pi I 4/15] + -36 Exp[2 Pi I 5/15] + 36 Exp[2 Pi I 7/15]),
                   "twoM" -> 1
                 |>,
-                <|"e" -> (72 Exp[2 Pi I/12] + -36 Exp[2 Pi I 3/12]), "twoM" -> 5|>,
+                <|"e" -> (36 + 72 Exp[2 Pi I/3]), "twoM" -> 5|>,
                 <|
-                  "e" -> (2 Exp[2 Pi I/60] + -2 Exp[2 Pi I 5/60] + -4 Exp[2 Pi I 7/60] + -2 Exp[2 Pi I 9/60] + -2 Exp[2 Pi I 11/60] + 4 Exp[2 Pi I 13/60] + 3 Exp[2 Pi I 15/60]),
+                  "e" -> (3 + -4 Exp[2 Pi I/15] + -2 Exp[2 Pi I 2/15] + 2 Exp[2 Pi I 3/15] + -4 Exp[2 Pi I 4/15] + 2 Exp[2 Pi I 5/15] + -2 Exp[2 Pi I 7/15]),
                   "twoM" -> 9
                 |>
               },
@@ -109124,17 +109176,17 @@ o3d = <|
             <|
               "components" -> {
                 <|
-                  "e" -> (-2 Exp[2 Pi I/60] + 2 Exp[2 Pi I 5/60] + 4 Exp[2 Pi I 7/60] + 2 Exp[2 Pi I 9/60] + 2 Exp[2 Pi I 11/60] + -4 Exp[2 Pi I 13/60] + -3 Exp[2 Pi I 15/60]),
+                  "e" -> (-3 + 4 Exp[2 Pi I/15] + 2 Exp[2 Pi I 2/15] + -2 Exp[2 Pi I 3/15] + 4 Exp[2 Pi I 4/15] + -2 Exp[2 Pi I 5/15] + 2 Exp[2 Pi I 7/15]),
                   "twoM" -> -9
                 |>,
-                <|"e" -> (-72 Exp[2 Pi I/12] + 36 Exp[2 Pi I 3/12]), "twoM" -> -5|>,
+                <|"e" -> (-36 + -72 Exp[2 Pi I/3]), "twoM" -> -5|>,
                 <|
-                  "e" -> (36 Exp[2 Pi I/60] + -36 Exp[2 Pi I 5/60] + -72 Exp[2 Pi I 7/60] + -36 Exp[2 Pi I 9/60] + -36 Exp[2 Pi I 11/60] + 72 Exp[2 Pi I 13/60] + 54 Exp[2 Pi I 15/60]),
+                  "e" -> (54 + -72 Exp[2 Pi I/15] + -36 Exp[2 Pi I 2/15] + 36 Exp[2 Pi I 3/15] + -72 Exp[2 Pi I 4/15] + 36 Exp[2 Pi I 5/15] + -36 Exp[2 Pi I 7/15]),
                   "twoM" -> -1
                 |>,
-                <|"e" -> (-168 Exp[2 Pi I/12] + 84 Exp[2 Pi I 3/12]), "twoM" -> 3|>,
+                <|"e" -> (-84 + -168 Exp[2 Pi I/3]), "twoM" -> 3|>,
                 <|
-                  "e" -> (-18 Exp[2 Pi I/60] + 18 Exp[2 Pi I 5/60] + 36 Exp[2 Pi I 7/60] + 18 Exp[2 Pi I 9/60] + 18 Exp[2 Pi I 11/60] + -36 Exp[2 Pi I 13/60] + -27 Exp[2 Pi I 15/60]),
+                  "e" -> (-27 + 36 Exp[2 Pi I/15] + 18 Exp[2 Pi I 2/15] + -18 Exp[2 Pi I 3/15] + 36 Exp[2 Pi I 4/15] + -18 Exp[2 Pi I 5/15] + 18 Exp[2 Pi I 7/15]),
                   "twoM" -> 7
                 |>
               },
@@ -109142,11 +109194,17 @@ o3d = <|
             |>,
             <|
               "components" -> {
-                <|"e" -> 3, "twoM" -> -7|>,
-                <|"e" -> (-4 + -8 Exp[2 Pi I 2/5] + -8 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> 42, "twoM" -> 1|>,
-                <|"e" -> (12 + 24 Exp[2 Pi I 2/5] + 24 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> -5, "twoM" -> 9|>
+                <|"e" -> 3 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (8 Exp[2 Pi I 3/20] + -4 Exp[2 Pi I 5/20] + 8 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> 42 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (-24 Exp[2 Pi I 3/20] + 12 Exp[2 Pi I 5/20] + -24 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> -5 Exp[2 Pi I/4], "twoM" -> 9|>
               },
               "mu" -> 4
             |>
@@ -109161,73 +109219,103 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -7|>,
-                <|"e" -> (-28 + -56 Exp[2 Pi I 2/5] + -56 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> -70, "twoM" -> 1|>,
-                <|"e" -> (4 + 8 Exp[2 Pi I 2/5] + 8 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> -1, "twoM" -> 9|>
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (56 Exp[2 Pi I 3/20] + -28 Exp[2 Pi I 5/20] + 56 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> -70 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (-8 Exp[2 Pi I 3/20] + 4 Exp[2 Pi I 5/20] + -8 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> -1 Exp[2 Pi I/4], "twoM" -> 9|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (-15 + -30 Exp[2 Pi I 2/5] + -30 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> -20, "twoM" -> -5|>,
-                <|"e" -> (-154 + -308 Exp[2 Pi I 2/5] + -308 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> 140, "twoM" -> 3|>,
-                <|"e" -> (-31 + -62 Exp[2 Pi I 2/5] + -62 Exp[2 Pi I 3/5]), "twoM" -> 7|>
+                <|
+                  "e" -> (30 Exp[2 Pi I 3/20] + -15 Exp[2 Pi I 5/20] + 30 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> -20 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (308 Exp[2 Pi I 3/20] + -154 Exp[2 Pi I 5/20] + 308 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> 140 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (62 Exp[2 Pi I 3/20] + -31 Exp[2 Pi I 5/20] + 62 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>
               },
               "mu" -> 2
             |>,
             <|
               "components" -> {
-                <|"e" -> (-65 Exp[2 Pi I/8] + 65 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
+                <|"e" -> (-65 Exp[2 Pi I/8] + -65 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
                 <|
-                  "e" -> (56 Exp[2 Pi I/40] + 56 Exp[2 Pi I 3/40] + -28 Exp[2 Pi I 5/40] + -56 Exp[2 Pi I 7/40] + 56 Exp[2 Pi I 9/40] + -28 Exp[2 Pi I 15/40]),
+                  "e" -> (56 Exp[2 Pi I/40] + -56 Exp[2 Pi I 3/40] + -28 Exp[2 Pi I 5/40] + 56 Exp[2 Pi I 7/40] + 56 Exp[2 Pi I 9/40] + 28 Exp[2 Pi I 15/40]),
                   "twoM" -> -3
                 |>,
-                <|"e" -> (-70 Exp[2 Pi I/8] + 70 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
+                <|"e" -> (-70 Exp[2 Pi I/8] + -70 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
                 <|
-                  "e" -> (-136 Exp[2 Pi I/40] + -136 Exp[2 Pi I 3/40] + 68 Exp[2 Pi I 5/40] + 136 Exp[2 Pi I 7/40] + -136 Exp[2 Pi I 9/40] + 68 Exp[2 Pi I 15/40]),
+                  "e" -> (-136 Exp[2 Pi I/40] + 136 Exp[2 Pi I 3/40] + 68 Exp[2 Pi I 5/40] + -136 Exp[2 Pi I 7/40] + -136 Exp[2 Pi I 9/40] + -68 Exp[2 Pi I 15/40]),
                   "twoM" -> 5
                 |>,
-                <|"e" -> (15 Exp[2 Pi I/8] + -15 Exp[2 Pi I 3/8]), "twoM" -> 9|>
+                <|"e" -> (15 Exp[2 Pi I/8] + 15 Exp[2 Pi I 3/8]), "twoM" -> 9|>
               },
               "mu" -> 3
             |>,
             <|
               "components" -> {
-                <|"e" -> (15 Exp[2 Pi I/8] + -15 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
+                <|"e" -> (15 Exp[2 Pi I/8] + 15 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
                 <|
-                  "e" -> (-136 Exp[2 Pi I/40] + -136 Exp[2 Pi I 3/40] + 68 Exp[2 Pi I 5/40] + 136 Exp[2 Pi I 7/40] + -136 Exp[2 Pi I 9/40] + 68 Exp[2 Pi I 15/40]),
+                  "e" -> (-136 Exp[2 Pi I/40] + 136 Exp[2 Pi I 3/40] + 68 Exp[2 Pi I 5/40] + -136 Exp[2 Pi I 7/40] + -136 Exp[2 Pi I 9/40] + -68 Exp[2 Pi I 15/40]),
                   "twoM" -> -5
                 |>,
-                <|"e" -> (-70 Exp[2 Pi I/8] + 70 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
+                <|"e" -> (-70 Exp[2 Pi I/8] + -70 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
                 <|
-                  "e" -> (56 Exp[2 Pi I/40] + 56 Exp[2 Pi I 3/40] + -28 Exp[2 Pi I 5/40] + -56 Exp[2 Pi I 7/40] + 56 Exp[2 Pi I 9/40] + -28 Exp[2 Pi I 15/40]),
+                  "e" -> (56 Exp[2 Pi I/40] + -56 Exp[2 Pi I 3/40] + -28 Exp[2 Pi I 5/40] + 56 Exp[2 Pi I 7/40] + 56 Exp[2 Pi I 9/40] + 28 Exp[2 Pi I 15/40]),
                   "twoM" -> 3
                 |>,
-                <|"e" -> (-65 Exp[2 Pi I/8] + 65 Exp[2 Pi I 3/8]), "twoM" -> 7|>
+                <|"e" -> (-65 Exp[2 Pi I/8] + -65 Exp[2 Pi I 3/8]), "twoM" -> 7|>
               },
               "mu" -> 4
             |>,
             <|
               "components" -> {
-                <|"e" -> (-31 + -62 Exp[2 Pi I 2/5] + -62 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> 140, "twoM" -> -3|>,
-                <|"e" -> (-154 + -308 Exp[2 Pi I 2/5] + -308 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> -20, "twoM" -> 5|>,
-                <|"e" -> (-15 + -30 Exp[2 Pi I 2/5] + -30 Exp[2 Pi I 3/5]), "twoM" -> 9|>
+                <|
+                  "e" -> (62 Exp[2 Pi I 3/20] + -31 Exp[2 Pi I 5/20] + 62 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> 140 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (308 Exp[2 Pi I 3/20] + -154 Exp[2 Pi I 5/20] + 308 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> -20 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (30 Exp[2 Pi I 3/20] + -15 Exp[2 Pi I 5/20] + 30 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>
               },
               "mu" -> 5
             |>,
             <|
               "components" -> {
-                <|"e" -> -1, "twoM" -> -9|>,
-                <|"e" -> (4 + 8 Exp[2 Pi I 2/5] + 8 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> -70, "twoM" -> -1|>,
-                <|"e" -> (-28 + -56 Exp[2 Pi I 2/5] + -56 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> 15, "twoM" -> 7|>
+                <|"e" -> -1 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (-8 Exp[2 Pi I 3/20] + 4 Exp[2 Pi I 5/20] + -8 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> -70 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (56 Exp[2 Pi I 3/20] + -28 Exp[2 Pi I 5/20] + 56 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> 7|>
               },
               "mu" -> 6
             |>
@@ -109242,23 +109330,41 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -11|>,
-                <|"e" -> (-55 + -110 Exp[2 Pi I 2/5] + -110 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> -330, "twoM" -> -3|>,
-                <|"e" -> (66 + 132 Exp[2 Pi I 2/5] + 132 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> -165, "twoM" -> 5|>,
-                <|"e" -> (-11 + -22 Exp[2 Pi I 2/5] + -22 Exp[2 Pi I 3/5]), "twoM" -> 9|>
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (110 Exp[2 Pi I 3/20] + -55 Exp[2 Pi I 5/20] + 110 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> -330 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (-132 Exp[2 Pi I 3/20] + 66 Exp[2 Pi I 5/20] + -132 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> -165 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (22 Exp[2 Pi I 3/20] + -11 Exp[2 Pi I 5/20] + 22 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (11 + 22 Exp[2 Pi I 2/5] + 22 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> 165, "twoM" -> -5|>,
-                <|"e" -> (-66 + -132 Exp[2 Pi I 2/5] + -132 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> 330, "twoM" -> 3|>,
-                <|"e" -> (55 + 110 Exp[2 Pi I 2/5] + 110 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> -15, "twoM" -> 11|>
+                <|
+                  "e" -> (-22 Exp[2 Pi I 3/20] + 11 Exp[2 Pi I 5/20] + -22 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> 165 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (132 Exp[2 Pi I 3/20] + -66 Exp[2 Pi I 5/20] + 132 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> 330 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (-110 Exp[2 Pi I 3/20] + 55 Exp[2 Pi I 5/20] + -110 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> -15 Exp[2 Pi I/4], "twoM" -> 11|>
               },
               "mu" -> 2
             |>
@@ -109273,30 +109379,39 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -9|>,
-                <|"e" -> (-45 + -90 Exp[2 Pi I 2/5] + -90 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> -210, "twoM" -> -1|>,
-                <|"e" -> (30 + 60 Exp[2 Pi I 2/5] + 60 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> -45, "twoM" -> 7|>,
-                <|"e" -> (-1 + -2 Exp[2 Pi I 2/5] + -2 Exp[2 Pi I 3/5]), "twoM" -> 11|>
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (90 Exp[2 Pi I 3/20] + -45 Exp[2 Pi I 5/20] + 90 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> -210 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (-60 Exp[2 Pi I 3/20] + 30 Exp[2 Pi I 5/20] + -60 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> -45 Exp[2 Pi I/4], "twoM" -> 7|>,
+                <|
+                  "e" -> (2 Exp[2 Pi I 3/20] + -1 Exp[2 Pi I 5/20] + 2 Exp[2 Pi I 7/20]),
+                  "twoM" -> 11
+                |>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (30 Exp[2 Pi I/12] + -15 Exp[2 Pi I 3/12]), "twoM" -> -11|>,
+                <|"e" -> (15 + 30 Exp[2 Pi I/3]), "twoM" -> -11|>,
                 <|
-                  "e" -> (-50 Exp[2 Pi I/60] + 50 Exp[2 Pi I 5/60] + 100 Exp[2 Pi I 7/60] + 50 Exp[2 Pi I 9/60] + 50 Exp[2 Pi I 11/60] + -100 Exp[2 Pi I 13/60] + -75 Exp[2 Pi I 15/60]),
+                  "e" -> (-75 + 100 Exp[2 Pi I/15] + 50 Exp[2 Pi I 2/15] + -50 Exp[2 Pi I 3/15] + 100 Exp[2 Pi I 4/15] + -50 Exp[2 Pi I 5/15] + 50 Exp[2 Pi I 7/15]),
                   "twoM" -> -7
                 |>,
-                <|"e" -> (60 Exp[2 Pi I/12] + -30 Exp[2 Pi I 3/12]), "twoM" -> -3|>,
+                <|"e" -> (30 + 60 Exp[2 Pi I/3]), "twoM" -> -3|>,
                 <|
-                  "e" -> (-84 Exp[2 Pi I/60] + 84 Exp[2 Pi I 5/60] + 168 Exp[2 Pi I 7/60] + 84 Exp[2 Pi I 9/60] + 84 Exp[2 Pi I 11/60] + -168 Exp[2 Pi I 13/60] + -126 Exp[2 Pi I 15/60]),
+                  "e" -> (-126 + 168 Exp[2 Pi I/15] + 84 Exp[2 Pi I 2/15] + -84 Exp[2 Pi I 3/15] + 168 Exp[2 Pi I 4/15] + -84 Exp[2 Pi I 5/15] + 84 Exp[2 Pi I 7/15]),
                   "twoM" -> 1
                 |>,
-                <|"e" -> (390 Exp[2 Pi I/12] + -195 Exp[2 Pi I 3/12]), "twoM" -> 5|>,
+                <|"e" -> (195 + 390 Exp[2 Pi I/3]), "twoM" -> 5|>,
                 <|
-                  "e" -> (38 Exp[2 Pi I/60] + -38 Exp[2 Pi I 5/60] + -76 Exp[2 Pi I 7/60] + -38 Exp[2 Pi I 9/60] + -38 Exp[2 Pi I 11/60] + 76 Exp[2 Pi I 13/60] + 57 Exp[2 Pi I 15/60]),
+                  "e" -> (57 + -76 Exp[2 Pi I/15] + -38 Exp[2 Pi I 2/15] + 38 Exp[2 Pi I 3/15] + -76 Exp[2 Pi I 4/15] + 38 Exp[2 Pi I 5/15] + -38 Exp[2 Pi I 7/15]),
                   "twoM" -> 9
                 |>
               },
@@ -109305,31 +109420,40 @@ o3d = <|
             <|
               "components" -> {
                 <|
-                  "e" -> (38 Exp[2 Pi I/60] + -38 Exp[2 Pi I 5/60] + -76 Exp[2 Pi I 7/60] + -38 Exp[2 Pi I 9/60] + -38 Exp[2 Pi I 11/60] + 76 Exp[2 Pi I 13/60] + 57 Exp[2 Pi I 15/60]),
+                  "e" -> (57 + -76 Exp[2 Pi I/15] + -38 Exp[2 Pi I 2/15] + 38 Exp[2 Pi I 3/15] + -76 Exp[2 Pi I 4/15] + 38 Exp[2 Pi I 5/15] + -38 Exp[2 Pi I 7/15]),
                   "twoM" -> -9
                 |>,
-                <|"e" -> (390 Exp[2 Pi I/12] + -195 Exp[2 Pi I 3/12]), "twoM" -> -5|>,
+                <|"e" -> (195 + 390 Exp[2 Pi I/3]), "twoM" -> -5|>,
                 <|
-                  "e" -> (-84 Exp[2 Pi I/60] + 84 Exp[2 Pi I 5/60] + 168 Exp[2 Pi I 7/60] + 84 Exp[2 Pi I 9/60] + 84 Exp[2 Pi I 11/60] + -168 Exp[2 Pi I 13/60] + -126 Exp[2 Pi I 15/60]),
+                  "e" -> (-126 + 168 Exp[2 Pi I/15] + 84 Exp[2 Pi I 2/15] + -84 Exp[2 Pi I 3/15] + 168 Exp[2 Pi I 4/15] + -84 Exp[2 Pi I 5/15] + 84 Exp[2 Pi I 7/15]),
                   "twoM" -> -1
                 |>,
-                <|"e" -> (60 Exp[2 Pi I/12] + -30 Exp[2 Pi I 3/12]), "twoM" -> 3|>,
+                <|"e" -> (30 + 60 Exp[2 Pi I/3]), "twoM" -> 3|>,
                 <|
-                  "e" -> (-50 Exp[2 Pi I/60] + 50 Exp[2 Pi I 5/60] + 100 Exp[2 Pi I 7/60] + 50 Exp[2 Pi I 9/60] + 50 Exp[2 Pi I 11/60] + -100 Exp[2 Pi I 13/60] + -75 Exp[2 Pi I 15/60]),
+                  "e" -> (-75 + 100 Exp[2 Pi I/15] + 50 Exp[2 Pi I 2/15] + -50 Exp[2 Pi I 3/15] + 100 Exp[2 Pi I 4/15] + -50 Exp[2 Pi I 5/15] + 50 Exp[2 Pi I 7/15]),
                   "twoM" -> 7
                 |>,
-                <|"e" -> (30 Exp[2 Pi I/12] + -15 Exp[2 Pi I 3/12]), "twoM" -> 11|>
+                <|"e" -> (15 + 30 Exp[2 Pi I/3]), "twoM" -> 11|>
               },
               "mu" -> 3
             |>,
             <|
               "components" -> {
-                <|"e" -> (-1 + -2 Exp[2 Pi I 2/5] + -2 Exp[2 Pi I 3/5]), "twoM" -> -11|>,
-                <|"e" -> -45, "twoM" -> -7|>,
-                <|"e" -> (30 + 60 Exp[2 Pi I 2/5] + 60 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> -210, "twoM" -> 1|>,
-                <|"e" -> (-45 + -90 Exp[2 Pi I 2/5] + -90 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> 15, "twoM" -> 9|>
+                <|
+                  "e" -> (2 Exp[2 Pi I 3/20] + -1 Exp[2 Pi I 5/20] + 2 Exp[2 Pi I 7/20]),
+                  "twoM" -> -11
+                |>,
+                <|"e" -> -45 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (-60 Exp[2 Pi I 3/20] + 30 Exp[2 Pi I 5/20] + -60 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> -210 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (90 Exp[2 Pi I 3/20] + -45 Exp[2 Pi I 5/20] + 90 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> 9|>
               },
               "mu" -> 4
             |>
@@ -109344,59 +109468,71 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 5, "twoM" -> -7|>,
-                <|"e" -> (-12 + -24 Exp[2 Pi I 2/5] + -24 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> -42, "twoM" -> 1|>,
-                <|"e" -> (4 + 8 Exp[2 Pi I 2/5] + 8 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> -3, "twoM" -> 9|>
+                <|"e" -> 5 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (24 Exp[2 Pi I 3/20] + -12 Exp[2 Pi I 5/20] + 24 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> -42 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (-8 Exp[2 Pi I 3/20] + 4 Exp[2 Pi I 5/20] + -8 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> -3 Exp[2 Pi I/4], "twoM" -> 9|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (-2 + -4 Exp[2 Pi I 2/5] + -4 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> 15, "twoM" -> -5|>,
-                <|"e" -> 10, "twoM" -> 3|>,
-                <|"e" -> (-6 + -12 Exp[2 Pi I 2/5] + -12 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> -1, "twoM" -> 11|>
+                <|
+                  "e" -> (4 Exp[2 Pi I 3/20] + -2 Exp[2 Pi I 5/20] + 4 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|"e" -> 10 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (12 Exp[2 Pi I 3/20] + -6 Exp[2 Pi I 5/20] + 12 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> -1 Exp[2 Pi I/4], "twoM" -> 11|>
               },
               "mu" -> 2
             |>,
             <|
               "components" -> {
                 <|
-                  "e" -> (2 Exp[2 Pi I/40] + 2 Exp[2 Pi I 3/40] + -1 Exp[2 Pi I 5/40] + -2 Exp[2 Pi I 7/40] + 2 Exp[2 Pi I 9/40] + -1 Exp[2 Pi I 15/40]),
+                  "e" -> (2 Exp[2 Pi I/40] + -2 Exp[2 Pi I 3/40] + -1 Exp[2 Pi I 5/40] + 2 Exp[2 Pi I 7/40] + 2 Exp[2 Pi I 9/40] + Exp[2 Pi I 15/40]),
                   "twoM" -> -11
                 |>,
-                <|"e" -> (-5 Exp[2 Pi I/8] + 5 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
+                <|"e" -> (-5 Exp[2 Pi I/8] + -5 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
                 <|
-                  "e" -> (36 Exp[2 Pi I/40] + 36 Exp[2 Pi I 3/40] + -18 Exp[2 Pi I 5/40] + -36 Exp[2 Pi I 7/40] + 36 Exp[2 Pi I 9/40] + -18 Exp[2 Pi I 15/40]),
+                  "e" -> (36 Exp[2 Pi I/40] + -36 Exp[2 Pi I 3/40] + -18 Exp[2 Pi I 5/40] + 36 Exp[2 Pi I 7/40] + 36 Exp[2 Pi I 9/40] + 18 Exp[2 Pi I 15/40]),
                   "twoM" -> -3
                 |>,
-                <|"e" -> (14 Exp[2 Pi I/8] + -14 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
+                <|"e" -> (14 Exp[2 Pi I/8] + 14 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
                 <|
-                  "e" -> (-6 Exp[2 Pi I/40] + -6 Exp[2 Pi I 3/40] + 3 Exp[2 Pi I 5/40] + 6 Exp[2 Pi I 7/40] + -6 Exp[2 Pi I 9/40] + 3 Exp[2 Pi I 15/40]),
+                  "e" -> (-6 Exp[2 Pi I/40] + 6 Exp[2 Pi I 3/40] + 3 Exp[2 Pi I 5/40] + -6 Exp[2 Pi I 7/40] + -6 Exp[2 Pi I 9/40] + -3 Exp[2 Pi I 15/40]),
                   "twoM" -> 5
                 |>,
-                <|"e" -> (7 Exp[2 Pi I/8] + -7 Exp[2 Pi I 3/8]), "twoM" -> 9|>
+                <|"e" -> (7 Exp[2 Pi I/8] + 7 Exp[2 Pi I 3/8]), "twoM" -> 9|>
               },
               "mu" -> 3
             |>,
             <|
               "components" -> {
-                <|"e" -> (-7 Exp[2 Pi I/8] + 7 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
+                <|"e" -> (-7 Exp[2 Pi I/8] + -7 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
                 <|
-                  "e" -> (6 Exp[2 Pi I/40] + 6 Exp[2 Pi I 3/40] + -3 Exp[2 Pi I 5/40] + -6 Exp[2 Pi I 7/40] + 6 Exp[2 Pi I 9/40] + -3 Exp[2 Pi I 15/40]),
+                  "e" -> (6 Exp[2 Pi I/40] + -6 Exp[2 Pi I 3/40] + -3 Exp[2 Pi I 5/40] + 6 Exp[2 Pi I 7/40] + 6 Exp[2 Pi I 9/40] + 3 Exp[2 Pi I 15/40]),
                   "twoM" -> -5
                 |>,
-                <|"e" -> (-14 Exp[2 Pi I/8] + 14 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
+                <|"e" -> (-14 Exp[2 Pi I/8] + -14 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
                 <|
-                  "e" -> (-36 Exp[2 Pi I/40] + -36 Exp[2 Pi I 3/40] + 18 Exp[2 Pi I 5/40] + 36 Exp[2 Pi I 7/40] + -36 Exp[2 Pi I 9/40] + 18 Exp[2 Pi I 15/40]),
+                  "e" -> (-36 Exp[2 Pi I/40] + 36 Exp[2 Pi I 3/40] + 18 Exp[2 Pi I 5/40] + -36 Exp[2 Pi I 7/40] + -36 Exp[2 Pi I 9/40] + -18 Exp[2 Pi I 15/40]),
                   "twoM" -> 3
                 |>,
-                <|"e" -> (5 Exp[2 Pi I/8] + -5 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
+                <|"e" -> (5 Exp[2 Pi I/8] + 5 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
                 <|
-                  "e" -> (-2 Exp[2 Pi I/40] + -2 Exp[2 Pi I 3/40] + Exp[2 Pi I 5/40] + 2 Exp[2 Pi I 7/40] + -2 Exp[2 Pi I 9/40] + Exp[2 Pi I 15/40]),
+                  "e" -> (-2 Exp[2 Pi I/40] + 2 Exp[2 Pi I 3/40] + Exp[2 Pi I 5/40] + -2 Exp[2 Pi I 7/40] + -2 Exp[2 Pi I 9/40] + -1 Exp[2 Pi I 15/40]),
                   "twoM" -> 11
                 |>
               },
@@ -109404,21 +109540,33 @@ o3d = <|
             |>,
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -11|>,
-                <|"e" -> (6 + 12 Exp[2 Pi I 2/5] + 12 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> -10, "twoM" -> -3|>,
-                <|"e" -> -15, "twoM" -> 5|>,
-                <|"e" -> (2 + 4 Exp[2 Pi I 2/5] + 4 Exp[2 Pi I 3/5]), "twoM" -> 9|>
+                <|"e" -> Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (-12 Exp[2 Pi I 3/20] + 6 Exp[2 Pi I 5/20] + -12 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> -10 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|"e" -> -15 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (-4 Exp[2 Pi I 3/20] + 2 Exp[2 Pi I 5/20] + -4 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>
               },
               "mu" -> 5
             |>,
             <|
               "components" -> {
-                <|"e" -> 3, "twoM" -> -9|>,
-                <|"e" -> (-4 + -8 Exp[2 Pi I 2/5] + -8 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> 42, "twoM" -> -1|>,
-                <|"e" -> (12 + 24 Exp[2 Pi I 2/5] + 24 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> -5, "twoM" -> 7|>
+                <|"e" -> 3 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (8 Exp[2 Pi I 3/20] + -4 Exp[2 Pi I 5/20] + 8 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> 42 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (-24 Exp[2 Pi I 3/20] + 12 Exp[2 Pi I 5/20] + -24 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> -5 Exp[2 Pi I/4], "twoM" -> 7|>
               },
               "mu" -> 6
             |>
@@ -109433,25 +109581,43 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 5, "twoM" -> -11|>,
-                <|"e" -> (-22 + -44 Exp[2 Pi I 2/5] + -44 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> -165, "twoM" -> -3|>,
-                <|"e" -> (44 + 88 Exp[2 Pi I 2/5] + 88 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> -165, "twoM" -> 5|>,
-                <|"e" -> (-22 + -44 Exp[2 Pi I 2/5] + -44 Exp[2 Pi I 3/5]), "twoM" -> 9|>,
-                <|"e" -> 5, "twoM" -> 13|>
+                <|"e" -> 5 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (44 Exp[2 Pi I 3/20] + -22 Exp[2 Pi I 5/20] + 44 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> -165 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (-88 Exp[2 Pi I 3/20] + 44 Exp[2 Pi I 5/20] + -88 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> -165 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (44 Exp[2 Pi I 3/20] + -22 Exp[2 Pi I 5/20] + 44 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>,
+                <|"e" -> 5 Exp[2 Pi I/4], "twoM" -> 13|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 5, "twoM" -> -13|>,
-                <|"e" -> (-22 + -44 Exp[2 Pi I 2/5] + -44 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> -165, "twoM" -> -5|>,
-                <|"e" -> (44 + 88 Exp[2 Pi I 2/5] + 88 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> -165, "twoM" -> 3|>,
-                <|"e" -> (-22 + -44 Exp[2 Pi I 2/5] + -44 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> 5, "twoM" -> 11|>
+                <|"e" -> 5 Exp[2 Pi I/4], "twoM" -> -13|>,
+                <|
+                  "e" -> (44 Exp[2 Pi I 3/20] + -22 Exp[2 Pi I 5/20] + 44 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> -165 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (-88 Exp[2 Pi I 3/20] + 44 Exp[2 Pi I 5/20] + -88 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> -165 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (44 Exp[2 Pi I 3/20] + -22 Exp[2 Pi I 5/20] + 44 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> 5 Exp[2 Pi I/4], "twoM" -> 11|>
               },
               "mu" -> 2
             |>
@@ -109466,25 +109632,43 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 65, "twoM" -> -11|>,
-                <|"e" -> (-78 + -156 Exp[2 Pi I 2/5] + -156 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> 975, "twoM" -> -3|>,
-                <|"e" -> (156 + 312 Exp[2 Pi I 2/5] + 312 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> -65, "twoM" -> 5|>,
-                <|"e" -> (-78 + -156 Exp[2 Pi I 2/5] + -156 Exp[2 Pi I 3/5]), "twoM" -> 9|>,
-                <|"e" -> -15, "twoM" -> 13|>
+                <|"e" -> 65 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (156 Exp[2 Pi I 3/20] + -78 Exp[2 Pi I 5/20] + 156 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> 975 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (-312 Exp[2 Pi I 3/20] + 156 Exp[2 Pi I 5/20] + -312 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> -65 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (156 Exp[2 Pi I 3/20] + -78 Exp[2 Pi I 5/20] + 156 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>,
+                <|"e" -> -15 Exp[2 Pi I/4], "twoM" -> 13|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> -15, "twoM" -> -13|>,
-                <|"e" -> (-78 + -156 Exp[2 Pi I 2/5] + -156 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> -65, "twoM" -> -5|>,
-                <|"e" -> (156 + 312 Exp[2 Pi I 2/5] + 312 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> 975, "twoM" -> 3|>,
-                <|"e" -> (-78 + -156 Exp[2 Pi I 2/5] + -156 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> 65, "twoM" -> 11|>
+                <|"e" -> -15 Exp[2 Pi I/4], "twoM" -> -13|>,
+                <|
+                  "e" -> (156 Exp[2 Pi I 3/20] + -78 Exp[2 Pi I 5/20] + 156 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> -65 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (-312 Exp[2 Pi I 3/20] + 156 Exp[2 Pi I 5/20] + -312 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> 975 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (156 Exp[2 Pi I 3/20] + -78 Exp[2 Pi I 5/20] + 156 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> 65 Exp[2 Pi I/4], "twoM" -> 11|>
               },
               "mu" -> 2
             |>
@@ -109499,63 +109683,81 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -9|>,
-                <|"e" -> (-55 + -110 Exp[2 Pi I 2/5] + -110 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> -330, "twoM" -> -1|>,
-                <|"e" -> (66 + 132 Exp[2 Pi I 2/5] + 132 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> -165, "twoM" -> 7|>,
-                <|"e" -> (-11 + -22 Exp[2 Pi I 2/5] + -22 Exp[2 Pi I 3/5]), "twoM" -> 11|>
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (110 Exp[2 Pi I 3/20] + -55 Exp[2 Pi I 5/20] + 110 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> -330 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (-132 Exp[2 Pi I 3/20] + 66 Exp[2 Pi I 5/20] + -132 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> -165 Exp[2 Pi I/4], "twoM" -> 7|>,
+                <|
+                  "e" -> (22 Exp[2 Pi I 3/20] + -11 Exp[2 Pi I 5/20] + 22 Exp[2 Pi I 7/20]),
+                  "twoM" -> 11
+                |>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (20 Exp[2 Pi I/12] + -10 Exp[2 Pi I 3/12]), "twoM" -> -11|>,
+                <|"e" -> (10 + 20 Exp[2 Pi I/3]), "twoM" -> -11|>,
                 <|
-                  "e" -> (-66 Exp[2 Pi I/60] + 66 Exp[2 Pi I 5/60] + 132 Exp[2 Pi I 7/60] + 66 Exp[2 Pi I 9/60] + 66 Exp[2 Pi I 11/60] + -132 Exp[2 Pi I 13/60] + -99 Exp[2 Pi I 15/60]),
+                  "e" -> (-99 + 132 Exp[2 Pi I/15] + 66 Exp[2 Pi I 2/15] + -66 Exp[2 Pi I 3/15] + 132 Exp[2 Pi I 4/15] + -66 Exp[2 Pi I 5/15] + 66 Exp[2 Pi I 7/15]),
                   "twoM" -> -7
                 |>,
-                <|"e" -> (-330 Exp[2 Pi I/12] + 165 Exp[2 Pi I 3/12]), "twoM" -> -3|>,
+                <|"e" -> (-165 + -330 Exp[2 Pi I/3]), "twoM" -> -3|>,
                 <|
-                  "e" -> (44 Exp[2 Pi I/60] + -44 Exp[2 Pi I 5/60] + -88 Exp[2 Pi I 7/60] + -44 Exp[2 Pi I 9/60] + -44 Exp[2 Pi I 11/60] + 88 Exp[2 Pi I 13/60] + 66 Exp[2 Pi I 15/60]),
+                  "e" -> (66 + -88 Exp[2 Pi I/15] + -44 Exp[2 Pi I 2/15] + 44 Exp[2 Pi I 3/15] + -88 Exp[2 Pi I 4/15] + 44 Exp[2 Pi I 5/15] + -44 Exp[2 Pi I 7/15]),
                   "twoM" -> 1
                 |>,
                 <|
-                  "e" -> (22 Exp[2 Pi I/60] + -22 Exp[2 Pi I 5/60] + -44 Exp[2 Pi I 7/60] + -22 Exp[2 Pi I 9/60] + -22 Exp[2 Pi I 11/60] + 44 Exp[2 Pi I 13/60] + 33 Exp[2 Pi I 15/60]),
+                  "e" -> (33 + -44 Exp[2 Pi I/15] + -22 Exp[2 Pi I 2/15] + 22 Exp[2 Pi I 3/15] + -44 Exp[2 Pi I 4/15] + 22 Exp[2 Pi I 5/15] + -22 Exp[2 Pi I 7/15]),
                   "twoM" -> 9
                 |>,
-                <|"e" -> (-10 Exp[2 Pi I/12] + 5 Exp[2 Pi I 3/12]), "twoM" -> 13|>
+                <|"e" -> (-5 + -10 Exp[2 Pi I/3]), "twoM" -> 13|>
               },
               "mu" -> 2
             |>,
             <|
               "components" -> {
-                <|"e" -> (10 Exp[2 Pi I/12] + -5 Exp[2 Pi I 3/12]), "twoM" -> -13|>,
+                <|"e" -> (5 + 10 Exp[2 Pi I/3]), "twoM" -> -13|>,
                 <|
-                  "e" -> (-22 Exp[2 Pi I/60] + 22 Exp[2 Pi I 5/60] + 44 Exp[2 Pi I 7/60] + 22 Exp[2 Pi I 9/60] + 22 Exp[2 Pi I 11/60] + -44 Exp[2 Pi I 13/60] + -33 Exp[2 Pi I 15/60]),
+                  "e" -> (-33 + 44 Exp[2 Pi I/15] + 22 Exp[2 Pi I 2/15] + -22 Exp[2 Pi I 3/15] + 44 Exp[2 Pi I 4/15] + -22 Exp[2 Pi I 5/15] + 22 Exp[2 Pi I 7/15]),
                   "twoM" -> -9
                 |>,
                 <|
-                  "e" -> (-44 Exp[2 Pi I/60] + 44 Exp[2 Pi I 5/60] + 88 Exp[2 Pi I 7/60] + 44 Exp[2 Pi I 9/60] + 44 Exp[2 Pi I 11/60] + -88 Exp[2 Pi I 13/60] + -66 Exp[2 Pi I 15/60]),
+                  "e" -> (-66 + 88 Exp[2 Pi I/15] + 44 Exp[2 Pi I 2/15] + -44 Exp[2 Pi I 3/15] + 88 Exp[2 Pi I 4/15] + -44 Exp[2 Pi I 5/15] + 44 Exp[2 Pi I 7/15]),
                   "twoM" -> -1
                 |>,
-                <|"e" -> (330 Exp[2 Pi I/12] + -165 Exp[2 Pi I 3/12]), "twoM" -> 3|>,
+                <|"e" -> (165 + 330 Exp[2 Pi I/3]), "twoM" -> 3|>,
                 <|
-                  "e" -> (66 Exp[2 Pi I/60] + -66 Exp[2 Pi I 5/60] + -132 Exp[2 Pi I 7/60] + -66 Exp[2 Pi I 9/60] + -66 Exp[2 Pi I 11/60] + 132 Exp[2 Pi I 13/60] + 99 Exp[2 Pi I 15/60]),
+                  "e" -> (99 + -132 Exp[2 Pi I/15] + -66 Exp[2 Pi I 2/15] + 66 Exp[2 Pi I 3/15] + -132 Exp[2 Pi I 4/15] + 66 Exp[2 Pi I 5/15] + -66 Exp[2 Pi I 7/15]),
                   "twoM" -> 7
                 |>,
-                <|"e" -> (-20 Exp[2 Pi I/12] + 10 Exp[2 Pi I 3/12]), "twoM" -> 11|>
+                <|"e" -> (-10 + -20 Exp[2 Pi I/3]), "twoM" -> 11|>
               },
               "mu" -> 3
             |>,
             <|
               "components" -> {
-                <|"e" -> (11 + 22 Exp[2 Pi I 2/5] + 22 Exp[2 Pi I 3/5]), "twoM" -> -11|>,
-                <|"e" -> 165, "twoM" -> -7|>,
-                <|"e" -> (-66 + -132 Exp[2 Pi I 2/5] + -132 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> 330, "twoM" -> 1|>,
-                <|"e" -> (55 + 110 Exp[2 Pi I 2/5] + 110 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> -15, "twoM" -> 9|>
+                <|
+                  "e" -> (-22 Exp[2 Pi I 3/20] + 11 Exp[2 Pi I 5/20] + -22 Exp[2 Pi I 7/20]),
+                  "twoM" -> -11
+                |>,
+                <|"e" -> 165 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (132 Exp[2 Pi I 3/20] + -66 Exp[2 Pi I 5/20] + 132 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> 330 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (-110 Exp[2 Pi I 3/20] + 55 Exp[2 Pi I 5/20] + -110 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> -15 Exp[2 Pi I/4], "twoM" -> 9|>
               },
               "mu" -> 4
             |>
@@ -109570,45 +109772,63 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -7|>,
-                <|"e" -> (-45 + -90 Exp[2 Pi I 2/5] + -90 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> -210, "twoM" -> 1|>,
-                <|"e" -> (30 + 60 Exp[2 Pi I 2/5] + 60 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> -45, "twoM" -> 9|>,
-                <|"e" -> (-1 + -2 Exp[2 Pi I 2/5] + -2 Exp[2 Pi I 3/5]), "twoM" -> 13|>
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (90 Exp[2 Pi I 3/20] + -45 Exp[2 Pi I 5/20] + 90 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> -210 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (-60 Exp[2 Pi I 3/20] + 30 Exp[2 Pi I 5/20] + -60 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> -45 Exp[2 Pi I/4], "twoM" -> 9|>,
+                <|
+                  "e" -> (2 Exp[2 Pi I 3/20] + -1 Exp[2 Pi I 5/20] + 2 Exp[2 Pi I 7/20]),
+                  "twoM" -> 13
+                |>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (-9 + -18 Exp[2 Pi I 2/5] + -18 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> 115, "twoM" -> -5|>,
-                <|"e" -> (78 + 156 Exp[2 Pi I 2/5] + 156 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> -18, "twoM" -> 3|>,
-                <|"e" -> (-21 + -42 Exp[2 Pi I 2/5] + -42 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> -17, "twoM" -> 11|>
+                <|
+                  "e" -> (18 Exp[2 Pi I 3/20] + -9 Exp[2 Pi I 5/20] + 18 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> 115 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (-156 Exp[2 Pi I 3/20] + 78 Exp[2 Pi I 5/20] + -156 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> -18 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (42 Exp[2 Pi I 3/20] + -21 Exp[2 Pi I 5/20] + 42 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> -17 Exp[2 Pi I/4], "twoM" -> 11|>
               },
               "mu" -> 2
             |>,
             <|
               "components" -> {
                 <|
-                  "e" -> (18 Exp[2 Pi I/40] + 18 Exp[2 Pi I 3/40] + -9 Exp[2 Pi I 5/40] + -18 Exp[2 Pi I 7/40] + 18 Exp[2 Pi I 9/40] + -9 Exp[2 Pi I 15/40]),
+                  "e" -> (18 Exp[2 Pi I/40] + -18 Exp[2 Pi I 3/40] + -9 Exp[2 Pi I 5/40] + 18 Exp[2 Pi I 7/40] + 18 Exp[2 Pi I 9/40] + 9 Exp[2 Pi I 15/40]),
                   "twoM" -> -11
                 |>,
-                <|"e" -> (76 Exp[2 Pi I/8] + -76 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
+                <|"e" -> (76 Exp[2 Pi I/8] + 76 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
                 <|
-                  "e" -> (18 Exp[2 Pi I/40] + 18 Exp[2 Pi I 3/40] + -9 Exp[2 Pi I 5/40] + -18 Exp[2 Pi I 7/40] + 18 Exp[2 Pi I 9/40] + -9 Exp[2 Pi I 15/40]),
+                  "e" -> (18 Exp[2 Pi I/40] + -18 Exp[2 Pi I 3/40] + -9 Exp[2 Pi I 5/40] + 18 Exp[2 Pi I 7/40] + 18 Exp[2 Pi I 9/40] + 9 Exp[2 Pi I 15/40]),
                   "twoM" -> -3
                 |>,
-                <|"e" -> (96 Exp[2 Pi I/8] + -96 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
+                <|"e" -> (96 Exp[2 Pi I/8] + 96 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
                 <|
-                  "e" -> (150 Exp[2 Pi I/40] + 150 Exp[2 Pi I 3/40] + -75 Exp[2 Pi I 5/40] + -150 Exp[2 Pi I 7/40] + 150 Exp[2 Pi I 9/40] + -75 Exp[2 Pi I 15/40]),
+                  "e" -> (150 Exp[2 Pi I/40] + -150 Exp[2 Pi I 3/40] + -75 Exp[2 Pi I 5/40] + 150 Exp[2 Pi I 7/40] + 150 Exp[2 Pi I 9/40] + 75 Exp[2 Pi I 15/40]),
                   "twoM" -> 5
                 |>,
-                <|"e" -> (-12 Exp[2 Pi I/8] + 12 Exp[2 Pi I 3/8]), "twoM" -> 9|>,
+                <|"e" -> (-12 Exp[2 Pi I/8] + -12 Exp[2 Pi I 3/8]), "twoM" -> 9|>,
                 <|
-                  "e" -> (6 Exp[2 Pi I/40] + 6 Exp[2 Pi I 3/40] + -3 Exp[2 Pi I 5/40] + -6 Exp[2 Pi I 7/40] + 6 Exp[2 Pi I 9/40] + -3 Exp[2 Pi I 15/40]),
+                  "e" -> (6 Exp[2 Pi I/40] + -6 Exp[2 Pi I 3/40] + -3 Exp[2 Pi I 5/40] + 6 Exp[2 Pi I 7/40] + 6 Exp[2 Pi I 9/40] + 3 Exp[2 Pi I 15/40]),
                   "twoM" -> 13
                 |>
               },
@@ -109617,22 +109837,22 @@ o3d = <|
             <|
               "components" -> {
                 <|
-                  "e" -> (6 Exp[2 Pi I/40] + 6 Exp[2 Pi I 3/40] + -3 Exp[2 Pi I 5/40] + -6 Exp[2 Pi I 7/40] + 6 Exp[2 Pi I 9/40] + -3 Exp[2 Pi I 15/40]),
+                  "e" -> (6 Exp[2 Pi I/40] + -6 Exp[2 Pi I 3/40] + -3 Exp[2 Pi I 5/40] + 6 Exp[2 Pi I 7/40] + 6 Exp[2 Pi I 9/40] + 3 Exp[2 Pi I 15/40]),
                   "twoM" -> -13
                 |>,
-                <|"e" -> (-12 Exp[2 Pi I/8] + 12 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
+                <|"e" -> (-12 Exp[2 Pi I/8] + -12 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
                 <|
-                  "e" -> (150 Exp[2 Pi I/40] + 150 Exp[2 Pi I 3/40] + -75 Exp[2 Pi I 5/40] + -150 Exp[2 Pi I 7/40] + 150 Exp[2 Pi I 9/40] + -75 Exp[2 Pi I 15/40]),
+                  "e" -> (150 Exp[2 Pi I/40] + -150 Exp[2 Pi I 3/40] + -75 Exp[2 Pi I 5/40] + 150 Exp[2 Pi I 7/40] + 150 Exp[2 Pi I 9/40] + 75 Exp[2 Pi I 15/40]),
                   "twoM" -> -5
                 |>,
-                <|"e" -> (96 Exp[2 Pi I/8] + -96 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
+                <|"e" -> (96 Exp[2 Pi I/8] + 96 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
                 <|
-                  "e" -> (18 Exp[2 Pi I/40] + 18 Exp[2 Pi I 3/40] + -9 Exp[2 Pi I 5/40] + -18 Exp[2 Pi I 7/40] + 18 Exp[2 Pi I 9/40] + -9 Exp[2 Pi I 15/40]),
+                  "e" -> (18 Exp[2 Pi I/40] + -18 Exp[2 Pi I 3/40] + -9 Exp[2 Pi I 5/40] + 18 Exp[2 Pi I 7/40] + 18 Exp[2 Pi I 9/40] + 9 Exp[2 Pi I 15/40]),
                   "twoM" -> 3
                 |>,
-                <|"e" -> (76 Exp[2 Pi I/8] + -76 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
+                <|"e" -> (76 Exp[2 Pi I/8] + 76 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
                 <|
-                  "e" -> (18 Exp[2 Pi I/40] + 18 Exp[2 Pi I 3/40] + -9 Exp[2 Pi I 5/40] + -18 Exp[2 Pi I 7/40] + 18 Exp[2 Pi I 9/40] + -9 Exp[2 Pi I 15/40]),
+                  "e" -> (18 Exp[2 Pi I/40] + -18 Exp[2 Pi I 3/40] + -9 Exp[2 Pi I 5/40] + 18 Exp[2 Pi I 7/40] + 18 Exp[2 Pi I 9/40] + 9 Exp[2 Pi I 15/40]),
                   "twoM" -> 11
                 |>
               },
@@ -109640,23 +109860,41 @@ o3d = <|
             |>,
             <|
               "components" -> {
-                <|"e" -> -17, "twoM" -> -11|>,
-                <|"e" -> (-21 + -42 Exp[2 Pi I 2/5] + -42 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> -18, "twoM" -> -3|>,
-                <|"e" -> (78 + 156 Exp[2 Pi I 2/5] + 156 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> 115, "twoM" -> 5|>,
-                <|"e" -> (-9 + -18 Exp[2 Pi I 2/5] + -18 Exp[2 Pi I 3/5]), "twoM" -> 9|>
+                <|"e" -> -17 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (42 Exp[2 Pi I 3/20] + -21 Exp[2 Pi I 5/20] + 42 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> -18 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (-156 Exp[2 Pi I 3/20] + 78 Exp[2 Pi I 5/20] + -156 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> 115 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (18 Exp[2 Pi I 3/20] + -9 Exp[2 Pi I 5/20] + 18 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>
               },
               "mu" -> 5
             |>,
             <|
               "components" -> {
-                <|"e" -> (-1 + -2 Exp[2 Pi I 2/5] + -2 Exp[2 Pi I 3/5]), "twoM" -> -13|>,
-                <|"e" -> -45, "twoM" -> -9|>,
-                <|"e" -> (30 + 60 Exp[2 Pi I 2/5] + 60 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> -210, "twoM" -> -1|>,
-                <|"e" -> (-45 + -90 Exp[2 Pi I 2/5] + -90 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> 15, "twoM" -> 7|>
+                <|
+                  "e" -> (2 Exp[2 Pi I 3/20] + -1 Exp[2 Pi I 5/20] + 2 Exp[2 Pi I 7/20]),
+                  "twoM" -> -13
+                |>,
+                <|"e" -> -45 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (-60 Exp[2 Pi I 3/20] + 30 Exp[2 Pi I 5/20] + -60 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> -210 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (90 Exp[2 Pi I 3/20] + -45 Exp[2 Pi I 5/20] + 90 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> 7|>
               },
               "mu" -> 6
             |>
@@ -109671,67 +109909,85 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 5, "twoM" -> -9|>,
-                <|"e" -> (-22 + -44 Exp[2 Pi I 2/5] + -44 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> -165, "twoM" -> -1|>,
-                <|"e" -> (44 + 88 Exp[2 Pi I 2/5] + 88 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> -165, "twoM" -> 7|>,
-                <|"e" -> (-22 + -44 Exp[2 Pi I 2/5] + -44 Exp[2 Pi I 3/5]), "twoM" -> 11|>,
-                <|"e" -> 5, "twoM" -> 15|>
+                <|"e" -> 5 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (44 Exp[2 Pi I 3/20] + -22 Exp[2 Pi I 5/20] + 44 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> -165 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (-88 Exp[2 Pi I 3/20] + 44 Exp[2 Pi I 5/20] + -88 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> -165 Exp[2 Pi I/4], "twoM" -> 7|>,
+                <|
+                  "e" -> (44 Exp[2 Pi I 3/20] + -22 Exp[2 Pi I 5/20] + 44 Exp[2 Pi I 7/20]),
+                  "twoM" -> 11
+                |>,
+                <|"e" -> 5 Exp[2 Pi I/4], "twoM" -> 15|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (10 Exp[2 Pi I/12] + -5 Exp[2 Pi I 3/12]), "twoM" -> -11|>,
+                <|"e" -> (5 + 10 Exp[2 Pi I/3]), "twoM" -> -11|>,
                 <|
-                  "e" -> (-44 Exp[2 Pi I/60] + 44 Exp[2 Pi I 5/60] + 88 Exp[2 Pi I 7/60] + 44 Exp[2 Pi I 9/60] + 44 Exp[2 Pi I 11/60] + -88 Exp[2 Pi I 13/60] + -66 Exp[2 Pi I 15/60]),
+                  "e" -> (-66 + 88 Exp[2 Pi I/15] + 44 Exp[2 Pi I 2/15] + -44 Exp[2 Pi I 3/15] + 88 Exp[2 Pi I 4/15] + -44 Exp[2 Pi I 5/15] + 44 Exp[2 Pi I 7/15]),
                   "twoM" -> -7
                 |>,
-                <|"e" -> (-330 Exp[2 Pi I/12] + 165 Exp[2 Pi I 3/12]), "twoM" -> -3|>,
+                <|"e" -> (-165 + -330 Exp[2 Pi I/3]), "twoM" -> -3|>,
                 <|
-                  "e" -> (88 Exp[2 Pi I/60] + -88 Exp[2 Pi I 5/60] + -176 Exp[2 Pi I 7/60] + -88 Exp[2 Pi I 9/60] + -88 Exp[2 Pi I 11/60] + 176 Exp[2 Pi I 13/60] + 132 Exp[2 Pi I 15/60]),
+                  "e" -> (132 + -176 Exp[2 Pi I/15] + -88 Exp[2 Pi I 2/15] + 88 Exp[2 Pi I 3/15] + -176 Exp[2 Pi I 4/15] + 88 Exp[2 Pi I 5/15] + -88 Exp[2 Pi I 7/15]),
                   "twoM" -> 1
                 |>,
-                <|"e" -> (-330 Exp[2 Pi I/12] + 165 Exp[2 Pi I 3/12]), "twoM" -> 5|>,
+                <|"e" -> (-165 + -330 Exp[2 Pi I/3]), "twoM" -> 5|>,
                 <|
-                  "e" -> (-44 Exp[2 Pi I/60] + 44 Exp[2 Pi I 5/60] + 88 Exp[2 Pi I 7/60] + 44 Exp[2 Pi I 9/60] + 44 Exp[2 Pi I 11/60] + -88 Exp[2 Pi I 13/60] + -66 Exp[2 Pi I 15/60]),
+                  "e" -> (-66 + 88 Exp[2 Pi I/15] + 44 Exp[2 Pi I 2/15] + -44 Exp[2 Pi I 3/15] + 88 Exp[2 Pi I 4/15] + -44 Exp[2 Pi I 5/15] + 44 Exp[2 Pi I 7/15]),
                   "twoM" -> 9
                 |>,
-                <|"e" -> (10 Exp[2 Pi I/12] + -5 Exp[2 Pi I 3/12]), "twoM" -> 13|>
+                <|"e" -> (5 + 10 Exp[2 Pi I/3]), "twoM" -> 13|>
               },
               "mu" -> 2
             |>,
             <|
               "components" -> {
-                <|"e" -> (10 Exp[2 Pi I/12] + -5 Exp[2 Pi I 3/12]), "twoM" -> -13|>,
+                <|"e" -> (5 + 10 Exp[2 Pi I/3]), "twoM" -> -13|>,
                 <|
-                  "e" -> (-44 Exp[2 Pi I/60] + 44 Exp[2 Pi I 5/60] + 88 Exp[2 Pi I 7/60] + 44 Exp[2 Pi I 9/60] + 44 Exp[2 Pi I 11/60] + -88 Exp[2 Pi I 13/60] + -66 Exp[2 Pi I 15/60]),
+                  "e" -> (-66 + 88 Exp[2 Pi I/15] + 44 Exp[2 Pi I 2/15] + -44 Exp[2 Pi I 3/15] + 88 Exp[2 Pi I 4/15] + -44 Exp[2 Pi I 5/15] + 44 Exp[2 Pi I 7/15]),
                   "twoM" -> -9
                 |>,
-                <|"e" -> (-330 Exp[2 Pi I/12] + 165 Exp[2 Pi I 3/12]), "twoM" -> -5|>,
+                <|"e" -> (-165 + -330 Exp[2 Pi I/3]), "twoM" -> -5|>,
                 <|
-                  "e" -> (88 Exp[2 Pi I/60] + -88 Exp[2 Pi I 5/60] + -176 Exp[2 Pi I 7/60] + -88 Exp[2 Pi I 9/60] + -88 Exp[2 Pi I 11/60] + 176 Exp[2 Pi I 13/60] + 132 Exp[2 Pi I 15/60]),
+                  "e" -> (132 + -176 Exp[2 Pi I/15] + -88 Exp[2 Pi I 2/15] + 88 Exp[2 Pi I 3/15] + -176 Exp[2 Pi I 4/15] + 88 Exp[2 Pi I 5/15] + -88 Exp[2 Pi I 7/15]),
                   "twoM" -> -1
                 |>,
-                <|"e" -> (-330 Exp[2 Pi I/12] + 165 Exp[2 Pi I 3/12]), "twoM" -> 3|>,
+                <|"e" -> (-165 + -330 Exp[2 Pi I/3]), "twoM" -> 3|>,
                 <|
-                  "e" -> (-44 Exp[2 Pi I/60] + 44 Exp[2 Pi I 5/60] + 88 Exp[2 Pi I 7/60] + 44 Exp[2 Pi I 9/60] + 44 Exp[2 Pi I 11/60] + -88 Exp[2 Pi I 13/60] + -66 Exp[2 Pi I 15/60]),
+                  "e" -> (-66 + 88 Exp[2 Pi I/15] + 44 Exp[2 Pi I 2/15] + -44 Exp[2 Pi I 3/15] + 88 Exp[2 Pi I 4/15] + -44 Exp[2 Pi I 5/15] + 44 Exp[2 Pi I 7/15]),
                   "twoM" -> 7
                 |>,
-                <|"e" -> (10 Exp[2 Pi I/12] + -5 Exp[2 Pi I 3/12]), "twoM" -> 11|>
+                <|"e" -> (5 + 10 Exp[2 Pi I/3]), "twoM" -> 11|>
               },
               "mu" -> 3
             |>,
             <|
               "components" -> {
-                <|"e" -> 5, "twoM" -> -15|>,
-                <|"e" -> (-22 + -44 Exp[2 Pi I 2/5] + -44 Exp[2 Pi I 3/5]), "twoM" -> -11|>,
-                <|"e" -> -165, "twoM" -> -7|>,
-                <|"e" -> (44 + 88 Exp[2 Pi I 2/5] + 88 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> -165, "twoM" -> 1|>,
-                <|"e" -> (-22 + -44 Exp[2 Pi I 2/5] + -44 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> 5, "twoM" -> 9|>
+                <|"e" -> 5 Exp[2 Pi I/4], "twoM" -> -15|>,
+                <|
+                  "e" -> (44 Exp[2 Pi I 3/20] + -22 Exp[2 Pi I 5/20] + 44 Exp[2 Pi I 7/20]),
+                  "twoM" -> -11
+                |>,
+                <|"e" -> -165 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (-88 Exp[2 Pi I 3/20] + 44 Exp[2 Pi I 5/20] + -88 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> -165 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (44 Exp[2 Pi I 3/20] + -22 Exp[2 Pi I 5/20] + 44 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> 5 Exp[2 Pi I/4], "twoM" -> 9|>
               },
               "mu" -> 4
             |>
@@ -109746,44 +110002,65 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -15|>,
-                <|"e" -> (105 + 210 Exp[2 Pi I 2/5] + 210 Exp[2 Pi I 3/5]), "twoM" -> -11|>,
-                <|"e" -> -2145, "twoM" -> 1|>,
-                <|"e" -> (273 + 546 Exp[2 Pi I 2/5] + 546 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> -910, "twoM" -> 9|>,
-                <|"e" -> (-58 + -116 Exp[2 Pi I 2/5] + -116 Exp[2 Pi I 3/5]), "twoM" -> 13|>
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> -15|>,
+                <|
+                  "e" -> (-210 Exp[2 Pi I 3/20] + 105 Exp[2 Pi I 5/20] + -210 Exp[2 Pi I 7/20]),
+                  "twoM" -> -11
+                |>,
+                <|"e" -> -2145 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (-546 Exp[2 Pi I 3/20] + 273 Exp[2 Pi I 5/20] + -546 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> -910 Exp[2 Pi I/4], "twoM" -> 9|>,
+                <|
+                  "e" -> (116 Exp[2 Pi I 3/20] + -58 Exp[2 Pi I 5/20] + 116 Exp[2 Pi I 7/20]),
+                  "twoM" -> 13
+                |>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 75, "twoM" -> -13|>,
-                <|"e" -> (-91 + -182 Exp[2 Pi I 2/5] + -182 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> 2002, "twoM" -> -5|>,
-                <|"e" -> (858 + 1716 Exp[2 Pi I 2/5] + 1716 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> -1729, "twoM" -> 3|>,
-                <|"e" -> (273 + 546 Exp[2 Pi I 2/5] + 546 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> -28, "twoM" -> 11|>,
-                <|"e" -> (16 + 32 Exp[2 Pi I 2/5] + 32 Exp[2 Pi I 3/5]), "twoM" -> 15|>
+                <|"e" -> 75 Exp[2 Pi I/4], "twoM" -> -13|>,
+                <|
+                  "e" -> (182 Exp[2 Pi I 3/20] + -91 Exp[2 Pi I 5/20] + 182 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> 2002 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (-1716 Exp[2 Pi I 3/20] + 858 Exp[2 Pi I 5/20] + -1716 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> -1729 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (-546 Exp[2 Pi I 3/20] + 273 Exp[2 Pi I 5/20] + -546 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> -28 Exp[2 Pi I/4], "twoM" -> 11|>,
+                <|
+                  "e" -> (-32 Exp[2 Pi I 3/20] + 16 Exp[2 Pi I 5/20] + -32 Exp[2 Pi I 7/20]),
+                  "twoM" -> 15
+                |>
               },
               "mu" -> 2
             |>,
             <|
               "components" -> {
-                <|"e" -> (-5 Exp[2 Pi I/8] + 5 Exp[2 Pi I 3/8]), "twoM" -> -15|>,
+                <|"e" -> (-5 Exp[2 Pi I/8] + -5 Exp[2 Pi I 3/8]), "twoM" -> -15|>,
                 <|
-                  "e" -> (84 Exp[2 Pi I/40] + 84 Exp[2 Pi I 3/40] + -42 Exp[2 Pi I 5/40] + -84 Exp[2 Pi I 7/40] + 84 Exp[2 Pi I 9/40] + -42 Exp[2 Pi I 15/40]),
+                  "e" -> (84 Exp[2 Pi I/40] + -84 Exp[2 Pi I 3/40] + -42 Exp[2 Pi I 5/40] + 84 Exp[2 Pi I 7/40] + 84 Exp[2 Pi I 9/40] + 42 Exp[2 Pi I 15/40]),
                   "twoM" -> -11
                 |>,
-                <|"e" -> (364 Exp[2 Pi I/8] + -364 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
+                <|"e" -> (364 Exp[2 Pi I/8] + 364 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
                 <|
-                  "e" -> (-2002 Exp[2 Pi I/40] + -2002 Exp[2 Pi I 3/40] + 1001 Exp[2 Pi I 5/40] + 2002 Exp[2 Pi I 7/40] + -2002 Exp[2 Pi I 9/40] + 1001 Exp[2 Pi I 15/40]),
+                  "e" -> (-2002 Exp[2 Pi I/40] + 2002 Exp[2 Pi I 3/40] + 1001 Exp[2 Pi I 5/40] + -2002 Exp[2 Pi I 7/40] + -2002 Exp[2 Pi I 9/40] + -1001 Exp[2 Pi I 15/40]),
                   "twoM" -> -3
                 |>,
-                <|"e" -> (507 Exp[2 Pi I/8] + -507 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
-                <|"e" -> (-546 Exp[2 Pi I/8] + 546 Exp[2 Pi I 3/8]), "twoM" -> 9|>,
+                <|"e" -> (507 Exp[2 Pi I/8] + 507 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
+                <|"e" -> (-546 Exp[2 Pi I/8] + -546 Exp[2 Pi I 3/8]), "twoM" -> 9|>,
                 <|
-                  "e" -> (-66 Exp[2 Pi I/40] + -66 Exp[2 Pi I 3/40] + 33 Exp[2 Pi I 5/40] + 66 Exp[2 Pi I 7/40] + -66 Exp[2 Pi I 9/40] + 33 Exp[2 Pi I 15/40]),
+                  "e" -> (-66 Exp[2 Pi I/40] + 66 Exp[2 Pi I 3/40] + 33 Exp[2 Pi I 5/40] + -66 Exp[2 Pi I 7/40] + -66 Exp[2 Pi I 9/40] + -33 Exp[2 Pi I 15/40]),
                   "twoM" -> 13
                 |>
               },
@@ -109792,45 +110069,66 @@ o3d = <|
             <|
               "components" -> {
                 <|
-                  "e" -> (66 Exp[2 Pi I/40] + 66 Exp[2 Pi I 3/40] + -33 Exp[2 Pi I 5/40] + -66 Exp[2 Pi I 7/40] + 66 Exp[2 Pi I 9/40] + -33 Exp[2 Pi I 15/40]),
+                  "e" -> (66 Exp[2 Pi I/40] + -66 Exp[2 Pi I 3/40] + -33 Exp[2 Pi I 5/40] + 66 Exp[2 Pi I 7/40] + 66 Exp[2 Pi I 9/40] + 33 Exp[2 Pi I 15/40]),
                   "twoM" -> -13
                 |>,
-                <|"e" -> (546 Exp[2 Pi I/8] + -546 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
-                <|"e" -> (-507 Exp[2 Pi I/8] + 507 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
+                <|"e" -> (546 Exp[2 Pi I/8] + 546 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
+                <|"e" -> (-507 Exp[2 Pi I/8] + -507 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
                 <|
-                  "e" -> (2002 Exp[2 Pi I/40] + 2002 Exp[2 Pi I 3/40] + -1001 Exp[2 Pi I 5/40] + -2002 Exp[2 Pi I 7/40] + 2002 Exp[2 Pi I 9/40] + -1001 Exp[2 Pi I 15/40]),
+                  "e" -> (2002 Exp[2 Pi I/40] + -2002 Exp[2 Pi I 3/40] + -1001 Exp[2 Pi I 5/40] + 2002 Exp[2 Pi I 7/40] + 2002 Exp[2 Pi I 9/40] + 1001 Exp[2 Pi I 15/40]),
                   "twoM" -> 3
                 |>,
-                <|"e" -> (-364 Exp[2 Pi I/8] + 364 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
+                <|"e" -> (-364 Exp[2 Pi I/8] + -364 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
                 <|
-                  "e" -> (-84 Exp[2 Pi I/40] + -84 Exp[2 Pi I 3/40] + 42 Exp[2 Pi I 5/40] + 84 Exp[2 Pi I 7/40] + -84 Exp[2 Pi I 9/40] + 42 Exp[2 Pi I 15/40]),
+                  "e" -> (-84 Exp[2 Pi I/40] + 84 Exp[2 Pi I 3/40] + 42 Exp[2 Pi I 5/40] + -84 Exp[2 Pi I 7/40] + -84 Exp[2 Pi I 9/40] + -42 Exp[2 Pi I 15/40]),
                   "twoM" -> 11
                 |>,
-                <|"e" -> (5 Exp[2 Pi I/8] + -5 Exp[2 Pi I 3/8]), "twoM" -> 15|>
+                <|"e" -> (5 Exp[2 Pi I/8] + 5 Exp[2 Pi I 3/8]), "twoM" -> 15|>
               },
               "mu" -> 4
             |>,
             <|
               "components" -> {
-                <|"e" -> (-16 + -32 Exp[2 Pi I 2/5] + -32 Exp[2 Pi I 3/5]), "twoM" -> -15|>,
-                <|"e" -> 28, "twoM" -> -11|>,
-                <|"e" -> (-273 + -546 Exp[2 Pi I 2/5] + -546 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> 1729, "twoM" -> -3|>,
-                <|"e" -> (-858 + -1716 Exp[2 Pi I 2/5] + -1716 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> -2002, "twoM" -> 5|>,
-                <|"e" -> (91 + 182 Exp[2 Pi I 2/5] + 182 Exp[2 Pi I 3/5]), "twoM" -> 9|>,
-                <|"e" -> -75, "twoM" -> 13|>
+                <|
+                  "e" -> (32 Exp[2 Pi I 3/20] + -16 Exp[2 Pi I 5/20] + 32 Exp[2 Pi I 7/20]),
+                  "twoM" -> -15
+                |>,
+                <|"e" -> 28 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (546 Exp[2 Pi I 3/20] + -273 Exp[2 Pi I 5/20] + 546 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> 1729 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (1716 Exp[2 Pi I 3/20] + -858 Exp[2 Pi I 5/20] + 1716 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> -2002 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (-182 Exp[2 Pi I 3/20] + 91 Exp[2 Pi I 5/20] + -182 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>,
+                <|"e" -> -75 Exp[2 Pi I/4], "twoM" -> 13|>
               },
               "mu" -> 5
             |>,
             <|
               "components" -> {
-                <|"e" -> (58 + 116 Exp[2 Pi I 2/5] + 116 Exp[2 Pi I 3/5]), "twoM" -> -13|>,
-                <|"e" -> 910, "twoM" -> -9|>,
-                <|"e" -> (-273 + -546 Exp[2 Pi I 2/5] + -546 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> 2145, "twoM" -> -1|>,
-                <|"e" -> (-105 + -210 Exp[2 Pi I 2/5] + -210 Exp[2 Pi I 3/5]), "twoM" -> 11|>,
-                <|"e" -> -15, "twoM" -> 15|>
+                <|
+                  "e" -> (-116 Exp[2 Pi I 3/20] + 58 Exp[2 Pi I 5/20] + -116 Exp[2 Pi I 7/20]),
+                  "twoM" -> -13
+                |>,
+                <|"e" -> 910 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (546 Exp[2 Pi I 3/20] + -273 Exp[2 Pi I 5/20] + 546 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> 2145 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (210 Exp[2 Pi I 3/20] + -105 Exp[2 Pi I 5/20] + 210 Exp[2 Pi I 7/20]),
+                  "twoM" -> 11
+                |>,
+                <|"e" -> -15 Exp[2 Pi I/4], "twoM" -> 15|>
               },
               "mu" -> 6
             |>
@@ -109845,50 +110143,74 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> -33, "twoM" -> -15|>,
-                <|"e" -> (-231 + -462 Exp[2 Pi I 2/5] + -462 Exp[2 Pi I 3/5]), "twoM" -> -11|>,
-                <|"e" -> 219, "twoM" -> -7|>,
-                <|"e" -> (-803 + -1606 Exp[2 Pi I 2/5] + -1606 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> -99, "twoM" -> 1|>,
-                <|"e" -> (363 + 726 Exp[2 Pi I 2/5] + 726 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> -407, "twoM" -> 9|>,
-                <|"e" -> (-33 + -66 Exp[2 Pi I 2/5] + -66 Exp[2 Pi I 3/5]), "twoM" -> 13|>
+                <|"e" -> 33 Exp[2 Pi I/4], "twoM" -> -15|>,
+                <|
+                  "e" -> (-462 Exp[2 Pi I 3/20] + 231 Exp[2 Pi I 5/20] + -462 Exp[2 Pi I 7/20]),
+                  "twoM" -> -11
+                |>,
+                <|"e" -> -219 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (-1606 Exp[2 Pi I 3/20] + 803 Exp[2 Pi I 5/20] + -1606 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> 99 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (726 Exp[2 Pi I 3/20] + -363 Exp[2 Pi I 5/20] + 726 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> 407 Exp[2 Pi I/4], "twoM" -> 9|>,
+                <|
+                  "e" -> (-66 Exp[2 Pi I 3/20] + 33 Exp[2 Pi I 5/20] + -66 Exp[2 Pi I 7/20]),
+                  "twoM" -> 13
+                |>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> -825, "twoM" -> -13|>,
-                <|"e" -> (125 + 250 Exp[2 Pi I 2/5] + 250 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> -6765, "twoM" -> -5|>,
-                <|"e" -> (7425 + 14850 Exp[2 Pi I 2/5] + 14850 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> 4565, "twoM" -> 3|>,
-                <|"e" -> (1815 + 3630 Exp[2 Pi I 2/5] + 3630 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> -495, "twoM" -> 11|>,
-                <|"e" -> (43 + 86 Exp[2 Pi I 2/5] + 86 Exp[2 Pi I 3/5]), "twoM" -> 15|>
+                <|"e" -> 825 Exp[2 Pi I/4], "twoM" -> -13|>,
+                <|
+                  "e" -> (250 Exp[2 Pi I 3/20] + -125 Exp[2 Pi I 5/20] + 250 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> 6765 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (14850 Exp[2 Pi I 3/20] + -7425 Exp[2 Pi I 5/20] + 14850 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> -4565 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (3630 Exp[2 Pi I 3/20] + -1815 Exp[2 Pi I 5/20] + 3630 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> 495 Exp[2 Pi I/4], "twoM" -> 11|>,
+                <|
+                  "e" -> (86 Exp[2 Pi I 3/20] + -43 Exp[2 Pi I 5/20] + 86 Exp[2 Pi I 7/20]),
+                  "twoM" -> 15
+                |>
               },
               "mu" -> 2
             |>,
             <|
               "components" -> {
-                <|"e" -> (55 Exp[2 Pi I/8] + -55 Exp[2 Pi I 3/8]), "twoM" -> -15|>,
+                <|"e" -> (-55 Exp[2 Pi I/8] + -55 Exp[2 Pi I 3/8]), "twoM" -> -15|>,
                 <|
-                  "e" -> (390 Exp[2 Pi I/40] + 390 Exp[2 Pi I 3/40] + -195 Exp[2 Pi I 5/40] + -390 Exp[2 Pi I 7/40] + 390 Exp[2 Pi I 9/40] + -195 Exp[2 Pi I 15/40]),
+                  "e" -> (-390 Exp[2 Pi I/40] + 390 Exp[2 Pi I 3/40] + 195 Exp[2 Pi I 5/40] + -390 Exp[2 Pi I 7/40] + -390 Exp[2 Pi I 9/40] + -195 Exp[2 Pi I 15/40]),
                   "twoM" -> -11
                 |>,
-                <|"e" -> (6435 Exp[2 Pi I/8] + -6435 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
+                <|"e" -> (-6435 Exp[2 Pi I/8] + -6435 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
                 <|
-                  "e" -> (2750 Exp[2 Pi I/40] + 2750 Exp[2 Pi I 3/40] + -1375 Exp[2 Pi I 5/40] + -2750 Exp[2 Pi I 7/40] + 2750 Exp[2 Pi I 9/40] + -1375 Exp[2 Pi I 15/40]),
+                  "e" -> (-2750 Exp[2 Pi I/40] + 2750 Exp[2 Pi I 3/40] + 1375 Exp[2 Pi I 5/40] + -2750 Exp[2 Pi I 7/40] + -2750 Exp[2 Pi I 9/40] + -1375 Exp[2 Pi I 15/40]),
                   "twoM" -> -3
                 |>,
-                <|"e" -> (-10395 Exp[2 Pi I/8] + 10395 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
+                <|"e" -> (10395 Exp[2 Pi I/8] + 10395 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
                 <|
-                  "e" -> (4818 Exp[2 Pi I/40] + 4818 Exp[2 Pi I 3/40] + -2409 Exp[2 Pi I 5/40] + -4818 Exp[2 Pi I 7/40] + 4818 Exp[2 Pi I 9/40] + -2409 Exp[2 Pi I 15/40]),
+                  "e" -> (-4818 Exp[2 Pi I/40] + 4818 Exp[2 Pi I 3/40] + 2409 Exp[2 Pi I 5/40] + -4818 Exp[2 Pi I 7/40] + -4818 Exp[2 Pi I 9/40] + -2409 Exp[2 Pi I 15/40]),
                   "twoM" -> 5
                 |>,
-                <|"e" -> (385 Exp[2 Pi I/8] + -385 Exp[2 Pi I 3/8]), "twoM" -> 9|>,
+                <|"e" -> (-385 Exp[2 Pi I/8] + -385 Exp[2 Pi I 3/8]), "twoM" -> 9|>,
                 <|
-                  "e" -> (-150 Exp[2 Pi I/40] + -150 Exp[2 Pi I 3/40] + 75 Exp[2 Pi I 5/40] + 150 Exp[2 Pi I 7/40] + -150 Exp[2 Pi I 9/40] + 75 Exp[2 Pi I 15/40]),
+                  "e" -> (150 Exp[2 Pi I/40] + -150 Exp[2 Pi I 3/40] + -75 Exp[2 Pi I 5/40] + 150 Exp[2 Pi I 7/40] + 150 Exp[2 Pi I 9/40] + 75 Exp[2 Pi I 15/40]),
                   "twoM" -> 13
                 |>
               },
@@ -109897,51 +110219,75 @@ o3d = <|
             <|
               "components" -> {
                 <|
-                  "e" -> (150 Exp[2 Pi I/40] + 150 Exp[2 Pi I 3/40] + -75 Exp[2 Pi I 5/40] + -150 Exp[2 Pi I 7/40] + 150 Exp[2 Pi I 9/40] + -75 Exp[2 Pi I 15/40]),
+                  "e" -> (-150 Exp[2 Pi I/40] + 150 Exp[2 Pi I 3/40] + 75 Exp[2 Pi I 5/40] + -150 Exp[2 Pi I 7/40] + -150 Exp[2 Pi I 9/40] + -75 Exp[2 Pi I 15/40]),
                   "twoM" -> -13
                 |>,
-                <|"e" -> (-385 Exp[2 Pi I/8] + 385 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
+                <|"e" -> (385 Exp[2 Pi I/8] + 385 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
                 <|
-                  "e" -> (-4818 Exp[2 Pi I/40] + -4818 Exp[2 Pi I 3/40] + 2409 Exp[2 Pi I 5/40] + 4818 Exp[2 Pi I 7/40] + -4818 Exp[2 Pi I 9/40] + 2409 Exp[2 Pi I 15/40]),
+                  "e" -> (4818 Exp[2 Pi I/40] + -4818 Exp[2 Pi I 3/40] + -2409 Exp[2 Pi I 5/40] + 4818 Exp[2 Pi I 7/40] + 4818 Exp[2 Pi I 9/40] + 2409 Exp[2 Pi I 15/40]),
                   "twoM" -> -5
                 |>,
-                <|"e" -> (10395 Exp[2 Pi I/8] + -10395 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
+                <|"e" -> (-10395 Exp[2 Pi I/8] + -10395 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
                 <|
-                  "e" -> (-2750 Exp[2 Pi I/40] + -2750 Exp[2 Pi I 3/40] + 1375 Exp[2 Pi I 5/40] + 2750 Exp[2 Pi I 7/40] + -2750 Exp[2 Pi I 9/40] + 1375 Exp[2 Pi I 15/40]),
+                  "e" -> (2750 Exp[2 Pi I/40] + -2750 Exp[2 Pi I 3/40] + -1375 Exp[2 Pi I 5/40] + 2750 Exp[2 Pi I 7/40] + 2750 Exp[2 Pi I 9/40] + 1375 Exp[2 Pi I 15/40]),
                   "twoM" -> 3
                 |>,
-                <|"e" -> (-6435 Exp[2 Pi I/8] + 6435 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
+                <|"e" -> (6435 Exp[2 Pi I/8] + 6435 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
                 <|
-                  "e" -> (-390 Exp[2 Pi I/40] + -390 Exp[2 Pi I 3/40] + 195 Exp[2 Pi I 5/40] + 390 Exp[2 Pi I 7/40] + -390 Exp[2 Pi I 9/40] + 195 Exp[2 Pi I 15/40]),
+                  "e" -> (390 Exp[2 Pi I/40] + -390 Exp[2 Pi I 3/40] + -195 Exp[2 Pi I 5/40] + 390 Exp[2 Pi I 7/40] + 390 Exp[2 Pi I 9/40] + 195 Exp[2 Pi I 15/40]),
                   "twoM" -> 11
                 |>,
-                <|"e" -> (-55 Exp[2 Pi I/8] + 55 Exp[2 Pi I 3/8]), "twoM" -> 15|>
+                <|"e" -> (55 Exp[2 Pi I/8] + 55 Exp[2 Pi I 3/8]), "twoM" -> 15|>
               },
               "mu" -> 4
             |>,
             <|
               "components" -> {
-                <|"e" -> (-43 + -86 Exp[2 Pi I 2/5] + -86 Exp[2 Pi I 3/5]), "twoM" -> -15|>,
-                <|"e" -> 495, "twoM" -> -11|>,
-                <|"e" -> (-1815 + -3630 Exp[2 Pi I 2/5] + -3630 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> -4565, "twoM" -> -3|>,
-                <|"e" -> (-7425 + -14850 Exp[2 Pi I 2/5] + -14850 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> 6765, "twoM" -> 5|>,
-                <|"e" -> (-125 + -250 Exp[2 Pi I 2/5] + -250 Exp[2 Pi I 3/5]), "twoM" -> 9|>,
-                <|"e" -> 825, "twoM" -> 13|>
+                <|
+                  "e" -> (-86 Exp[2 Pi I 3/20] + 43 Exp[2 Pi I 5/20] + -86 Exp[2 Pi I 7/20]),
+                  "twoM" -> -15
+                |>,
+                <|"e" -> -495 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (-3630 Exp[2 Pi I 3/20] + 1815 Exp[2 Pi I 5/20] + -3630 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> 4565 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (-14850 Exp[2 Pi I 3/20] + 7425 Exp[2 Pi I 5/20] + -14850 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> -6765 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (-250 Exp[2 Pi I 3/20] + 125 Exp[2 Pi I 5/20] + -250 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>,
+                <|"e" -> -825 Exp[2 Pi I/4], "twoM" -> 13|>
               },
               "mu" -> 5
             |>,
             <|
               "components" -> {
-                <|"e" -> (33 + 66 Exp[2 Pi I 2/5] + 66 Exp[2 Pi I 3/5]), "twoM" -> -13|>,
-                <|"e" -> 407, "twoM" -> -9|>,
-                <|"e" -> (-363 + -726 Exp[2 Pi I 2/5] + -726 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> 99, "twoM" -> -1|>,
-                <|"e" -> (803 + 1606 Exp[2 Pi I 2/5] + 1606 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> -219, "twoM" -> 7|>,
-                <|"e" -> (231 + 462 Exp[2 Pi I 2/5] + 462 Exp[2 Pi I 3/5]), "twoM" -> 11|>,
-                <|"e" -> 33, "twoM" -> 15|>
+                <|
+                  "e" -> (66 Exp[2 Pi I 3/20] + -33 Exp[2 Pi I 5/20] + 66 Exp[2 Pi I 7/20]),
+                  "twoM" -> -13
+                |>,
+                <|"e" -> -407 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (-726 Exp[2 Pi I 3/20] + 363 Exp[2 Pi I 5/20] + -726 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> -99 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (1606 Exp[2 Pi I 3/20] + -803 Exp[2 Pi I 5/20] + 1606 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> 219 Exp[2 Pi I/4], "twoM" -> 7|>,
+                <|
+                  "e" -> (462 Exp[2 Pi I 3/20] + -231 Exp[2 Pi I 5/20] + 462 Exp[2 Pi I 7/20]),
+                  "twoM" -> 11
+                |>,
+                <|"e" -> -33 Exp[2 Pi I/4], "twoM" -> 15|>
               },
               "mu" -> 6
             |>
@@ -109956,29 +110302,53 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 85, "twoM" -> -15|>,
-                <|"e" -> (170 + 340 Exp[2 Pi I 2/5] + 340 Exp[2 Pi I 3/5]), "twoM" -> -11|>,
-                <|"e" -> -1190, "twoM" -> -7|>,
-                <|"e" -> (-374 + -748 Exp[2 Pi I 2/5] + -748 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> 3740, "twoM" -> 1|>,
-                <|"e" -> (238 + 476 Exp[2 Pi I 2/5] + 476 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> 1190, "twoM" -> 9|>,
-                <|"e" -> (-34 + -68 Exp[2 Pi I 2/5] + -68 Exp[2 Pi I 3/5]), "twoM" -> 13|>,
-                <|"e" -> 15, "twoM" -> 17|>
+                <|"e" -> 85 Exp[2 Pi I/4], "twoM" -> -15|>,
+                <|
+                  "e" -> (-340 Exp[2 Pi I 3/20] + 170 Exp[2 Pi I 5/20] + -340 Exp[2 Pi I 7/20]),
+                  "twoM" -> -11
+                |>,
+                <|"e" -> -1190 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (748 Exp[2 Pi I 3/20] + -374 Exp[2 Pi I 5/20] + 748 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> 3740 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (-476 Exp[2 Pi I 3/20] + 238 Exp[2 Pi I 5/20] + -476 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> 1190 Exp[2 Pi I/4], "twoM" -> 9|>,
+                <|
+                  "e" -> (68 Exp[2 Pi I 3/20] + -34 Exp[2 Pi I 5/20] + 68 Exp[2 Pi I 7/20]),
+                  "twoM" -> 13
+                |>,
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> 17|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -17|>,
-                <|"e" -> (-34 + -68 Exp[2 Pi I 2/5] + -68 Exp[2 Pi I 3/5]), "twoM" -> -13|>,
-                <|"e" -> 1190, "twoM" -> -9|>,
-                <|"e" -> (238 + 476 Exp[2 Pi I 2/5] + 476 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> 3740, "twoM" -> -1|>,
-                <|"e" -> (-374 + -748 Exp[2 Pi I 2/5] + -748 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> -1190, "twoM" -> 7|>,
-                <|"e" -> (170 + 340 Exp[2 Pi I 2/5] + 340 Exp[2 Pi I 3/5]), "twoM" -> 11|>,
-                <|"e" -> 85, "twoM" -> 15|>
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> -17|>,
+                <|
+                  "e" -> (68 Exp[2 Pi I 3/20] + -34 Exp[2 Pi I 5/20] + 68 Exp[2 Pi I 7/20]),
+                  "twoM" -> -13
+                |>,
+                <|"e" -> 1190 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (-476 Exp[2 Pi I 3/20] + 238 Exp[2 Pi I 5/20] + -476 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> 3740 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (748 Exp[2 Pi I 3/20] + -374 Exp[2 Pi I 5/20] + 748 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> -1190 Exp[2 Pi I/4], "twoM" -> 7|>,
+                <|
+                  "e" -> (-340 Exp[2 Pi I 3/20] + 170 Exp[2 Pi I 5/20] + -340 Exp[2 Pi I 7/20]),
+                  "twoM" -> 11
+                |>,
+                <|"e" -> 85 Exp[2 Pi I/4], "twoM" -> 15|>
               },
               "mu" -> 2
             |>
@@ -109993,42 +110363,54 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -17|>,
-                <|"e" -> (136 + 272 Exp[2 Pi I 2/5] + 272 Exp[2 Pi I 3/5]), "twoM" -> -13|>,
-                <|"e" -> -140, "twoM" -> -9|>,
-                <|"e" -> (728 + 1456 Exp[2 Pi I 2/5] + 1456 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> -1430, "twoM" -> -1|>,
-                <|"e" -> (-520 + -1040 Exp[2 Pi I 2/5] + -1040 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> -364, "twoM" -> 7|>,
-                <|"e" -> (40 + 80 Exp[2 Pi I 2/5] + 80 Exp[2 Pi I 3/5]), "twoM" -> 11|>,
-                <|"e" -> -1, "twoM" -> 15|>
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> -17|>,
+                <|
+                  "e" -> (-272 Exp[2 Pi I 3/20] + 136 Exp[2 Pi I 5/20] + -272 Exp[2 Pi I 7/20]),
+                  "twoM" -> -13
+                |>,
+                <|"e" -> -140 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (-1456 Exp[2 Pi I 3/20] + 728 Exp[2 Pi I 5/20] + -1456 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> -1430 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (1040 Exp[2 Pi I 3/20] + -520 Exp[2 Pi I 5/20] + 1040 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> -364 Exp[2 Pi I/4], "twoM" -> 7|>,
+                <|
+                  "e" -> (-80 Exp[2 Pi I 3/20] + 40 Exp[2 Pi I 5/20] + -80 Exp[2 Pi I 7/20]),
+                  "twoM" -> 11
+                |>,
+                <|"e" -> -1 Exp[2 Pi I/4], "twoM" -> 15|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
                 <|
-                  "e" -> (-34 Exp[2 Pi I/60] + 34 Exp[2 Pi I 5/60] + 68 Exp[2 Pi I 7/60] + 34 Exp[2 Pi I 9/60] + 34 Exp[2 Pi I 11/60] + -68 Exp[2 Pi I 13/60] + -51 Exp[2 Pi I 15/60]),
+                  "e" -> (-51 + 68 Exp[2 Pi I/15] + 34 Exp[2 Pi I 2/15] + -34 Exp[2 Pi I 3/15] + 68 Exp[2 Pi I 4/15] + -34 Exp[2 Pi I 5/15] + 34 Exp[2 Pi I 7/15]),
                   "twoM" -> -15
                 |>,
-                <|"e" -> (80 Exp[2 Pi I/12] + -40 Exp[2 Pi I 3/12]), "twoM" -> -11|>,
+                <|"e" -> (40 + 80 Exp[2 Pi I/3]), "twoM" -> -11|>,
                 <|
-                  "e" -> (-728 Exp[2 Pi I/60] + 728 Exp[2 Pi I 5/60] + 1456 Exp[2 Pi I 7/60] + 728 Exp[2 Pi I 9/60] + 728 Exp[2 Pi I 11/60] + -1456 Exp[2 Pi I 13/60] + -1092 Exp[2 Pi I 15/60]),
+                  "e" -> (-1092 + 1456 Exp[2 Pi I/15] + 728 Exp[2 Pi I 2/15] + -728 Exp[2 Pi I 3/15] + 1456 Exp[2 Pi I 4/15] + -728 Exp[2 Pi I 5/15] + 728 Exp[2 Pi I 7/15]),
                   "twoM" -> -7
                 |>,
-                <|"e" -> (2288 Exp[2 Pi I/12] + -1144 Exp[2 Pi I 3/12]), "twoM" -> -3|>,
+                <|"e" -> (1144 + 2288 Exp[2 Pi I/3]), "twoM" -> -3|>,
                 <|
-                  "e" -> (1300 Exp[2 Pi I/60] + -1300 Exp[2 Pi I 5/60] + -2600 Exp[2 Pi I 7/60] + -1300 Exp[2 Pi I 9/60] + -1300 Exp[2 Pi I 11/60] + 2600 Exp[2 Pi I 13/60] + 1950 Exp[2 Pi I 15/60]),
+                  "e" -> (1950 + -2600 Exp[2 Pi I/15] + -1300 Exp[2 Pi I 2/15] + 1300 Exp[2 Pi I 3/15] + -2600 Exp[2 Pi I 4/15] + 1300 Exp[2 Pi I 5/15] + -1300 Exp[2 Pi I 7/15]),
                   "twoM" -> 1
                 |>,
-                <|"e" -> (1456 Exp[2 Pi I/12] + -728 Exp[2 Pi I 3/12]), "twoM" -> 5|>,
+                <|"e" -> (728 + 1456 Exp[2 Pi I/3]), "twoM" -> 5|>,
                 <|
-                  "e" -> (-280 Exp[2 Pi I/60] + 280 Exp[2 Pi I 5/60] + 560 Exp[2 Pi I 7/60] + 280 Exp[2 Pi I 9/60] + 280 Exp[2 Pi I 11/60] + -560 Exp[2 Pi I 13/60] + -420 Exp[2 Pi I 15/60]),
+                  "e" -> (-420 + 560 Exp[2 Pi I/15] + 280 Exp[2 Pi I 2/15] + -280 Exp[2 Pi I 3/15] + 560 Exp[2 Pi I 4/15] + -280 Exp[2 Pi I 5/15] + 280 Exp[2 Pi I 7/15]),
                   "twoM" -> 9
                 |>,
-                <|"e" -> (16 Exp[2 Pi I/12] + -8 Exp[2 Pi I 3/12]), "twoM" -> 13|>,
+                <|"e" -> (8 + 16 Exp[2 Pi I/3]), "twoM" -> 13|>,
                 <|
-                  "e" -> (-2 Exp[2 Pi I/60] + 2 Exp[2 Pi I 5/60] + 4 Exp[2 Pi I 7/60] + 2 Exp[2 Pi I 9/60] + 2 Exp[2 Pi I 11/60] + -4 Exp[2 Pi I 13/60] + -3 Exp[2 Pi I 15/60]),
+                  "e" -> (-3 + 4 Exp[2 Pi I/15] + 2 Exp[2 Pi I 2/15] + -2 Exp[2 Pi I 3/15] + 4 Exp[2 Pi I 4/15] + -2 Exp[2 Pi I 5/15] + 2 Exp[2 Pi I 7/15]),
                   "twoM" -> 17
                 |>
               },
@@ -110037,27 +110419,27 @@ o3d = <|
             <|
               "components" -> {
                 <|
-                  "e" -> (2 Exp[2 Pi I/60] + -2 Exp[2 Pi I 5/60] + -4 Exp[2 Pi I 7/60] + -2 Exp[2 Pi I 9/60] + -2 Exp[2 Pi I 11/60] + 4 Exp[2 Pi I 13/60] + 3 Exp[2 Pi I 15/60]),
+                  "e" -> (3 + -4 Exp[2 Pi I/15] + -2 Exp[2 Pi I 2/15] + 2 Exp[2 Pi I 3/15] + -4 Exp[2 Pi I 4/15] + 2 Exp[2 Pi I 5/15] + -2 Exp[2 Pi I 7/15]),
                   "twoM" -> -17
                 |>,
-                <|"e" -> (-16 Exp[2 Pi I/12] + 8 Exp[2 Pi I 3/12]), "twoM" -> -13|>,
+                <|"e" -> (-8 + -16 Exp[2 Pi I/3]), "twoM" -> -13|>,
                 <|
-                  "e" -> (280 Exp[2 Pi I/60] + -280 Exp[2 Pi I 5/60] + -560 Exp[2 Pi I 7/60] + -280 Exp[2 Pi I 9/60] + -280 Exp[2 Pi I 11/60] + 560 Exp[2 Pi I 13/60] + 420 Exp[2 Pi I 15/60]),
+                  "e" -> (420 + -560 Exp[2 Pi I/15] + -280 Exp[2 Pi I 2/15] + 280 Exp[2 Pi I 3/15] + -560 Exp[2 Pi I 4/15] + 280 Exp[2 Pi I 5/15] + -280 Exp[2 Pi I 7/15]),
                   "twoM" -> -9
                 |>,
-                <|"e" -> (-1456 Exp[2 Pi I/12] + 728 Exp[2 Pi I 3/12]), "twoM" -> -5|>,
+                <|"e" -> (-728 + -1456 Exp[2 Pi I/3]), "twoM" -> -5|>,
                 <|
-                  "e" -> (-1300 Exp[2 Pi I/60] + 1300 Exp[2 Pi I 5/60] + 2600 Exp[2 Pi I 7/60] + 1300 Exp[2 Pi I 9/60] + 1300 Exp[2 Pi I 11/60] + -2600 Exp[2 Pi I 13/60] + -1950 Exp[2 Pi I 15/60]),
+                  "e" -> (-1950 + 2600 Exp[2 Pi I/15] + 1300 Exp[2 Pi I 2/15] + -1300 Exp[2 Pi I 3/15] + 2600 Exp[2 Pi I 4/15] + -1300 Exp[2 Pi I 5/15] + 1300 Exp[2 Pi I 7/15]),
                   "twoM" -> -1
                 |>,
-                <|"e" -> (-2288 Exp[2 Pi I/12] + 1144 Exp[2 Pi I 3/12]), "twoM" -> 3|>,
+                <|"e" -> (-1144 + -2288 Exp[2 Pi I/3]), "twoM" -> 3|>,
                 <|
-                  "e" -> (728 Exp[2 Pi I/60] + -728 Exp[2 Pi I 5/60] + -1456 Exp[2 Pi I 7/60] + -728 Exp[2 Pi I 9/60] + -728 Exp[2 Pi I 11/60] + 1456 Exp[2 Pi I 13/60] + 1092 Exp[2 Pi I 15/60]),
+                  "e" -> (1092 + -1456 Exp[2 Pi I/15] + -728 Exp[2 Pi I 2/15] + 728 Exp[2 Pi I 3/15] + -1456 Exp[2 Pi I 4/15] + 728 Exp[2 Pi I 5/15] + -728 Exp[2 Pi I 7/15]),
                   "twoM" -> 7
                 |>,
-                <|"e" -> (-80 Exp[2 Pi I/12] + 40 Exp[2 Pi I 3/12]), "twoM" -> 11|>,
+                <|"e" -> (-40 + -80 Exp[2 Pi I/3]), "twoM" -> 11|>,
                 <|
-                  "e" -> (34 Exp[2 Pi I/60] + -34 Exp[2 Pi I 5/60] + -68 Exp[2 Pi I 7/60] + -34 Exp[2 Pi I 9/60] + -34 Exp[2 Pi I 11/60] + 68 Exp[2 Pi I 13/60] + 51 Exp[2 Pi I 15/60]),
+                  "e" -> (51 + -68 Exp[2 Pi I/15] + -34 Exp[2 Pi I 2/15] + 34 Exp[2 Pi I 3/15] + -68 Exp[2 Pi I 4/15] + 34 Exp[2 Pi I 5/15] + -34 Exp[2 Pi I 7/15]),
                   "twoM" -> 15
                 |>
               },
@@ -110065,15 +110447,27 @@ o3d = <|
             |>,
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -15|>,
-                <|"e" -> (-40 + -80 Exp[2 Pi I 2/5] + -80 Exp[2 Pi I 3/5]), "twoM" -> -11|>,
-                <|"e" -> 364, "twoM" -> -7|>,
-                <|"e" -> (520 + 1040 Exp[2 Pi I 2/5] + 1040 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> 1430, "twoM" -> 1|>,
-                <|"e" -> (-728 + -1456 Exp[2 Pi I 2/5] + -1456 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> 140, "twoM" -> 9|>,
-                <|"e" -> (-136 + -272 Exp[2 Pi I 2/5] + -272 Exp[2 Pi I 3/5]), "twoM" -> 13|>,
-                <|"e" -> -15, "twoM" -> 17|>
+                <|"e" -> Exp[2 Pi I/4], "twoM" -> -15|>,
+                <|
+                  "e" -> (80 Exp[2 Pi I 3/20] + -40 Exp[2 Pi I 5/20] + 80 Exp[2 Pi I 7/20]),
+                  "twoM" -> -11
+                |>,
+                <|"e" -> 364 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (-1040 Exp[2 Pi I 3/20] + 520 Exp[2 Pi I 5/20] + -1040 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> 1430 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (1456 Exp[2 Pi I 3/20] + -728 Exp[2 Pi I 5/20] + 1456 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> 140 Exp[2 Pi I/4], "twoM" -> 9|>,
+                <|
+                  "e" -> (272 Exp[2 Pi I 3/20] + -136 Exp[2 Pi I 5/20] + 272 Exp[2 Pi I 7/20]),
+                  "twoM" -> 13
+                |>,
+                <|"e" -> -15 Exp[2 Pi I/4], "twoM" -> 17|>
               },
               "mu" -> 4
             |>
@@ -110088,105 +110482,153 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -15|>,
-                <|"e" -> (120 + 240 Exp[2 Pi I 2/5] + 240 Exp[2 Pi I 3/5]), "twoM" -> -11|>,
-                <|"e" -> -4290, "twoM" -> 1|>,
-                <|"e" -> (728 + 1456 Exp[2 Pi I 2/5] + 1456 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> -3640, "twoM" -> 9|>,
-                <|"e" -> (-464 + -928 Exp[2 Pi I 2/5] + -928 Exp[2 Pi I 3/5]), "twoM" -> 13|>,
-                <|"e" -> 107, "twoM" -> 17|>
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> -15|>,
+                <|
+                  "e" -> (-240 Exp[2 Pi I 3/20] + 120 Exp[2 Pi I 5/20] + -240 Exp[2 Pi I 7/20]),
+                  "twoM" -> -11
+                |>,
+                <|"e" -> -4290 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (-1456 Exp[2 Pi I 3/20] + 728 Exp[2 Pi I 5/20] + -1456 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> -3640 Exp[2 Pi I/4], "twoM" -> 9|>,
+                <|
+                  "e" -> (928 Exp[2 Pi I 3/20] + -464 Exp[2 Pi I 5/20] + 928 Exp[2 Pi I 7/20]),
+                  "twoM" -> 13
+                |>,
+                <|"e" -> 107 Exp[2 Pi I/4], "twoM" -> 17|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (-15 + -30 Exp[2 Pi I 2/5] + -30 Exp[2 Pi I 3/5]), "twoM" -> -17|>,
-                <|"e" -> -280, "twoM" -> -13|>,
-                <|"e" -> (-560 + -1120 Exp[2 Pi I 2/5] + -1120 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> 14560, "twoM" -> -5|>,
-                <|"e" -> (15730 + 31460 Exp[2 Pi I 2/5] + 31460 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> -28600, "twoM" -> 3|>,
-                <|"e" -> (16744 + 33488 Exp[2 Pi I 2/5] + 33488 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> 12400, "twoM" -> 11|>,
-                <|"e" -> (-539 + -1078 Exp[2 Pi I 2/5] + -1078 Exp[2 Pi I 3/5]), "twoM" -> 15|>
+                <|
+                  "e" -> (30 Exp[2 Pi I 3/20] + -15 Exp[2 Pi I 5/20] + 30 Exp[2 Pi I 7/20]),
+                  "twoM" -> -17
+                |>,
+                <|"e" -> -280 Exp[2 Pi I/4], "twoM" -> -13|>,
+                <|
+                  "e" -> (1120 Exp[2 Pi I 3/20] + -560 Exp[2 Pi I 5/20] + 1120 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> 14560 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (-31460 Exp[2 Pi I 3/20] + 15730 Exp[2 Pi I 5/20] + -31460 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> -28600 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (-33488 Exp[2 Pi I 3/20] + 16744 Exp[2 Pi I 5/20] + -33488 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> 12400 Exp[2 Pi I/4], "twoM" -> 11|>,
+                <|
+                  "e" -> (1078 Exp[2 Pi I 3/20] + -539 Exp[2 Pi I 5/20] + 1078 Exp[2 Pi I 7/20]),
+                  "twoM" -> 15
+                |>
               },
               "mu" -> 2
             |>,
             <|
               "components" -> {
-                <|"e" -> (145 Exp[2 Pi I/8] + -145 Exp[2 Pi I 3/8]), "twoM" -> -15|>,
+                <|"e" -> (145 Exp[2 Pi I/8] + 145 Exp[2 Pi I 3/8]), "twoM" -> -15|>,
                 <|
-                  "e" -> (1160 Exp[2 Pi I/40] + 1160 Exp[2 Pi I 3/40] + -580 Exp[2 Pi I 5/40] + -1160 Exp[2 Pi I 7/40] + 1160 Exp[2 Pi I 9/40] + -580 Exp[2 Pi I 15/40]),
+                  "e" -> (1160 Exp[2 Pi I/40] + -1160 Exp[2 Pi I 3/40] + -580 Exp[2 Pi I 5/40] + 1160 Exp[2 Pi I 7/40] + 1160 Exp[2 Pi I 9/40] + 580 Exp[2 Pi I 15/40]),
                   "twoM" -> -11
                 |>,
-                <|"e" -> (12740 Exp[2 Pi I/8] + -12740 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
+                <|"e" -> (12740 Exp[2 Pi I/8] + 12740 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
                 <|
-                  "e" -> (-35464 Exp[2 Pi I/40] + -35464 Exp[2 Pi I 3/40] + 17732 Exp[2 Pi I 5/40] + 35464 Exp[2 Pi I 7/40] + -35464 Exp[2 Pi I 9/40] + 17732 Exp[2 Pi I 15/40]),
+                  "e" -> (-35464 Exp[2 Pi I/40] + 35464 Exp[2 Pi I 3/40] + 17732 Exp[2 Pi I 5/40] + -35464 Exp[2 Pi I 7/40] + -35464 Exp[2 Pi I 9/40] + -17732 Exp[2 Pi I 15/40]),
                   "twoM" -> -3
                 |>,
-                <|"e" -> (-21450 Exp[2 Pi I/8] + 21450 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
+                <|"e" -> (-21450 Exp[2 Pi I/8] + -21450 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
                 <|
-                  "e" -> (-37128 Exp[2 Pi I/40] + -37128 Exp[2 Pi I 3/40] + 18564 Exp[2 Pi I 5/40] + 37128 Exp[2 Pi I 7/40] + -37128 Exp[2 Pi I 9/40] + 18564 Exp[2 Pi I 15/40]),
+                  "e" -> (-37128 Exp[2 Pi I/40] + 37128 Exp[2 Pi I 3/40] + 18564 Exp[2 Pi I 5/40] + -37128 Exp[2 Pi I 7/40] + -37128 Exp[2 Pi I 9/40] + -18564 Exp[2 Pi I 15/40]),
                   "twoM" -> 5
                 |>,
-                <|"e" -> (10500 Exp[2 Pi I/8] + -10500 Exp[2 Pi I 3/8]), "twoM" -> 9|>,
+                <|"e" -> (10500 Exp[2 Pi I/8] + 10500 Exp[2 Pi I 3/8]), "twoM" -> 9|>,
                 <|
-                  "e" -> (1032 Exp[2 Pi I/40] + 1032 Exp[2 Pi I 3/40] + -516 Exp[2 Pi I 5/40] + -1032 Exp[2 Pi I 7/40] + 1032 Exp[2 Pi I 9/40] + -516 Exp[2 Pi I 15/40]),
+                  "e" -> (1032 Exp[2 Pi I/40] + -1032 Exp[2 Pi I 3/40] + -516 Exp[2 Pi I 5/40] + 1032 Exp[2 Pi I 7/40] + 1032 Exp[2 Pi I 9/40] + 516 Exp[2 Pi I 15/40]),
                   "twoM" -> 13
                 |>,
-                <|"e" -> (-15 Exp[2 Pi I/8] + 15 Exp[2 Pi I 3/8]), "twoM" -> 17|>
+                <|"e" -> (-15 Exp[2 Pi I/8] + -15 Exp[2 Pi I 3/8]), "twoM" -> 17|>
               },
               "mu" -> 3
             |>,
             <|
               "components" -> {
-                <|"e" -> (-15 Exp[2 Pi I/8] + 15 Exp[2 Pi I 3/8]), "twoM" -> -17|>,
+                <|"e" -> (-15 Exp[2 Pi I/8] + -15 Exp[2 Pi I 3/8]), "twoM" -> -17|>,
                 <|
-                  "e" -> (1032 Exp[2 Pi I/40] + 1032 Exp[2 Pi I 3/40] + -516 Exp[2 Pi I 5/40] + -1032 Exp[2 Pi I 7/40] + 1032 Exp[2 Pi I 9/40] + -516 Exp[2 Pi I 15/40]),
+                  "e" -> (1032 Exp[2 Pi I/40] + -1032 Exp[2 Pi I 3/40] + -516 Exp[2 Pi I 5/40] + 1032 Exp[2 Pi I 7/40] + 1032 Exp[2 Pi I 9/40] + 516 Exp[2 Pi I 15/40]),
                   "twoM" -> -13
                 |>,
-                <|"e" -> (10500 Exp[2 Pi I/8] + -10500 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
+                <|"e" -> (10500 Exp[2 Pi I/8] + 10500 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
                 <|
-                  "e" -> (-37128 Exp[2 Pi I/40] + -37128 Exp[2 Pi I 3/40] + 18564 Exp[2 Pi I 5/40] + 37128 Exp[2 Pi I 7/40] + -37128 Exp[2 Pi I 9/40] + 18564 Exp[2 Pi I 15/40]),
+                  "e" -> (-37128 Exp[2 Pi I/40] + 37128 Exp[2 Pi I 3/40] + 18564 Exp[2 Pi I 5/40] + -37128 Exp[2 Pi I 7/40] + -37128 Exp[2 Pi I 9/40] + -18564 Exp[2 Pi I 15/40]),
                   "twoM" -> -5
                 |>,
-                <|"e" -> (-21450 Exp[2 Pi I/8] + 21450 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
+                <|"e" -> (-21450 Exp[2 Pi I/8] + -21450 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
                 <|
-                  "e" -> (-35464 Exp[2 Pi I/40] + -35464 Exp[2 Pi I 3/40] + 17732 Exp[2 Pi I 5/40] + 35464 Exp[2 Pi I 7/40] + -35464 Exp[2 Pi I 9/40] + 17732 Exp[2 Pi I 15/40]),
+                  "e" -> (-35464 Exp[2 Pi I/40] + 35464 Exp[2 Pi I 3/40] + 17732 Exp[2 Pi I 5/40] + -35464 Exp[2 Pi I 7/40] + -35464 Exp[2 Pi I 9/40] + -17732 Exp[2 Pi I 15/40]),
                   "twoM" -> 3
                 |>,
-                <|"e" -> (12740 Exp[2 Pi I/8] + -12740 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
+                <|"e" -> (12740 Exp[2 Pi I/8] + 12740 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
                 <|
-                  "e" -> (1160 Exp[2 Pi I/40] + 1160 Exp[2 Pi I 3/40] + -580 Exp[2 Pi I 5/40] + -1160 Exp[2 Pi I 7/40] + 1160 Exp[2 Pi I 9/40] + -580 Exp[2 Pi I 15/40]),
+                  "e" -> (1160 Exp[2 Pi I/40] + -1160 Exp[2 Pi I 3/40] + -580 Exp[2 Pi I 5/40] + 1160 Exp[2 Pi I 7/40] + 1160 Exp[2 Pi I 9/40] + 580 Exp[2 Pi I 15/40]),
                   "twoM" -> 11
                 |>,
-                <|"e" -> (145 Exp[2 Pi I/8] + -145 Exp[2 Pi I 3/8]), "twoM" -> 15|>
+                <|"e" -> (145 Exp[2 Pi I/8] + 145 Exp[2 Pi I 3/8]), "twoM" -> 15|>
               },
               "mu" -> 4
             |>,
             <|
               "components" -> {
-                <|"e" -> (-539 + -1078 Exp[2 Pi I 2/5] + -1078 Exp[2 Pi I 3/5]), "twoM" -> -15|>,
-                <|"e" -> 12400, "twoM" -> -11|>,
-                <|"e" -> (16744 + 33488 Exp[2 Pi I 2/5] + 33488 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> -28600, "twoM" -> -3|>,
-                <|"e" -> (15730 + 31460 Exp[2 Pi I 2/5] + 31460 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> 14560, "twoM" -> 5|>,
-                <|"e" -> (-560 + -1120 Exp[2 Pi I 2/5] + -1120 Exp[2 Pi I 3/5]), "twoM" -> 9|>,
-                <|"e" -> -280, "twoM" -> 13|>,
-                <|"e" -> (-15 + -30 Exp[2 Pi I 2/5] + -30 Exp[2 Pi I 3/5]), "twoM" -> 17|>
+                <|
+                  "e" -> (1078 Exp[2 Pi I 3/20] + -539 Exp[2 Pi I 5/20] + 1078 Exp[2 Pi I 7/20]),
+                  "twoM" -> -15
+                |>,
+                <|"e" -> 12400 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (-33488 Exp[2 Pi I 3/20] + 16744 Exp[2 Pi I 5/20] + -33488 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> -28600 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (-31460 Exp[2 Pi I 3/20] + 15730 Exp[2 Pi I 5/20] + -31460 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> 14560 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (1120 Exp[2 Pi I 3/20] + -560 Exp[2 Pi I 5/20] + 1120 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>,
+                <|"e" -> -280 Exp[2 Pi I/4], "twoM" -> 13|>,
+                <|
+                  "e" -> (30 Exp[2 Pi I 3/20] + -15 Exp[2 Pi I 5/20] + 30 Exp[2 Pi I 7/20]),
+                  "twoM" -> 17
+                |>
               },
               "mu" -> 5
             |>,
             <|
               "components" -> {
-                <|"e" -> 107, "twoM" -> -17|>,
-                <|"e" -> (-464 + -928 Exp[2 Pi I 2/5] + -928 Exp[2 Pi I 3/5]), "twoM" -> -13|>,
-                <|"e" -> -3640, "twoM" -> -9|>,
-                <|"e" -> (728 + 1456 Exp[2 Pi I 2/5] + 1456 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> -4290, "twoM" -> -1|>,
-                <|"e" -> (120 + 240 Exp[2 Pi I 2/5] + 240 Exp[2 Pi I 3/5]), "twoM" -> 11|>,
-                <|"e" -> 15, "twoM" -> 15|>
+                <|"e" -> 107 Exp[2 Pi I/4], "twoM" -> -17|>,
+                <|
+                  "e" -> (928 Exp[2 Pi I 3/20] + -464 Exp[2 Pi I 5/20] + 928 Exp[2 Pi I 7/20]),
+                  "twoM" -> -13
+                |>,
+                <|"e" -> -3640 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (-1456 Exp[2 Pi I 3/20] + 728 Exp[2 Pi I 5/20] + -1456 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> -4290 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (-240 Exp[2 Pi I 3/20] + 120 Exp[2 Pi I 5/20] + -240 Exp[2 Pi I 7/20]),
+                  "twoM" -> 11
+                |>,
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> 15|>
               },
               "mu" -> 6
             |>
@@ -110201,109 +110643,163 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> -75, "twoM" -> -15|>,
-                <|"e" -> (-600 + -1200 Exp[2 Pi I 2/5] + -1200 Exp[2 Pi I 3/5]), "twoM" -> -11|>,
-                <|"e" -> 540, "twoM" -> -7|>,
-                <|"e" -> (-2376 + -4752 Exp[2 Pi I 2/5] + -4752 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> 3630, "twoM" -> 1|>,
-                <|"e" -> (1112 + 2224 Exp[2 Pi I 2/5] + 2224 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> 380, "twoM" -> 9|>,
-                <|"e" -> (-56 + -112 Exp[2 Pi I 2/5] + -112 Exp[2 Pi I 3/5]), "twoM" -> 13|>,
-                <|"e" -> 5, "twoM" -> 17|>
+                <|"e" -> 75 Exp[2 Pi I/4], "twoM" -> -15|>,
+                <|
+                  "e" -> (-1200 Exp[2 Pi I 3/20] + 600 Exp[2 Pi I 5/20] + -1200 Exp[2 Pi I 7/20]),
+                  "twoM" -> -11
+                |>,
+                <|"e" -> -540 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (-4752 Exp[2 Pi I 3/20] + 2376 Exp[2 Pi I 5/20] + -4752 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> -3630 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (2224 Exp[2 Pi I 3/20] + -1112 Exp[2 Pi I 5/20] + 2224 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> -380 Exp[2 Pi I/4], "twoM" -> 9|>,
+                <|
+                  "e" -> (-112 Exp[2 Pi I 3/20] + 56 Exp[2 Pi I 5/20] + -112 Exp[2 Pi I 7/20]),
+                  "twoM" -> 13
+                |>,
+                <|"e" -> -5 Exp[2 Pi I/4], "twoM" -> 17|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (15 + 30 Exp[2 Pi I 2/5] + 30 Exp[2 Pi I 3/5]), "twoM" -> -17|>,
-                <|"e" -> 280, "twoM" -> -13|>,
-                <|"e" -> (20 + 40 Exp[2 Pi I 2/5] + 40 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> -2680, "twoM" -> -5|>,
-                <|"e" -> (2090 + 4180 Exp[2 Pi I 2/5] + 4180 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> 4840, "twoM" -> 3|>,
-                <|"e" -> (1076 + 2152 Exp[2 Pi I 2/5] + 2152 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> -520, "twoM" -> 11|>,
-                <|"e" -> (-1 + -2 Exp[2 Pi I 2/5] + -2 Exp[2 Pi I 3/5]), "twoM" -> 15|>
+                <|
+                  "e" -> (30 Exp[2 Pi I 3/20] + -15 Exp[2 Pi I 5/20] + 30 Exp[2 Pi I 7/20]),
+                  "twoM" -> -17
+                |>,
+                <|"e" -> -280 Exp[2 Pi I/4], "twoM" -> -13|>,
+                <|
+                  "e" -> (40 Exp[2 Pi I 3/20] + -20 Exp[2 Pi I 5/20] + 40 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> 2680 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (4180 Exp[2 Pi I 3/20] + -2090 Exp[2 Pi I 5/20] + 4180 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> -4840 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (2152 Exp[2 Pi I 3/20] + -1076 Exp[2 Pi I 5/20] + 2152 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> 520 Exp[2 Pi I/4], "twoM" -> 11|>,
+                <|
+                  "e" -> (-2 Exp[2 Pi I 3/20] + Exp[2 Pi I 5/20] + -2 Exp[2 Pi I 7/20]),
+                  "twoM" -> 15
+                |>
               },
               "mu" -> 2
             |>,
             <|
               "components" -> {
-                <|"e" -> (-145 Exp[2 Pi I/8] + 145 Exp[2 Pi I 3/8]), "twoM" -> -15|>,
+                <|"e" -> (145 Exp[2 Pi I/8] + 145 Exp[2 Pi I 3/8]), "twoM" -> -15|>,
                 <|
-                  "e" -> (-80 Exp[2 Pi I/40] + -80 Exp[2 Pi I 3/40] + 40 Exp[2 Pi I 5/40] + 80 Exp[2 Pi I 7/40] + -80 Exp[2 Pi I 9/40] + 40 Exp[2 Pi I 15/40]),
+                  "e" -> (80 Exp[2 Pi I/40] + -80 Exp[2 Pi I 3/40] + -40 Exp[2 Pi I 5/40] + 80 Exp[2 Pi I 7/40] + 80 Exp[2 Pi I 9/40] + 40 Exp[2 Pi I 15/40]),
                   "twoM" -> -11
                 |>,
-                <|"e" -> (-860 Exp[2 Pi I/8] + 860 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
+                <|"e" -> (860 Exp[2 Pi I/8] + 860 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
                 <|
-                  "e" -> (-176 Exp[2 Pi I/40] + -176 Exp[2 Pi I 3/40] + 88 Exp[2 Pi I 5/40] + 176 Exp[2 Pi I 7/40] + -176 Exp[2 Pi I 9/40] + 88 Exp[2 Pi I 15/40]),
+                  "e" -> (176 Exp[2 Pi I/40] + -176 Exp[2 Pi I 3/40] + -88 Exp[2 Pi I 5/40] + 176 Exp[2 Pi I 7/40] + 176 Exp[2 Pi I 9/40] + 88 Exp[2 Pi I 15/40]),
                   "twoM" -> -3
                 |>,
-                <|"e" -> (-2310 Exp[2 Pi I/8] + 2310 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
+                <|"e" -> (2310 Exp[2 Pi I/8] + 2310 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
                 <|
-                  "e" -> (1488 Exp[2 Pi I/40] + 1488 Exp[2 Pi I 3/40] + -744 Exp[2 Pi I 5/40] + -1488 Exp[2 Pi I 7/40] + 1488 Exp[2 Pi I 9/40] + -744 Exp[2 Pi I 15/40]),
+                  "e" -> (-1488 Exp[2 Pi I/40] + 1488 Exp[2 Pi I 3/40] + 744 Exp[2 Pi I 5/40] + -1488 Exp[2 Pi I 7/40] + -1488 Exp[2 Pi I 9/40] + -744 Exp[2 Pi I 15/40]),
                   "twoM" -> 5
                 |>,
-                <|"e" -> (1380 Exp[2 Pi I/8] + -1380 Exp[2 Pi I 3/8]), "twoM" -> 9|>,
+                <|"e" -> (-1380 Exp[2 Pi I/8] + -1380 Exp[2 Pi I 3/8]), "twoM" -> 9|>,
                 <|
-                  "e" -> (48 Exp[2 Pi I/40] + 48 Exp[2 Pi I 3/40] + -24 Exp[2 Pi I 5/40] + -48 Exp[2 Pi I 7/40] + 48 Exp[2 Pi I 9/40] + -24 Exp[2 Pi I 15/40]),
+                  "e" -> (-48 Exp[2 Pi I/40] + 48 Exp[2 Pi I 3/40] + 24 Exp[2 Pi I 5/40] + -48 Exp[2 Pi I 7/40] + -48 Exp[2 Pi I 9/40] + -24 Exp[2 Pi I 15/40]),
                   "twoM" -> 13
                 |>,
-                <|"e" -> (15 Exp[2 Pi I/8] + -15 Exp[2 Pi I 3/8]), "twoM" -> 17|>
+                <|"e" -> (-15 Exp[2 Pi I/8] + -15 Exp[2 Pi I 3/8]), "twoM" -> 17|>
               },
               "mu" -> 3
             |>,
             <|
               "components" -> {
-                <|"e" -> (15 Exp[2 Pi I/8] + -15 Exp[2 Pi I 3/8]), "twoM" -> -17|>,
+                <|"e" -> (-15 Exp[2 Pi I/8] + -15 Exp[2 Pi I 3/8]), "twoM" -> -17|>,
                 <|
-                  "e" -> (48 Exp[2 Pi I/40] + 48 Exp[2 Pi I 3/40] + -24 Exp[2 Pi I 5/40] + -48 Exp[2 Pi I 7/40] + 48 Exp[2 Pi I 9/40] + -24 Exp[2 Pi I 15/40]),
+                  "e" -> (-48 Exp[2 Pi I/40] + 48 Exp[2 Pi I 3/40] + 24 Exp[2 Pi I 5/40] + -48 Exp[2 Pi I 7/40] + -48 Exp[2 Pi I 9/40] + -24 Exp[2 Pi I 15/40]),
                   "twoM" -> -13
                 |>,
-                <|"e" -> (1380 Exp[2 Pi I/8] + -1380 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
+                <|"e" -> (-1380 Exp[2 Pi I/8] + -1380 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
                 <|
-                  "e" -> (1488 Exp[2 Pi I/40] + 1488 Exp[2 Pi I 3/40] + -744 Exp[2 Pi I 5/40] + -1488 Exp[2 Pi I 7/40] + 1488 Exp[2 Pi I 9/40] + -744 Exp[2 Pi I 15/40]),
+                  "e" -> (-1488 Exp[2 Pi I/40] + 1488 Exp[2 Pi I 3/40] + 744 Exp[2 Pi I 5/40] + -1488 Exp[2 Pi I 7/40] + -1488 Exp[2 Pi I 9/40] + -744 Exp[2 Pi I 15/40]),
                   "twoM" -> -5
                 |>,
-                <|"e" -> (-2310 Exp[2 Pi I/8] + 2310 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
+                <|"e" -> (2310 Exp[2 Pi I/8] + 2310 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
                 <|
-                  "e" -> (-176 Exp[2 Pi I/40] + -176 Exp[2 Pi I 3/40] + 88 Exp[2 Pi I 5/40] + 176 Exp[2 Pi I 7/40] + -176 Exp[2 Pi I 9/40] + 88 Exp[2 Pi I 15/40]),
+                  "e" -> (176 Exp[2 Pi I/40] + -176 Exp[2 Pi I 3/40] + -88 Exp[2 Pi I 5/40] + 176 Exp[2 Pi I 7/40] + 176 Exp[2 Pi I 9/40] + 88 Exp[2 Pi I 15/40]),
                   "twoM" -> 3
                 |>,
-                <|"e" -> (-860 Exp[2 Pi I/8] + 860 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
+                <|"e" -> (860 Exp[2 Pi I/8] + 860 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
                 <|
-                  "e" -> (-80 Exp[2 Pi I/40] + -80 Exp[2 Pi I 3/40] + 40 Exp[2 Pi I 5/40] + 80 Exp[2 Pi I 7/40] + -80 Exp[2 Pi I 9/40] + 40 Exp[2 Pi I 15/40]),
+                  "e" -> (80 Exp[2 Pi I/40] + -80 Exp[2 Pi I 3/40] + -40 Exp[2 Pi I 5/40] + 80 Exp[2 Pi I 7/40] + 80 Exp[2 Pi I 9/40] + 40 Exp[2 Pi I 15/40]),
                   "twoM" -> 11
                 |>,
-                <|"e" -> (-145 Exp[2 Pi I/8] + 145 Exp[2 Pi I 3/8]), "twoM" -> 15|>
+                <|"e" -> (145 Exp[2 Pi I/8] + 145 Exp[2 Pi I 3/8]), "twoM" -> 15|>
               },
               "mu" -> 4
             |>,
             <|
               "components" -> {
-                <|"e" -> (-1 + -2 Exp[2 Pi I 2/5] + -2 Exp[2 Pi I 3/5]), "twoM" -> -15|>,
-                <|"e" -> -520, "twoM" -> -11|>,
-                <|"e" -> (1076 + 2152 Exp[2 Pi I 2/5] + 2152 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> 4840, "twoM" -> -3|>,
-                <|"e" -> (2090 + 4180 Exp[2 Pi I 2/5] + 4180 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> -2680, "twoM" -> 5|>,
-                <|"e" -> (20 + 40 Exp[2 Pi I 2/5] + 40 Exp[2 Pi I 3/5]), "twoM" -> 9|>,
-                <|"e" -> 280, "twoM" -> 13|>,
-                <|"e" -> (15 + 30 Exp[2 Pi I 2/5] + 30 Exp[2 Pi I 3/5]), "twoM" -> 17|>
+                <|
+                  "e" -> (-2 Exp[2 Pi I 3/20] + Exp[2 Pi I 5/20] + -2 Exp[2 Pi I 7/20]),
+                  "twoM" -> -15
+                |>,
+                <|"e" -> 520 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (2152 Exp[2 Pi I 3/20] + -1076 Exp[2 Pi I 5/20] + 2152 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> -4840 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (4180 Exp[2 Pi I 3/20] + -2090 Exp[2 Pi I 5/20] + 4180 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> 2680 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (40 Exp[2 Pi I 3/20] + -20 Exp[2 Pi I 5/20] + 40 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>,
+                <|"e" -> -280 Exp[2 Pi I/4], "twoM" -> 13|>,
+                <|
+                  "e" -> (30 Exp[2 Pi I 3/20] + -15 Exp[2 Pi I 5/20] + 30 Exp[2 Pi I 7/20]),
+                  "twoM" -> 17
+                |>
               },
               "mu" -> 5
             |>,
             <|
               "components" -> {
-                <|"e" -> 5, "twoM" -> -17|>,
-                <|"e" -> (-56 + -112 Exp[2 Pi I 2/5] + -112 Exp[2 Pi I 3/5]), "twoM" -> -13|>,
-                <|"e" -> 380, "twoM" -> -9|>,
-                <|"e" -> (1112 + 2224 Exp[2 Pi I 2/5] + 2224 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> 3630, "twoM" -> -1|>,
-                <|"e" -> (-2376 + -4752 Exp[2 Pi I 2/5] + -4752 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> 540, "twoM" -> 7|>,
-                <|"e" -> (-600 + -1200 Exp[2 Pi I 2/5] + -1200 Exp[2 Pi I 3/5]), "twoM" -> 11|>,
-                <|"e" -> -75, "twoM" -> 15|>
+                <|"e" -> -5 Exp[2 Pi I/4], "twoM" -> -17|>,
+                <|
+                  "e" -> (-112 Exp[2 Pi I 3/20] + 56 Exp[2 Pi I 5/20] + -112 Exp[2 Pi I 7/20]),
+                  "twoM" -> -13
+                |>,
+                <|"e" -> -380 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (2224 Exp[2 Pi I 3/20] + -1112 Exp[2 Pi I 5/20] + 2224 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> -3630 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (-4752 Exp[2 Pi I 3/20] + 2376 Exp[2 Pi I 5/20] + -4752 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> -540 Exp[2 Pi I/4], "twoM" -> 7|>,
+                <|
+                  "e" -> (-1200 Exp[2 Pi I 3/20] + 600 Exp[2 Pi I 5/20] + -1200 Exp[2 Pi I 7/20]),
+                  "twoM" -> 11
+                |>,
+                <|"e" -> 75 Exp[2 Pi I/4], "twoM" -> 15|>
               },
               "mu" -> 6
             |>
@@ -110318,31 +110814,61 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -19|>,
-                <|"e" -> (171 + 342 Exp[2 Pi I 2/5] + 342 Exp[2 Pi I 3/5]), "twoM" -> -15|>,
-                <|"e" -> -228, "twoM" -> -11|>,
-                <|"e" -> (1596 + 3192 Exp[2 Pi I 2/5] + 3192 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> -4446, "twoM" -> -3|>,
-                <|"e" -> (-2470 + -4940 Exp[2 Pi I 2/5] + -4940 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> -2964, "twoM" -> 5|>,
-                <|"e" -> (684 + 1368 Exp[2 Pi I 2/5] + 1368 Exp[2 Pi I 3/5]), "twoM" -> 9|>,
-                <|"e" -> -57, "twoM" -> 13|>,
-                <|"e" -> (19 + 38 Exp[2 Pi I 2/5] + 38 Exp[2 Pi I 3/5]), "twoM" -> 17|>
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> -19|>,
+                <|
+                  "e" -> (-342 Exp[2 Pi I 3/20] + 171 Exp[2 Pi I 5/20] + -342 Exp[2 Pi I 7/20]),
+                  "twoM" -> -15
+                |>,
+                <|"e" -> -228 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (-3192 Exp[2 Pi I 3/20] + 1596 Exp[2 Pi I 5/20] + -3192 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> -4446 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (4940 Exp[2 Pi I 3/20] + -2470 Exp[2 Pi I 5/20] + 4940 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> -2964 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (-1368 Exp[2 Pi I 3/20] + 684 Exp[2 Pi I 5/20] + -1368 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>,
+                <|"e" -> -57 Exp[2 Pi I/4], "twoM" -> 13|>,
+                <|
+                  "e" -> (-38 Exp[2 Pi I 3/20] + 19 Exp[2 Pi I 5/20] + -38 Exp[2 Pi I 7/20]),
+                  "twoM" -> 17
+                |>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (-19 + -38 Exp[2 Pi I 2/5] + -38 Exp[2 Pi I 3/5]), "twoM" -> -17|>,
-                <|"e" -> 57, "twoM" -> -13|>,
-                <|"e" -> (-684 + -1368 Exp[2 Pi I 2/5] + -1368 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> 2964, "twoM" -> -5|>,
-                <|"e" -> (2470 + 4940 Exp[2 Pi I 2/5] + 4940 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> 4446, "twoM" -> 3|>,
-                <|"e" -> (-1596 + -3192 Exp[2 Pi I 2/5] + -3192 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> 228, "twoM" -> 11|>,
-                <|"e" -> (-171 + -342 Exp[2 Pi I 2/5] + -342 Exp[2 Pi I 3/5]), "twoM" -> 15|>,
-                <|"e" -> -15, "twoM" -> 19|>
+                <|
+                  "e" -> (38 Exp[2 Pi I 3/20] + -19 Exp[2 Pi I 5/20] + 38 Exp[2 Pi I 7/20]),
+                  "twoM" -> -17
+                |>,
+                <|"e" -> 57 Exp[2 Pi I/4], "twoM" -> -13|>,
+                <|
+                  "e" -> (1368 Exp[2 Pi I 3/20] + -684 Exp[2 Pi I 5/20] + 1368 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> 2964 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (-4940 Exp[2 Pi I 3/20] + 2470 Exp[2 Pi I 5/20] + -4940 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> 4446 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (3192 Exp[2 Pi I 3/20] + -1596 Exp[2 Pi I 5/20] + 3192 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> 228 Exp[2 Pi I/4], "twoM" -> 11|>,
+                <|
+                  "e" -> (342 Exp[2 Pi I 3/20] + -171 Exp[2 Pi I 5/20] + 342 Exp[2 Pi I 7/20]),
+                  "twoM" -> 15
+                |>,
+                <|"e" -> -15 Exp[2 Pi I/4], "twoM" -> 19|>
               },
               "mu" -> 2
             |>
@@ -110357,31 +110883,61 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 5, "twoM" -> -19|>,
-                <|"e" -> (-15 + -30 Exp[2 Pi I 2/5] + -30 Exp[2 Pi I 3/5]), "twoM" -> -15|>,
-                <|"e" -> -284, "twoM" -> -11|>,
-                <|"e" -> (-348 + -696 Exp[2 Pi I 2/5] + -696 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> -858, "twoM" -> -3|>,
-                <|"e" -> (286 + 572 Exp[2 Pi I 2/5] + 572 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> -1612, "twoM" -> 5|>,
-                <|"e" -> (84 + 168 Exp[2 Pi I 2/5] + 168 Exp[2 Pi I 3/5]), "twoM" -> 9|>,
-                <|"e" -> 189, "twoM" -> 13|>,
-                <|"e" -> (-7 + -14 Exp[2 Pi I 2/5] + -14 Exp[2 Pi I 3/5]), "twoM" -> 17|>
+                <|"e" -> 5 Exp[2 Pi I/4], "twoM" -> -19|>,
+                <|
+                  "e" -> (30 Exp[2 Pi I 3/20] + -15 Exp[2 Pi I 5/20] + 30 Exp[2 Pi I 7/20]),
+                  "twoM" -> -15
+                |>,
+                <|"e" -> -284 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (696 Exp[2 Pi I 3/20] + -348 Exp[2 Pi I 5/20] + 696 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> -858 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (-572 Exp[2 Pi I 3/20] + 286 Exp[2 Pi I 5/20] + -572 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> -1612 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (-168 Exp[2 Pi I 3/20] + 84 Exp[2 Pi I 5/20] + -168 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>,
+                <|"e" -> 189 Exp[2 Pi I/4], "twoM" -> 13|>,
+                <|
+                  "e" -> (14 Exp[2 Pi I 3/20] + -7 Exp[2 Pi I 5/20] + 14 Exp[2 Pi I 7/20]),
+                  "twoM" -> 17
+                |>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (7 + 14 Exp[2 Pi I 2/5] + 14 Exp[2 Pi I 3/5]), "twoM" -> -17|>,
-                <|"e" -> -189, "twoM" -> -13|>,
-                <|"e" -> (-84 + -168 Exp[2 Pi I 2/5] + -168 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> 1612, "twoM" -> -5|>,
-                <|"e" -> (-286 + -572 Exp[2 Pi I 2/5] + -572 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> 858, "twoM" -> 3|>,
-                <|"e" -> (348 + 696 Exp[2 Pi I 2/5] + 696 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> 284, "twoM" -> 11|>,
-                <|"e" -> (15 + 30 Exp[2 Pi I 2/5] + 30 Exp[2 Pi I 3/5]), "twoM" -> 15|>,
-                <|"e" -> -5, "twoM" -> 19|>
+                <|
+                  "e" -> (-14 Exp[2 Pi I 3/20] + 7 Exp[2 Pi I 5/20] + -14 Exp[2 Pi I 7/20]),
+                  "twoM" -> -17
+                |>,
+                <|"e" -> -189 Exp[2 Pi I/4], "twoM" -> -13|>,
+                <|
+                  "e" -> (168 Exp[2 Pi I 3/20] + -84 Exp[2 Pi I 5/20] + 168 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> 1612 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (572 Exp[2 Pi I 3/20] + -286 Exp[2 Pi I 5/20] + 572 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> 858 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (-696 Exp[2 Pi I 3/20] + 348 Exp[2 Pi I 5/20] + -696 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> 284 Exp[2 Pi I/4], "twoM" -> 11|>,
+                <|
+                  "e" -> (-30 Exp[2 Pi I 3/20] + 15 Exp[2 Pi I 5/20] + -30 Exp[2 Pi I 7/20]),
+                  "twoM" -> 15
+                |>,
+                <|"e" -> -5 Exp[2 Pi I/4], "twoM" -> 19|>
               },
               "mu" -> 2
             |>
@@ -110396,44 +110952,59 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -17|>,
-                <|"e" -> (153 + 306 Exp[2 Pi I 2/5] + 306 Exp[2 Pi I 3/5]), "twoM" -> -13|>,
-                <|"e" -> -180, "twoM" -> -9|>,
-                <|"e" -> (1092 + 2184 Exp[2 Pi I 2/5] + 2184 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> -2574, "twoM" -> -1|>,
-                <|"e" -> (-1170 + -2340 Exp[2 Pi I 2/5] + -2340 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> -1092, "twoM" -> 7|>,
-                <|"e" -> (180 + 360 Exp[2 Pi I 2/5] + 360 Exp[2 Pi I 3/5]), "twoM" -> 11|>,
-                <|"e" -> -9, "twoM" -> 15|>,
-                <|"e" -> (1 + 2 Exp[2 Pi I 2/5] + 2 Exp[2 Pi I 3/5]), "twoM" -> 19|>
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> -17|>,
+                <|
+                  "e" -> (-306 Exp[2 Pi I 3/20] + 153 Exp[2 Pi I 5/20] + -306 Exp[2 Pi I 7/20]),
+                  "twoM" -> -13
+                |>,
+                <|"e" -> -180 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (-2184 Exp[2 Pi I 3/20] + 1092 Exp[2 Pi I 5/20] + -2184 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> -2574 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (2340 Exp[2 Pi I 3/20] + -1170 Exp[2 Pi I 5/20] + 2340 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> -1092 Exp[2 Pi I/4], "twoM" -> 7|>,
+                <|
+                  "e" -> (-360 Exp[2 Pi I 3/20] + 180 Exp[2 Pi I 5/20] + -360 Exp[2 Pi I 7/20]),
+                  "twoM" -> 11
+                |>,
+                <|"e" -> -9 Exp[2 Pi I/4], "twoM" -> 15|>,
+                <|
+                  "e" -> (-2 Exp[2 Pi I 3/20] + Exp[2 Pi I 5/20] + -2 Exp[2 Pi I 7/20]),
+                  "twoM" -> 19
+                |>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (30 Exp[2 Pi I/12] + -15 Exp[2 Pi I 3/12]), "twoM" -> -19|>,
+                <|"e" -> (15 + 30 Exp[2 Pi I/3]), "twoM" -> -19|>,
                 <|
-                  "e" -> (234 Exp[2 Pi I/60] + -234 Exp[2 Pi I 5/60] + -468 Exp[2 Pi I 7/60] + -234 Exp[2 Pi I 9/60] + -234 Exp[2 Pi I 11/60] + 468 Exp[2 Pi I 13/60] + 351 Exp[2 Pi I 15/60]),
+                  "e" -> (351 + -468 Exp[2 Pi I/15] + -234 Exp[2 Pi I 2/15] + 234 Exp[2 Pi I 3/15] + -468 Exp[2 Pi I 4/15] + 234 Exp[2 Pi I 5/15] + -234 Exp[2 Pi I 7/15]),
                   "twoM" -> -15
                 |>,
-                <|"e" -> (-168 Exp[2 Pi I/12] + 84 Exp[2 Pi I 3/12]), "twoM" -> -11|>,
+                <|"e" -> (-84 + -168 Exp[2 Pi I/3]), "twoM" -> -11|>,
                 <|
-                  "e" -> (168 Exp[2 Pi I/60] + -168 Exp[2 Pi I 5/60] + -336 Exp[2 Pi I 7/60] + -168 Exp[2 Pi I 9/60] + -168 Exp[2 Pi I 11/60] + 336 Exp[2 Pi I 13/60] + 252 Exp[2 Pi I 15/60]),
+                  "e" -> (252 + -336 Exp[2 Pi I/15] + -168 Exp[2 Pi I 2/15] + 168 Exp[2 Pi I 3/15] + -336 Exp[2 Pi I 4/15] + 168 Exp[2 Pi I 5/15] + -168 Exp[2 Pi I 7/15]),
                   "twoM" -> -7
                 |>,
-                <|"e" -> (2340 Exp[2 Pi I/12] + -1170 Exp[2 Pi I 3/12]), "twoM" -> -3|>,
+                <|"e" -> (1170 + 2340 Exp[2 Pi I/3]), "twoM" -> -3|>,
                 <|
-                  "e" -> (2860 Exp[2 Pi I/60] + -2860 Exp[2 Pi I 5/60] + -5720 Exp[2 Pi I 7/60] + -2860 Exp[2 Pi I 9/60] + -2860 Exp[2 Pi I 11/60] + 5720 Exp[2 Pi I 13/60] + 4290 Exp[2 Pi I 15/60]),
+                  "e" -> (4290 + -5720 Exp[2 Pi I/15] + -2860 Exp[2 Pi I 2/15] + 2860 Exp[2 Pi I 3/15] + -5720 Exp[2 Pi I 4/15] + 2860 Exp[2 Pi I 5/15] + -2860 Exp[2 Pi I 7/15]),
                   "twoM" -> 1
                 |>,
-                <|"e" -> (5304 Exp[2 Pi I/12] + -2652 Exp[2 Pi I 3/12]), "twoM" -> 5|>,
+                <|"e" -> (2652 + 5304 Exp[2 Pi I/3]), "twoM" -> 5|>,
                 <|
-                  "e" -> (-1656 Exp[2 Pi I/60] + 1656 Exp[2 Pi I 5/60] + 3312 Exp[2 Pi I 7/60] + 1656 Exp[2 Pi I 9/60] + 1656 Exp[2 Pi I 11/60] + -3312 Exp[2 Pi I 13/60] + -2484 Exp[2 Pi I 15/60]),
+                  "e" -> (-2484 + 3312 Exp[2 Pi I/15] + 1656 Exp[2 Pi I 2/15] + -1656 Exp[2 Pi I 3/15] + 3312 Exp[2 Pi I 4/15] + -1656 Exp[2 Pi I 5/15] + 1656 Exp[2 Pi I 7/15]),
                   "twoM" -> 9
                 |>,
-                <|"e" -> (174 Exp[2 Pi I/12] + -87 Exp[2 Pi I 3/12]), "twoM" -> 13|>,
+                <|"e" -> (87 + 174 Exp[2 Pi I/3]), "twoM" -> 13|>,
                 <|
-                  "e" -> (-70 Exp[2 Pi I/60] + 70 Exp[2 Pi I 5/60] + 140 Exp[2 Pi I 7/60] + 70 Exp[2 Pi I 9/60] + 70 Exp[2 Pi I 11/60] + -140 Exp[2 Pi I 13/60] + -105 Exp[2 Pi I 15/60]),
+                  "e" -> (-105 + 140 Exp[2 Pi I/15] + 70 Exp[2 Pi I 2/15] + -70 Exp[2 Pi I 3/15] + 140 Exp[2 Pi I 4/15] + -70 Exp[2 Pi I 5/15] + 70 Exp[2 Pi I 7/15]),
                   "twoM" -> 17
                 |>
               },
@@ -110442,287 +111013,368 @@ o3d = <|
             <|
               "components" -> {
                 <|
-                  "e" -> (-70 Exp[2 Pi I/60] + 70 Exp[2 Pi I 5/60] + 140 Exp[2 Pi I 7/60] + 70 Exp[2 Pi I 9/60] + 70 Exp[2 Pi I 11/60] + -140 Exp[2 Pi I 13/60] + -105 Exp[2 Pi I 15/60]),
+                  "e" -> (-105 + 140 Exp[2 Pi I/15] + 70 Exp[2 Pi I 2/15] + -70 Exp[2 Pi I 3/15] + 140 Exp[2 Pi I 4/15] + -70 Exp[2 Pi I 5/15] + 70 Exp[2 Pi I 7/15]),
                   "twoM" -> -17
                 |>,
-                <|"e" -> (174 Exp[2 Pi I/12] + -87 Exp[2 Pi I 3/12]), "twoM" -> -13|>,
+                <|"e" -> (87 + 174 Exp[2 Pi I/3]), "twoM" -> -13|>,
                 <|
-                  "e" -> (-1656 Exp[2 Pi I/60] + 1656 Exp[2 Pi I 5/60] + 3312 Exp[2 Pi I 7/60] + 1656 Exp[2 Pi I 9/60] + 1656 Exp[2 Pi I 11/60] + -3312 Exp[2 Pi I 13/60] + -2484 Exp[2 Pi I 15/60]),
+                  "e" -> (-2484 + 3312 Exp[2 Pi I/15] + 1656 Exp[2 Pi I 2/15] + -1656 Exp[2 Pi I 3/15] + 3312 Exp[2 Pi I 4/15] + -1656 Exp[2 Pi I 5/15] + 1656 Exp[2 Pi I 7/15]),
                   "twoM" -> -9
                 |>,
-                <|"e" -> (5304 Exp[2 Pi I/12] + -2652 Exp[2 Pi I 3/12]), "twoM" -> -5|>,
+                <|"e" -> (2652 + 5304 Exp[2 Pi I/3]), "twoM" -> -5|>,
                 <|
-                  "e" -> (2860 Exp[2 Pi I/60] + -2860 Exp[2 Pi I 5/60] + -5720 Exp[2 Pi I 7/60] + -2860 Exp[2 Pi I 9/60] + -2860 Exp[2 Pi I 11/60] + 5720 Exp[2 Pi I 13/60] + 4290 Exp[2 Pi I 15/60]),
+                  "e" -> (4290 + -5720 Exp[2 Pi I/15] + -2860 Exp[2 Pi I 2/15] + 2860 Exp[2 Pi I 3/15] + -5720 Exp[2 Pi I 4/15] + 2860 Exp[2 Pi I 5/15] + -2860 Exp[2 Pi I 7/15]),
                   "twoM" -> -1
                 |>,
-                <|"e" -> (2340 Exp[2 Pi I/12] + -1170 Exp[2 Pi I 3/12]), "twoM" -> 3|>,
+                <|"e" -> (1170 + 2340 Exp[2 Pi I/3]), "twoM" -> 3|>,
                 <|
-                  "e" -> (168 Exp[2 Pi I/60] + -168 Exp[2 Pi I 5/60] + -336 Exp[2 Pi I 7/60] + -168 Exp[2 Pi I 9/60] + -168 Exp[2 Pi I 11/60] + 336 Exp[2 Pi I 13/60] + 252 Exp[2 Pi I 15/60]),
+                  "e" -> (252 + -336 Exp[2 Pi I/15] + -168 Exp[2 Pi I 2/15] + 168 Exp[2 Pi I 3/15] + -336 Exp[2 Pi I 4/15] + 168 Exp[2 Pi I 5/15] + -168 Exp[2 Pi I 7/15]),
                   "twoM" -> 7
                 |>,
-                <|"e" -> (-168 Exp[2 Pi I/12] + 84 Exp[2 Pi I 3/12]), "twoM" -> 11|>,
+                <|"e" -> (-84 + -168 Exp[2 Pi I/3]), "twoM" -> 11|>,
                 <|
-                  "e" -> (234 Exp[2 Pi I/60] + -234 Exp[2 Pi I 5/60] + -468 Exp[2 Pi I 7/60] + -234 Exp[2 Pi I 9/60] + -234 Exp[2 Pi I 11/60] + 468 Exp[2 Pi I 13/60] + 351 Exp[2 Pi I 15/60]),
+                  "e" -> (351 + -468 Exp[2 Pi I/15] + -234 Exp[2 Pi I 2/15] + 234 Exp[2 Pi I 3/15] + -468 Exp[2 Pi I 4/15] + 234 Exp[2 Pi I 5/15] + -234 Exp[2 Pi I 7/15]),
                   "twoM" -> 15
                 |>,
-                <|"e" -> (30 Exp[2 Pi I/12] + -15 Exp[2 Pi I 3/12]), "twoM" -> 19|>
-              },
-              "mu" -> 3
-            |>,
-            <|
-              "components" -> {
-                <|"e" -> (1 + 2 Exp[2 Pi I 2/5] + 2 Exp[2 Pi I 3/5]), "twoM" -> -19|>,
-                <|"e" -> -9, "twoM" -> -15|>,
-                <|"e" -> (180 + 360 Exp[2 Pi I 2/5] + 360 Exp[2 Pi I 3/5]), "twoM" -> -11|>,
-                <|"e" -> -1092, "twoM" -> -7|>,
-                <|"e" -> (-1170 + -2340 Exp[2 Pi I 2/5] + -2340 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> -2574, "twoM" -> 1|>,
-                <|"e" -> (1092 + 2184 Exp[2 Pi I 2/5] + 2184 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> -180, "twoM" -> 9|>,
-                <|"e" -> (153 + 306 Exp[2 Pi I 2/5] + 306 Exp[2 Pi I 3/5]), "twoM" -> 13|>,
-                <|"e" -> 15, "twoM" -> 17|>
-              },
-              "mu" -> 4
-            |>
-          }
-        |>,
-        <|
-          "dim" -> 6,
-          "irrep" -> "I_5/2",
-          "irrep_id" -> "I5h",
-          "kappa" -> 1,
-          "twoJ" -> 19,
-          "vectors" -> {
-            <|
-              "components" -> {
-                <|"e" -> 75, "twoM" -> -19|>,
-                <|"e" -> 19380, "twoM" -> -11|>,
-                <|"e" -> (840 + 1680 Exp[2 Pi I 2/5] + 1680 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> 104130, "twoM" -> -3|>,
-                <|"e" -> (-40040 + -80080 Exp[2 Pi I 2/5] + -80080 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> -67020, "twoM" -> 5|>,
-                <|"e" -> (-10056 + -20112 Exp[2 Pi I 2/5] + -20112 Exp[2 Pi I 3/5]), "twoM" -> 9|>,
-                <|"e" -> 5515, "twoM" -> 13|>,
-                <|"e" -> (-24 + -48 Exp[2 Pi I 2/5] + -48 Exp[2 Pi I 3/5]), "twoM" -> 17|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
-                <|"e" -> -1045, "twoM" -> -17|>,
-                <|"e" -> (-5814 + -11628 Exp[2 Pi I 2/5] + -11628 Exp[2 Pi I 3/5]), "twoM" -> -13|>,
-                <|"e" -> 14340, "twoM" -> -9|>,
-                <|"e" -> (-6656 + -13312 Exp[2 Pi I 2/5] + -13312 Exp[2 Pi I 3/5]), "twoM" -> -5|>,
-                <|"e" -> -20878, "twoM" -> -1|>,
-                <|"e" -> (-19020 + -38040 Exp[2 Pi I 2/5] + -38040 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> -41244, "twoM" -> 7|>,
-                <|"e" -> (9520 + 19040 Exp[2 Pi I 2/5] + 19040 Exp[2 Pi I 3/5]), "twoM" -> 11|>,
-                <|"e" -> -453, "twoM" -> 15|>,
-                <|"e" -> (82 + 164 Exp[2 Pi I 2/5] + 164 Exp[2 Pi I 3/5]), "twoM" -> 19|>
-              },
-              "mu" -> 2
-            |>,
-            <|
-              "components" -> {
-                <|"e" -> (-385 Exp[2 Pi I/8] + 385 Exp[2 Pi I 3/8]), "twoM" -> -19|>,
-                <|
-                  "e" -> (2166 Exp[2 Pi I/40] + 2166 Exp[2 Pi I 3/40] + -1083 Exp[2 Pi I 5/40] + -2166 Exp[2 Pi I 7/40] + 2166 Exp[2 Pi I 9/40] + -1083 Exp[2 Pi I 15/40]),
-                  "twoM" -> -15
-                |>,
-                <|"e" -> (-8724 Exp[2 Pi I/8] + 8724 Exp[2 Pi I 3/8]), "twoM" -> -11|>,
-                <|
-                  "e" -> (-49448 Exp[2 Pi I/40] + -49448 Exp[2 Pi I 3/40] + 24724 Exp[2 Pi I 5/40] + 49448 Exp[2 Pi I 7/40] + -49448 Exp[2 Pi I 9/40] + 24724 Exp[2 Pi I 15/40]),
-                  "twoM" -> -7
-                |>,
-                <|"e" -> (-79950 Exp[2 Pi I/8] + 79950 Exp[2 Pi I 3/8]), "twoM" -> -3|>,
-                <|
-                  "e" -> (106260 Exp[2 Pi I/40] + 106260 Exp[2 Pi I 3/40] + -53130 Exp[2 Pi I 5/40] + -106260 Exp[2 Pi I 7/40] + 106260 Exp[2 Pi I 9/40] + -53130 Exp[2 Pi I 15/40]),
-                  "twoM" -> 1
-                |>,
-                <|"e" -> (-9828 Exp[2 Pi I/8] + 9828 Exp[2 Pi I 3/8]), "twoM" -> 5|>,
-                <|
-                  "e" -> (18936 Exp[2 Pi I/40] + 18936 Exp[2 Pi I 3/40] + -9468 Exp[2 Pi I 5/40] + -18936 Exp[2 Pi I 7/40] + 18936 Exp[2 Pi I 9/40] + -9468 Exp[2 Pi I 15/40]),
-                  "twoM" -> 9
-                |>,
-                <|"e" -> (327 Exp[2 Pi I/8] + -327 Exp[2 Pi I 3/8]), "twoM" -> 13|>,
-                <|
-                  "e" -> (2470 Exp[2 Pi I/40] + 2470 Exp[2 Pi I 3/40] + -1235 Exp[2 Pi I 5/40] + -2470 Exp[2 Pi I 7/40] + 2470 Exp[2 Pi I 9/40] + -1235 Exp[2 Pi I 15/40]),
-                  "twoM" -> 17
-                |>
+                <|"e" -> (15 + 30 Exp[2 Pi I/3]), "twoM" -> 19|>
               },
               "mu" -> 3
             |>,
             <|
               "components" -> {
                 <|
-                  "e" -> (-2470 Exp[2 Pi I/40] + -2470 Exp[2 Pi I 3/40] + 1235 Exp[2 Pi I 5/40] + 2470 Exp[2 Pi I 7/40] + -2470 Exp[2 Pi I 9/40] + 1235 Exp[2 Pi I 15/40]),
-                  "twoM" -> -17
-                |>,
-                <|"e" -> (-327 Exp[2 Pi I/8] + 327 Exp[2 Pi I 3/8]), "twoM" -> -13|>,
-                <|
-                  "e" -> (-18936 Exp[2 Pi I/40] + -18936 Exp[2 Pi I 3/40] + 9468 Exp[2 Pi I 5/40] + 18936 Exp[2 Pi I 7/40] + -18936 Exp[2 Pi I 9/40] + 9468 Exp[2 Pi I 15/40]),
-                  "twoM" -> -9
-                |>,
-                <|"e" -> (9828 Exp[2 Pi I/8] + -9828 Exp[2 Pi I 3/8]), "twoM" -> -5|>,
-                <|
-                  "e" -> (-106260 Exp[2 Pi I/40] + -106260 Exp[2 Pi I 3/40] + 53130 Exp[2 Pi I 5/40] + 106260 Exp[2 Pi I 7/40] + -106260 Exp[2 Pi I 9/40] + 53130 Exp[2 Pi I 15/40]),
-                  "twoM" -> -1
-                |>,
-                <|"e" -> (79950 Exp[2 Pi I/8] + -79950 Exp[2 Pi I 3/8]), "twoM" -> 3|>,
-                <|
-                  "e" -> (49448 Exp[2 Pi I/40] + 49448 Exp[2 Pi I 3/40] + -24724 Exp[2 Pi I 5/40] + -49448 Exp[2 Pi I 7/40] + 49448 Exp[2 Pi I 9/40] + -24724 Exp[2 Pi I 15/40]),
-                  "twoM" -> 7
-                |>,
-                <|"e" -> (8724 Exp[2 Pi I/8] + -8724 Exp[2 Pi I 3/8]), "twoM" -> 11|>,
-                <|
-                  "e" -> (-2166 Exp[2 Pi I/40] + -2166 Exp[2 Pi I 3/40] + 1083 Exp[2 Pi I 5/40] + 2166 Exp[2 Pi I 7/40] + -2166 Exp[2 Pi I 9/40] + 1083 Exp[2 Pi I 15/40]),
-                  "twoM" -> 15
-                |>,
-                <|"e" -> (385 Exp[2 Pi I/8] + -385 Exp[2 Pi I 3/8]), "twoM" -> 19|>
-              },
-              "mu" -> 4
-            |>,
-            <|
-              "components" -> {
-                <|"e" -> (-82 + -164 Exp[2 Pi I 2/5] + -164 Exp[2 Pi I 3/5]), "twoM" -> -19|>,
-                <|"e" -> 453, "twoM" -> -15|>,
-                <|"e" -> (-9520 + -19040 Exp[2 Pi I 2/5] + -19040 Exp[2 Pi I 3/5]), "twoM" -> -11|>,
-                <|"e" -> 41244, "twoM" -> -7|>,
-                <|"e" -> (19020 + 38040 Exp[2 Pi I 2/5] + 38040 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> 20878, "twoM" -> 1|>,
-                <|"e" -> (6656 + 13312 Exp[2 Pi I 2/5] + 13312 Exp[2 Pi I 3/5]), "twoM" -> 5|>,
-                <|"e" -> -14340, "twoM" -> 9|>,
-                <|"e" -> (5814 + 11628 Exp[2 Pi I 2/5] + 11628 Exp[2 Pi I 3/5]), "twoM" -> 13|>,
-                <|"e" -> 1045, "twoM" -> 17|>
-              },
-              "mu" -> 5
-            |>,
-            <|
-              "components" -> {
-                <|"e" -> (24 + 48 Exp[2 Pi I 2/5] + 48 Exp[2 Pi I 3/5]), "twoM" -> -17|>,
-                <|"e" -> -5515, "twoM" -> -13|>,
-                <|"e" -> (10056 + 20112 Exp[2 Pi I 2/5] + 20112 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> 67020, "twoM" -> -5|>,
-                <|"e" -> (40040 + 80080 Exp[2 Pi I 2/5] + 80080 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> -104130, "twoM" -> 3|>,
-                <|"e" -> (-840 + -1680 Exp[2 Pi I 2/5] + -1680 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> -19380, "twoM" -> 11|>,
-                <|"e" -> -75, "twoM" -> 19|>
-              },
-              "mu" -> 6
-            |>
-          }
-        |>,
-        <|
-          "dim" -> 6,
-          "irrep" -> "I_5/2",
-          "irrep_id" -> "I5h",
-          "kappa" -> 2,
-          "twoJ" -> 19,
-          "vectors" -> {
-            <|
-              "components" -> {
-                <|
-                  "e" -> (-40755 + -81510 Exp[2 Pi I 2/5] + -81510 Exp[2 Pi I 3/5]),
+                  "e" -> (-2 Exp[2 Pi I 3/20] + Exp[2 Pi I 5/20] + -2 Exp[2 Pi I 7/20]),
                   "twoM" -> -19
                 |>,
-                <|"e" -> 1146495, "twoM" -> -15|>,
+                <|"e" -> -9 Exp[2 Pi I/4], "twoM" -> -15|>,
                 <|
-                  "e" -> (-136204 + -272408 Exp[2 Pi I 2/5] + -272408 Exp[2 Pi I 3/5]),
+                  "e" -> (-360 Exp[2 Pi I 3/20] + 180 Exp[2 Pi I 5/20] + -360 Exp[2 Pi I 7/20]),
                   "twoM" -> -11
                 |>,
-                <|"e" -> -12982900, "twoM" -> -7|>,
+                <|"e" -> -1092 Exp[2 Pi I/4], "twoM" -> -7|>,
                 <|
-                  "e" -> (-941018 + -1882036 Exp[2 Pi I 2/5] + -1882036 Exp[2 Pi I 3/5]),
+                  "e" -> (2340 Exp[2 Pi I 3/20] + -1170 Exp[2 Pi I 5/20] + 2340 Exp[2 Pi I 7/20]),
                   "twoM" -> -3
                 |>,
-                <|"e" -> -510510, "twoM" -> 1|>,
+                <|"e" -> -2574 Exp[2 Pi I/4], "twoM" -> 1|>,
                 <|
-                  "e" -> (-3326492 + -6652984 Exp[2 Pi I 2/5] + -6652984 Exp[2 Pi I 3/5]),
+                  "e" -> (-2184 Exp[2 Pi I 3/20] + 1092 Exp[2 Pi I 5/20] + -2184 Exp[2 Pi I 7/20]),
                   "twoM" -> 5
                 |>,
-                <|"e" -> -499460, "twoM" -> 9|>,
-                <|"e" -> (60469 + 120938 Exp[2 Pi I 2/5] + 120938 Exp[2 Pi I 3/5]), "twoM" -> 13|>,
-                <|"e" -> -11225, "twoM" -> 17|>
+                <|"e" -> -180 Exp[2 Pi I/4], "twoM" -> 9|>,
+                <|
+                  "e" -> (-306 Exp[2 Pi I 3/20] + 153 Exp[2 Pi I 5/20] + -306 Exp[2 Pi I 7/20]),
+                  "twoM" -> 13
+                |>,
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> 17|>
+              },
+              "mu" -> 4
+            |>
+          }
+        |>,
+        <|
+          "dim" -> 6,
+          "irrep" -> "I_5/2",
+          "irrep_id" -> "I5h",
+          "kappa" -> 1,
+          "twoJ" -> 19,
+          "vectors" -> {
+            <|
+              "components" -> {
+                <|"e" -> 75 Exp[2 Pi I/4], "twoM" -> -19|>,
+                <|"e" -> 19380 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (-1680 Exp[2 Pi I 3/20] + 840 Exp[2 Pi I 5/20] + -1680 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> 104130 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (80080 Exp[2 Pi I 3/20] + -40040 Exp[2 Pi I 5/20] + 80080 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> -67020 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (20112 Exp[2 Pi I 3/20] + -10056 Exp[2 Pi I 5/20] + 20112 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>,
+                <|"e" -> 5515 Exp[2 Pi I/4], "twoM" -> 13|>,
+                <|
+                  "e" -> (48 Exp[2 Pi I 3/20] + -24 Exp[2 Pi I 5/20] + 48 Exp[2 Pi I 7/20]),
+                  "twoM" -> 17
+                |>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (21851 + 43702 Exp[2 Pi I 2/5] + 43702 Exp[2 Pi I 3/5]), "twoM" -> -17|>,
-                <|"e" -> -219011, "twoM" -> -13|>,
+                <|"e" -> -1045 Exp[2 Pi I/4], "twoM" -> -17|>,
                 <|
-                  "e" -> (-1069300 + -2138600 Exp[2 Pi I 2/5] + -2138600 Exp[2 Pi I 3/5]),
+                  "e" -> (11628 Exp[2 Pi I 3/20] + -5814 Exp[2 Pi I 5/20] + 11628 Exp[2 Pi I 7/20]),
+                  "twoM" -> -13
+                |>,
+                <|"e" -> 14340 Exp[2 Pi I/4], "twoM" -> -9|>,
+                <|
+                  "e" -> (13312 Exp[2 Pi I 3/20] + -6656 Exp[2 Pi I 5/20] + 13312 Exp[2 Pi I 7/20]),
+                  "twoM" -> -5
+                |>,
+                <|"e" -> -20878 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (38040 Exp[2 Pi I 3/20] + -19020 Exp[2 Pi I 5/20] + 38040 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> -41244 Exp[2 Pi I/4], "twoM" -> 7|>,
+                <|
+                  "e" -> (-19040 Exp[2 Pi I 3/20] + 9520 Exp[2 Pi I 5/20] + -19040 Exp[2 Pi I 7/20]),
+                  "twoM" -> 11
+                |>,
+                <|"e" -> -453 Exp[2 Pi I/4], "twoM" -> 15|>,
+                <|
+                  "e" -> (-164 Exp[2 Pi I 3/20] + 82 Exp[2 Pi I 5/20] + -164 Exp[2 Pi I 7/20]),
+                  "twoM" -> 19
+                |>
+              },
+              "mu" -> 2
+            |>,
+            <|
+              "components" -> {
+                <|"e" -> (-385 Exp[2 Pi I/8] + -385 Exp[2 Pi I 3/8]), "twoM" -> -19|>,
+                <|
+                  "e" -> (2166 Exp[2 Pi I/40] + -2166 Exp[2 Pi I 3/40] + -1083 Exp[2 Pi I 5/40] + 2166 Exp[2 Pi I 7/40] + 2166 Exp[2 Pi I 9/40] + 1083 Exp[2 Pi I 15/40]),
+                  "twoM" -> -15
+                |>,
+                <|"e" -> (-8724 Exp[2 Pi I/8] + -8724 Exp[2 Pi I 3/8]), "twoM" -> -11|>,
+                <|
+                  "e" -> (-49448 Exp[2 Pi I/40] + 49448 Exp[2 Pi I 3/40] + 24724 Exp[2 Pi I 5/40] + -49448 Exp[2 Pi I 7/40] + -49448 Exp[2 Pi I 9/40] + -24724 Exp[2 Pi I 15/40]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> (-79950 Exp[2 Pi I/8] + -79950 Exp[2 Pi I 3/8]), "twoM" -> -3|>,
+                <|
+                  "e" -> (106260 Exp[2 Pi I/40] + -106260 Exp[2 Pi I 3/40] + -53130 Exp[2 Pi I 5/40] + 106260 Exp[2 Pi I 7/40] + 106260 Exp[2 Pi I 9/40] + 53130 Exp[2 Pi I 15/40]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> (-9828 Exp[2 Pi I/8] + -9828 Exp[2 Pi I 3/8]), "twoM" -> 5|>,
+                <|
+                  "e" -> (18936 Exp[2 Pi I/40] + -18936 Exp[2 Pi I 3/40] + -9468 Exp[2 Pi I 5/40] + 18936 Exp[2 Pi I 7/40] + 18936 Exp[2 Pi I 9/40] + 9468 Exp[2 Pi I 15/40]),
+                  "twoM" -> 9
+                |>,
+                <|"e" -> (327 Exp[2 Pi I/8] + 327 Exp[2 Pi I 3/8]), "twoM" -> 13|>,
+                <|
+                  "e" -> (2470 Exp[2 Pi I/40] + -2470 Exp[2 Pi I 3/40] + -1235 Exp[2 Pi I 5/40] + 2470 Exp[2 Pi I 7/40] + 2470 Exp[2 Pi I 9/40] + 1235 Exp[2 Pi I 15/40]),
+                  "twoM" -> 17
+                |>
+              },
+              "mu" -> 3
+            |>,
+            <|
+              "components" -> {
+                <|
+                  "e" -> (-2470 Exp[2 Pi I/40] + 2470 Exp[2 Pi I 3/40] + 1235 Exp[2 Pi I 5/40] + -2470 Exp[2 Pi I 7/40] + -2470 Exp[2 Pi I 9/40] + -1235 Exp[2 Pi I 15/40]),
+                  "twoM" -> -17
+                |>,
+                <|"e" -> (-327 Exp[2 Pi I/8] + -327 Exp[2 Pi I 3/8]), "twoM" -> -13|>,
+                <|
+                  "e" -> (-18936 Exp[2 Pi I/40] + 18936 Exp[2 Pi I 3/40] + 9468 Exp[2 Pi I 5/40] + -18936 Exp[2 Pi I 7/40] + -18936 Exp[2 Pi I 9/40] + -9468 Exp[2 Pi I 15/40]),
                   "twoM" -> -9
                 |>,
-                <|"e" -> -1947452, "twoM" -> -5|>,
+                <|"e" -> (9828 Exp[2 Pi I/8] + 9828 Exp[2 Pi I 3/8]), "twoM" -> -5|>,
                 <|
-                  "e" -> (520234 + 1040468 Exp[2 Pi I 2/5] + 1040468 Exp[2 Pi I 3/5]),
+                  "e" -> (-106260 Exp[2 Pi I/40] + 106260 Exp[2 Pi I 3/40] + 53130 Exp[2 Pi I 5/40] + -106260 Exp[2 Pi I 7/40] + -106260 Exp[2 Pi I 9/40] + -53130 Exp[2 Pi I 15/40]),
                   "twoM" -> -1
                 |>,
-                <|"e" -> -3575338, "twoM" -> 3|>,
-                <|"e" -> (30940 + 61880 Exp[2 Pi I 2/5] + 61880 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> 24276, "twoM" -> 11|>,
-                <|"e" -> (-18029 + -36058 Exp[2 Pi I 2/5] + -36058 Exp[2 Pi I 3/5]), "twoM" -> 15|>,
-                <|"e" -> 1301, "twoM" -> 19|>
+                <|"e" -> (79950 Exp[2 Pi I/8] + 79950 Exp[2 Pi I 3/8]), "twoM" -> 3|>,
+                <|
+                  "e" -> (49448 Exp[2 Pi I/40] + -49448 Exp[2 Pi I 3/40] + -24724 Exp[2 Pi I 5/40] + 49448 Exp[2 Pi I 7/40] + 49448 Exp[2 Pi I 9/40] + 24724 Exp[2 Pi I 15/40]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> (8724 Exp[2 Pi I/8] + 8724 Exp[2 Pi I 3/8]), "twoM" -> 11|>,
+                <|
+                  "e" -> (-2166 Exp[2 Pi I/40] + 2166 Exp[2 Pi I 3/40] + 1083 Exp[2 Pi I 5/40] + -2166 Exp[2 Pi I 7/40] + -2166 Exp[2 Pi I 9/40] + -1083 Exp[2 Pi I 15/40]),
+                  "twoM" -> 15
+                |>,
+                <|"e" -> (385 Exp[2 Pi I/8] + 385 Exp[2 Pi I 3/8]), "twoM" -> 19|>
+              },
+              "mu" -> 4
+            |>,
+            <|
+              "components" -> {
+                <|
+                  "e" -> (164 Exp[2 Pi I 3/20] + -82 Exp[2 Pi I 5/20] + 164 Exp[2 Pi I 7/20]),
+                  "twoM" -> -19
+                |>,
+                <|"e" -> 453 Exp[2 Pi I/4], "twoM" -> -15|>,
+                <|
+                  "e" -> (19040 Exp[2 Pi I 3/20] + -9520 Exp[2 Pi I 5/20] + 19040 Exp[2 Pi I 7/20]),
+                  "twoM" -> -11
+                |>,
+                <|"e" -> 41244 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (-38040 Exp[2 Pi I 3/20] + 19020 Exp[2 Pi I 5/20] + -38040 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> 20878 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (-13312 Exp[2 Pi I 3/20] + 6656 Exp[2 Pi I 5/20] + -13312 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> -14340 Exp[2 Pi I/4], "twoM" -> 9|>,
+                <|
+                  "e" -> (-11628 Exp[2 Pi I 3/20] + 5814 Exp[2 Pi I 5/20] + -11628 Exp[2 Pi I 7/20]),
+                  "twoM" -> 13
+                |>,
+                <|"e" -> 1045 Exp[2 Pi I/4], "twoM" -> 17|>
+              },
+              "mu" -> 5
+            |>,
+            <|
+              "components" -> {
+                <|
+                  "e" -> (-48 Exp[2 Pi I 3/20] + 24 Exp[2 Pi I 5/20] + -48 Exp[2 Pi I 7/20]),
+                  "twoM" -> -17
+                |>,
+                <|"e" -> -5515 Exp[2 Pi I/4], "twoM" -> -13|>,
+                <|
+                  "e" -> (-20112 Exp[2 Pi I 3/20] + 10056 Exp[2 Pi I 5/20] + -20112 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> 67020 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (-80080 Exp[2 Pi I 3/20] + 40040 Exp[2 Pi I 5/20] + -80080 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> -104130 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (1680 Exp[2 Pi I 3/20] + -840 Exp[2 Pi I 5/20] + 1680 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> -19380 Exp[2 Pi I/4], "twoM" -> 11|>,
+                <|"e" -> -75 Exp[2 Pi I/4], "twoM" -> 19|>
+              },
+              "mu" -> 6
+            |>
+          }
+        |>,
+        <|
+          "dim" -> 6,
+          "irrep" -> "I_5/2",
+          "irrep_id" -> "I5h",
+          "kappa" -> 2,
+          "twoJ" -> 19,
+          "vectors" -> {
+            <|
+              "components" -> {
+                <|
+                  "e" -> (81510 Exp[2 Pi I 3/20] + -40755 Exp[2 Pi I 5/20] + 81510 Exp[2 Pi I 7/20]),
+                  "twoM" -> -19
+                |>,
+                <|"e" -> 1146495 Exp[2 Pi I/4], "twoM" -> -15|>,
+                <|
+                  "e" -> (272408 Exp[2 Pi I 3/20] + -136204 Exp[2 Pi I 5/20] + 272408 Exp[2 Pi I 7/20]),
+                  "twoM" -> -11
+                |>,
+                <|"e" -> -12982900 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (1882036 Exp[2 Pi I 3/20] + -941018 Exp[2 Pi I 5/20] + 1882036 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> -510510 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (6652984 Exp[2 Pi I 3/20] + -3326492 Exp[2 Pi I 5/20] + 6652984 Exp[2 Pi I 7/20]),
+                  "twoM" -> 5
+                |>,
+                <|"e" -> -499460 Exp[2 Pi I/4], "twoM" -> 9|>,
+                <|
+                  "e" -> (-120938 Exp[2 Pi I 3/20] + 60469 Exp[2 Pi I 5/20] + -120938 Exp[2 Pi I 7/20]),
+                  "twoM" -> 13
+                |>,
+                <|"e" -> -11225 Exp[2 Pi I/4], "twoM" -> 17|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
+                <|
+                  "e" -> (-43702 Exp[2 Pi I 3/20] + 21851 Exp[2 Pi I 5/20] + -43702 Exp[2 Pi I 7/20]),
+                  "twoM" -> -17
+                |>,
+                <|"e" -> -219011 Exp[2 Pi I/4], "twoM" -> -13|>,
+                <|
+                  "e" -> (2138600 Exp[2 Pi I 3/20] + -1069300 Exp[2 Pi I 5/20] + 2138600 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> -1947452 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (-1040468 Exp[2 Pi I 3/20] + 520234 Exp[2 Pi I 5/20] + -1040468 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> -3575338 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (-61880 Exp[2 Pi I 3/20] + 30940 Exp[2 Pi I 5/20] + -61880 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> 24276 Exp[2 Pi I/4], "twoM" -> 11|>,
+                <|
+                  "e" -> (36058 Exp[2 Pi I 3/20] + -18029 Exp[2 Pi I 5/20] + 36058 Exp[2 Pi I 7/20]),
+                  "twoM" -> 15
+                |>,
+                <|"e" -> 1301 Exp[2 Pi I/4], "twoM" -> 19|>
               },
               "mu" -> 2
             |>,
             <|
               "components" -> {
                 <|
-                  "e" -> (4018 Exp[2 Pi I/40] + 4018 Exp[2 Pi I 3/40] + -2009 Exp[2 Pi I 5/40] + -4018 Exp[2 Pi I 7/40] + 4018 Exp[2 Pi I 9/40] + -2009 Exp[2 Pi I 15/40]),
+                  "e" -> (4018 Exp[2 Pi I/40] + -4018 Exp[2 Pi I 3/40] + -2009 Exp[2 Pi I 5/40] + 4018 Exp[2 Pi I 7/40] + 4018 Exp[2 Pi I 9/40] + 2009 Exp[2 Pi I 15/40]),
                   "twoM" -> -19
                 |>,
-                <|"e" -> (11449 Exp[2 Pi I/8] + -11449 Exp[2 Pi I 3/8]), "twoM" -> -15|>,
+                <|"e" -> (11449 Exp[2 Pi I/8] + 11449 Exp[2 Pi I 3/8]), "twoM" -> -15|>,
                 <|
-                  "e" -> (-715768 Exp[2 Pi I/40] + -715768 Exp[2 Pi I 3/40] + 357884 Exp[2 Pi I 5/40] + 715768 Exp[2 Pi I 7/40] + -715768 Exp[2 Pi I 9/40] + 357884 Exp[2 Pi I 15/40]),
+                  "e" -> (-715768 Exp[2 Pi I/40] + 715768 Exp[2 Pi I 3/40] + 357884 Exp[2 Pi I 5/40] + -715768 Exp[2 Pi I 7/40] + -715768 Exp[2 Pi I 9/40] + -357884 Exp[2 Pi I 15/40]),
                   "twoM" -> -11
                 |>,
-                <|"e" -> (1200948 Exp[2 Pi I/8] + -1200948 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
+                <|"e" -> (1200948 Exp[2 Pi I/8] + 1200948 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
                 <|
-                  "e" -> (1247324 Exp[2 Pi I/40] + 1247324 Exp[2 Pi I 3/40] + -623662 Exp[2 Pi I 5/40] + -1247324 Exp[2 Pi I 7/40] + 1247324 Exp[2 Pi I 9/40] + -623662 Exp[2 Pi I 15/40]),
+                  "e" -> (1247324 Exp[2 Pi I/40] + -1247324 Exp[2 Pi I 3/40] + -623662 Exp[2 Pi I 5/40] + 1247324 Exp[2 Pi I 7/40] + 1247324 Exp[2 Pi I 9/40] + 623662 Exp[2 Pi I 15/40]),
                   "twoM" -> -3
                 |>,
-                <|"e" -> (3505502 Exp[2 Pi I/8] + -3505502 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
+                <|"e" -> (3505502 Exp[2 Pi I/8] + 3505502 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
                 <|
-                  "e" -> (680680 Exp[2 Pi I/40] + 680680 Exp[2 Pi I 3/40] + -340340 Exp[2 Pi I 5/40] + -680680 Exp[2 Pi I 7/40] + 680680 Exp[2 Pi I 9/40] + -340340 Exp[2 Pi I 15/40]),
+                  "e" -> (680680 Exp[2 Pi I/40] + -680680 Exp[2 Pi I 3/40] + -340340 Exp[2 Pi I 5/40] + 680680 Exp[2 Pi I 7/40] + 680680 Exp[2 Pi I 9/40] + 340340 Exp[2 Pi I 15/40]),
                   "twoM" -> 5
                 |>,
-                <|"e" -> (340612 Exp[2 Pi I/8] + -340612 Exp[2 Pi I 3/8]), "twoM" -> 9|>,
+                <|"e" -> (340612 Exp[2 Pi I/8] + 340612 Exp[2 Pi I 3/8]), "twoM" -> 9|>,
                 <|
-                  "e" -> (-187646 Exp[2 Pi I/40] + -187646 Exp[2 Pi I 3/40] + 93823 Exp[2 Pi I 5/40] + 187646 Exp[2 Pi I 7/40] + -187646 Exp[2 Pi I 9/40] + 93823 Exp[2 Pi I 15/40]),
+                  "e" -> (-187646 Exp[2 Pi I/40] + 187646 Exp[2 Pi I 3/40] + 93823 Exp[2 Pi I 5/40] + -187646 Exp[2 Pi I 7/40] + -187646 Exp[2 Pi I 9/40] + -93823 Exp[2 Pi I 15/40]),
                   "twoM" -> 13
                 |>,
-                <|"e" -> (-8399 Exp[2 Pi I/8] + 8399 Exp[2 Pi I 3/8]), "twoM" -> 17|>
+                <|"e" -> (-8399 Exp[2 Pi I/8] + -8399 Exp[2 Pi I 3/8]), "twoM" -> 17|>
               },
               "mu" -> 3
             |>,
             <|
               "components" -> {
-                <|"e" -> (8399 Exp[2 Pi I/8] + -8399 Exp[2 Pi I 3/8]), "twoM" -> -17|>,
+                <|"e" -> (8399 Exp[2 Pi I/8] + 8399 Exp[2 Pi I 3/8]), "twoM" -> -17|>,
                 <|
-                  "e" -> (187646 Exp[2 Pi I/40] + 187646 Exp[2 Pi I 3/40] + -93823 Exp[2 Pi I 5/40] + -187646 Exp[2 Pi I 7/40] + 187646 Exp[2 Pi I 9/40] + -93823 Exp[2 Pi I 15/40]),
+                  "e" -> (187646 Exp[2 Pi I/40] + -187646 Exp[2 Pi I 3/40] + -93823 Exp[2 Pi I 5/40] + 187646 Exp[2 Pi I 7/40] + 187646 Exp[2 Pi I 9/40] + 93823 Exp[2 Pi I 15/40]),
                   "twoM" -> -13
                 |>,
-                <|"e" -> (-340612 Exp[2 Pi I/8] + 340612 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
+                <|"e" -> (-340612 Exp[2 Pi I/8] + -340612 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
                 <|
-                  "e" -> (-680680 Exp[2 Pi I/40] + -680680 Exp[2 Pi I 3/40] + 340340 Exp[2 Pi I 5/40] + 680680 Exp[2 Pi I 7/40] + -680680 Exp[2 Pi I 9/40] + 340340 Exp[2 Pi I 15/40]),
+                  "e" -> (-680680 Exp[2 Pi I/40] + 680680 Exp[2 Pi I 3/40] + 340340 Exp[2 Pi I 5/40] + -680680 Exp[2 Pi I 7/40] + -680680 Exp[2 Pi I 9/40] + -340340 Exp[2 Pi I 15/40]),
                   "twoM" -> -5
                 |>,
-                <|"e" -> (-3505502 Exp[2 Pi I/8] + 3505502 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
+                <|"e" -> (-3505502 Exp[2 Pi I/8] + -3505502 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
                 <|
-                  "e" -> (-1247324 Exp[2 Pi I/40] + -1247324 Exp[2 Pi I 3/40] + 623662 Exp[2 Pi I 5/40] + 1247324 Exp[2 Pi I 7/40] + -1247324 Exp[2 Pi I 9/40] + 623662 Exp[2 Pi I 15/40]),
+                  "e" -> (-1247324 Exp[2 Pi I/40] + 1247324 Exp[2 Pi I 3/40] + 623662 Exp[2 Pi I 5/40] + -1247324 Exp[2 Pi I 7/40] + -1247324 Exp[2 Pi I 9/40] + -623662 Exp[2 Pi I 15/40]),
                   "twoM" -> 3
                 |>,
-                <|"e" -> (-1200948 Exp[2 Pi I/8] + 1200948 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
+                <|"e" -> (-1200948 Exp[2 Pi I/8] + -1200948 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
                 <|
-                  "e" -> (715768 Exp[2 Pi I/40] + 715768 Exp[2 Pi I 3/40] + -357884 Exp[2 Pi I 5/40] + -715768 Exp[2 Pi I 7/40] + 715768 Exp[2 Pi I 9/40] + -357884 Exp[2 Pi I 15/40]),
+                  "e" -> (715768 Exp[2 Pi I/40] + -715768 Exp[2 Pi I 3/40] + -357884 Exp[2 Pi I 5/40] + 715768 Exp[2 Pi I 7/40] + 715768 Exp[2 Pi I 9/40] + 357884 Exp[2 Pi I 15/40]),
                   "twoM" -> 11
                 |>,
-                <|"e" -> (-11449 Exp[2 Pi I/8] + 11449 Exp[2 Pi I 3/8]), "twoM" -> 15|>,
+                <|"e" -> (-11449 Exp[2 Pi I/8] + -11449 Exp[2 Pi I 3/8]), "twoM" -> 15|>,
                 <|
-                  "e" -> (-4018 Exp[2 Pi I/40] + -4018 Exp[2 Pi I 3/40] + 2009 Exp[2 Pi I 5/40] + 4018 Exp[2 Pi I 7/40] + -4018 Exp[2 Pi I 9/40] + 2009 Exp[2 Pi I 15/40]),
+                  "e" -> (-4018 Exp[2 Pi I/40] + 4018 Exp[2 Pi I 3/40] + 2009 Exp[2 Pi I 5/40] + -4018 Exp[2 Pi I 7/40] + -4018 Exp[2 Pi I 9/40] + -2009 Exp[2 Pi I 15/40]),
                   "twoM" -> 19
                 |>
               },
@@ -110730,46 +111382,61 @@ o3d = <|
             |>,
             <|
               "components" -> {
-                <|"e" -> -1301, "twoM" -> -19|>,
-                <|"e" -> (18029 + 36058 Exp[2 Pi I 2/5] + 36058 Exp[2 Pi I 3/5]), "twoM" -> -15|>,
-                <|"e" -> -24276, "twoM" -> -11|>,
-                <|"e" -> (-30940 + -61880 Exp[2 Pi I 2/5] + -61880 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> 3575338, "twoM" -> -3|>,
+                <|"e" -> -1301 Exp[2 Pi I/4], "twoM" -> -19|>,
                 <|
-                  "e" -> (-520234 + -1040468 Exp[2 Pi I 2/5] + -1040468 Exp[2 Pi I 3/5]),
+                  "e" -> (-36058 Exp[2 Pi I 3/20] + 18029 Exp[2 Pi I 5/20] + -36058 Exp[2 Pi I 7/20]),
+                  "twoM" -> -15
+                |>,
+                <|"e" -> -24276 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (61880 Exp[2 Pi I 3/20] + -30940 Exp[2 Pi I 5/20] + 61880 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> 3575338 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (1040468 Exp[2 Pi I 3/20] + -520234 Exp[2 Pi I 5/20] + 1040468 Exp[2 Pi I 7/20]),
                   "twoM" -> 1
                 |>,
-                <|"e" -> 1947452, "twoM" -> 5|>,
+                <|"e" -> 1947452 Exp[2 Pi I/4], "twoM" -> 5|>,
                 <|
-                  "e" -> (1069300 + 2138600 Exp[2 Pi I 2/5] + 2138600 Exp[2 Pi I 3/5]),
+                  "e" -> (-2138600 Exp[2 Pi I 3/20] + 1069300 Exp[2 Pi I 5/20] + -2138600 Exp[2 Pi I 7/20]),
                   "twoM" -> 9
                 |>,
-                <|"e" -> 219011, "twoM" -> 13|>,
-                <|"e" -> (-21851 + -43702 Exp[2 Pi I 2/5] + -43702 Exp[2 Pi I 3/5]), "twoM" -> 17|>
+                <|"e" -> 219011 Exp[2 Pi I/4], "twoM" -> 13|>,
+                <|
+                  "e" -> (43702 Exp[2 Pi I 3/20] + -21851 Exp[2 Pi I 5/20] + 43702 Exp[2 Pi I 7/20]),
+                  "twoM" -> 17
+                |>
               },
               "mu" -> 5
             |>,
             <|
               "components" -> {
-                <|"e" -> 11225, "twoM" -> -17|>,
+                <|"e" -> 11225 Exp[2 Pi I/4], "twoM" -> -17|>,
                 <|
-                  "e" -> (-60469 + -120938 Exp[2 Pi I 2/5] + -120938 Exp[2 Pi I 3/5]),
+                  "e" -> (120938 Exp[2 Pi I 3/20] + -60469 Exp[2 Pi I 5/20] + 120938 Exp[2 Pi I 7/20]),
                   "twoM" -> -13
                 |>,
-                <|"e" -> 499460, "twoM" -> -9|>,
+                <|"e" -> 499460 Exp[2 Pi I/4], "twoM" -> -9|>,
                 <|
-                  "e" -> (3326492 + 6652984 Exp[2 Pi I 2/5] + 6652984 Exp[2 Pi I 3/5]),
+                  "e" -> (-6652984 Exp[2 Pi I 3/20] + 3326492 Exp[2 Pi I 5/20] + -6652984 Exp[2 Pi I 7/20]),
                   "twoM" -> -5
                 |>,
-                <|"e" -> 510510, "twoM" -> -1|>,
+                <|"e" -> 510510 Exp[2 Pi I/4], "twoM" -> -1|>,
                 <|
-                  "e" -> (941018 + 1882036 Exp[2 Pi I 2/5] + 1882036 Exp[2 Pi I 3/5]),
+                  "e" -> (-1882036 Exp[2 Pi I 3/20] + 941018 Exp[2 Pi I 5/20] + -1882036 Exp[2 Pi I 7/20]),
                   "twoM" -> 3
                 |>,
-                <|"e" -> 12982900, "twoM" -> 7|>,
-                <|"e" -> (136204 + 272408 Exp[2 Pi I 2/5] + 272408 Exp[2 Pi I 3/5]), "twoM" -> 11|>,
-                <|"e" -> -1146495, "twoM" -> 15|>,
-                <|"e" -> (40755 + 81510 Exp[2 Pi I 2/5] + 81510 Exp[2 Pi I 3/5]), "twoM" -> 19|>
+                <|"e" -> 12982900 Exp[2 Pi I/4], "twoM" -> 7|>,
+                <|
+                  "e" -> (-272408 Exp[2 Pi I 3/20] + 136204 Exp[2 Pi I 5/20] + -272408 Exp[2 Pi I 7/20]),
+                  "twoM" -> 11
+                |>,
+                <|"e" -> -1146495 Exp[2 Pi I/4], "twoM" -> 15|>,
+                <|
+                  "e" -> (-81510 Exp[2 Pi I 3/20] + 40755 Exp[2 Pi I 5/20] + -81510 Exp[2 Pi I 7/20]),
+                  "twoM" -> 19
+                |>
               },
               "mu" -> 6
             |>
@@ -110784,33 +111451,63 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 3, "twoM" -> -19|>,
-                <|"e" -> (38 + 76 Exp[2 Pi I 2/5] + 76 Exp[2 Pi I 3/5]), "twoM" -> -15|>,
-                <|"e" -> -57, "twoM" -> -11|>,
-                <|"e" -> (456 + 912 Exp[2 Pi I 2/5] + 912 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> -1482, "twoM" -> -3|>,
-                <|"e" -> (-988 + -1976 Exp[2 Pi I 2/5] + -1976 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> -1482, "twoM" -> 5|>,
-                <|"e" -> (456 + 912 Exp[2 Pi I 2/5] + 912 Exp[2 Pi I 3/5]), "twoM" -> 9|>,
-                <|"e" -> -57, "twoM" -> 13|>,
-                <|"e" -> (38 + 76 Exp[2 Pi I 2/5] + 76 Exp[2 Pi I 3/5]), "twoM" -> 17|>,
-                <|"e" -> 3, "twoM" -> 21|>
+                <|"e" -> 3 Exp[2 Pi I/4], "twoM" -> -19|>,
+                <|
+                  "e" -> (-76 Exp[2 Pi I 3/20] + 38 Exp[2 Pi I 5/20] + -76 Exp[2 Pi I 7/20]),
+                  "twoM" -> -15
+                |>,
+                <|"e" -> -57 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (-912 Exp[2 Pi I 3/20] + 456 Exp[2 Pi I 5/20] + -912 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> -1482 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (1976 Exp[2 Pi I 3/20] + -988 Exp[2 Pi I 5/20] + 1976 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> -1482 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (-912 Exp[2 Pi I 3/20] + 456 Exp[2 Pi I 5/20] + -912 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>,
+                <|"e" -> -57 Exp[2 Pi I/4], "twoM" -> 13|>,
+                <|
+                  "e" -> (-76 Exp[2 Pi I 3/20] + 38 Exp[2 Pi I 5/20] + -76 Exp[2 Pi I 7/20]),
+                  "twoM" -> 17
+                |>,
+                <|"e" -> 3 Exp[2 Pi I/4], "twoM" -> 21|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 3, "twoM" -> -21|>,
-                <|"e" -> (38 + 76 Exp[2 Pi I 2/5] + 76 Exp[2 Pi I 3/5]), "twoM" -> -17|>,
-                <|"e" -> -57, "twoM" -> -13|>,
-                <|"e" -> (456 + 912 Exp[2 Pi I 2/5] + 912 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> -1482, "twoM" -> -5|>,
-                <|"e" -> (-988 + -1976 Exp[2 Pi I 2/5] + -1976 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> -1482, "twoM" -> 3|>,
-                <|"e" -> (456 + 912 Exp[2 Pi I 2/5] + 912 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> -57, "twoM" -> 11|>,
-                <|"e" -> (38 + 76 Exp[2 Pi I 2/5] + 76 Exp[2 Pi I 3/5]), "twoM" -> 15|>,
-                <|"e" -> 3, "twoM" -> 19|>
+                <|"e" -> 3 Exp[2 Pi I/4], "twoM" -> -21|>,
+                <|
+                  "e" -> (-76 Exp[2 Pi I 3/20] + 38 Exp[2 Pi I 5/20] + -76 Exp[2 Pi I 7/20]),
+                  "twoM" -> -17
+                |>,
+                <|"e" -> -57 Exp[2 Pi I/4], "twoM" -> -13|>,
+                <|
+                  "e" -> (-912 Exp[2 Pi I 3/20] + 456 Exp[2 Pi I 5/20] + -912 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> -1482 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (1976 Exp[2 Pi I 3/20] + -988 Exp[2 Pi I 5/20] + 1976 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> -1482 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (-912 Exp[2 Pi I 3/20] + 456 Exp[2 Pi I 5/20] + -912 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> -57 Exp[2 Pi I/4], "twoM" -> 11|>,
+                <|
+                  "e" -> (-76 Exp[2 Pi I 3/20] + 38 Exp[2 Pi I 5/20] + -76 Exp[2 Pi I 7/20]),
+                  "twoM" -> 15
+                |>,
+                <|"e" -> 3 Exp[2 Pi I/4], "twoM" -> 19|>
               },
               "mu" -> 2
             |>
@@ -110825,48 +111522,60 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -21|>,
-                <|"e" -> 5985, "twoM" -> -13|>,
-                <|"e" -> (336 + 672 Exp[2 Pi I 2/5] + 672 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> 56070, "twoM" -> -5|>,
-                <|"e" -> (-30576 + -61152 Exp[2 Pi I 2/5] + -61152 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> -78190, "twoM" -> 3|>,
-                <|"e" -> (-20112 + -40224 Exp[2 Pi I 2/5] + -40224 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> 23163, "twoM" -> 11|>,
-                <|"e" -> (-336 + -672 Exp[2 Pi I 2/5] + -672 Exp[2 Pi I 3/5]), "twoM" -> 15|>,
-                <|"e" -> 637, "twoM" -> 19|>
+                <|"e" -> 15 Exp[2 Pi I/4], "twoM" -> -21|>,
+                <|"e" -> 5985 Exp[2 Pi I/4], "twoM" -> -13|>,
+                <|
+                  "e" -> (-672 Exp[2 Pi I 3/20] + 336 Exp[2 Pi I 5/20] + -672 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> 56070 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (61152 Exp[2 Pi I 3/20] + -30576 Exp[2 Pi I 5/20] + 61152 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> -78190 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (40224 Exp[2 Pi I 3/20] + -20112 Exp[2 Pi I 5/20] + 40224 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> 23163 Exp[2 Pi I/4], "twoM" -> 11|>,
+                <|
+                  "e" -> (672 Exp[2 Pi I 3/20] + -336 Exp[2 Pi I 5/20] + 672 Exp[2 Pi I 7/20]),
+                  "twoM" -> 15
+                |>,
+                <|"e" -> 637 Exp[2 Pi I/4], "twoM" -> 19|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
                 <|
-                  "e" -> (462 Exp[2 Pi I/60] + -462 Exp[2 Pi I 5/60] + -924 Exp[2 Pi I 7/60] + -462 Exp[2 Pi I 9/60] + -462 Exp[2 Pi I 11/60] + 924 Exp[2 Pi I 13/60] + 693 Exp[2 Pi I 15/60]),
+                  "e" -> (693 + -924 Exp[2 Pi I/15] + -462 Exp[2 Pi I 2/15] + 462 Exp[2 Pi I 3/15] + -924 Exp[2 Pi I 4/15] + 462 Exp[2 Pi I 5/15] + -462 Exp[2 Pi I 7/15]),
                   "twoM" -> -19
                 |>,
-                <|"e" -> (21280 Exp[2 Pi I/12] + -10640 Exp[2 Pi I 3/12]), "twoM" -> -15|>,
+                <|"e" -> (10640 + 21280 Exp[2 Pi I/3]), "twoM" -> -15|>,
                 <|
-                  "e" -> (-9534 Exp[2 Pi I/60] + 9534 Exp[2 Pi I 5/60] + 19068 Exp[2 Pi I 7/60] + 9534 Exp[2 Pi I 9/60] + 9534 Exp[2 Pi I 11/60] + -19068 Exp[2 Pi I 13/60] + -14301 Exp[2 Pi I 15/60]),
+                  "e" -> (-14301 + 19068 Exp[2 Pi I/15] + 9534 Exp[2 Pi I 2/15] + -9534 Exp[2 Pi I 3/15] + 19068 Exp[2 Pi I 4/15] + -9534 Exp[2 Pi I 5/15] + 9534 Exp[2 Pi I 7/15]),
                   "twoM" -> -11
                 |>,
-                <|"e" -> (158880 Exp[2 Pi I/12] + -79440 Exp[2 Pi I 3/12]), "twoM" -> -7|>,
+                <|"e" -> (79440 + 158880 Exp[2 Pi I/3]), "twoM" -> -7|>,
                 <|
-                  "e" -> (-75348 Exp[2 Pi I/60] + 75348 Exp[2 Pi I 5/60] + 150696 Exp[2 Pi I 7/60] + 75348 Exp[2 Pi I 9/60] + 75348 Exp[2 Pi I 11/60] + -150696 Exp[2 Pi I 13/60] + -113022 Exp[2 Pi I 15/60]),
+                  "e" -> (-113022 + 150696 Exp[2 Pi I/15] + 75348 Exp[2 Pi I 2/15] + -75348 Exp[2 Pi I 3/15] + 150696 Exp[2 Pi I 4/15] + -75348 Exp[2 Pi I 5/15] + 75348 Exp[2 Pi I 7/15]),
                   "twoM" -> -3
                 |>,
-                <|"e" -> (-197792 Exp[2 Pi I/12] + 98896 Exp[2 Pi I 3/12]), "twoM" -> 1|>,
+                <|"e" -> (-98896 + -197792 Exp[2 Pi I/3]), "twoM" -> 1|>,
                 <|
-                  "e" -> (-17052 Exp[2 Pi I/60] + 17052 Exp[2 Pi I 5/60] + 34104 Exp[2 Pi I 7/60] + 17052 Exp[2 Pi I 9/60] + 17052 Exp[2 Pi I 11/60] + -34104 Exp[2 Pi I 13/60] + -25578 Exp[2 Pi I 15/60]),
+                  "e" -> (-25578 + 34104 Exp[2 Pi I/15] + 17052 Exp[2 Pi I 2/15] + -17052 Exp[2 Pi I 3/15] + 34104 Exp[2 Pi I 4/15] + -17052 Exp[2 Pi I 5/15] + 17052 Exp[2 Pi I 7/15]),
                   "twoM" -> 5
                 |>,
-                <|"e" -> (-19488 Exp[2 Pi I/12] + 9744 Exp[2 Pi I 3/12]), "twoM" -> 9|>,
+                <|"e" -> (-9744 + -19488 Exp[2 Pi I/3]), "twoM" -> 9|>,
                 <|
-                  "e" -> (294 Exp[2 Pi I/60] + -294 Exp[2 Pi I 5/60] + -588 Exp[2 Pi I 7/60] + -294 Exp[2 Pi I 9/60] + -294 Exp[2 Pi I 11/60] + 588 Exp[2 Pi I 13/60] + 441 Exp[2 Pi I 15/60]),
+                  "e" -> (441 + -588 Exp[2 Pi I/15] + -294 Exp[2 Pi I 2/15] + 294 Exp[2 Pi I 3/15] + -588 Exp[2 Pi I 4/15] + 294 Exp[2 Pi I 5/15] + -294 Exp[2 Pi I 7/15]),
                   "twoM" -> 13
                 |>,
-                <|"e" -> (-8960 Exp[2 Pi I/12] + 4480 Exp[2 Pi I 3/12]), "twoM" -> 17|>,
+                <|"e" -> (-4480 + -8960 Exp[2 Pi I/3]), "twoM" -> 17|>,
                 <|
-                  "e" -> (-198 Exp[2 Pi I/60] + 198 Exp[2 Pi I 5/60] + 396 Exp[2 Pi I 7/60] + 198 Exp[2 Pi I 9/60] + 198 Exp[2 Pi I 11/60] + -396 Exp[2 Pi I 13/60] + -297 Exp[2 Pi I 15/60]),
+                  "e" -> (-297 + 396 Exp[2 Pi I/15] + 198 Exp[2 Pi I 2/15] + -198 Exp[2 Pi I 3/15] + 396 Exp[2 Pi I 4/15] + -198 Exp[2 Pi I 5/15] + 198 Exp[2 Pi I 7/15]),
                   "twoM" -> 21
                 |>
               },
@@ -110875,32 +111584,32 @@ o3d = <|
             <|
               "components" -> {
                 <|
-                  "e" -> (198 Exp[2 Pi I/60] + -198 Exp[2 Pi I 5/60] + -396 Exp[2 Pi I 7/60] + -198 Exp[2 Pi I 9/60] + -198 Exp[2 Pi I 11/60] + 396 Exp[2 Pi I 13/60] + 297 Exp[2 Pi I 15/60]),
+                  "e" -> (297 + -396 Exp[2 Pi I/15] + -198 Exp[2 Pi I 2/15] + 198 Exp[2 Pi I 3/15] + -396 Exp[2 Pi I 4/15] + 198 Exp[2 Pi I 5/15] + -198 Exp[2 Pi I 7/15]),
                   "twoM" -> -21
                 |>,
-                <|"e" -> (8960 Exp[2 Pi I/12] + -4480 Exp[2 Pi I 3/12]), "twoM" -> -17|>,
+                <|"e" -> (4480 + 8960 Exp[2 Pi I/3]), "twoM" -> -17|>,
                 <|
-                  "e" -> (-294 Exp[2 Pi I/60] + 294 Exp[2 Pi I 5/60] + 588 Exp[2 Pi I 7/60] + 294 Exp[2 Pi I 9/60] + 294 Exp[2 Pi I 11/60] + -588 Exp[2 Pi I 13/60] + -441 Exp[2 Pi I 15/60]),
+                  "e" -> (-441 + 588 Exp[2 Pi I/15] + 294 Exp[2 Pi I 2/15] + -294 Exp[2 Pi I 3/15] + 588 Exp[2 Pi I 4/15] + -294 Exp[2 Pi I 5/15] + 294 Exp[2 Pi I 7/15]),
                   "twoM" -> -13
                 |>,
-                <|"e" -> (19488 Exp[2 Pi I/12] + -9744 Exp[2 Pi I 3/12]), "twoM" -> -9|>,
+                <|"e" -> (9744 + 19488 Exp[2 Pi I/3]), "twoM" -> -9|>,
                 <|
-                  "e" -> (17052 Exp[2 Pi I/60] + -17052 Exp[2 Pi I 5/60] + -34104 Exp[2 Pi I 7/60] + -17052 Exp[2 Pi I 9/60] + -17052 Exp[2 Pi I 11/60] + 34104 Exp[2 Pi I 13/60] + 25578 Exp[2 Pi I 15/60]),
+                  "e" -> (25578 + -34104 Exp[2 Pi I/15] + -17052 Exp[2 Pi I 2/15] + 17052 Exp[2 Pi I 3/15] + -34104 Exp[2 Pi I 4/15] + 17052 Exp[2 Pi I 5/15] + -17052 Exp[2 Pi I 7/15]),
                   "twoM" -> -5
                 |>,
-                <|"e" -> (197792 Exp[2 Pi I/12] + -98896 Exp[2 Pi I 3/12]), "twoM" -> -1|>,
+                <|"e" -> (98896 + 197792 Exp[2 Pi I/3]), "twoM" -> -1|>,
                 <|
-                  "e" -> (75348 Exp[2 Pi I/60] + -75348 Exp[2 Pi I 5/60] + -150696 Exp[2 Pi I 7/60] + -75348 Exp[2 Pi I 9/60] + -75348 Exp[2 Pi I 11/60] + 150696 Exp[2 Pi I 13/60] + 113022 Exp[2 Pi I 15/60]),
+                  "e" -> (113022 + -150696 Exp[2 Pi I/15] + -75348 Exp[2 Pi I 2/15] + 75348 Exp[2 Pi I 3/15] + -150696 Exp[2 Pi I 4/15] + 75348 Exp[2 Pi I 5/15] + -75348 Exp[2 Pi I 7/15]),
                   "twoM" -> 3
                 |>,
-                <|"e" -> (-158880 Exp[2 Pi I/12] + 79440 Exp[2 Pi I 3/12]), "twoM" -> 7|>,
+                <|"e" -> (-79440 + -158880 Exp[2 Pi I/3]), "twoM" -> 7|>,
                 <|
-                  "e" -> (9534 Exp[2 Pi I/60] + -9534 Exp[2 Pi I 5/60] + -19068 Exp[2 Pi I 7/60] + -9534 Exp[2 Pi I 9/60] + -9534 Exp[2 Pi I 11/60] + 19068 Exp[2 Pi I 13/60] + 14301 Exp[2 Pi I 15/60]),
+                  "e" -> (14301 + -19068 Exp[2 Pi I/15] + -9534 Exp[2 Pi I 2/15] + 9534 Exp[2 Pi I 3/15] + -19068 Exp[2 Pi I 4/15] + 9534 Exp[2 Pi I 5/15] + -9534 Exp[2 Pi I 7/15]),
                   "twoM" -> 11
                 |>,
-                <|"e" -> (-21280 Exp[2 Pi I/12] + 10640 Exp[2 Pi I 3/12]), "twoM" -> 15|>,
+                <|"e" -> (-10640 + -21280 Exp[2 Pi I/3]), "twoM" -> 15|>,
                 <|
-                  "e" -> (-462 Exp[2 Pi I/60] + 462 Exp[2 Pi I 5/60] + 924 Exp[2 Pi I 7/60] + 462 Exp[2 Pi I 9/60] + 462 Exp[2 Pi I 11/60] + -924 Exp[2 Pi I 13/60] + -693 Exp[2 Pi I 15/60]),
+                  "e" -> (-693 + 924 Exp[2 Pi I/15] + 462 Exp[2 Pi I 2/15] + -462 Exp[2 Pi I 3/15] + 924 Exp[2 Pi I 4/15] + -462 Exp[2 Pi I 5/15] + 462 Exp[2 Pi I 7/15]),
                   "twoM" -> 19
                 |>
               },
@@ -110908,16 +111617,28 @@ o3d = <|
             |>,
             <|
               "components" -> {
-                <|"e" -> -637, "twoM" -> -19|>,
-                <|"e" -> (336 + 672 Exp[2 Pi I 2/5] + 672 Exp[2 Pi I 3/5]), "twoM" -> -15|>,
-                <|"e" -> -23163, "twoM" -> -11|>,
-                <|"e" -> (20112 + 40224 Exp[2 Pi I 2/5] + 40224 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> 78190, "twoM" -> -3|>,
-                <|"e" -> (30576 + 61152 Exp[2 Pi I 2/5] + 61152 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> -56070, "twoM" -> 5|>,
-                <|"e" -> (-336 + -672 Exp[2 Pi I 2/5] + -672 Exp[2 Pi I 3/5]), "twoM" -> 9|>,
-                <|"e" -> -5985, "twoM" -> 13|>,
-                <|"e" -> -15, "twoM" -> 21|>
+                <|"e" -> -637 Exp[2 Pi I/4], "twoM" -> -19|>,
+                <|
+                  "e" -> (-672 Exp[2 Pi I 3/20] + 336 Exp[2 Pi I 5/20] + -672 Exp[2 Pi I 7/20]),
+                  "twoM" -> -15
+                |>,
+                <|"e" -> -23163 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (-40224 Exp[2 Pi I 3/20] + 20112 Exp[2 Pi I 5/20] + -40224 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> 78190 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (-61152 Exp[2 Pi I 3/20] + 30576 Exp[2 Pi I 5/20] + -61152 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> -56070 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (672 Exp[2 Pi I 3/20] + -336 Exp[2 Pi I 5/20] + 672 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>,
+                <|"e" -> -5985 Exp[2 Pi I/4], "twoM" -> 13|>,
+                <|"e" -> -15 Exp[2 Pi I/4], "twoM" -> 21|>
               },
               "mu" -> 4
             |>
@@ -110933,115 +111654,130 @@ o3d = <|
             <|
               "components" -> {
                 <|
-                  "e" -> (-13585 + -27170 Exp[2 Pi I 2/5] + -27170 Exp[2 Pi I 3/5]),
+                  "e" -> (27170 Exp[2 Pi I 3/20] + -13585 Exp[2 Pi I 5/20] + 27170 Exp[2 Pi I 7/20]),
                   "twoM" -> -21
                 |>,
-                <|"e" -> 458350, "twoM" -> -17|>,
+                <|"e" -> 458350 Exp[2 Pi I/4], "twoM" -> -17|>,
                 <|
-                  "e" -> (-195225 + -390450 Exp[2 Pi I 2/5] + -390450 Exp[2 Pi I 3/5]),
+                  "e" -> (390450 Exp[2 Pi I 3/20] + -195225 Exp[2 Pi I 5/20] + 390450 Exp[2 Pi I 7/20]),
                   "twoM" -> -13
                 |>,
-                <|"e" -> -8488440, "twoM" -> -9|>,
+                <|"e" -> -8488440 Exp[2 Pi I/4], "twoM" -> -9|>,
                 <|
-                  "e" -> (-2012290 + -4024580 Exp[2 Pi I 2/5] + -4024580 Exp[2 Pi I 3/5]),
+                  "e" -> (4024580 Exp[2 Pi I 3/20] + -2012290 Exp[2 Pi I 5/20] + 4024580 Exp[2 Pi I 7/20]),
                   "twoM" -> -5
                 |>,
-                <|"e" -> 2603380, "twoM" -> -1|>,
+                <|"e" -> 2603380 Exp[2 Pi I/4], "twoM" -> -1|>,
                 <|
-                  "e" -> (-4660890 + -9321780 Exp[2 Pi I 2/5] + -9321780 Exp[2 Pi I 3/5]),
+                  "e" -> (9321780 Exp[2 Pi I 3/20] + -4660890 Exp[2 Pi I 5/20] + 9321780 Exp[2 Pi I 7/20]),
                   "twoM" -> 3
                 |>,
-                <|"e" -> 503880, "twoM" -> 7|>,
+                <|"e" -> 503880 Exp[2 Pi I/4], "twoM" -> 7|>,
                 <|
-                  "e" -> (-77197 + -154394 Exp[2 Pi I 2/5] + -154394 Exp[2 Pi I 3/5]),
+                  "e" -> (154394 Exp[2 Pi I 3/20] + -77197 Exp[2 Pi I 5/20] + 154394 Exp[2 Pi I 7/20]),
                   "twoM" -> 11
                 |>,
-                <|"e" -> -220210, "twoM" -> 15|>,
-                <|"e" -> (3667 + 7334 Exp[2 Pi I 2/5] + 7334 Exp[2 Pi I 3/5]), "twoM" -> 19|>
+                <|"e" -> -220210 Exp[2 Pi I/4], "twoM" -> 15|>,
+                <|
+                  "e" -> (-7334 Exp[2 Pi I 3/20] + 3667 Exp[2 Pi I 5/20] + -7334 Exp[2 Pi I 7/20]),
+                  "twoM" -> 19
+                |>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (-258690 Exp[2 Pi I/12] + 129345 Exp[2 Pi I 3/12]), "twoM" -> -19|>,
+                <|"e" -> (-129345 + -258690 Exp[2 Pi I/3]), "twoM" -> -19|>,
                 <|
-                  "e" -> (467020 Exp[2 Pi I/60] + -467020 Exp[2 Pi I 5/60] + -934040 Exp[2 Pi I 7/60] + -467020 Exp[2 Pi I 9/60] + -467020 Exp[2 Pi I 11/60] + 934040 Exp[2 Pi I 13/60] + 700530 Exp[2 Pi I 15/60]),
+                  "e" -> (700530 + -934040 Exp[2 Pi I/15] + -467020 Exp[2 Pi I 2/15] + 467020 Exp[2 Pi I 3/15] + -934040 Exp[2 Pi I 4/15] + 467020 Exp[2 Pi I 5/15] + -467020 Exp[2 Pi I 7/15]),
                   "twoM" -> -15
                 |>,
-                <|"e" -> (18788910 Exp[2 Pi I/12] + -9394455 Exp[2 Pi I 3/12]), "twoM" -> -11|>,
+                <|"e" -> (9394455 + 18788910 Exp[2 Pi I/3]), "twoM" -> -11|>,
                 <|
-                  "e" -> (9379920 Exp[2 Pi I/60] + -9379920 Exp[2 Pi I 5/60] + -18759840 Exp[2 Pi I 7/60] + -9379920 Exp[2 Pi I 9/60] + -9379920 Exp[2 Pi I 11/60] + 18759840 Exp[2 Pi I 13/60] + 14069880 Exp[2 Pi I 15/60]),
+                  "e" -> (14069880 + -18759840 Exp[2 Pi I/15] + -9379920 Exp[2 Pi I 2/15] + 9379920 Exp[2 Pi I 3/15] + -18759840 Exp[2 Pi I 4/15] + 9379920 Exp[2 Pi I 5/15] + -9379920 Exp[2 Pi I 7/15]),
                   "twoM" -> -7
                 |>,
-                <|"e" -> (-21078980 Exp[2 Pi I/12] + 10539490 Exp[2 Pi I 3/12]), "twoM" -> -3|>,
+                <|"e" -> (-10539490 + -21078980 Exp[2 Pi I/3]), "twoM" -> -3|>,
                 <|
-                  "e" -> (28183688 Exp[2 Pi I/60] + -28183688 Exp[2 Pi I 5/60] + -56367376 Exp[2 Pi I 7/60] + -28183688 Exp[2 Pi I 9/60] + -28183688 Exp[2 Pi I 11/60] + 56367376 Exp[2 Pi I 13/60] + 42275532 Exp[2 Pi I 15/60]),
+                  "e" -> (42275532 + -56367376 Exp[2 Pi I/15] + -28183688 Exp[2 Pi I 2/15] + 28183688 Exp[2 Pi I 3/15] + -56367376 Exp[2 Pi I 4/15] + 28183688 Exp[2 Pi I 5/15] + -28183688 Exp[2 Pi I 7/15]),
                   "twoM" -> 1
                 |>,
-                <|"e" -> (-13352820 Exp[2 Pi I/12] + 6676410 Exp[2 Pi I 3/12]), "twoM" -> 5|>,
+                <|"e" -> (-6676410 + -13352820 Exp[2 Pi I/3]), "twoM" -> 5|>,
                 <|
-                  "e" -> (3715792 Exp[2 Pi I/60] + -3715792 Exp[2 Pi I 5/60] + -7431584 Exp[2 Pi I 7/60] + -3715792 Exp[2 Pi I 9/60] + -3715792 Exp[2 Pi I 11/60] + 7431584 Exp[2 Pi I 13/60] + 5573688 Exp[2 Pi I 15/60]),
+                  "e" -> (5573688 + -7431584 Exp[2 Pi I/15] + -3715792 Exp[2 Pi I 2/15] + 3715792 Exp[2 Pi I 3/15] + -7431584 Exp[2 Pi I 4/15] + 3715792 Exp[2 Pi I 5/15] + -3715792 Exp[2 Pi I 7/15]),
                   "twoM" -> 9
                 |>,
-                <|"e" -> (5635590 Exp[2 Pi I/12] + -2817795 Exp[2 Pi I 3/12]), "twoM" -> 13|>,
+                <|"e" -> (2817795 + 5635590 Exp[2 Pi I/3]), "twoM" -> 13|>,
                 <|
-                  "e" -> (-13300 Exp[2 Pi I/60] + 13300 Exp[2 Pi I 5/60] + 26600 Exp[2 Pi I 7/60] + 13300 Exp[2 Pi I 9/60] + 13300 Exp[2 Pi I 11/60] + -26600 Exp[2 Pi I 13/60] + -19950 Exp[2 Pi I 15/60]),
+                  "e" -> (-19950 + 26600 Exp[2 Pi I/15] + 13300 Exp[2 Pi I 2/15] + -13300 Exp[2 Pi I 3/15] + 26600 Exp[2 Pi I 4/15] + -13300 Exp[2 Pi I 5/15] + 13300 Exp[2 Pi I 7/15]),
                   "twoM" -> 17
                 |>,
-                <|"e" -> (-20090 Exp[2 Pi I/12] + 10045 Exp[2 Pi I 3/12]), "twoM" -> 21|>
+                <|"e" -> (-10045 + -20090 Exp[2 Pi I/3]), "twoM" -> 21|>
               },
               "mu" -> 2
             |>,
             <|
               "components" -> {
-                <|"e" -> (20090 Exp[2 Pi I/12] + -10045 Exp[2 Pi I 3/12]), "twoM" -> -21|>,
+                <|"e" -> (10045 + 20090 Exp[2 Pi I/3]), "twoM" -> -21|>,
                 <|
-                  "e" -> (13300 Exp[2 Pi I/60] + -13300 Exp[2 Pi I 5/60] + -26600 Exp[2 Pi I 7/60] + -13300 Exp[2 Pi I 9/60] + -13300 Exp[2 Pi I 11/60] + 26600 Exp[2 Pi I 13/60] + 19950 Exp[2 Pi I 15/60]),
+                  "e" -> (19950 + -26600 Exp[2 Pi I/15] + -13300 Exp[2 Pi I 2/15] + 13300 Exp[2 Pi I 3/15] + -26600 Exp[2 Pi I 4/15] + 13300 Exp[2 Pi I 5/15] + -13300 Exp[2 Pi I 7/15]),
                   "twoM" -> -17
                 |>,
-                <|"e" -> (-5635590 Exp[2 Pi I/12] + 2817795 Exp[2 Pi I 3/12]), "twoM" -> -13|>,
+                <|"e" -> (-2817795 + -5635590 Exp[2 Pi I/3]), "twoM" -> -13|>,
                 <|
-                  "e" -> (-3715792 Exp[2 Pi I/60] + 3715792 Exp[2 Pi I 5/60] + 7431584 Exp[2 Pi I 7/60] + 3715792 Exp[2 Pi I 9/60] + 3715792 Exp[2 Pi I 11/60] + -7431584 Exp[2 Pi I 13/60] + -5573688 Exp[2 Pi I 15/60]),
+                  "e" -> (-5573688 + 7431584 Exp[2 Pi I/15] + 3715792 Exp[2 Pi I 2/15] + -3715792 Exp[2 Pi I 3/15] + 7431584 Exp[2 Pi I 4/15] + -3715792 Exp[2 Pi I 5/15] + 3715792 Exp[2 Pi I 7/15]),
                   "twoM" -> -9
                 |>,
-                <|"e" -> (13352820 Exp[2 Pi I/12] + -6676410 Exp[2 Pi I 3/12]), "twoM" -> -5|>,
+                <|"e" -> (6676410 + 13352820 Exp[2 Pi I/3]), "twoM" -> -5|>,
                 <|
-                  "e" -> (-28183688 Exp[2 Pi I/60] + 28183688 Exp[2 Pi I 5/60] + 56367376 Exp[2 Pi I 7/60] + 28183688 Exp[2 Pi I 9/60] + 28183688 Exp[2 Pi I 11/60] + -56367376 Exp[2 Pi I 13/60] + -42275532 Exp[2 Pi I 15/60]),
+                  "e" -> (-42275532 + 56367376 Exp[2 Pi I/15] + 28183688 Exp[2 Pi I 2/15] + -28183688 Exp[2 Pi I 3/15] + 56367376 Exp[2 Pi I 4/15] + -28183688 Exp[2 Pi I 5/15] + 28183688 Exp[2 Pi I 7/15]),
                   "twoM" -> -1
                 |>,
-                <|"e" -> (21078980 Exp[2 Pi I/12] + -10539490 Exp[2 Pi I 3/12]), "twoM" -> 3|>,
+                <|"e" -> (10539490 + 21078980 Exp[2 Pi I/3]), "twoM" -> 3|>,
                 <|
-                  "e" -> (-9379920 Exp[2 Pi I/60] + 9379920 Exp[2 Pi I 5/60] + 18759840 Exp[2 Pi I 7/60] + 9379920 Exp[2 Pi I 9/60] + 9379920 Exp[2 Pi I 11/60] + -18759840 Exp[2 Pi I 13/60] + -14069880 Exp[2 Pi I 15/60]),
+                  "e" -> (-14069880 + 18759840 Exp[2 Pi I/15] + 9379920 Exp[2 Pi I 2/15] + -9379920 Exp[2 Pi I 3/15] + 18759840 Exp[2 Pi I 4/15] + -9379920 Exp[2 Pi I 5/15] + 9379920 Exp[2 Pi I 7/15]),
                   "twoM" -> 7
                 |>,
-                <|"e" -> (-18788910 Exp[2 Pi I/12] + 9394455 Exp[2 Pi I 3/12]), "twoM" -> 11|>,
+                <|"e" -> (-9394455 + -18788910 Exp[2 Pi I/3]), "twoM" -> 11|>,
                 <|
-                  "e" -> (-467020 Exp[2 Pi I/60] + 467020 Exp[2 Pi I 5/60] + 934040 Exp[2 Pi I 7/60] + 467020 Exp[2 Pi I 9/60] + 467020 Exp[2 Pi I 11/60] + -934040 Exp[2 Pi I 13/60] + -700530 Exp[2 Pi I 15/60]),
+                  "e" -> (-700530 + 934040 Exp[2 Pi I/15] + 467020 Exp[2 Pi I 2/15] + -467020 Exp[2 Pi I 3/15] + 934040 Exp[2 Pi I 4/15] + -467020 Exp[2 Pi I 5/15] + 467020 Exp[2 Pi I 7/15]),
                   "twoM" -> 15
                 |>,
-                <|"e" -> (258690 Exp[2 Pi I/12] + -129345 Exp[2 Pi I 3/12]), "twoM" -> 19|>
+                <|"e" -> (129345 + 258690 Exp[2 Pi I/3]), "twoM" -> 19|>
               },
               "mu" -> 3
             |>,
             <|
               "components" -> {
-                <|"e" -> (-3667 + -7334 Exp[2 Pi I 2/5] + -7334 Exp[2 Pi I 3/5]), "twoM" -> -19|>,
-                <|"e" -> 220210, "twoM" -> -15|>,
-                <|"e" -> (77197 + 154394 Exp[2 Pi I 2/5] + 154394 Exp[2 Pi I 3/5]), "twoM" -> -11|>,
-                <|"e" -> -503880, "twoM" -> -7|>,
                 <|
-                  "e" -> (4660890 + 9321780 Exp[2 Pi I 2/5] + 9321780 Exp[2 Pi I 3/5]),
+                  "e" -> (7334 Exp[2 Pi I 3/20] + -3667 Exp[2 Pi I 5/20] + 7334 Exp[2 Pi I 7/20]),
+                  "twoM" -> -19
+                |>,
+                <|"e" -> 220210 Exp[2 Pi I/4], "twoM" -> -15|>,
+                <|
+                  "e" -> (-154394 Exp[2 Pi I 3/20] + 77197 Exp[2 Pi I 5/20] + -154394 Exp[2 Pi I 7/20]),
+                  "twoM" -> -11
+                |>,
+                <|"e" -> -503880 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (-9321780 Exp[2 Pi I 3/20] + 4660890 Exp[2 Pi I 5/20] + -9321780 Exp[2 Pi I 7/20]),
                   "twoM" -> -3
                 |>,
-                <|"e" -> -2603380, "twoM" -> 1|>,
+                <|"e" -> -2603380 Exp[2 Pi I/4], "twoM" -> 1|>,
                 <|
-                  "e" -> (2012290 + 4024580 Exp[2 Pi I 2/5] + 4024580 Exp[2 Pi I 3/5]),
+                  "e" -> (-4024580 Exp[2 Pi I 3/20] + 2012290 Exp[2 Pi I 5/20] + -4024580 Exp[2 Pi I 7/20]),
                   "twoM" -> 5
                 |>,
-                <|"e" -> 8488440, "twoM" -> 9|>,
-                <|"e" -> (195225 + 390450 Exp[2 Pi I 2/5] + 390450 Exp[2 Pi I 3/5]), "twoM" -> 13|>,
-                <|"e" -> -458350, "twoM" -> 17|>,
-                <|"e" -> (13585 + 27170 Exp[2 Pi I 2/5] + 27170 Exp[2 Pi I 3/5]), "twoM" -> 21|>
+                <|"e" -> 8488440 Exp[2 Pi I/4], "twoM" -> 9|>,
+                <|
+                  "e" -> (-390450 Exp[2 Pi I 3/20] + 195225 Exp[2 Pi I 5/20] + -390450 Exp[2 Pi I 7/20]),
+                  "twoM" -> 13
+                |>,
+                <|"e" -> -458350 Exp[2 Pi I/4], "twoM" -> 17|>,
+                <|
+                  "e" -> (-27170 Exp[2 Pi I 3/20] + 13585 Exp[2 Pi I 5/20] + -27170 Exp[2 Pi I 7/20]),
+                  "twoM" -> 21
+                |>
               },
               "mu" -> 4
             |>
@@ -111056,134 +111792,185 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 45, "twoM" -> -19|>,
-                <|"e" -> 14535, "twoM" -> -11|>,
-                <|"e" -> (720 + 1440 Exp[2 Pi I 2/5] + 1440 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> 104130, "twoM" -> -3|>,
-                <|"e" -> (-48048 + -96096 Exp[2 Pi I 2/5] + -96096 Exp[2 Pi I 3/5]), "twoM" -> 1|>,
-                <|"e" -> -100530, "twoM" -> 5|>,
-                <|"e" -> (-20112 + -40224 Exp[2 Pi I 2/5] + -40224 Exp[2 Pi I 3/5]), "twoM" -> 9|>,
-                <|"e" -> 16545, "twoM" -> 13|>,
-                <|"e" -> (-144 + -288 Exp[2 Pi I 2/5] + -288 Exp[2 Pi I 3/5]), "twoM" -> 17|>,
-                <|"e" -> 91, "twoM" -> 21|>
+                <|"e" -> 45 Exp[2 Pi I/4], "twoM" -> -19|>,
+                <|"e" -> 14535 Exp[2 Pi I/4], "twoM" -> -11|>,
+                <|
+                  "e" -> (-1440 Exp[2 Pi I 3/20] + 720 Exp[2 Pi I 5/20] + -1440 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> 104130 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (96096 Exp[2 Pi I 3/20] + -48048 Exp[2 Pi I 5/20] + 96096 Exp[2 Pi I 7/20]),
+                  "twoM" -> 1
+                |>,
+                <|"e" -> -100530 Exp[2 Pi I/4], "twoM" -> 5|>,
+                <|
+                  "e" -> (40224 Exp[2 Pi I 3/20] + -20112 Exp[2 Pi I 5/20] + 40224 Exp[2 Pi I 7/20]),
+                  "twoM" -> 9
+                |>,
+                <|"e" -> 16545 Exp[2 Pi I/4], "twoM" -> 13|>,
+                <|
+                  "e" -> (288 Exp[2 Pi I 3/20] + -144 Exp[2 Pi I 5/20] + 288 Exp[2 Pi I 7/20]),
+                  "twoM" -> 17
+                |>,
+                <|"e" -> 91 Exp[2 Pi I/4], "twoM" -> 21|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (-45 + -90 Exp[2 Pi I 2/5] + -90 Exp[2 Pi I 3/5]), "twoM" -> -21|>,
-                <|"e" -> -3300, "twoM" -> -17|>,
                 <|
-                  "e" -> (-38475 + -76950 Exp[2 Pi I 2/5] + -76950 Exp[2 Pi I 3/5]),
+                  "e" -> (90 Exp[2 Pi I 3/20] + -45 Exp[2 Pi I 5/20] + 90 Exp[2 Pi I 7/20]),
+                  "twoM" -> -21
+                |>,
+                <|"e" -> -3300 Exp[2 Pi I/4], "twoM" -> -17|>,
+                <|
+                  "e" -> (76950 Exp[2 Pi I 3/20] + -38475 Exp[2 Pi I 5/20] + 76950 Exp[2 Pi I 7/20]),
                   "twoM" -> -13
                 |>,
-                <|"e" -> 52320, "twoM" -> -9|>,
+                <|"e" -> 52320 Exp[2 Pi I/4], "twoM" -> -9|>,
                 <|
-                  "e" -> (-198930 + -397860 Exp[2 Pi I 2/5] + -397860 Exp[2 Pi I 3/5]),
+                  "e" -> (397860 Exp[2 Pi I 3/20] + -198930 Exp[2 Pi I 5/20] + 397860 Exp[2 Pi I 7/20]),
                   "twoM" -> -5
                 |>,
-                <|"e" -> 344760, "twoM" -> -1|>,
-                <|"e" -> (107770 + 215540 Exp[2 Pi I 2/5] + 215540 Exp[2 Pi I 3/5]), "twoM" -> 3|>,
-                <|"e" -> -51840, "twoM" -> 7|>,
-                <|"e" -> (44751 + 89502 Exp[2 Pi I 2/5] + 89502 Exp[2 Pi I 3/5]), "twoM" -> 11|>,
-                <|"e" -> -4020, "twoM" -> 15|>,
-                <|"e" -> (3009 + 6018 Exp[2 Pi I 2/5] + 6018 Exp[2 Pi I 3/5]), "twoM" -> 19|>
+                <|"e" -> 344760 Exp[2 Pi I/4], "twoM" -> -1|>,
+                <|
+                  "e" -> (-215540 Exp[2 Pi I 3/20] + 107770 Exp[2 Pi I 5/20] + -215540 Exp[2 Pi I 7/20]),
+                  "twoM" -> 3
+                |>,
+                <|"e" -> -51840 Exp[2 Pi I/4], "twoM" -> 7|>,
+                <|
+                  "e" -> (-89502 Exp[2 Pi I 3/20] + 44751 Exp[2 Pi I 5/20] + -89502 Exp[2 Pi I 7/20]),
+                  "twoM" -> 11
+                |>,
+                <|"e" -> -4020 Exp[2 Pi I/4], "twoM" -> 15|>,
+                <|
+                  "e" -> (-6018 Exp[2 Pi I 3/20] + 3009 Exp[2 Pi I 5/20] + -6018 Exp[2 Pi I 7/20]),
+                  "twoM" -> 19
+                |>
               },
               "mu" -> 2
             |>,
             <|
               "components" -> {
-                <|"e" -> (-1155 Exp[2 Pi I/8] + 1155 Exp[2 Pi I 3/8]), "twoM" -> -19|>,
+                <|"e" -> (-1155 Exp[2 Pi I/8] + -1155 Exp[2 Pi I 3/8]), "twoM" -> -19|>,
                 <|
-                  "e" -> (15770 Exp[2 Pi I/40] + 15770 Exp[2 Pi I 3/40] + -7885 Exp[2 Pi I 5/40] + -15770 Exp[2 Pi I 7/40] + 15770 Exp[2 Pi I 9/40] + -7885 Exp[2 Pi I 15/40]),
+                  "e" -> (15770 Exp[2 Pi I/40] + -15770 Exp[2 Pi I 3/40] + -7885 Exp[2 Pi I 5/40] + 15770 Exp[2 Pi I 7/40] + 15770 Exp[2 Pi I 9/40] + 7885 Exp[2 Pi I 15/40]),
                   "twoM" -> -15
                 |>,
-                <|"e" -> (10170 Exp[2 Pi I/8] + -10170 Exp[2 Pi I 3/8]), "twoM" -> -11|>,
+                <|"e" -> (10170 Exp[2 Pi I/8] + 10170 Exp[2 Pi I 3/8]), "twoM" -> -11|>,
                 <|
-                  "e" -> (18120 Exp[2 Pi I/40] + 18120 Exp[2 Pi I 3/40] + -9060 Exp[2 Pi I 5/40] + -18120 Exp[2 Pi I 7/40] + 18120 Exp[2 Pi I 9/40] + -9060 Exp[2 Pi I 15/40]),
+                  "e" -> (18120 Exp[2 Pi I/40] + -18120 Exp[2 Pi I 3/40] + -9060 Exp[2 Pi I 5/40] + 18120 Exp[2 Pi I 7/40] + 18120 Exp[2 Pi I 9/40] + 9060 Exp[2 Pi I 15/40]),
                   "twoM" -> -7
                 |>,
-                <|"e" -> (-54210 Exp[2 Pi I/8] + 54210 Exp[2 Pi I 3/8]), "twoM" -> -3|>,
+                <|"e" -> (-54210 Exp[2 Pi I/8] + -54210 Exp[2 Pi I 3/8]), "twoM" -> -3|>,
                 <|
-                  "e" -> (151788 Exp[2 Pi I/40] + 151788 Exp[2 Pi I 3/40] + -75894 Exp[2 Pi I 5/40] + -151788 Exp[2 Pi I 7/40] + 151788 Exp[2 Pi I 9/40] + -75894 Exp[2 Pi I 15/40]),
+                  "e" -> (151788 Exp[2 Pi I/40] + -151788 Exp[2 Pi I 3/40] + -75894 Exp[2 Pi I 5/40] + 151788 Exp[2 Pi I 7/40] + 151788 Exp[2 Pi I 9/40] + 75894 Exp[2 Pi I 15/40]),
                   "twoM" -> 1
                 |>,
-                <|"e" -> (-118440 Exp[2 Pi I/8] + 118440 Exp[2 Pi I 3/8]), "twoM" -> 5|>,
+                <|"e" -> (-118440 Exp[2 Pi I/8] + -118440 Exp[2 Pi I 3/8]), "twoM" -> 5|>,
                 <|
-                  "e" -> (-59928 Exp[2 Pi I/40] + -59928 Exp[2 Pi I 3/40] + 29964 Exp[2 Pi I 5/40] + 59928 Exp[2 Pi I 7/40] + -59928 Exp[2 Pi I 9/40] + 29964 Exp[2 Pi I 15/40]),
+                  "e" -> (-59928 Exp[2 Pi I/40] + 59928 Exp[2 Pi I 3/40] + 29964 Exp[2 Pi I 5/40] + -59928 Exp[2 Pi I 7/40] + -59928 Exp[2 Pi I 9/40] + -29964 Exp[2 Pi I 15/40]),
                   "twoM" -> 9
                 |>,
-                <|"e" -> (-4995 Exp[2 Pi I/8] + 4995 Exp[2 Pi I 3/8]), "twoM" -> 13|>,
+                <|"e" -> (-4995 Exp[2 Pi I/8] + -4995 Exp[2 Pi I 3/8]), "twoM" -> 13|>,
                 <|
-                  "e" -> (2250 Exp[2 Pi I/40] + 2250 Exp[2 Pi I 3/40] + -1125 Exp[2 Pi I 5/40] + -2250 Exp[2 Pi I 7/40] + 2250 Exp[2 Pi I 9/40] + -1125 Exp[2 Pi I 15/40]),
+                  "e" -> (2250 Exp[2 Pi I/40] + -2250 Exp[2 Pi I 3/40] + -1125 Exp[2 Pi I 5/40] + 2250 Exp[2 Pi I 7/40] + 2250 Exp[2 Pi I 9/40] + 1125 Exp[2 Pi I 15/40]),
                   "twoM" -> 17
                 |>,
-                <|"e" -> (-330 Exp[2 Pi I/8] + 330 Exp[2 Pi I 3/8]), "twoM" -> 21|>
+                <|"e" -> (-330 Exp[2 Pi I/8] + -330 Exp[2 Pi I 3/8]), "twoM" -> 21|>
               },
               "mu" -> 3
             |>,
             <|
               "components" -> {
-                <|"e" -> (-330 Exp[2 Pi I/8] + 330 Exp[2 Pi I 3/8]), "twoM" -> -21|>,
+                <|"e" -> (-330 Exp[2 Pi I/8] + -330 Exp[2 Pi I 3/8]), "twoM" -> -21|>,
                 <|
-                  "e" -> (2250 Exp[2 Pi I/40] + 2250 Exp[2 Pi I 3/40] + -1125 Exp[2 Pi I 5/40] + -2250 Exp[2 Pi I 7/40] + 2250 Exp[2 Pi I 9/40] + -1125 Exp[2 Pi I 15/40]),
+                  "e" -> (2250 Exp[2 Pi I/40] + -2250 Exp[2 Pi I 3/40] + -1125 Exp[2 Pi I 5/40] + 2250 Exp[2 Pi I 7/40] + 2250 Exp[2 Pi I 9/40] + 1125 Exp[2 Pi I 15/40]),
                   "twoM" -> -17
                 |>,
-                <|"e" -> (-4995 Exp[2 Pi I/8] + 4995 Exp[2 Pi I 3/8]), "twoM" -> -13|>,
+                <|"e" -> (-4995 Exp[2 Pi I/8] + -4995 Exp[2 Pi I 3/8]), "twoM" -> -13|>,
                 <|
-                  "e" -> (-59928 Exp[2 Pi I/40] + -59928 Exp[2 Pi I 3/40] + 29964 Exp[2 Pi I 5/40] + 59928 Exp[2 Pi I 7/40] + -59928 Exp[2 Pi I 9/40] + 29964 Exp[2 Pi I 15/40]),
+                  "e" -> (-59928 Exp[2 Pi I/40] + 59928 Exp[2 Pi I 3/40] + 29964 Exp[2 Pi I 5/40] + -59928 Exp[2 Pi I 7/40] + -59928 Exp[2 Pi I 9/40] + -29964 Exp[2 Pi I 15/40]),
                   "twoM" -> -9
                 |>,
-                <|"e" -> (-118440 Exp[2 Pi I/8] + 118440 Exp[2 Pi I 3/8]), "twoM" -> -5|>,
+                <|"e" -> (-118440 Exp[2 Pi I/8] + -118440 Exp[2 Pi I 3/8]), "twoM" -> -5|>,
                 <|
-                  "e" -> (151788 Exp[2 Pi I/40] + 151788 Exp[2 Pi I 3/40] + -75894 Exp[2 Pi I 5/40] + -151788 Exp[2 Pi I 7/40] + 151788 Exp[2 Pi I 9/40] + -75894 Exp[2 Pi I 15/40]),
+                  "e" -> (151788 Exp[2 Pi I/40] + -151788 Exp[2 Pi I 3/40] + -75894 Exp[2 Pi I 5/40] + 151788 Exp[2 Pi I 7/40] + 151788 Exp[2 Pi I 9/40] + 75894 Exp[2 Pi I 15/40]),
                   "twoM" -> -1
                 |>,
-                <|"e" -> (-54210 Exp[2 Pi I/8] + 54210 Exp[2 Pi I 3/8]), "twoM" -> 3|>,
+                <|"e" -> (-54210 Exp[2 Pi I/8] + -54210 Exp[2 Pi I 3/8]), "twoM" -> 3|>,
                 <|
-                  "e" -> (18120 Exp[2 Pi I/40] + 18120 Exp[2 Pi I 3/40] + -9060 Exp[2 Pi I 5/40] + -18120 Exp[2 Pi I 7/40] + 18120 Exp[2 Pi I 9/40] + -9060 Exp[2 Pi I 15/40]),
+                  "e" -> (18120 Exp[2 Pi I/40] + -18120 Exp[2 Pi I 3/40] + -9060 Exp[2 Pi I 5/40] + 18120 Exp[2 Pi I 7/40] + 18120 Exp[2 Pi I 9/40] + 9060 Exp[2 Pi I 15/40]),
                   "twoM" -> 7
                 |>,
-                <|"e" -> (10170 Exp[2 Pi I/8] + -10170 Exp[2 Pi I 3/8]), "twoM" -> 11|>,
+                <|"e" -> (10170 Exp[2 Pi I/8] + 10170 Exp[2 Pi I 3/8]), "twoM" -> 11|>,
                 <|
-                  "e" -> (15770 Exp[2 Pi I/40] + 15770 Exp[2 Pi I 3/40] + -7885 Exp[2 Pi I 5/40] + -15770 Exp[2 Pi I 7/40] + 15770 Exp[2 Pi I 9/40] + -7885 Exp[2 Pi I 15/40]),
+                  "e" -> (15770 Exp[2 Pi I/40] + -15770 Exp[2 Pi I 3/40] + -7885 Exp[2 Pi I 5/40] + 15770 Exp[2 Pi I 7/40] + 15770 Exp[2 Pi I 9/40] + 7885 Exp[2 Pi I 15/40]),
                   "twoM" -> 15
                 |>,
-                <|"e" -> (-1155 Exp[2 Pi I/8] + 1155 Exp[2 Pi I 3/8]), "twoM" -> 19|>
+                <|"e" -> (-1155 Exp[2 Pi I/8] + -1155 Exp[2 Pi I 3/8]), "twoM" -> 19|>
               },
               "mu" -> 4
             |>,
             <|
               "components" -> {
-                <|"e" -> (3009 + 6018 Exp[2 Pi I 2/5] + 6018 Exp[2 Pi I 3/5]), "twoM" -> -19|>,
-                <|"e" -> -4020, "twoM" -> -15|>,
-                <|"e" -> (44751 + 89502 Exp[2 Pi I 2/5] + 89502 Exp[2 Pi I 3/5]), "twoM" -> -11|>,
-                <|"e" -> -51840, "twoM" -> -7|>,
-                <|"e" -> (107770 + 215540 Exp[2 Pi I 2/5] + 215540 Exp[2 Pi I 3/5]), "twoM" -> -3|>,
-                <|"e" -> 344760, "twoM" -> 1|>,
                 <|
-                  "e" -> (-198930 + -397860 Exp[2 Pi I 2/5] + -397860 Exp[2 Pi I 3/5]),
+                  "e" -> (-6018 Exp[2 Pi I 3/20] + 3009 Exp[2 Pi I 5/20] + -6018 Exp[2 Pi I 7/20]),
+                  "twoM" -> -19
+                |>,
+                <|"e" -> -4020 Exp[2 Pi I/4], "twoM" -> -15|>,
+                <|
+                  "e" -> (-89502 Exp[2 Pi I 3/20] + 44751 Exp[2 Pi I 5/20] + -89502 Exp[2 Pi I 7/20]),
+                  "twoM" -> -11
+                |>,
+                <|"e" -> -51840 Exp[2 Pi I/4], "twoM" -> -7|>,
+                <|
+                  "e" -> (-215540 Exp[2 Pi I 3/20] + 107770 Exp[2 Pi I 5/20] + -215540 Exp[2 Pi I 7/20]),
+                  "twoM" -> -3
+                |>,
+                <|"e" -> 344760 Exp[2 Pi I/4], "twoM" -> 1|>,
+                <|
+                  "e" -> (397860 Exp[2 Pi I 3/20] + -198930 Exp[2 Pi I 5/20] + 397860 Exp[2 Pi I 7/20]),
                   "twoM" -> 5
                 |>,
-                <|"e" -> 52320, "twoM" -> 9|>,
-                <|"e" -> (-38475 + -76950 Exp[2 Pi I 2/5] + -76950 Exp[2 Pi I 3/5]), "twoM" -> 13|>,
-                <|"e" -> -3300, "twoM" -> 17|>,
-                <|"e" -> (-45 + -90 Exp[2 Pi I 2/5] + -90 Exp[2 Pi I 3/5]), "twoM" -> 21|>
+                <|"e" -> 52320 Exp[2 Pi I/4], "twoM" -> 9|>,
+                <|
+                  "e" -> (76950 Exp[2 Pi I 3/20] + -38475 Exp[2 Pi I 5/20] + 76950 Exp[2 Pi I 7/20]),
+                  "twoM" -> 13
+                |>,
+                <|"e" -> -3300 Exp[2 Pi I/4], "twoM" -> 17|>,
+                <|
+                  "e" -> (90 Exp[2 Pi I 3/20] + -45 Exp[2 Pi I 5/20] + 90 Exp[2 Pi I 7/20]),
+                  "twoM" -> 21
+                |>
               },
               "mu" -> 5
             |>,
             <|
               "components" -> {
-                <|"e" -> 91, "twoM" -> -21|>,
-                <|"e" -> (-144 + -288 Exp[2 Pi I 2/5] + -288 Exp[2 Pi I 3/5]), "twoM" -> -17|>,
-                <|"e" -> 16545, "twoM" -> -13|>,
-                <|"e" -> (-20112 + -40224 Exp[2 Pi I 2/5] + -40224 Exp[2 Pi I 3/5]), "twoM" -> -9|>,
-                <|"e" -> -100530, "twoM" -> -5|>,
-                <|"e" -> (-48048 + -96096 Exp[2 Pi I 2/5] + -96096 Exp[2 Pi I 3/5]), "twoM" -> -1|>,
-                <|"e" -> 104130, "twoM" -> 3|>,
-                <|"e" -> (720 + 1440 Exp[2 Pi I 2/5] + 1440 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> 14535, "twoM" -> 11|>,
-                <|"e" -> 45, "twoM" -> 19|>
+                <|"e" -> 91 Exp[2 Pi I/4], "twoM" -> -21|>,
+                <|
+                  "e" -> (288 Exp[2 Pi I 3/20] + -144 Exp[2 Pi I 5/20] + 288 Exp[2 Pi I 7/20]),
+                  "twoM" -> -17
+                |>,
+                <|"e" -> 16545 Exp[2 Pi I/4], "twoM" -> -13|>,
+                <|
+                  "e" -> (40224 Exp[2 Pi I 3/20] + -20112 Exp[2 Pi I 5/20] + 40224 Exp[2 Pi I 7/20]),
+                  "twoM" -> -9
+                |>,
+                <|"e" -> -100530 Exp[2 Pi I/4], "twoM" -> -5|>,
+                <|
+                  "e" -> (96096 Exp[2 Pi I 3/20] + -48048 Exp[2 Pi I 5/20] + 96096 Exp[2 Pi I 7/20]),
+                  "twoM" -> -1
+                |>,
+                <|"e" -> 104130 Exp[2 Pi I/4], "twoM" -> 3|>,
+                <|
+                  "e" -> (-1440 Exp[2 Pi I 3/20] + 720 Exp[2 Pi I 5/20] + -1440 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> 14535 Exp[2 Pi I/4], "twoM" -> 11|>,
+                <|"e" -> 45 Exp[2 Pi I/4], "twoM" -> 19|>
               },
               "mu" -> 6
             |>
@@ -111198,86 +111985,98 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> (-9405 + -18810 Exp[2 Pi I 2/5] + -18810 Exp[2 Pi I 3/5]), "twoM" -> -19|>,
-                <|"e" -> 286650, "twoM" -> -15|>,
                 <|
-                  "e" -> (-113985 + -227970 Exp[2 Pi I 2/5] + -227970 Exp[2 Pi I 3/5]),
+                  "e" -> (18810 Exp[2 Pi I 3/20] + -9405 Exp[2 Pi I 5/20] + 18810 Exp[2 Pi I 7/20]),
+                  "twoM" -> -19
+                |>,
+                <|"e" -> 286650 Exp[2 Pi I/4], "twoM" -> -15|>,
+                <|
+                  "e" -> (227970 Exp[2 Pi I 3/20] + -113985 Exp[2 Pi I 5/20] + 227970 Exp[2 Pi I 7/20]),
                   "twoM" -> -11
                 |>,
-                <|"e" -> -4192200, "twoM" -> -7|>,
+                <|"e" -> -4192200 Exp[2 Pi I/4], "twoM" -> -7|>,
                 <|
-                  "e" -> (-895050 + -1790100 Exp[2 Pi I 2/5] + -1790100 Exp[2 Pi I 3/5]),
+                  "e" -> (1790100 Exp[2 Pi I 3/20] + -895050 Exp[2 Pi I 5/20] + 1790100 Exp[2 Pi I 7/20]),
                   "twoM" -> -3
                 |>,
-                <|"e" -> 1021020, "twoM" -> 1|>,
+                <|"e" -> 1021020 Exp[2 Pi I/4], "twoM" -> 1|>,
                 <|
-                  "e" -> (-1347930 + -2695860 Exp[2 Pi I 2/5] + -2695860 Exp[2 Pi I 3/5]),
+                  "e" -> (2695860 Exp[2 Pi I 3/20] + -1347930 Exp[2 Pi I 5/20] + 2695860 Exp[2 Pi I 7/20]),
                   "twoM" -> 5
                 |>,
-                <|"e" -> 148920, "twoM" -> 9|>,
-                <|"e" -> (-18105 + -36210 Exp[2 Pi I 2/5] + -36210 Exp[2 Pi I 3/5]), "twoM" -> 13|>,
-                <|"e" -> -21510, "twoM" -> 17|>,
-                <|"e" -> (91 + 182 Exp[2 Pi I 2/5] + 182 Exp[2 Pi I 3/5]), "twoM" -> 21|>
+                <|"e" -> 148920 Exp[2 Pi I/4], "twoM" -> 9|>,
+                <|
+                  "e" -> (36210 Exp[2 Pi I 3/20] + -18105 Exp[2 Pi I 5/20] + 36210 Exp[2 Pi I 7/20]),
+                  "twoM" -> 13
+                |>,
+                <|"e" -> -21510 Exp[2 Pi I/4], "twoM" -> 17|>,
+                <|
+                  "e" -> (-182 Exp[2 Pi I 3/20] + 91 Exp[2 Pi I 5/20] + -182 Exp[2 Pi I 7/20]),
+                  "twoM" -> 21
+                |>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 9405, "twoM" -> -21|>,
+                <|"e" -> 9405 Exp[2 Pi I/4], "twoM" -> -21|>,
                 <|
-                  "e" -> (-34050 + -68100 Exp[2 Pi I 2/5] + -68100 Exp[2 Pi I 3/5]),
+                  "e" -> (68100 Exp[2 Pi I 3/20] + -34050 Exp[2 Pi I 5/20] + 68100 Exp[2 Pi I 7/20]),
                   "twoM" -> -17
                 |>,
-                <|"e" -> -42255, "twoM" -> -13|>,
+                <|"e" -> -42255 Exp[2 Pi I/4], "twoM" -> -13|>,
                 <|
-                  "e" -> (-490008 + -980016 Exp[2 Pi I 2/5] + -980016 Exp[2 Pi I 3/5]),
+                  "e" -> (980016 Exp[2 Pi I 3/20] + -490008 Exp[2 Pi I 5/20] + 980016 Exp[2 Pi I 7/20]),
                   "twoM" -> -9
                 |>,
-                <|"e" -> -1765110, "twoM" -> -5|>,
+                <|"e" -> -1765110 Exp[2 Pi I/4], "twoM" -> -5|>,
                 <|
-                  "e" -> (792948 + 1585896 Exp[2 Pi I 2/5] + 1585896 Exp[2 Pi I 3/5]),
+                  "e" -> (-1585896 Exp[2 Pi I 3/20] + 792948 Exp[2 Pi I 5/20] + -1585896 Exp[2 Pi I 7/20]),
                   "twoM" -> -1
                 |>,
-                <|"e" -> -5133830, "twoM" -> 3|>,
-                <|"e" -> (378216 + 756432 Exp[2 Pi I 2/5] + 756432 Exp[2 Pi I 3/5]), "twoM" -> 7|>,
-                <|"e" -> -409479, "twoM" -> 11|>,
+                <|"e" -> -5133830 Exp[2 Pi I/4], "twoM" -> 3|>,
                 <|
-                  "e" -> (-95682 + -191364 Exp[2 Pi I 2/5] + -191364 Exp[2 Pi I 3/5]),
+                  "e" -> (-756432 Exp[2 Pi I 3/20] + 378216 Exp[2 Pi I 5/20] + -756432 Exp[2 Pi I 7/20]),
+                  "twoM" -> 7
+                |>,
+                <|"e" -> -409479 Exp[2 Pi I/4], "twoM" -> 11|>,
+                <|
+                  "e" -> (191364 Exp[2 Pi I 3/20] + -95682 Exp[2 Pi I 5/20] + 191364 Exp[2 Pi I 7/20]),
                   "twoM" -> 15
                 |>,
-                <|"e" -> 1749, "twoM" -> 19|>
+                <|"e" -> 1749 Exp[2 Pi I/4], "twoM" -> 19|>
               },
               "mu" -> 2
             |>,
             <|
               "components" -> {
                 <|
-                  "e" -> (-21126 Exp[2 Pi I/40] + -21126 Exp[2 Pi I 3/40] + 10563 Exp[2 Pi I 5/40] + 21126 Exp[2 Pi I 7/40] + -21126 Exp[2 Pi I 9/40] + 10563 Exp[2 Pi I 15/40]),
+                  "e" -> (-21126 Exp[2 Pi I/40] + 21126 Exp[2 Pi I 3/40] + 10563 Exp[2 Pi I 5/40] + -21126 Exp[2 Pi I 7/40] + -21126 Exp[2 Pi I 9/40] + -10563 Exp[2 Pi I 15/40]),
                   "twoM" -> -19
                 |>,
-                <|"e" -> (-67430 Exp[2 Pi I/8] + 67430 Exp[2 Pi I 3/8]), "twoM" -> -15|>,
+                <|"e" -> (-67430 Exp[2 Pi I/8] + -67430 Exp[2 Pi I 3/8]), "twoM" -> -15|>,
                 <|
-                  "e" -> (702882 Exp[2 Pi I/40] + 702882 Exp[2 Pi I 3/40] + -351441 Exp[2 Pi I 5/40] + -702882 Exp[2 Pi I 7/40] + 702882 Exp[2 Pi I 9/40] + -351441 Exp[2 Pi I 15/40]),
+                  "e" -> (702882 Exp[2 Pi I/40] + -702882 Exp[2 Pi I 3/40] + -351441 Exp[2 Pi I 5/40] + 702882 Exp[2 Pi I 7/40] + 702882 Exp[2 Pi I 9/40] + 351441 Exp[2 Pi I 15/40]),
                   "twoM" -> -11
                 |>,
-                <|"e" -> (-340680 Exp[2 Pi I/8] + 340680 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
+                <|"e" -> (-340680 Exp[2 Pi I/8] + -340680 Exp[2 Pi I 3/8]), "twoM" -> -7|>,
                 <|
-                  "e" -> (177684 Exp[2 Pi I/40] + 177684 Exp[2 Pi I 3/40] + -88842 Exp[2 Pi I 5/40] + -177684 Exp[2 Pi I 7/40] + 177684 Exp[2 Pi I 9/40] + -88842 Exp[2 Pi I 15/40]),
+                  "e" -> (177684 Exp[2 Pi I/40] + -177684 Exp[2 Pi I 3/40] + -88842 Exp[2 Pi I 5/40] + 177684 Exp[2 Pi I 7/40] + 177684 Exp[2 Pi I 9/40] + 88842 Exp[2 Pi I 15/40]),
                   "twoM" -> -3
                 |>,
-                <|"e" -> (1912092 Exp[2 Pi I/8] + -1912092 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
+                <|"e" -> (1912092 Exp[2 Pi I/8] + 1912092 Exp[2 Pi I 3/8]), "twoM" -> 1|>,
                 <|
-                  "e" -> (766836 Exp[2 Pi I/40] + 766836 Exp[2 Pi I 3/40] + -383418 Exp[2 Pi I 5/40] + -766836 Exp[2 Pi I 7/40] + 766836 Exp[2 Pi I 9/40] + -383418 Exp[2 Pi I 15/40]),
+                  "e" -> (766836 Exp[2 Pi I/40] + -766836 Exp[2 Pi I 3/40] + -383418 Exp[2 Pi I 5/40] + 766836 Exp[2 Pi I 7/40] + 766836 Exp[2 Pi I 9/40] + 383418 Exp[2 Pi I 15/40]),
                   "twoM" -> 5
                 |>,
-                <|"e" -> (775608 Exp[2 Pi I/8] + -775608 Exp[2 Pi I 3/8]), "twoM" -> 9|>,
+                <|"e" -> (775608 Exp[2 Pi I/8] + 775608 Exp[2 Pi I 3/8]), "twoM" -> 9|>,
                 <|
-                  "e" -> (-525582 Exp[2 Pi I/40] + -525582 Exp[2 Pi I 3/40] + 262791 Exp[2 Pi I 5/40] + 525582 Exp[2 Pi I 7/40] + -525582 Exp[2 Pi I 9/40] + 262791 Exp[2 Pi I 15/40]),
+                  "e" -> (-525582 Exp[2 Pi I/40] + 525582 Exp[2 Pi I 3/40] + 262791 Exp[2 Pi I 5/40] + -525582 Exp[2 Pi I 7/40] + -525582 Exp[2 Pi I 9/40] + -262791 Exp[2 Pi I 15/40]),
                   "twoM" -> 13
                 |>,
-                <|"e" -> (11610 Exp[2 Pi I/8] + -11610 Exp[2 Pi I 3/8]), "twoM" -> 17|>,
+                <|"e" -> (11610 Exp[2 Pi I/8] + 11610 Exp[2 Pi I 3/8]), "twoM" -> 17|>,
                 <|
-                  "e" -> (2154 Exp[2 Pi I/40] + 2154 Exp[2 Pi I 3/40] + -1077 Exp[2 Pi I 5/40] + -2154 Exp[2 Pi I 7/40] + 2154 Exp[2 Pi I 9/40] + -1077 Exp[2 Pi I 15/40]),
+                  "e" -> (2154 Exp[2 Pi I/40] + -2154 Exp[2 Pi I 3/40] + -1077 Exp[2 Pi I 5/40] + 2154 Exp[2 Pi I 7/40] + 2154 Exp[2 Pi I 9/40] + 1077 Exp[2 Pi I 15/40]),
                   "twoM" -> 21
                 |>
               },
@@ -111286,32 +112085,32 @@ o3d = <|
             <|
               "components" -> {
                 <|
-                  "e" -> (2154 Exp[2 Pi I/40] + 2154 Exp[2 Pi I 3/40] + -1077 Exp[2 Pi I 5/40] + -2154 Exp[2 Pi I 7/40] + 2154 Exp[2 Pi I 9/40] + -1077 Exp[2 Pi I 15/40]),
+                  "e" -> (2154 Exp[2 Pi I/40] + -2154 Exp[2 Pi I 3/40] + -1077 Exp[2 Pi I 5/40] + 2154 Exp[2 Pi I 7/40] + 2154 Exp[2 Pi I 9/40] + 1077 Exp[2 Pi I 15/40]),
                   "twoM" -> -21
                 |>,
-                <|"e" -> (11610 Exp[2 Pi I/8] + -11610 Exp[2 Pi I 3/8]), "twoM" -> -17|>,
+                <|"e" -> (11610 Exp[2 Pi I/8] + 11610 Exp[2 Pi I 3/8]), "twoM" -> -17|>,
                 <|
-                  "e" -> (-525582 Exp[2 Pi I/40] + -525582 Exp[2 Pi I 3/40] + 262791 Exp[2 Pi I 5/40] + 525582 Exp[2 Pi I 7/40] + -525582 Exp[2 Pi I 9/40] + 262791 Exp[2 Pi I 15/40]),
+                  "e" -> (-525582 Exp[2 Pi I/40] + 525582 Exp[2 Pi I 3/40] + 262791 Exp[2 Pi I 5/40] + -525582 Exp[2 Pi I 7/40] + -525582 Exp[2 Pi I 9/40] + -262791 Exp[2 Pi I 15/40]),
                   "twoM" -> -13
                 |>,
-                <|"e" -> (775608 Exp[2 Pi I/8] + -775608 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
+                <|"e" -> (775608 Exp[2 Pi I/8] + 775608 Exp[2 Pi I 3/8]), "twoM" -> -9|>,
                 <|
-                  "e" -> (766836 Exp[2 Pi I/40] + 766836 Exp[2 Pi I 3/40] + -383418 Exp[2 Pi I 5/40] + -766836 Exp[2 Pi I 7/40] + 766836 Exp[2 Pi I 9/40] + -383418 Exp[2 Pi I 15/40]),
+                  "e" -> (766836 Exp[2 Pi I/40] + -766836 Exp[2 Pi I 3/40] + -383418 Exp[2 Pi I 5/40] + 766836 Exp[2 Pi I 7/40] + 766836 Exp[2 Pi I 9/40] + 383418 Exp[2 Pi I 15/40]),
                   "twoM" -> -5
                 |>,
-                <|"e" -> (1912092 Exp[2 Pi I/8] + -1912092 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
+                <|"e" -> (1912092 Exp[2 Pi I/8] + 1912092 Exp[2 Pi I 3/8]), "twoM" -> -1|>,
                 <|
-                  "e" -> (177684 Exp[2 Pi I/40] + 177684 Exp[2 Pi I 3/40] + -88842 Exp[2 Pi I 5/40] + -177684 Exp[2 Pi I 7/40] + 177684 Exp[2 Pi I 9/40] + -88842 Exp[2 Pi I 15/40]),
+                  "e" -> (177684 Exp[2 Pi I/40] + -177684 Exp[2 Pi I 3/40] + -88842 Exp[2 Pi I 5/40] + 177684 Exp[2 Pi I 7/40] + 177684 Exp[2 Pi I 9/40] + 88842 Exp[2 Pi I 15/40]),
                   "twoM" -> 3
                 |>,
-                <|"e" -> (-340680 Exp[2 Pi I/8] + 340680 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
+                <|"e" -> (-340680 Exp[2 Pi I/8] + -340680 Exp[2 Pi I 3/8]), "twoM" -> 7|>,
                 <|
-                  "e" -> (702882 Exp[2 Pi I/40] + 702882 Exp[2 Pi I 3/40] + -351441 Exp[2 Pi I 5/40] + -702882 Exp[2 Pi I 7/40] + 702882 Exp[2 Pi I 9/40] + -351441 Exp[2 Pi I 15/40]),
+                  "e" -> (702882 Exp[2 Pi I/40] + -702882 Exp[2 Pi I 3/40] + -351441 Exp[2 Pi I 5/40] + 702882 Exp[2 Pi I 7/40] + 702882 Exp[2 Pi I 9/40] + 351441 Exp[2 Pi I 15/40]),
                   "twoM" -> 11
                 |>,
-                <|"e" -> (-67430 Exp[2 Pi I/8] + 67430 Exp[2 Pi I 3/8]), "twoM" -> 15|>,
+                <|"e" -> (-67430 Exp[2 Pi I/8] + -67430 Exp[2 Pi I 3/8]), "twoM" -> 15|>,
                 <|
-                  "e" -> (-21126 Exp[2 Pi I/40] + -21126 Exp[2 Pi I 3/40] + 10563 Exp[2 Pi I 5/40] + 21126 Exp[2 Pi I 7/40] + -21126 Exp[2 Pi I 9/40] + 10563 Exp[2 Pi I 15/40]),
+                  "e" -> (-21126 Exp[2 Pi I/40] + 21126 Exp[2 Pi I 3/40] + 10563 Exp[2 Pi I 5/40] + -21126 Exp[2 Pi I 7/40] + -21126 Exp[2 Pi I 9/40] + -10563 Exp[2 Pi I 15/40]),
                   "twoM" -> 19
                 |>
               },
@@ -111319,54 +112118,66 @@ o3d = <|
             |>,
             <|
               "components" -> {
-                <|"e" -> 1749, "twoM" -> -19|>,
+                <|"e" -> 1749 Exp[2 Pi I/4], "twoM" -> -19|>,
                 <|
-                  "e" -> (-95682 + -191364 Exp[2 Pi I 2/5] + -191364 Exp[2 Pi I 3/5]),
+                  "e" -> (191364 Exp[2 Pi I 3/20] + -95682 Exp[2 Pi I 5/20] + 191364 Exp[2 Pi I 7/20]),
                   "twoM" -> -15
                 |>,
-                <|"e" -> -409479, "twoM" -> -11|>,
-                <|"e" -> (378216 + 756432 Exp[2 Pi I 2/5] + 756432 Exp[2 Pi I 3/5]), "twoM" -> -7|>,
-                <|"e" -> -5133830, "twoM" -> -3|>,
+                <|"e" -> -409479 Exp[2 Pi I/4], "twoM" -> -11|>,
                 <|
-                  "e" -> (792948 + 1585896 Exp[2 Pi I 2/5] + 1585896 Exp[2 Pi I 3/5]),
+                  "e" -> (-756432 Exp[2 Pi I 3/20] + 378216 Exp[2 Pi I 5/20] + -756432 Exp[2 Pi I 7/20]),
+                  "twoM" -> -7
+                |>,
+                <|"e" -> -5133830 Exp[2 Pi I/4], "twoM" -> -3|>,
+                <|
+                  "e" -> (-1585896 Exp[2 Pi I 3/20] + 792948 Exp[2 Pi I 5/20] + -1585896 Exp[2 Pi I 7/20]),
                   "twoM" -> 1
                 |>,
-                <|"e" -> -1765110, "twoM" -> 5|>,
+                <|"e" -> -1765110 Exp[2 Pi I/4], "twoM" -> 5|>,
                 <|
-                  "e" -> (-490008 + -980016 Exp[2 Pi I 2/5] + -980016 Exp[2 Pi I 3/5]),
+                  "e" -> (980016 Exp[2 Pi I 3/20] + -490008 Exp[2 Pi I 5/20] + 980016 Exp[2 Pi I 7/20]),
                   "twoM" -> 9
                 |>,
-                <|"e" -> -42255, "twoM" -> 13|>,
-                <|"e" -> (-34050 + -68100 Exp[2 Pi I 2/5] + -68100 Exp[2 Pi I 3/5]), "twoM" -> 17|>,
-                <|"e" -> 9405, "twoM" -> 21|>
+                <|"e" -> -42255 Exp[2 Pi I/4], "twoM" -> 13|>,
+                <|
+                  "e" -> (68100 Exp[2 Pi I 3/20] + -34050 Exp[2 Pi I 5/20] + 68100 Exp[2 Pi I 7/20]),
+                  "twoM" -> 17
+                |>,
+                <|"e" -> 9405 Exp[2 Pi I/4], "twoM" -> 21|>
               },
               "mu" -> 5
             |>,
             <|
               "components" -> {
-                <|"e" -> (91 + 182 Exp[2 Pi I 2/5] + 182 Exp[2 Pi I 3/5]), "twoM" -> -21|>,
-                <|"e" -> -21510, "twoM" -> -17|>,
                 <|
-                  "e" -> (-18105 + -36210 Exp[2 Pi I 2/5] + -36210 Exp[2 Pi I 3/5]),
+                  "e" -> (-182 Exp[2 Pi I 3/20] + 91 Exp[2 Pi I 5/20] + -182 Exp[2 Pi I 7/20]),
+                  "twoM" -> -21
+                |>,
+                <|"e" -> -21510 Exp[2 Pi I/4], "twoM" -> -17|>,
+                <|
+                  "e" -> (36210 Exp[2 Pi I 3/20] + -18105 Exp[2 Pi I 5/20] + 36210 Exp[2 Pi I 7/20]),
                   "twoM" -> -13
                 |>,
-                <|"e" -> 148920, "twoM" -> -9|>,
+                <|"e" -> 148920 Exp[2 Pi I/4], "twoM" -> -9|>,
                 <|
-                  "e" -> (-1347930 + -2695860 Exp[2 Pi I 2/5] + -2695860 Exp[2 Pi I 3/5]),
+                  "e" -> (2695860 Exp[2 Pi I 3/20] + -1347930 Exp[2 Pi I 5/20] + 2695860 Exp[2 Pi I 7/20]),
                   "twoM" -> -5
                 |>,
-                <|"e" -> 1021020, "twoM" -> -1|>,
+                <|"e" -> 1021020 Exp[2 Pi I/4], "twoM" -> -1|>,
                 <|
-                  "e" -> (-895050 + -1790100 Exp[2 Pi I 2/5] + -1790100 Exp[2 Pi I 3/5]),
+                  "e" -> (1790100 Exp[2 Pi I 3/20] + -895050 Exp[2 Pi I 5/20] + 1790100 Exp[2 Pi I 7/20]),
                   "twoM" -> 3
                 |>,
-                <|"e" -> -4192200, "twoM" -> 7|>,
+                <|"e" -> -4192200 Exp[2 Pi I/4], "twoM" -> 7|>,
                 <|
-                  "e" -> (-113985 + -227970 Exp[2 Pi I 2/5] + -227970 Exp[2 Pi I 3/5]),
+                  "e" -> (227970 Exp[2 Pi I 3/20] + -113985 Exp[2 Pi I 5/20] + 227970 Exp[2 Pi I 7/20]),
                   "twoM" -> 11
                 |>,
-                <|"e" -> 286650, "twoM" -> 15|>,
-                <|"e" -> (-9405 + -18810 Exp[2 Pi I 2/5] + -18810 Exp[2 Pi I 3/5]), "twoM" -> 19|>
+                <|"e" -> 286650 Exp[2 Pi I/4], "twoM" -> 15|>,
+                <|
+                  "e" -> (18810 Exp[2 Pi I 3/20] + -9405 Exp[2 Pi I 5/20] + 18810 Exp[2 Pi I 7/20]),
+                  "twoM" -> 19
+                |>
               },
               "mu" -> 6
             |>
@@ -114589,24 +115400,24 @@ o3d = <|
                 "separation" -> "unique"
               |>,
               <|
-                "N" -> (3248 + -2400 Exp[2 Pi I/12] + 1200 Exp[2 Pi I 3/12]),
+                "N" -> (1296 + 1440 Exp[2 Pi I/12] + -720 Exp[2 Pi I 3/12]),
                 "irrep" -> "2G3h",
                 "kappa" -> 1,
                 "partners" -> {
                   <|
                     "mu" -> 1,
                     "terms" -> {
-                      <|"e" -> (26 + -14 Exp[2 Pi I/12] + 7 Exp[2 Pi I 3/12]), "i" -> 1|>,
+                      <|"e" -> (18 + 18 Exp[2 Pi I/12] + -9 Exp[2 Pi I 3/12]), "i" -> 1|>,
                       <|
-                        "e" -> (-21 + 9 Exp[2 Pi I/60] + -8 Exp[2 Pi I 2/60] + 9 Exp[2 Pi I 4/60] + 2 Exp[2 Pi I 5/60] + 9 Exp[2 Pi I 6/60] + -8 Exp[2 Pi I 7/60] + 8 Exp[2 Pi I 8/60] + -9 Exp[2 Pi I 9/60] + 10 Exp[2 Pi I 10/60] + -9 Exp[2 Pi I 11/60] + 8 Exp[2 Pi I 13/60] + -9 Exp[2 Pi I 14/60] + -4 Exp[2 Pi I 15/60]),
+                        "e" -> (7 + Exp[2 Pi I/60] + 4 Exp[2 Pi I 2/60] + Exp[2 Pi I 4/60] + 6 Exp[2 Pi I 5/60] + Exp[2 Pi I 6/60] + 4 Exp[2 Pi I 7/60] + -4 Exp[2 Pi I 8/60] + -1 Exp[2 Pi I 9/60] + 2 Exp[2 Pi I 10/60] + -1 Exp[2 Pi I 11/60] + -4 Exp[2 Pi I 13/60] + -1 Exp[2 Pi I 14/60] + 4 Exp[2 Pi I 15/60]),
                         "i" -> 2
                       |>,
                       <|
-                        "e" -> (-17 + -4 Exp[2 Pi I/60] + 18 Exp[2 Pi I 4/60] + 4 Exp[2 Pi I 5/60] + 18 Exp[2 Pi I 6/60] + 8 Exp[2 Pi I 7/60] + 4 Exp[2 Pi I 9/60] + 16 Exp[2 Pi I 10/60] + 4 Exp[2 Pi I 11/60] + -8 Exp[2 Pi I 13/60] + -18 Exp[2 Pi I 14/60] + -16 Exp[2 Pi I 15/60]),
+                        "e" -> (7 + 4 Exp[2 Pi I/60] + -6 Exp[2 Pi I 4/60] + -4 Exp[2 Pi I 5/60] + -6 Exp[2 Pi I 6/60] + -8 Exp[2 Pi I 7/60] + -4 Exp[2 Pi I 9/60] + -8 Exp[2 Pi I 10/60] + -4 Exp[2 Pi I 11/60] + 8 Exp[2 Pi I 13/60] + 6 Exp[2 Pi I 14/60]),
                         "i" -> 3
                       |>,
                       <|
-                        "e" -> (-5 Exp[2 Pi I/60] + -6 Exp[2 Pi I 2/60] + 5 Exp[2 Pi I 4/60] + -18 Exp[2 Pi I 5/60] + 5 Exp[2 Pi I 6/60] + 6 Exp[2 Pi I 7/60] + 6 Exp[2 Pi I 8/60] + 5 Exp[2 Pi I 9/60] + 24 Exp[2 Pi I 10/60] + 5 Exp[2 Pi I 11/60] + -6 Exp[2 Pi I 13/60] + -5 Exp[2 Pi I 14/60] + -11 Exp[2 Pi I 15/60]),
+                        "e" -> (-16 + -1 Exp[2 Pi I/60] + -2 Exp[2 Pi I 2/60] + Exp[2 Pi I 4/60] + -10 Exp[2 Pi I 5/60] + Exp[2 Pi I 6/60] + 2 Exp[2 Pi I 7/60] + 2 Exp[2 Pi I 8/60] + Exp[2 Pi I 9/60] + 12 Exp[2 Pi I 10/60] + Exp[2 Pi I 11/60] + -2 Exp[2 Pi I 13/60] + -1 Exp[2 Pi I 14/60] + 13 Exp[2 Pi I 15/60]),
                         "i" -> 4
                       |>
                     }
@@ -114615,19 +115426,19 @@ o3d = <|
                     "mu" -> 2,
                     "terms" -> {
                       <|
-                        "e" -> (-6 + -2 Exp[2 Pi I/60] + 12 Exp[2 Pi I 2/60] + -2 Exp[2 Pi I 4/60] + 15 Exp[2 Pi I 5/60] + -2 Exp[2 Pi I 6/60] + 12 Exp[2 Pi I 7/60] + -12 Exp[2 Pi I 8/60] + 2 Exp[2 Pi I 9/60] + 3 Exp[2 Pi I 10/60] + 2 Exp[2 Pi I 11/60] + -12 Exp[2 Pi I 13/60] + 2 Exp[2 Pi I 14/60] + -20 Exp[2 Pi I 15/60]),
+                        "e" -> (10 + 10 Exp[2 Pi I/60] + 8 Exp[2 Pi I 2/60] + -10 Exp[2 Pi I 4/60] + -5 Exp[2 Pi I 5/60] + -10 Exp[2 Pi I 6/60] + -8 Exp[2 Pi I 7/60] + -8 Exp[2 Pi I 8/60] + -10 Exp[2 Pi I 9/60] + -3 Exp[2 Pi I 10/60] + -10 Exp[2 Pi I 11/60] + 8 Exp[2 Pi I 13/60] + 10 Exp[2 Pi I 14/60] + 8 Exp[2 Pi I 15/60]),
                         "i" -> 1
                       |>,
                       <|
-                        "e" -> (-13 + -7 Exp[2 Pi I/60] + -3 Exp[2 Pi I 4/60] + 7 Exp[2 Pi I 5/60] + -3 Exp[2 Pi I 6/60] + 14 Exp[2 Pi I 7/60] + 7 Exp[2 Pi I 9/60] + 29 Exp[2 Pi I 10/60] + 7 Exp[2 Pi I 11/60] + -14 Exp[2 Pi I 13/60] + 3 Exp[2 Pi I 14/60] + -43 Exp[2 Pi I 15/60]),
+                        "e" -> (-3 + -3 Exp[2 Pi I/60] + -6 Exp[2 Pi I 2/60] + 3 Exp[2 Pi I 4/60] + 3 Exp[2 Pi I 5/60] + 3 Exp[2 Pi I 6/60] + 6 Exp[2 Pi I 8/60] + 3 Exp[2 Pi I 9/60] + 3 Exp[2 Pi I 10/60] + 3 Exp[2 Pi I 11/60] + -3 Exp[2 Pi I 14/60] + -3 Exp[2 Pi I 15/60]),
                         "i" -> 2
                       |>,
                       <|
-                        "e" -> (-3 + 6 Exp[2 Pi I/60] + -2 Exp[2 Pi I 2/60] + -6 Exp[2 Pi I 4/60] + -5 Exp[2 Pi I 5/60] + -6 Exp[2 Pi I 6/60] + 2 Exp[2 Pi I 7/60] + 2 Exp[2 Pi I 8/60] + -6 Exp[2 Pi I 9/60] + 7 Exp[2 Pi I 10/60] + -6 Exp[2 Pi I 11/60] + -2 Exp[2 Pi I 13/60] + 6 Exp[2 Pi I 14/60] + 7 Exp[2 Pi I 15/60]),
+                        "e" -> (-7 + 2 Exp[2 Pi I/60] + 2 Exp[2 Pi I 2/60] + 2 Exp[2 Pi I 4/60] + -15 Exp[2 Pi I 5/60] + 2 Exp[2 Pi I 6/60] + 2 Exp[2 Pi I 7/60] + -2 Exp[2 Pi I 8/60] + -2 Exp[2 Pi I 9/60] + -17 Exp[2 Pi I 10/60] + -2 Exp[2 Pi I 11/60] + -2 Exp[2 Pi I 13/60] + -2 Exp[2 Pi I 14/60] + -7 Exp[2 Pi I 15/60]),
                         "i" -> 3
                       |>,
                       <|
-                        "e" -> (8 + -21 Exp[2 Pi I/60] + 6 Exp[2 Pi I 2/60] + -3 Exp[2 Pi I 4/60] + -1 Exp[2 Pi I 5/60] + -3 Exp[2 Pi I 6/60] + -6 Exp[2 Pi I 8/60] + 21 Exp[2 Pi I 9/60] + -3 Exp[2 Pi I 10/60] + 21 Exp[2 Pi I 11/60] + 3 Exp[2 Pi I 14/60] + -10 Exp[2 Pi I 15/60]),
+                        "e" -> (2 + -1 Exp[2 Pi I/60] + 3 Exp[2 Pi I 4/60] + Exp[2 Pi I 5/60] + 3 Exp[2 Pi I 6/60] + 2 Exp[2 Pi I 7/60] + Exp[2 Pi I 9/60] + -7 Exp[2 Pi I 10/60] + Exp[2 Pi I 11/60] + -2 Exp[2 Pi I 13/60] + -3 Exp[2 Pi I 14/60] + -12 Exp[2 Pi I 15/60]),
                         "i" -> 4
                       |>
                     }
@@ -114757,7 +115568,7 @@ o3d = <|
                 "separation" -> "unique"
               |>,
               <|
-                "N" -> (4320 + 4800 Exp[2 Pi I/12] + -2400 Exp[2 Pi I 3/12]),
+                "N" -> (12960 + 14400 Exp[2 Pi I/12] + -7200 Exp[2 Pi I 3/12]),
                 "irrep" -> "2G3h",
                 "kappa" -> 1,
                 "partners" -> {
@@ -114766,23 +115577,23 @@ o3d = <|
                     "terms" -> {
                       <|"e" -> (30 + 30 Exp[2 Pi I/12] + -15 Exp[2 Pi I 3/12]), "i" -> 1|>,
                       <|
-                        "e" -> (5 + -4 Exp[2 Pi I/60] + -6 Exp[2 Pi I 2/60] + 4 Exp[2 Pi I 4/60] + 13 Exp[2 Pi I 5/60] + 4 Exp[2 Pi I 6/60] + 6 Exp[2 Pi I 7/60] + 6 Exp[2 Pi I 8/60] + 4 Exp[2 Pi I 9/60] + -7 Exp[2 Pi I 10/60] + 4 Exp[2 Pi I 11/60] + -6 Exp[2 Pi I 13/60] + -4 Exp[2 Pi I 14/60] + -15 Exp[2 Pi I 15/60]),
+                        "e" -> (-35 + -16 Exp[2 Pi I/60] + -14 Exp[2 Pi I 2/60] + 16 Exp[2 Pi I 4/60] + -3 Exp[2 Pi I 5/60] + 16 Exp[2 Pi I 6/60] + 14 Exp[2 Pi I 7/60] + 14 Exp[2 Pi I 8/60] + 16 Exp[2 Pi I 9/60] + 17 Exp[2 Pi I 10/60] + 16 Exp[2 Pi I 11/60] + -14 Exp[2 Pi I 13/60] + -16 Exp[2 Pi I 14/60] + 5 Exp[2 Pi I 15/60]),
                         "i" -> 2
                       |>,
                       <|
-                        "e" -> (-12 Exp[2 Pi I/120] + 2 Exp[2 Pi I 3/120] + 11 Exp[2 Pi I 5/120] + 16 Exp[2 Pi I 7/120] + 14 Exp[2 Pi I 9/120] + 7 Exp[2 Pi I 15/120] + -4 Exp[2 Pi I 19/120] + -2 Exp[2 Pi I 21/120] + -16 Exp[2 Pi I 23/120] + -7 Exp[2 Pi I 25/120] + -14 Exp[2 Pi I 27/120] + -12 Exp[2 Pi I 29/120] + 4 Exp[2 Pi I 31/120]),
+                        "e" -> (-6 Exp[2 Pi I/40] + 6 Exp[2 Pi I 3/40] + 3 Exp[2 Pi I 5/40] + -6 Exp[2 Pi I 7/40] + -6 Exp[2 Pi I 9/40] + -3 Exp[2 Pi I 15/40]),
                         "i" -> 3
                       |>,
                       <|
-                        "e" -> (-9 Exp[2 Pi I 5/120] + -10 Exp[2 Pi I 7/120] + -18 Exp[2 Pi I 9/120] + -5 Exp[2 Pi I 15/120] + -10 Exp[2 Pi I 19/120] + 18 Exp[2 Pi I 21/120] + 10 Exp[2 Pi I 23/120] + 9 Exp[2 Pi I 25/120] + 10 Exp[2 Pi I 27/120] + 10 Exp[2 Pi I 31/120]),
+                        "e" -> (11 Exp[2 Pi I 5/120] + -14 Exp[2 Pi I 7/120] + -18 Exp[2 Pi I 9/120] + 23 Exp[2 Pi I 15/120] + -14 Exp[2 Pi I 19/120] + 18 Exp[2 Pi I 21/120] + 14 Exp[2 Pi I 23/120] + 29 Exp[2 Pi I 25/120] + 14 Exp[2 Pi I 27/120] + 14 Exp[2 Pi I 31/120]),
                         "i" -> 4
                       |>,
                       <|
-                        "e" -> (-14 + -6 Exp[2 Pi I/60] + 8 Exp[2 Pi I 4/60] + 6 Exp[2 Pi I 5/60] + 8 Exp[2 Pi I 6/60] + 12 Exp[2 Pi I 7/60] + 6 Exp[2 Pi I 9/60] + 20 Exp[2 Pi I 10/60] + 6 Exp[2 Pi I 11/60] + -12 Exp[2 Pi I 13/60] + -8 Exp[2 Pi I 14/60] + 11 Exp[2 Pi I 15/60]),
+                        "e" -> (38 + 22 Exp[2 Pi I/60] + -36 Exp[2 Pi I 4/60] + -22 Exp[2 Pi I 5/60] + -36 Exp[2 Pi I 6/60] + -44 Exp[2 Pi I 7/60] + -22 Exp[2 Pi I 9/60] + -40 Exp[2 Pi I 10/60] + -22 Exp[2 Pi I 11/60] + 44 Exp[2 Pi I 13/60] + 36 Exp[2 Pi I 14/60] + 3 Exp[2 Pi I 15/60]),
                         "i" -> 5
                       |>,
                       <|
-                        "e" -> (5 + 5 Exp[2 Pi I/12] + 5 Exp[2 Pi I 2/12] + 5 Exp[2 Pi I 3/12]),
+                        "e" -> (-15 + -15 Exp[2 Pi I/12] + -15 Exp[2 Pi I 2/12] + -15 Exp[2 Pi I 3/12]),
                         "i" -> 6
                       |>
                     }
@@ -114791,27 +115602,27 @@ o3d = <|
                     "mu" -> 2,
                     "terms" -> {
                       <|
-                        "e" -> (-5 Exp[2 Pi I/60] + -10 Exp[2 Pi I 2/60] + -5 Exp[2 Pi I 4/60] + -5 Exp[2 Pi I 6/60] + -10 Exp[2 Pi I 7/60] + 10 Exp[2 Pi I 8/60] + 5 Exp[2 Pi I 9/60] + 10 Exp[2 Pi I 10/60] + 5 Exp[2 Pi I 11/60] + 10 Exp[2 Pi I 13/60] + 5 Exp[2 Pi I 14/60] + 5 Exp[2 Pi I 15/60]),
+                        "e" -> (-60 + -45 Exp[2 Pi I/60] + -30 Exp[2 Pi I 2/60] + 45 Exp[2 Pi I 4/60] + 45 Exp[2 Pi I 6/60] + 30 Exp[2 Pi I 7/60] + 30 Exp[2 Pi I 8/60] + 45 Exp[2 Pi I 9/60] + 30 Exp[2 Pi I 10/60] + 45 Exp[2 Pi I 11/60] + -30 Exp[2 Pi I 13/60] + -45 Exp[2 Pi I 14/60] + -15 Exp[2 Pi I 15/60]),
                         "i" -> 1
                       |>,
                       <|
-                        "e" -> (-11 + 7 Exp[2 Pi I/60] + 2 Exp[2 Pi I 2/60] + -1 Exp[2 Pi I 4/60] + -15 Exp[2 Pi I 5/60] + -1 Exp[2 Pi I 6/60] + -2 Exp[2 Pi I 8/60] + -7 Exp[2 Pi I 9/60] + -1 Exp[2 Pi I 10/60] + -7 Exp[2 Pi I 11/60] + Exp[2 Pi I 14/60] + 11 Exp[2 Pi I 15/60]),
+                        "e" -> (-17 + -7 Exp[2 Pi I/60] + 9 Exp[2 Pi I 4/60] + 7 Exp[2 Pi I 5/60] + 9 Exp[2 Pi I 6/60] + 14 Exp[2 Pi I 7/60] + 7 Exp[2 Pi I 9/60] + 25 Exp[2 Pi I 10/60] + 7 Exp[2 Pi I 11/60] + -14 Exp[2 Pi I 13/60] + -9 Exp[2 Pi I 14/60] + -3 Exp[2 Pi I 15/60]),
                         "i" -> 2
                       |>,
                       <|
-                        "e" -> (2 Exp[2 Pi I 3/40] + 5 Exp[2 Pi I 5/40] + -2 Exp[2 Pi I 7/40] + -1 Exp[2 Pi I 15/40]),
+                        "e" -> (32 Exp[2 Pi I/120] + 38 Exp[2 Pi I 3/120] + 23 Exp[2 Pi I 5/120] + 20 Exp[2 Pi I 7/120] + -16 Exp[2 Pi I 9/120] + -19 Exp[2 Pi I 15/120] + -20 Exp[2 Pi I 19/120] + -16 Exp[2 Pi I 21/120] + -20 Exp[2 Pi I 23/120] + -7 Exp[2 Pi I 25/120] + 18 Exp[2 Pi I 27/120] + 32 Exp[2 Pi I 29/120] + 20 Exp[2 Pi I 31/120]),
                         "i" -> 3
                       |>,
                       <|
-                        "e" -> (-18 Exp[2 Pi I/120] + -8 Exp[2 Pi I 3/120] + -11 Exp[2 Pi I 5/120] + -4 Exp[2 Pi I 7/120] + -4 Exp[2 Pi I 9/120] + -3 Exp[2 Pi I 15/120] + -14 Exp[2 Pi I 19/120] + 22 Exp[2 Pi I 21/120] + 4 Exp[2 Pi I 23/120] + -3 Exp[2 Pi I 25/120] + -4 Exp[2 Pi I 27/120] + -18 Exp[2 Pi I 29/120] + 14 Exp[2 Pi I 31/120]),
+                        "e" -> (-10 Exp[2 Pi I/120] + -34 Exp[2 Pi I 3/120] + -33 Exp[2 Pi I 5/120] + -20 Exp[2 Pi I 7/120] + 14 Exp[2 Pi I 9/120] + -3 Exp[2 Pi I 15/120] + 30 Exp[2 Pi I 19/120] + -4 Exp[2 Pi I 21/120] + 20 Exp[2 Pi I 23/120] + 3 Exp[2 Pi I 25/120] + -14 Exp[2 Pi I 27/120] + -10 Exp[2 Pi I 29/120] + -30 Exp[2 Pi I 31/120]),
                         "i" -> 4
                       |>,
                       <|
-                        "e" -> (26 + -7 Exp[2 Pi I/60] + -6 Exp[2 Pi I 2/60] + 7 Exp[2 Pi I 4/60] + 28 Exp[2 Pi I 5/60] + 7 Exp[2 Pi I 6/60] + 6 Exp[2 Pi I 7/60] + 6 Exp[2 Pi I 8/60] + 7 Exp[2 Pi I 9/60] + -22 Exp[2 Pi I 10/60] + 7 Exp[2 Pi I 11/60] + -6 Exp[2 Pi I 13/60] + -7 Exp[2 Pi I 14/60] + -39 Exp[2 Pi I 15/60]),
+                        "e" -> (-10 + -11 Exp[2 Pi I/60] + -26 Exp[2 Pi I 2/60] + -11 Exp[2 Pi I 4/60] + -8 Exp[2 Pi I 5/60] + -11 Exp[2 Pi I 6/60] + -26 Exp[2 Pi I 7/60] + 26 Exp[2 Pi I 8/60] + 11 Exp[2 Pi I 9/60] + 18 Exp[2 Pi I 10/60] + 11 Exp[2 Pi I 11/60] + 26 Exp[2 Pi I 13/60] + 11 Exp[2 Pi I 14/60] + 5 Exp[2 Pi I 15/60]),
                         "i" -> 5
                       |>,
                       <|
-                        "e" -> (-5 + -5 Exp[2 Pi I/60] + 15 Exp[2 Pi I 4/60] + 5 Exp[2 Pi I 5/60] + 15 Exp[2 Pi I 6/60] + 10 Exp[2 Pi I 7/60] + 5 Exp[2 Pi I 9/60] + -5 Exp[2 Pi I 10/60] + 5 Exp[2 Pi I 11/60] + -10 Exp[2 Pi I 13/60] + -15 Exp[2 Pi I 14/60] + -15 Exp[2 Pi I 15/60]),
+                        "e" -> (-15 + -15 Exp[2 Pi I/60] + -10 Exp[2 Pi I 2/60] + 5 Exp[2 Pi I 4/60] + -5 Exp[2 Pi I 5/60] + 5 Exp[2 Pi I 6/60] + 10 Exp[2 Pi I 8/60] + 15 Exp[2 Pi I 9/60] + 5 Exp[2 Pi I 10/60] + 15 Exp[2 Pi I 11/60] + -5 Exp[2 Pi I 14/60] + -5 Exp[2 Pi I 15/60]),
                         "i" -> 6
                       |>
                     }

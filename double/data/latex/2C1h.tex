@@ -453,7 +453,7 @@ Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, sections \href{../..
 so $\lift{R}_{z}(\omega)$ multiplies $\jm{J}{m}$ by $\expe^{\iunit m\omega}$, $0 \le \omega < 4\pi$, and $\elt{\barred{E}}$ by $-1$. \label{n:index.ketcoefficient}\label{n:vector.basis.symmetry}\label{n:index.ketweight}\label{n:index.total}A vector is listed by its coefficients $e_m$:
 \begin{equation}\label{e:ket}v = \frac{1}{\sqrt{\mathrm{tot}}}\sum_m e_m\sqrt{F_m}\;\jm{J}{m},\qquad F_m = (J+m)!\,(J-m)!,\qquad \mathrm{tot} = \sum_m |e_m|^2F_m,\end{equation}
 so every $e_m$ here is $\pm 1$.
-\leavevmode\label{n:group.A}The subgroup $\grp{A}$ of the elements over $\grp{C_{\infty h}}$ acts diagonally on the kets, and $\grp{2C_{1h}} = \grp{A}$: every ket is a block. Blocks are ordered by $J$, then $|m|$, $+m$ before $-m$.
+\leavevmode\label{n:group.A}The subgroup $\grp{A}$ of the elements over $\grp{C_{\infty h}}$ acts diagonally on the kets, and $\grp{2C_{1h}} = \grp{A}$: every ket is a block. Blocks are ordered by $J$, then $|m|$, $+m$ before $-m$. The block of the second irrep of a complex pair is $(-1)^{J+m}\jm{J}{m}$, the image of the first irrep's $\jm{J}{-m}$ under time reversal. These blocks are adapted to time reversal (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.26.1}{26.1}).
 \leavevmode\label{n:operator.determinant.character}At the parity $p = -1$ a block keeps its kets, and its irrep $\Gamma$ becomes $\Gamma \irrprod \det_{\grp{2C_{1h}}}$: $\irr{e}_{1/2}' \to \irr{e}_{1/2}''$, $\irr{e}_{1/2}'' \to \irr{e}_{1/2}'$.
 The bases have 132 blocks and 132 vectors at $J = \nicefrac{1}{2}, \nicefrac{3}{2}, \dots, \nicefrac{21}{2}$. \label{n:index.copy}\label{n:head.vector}A row gives a vector of a block at $J$: the block's irrep and copy index $\mult$, the partner index $\intx$ and the vector.
 {\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}rlrr@{\hspace{4pt}}l@{\hspace{18pt}}rlrr@{\hspace{4pt}}l@{}}\toprule
@@ -461,45 +461,45 @@ $J$ & irrep & $\mult$ & $\intx$ & vector & $J$ & irrep & $\mult$ & $\intx$ & vec
 \bottomrule\endfoot\endlastfoot
 $\nicefrac{1}{2}$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\jm{\nicefrac{1}{2}}{\nicefrac{1}{2}}$ & $\nicefrac{5}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $\jm{\nicefrac{5}{2}}{-\nicefrac{5}{2}}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
 $\nicefrac{1}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $\jm{\nicefrac{1}{2}}{-\nicefrac{1}{2}}$ & $\nicefrac{7}{2}$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\jm{\nicefrac{7}{2}}{\nicefrac{1}{2}}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
-$\nicefrac{3}{2}$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\jm{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ & $\nicefrac{7}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $\jm{\nicefrac{7}{2}}{-\nicefrac{1}{2}}$\\*
-$\nicefrac{3}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $\jm{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ & $\nicefrac{7}{2}$ & $\irr{e}_{1/2}''$ & 2 & 1 & $\jm{\nicefrac{7}{2}}{\nicefrac{3}{2}}$\\*
-$\nicefrac{3}{2}$ & $\irr{e}_{1/2}''$ & 2 & 1 & $\jm{\nicefrac{3}{2}}{\nicefrac{3}{2}}$ & $\nicefrac{7}{2}$ & $\irr{e}_{1/2}'$ & 2 & 1 & $\jm{\nicefrac{7}{2}}{-\nicefrac{3}{2}}$\\*
+$\nicefrac{3}{2}$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\jm{\nicefrac{3}{2}}{\nicefrac{1}{2}}$ & $\nicefrac{7}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $-\jm{\nicefrac{7}{2}}{-\nicefrac{1}{2}}$\\*
+$\nicefrac{3}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $-\jm{\nicefrac{3}{2}}{-\nicefrac{1}{2}}$ & $\nicefrac{7}{2}$ & $\irr{e}_{1/2}''$ & 2 & 1 & $-\jm{\nicefrac{7}{2}}{\nicefrac{3}{2}}$\\*
+$\nicefrac{3}{2}$ & $\irr{e}_{1/2}''$ & 2 & 1 & $-\jm{\nicefrac{3}{2}}{\nicefrac{3}{2}}$ & $\nicefrac{7}{2}$ & $\irr{e}_{1/2}'$ & 2 & 1 & $\jm{\nicefrac{7}{2}}{-\nicefrac{3}{2}}$\\*
 $\nicefrac{3}{2}$ & $\irr{e}_{1/2}'$ & 2 & 1 & $\jm{\nicefrac{3}{2}}{-\nicefrac{3}{2}}$ & $\nicefrac{7}{2}$ & $\irr{e}_{1/2}'$ & 3 & 1 & $\jm{\nicefrac{7}{2}}{\nicefrac{5}{2}}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
-$\nicefrac{5}{2}$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\jm{\nicefrac{5}{2}}{\nicefrac{1}{2}}$ & $\nicefrac{7}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $\jm{\nicefrac{7}{2}}{-\nicefrac{5}{2}}$\\*
-$\nicefrac{5}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $\jm{\nicefrac{5}{2}}{-\nicefrac{1}{2}}$ & $\nicefrac{7}{2}$ & $\irr{e}_{1/2}''$ & 4 & 1 & $\jm{\nicefrac{7}{2}}{\nicefrac{7}{2}}$\\*
+$\nicefrac{5}{2}$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\jm{\nicefrac{5}{2}}{\nicefrac{1}{2}}$ & $\nicefrac{7}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $-\jm{\nicefrac{7}{2}}{-\nicefrac{5}{2}}$\\*
+$\nicefrac{5}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $\jm{\nicefrac{5}{2}}{-\nicefrac{1}{2}}$ & $\nicefrac{7}{2}$ & $\irr{e}_{1/2}''$ & 4 & 1 & $-\jm{\nicefrac{7}{2}}{\nicefrac{7}{2}}$\\*
 $\nicefrac{5}{2}$ & $\irr{e}_{1/2}''$ & 2 & 1 & $\jm{\nicefrac{5}{2}}{\nicefrac{3}{2}}$ & $\nicefrac{7}{2}$ & $\irr{e}_{1/2}'$ & 4 & 1 & $\jm{\nicefrac{7}{2}}{-\nicefrac{7}{2}}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
 $\nicefrac{5}{2}$ & $\irr{e}_{1/2}'$ & 2 & 1 & $\jm{\nicefrac{5}{2}}{-\nicefrac{3}{2}}$ & $\nicefrac{9}{2}$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\jm{\nicefrac{9}{2}}{\nicefrac{1}{2}}$\\*
 $\nicefrac{5}{2}$ & $\irr{e}_{1/2}'$ & 3 & 1 & $\jm{\nicefrac{5}{2}}{\nicefrac{5}{2}}$ & $\nicefrac{9}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $\jm{\nicefrac{9}{2}}{-\nicefrac{1}{2}}$\\
 \grouprule{0pt}{\heavyrulewidth}
 $\nicefrac{9}{2}$ & $\irr{e}_{1/2}''$ & 2 & 1 & $\jm{\nicefrac{9}{2}}{\nicefrac{3}{2}}$ & $\nicefrac{11}{2}$ & $\irr{e}_{1/2}'$ & 2 & 1 & $\jm{\nicefrac{11}{2}}{-\nicefrac{3}{2}}$\\*
 $\nicefrac{9}{2}$ & $\irr{e}_{1/2}'$ & 2 & 1 & $\jm{\nicefrac{9}{2}}{-\nicefrac{3}{2}}$ & $\nicefrac{11}{2}$ & $\irr{e}_{1/2}'$ & 3 & 1 & $\jm{\nicefrac{11}{2}}{\nicefrac{5}{2}}$\\*
-$\nicefrac{9}{2}$ & $\irr{e}_{1/2}'$ & 3 & 1 & $\jm{\nicefrac{9}{2}}{\nicefrac{5}{2}}$ & $\nicefrac{11}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $\jm{\nicefrac{11}{2}}{-\nicefrac{5}{2}}$\\*
-$\nicefrac{9}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $\jm{\nicefrac{9}{2}}{-\nicefrac{5}{2}}$ & $\nicefrac{11}{2}$ & $\irr{e}_{1/2}''$ & 4 & 1 & $\jm{\nicefrac{11}{2}}{\nicefrac{7}{2}}$\\*
+$\nicefrac{9}{2}$ & $\irr{e}_{1/2}'$ & 3 & 1 & $\jm{\nicefrac{9}{2}}{\nicefrac{5}{2}}$ & $\nicefrac{11}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $-\jm{\nicefrac{11}{2}}{-\nicefrac{5}{2}}$\\*
+$\nicefrac{9}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $\jm{\nicefrac{9}{2}}{-\nicefrac{5}{2}}$ & $\nicefrac{11}{2}$ & $\irr{e}_{1/2}''$ & 4 & 1 & $-\jm{\nicefrac{11}{2}}{\nicefrac{7}{2}}$\\*
 $\nicefrac{9}{2}$ & $\irr{e}_{1/2}''$ & 4 & 1 & $\jm{\nicefrac{9}{2}}{\nicefrac{7}{2}}$ & $\nicefrac{11}{2}$ & $\irr{e}_{1/2}'$ & 4 & 1 & $\jm{\nicefrac{11}{2}}{-\nicefrac{7}{2}}$\\*
 $\nicefrac{9}{2}$ & $\irr{e}_{1/2}'$ & 4 & 1 & $\jm{\nicefrac{9}{2}}{-\nicefrac{7}{2}}$ & $\nicefrac{11}{2}$ & $\irr{e}_{1/2}'$ & 5 & 1 & $\jm{\nicefrac{11}{2}}{\nicefrac{9}{2}}$\\*
-$\nicefrac{9}{2}$ & $\irr{e}_{1/2}'$ & 5 & 1 & $\jm{\nicefrac{9}{2}}{\nicefrac{9}{2}}$ & $\nicefrac{11}{2}$ & $\irr{e}_{1/2}''$ & 5 & 1 & $\jm{\nicefrac{11}{2}}{-\nicefrac{9}{2}}$\\*
-$\nicefrac{9}{2}$ & $\irr{e}_{1/2}''$ & 5 & 1 & $\jm{\nicefrac{9}{2}}{-\nicefrac{9}{2}}$ & $\nicefrac{11}{2}$ & $\irr{e}_{1/2}''$ & 6 & 1 & $\jm{\nicefrac{11}{2}}{\nicefrac{11}{2}}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
+$\nicefrac{9}{2}$ & $\irr{e}_{1/2}'$ & 5 & 1 & $\jm{\nicefrac{9}{2}}{\nicefrac{9}{2}}$ & $\nicefrac{11}{2}$ & $\irr{e}_{1/2}''$ & 5 & 1 & $-\jm{\nicefrac{11}{2}}{-\nicefrac{9}{2}}$\\*
+$\nicefrac{9}{2}$ & $\irr{e}_{1/2}''$ & 5 & 1 & $\jm{\nicefrac{9}{2}}{-\nicefrac{9}{2}}$ & $\nicefrac{11}{2}$ & $\irr{e}_{1/2}''$ & 6 & 1 & $-\jm{\nicefrac{11}{2}}{\nicefrac{11}{2}}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
 $\nicefrac{11}{2}$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\jm{\nicefrac{11}{2}}{\nicefrac{1}{2}}$ & $\nicefrac{11}{2}$ & $\irr{e}_{1/2}'$ & 6 & 1 & $\jm{\nicefrac{11}{2}}{-\nicefrac{11}{2}}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
-$\nicefrac{11}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $\jm{\nicefrac{11}{2}}{-\nicefrac{1}{2}}$ & $\nicefrac{13}{2}$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\jm{\nicefrac{13}{2}}{\nicefrac{1}{2}}$\\*
-$\nicefrac{11}{2}$ & $\irr{e}_{1/2}''$ & 2 & 1 & $\jm{\nicefrac{11}{2}}{\nicefrac{3}{2}}$ & $\nicefrac{13}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $\jm{\nicefrac{13}{2}}{-\nicefrac{1}{2}}$\\
+$\nicefrac{11}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $-\jm{\nicefrac{11}{2}}{-\nicefrac{1}{2}}$ & $\nicefrac{13}{2}$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\jm{\nicefrac{13}{2}}{\nicefrac{1}{2}}$\\*
+$\nicefrac{11}{2}$ & $\irr{e}_{1/2}''$ & 2 & 1 & $-\jm{\nicefrac{11}{2}}{\nicefrac{3}{2}}$ & $\nicefrac{13}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $\jm{\nicefrac{13}{2}}{-\nicefrac{1}{2}}$\\
 \grouprule{0pt}{\heavyrulewidth}
 $\nicefrac{13}{2}$ & $\irr{e}_{1/2}''$ & 2 & 1 & $\jm{\nicefrac{13}{2}}{\nicefrac{3}{2}}$ & $\nicefrac{13}{2}$ & $\irr{e}_{1/2}''$ & 7 & 1 & $\jm{\nicefrac{13}{2}}{-\nicefrac{13}{2}}$\\*\noalign{\vskip 1.5pt}\multispan{5} & \multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\\*\noalign{\vskip 1.5pt}
 $\nicefrac{13}{2}$ & $\irr{e}_{1/2}'$ & 2 & 1 & $\jm{\nicefrac{13}{2}}{-\nicefrac{3}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\jm{\nicefrac{15}{2}}{\nicefrac{1}{2}}$\\*
-$\nicefrac{13}{2}$ & $\irr{e}_{1/2}'$ & 3 & 1 & $\jm{\nicefrac{13}{2}}{\nicefrac{5}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $\jm{\nicefrac{15}{2}}{-\nicefrac{1}{2}}$\\*
-$\nicefrac{13}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $\jm{\nicefrac{13}{2}}{-\nicefrac{5}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 2 & 1 & $\jm{\nicefrac{15}{2}}{\nicefrac{3}{2}}$\\*
+$\nicefrac{13}{2}$ & $\irr{e}_{1/2}'$ & 3 & 1 & $\jm{\nicefrac{13}{2}}{\nicefrac{5}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $-\jm{\nicefrac{15}{2}}{-\nicefrac{1}{2}}$\\*
+$\nicefrac{13}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $\jm{\nicefrac{13}{2}}{-\nicefrac{5}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 2 & 1 & $-\jm{\nicefrac{15}{2}}{\nicefrac{3}{2}}$\\*
 $\nicefrac{13}{2}$ & $\irr{e}_{1/2}''$ & 4 & 1 & $\jm{\nicefrac{13}{2}}{\nicefrac{7}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}'$ & 2 & 1 & $\jm{\nicefrac{15}{2}}{-\nicefrac{3}{2}}$\\*
 $\nicefrac{13}{2}$ & $\irr{e}_{1/2}'$ & 4 & 1 & $\jm{\nicefrac{13}{2}}{-\nicefrac{7}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}'$ & 3 & 1 & $\jm{\nicefrac{15}{2}}{\nicefrac{5}{2}}$\\*
-$\nicefrac{13}{2}$ & $\irr{e}_{1/2}'$ & 5 & 1 & $\jm{\nicefrac{13}{2}}{\nicefrac{9}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $\jm{\nicefrac{15}{2}}{-\nicefrac{5}{2}}$\\*
-$\nicefrac{13}{2}$ & $\irr{e}_{1/2}''$ & 5 & 1 & $\jm{\nicefrac{13}{2}}{-\nicefrac{9}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 4 & 1 & $\jm{\nicefrac{15}{2}}{\nicefrac{7}{2}}$\\*
+$\nicefrac{13}{2}$ & $\irr{e}_{1/2}'$ & 5 & 1 & $\jm{\nicefrac{13}{2}}{\nicefrac{9}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $-\jm{\nicefrac{15}{2}}{-\nicefrac{5}{2}}$\\*
+$\nicefrac{13}{2}$ & $\irr{e}_{1/2}''$ & 5 & 1 & $\jm{\nicefrac{13}{2}}{-\nicefrac{9}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 4 & 1 & $-\jm{\nicefrac{15}{2}}{\nicefrac{7}{2}}$\\*
 $\nicefrac{13}{2}$ & $\irr{e}_{1/2}''$ & 6 & 1 & $\jm{\nicefrac{13}{2}}{\nicefrac{11}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}'$ & 4 & 1 & $\jm{\nicefrac{15}{2}}{-\nicefrac{7}{2}}$\\*
 $\nicefrac{13}{2}$ & $\irr{e}_{1/2}'$ & 6 & 1 & $\jm{\nicefrac{13}{2}}{-\nicefrac{11}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}'$ & 5 & 1 & $\jm{\nicefrac{15}{2}}{\nicefrac{9}{2}}$\\*
-$\nicefrac{13}{2}$ & $\irr{e}_{1/2}'$ & 7 & 1 & $\jm{\nicefrac{13}{2}}{\nicefrac{13}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 5 & 1 & $\jm{\nicefrac{15}{2}}{-\nicefrac{9}{2}}$\\
+$\nicefrac{13}{2}$ & $\irr{e}_{1/2}'$ & 7 & 1 & $\jm{\nicefrac{13}{2}}{\nicefrac{13}{2}}$ & $\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 5 & 1 & $-\jm{\nicefrac{15}{2}}{-\nicefrac{9}{2}}$\\
 \grouprule{0pt}{\heavyrulewidth}
-$\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 6 & 1 & $\jm{\nicefrac{15}{2}}{\nicefrac{11}{2}}$ & $\nicefrac{17}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $\jm{\nicefrac{17}{2}}{-\nicefrac{5}{2}}$\\*
+$\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 6 & 1 & $-\jm{\nicefrac{15}{2}}{\nicefrac{11}{2}}$ & $\nicefrac{17}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $\jm{\nicefrac{17}{2}}{-\nicefrac{5}{2}}$\\*
 $\nicefrac{15}{2}$ & $\irr{e}_{1/2}'$ & 6 & 1 & $\jm{\nicefrac{15}{2}}{-\nicefrac{11}{2}}$ & $\nicefrac{17}{2}$ & $\irr{e}_{1/2}''$ & 4 & 1 & $\jm{\nicefrac{17}{2}}{\nicefrac{7}{2}}$\\*
 $\nicefrac{15}{2}$ & $\irr{e}_{1/2}'$ & 7 & 1 & $\jm{\nicefrac{15}{2}}{\nicefrac{13}{2}}$ & $\nicefrac{17}{2}$ & $\irr{e}_{1/2}'$ & 4 & 1 & $\jm{\nicefrac{17}{2}}{-\nicefrac{7}{2}}$\\*
-$\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 7 & 1 & $\jm{\nicefrac{15}{2}}{-\nicefrac{13}{2}}$ & $\nicefrac{17}{2}$ & $\irr{e}_{1/2}'$ & 5 & 1 & $\jm{\nicefrac{17}{2}}{\nicefrac{9}{2}}$\\*
-$\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 8 & 1 & $\jm{\nicefrac{15}{2}}{\nicefrac{15}{2}}$ & $\nicefrac{17}{2}$ & $\irr{e}_{1/2}''$ & 5 & 1 & $\jm{\nicefrac{17}{2}}{-\nicefrac{9}{2}}$\\*
+$\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 7 & 1 & $-\jm{\nicefrac{15}{2}}{-\nicefrac{13}{2}}$ & $\nicefrac{17}{2}$ & $\irr{e}_{1/2}'$ & 5 & 1 & $\jm{\nicefrac{17}{2}}{\nicefrac{9}{2}}$\\*
+$\nicefrac{15}{2}$ & $\irr{e}_{1/2}''$ & 8 & 1 & $-\jm{\nicefrac{15}{2}}{\nicefrac{15}{2}}$ & $\nicefrac{17}{2}$ & $\irr{e}_{1/2}''$ & 5 & 1 & $\jm{\nicefrac{17}{2}}{-\nicefrac{9}{2}}$\\*
 $\nicefrac{15}{2}$ & $\irr{e}_{1/2}'$ & 8 & 1 & $\jm{\nicefrac{15}{2}}{-\nicefrac{15}{2}}$ & $\nicefrac{17}{2}$ & $\irr{e}_{1/2}''$ & 6 & 1 & $\jm{\nicefrac{17}{2}}{\nicefrac{11}{2}}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
 $\nicefrac{17}{2}$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\jm{\nicefrac{17}{2}}{\nicefrac{1}{2}}$ & $\nicefrac{17}{2}$ & $\irr{e}_{1/2}'$ & 6 & 1 & $\jm{\nicefrac{17}{2}}{-\nicefrac{11}{2}}$\\*
 $\nicefrac{17}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $\jm{\nicefrac{17}{2}}{-\nicefrac{1}{2}}$ & $\nicefrac{17}{2}$ & $\irr{e}_{1/2}'$ & 7 & 1 & $\jm{\nicefrac{17}{2}}{\nicefrac{13}{2}}$\\*
@@ -507,16 +507,16 @@ $\nicefrac{17}{2}$ & $\irr{e}_{1/2}''$ & 2 & 1 & $\jm{\nicefrac{17}{2}}{\nicefra
 $\nicefrac{17}{2}$ & $\irr{e}_{1/2}'$ & 2 & 1 & $\jm{\nicefrac{17}{2}}{-\nicefrac{3}{2}}$ & $\nicefrac{17}{2}$ & $\irr{e}_{1/2}''$ & 8 & 1 & $\jm{\nicefrac{17}{2}}{\nicefrac{15}{2}}$\\*
 $\nicefrac{17}{2}$ & $\irr{e}_{1/2}'$ & 3 & 1 & $\jm{\nicefrac{17}{2}}{\nicefrac{5}{2}}$ & $\nicefrac{17}{2}$ & $\irr{e}_{1/2}'$ & 8 & 1 & $\jm{\nicefrac{17}{2}}{-\nicefrac{15}{2}}$\\
 \grouprule{0pt}{\heavyrulewidth}
-$\nicefrac{17}{2}$ & $\irr{e}_{1/2}'$ & 9 & 1 & $\jm{\nicefrac{17}{2}}{\nicefrac{17}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 5 & 1 & $\jm{\nicefrac{19}{2}}{-\nicefrac{9}{2}}$\\*
-$\nicefrac{17}{2}$ & $\irr{e}_{1/2}''$ & 9 & 1 & $\jm{\nicefrac{17}{2}}{-\nicefrac{17}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 6 & 1 & $\jm{\nicefrac{19}{2}}{\nicefrac{11}{2}}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
+$\nicefrac{17}{2}$ & $\irr{e}_{1/2}'$ & 9 & 1 & $\jm{\nicefrac{17}{2}}{\nicefrac{17}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 5 & 1 & $-\jm{\nicefrac{19}{2}}{-\nicefrac{9}{2}}$\\*
+$\nicefrac{17}{2}$ & $\irr{e}_{1/2}''$ & 9 & 1 & $\jm{\nicefrac{17}{2}}{-\nicefrac{17}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 6 & 1 & $-\jm{\nicefrac{19}{2}}{\nicefrac{11}{2}}$\\*\noalign{\vskip 1.5pt}\multispan{5}\leaders\hrule height\cmidrulewidth\hfill\kern0pt\hskip18pt & \multispan{5}\\*\noalign{\vskip 1.5pt}
 $\nicefrac{19}{2}$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\jm{\nicefrac{19}{2}}{\nicefrac{1}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}'$ & 6 & 1 & $\jm{\nicefrac{19}{2}}{-\nicefrac{11}{2}}$\\*
-$\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $\jm{\nicefrac{19}{2}}{-\nicefrac{1}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}'$ & 7 & 1 & $\jm{\nicefrac{19}{2}}{\nicefrac{13}{2}}$\\*
-$\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 2 & 1 & $\jm{\nicefrac{19}{2}}{\nicefrac{3}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 7 & 1 & $\jm{\nicefrac{19}{2}}{-\nicefrac{13}{2}}$\\*
-$\nicefrac{19}{2}$ & $\irr{e}_{1/2}'$ & 2 & 1 & $\jm{\nicefrac{19}{2}}{-\nicefrac{3}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 8 & 1 & $\jm{\nicefrac{19}{2}}{\nicefrac{15}{2}}$\\*
+$\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 1 & 1 & $-\jm{\nicefrac{19}{2}}{-\nicefrac{1}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}'$ & 7 & 1 & $\jm{\nicefrac{19}{2}}{\nicefrac{13}{2}}$\\*
+$\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 2 & 1 & $-\jm{\nicefrac{19}{2}}{\nicefrac{3}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 7 & 1 & $-\jm{\nicefrac{19}{2}}{-\nicefrac{13}{2}}$\\*
+$\nicefrac{19}{2}$ & $\irr{e}_{1/2}'$ & 2 & 1 & $\jm{\nicefrac{19}{2}}{-\nicefrac{3}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 8 & 1 & $-\jm{\nicefrac{19}{2}}{\nicefrac{15}{2}}$\\*
 $\nicefrac{19}{2}$ & $\irr{e}_{1/2}'$ & 3 & 1 & $\jm{\nicefrac{19}{2}}{\nicefrac{5}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}'$ & 8 & 1 & $\jm{\nicefrac{19}{2}}{-\nicefrac{15}{2}}$\\*
-$\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $\jm{\nicefrac{19}{2}}{-\nicefrac{5}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}'$ & 9 & 1 & $\jm{\nicefrac{19}{2}}{\nicefrac{17}{2}}$\\*
-$\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 4 & 1 & $\jm{\nicefrac{19}{2}}{\nicefrac{7}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 9 & 1 & $\jm{\nicefrac{19}{2}}{-\nicefrac{17}{2}}$\\*
-$\nicefrac{19}{2}$ & $\irr{e}_{1/2}'$ & 4 & 1 & $\jm{\nicefrac{19}{2}}{-\nicefrac{7}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 10 & 1 & $\jm{\nicefrac{19}{2}}{\nicefrac{19}{2}}$\\*
+$\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 3 & 1 & $-\jm{\nicefrac{19}{2}}{-\nicefrac{5}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}'$ & 9 & 1 & $\jm{\nicefrac{19}{2}}{\nicefrac{17}{2}}$\\*
+$\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 4 & 1 & $-\jm{\nicefrac{19}{2}}{\nicefrac{7}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 9 & 1 & $-\jm{\nicefrac{19}{2}}{-\nicefrac{17}{2}}$\\*
+$\nicefrac{19}{2}$ & $\irr{e}_{1/2}'$ & 4 & 1 & $\jm{\nicefrac{19}{2}}{-\nicefrac{7}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}''$ & 10 & 1 & $-\jm{\nicefrac{19}{2}}{\nicefrac{19}{2}}$\\*
 $\nicefrac{19}{2}$ & $\irr{e}_{1/2}'$ & 5 & 1 & $\jm{\nicefrac{19}{2}}{\nicefrac{9}{2}}$ & $\nicefrac{19}{2}$ & $\irr{e}_{1/2}'$ & 10 & 1 & $\jm{\nicefrac{19}{2}}{-\nicefrac{19}{2}}$\\
 \grouprule{0pt}{\heavyrulewidth}
 $\nicefrac{21}{2}$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\jm{\nicefrac{21}{2}}{\nicefrac{1}{2}}$ & $\nicefrac{21}{2}$ & $\irr{e}_{1/2}'$ & 6 & 1 & $\jm{\nicefrac{21}{2}}{-\nicefrac{11}{2}}$\\*
@@ -535,7 +535,7 @@ $\nicefrac{21}{2}$ & $\irr{e}_{1/2}''$ & 6 & 1 & $\jm{\nicefrac{21}{2}}{\nicefra
 \partbox{Spinors and tensors}
 \section{Spin--orbitals}\label{s:spin_orbitals}
 Conventions: \href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.25.4}{25.4}.
-\leavevmode\label{n:index.orbital.l}The states of an electron of orbital angular momentum $l$ and spin $\nicefrac{1}{2}$ are each given up to a positive factor. \label{n:local.spinor.uv}\label{n:local.function.f}They are written in the functions $f$ of the $\orbital{s}$, $\orbital{p}$ and $\orbital{d}$ shells of \href{../../../rotation/data/pdf/C1h.pdf}{$\grp{C_{1h}}$} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.13}{13}) times the spin kets $u = \jm{1/2}{1/2}$ and $v = \jm{1/2}{-1/2}$. The record also holds the $\orbital{f}$ shell (\texttt{spin\symbol{95}orbitals}). An orbital level consists of the functions of degree $l$ that carry the irrep $\Gamma$ of \href{../../../rotation/data/pdf/C1h.pdf}{$\grp{C_{1h}}$}, $b$ times when it occurs $b$ times. With the spin, it splits into the spinor irreps $\Lambda$ of $\grp{2C_{1h}}$, those of the doublet of $\Gamma$ in the spin--orbit levels (section~\ref{s:spin_orbit}, first column). \label{n:head.state}Under the heading of its shell, a row gives $\Gamma$, a copy $\mult$ of $\Lambda$ (when there are several), its partner $\intx$ and the state. The normalized state (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.25.4}{25.4}) follows the partner law with the matrices of section~\ref{s:irrep_matrices}.
+\leavevmode\label{n:index.orbital.l}The states of an electron of orbital angular momentum $l$ and spin $\nicefrac{1}{2}$ are each given up to a positive factor. \label{n:local.spinor.uv}\label{n:local.function.f}They are written in the functions $f$ of the $\orbital{s}$, $\orbital{p}$ and $\orbital{d}$ shells of \href{../../../rotation/data/pdf/C1h.pdf}{$\grp{C_{1h}}$} (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../../rotation/CONVENTIONS.pdf\#conv.13}{13}) times the spin kets $u = \jm{1/2}{1/2}$ and $v = \jm{1/2}{-1/2}$. The record also holds the $\orbital{f}$ shell (\texttt{spin\symbol{95}orbitals}). An orbital level consists of the functions of degree $l$ that carry the irrep $\Gamma$ of \href{../../../rotation/data/pdf/C1h.pdf}{$\grp{C_{1h}}$}, $b$ times when it occurs $b$ times. With the spin, it splits into the spinor irreps $\Lambda$ of $\grp{2C_{1h}}$, those of the doublet of $\Gamma$ in the spin--orbit levels (section~\ref{s:spin_orbit}, first column). \label{n:head.state}Under the heading of its shell, a row gives $\Gamma$, a copy $\mult$ of $\Lambda$ (when there are several), its partner $\intx$ and the state. The normalized state (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.25.4}{25.4}) follows the partner law with the matrices of section~\ref{s:irrep_matrices}. The copies are adapted to time reversal, which sends $f u$ to $f v$ and $f v$ to $-f u$ (\href{../../CONVENTIONS.pdf}{CONVENTIONS.pdf}, section \href{../../CONVENTIONS.pdf\#conv.25.4}{25.4}).
 {\small\begin{longtable}{@{}llrrl@{\hspace{18pt}}llrrl@{}}\toprule
 $\Gamma$ & $\Lambda$ & $\mult$ & $\intx$ & state & $\Gamma$ & $\Lambda$ & $\mult$ & $\intx$ & state\\\midrule\endhead
 \bottomrule\endfoot\endlastfoot
@@ -548,8 +548,8 @@ $2\,\irr{a}'$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\orbital{p}_{x}u$ &  & $\irr{e}_{1/2
  & $\irr{e}_{1/2}''$ & 1 & 1 & $\orbital{p}_{x}v$ &  & $\irr{e}_{1/2}''$ & 3 & 1 & $\orbital{d}_{xy}v$\\*
  & $\irr{e}_{1/2}''$ & 2 & 1 & $\orbital{p}_{y}v$ & $2\,\irr{a}''$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\orbital{d}_{yz}v$\\*
 $\irr{a}''$ & $\irr{e}_{1/2}'$ & 1 & 1 & $\orbital{p}_{z}v$ &  & $\irr{e}_{1/2}'$ & 2 & 1 & $\orbital{d}_{zx}v$\\*
- & $\irr{e}_{1/2}''$ & 1 & 1 & $\orbital{p}_{z}u$ &  & $\irr{e}_{1/2}''$ & 1 & 1 & $\orbital{d}_{yz}u$\\*
- &  &  &  &  &  & $\irr{e}_{1/2}''$ & 2 & 1 & $\orbital{d}_{zx}u$\\
+ & $\irr{e}_{1/2}''$ & 1 & 1 & $-\orbital{p}_{z}u$ &  & $\irr{e}_{1/2}''$ & 1 & 1 & $-\orbital{d}_{yz}u$\\*
+ &  &  &  &  &  & $\irr{e}_{1/2}''$ & 2 & 1 & $-\orbital{d}_{zx}u$\\
 \bottomrule\end{longtable}}
 \needspace{103pt}
 \section{Invariant polynomials}\label{s:invariants}

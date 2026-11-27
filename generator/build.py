@@ -201,8 +201,10 @@ def run_stage(stage, args):
 
 def run_all(args):
     if args.with_store and names.CATALOGUE == "double":
-        # the Double's store reads no record
-        status = run_stage("store", args) or run_stage("records", args)
+        # the Double's store reads the blocks irrep x irrep -> trivial of its records (time reversal,
+        # double/CONVENTIONS.md section 26.1), and the records read the store's files 2J <= 21
+        status = (run_stage("records", args) or run_stage("store", args)
+                  or run_stage("records", args))
     elif args.with_store:
         status = run_stage("records", args)
         if status not in (0, INCOMPLETE):

@@ -7964,8 +7964,16 @@ o3d = {
                                 'irrep_id': 'E1h',
                                 'kappa': 1,
                                 'vectors': [
-                                    {'components': [{'c': Rational(1,1), 'function': 's', 'twoMs': 1}], 'mu': 1},
-                                    {'components': [{'c': Rational(1,1), 'function': 's', 'twoMs': -1}], 'mu': 2}
+                                    {
+                                        'components': [{'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 's', 'twoMs': 1}],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 's', 'twoMs': -1}
+                                        ],
+                                        'mu': 2
+                                    }
                                 ]
                             }
                         ],
@@ -8065,13 +8073,35 @@ o3d = {
                                 'kappa': 1,
                                 'vectors': [
                                     {
-                                        'components': [{'c': Rational(1,1), 'function': 'd_x2-y2', 'twoMs': -1}],
+                                        'components': [
+                                            {
+                                                'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                                'function': 'd_x2-y2',
+                                                'twoMs': -1
+                                            }
+                                        ],
                                         'mu': 1
                                     },
-                                    {'components': [{'c': Rational(-1,1), 'function': 'd_z2', 'twoMs': 1}], 'mu': 2},
-                                    {'components': [{'c': Rational(1,1), 'function': 'd_z2', 'twoMs': -1}], 'mu': 3},
                                     {
-                                        'components': [{'c': Rational(-1,1), 'function': 'd_x2-y2', 'twoMs': 1}],
+                                        'components': [
+                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_z2', 'twoMs': 1}
+                                        ],
+                                        'mu': 2
+                                    },
+                                    {
+                                        'components': [
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_z2', 'twoMs': -1}
+                                        ],
+                                        'mu': 3
+                                    },
+                                    {
+                                        'components': [
+                                            {
+                                                'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                                                'function': 'd_x2-y2',
+                                                'twoMs': 1
+                                            }
+                                        ],
                                         'mu': 4
                                     }
                                 ]
@@ -8165,8 +8195,18 @@ o3d = {
                                 'irrep_id': 'E1h',
                                 'kappa': 1,
                                 'vectors': [
-                                    {'components': [{'c': Rational(1,1), 'function': 'f_xyz', 'twoMs': 1}], 'mu': 1},
-                                    {'components': [{'c': Rational(1,1), 'function': 'f_xyz', 'twoMs': -1}], 'mu': 2}
+                                    {
+                                        'components': [
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': 1}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': -1}
+                                        ],
+                                        'mu': 2
+                                    }
                                 ]
                             }
                         ],
@@ -8409,8 +8449,14 @@ o3d = {
                     'kappa': 1,
                     'twoJ': 1,
                     'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 1}], 'mu': 1},
-                        {'components': [{'e': Rational(1,1), 'twoM': -1}], 'mu': 2}
+                        {
+                            'components': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1}],
+                            'mu': 2
+                        }
                     ]
                 },
                 {
@@ -8420,26 +8466,22 @@ o3d = {
                     'kappa': 1,
                     'twoJ': 3,
                     'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 3}], 'mu': 1},
                         {
-                            'components': [
-                                {
-                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 1
-                                }
-                            ],
+                            'components': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [{'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 1}],
                             'mu': 2
                         },
                         {
-                            'components': [
-                                {
-                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -1
-                                }
-                            ],
+                            'components': [{'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -1}],
                             'mu': 3
                         },
-                        {'components': [{'e': Rational(1,1), 'twoM': -3}], 'mu': 4}
+                        {
+                            'components': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3}],
+                            'mu': 4
+                        }
                     ]
                 },
                 {
@@ -8450,11 +8492,13 @@ o3d = {
                     'twoJ': 5,
                     'vectors': [
                         {
-                            'components': [{'e': Rational(5,1), 'twoM': -3}, {'e': Rational(-1,1), 'twoM': 5}],
+                            'components': [{'q': [5, 1], 'twoM': -3}, {'q': [-1, 1], 'twoM': 5}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
-                            'components': [{'e': Rational(-1,1), 'twoM': -5}, {'e': Rational(5,1), 'twoM': 3}],
+                            'components': [{'q': [1, 1], 'twoM': -5}, {'q': [-5, 1], 'twoM': 3}],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -8467,29 +8511,21 @@ o3d = {
                     'twoJ': 5,
                     'vectors': [
                         {
-                            'components': [{'e': Rational(1,1), 'twoM': -5}, {'e': Rational(1,1), 'twoM': 3}],
+                            'components': [{'q': [1, 1], 'twoM': -5}, {'q': [1, 1], 'twoM': 3}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
-                            'components': [
-                                {
-                                    'e': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 1
-                                }
-                            ],
+                            'components': [{'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 1}],
                             'mu': 2
                         },
                         {
-                            'components': [
-                                {
-                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -1
-                                }
-                            ],
+                            'components': [{'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -1}],
                             'mu': 3
                         },
                         {
-                            'components': [{'e': Rational(-1,1), 'twoM': -3}, {'e': Rational(-1,1), 'twoM': 5}],
+                            'components': [{'q': [1, 1], 'twoM': -3}, {'q': [1, 1], 'twoM': 5}],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -8502,11 +8538,13 @@ o3d = {
                     'twoJ': 7,
                     'vectors': [
                         {
-                            'components': [{'e': Rational(1,1), 'twoM': -7}, {'e': Rational(7,1), 'twoM': 1}],
+                            'components': [{'q': [1, 1], 'twoM': -7}, {'q': [7, 1], 'twoM': 1}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
-                            'components': [{'e': Rational(-7,1), 'twoM': -1}, {'e': Rational(-1,1), 'twoM': 7}],
+                            'components': [{'q': [7, 1], 'twoM': -1}, {'q': [1, 1], 'twoM': 7}],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -8519,11 +8557,13 @@ o3d = {
                     'twoJ': 7,
                     'vectors': [
                         {
-                            'components': [{'e': Rational(1,1), 'twoM': -3}, {'e': Rational(-1,1), 'twoM': 5}],
+                            'components': [{'q': [1, 1], 'twoM': -3}, {'q': [-1, 1], 'twoM': 5}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
-                            'components': [{'e': Rational(1,1), 'twoM': -5}, {'e': Rational(-1,1), 'twoM': 3}],
+                            'components': [{'q': [1, 1], 'twoM': -5}, {'q': [-1, 1], 'twoM': 3}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -8536,21 +8576,23 @@ o3d = {
                     'twoJ': 7,
                     'vectors': [
                         {
-                            'components': [{'e': Rational(1,1), 'twoM': -5}, {'e': Rational(3,1), 'twoM': 3}],
+                            'components': [{'q': [1, 1], 'twoM': -5}, {'q': [3, 1], 'twoM': 3}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [{'q': [1, 1], 'twoM': -7}, {'q': [-5, 1], 'twoM': 1}],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
                             'components': [{'q': [5, 1], 'twoM': -1}, {'q': [-1, 1], 'twoM': 7}],
-                            'factor': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
-                            'components': [{'e': Rational(3,1), 'twoM': -3}, {'e': Rational(1,1), 'twoM': 5}],
+                            'components': [{'q': [3, 1], 'twoM': -3}, {'q': [1, 1], 'twoM': 5}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -8563,19 +8605,13 @@ o3d = {
                     'twoJ': 9,
                     'vectors': [
                         {
-                            'components': [
-                                {'e': Rational(1,1), 'twoM': -7},
-                                {'e': Rational(14,1), 'twoM': 1},
-                                {'e': Rational(1,1), 'twoM': 9}
-                            ],
+                            'components': [{'q': [1, 1], 'twoM': -7}, {'q': [14, 1], 'twoM': 1}, {'q': [1, 1], 'twoM': 9}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
-                            'components': [
-                                {'e': Rational(1,1), 'twoM': -9},
-                                {'e': Rational(14,1), 'twoM': -1},
-                                {'e': Rational(1,1), 'twoM': 7}
-                            ],
+                            'components': [{'q': [1, 1], 'twoM': -9}, {'q': [14, 1], 'twoM': -1}, {'q': [1, 1], 'twoM': 7}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -8587,18 +8623,24 @@ o3d = {
                     'kappa': 1,
                     'twoJ': 9,
                     'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': -5}], 'mu': 1},
+                        {
+                            'components': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5}],
+                            'mu': 1
+                        },
                         {
                             'components': [{'q': [5, 1], 'twoM': -7}, {'q': [-14, 1], 'twoM': 1}, {'q': [1, 1], 'twoM': 9}],
-                            'factor': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
                             'components': [{'q': [1, 1], 'twoM': -9}, {'q': [-14, 1], 'twoM': -1}, {'q': [5, 1], 'twoM': 7}],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
-                        {'components': [{'e': Rational(-1,1), 'twoM': 5}], 'mu': 4}
+                        {
+                            'components': [{'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5}],
+                            'mu': 4
+                        }
                     ]
                 },
                 {
@@ -8608,18 +8650,24 @@ o3d = {
                     'kappa': 2,
                     'twoJ': 9,
                     'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 3}], 'mu': 1},
+                        {
+                            'components': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3}],
+                            'mu': 1
+                        },
                         {
                             'components': [{'q': [3, 1], 'twoM': -7}, {'q': [6, 1], 'twoM': 1}, {'q': [-1, 1], 'twoM': 9}],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
                             'components': [{'q': [1, 1], 'twoM': -9}, {'q': [-6, 1], 'twoM': -1}, {'q': [-3, 1], 'twoM': 7}],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
-                        {'components': [{'e': Rational(-1,1), 'twoM': -3}], 'mu': 4}
+                        {
+                            'components': [{'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3}],
+                            'mu': 4
+                        }
                     ]
                 },
                 {
@@ -8630,19 +8678,13 @@ o3d = {
                     'twoJ': 11,
                     'vectors': [
                         {
-                            'components': [
-                                {'e': Rational(5,1), 'twoM': -7},
-                                {'e': Rational(-6,1), 'twoM': 1},
-                                {'e': Rational(1,1), 'twoM': 9}
-                            ],
+                            'components': [{'q': [5, 1], 'twoM': -7}, {'q': [-6, 1], 'twoM': 1}, {'q': [1, 1], 'twoM': 9}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
-                            'components': [
-                                {'e': Rational(-1,1), 'twoM': -9},
-                                {'e': Rational(6,1), 'twoM': -1},
-                                {'e': Rational(-5,1), 'twoM': 7}
-                            ],
+                            'components': [{'q': [1, 1], 'twoM': -9}, {'q': [-6, 1], 'twoM': -1}, {'q': [5, 1], 'twoM': 7}],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -8656,18 +8698,16 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -11},
-                                {'e': Rational(-22,1), 'twoM': -3},
-                                {'e': Rational(-11,1), 'twoM': 5}
+                                {'q': [1, 1], 'twoM': -11},
+                                {'q': [-22, 1], 'twoM': -3},
+                                {'q': [-11, 1], 'twoM': 5}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
-                            'components': [
-                                {'e': Rational(11,1), 'twoM': -5},
-                                {'e': Rational(22,1), 'twoM': 3},
-                                {'e': Rational(-1,1), 'twoM': 11}
-                            ],
+                            'components': [{'q': [11, 1], 'twoM': -5}, {'q': [22, 1], 'twoM': 3}, {'q': [-1, 1], 'twoM': 11}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -8680,21 +8720,23 @@ o3d = {
                     'twoJ': 11,
                     'vectors': [
                         {
-                            'components': [{'e': Rational(15,1), 'twoM': -5}, {'e': Rational(1,1), 'twoM': 11}],
+                            'components': [{'q': [15, 1], 'twoM': -5}, {'q': [1, 1], 'twoM': 11}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [{'q': [5, 1], 'twoM': -7}, {'q': [21, 1], 'twoM': 1}, {'q': [-2, 1], 'twoM': 9}],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
                             'components': [{'q': [2, 1], 'twoM': -9}, {'q': [-21, 1], 'twoM': -1}, {'q': [-5, 1], 'twoM': 7}],
-                            'factor': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
-                            'components': [{'e': Rational(1,1), 'twoM': -11}, {'e': Rational(15,1), 'twoM': 5}],
+                            'components': [{'q': [1, 1], 'twoM': -11}, {'q': [15, 1], 'twoM': 5}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -8708,28 +8750,30 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(-11,1), 'twoM': -5},
-                                {'e': Rational(26,1), 'twoM': 3},
-                                {'e': Rational(1,1), 'twoM': 11}
+                                {'q': [11, 1], 'twoM': -5},
+                                {'q': [-26, 1], 'twoM': 3},
+                                {'q': [-1, 1], 'twoM': 11}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [{'q': [1, 1], 'twoM': -7}, {'q': [-14, 1], 'twoM': 1}, {'q': [-3, 1], 'twoM': 9}],
-                            'factor': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
                             'components': [{'q': [3, 1], 'twoM': -9}, {'q': [14, 1], 'twoM': -1}, {'q': [-1, 1], 'twoM': 7}],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -11},
-                                {'e': Rational(26,1), 'twoM': -3},
-                                {'e': Rational(-11,1), 'twoM': 5}
+                                {'q': [1, 1], 'twoM': -11},
+                                {'q': [26, 1], 'twoM': -3},
+                                {'q': [-11, 1], 'twoM': 5}
                             ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -8742,19 +8786,13 @@ o3d = {
                     'twoJ': 13,
                     'vectors': [
                         {
-                            'components': [
-                                {'e': Rational(1,1), 'twoM': -7},
-                                {'e': Rational(-2,1), 'twoM': 1},
-                                {'e': Rational(1,1), 'twoM': 9}
-                            ],
+                            'components': [{'q': [1, 1], 'twoM': -7}, {'q': [-2, 1], 'twoM': 1}, {'q': [1, 1], 'twoM': 9}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
-                            'components': [
-                                {'e': Rational(1,1), 'twoM': -9},
-                                {'e': Rational(-2,1), 'twoM': -1},
-                                {'e': Rational(1,1), 'twoM': 7}
-                            ],
+                            'components': [{'q': [1, 1], 'twoM': -9}, {'q': [-2, 1], 'twoM': -1}, {'q': [1, 1], 'twoM': 7}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -8768,18 +8806,20 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(13,1), 'twoM': -11},
-                                {'e': Rational(-143,1), 'twoM': 5},
-                                {'e': Rational(2,1), 'twoM': 13}
+                                {'q': [13, 1], 'twoM': -11},
+                                {'q': [-143, 1], 'twoM': 5},
+                                {'q': [2, 1], 'twoM': 13}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(2,1), 'twoM': -13},
-                                {'e': Rational(-143,1), 'twoM': -5},
-                                {'e': Rational(13,1), 'twoM': 11}
+                                {'q': [2, 1], 'twoM': -13},
+                                {'q': [-143, 1], 'twoM': -5},
+                                {'q': [13, 1], 'twoM': 11}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -8793,20 +8833,22 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(3,1), 'twoM': -11},
-                                {'e': Rational(57,1), 'twoM': -3},
-                                {'e': Rational(5,1), 'twoM': 5},
-                                {'e': Rational(-1,1), 'twoM': 13}
+                                {'q': [3, 1], 'twoM': -11},
+                                {'q': [57, 1], 'twoM': -3},
+                                {'q': [5, 1], 'twoM': 5},
+                                {'q': [-1, 1], 'twoM': 13}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(-1,1), 'twoM': -13},
-                                {'e': Rational(5,1), 'twoM': -5},
-                                {'e': Rational(57,1), 'twoM': 3},
-                                {'e': Rational(3,1), 'twoM': 11}
+                                {'q': [1, 1], 'twoM': -13},
+                                {'q': [-5, 1], 'twoM': -5},
+                                {'q': [-57, 1], 'twoM': 3},
+                                {'q': [-3, 1], 'twoM': 11}
                             ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -8819,16 +8861,13 @@ o3d = {
                     'twoJ': 13,
                     'vectors': [
                         {
-                            'components': [
-                                {'e': Rational(1,1), 'twoM': -13},
-                                {'e': Rational(33,1), 'twoM': 3},
-                                {'e': Rational(-2,1), 'twoM': 11}
-                            ],
+                            'components': [{'q': [1, 1], 'twoM': -13}, {'q': [33, 1], 'twoM': 3}, {'q': [-2, 1], 'twoM': 11}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [{'q': [11, 1], 'twoM': -7}, {'q': [22, 1], 'twoM': 1}, {'q': [-1, 1], 'twoM': 9}],
-                            'factor': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
@@ -8837,15 +8876,16 @@ o3d = {
                                 {'q': [-22, 1], 'twoM': -1},
                                 {'q': [-11, 1], 'twoM': 7}
                             ],
-                            'factor': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
                             'components': [
-                                {'e': Rational(2,1), 'twoM': -11},
-                                {'e': Rational(-33,1), 'twoM': -3},
-                                {'e': Rational(-1,1), 'twoM': 13}
+                                {'q': [2, 1], 'twoM': -11},
+                                {'q': [-33, 1], 'twoM': -3},
+                                {'q': [-1, 1], 'twoM': 13}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -8859,30 +8899,32 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -13},
-                                {'e': Rational(35,1), 'twoM': -5},
-                                {'e': Rational(-9,1), 'twoM': 3},
-                                {'e': Rational(5,1), 'twoM': 11}
+                                {'q': [1, 1], 'twoM': -13},
+                                {'q': [35, 1], 'twoM': -5},
+                                {'q': [-9, 1], 'twoM': 3},
+                                {'q': [5, 1], 'twoM': 11}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [{'q': [5, 1], 'twoM': -7}, {'q': [-18, 1], 'twoM': 1}, {'q': [-3, 1], 'twoM': 9}],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
                             'components': [{'q': [3, 1], 'twoM': -9}, {'q': [18, 1], 'twoM': -1}, {'q': [-5, 1], 'twoM': 7}],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
                             'components': [
-                                {'e': Rational(-5,1), 'twoM': -11},
-                                {'e': Rational(9,1), 'twoM': -3},
-                                {'e': Rational(-35,1), 'twoM': 5},
-                                {'e': Rational(-1,1), 'twoM': 13}
+                                {'q': [5, 1], 'twoM': -11},
+                                {'q': [-9, 1], 'twoM': -3},
+                                {'q': [35, 1], 'twoM': 5},
+                                {'q': [1, 1], 'twoM': 13}
                             ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -8896,20 +8938,22 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -15},
-                                {'e': Rational(21,1), 'twoM': -7},
-                                {'e': Rational(99,1), 'twoM': 1},
-                                {'e': Rational(7,1), 'twoM': 9}
+                                {'q': [1, 1], 'twoM': -15},
+                                {'q': [21, 1], 'twoM': -7},
+                                {'q': [99, 1], 'twoM': 1},
+                                {'q': [7, 1], 'twoM': 9}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(-7,1), 'twoM': -9},
-                                {'e': Rational(-99,1), 'twoM': -1},
-                                {'e': Rational(-21,1), 'twoM': 7},
-                                {'e': Rational(-1,1), 'twoM': 15}
+                                {'q': [7, 1], 'twoM': -9},
+                                {'q': [99, 1], 'twoM': -1},
+                                {'q': [21, 1], 'twoM': 7},
+                                {'q': [1, 1], 'twoM': 15}
                             ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -8923,20 +8967,22 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -11},
-                                {'e': Rational(13,1), 'twoM': -3},
-                                {'e': Rational(-13,1), 'twoM': 5},
-                                {'e': Rational(-1,1), 'twoM': 13}
+                                {'q': [1, 1], 'twoM': -11},
+                                {'q': [13, 1], 'twoM': -3},
+                                {'q': [-13, 1], 'twoM': 5},
+                                {'q': [-1, 1], 'twoM': 13}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -13},
-                                {'e': Rational(13,1), 'twoM': -5},
-                                {'e': Rational(-13,1), 'twoM': 3},
-                                {'e': Rational(-1,1), 'twoM': 11}
+                                {'q': [1, 1], 'twoM': -13},
+                                {'q': [13, 1], 'twoM': -5},
+                                {'q': [-13, 1], 'twoM': 3},
+                                {'q': [-1, 1], 'twoM': 11}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -8949,7 +8995,8 @@ o3d = {
                     'twoJ': 15,
                     'vectors': [
                         {
-                            'components': [{'e': Rational(1,1), 'twoM': -13}, {'e': Rational(7,1), 'twoM': 11}],
+                            'components': [{'q': [1, 1], 'twoM': -13}, {'q': [7, 1], 'twoM': 11}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
@@ -8959,7 +9006,7 @@ o3d = {
                                 {'q': [-429, 1], 'twoM': 1},
                                 {'q': [91, 1], 'twoM': 9}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
@@ -8969,11 +9016,12 @@ o3d = {
                                 {'q': [273, 1], 'twoM': 7},
                                 {'q': [1, 1], 'twoM': 15}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
-                            'components': [{'e': Rational(7,1), 'twoM': -11}, {'e': Rational(1,1), 'twoM': 13}],
+                            'components': [{'q': [7, 1], 'twoM': -11}, {'q': [1, 1], 'twoM': 13}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -8987,10 +9035,11 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(-5,1), 'twoM': -13},
-                                {'e': Rational(88,1), 'twoM': -5},
-                                {'e': Rational(5,1), 'twoM': 11}
+                                {'q': [5, 1], 'twoM': -13},
+                                {'q': [-88, 1], 'twoM': -5},
+                                {'q': [-5, 1], 'twoM': 11}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
@@ -9000,7 +9049,7 @@ o3d = {
                                 {'q': [-495, 1], 'twoM': 1},
                                 {'q': [425, 1], 'twoM': 9}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
@@ -9010,15 +9059,12 @@ o3d = {
                                 {'q': [-645, 1], 'twoM': 7},
                                 {'q': [11, 1], 'twoM': 15}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
-                            'components': [
-                                {'e': Rational(5,1), 'twoM': -11},
-                                {'e': Rational(88,1), 'twoM': 5},
-                                {'e': Rational(-5,1), 'twoM': 13}
-                            ],
+                            'components': [{'q': [5, 1], 'twoM': -11}, {'q': [88, 1], 'twoM': 5}, {'q': [-5, 1], 'twoM': 13}],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -9032,11 +9078,12 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -13},
-                                {'e': Rational(13,1), 'twoM': -5},
-                                {'e': Rational(51,1), 'twoM': 3},
-                                {'e': Rational(-1,1), 'twoM': 11}
+                                {'q': [1, 1], 'twoM': -13},
+                                {'q': [13, 1], 'twoM': -5},
+                                {'q': [51, 1], 'twoM': 3},
+                                {'q': [-1, 1], 'twoM': 11}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
@@ -9046,7 +9093,7 @@ o3d = {
                                 {'q': [-45, 1], 'twoM': 1},
                                 {'q': [-17, 1], 'twoM': 9}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
@@ -9056,16 +9103,17 @@ o3d = {
                                 {'q': [3, 1], 'twoM': 7},
                                 {'q': [-1, 1], 'twoM': 15}
                             ],
-                            'factor': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
                             'components': [
-                                {'e': Rational(-1,1), 'twoM': -11},
-                                {'e': Rational(51,1), 'twoM': -3},
-                                {'e': Rational(13,1), 'twoM': 5},
-                                {'e': Rational(1,1), 'twoM': 13}
+                                {'q': [1, 1], 'twoM': -11},
+                                {'q': [-51, 1], 'twoM': -3},
+                                {'q': [-13, 1], 'twoM': 5},
+                                {'q': [-1, 1], 'twoM': 13}
                             ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -9079,20 +9127,22 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(51,1), 'twoM': -15},
-                                {'e': Rational(4862,1), 'twoM': 1},
-                                {'e': Rational(952,1), 'twoM': 9},
-                                {'e': Rational(23,1), 'twoM': 17}
+                                {'q': [51, 1], 'twoM': -15},
+                                {'q': [4862, 1], 'twoM': 1},
+                                {'q': [952, 1], 'twoM': 9},
+                                {'q': [23, 1], 'twoM': 17}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(23,1), 'twoM': -17},
-                                {'e': Rational(952,1), 'twoM': -9},
-                                {'e': Rational(4862,1), 'twoM': -1},
-                                {'e': Rational(51,1), 'twoM': 15}
+                                {'q': [23, 1], 'twoM': -17},
+                                {'q': [952, 1], 'twoM': -9},
+                                {'q': [4862, 1], 'twoM': -1},
+                                {'q': [51, 1], 'twoM': 15}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -9106,22 +9156,24 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(-7,1), 'twoM': -15},
-                                {'e': Rational(212,1), 'twoM': -7},
-                                {'e': Rational(110,1), 'twoM': 1},
-                                {'e': Rational(-60,1), 'twoM': 9},
-                                {'e': Rational(1,1), 'twoM': 17}
+                                {'q': [7, 1], 'twoM': -15},
+                                {'q': [-212, 1], 'twoM': -7},
+                                {'q': [-110, 1], 'twoM': 1},
+                                {'q': [60, 1], 'twoM': 9},
+                                {'q': [-1, 1], 'twoM': 17}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -17},
-                                {'e': Rational(-60,1), 'twoM': -9},
-                                {'e': Rational(110,1), 'twoM': -1},
-                                {'e': Rational(212,1), 'twoM': 7},
-                                {'e': Rational(-7,1), 'twoM': 15}
+                                {'q': [1, 1], 'twoM': -17},
+                                {'q': [-60, 1], 'twoM': -9},
+                                {'q': [110, 1], 'twoM': -1},
+                                {'q': [212, 1], 'twoM': 7},
+                                {'q': [-7, 1], 'twoM': 15}
                             ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -9135,20 +9187,22 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(5,1), 'twoM': -11},
-                                {'e': Rational(-11,1), 'twoM': -3},
-                                {'e': Rational(7,1), 'twoM': 5},
-                                {'e': Rational(-1,1), 'twoM': 13}
+                                {'q': [5, 1], 'twoM': -11},
+                                {'q': [-11, 1], 'twoM': -3},
+                                {'q': [7, 1], 'twoM': 5},
+                                {'q': [-1, 1], 'twoM': 13}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(-1,1), 'twoM': -13},
-                                {'e': Rational(7,1), 'twoM': -5},
-                                {'e': Rational(-11,1), 'twoM': 3},
-                                {'e': Rational(5,1), 'twoM': 11}
+                                {'q': [1, 1], 'twoM': -13},
+                                {'q': [-7, 1], 'twoM': -5},
+                                {'q': [11, 1], 'twoM': 3},
+                                {'q': [-5, 1], 'twoM': 11}
                             ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -9161,7 +9215,8 @@ o3d = {
                     'twoJ': 17,
                     'vectors': [
                         {
-                            'components': [{'e': Rational(1,1), 'twoM': -13}, {'e': Rational(1,1), 'twoM': 11}],
+                            'components': [{'q': [1, 1], 'twoM': -13}, {'q': [1, 1], 'twoM': 11}],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
@@ -9172,7 +9227,7 @@ o3d = {
                                 {'q': [364, 1], 'twoM': 9},
                                 {'q': [1, 1], 'twoM': 17}
                             ],
-                            'factor': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
@@ -9183,11 +9238,12 @@ o3d = {
                                 {'q': [364, 1], 'twoM': 7},
                                 {'q': [1, 1], 'twoM': 15}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
-                            'components': [{'e': Rational(-1,1), 'twoM': -11}, {'e': Rational(-1,1), 'twoM': 13}],
+                            'components': [{'q': [1, 1], 'twoM': -11}, {'q': [1, 1], 'twoM': 13}],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -9201,10 +9257,11 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -13},
-                                {'e': Rational(78,1), 'twoM': -5},
-                                {'e': Rational(-5,1), 'twoM': 11}
+                                {'q': [1, 1], 'twoM': -13},
+                                {'q': [78, 1], 'twoM': -5},
+                                {'q': [-5, 1], 'twoM': 11}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
@@ -9215,7 +9272,7 @@ o3d = {
                                 {'q': [-1700, 1], 'twoM': 9},
                                 {'q': [37, 1], 'twoM': 17}
                             ],
-                            'factor': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
@@ -9226,15 +9283,16 @@ o3d = {
                                 {'q': [988, 1], 'twoM': 7},
                                 {'q': [229, 1], 'twoM': 15}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
                             'components': [
-                                {'e': Rational(5,1), 'twoM': -11},
-                                {'e': Rational(-78,1), 'twoM': 5},
-                                {'e': Rational(-1,1), 'twoM': 13}
+                                {'q': [5, 1], 'twoM': -11},
+                                {'q': [-78, 1], 'twoM': 5},
+                                {'q': [-1, 1], 'twoM': 13}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -9248,11 +9306,12 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(-1,1), 'twoM': -13},
-                                {'e': Rational(7,1), 'twoM': -5},
-                                {'e': Rational(85,1), 'twoM': 3},
-                                {'e': Rational(5,1), 'twoM': 11}
+                                {'q': [1, 1], 'twoM': -13},
+                                {'q': [-7, 1], 'twoM': -5},
+                                {'q': [-85, 1], 'twoM': 3},
+                                {'q': [-5, 1], 'twoM': 11}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
@@ -9262,7 +9321,7 @@ o3d = {
                                 {'q': [70, 1], 'twoM': 1},
                                 {'q': [-1, 1], 'twoM': 17}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
@@ -9272,16 +9331,17 @@ o3d = {
                                 {'q': [-56, 1], 'twoM': 7},
                                 {'q': [-3, 1], 'twoM': 15}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
                             'components': [
-                                {'e': Rational(-5,1), 'twoM': -11},
-                                {'e': Rational(-85,1), 'twoM': -3},
-                                {'e': Rational(-7,1), 'twoM': 5},
-                                {'e': Rational(1,1), 'twoM': 13}
+                                {'q': [5, 1], 'twoM': -11},
+                                {'q': [85, 1], 'twoM': -3},
+                                {'q': [7, 1], 'twoM': 5},
+                                {'q': [-1, 1], 'twoM': 13}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -9295,20 +9355,22 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(39,1), 'twoM': -15},
-                                {'e': Rational(-442,1), 'twoM': 1},
-                                {'e': Rational(408,1), 'twoM': 9},
-                                {'e': Rational(-5,1), 'twoM': 17}
+                                {'q': [39, 1], 'twoM': -15},
+                                {'q': [-442, 1], 'twoM': 1},
+                                {'q': [408, 1], 'twoM': 9},
+                                {'q': [-5, 1], 'twoM': 17}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(5,1), 'twoM': -17},
-                                {'e': Rational(-408,1), 'twoM': -9},
-                                {'e': Rational(442,1), 'twoM': -1},
-                                {'e': Rational(-39,1), 'twoM': 15}
+                                {'q': [5, 1], 'twoM': -17},
+                                {'q': [-408, 1], 'twoM': -9},
+                                {'q': [442, 1], 'twoM': -1},
+                                {'q': [-39, 1], 'twoM': 15}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -9322,22 +9384,24 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(15,1), 'twoM': -15},
-                                {'e': Rational(348,1), 'twoM': -7},
-                                {'e': Rational(-286,1), 'twoM': 1},
-                                {'e': Rational(-84,1), 'twoM': 9},
-                                {'e': Rational(7,1), 'twoM': 17}
+                                {'q': [15, 1], 'twoM': -15},
+                                {'q': [348, 1], 'twoM': -7},
+                                {'q': [-286, 1], 'twoM': 1},
+                                {'q': [-84, 1], 'twoM': 9},
+                                {'q': [7, 1], 'twoM': 17}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(-7,1), 'twoM': -17},
-                                {'e': Rational(84,1), 'twoM': -9},
-                                {'e': Rational(286,1), 'twoM': -1},
-                                {'e': Rational(-348,1), 'twoM': 7},
-                                {'e': Rational(-15,1), 'twoM': 15}
+                                {'q': [7, 1], 'twoM': -17},
+                                {'q': [-84, 1], 'twoM': -9},
+                                {'q': [-286, 1], 'twoM': -1},
+                                {'q': [348, 1], 'twoM': 7},
+                                {'q': [15, 1], 'twoM': 15}
                             ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -9351,20 +9415,22 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -19},
-                                {'e': Rational(-342,1), 'twoM': -3},
-                                {'e': Rational(-152,1), 'twoM': 5},
-                                {'e': Rational(-19,1), 'twoM': 13}
+                                {'q': [1, 1], 'twoM': -19},
+                                {'q': [-342, 1], 'twoM': -3},
+                                {'q': [-152, 1], 'twoM': 5},
+                                {'q': [-19, 1], 'twoM': 13}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(19,1), 'twoM': -13},
-                                {'e': Rational(152,1), 'twoM': -5},
-                                {'e': Rational(342,1), 'twoM': 3},
-                                {'e': Rational(-1,1), 'twoM': 19}
+                                {'q': [19, 1], 'twoM': -13},
+                                {'q': [152, 1], 'twoM': -5},
+                                {'q': [342, 1], 'twoM': 3},
+                                {'q': [-1, 1], 'twoM': 19}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -9378,22 +9444,24 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(-1,1), 'twoM': -19},
-                                {'e': Rational(140,1), 'twoM': -11},
-                                {'e': Rational(-78,1), 'twoM': -3},
-                                {'e': Rational(572,1), 'twoM': 5},
-                                {'e': Rational(-121,1), 'twoM': 13}
+                                {'q': [1, 1], 'twoM': -19},
+                                {'q': [-140, 1], 'twoM': -11},
+                                {'q': [78, 1], 'twoM': -3},
+                                {'q': [-572, 1], 'twoM': 5},
+                                {'q': [121, 1], 'twoM': 13}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(121,1), 'twoM': -13},
-                                {'e': Rational(-572,1), 'twoM': -5},
-                                {'e': Rational(78,1), 'twoM': 3},
-                                {'e': Rational(-140,1), 'twoM': 11},
-                                {'e': Rational(1,1), 'twoM': 19}
+                                {'q': [121, 1], 'twoM': -13},
+                                {'q': [-572, 1], 'twoM': -5},
+                                {'q': [78, 1], 'twoM': 3},
+                                {'q': [-140, 1], 'twoM': 11},
+                                {'q': [1, 1], 'twoM': 19}
                             ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -9407,10 +9475,11 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(51,1), 'twoM': -13},
-                                {'e': Rational(204,1), 'twoM': 11},
-                                {'e': Rational(1,1), 'twoM': 19}
+                                {'q': [51, 1], 'twoM': -13},
+                                {'q': [204, 1], 'twoM': 11},
+                                {'q': [1, 1], 'twoM': 19}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
@@ -9421,7 +9490,7 @@ o3d = {
                                 {'q': [-612, 1], 'twoM': 9},
                                 {'q': [25, 1], 'twoM': 17}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
@@ -9432,15 +9501,16 @@ o3d = {
                                 {'q': [-1428, 1], 'twoM': 7},
                                 {'q': [225, 1], 'twoM': 15}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -19},
-                                {'e': Rational(204,1), 'twoM': -11},
-                                {'e': Rational(51,1), 'twoM': 13}
+                                {'q': [1, 1], 'twoM': -19},
+                                {'q': [204, 1], 'twoM': -11},
+                                {'q': [51, 1], 'twoM': 13}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -9454,11 +9524,12 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(115,1), 'twoM': -13},
-                                {'e': Rational(3562,1), 'twoM': -5},
-                                {'e': Rational(-362,1), 'twoM': 11},
-                                {'e': Rational(13,1), 'twoM': 19}
+                                {'q': [115, 1], 'twoM': -13},
+                                {'q': [3562, 1], 'twoM': -5},
+                                {'q': [-362, 1], 'twoM': 11},
+                                {'q': [13, 1], 'twoM': 19}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
@@ -9469,7 +9540,7 @@ o3d = {
                                 {'q': [11, 1], 'twoM': 9},
                                 {'q': [-15, 1], 'twoM': 17}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
@@ -9480,16 +9551,17 @@ o3d = {
                                 {'q': [-665, 1], 'twoM': 7},
                                 {'q': [-2, 1], 'twoM': 15}
                             ],
-                            'factor': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
                             'components': [
-                                {'e': Rational(13,1), 'twoM': -19},
-                                {'e': Rational(-362,1), 'twoM': -11},
-                                {'e': Rational(3562,1), 'twoM': 5},
-                                {'e': Rational(115,1), 'twoM': 13}
+                                {'q': [13, 1], 'twoM': -19},
+                                {'q': [-362, 1], 'twoM': -11},
+                                {'q': [3562, 1], 'twoM': 5},
+                                {'q': [115, 1], 'twoM': 13}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -9503,12 +9575,13 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(-23,1), 'twoM': -13},
-                                {'e': Rational(-140,1), 'twoM': -5},
-                                {'e': Rational(414,1), 'twoM': 3},
-                                {'e': Rational(4,1), 'twoM': 11},
-                                {'e': Rational(1,1), 'twoM': 19}
+                                {'q': [23, 1], 'twoM': -13},
+                                {'q': [140, 1], 'twoM': -5},
+                                {'q': [-414, 1], 'twoM': 3},
+                                {'q': [-4, 1], 'twoM': 11},
+                                {'q': [-1, 1], 'twoM': 19}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
@@ -9519,7 +9592,7 @@ o3d = {
                                 {'q': [-76, 1], 'twoM': 9},
                                 {'q': [-3, 1], 'twoM': 17}
                             ],
-                            'factor': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
@@ -9530,17 +9603,18 @@ o3d = {
                                 {'q': [28, 1], 'twoM': 7},
                                 {'q': [-5, 1], 'twoM': 15}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -19},
-                                {'e': Rational(4,1), 'twoM': -11},
-                                {'e': Rational(414,1), 'twoM': -3},
-                                {'e': Rational(-140,1), 'twoM': 5},
-                                {'e': Rational(-23,1), 'twoM': 13}
+                                {'q': [1, 1], 'twoM': -19},
+                                {'q': [4, 1], 'twoM': -11},
+                                {'q': [414, 1], 'twoM': -3},
+                                {'q': [-140, 1], 'twoM': 5},
+                                {'q': [-23, 1], 'twoM': 13}
                             ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -9554,22 +9628,24 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -15},
-                                {'e': Rational(12,1), 'twoM': -7},
-                                {'e': Rational(-26,1), 'twoM': 1},
-                                {'e': Rational(12,1), 'twoM': 9},
-                                {'e': Rational(1,1), 'twoM': 17}
+                                {'q': [1, 1], 'twoM': -15},
+                                {'q': [12, 1], 'twoM': -7},
+                                {'q': [-26, 1], 'twoM': 1},
+                                {'q': [12, 1], 'twoM': 9},
+                                {'q': [1, 1], 'twoM': 17}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -17},
-                                {'e': Rational(12,1), 'twoM': -9},
-                                {'e': Rational(-26,1), 'twoM': -1},
-                                {'e': Rational(12,1), 'twoM': 7},
-                                {'e': Rational(1,1), 'twoM': 15}
+                                {'q': [1, 1], 'twoM': -17},
+                                {'q': [12, 1], 'twoM': -9},
+                                {'q': [-26, 1], 'twoM': -1},
+                                {'q': [12, 1], 'twoM': 7},
+                                {'q': [1, 1], 'twoM': 15}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -9583,22 +9659,24 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(39,1), 'twoM': -19},
-                                {'e': Rational(-8398,1), 'twoM': -3},
-                                {'e': Rational(-11628,1), 'twoM': 5},
-                                {'e': Rational(-513,1), 'twoM': 13},
-                                {'e': Rational(20,1), 'twoM': 21}
+                                {'q': [39, 1], 'twoM': -19},
+                                {'q': [-8398, 1], 'twoM': -3},
+                                {'q': [-11628, 1], 'twoM': 5},
+                                {'q': [-513, 1], 'twoM': 13},
+                                {'q': [20, 1], 'twoM': 21}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(20,1), 'twoM': -21},
-                                {'e': Rational(-513,1), 'twoM': -13},
-                                {'e': Rational(-11628,1), 'twoM': -5},
-                                {'e': Rational(-8398,1), 'twoM': 3},
-                                {'e': Rational(39,1), 'twoM': 19}
+                                {'q': [20, 1], 'twoM': -21},
+                                {'q': [-513, 1], 'twoM': -13},
+                                {'q': [-11628, 1], 'twoM': -5},
+                                {'q': [-8398, 1], 'twoM': 3},
+                                {'q': [39, 1], 'twoM': 19}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -9612,24 +9690,26 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(11,1), 'twoM': -19},
-                                {'e': Rational(259,1), 'twoM': -11},
-                                {'e': Rational(1430,1), 'twoM': -3},
-                                {'e': Rational(-610,1), 'twoM': 5},
-                                {'e': Rational(-65,1), 'twoM': 13},
-                                {'e': Rational(-1,1), 'twoM': 21}
+                                {'q': [11, 1], 'twoM': -19},
+                                {'q': [259, 1], 'twoM': -11},
+                                {'q': [1430, 1], 'twoM': -3},
+                                {'q': [-610, 1], 'twoM': 5},
+                                {'q': [-65, 1], 'twoM': 13},
+                                {'q': [-1, 1], 'twoM': 21}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(-1,1), 'twoM': -21},
-                                {'e': Rational(-65,1), 'twoM': -13},
-                                {'e': Rational(-610,1), 'twoM': -5},
-                                {'e': Rational(1430,1), 'twoM': 3},
-                                {'e': Rational(259,1), 'twoM': 11},
-                                {'e': Rational(11,1), 'twoM': 19}
+                                {'q': [1, 1], 'twoM': -21},
+                                {'q': [65, 1], 'twoM': -13},
+                                {'q': [610, 1], 'twoM': -5},
+                                {'q': [-1430, 1], 'twoM': 3},
+                                {'q': [-259, 1], 'twoM': 11},
+                                {'q': [-11, 1], 'twoM': 19}
                             ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 2
                         }
                     ]
@@ -9643,10 +9723,11 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(13,1), 'twoM': -21},
-                                {'e': Rational(6783,1), 'twoM': 11},
-                                {'e': Rational(-140,1), 'twoM': 19}
+                                {'q': [13, 1], 'twoM': -21},
+                                {'q': [6783, 1], 'twoM': 11},
+                                {'q': [-140, 1], 'twoM': 19}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
@@ -9657,7 +9738,7 @@ o3d = {
                                 {'q': [54264, 1], 'twoM': 9},
                                 {'q': [-2485, 1], 'twoM': 17}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
@@ -9668,15 +9749,16 @@ o3d = {
                                 {'q': [77520, 1], 'twoM': 7},
                                 {'q': [-4655, 1], 'twoM': 15}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
                             'components': [
-                                {'e': Rational(140,1), 'twoM': -19},
-                                {'e': Rational(-6783,1), 'twoM': -11},
-                                {'e': Rational(-13,1), 'twoM': 21}
+                                {'q': [140, 1], 'twoM': -19},
+                                {'q': [-6783, 1], 'twoM': -11},
+                                {'q': [-13, 1], 'twoM': 21}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -9690,11 +9772,12 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(64,1), 'twoM': -21},
-                                {'e': Rational(25225,1), 'twoM': -13},
-                                {'e': Rational(7004,1), 'twoM': 11},
-                                {'e': Rational(475,1), 'twoM': 19}
+                                {'q': [64, 1], 'twoM': -21},
+                                {'q': [25225, 1], 'twoM': -13},
+                                {'q': [7004, 1], 'twoM': 11},
+                                {'q': [475, 1], 'twoM': 19}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
@@ -9705,7 +9788,7 @@ o3d = {
                                 {'q': [-56032, 1], 'twoM': 9},
                                 {'q': [18055, 1], 'twoM': 17}
                             ],
-                            'factor': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
@@ -9716,16 +9799,17 @@ o3d = {
                                 {'q': [-410040, 1], 'twoM': 7},
                                 {'q': [37235, 1], 'twoM': 15}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
                             'components': [
-                                {'e': Rational(-475,1), 'twoM': -19},
-                                {'e': Rational(-7004,1), 'twoM': -11},
-                                {'e': Rational(-25225,1), 'twoM': 13},
-                                {'e': Rational(-64,1), 'twoM': 21}
+                                {'q': [475, 1], 'twoM': -19},
+                                {'q': [7004, 1], 'twoM': -11},
+                                {'q': [25225, 1], 'twoM': 13},
+                                {'q': [64, 1], 'twoM': 21}
                             ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -9739,12 +9823,13 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(57,1), 'twoM': -21},
-                                {'e': Rational(-2042,1), 'twoM': -13},
-                                {'e': Rational(29318,1), 'twoM': -5},
-                                {'e': Rational(1657,1), 'twoM': 11},
-                                {'e': Rational(194,1), 'twoM': 19}
+                                {'q': [57, 1], 'twoM': -21},
+                                {'q': [-2042, 1], 'twoM': -13},
+                                {'q': [29318, 1], 'twoM': -5},
+                                {'q': [1657, 1], 'twoM': 11},
+                                {'q': [194, 1], 'twoM': 19}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
@@ -9755,7 +9840,7 @@ o3d = {
                                 {'q': [-8668, 1], 'twoM': 9},
                                 {'q': [-23, 1], 'twoM': 17}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
@@ -9766,17 +9851,18 @@ o3d = {
                                 {'q': [2092, 1], 'twoM': 7},
                                 {'q': [-1073, 1], 'twoM': 15}
                             ],
-                            'factor': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
                             'components': [
-                                {'e': Rational(-194,1), 'twoM': -19},
-                                {'e': Rational(-1657,1), 'twoM': -11},
-                                {'e': Rational(-29318,1), 'twoM': 5},
-                                {'e': Rational(2042,1), 'twoM': 13},
-                                {'e': Rational(-57,1), 'twoM': 21}
+                                {'q': [194, 1], 'twoM': -19},
+                                {'q': [1657, 1], 'twoM': -11},
+                                {'q': [29318, 1], 'twoM': 5},
+                                {'q': [-2042, 1], 'twoM': 13},
+                                {'q': [57, 1], 'twoM': 21}
                             ],
+                            'factor': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -9790,13 +9876,14 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -21},
-                                {'e': Rational(9,1), 'twoM': -13},
-                                {'e': Rational(-126,1), 'twoM': -5},
-                                {'e': Rational(730,1), 'twoM': 3},
-                                {'e': Rational(-99,1), 'twoM': 11},
-                                {'e': Rational(-3,1), 'twoM': 19}
+                                {'q': [1, 1], 'twoM': -21},
+                                {'q': [9, 1], 'twoM': -13},
+                                {'q': [-126, 1], 'twoM': -5},
+                                {'q': [730, 1], 'twoM': 3},
+                                {'q': [-99, 1], 'twoM': 11},
+                                {'q': [-3, 1], 'twoM': 19}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 1
                         },
                         {
@@ -9807,7 +9894,7 @@ o3d = {
                                 {'q': [12, 1], 'twoM': 9},
                                 {'q': [-3, 1], 'twoM': 17}
                             ],
-                            'factor': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 2
                         },
                         {
@@ -9818,18 +9905,19 @@ o3d = {
                                 {'q': [-108, 1], 'twoM': 7},
                                 {'q': [-13, 1], 'twoM': 15}
                             ],
-                            'factor': (Rational(-2,1)*exp(2*pi*I*Rational(1,12)) + Rational(1,1)*exp(2*pi*I*Rational(3,12))),
+                            'factor': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,3))),
                             'mu': 3
                         },
                         {
                             'components': [
-                                {'e': Rational(3,1), 'twoM': -19},
-                                {'e': Rational(99,1), 'twoM': -11},
-                                {'e': Rational(-730,1), 'twoM': -3},
-                                {'e': Rational(126,1), 'twoM': 5},
-                                {'e': Rational(-9,1), 'twoM': 13},
-                                {'e': Rational(-1,1), 'twoM': 21}
+                                {'q': [3, 1], 'twoM': -19},
+                                {'q': [99, 1], 'twoM': -11},
+                                {'q': [-730, 1], 'twoM': -3},
+                                {'q': [126, 1], 'twoM': 5},
+                                {'q': [-9, 1], 'twoM': 13},
+                                {'q': [-1, 1], 'twoM': 21}
                             ],
+                            'factor': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                             'mu': 4
                         }
                     ]
@@ -11282,15 +11370,15 @@ o3d = {
                                     {
                                         'mu': 1,
                                         'terms': [
-                                            {'e': Rational(1,1), 'i': 2},
-                                            {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'i': 4}
+                                            {'e': Rational(1,1), 'i': 1},
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 3}
                                         ]
                                     },
                                     {
                                         'mu': 2,
                                         'terms': [
-                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 1},
-                                            {'e': Rational(-1,1), 'i': 3}
+                                            {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'i': 2},
+                                            {'e': Rational(1,1), 'i': 4}
                                         ]
                                     }
                                 ],

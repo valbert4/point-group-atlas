@@ -3530,8 +3530,8 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'p_x', 'twoMs': 1},
-                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_y', 'twoMs': 1}
+                                            {'c': Rational(-1,1), 'function': 'p_x', 'twoMs': 1},
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_y', 'twoMs': 1}
                                         ],
                                         'mu': 1
                                     }
@@ -3636,8 +3636,8 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_yz', 'twoMs': 1},
-                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': 1}
+                                            {'c': Rational(-1,1), 'function': 'd_yz', 'twoMs': 1},
+                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': 1}
                                         ],
                                         'mu': 1
                                     }
@@ -3710,8 +3710,8 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_x2-y2', 'twoMs': 1},
-                                            {'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_xy', 'twoMs': 1}
+                                            {'c': Rational(-1,1), 'function': 'd_x2-y2', 'twoMs': 1},
+                                            {'c': (Rational(2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_xy', 'twoMs': 1}
                                         ],
                                         'mu': 1
                                     }
@@ -3816,8 +3816,8 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'f_xz2', 'twoMs': 1},
-                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_yz2', 'twoMs': 1}
+                                            {'c': Rational(-1,1), 'function': 'f_xz2', 'twoMs': 1},
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_yz2', 'twoMs': 1}
                                         ],
                                         'mu': 1
                                     }
@@ -3890,8 +3890,8 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'f_z(x2-y2)', 'twoMs': 1},
-                                            {'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': 1}
+                                            {'c': Rational(-1,1), 'function': 'f_z(x2-y2)', 'twoMs': 1},
+                                            {'c': (Rational(2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': 1}
                                         ],
                                         'mu': 1
                                     }
@@ -3972,9 +3972,9 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'f_x(x2-3y2)', 'twoMs': -1},
+                                            {'c': Rational(-1,1), 'function': 'f_x(x2-3y2)', 'twoMs': -1},
                                             {
-                                                'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                                                'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                 'function': 'f_y(3x2-y2)',
                                                 'twoMs': -1
                                             }
@@ -3991,9 +3991,9 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'f_x(x2-3y2)', 'twoMs': 1},
+                                            {'c': Rational(-1,1), 'function': 'f_x(x2-3y2)', 'twoMs': 1},
                                             {
-                                                'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                                                'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
                                                 'function': 'f_y(3x2-y2)',
                                                 'twoMs': 1
                                             }
@@ -4033,19 +4033,19 @@ o3d = {
                     'case': '2G abelian (there is no flip)',
                     'dim': 1,
                     'kind': 'single_ket',
-                    'vectors': '|j,m>'
+                    'vectors': "|j,m>; for the second irrep of a complex pair (-1)^(j+m) |j,m>, the image under time reversal of the first irrep's |j,-m>; for a real irrep the copies |j,m>, -(-1)^(j-m) |j,-m> (m > 0), a pair"
                 },
                 {
                     'case': 'chi_m != chi_-m',
                     'dim': 2,
                     'kind': 'partner_pair',
-                    'vectors': 'mu = 1: |j,m_1>; mu = 2: c |j,-m_1>, c a root of unity (the partner law)'
+                    'vectors': 'mu = 1: |j,m_1>; mu = 2: c |j,-m_1>, c = +1 or -1 (the partner law), both times i when c = (-1)^(j-m_1)'
                 },
                 {
                     'case': 'chi_m = chi_-m, m > 0',
                     'dim': 1,
                     'kind': 'pm_pair',
-                    'vectors': '|j,m> + s |j,-m>: s = +1 and s = -1 for the flip (C_2x, 0), s = +i and s = -i for the flip (sigma_v(xz), 0)'
+                    'vectors': '|j,m> + s |j,-m>: s = +1 and s = -1 for the flip (C_2x, 0), s = +i and s = -i for the flip (sigma_v(xz), 0); for the second irrep of a complex pair times conj(s) (-1)^(j-m)'
                 }
             ],
             'flip': {'reason': 'not-defined-for-family', 'value': None},
@@ -4083,7 +4083,7 @@ o3d = {
                 '2E_5/2': '2E_5/2',
                 'A_7/2': 'A_7/2'
             },
-            'parity_rule': 'D^(j,-1)|2G = (D^(j,+1)|2G) (x) det: at parity -1 a block keeps its kets and its label is multiplied by det (parity_label_map); inside a 2-dimensional block the partner order and c are set again at that parity',
+            'parity_rule': 'D^(j,-1)|2G = (D^(j,+1)|2G) (x) det: at parity -1 a block keeps its kets and its label is multiplied by det (parity_label_map); inside a 2-dimensional block the partner order, c and the factor i are set again at that parity',
             'structure_theorem': 'A = 2G n 2C_infh acts diagonally on |j,m>; either 2G = A (abelian) or [2G:A] = 2 with the coset generated by one flip (the field flip: the lift (C_2x, 0) or (sigma_v(xz), 0)) sending |j,m> to a multiple of |j,-m>'
         },
         'enumerated': {
@@ -4127,7 +4127,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -1,
                     'twoJ': 3,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -1}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -1}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4187,7 +4187,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -3,
                     'twoJ': 5,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -3}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -3}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4227,7 +4227,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -1,
                     'twoJ': 7,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -1}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -1}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4267,7 +4267,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -5,
                     'twoJ': 7,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -5}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -5}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4287,7 +4287,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -7,
                     'twoJ': 7,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -7}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -7}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4327,7 +4327,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -3,
                     'twoJ': 9,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -3}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -3}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4377,7 +4377,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': 9,
                     'twoJ': 9,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 9}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 9}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4407,7 +4407,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -1,
                     'twoJ': 11,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -1}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -1}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4447,7 +4447,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -5,
                     'twoJ': 11,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -5}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -5}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4467,7 +4467,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -7,
                     'twoJ': 11,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -7}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -7}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4497,7 +4497,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': 11,
                     'twoJ': 11,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 11}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 11}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4547,7 +4547,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -3,
                     'twoJ': 13,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -3}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -3}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4597,7 +4597,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': 9,
                     'twoJ': 13,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 9}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 9}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4637,7 +4637,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': 13,
                     'twoJ': 13,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 13}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 13}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4667,7 +4667,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -1,
                     'twoJ': 15,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -1}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -1}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4707,7 +4707,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -5,
                     'twoJ': 15,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -5}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -5}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4727,7 +4727,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -7,
                     'twoJ': 15,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -7}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -7}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4757,7 +4757,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': 11,
                     'twoJ': 15,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 11}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 11}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4847,7 +4847,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -3,
                     'twoJ': 17,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -3}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -3}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4897,7 +4897,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': 9,
                     'twoJ': 17,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 9}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 9}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4937,7 +4937,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': 13,
                     'twoJ': 17,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 13}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 13}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -4967,7 +4967,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -15,
                     'twoJ': 17,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -15}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -15}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -5007,7 +5007,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -1,
                     'twoJ': 19,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -1}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -1}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -5047,7 +5047,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -5,
                     'twoJ': 19,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -5}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -5}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -5067,7 +5067,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -7,
                     'twoJ': 19,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -7}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -7}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -5097,7 +5097,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': 11,
                     'twoJ': 19,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 11}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 11}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -5167,7 +5167,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -17,
                     'twoJ': 19,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -17}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -17}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -5227,7 +5227,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -3,
                     'twoJ': 21,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -3}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -3}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -5277,7 +5277,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': 9,
                     'twoJ': 21,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 9}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 9}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -5317,7 +5317,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': 13,
                     'twoJ': 21,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': 13}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': 13}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -5347,7 +5347,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -15,
                     'twoJ': 21,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -15}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -15}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -5387,7 +5387,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -19,
                     'twoJ': 21,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -19}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -19}], 'mu': 1}]
                 },
                 {
                     'dim': 1,
@@ -5407,7 +5407,7 @@ o3d = {
                     'kind': 'single_ket',
                     'seed_twoM': -21,
                     'twoJ': 21,
-                    'vectors': [{'components': [{'e': Rational(1,1), 'twoM': -21}], 'mu': 1}]
+                    'vectors': [{'components': [{'e': Rational(-1,1), 'twoM': -21}], 'mu': 1}]
                 }
             ],
             'twoJ_max': 21,

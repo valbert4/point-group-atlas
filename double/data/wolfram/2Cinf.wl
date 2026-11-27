@@ -1364,8 +1364,8 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "p_x", "twoMs" -> 1|>,
-                      <|"c" -> -1 Exp[2 Pi I/4], "function" -> "p_y", "twoMs" -> 1|>
+                      <|"c" -> -1, "function" -> "p_x", "twoMs" -> 1|>,
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "p_y", "twoMs" -> 1|>
                     },
                     "mu" -> 1
                   |>
@@ -1470,8 +1470,8 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_yz", "twoMs" -> 1|>,
-                      <|"c" -> Exp[2 Pi I/4], "function" -> "d_zx", "twoMs" -> 1|>
+                      <|"c" -> -1, "function" -> "d_yz", "twoMs" -> 1|>,
+                      <|"c" -> -1 Exp[2 Pi I/4], "function" -> "d_zx", "twoMs" -> 1|>
                     },
                     "mu" -> 1
                   |>
@@ -1544,8 +1544,8 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_x2-y2", "twoMs" -> 1|>,
-                      <|"c" -> -2 Exp[2 Pi I/4], "function" -> "d_xy", "twoMs" -> 1|>
+                      <|"c" -> -1, "function" -> "d_x2-y2", "twoMs" -> 1|>,
+                      <|"c" -> 2 Exp[2 Pi I/4], "function" -> "d_xy", "twoMs" -> 1|>
                     },
                     "mu" -> 1
                   |>
@@ -1650,8 +1650,8 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "f_xz2", "twoMs" -> 1|>,
-                      <|"c" -> -1 Exp[2 Pi I/4], "function" -> "f_yz2", "twoMs" -> 1|>
+                      <|"c" -> -1, "function" -> "f_xz2", "twoMs" -> 1|>,
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "f_yz2", "twoMs" -> 1|>
                     },
                     "mu" -> 1
                   |>
@@ -1724,8 +1724,8 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "f_z(x2-y2)", "twoMs" -> 1|>,
-                      <|"c" -> -2 Exp[2 Pi I/4], "function" -> "f_xyz", "twoMs" -> 1|>
+                      <|"c" -> -1, "function" -> "f_z(x2-y2)", "twoMs" -> 1|>,
+                      <|"c" -> 2 Exp[2 Pi I/4], "function" -> "f_xyz", "twoMs" -> 1|>
                     },
                     "mu" -> 1
                   |>
@@ -1798,8 +1798,8 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "f_x(x2-3y2)", "twoMs" -> 1|>,
-                      <|"c" -> -1 Exp[2 Pi I/4], "function" -> "f_y(3x2-y2)", "twoMs" -> 1|>
+                      <|"c" -> -1, "function" -> "f_x(x2-3y2)", "twoMs" -> 1|>,
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "f_y(3x2-y2)", "twoMs" -> 1|>
                     },
                     "mu" -> 1
                   |>
@@ -1843,7 +1843,7 @@ o3d = <|
           "case" -> "2G abelian (there is no flip)",
           "dim" -> 1,
           "kind" -> "single_ket",
-          "vectors" -> "|J,m>: 1E_m for m > 0, 2E_-m for m < 0"
+          "vectors" -> "|J,m>: 1E_m for m > 0; (-1)^(J+m) |J,m>: 2E_-m for m < 0, the image of |J,-m> under time reversal"
         |>
       },
       "multiplicity" -> {
@@ -1903,7 +1903,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -1,
           "twoJ" -> 3,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -1|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -1963,7 +1963,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -3,
           "twoJ" -> 5,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -3|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2023,7 +2023,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -1,
           "twoJ" -> 7,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -1|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2043,7 +2043,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -5,
           "twoJ" -> 7,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -5|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2123,7 +2123,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -3,
           "twoJ" -> 9,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -3|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2143,7 +2143,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -7,
           "twoJ" -> 9,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -7|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -7|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2223,7 +2223,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -1,
           "twoJ" -> 11,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -1|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2243,7 +2243,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -5,
           "twoJ" -> 11,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -5|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2263,7 +2263,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -9,
           "twoJ" -> 11,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -9|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -9|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2363,7 +2363,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -3,
           "twoJ" -> 13,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -3|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2383,7 +2383,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -7,
           "twoJ" -> 13,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -7|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -7|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2403,7 +2403,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -11,
           "twoJ" -> 13,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -11|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -11|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2503,7 +2503,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -1,
           "twoJ" -> 15,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -1|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2523,7 +2523,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -5,
           "twoJ" -> 15,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -5|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2543,7 +2543,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -9,
           "twoJ" -> 15,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -9|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -9|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2563,7 +2563,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -13,
           "twoJ" -> 15,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -13|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -13|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2683,7 +2683,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -3,
           "twoJ" -> 17,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -3|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2703,7 +2703,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -7,
           "twoJ" -> 17,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -7|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -7|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2723,7 +2723,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -11,
           "twoJ" -> 17,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -11|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -11|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2743,7 +2743,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -15,
           "twoJ" -> 17,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -15|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -15|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2863,7 +2863,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -1,
           "twoJ" -> 19,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -1|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2883,7 +2883,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -5,
           "twoJ" -> 19,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -5|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -5|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2903,7 +2903,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -9,
           "twoJ" -> 19,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -9|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -9|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2923,7 +2923,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -13,
           "twoJ" -> 19,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -13|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -13|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -2943,7 +2943,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -17,
           "twoJ" -> 19,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -17|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -17|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -3083,7 +3083,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -3,
           "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -3|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -3|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -3103,7 +3103,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -7,
           "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -7|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -7|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -3123,7 +3123,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -11,
           "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -11|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -11|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -3143,7 +3143,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -15,
           "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -15|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -15|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,
@@ -3163,7 +3163,7 @@ o3d = <|
           "kind" -> "single_ket",
           "seed_twoM" -> -19,
           "twoJ" -> 21,
-          "vectors" -> {<|"components" -> {<|"e" -> 1, "twoM" -> -19|>}, "mu" -> 1|>}
+          "vectors" -> {<|"components" -> {<|"e" -> -1, "twoM" -> -19|>}, "mu" -> 1|>}
         |>,
         <|
           "dim" -> 1,

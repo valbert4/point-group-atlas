@@ -555,6 +555,8 @@ def construction(D, ir):
     if method == "twist":
         by, source = D.irrep_id(c["by"]), D.irrep_id(c["from"])
         return r"$\repD{%s}(g) = \irchar{%s}(g)\, \repD{%s}(g)$." % (label, by, source)
+    if method == "conjugate":
+        return r"$\repD{%s}(g) = \conj{\repD{%s}(g)}$." % (label, D.irrep_id(c["from"]))
     if method == "wigner":
         # the kets of an irrep of Pin-(3), a formula per ket, so that a line, and the site's
         # narrow view, may break between kets

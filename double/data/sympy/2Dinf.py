@@ -915,8 +915,18 @@ o3d = {
                                 'irrep_id': 'E1h',
                                 'kappa': 1,
                                 'vectors': [
-                                    {'components': [{'c': Rational(1,1), 'function': 'p_z', 'twoMs': -1}], 'mu': 1},
-                                    {'components': [{'c': Rational(-1,1), 'function': 'p_z', 'twoMs': 1}], 'mu': 2}
+                                    {
+                                        'components': [
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_z', 'twoMs': -1}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_z', 'twoMs': 1}
+                                        ],
+                                        'mu': 2
+                                    }
                                 ]
                             }
                         ],
@@ -934,15 +944,15 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'p_x', 'twoMs': 1},
-                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_y', 'twoMs': 1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_x', 'twoMs': 1},
+                                            {'c': Rational(1,1), 'function': 'p_y', 'twoMs': 1}
                                         ],
                                         'mu': 1
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'p_x', 'twoMs': -1},
-                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_y', 'twoMs': -1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_x', 'twoMs': -1},
+                                            {'c': Rational(-1,1), 'function': 'p_y', 'twoMs': -1}
                                         ],
                                         'mu': 2
                                     }
@@ -956,15 +966,15 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'p_x', 'twoMs': -1},
-                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_y', 'twoMs': -1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_x', 'twoMs': -1},
+                                            {'c': Rational(1,1), 'function': 'p_y', 'twoMs': -1}
                                         ],
                                         'mu': 1
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(-1,1), 'function': 'p_x', 'twoMs': 1},
-                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_y', 'twoMs': 1}
+                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'p_x', 'twoMs': 1},
+                                            {'c': Rational(1,1), 'function': 'p_y', 'twoMs': 1}
                                         ],
                                         'mu': 2
                                     }
@@ -1009,15 +1019,15 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_yz', 'twoMs': 1},
-                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': 1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': 1},
+                                            {'c': Rational(-1,1), 'function': 'd_zx', 'twoMs': 1}
                                         ],
                                         'mu': 1
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_yz', 'twoMs': -1},
-                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': -1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': -1},
+                                            {'c': Rational(1,1), 'function': 'd_zx', 'twoMs': -1}
                                         ],
                                         'mu': 2
                                     }
@@ -1031,15 +1041,15 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_yz', 'twoMs': -1},
-                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': -1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': -1},
+                                            {'c': Rational(-1,1), 'function': 'd_zx', 'twoMs': -1}
                                         ],
                                         'mu': 1
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(-1,1), 'function': 'd_yz', 'twoMs': 1},
-                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': 1}
+                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': 1},
+                                            {'c': Rational(-1,1), 'function': 'd_zx', 'twoMs': 1}
                                         ],
                                         'mu': 2
                                     }
@@ -1116,8 +1126,18 @@ o3d = {
                                 'irrep_id': 'E1h',
                                 'kappa': 1,
                                 'vectors': [
-                                    {'components': [{'c': Rational(1,1), 'function': 'f_z3', 'twoMs': -1}], 'mu': 1},
-                                    {'components': [{'c': Rational(-1,1), 'function': 'f_z3', 'twoMs': 1}], 'mu': 2}
+                                    {
+                                        'components': [
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_z3', 'twoMs': -1}
+                                        ],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_z3', 'twoMs': 1}
+                                        ],
+                                        'mu': 2
+                                    }
                                 ]
                             }
                         ],
@@ -1135,15 +1155,15 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'f_xz2', 'twoMs': 1},
-                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_yz2', 'twoMs': 1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xz2', 'twoMs': 1},
+                                            {'c': Rational(1,1), 'function': 'f_yz2', 'twoMs': 1}
                                         ],
                                         'mu': 1
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'f_xz2', 'twoMs': -1},
-                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_yz2', 'twoMs': -1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xz2', 'twoMs': -1},
+                                            {'c': Rational(-1,1), 'function': 'f_yz2', 'twoMs': -1}
                                         ],
                                         'mu': 2
                                     }
@@ -1157,15 +1177,15 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'f_xz2', 'twoMs': -1},
-                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_yz2', 'twoMs': -1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xz2', 'twoMs': -1},
+                                            {'c': Rational(1,1), 'function': 'f_yz2', 'twoMs': -1}
                                         ],
                                         'mu': 1
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(-1,1), 'function': 'f_xz2', 'twoMs': 1},
-                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_yz2', 'twoMs': 1}
+                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xz2', 'twoMs': 1},
+                                            {'c': Rational(1,1), 'function': 'f_yz2', 'twoMs': 1}
                                         ],
                                         'mu': 2
                                     }
@@ -1186,15 +1206,23 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'f_z(x2-y2)', 'twoMs': 1},
-                                            {'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': 1}
+                                            {
+                                                'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                                'function': 'f_z(x2-y2)',
+                                                'twoMs': 1
+                                            },
+                                            {'c': Rational(2,1), 'function': 'f_xyz', 'twoMs': 1}
                                         ],
                                         'mu': 1
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'f_z(x2-y2)', 'twoMs': -1},
-                                            {'c': (Rational(2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': -1}
+                                            {
+                                                'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                                'function': 'f_z(x2-y2)',
+                                                'twoMs': -1
+                                            },
+                                            {'c': Rational(-2,1), 'function': 'f_xyz', 'twoMs': -1}
                                         ],
                                         'mu': 2
                                     }
@@ -1208,15 +1236,23 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'f_z(x2-y2)', 'twoMs': -1},
-                                            {'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': -1}
+                                            {
+                                                'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                                'function': 'f_z(x2-y2)',
+                                                'twoMs': -1
+                                            },
+                                            {'c': Rational(2,1), 'function': 'f_xyz', 'twoMs': -1}
                                         ],
                                         'mu': 1
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(-1,1), 'function': 'f_z(x2-y2)', 'twoMs': 1},
-                                            {'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'f_xyz', 'twoMs': 1}
+                                            {
+                                                'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                                                'function': 'f_z(x2-y2)',
+                                                'twoMs': 1
+                                            },
+                                            {'c': Rational(2,1), 'function': 'f_xyz', 'twoMs': 1}
                                         ],
                                         'mu': 2
                                     }
@@ -1237,23 +1273,23 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'f_x(x2-3y2)', 'twoMs': 1},
                                             {
-                                                'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
-                                                'function': 'f_y(3x2-y2)',
+                                                'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                                'function': 'f_x(x2-3y2)',
                                                 'twoMs': 1
-                                            }
+                                            },
+                                            {'c': Rational(1,1), 'function': 'f_y(3x2-y2)', 'twoMs': 1}
                                         ],
                                         'mu': 1
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'f_x(x2-3y2)', 'twoMs': -1},
                                             {
                                                 'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
-                                                'function': 'f_y(3x2-y2)',
+                                                'function': 'f_x(x2-3y2)',
                                                 'twoMs': -1
-                                            }
+                                            },
+                                            {'c': Rational(-1,1), 'function': 'f_y(3x2-y2)', 'twoMs': -1}
                                         ],
                                         'mu': 2
                                     }
@@ -1267,23 +1303,23 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'f_x(x2-3y2)', 'twoMs': -1},
                                             {
-                                                'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
-                                                'function': 'f_y(3x2-y2)',
+                                                'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                                'function': 'f_x(x2-3y2)',
                                                 'twoMs': -1
-                                            }
+                                            },
+                                            {'c': Rational(1,1), 'function': 'f_y(3x2-y2)', 'twoMs': -1}
                                         ],
                                         'mu': 1
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(-1,1), 'function': 'f_x(x2-3y2)', 'twoMs': 1},
                                             {
                                                 'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
-                                                'function': 'f_y(3x2-y2)',
+                                                'function': 'f_x(x2-3y2)',
                                                 'twoMs': 1
-                                            }
+                                            },
+                                            {'c': Rational(1,1), 'function': 'f_y(3x2-y2)', 'twoMs': 1}
                                         ],
                                         'mu': 2
                                     }

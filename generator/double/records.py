@@ -30,6 +30,7 @@ from . import lattice as PL
 from . import lifts
 from . import spin_orbit_levels as SOL
 from . import spin_orbitals as SO
+from . import time_reversal as TRD
 from . import subduction as SUB
 from . import wigner
 from .irrep_matrices import AXIAL
@@ -103,6 +104,7 @@ NOTES = {
               "|j, m>, 2m in twoM in this order, 2j = twoJ, p = parity",
     "twist": "D = D^from (x) lambda, lambda the one-dimensional irrep by",
     "galois": "entrywise sigma_t: zeta_M -> zeta_M^t, t = sigma, M = conductor",
+    "conjugate": "D = conj(D^from), from the first irrep of the complex pair",
 }
 
 
@@ -175,21 +177,26 @@ STRUCTURE = ("A = 2G n 2C_infh acts diagonally on |j,m>; either 2G = A (abelian)
              "(sigma_v(xz), 0)) sending |j,m> to a multiple of |j,-m>")
 PARITY_RULE = ("D^(j,-1)|2G = (D^(j,+1)|2G) (x) det: at parity -1 a block keeps its kets and "
                "its label is multiplied by det (parity_label_map); inside a 2-dimensional block "
-               "the partner order and c are set again at that parity")
+               "the partner order, c and the factor i are set again at that parity")
 CASES = [
     {"case": "2G abelian (there is no flip)", "dim": 1, "kind": "single_ket",
-     "vectors": "|j,m>"},
+     "vectors": "|j,m>; for the second irrep of a complex pair (-1)^(j+m) |j,m>, the image under "
+                "time reversal of the first irrep's |j,-m>; for a real irrep the copies "
+                "|j,m>, -(-1)^(j-m) |j,-m> (m > 0), a pair"},
     {"case": "chi_m != chi_-m", "dim": 2, "kind": "partner_pair",
-     "vectors": "mu = 1: |j,m_1>; mu = 2: c |j,-m_1>, c a root of unity (the partner law)"},
+     "vectors": "mu = 1: |j,m_1>; mu = 2: c |j,-m_1>, c = +1 or -1 (the partner law), both times "
+                "i when c = (-1)^(j-m_1)"},
     {"case": "chi_m = chi_-m, m > 0", "dim": 1, "kind": "pm_pair",
      "vectors": "|j,m> + s |j,-m>: s = +1 and s = -1 for the flip (C_2x, 0), s = +i and s = -i "
-                "for the flip (sigma_v(xz), 0)"},
+                "for the flip (sigma_v(xz), 0); for the second irrep of a complex pair times "
+                "conj(s) (-1)^(j-m)"},
 ]
 
 
-def bases_block(C, period):
+def bases_block(C, period, doc):
     """subduction_basis of an axial preimage at half-integer j: the closed form, the blocks for
-    2j <= 21, the generating function and the allowed m; the integer-j bases are the covered
+    2j <= 21 adapted to time reversal (time_reversal.adapt_axial, with N from the record doc's
+    blocks), the generating function and the allowed m; the integer-j bases are the covered
     record's (integer_J)."""
     G = C.G
     rec = G.L.rec
@@ -200,6 +207,7 @@ def bases_block(C, period):
     for twoJ in range(1, TWOJ_ENUMERATED + 1, 2):
         for b in B.blocks(twoJ):
             blocks.append(B.block_json(twoJ, b))
+    TRD.adapt_axial(blocks, doc)
     S = SUB.Subduction(G.order, C.classes, spinors)
     top = max(8 * period + 1, 49)
     mult = {k: S.row(k, Cyc.one()) for k in range(1, top + 1, 2)}
@@ -432,14 +440,14 @@ def preimage_record(base):
                       CORE.schoenflies(C.base), rot(C.base, "/subduction_o3"))
     doc["subduction_parent"] = sp
     if rec_family(C).get("name") in AXIAL:
-        doc["subduction_basis"] = bases_block(C, sp["period"])
+        doc["subduction_basis"] = bases_block(C, sp["period"], doc)
     else:
         S, cache = SUB.Subduction(C.G.order, C.classes, spinors), {}
         doc["subduction_basis"] = EB.record_block(
             C, rot(C.base, "/subduction_basis"), lambda i, k: _mult(S, cache, i, k),
             sp["period"])
     doc["jj_configurations"] = JJ.finite_block(C)
-    doc["spin_orbitals"] = SO.ls_block(base)
+    doc["spin_orbitals"] = SO.ls_block(base, doc)
     doc["invariants"] = INV.finite_block(C, doc["jj_configurations"]["levels"])
     doc["subgroup_lattice"] = lat
     doc["subduction_embeddings"] = emb

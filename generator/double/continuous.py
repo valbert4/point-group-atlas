@@ -1163,8 +1163,10 @@ def bases_block(base, fams):
                          vectors=[dict(_ket(tm), mu=mu)
                                   for mu, tm in enumerate(range(twoJ, -twoJ - 1, -2), 1)])
             elif abelian:
+                # the ket of 2E_n is the image of 1E_n's |J,n> under time reversal, (-1)^(J-n) |J,-n>
                 tm = k if f.id.startswith("1") else -k
-                b.update(dim=1, kind="single_ket", seed_twoM=tm, vectors=[dict(_ket(tm), mu=1)])
+                c = 1 if f.id.startswith("1") else (-1) ** int(J - x)
+                b.update(dim=1, kind="single_ket", seed_twoM=tm, vectors=[dict(_ket(tm, c), mu=1)])
             else:
                 c = (-1) ** int(J - x)
                 b.update(dim=2, kind="partner_pair", seed_twoM=k,
@@ -1190,7 +1192,8 @@ def bases_block(base, fams):
     else:
         if abelian:
             cases = [{"case": "2G abelian (there is no flip)", "dim": 1, "kind": "single_ket",
-                      "vectors": "|J,m>: 1E_m for m > 0, 2E_-m for m < 0"}]
+                      "vectors": "|J,m>: 1E_m for m > 0; (-1)^(J+m) |J,m>: 2E_-m for m < 0, the image "
+                                 "of |J,-m> under time reversal"}]
         else:
             cases = [{"case": "every J and 1/2 <= n <= J", "dim": 2, "kind": "partner_pair",
                       "vectors": "mu = 1: |J,-n>; mu = 2: (-1)^(J-n) |J,n>"}]

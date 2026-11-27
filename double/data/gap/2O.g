@@ -6982,11 +6982,11 @@ o3d := rec(
                 ("kappa") := 1,
                 ("vectors") := [
                   rec(
-                    ("components") := [ rec( ("c") := 1, ("function") := "s", ("twoMs") := 1 ) ],
+                    ("components") := [ rec( ("c") := E(4), ("function") := "s", ("twoMs") := 1 ) ],
                     ("mu") := 1
                   ),
                   rec(
-                    ("components") := [ rec( ("c") := 1, ("function") := "s", ("twoMs") := -1 ) ],
+                    ("components") := [ rec( ("c") := E(4), ("function") := "s", ("twoMs") := -1 ) ],
                     ("mu") := 2
                   )
                 ]
@@ -7088,19 +7088,19 @@ o3d := rec(
                 ("kappa") := 1,
                 ("vectors") := [
                   rec(
-                    ("components") := [ rec( ("c") := 1, ("function") := "d_x2-y2", ("twoMs") := -1 ) ],
+                    ("components") := [ rec( ("c") := E(4), ("function") := "d_x2-y2", ("twoMs") := -1 ) ],
                     ("mu") := 1
                   ),
                   rec(
-                    ("components") := [ rec( ("c") := -1, ("function") := "d_z2", ("twoMs") := 1 ) ],
+                    ("components") := [ rec( ("c") := -1*E(4), ("function") := "d_z2", ("twoMs") := 1 ) ],
                     ("mu") := 2
                   ),
                   rec(
-                    ("components") := [ rec( ("c") := 1, ("function") := "d_z2", ("twoMs") := -1 ) ],
+                    ("components") := [ rec( ("c") := E(4), ("function") := "d_z2", ("twoMs") := -1 ) ],
                     ("mu") := 3
                   ),
                   rec(
-                    ("components") := [ rec( ("c") := -1, ("function") := "d_x2-y2", ("twoMs") := 1 ) ],
+                    ("components") := [ rec( ("c") := -1*E(4), ("function") := "d_x2-y2", ("twoMs") := 1 ) ],
                     ("mu") := 4
                   )
                 ]
@@ -7195,11 +7195,11 @@ o3d := rec(
                 ("kappa") := 1,
                 ("vectors") := [
                   rec(
-                    ("components") := [ rec( ("c") := 1, ("function") := "f_xyz", ("twoMs") := 1 ) ],
+                    ("components") := [ rec( ("c") := E(4), ("function") := "f_xyz", ("twoMs") := 1 ) ],
                     ("mu") := 1
                   ),
                   rec(
-                    ("components") := [ rec( ("c") := 1, ("function") := "f_xyz", ("twoMs") := -1 ) ],
+                    ("components") := [ rec( ("c") := E(4), ("function") := "f_xyz", ("twoMs") := -1 ) ],
                     ("mu") := 2
                   )
                 ]
@@ -7395,8 +7395,8 @@ o3d := rec(
           ("kappa") := 1,
           ("twoJ") := 1,
           ("vectors") := [
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 1 ) ], ("mu") := 1 ),
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -1 ) ], ("mu") := 2 )
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 1 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -1 ) ], ("mu") := 2 )
           ]
         ),
         rec(
@@ -7406,16 +7406,10 @@ o3d := rec(
           ("kappa") := 1,
           ("twoJ") := 3,
           ("vectors") := [
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 3 ) ], ("mu") := 1 ),
-            rec(
-              ("components") := [ rec( ("e") := 2*E(12)+-1*E(12)^3, ("twoM") := 1 ) ],
-              ("mu") := 2
-            ),
-            rec(
-              ("components") := [ rec( ("e") := 2*E(12)+-1*E(12)^3, ("twoM") := -1 ) ],
-              ("mu") := 3
-            ),
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -3 ) ], ("mu") := 4 )
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 3 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := 1+2*E(3), ("twoM") := 1 ) ], ("mu") := 2 ),
+            rec( ("components") := [ rec( ("e") := 1+2*E(3), ("twoM") := -1 ) ], ("mu") := 3 ),
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -3 ) ], ("mu") := 4 )
           ]
         ),
         rec(
@@ -7426,11 +7420,19 @@ o3d := rec(
           ("twoJ") := 5,
           ("vectors") := [
             rec(
-              ("components") := [ rec( ("e") := 5, ("twoM") := -3 ), rec( ("e") := -1, ("twoM") := 5 ) ],
+              ("components") := [
+                rec( ("q") := [ 5, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 5 )
+              ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
-              ("components") := [ rec( ("e") := -1, ("twoM") := -5 ), rec( ("e") := 5, ("twoM") := 3 ) ],
+              ("components") := [
+                rec( ("q") := [ 1, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ -5, 1 ], ("twoM") := 3 )
+              ],
+              ("factor") := -1*E(4),
               ("mu") := 2
             )
           ]
@@ -7443,19 +7445,21 @@ o3d := rec(
           ("twoJ") := 5,
           ("vectors") := [
             rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := -5 ), rec( ("e") := 1, ("twoM") := 3 ) ],
+              ("components") := [
+                rec( ("q") := [ 1, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 3 )
+              ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
+            rec( ("components") := [ rec( ("e") := -1+-2*E(3), ("twoM") := 1 ) ], ("mu") := 2 ),
+            rec( ("components") := [ rec( ("e") := 1+2*E(3), ("twoM") := -1 ) ], ("mu") := 3 ),
             rec(
-              ("components") := [ rec( ("e") := -2*E(12)+E(12)^3, ("twoM") := 1 ) ],
-              ("mu") := 2
-            ),
-            rec(
-              ("components") := [ rec( ("e") := 2*E(12)+-1*E(12)^3, ("twoM") := -1 ) ],
-              ("mu") := 3
-            ),
-            rec(
-              ("components") := [ rec( ("e") := -1, ("twoM") := -3 ), rec( ("e") := -1, ("twoM") := 5 ) ],
+              ("components") := [
+                rec( ("q") := [ 1, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 5 )
+              ],
+              ("factor") := -1*E(4),
               ("mu") := 4
             )
           ]
@@ -7468,11 +7472,19 @@ o3d := rec(
           ("twoJ") := 7,
           ("vectors") := [
             rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := -7 ), rec( ("e") := 7, ("twoM") := 1 ) ],
+              ("components") := [
+                rec( ("q") := [ 1, 1 ], ("twoM") := -7 ),
+                rec( ("q") := [ 7, 1 ], ("twoM") := 1 )
+              ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
-              ("components") := [ rec( ("e") := -7, ("twoM") := -1 ), rec( ("e") := -1, ("twoM") := 7 ) ],
+              ("components") := [
+                rec( ("q") := [ 7, 1 ], ("twoM") := -1 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 7 )
+              ],
+              ("factor") := -1*E(4),
               ("mu") := 2
             )
           ]
@@ -7485,11 +7497,19 @@ o3d := rec(
           ("twoJ") := 7,
           ("vectors") := [
             rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := -3 ), rec( ("e") := -1, ("twoM") := 5 ) ],
+              ("components") := [
+                rec( ("q") := [ 1, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 5 )
+              ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := -5 ), rec( ("e") := -1, ("twoM") := 3 ) ],
+              ("components") := [
+                rec( ("q") := [ 1, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 3 )
+              ],
+              ("factor") := E(4),
               ("mu") := 2
             )
           ]
@@ -7502,7 +7522,11 @@ o3d := rec(
           ("twoJ") := 7,
           ("vectors") := [
             rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := -5 ), rec( ("e") := 3, ("twoM") := 3 ) ],
+              ("components") := [
+                rec( ("q") := [ 1, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ 3, 1 ], ("twoM") := 3 )
+              ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -7510,7 +7534,7 @@ o3d := rec(
                 rec( ("q") := [ 1, 1 ], ("twoM") := -7 ),
                 rec( ("q") := [ -5, 1 ], ("twoM") := 1 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -7518,11 +7542,15 @@ o3d := rec(
                 rec( ("q") := [ 5, 1 ], ("twoM") := -1 ),
                 rec( ("q") := [ -1, 1 ], ("twoM") := 7 )
               ],
-              ("factor") := -2*E(12)+E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 3
             ),
             rec(
-              ("components") := [ rec( ("e") := 3, ("twoM") := -3 ), rec( ("e") := 1, ("twoM") := 5 ) ],
+              ("components") := [
+                rec( ("q") := [ 3, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 5 )
+              ],
+              ("factor") := E(4),
               ("mu") := 4
             )
           ]
@@ -7536,18 +7564,20 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -7 ),
-                rec( ("e") := 14, ("twoM") := 1 ),
-                rec( ("e") := 1, ("twoM") := 9 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -7 ),
+                rec( ("q") := [ 14, 1 ], ("twoM") := 1 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 9 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -9 ),
-                rec( ("e") := 14, ("twoM") := -1 ),
-                rec( ("e") := 1, ("twoM") := 7 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -9 ),
+                rec( ("q") := [ 14, 1 ], ("twoM") := -1 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 7 )
               ],
+              ("factor") := E(4),
               ("mu") := 2
             )
           ]
@@ -7559,14 +7589,14 @@ o3d := rec(
           ("kappa") := 1,
           ("twoJ") := 9,
           ("vectors") := [
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := -5 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := -5 ) ], ("mu") := 1 ),
             rec(
               ("components") := [
                 rec( ("q") := [ 5, 1 ], ("twoM") := -7 ),
                 rec( ("q") := [ -14, 1 ], ("twoM") := 1 ),
                 rec( ("q") := [ 1, 1 ], ("twoM") := 9 )
               ],
-              ("factor") := -2*E(12)+E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -7575,10 +7605,10 @@ o3d := rec(
                 rec( ("q") := [ -14, 1 ], ("twoM") := -1 ),
                 rec( ("q") := [ 5, 1 ], ("twoM") := 7 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 3
             ),
-            rec( ("components") := [ rec( ("e") := -1, ("twoM") := 5 ) ], ("mu") := 4 )
+            rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := 5 ) ], ("mu") := 4 )
           ]
         ),
         rec(
@@ -7588,14 +7618,14 @@ o3d := rec(
           ("kappa") := 2,
           ("twoJ") := 9,
           ("vectors") := [
-            rec( ("components") := [ rec( ("e") := 1, ("twoM") := 3 ) ], ("mu") := 1 ),
+            rec( ("components") := [ rec( ("e") := E(4), ("twoM") := 3 ) ], ("mu") := 1 ),
             rec(
               ("components") := [
                 rec( ("q") := [ 3, 1 ], ("twoM") := -7 ),
                 rec( ("q") := [ 6, 1 ], ("twoM") := 1 ),
                 rec( ("q") := [ -1, 1 ], ("twoM") := 9 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -7604,10 +7634,10 @@ o3d := rec(
                 rec( ("q") := [ -6, 1 ], ("twoM") := -1 ),
                 rec( ("q") := [ -3, 1 ], ("twoM") := 7 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 3
             ),
-            rec( ("components") := [ rec( ("e") := -1, ("twoM") := -3 ) ], ("mu") := 4 )
+            rec( ("components") := [ rec( ("e") := -1*E(4), ("twoM") := -3 ) ], ("mu") := 4 )
           ]
         ),
         rec(
@@ -7619,18 +7649,20 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 5, ("twoM") := -7 ),
-                rec( ("e") := -6, ("twoM") := 1 ),
-                rec( ("e") := 1, ("twoM") := 9 )
+                rec( ("q") := [ 5, 1 ], ("twoM") := -7 ),
+                rec( ("q") := [ -6, 1 ], ("twoM") := 1 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 9 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := -1, ("twoM") := -9 ),
-                rec( ("e") := 6, ("twoM") := -1 ),
-                rec( ("e") := -5, ("twoM") := 7 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -9 ),
+                rec( ("q") := [ -6, 1 ], ("twoM") := -1 ),
+                rec( ("q") := [ 5, 1 ], ("twoM") := 7 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 2
             )
           ]
@@ -7644,18 +7676,20 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -11 ),
-                rec( ("e") := -22, ("twoM") := -3 ),
-                rec( ("e") := -11, ("twoM") := 5 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ -22, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ -11, 1 ], ("twoM") := 5 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := 11, ("twoM") := -5 ),
-                rec( ("e") := 22, ("twoM") := 3 ),
-                rec( ("e") := -1, ("twoM") := 11 )
+                rec( ("q") := [ 11, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ 22, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 11 )
               ],
+              ("factor") := E(4),
               ("mu") := 2
             )
           ]
@@ -7668,7 +7702,11 @@ o3d := rec(
           ("twoJ") := 11,
           ("vectors") := [
             rec(
-              ("components") := [ rec( ("e") := 15, ("twoM") := -5 ), rec( ("e") := 1, ("twoM") := 11 ) ],
+              ("components") := [
+                rec( ("q") := [ 15, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 11 )
+              ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -7677,7 +7715,7 @@ o3d := rec(
                 rec( ("q") := [ 21, 1 ], ("twoM") := 1 ),
                 rec( ("q") := [ -2, 1 ], ("twoM") := 9 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -7686,11 +7724,15 @@ o3d := rec(
                 rec( ("q") := [ -21, 1 ], ("twoM") := -1 ),
                 rec( ("q") := [ -5, 1 ], ("twoM") := 7 )
               ],
-              ("factor") := -2*E(12)+E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 3
             ),
             rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := -11 ), rec( ("e") := 15, ("twoM") := 5 ) ],
+              ("components") := [
+                rec( ("q") := [ 1, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 15, 1 ], ("twoM") := 5 )
+              ],
+              ("factor") := E(4),
               ("mu") := 4
             )
           ]
@@ -7704,10 +7746,11 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := -11, ("twoM") := -5 ),
-                rec( ("e") := 26, ("twoM") := 3 ),
-                rec( ("e") := 1, ("twoM") := 11 )
+                rec( ("q") := [ 11, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ -26, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 11 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -7716,7 +7759,7 @@ o3d := rec(
                 rec( ("q") := [ -14, 1 ], ("twoM") := 1 ),
                 rec( ("q") := [ -3, 1 ], ("twoM") := 9 )
               ],
-              ("factor") := -2*E(12)+E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -7725,15 +7768,16 @@ o3d := rec(
                 rec( ("q") := [ 14, 1 ], ("twoM") := -1 ),
                 rec( ("q") := [ -1, 1 ], ("twoM") := 7 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 3
             ),
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -11 ),
-                rec( ("e") := 26, ("twoM") := -3 ),
-                rec( ("e") := -11, ("twoM") := 5 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 26, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ -11, 1 ], ("twoM") := 5 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 4
             )
           ]
@@ -7747,18 +7791,20 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -7 ),
-                rec( ("e") := -2, ("twoM") := 1 ),
-                rec( ("e") := 1, ("twoM") := 9 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -7 ),
+                rec( ("q") := [ -2, 1 ], ("twoM") := 1 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 9 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -9 ),
-                rec( ("e") := -2, ("twoM") := -1 ),
-                rec( ("e") := 1, ("twoM") := 7 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -9 ),
+                rec( ("q") := [ -2, 1 ], ("twoM") := -1 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 7 )
               ],
+              ("factor") := E(4),
               ("mu") := 2
             )
           ]
@@ -7772,18 +7818,20 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 13, ("twoM") := -11 ),
-                rec( ("e") := -143, ("twoM") := 5 ),
-                rec( ("e") := 2, ("twoM") := 13 )
+                rec( ("q") := [ 13, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ -143, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ 2, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := 2, ("twoM") := -13 ),
-                rec( ("e") := -143, ("twoM") := -5 ),
-                rec( ("e") := 13, ("twoM") := 11 )
+                rec( ("q") := [ 2, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ -143, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ 13, 1 ], ("twoM") := 11 )
               ],
+              ("factor") := E(4),
               ("mu") := 2
             )
           ]
@@ -7797,20 +7845,22 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 3, ("twoM") := -11 ),
-                rec( ("e") := 57, ("twoM") := -3 ),
-                rec( ("e") := 5, ("twoM") := 5 ),
-                rec( ("e") := -1, ("twoM") := 13 )
+                rec( ("q") := [ 3, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 57, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ 5, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := -1, ("twoM") := -13 ),
-                rec( ("e") := 5, ("twoM") := -5 ),
-                rec( ("e") := 57, ("twoM") := 3 ),
-                rec( ("e") := 3, ("twoM") := 11 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ -5, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ -57, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ -3, 1 ], ("twoM") := 11 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 2
             )
           ]
@@ -7824,10 +7874,11 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -13 ),
-                rec( ("e") := 33, ("twoM") := 3 ),
-                rec( ("e") := -2, ("twoM") := 11 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ 33, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ -2, 1 ], ("twoM") := 11 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -7836,7 +7887,7 @@ o3d := rec(
                 rec( ("q") := [ 22, 1 ], ("twoM") := 1 ),
                 rec( ("q") := [ -1, 1 ], ("twoM") := 9 )
               ],
-              ("factor") := -2*E(12)+E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -7845,15 +7896,16 @@ o3d := rec(
                 rec( ("q") := [ -22, 1 ], ("twoM") := -1 ),
                 rec( ("q") := [ -11, 1 ], ("twoM") := 7 )
               ],
-              ("factor") := -2*E(12)+E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 3
             ),
             rec(
               ("components") := [
-                rec( ("e") := 2, ("twoM") := -11 ),
-                rec( ("e") := -33, ("twoM") := -3 ),
-                rec( ("e") := -1, ("twoM") := 13 )
+                rec( ("q") := [ 2, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ -33, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := E(4),
               ("mu") := 4
             )
           ]
@@ -7867,11 +7919,12 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -13 ),
-                rec( ("e") := 35, ("twoM") := -5 ),
-                rec( ("e") := -9, ("twoM") := 3 ),
-                rec( ("e") := 5, ("twoM") := 11 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ 35, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ -9, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ 5, 1 ], ("twoM") := 11 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -7880,7 +7933,7 @@ o3d := rec(
                 rec( ("q") := [ -18, 1 ], ("twoM") := 1 ),
                 rec( ("q") := [ -3, 1 ], ("twoM") := 9 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -7889,16 +7942,17 @@ o3d := rec(
                 rec( ("q") := [ 18, 1 ], ("twoM") := -1 ),
                 rec( ("q") := [ -5, 1 ], ("twoM") := 7 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 3
             ),
             rec(
               ("components") := [
-                rec( ("e") := -5, ("twoM") := -11 ),
-                rec( ("e") := 9, ("twoM") := -3 ),
-                rec( ("e") := -35, ("twoM") := 5 ),
-                rec( ("e") := -1, ("twoM") := 13 )
+                rec( ("q") := [ 5, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ -9, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ 35, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 4
             )
           ]
@@ -7912,20 +7966,22 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -15 ),
-                rec( ("e") := 21, ("twoM") := -7 ),
-                rec( ("e") := 99, ("twoM") := 1 ),
-                rec( ("e") := 7, ("twoM") := 9 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -15 ),
+                rec( ("q") := [ 21, 1 ], ("twoM") := -7 ),
+                rec( ("q") := [ 99, 1 ], ("twoM") := 1 ),
+                rec( ("q") := [ 7, 1 ], ("twoM") := 9 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := -7, ("twoM") := -9 ),
-                rec( ("e") := -99, ("twoM") := -1 ),
-                rec( ("e") := -21, ("twoM") := 7 ),
-                rec( ("e") := -1, ("twoM") := 15 )
+                rec( ("q") := [ 7, 1 ], ("twoM") := -9 ),
+                rec( ("q") := [ 99, 1 ], ("twoM") := -1 ),
+                rec( ("q") := [ 21, 1 ], ("twoM") := 7 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 15 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 2
             )
           ]
@@ -7939,20 +7995,22 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -11 ),
-                rec( ("e") := 13, ("twoM") := -3 ),
-                rec( ("e") := -13, ("twoM") := 5 ),
-                rec( ("e") := -1, ("twoM") := 13 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 13, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ -13, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -13 ),
-                rec( ("e") := 13, ("twoM") := -5 ),
-                rec( ("e") := -13, ("twoM") := 3 ),
-                rec( ("e") := -1, ("twoM") := 11 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ 13, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ -13, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 11 )
               ],
+              ("factor") := E(4),
               ("mu") := 2
             )
           ]
@@ -7965,7 +8023,11 @@ o3d := rec(
           ("twoJ") := 15,
           ("vectors") := [
             rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := -13 ), rec( ("e") := 7, ("twoM") := 11 ) ],
+              ("components") := [
+                rec( ("q") := [ 1, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ 7, 1 ], ("twoM") := 11 )
+              ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -7975,7 +8037,7 @@ o3d := rec(
                 rec( ("q") := [ -429, 1 ], ("twoM") := 1 ),
                 rec( ("q") := [ 91, 1 ], ("twoM") := 9 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -7985,11 +8047,15 @@ o3d := rec(
                 rec( ("q") := [ 273, 1 ], ("twoM") := 7 ),
                 rec( ("q") := [ 1, 1 ], ("twoM") := 15 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 3
             ),
             rec(
-              ("components") := [ rec( ("e") := 7, ("twoM") := -11 ), rec( ("e") := 1, ("twoM") := 13 ) ],
+              ("components") := [
+                rec( ("q") := [ 7, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 13 )
+              ],
+              ("factor") := E(4),
               ("mu") := 4
             )
           ]
@@ -8003,10 +8069,11 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := -5, ("twoM") := -13 ),
-                rec( ("e") := 88, ("twoM") := -5 ),
-                rec( ("e") := 5, ("twoM") := 11 )
+                rec( ("q") := [ 5, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ -88, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ -5, 1 ], ("twoM") := 11 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -8016,7 +8083,7 @@ o3d := rec(
                 rec( ("q") := [ -495, 1 ], ("twoM") := 1 ),
                 rec( ("q") := [ 425, 1 ], ("twoM") := 9 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -8026,15 +8093,16 @@ o3d := rec(
                 rec( ("q") := [ -645, 1 ], ("twoM") := 7 ),
                 rec( ("q") := [ 11, 1 ], ("twoM") := 15 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 3
             ),
             rec(
               ("components") := [
-                rec( ("e") := 5, ("twoM") := -11 ),
-                rec( ("e") := 88, ("twoM") := 5 ),
-                rec( ("e") := -5, ("twoM") := 13 )
+                rec( ("q") := [ 5, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 88, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ -5, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 4
             )
           ]
@@ -8048,11 +8116,12 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -13 ),
-                rec( ("e") := 13, ("twoM") := -5 ),
-                rec( ("e") := 51, ("twoM") := 3 ),
-                rec( ("e") := -1, ("twoM") := 11 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ 13, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ 51, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 11 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -8062,7 +8131,7 @@ o3d := rec(
                 rec( ("q") := [ -45, 1 ], ("twoM") := 1 ),
                 rec( ("q") := [ -17, 1 ], ("twoM") := 9 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -8072,16 +8141,17 @@ o3d := rec(
                 rec( ("q") := [ 3, 1 ], ("twoM") := 7 ),
                 rec( ("q") := [ -1, 1 ], ("twoM") := 15 )
               ],
-              ("factor") := -2*E(12)+E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 3
             ),
             rec(
               ("components") := [
-                rec( ("e") := -1, ("twoM") := -11 ),
-                rec( ("e") := 51, ("twoM") := -3 ),
-                rec( ("e") := 13, ("twoM") := 5 ),
-                rec( ("e") := 1, ("twoM") := 13 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ -51, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ -13, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 4
             )
           ]
@@ -8095,20 +8165,22 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 51, ("twoM") := -15 ),
-                rec( ("e") := 4862, ("twoM") := 1 ),
-                rec( ("e") := 952, ("twoM") := 9 ),
-                rec( ("e") := 23, ("twoM") := 17 )
+                rec( ("q") := [ 51, 1 ], ("twoM") := -15 ),
+                rec( ("q") := [ 4862, 1 ], ("twoM") := 1 ),
+                rec( ("q") := [ 952, 1 ], ("twoM") := 9 ),
+                rec( ("q") := [ 23, 1 ], ("twoM") := 17 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := 23, ("twoM") := -17 ),
-                rec( ("e") := 952, ("twoM") := -9 ),
-                rec( ("e") := 4862, ("twoM") := -1 ),
-                rec( ("e") := 51, ("twoM") := 15 )
+                rec( ("q") := [ 23, 1 ], ("twoM") := -17 ),
+                rec( ("q") := [ 952, 1 ], ("twoM") := -9 ),
+                rec( ("q") := [ 4862, 1 ], ("twoM") := -1 ),
+                rec( ("q") := [ 51, 1 ], ("twoM") := 15 )
               ],
+              ("factor") := E(4),
               ("mu") := 2
             )
           ]
@@ -8122,22 +8194,24 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := -7, ("twoM") := -15 ),
-                rec( ("e") := 212, ("twoM") := -7 ),
-                rec( ("e") := 110, ("twoM") := 1 ),
-                rec( ("e") := -60, ("twoM") := 9 ),
-                rec( ("e") := 1, ("twoM") := 17 )
+                rec( ("q") := [ 7, 1 ], ("twoM") := -15 ),
+                rec( ("q") := [ -212, 1 ], ("twoM") := -7 ),
+                rec( ("q") := [ -110, 1 ], ("twoM") := 1 ),
+                rec( ("q") := [ 60, 1 ], ("twoM") := 9 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 17 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -17 ),
-                rec( ("e") := -60, ("twoM") := -9 ),
-                rec( ("e") := 110, ("twoM") := -1 ),
-                rec( ("e") := 212, ("twoM") := 7 ),
-                rec( ("e") := -7, ("twoM") := 15 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -17 ),
+                rec( ("q") := [ -60, 1 ], ("twoM") := -9 ),
+                rec( ("q") := [ 110, 1 ], ("twoM") := -1 ),
+                rec( ("q") := [ 212, 1 ], ("twoM") := 7 ),
+                rec( ("q") := [ -7, 1 ], ("twoM") := 15 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 2
             )
           ]
@@ -8151,20 +8225,22 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 5, ("twoM") := -11 ),
-                rec( ("e") := -11, ("twoM") := -3 ),
-                rec( ("e") := 7, ("twoM") := 5 ),
-                rec( ("e") := -1, ("twoM") := 13 )
+                rec( ("q") := [ 5, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ -11, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ 7, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := -1, ("twoM") := -13 ),
-                rec( ("e") := 7, ("twoM") := -5 ),
-                rec( ("e") := -11, ("twoM") := 3 ),
-                rec( ("e") := 5, ("twoM") := 11 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ -7, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ 11, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ -5, 1 ], ("twoM") := 11 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 2
             )
           ]
@@ -8177,7 +8253,11 @@ o3d := rec(
           ("twoJ") := 17,
           ("vectors") := [
             rec(
-              ("components") := [ rec( ("e") := 1, ("twoM") := -13 ), rec( ("e") := 1, ("twoM") := 11 ) ],
+              ("components") := [
+                rec( ("q") := [ 1, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 11 )
+              ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -8188,7 +8268,7 @@ o3d := rec(
                 rec( ("q") := [ 364, 1 ], ("twoM") := 9 ),
                 rec( ("q") := [ 1, 1 ], ("twoM") := 17 )
               ],
-              ("factor") := -2*E(12)+E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -8199,11 +8279,15 @@ o3d := rec(
                 rec( ("q") := [ 364, 1 ], ("twoM") := 7 ),
                 rec( ("q") := [ 1, 1 ], ("twoM") := 15 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 3
             ),
             rec(
-              ("components") := [ rec( ("e") := -1, ("twoM") := -11 ), rec( ("e") := -1, ("twoM") := 13 ) ],
+              ("components") := [
+                rec( ("q") := [ 1, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 13 )
+              ],
+              ("factor") := -1*E(4),
               ("mu") := 4
             )
           ]
@@ -8217,10 +8301,11 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -13 ),
-                rec( ("e") := 78, ("twoM") := -5 ),
-                rec( ("e") := -5, ("twoM") := 11 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ 78, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ -5, 1 ], ("twoM") := 11 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -8231,7 +8316,7 @@ o3d := rec(
                 rec( ("q") := [ -1700, 1 ], ("twoM") := 9 ),
                 rec( ("q") := [ 37, 1 ], ("twoM") := 17 )
               ],
-              ("factor") := -2*E(12)+E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -8242,15 +8327,16 @@ o3d := rec(
                 rec( ("q") := [ 988, 1 ], ("twoM") := 7 ),
                 rec( ("q") := [ 229, 1 ], ("twoM") := 15 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 3
             ),
             rec(
               ("components") := [
-                rec( ("e") := 5, ("twoM") := -11 ),
-                rec( ("e") := -78, ("twoM") := 5 ),
-                rec( ("e") := -1, ("twoM") := 13 )
+                rec( ("q") := [ 5, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ -78, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := E(4),
               ("mu") := 4
             )
           ]
@@ -8264,11 +8350,12 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := -1, ("twoM") := -13 ),
-                rec( ("e") := 7, ("twoM") := -5 ),
-                rec( ("e") := 85, ("twoM") := 3 ),
-                rec( ("e") := 5, ("twoM") := 11 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ -7, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ -85, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ -5, 1 ], ("twoM") := 11 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -8278,7 +8365,7 @@ o3d := rec(
                 rec( ("q") := [ 70, 1 ], ("twoM") := 1 ),
                 rec( ("q") := [ -1, 1 ], ("twoM") := 17 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -8288,16 +8375,17 @@ o3d := rec(
                 rec( ("q") := [ -56, 1 ], ("twoM") := 7 ),
                 rec( ("q") := [ -3, 1 ], ("twoM") := 15 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 3
             ),
             rec(
               ("components") := [
-                rec( ("e") := -5, ("twoM") := -11 ),
-                rec( ("e") := -85, ("twoM") := -3 ),
-                rec( ("e") := -7, ("twoM") := 5 ),
-                rec( ("e") := 1, ("twoM") := 13 )
+                rec( ("q") := [ 5, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 85, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ 7, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := E(4),
               ("mu") := 4
             )
           ]
@@ -8311,20 +8399,22 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 39, ("twoM") := -15 ),
-                rec( ("e") := -442, ("twoM") := 1 ),
-                rec( ("e") := 408, ("twoM") := 9 ),
-                rec( ("e") := -5, ("twoM") := 17 )
+                rec( ("q") := [ 39, 1 ], ("twoM") := -15 ),
+                rec( ("q") := [ -442, 1 ], ("twoM") := 1 ),
+                rec( ("q") := [ 408, 1 ], ("twoM") := 9 ),
+                rec( ("q") := [ -5, 1 ], ("twoM") := 17 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := 5, ("twoM") := -17 ),
-                rec( ("e") := -408, ("twoM") := -9 ),
-                rec( ("e") := 442, ("twoM") := -1 ),
-                rec( ("e") := -39, ("twoM") := 15 )
+                rec( ("q") := [ 5, 1 ], ("twoM") := -17 ),
+                rec( ("q") := [ -408, 1 ], ("twoM") := -9 ),
+                rec( ("q") := [ 442, 1 ], ("twoM") := -1 ),
+                rec( ("q") := [ -39, 1 ], ("twoM") := 15 )
               ],
+              ("factor") := E(4),
               ("mu") := 2
             )
           ]
@@ -8338,22 +8428,24 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 15, ("twoM") := -15 ),
-                rec( ("e") := 348, ("twoM") := -7 ),
-                rec( ("e") := -286, ("twoM") := 1 ),
-                rec( ("e") := -84, ("twoM") := 9 ),
-                rec( ("e") := 7, ("twoM") := 17 )
+                rec( ("q") := [ 15, 1 ], ("twoM") := -15 ),
+                rec( ("q") := [ 348, 1 ], ("twoM") := -7 ),
+                rec( ("q") := [ -286, 1 ], ("twoM") := 1 ),
+                rec( ("q") := [ -84, 1 ], ("twoM") := 9 ),
+                rec( ("q") := [ 7, 1 ], ("twoM") := 17 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := -7, ("twoM") := -17 ),
-                rec( ("e") := 84, ("twoM") := -9 ),
-                rec( ("e") := 286, ("twoM") := -1 ),
-                rec( ("e") := -348, ("twoM") := 7 ),
-                rec( ("e") := -15, ("twoM") := 15 )
+                rec( ("q") := [ 7, 1 ], ("twoM") := -17 ),
+                rec( ("q") := [ -84, 1 ], ("twoM") := -9 ),
+                rec( ("q") := [ -286, 1 ], ("twoM") := -1 ),
+                rec( ("q") := [ 348, 1 ], ("twoM") := 7 ),
+                rec( ("q") := [ 15, 1 ], ("twoM") := 15 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 2
             )
           ]
@@ -8367,20 +8459,22 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -19 ),
-                rec( ("e") := -342, ("twoM") := -3 ),
-                rec( ("e") := -152, ("twoM") := 5 ),
-                rec( ("e") := -19, ("twoM") := 13 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -19 ),
+                rec( ("q") := [ -342, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ -152, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ -19, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := 19, ("twoM") := -13 ),
-                rec( ("e") := 152, ("twoM") := -5 ),
-                rec( ("e") := 342, ("twoM") := 3 ),
-                rec( ("e") := -1, ("twoM") := 19 )
+                rec( ("q") := [ 19, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ 152, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ 342, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 19 )
               ],
+              ("factor") := E(4),
               ("mu") := 2
             )
           ]
@@ -8394,22 +8488,24 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := -1, ("twoM") := -19 ),
-                rec( ("e") := 140, ("twoM") := -11 ),
-                rec( ("e") := -78, ("twoM") := -3 ),
-                rec( ("e") := 572, ("twoM") := 5 ),
-                rec( ("e") := -121, ("twoM") := 13 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -19 ),
+                rec( ("q") := [ -140, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 78, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ -572, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ 121, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := 121, ("twoM") := -13 ),
-                rec( ("e") := -572, ("twoM") := -5 ),
-                rec( ("e") := 78, ("twoM") := 3 ),
-                rec( ("e") := -140, ("twoM") := 11 ),
-                rec( ("e") := 1, ("twoM") := 19 )
+                rec( ("q") := [ 121, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ -572, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ 78, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ -140, 1 ], ("twoM") := 11 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 19 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 2
             )
           ]
@@ -8423,10 +8519,11 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 51, ("twoM") := -13 ),
-                rec( ("e") := 204, ("twoM") := 11 ),
-                rec( ("e") := 1, ("twoM") := 19 )
+                rec( ("q") := [ 51, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ 204, 1 ], ("twoM") := 11 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 19 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -8437,7 +8534,7 @@ o3d := rec(
                 rec( ("q") := [ -612, 1 ], ("twoM") := 9 ),
                 rec( ("q") := [ 25, 1 ], ("twoM") := 17 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -8448,15 +8545,16 @@ o3d := rec(
                 rec( ("q") := [ -1428, 1 ], ("twoM") := 7 ),
                 rec( ("q") := [ 225, 1 ], ("twoM") := 15 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 3
             ),
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -19 ),
-                rec( ("e") := 204, ("twoM") := -11 ),
-                rec( ("e") := 51, ("twoM") := 13 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -19 ),
+                rec( ("q") := [ 204, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 51, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := E(4),
               ("mu") := 4
             )
           ]
@@ -8470,11 +8568,12 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 115, ("twoM") := -13 ),
-                rec( ("e") := 3562, ("twoM") := -5 ),
-                rec( ("e") := -362, ("twoM") := 11 ),
-                rec( ("e") := 13, ("twoM") := 19 )
+                rec( ("q") := [ 115, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ 3562, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ -362, 1 ], ("twoM") := 11 ),
+                rec( ("q") := [ 13, 1 ], ("twoM") := 19 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -8485,7 +8584,7 @@ o3d := rec(
                 rec( ("q") := [ 11, 1 ], ("twoM") := 9 ),
                 rec( ("q") := [ -15, 1 ], ("twoM") := 17 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -8496,16 +8595,17 @@ o3d := rec(
                 rec( ("q") := [ -665, 1 ], ("twoM") := 7 ),
                 rec( ("q") := [ -2, 1 ], ("twoM") := 15 )
               ],
-              ("factor") := -2*E(12)+E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 3
             ),
             rec(
               ("components") := [
-                rec( ("e") := 13, ("twoM") := -19 ),
-                rec( ("e") := -362, ("twoM") := -11 ),
-                rec( ("e") := 3562, ("twoM") := 5 ),
-                rec( ("e") := 115, ("twoM") := 13 )
+                rec( ("q") := [ 13, 1 ], ("twoM") := -19 ),
+                rec( ("q") := [ -362, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 3562, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ 115, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := E(4),
               ("mu") := 4
             )
           ]
@@ -8519,12 +8619,13 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := -23, ("twoM") := -13 ),
-                rec( ("e") := -140, ("twoM") := -5 ),
-                rec( ("e") := 414, ("twoM") := 3 ),
-                rec( ("e") := 4, ("twoM") := 11 ),
-                rec( ("e") := 1, ("twoM") := 19 )
+                rec( ("q") := [ 23, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ 140, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ -414, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ -4, 1 ], ("twoM") := 11 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 19 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -8535,7 +8636,7 @@ o3d := rec(
                 rec( ("q") := [ -76, 1 ], ("twoM") := 9 ),
                 rec( ("q") := [ -3, 1 ], ("twoM") := 17 )
               ],
-              ("factor") := -2*E(12)+E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -8546,17 +8647,18 @@ o3d := rec(
                 rec( ("q") := [ 28, 1 ], ("twoM") := 7 ),
                 rec( ("q") := [ -5, 1 ], ("twoM") := 15 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 3
             ),
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -19 ),
-                rec( ("e") := 4, ("twoM") := -11 ),
-                rec( ("e") := 414, ("twoM") := -3 ),
-                rec( ("e") := -140, ("twoM") := 5 ),
-                rec( ("e") := -23, ("twoM") := 13 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -19 ),
+                rec( ("q") := [ 4, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 414, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ -140, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ -23, 1 ], ("twoM") := 13 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 4
             )
           ]
@@ -8570,22 +8672,24 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -15 ),
-                rec( ("e") := 12, ("twoM") := -7 ),
-                rec( ("e") := -26, ("twoM") := 1 ),
-                rec( ("e") := 12, ("twoM") := 9 ),
-                rec( ("e") := 1, ("twoM") := 17 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -15 ),
+                rec( ("q") := [ 12, 1 ], ("twoM") := -7 ),
+                rec( ("q") := [ -26, 1 ], ("twoM") := 1 ),
+                rec( ("q") := [ 12, 1 ], ("twoM") := 9 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 17 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -17 ),
-                rec( ("e") := 12, ("twoM") := -9 ),
-                rec( ("e") := -26, ("twoM") := -1 ),
-                rec( ("e") := 12, ("twoM") := 7 ),
-                rec( ("e") := 1, ("twoM") := 15 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -17 ),
+                rec( ("q") := [ 12, 1 ], ("twoM") := -9 ),
+                rec( ("q") := [ -26, 1 ], ("twoM") := -1 ),
+                rec( ("q") := [ 12, 1 ], ("twoM") := 7 ),
+                rec( ("q") := [ 1, 1 ], ("twoM") := 15 )
               ],
+              ("factor") := E(4),
               ("mu") := 2
             )
           ]
@@ -8599,22 +8703,24 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 39, ("twoM") := -19 ),
-                rec( ("e") := -8398, ("twoM") := -3 ),
-                rec( ("e") := -11628, ("twoM") := 5 ),
-                rec( ("e") := -513, ("twoM") := 13 ),
-                rec( ("e") := 20, ("twoM") := 21 )
+                rec( ("q") := [ 39, 1 ], ("twoM") := -19 ),
+                rec( ("q") := [ -8398, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ -11628, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ -513, 1 ], ("twoM") := 13 ),
+                rec( ("q") := [ 20, 1 ], ("twoM") := 21 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := 20, ("twoM") := -21 ),
-                rec( ("e") := -513, ("twoM") := -13 ),
-                rec( ("e") := -11628, ("twoM") := -5 ),
-                rec( ("e") := -8398, ("twoM") := 3 ),
-                rec( ("e") := 39, ("twoM") := 19 )
+                rec( ("q") := [ 20, 1 ], ("twoM") := -21 ),
+                rec( ("q") := [ -513, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ -11628, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ -8398, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ 39, 1 ], ("twoM") := 19 )
               ],
+              ("factor") := E(4),
               ("mu") := 2
             )
           ]
@@ -8628,24 +8734,26 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 11, ("twoM") := -19 ),
-                rec( ("e") := 259, ("twoM") := -11 ),
-                rec( ("e") := 1430, ("twoM") := -3 ),
-                rec( ("e") := -610, ("twoM") := 5 ),
-                rec( ("e") := -65, ("twoM") := 13 ),
-                rec( ("e") := -1, ("twoM") := 21 )
+                rec( ("q") := [ 11, 1 ], ("twoM") := -19 ),
+                rec( ("q") := [ 259, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 1430, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ -610, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ -65, 1 ], ("twoM") := 13 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 21 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
               ("components") := [
-                rec( ("e") := -1, ("twoM") := -21 ),
-                rec( ("e") := -65, ("twoM") := -13 ),
-                rec( ("e") := -610, ("twoM") := -5 ),
-                rec( ("e") := 1430, ("twoM") := 3 ),
-                rec( ("e") := 259, ("twoM") := 11 ),
-                rec( ("e") := 11, ("twoM") := 19 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -21 ),
+                rec( ("q") := [ 65, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ 610, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ -1430, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ -259, 1 ], ("twoM") := 11 ),
+                rec( ("q") := [ -11, 1 ], ("twoM") := 19 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 2
             )
           ]
@@ -8659,10 +8767,11 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 13, ("twoM") := -21 ),
-                rec( ("e") := 6783, ("twoM") := 11 ),
-                rec( ("e") := -140, ("twoM") := 19 )
+                rec( ("q") := [ 13, 1 ], ("twoM") := -21 ),
+                rec( ("q") := [ 6783, 1 ], ("twoM") := 11 ),
+                rec( ("q") := [ -140, 1 ], ("twoM") := 19 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -8673,7 +8782,7 @@ o3d := rec(
                 rec( ("q") := [ 54264, 1 ], ("twoM") := 9 ),
                 rec( ("q") := [ -2485, 1 ], ("twoM") := 17 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -8684,15 +8793,16 @@ o3d := rec(
                 rec( ("q") := [ 77520, 1 ], ("twoM") := 7 ),
                 rec( ("q") := [ -4655, 1 ], ("twoM") := 15 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 3
             ),
             rec(
               ("components") := [
-                rec( ("e") := 140, ("twoM") := -19 ),
-                rec( ("e") := -6783, ("twoM") := -11 ),
-                rec( ("e") := -13, ("twoM") := 21 )
+                rec( ("q") := [ 140, 1 ], ("twoM") := -19 ),
+                rec( ("q") := [ -6783, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ -13, 1 ], ("twoM") := 21 )
               ],
+              ("factor") := E(4),
               ("mu") := 4
             )
           ]
@@ -8706,11 +8816,12 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 64, ("twoM") := -21 ),
-                rec( ("e") := 25225, ("twoM") := -13 ),
-                rec( ("e") := 7004, ("twoM") := 11 ),
-                rec( ("e") := 475, ("twoM") := 19 )
+                rec( ("q") := [ 64, 1 ], ("twoM") := -21 ),
+                rec( ("q") := [ 25225, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ 7004, 1 ], ("twoM") := 11 ),
+                rec( ("q") := [ 475, 1 ], ("twoM") := 19 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -8721,7 +8832,7 @@ o3d := rec(
                 rec( ("q") := [ -56032, 1 ], ("twoM") := 9 ),
                 rec( ("q") := [ 18055, 1 ], ("twoM") := 17 )
               ],
-              ("factor") := -2*E(12)+E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -8732,16 +8843,17 @@ o3d := rec(
                 rec( ("q") := [ -410040, 1 ], ("twoM") := 7 ),
                 rec( ("q") := [ 37235, 1 ], ("twoM") := 15 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 3
             ),
             rec(
               ("components") := [
-                rec( ("e") := -475, ("twoM") := -19 ),
-                rec( ("e") := -7004, ("twoM") := -11 ),
-                rec( ("e") := -25225, ("twoM") := 13 ),
-                rec( ("e") := -64, ("twoM") := 21 )
+                rec( ("q") := [ 475, 1 ], ("twoM") := -19 ),
+                rec( ("q") := [ 7004, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 25225, 1 ], ("twoM") := 13 ),
+                rec( ("q") := [ 64, 1 ], ("twoM") := 21 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 4
             )
           ]
@@ -8755,12 +8867,13 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 57, ("twoM") := -21 ),
-                rec( ("e") := -2042, ("twoM") := -13 ),
-                rec( ("e") := 29318, ("twoM") := -5 ),
-                rec( ("e") := 1657, ("twoM") := 11 ),
-                rec( ("e") := 194, ("twoM") := 19 )
+                rec( ("q") := [ 57, 1 ], ("twoM") := -21 ),
+                rec( ("q") := [ -2042, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ 29318, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ 1657, 1 ], ("twoM") := 11 ),
+                rec( ("q") := [ 194, 1 ], ("twoM") := 19 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -8771,7 +8884,7 @@ o3d := rec(
                 rec( ("q") := [ -8668, 1 ], ("twoM") := 9 ),
                 rec( ("q") := [ -23, 1 ], ("twoM") := 17 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -8782,17 +8895,18 @@ o3d := rec(
                 rec( ("q") := [ 2092, 1 ], ("twoM") := 7 ),
                 rec( ("q") := [ -1073, 1 ], ("twoM") := 15 )
               ],
-              ("factor") := 2*E(12)+-1*E(12)^3,
+              ("factor") := 1+2*E(3),
               ("mu") := 3
             ),
             rec(
               ("components") := [
-                rec( ("e") := -194, ("twoM") := -19 ),
-                rec( ("e") := -1657, ("twoM") := -11 ),
-                rec( ("e") := -29318, ("twoM") := 5 ),
-                rec( ("e") := 2042, ("twoM") := 13 ),
-                rec( ("e") := -57, ("twoM") := 21 )
+                rec( ("q") := [ 194, 1 ], ("twoM") := -19 ),
+                rec( ("q") := [ 1657, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ 29318, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ -2042, 1 ], ("twoM") := 13 ),
+                rec( ("q") := [ 57, 1 ], ("twoM") := 21 )
               ],
+              ("factor") := -1*E(4),
               ("mu") := 4
             )
           ]
@@ -8806,13 +8920,14 @@ o3d := rec(
           ("vectors") := [
             rec(
               ("components") := [
-                rec( ("e") := 1, ("twoM") := -21 ),
-                rec( ("e") := 9, ("twoM") := -13 ),
-                rec( ("e") := -126, ("twoM") := -5 ),
-                rec( ("e") := 730, ("twoM") := 3 ),
-                rec( ("e") := -99, ("twoM") := 11 ),
-                rec( ("e") := -3, ("twoM") := 19 )
+                rec( ("q") := [ 1, 1 ], ("twoM") := -21 ),
+                rec( ("q") := [ 9, 1 ], ("twoM") := -13 ),
+                rec( ("q") := [ -126, 1 ], ("twoM") := -5 ),
+                rec( ("q") := [ 730, 1 ], ("twoM") := 3 ),
+                rec( ("q") := [ -99, 1 ], ("twoM") := 11 ),
+                rec( ("q") := [ -3, 1 ], ("twoM") := 19 )
               ],
+              ("factor") := E(4),
               ("mu") := 1
             ),
             rec(
@@ -8823,7 +8938,7 @@ o3d := rec(
                 rec( ("q") := [ 12, 1 ], ("twoM") := 9 ),
                 rec( ("q") := [ -3, 1 ], ("twoM") := 17 )
               ],
-              ("factor") := -2*E(12)+E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 2
             ),
             rec(
@@ -8834,18 +8949,19 @@ o3d := rec(
                 rec( ("q") := [ -108, 1 ], ("twoM") := 7 ),
                 rec( ("q") := [ -13, 1 ], ("twoM") := 15 )
               ],
-              ("factor") := -2*E(12)+E(12)^3,
+              ("factor") := -1+-2*E(3),
               ("mu") := 3
             ),
             rec(
               ("components") := [
-                rec( ("e") := 3, ("twoM") := -19 ),
-                rec( ("e") := 99, ("twoM") := -11 ),
-                rec( ("e") := -730, ("twoM") := -3 ),
-                rec( ("e") := 126, ("twoM") := 5 ),
-                rec( ("e") := -9, ("twoM") := 13 ),
-                rec( ("e") := -1, ("twoM") := 21 )
+                rec( ("q") := [ 3, 1 ], ("twoM") := -19 ),
+                rec( ("q") := [ 99, 1 ], ("twoM") := -11 ),
+                rec( ("q") := [ -730, 1 ], ("twoM") := -3 ),
+                rec( ("q") := [ 126, 1 ], ("twoM") := 5 ),
+                rec( ("q") := [ -9, 1 ], ("twoM") := 13 ),
+                rec( ("q") := [ -1, 1 ], ("twoM") := 21 )
               ],
+              ("factor") := E(4),
               ("mu") := 4
             )
           ]
@@ -10621,11 +10737,11 @@ o3d := rec(
                 ("partners") := [
                   rec(
                     ("mu") := 1,
-                    ("terms") := [ rec( ("e") := 1, ("i") := 2 ), rec( ("e") := -1*E(4), ("i") := 4 ) ]
+                    ("terms") := [ rec( ("e") := 1, ("i") := 1 ), rec( ("e") := E(4), ("i") := 3 ) ]
                   ),
                   rec(
                     ("mu") := 2,
-                    ("terms") := [ rec( ("e") := E(4), ("i") := 1 ), rec( ("e") := -1, ("i") := 3 ) ]
+                    ("terms") := [ rec( ("e") := E(4), ("i") := 2 ), rec( ("e") := 1, ("i") := 4 ) ]
                   )
                 ],
                 ("separation") := "unique"

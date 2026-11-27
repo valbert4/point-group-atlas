@@ -23,10 +23,16 @@ partner; a copy that this changes is scaled to coprime integer coordinates, all 
 together.  A vector is written as the pairs (e_m, r_m), r_m = F_m / tot, tot = <e|e>_F (the
 amplitude of |j, m> is e_m sqrt(r_m)), every value at its minimal conductor.
 
+Time reversal (time_reversal.py, section 26.1).  The copies of an irrep of case (a) are then taken
+from the real form of the range (Rotation's rule R1, N from the record's block irrep x irrep ->
+trivial), each with the sign of the phase form; those of the second irrep of a complex pair
+(2G_3/2 of 2T) are the images of the first irrep's under time reversal (adapt_doc).
+
 2Th, 2Td, 2Oh, 2Ih.  At the natural parity +1 an element of the derived preimage acts on the kets
 as the element of 2T, 2O, 2O, 2I with the same SU(2) part, and each spinor irrep of the derived
 preimage has, on its elements, the matrices of one spinor irrep of the parent on those elements:
-its files are the parent's, each block renamed to that irrep.
+its files are the parent's, each block renamed to that irrep, and multiplied by i or -i where the
+irrep's N is minus the parent irrep's (time_reversal.derived_factors; no irrep does).
 """
 import math
 from fractions import Fraction
@@ -37,6 +43,7 @@ from ..bases import section as SEC
 from ..exact.cyclo import Cyc, csum
 from . import axial_bases as AB
 from . import core as CORE
+from . import time_reversal as TRD
 from . import wigner
 
 PARENTS = ("T", "O", "I")
@@ -172,6 +179,39 @@ def parent_blocks(base, twoJ):
     return blocks
 
 
+def _record(base):
+    """The Double record of the preimage of base (its file, whatever the catalogue of the process)."""
+    return serialize.read_json(names.catalogue_path(
+        "double", "%s/%s.json" % (names.RECORDS_DIR, names.preimage_stem(base))))
+
+
+def adapt_doc(base, doc, record=None):
+    """The file of 2T, 2O or 2I at one 2J with its copies adapted to time reversal
+    (time_reversal.adapted_files, N from the preimage's record): a copy that changes is scaled to
+    coprime integer coordinates, all its partners together, and written again; the others keep
+    their values."""
+    if record is None:
+        record = _record(base)
+    twoJ = doc["twoJ"]
+    Fm = [_F(twoJ, tm) for tm in ascending(twoJ)]
+    new = TRD.adapted_files(twoJ, doc["blocks"], record, lambda tm: _F(twoJ, tm))
+    out = []
+    for b in doc["blocks"]:
+        vs = new.get((b["irrep"], b["copy"]))
+        if vs is not None:
+            vectors, tots = [], set()
+            for mu, v in enumerate(_coprime(vs), 1):
+                comps, tot = _vector_json(twoJ, v, Fm)
+                tots.add(tot)
+                vectors.append({"mu": mu, "components": comps})
+            if len(tots) != 1:
+                raise AssertionError("2%s 2J = %d: the partners of %s differ in norm"
+                                     % (base, twoJ, b["irrep"]))
+            b = dict(b, vectors=vectors)
+        out.append(b)
+    return dict(doc, blocks=out)
+
+
 def _su2_key(G, k):
     return tuple(repr(x.minimal().to_json()) for row in G.su2(k) for x in row)
 
@@ -197,12 +237,26 @@ def derived_map(name):
 
 
 def derived_blocks(name, parent_doc):
+    """The parent's blocks renamed to the derived preimage's irreps; a block of an irrep whose N is
+    minus its parent irrep's (time_reversal.derived_factors) is then multiplied by i or -i, the sign
+    that keeps its first coefficient in the phase form."""
     Cd = CORE.core(name)
     rank = {ir["id"]: k for k, ir in enumerate(Cd.irreps)}
     label = {ir["id"]: ir["label"] for ir in Cd.irreps}
     m = derived_map(name)
-    blocks = [dict(b, irrep=m[b["irrep"]], label=label[m[b["irrep"]]])
-              for b in parent_doc["blocks"]]
+    factors = TRD.derived_factors(_record(DERIVED_FROM[name]), _record(name), m)
+    blocks = []
+    for b in parent_doc["blocks"]:
+        b = dict(b, irrep=m[b["irrep"]], label=label[m[b["irrep"]]])
+        lam = factors[b["irrep"]]
+        if lam != Cyc.one():
+            v1 = next(v for v in b["vectors"] if v["mu"] == 1)
+            x = Cyc.from_json(v1["components"][0]["e"]) * lam
+            lam = lam * Cyc.rational(TRD.phase_sign_e({"components": [{"e": x.to_json()}]}))
+            b["vectors"] = [{"mu": v["mu"], "components": [
+                dict(c, e=(Cyc.from_json(c["e"]) * lam).minimal().to_json())
+                for c in v["components"]]} for v in b["vectors"]]
+        blocks.append(b)
     blocks.sort(key=lambda b: (rank[b["irrep"]], b["copy"]))
     return blocks
 
@@ -214,10 +268,12 @@ def write_file(stem, twoJ, blocks):
 
 
 def write_parent(task):
-    """Compute and write the file of 2T, 2O or 2I at 2J; (path, number of blocks)."""
+    """Compute and write the file of 2T, 2O or 2I at 2J, its copies adapted to time reversal;
+    (path, number of blocks)."""
     base, twoJ = task
-    blocks = parent_blocks(base, twoJ)
     stem = names.preimage_stem(base)
+    doc = adapt_doc(base, {"twoJ": twoJ, "blocks": parent_blocks(base, twoJ)})
+    blocks = doc["blocks"]
     write_file(stem, twoJ, blocks)
     return names.relative(names.double_bases_path(stem, twoJ)), len(blocks)
 

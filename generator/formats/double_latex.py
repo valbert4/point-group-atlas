@@ -871,7 +871,9 @@ def spin_orbitals_text(D, kind, times, copy, matrices):
         + D.define("head.state")
         + r"Under the heading of its shell, a row gives $\Gamma$, %s, its partner $\intx$ and the "
           r"state. The normalized state (CONVENTIONS.pdf, section 25.4) follows the partner law "
-          r"with the matrices of section~\ref{%s}." % (copy, matrices))
+          r"with the matrices of section~\ref{%s}. The copies are adapted to time reversal, "
+          r"which sends $f u$ to $f v$ and $f v$ to $-f u$ (CONVENTIONS.pdf, section 25.4)."
+          % (copy, matrices))
 
 
 def section_spin_orbitals(D):

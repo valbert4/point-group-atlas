@@ -23,9 +23,16 @@ pivots, orthogonalised by Gram-Schmidt in kappa order (the coefficients computed
 applied to every partner), with the partners v_mu = P_mu v_1, so that k v_mu = sum_nu v_nu
 D^Lambda(k)_(nu,mu).
 
+Time reversal (section 25.4).  Theta(c f u) = conj(c) f v, Theta(c f v) = -conj(c) f u; the copies of
+each level are adapted by time_reversal.adapt_spin_orbitals: within the level of a real Gamma, R1
+(case (a)), the pairs (case (b)) and the images of the first irrep's (case (c)); across the levels
+of a complex pair of Gamma, the images of the first level's copies.
+
 jj form, SU(2).  |l j m> = sum <l m_l 1/2 m_s | j m> |l m_l> |1/2 m_s>, j = l -+ 1/2, with the
 Clebsch-Gordan coefficients of section 29.3 and |l m_l> = r^l Y_l^m_l the polynomial of Rotation's
-section 9, written in the functions.
+section 9, written in the functions; as Theta |l j m> = (-1)^l (-1)^(j-m) |l j -m>, a state of odd l
+is set times -i, adapted to time reversal and in the phase form (its first coefficient, -1 by the
+Condon-Shortley phase, becomes i).
 """
 import math
 from fractions import Fraction
@@ -35,6 +42,7 @@ from ..exact.cyclo import Cyc, csum
 from ..tables import cartesian as CT
 from . import core as CORE
 from . import su2, wigner
+from . import time_reversal as TRD
 
 L_MAX = 3
 SHELLS = "spdf"
@@ -229,9 +237,10 @@ class Preimage:
         return self._T[l]
 
 
-def ls_shell(pre, l):
+def ls_shell(pre, l, record):
     """The orbital levels of degree l with their spin-orbitals:
-    [(Gamma irrep, multiplicity, [(Lambda irrep, [copy: [partner vectors]])])]."""
+    [(Gamma irrep, multiplicity, [(Lambda irrep, [copy: [partner vectors]])])], the copies of each
+    level adapted to time reversal (time_reversal.adapt_spin_orbitals, N from the record)."""
     C, G = pre.C, pre.G
     T = pre.T(l)
     n = 2 * l + 1
@@ -289,6 +298,7 @@ def ls_shell(pre, l):
                                                      "partner law" % (C.base, lam["id"]))
                 blocks.append((lam, copies))
         levels.append((gam, int(mult), blocks))
+    TRD.adapt_spin_orbitals(levels, record, w, {ir["id"]: k for k, ir in enumerate(C.irreps)})
     return levels
 
 
@@ -298,13 +308,18 @@ def components(l, v):
             for i, x in enumerate(v) if not x.is_zero()]
 
 
-def ls_block(base):
-    """`spin_orbitals` of the preimage of `base`: the LS form, l <= 3."""
+def ls_block(base, record=None):
+    """`spin_orbitals` of the preimage of `base`: the LS form, l <= 3, adapted to time reversal with
+    the N of the preimage's record (read from its file when record is None)."""
+    if record is None:
+        from .. import names, serialize
+        record = serialize.read_json(names.catalogue_path(
+            "double", "%s/%s.json" % (names.RECORDS_DIR, names.preimage_stem(base))))
     pre = Preimage(base)
     shells = []
     for l in range(L_MAX + 1):
         levels = []
-        for gam, mult, blocks in ls_shell(pre, l):
+        for gam, mult, blocks in ls_shell(pre, l, record):
             out = []
             for lam, copies in blocks:
                 for kappa, copy in enumerate(copies, 1):
@@ -366,7 +381,10 @@ def jj_state(l, twoj, twom):
         for i, c in enumerate(in_functions(l, ylm_poly(l, ml))):
             if not c.is_zero():
                 v[2 * i + s] = (v[2 * i + s] + coef * c).minimal()
-    # the state is sqrt(q0) > 0 times v
+    # the state is sqrt(q0) > 0 times v; Theta |l j m> = (-1)^l (-1)^(j-m) |l j -m>, so at odd l the
+    # state is set times -i, adapted to time reversal and in the phase form (section 25.4)
+    if l % 2:
+        v = [(-(x * I)).minimal() for x in v]
     return scaled(v)
 
 

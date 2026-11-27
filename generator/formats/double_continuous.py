@@ -582,7 +582,9 @@ def section_spin_orbitals(D):
         + r"The states are written in the functions $f$ of the $\orbital{s}$, $\orbital{p}$ and "
           r"$\orbital{d}$ shells of %s (CONVENTIONS.pdf, section 13) times the spin kets "
           r"$u = \jm{1/2}{1/2}$ and $v = \jm{1/2}{-1/2}$, each up to a positive factor. The record "
-          r"also holds the $\orbital{f}$ shell (\texttt{spin\symbol{95}orbitals}). "
+          r"also holds the $\orbital{f}$ shell (\texttt{spin\symbol{95}orbitals}). A state of odd "
+          r"$l$ is multiplied by $-\iunit$, so that every state is adapted to time reversal "
+          r"(CONVENTIONS.pdf, section 25.4). "
           % DL.rotation_linked("SO3")
         + D.define("head.subshell", "head.state")
         + r"A row gives the subshell, $m$ and the state.")

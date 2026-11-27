@@ -425,46 +425,6 @@ o3d = <|
             {{-1, 0}, {0, -1}},
             {
               {
-                (1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12]),
-                (-1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12])
-              },
-              {
-                (-1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12]),
-                (-1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12])
-              }
-            },
-            {
-              {
-                (-1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12]),
-                (1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12])
-              },
-              {
-                (1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12]),
-                (1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12])
-              }
-            },
-            {
-              {
-                (-1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12]),
-                (-1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12])
-              },
-              {
-                (-1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12]),
-                (1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12])
-              }
-            },
-            {
-              {
-                (1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12]),
-                (1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12])
-              },
-              {
-                (1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12]),
-                (-1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12])
-              }
-            },
-            {
-              {
                 (-1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12]),
                 (1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12])
               },
@@ -505,42 +465,42 @@ o3d = <|
             },
             {
               {
-                (-1/2 + 1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12]),
-                (-1/2 + -1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12])
+                (1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12]),
+                (-1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12])
               },
               {
-                (1/2 + -1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12]),
-                (-1/2 + -1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12])
+                (-1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12]),
+                (-1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12])
               }
             },
             {
               {
-                (1/2 + -1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12]),
-                (1/2 + 1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12])
+                (-1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12]),
+                (1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12])
               },
               {
-                (-1/2 + 1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12]),
-                (1/2 + 1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12])
+                (1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12]),
+                (1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12])
               }
             },
             {
               {
-                (-1/2 + -1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12]),
-                (1/2 + -1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12])
+                (-1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12]),
+                (-1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12])
               },
               {
-                (-1/2 + -1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12]),
-                (-1/2 + 1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12])
+                (-1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12]),
+                (1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12])
               }
             },
             {
               {
-                (1/2 + 1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12]),
-                (-1/2 + 1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12])
+                (1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12]),
+                (1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12])
               },
               {
-                (1/2 + 1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12]),
-                (1/2 + -1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12])
+                (1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12] + -1/2 Exp[2 Pi I 3/12]),
+                (-1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12] + 1/2 Exp[2 Pi I 3/12])
               }
             },
             {
@@ -583,18 +543,57 @@ o3d = <|
                 (1/2 + 1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12])
               }
             },
-            {{Exp[2 Pi I/4], 0}, {0, -1 Exp[2 Pi I/4]}},
+            {
+              {
+                (-1/2 + 1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12]),
+                (-1/2 + -1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12])
+              },
+              {
+                (1/2 + -1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12]),
+                (-1/2 + -1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12])
+              }
+            },
+            {
+              {
+                (1/2 + -1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12]),
+                (1/2 + 1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12])
+              },
+              {
+                (-1/2 + 1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12]),
+                (1/2 + 1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12])
+              }
+            },
+            {
+              {
+                (-1/2 + -1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12]),
+                (1/2 + -1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12])
+              },
+              {
+                (-1/2 + -1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12]),
+                (-1/2 + 1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12])
+              }
+            },
+            {
+              {
+                (1/2 + 1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12]),
+                (-1/2 + 1/2 Exp[2 Pi I/12] + 1/2 Exp[2 Pi I 2/12])
+              },
+              {
+                (1/2 + 1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12]),
+                (1/2 + -1/2 Exp[2 Pi I/12] + -1/2 Exp[2 Pi I 2/12])
+              }
+            },
             {{-1 Exp[2 Pi I/4], 0}, {0, Exp[2 Pi I/4]}},
+            {{Exp[2 Pi I/4], 0}, {0, -1 Exp[2 Pi I/4]}},
             {{0, 1}, {-1, 0}},
             {{0, -1}, {1, 0}},
-            {{0, Exp[2 Pi I/4]}, {Exp[2 Pi I/4], 0}},
-            {{0, -1 Exp[2 Pi I/4]}, {-1 Exp[2 Pi I/4], 0}}
+            {{0, -1 Exp[2 Pi I/4]}, {-1 Exp[2 Pi I/4], 0}},
+            {{0, Exp[2 Pi I/4]}, {Exp[2 Pi I/4], 0}}
           },
           "construction" -> <|
-            "by" -> "2E",
-            "from" -> "E1h",
-            "method" -> "twist",
-            "note" -> "D = D^from (x) lambda, lambda the one-dimensional irrep by"
+            "from" -> "1G3h",
+            "method" -> "conjugate",
+            "note" -> "D = conj(D^from), from the first irrep of the complex pair"
           |>,
           "dim" -> 2,
           "unitary" -> True
@@ -683,8 +682,8 @@ o3d = <|
             "c" -> "2G3h",
             "kappa" -> 1,
             "partners" -> {
-              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
-              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
             },
             "separation" -> "unique"
           |>
@@ -699,8 +698,8 @@ o3d = <|
             "c" -> "E1h",
             "kappa" -> 1,
             "partners" -> {
-              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
-              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
             },
             "separation" -> "unique"
           |>
@@ -715,8 +714,8 @@ o3d = <|
             "c" -> "2G3h",
             "kappa" -> 1,
             "partners" -> {
-              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
-              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
             },
             "separation" -> "unique"
           |>
@@ -747,8 +746,8 @@ o3d = <|
             "c" -> "1G3h",
             "kappa" -> 1,
             "partners" -> {
-              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>}|>,
-              <|"mu" -> 2, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>
+              <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>}|>,
+              <|"mu" -> 2, "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 1|>}|>
             },
             "separation" -> "unique"
           |>
@@ -814,17 +813,17 @@ o3d = <|
               <|
                 "mu" -> 1,
                 "terms" -> {
-                  <|"e" -> 1, "i" -> 1, "k" -> 2|>,
-                  <|"e" -> (Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "i" -> 2, "k" -> 2|>,
-                  <|"e" -> Exp[2 Pi I/3], "i" -> 3, "k" -> 1|>
+                  <|"e" -> 1, "i" -> 1, "k" -> 1|>,
+                  <|"e" -> (-1 Exp[2 Pi I/12] + Exp[2 Pi I 3/12]), "i" -> 2, "k" -> 1|>,
+                  <|"e" -> -1 Exp[2 Pi I/3], "i" -> 3, "k" -> 2|>
                 }
               |>,
               <|
                 "mu" -> 2,
                 "terms" -> {
-                  <|"e" -> 1, "i" -> 1, "k" -> 1|>,
-                  <|"e" -> (-1 Exp[2 Pi I/12] + Exp[2 Pi I 3/12]), "i" -> 2, "k" -> 1|>,
-                  <|"e" -> -1 Exp[2 Pi I/3], "i" -> 3, "k" -> 2|>
+                  <|"e" -> -1, "i" -> 1, "k" -> 2|>,
+                  <|"e" -> (-1 Exp[2 Pi I/12] + Exp[2 Pi I 3/12]), "i" -> 2, "k" -> 2|>,
+                  <|"e" -> -1 Exp[2 Pi I/3], "i" -> 3, "k" -> 1|>
                 }
               |>
             },
@@ -892,17 +891,17 @@ o3d = <|
               <|
                 "mu" -> 1,
                 "terms" -> {
-                  <|"e" -> 1, "i" -> 1, "k" -> 2|>,
-                  <|"e" -> -1 Exp[2 Pi I/12], "i" -> 2, "k" -> 2|>,
-                  <|"e" -> (-1 + -1 Exp[2 Pi I/3]), "i" -> 3, "k" -> 1|>
+                  <|"e" -> 1, "i" -> 1, "k" -> 1|>,
+                  <|"e" -> Exp[2 Pi I/12], "i" -> 2, "k" -> 1|>,
+                  <|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 3, "k" -> 2|>
                 }
               |>,
               <|
                 "mu" -> 2,
                 "terms" -> {
-                  <|"e" -> 1, "i" -> 1, "k" -> 1|>,
-                  <|"e" -> Exp[2 Pi I/12], "i" -> 2, "k" -> 1|>,
-                  <|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 3, "k" -> 2|>
+                  <|"e" -> -1, "i" -> 1, "k" -> 2|>,
+                  <|"e" -> Exp[2 Pi I/12], "i" -> 2, "k" -> 2|>,
+                  <|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 3, "k" -> 1|>
                 }
               |>
             },
@@ -922,17 +921,17 @@ o3d = <|
               <|
                 "mu" -> 1,
                 "terms" -> {
-                  <|"e" -> 1, "i" -> 1, "k" -> 2|>,
-                  <|"e" -> -1 Exp[2 Pi I/12], "i" -> 2, "k" -> 2|>,
-                  <|"e" -> (-1 + -1 Exp[2 Pi I/3]), "i" -> 3, "k" -> 1|>
+                  <|"e" -> 1, "i" -> 1, "k" -> 1|>,
+                  <|"e" -> -1 Exp[2 Pi I/12], "i" -> 2, "k" -> 1|>,
+                  <|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 3, "k" -> 2|>
                 }
               |>,
               <|
                 "mu" -> 2,
                 "terms" -> {
-                  <|"e" -> 1, "i" -> 1, "k" -> 1|>,
-                  <|"e" -> Exp[2 Pi I/12], "i" -> 2, "k" -> 1|>,
-                  <|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 3, "k" -> 2|>
+                  <|"e" -> -1, "i" -> 1, "k" -> 2|>,
+                  <|"e" -> -1 Exp[2 Pi I/12], "i" -> 2, "k" -> 2|>,
+                  <|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 3, "k" -> 1|>
                 }
               |>
             },
@@ -946,17 +945,17 @@ o3d = <|
               <|
                 "mu" -> 1,
                 "terms" -> {
-                  <|"e" -> 1, "i" -> 1, "k" -> 2|>,
-                  <|"e" -> (Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "i" -> 2, "k" -> 2|>,
-                  <|"e" -> Exp[2 Pi I/3], "i" -> 3, "k" -> 1|>
+                  <|"e" -> 1, "i" -> 1, "k" -> 1|>,
+                  <|"e" -> (Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "i" -> 2, "k" -> 1|>,
+                  <|"e" -> -1 Exp[2 Pi I/3], "i" -> 3, "k" -> 2|>
                 }
               |>,
               <|
                 "mu" -> 2,
                 "terms" -> {
-                  <|"e" -> 1, "i" -> 1, "k" -> 1|>,
-                  <|"e" -> (-1 Exp[2 Pi I/12] + Exp[2 Pi I 3/12]), "i" -> 2, "k" -> 1|>,
-                  <|"e" -> -1 Exp[2 Pi I/3], "i" -> 3, "k" -> 2|>
+                  <|"e" -> -1, "i" -> 1, "k" -> 2|>,
+                  <|"e" -> (Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "i" -> 2, "k" -> 2|>,
+                  <|"e" -> -1 Exp[2 Pi I/3], "i" -> 3, "k" -> 1|>
                 }
               |>
             },
@@ -971,7 +970,7 @@ o3d = <|
                 "mu" -> 1,
                 "terms" -> {
                   <|"e" -> 1, "i" -> 1, "k" -> 2|>,
-                  <|"e" -> Exp[2 Pi I/4], "i" -> 2, "k" -> 2|>,
+                  <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2, "k" -> 2|>,
                   <|"e" -> 1, "i" -> 3, "k" -> 1|>
                 }
               |>,
@@ -979,7 +978,7 @@ o3d = <|
                 "mu" -> 2,
                 "terms" -> {
                   <|"e" -> 1, "i" -> 1, "k" -> 1|>,
-                  <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2, "k" -> 1|>,
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 2, "k" -> 1|>,
                   <|"e" -> -1, "i" -> 3, "k" -> 2|>
                 }
               |>
@@ -1084,7 +1083,7 @@ o3d = <|
             "partners" -> {
               <|
                 "mu" -> 1,
-                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>, <|"e" -> 1, "i" -> 2, "k" -> 2|>}
               |>
             },
             "separation" -> "unique"
@@ -1096,20 +1095,20 @@ o3d = <|
             "partners" -> {
               <|
                 "mu" -> 1,
-                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>, <|"e" -> -1, "i" -> 2, "k" -> 2|>}
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> 1, "i" -> 2, "k" -> 1|>}
               |>,
               <|
                 "mu" -> 2,
                 "terms" -> {
-                  <|"e" -> Exp[2 Pi I/12], "i" -> 1, "k" -> 1|>,
-                  <|"e" -> Exp[2 Pi I/12], "i" -> 2, "k" -> 2|>
+                  <|"e" -> Exp[2 Pi I/12], "i" -> 1, "k" -> 2|>,
+                  <|"e" -> -1 Exp[2 Pi I/12], "i" -> 2, "k" -> 1|>
                 }
               |>,
               <|
                 "mu" -> 3,
                 "terms" -> {
-                  <|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 1, "k" -> 2|>,
-                  <|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 2, "k" -> 1|>
+                  <|"e" -> (-1 + -1 Exp[2 Pi I/3]), "i" -> 1, "k" -> 1|>,
+                  <|"e" -> (1 + Exp[2 Pi I/3]), "i" -> 2, "k" -> 2|>
                 }
               |>
             },
@@ -1172,7 +1171,7 @@ o3d = <|
             "partners" -> {
               <|
                 "mu" -> 1,
-                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>, <|"e" -> 1, "i" -> 2, "k" -> 2|>}
               |>
             },
             "separation" -> "unique"
@@ -1184,18 +1183,18 @@ o3d = <|
             "partners" -> {
               <|
                 "mu" -> 1,
-                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>, <|"e" -> -1, "i" -> 2, "k" -> 2|>}
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 2|>, <|"e" -> 1, "i" -> 2, "k" -> 1|>}
               |>,
               <|
                 "mu" -> 2,
                 "terms" -> {
-                  <|"e" -> -1 Exp[2 Pi I/4], "i" -> 1, "k" -> 1|>,
-                  <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2, "k" -> 2|>
+                  <|"e" -> -1 Exp[2 Pi I/4], "i" -> 1, "k" -> 2|>,
+                  <|"e" -> Exp[2 Pi I/4], "i" -> 2, "k" -> 1|>
                 }
               |>,
               <|
                 "mu" -> 3,
-                "terms" -> {<|"e" -> -1, "i" -> 1, "k" -> 2|>, <|"e" -> -1, "i" -> 2, "k" -> 1|>}
+                "terms" -> {<|"e" -> 1, "i" -> 1, "k" -> 1|>, <|"e" -> -1, "i" -> 2, "k" -> 2|>}
               |>
             },
             "separation" -> "unique"
@@ -1230,8 +1229,8 @@ o3d = <|
               <|
                 "mu" -> 2,
                 "terms" -> {
-                  <|"e" -> (-1 Exp[2 Pi I/12] + Exp[2 Pi I 3/12]), "i" -> 1, "k" -> 1|>,
-                  <|"e" -> (-1 Exp[2 Pi I/12] + Exp[2 Pi I 3/12]), "i" -> 2, "k" -> 2|>
+                  <|"e" -> (Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "i" -> 1, "k" -> 1|>,
+                  <|"e" -> (Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "i" -> 2, "k" -> 2|>
                 }
               |>,
               <|
@@ -2306,8 +2305,14 @@ o3d = <|
                 "irrep_id" -> "E1h",
                 "kappa" -> 1,
                 "vectors" -> {
-                  <|"components" -> {<|"c" -> 1, "function" -> "s", "twoMs" -> 1|>}, "mu" -> 1|>,
-                  <|"components" -> {<|"c" -> 1, "function" -> "s", "twoMs" -> -1|>}, "mu" -> 2|>
+                  <|
+                    "components" -> {<|"c" -> Exp[2 Pi I/4], "function" -> "s", "twoMs" -> 1|>},
+                    "mu" -> 1
+                  |>,
+                  <|
+                    "components" -> {<|"c" -> Exp[2 Pi I/4], "function" -> "s", "twoMs" -> -1|>},
+                    "mu" -> 2
+                  |>
                 }
               |>
             },
@@ -2380,17 +2385,17 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "p_x", "twoMs" -> -1|>,
-                      <|"c" -> (Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "function" -> "p_y", "twoMs" -> -1|>,
-                      <|"c" -> Exp[2 Pi I/3], "function" -> "p_z", "twoMs" -> 1|>
+                      <|"c" -> -1, "function" -> "p_x", "twoMs" -> 1|>,
+                      <|"c" -> (Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "function" -> "p_y", "twoMs" -> 1|>,
+                      <|"c" -> Exp[2 Pi I/3], "function" -> "p_z", "twoMs" -> -1|>
                     },
                     "mu" -> 1
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "p_x", "twoMs" -> 1|>,
-                      <|"c" -> (-1 Exp[2 Pi I/12] + Exp[2 Pi I 3/12]), "function" -> "p_y", "twoMs" -> 1|>,
-                      <|"c" -> -1 Exp[2 Pi I/3], "function" -> "p_z", "twoMs" -> -1|>
+                      <|"c" -> 1, "function" -> "p_x", "twoMs" -> -1|>,
+                      <|"c" -> (Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "function" -> "p_y", "twoMs" -> -1|>,
+                      <|"c" -> Exp[2 Pi I/3], "function" -> "p_z", "twoMs" -> 1|>
                     },
                     "mu" -> 2
                   |>
@@ -2447,15 +2452,15 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_z2", "twoMs" -> 1|>,
-                      <|"c" -> (-1 + -2 Exp[2 Pi I/3]), "function" -> "d_x2-y2", "twoMs" -> 1|>
+                      <|"c" -> 1, "function" -> "d_z2", "twoMs" -> -1|>,
+                      <|"c" -> (-1 + -2 Exp[2 Pi I/3]), "function" -> "d_x2-y2", "twoMs" -> -1|>
                     },
                     "mu" -> 1
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_z2", "twoMs" -> -1|>,
-                      <|"c" -> (-1 + -2 Exp[2 Pi I/3]), "function" -> "d_x2-y2", "twoMs" -> -1|>
+                      <|"c" -> -1, "function" -> "d_z2", "twoMs" -> 1|>,
+                      <|"c" -> (1 + 2 Exp[2 Pi I/3]), "function" -> "d_x2-y2", "twoMs" -> 1|>
                     },
                     "mu" -> 2
                   |>
@@ -2528,17 +2533,17 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> 1, "function" -> "d_xy", "twoMs" -> 1|>,
-                      <|"c" -> (-1 + -1 Exp[2 Pi I/3]), "function" -> "d_yz", "twoMs" -> -1|>,
-                      <|"c" -> -1 Exp[2 Pi I/12], "function" -> "d_zx", "twoMs" -> -1|>
+                      <|"c" -> 1, "function" -> "d_xy", "twoMs" -> -1|>,
+                      <|"c" -> (1 + Exp[2 Pi I/3]), "function" -> "d_yz", "twoMs" -> 1|>,
+                      <|"c" -> -1 Exp[2 Pi I/12], "function" -> "d_zx", "twoMs" -> 1|>
                     },
                     "mu" -> 1
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> -1, "function" -> "d_xy", "twoMs" -> -1|>,
-                      <|"c" -> (-1 + -1 Exp[2 Pi I/3]), "function" -> "d_yz", "twoMs" -> 1|>,
-                      <|"c" -> Exp[2 Pi I/12], "function" -> "d_zx", "twoMs" -> 1|>
+                      <|"c" -> 1, "function" -> "d_xy", "twoMs" -> 1|>,
+                      <|"c" -> (-1 + -1 Exp[2 Pi I/3]), "function" -> "d_yz", "twoMs" -> -1|>,
+                      <|"c" -> -1 Exp[2 Pi I/12], "function" -> "d_zx", "twoMs" -> -1|>
                     },
                     "mu" -> 2
                   |>
@@ -2564,8 +2569,14 @@ o3d = <|
                 "irrep_id" -> "E1h",
                 "kappa" -> 1,
                 "vectors" -> {
-                  <|"components" -> {<|"c" -> 1, "function" -> "f_xyz", "twoMs" -> 1|>}, "mu" -> 1|>,
-                  <|"components" -> {<|"c" -> 1, "function" -> "f_xyz", "twoMs" -> -1|>}, "mu" -> 2|>
+                  <|
+                    "components" -> {<|"c" -> Exp[2 Pi I/4], "function" -> "f_xyz", "twoMs" -> 1|>},
+                    "mu" -> 1
+                  |>,
+                  <|
+                    "components" -> {<|"c" -> Exp[2 Pi I/4], "function" -> "f_xyz", "twoMs" -> -1|>},
+                    "mu" -> 2
+                  |>
                 }
               |>
             },
@@ -2611,21 +2622,21 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> -2, "function" -> "f_z3", "twoMs" -> 1|>,
-                      <|"c" -> 4, "function" -> "f_xz2", "twoMs" -> -1|>,
-                      <|"c" -> -1 Exp[2 Pi I/4], "function" -> "f_yz2", "twoMs" -> -1|>,
-                      <|"c" -> -10, "function" -> "f_z(x2-y2)", "twoMs" -> 1|>,
-                      <|"c" -> 5 Exp[2 Pi I/4], "function" -> "f_y(3x2-y2)", "twoMs" -> -1|>
+                      <|"c" -> 2, "function" -> "f_z3", "twoMs" -> 1|>,
+                      <|"c" -> -4, "function" -> "f_xz2", "twoMs" -> -1|>,
+                      <|"c" -> Exp[2 Pi I/4], "function" -> "f_yz2", "twoMs" -> -1|>,
+                      <|"c" -> 10, "function" -> "f_z(x2-y2)", "twoMs" -> 1|>,
+                      <|"c" -> -5 Exp[2 Pi I/4], "function" -> "f_y(3x2-y2)", "twoMs" -> -1|>
                     },
                     "mu" -> 1
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> 2, "function" -> "f_z3", "twoMs" -> -1|>,
-                      <|"c" -> 4, "function" -> "f_xz2", "twoMs" -> 1|>,
-                      <|"c" -> Exp[2 Pi I/4], "function" -> "f_yz2", "twoMs" -> 1|>,
-                      <|"c" -> 10, "function" -> "f_z(x2-y2)", "twoMs" -> -1|>,
-                      <|"c" -> -5 Exp[2 Pi I/4], "function" -> "f_y(3x2-y2)", "twoMs" -> 1|>
+                      <|"c" -> -2, "function" -> "f_z3", "twoMs" -> -1|>,
+                      <|"c" -> -4, "function" -> "f_xz2", "twoMs" -> 1|>,
+                      <|"c" -> -1 Exp[2 Pi I/4], "function" -> "f_yz2", "twoMs" -> 1|>,
+                      <|"c" -> -10, "function" -> "f_z(x2-y2)", "twoMs" -> -1|>,
+                      <|"c" -> 5 Exp[2 Pi I/4], "function" -> "f_y(3x2-y2)", "twoMs" -> 1|>
                     },
                     "mu" -> 2
                   |>
@@ -2711,21 +2722,21 @@ o3d = <|
                 "vectors" -> {
                   <|
                     "components" -> {
-                      <|"c" -> 2, "function" -> "f_z3", "twoMs" -> 1|>,
-                      <|"c" -> 3 Exp[2 Pi I/12], "function" -> "f_yz2", "twoMs" -> -1|>,
-                      <|"c" -> -6, "function" -> "f_z(x2-y2)", "twoMs" -> 1|>,
-                      <|"c" -> (-4 + -4 Exp[2 Pi I/3]), "function" -> "f_x(x2-3y2)", "twoMs" -> -1|>,
-                      <|"c" -> Exp[2 Pi I/12], "function" -> "f_y(3x2-y2)", "twoMs" -> -1|>
+                      <|"c" -> 2, "function" -> "f_z3", "twoMs" -> -1|>,
+                      <|"c" -> 3 Exp[2 Pi I/12], "function" -> "f_yz2", "twoMs" -> 1|>,
+                      <|"c" -> -6, "function" -> "f_z(x2-y2)", "twoMs" -> -1|>,
+                      <|"c" -> (4 + 4 Exp[2 Pi I/3]), "function" -> "f_x(x2-3y2)", "twoMs" -> 1|>,
+                      <|"c" -> Exp[2 Pi I/12], "function" -> "f_y(3x2-y2)", "twoMs" -> 1|>
                     },
                     "mu" -> 1
                   |>,
                   <|
                     "components" -> {
-                      <|"c" -> -2, "function" -> "f_z3", "twoMs" -> -1|>,
-                      <|"c" -> -3 Exp[2 Pi I/12], "function" -> "f_yz2", "twoMs" -> 1|>,
-                      <|"c" -> 6, "function" -> "f_z(x2-y2)", "twoMs" -> -1|>,
-                      <|"c" -> (-4 + -4 Exp[2 Pi I/3]), "function" -> "f_x(x2-3y2)", "twoMs" -> 1|>,
-                      <|"c" -> -1 Exp[2 Pi I/12], "function" -> "f_y(3x2-y2)", "twoMs" -> 1|>
+                      <|"c" -> 2, "function" -> "f_z3", "twoMs" -> 1|>,
+                      <|"c" -> 3 Exp[2 Pi I/12], "function" -> "f_yz2", "twoMs" -> -1|>,
+                      <|"c" -> -6, "function" -> "f_z(x2-y2)", "twoMs" -> 1|>,
+                      <|"c" -> (-4 + -4 Exp[2 Pi I/3]), "function" -> "f_x(x2-3y2)", "twoMs" -> -1|>,
+                      <|"c" -> Exp[2 Pi I/12], "function" -> "f_y(3x2-y2)", "twoMs" -> -1|>
                     },
                     "mu" -> 2
                   |>
@@ -2737,6 +2748,24 @@ o3d = <|
                 "irrep_id" -> "2G3h",
                 "kappa" -> 2,
                 "vectors" -> {
+                  <|
+                    "components" -> {
+                      <|"c" -> -2 Exp[2 Pi I/3], "function" -> "f_z3", "twoMs" -> -1|>,
+                      <|"c" -> -4, "function" -> "f_xz2", "twoMs" -> 1|>,
+                      <|
+                        "c" -> (-1 Exp[2 Pi I/12] + Exp[2 Pi I 3/12]),
+                        "function" -> "f_yz2",
+                        "twoMs" -> 1
+                      |>,
+                      <|"c" -> -10 Exp[2 Pi I/3], "function" -> "f_z(x2-y2)", "twoMs" -> -1|>,
+                      <|
+                        "c" -> (5 Exp[2 Pi I/12] + -5 Exp[2 Pi I 3/12]),
+                        "function" -> "f_y(3x2-y2)",
+                        "twoMs" -> 1
+                      |>
+                    },
+                    "mu" -> 1
+                  |>,
                   <|
                     "components" -> {
                       <|"c" -> -2 Exp[2 Pi I/3], "function" -> "f_z3", "twoMs" -> 1|>,
@@ -2751,24 +2780,6 @@ o3d = <|
                         "c" -> (5 Exp[2 Pi I/12] + -5 Exp[2 Pi I 3/12]),
                         "function" -> "f_y(3x2-y2)",
                         "twoMs" -> -1
-                      |>
-                    },
-                    "mu" -> 1
-                  |>,
-                  <|
-                    "components" -> {
-                      <|"c" -> 2 Exp[2 Pi I/3], "function" -> "f_z3", "twoMs" -> -1|>,
-                      <|"c" -> 4, "function" -> "f_xz2", "twoMs" -> 1|>,
-                      <|
-                        "c" -> (Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]),
-                        "function" -> "f_yz2",
-                        "twoMs" -> 1
-                      |>,
-                      <|"c" -> 10 Exp[2 Pi I/3], "function" -> "f_z(x2-y2)", "twoMs" -> -1|>,
-                      <|
-                        "c" -> (-5 Exp[2 Pi I/12] + 5 Exp[2 Pi I 3/12]),
-                        "function" -> "f_y(3x2-y2)",
-                        "twoMs" -> 1
                       |>
                     },
                     "mu" -> 2
@@ -2804,8 +2815,8 @@ o3d = <|
           "kappa" -> 1,
           "twoJ" -> 1,
           "vectors" -> {
-            <|"components" -> {<|"e" -> 1, "twoM" -> 1|>}, "mu" -> 1|>,
-            <|"components" -> {<|"e" -> 1, "twoM" -> -1|>}, "mu" -> 2|>
+            <|"components" -> {<|"e" -> Exp[2 Pi I/4], "twoM" -> 1|>}, "mu" -> 1|>,
+            <|"components" -> {<|"e" -> Exp[2 Pi I/4], "twoM" -> -1|>}, "mu" -> 2|>
           }
         |>,
         <|
@@ -2833,11 +2844,11 @@ o3d = <|
           "twoJ" -> 3,
           "vectors" -> {
             <|
-              "components" -> {<|"e" -> 1, "twoM" -> -3|>, <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> 1|>},
+              "components" -> {<|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> -1|>, <|"e" -> -1, "twoM" -> 3|>},
               "mu" -> 1
             |>,
             <|
-              "components" -> {<|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> -1|>, <|"e" -> -1, "twoM" -> 3|>},
+              "components" -> {<|"e" -> -1, "twoM" -> -3|>, <|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> 1|>},
               "mu" -> 2
             |>
           }
@@ -2850,11 +2861,13 @@ o3d = <|
           "twoJ" -> 5,
           "vectors" -> {
             <|
-              "components" -> {<|"e" -> 5, "twoM" -> -3|>, <|"e" -> -1, "twoM" -> 5|>},
+              "components" -> {<|"q" -> {5, 1}, "twoM" -> -3|>, <|"q" -> {-1, 1}, "twoM" -> 5|>},
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
-              "components" -> {<|"e" -> -1, "twoM" -> -5|>, <|"e" -> 5, "twoM" -> 3|>},
+              "components" -> {<|"q" -> {1, 1}, "twoM" -> -5|>, <|"q" -> {-5, 1}, "twoM" -> 3|>},
+              "factor" -> -1 Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -2893,17 +2906,17 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -3|>,
-                <|"e" -> (2 + 4 Exp[2 Pi I/3]), "twoM" -> 1|>,
-                <|"e" -> 1, "twoM" -> 5|>
+                <|"e" -> 1, "twoM" -> -5|>,
+                <|"e" -> (2 + 4 Exp[2 Pi I/3]), "twoM" -> -1|>,
+                <|"e" -> 1, "twoM" -> 3|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -5|>,
-                <|"e" -> (2 + 4 Exp[2 Pi I/3]), "twoM" -> -1|>,
-                <|"e" -> 1, "twoM" -> 3|>
+                <|"e" -> -1, "twoM" -> -3|>,
+                <|"e" -> (-2 + -4 Exp[2 Pi I/3]), "twoM" -> 1|>,
+                <|"e" -> -1, "twoM" -> 5|>
               },
               "mu" -> 2
             |>
@@ -2917,11 +2930,13 @@ o3d = <|
           "twoJ" -> 7,
           "vectors" -> {
             <|
-              "components" -> {<|"e" -> 1, "twoM" -> -7|>, <|"e" -> 7, "twoM" -> 1|>},
+              "components" -> {<|"q" -> {1, 1}, "twoM" -> -7|>, <|"q" -> {7, 1}, "twoM" -> 1|>},
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
-              "components" -> {<|"e" -> -7, "twoM" -> -1|>, <|"e" -> -1, "twoM" -> 7|>},
+              "components" -> {<|"q" -> {7, 1}, "twoM" -> -1|>, <|"q" -> {1, 1}, "twoM" -> 7|>},
+              "factor" -> -1 Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -2934,11 +2949,13 @@ o3d = <|
           "twoJ" -> 7,
           "vectors" -> {
             <|
-              "components" -> {<|"e" -> 1, "twoM" -> -3|>, <|"e" -> -1, "twoM" -> 5|>},
+              "components" -> {<|"q" -> {1, 1}, "twoM" -> -3|>, <|"q" -> {-1, 1}, "twoM" -> 5|>},
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
-              "components" -> {<|"e" -> 1, "twoM" -> -5|>, <|"e" -> -1, "twoM" -> 3|>},
+              "components" -> {<|"q" -> {1, 1}, "twoM" -> -5|>, <|"q" -> {-1, 1}, "twoM" -> 3|>},
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -2979,19 +2996,19 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -7|>,
-                <|"e" -> (-3 + -6 Exp[2 Pi I/3]), "twoM" -> -3|>,
-                <|"e" -> -5, "twoM" -> 1|>,
-                <|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> 5|>
+                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> -5|>,
+                <|"e" -> 5, "twoM" -> -1|>,
+                <|"e" -> (3 + 6 Exp[2 Pi I/3]), "twoM" -> 3|>,
+                <|"e" -> -1, "twoM" -> 7|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> -5|>,
-                <|"e" -> 5, "twoM" -> -1|>,
-                <|"e" -> (3 + 6 Exp[2 Pi I/3]), "twoM" -> 3|>,
-                <|"e" -> -1, "twoM" -> 7|>
+                <|"e" -> -1, "twoM" -> -7|>,
+                <|"e" -> (3 + 6 Exp[2 Pi I/3]), "twoM" -> -3|>,
+                <|"e" -> 5, "twoM" -> 1|>,
+                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> 5|>
               },
               "mu" -> 2
             |>
@@ -3005,15 +3022,21 @@ o3d = <|
           "twoJ" -> 9,
           "vectors" -> {
             <|
-              "components" -> {<|"e" -> 1, "twoM" -> -7|>, <|"e" -> 14, "twoM" -> 1|>, <|"e" -> 1, "twoM" -> 9|>},
+              "components" -> {
+                <|"q" -> {1, 1}, "twoM" -> -7|>,
+                <|"q" -> {14, 1}, "twoM" -> 1|>,
+                <|"q" -> {1, 1}, "twoM" -> 9|>
+              },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -9|>,
-                <|"e" -> 14, "twoM" -> -1|>,
-                <|"e" -> 1, "twoM" -> 7|>
+                <|"q" -> {1, 1}, "twoM" -> -9|>,
+                <|"q" -> {14, 1}, "twoM" -> -1|>,
+                <|"q" -> {1, 1}, "twoM" -> 7|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -3081,19 +3104,19 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 5, "twoM" -> -7|>,
-                <|"e" -> -14, "twoM" -> 1|>,
-                <|"e" -> (-8 + -16 Exp[2 Pi I/3]), "twoM" -> 5|>,
-                <|"e" -> 1, "twoM" -> 9|>
+                <|"e" -> 1, "twoM" -> -9|>,
+                <|"e" -> (-8 + -16 Exp[2 Pi I/3]), "twoM" -> -5|>,
+                <|"e" -> -14, "twoM" -> -1|>,
+                <|"e" -> 5, "twoM" -> 7|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -9|>,
-                <|"e" -> (-8 + -16 Exp[2 Pi I/3]), "twoM" -> -5|>,
-                <|"e" -> -14, "twoM" -> -1|>,
-                <|"e" -> 5, "twoM" -> 7|>
+                <|"e" -> -5, "twoM" -> -7|>,
+                <|"e" -> 14, "twoM" -> 1|>,
+                <|"e" -> (8 + 16 Exp[2 Pi I/3]), "twoM" -> 5|>,
+                <|"e" -> -1, "twoM" -> 9|>
               },
               "mu" -> 2
             |>
@@ -3108,19 +3131,19 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> (-3 + -6 Exp[2 Pi I/3]), "twoM" -> -7|>,
-                <|"e" -> 24, "twoM" -> -3|>,
-                <|"e" -> (-6 + -12 Exp[2 Pi I/3]), "twoM" -> 1|>,
-                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> 9|>
+                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> -9|>,
+                <|"e" -> (-6 + -12 Exp[2 Pi I/3]), "twoM" -> -1|>,
+                <|"e" -> 24, "twoM" -> 3|>,
+                <|"e" -> (-3 + -6 Exp[2 Pi I/3]), "twoM" -> 7|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> -9|>,
-                <|"e" -> (-6 + -12 Exp[2 Pi I/3]), "twoM" -> -1|>,
-                <|"e" -> 24, "twoM" -> 3|>,
-                <|"e" -> (-3 + -6 Exp[2 Pi I/3]), "twoM" -> 7|>
+                <|"e" -> (3 + 6 Exp[2 Pi I/3]), "twoM" -> -7|>,
+                <|"e" -> -24, "twoM" -> -3|>,
+                <|"e" -> (6 + 12 Exp[2 Pi I/3]), "twoM" -> 1|>,
+                <|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> 9|>
               },
               "mu" -> 2
             |>
@@ -3135,18 +3158,20 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -11|>,
-                <|"e" -> -22, "twoM" -> -3|>,
-                <|"e" -> -11, "twoM" -> 5|>
+                <|"q" -> {1, 1}, "twoM" -> -11|>,
+                <|"q" -> {-22, 1}, "twoM" -> -3|>,
+                <|"q" -> {-11, 1}, "twoM" -> 5|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 11, "twoM" -> -5|>,
-                <|"e" -> 22, "twoM" -> 3|>,
-                <|"e" -> -1, "twoM" -> 11|>
+                <|"q" -> {11, 1}, "twoM" -> -5|>,
+                <|"q" -> {22, 1}, "twoM" -> 3|>,
+                <|"q" -> {-1, 1}, "twoM" -> 11|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -3159,15 +3184,21 @@ o3d = <|
           "twoJ" -> 11,
           "vectors" -> {
             <|
-              "components" -> {<|"e" -> 5, "twoM" -> -7|>, <|"e" -> -6, "twoM" -> 1|>, <|"e" -> 1, "twoM" -> 9|>},
+              "components" -> {
+                <|"q" -> {5, 1}, "twoM" -> -7|>,
+                <|"q" -> {-6, 1}, "twoM" -> 1|>,
+                <|"q" -> {1, 1}, "twoM" -> 9|>
+              },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> -1, "twoM" -> -9|>,
-                <|"e" -> 6, "twoM" -> -1|>,
-                <|"e" -> -5, "twoM" -> 7|>
+                <|"q" -> {1, 1}, "twoM" -> -9|>,
+                <|"q" -> {-6, 1}, "twoM" -> -1|>,
+                <|"q" -> {5, 1}, "twoM" -> 7|>
               },
+              "factor" -> -1 Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -3241,21 +3272,21 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -11|>,
-                <|"e" -> 20, "twoM" -> -3|>,
-                <|"e" -> (14 + 28 Exp[2 Pi I/3]), "twoM" -> 1|>,
-                <|"e" -> -5, "twoM" -> 5|>,
-                <|"e" -> (2 + 4 Exp[2 Pi I/3]), "twoM" -> 9|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
                 <|"e" -> (-2 + -4 Exp[2 Pi I/3]), "twoM" -> -9|>,
                 <|"e" -> 5, "twoM" -> -5|>,
                 <|"e" -> (-14 + -28 Exp[2 Pi I/3]), "twoM" -> -1|>,
                 <|"e" -> -20, "twoM" -> 3|>,
                 <|"e" -> -1, "twoM" -> 11|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
+                <|"e" -> -1, "twoM" -> -11|>,
+                <|"e" -> -20, "twoM" -> -3|>,
+                <|"e" -> (-14 + -28 Exp[2 Pi I/3]), "twoM" -> 1|>,
+                <|"e" -> 5, "twoM" -> 5|>,
+                <|"e" -> (-2 + -4 Exp[2 Pi I/3]), "twoM" -> 9|>
               },
               "mu" -> 2
             |>
@@ -3270,23 +3301,23 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> -11|>,
-                <|"e" -> 13, "twoM" -> -7|>,
-                <|"e" -> (6 + 12 Exp[2 Pi I/3]), "twoM" -> -3|>,
-                <|"e" -> 42, "twoM" -> 1|>,
-                <|"e" -> (-21 + -42 Exp[2 Pi I/3]), "twoM" -> 5|>,
-                <|"e" -> -7, "twoM" -> 9|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
                 <|"e" -> 7, "twoM" -> -9|>,
                 <|"e" -> (21 + 42 Exp[2 Pi I/3]), "twoM" -> -5|>,
                 <|"e" -> -42, "twoM" -> -1|>,
                 <|"e" -> (-6 + -12 Exp[2 Pi I/3]), "twoM" -> 3|>,
                 <|"e" -> -13, "twoM" -> 7|>,
                 <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> 11|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
+                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> -11|>,
+                <|"e" -> -13, "twoM" -> -7|>,
+                <|"e" -> (-6 + -12 Exp[2 Pi I/3]), "twoM" -> -3|>,
+                <|"e" -> -42, "twoM" -> 1|>,
+                <|"e" -> (21 + 42 Exp[2 Pi I/3]), "twoM" -> 5|>,
+                <|"e" -> 7, "twoM" -> 9|>
               },
               "mu" -> 2
             |>
@@ -3301,18 +3332,20 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 13, "twoM" -> -11|>,
-                <|"e" -> -143, "twoM" -> 5|>,
-                <|"e" -> 2, "twoM" -> 13|>
+                <|"q" -> {13, 1}, "twoM" -> -11|>,
+                <|"q" -> {-143, 1}, "twoM" -> 5|>,
+                <|"q" -> {2, 1}, "twoM" -> 13|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 2, "twoM" -> -13|>,
-                <|"e" -> -143, "twoM" -> -5|>,
-                <|"e" -> 13, "twoM" -> 11|>
+                <|"q" -> {2, 1}, "twoM" -> -13|>,
+                <|"q" -> {-143, 1}, "twoM" -> -5|>,
+                <|"q" -> {13, 1}, "twoM" -> 11|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -3325,15 +3358,21 @@ o3d = <|
           "twoJ" -> 13,
           "vectors" -> {
             <|
-              "components" -> {<|"e" -> 1, "twoM" -> -7|>, <|"e" -> -2, "twoM" -> 1|>, <|"e" -> 1, "twoM" -> 9|>},
+              "components" -> {
+                <|"q" -> {1, 1}, "twoM" -> -7|>,
+                <|"q" -> {-2, 1}, "twoM" -> 1|>,
+                <|"q" -> {1, 1}, "twoM" -> 9|>
+              },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -9|>,
-                <|"e" -> -2, "twoM" -> -1|>,
-                <|"e" -> 1, "twoM" -> 7|>
+                <|"q" -> {1, 1}, "twoM" -> -9|>,
+                <|"q" -> {-2, 1}, "twoM" -> -1|>,
+                <|"q" -> {1, 1}, "twoM" -> 7|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -3347,20 +3386,22 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 3, "twoM" -> -11|>,
-                <|"e" -> 57, "twoM" -> -3|>,
-                <|"e" -> 5, "twoM" -> 5|>,
-                <|"e" -> -1, "twoM" -> 13|>
+                <|"q" -> {3, 1}, "twoM" -> -11|>,
+                <|"q" -> {57, 1}, "twoM" -> -3|>,
+                <|"q" -> {5, 1}, "twoM" -> 5|>,
+                <|"q" -> {-1, 1}, "twoM" -> 13|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> -1, "twoM" -> -13|>,
-                <|"e" -> 5, "twoM" -> -5|>,
-                <|"e" -> 57, "twoM" -> 3|>,
-                <|"e" -> 3, "twoM" -> 11|>
+                <|"q" -> {1, 1}, "twoM" -> -13|>,
+                <|"q" -> {-5, 1}, "twoM" -> -5|>,
+                <|"q" -> {-57, 1}, "twoM" -> 3|>,
+                <|"q" -> {-3, 1}, "twoM" -> 11|>
               },
+              "factor" -> -1 Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -3405,25 +3446,25 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> (-7 + -14 Exp[2 Pi I/3]), "twoM" -> -11|>,
-                <|"e" -> 78, "twoM" -> -7|>,
-                <|"e" -> (63 + 126 Exp[2 Pi I/3]), "twoM" -> -3|>,
-                <|"e" -> 36, "twoM" -> 1|>,
-                <|"e" -> (-25 + -50 Exp[2 Pi I/3]), "twoM" -> 5|>,
-                <|"e" -> -18, "twoM" -> 9|>,
-                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> 13|>
+                <|"e" -> (7 + 14 Exp[2 Pi I/3]), "twoM" -> -11|>,
+                <|"e" -> -78, "twoM" -> -7|>,
+                <|"e" -> (-63 + -126 Exp[2 Pi I/3]), "twoM" -> -3|>,
+                <|"e" -> -36, "twoM" -> 1|>,
+                <|"e" -> (25 + 50 Exp[2 Pi I/3]), "twoM" -> 5|>,
+                <|"e" -> 18, "twoM" -> 9|>,
+                <|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> 13|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> -13|>,
-                <|"e" -> -18, "twoM" -> -9|>,
-                <|"e" -> (-25 + -50 Exp[2 Pi I/3]), "twoM" -> -5|>,
-                <|"e" -> 36, "twoM" -> -1|>,
-                <|"e" -> (63 + 126 Exp[2 Pi I/3]), "twoM" -> 3|>,
-                <|"e" -> 78, "twoM" -> 7|>,
-                <|"e" -> (-7 + -14 Exp[2 Pi I/3]), "twoM" -> 11|>
+                <|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> -13|>,
+                <|"e" -> 18, "twoM" -> -9|>,
+                <|"e" -> (25 + 50 Exp[2 Pi I/3]), "twoM" -> -5|>,
+                <|"e" -> -36, "twoM" -> -1|>,
+                <|"e" -> (-63 + -126 Exp[2 Pi I/3]), "twoM" -> 3|>,
+                <|"e" -> -78, "twoM" -> 7|>,
+                <|"e" -> (7 + 14 Exp[2 Pi I/3]), "twoM" -> 11|>
               },
               "mu" -> 2
             |>
@@ -3438,23 +3479,23 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 5, "twoM" -> -11|>,
-                <|"e" -> 33, "twoM" -> -3|>,
-                <|"e" -> (88 + 176 Exp[2 Pi I/3]), "twoM" -> 1|>,
-                <|"e" -> 55, "twoM" -> 5|>,
-                <|"e" -> (8 + 16 Exp[2 Pi I/3]), "twoM" -> 9|>,
-                <|"e" -> 3, "twoM" -> 13|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
                 <|"e" -> 3, "twoM" -> -13|>,
                 <|"e" -> (8 + 16 Exp[2 Pi I/3]), "twoM" -> -9|>,
                 <|"e" -> 55, "twoM" -> -5|>,
                 <|"e" -> (88 + 176 Exp[2 Pi I/3]), "twoM" -> -1|>,
                 <|"e" -> 33, "twoM" -> 3|>,
                 <|"e" -> 5, "twoM" -> 11|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
+                <|"e" -> -5, "twoM" -> -11|>,
+                <|"e" -> -33, "twoM" -> -3|>,
+                <|"e" -> (-88 + -176 Exp[2 Pi I/3]), "twoM" -> 1|>,
+                <|"e" -> -55, "twoM" -> 5|>,
+                <|"e" -> (-8 + -16 Exp[2 Pi I/3]), "twoM" -> 9|>,
+                <|"e" -> -3, "twoM" -> 13|>
               },
               "mu" -> 2
             |>
@@ -3467,6 +3508,18 @@ o3d = <|
           "kappa" -> 2,
           "twoJ" -> 13,
           "vectors" -> {
+            <|
+              "components" -> {
+                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> -13|>,
+                <|"e" -> 18, "twoM" -> -9|>,
+                <|"e" -> (-25 + -50 Exp[2 Pi I/3]), "twoM" -> -5|>,
+                <|"e" -> -36, "twoM" -> -1|>,
+                <|"e" -> (63 + 126 Exp[2 Pi I/3]), "twoM" -> 3|>,
+                <|"e" -> -78, "twoM" -> 7|>,
+                <|"e" -> (-7 + -14 Exp[2 Pi I/3]), "twoM" -> 11|>
+              },
+              "mu" -> 1
+            |>,
             <|
               "components" -> {
                 <|"e" -> (7 + 14 Exp[2 Pi I/3]), "twoM" -> -11|>,
@@ -3477,18 +3530,6 @@ o3d = <|
                 <|"e" -> -18, "twoM" -> 9|>,
                 <|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> 13|>
               },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
-                <|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> -13|>,
-                <|"e" -> -18, "twoM" -> -9|>,
-                <|"e" -> (25 + 50 Exp[2 Pi I/3]), "twoM" -> -5|>,
-                <|"e" -> 36, "twoM" -> -1|>,
-                <|"e" -> (-63 + -126 Exp[2 Pi I/3]), "twoM" -> 3|>,
-                <|"e" -> 78, "twoM" -> 7|>,
-                <|"e" -> (7 + 14 Exp[2 Pi I/3]), "twoM" -> 11|>
-              },
               "mu" -> 2
             |>
           }
@@ -3502,20 +3543,22 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -15|>,
-                <|"e" -> 21, "twoM" -> -7|>,
-                <|"e" -> 99, "twoM" -> 1|>,
-                <|"e" -> 7, "twoM" -> 9|>
+                <|"q" -> {1, 1}, "twoM" -> -15|>,
+                <|"q" -> {21, 1}, "twoM" -> -7|>,
+                <|"q" -> {99, 1}, "twoM" -> 1|>,
+                <|"q" -> {7, 1}, "twoM" -> 9|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> -7, "twoM" -> -9|>,
-                <|"e" -> -99, "twoM" -> -1|>,
-                <|"e" -> -21, "twoM" -> 7|>,
-                <|"e" -> -1, "twoM" -> 15|>
+                <|"q" -> {7, 1}, "twoM" -> -9|>,
+                <|"q" -> {99, 1}, "twoM" -> -1|>,
+                <|"q" -> {21, 1}, "twoM" -> 7|>,
+                <|"q" -> {1, 1}, "twoM" -> 15|>
               },
+              "factor" -> -1 Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -3529,20 +3572,22 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -11|>,
-                <|"e" -> 13, "twoM" -> -3|>,
-                <|"e" -> -13, "twoM" -> 5|>,
-                <|"e" -> -1, "twoM" -> 13|>
+                <|"q" -> {1, 1}, "twoM" -> -11|>,
+                <|"q" -> {13, 1}, "twoM" -> -3|>,
+                <|"q" -> {-13, 1}, "twoM" -> 5|>,
+                <|"q" -> {-1, 1}, "twoM" -> 13|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -13|>,
-                <|"e" -> 13, "twoM" -> -5|>,
-                <|"e" -> -13, "twoM" -> 3|>,
-                <|"e" -> -1, "twoM" -> 11|>
+                <|"q" -> {1, 1}, "twoM" -> -13|>,
+                <|"q" -> {13, 1}, "twoM" -> -5|>,
+                <|"q" -> {-13, 1}, "twoM" -> 3|>,
+                <|"q" -> {-1, 1}, "twoM" -> 11|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -3587,25 +3632,25 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> (-49 + -98 Exp[2 Pi I/3]), "twoM" -> -15|>,
-                <|"e" -> 2460, "twoM" -> -11|>,
-                <|"e" -> -2145, "twoM" -> -3|>,
-                <|"e" -> (6435 + 12870 Exp[2 Pi I/3]), "twoM" -> 1|>,
-                <|"e" -> 9438, "twoM" -> 5|>,
-                <|"e" -> (-3250 + -6500 Exp[2 Pi I/3]), "twoM" -> 9|>,
-                <|"e" -> -345, "twoM" -> 13|>
+                <|"e" -> (49 + 98 Exp[2 Pi I/3]), "twoM" -> -15|>,
+                <|"e" -> -2460, "twoM" -> -11|>,
+                <|"e" -> 2145, "twoM" -> -3|>,
+                <|"e" -> (-6435 + -12870 Exp[2 Pi I/3]), "twoM" -> 1|>,
+                <|"e" -> -9438, "twoM" -> 5|>,
+                <|"e" -> (3250 + 6500 Exp[2 Pi I/3]), "twoM" -> 9|>,
+                <|"e" -> 345, "twoM" -> 13|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 345, "twoM" -> -13|>,
-                <|"e" -> (3250 + 6500 Exp[2 Pi I/3]), "twoM" -> -9|>,
-                <|"e" -> -9438, "twoM" -> -5|>,
-                <|"e" -> (-6435 + -12870 Exp[2 Pi I/3]), "twoM" -> -1|>,
-                <|"e" -> 2145, "twoM" -> 3|>,
-                <|"e" -> -2460, "twoM" -> 11|>,
-                <|"e" -> (49 + 98 Exp[2 Pi I/3]), "twoM" -> 15|>
+                <|"e" -> -345, "twoM" -> -13|>,
+                <|"e" -> (-3250 + -6500 Exp[2 Pi I/3]), "twoM" -> -9|>,
+                <|"e" -> 9438, "twoM" -> -5|>,
+                <|"e" -> (6435 + 12870 Exp[2 Pi I/3]), "twoM" -> -1|>,
+                <|"e" -> -2145, "twoM" -> 3|>,
+                <|"e" -> 2460, "twoM" -> 11|>,
+                <|"e" -> (-49 + -98 Exp[2 Pi I/3]), "twoM" -> 15|>
               },
               "mu" -> 2
             |>
@@ -3620,27 +3665,27 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> -1, "twoM" -> -15|>,
-                <|"e" -> (17 + 34 Exp[2 Pi I/3]), "twoM" -> -11|>,
-                <|"e" -> 171, "twoM" -> -7|>,
-                <|"e" -> (-11 + -22 Exp[2 Pi I/3]), "twoM" -> -3|>,
-                <|"e" -> -99, "twoM" -> 1|>,
-                <|"e" -> (-77 + -154 Exp[2 Pi I/3]), "twoM" -> 5|>,
-                <|"e" -> -7, "twoM" -> 9|>,
-                <|"e" -> (7 + 14 Exp[2 Pi I/3]), "twoM" -> 13|>
+                <|"e" -> 1, "twoM" -> -15|>,
+                <|"e" -> (-17 + -34 Exp[2 Pi I/3]), "twoM" -> -11|>,
+                <|"e" -> -171, "twoM" -> -7|>,
+                <|"e" -> (11 + 22 Exp[2 Pi I/3]), "twoM" -> -3|>,
+                <|"e" -> 99, "twoM" -> 1|>,
+                <|"e" -> (77 + 154 Exp[2 Pi I/3]), "twoM" -> 5|>,
+                <|"e" -> 7, "twoM" -> 9|>,
+                <|"e" -> (-7 + -14 Exp[2 Pi I/3]), "twoM" -> 13|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (-7 + -14 Exp[2 Pi I/3]), "twoM" -> -13|>,
-                <|"e" -> 7, "twoM" -> -9|>,
-                <|"e" -> (77 + 154 Exp[2 Pi I/3]), "twoM" -> -5|>,
-                <|"e" -> 99, "twoM" -> -1|>,
-                <|"e" -> (11 + 22 Exp[2 Pi I/3]), "twoM" -> 3|>,
-                <|"e" -> -171, "twoM" -> 7|>,
-                <|"e" -> (-17 + -34 Exp[2 Pi I/3]), "twoM" -> 11|>,
-                <|"e" -> 1, "twoM" -> 15|>
+                <|"e" -> (7 + 14 Exp[2 Pi I/3]), "twoM" -> -13|>,
+                <|"e" -> -7, "twoM" -> -9|>,
+                <|"e" -> (-77 + -154 Exp[2 Pi I/3]), "twoM" -> -5|>,
+                <|"e" -> -99, "twoM" -> -1|>,
+                <|"e" -> (-11 + -22 Exp[2 Pi I/3]), "twoM" -> 3|>,
+                <|"e" -> 171, "twoM" -> 7|>,
+                <|"e" -> (17 + 34 Exp[2 Pi I/3]), "twoM" -> 11|>,
+                <|"e" -> -1, "twoM" -> 15|>
               },
               "mu" -> 2
             |>
@@ -3655,23 +3700,23 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -15|>,
-                <|"e" -> (-49 + -98 Exp[2 Pi I/3]), "twoM" -> -3|>,
-                <|"e" -> -51, "twoM" -> 1|>,
-                <|"e" -> (-14 + -28 Exp[2 Pi I/3]), "twoM" -> 5|>,
-                <|"e" -> -14, "twoM" -> 9|>,
-                <|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> 13|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
                 <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> -13|>,
                 <|"e" -> 14, "twoM" -> -9|>,
                 <|"e" -> (14 + 28 Exp[2 Pi I/3]), "twoM" -> -5|>,
                 <|"e" -> 51, "twoM" -> -1|>,
                 <|"e" -> (49 + 98 Exp[2 Pi I/3]), "twoM" -> 3|>,
                 <|"e" -> -1, "twoM" -> 15|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
+                <|"e" -> -1, "twoM" -> -15|>,
+                <|"e" -> (49 + 98 Exp[2 Pi I/3]), "twoM" -> -3|>,
+                <|"e" -> 51, "twoM" -> 1|>,
+                <|"e" -> (14 + 28 Exp[2 Pi I/3]), "twoM" -> 5|>,
+                <|"e" -> 14, "twoM" -> 9|>,
+                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> 13|>
               },
               "mu" -> 2
             |>
@@ -3686,6 +3731,18 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
+                <|"e" -> -345, "twoM" -> -13|>,
+                <|"e" -> (3250 + 6500 Exp[2 Pi I/3]), "twoM" -> -9|>,
+                <|"e" -> 9438, "twoM" -> -5|>,
+                <|"e" -> (-6435 + -12870 Exp[2 Pi I/3]), "twoM" -> -1|>,
+                <|"e" -> -2145, "twoM" -> 3|>,
+                <|"e" -> 2460, "twoM" -> 11|>,
+                <|"e" -> (49 + 98 Exp[2 Pi I/3]), "twoM" -> 15|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
                 <|"e" -> (49 + 98 Exp[2 Pi I/3]), "twoM" -> -15|>,
                 <|"e" -> 2460, "twoM" -> -11|>,
                 <|"e" -> -2145, "twoM" -> -3|>,
@@ -3693,18 +3750,6 @@ o3d = <|
                 <|"e" -> 9438, "twoM" -> 5|>,
                 <|"e" -> (3250 + 6500 Exp[2 Pi I/3]), "twoM" -> 9|>,
                 <|"e" -> -345, "twoM" -> 13|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
-                <|"e" -> 345, "twoM" -> -13|>,
-                <|"e" -> (-3250 + -6500 Exp[2 Pi I/3]), "twoM" -> -9|>,
-                <|"e" -> -9438, "twoM" -> -5|>,
-                <|"e" -> (6435 + 12870 Exp[2 Pi I/3]), "twoM" -> -1|>,
-                <|"e" -> 2145, "twoM" -> 3|>,
-                <|"e" -> -2460, "twoM" -> 11|>,
-                <|"e" -> (-49 + -98 Exp[2 Pi I/3]), "twoM" -> 15|>
               },
               "mu" -> 2
             |>
@@ -3717,6 +3762,19 @@ o3d = <|
           "kappa" -> 3,
           "twoJ" -> 15,
           "vectors" -> {
+            <|
+              "components" -> {
+                <|"e" -> (-7 + -14 Exp[2 Pi I/3]), "twoM" -> -13|>,
+                <|"e" -> -7, "twoM" -> -9|>,
+                <|"e" -> (77 + 154 Exp[2 Pi I/3]), "twoM" -> -5|>,
+                <|"e" -> -99, "twoM" -> -1|>,
+                <|"e" -> (11 + 22 Exp[2 Pi I/3]), "twoM" -> 3|>,
+                <|"e" -> 171, "twoM" -> 7|>,
+                <|"e" -> (-17 + -34 Exp[2 Pi I/3]), "twoM" -> 11|>,
+                <|"e" -> -1, "twoM" -> 15|>
+              },
+              "mu" -> 1
+            |>,
             <|
               "components" -> {
                 <|"e" -> -1, "twoM" -> -15|>,
@@ -3728,19 +3786,6 @@ o3d = <|
                 <|"e" -> -7, "twoM" -> 9|>,
                 <|"e" -> (-7 + -14 Exp[2 Pi I/3]), "twoM" -> 13|>
               },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
-                <|"e" -> (7 + 14 Exp[2 Pi I/3]), "twoM" -> -13|>,
-                <|"e" -> 7, "twoM" -> -9|>,
-                <|"e" -> (-77 + -154 Exp[2 Pi I/3]), "twoM" -> -5|>,
-                <|"e" -> 99, "twoM" -> -1|>,
-                <|"e" -> (-11 + -22 Exp[2 Pi I/3]), "twoM" -> 3|>,
-                <|"e" -> -171, "twoM" -> 7|>,
-                <|"e" -> (17 + 34 Exp[2 Pi I/3]), "twoM" -> 11|>,
-                <|"e" -> 1, "twoM" -> 15|>
-              },
               "mu" -> 2
             |>
           }
@@ -3754,20 +3799,22 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 51, "twoM" -> -15|>,
-                <|"e" -> 4862, "twoM" -> 1|>,
-                <|"e" -> 952, "twoM" -> 9|>,
-                <|"e" -> 23, "twoM" -> 17|>
+                <|"q" -> {51, 1}, "twoM" -> -15|>,
+                <|"q" -> {4862, 1}, "twoM" -> 1|>,
+                <|"q" -> {952, 1}, "twoM" -> 9|>,
+                <|"q" -> {23, 1}, "twoM" -> 17|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 23, "twoM" -> -17|>,
-                <|"e" -> 952, "twoM" -> -9|>,
-                <|"e" -> 4862, "twoM" -> -1|>,
-                <|"e" -> 51, "twoM" -> 15|>
+                <|"q" -> {23, 1}, "twoM" -> -17|>,
+                <|"q" -> {952, 1}, "twoM" -> -9|>,
+                <|"q" -> {4862, 1}, "twoM" -> -1|>,
+                <|"q" -> {51, 1}, "twoM" -> 15|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -3781,20 +3828,22 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 5, "twoM" -> -11|>,
-                <|"e" -> -11, "twoM" -> -3|>,
-                <|"e" -> 7, "twoM" -> 5|>,
-                <|"e" -> -1, "twoM" -> 13|>
+                <|"q" -> {5, 1}, "twoM" -> -11|>,
+                <|"q" -> {-11, 1}, "twoM" -> -3|>,
+                <|"q" -> {7, 1}, "twoM" -> 5|>,
+                <|"q" -> {-1, 1}, "twoM" -> 13|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> -1, "twoM" -> -13|>,
-                <|"e" -> 7, "twoM" -> -5|>,
-                <|"e" -> -11, "twoM" -> 3|>,
-                <|"e" -> 5, "twoM" -> 11|>
+                <|"q" -> {1, 1}, "twoM" -> -13|>,
+                <|"q" -> {-7, 1}, "twoM" -> -5|>,
+                <|"q" -> {11, 1}, "twoM" -> 3|>,
+                <|"q" -> {-5, 1}, "twoM" -> 11|>
               },
+              "factor" -> -1 Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -3808,22 +3857,24 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> -7, "twoM" -> -15|>,
-                <|"e" -> 212, "twoM" -> -7|>,
-                <|"e" -> 110, "twoM" -> 1|>,
-                <|"e" -> -60, "twoM" -> 9|>,
-                <|"e" -> 1, "twoM" -> 17|>
+                <|"q" -> {7, 1}, "twoM" -> -15|>,
+                <|"q" -> {-212, 1}, "twoM" -> -7|>,
+                <|"q" -> {-110, 1}, "twoM" -> 1|>,
+                <|"q" -> {60, 1}, "twoM" -> 9|>,
+                <|"q" -> {-1, 1}, "twoM" -> 17|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -17|>,
-                <|"e" -> -60, "twoM" -> -9|>,
-                <|"e" -> 110, "twoM" -> -1|>,
-                <|"e" -> 212, "twoM" -> 7|>,
-                <|"e" -> -7, "twoM" -> 15|>
+                <|"q" -> {1, 1}, "twoM" -> -17|>,
+                <|"q" -> {-60, 1}, "twoM" -> -9|>,
+                <|"q" -> {110, 1}, "twoM" -> -1|>,
+                <|"q" -> {212, 1}, "twoM" -> 7|>,
+                <|"q" -> {-7, 1}, "twoM" -> 15|>
               },
+              "factor" -> -1 Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -3940,18 +3991,6 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 39, "twoM" -> -15|>,
-                <|"e" -> (-936 + -1872 Exp[2 Pi I/3]), "twoM" -> -3|>,
-                <|"e" -> -2210, "twoM" -> 1|>,
-                <|"e" -> (-1456 + -2912 Exp[2 Pi I/3]), "twoM" -> 5|>,
-                <|"e" -> -280, "twoM" -> 9|>,
-                <|"e" -> (-40 + -80 Exp[2 Pi I/3]), "twoM" -> 13|>,
-                <|"e" -> 19, "twoM" -> 17|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
                 <|"e" -> 19, "twoM" -> -17|>,
                 <|"e" -> (-40 + -80 Exp[2 Pi I/3]), "twoM" -> -13|>,
                 <|"e" -> -280, "twoM" -> -9|>,
@@ -3959,6 +3998,18 @@ o3d = <|
                 <|"e" -> -2210, "twoM" -> -1|>,
                 <|"e" -> (-936 + -1872 Exp[2 Pi I/3]), "twoM" -> 3|>,
                 <|"e" -> 39, "twoM" -> 15|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
+                <|"e" -> -39, "twoM" -> -15|>,
+                <|"e" -> (936 + 1872 Exp[2 Pi I/3]), "twoM" -> -3|>,
+                <|"e" -> 2210, "twoM" -> 1|>,
+                <|"e" -> (1456 + 2912 Exp[2 Pi I/3]), "twoM" -> 5|>,
+                <|"e" -> 280, "twoM" -> 9|>,
+                <|"e" -> (40 + 80 Exp[2 Pi I/3]), "twoM" -> 13|>,
+                <|"e" -> -19, "twoM" -> 17|>
               },
               "mu" -> 2
             |>
@@ -3973,19 +4024,6 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> (-11 + -22 Exp[2 Pi I/3]), "twoM" -> -15|>,
-                <|"e" -> 124, "twoM" -> -11|>,
-                <|"e" -> 572, "twoM" -> -3|>,
-                <|"e" -> (-286 + -572 Exp[2 Pi I/3]), "twoM" -> 1|>,
-                <|"e" -> -364, "twoM" -> 5|>,
-                <|"e" -> (168 + 336 Exp[2 Pi I/3]), "twoM" -> 9|>,
-                <|"e" -> 52, "twoM" -> 13|>,
-                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> 17|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
                 <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> -17|>,
                 <|"e" -> 52, "twoM" -> -13|>,
                 <|"e" -> (168 + 336 Exp[2 Pi I/3]), "twoM" -> -9|>,
@@ -3994,6 +4032,19 @@ o3d = <|
                 <|"e" -> 572, "twoM" -> 3|>,
                 <|"e" -> 124, "twoM" -> 11|>,
                 <|"e" -> (-11 + -22 Exp[2 Pi I/3]), "twoM" -> 15|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
+                <|"e" -> (11 + 22 Exp[2 Pi I/3]), "twoM" -> -15|>,
+                <|"e" -> -124, "twoM" -> -11|>,
+                <|"e" -> -572, "twoM" -> -3|>,
+                <|"e" -> (286 + 572 Exp[2 Pi I/3]), "twoM" -> 1|>,
+                <|"e" -> 364, "twoM" -> 5|>,
+                <|"e" -> (-168 + -336 Exp[2 Pi I/3]), "twoM" -> 9|>,
+                <|"e" -> -52, "twoM" -> 13|>,
+                <|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> 17|>
               },
               "mu" -> 2
             |>
@@ -4008,19 +4059,6 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 7, "twoM" -> -15|>,
-                <|"e" -> 172, "twoM" -> -7|>,
-                <|"e" -> (176 + 352 Exp[2 Pi I/3]), "twoM" -> -3|>,
-                <|"e" -> -110, "twoM" -> 1|>,
-                <|"e" -> (-32 + -64 Exp[2 Pi I/3]), "twoM" -> 5|>,
-                <|"e" -> 60, "twoM" -> 9|>,
-                <|"e" -> (-16 + -32 Exp[2 Pi I/3]), "twoM" -> 13|>,
-                <|"e" -> -1, "twoM" -> 17|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
                 <|"e" -> -1, "twoM" -> -17|>,
                 <|"e" -> (-16 + -32 Exp[2 Pi I/3]), "twoM" -> -13|>,
                 <|"e" -> 60, "twoM" -> -9|>,
@@ -4029,6 +4067,19 @@ o3d = <|
                 <|"e" -> (176 + 352 Exp[2 Pi I/3]), "twoM" -> 3|>,
                 <|"e" -> 172, "twoM" -> 7|>,
                 <|"e" -> 7, "twoM" -> 15|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
+                <|"e" -> -7, "twoM" -> -15|>,
+                <|"e" -> -172, "twoM" -> -7|>,
+                <|"e" -> (-176 + -352 Exp[2 Pi I/3]), "twoM" -> -3|>,
+                <|"e" -> 110, "twoM" -> 1|>,
+                <|"e" -> (32 + 64 Exp[2 Pi I/3]), "twoM" -> 5|>,
+                <|"e" -> -60, "twoM" -> 9|>,
+                <|"e" -> (16 + 32 Exp[2 Pi I/3]), "twoM" -> 13|>,
+                <|"e" -> 1, "twoM" -> 17|>
               },
               "mu" -> 2
             |>
@@ -4043,20 +4094,22 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -19|>,
-                <|"e" -> -342, "twoM" -> -3|>,
-                <|"e" -> -152, "twoM" -> 5|>,
-                <|"e" -> -19, "twoM" -> 13|>
+                <|"q" -> {1, 1}, "twoM" -> -19|>,
+                <|"q" -> {-342, 1}, "twoM" -> -3|>,
+                <|"q" -> {-152, 1}, "twoM" -> 5|>,
+                <|"q" -> {-19, 1}, "twoM" -> 13|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 19, "twoM" -> -13|>,
-                <|"e" -> 152, "twoM" -> -5|>,
-                <|"e" -> 342, "twoM" -> 3|>,
-                <|"e" -> -1, "twoM" -> 19|>
+                <|"q" -> {19, 1}, "twoM" -> -13|>,
+                <|"q" -> {152, 1}, "twoM" -> -5|>,
+                <|"q" -> {342, 1}, "twoM" -> 3|>,
+                <|"q" -> {-1, 1}, "twoM" -> 19|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -4070,20 +4123,22 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 39, "twoM" -> -15|>,
-                <|"e" -> -442, "twoM" -> 1|>,
-                <|"e" -> 408, "twoM" -> 9|>,
-                <|"e" -> -5, "twoM" -> 17|>
+                <|"q" -> {39, 1}, "twoM" -> -15|>,
+                <|"q" -> {-442, 1}, "twoM" -> 1|>,
+                <|"q" -> {408, 1}, "twoM" -> 9|>,
+                <|"q" -> {-5, 1}, "twoM" -> 17|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 5, "twoM" -> -17|>,
-                <|"e" -> -408, "twoM" -> -9|>,
-                <|"e" -> 442, "twoM" -> -1|>,
-                <|"e" -> -39, "twoM" -> 15|>
+                <|"q" -> {5, 1}, "twoM" -> -17|>,
+                <|"q" -> {-408, 1}, "twoM" -> -9|>,
+                <|"q" -> {442, 1}, "twoM" -> -1|>,
+                <|"q" -> {-39, 1}, "twoM" -> 15|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -4097,22 +4152,24 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> -1, "twoM" -> -19|>,
-                <|"e" -> 140, "twoM" -> -11|>,
-                <|"e" -> -78, "twoM" -> -3|>,
-                <|"e" -> 572, "twoM" -> 5|>,
-                <|"e" -> -121, "twoM" -> 13|>
+                <|"q" -> {1, 1}, "twoM" -> -19|>,
+                <|"q" -> {-140, 1}, "twoM" -> -11|>,
+                <|"q" -> {78, 1}, "twoM" -> -3|>,
+                <|"q" -> {-572, 1}, "twoM" -> 5|>,
+                <|"q" -> {121, 1}, "twoM" -> 13|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 121, "twoM" -> -13|>,
-                <|"e" -> -572, "twoM" -> -5|>,
-                <|"e" -> 78, "twoM" -> 3|>,
-                <|"e" -> -140, "twoM" -> 11|>,
-                <|"e" -> 1, "twoM" -> 19|>
+                <|"q" -> {121, 1}, "twoM" -> -13|>,
+                <|"q" -> {-572, 1}, "twoM" -> -5|>,
+                <|"q" -> {78, 1}, "twoM" -> 3|>,
+                <|"q" -> {-140, 1}, "twoM" -> 11|>,
+                <|"q" -> {1, 1}, "twoM" -> 19|>
               },
+              "factor" -> -1 Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -4126,22 +4183,24 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -15|>,
-                <|"e" -> 348, "twoM" -> -7|>,
-                <|"e" -> -286, "twoM" -> 1|>,
-                <|"e" -> -84, "twoM" -> 9|>,
-                <|"e" -> 7, "twoM" -> 17|>
+                <|"q" -> {15, 1}, "twoM" -> -15|>,
+                <|"q" -> {348, 1}, "twoM" -> -7|>,
+                <|"q" -> {-286, 1}, "twoM" -> 1|>,
+                <|"q" -> {-84, 1}, "twoM" -> 9|>,
+                <|"q" -> {7, 1}, "twoM" -> 17|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> -7, "twoM" -> -17|>,
-                <|"e" -> 84, "twoM" -> -9|>,
-                <|"e" -> 286, "twoM" -> -1|>,
-                <|"e" -> -348, "twoM" -> 7|>,
-                <|"e" -> -15, "twoM" -> 15|>
+                <|"q" -> {7, 1}, "twoM" -> -17|>,
+                <|"q" -> {-84, 1}, "twoM" -> -9|>,
+                <|"q" -> {-286, 1}, "twoM" -> -1|>,
+                <|"q" -> {348, 1}, "twoM" -> 7|>,
+                <|"q" -> {15, 1}, "twoM" -> 15|>
               },
+              "factor" -> -1 Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -4190,29 +4249,29 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> (-33 + -66 Exp[2 Pi I/3]), "twoM" -> -19|>,
-                <|"e" -> 4999, "twoM" -> -15|>,
-                <|"e" -> 21896, "twoM" -> -7|>,
-                <|"e" -> (-92378 + -184756 Exp[2 Pi I/3]), "twoM" -> -3|>,
-                <|"e" -> 4862, "twoM" -> 1|>,
-                <|"e" -> (76024 + 152048 Exp[2 Pi I/3]), "twoM" -> 5|>,
-                <|"e" -> -54128, "twoM" -> 9|>,
-                <|"e" -> (7939 + 15878 Exp[2 Pi I/3]), "twoM" -> 13|>,
-                <|"e" -> -2973, "twoM" -> 17|>
+                <|"e" -> (33 + 66 Exp[2 Pi I/3]), "twoM" -> -19|>,
+                <|"e" -> -4999, "twoM" -> -15|>,
+                <|"e" -> -21896, "twoM" -> -7|>,
+                <|"e" -> (92378 + 184756 Exp[2 Pi I/3]), "twoM" -> -3|>,
+                <|"e" -> -4862, "twoM" -> 1|>,
+                <|"e" -> (-76024 + -152048 Exp[2 Pi I/3]), "twoM" -> 5|>,
+                <|"e" -> 54128, "twoM" -> 9|>,
+                <|"e" -> (-7939 + -15878 Exp[2 Pi I/3]), "twoM" -> 13|>,
+                <|"e" -> 2973, "twoM" -> 17|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 2973, "twoM" -> -17|>,
-                <|"e" -> (-7939 + -15878 Exp[2 Pi I/3]), "twoM" -> -13|>,
-                <|"e" -> 54128, "twoM" -> -9|>,
-                <|"e" -> (-76024 + -152048 Exp[2 Pi I/3]), "twoM" -> -5|>,
-                <|"e" -> -4862, "twoM" -> -1|>,
-                <|"e" -> (92378 + 184756 Exp[2 Pi I/3]), "twoM" -> 3|>,
-                <|"e" -> -21896, "twoM" -> 7|>,
-                <|"e" -> -4999, "twoM" -> 15|>,
-                <|"e" -> (33 + 66 Exp[2 Pi I/3]), "twoM" -> 19|>
+                <|"e" -> -2973, "twoM" -> -17|>,
+                <|"e" -> (7939 + 15878 Exp[2 Pi I/3]), "twoM" -> -13|>,
+                <|"e" -> -54128, "twoM" -> -9|>,
+                <|"e" -> (76024 + 152048 Exp[2 Pi I/3]), "twoM" -> -5|>,
+                <|"e" -> 4862, "twoM" -> -1|>,
+                <|"e" -> (-92378 + -184756 Exp[2 Pi I/3]), "twoM" -> 3|>,
+                <|"e" -> 21896, "twoM" -> 7|>,
+                <|"e" -> 4999, "twoM" -> 15|>,
+                <|"e" -> (-33 + -66 Exp[2 Pi I/3]), "twoM" -> 19|>
               },
               "mu" -> 2
             |>
@@ -4266,19 +4325,6 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 15, "twoM" -> -19|>,
-                <|"e" -> (924 + 1848 Exp[2 Pi I/3]), "twoM" -> -7|>,
-                <|"e" -> 1998, "twoM" -> -3|>,
-                <|"e" -> (2596 + 5192 Exp[2 Pi I/3]), "twoM" -> 1|>,
-                <|"e" -> 1800, "twoM" -> 5|>,
-                <|"e" -> (324 + 648 Exp[2 Pi I/3]), "twoM" -> 9|>,
-                <|"e" -> 27, "twoM" -> 13|>,
-                <|"e" -> (-4 + -8 Exp[2 Pi I/3]), "twoM" -> 17|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
                 <|"e" -> (4 + 8 Exp[2 Pi I/3]), "twoM" -> -17|>,
                 <|"e" -> -27, "twoM" -> -13|>,
                 <|"e" -> (-324 + -648 Exp[2 Pi I/3]), "twoM" -> -9|>,
@@ -4287,6 +4333,19 @@ o3d = <|
                 <|"e" -> -1998, "twoM" -> 3|>,
                 <|"e" -> (-924 + -1848 Exp[2 Pi I/3]), "twoM" -> 7|>,
                 <|"e" -> -15, "twoM" -> 19|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
+                <|"e" -> -15, "twoM" -> -19|>,
+                <|"e" -> (-924 + -1848 Exp[2 Pi I/3]), "twoM" -> -7|>,
+                <|"e" -> -1998, "twoM" -> -3|>,
+                <|"e" -> (-2596 + -5192 Exp[2 Pi I/3]), "twoM" -> 1|>,
+                <|"e" -> -1800, "twoM" -> 5|>,
+                <|"e" -> (-324 + -648 Exp[2 Pi I/3]), "twoM" -> 9|>,
+                <|"e" -> -27, "twoM" -> 13|>,
+                <|"e" -> (4 + 8 Exp[2 Pi I/3]), "twoM" -> 17|>
               },
               "mu" -> 2
             |>
@@ -4301,6 +4360,20 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
+                <|"e" -> -2973, "twoM" -> -17|>,
+                <|"e" -> (-7939 + -15878 Exp[2 Pi I/3]), "twoM" -> -13|>,
+                <|"e" -> -54128, "twoM" -> -9|>,
+                <|"e" -> (-76024 + -152048 Exp[2 Pi I/3]), "twoM" -> -5|>,
+                <|"e" -> 4862, "twoM" -> -1|>,
+                <|"e" -> (92378 + 184756 Exp[2 Pi I/3]), "twoM" -> 3|>,
+                <|"e" -> 21896, "twoM" -> 7|>,
+                <|"e" -> 4999, "twoM" -> 15|>,
+                <|"e" -> (33 + 66 Exp[2 Pi I/3]), "twoM" -> 19|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
                 <|"e" -> (33 + 66 Exp[2 Pi I/3]), "twoM" -> -19|>,
                 <|"e" -> 4999, "twoM" -> -15|>,
                 <|"e" -> 21896, "twoM" -> -7|>,
@@ -4310,20 +4383,6 @@ o3d = <|
                 <|"e" -> -54128, "twoM" -> 9|>,
                 <|"e" -> (-7939 + -15878 Exp[2 Pi I/3]), "twoM" -> 13|>,
                 <|"e" -> -2973, "twoM" -> 17|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
-                <|"e" -> 2973, "twoM" -> -17|>,
-                <|"e" -> (7939 + 15878 Exp[2 Pi I/3]), "twoM" -> -13|>,
-                <|"e" -> 54128, "twoM" -> -9|>,
-                <|"e" -> (76024 + 152048 Exp[2 Pi I/3]), "twoM" -> -5|>,
-                <|"e" -> -4862, "twoM" -> -1|>,
-                <|"e" -> (-92378 + -184756 Exp[2 Pi I/3]), "twoM" -> 3|>,
-                <|"e" -> -21896, "twoM" -> 7|>,
-                <|"e" -> -4999, "twoM" -> 15|>,
-                <|"e" -> (-33 + -66 Exp[2 Pi I/3]), "twoM" -> 19|>
               },
               "mu" -> 2
             |>
@@ -4338,21 +4397,6 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -19|>,
-                <|"e" -> (51 + 102 Exp[2 Pi I/3]), "twoM" -> -15|>,
-                <|"e" -> 628, "twoM" -> -11|>,
-                <|"e" -> (-532 + -1064 Exp[2 Pi I/3]), "twoM" -> -7|>,
-                <|"e" -> 78, "twoM" -> -3|>,
-                <|"e" -> (858 + 1716 Exp[2 Pi I/3]), "twoM" -> 1|>,
-                <|"e" -> -572, "twoM" -> 5|>,
-                <|"e" -> (-132 + -264 Exp[2 Pi I/3]), "twoM" -> 9|>,
-                <|"e" -> 121, "twoM" -> 13|>,
-                <|"e" -> (11 + 22 Exp[2 Pi I/3]), "twoM" -> 17|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
                 <|"e" -> (-11 + -22 Exp[2 Pi I/3]), "twoM" -> -17|>,
                 <|"e" -> -121, "twoM" -> -13|>,
                 <|"e" -> (132 + 264 Exp[2 Pi I/3]), "twoM" -> -9|>,
@@ -4363,6 +4407,21 @@ o3d = <|
                 <|"e" -> -628, "twoM" -> 11|>,
                 <|"e" -> (-51 + -102 Exp[2 Pi I/3]), "twoM" -> 15|>,
                 <|"e" -> -1, "twoM" -> 19|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
+                <|"e" -> -1, "twoM" -> -19|>,
+                <|"e" -> (-51 + -102 Exp[2 Pi I/3]), "twoM" -> -15|>,
+                <|"e" -> -628, "twoM" -> -11|>,
+                <|"e" -> (532 + 1064 Exp[2 Pi I/3]), "twoM" -> -7|>,
+                <|"e" -> -78, "twoM" -> -3|>,
+                <|"e" -> (-858 + -1716 Exp[2 Pi I/3]), "twoM" -> 1|>,
+                <|"e" -> 572, "twoM" -> 5|>,
+                <|"e" -> (132 + 264 Exp[2 Pi I/3]), "twoM" -> 9|>,
+                <|"e" -> -121, "twoM" -> 13|>,
+                <|"e" -> (-11 + -22 Exp[2 Pi I/3]), "twoM" -> 17|>
               },
               "mu" -> 2
             |>
@@ -4377,22 +4436,24 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 39, "twoM" -> -19|>,
-                <|"e" -> -8398, "twoM" -> -3|>,
-                <|"e" -> -11628, "twoM" -> 5|>,
-                <|"e" -> -513, "twoM" -> 13|>,
-                <|"e" -> 20, "twoM" -> 21|>
+                <|"q" -> {39, 1}, "twoM" -> -19|>,
+                <|"q" -> {-8398, 1}, "twoM" -> -3|>,
+                <|"q" -> {-11628, 1}, "twoM" -> 5|>,
+                <|"q" -> {-513, 1}, "twoM" -> 13|>,
+                <|"q" -> {20, 1}, "twoM" -> 21|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 20, "twoM" -> -21|>,
-                <|"e" -> -513, "twoM" -> -13|>,
-                <|"e" -> -11628, "twoM" -> -5|>,
-                <|"e" -> -8398, "twoM" -> 3|>,
-                <|"e" -> 39, "twoM" -> 19|>
+                <|"q" -> {20, 1}, "twoM" -> -21|>,
+                <|"q" -> {-513, 1}, "twoM" -> -13|>,
+                <|"q" -> {-11628, 1}, "twoM" -> -5|>,
+                <|"q" -> {-8398, 1}, "twoM" -> 3|>,
+                <|"q" -> {39, 1}, "twoM" -> 19|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -4406,22 +4467,24 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -15|>,
-                <|"e" -> 12, "twoM" -> -7|>,
-                <|"e" -> -26, "twoM" -> 1|>,
-                <|"e" -> 12, "twoM" -> 9|>,
-                <|"e" -> 1, "twoM" -> 17|>
+                <|"q" -> {1, 1}, "twoM" -> -15|>,
+                <|"q" -> {12, 1}, "twoM" -> -7|>,
+                <|"q" -> {-26, 1}, "twoM" -> 1|>,
+                <|"q" -> {12, 1}, "twoM" -> 9|>,
+                <|"q" -> {1, 1}, "twoM" -> 17|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 1, "twoM" -> -17|>,
-                <|"e" -> 12, "twoM" -> -9|>,
-                <|"e" -> -26, "twoM" -> -1|>,
-                <|"e" -> 12, "twoM" -> 7|>,
-                <|"e" -> 1, "twoM" -> 15|>
+                <|"q" -> {1, 1}, "twoM" -> -17|>,
+                <|"q" -> {12, 1}, "twoM" -> -9|>,
+                <|"q" -> {-26, 1}, "twoM" -> -1|>,
+                <|"q" -> {12, 1}, "twoM" -> 7|>,
+                <|"q" -> {1, 1}, "twoM" -> 15|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -4435,24 +4498,26 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 11, "twoM" -> -19|>,
-                <|"e" -> 259, "twoM" -> -11|>,
-                <|"e" -> 1430, "twoM" -> -3|>,
-                <|"e" -> -610, "twoM" -> 5|>,
-                <|"e" -> -65, "twoM" -> 13|>,
-                <|"e" -> -1, "twoM" -> 21|>
+                <|"q" -> {11, 1}, "twoM" -> -19|>,
+                <|"q" -> {259, 1}, "twoM" -> -11|>,
+                <|"q" -> {1430, 1}, "twoM" -> -3|>,
+                <|"q" -> {-610, 1}, "twoM" -> 5|>,
+                <|"q" -> {-65, 1}, "twoM" -> 13|>,
+                <|"q" -> {-1, 1}, "twoM" -> 21|>
               },
+              "factor" -> Exp[2 Pi I/4],
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> -1, "twoM" -> -21|>,
-                <|"e" -> -65, "twoM" -> -13|>,
-                <|"e" -> -610, "twoM" -> -5|>,
-                <|"e" -> 1430, "twoM" -> 3|>,
-                <|"e" -> 259, "twoM" -> 11|>,
-                <|"e" -> 11, "twoM" -> 19|>
+                <|"q" -> {1, 1}, "twoM" -> -21|>,
+                <|"q" -> {65, 1}, "twoM" -> -13|>,
+                <|"q" -> {610, 1}, "twoM" -> -5|>,
+                <|"q" -> {-1430, 1}, "twoM" -> 3|>,
+                <|"q" -> {-259, 1}, "twoM" -> 11|>,
+                <|"q" -> {-11, 1}, "twoM" -> 19|>
               },
+              "factor" -> -1 Exp[2 Pi I/4],
               "mu" -> 2
             |>
           }
@@ -4501,29 +4566,29 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> (-4443 + -8886 Exp[2 Pi I/3]), "twoM" -> -19|>,
-                <|"e" -> 164253, "twoM" -> -15|>,
-                <|"e" -> (594626 + 1189252 Exp[2 Pi I/3]), "twoM" -> -3|>,
-                <|"e" -> 930546, "twoM" -> 1|>,
-                <|"e" -> (-620568 + -1241136 Exp[2 Pi I/3]), "twoM" -> 5|>,
-                <|"e" -> -620568, "twoM" -> 9|>,
-                <|"e" -> (193905 + 387810 Exp[2 Pi I/3]), "twoM" -> 13|>,
-                <|"e" -> 17289, "twoM" -> 17|>,
-                <|"e" -> (320 + 640 Exp[2 Pi I/3]), "twoM" -> 21|>
+                <|"e" -> (4443 + 8886 Exp[2 Pi I/3]), "twoM" -> -19|>,
+                <|"e" -> -164253, "twoM" -> -15|>,
+                <|"e" -> (-594626 + -1189252 Exp[2 Pi I/3]), "twoM" -> -3|>,
+                <|"e" -> -930546, "twoM" -> 1|>,
+                <|"e" -> (620568 + 1241136 Exp[2 Pi I/3]), "twoM" -> 5|>,
+                <|"e" -> 620568, "twoM" -> 9|>,
+                <|"e" -> (-193905 + -387810 Exp[2 Pi I/3]), "twoM" -> 13|>,
+                <|"e" -> -17289, "twoM" -> 17|>,
+                <|"e" -> (-320 + -640 Exp[2 Pi I/3]), "twoM" -> 21|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (320 + 640 Exp[2 Pi I/3]), "twoM" -> -21|>,
-                <|"e" -> 17289, "twoM" -> -17|>,
-                <|"e" -> (193905 + 387810 Exp[2 Pi I/3]), "twoM" -> -13|>,
-                <|"e" -> -620568, "twoM" -> -9|>,
-                <|"e" -> (-620568 + -1241136 Exp[2 Pi I/3]), "twoM" -> -5|>,
-                <|"e" -> 930546, "twoM" -> -1|>,
-                <|"e" -> (594626 + 1189252 Exp[2 Pi I/3]), "twoM" -> 3|>,
-                <|"e" -> 164253, "twoM" -> 15|>,
-                <|"e" -> (-4443 + -8886 Exp[2 Pi I/3]), "twoM" -> 19|>
+                <|"e" -> (-320 + -640 Exp[2 Pi I/3]), "twoM" -> -21|>,
+                <|"e" -> -17289, "twoM" -> -17|>,
+                <|"e" -> (-193905 + -387810 Exp[2 Pi I/3]), "twoM" -> -13|>,
+                <|"e" -> 620568, "twoM" -> -9|>,
+                <|"e" -> (620568 + 1241136 Exp[2 Pi I/3]), "twoM" -> -5|>,
+                <|"e" -> -930546, "twoM" -> -1|>,
+                <|"e" -> (-594626 + -1189252 Exp[2 Pi I/3]), "twoM" -> 3|>,
+                <|"e" -> -164253, "twoM" -> 15|>,
+                <|"e" -> (4443 + 8886 Exp[2 Pi I/3]), "twoM" -> 19|>
               },
               "mu" -> 2
             |>
@@ -4538,31 +4603,31 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> -363, "twoM" -> -19|>,
-                <|"e" -> (9020 + 18040 Exp[2 Pi I/3]), "twoM" -> -15|>,
-                <|"e" -> 102831, "twoM" -> -11|>,
-                <|"e" -> -167310, "twoM" -> -3|>,
-                <|"e" -> (-56680 + -113360 Exp[2 Pi I/3]), "twoM" -> 1|>,
-                <|"e" -> 53310, "twoM" -> 5|>,
-                <|"e" -> (50784 + 101568 Exp[2 Pi I/3]), "twoM" -> 9|>,
-                <|"e" -> 13065, "twoM" -> 13|>,
-                <|"e" -> (-4660 + -9320 Exp[2 Pi I/3]), "twoM" -> 17|>,
-                <|"e" -> 3, "twoM" -> 21|>
+                <|"e" -> 363, "twoM" -> -19|>,
+                <|"e" -> (-9020 + -18040 Exp[2 Pi I/3]), "twoM" -> -15|>,
+                <|"e" -> -102831, "twoM" -> -11|>,
+                <|"e" -> 167310, "twoM" -> -3|>,
+                <|"e" -> (56680 + 113360 Exp[2 Pi I/3]), "twoM" -> 1|>,
+                <|"e" -> -53310, "twoM" -> 5|>,
+                <|"e" -> (-50784 + -101568 Exp[2 Pi I/3]), "twoM" -> 9|>,
+                <|"e" -> -13065, "twoM" -> 13|>,
+                <|"e" -> (4660 + 9320 Exp[2 Pi I/3]), "twoM" -> 17|>,
+                <|"e" -> -3, "twoM" -> 21|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> 3, "twoM" -> -21|>,
-                <|"e" -> (-4660 + -9320 Exp[2 Pi I/3]), "twoM" -> -17|>,
-                <|"e" -> 13065, "twoM" -> -13|>,
-                <|"e" -> (50784 + 101568 Exp[2 Pi I/3]), "twoM" -> -9|>,
-                <|"e" -> 53310, "twoM" -> -5|>,
-                <|"e" -> (-56680 + -113360 Exp[2 Pi I/3]), "twoM" -> -1|>,
-                <|"e" -> -167310, "twoM" -> 3|>,
-                <|"e" -> 102831, "twoM" -> 11|>,
-                <|"e" -> (9020 + 18040 Exp[2 Pi I/3]), "twoM" -> 15|>,
-                <|"e" -> -363, "twoM" -> 19|>
+                <|"e" -> -3, "twoM" -> -21|>,
+                <|"e" -> (4660 + 9320 Exp[2 Pi I/3]), "twoM" -> -17|>,
+                <|"e" -> -13065, "twoM" -> -13|>,
+                <|"e" -> (-50784 + -101568 Exp[2 Pi I/3]), "twoM" -> -9|>,
+                <|"e" -> -53310, "twoM" -> -5|>,
+                <|"e" -> (56680 + 113360 Exp[2 Pi I/3]), "twoM" -> -1|>,
+                <|"e" -> 167310, "twoM" -> 3|>,
+                <|"e" -> -102831, "twoM" -> 11|>,
+                <|"e" -> (-9020 + -18040 Exp[2 Pi I/3]), "twoM" -> 15|>,
+                <|"e" -> 363, "twoM" -> 19|>
               },
               "mu" -> 2
             |>
@@ -4577,33 +4642,33 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> (-7 + -14 Exp[2 Pi I/3]), "twoM" -> -19|>,
-                <|"e" -> -14, "twoM" -> -15|>,
-                <|"e" -> (77 + 154 Exp[2 Pi I/3]), "twoM" -> -11|>,
-                <|"e" -> 1368, "twoM" -> -7|>,
-                <|"e" -> (546 + 1092 Exp[2 Pi I/3]), "twoM" -> -3|>,
-                <|"e" -> 364, "twoM" -> 1|>,
-                <|"e" -> (-14 + -28 Exp[2 Pi I/3]), "twoM" -> 5|>,
-                <|"e" -> -168, "twoM" -> 9|>,
-                <|"e" -> (-91 + -182 Exp[2 Pi I/3]), "twoM" -> 13|>,
-                <|"e" -> -14, "twoM" -> 17|>,
-                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> 21|>
+                <|"e" -> (7 + 14 Exp[2 Pi I/3]), "twoM" -> -19|>,
+                <|"e" -> 14, "twoM" -> -15|>,
+                <|"e" -> (-77 + -154 Exp[2 Pi I/3]), "twoM" -> -11|>,
+                <|"e" -> -1368, "twoM" -> -7|>,
+                <|"e" -> (-546 + -1092 Exp[2 Pi I/3]), "twoM" -> -3|>,
+                <|"e" -> -364, "twoM" -> 1|>,
+                <|"e" -> (14 + 28 Exp[2 Pi I/3]), "twoM" -> 5|>,
+                <|"e" -> 168, "twoM" -> 9|>,
+                <|"e" -> (91 + 182 Exp[2 Pi I/3]), "twoM" -> 13|>,
+                <|"e" -> 14, "twoM" -> 17|>,
+                <|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> 21|>
               },
               "mu" -> 1
             |>,
             <|
               "components" -> {
-                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> -21|>,
-                <|"e" -> -14, "twoM" -> -17|>,
-                <|"e" -> (-91 + -182 Exp[2 Pi I/3]), "twoM" -> -13|>,
-                <|"e" -> -168, "twoM" -> -9|>,
-                <|"e" -> (-14 + -28 Exp[2 Pi I/3]), "twoM" -> -5|>,
-                <|"e" -> 364, "twoM" -> -1|>,
-                <|"e" -> (546 + 1092 Exp[2 Pi I/3]), "twoM" -> 3|>,
-                <|"e" -> 1368, "twoM" -> 7|>,
-                <|"e" -> (77 + 154 Exp[2 Pi I/3]), "twoM" -> 11|>,
-                <|"e" -> -14, "twoM" -> 15|>,
-                <|"e" -> (-7 + -14 Exp[2 Pi I/3]), "twoM" -> 19|>
+                <|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> -21|>,
+                <|"e" -> 14, "twoM" -> -17|>,
+                <|"e" -> (91 + 182 Exp[2 Pi I/3]), "twoM" -> -13|>,
+                <|"e" -> 168, "twoM" -> -9|>,
+                <|"e" -> (14 + 28 Exp[2 Pi I/3]), "twoM" -> -5|>,
+                <|"e" -> -364, "twoM" -> -1|>,
+                <|"e" -> (-546 + -1092 Exp[2 Pi I/3]), "twoM" -> 3|>,
+                <|"e" -> -1368, "twoM" -> 7|>,
+                <|"e" -> (-77 + -154 Exp[2 Pi I/3]), "twoM" -> 11|>,
+                <|"e" -> 14, "twoM" -> 15|>,
+                <|"e" -> (7 + 14 Exp[2 Pi I/3]), "twoM" -> 19|>
               },
               "mu" -> 2
             |>
@@ -4618,19 +4683,6 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
-                <|"e" -> 663, "twoM" -> -19|>,
-                <|"e" -> 41990, "twoM" -> -3|>,
-                <|"e" -> (100776 + 201552 Exp[2 Pi I/3]), "twoM" -> 1|>,
-                <|"e" -> 77520, "twoM" -> 5|>,
-                <|"e" -> (25840 + 51680 Exp[2 Pi I/3]), "twoM" -> 9|>,
-                <|"e" -> 6555, "twoM" -> 13|>,
-                <|"e" -> (360 + 720 Exp[2 Pi I/3]), "twoM" -> 17|>,
-                <|"e" -> 248, "twoM" -> 21|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
                 <|"e" -> 248, "twoM" -> -21|>,
                 <|"e" -> (360 + 720 Exp[2 Pi I/3]), "twoM" -> -17|>,
                 <|"e" -> 6555, "twoM" -> -13|>,
@@ -4639,6 +4691,19 @@ o3d = <|
                 <|"e" -> (100776 + 201552 Exp[2 Pi I/3]), "twoM" -> -1|>,
                 <|"e" -> 41990, "twoM" -> 3|>,
                 <|"e" -> 663, "twoM" -> 19|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
+                <|"e" -> -663, "twoM" -> -19|>,
+                <|"e" -> -41990, "twoM" -> -3|>,
+                <|"e" -> (-100776 + -201552 Exp[2 Pi I/3]), "twoM" -> 1|>,
+                <|"e" -> -77520, "twoM" -> 5|>,
+                <|"e" -> (-25840 + -51680 Exp[2 Pi I/3]), "twoM" -> 9|>,
+                <|"e" -> -6555, "twoM" -> 13|>,
+                <|"e" -> (-360 + -720 Exp[2 Pi I/3]), "twoM" -> 17|>,
+                <|"e" -> -248, "twoM" -> 21|>
               },
               "mu" -> 2
             |>
@@ -4653,6 +4718,20 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
+                <|"e" -> (320 + 640 Exp[2 Pi I/3]), "twoM" -> -21|>,
+                <|"e" -> -17289, "twoM" -> -17|>,
+                <|"e" -> (193905 + 387810 Exp[2 Pi I/3]), "twoM" -> -13|>,
+                <|"e" -> 620568, "twoM" -> -9|>,
+                <|"e" -> (-620568 + -1241136 Exp[2 Pi I/3]), "twoM" -> -5|>,
+                <|"e" -> -930546, "twoM" -> -1|>,
+                <|"e" -> (594626 + 1189252 Exp[2 Pi I/3]), "twoM" -> 3|>,
+                <|"e" -> -164253, "twoM" -> 15|>,
+                <|"e" -> (-4443 + -8886 Exp[2 Pi I/3]), "twoM" -> 19|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
                 <|"e" -> (4443 + 8886 Exp[2 Pi I/3]), "twoM" -> -19|>,
                 <|"e" -> 164253, "twoM" -> -15|>,
                 <|"e" -> (-594626 + -1189252 Exp[2 Pi I/3]), "twoM" -> -3|>,
@@ -4662,20 +4741,6 @@ o3d = <|
                 <|"e" -> (-193905 + -387810 Exp[2 Pi I/3]), "twoM" -> 13|>,
                 <|"e" -> 17289, "twoM" -> 17|>,
                 <|"e" -> (-320 + -640 Exp[2 Pi I/3]), "twoM" -> 21|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
-                <|"e" -> (-320 + -640 Exp[2 Pi I/3]), "twoM" -> -21|>,
-                <|"e" -> 17289, "twoM" -> -17|>,
-                <|"e" -> (-193905 + -387810 Exp[2 Pi I/3]), "twoM" -> -13|>,
-                <|"e" -> -620568, "twoM" -> -9|>,
-                <|"e" -> (620568 + 1241136 Exp[2 Pi I/3]), "twoM" -> -5|>,
-                <|"e" -> 930546, "twoM" -> -1|>,
-                <|"e" -> (-594626 + -1189252 Exp[2 Pi I/3]), "twoM" -> 3|>,
-                <|"e" -> 164253, "twoM" -> 15|>,
-                <|"e" -> (4443 + 8886 Exp[2 Pi I/3]), "twoM" -> 19|>
               },
               "mu" -> 2
             |>
@@ -4690,6 +4755,21 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
+                <|"e" -> -3, "twoM" -> -21|>,
+                <|"e" -> (-4660 + -9320 Exp[2 Pi I/3]), "twoM" -> -17|>,
+                <|"e" -> -13065, "twoM" -> -13|>,
+                <|"e" -> (50784 + 101568 Exp[2 Pi I/3]), "twoM" -> -9|>,
+                <|"e" -> -53310, "twoM" -> -5|>,
+                <|"e" -> (-56680 + -113360 Exp[2 Pi I/3]), "twoM" -> -1|>,
+                <|"e" -> 167310, "twoM" -> 3|>,
+                <|"e" -> -102831, "twoM" -> 11|>,
+                <|"e" -> (9020 + 18040 Exp[2 Pi I/3]), "twoM" -> 15|>,
+                <|"e" -> 363, "twoM" -> 19|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
                 <|"e" -> -363, "twoM" -> -19|>,
                 <|"e" -> (-9020 + -18040 Exp[2 Pi I/3]), "twoM" -> -15|>,
                 <|"e" -> 102831, "twoM" -> -11|>,
@@ -4700,21 +4780,6 @@ o3d = <|
                 <|"e" -> 13065, "twoM" -> 13|>,
                 <|"e" -> (4660 + 9320 Exp[2 Pi I/3]), "twoM" -> 17|>,
                 <|"e" -> 3, "twoM" -> 21|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
-                <|"e" -> 3, "twoM" -> -21|>,
-                <|"e" -> (4660 + 9320 Exp[2 Pi I/3]), "twoM" -> -17|>,
-                <|"e" -> 13065, "twoM" -> -13|>,
-                <|"e" -> (-50784 + -101568 Exp[2 Pi I/3]), "twoM" -> -9|>,
-                <|"e" -> 53310, "twoM" -> -5|>,
-                <|"e" -> (56680 + 113360 Exp[2 Pi I/3]), "twoM" -> -1|>,
-                <|"e" -> -167310, "twoM" -> 3|>,
-                <|"e" -> 102831, "twoM" -> 11|>,
-                <|"e" -> (-9020 + -18040 Exp[2 Pi I/3]), "twoM" -> 15|>,
-                <|"e" -> -363, "twoM" -> 19|>
               },
               "mu" -> 2
             |>
@@ -4729,6 +4794,22 @@ o3d = <|
           "vectors" -> {
             <|
               "components" -> {
+                <|"e" -> (1 + 2 Exp[2 Pi I/3]), "twoM" -> -21|>,
+                <|"e" -> 14, "twoM" -> -17|>,
+                <|"e" -> (-91 + -182 Exp[2 Pi I/3]), "twoM" -> -13|>,
+                <|"e" -> 168, "twoM" -> -9|>,
+                <|"e" -> (-14 + -28 Exp[2 Pi I/3]), "twoM" -> -5|>,
+                <|"e" -> -364, "twoM" -> -1|>,
+                <|"e" -> (546 + 1092 Exp[2 Pi I/3]), "twoM" -> 3|>,
+                <|"e" -> -1368, "twoM" -> 7|>,
+                <|"e" -> (77 + 154 Exp[2 Pi I/3]), "twoM" -> 11|>,
+                <|"e" -> 14, "twoM" -> 15|>,
+                <|"e" -> (-7 + -14 Exp[2 Pi I/3]), "twoM" -> 19|>
+              },
+              "mu" -> 1
+            |>,
+            <|
+              "components" -> {
                 <|"e" -> (7 + 14 Exp[2 Pi I/3]), "twoM" -> -19|>,
                 <|"e" -> -14, "twoM" -> -15|>,
                 <|"e" -> (-77 + -154 Exp[2 Pi I/3]), "twoM" -> -11|>,
@@ -4740,22 +4821,6 @@ o3d = <|
                 <|"e" -> (91 + 182 Exp[2 Pi I/3]), "twoM" -> 13|>,
                 <|"e" -> -14, "twoM" -> 17|>,
                 <|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> 21|>
-              },
-              "mu" -> 1
-            |>,
-            <|
-              "components" -> {
-                <|"e" -> (-1 + -2 Exp[2 Pi I/3]), "twoM" -> -21|>,
-                <|"e" -> -14, "twoM" -> -17|>,
-                <|"e" -> (91 + 182 Exp[2 Pi I/3]), "twoM" -> -13|>,
-                <|"e" -> -168, "twoM" -> -9|>,
-                <|"e" -> (14 + 28 Exp[2 Pi I/3]), "twoM" -> -5|>,
-                <|"e" -> 364, "twoM" -> -1|>,
-                <|"e" -> (-546 + -1092 Exp[2 Pi I/3]), "twoM" -> 3|>,
-                <|"e" -> 1368, "twoM" -> 7|>,
-                <|"e" -> (-77 + -154 Exp[2 Pi I/3]), "twoM" -> 11|>,
-                <|"e" -> -14, "twoM" -> 15|>,
-                <|"e" -> (7 + 14 Exp[2 Pi I/3]), "twoM" -> 19|>
               },
               "mu" -> 2
             |>
@@ -5007,14 +5072,14 @@ o3d = <|
                 "N" -> 1,
                 "irrep" -> "1E1h",
                 "kappa" -> 1,
-                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
                 "separation" -> "unique"
               |>,
               <|
                 "N" -> 1,
                 "irrep" -> "2E1h",
                 "kappa" -> 1,
-                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>},
+                "partners" -> {<|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>},
                 "separation" -> "unique"
               |>
             },
@@ -5134,30 +5199,30 @@ o3d = <|
               <|
                 "blocks" -> {
                   <|
-                    "N" -> (9 + -10 Exp[2 Pi I/12] + 5 Exp[2 Pi I 3/12]),
+                    "N" -> (9 + 10 Exp[2 Pi I/12] + -5 Exp[2 Pi I 3/12]),
                     "irrep" -> "A3h",
                     "kappa" -> 1,
                     "partners" -> {
                       <|
                         "mu" -> 1,
                         "terms" -> {
-                          <|"e" -> (2 + -2 Exp[2 Pi I/12] + Exp[2 Pi I 3/12]), "i" -> 1|>,
-                          <|"e" -> (-1 + Exp[2 Pi I/12] + Exp[2 Pi I 2/12] + -1 Exp[2 Pi I 3/12]), "i" -> 2|>
+                          <|"e" -> (2 + 2 Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "i" -> 1|>,
+                          <|"e" -> (-1 + -1 Exp[2 Pi I/12] + Exp[2 Pi I 2/12] + Exp[2 Pi I 3/12]), "i" -> 2|>
                         }
                       |>
                     },
                     "separation" -> "unique"
                   |>,
                   <|
-                    "N" -> (9 + 10 Exp[2 Pi I/12] + -5 Exp[2 Pi I 3/12]),
+                    "N" -> (9 + -10 Exp[2 Pi I/12] + 5 Exp[2 Pi I 3/12]),
                     "irrep" -> "1E1h",
                     "kappa" -> 1,
                     "partners" -> {
                       <|
                         "mu" -> 1,
                         "terms" -> {
-                          <|"e" -> (2 + 2 Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "i" -> 1|>,
-                          <|"e" -> (-1 Exp[2 Pi I/12] + -1 Exp[2 Pi I 2/12]), "i" -> 2|>
+                          <|"e" -> (2 + -2 Exp[2 Pi I/12] + Exp[2 Pi I 3/12]), "i" -> 1|>,
+                          <|"e" -> (Exp[2 Pi I/12] + -1 Exp[2 Pi I 2/12]), "i" -> 2|>
                         }
                       |>
                     },
@@ -5286,30 +5351,30 @@ o3d = <|
           <|
             "blocks" -> {
               <|
-                "N" -> (9 + -10 Exp[2 Pi I/12] + 5 Exp[2 Pi I 3/12]),
+                "N" -> (9 + 10 Exp[2 Pi I/12] + -5 Exp[2 Pi I 3/12]),
                 "irrep" -> "A3h",
                 "kappa" -> 1,
                 "partners" -> {
                   <|
                     "mu" -> 1,
                     "terms" -> {
-                      <|"e" -> (2 + -2 Exp[2 Pi I/12] + Exp[2 Pi I 3/12]), "i" -> 1|>,
-                      <|"e" -> (-1 + Exp[2 Pi I/12] + Exp[2 Pi I 2/12] + -1 Exp[2 Pi I 3/12]), "i" -> 2|>
+                      <|"e" -> (2 + 2 Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "i" -> 1|>,
+                      <|"e" -> (-1 + -1 Exp[2 Pi I/12] + Exp[2 Pi I 2/12] + Exp[2 Pi I 3/12]), "i" -> 2|>
                     }
                   |>
                 },
                 "separation" -> "unique"
               |>,
               <|
-                "N" -> (9 + 10 Exp[2 Pi I/12] + -5 Exp[2 Pi I 3/12]),
+                "N" -> (9 + -10 Exp[2 Pi I/12] + 5 Exp[2 Pi I 3/12]),
                 "irrep" -> "2E1h",
                 "kappa" -> 1,
                 "partners" -> {
                   <|
                     "mu" -> 1,
                     "terms" -> {
-                      <|"e" -> (2 + 2 Exp[2 Pi I/12] + -1 Exp[2 Pi I 3/12]), "i" -> 1|>,
-                      <|"e" -> (-1 Exp[2 Pi I/12] + -1 Exp[2 Pi I 2/12]), "i" -> 2|>
+                      <|"e" -> (2 + -2 Exp[2 Pi I/12] + Exp[2 Pi I 3/12]), "i" -> 1|>,
+                      <|"e" -> (Exp[2 Pi I/12] + -1 Exp[2 Pi I 2/12]), "i" -> 2|>
                     }
                   |>
                 },
@@ -5405,8 +5470,8 @@ o3d = <|
                 "irrep" -> "E1h",
                 "kappa" -> 1,
                 "partners" -> {
-                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 2|>}|>,
-                  <|"mu" -> 2, "terms" -> {<|"e" -> -1 Exp[2 Pi I/4], "i" -> 1|>}|>
+                  <|"mu" -> 1, "terms" -> {<|"e" -> 1, "i" -> 1|>}|>,
+                  <|"mu" -> 2, "terms" -> {<|"e" -> Exp[2 Pi I/4], "i" -> 2|>}|>
                 },
                 "separation" -> "unique"
               |>
@@ -5480,11 +5545,11 @@ o3d = <|
                     "partners" -> {
                       <|
                         "mu" -> 1,
-                        "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> Exp[2 Pi I/4], "i" -> 2|>}
+                        "terms" -> {<|"e" -> 1, "i" -> 1|>, <|"e" -> -1 Exp[2 Pi I/4], "i" -> 2|>}
                       |>,
                       <|
                         "mu" -> 2,
-                        "terms" -> {<|"e" -> -1 Exp[2 Pi I/4], "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}
+                        "terms" -> {<|"e" -> -1 Exp[2 Pi I/4], "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}
                       |>
                     },
                     "separation" -> "unique"
@@ -5507,7 +5572,7 @@ o3d = <|
                       |>,
                       <|
                         "mu" -> 2,
-                        "terms" -> {<|"e" -> -1 Exp[2 Pi I/4], "i" -> 1|>, <|"e" -> -1, "i" -> 2|>}
+                        "terms" -> {<|"e" -> Exp[2 Pi I/4], "i" -> 1|>, <|"e" -> 1, "i" -> 2|>}
                       |>
                     },
                     "separation" -> "unique"

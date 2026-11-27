@@ -1061,15 +1061,15 @@ o3d := rec(
                 ("vectors") := [
                   rec(
                     ("components") := [
-                      rec( ("c") := 1, ("function") := "d_yz", ("twoMs") := 1 ),
-                      rec( ("c") := E(4), ("function") := "d_zx", ("twoMs") := 1 )
+                      rec( ("c") := E(4), ("function") := "d_yz", ("twoMs") := 1 ),
+                      rec( ("c") := -1, ("function") := "d_zx", ("twoMs") := 1 )
                     ],
                     ("mu") := 1
                   ),
                   rec(
                     ("components") := [
-                      rec( ("c") := 1, ("function") := "d_yz", ("twoMs") := -1 ),
-                      rec( ("c") := -1*E(4), ("function") := "d_zx", ("twoMs") := -1 )
+                      rec( ("c") := E(4), ("function") := "d_yz", ("twoMs") := -1 ),
+                      rec( ("c") := 1, ("function") := "d_zx", ("twoMs") := -1 )
                     ],
                     ("mu") := 2
                   )
@@ -1083,15 +1083,15 @@ o3d := rec(
                 ("vectors") := [
                   rec(
                     ("components") := [
-                      rec( ("c") := 1, ("function") := "d_yz", ("twoMs") := -1 ),
-                      rec( ("c") := E(4), ("function") := "d_zx", ("twoMs") := -1 )
+                      rec( ("c") := E(4), ("function") := "d_yz", ("twoMs") := -1 ),
+                      rec( ("c") := -1, ("function") := "d_zx", ("twoMs") := -1 )
                     ],
                     ("mu") := 1
                   ),
                   rec(
                     ("components") := [
-                      rec( ("c") := -1, ("function") := "d_yz", ("twoMs") := 1 ),
-                      rec( ("c") := E(4), ("function") := "d_zx", ("twoMs") := 1 )
+                      rec( ("c") := -1*E(4), ("function") := "d_yz", ("twoMs") := 1 ),
+                      rec( ("c") := -1, ("function") := "d_zx", ("twoMs") := 1 )
                     ],
                     ("mu") := 2
                   )

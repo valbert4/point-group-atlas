@@ -203516,8 +203516,16 @@ o3d = {
                                 'irrep_id': 'E1hg',
                                 'kappa': 1,
                                 'vectors': [
-                                    {'components': [{'c': Rational(1,1), 'function': 's', 'twoMs': 1}], 'mu': 1},
-                                    {'components': [{'c': Rational(1,1), 'function': 's', 'twoMs': -1}], 'mu': 2}
+                                    {
+                                        'components': [{'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 's', 'twoMs': 1}],
+                                        'mu': 1
+                                    },
+                                    {
+                                        'components': [
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 's', 'twoMs': -1}
+                                        ],
+                                        'mu': 2
+                                    }
                                 ]
                             }
                         ],
@@ -203618,35 +203626,43 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_x2-y2', 'twoMs': -1},
-                                            {'c': (Rational(2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_xy', 'twoMs': -1},
-                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': 1},
-                                            {'c': Rational(1,1), 'function': 'd_zx', 'twoMs': 1}
+                                            {
+                                                'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                                'function': 'd_x2-y2',
+                                                'twoMs': -1
+                                            },
+                                            {'c': Rational(-2,1), 'function': 'd_xy', 'twoMs': -1},
+                                            {'c': Rational(-1,1), 'function': 'd_yz', 'twoMs': 1},
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': 1}
                                         ],
                                         'mu': 1
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(-1,1), 'function': 'd_z2', 'twoMs': 1},
-                                            {'c': (Rational(-3,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': -1},
-                                            {'c': Rational(-3,1), 'function': 'd_zx', 'twoMs': -1}
+                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_z2', 'twoMs': 1},
+                                            {'c': Rational(3,1), 'function': 'd_yz', 'twoMs': -1},
+                                            {'c': (Rational(-3,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': -1}
                                         ],
                                         'mu': 2
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_z2', 'twoMs': -1},
-                                            {'c': (Rational(3,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': 1},
-                                            {'c': Rational(-3,1), 'function': 'd_zx', 'twoMs': 1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_z2', 'twoMs': -1},
+                                            {'c': Rational(-3,1), 'function': 'd_yz', 'twoMs': 1},
+                                            {'c': (Rational(-3,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': 1}
                                         ],
                                         'mu': 3
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(-1,1), 'function': 'd_x2-y2', 'twoMs': 1},
-                                            {'c': (Rational(2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_xy', 'twoMs': 1},
-                                            {'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': -1},
-                                            {'c': Rational(1,1), 'function': 'd_zx', 'twoMs': -1}
+                                            {
+                                                'c': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))),
+                                                'function': 'd_x2-y2',
+                                                'twoMs': 1
+                                            },
+                                            {'c': Rational(-2,1), 'function': 'd_xy', 'twoMs': 1},
+                                            {'c': Rational(1,1), 'function': 'd_yz', 'twoMs': -1},
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': -1}
                                         ],
                                         'mu': 4
                                     }
@@ -203660,49 +203676,57 @@ o3d = {
                                 'vectors': [
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_x2-y2', 'twoMs': 1},
-                                            {'c': (Rational(2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_xy', 'twoMs': 1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_x2-y2', 'twoMs': 1},
+                                            {'c': Rational(-2,1), 'function': 'd_xy', 'twoMs': 1}
                                         ],
                                         'mu': 1
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_x2-y2', 'twoMs': -1},
-                                            {'c': (Rational(2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_xy', 'twoMs': -1},
-                                            {'c': (Rational(-4,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': 1},
-                                            {'c': Rational(-4,1), 'function': 'd_zx', 'twoMs': 1}
+                                            {
+                                                'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                                'function': 'd_x2-y2',
+                                                'twoMs': -1
+                                            },
+                                            {'c': Rational(-2,1), 'function': 'd_xy', 'twoMs': -1},
+                                            {'c': Rational(4,1), 'function': 'd_yz', 'twoMs': 1},
+                                            {'c': (Rational(-4,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': 1}
                                         ],
                                         'mu': 2
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_z2', 'twoMs': 1},
-                                            {'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': -1},
-                                            {'c': Rational(-2,1), 'function': 'd_zx', 'twoMs': -1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_z2', 'twoMs': 1},
+                                            {'c': Rational(2,1), 'function': 'd_yz', 'twoMs': -1},
+                                            {'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': -1}
                                         ],
                                         'mu': 3
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_z2', 'twoMs': -1},
-                                            {'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': 1},
-                                            {'c': Rational(2,1), 'function': 'd_zx', 'twoMs': 1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_z2', 'twoMs': -1},
+                                            {'c': Rational(2,1), 'function': 'd_yz', 'twoMs': 1},
+                                            {'c': (Rational(2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': 1}
                                         ],
                                         'mu': 4
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_x2-y2', 'twoMs': 1},
-                                            {'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_xy', 'twoMs': 1},
-                                            {'c': (Rational(-4,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_yz', 'twoMs': -1},
-                                            {'c': Rational(4,1), 'function': 'd_zx', 'twoMs': -1}
+                                            {'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_x2-y2', 'twoMs': 1},
+                                            {'c': Rational(2,1), 'function': 'd_xy', 'twoMs': 1},
+                                            {'c': Rational(4,1), 'function': 'd_yz', 'twoMs': -1},
+                                            {'c': (Rational(4,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_zx', 'twoMs': -1}
                                         ],
                                         'mu': 5
                                     },
                                     {
                                         'components': [
-                                            {'c': Rational(1,1), 'function': 'd_x2-y2', 'twoMs': -1},
-                                            {'c': (Rational(-2,1)*exp(2*pi*I*Rational(1,4))), 'function': 'd_xy', 'twoMs': -1}
+                                            {
+                                                'c': (Rational(1,1)*exp(2*pi*I*Rational(1,4))),
+                                                'function': 'd_x2-y2',
+                                                'twoMs': -1
+                                            },
+                                            {'c': Rational(2,1), 'function': 'd_xy', 'twoMs': -1}
                                         ],
                                         'mu': 6
                                     }
@@ -204267,8 +204291,14 @@ o3d = {
                     'kappa': 1,
                     'twoJ': 1,
                     'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 1}], 'mu': 1},
-                        {'components': [{'e': Rational(1,1), 'twoM': -1}], 'mu': 2}
+                        {
+                            'components': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1}],
+                            'mu': 2
+                        }
                     ]
                 },
                 {
@@ -204278,26 +204308,22 @@ o3d = {
                     'kappa': 1,
                     'twoJ': 3,
                     'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 3}], 'mu': 1},
                         {
-                            'components': [
-                                {
-                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 1
-                                }
-                            ],
+                            'components': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3}],
+                            'mu': 1
+                        },
+                        {
+                            'components': [{'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 1}],
                             'mu': 2
                         },
                         {
-                            'components': [
-                                {
-                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -1
-                                }
-                            ],
+                            'components': [{'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -1}],
                             'mu': 3
                         },
-                        {'components': [{'e': Rational(1,1), 'twoM': -3}], 'mu': 4}
+                        {
+                            'components': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3}],
+                            'mu': 4
+                        }
                     ]
                 },
                 {
@@ -204307,11 +204333,14 @@ o3d = {
                     'kappa': 1,
                     'twoJ': 5,
                     'vectors': [
-                        {'components': [{'e': Rational(1,1), 'twoM': 5}], 'mu': 1},
+                        {
+                            'components': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5}],
+                            'mu': 1
+                        },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1,1)*exp(2*pi*I*Rational(5,20)) + Rational(2,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 }
                             ],
@@ -204320,7 +204349,7 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(1,40)) + Rational(2,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2,1)*exp(2*pi*I*Rational(7,40)) + Rational(2,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1,1)*exp(2*pi*I*Rational(5,40)) + Rational(2,1)*exp(2*pi*I*Rational(7,40)) + Rational(2,1)*exp(2*pi*I*Rational(9,40)) + Rational(1,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 1
                                 }
                             ],
@@ -204329,7 +204358,7 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(1,40)) + Rational(2,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2,1)*exp(2*pi*I*Rational(7,40)) + Rational(2,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1,1)*exp(2*pi*I*Rational(5,40)) + Rational(2,1)*exp(2*pi*I*Rational(7,40)) + Rational(2,1)*exp(2*pi*I*Rational(9,40)) + Rational(1,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -1
                                 }
                             ],
@@ -204338,13 +204367,16 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1,1)*exp(2*pi*I*Rational(5,20)) + Rational(2,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 }
                             ],
                             'mu': 5
                         },
-                        {'components': [{'e': Rational(1,1), 'twoM': -5}], 'mu': 6}
+                        {
+                            'components': [{'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5}],
+                            'mu': 6
+                        }
                     ]
                 },
                 {
@@ -204356,14 +204388,14 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(5,1), 'twoM': -7},
+                                {'e': (Rational(5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(7,1) + Rational(14,1)*exp(2*pi*I*Rational(2,5)) + Rational(14,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-14,1)*exp(2*pi*I*Rational(3,20)) + Rational(7,1)*exp(2*pi*I*Rational(5,20)) + Rational(-14,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(35,1), 'twoM': 1},
+                                {'e': (Rational(35,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(-7,1) + Rational(-14,1)*exp(2*pi*I*Rational(2,5)) + Rational(-14,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(14,1)*exp(2*pi*I*Rational(3,20)) + Rational(-7,1)*exp(2*pi*I*Rational(5,20)) + Rational(14,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 }
                             ],
@@ -204372,15 +204404,15 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(7,1) + Rational(14,1)*exp(2*pi*I*Rational(2,5)) + Rational(14,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-14,1)*exp(2*pi*I*Rational(3,20)) + Rational(7,1)*exp(2*pi*I*Rational(5,20)) + Rational(-14,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(-35,1), 'twoM': -1},
+                                {'e': (Rational(-35,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(-7,1) + Rational(-14,1)*exp(2*pi*I*Rational(2,5)) + Rational(-14,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(14,1)*exp(2*pi*I*Rational(3,20)) + Rational(-7,1)*exp(2*pi*I*Rational(5,20)) + Rational(14,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(-5,1), 'twoM': 7}
+                                {'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7}
                             ],
                             'mu': 2
                         }
@@ -204395,14 +204427,14 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(15,1), 'twoM': -7},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(-21,1) + Rational(-42,1)*exp(2*pi*I*Rational(2,5)) + Rational(-42,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(42,1)*exp(2*pi*I*Rational(3,20)) + Rational(-21,1)*exp(2*pi*I*Rational(5,20)) + Rational(42,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(-35,1), 'twoM': 1},
+                                {'e': (Rational(-35,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(2,5)) + Rational(2,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-2,1)*exp(2*pi*I*Rational(3,20)) + Rational(1,1)*exp(2*pi*I*Rational(5,20)) + Rational(-2,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 }
                             ],
@@ -204410,14 +204442,14 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(-35,1), 'twoM': -5},
+                                {'e': (Rational(-35,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(-35,1) + Rational(-70,1)*exp(2*pi*I*Rational(2,5)) + Rational(-70,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(70,1)*exp(2*pi*I*Rational(3,20)) + Rational(-35,1)*exp(2*pi*I*Rational(5,20)) + Rational(70,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(15,1), 'twoM': 3},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1,1)*exp(2*pi*I*Rational(5,20)) + Rational(2,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 }
                             ],
@@ -204426,19 +204458,19 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(5,1)*exp(2*pi*I*Rational(1,8)) + Rational(-5,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(5,1)*exp(2*pi*I*Rational(1,8)) + Rational(5,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(-42,1)*exp(2*pi*I*Rational(1,40)) + Rational(-42,1)*exp(2*pi*I*Rational(3,40)) + Rational(21,1)*exp(2*pi*I*Rational(5,40)) + Rational(42,1)*exp(2*pi*I*Rational(7,40)) + Rational(-42,1)*exp(2*pi*I*Rational(9,40)) + Rational(21,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-42,1)*exp(2*pi*I*Rational(1,40)) + Rational(42,1)*exp(2*pi*I*Rational(3,40)) + Rational(21,1)*exp(2*pi*I*Rational(5,40)) + Rational(-42,1)*exp(2*pi*I*Rational(7,40)) + Rational(-42,1)*exp(2*pi*I*Rational(9,40)) + Rational(-21,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(-25,1)*exp(2*pi*I*Rational(1,8)) + Rational(25,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-25,1)*exp(2*pi*I*Rational(1,8)) + Rational(-25,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(-14,1)*exp(2*pi*I*Rational(1,40)) + Rational(-14,1)*exp(2*pi*I*Rational(3,40)) + Rational(7,1)*exp(2*pi*I*Rational(5,40)) + Rational(14,1)*exp(2*pi*I*Rational(7,40)) + Rational(-14,1)*exp(2*pi*I*Rational(9,40)) + Rational(7,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-14,1)*exp(2*pi*I*Rational(1,40)) + Rational(14,1)*exp(2*pi*I*Rational(3,40)) + Rational(7,1)*exp(2*pi*I*Rational(5,40)) + Rational(-14,1)*exp(2*pi*I*Rational(7,40)) + Rational(-14,1)*exp(2*pi*I*Rational(9,40)) + Rational(-7,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 5
                                 }
                             ],
@@ -204447,19 +204479,19 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(14,1)*exp(2*pi*I*Rational(1,40)) + Rational(14,1)*exp(2*pi*I*Rational(3,40)) + Rational(-7,1)*exp(2*pi*I*Rational(5,40)) + Rational(-14,1)*exp(2*pi*I*Rational(7,40)) + Rational(14,1)*exp(2*pi*I*Rational(9,40)) + Rational(-7,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(14,1)*exp(2*pi*I*Rational(1,40)) + Rational(-14,1)*exp(2*pi*I*Rational(3,40)) + Rational(-7,1)*exp(2*pi*I*Rational(5,40)) + Rational(14,1)*exp(2*pi*I*Rational(7,40)) + Rational(14,1)*exp(2*pi*I*Rational(9,40)) + Rational(7,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(25,1)*exp(2*pi*I*Rational(1,8)) + Rational(-25,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(25,1)*exp(2*pi*I*Rational(1,8)) + Rational(25,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(42,1)*exp(2*pi*I*Rational(1,40)) + Rational(42,1)*exp(2*pi*I*Rational(3,40)) + Rational(-21,1)*exp(2*pi*I*Rational(5,40)) + Rational(-42,1)*exp(2*pi*I*Rational(7,40)) + Rational(42,1)*exp(2*pi*I*Rational(9,40)) + Rational(-21,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(42,1)*exp(2*pi*I*Rational(1,40)) + Rational(-42,1)*exp(2*pi*I*Rational(3,40)) + Rational(-21,1)*exp(2*pi*I*Rational(5,40)) + Rational(42,1)*exp(2*pi*I*Rational(7,40)) + Rational(42,1)*exp(2*pi*I*Rational(9,40)) + Rational(21,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,8)) + Rational(5,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,8)) + Rational(-5,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 7
                                 }
                             ],
@@ -204468,30 +204500,30 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(2,5)) + Rational(2,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-2,1)*exp(2*pi*I*Rational(3,20)) + Rational(1,1)*exp(2*pi*I*Rational(5,20)) + Rational(-2,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(-15,1), 'twoM': -3},
+                                {'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(35,1) + Rational(70,1)*exp(2*pi*I*Rational(2,5)) + Rational(70,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-70,1)*exp(2*pi*I*Rational(3,20)) + Rational(35,1)*exp(2*pi*I*Rational(5,20)) + Rational(-70,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(35,1), 'twoM': 5}
+                                {'e': (Rational(35,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5}
                             ],
                             'mu': 5
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1,1)*exp(2*pi*I*Rational(5,20)) + Rational(2,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(35,1), 'twoM': -1},
+                                {'e': (Rational(35,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(21,1) + Rational(42,1)*exp(2*pi*I*Rational(2,5)) + Rational(42,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-42,1)*exp(2*pi*I*Rational(3,20)) + Rational(21,1)*exp(2*pi*I*Rational(5,20)) + Rational(-42,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(-15,1), 'twoM': 7}
+                                {'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7}
                             ],
                             'mu': 6
                         }
@@ -204506,40 +204538,34 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(5,1), 'twoM': -9},
+                                {'e': (Rational(5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(-12,1) + Rational(-24,1)*exp(2*pi*I*Rational(2,5)) + Rational(-24,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(24,1)*exp(2*pi*I*Rational(3,20)) + Rational(-12,1)*exp(2*pi*I*Rational(5,20)) + Rational(24,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(-42,1), 'twoM': -1},
+                                {'e': (Rational(-42,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(4,1) + Rational(8,1)*exp(2*pi*I*Rational(2,5)) + Rational(8,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-8,1)*exp(2*pi*I*Rational(3,20)) + Rational(4,1)*exp(2*pi*I*Rational(5,20)) + Rational(-8,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(-3,1), 'twoM': 7}
+                                {'e': (Rational(-3,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7}
                             ],
                             'mu': 1
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(18,1)*exp(2*pi*I*Rational(1,60)) + Rational(-18,1)*exp(2*pi*I*Rational(5,60)) + Rational(-36,1)*exp(2*pi*I*Rational(7,60)) + Rational(-18,1)*exp(2*pi*I*Rational(9,60)) + Rational(-18,1)*exp(2*pi*I*Rational(11,60)) + Rational(36,1)*exp(2*pi*I*Rational(13,60)) + Rational(27,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(27,1) + Rational(-36,1)*exp(2*pi*I*Rational(1,15)) + Rational(-18,1)*exp(2*pi*I*Rational(2,15)) + Rational(18,1)*exp(2*pi*I*Rational(3,15)) + Rational(-36,1)*exp(2*pi*I*Rational(4,15)) + Rational(18,1)*exp(2*pi*I*Rational(5,15)) + Rational(-18,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -7
                                 },
+                                {'e': (Rational(84,1) + Rational(168,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -3},
                                 {
-                                    'e': (Rational(168,1)*exp(2*pi*I*Rational(1,12)) + Rational(-84,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -3
-                                },
-                                {
-                                    'e': (Rational(-36,1)*exp(2*pi*I*Rational(1,60)) + Rational(36,1)*exp(2*pi*I*Rational(5,60)) + Rational(72,1)*exp(2*pi*I*Rational(7,60)) + Rational(36,1)*exp(2*pi*I*Rational(9,60)) + Rational(36,1)*exp(2*pi*I*Rational(11,60)) + Rational(-72,1)*exp(2*pi*I*Rational(13,60)) + Rational(-54,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-54,1) + Rational(72,1)*exp(2*pi*I*Rational(1,15)) + Rational(36,1)*exp(2*pi*I*Rational(2,15)) + Rational(-36,1)*exp(2*pi*I*Rational(3,15)) + Rational(72,1)*exp(2*pi*I*Rational(4,15)) + Rational(-36,1)*exp(2*pi*I*Rational(5,15)) + Rational(36,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 1
                                 },
+                                {'e': (Rational(36,1) + Rational(72,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 5},
                                 {
-                                    'e': (Rational(72,1)*exp(2*pi*I*Rational(1,12)) + Rational(-36,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 5
-                                },
-                                {
-                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(1,60)) + Rational(-2,1)*exp(2*pi*I*Rational(5,60)) + Rational(-4,1)*exp(2*pi*I*Rational(7,60)) + Rational(-2,1)*exp(2*pi*I*Rational(9,60)) + Rational(-2,1)*exp(2*pi*I*Rational(11,60)) + Rational(4,1)*exp(2*pi*I*Rational(13,60)) + Rational(3,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(3,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,15)) + Rational(-2,1)*exp(2*pi*I*Rational(2,15)) + Rational(2,1)*exp(2*pi*I*Rational(3,15)) + Rational(-4,1)*exp(2*pi*I*Rational(4,15)) + Rational(2,1)*exp(2*pi*I*Rational(5,15)) + Rational(-2,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 9
                                 }
                             ],
@@ -204548,23 +204574,17 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-2,1)*exp(2*pi*I*Rational(1,60)) + Rational(2,1)*exp(2*pi*I*Rational(5,60)) + Rational(4,1)*exp(2*pi*I*Rational(7,60)) + Rational(2,1)*exp(2*pi*I*Rational(9,60)) + Rational(2,1)*exp(2*pi*I*Rational(11,60)) + Rational(-4,1)*exp(2*pi*I*Rational(13,60)) + Rational(-3,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-3,1) + Rational(4,1)*exp(2*pi*I*Rational(1,15)) + Rational(2,1)*exp(2*pi*I*Rational(2,15)) + Rational(-2,1)*exp(2*pi*I*Rational(3,15)) + Rational(4,1)*exp(2*pi*I*Rational(4,15)) + Rational(-2,1)*exp(2*pi*I*Rational(5,15)) + Rational(2,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -9
                                 },
+                                {'e': (Rational(-36,1) + Rational(-72,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -5},
                                 {
-                                    'e': (Rational(-72,1)*exp(2*pi*I*Rational(1,12)) + Rational(36,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -5
-                                },
-                                {
-                                    'e': (Rational(36,1)*exp(2*pi*I*Rational(1,60)) + Rational(-36,1)*exp(2*pi*I*Rational(5,60)) + Rational(-72,1)*exp(2*pi*I*Rational(7,60)) + Rational(-36,1)*exp(2*pi*I*Rational(9,60)) + Rational(-36,1)*exp(2*pi*I*Rational(11,60)) + Rational(72,1)*exp(2*pi*I*Rational(13,60)) + Rational(54,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(54,1) + Rational(-72,1)*exp(2*pi*I*Rational(1,15)) + Rational(-36,1)*exp(2*pi*I*Rational(2,15)) + Rational(36,1)*exp(2*pi*I*Rational(3,15)) + Rational(-72,1)*exp(2*pi*I*Rational(4,15)) + Rational(36,1)*exp(2*pi*I*Rational(5,15)) + Rational(-36,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -1
                                 },
+                                {'e': (Rational(-84,1) + Rational(-168,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 3},
                                 {
-                                    'e': (Rational(-168,1)*exp(2*pi*I*Rational(1,12)) + Rational(84,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 3
-                                },
-                                {
-                                    'e': (Rational(-18,1)*exp(2*pi*I*Rational(1,60)) + Rational(18,1)*exp(2*pi*I*Rational(5,60)) + Rational(36,1)*exp(2*pi*I*Rational(7,60)) + Rational(18,1)*exp(2*pi*I*Rational(9,60)) + Rational(18,1)*exp(2*pi*I*Rational(11,60)) + Rational(-36,1)*exp(2*pi*I*Rational(13,60)) + Rational(-27,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-27,1) + Rational(36,1)*exp(2*pi*I*Rational(1,15)) + Rational(18,1)*exp(2*pi*I*Rational(2,15)) + Rational(-18,1)*exp(2*pi*I*Rational(3,15)) + Rational(36,1)*exp(2*pi*I*Rational(4,15)) + Rational(-18,1)*exp(2*pi*I*Rational(5,15)) + Rational(18,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 7
                                 }
                             ],
@@ -204572,17 +204592,17 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(3,1), 'twoM': -7},
+                                {'e': (Rational(3,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(-4,1) + Rational(-8,1)*exp(2*pi*I*Rational(2,5)) + Rational(-8,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(8,1)*exp(2*pi*I*Rational(3,20)) + Rational(-4,1)*exp(2*pi*I*Rational(5,20)) + Rational(8,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(42,1), 'twoM': 1},
+                                {'e': (Rational(42,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(12,1) + Rational(24,1)*exp(2*pi*I*Rational(2,5)) + Rational(24,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-24,1)*exp(2*pi*I*Rational(3,20)) + Rational(12,1)*exp(2*pi*I*Rational(5,20)) + Rational(-24,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(-5,1), 'twoM': 9}
+                                {'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9}
                             ],
                             'mu': 4
                         }
@@ -204597,34 +204617,34 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(15,1), 'twoM': -7},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(-28,1) + Rational(-56,1)*exp(2*pi*I*Rational(2,5)) + Rational(-56,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(56,1)*exp(2*pi*I*Rational(3,20)) + Rational(-28,1)*exp(2*pi*I*Rational(5,20)) + Rational(56,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(-70,1), 'twoM': 1},
+                                {'e': (Rational(-70,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(4,1) + Rational(8,1)*exp(2*pi*I*Rational(2,5)) + Rational(8,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-8,1)*exp(2*pi*I*Rational(3,20)) + Rational(4,1)*exp(2*pi*I*Rational(5,20)) + Rational(-8,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(-1,1), 'twoM': 9}
+                                {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9}
                             ],
                             'mu': 1
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-15,1) + Rational(-30,1)*exp(2*pi*I*Rational(2,5)) + Rational(-30,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(30,1)*exp(2*pi*I*Rational(3,20)) + Rational(-15,1)*exp(2*pi*I*Rational(5,20)) + Rational(30,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(-20,1), 'twoM': -5},
+                                {'e': (Rational(-20,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(-154,1) + Rational(-308,1)*exp(2*pi*I*Rational(2,5)) + Rational(-308,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(308,1)*exp(2*pi*I*Rational(3,20)) + Rational(-154,1)*exp(2*pi*I*Rational(5,20)) + Rational(308,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(140,1), 'twoM': 3},
+                                {'e': (Rational(140,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(-31,1) + Rational(-62,1)*exp(2*pi*I*Rational(2,5)) + Rational(-62,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(62,1)*exp(2*pi*I*Rational(3,20)) + Rational(-31,1)*exp(2*pi*I*Rational(5,20)) + Rational(62,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 }
                             ],
@@ -204633,23 +204653,23 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-65,1)*exp(2*pi*I*Rational(1,8)) + Rational(65,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-65,1)*exp(2*pi*I*Rational(1,8)) + Rational(-65,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(56,1)*exp(2*pi*I*Rational(1,40)) + Rational(56,1)*exp(2*pi*I*Rational(3,40)) + Rational(-28,1)*exp(2*pi*I*Rational(5,40)) + Rational(-56,1)*exp(2*pi*I*Rational(7,40)) + Rational(56,1)*exp(2*pi*I*Rational(9,40)) + Rational(-28,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(56,1)*exp(2*pi*I*Rational(1,40)) + Rational(-56,1)*exp(2*pi*I*Rational(3,40)) + Rational(-28,1)*exp(2*pi*I*Rational(5,40)) + Rational(56,1)*exp(2*pi*I*Rational(7,40)) + Rational(56,1)*exp(2*pi*I*Rational(9,40)) + Rational(28,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(-70,1)*exp(2*pi*I*Rational(1,8)) + Rational(70,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-70,1)*exp(2*pi*I*Rational(1,8)) + Rational(-70,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(-136,1)*exp(2*pi*I*Rational(1,40)) + Rational(-136,1)*exp(2*pi*I*Rational(3,40)) + Rational(68,1)*exp(2*pi*I*Rational(5,40)) + Rational(136,1)*exp(2*pi*I*Rational(7,40)) + Rational(-136,1)*exp(2*pi*I*Rational(9,40)) + Rational(68,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-136,1)*exp(2*pi*I*Rational(1,40)) + Rational(136,1)*exp(2*pi*I*Rational(3,40)) + Rational(68,1)*exp(2*pi*I*Rational(5,40)) + Rational(-136,1)*exp(2*pi*I*Rational(7,40)) + Rational(-136,1)*exp(2*pi*I*Rational(9,40)) + Rational(-68,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 5
                                 },
                                 {
-                                    'e': (Rational(15,1)*exp(2*pi*I*Rational(1,8)) + Rational(-15,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(15,1)*exp(2*pi*I*Rational(1,8)) + Rational(15,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 9
                                 }
                             ],
@@ -204658,23 +204678,23 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(15,1)*exp(2*pi*I*Rational(1,8)) + Rational(-15,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(15,1)*exp(2*pi*I*Rational(1,8)) + Rational(15,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(-136,1)*exp(2*pi*I*Rational(1,40)) + Rational(-136,1)*exp(2*pi*I*Rational(3,40)) + Rational(68,1)*exp(2*pi*I*Rational(5,40)) + Rational(136,1)*exp(2*pi*I*Rational(7,40)) + Rational(-136,1)*exp(2*pi*I*Rational(9,40)) + Rational(68,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-136,1)*exp(2*pi*I*Rational(1,40)) + Rational(136,1)*exp(2*pi*I*Rational(3,40)) + Rational(68,1)*exp(2*pi*I*Rational(5,40)) + Rational(-136,1)*exp(2*pi*I*Rational(7,40)) + Rational(-136,1)*exp(2*pi*I*Rational(9,40)) + Rational(-68,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(-70,1)*exp(2*pi*I*Rational(1,8)) + Rational(70,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-70,1)*exp(2*pi*I*Rational(1,8)) + Rational(-70,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(56,1)*exp(2*pi*I*Rational(1,40)) + Rational(56,1)*exp(2*pi*I*Rational(3,40)) + Rational(-28,1)*exp(2*pi*I*Rational(5,40)) + Rational(-56,1)*exp(2*pi*I*Rational(7,40)) + Rational(56,1)*exp(2*pi*I*Rational(9,40)) + Rational(-28,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(56,1)*exp(2*pi*I*Rational(1,40)) + Rational(-56,1)*exp(2*pi*I*Rational(3,40)) + Rational(-28,1)*exp(2*pi*I*Rational(5,40)) + Rational(56,1)*exp(2*pi*I*Rational(7,40)) + Rational(56,1)*exp(2*pi*I*Rational(9,40)) + Rational(28,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(-65,1)*exp(2*pi*I*Rational(1,8)) + Rational(65,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-65,1)*exp(2*pi*I*Rational(1,8)) + Rational(-65,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 7
                                 }
                             ],
@@ -204683,17 +204703,17 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-31,1) + Rational(-62,1)*exp(2*pi*I*Rational(2,5)) + Rational(-62,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(62,1)*exp(2*pi*I*Rational(3,20)) + Rational(-31,1)*exp(2*pi*I*Rational(5,20)) + Rational(62,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(140,1), 'twoM': -3},
+                                {'e': (Rational(140,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(-154,1) + Rational(-308,1)*exp(2*pi*I*Rational(2,5)) + Rational(-308,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(308,1)*exp(2*pi*I*Rational(3,20)) + Rational(-154,1)*exp(2*pi*I*Rational(5,20)) + Rational(308,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(-20,1), 'twoM': 5},
+                                {'e': (Rational(-20,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(-15,1) + Rational(-30,1)*exp(2*pi*I*Rational(2,5)) + Rational(-30,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(30,1)*exp(2*pi*I*Rational(3,20)) + Rational(-15,1)*exp(2*pi*I*Rational(5,20)) + Rational(30,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 }
                             ],
@@ -204701,17 +204721,17 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(-1,1), 'twoM': -9},
+                                {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(4,1) + Rational(8,1)*exp(2*pi*I*Rational(2,5)) + Rational(8,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-8,1)*exp(2*pi*I*Rational(3,20)) + Rational(4,1)*exp(2*pi*I*Rational(5,20)) + Rational(-8,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(-70,1), 'twoM': -1},
+                                {'e': (Rational(-70,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(-28,1) + Rational(-56,1)*exp(2*pi*I*Rational(2,5)) + Rational(-56,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(56,1)*exp(2*pi*I*Rational(3,20)) + Rational(-28,1)*exp(2*pi*I*Rational(5,20)) + Rational(56,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(15,1), 'twoM': 7}
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7}
                             ],
                             'mu': 6
                         }
@@ -204726,19 +204746,19 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(15,1), 'twoM': -11},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(-55,1) + Rational(-110,1)*exp(2*pi*I*Rational(2,5)) + Rational(-110,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(110,1)*exp(2*pi*I*Rational(3,20)) + Rational(-55,1)*exp(2*pi*I*Rational(5,20)) + Rational(110,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(-330,1), 'twoM': -3},
+                                {'e': (Rational(-330,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(66,1) + Rational(132,1)*exp(2*pi*I*Rational(2,5)) + Rational(132,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-132,1)*exp(2*pi*I*Rational(3,20)) + Rational(66,1)*exp(2*pi*I*Rational(5,20)) + Rational(-132,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(-165,1), 'twoM': 5},
+                                {'e': (Rational(-165,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(-11,1) + Rational(-22,1)*exp(2*pi*I*Rational(2,5)) + Rational(-22,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(22,1)*exp(2*pi*I*Rational(3,20)) + Rational(-11,1)*exp(2*pi*I*Rational(5,20)) + Rational(22,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 }
                             ],
@@ -204747,20 +204767,20 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(11,1) + Rational(22,1)*exp(2*pi*I*Rational(2,5)) + Rational(22,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-22,1)*exp(2*pi*I*Rational(3,20)) + Rational(11,1)*exp(2*pi*I*Rational(5,20)) + Rational(-22,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(165,1), 'twoM': -5},
+                                {'e': (Rational(165,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(-66,1) + Rational(-132,1)*exp(2*pi*I*Rational(2,5)) + Rational(-132,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(132,1)*exp(2*pi*I*Rational(3,20)) + Rational(-66,1)*exp(2*pi*I*Rational(5,20)) + Rational(132,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(330,1), 'twoM': 3},
+                                {'e': (Rational(330,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(55,1) + Rational(110,1)*exp(2*pi*I*Rational(2,5)) + Rational(110,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-110,1)*exp(2*pi*I*Rational(3,20)) + Rational(55,1)*exp(2*pi*I*Rational(5,20)) + Rational(-110,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(-15,1), 'twoM': 11}
+                                {'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11}
                             ],
                             'mu': 2
                         }
@@ -204775,19 +204795,19 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(15,1), 'twoM': -9},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(-45,1) + Rational(-90,1)*exp(2*pi*I*Rational(2,5)) + Rational(-90,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(90,1)*exp(2*pi*I*Rational(3,20)) + Rational(-45,1)*exp(2*pi*I*Rational(5,20)) + Rational(90,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(-210,1), 'twoM': -1},
+                                {'e': (Rational(-210,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(30,1) + Rational(60,1)*exp(2*pi*I*Rational(2,5)) + Rational(60,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-60,1)*exp(2*pi*I*Rational(3,20)) + Rational(30,1)*exp(2*pi*I*Rational(5,20)) + Rational(-60,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(-45,1), 'twoM': 7},
+                                {'e': (Rational(-45,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7},
                                 {
-                                    'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1,1)*exp(2*pi*I*Rational(5,20)) + Rational(2,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 }
                             ],
@@ -204795,28 +204815,19 @@ o3d = {
                         },
                         {
                             'components': [
+                                {'e': (Rational(15,1) + Rational(30,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -11},
                                 {
-                                    'e': (Rational(30,1)*exp(2*pi*I*Rational(1,12)) + Rational(-15,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -11
-                                },
-                                {
-                                    'e': (Rational(-50,1)*exp(2*pi*I*Rational(1,60)) + Rational(50,1)*exp(2*pi*I*Rational(5,60)) + Rational(100,1)*exp(2*pi*I*Rational(7,60)) + Rational(50,1)*exp(2*pi*I*Rational(9,60)) + Rational(50,1)*exp(2*pi*I*Rational(11,60)) + Rational(-100,1)*exp(2*pi*I*Rational(13,60)) + Rational(-75,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-75,1) + Rational(100,1)*exp(2*pi*I*Rational(1,15)) + Rational(50,1)*exp(2*pi*I*Rational(2,15)) + Rational(-50,1)*exp(2*pi*I*Rational(3,15)) + Rational(100,1)*exp(2*pi*I*Rational(4,15)) + Rational(-50,1)*exp(2*pi*I*Rational(5,15)) + Rational(50,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -7
                                 },
+                                {'e': (Rational(30,1) + Rational(60,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -3},
                                 {
-                                    'e': (Rational(60,1)*exp(2*pi*I*Rational(1,12)) + Rational(-30,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -3
-                                },
-                                {
-                                    'e': (Rational(-84,1)*exp(2*pi*I*Rational(1,60)) + Rational(84,1)*exp(2*pi*I*Rational(5,60)) + Rational(168,1)*exp(2*pi*I*Rational(7,60)) + Rational(84,1)*exp(2*pi*I*Rational(9,60)) + Rational(84,1)*exp(2*pi*I*Rational(11,60)) + Rational(-168,1)*exp(2*pi*I*Rational(13,60)) + Rational(-126,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-126,1) + Rational(168,1)*exp(2*pi*I*Rational(1,15)) + Rational(84,1)*exp(2*pi*I*Rational(2,15)) + Rational(-84,1)*exp(2*pi*I*Rational(3,15)) + Rational(168,1)*exp(2*pi*I*Rational(4,15)) + Rational(-84,1)*exp(2*pi*I*Rational(5,15)) + Rational(84,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 1
                                 },
+                                {'e': (Rational(195,1) + Rational(390,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 5},
                                 {
-                                    'e': (Rational(390,1)*exp(2*pi*I*Rational(1,12)) + Rational(-195,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 5
-                                },
-                                {
-                                    'e': (Rational(38,1)*exp(2*pi*I*Rational(1,60)) + Rational(-38,1)*exp(2*pi*I*Rational(5,60)) + Rational(-76,1)*exp(2*pi*I*Rational(7,60)) + Rational(-38,1)*exp(2*pi*I*Rational(9,60)) + Rational(-38,1)*exp(2*pi*I*Rational(11,60)) + Rational(76,1)*exp(2*pi*I*Rational(13,60)) + Rational(57,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(57,1) + Rational(-76,1)*exp(2*pi*I*Rational(1,15)) + Rational(-38,1)*exp(2*pi*I*Rational(2,15)) + Rational(38,1)*exp(2*pi*I*Rational(3,15)) + Rational(-76,1)*exp(2*pi*I*Rational(4,15)) + Rational(38,1)*exp(2*pi*I*Rational(5,15)) + Rational(-38,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 9
                                 }
                             ],
@@ -204825,49 +204836,40 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(38,1)*exp(2*pi*I*Rational(1,60)) + Rational(-38,1)*exp(2*pi*I*Rational(5,60)) + Rational(-76,1)*exp(2*pi*I*Rational(7,60)) + Rational(-38,1)*exp(2*pi*I*Rational(9,60)) + Rational(-38,1)*exp(2*pi*I*Rational(11,60)) + Rational(76,1)*exp(2*pi*I*Rational(13,60)) + Rational(57,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(57,1) + Rational(-76,1)*exp(2*pi*I*Rational(1,15)) + Rational(-38,1)*exp(2*pi*I*Rational(2,15)) + Rational(38,1)*exp(2*pi*I*Rational(3,15)) + Rational(-76,1)*exp(2*pi*I*Rational(4,15)) + Rational(38,1)*exp(2*pi*I*Rational(5,15)) + Rational(-38,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -9
                                 },
+                                {'e': (Rational(195,1) + Rational(390,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -5},
                                 {
-                                    'e': (Rational(390,1)*exp(2*pi*I*Rational(1,12)) + Rational(-195,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -5
-                                },
-                                {
-                                    'e': (Rational(-84,1)*exp(2*pi*I*Rational(1,60)) + Rational(84,1)*exp(2*pi*I*Rational(5,60)) + Rational(168,1)*exp(2*pi*I*Rational(7,60)) + Rational(84,1)*exp(2*pi*I*Rational(9,60)) + Rational(84,1)*exp(2*pi*I*Rational(11,60)) + Rational(-168,1)*exp(2*pi*I*Rational(13,60)) + Rational(-126,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-126,1) + Rational(168,1)*exp(2*pi*I*Rational(1,15)) + Rational(84,1)*exp(2*pi*I*Rational(2,15)) + Rational(-84,1)*exp(2*pi*I*Rational(3,15)) + Rational(168,1)*exp(2*pi*I*Rational(4,15)) + Rational(-84,1)*exp(2*pi*I*Rational(5,15)) + Rational(84,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -1
                                 },
+                                {'e': (Rational(30,1) + Rational(60,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 3},
                                 {
-                                    'e': (Rational(60,1)*exp(2*pi*I*Rational(1,12)) + Rational(-30,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 3
-                                },
-                                {
-                                    'e': (Rational(-50,1)*exp(2*pi*I*Rational(1,60)) + Rational(50,1)*exp(2*pi*I*Rational(5,60)) + Rational(100,1)*exp(2*pi*I*Rational(7,60)) + Rational(50,1)*exp(2*pi*I*Rational(9,60)) + Rational(50,1)*exp(2*pi*I*Rational(11,60)) + Rational(-100,1)*exp(2*pi*I*Rational(13,60)) + Rational(-75,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-75,1) + Rational(100,1)*exp(2*pi*I*Rational(1,15)) + Rational(50,1)*exp(2*pi*I*Rational(2,15)) + Rational(-50,1)*exp(2*pi*I*Rational(3,15)) + Rational(100,1)*exp(2*pi*I*Rational(4,15)) + Rational(-50,1)*exp(2*pi*I*Rational(5,15)) + Rational(50,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 7
                                 },
-                                {
-                                    'e': (Rational(30,1)*exp(2*pi*I*Rational(1,12)) + Rational(-15,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 11
-                                }
+                                {'e': (Rational(15,1) + Rational(30,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 11}
                             ],
                             'mu': 3
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1,1)*exp(2*pi*I*Rational(5,20)) + Rational(2,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(-45,1), 'twoM': -7},
+                                {'e': (Rational(-45,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(30,1) + Rational(60,1)*exp(2*pi*I*Rational(2,5)) + Rational(60,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-60,1)*exp(2*pi*I*Rational(3,20)) + Rational(30,1)*exp(2*pi*I*Rational(5,20)) + Rational(-60,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(-210,1), 'twoM': 1},
+                                {'e': (Rational(-210,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(-45,1) + Rational(-90,1)*exp(2*pi*I*Rational(2,5)) + Rational(-90,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(90,1)*exp(2*pi*I*Rational(3,20)) + Rational(-45,1)*exp(2*pi*I*Rational(5,20)) + Rational(90,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(15,1), 'twoM': 9}
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9}
                             ],
                             'mu': 4
                         }
@@ -204882,60 +204884,60 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(5,1), 'twoM': -7},
+                                {'e': (Rational(5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(-12,1) + Rational(-24,1)*exp(2*pi*I*Rational(2,5)) + Rational(-24,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(24,1)*exp(2*pi*I*Rational(3,20)) + Rational(-12,1)*exp(2*pi*I*Rational(5,20)) + Rational(24,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(-42,1), 'twoM': 1},
+                                {'e': (Rational(-42,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(4,1) + Rational(8,1)*exp(2*pi*I*Rational(2,5)) + Rational(8,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-8,1)*exp(2*pi*I*Rational(3,20)) + Rational(4,1)*exp(2*pi*I*Rational(5,20)) + Rational(-8,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(-3,1), 'twoM': 9}
+                                {'e': (Rational(-3,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9}
                             ],
                             'mu': 1
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-2,1) + Rational(-4,1)*exp(2*pi*I*Rational(2,5)) + Rational(-4,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(4,1)*exp(2*pi*I*Rational(3,20)) + Rational(-2,1)*exp(2*pi*I*Rational(5,20)) + Rational(4,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(15,1), 'twoM': -5},
-                                {'e': Rational(10,1), 'twoM': 3},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
+                                {'e': (Rational(10,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(-6,1) + Rational(-12,1)*exp(2*pi*I*Rational(2,5)) + Rational(-12,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(12,1)*exp(2*pi*I*Rational(3,20)) + Rational(-6,1)*exp(2*pi*I*Rational(5,20)) + Rational(12,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(-1,1), 'twoM': 11}
+                                {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11}
                             ],
                             'mu': 2
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(1,40)) + Rational(2,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2,1)*exp(2*pi*I*Rational(7,40)) + Rational(2,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1,1)*exp(2*pi*I*Rational(5,40)) + Rational(2,1)*exp(2*pi*I*Rational(7,40)) + Rational(2,1)*exp(2*pi*I*Rational(9,40)) + Rational(1,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -11
                                 },
                                 {
-                                    'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,8)) + Rational(5,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,8)) + Rational(-5,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(36,1)*exp(2*pi*I*Rational(1,40)) + Rational(36,1)*exp(2*pi*I*Rational(3,40)) + Rational(-18,1)*exp(2*pi*I*Rational(5,40)) + Rational(-36,1)*exp(2*pi*I*Rational(7,40)) + Rational(36,1)*exp(2*pi*I*Rational(9,40)) + Rational(-18,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(36,1)*exp(2*pi*I*Rational(1,40)) + Rational(-36,1)*exp(2*pi*I*Rational(3,40)) + Rational(-18,1)*exp(2*pi*I*Rational(5,40)) + Rational(36,1)*exp(2*pi*I*Rational(7,40)) + Rational(36,1)*exp(2*pi*I*Rational(9,40)) + Rational(18,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(14,1)*exp(2*pi*I*Rational(1,8)) + Rational(-14,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(14,1)*exp(2*pi*I*Rational(1,8)) + Rational(14,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(-6,1)*exp(2*pi*I*Rational(1,40)) + Rational(-6,1)*exp(2*pi*I*Rational(3,40)) + Rational(3,1)*exp(2*pi*I*Rational(5,40)) + Rational(6,1)*exp(2*pi*I*Rational(7,40)) + Rational(-6,1)*exp(2*pi*I*Rational(9,40)) + Rational(3,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-6,1)*exp(2*pi*I*Rational(1,40)) + Rational(6,1)*exp(2*pi*I*Rational(3,40)) + Rational(3,1)*exp(2*pi*I*Rational(5,40)) + Rational(-6,1)*exp(2*pi*I*Rational(7,40)) + Rational(-6,1)*exp(2*pi*I*Rational(9,40)) + Rational(-3,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 5
                                 },
                                 {
-                                    'e': (Rational(7,1)*exp(2*pi*I*Rational(1,8)) + Rational(-7,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(7,1)*exp(2*pi*I*Rational(1,8)) + Rational(7,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 9
                                 }
                             ],
@@ -204944,27 +204946,27 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-7,1)*exp(2*pi*I*Rational(1,8)) + Rational(7,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-7,1)*exp(2*pi*I*Rational(1,8)) + Rational(-7,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(6,1)*exp(2*pi*I*Rational(1,40)) + Rational(6,1)*exp(2*pi*I*Rational(3,40)) + Rational(-3,1)*exp(2*pi*I*Rational(5,40)) + Rational(-6,1)*exp(2*pi*I*Rational(7,40)) + Rational(6,1)*exp(2*pi*I*Rational(9,40)) + Rational(-3,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(6,1)*exp(2*pi*I*Rational(1,40)) + Rational(-6,1)*exp(2*pi*I*Rational(3,40)) + Rational(-3,1)*exp(2*pi*I*Rational(5,40)) + Rational(6,1)*exp(2*pi*I*Rational(7,40)) + Rational(6,1)*exp(2*pi*I*Rational(9,40)) + Rational(3,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(-14,1)*exp(2*pi*I*Rational(1,8)) + Rational(14,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-14,1)*exp(2*pi*I*Rational(1,8)) + Rational(-14,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(-36,1)*exp(2*pi*I*Rational(1,40)) + Rational(-36,1)*exp(2*pi*I*Rational(3,40)) + Rational(18,1)*exp(2*pi*I*Rational(5,40)) + Rational(36,1)*exp(2*pi*I*Rational(7,40)) + Rational(-36,1)*exp(2*pi*I*Rational(9,40)) + Rational(18,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-36,1)*exp(2*pi*I*Rational(1,40)) + Rational(36,1)*exp(2*pi*I*Rational(3,40)) + Rational(18,1)*exp(2*pi*I*Rational(5,40)) + Rational(-36,1)*exp(2*pi*I*Rational(7,40)) + Rational(-36,1)*exp(2*pi*I*Rational(9,40)) + Rational(-18,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(5,1)*exp(2*pi*I*Rational(1,8)) + Rational(-5,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(5,1)*exp(2*pi*I*Rational(1,8)) + Rational(5,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 7
                                 },
                                 {
-                                    'e': (Rational(-2,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2,1)*exp(2*pi*I*Rational(3,40)) + Rational(1,1)*exp(2*pi*I*Rational(5,40)) + Rational(2,1)*exp(2*pi*I*Rational(7,40)) + Rational(-2,1)*exp(2*pi*I*Rational(9,40)) + Rational(1,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-2,1)*exp(2*pi*I*Rational(1,40)) + Rational(2,1)*exp(2*pi*I*Rational(3,40)) + Rational(1,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2,1)*exp(2*pi*I*Rational(7,40)) + Rational(-2,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 11
                                 }
                             ],
@@ -204972,15 +204974,15 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -11},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(6,1) + Rational(12,1)*exp(2*pi*I*Rational(2,5)) + Rational(12,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-12,1)*exp(2*pi*I*Rational(3,20)) + Rational(6,1)*exp(2*pi*I*Rational(5,20)) + Rational(-12,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(-10,1), 'twoM': -3},
-                                {'e': Rational(-15,1), 'twoM': 5},
+                                {'e': (Rational(-10,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
+                                {'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(2,1) + Rational(4,1)*exp(2*pi*I*Rational(2,5)) + Rational(4,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-4,1)*exp(2*pi*I*Rational(3,20)) + Rational(2,1)*exp(2*pi*I*Rational(5,20)) + Rational(-4,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 }
                             ],
@@ -204988,17 +204990,17 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(3,1), 'twoM': -9},
+                                {'e': (Rational(3,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(-4,1) + Rational(-8,1)*exp(2*pi*I*Rational(2,5)) + Rational(-8,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(8,1)*exp(2*pi*I*Rational(3,20)) + Rational(-4,1)*exp(2*pi*I*Rational(5,20)) + Rational(8,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(42,1), 'twoM': -1},
+                                {'e': (Rational(42,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(12,1) + Rational(24,1)*exp(2*pi*I*Rational(2,5)) + Rational(24,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-24,1)*exp(2*pi*I*Rational(3,20)) + Rational(12,1)*exp(2*pi*I*Rational(5,20)) + Rational(-24,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(-5,1), 'twoM': 7}
+                                {'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7}
                             ],
                             'mu': 6
                         }
@@ -205013,43 +205015,43 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(5,1), 'twoM': -11},
+                                {'e': (Rational(5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(-22,1) + Rational(-44,1)*exp(2*pi*I*Rational(2,5)) + Rational(-44,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(44,1)*exp(2*pi*I*Rational(3,20)) + Rational(-22,1)*exp(2*pi*I*Rational(5,20)) + Rational(44,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(-165,1), 'twoM': -3},
+                                {'e': (Rational(-165,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(44,1) + Rational(88,1)*exp(2*pi*I*Rational(2,5)) + Rational(88,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-88,1)*exp(2*pi*I*Rational(3,20)) + Rational(44,1)*exp(2*pi*I*Rational(5,20)) + Rational(-88,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(-165,1), 'twoM': 5},
+                                {'e': (Rational(-165,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(-22,1) + Rational(-44,1)*exp(2*pi*I*Rational(2,5)) + Rational(-44,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(44,1)*exp(2*pi*I*Rational(3,20)) + Rational(-22,1)*exp(2*pi*I*Rational(5,20)) + Rational(44,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 },
-                                {'e': Rational(5,1), 'twoM': 13}
+                                {'e': (Rational(5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 13}
                             ],
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(5,1), 'twoM': -13},
+                                {'e': (Rational(5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -13},
                                 {
-                                    'e': (Rational(-22,1) + Rational(-44,1)*exp(2*pi*I*Rational(2,5)) + Rational(-44,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(44,1)*exp(2*pi*I*Rational(3,20)) + Rational(-22,1)*exp(2*pi*I*Rational(5,20)) + Rational(44,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(-165,1), 'twoM': -5},
+                                {'e': (Rational(-165,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(44,1) + Rational(88,1)*exp(2*pi*I*Rational(2,5)) + Rational(88,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-88,1)*exp(2*pi*I*Rational(3,20)) + Rational(44,1)*exp(2*pi*I*Rational(5,20)) + Rational(-88,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(-165,1), 'twoM': 3},
+                                {'e': (Rational(-165,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(-22,1) + Rational(-44,1)*exp(2*pi*I*Rational(2,5)) + Rational(-44,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(44,1)*exp(2*pi*I*Rational(3,20)) + Rational(-22,1)*exp(2*pi*I*Rational(5,20)) + Rational(44,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(5,1), 'twoM': 11}
+                                {'e': (Rational(5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11}
                             ],
                             'mu': 2
                         }
@@ -205064,43 +205066,43 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(65,1), 'twoM': -11},
+                                {'e': (Rational(65,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(-78,1) + Rational(-156,1)*exp(2*pi*I*Rational(2,5)) + Rational(-156,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(156,1)*exp(2*pi*I*Rational(3,20)) + Rational(-78,1)*exp(2*pi*I*Rational(5,20)) + Rational(156,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(975,1), 'twoM': -3},
+                                {'e': (Rational(975,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(156,1) + Rational(312,1)*exp(2*pi*I*Rational(2,5)) + Rational(312,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-312,1)*exp(2*pi*I*Rational(3,20)) + Rational(156,1)*exp(2*pi*I*Rational(5,20)) + Rational(-312,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(-65,1), 'twoM': 5},
+                                {'e': (Rational(-65,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(-78,1) + Rational(-156,1)*exp(2*pi*I*Rational(2,5)) + Rational(-156,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(156,1)*exp(2*pi*I*Rational(3,20)) + Rational(-78,1)*exp(2*pi*I*Rational(5,20)) + Rational(156,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 },
-                                {'e': Rational(-15,1), 'twoM': 13}
+                                {'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 13}
                             ],
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(-15,1), 'twoM': -13},
+                                {'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -13},
                                 {
-                                    'e': (Rational(-78,1) + Rational(-156,1)*exp(2*pi*I*Rational(2,5)) + Rational(-156,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(156,1)*exp(2*pi*I*Rational(3,20)) + Rational(-78,1)*exp(2*pi*I*Rational(5,20)) + Rational(156,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(-65,1), 'twoM': -5},
+                                {'e': (Rational(-65,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(156,1) + Rational(312,1)*exp(2*pi*I*Rational(2,5)) + Rational(312,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-312,1)*exp(2*pi*I*Rational(3,20)) + Rational(156,1)*exp(2*pi*I*Rational(5,20)) + Rational(-312,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(975,1), 'twoM': 3},
+                                {'e': (Rational(975,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(-78,1) + Rational(-156,1)*exp(2*pi*I*Rational(2,5)) + Rational(-156,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(156,1)*exp(2*pi*I*Rational(3,20)) + Rational(-78,1)*exp(2*pi*I*Rational(5,20)) + Rational(156,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(65,1), 'twoM': 11}
+                                {'e': (Rational(65,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11}
                             ],
                             'mu': 2
                         }
@@ -205115,19 +205117,19 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(15,1), 'twoM': -9},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(-55,1) + Rational(-110,1)*exp(2*pi*I*Rational(2,5)) + Rational(-110,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(110,1)*exp(2*pi*I*Rational(3,20)) + Rational(-55,1)*exp(2*pi*I*Rational(5,20)) + Rational(110,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(-330,1), 'twoM': -1},
+                                {'e': (Rational(-330,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(66,1) + Rational(132,1)*exp(2*pi*I*Rational(2,5)) + Rational(132,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-132,1)*exp(2*pi*I*Rational(3,20)) + Rational(66,1)*exp(2*pi*I*Rational(5,20)) + Rational(-132,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(-165,1), 'twoM': 7},
+                                {'e': (Rational(-165,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7},
                                 {
-                                    'e': (Rational(-11,1) + Rational(-22,1)*exp(2*pi*I*Rational(2,5)) + Rational(-22,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(22,1)*exp(2*pi*I*Rational(3,20)) + Rational(-11,1)*exp(2*pi*I*Rational(5,20)) + Rational(22,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 }
                             ],
@@ -205135,79 +205137,64 @@ o3d = {
                         },
                         {
                             'components': [
+                                {'e': (Rational(10,1) + Rational(20,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -11},
                                 {
-                                    'e': (Rational(20,1)*exp(2*pi*I*Rational(1,12)) + Rational(-10,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -11
-                                },
-                                {
-                                    'e': (Rational(-66,1)*exp(2*pi*I*Rational(1,60)) + Rational(66,1)*exp(2*pi*I*Rational(5,60)) + Rational(132,1)*exp(2*pi*I*Rational(7,60)) + Rational(66,1)*exp(2*pi*I*Rational(9,60)) + Rational(66,1)*exp(2*pi*I*Rational(11,60)) + Rational(-132,1)*exp(2*pi*I*Rational(13,60)) + Rational(-99,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-99,1) + Rational(132,1)*exp(2*pi*I*Rational(1,15)) + Rational(66,1)*exp(2*pi*I*Rational(2,15)) + Rational(-66,1)*exp(2*pi*I*Rational(3,15)) + Rational(132,1)*exp(2*pi*I*Rational(4,15)) + Rational(-66,1)*exp(2*pi*I*Rational(5,15)) + Rational(66,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(-330,1)*exp(2*pi*I*Rational(1,12)) + Rational(165,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-165,1) + Rational(-330,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(44,1)*exp(2*pi*I*Rational(1,60)) + Rational(-44,1)*exp(2*pi*I*Rational(5,60)) + Rational(-88,1)*exp(2*pi*I*Rational(7,60)) + Rational(-44,1)*exp(2*pi*I*Rational(9,60)) + Rational(-44,1)*exp(2*pi*I*Rational(11,60)) + Rational(88,1)*exp(2*pi*I*Rational(13,60)) + Rational(66,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(66,1) + Rational(-88,1)*exp(2*pi*I*Rational(1,15)) + Rational(-44,1)*exp(2*pi*I*Rational(2,15)) + Rational(44,1)*exp(2*pi*I*Rational(3,15)) + Rational(-88,1)*exp(2*pi*I*Rational(4,15)) + Rational(44,1)*exp(2*pi*I*Rational(5,15)) + Rational(-44,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(22,1)*exp(2*pi*I*Rational(1,60)) + Rational(-22,1)*exp(2*pi*I*Rational(5,60)) + Rational(-44,1)*exp(2*pi*I*Rational(7,60)) + Rational(-22,1)*exp(2*pi*I*Rational(9,60)) + Rational(-22,1)*exp(2*pi*I*Rational(11,60)) + Rational(44,1)*exp(2*pi*I*Rational(13,60)) + Rational(33,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(33,1) + Rational(-44,1)*exp(2*pi*I*Rational(1,15)) + Rational(-22,1)*exp(2*pi*I*Rational(2,15)) + Rational(22,1)*exp(2*pi*I*Rational(3,15)) + Rational(-44,1)*exp(2*pi*I*Rational(4,15)) + Rational(22,1)*exp(2*pi*I*Rational(5,15)) + Rational(-22,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 9
                                 },
-                                {
-                                    'e': (Rational(-10,1)*exp(2*pi*I*Rational(1,12)) + Rational(5,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 13
-                                }
+                                {'e': (Rational(-5,1) + Rational(-10,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 13}
                             ],
                             'mu': 2
                         },
                         {
                             'components': [
+                                {'e': (Rational(5,1) + Rational(10,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -13},
                                 {
-                                    'e': (Rational(10,1)*exp(2*pi*I*Rational(1,12)) + Rational(-5,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -13
-                                },
-                                {
-                                    'e': (Rational(-22,1)*exp(2*pi*I*Rational(1,60)) + Rational(22,1)*exp(2*pi*I*Rational(5,60)) + Rational(44,1)*exp(2*pi*I*Rational(7,60)) + Rational(22,1)*exp(2*pi*I*Rational(9,60)) + Rational(22,1)*exp(2*pi*I*Rational(11,60)) + Rational(-44,1)*exp(2*pi*I*Rational(13,60)) + Rational(-33,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-33,1) + Rational(44,1)*exp(2*pi*I*Rational(1,15)) + Rational(22,1)*exp(2*pi*I*Rational(2,15)) + Rational(-22,1)*exp(2*pi*I*Rational(3,15)) + Rational(44,1)*exp(2*pi*I*Rational(4,15)) + Rational(-22,1)*exp(2*pi*I*Rational(5,15)) + Rational(22,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(-44,1)*exp(2*pi*I*Rational(1,60)) + Rational(44,1)*exp(2*pi*I*Rational(5,60)) + Rational(88,1)*exp(2*pi*I*Rational(7,60)) + Rational(44,1)*exp(2*pi*I*Rational(9,60)) + Rational(44,1)*exp(2*pi*I*Rational(11,60)) + Rational(-88,1)*exp(2*pi*I*Rational(13,60)) + Rational(-66,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-66,1) + Rational(88,1)*exp(2*pi*I*Rational(1,15)) + Rational(44,1)*exp(2*pi*I*Rational(2,15)) + Rational(-44,1)*exp(2*pi*I*Rational(3,15)) + Rational(88,1)*exp(2*pi*I*Rational(4,15)) + Rational(-44,1)*exp(2*pi*I*Rational(5,15)) + Rational(44,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -1
                                 },
+                                {'e': (Rational(165,1) + Rational(330,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 3},
                                 {
-                                    'e': (Rational(330,1)*exp(2*pi*I*Rational(1,12)) + Rational(-165,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 3
-                                },
-                                {
-                                    'e': (Rational(66,1)*exp(2*pi*I*Rational(1,60)) + Rational(-66,1)*exp(2*pi*I*Rational(5,60)) + Rational(-132,1)*exp(2*pi*I*Rational(7,60)) + Rational(-66,1)*exp(2*pi*I*Rational(9,60)) + Rational(-66,1)*exp(2*pi*I*Rational(11,60)) + Rational(132,1)*exp(2*pi*I*Rational(13,60)) + Rational(99,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(99,1) + Rational(-132,1)*exp(2*pi*I*Rational(1,15)) + Rational(-66,1)*exp(2*pi*I*Rational(2,15)) + Rational(66,1)*exp(2*pi*I*Rational(3,15)) + Rational(-132,1)*exp(2*pi*I*Rational(4,15)) + Rational(66,1)*exp(2*pi*I*Rational(5,15)) + Rational(-66,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 7
                                 },
-                                {
-                                    'e': (Rational(-20,1)*exp(2*pi*I*Rational(1,12)) + Rational(10,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 11
-                                }
+                                {'e': (Rational(-10,1) + Rational(-20,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 11}
                             ],
                             'mu': 3
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(11,1) + Rational(22,1)*exp(2*pi*I*Rational(2,5)) + Rational(22,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-22,1)*exp(2*pi*I*Rational(3,20)) + Rational(11,1)*exp(2*pi*I*Rational(5,20)) + Rational(-22,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(165,1), 'twoM': -7},
+                                {'e': (Rational(165,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(-66,1) + Rational(-132,1)*exp(2*pi*I*Rational(2,5)) + Rational(-132,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(132,1)*exp(2*pi*I*Rational(3,20)) + Rational(-66,1)*exp(2*pi*I*Rational(5,20)) + Rational(132,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(330,1), 'twoM': 1},
+                                {'e': (Rational(330,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(55,1) + Rational(110,1)*exp(2*pi*I*Rational(2,5)) + Rational(110,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-110,1)*exp(2*pi*I*Rational(3,20)) + Rational(55,1)*exp(2*pi*I*Rational(5,20)) + Rational(-110,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(-15,1), 'twoM': 9}
+                                {'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9}
                             ],
                             'mu': 4
                         }
@@ -205222,19 +205209,19 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(15,1), 'twoM': -7},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(-45,1) + Rational(-90,1)*exp(2*pi*I*Rational(2,5)) + Rational(-90,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(90,1)*exp(2*pi*I*Rational(3,20)) + Rational(-45,1)*exp(2*pi*I*Rational(5,20)) + Rational(90,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(-210,1), 'twoM': 1},
+                                {'e': (Rational(-210,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(30,1) + Rational(60,1)*exp(2*pi*I*Rational(2,5)) + Rational(60,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-60,1)*exp(2*pi*I*Rational(3,20)) + Rational(30,1)*exp(2*pi*I*Rational(5,20)) + Rational(-60,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(-45,1), 'twoM': 9},
+                                {'e': (Rational(-45,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9},
                                 {
-                                    'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1,1)*exp(2*pi*I*Rational(5,20)) + Rational(2,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 13
                                 }
                             ],
@@ -205243,51 +205230,51 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-9,1) + Rational(-18,1)*exp(2*pi*I*Rational(2,5)) + Rational(-18,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(18,1)*exp(2*pi*I*Rational(3,20)) + Rational(-9,1)*exp(2*pi*I*Rational(5,20)) + Rational(18,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(115,1), 'twoM': -5},
+                                {'e': (Rational(115,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(78,1) + Rational(156,1)*exp(2*pi*I*Rational(2,5)) + Rational(156,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-156,1)*exp(2*pi*I*Rational(3,20)) + Rational(78,1)*exp(2*pi*I*Rational(5,20)) + Rational(-156,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(-18,1), 'twoM': 3},
+                                {'e': (Rational(-18,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(-21,1) + Rational(-42,1)*exp(2*pi*I*Rational(2,5)) + Rational(-42,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(42,1)*exp(2*pi*I*Rational(3,20)) + Rational(-21,1)*exp(2*pi*I*Rational(5,20)) + Rational(42,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(-17,1), 'twoM': 11}
+                                {'e': (Rational(-17,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11}
                             ],
                             'mu': 2
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(18,1)*exp(2*pi*I*Rational(1,40)) + Rational(18,1)*exp(2*pi*I*Rational(3,40)) + Rational(-9,1)*exp(2*pi*I*Rational(5,40)) + Rational(-18,1)*exp(2*pi*I*Rational(7,40)) + Rational(18,1)*exp(2*pi*I*Rational(9,40)) + Rational(-9,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(18,1)*exp(2*pi*I*Rational(1,40)) + Rational(-18,1)*exp(2*pi*I*Rational(3,40)) + Rational(-9,1)*exp(2*pi*I*Rational(5,40)) + Rational(18,1)*exp(2*pi*I*Rational(7,40)) + Rational(18,1)*exp(2*pi*I*Rational(9,40)) + Rational(9,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -11
                                 },
                                 {
-                                    'e': (Rational(76,1)*exp(2*pi*I*Rational(1,8)) + Rational(-76,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(76,1)*exp(2*pi*I*Rational(1,8)) + Rational(76,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(18,1)*exp(2*pi*I*Rational(1,40)) + Rational(18,1)*exp(2*pi*I*Rational(3,40)) + Rational(-9,1)*exp(2*pi*I*Rational(5,40)) + Rational(-18,1)*exp(2*pi*I*Rational(7,40)) + Rational(18,1)*exp(2*pi*I*Rational(9,40)) + Rational(-9,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(18,1)*exp(2*pi*I*Rational(1,40)) + Rational(-18,1)*exp(2*pi*I*Rational(3,40)) + Rational(-9,1)*exp(2*pi*I*Rational(5,40)) + Rational(18,1)*exp(2*pi*I*Rational(7,40)) + Rational(18,1)*exp(2*pi*I*Rational(9,40)) + Rational(9,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(96,1)*exp(2*pi*I*Rational(1,8)) + Rational(-96,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(96,1)*exp(2*pi*I*Rational(1,8)) + Rational(96,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(150,1)*exp(2*pi*I*Rational(1,40)) + Rational(150,1)*exp(2*pi*I*Rational(3,40)) + Rational(-75,1)*exp(2*pi*I*Rational(5,40)) + Rational(-150,1)*exp(2*pi*I*Rational(7,40)) + Rational(150,1)*exp(2*pi*I*Rational(9,40)) + Rational(-75,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(150,1)*exp(2*pi*I*Rational(1,40)) + Rational(-150,1)*exp(2*pi*I*Rational(3,40)) + Rational(-75,1)*exp(2*pi*I*Rational(5,40)) + Rational(150,1)*exp(2*pi*I*Rational(7,40)) + Rational(150,1)*exp(2*pi*I*Rational(9,40)) + Rational(75,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 5
                                 },
                                 {
-                                    'e': (Rational(-12,1)*exp(2*pi*I*Rational(1,8)) + Rational(12,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-12,1)*exp(2*pi*I*Rational(1,8)) + Rational(-12,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 9
                                 },
                                 {
-                                    'e': (Rational(6,1)*exp(2*pi*I*Rational(1,40)) + Rational(6,1)*exp(2*pi*I*Rational(3,40)) + Rational(-3,1)*exp(2*pi*I*Rational(5,40)) + Rational(-6,1)*exp(2*pi*I*Rational(7,40)) + Rational(6,1)*exp(2*pi*I*Rational(9,40)) + Rational(-3,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(6,1)*exp(2*pi*I*Rational(1,40)) + Rational(-6,1)*exp(2*pi*I*Rational(3,40)) + Rational(-3,1)*exp(2*pi*I*Rational(5,40)) + Rational(6,1)*exp(2*pi*I*Rational(7,40)) + Rational(6,1)*exp(2*pi*I*Rational(9,40)) + Rational(3,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 13
                                 }
                             ],
@@ -205296,31 +205283,31 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(6,1)*exp(2*pi*I*Rational(1,40)) + Rational(6,1)*exp(2*pi*I*Rational(3,40)) + Rational(-3,1)*exp(2*pi*I*Rational(5,40)) + Rational(-6,1)*exp(2*pi*I*Rational(7,40)) + Rational(6,1)*exp(2*pi*I*Rational(9,40)) + Rational(-3,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(6,1)*exp(2*pi*I*Rational(1,40)) + Rational(-6,1)*exp(2*pi*I*Rational(3,40)) + Rational(-3,1)*exp(2*pi*I*Rational(5,40)) + Rational(6,1)*exp(2*pi*I*Rational(7,40)) + Rational(6,1)*exp(2*pi*I*Rational(9,40)) + Rational(3,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -13
                                 },
                                 {
-                                    'e': (Rational(-12,1)*exp(2*pi*I*Rational(1,8)) + Rational(12,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-12,1)*exp(2*pi*I*Rational(1,8)) + Rational(-12,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(150,1)*exp(2*pi*I*Rational(1,40)) + Rational(150,1)*exp(2*pi*I*Rational(3,40)) + Rational(-75,1)*exp(2*pi*I*Rational(5,40)) + Rational(-150,1)*exp(2*pi*I*Rational(7,40)) + Rational(150,1)*exp(2*pi*I*Rational(9,40)) + Rational(-75,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(150,1)*exp(2*pi*I*Rational(1,40)) + Rational(-150,1)*exp(2*pi*I*Rational(3,40)) + Rational(-75,1)*exp(2*pi*I*Rational(5,40)) + Rational(150,1)*exp(2*pi*I*Rational(7,40)) + Rational(150,1)*exp(2*pi*I*Rational(9,40)) + Rational(75,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(96,1)*exp(2*pi*I*Rational(1,8)) + Rational(-96,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(96,1)*exp(2*pi*I*Rational(1,8)) + Rational(96,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(18,1)*exp(2*pi*I*Rational(1,40)) + Rational(18,1)*exp(2*pi*I*Rational(3,40)) + Rational(-9,1)*exp(2*pi*I*Rational(5,40)) + Rational(-18,1)*exp(2*pi*I*Rational(7,40)) + Rational(18,1)*exp(2*pi*I*Rational(9,40)) + Rational(-9,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(18,1)*exp(2*pi*I*Rational(1,40)) + Rational(-18,1)*exp(2*pi*I*Rational(3,40)) + Rational(-9,1)*exp(2*pi*I*Rational(5,40)) + Rational(18,1)*exp(2*pi*I*Rational(7,40)) + Rational(18,1)*exp(2*pi*I*Rational(9,40)) + Rational(9,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(76,1)*exp(2*pi*I*Rational(1,8)) + Rational(-76,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(76,1)*exp(2*pi*I*Rational(1,8)) + Rational(76,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 7
                                 },
                                 {
-                                    'e': (Rational(18,1)*exp(2*pi*I*Rational(1,40)) + Rational(18,1)*exp(2*pi*I*Rational(3,40)) + Rational(-9,1)*exp(2*pi*I*Rational(5,40)) + Rational(-18,1)*exp(2*pi*I*Rational(7,40)) + Rational(18,1)*exp(2*pi*I*Rational(9,40)) + Rational(-9,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(18,1)*exp(2*pi*I*Rational(1,40)) + Rational(-18,1)*exp(2*pi*I*Rational(3,40)) + Rational(-9,1)*exp(2*pi*I*Rational(5,40)) + Rational(18,1)*exp(2*pi*I*Rational(7,40)) + Rational(18,1)*exp(2*pi*I*Rational(9,40)) + Rational(9,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 11
                                 }
                             ],
@@ -205328,19 +205315,19 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(-17,1), 'twoM': -11},
+                                {'e': (Rational(-17,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(-21,1) + Rational(-42,1)*exp(2*pi*I*Rational(2,5)) + Rational(-42,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(42,1)*exp(2*pi*I*Rational(3,20)) + Rational(-21,1)*exp(2*pi*I*Rational(5,20)) + Rational(42,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(-18,1), 'twoM': -3},
+                                {'e': (Rational(-18,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(78,1) + Rational(156,1)*exp(2*pi*I*Rational(2,5)) + Rational(156,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-156,1)*exp(2*pi*I*Rational(3,20)) + Rational(78,1)*exp(2*pi*I*Rational(5,20)) + Rational(-156,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(115,1), 'twoM': 5},
+                                {'e': (Rational(115,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(-9,1) + Rational(-18,1)*exp(2*pi*I*Rational(2,5)) + Rational(-18,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(18,1)*exp(2*pi*I*Rational(3,20)) + Rational(-9,1)*exp(2*pi*I*Rational(5,20)) + Rational(18,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 }
                             ],
@@ -205349,20 +205336,20 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1,1)*exp(2*pi*I*Rational(5,20)) + Rational(2,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -13
                                 },
-                                {'e': Rational(-45,1), 'twoM': -9},
+                                {'e': (Rational(-45,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(30,1) + Rational(60,1)*exp(2*pi*I*Rational(2,5)) + Rational(60,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-60,1)*exp(2*pi*I*Rational(3,20)) + Rational(30,1)*exp(2*pi*I*Rational(5,20)) + Rational(-60,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(-210,1), 'twoM': -1},
+                                {'e': (Rational(-210,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(-45,1) + Rational(-90,1)*exp(2*pi*I*Rational(2,5)) + Rational(-90,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(90,1)*exp(2*pi*I*Rational(3,20)) + Rational(-45,1)*exp(2*pi*I*Rational(5,20)) + Rational(90,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(15,1), 'twoM': 7}
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7}
                             ],
                             'mu': 6
                         }
@@ -205377,109 +205364,91 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(5,1), 'twoM': -9},
+                                {'e': (Rational(5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(-22,1) + Rational(-44,1)*exp(2*pi*I*Rational(2,5)) + Rational(-44,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(44,1)*exp(2*pi*I*Rational(3,20)) + Rational(-22,1)*exp(2*pi*I*Rational(5,20)) + Rational(44,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(-165,1), 'twoM': -1},
+                                {'e': (Rational(-165,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(44,1) + Rational(88,1)*exp(2*pi*I*Rational(2,5)) + Rational(88,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-88,1)*exp(2*pi*I*Rational(3,20)) + Rational(44,1)*exp(2*pi*I*Rational(5,20)) + Rational(-88,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(-165,1), 'twoM': 7},
+                                {'e': (Rational(-165,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7},
                                 {
-                                    'e': (Rational(-22,1) + Rational(-44,1)*exp(2*pi*I*Rational(2,5)) + Rational(-44,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(44,1)*exp(2*pi*I*Rational(3,20)) + Rational(-22,1)*exp(2*pi*I*Rational(5,20)) + Rational(44,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 },
-                                {'e': Rational(5,1), 'twoM': 15}
+                                {'e': (Rational(5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 15}
                             ],
                             'mu': 1
                         },
                         {
                             'components': [
+                                {'e': (Rational(5,1) + Rational(10,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -11},
                                 {
-                                    'e': (Rational(10,1)*exp(2*pi*I*Rational(1,12)) + Rational(-5,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -11
-                                },
-                                {
-                                    'e': (Rational(-44,1)*exp(2*pi*I*Rational(1,60)) + Rational(44,1)*exp(2*pi*I*Rational(5,60)) + Rational(88,1)*exp(2*pi*I*Rational(7,60)) + Rational(44,1)*exp(2*pi*I*Rational(9,60)) + Rational(44,1)*exp(2*pi*I*Rational(11,60)) + Rational(-88,1)*exp(2*pi*I*Rational(13,60)) + Rational(-66,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-66,1) + Rational(88,1)*exp(2*pi*I*Rational(1,15)) + Rational(44,1)*exp(2*pi*I*Rational(2,15)) + Rational(-44,1)*exp(2*pi*I*Rational(3,15)) + Rational(88,1)*exp(2*pi*I*Rational(4,15)) + Rational(-44,1)*exp(2*pi*I*Rational(5,15)) + Rational(44,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(-330,1)*exp(2*pi*I*Rational(1,12)) + Rational(165,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-165,1) + Rational(-330,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(88,1)*exp(2*pi*I*Rational(1,60)) + Rational(-88,1)*exp(2*pi*I*Rational(5,60)) + Rational(-176,1)*exp(2*pi*I*Rational(7,60)) + Rational(-88,1)*exp(2*pi*I*Rational(9,60)) + Rational(-88,1)*exp(2*pi*I*Rational(11,60)) + Rational(176,1)*exp(2*pi*I*Rational(13,60)) + Rational(132,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(132,1) + Rational(-176,1)*exp(2*pi*I*Rational(1,15)) + Rational(-88,1)*exp(2*pi*I*Rational(2,15)) + Rational(88,1)*exp(2*pi*I*Rational(3,15)) + Rational(-176,1)*exp(2*pi*I*Rational(4,15)) + Rational(88,1)*exp(2*pi*I*Rational(5,15)) + Rational(-88,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 1
                                 },
+                                {'e': (Rational(-165,1) + Rational(-330,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 5},
                                 {
-                                    'e': (Rational(-330,1)*exp(2*pi*I*Rational(1,12)) + Rational(165,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 5
-                                },
-                                {
-                                    'e': (Rational(-44,1)*exp(2*pi*I*Rational(1,60)) + Rational(44,1)*exp(2*pi*I*Rational(5,60)) + Rational(88,1)*exp(2*pi*I*Rational(7,60)) + Rational(44,1)*exp(2*pi*I*Rational(9,60)) + Rational(44,1)*exp(2*pi*I*Rational(11,60)) + Rational(-88,1)*exp(2*pi*I*Rational(13,60)) + Rational(-66,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-66,1) + Rational(88,1)*exp(2*pi*I*Rational(1,15)) + Rational(44,1)*exp(2*pi*I*Rational(2,15)) + Rational(-44,1)*exp(2*pi*I*Rational(3,15)) + Rational(88,1)*exp(2*pi*I*Rational(4,15)) + Rational(-44,1)*exp(2*pi*I*Rational(5,15)) + Rational(44,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 9
                                 },
-                                {
-                                    'e': (Rational(10,1)*exp(2*pi*I*Rational(1,12)) + Rational(-5,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 13
-                                }
+                                {'e': (Rational(5,1) + Rational(10,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 13}
                             ],
                             'mu': 2
                         },
                         {
                             'components': [
+                                {'e': (Rational(5,1) + Rational(10,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -13},
                                 {
-                                    'e': (Rational(10,1)*exp(2*pi*I*Rational(1,12)) + Rational(-5,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -13
-                                },
-                                {
-                                    'e': (Rational(-44,1)*exp(2*pi*I*Rational(1,60)) + Rational(44,1)*exp(2*pi*I*Rational(5,60)) + Rational(88,1)*exp(2*pi*I*Rational(7,60)) + Rational(44,1)*exp(2*pi*I*Rational(9,60)) + Rational(44,1)*exp(2*pi*I*Rational(11,60)) + Rational(-88,1)*exp(2*pi*I*Rational(13,60)) + Rational(-66,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-66,1) + Rational(88,1)*exp(2*pi*I*Rational(1,15)) + Rational(44,1)*exp(2*pi*I*Rational(2,15)) + Rational(-44,1)*exp(2*pi*I*Rational(3,15)) + Rational(88,1)*exp(2*pi*I*Rational(4,15)) + Rational(-44,1)*exp(2*pi*I*Rational(5,15)) + Rational(44,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(-330,1)*exp(2*pi*I*Rational(1,12)) + Rational(165,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-165,1) + Rational(-330,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(88,1)*exp(2*pi*I*Rational(1,60)) + Rational(-88,1)*exp(2*pi*I*Rational(5,60)) + Rational(-176,1)*exp(2*pi*I*Rational(7,60)) + Rational(-88,1)*exp(2*pi*I*Rational(9,60)) + Rational(-88,1)*exp(2*pi*I*Rational(11,60)) + Rational(176,1)*exp(2*pi*I*Rational(13,60)) + Rational(132,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(132,1) + Rational(-176,1)*exp(2*pi*I*Rational(1,15)) + Rational(-88,1)*exp(2*pi*I*Rational(2,15)) + Rational(88,1)*exp(2*pi*I*Rational(3,15)) + Rational(-176,1)*exp(2*pi*I*Rational(4,15)) + Rational(88,1)*exp(2*pi*I*Rational(5,15)) + Rational(-88,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -1
                                 },
+                                {'e': (Rational(-165,1) + Rational(-330,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 3},
                                 {
-                                    'e': (Rational(-330,1)*exp(2*pi*I*Rational(1,12)) + Rational(165,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 3
-                                },
-                                {
-                                    'e': (Rational(-44,1)*exp(2*pi*I*Rational(1,60)) + Rational(44,1)*exp(2*pi*I*Rational(5,60)) + Rational(88,1)*exp(2*pi*I*Rational(7,60)) + Rational(44,1)*exp(2*pi*I*Rational(9,60)) + Rational(44,1)*exp(2*pi*I*Rational(11,60)) + Rational(-88,1)*exp(2*pi*I*Rational(13,60)) + Rational(-66,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-66,1) + Rational(88,1)*exp(2*pi*I*Rational(1,15)) + Rational(44,1)*exp(2*pi*I*Rational(2,15)) + Rational(-44,1)*exp(2*pi*I*Rational(3,15)) + Rational(88,1)*exp(2*pi*I*Rational(4,15)) + Rational(-44,1)*exp(2*pi*I*Rational(5,15)) + Rational(44,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 7
                                 },
-                                {
-                                    'e': (Rational(10,1)*exp(2*pi*I*Rational(1,12)) + Rational(-5,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 11
-                                }
+                                {'e': (Rational(5,1) + Rational(10,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 11}
                             ],
                             'mu': 3
                         },
                         {
                             'components': [
-                                {'e': Rational(5,1), 'twoM': -15},
+                                {'e': (Rational(5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -15},
                                 {
-                                    'e': (Rational(-22,1) + Rational(-44,1)*exp(2*pi*I*Rational(2,5)) + Rational(-44,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(44,1)*exp(2*pi*I*Rational(3,20)) + Rational(-22,1)*exp(2*pi*I*Rational(5,20)) + Rational(44,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(-165,1), 'twoM': -7},
+                                {'e': (Rational(-165,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(44,1) + Rational(88,1)*exp(2*pi*I*Rational(2,5)) + Rational(88,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-88,1)*exp(2*pi*I*Rational(3,20)) + Rational(44,1)*exp(2*pi*I*Rational(5,20)) + Rational(-88,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(-165,1), 'twoM': 1},
+                                {'e': (Rational(-165,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(-22,1) + Rational(-44,1)*exp(2*pi*I*Rational(2,5)) + Rational(-44,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(44,1)*exp(2*pi*I*Rational(3,20)) + Rational(-22,1)*exp(2*pi*I*Rational(5,20)) + Rational(44,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(5,1), 'twoM': 9}
+                                {'e': (Rational(5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9}
                             ],
                             'mu': 4
                         }
@@ -205494,19 +205463,19 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(15,1), 'twoM': -15},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -15},
                                 {
-                                    'e': (Rational(105,1) + Rational(210,1)*exp(2*pi*I*Rational(2,5)) + Rational(210,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-210,1)*exp(2*pi*I*Rational(3,20)) + Rational(105,1)*exp(2*pi*I*Rational(5,20)) + Rational(-210,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(-2145,1), 'twoM': 1},
+                                {'e': (Rational(-2145,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(273,1) + Rational(546,1)*exp(2*pi*I*Rational(2,5)) + Rational(546,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-546,1)*exp(2*pi*I*Rational(3,20)) + Rational(273,1)*exp(2*pi*I*Rational(5,20)) + Rational(-546,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(-910,1), 'twoM': 9},
+                                {'e': (Rational(-910,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9},
                                 {
-                                    'e': (Rational(-58,1) + Rational(-116,1)*exp(2*pi*I*Rational(2,5)) + Rational(-116,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(116,1)*exp(2*pi*I*Rational(3,20)) + Rational(-58,1)*exp(2*pi*I*Rational(5,20)) + Rational(116,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 13
                                 }
                             ],
@@ -205514,24 +205483,24 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(75,1), 'twoM': -13},
+                                {'e': (Rational(75,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -13},
                                 {
-                                    'e': (Rational(-91,1) + Rational(-182,1)*exp(2*pi*I*Rational(2,5)) + Rational(-182,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(182,1)*exp(2*pi*I*Rational(3,20)) + Rational(-91,1)*exp(2*pi*I*Rational(5,20)) + Rational(182,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(2002,1), 'twoM': -5},
+                                {'e': (Rational(2002,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(858,1) + Rational(1716,1)*exp(2*pi*I*Rational(2,5)) + Rational(1716,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1716,1)*exp(2*pi*I*Rational(3,20)) + Rational(858,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1716,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(-1729,1), 'twoM': 3},
+                                {'e': (Rational(-1729,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(273,1) + Rational(546,1)*exp(2*pi*I*Rational(2,5)) + Rational(546,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-546,1)*exp(2*pi*I*Rational(3,20)) + Rational(273,1)*exp(2*pi*I*Rational(5,20)) + Rational(-546,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(-28,1), 'twoM': 11},
+                                {'e': (Rational(-28,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11},
                                 {
-                                    'e': (Rational(16,1) + Rational(32,1)*exp(2*pi*I*Rational(2,5)) + Rational(32,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-32,1)*exp(2*pi*I*Rational(3,20)) + Rational(16,1)*exp(2*pi*I*Rational(5,20)) + Rational(-32,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 15
                                 }
                             ],
@@ -205540,31 +205509,31 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,8)) + Rational(5,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,8)) + Rational(-5,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -15
                                 },
                                 {
-                                    'e': (Rational(84,1)*exp(2*pi*I*Rational(1,40)) + Rational(84,1)*exp(2*pi*I*Rational(3,40)) + Rational(-42,1)*exp(2*pi*I*Rational(5,40)) + Rational(-84,1)*exp(2*pi*I*Rational(7,40)) + Rational(84,1)*exp(2*pi*I*Rational(9,40)) + Rational(-42,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(84,1)*exp(2*pi*I*Rational(1,40)) + Rational(-84,1)*exp(2*pi*I*Rational(3,40)) + Rational(-42,1)*exp(2*pi*I*Rational(5,40)) + Rational(84,1)*exp(2*pi*I*Rational(7,40)) + Rational(84,1)*exp(2*pi*I*Rational(9,40)) + Rational(42,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -11
                                 },
                                 {
-                                    'e': (Rational(364,1)*exp(2*pi*I*Rational(1,8)) + Rational(-364,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(364,1)*exp(2*pi*I*Rational(1,8)) + Rational(364,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(-2002,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2002,1)*exp(2*pi*I*Rational(3,40)) + Rational(1001,1)*exp(2*pi*I*Rational(5,40)) + Rational(2002,1)*exp(2*pi*I*Rational(7,40)) + Rational(-2002,1)*exp(2*pi*I*Rational(9,40)) + Rational(1001,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-2002,1)*exp(2*pi*I*Rational(1,40)) + Rational(2002,1)*exp(2*pi*I*Rational(3,40)) + Rational(1001,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2002,1)*exp(2*pi*I*Rational(7,40)) + Rational(-2002,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1001,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(507,1)*exp(2*pi*I*Rational(1,8)) + Rational(-507,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(507,1)*exp(2*pi*I*Rational(1,8)) + Rational(507,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(-546,1)*exp(2*pi*I*Rational(1,8)) + Rational(546,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-546,1)*exp(2*pi*I*Rational(1,8)) + Rational(-546,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 9
                                 },
                                 {
-                                    'e': (Rational(-66,1)*exp(2*pi*I*Rational(1,40)) + Rational(-66,1)*exp(2*pi*I*Rational(3,40)) + Rational(33,1)*exp(2*pi*I*Rational(5,40)) + Rational(66,1)*exp(2*pi*I*Rational(7,40)) + Rational(-66,1)*exp(2*pi*I*Rational(9,40)) + Rational(33,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-66,1)*exp(2*pi*I*Rational(1,40)) + Rational(66,1)*exp(2*pi*I*Rational(3,40)) + Rational(33,1)*exp(2*pi*I*Rational(5,40)) + Rational(-66,1)*exp(2*pi*I*Rational(7,40)) + Rational(-66,1)*exp(2*pi*I*Rational(9,40)) + Rational(-33,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 13
                                 }
                             ],
@@ -205573,31 +205542,31 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(66,1)*exp(2*pi*I*Rational(1,40)) + Rational(66,1)*exp(2*pi*I*Rational(3,40)) + Rational(-33,1)*exp(2*pi*I*Rational(5,40)) + Rational(-66,1)*exp(2*pi*I*Rational(7,40)) + Rational(66,1)*exp(2*pi*I*Rational(9,40)) + Rational(-33,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(66,1)*exp(2*pi*I*Rational(1,40)) + Rational(-66,1)*exp(2*pi*I*Rational(3,40)) + Rational(-33,1)*exp(2*pi*I*Rational(5,40)) + Rational(66,1)*exp(2*pi*I*Rational(7,40)) + Rational(66,1)*exp(2*pi*I*Rational(9,40)) + Rational(33,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -13
                                 },
                                 {
-                                    'e': (Rational(546,1)*exp(2*pi*I*Rational(1,8)) + Rational(-546,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(546,1)*exp(2*pi*I*Rational(1,8)) + Rational(546,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(-507,1)*exp(2*pi*I*Rational(1,8)) + Rational(507,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-507,1)*exp(2*pi*I*Rational(1,8)) + Rational(-507,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(2002,1)*exp(2*pi*I*Rational(1,40)) + Rational(2002,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1001,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2002,1)*exp(2*pi*I*Rational(7,40)) + Rational(2002,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1001,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(2002,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2002,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1001,1)*exp(2*pi*I*Rational(5,40)) + Rational(2002,1)*exp(2*pi*I*Rational(7,40)) + Rational(2002,1)*exp(2*pi*I*Rational(9,40)) + Rational(1001,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(-364,1)*exp(2*pi*I*Rational(1,8)) + Rational(364,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-364,1)*exp(2*pi*I*Rational(1,8)) + Rational(-364,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 7
                                 },
                                 {
-                                    'e': (Rational(-84,1)*exp(2*pi*I*Rational(1,40)) + Rational(-84,1)*exp(2*pi*I*Rational(3,40)) + Rational(42,1)*exp(2*pi*I*Rational(5,40)) + Rational(84,1)*exp(2*pi*I*Rational(7,40)) + Rational(-84,1)*exp(2*pi*I*Rational(9,40)) + Rational(42,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-84,1)*exp(2*pi*I*Rational(1,40)) + Rational(84,1)*exp(2*pi*I*Rational(3,40)) + Rational(42,1)*exp(2*pi*I*Rational(5,40)) + Rational(-84,1)*exp(2*pi*I*Rational(7,40)) + Rational(-84,1)*exp(2*pi*I*Rational(9,40)) + Rational(-42,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 11
                                 },
                                 {
-                                    'e': (Rational(5,1)*exp(2*pi*I*Rational(1,8)) + Rational(-5,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(5,1)*exp(2*pi*I*Rational(1,8)) + Rational(5,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 15
                                 }
                             ],
@@ -205606,45 +205575,45 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-16,1) + Rational(-32,1)*exp(2*pi*I*Rational(2,5)) + Rational(-32,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(32,1)*exp(2*pi*I*Rational(3,20)) + Rational(-16,1)*exp(2*pi*I*Rational(5,20)) + Rational(32,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -15
                                 },
-                                {'e': Rational(28,1), 'twoM': -11},
+                                {'e': (Rational(28,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(-273,1) + Rational(-546,1)*exp(2*pi*I*Rational(2,5)) + Rational(-546,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(546,1)*exp(2*pi*I*Rational(3,20)) + Rational(-273,1)*exp(2*pi*I*Rational(5,20)) + Rational(546,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(1729,1), 'twoM': -3},
+                                {'e': (Rational(1729,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(-858,1) + Rational(-1716,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1716,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1716,1)*exp(2*pi*I*Rational(3,20)) + Rational(-858,1)*exp(2*pi*I*Rational(5,20)) + Rational(1716,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(-2002,1), 'twoM': 5},
+                                {'e': (Rational(-2002,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(91,1) + Rational(182,1)*exp(2*pi*I*Rational(2,5)) + Rational(182,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-182,1)*exp(2*pi*I*Rational(3,20)) + Rational(91,1)*exp(2*pi*I*Rational(5,20)) + Rational(-182,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 },
-                                {'e': Rational(-75,1), 'twoM': 13}
+                                {'e': (Rational(-75,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 13}
                             ],
                             'mu': 5
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(58,1) + Rational(116,1)*exp(2*pi*I*Rational(2,5)) + Rational(116,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-116,1)*exp(2*pi*I*Rational(3,20)) + Rational(58,1)*exp(2*pi*I*Rational(5,20)) + Rational(-116,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -13
                                 },
-                                {'e': Rational(910,1), 'twoM': -9},
+                                {'e': (Rational(910,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(-273,1) + Rational(-546,1)*exp(2*pi*I*Rational(2,5)) + Rational(-546,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(546,1)*exp(2*pi*I*Rational(3,20)) + Rational(-273,1)*exp(2*pi*I*Rational(5,20)) + Rational(546,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(2145,1), 'twoM': -1},
+                                {'e': (Rational(2145,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(-105,1) + Rational(-210,1)*exp(2*pi*I*Rational(2,5)) + Rational(-210,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(210,1)*exp(2*pi*I*Rational(3,20)) + Rational(-105,1)*exp(2*pi*I*Rational(5,20)) + Rational(210,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 },
-                                {'e': Rational(-15,1), 'twoM': 15}
+                                {'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 15}
                             ],
                             'mu': 6
                         }
@@ -205659,24 +205628,24 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(-33,1), 'twoM': -15},
+                                {'e': (Rational(33,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -15},
                                 {
-                                    'e': (Rational(-231,1) + Rational(-462,1)*exp(2*pi*I*Rational(2,5)) + Rational(-462,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-462,1)*exp(2*pi*I*Rational(3,20)) + Rational(231,1)*exp(2*pi*I*Rational(5,20)) + Rational(-462,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(219,1), 'twoM': -7},
+                                {'e': (Rational(-219,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(-803,1) + Rational(-1606,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1606,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1606,1)*exp(2*pi*I*Rational(3,20)) + Rational(803,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1606,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(-99,1), 'twoM': 1},
+                                {'e': (Rational(99,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(363,1) + Rational(726,1)*exp(2*pi*I*Rational(2,5)) + Rational(726,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(726,1)*exp(2*pi*I*Rational(3,20)) + Rational(-363,1)*exp(2*pi*I*Rational(5,20)) + Rational(726,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(-407,1), 'twoM': 9},
+                                {'e': (Rational(407,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9},
                                 {
-                                    'e': (Rational(-33,1) + Rational(-66,1)*exp(2*pi*I*Rational(2,5)) + Rational(-66,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-66,1)*exp(2*pi*I*Rational(3,20)) + Rational(33,1)*exp(2*pi*I*Rational(5,20)) + Rational(-66,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 13
                                 }
                             ],
@@ -205684,24 +205653,24 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(-825,1), 'twoM': -13},
+                                {'e': (Rational(825,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -13},
                                 {
-                                    'e': (Rational(125,1) + Rational(250,1)*exp(2*pi*I*Rational(2,5)) + Rational(250,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(250,1)*exp(2*pi*I*Rational(3,20)) + Rational(-125,1)*exp(2*pi*I*Rational(5,20)) + Rational(250,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(-6765,1), 'twoM': -5},
+                                {'e': (Rational(6765,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(7425,1) + Rational(14850,1)*exp(2*pi*I*Rational(2,5)) + Rational(14850,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(14850,1)*exp(2*pi*I*Rational(3,20)) + Rational(-7425,1)*exp(2*pi*I*Rational(5,20)) + Rational(14850,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(4565,1), 'twoM': 3},
+                                {'e': (Rational(-4565,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(1815,1) + Rational(3630,1)*exp(2*pi*I*Rational(2,5)) + Rational(3630,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(3630,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1815,1)*exp(2*pi*I*Rational(5,20)) + Rational(3630,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(-495,1), 'twoM': 11},
+                                {'e': (Rational(495,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11},
                                 {
-                                    'e': (Rational(43,1) + Rational(86,1)*exp(2*pi*I*Rational(2,5)) + Rational(86,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(86,1)*exp(2*pi*I*Rational(3,20)) + Rational(-43,1)*exp(2*pi*I*Rational(5,20)) + Rational(86,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 15
                                 }
                             ],
@@ -205710,35 +205679,35 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(55,1)*exp(2*pi*I*Rational(1,8)) + Rational(-55,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-55,1)*exp(2*pi*I*Rational(1,8)) + Rational(-55,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -15
                                 },
                                 {
-                                    'e': (Rational(390,1)*exp(2*pi*I*Rational(1,40)) + Rational(390,1)*exp(2*pi*I*Rational(3,40)) + Rational(-195,1)*exp(2*pi*I*Rational(5,40)) + Rational(-390,1)*exp(2*pi*I*Rational(7,40)) + Rational(390,1)*exp(2*pi*I*Rational(9,40)) + Rational(-195,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-390,1)*exp(2*pi*I*Rational(1,40)) + Rational(390,1)*exp(2*pi*I*Rational(3,40)) + Rational(195,1)*exp(2*pi*I*Rational(5,40)) + Rational(-390,1)*exp(2*pi*I*Rational(7,40)) + Rational(-390,1)*exp(2*pi*I*Rational(9,40)) + Rational(-195,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -11
                                 },
                                 {
-                                    'e': (Rational(6435,1)*exp(2*pi*I*Rational(1,8)) + Rational(-6435,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-6435,1)*exp(2*pi*I*Rational(1,8)) + Rational(-6435,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(2750,1)*exp(2*pi*I*Rational(1,40)) + Rational(2750,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1375,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2750,1)*exp(2*pi*I*Rational(7,40)) + Rational(2750,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1375,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-2750,1)*exp(2*pi*I*Rational(1,40)) + Rational(2750,1)*exp(2*pi*I*Rational(3,40)) + Rational(1375,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2750,1)*exp(2*pi*I*Rational(7,40)) + Rational(-2750,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1375,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(-10395,1)*exp(2*pi*I*Rational(1,8)) + Rational(10395,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(10395,1)*exp(2*pi*I*Rational(1,8)) + Rational(10395,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(4818,1)*exp(2*pi*I*Rational(1,40)) + Rational(4818,1)*exp(2*pi*I*Rational(3,40)) + Rational(-2409,1)*exp(2*pi*I*Rational(5,40)) + Rational(-4818,1)*exp(2*pi*I*Rational(7,40)) + Rational(4818,1)*exp(2*pi*I*Rational(9,40)) + Rational(-2409,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-4818,1)*exp(2*pi*I*Rational(1,40)) + Rational(4818,1)*exp(2*pi*I*Rational(3,40)) + Rational(2409,1)*exp(2*pi*I*Rational(5,40)) + Rational(-4818,1)*exp(2*pi*I*Rational(7,40)) + Rational(-4818,1)*exp(2*pi*I*Rational(9,40)) + Rational(-2409,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 5
                                 },
                                 {
-                                    'e': (Rational(385,1)*exp(2*pi*I*Rational(1,8)) + Rational(-385,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-385,1)*exp(2*pi*I*Rational(1,8)) + Rational(-385,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 9
                                 },
                                 {
-                                    'e': (Rational(-150,1)*exp(2*pi*I*Rational(1,40)) + Rational(-150,1)*exp(2*pi*I*Rational(3,40)) + Rational(75,1)*exp(2*pi*I*Rational(5,40)) + Rational(150,1)*exp(2*pi*I*Rational(7,40)) + Rational(-150,1)*exp(2*pi*I*Rational(9,40)) + Rational(75,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(150,1)*exp(2*pi*I*Rational(1,40)) + Rational(-150,1)*exp(2*pi*I*Rational(3,40)) + Rational(-75,1)*exp(2*pi*I*Rational(5,40)) + Rational(150,1)*exp(2*pi*I*Rational(7,40)) + Rational(150,1)*exp(2*pi*I*Rational(9,40)) + Rational(75,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 13
                                 }
                             ],
@@ -205747,35 +205716,35 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(150,1)*exp(2*pi*I*Rational(1,40)) + Rational(150,1)*exp(2*pi*I*Rational(3,40)) + Rational(-75,1)*exp(2*pi*I*Rational(5,40)) + Rational(-150,1)*exp(2*pi*I*Rational(7,40)) + Rational(150,1)*exp(2*pi*I*Rational(9,40)) + Rational(-75,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-150,1)*exp(2*pi*I*Rational(1,40)) + Rational(150,1)*exp(2*pi*I*Rational(3,40)) + Rational(75,1)*exp(2*pi*I*Rational(5,40)) + Rational(-150,1)*exp(2*pi*I*Rational(7,40)) + Rational(-150,1)*exp(2*pi*I*Rational(9,40)) + Rational(-75,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -13
                                 },
                                 {
-                                    'e': (Rational(-385,1)*exp(2*pi*I*Rational(1,8)) + Rational(385,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(385,1)*exp(2*pi*I*Rational(1,8)) + Rational(385,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(-4818,1)*exp(2*pi*I*Rational(1,40)) + Rational(-4818,1)*exp(2*pi*I*Rational(3,40)) + Rational(2409,1)*exp(2*pi*I*Rational(5,40)) + Rational(4818,1)*exp(2*pi*I*Rational(7,40)) + Rational(-4818,1)*exp(2*pi*I*Rational(9,40)) + Rational(2409,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(4818,1)*exp(2*pi*I*Rational(1,40)) + Rational(-4818,1)*exp(2*pi*I*Rational(3,40)) + Rational(-2409,1)*exp(2*pi*I*Rational(5,40)) + Rational(4818,1)*exp(2*pi*I*Rational(7,40)) + Rational(4818,1)*exp(2*pi*I*Rational(9,40)) + Rational(2409,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(10395,1)*exp(2*pi*I*Rational(1,8)) + Rational(-10395,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-10395,1)*exp(2*pi*I*Rational(1,8)) + Rational(-10395,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(-2750,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2750,1)*exp(2*pi*I*Rational(3,40)) + Rational(1375,1)*exp(2*pi*I*Rational(5,40)) + Rational(2750,1)*exp(2*pi*I*Rational(7,40)) + Rational(-2750,1)*exp(2*pi*I*Rational(9,40)) + Rational(1375,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(2750,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2750,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1375,1)*exp(2*pi*I*Rational(5,40)) + Rational(2750,1)*exp(2*pi*I*Rational(7,40)) + Rational(2750,1)*exp(2*pi*I*Rational(9,40)) + Rational(1375,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(-6435,1)*exp(2*pi*I*Rational(1,8)) + Rational(6435,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(6435,1)*exp(2*pi*I*Rational(1,8)) + Rational(6435,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 7
                                 },
                                 {
-                                    'e': (Rational(-390,1)*exp(2*pi*I*Rational(1,40)) + Rational(-390,1)*exp(2*pi*I*Rational(3,40)) + Rational(195,1)*exp(2*pi*I*Rational(5,40)) + Rational(390,1)*exp(2*pi*I*Rational(7,40)) + Rational(-390,1)*exp(2*pi*I*Rational(9,40)) + Rational(195,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(390,1)*exp(2*pi*I*Rational(1,40)) + Rational(-390,1)*exp(2*pi*I*Rational(3,40)) + Rational(-195,1)*exp(2*pi*I*Rational(5,40)) + Rational(390,1)*exp(2*pi*I*Rational(7,40)) + Rational(390,1)*exp(2*pi*I*Rational(9,40)) + Rational(195,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 11
                                 },
                                 {
-                                    'e': (Rational(-55,1)*exp(2*pi*I*Rational(1,8)) + Rational(55,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(55,1)*exp(2*pi*I*Rational(1,8)) + Rational(55,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 15
                                 }
                             ],
@@ -205784,50 +205753,50 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-43,1) + Rational(-86,1)*exp(2*pi*I*Rational(2,5)) + Rational(-86,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-86,1)*exp(2*pi*I*Rational(3,20)) + Rational(43,1)*exp(2*pi*I*Rational(5,20)) + Rational(-86,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -15
                                 },
-                                {'e': Rational(495,1), 'twoM': -11},
+                                {'e': (Rational(-495,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(-1815,1) + Rational(-3630,1)*exp(2*pi*I*Rational(2,5)) + Rational(-3630,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-3630,1)*exp(2*pi*I*Rational(3,20)) + Rational(1815,1)*exp(2*pi*I*Rational(5,20)) + Rational(-3630,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(-4565,1), 'twoM': -3},
+                                {'e': (Rational(4565,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(-7425,1) + Rational(-14850,1)*exp(2*pi*I*Rational(2,5)) + Rational(-14850,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-14850,1)*exp(2*pi*I*Rational(3,20)) + Rational(7425,1)*exp(2*pi*I*Rational(5,20)) + Rational(-14850,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(6765,1), 'twoM': 5},
+                                {'e': (Rational(-6765,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(-125,1) + Rational(-250,1)*exp(2*pi*I*Rational(2,5)) + Rational(-250,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-250,1)*exp(2*pi*I*Rational(3,20)) + Rational(125,1)*exp(2*pi*I*Rational(5,20)) + Rational(-250,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 },
-                                {'e': Rational(825,1), 'twoM': 13}
+                                {'e': (Rational(-825,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 13}
                             ],
                             'mu': 5
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(33,1) + Rational(66,1)*exp(2*pi*I*Rational(2,5)) + Rational(66,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(66,1)*exp(2*pi*I*Rational(3,20)) + Rational(-33,1)*exp(2*pi*I*Rational(5,20)) + Rational(66,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -13
                                 },
-                                {'e': Rational(407,1), 'twoM': -9},
+                                {'e': (Rational(-407,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(-363,1) + Rational(-726,1)*exp(2*pi*I*Rational(2,5)) + Rational(-726,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-726,1)*exp(2*pi*I*Rational(3,20)) + Rational(363,1)*exp(2*pi*I*Rational(5,20)) + Rational(-726,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(99,1), 'twoM': -1},
+                                {'e': (Rational(-99,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(803,1) + Rational(1606,1)*exp(2*pi*I*Rational(2,5)) + Rational(1606,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1606,1)*exp(2*pi*I*Rational(3,20)) + Rational(-803,1)*exp(2*pi*I*Rational(5,20)) + Rational(1606,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(-219,1), 'twoM': 7},
+                                {'e': (Rational(219,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7},
                                 {
-                                    'e': (Rational(231,1) + Rational(462,1)*exp(2*pi*I*Rational(2,5)) + Rational(462,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(462,1)*exp(2*pi*I*Rational(3,20)) + Rational(-231,1)*exp(2*pi*I*Rational(5,20)) + Rational(462,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 },
-                                {'e': Rational(33,1), 'twoM': 15}
+                                {'e': (Rational(-33,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 15}
                             ],
                             'mu': 6
                         }
@@ -205842,53 +205811,53 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(85,1), 'twoM': -15},
+                                {'e': (Rational(85,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -15},
                                 {
-                                    'e': (Rational(170,1) + Rational(340,1)*exp(2*pi*I*Rational(2,5)) + Rational(340,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-340,1)*exp(2*pi*I*Rational(3,20)) + Rational(170,1)*exp(2*pi*I*Rational(5,20)) + Rational(-340,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(-1190,1), 'twoM': -7},
+                                {'e': (Rational(-1190,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(-374,1) + Rational(-748,1)*exp(2*pi*I*Rational(2,5)) + Rational(-748,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(748,1)*exp(2*pi*I*Rational(3,20)) + Rational(-374,1)*exp(2*pi*I*Rational(5,20)) + Rational(748,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(3740,1), 'twoM': 1},
+                                {'e': (Rational(3740,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(238,1) + Rational(476,1)*exp(2*pi*I*Rational(2,5)) + Rational(476,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-476,1)*exp(2*pi*I*Rational(3,20)) + Rational(238,1)*exp(2*pi*I*Rational(5,20)) + Rational(-476,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(1190,1), 'twoM': 9},
+                                {'e': (Rational(1190,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9},
                                 {
-                                    'e': (Rational(-34,1) + Rational(-68,1)*exp(2*pi*I*Rational(2,5)) + Rational(-68,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(68,1)*exp(2*pi*I*Rational(3,20)) + Rational(-34,1)*exp(2*pi*I*Rational(5,20)) + Rational(68,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 13
                                 },
-                                {'e': Rational(15,1), 'twoM': 17}
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 17}
                             ],
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(15,1), 'twoM': -17},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -17},
                                 {
-                                    'e': (Rational(-34,1) + Rational(-68,1)*exp(2*pi*I*Rational(2,5)) + Rational(-68,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(68,1)*exp(2*pi*I*Rational(3,20)) + Rational(-34,1)*exp(2*pi*I*Rational(5,20)) + Rational(68,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -13
                                 },
-                                {'e': Rational(1190,1), 'twoM': -9},
+                                {'e': (Rational(1190,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(238,1) + Rational(476,1)*exp(2*pi*I*Rational(2,5)) + Rational(476,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-476,1)*exp(2*pi*I*Rational(3,20)) + Rational(238,1)*exp(2*pi*I*Rational(5,20)) + Rational(-476,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(3740,1), 'twoM': -1},
+                                {'e': (Rational(3740,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(-374,1) + Rational(-748,1)*exp(2*pi*I*Rational(2,5)) + Rational(-748,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(748,1)*exp(2*pi*I*Rational(3,20)) + Rational(-374,1)*exp(2*pi*I*Rational(5,20)) + Rational(748,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(-1190,1), 'twoM': 7},
+                                {'e': (Rational(-1190,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7},
                                 {
-                                    'e': (Rational(170,1) + Rational(340,1)*exp(2*pi*I*Rational(2,5)) + Rational(340,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-340,1)*exp(2*pi*I*Rational(3,20)) + Rational(170,1)*exp(2*pi*I*Rational(5,20)) + Rational(-340,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 },
-                                {'e': Rational(85,1), 'twoM': 15}
+                                {'e': (Rational(85,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 15}
                             ],
                             'mu': 2
                         }
@@ -205903,66 +205872,57 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(15,1), 'twoM': -17},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -17},
                                 {
-                                    'e': (Rational(136,1) + Rational(272,1)*exp(2*pi*I*Rational(2,5)) + Rational(272,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-272,1)*exp(2*pi*I*Rational(3,20)) + Rational(136,1)*exp(2*pi*I*Rational(5,20)) + Rational(-272,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -13
                                 },
-                                {'e': Rational(-140,1), 'twoM': -9},
+                                {'e': (Rational(-140,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(728,1) + Rational(1456,1)*exp(2*pi*I*Rational(2,5)) + Rational(1456,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1456,1)*exp(2*pi*I*Rational(3,20)) + Rational(728,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1456,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(-1430,1), 'twoM': -1},
+                                {'e': (Rational(-1430,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(-520,1) + Rational(-1040,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1040,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1040,1)*exp(2*pi*I*Rational(3,20)) + Rational(-520,1)*exp(2*pi*I*Rational(5,20)) + Rational(1040,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(-364,1), 'twoM': 7},
+                                {'e': (Rational(-364,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7},
                                 {
-                                    'e': (Rational(40,1) + Rational(80,1)*exp(2*pi*I*Rational(2,5)) + Rational(80,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-80,1)*exp(2*pi*I*Rational(3,20)) + Rational(40,1)*exp(2*pi*I*Rational(5,20)) + Rational(-80,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 },
-                                {'e': Rational(-1,1), 'twoM': 15}
+                                {'e': (Rational(-1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 15}
                             ],
                             'mu': 1
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-34,1)*exp(2*pi*I*Rational(1,60)) + Rational(34,1)*exp(2*pi*I*Rational(5,60)) + Rational(68,1)*exp(2*pi*I*Rational(7,60)) + Rational(34,1)*exp(2*pi*I*Rational(9,60)) + Rational(34,1)*exp(2*pi*I*Rational(11,60)) + Rational(-68,1)*exp(2*pi*I*Rational(13,60)) + Rational(-51,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-51,1) + Rational(68,1)*exp(2*pi*I*Rational(1,15)) + Rational(34,1)*exp(2*pi*I*Rational(2,15)) + Rational(-34,1)*exp(2*pi*I*Rational(3,15)) + Rational(68,1)*exp(2*pi*I*Rational(4,15)) + Rational(-34,1)*exp(2*pi*I*Rational(5,15)) + Rational(34,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -15
                                 },
+                                {'e': (Rational(40,1) + Rational(80,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -11},
                                 {
-                                    'e': (Rational(80,1)*exp(2*pi*I*Rational(1,12)) + Rational(-40,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -11
-                                },
-                                {
-                                    'e': (Rational(-728,1)*exp(2*pi*I*Rational(1,60)) + Rational(728,1)*exp(2*pi*I*Rational(5,60)) + Rational(1456,1)*exp(2*pi*I*Rational(7,60)) + Rational(728,1)*exp(2*pi*I*Rational(9,60)) + Rational(728,1)*exp(2*pi*I*Rational(11,60)) + Rational(-1456,1)*exp(2*pi*I*Rational(13,60)) + Rational(-1092,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-1092,1) + Rational(1456,1)*exp(2*pi*I*Rational(1,15)) + Rational(728,1)*exp(2*pi*I*Rational(2,15)) + Rational(-728,1)*exp(2*pi*I*Rational(3,15)) + Rational(1456,1)*exp(2*pi*I*Rational(4,15)) + Rational(-728,1)*exp(2*pi*I*Rational(5,15)) + Rational(728,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(2288,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1144,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(1144,1) + Rational(2288,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(1300,1)*exp(2*pi*I*Rational(1,60)) + Rational(-1300,1)*exp(2*pi*I*Rational(5,60)) + Rational(-2600,1)*exp(2*pi*I*Rational(7,60)) + Rational(-1300,1)*exp(2*pi*I*Rational(9,60)) + Rational(-1300,1)*exp(2*pi*I*Rational(11,60)) + Rational(2600,1)*exp(2*pi*I*Rational(13,60)) + Rational(1950,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(1950,1) + Rational(-2600,1)*exp(2*pi*I*Rational(1,15)) + Rational(-1300,1)*exp(2*pi*I*Rational(2,15)) + Rational(1300,1)*exp(2*pi*I*Rational(3,15)) + Rational(-2600,1)*exp(2*pi*I*Rational(4,15)) + Rational(1300,1)*exp(2*pi*I*Rational(5,15)) + Rational(-1300,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 1
                                 },
+                                {'e': (Rational(728,1) + Rational(1456,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 5},
                                 {
-                                    'e': (Rational(1456,1)*exp(2*pi*I*Rational(1,12)) + Rational(-728,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 5
-                                },
-                                {
-                                    'e': (Rational(-280,1)*exp(2*pi*I*Rational(1,60)) + Rational(280,1)*exp(2*pi*I*Rational(5,60)) + Rational(560,1)*exp(2*pi*I*Rational(7,60)) + Rational(280,1)*exp(2*pi*I*Rational(9,60)) + Rational(280,1)*exp(2*pi*I*Rational(11,60)) + Rational(-560,1)*exp(2*pi*I*Rational(13,60)) + Rational(-420,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-420,1) + Rational(560,1)*exp(2*pi*I*Rational(1,15)) + Rational(280,1)*exp(2*pi*I*Rational(2,15)) + Rational(-280,1)*exp(2*pi*I*Rational(3,15)) + Rational(560,1)*exp(2*pi*I*Rational(4,15)) + Rational(-280,1)*exp(2*pi*I*Rational(5,15)) + Rational(280,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 9
                                 },
+                                {'e': (Rational(8,1) + Rational(16,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 13},
                                 {
-                                    'e': (Rational(16,1)*exp(2*pi*I*Rational(1,12)) + Rational(-8,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 13
-                                },
-                                {
-                                    'e': (Rational(-2,1)*exp(2*pi*I*Rational(1,60)) + Rational(2,1)*exp(2*pi*I*Rational(5,60)) + Rational(4,1)*exp(2*pi*I*Rational(7,60)) + Rational(2,1)*exp(2*pi*I*Rational(9,60)) + Rational(2,1)*exp(2*pi*I*Rational(11,60)) + Rational(-4,1)*exp(2*pi*I*Rational(13,60)) + Rational(-3,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-3,1) + Rational(4,1)*exp(2*pi*I*Rational(1,15)) + Rational(2,1)*exp(2*pi*I*Rational(2,15)) + Rational(-2,1)*exp(2*pi*I*Rational(3,15)) + Rational(4,1)*exp(2*pi*I*Rational(4,15)) + Rational(-2,1)*exp(2*pi*I*Rational(5,15)) + Rational(2,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 17
                                 }
                             ],
@@ -205971,39 +205931,33 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(2,1)*exp(2*pi*I*Rational(1,60)) + Rational(-2,1)*exp(2*pi*I*Rational(5,60)) + Rational(-4,1)*exp(2*pi*I*Rational(7,60)) + Rational(-2,1)*exp(2*pi*I*Rational(9,60)) + Rational(-2,1)*exp(2*pi*I*Rational(11,60)) + Rational(4,1)*exp(2*pi*I*Rational(13,60)) + Rational(3,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(3,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,15)) + Rational(-2,1)*exp(2*pi*I*Rational(2,15)) + Rational(2,1)*exp(2*pi*I*Rational(3,15)) + Rational(-4,1)*exp(2*pi*I*Rational(4,15)) + Rational(2,1)*exp(2*pi*I*Rational(5,15)) + Rational(-2,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -17
                                 },
+                                {'e': (Rational(-8,1) + Rational(-16,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -13},
                                 {
-                                    'e': (Rational(-16,1)*exp(2*pi*I*Rational(1,12)) + Rational(8,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -13
-                                },
-                                {
-                                    'e': (Rational(280,1)*exp(2*pi*I*Rational(1,60)) + Rational(-280,1)*exp(2*pi*I*Rational(5,60)) + Rational(-560,1)*exp(2*pi*I*Rational(7,60)) + Rational(-280,1)*exp(2*pi*I*Rational(9,60)) + Rational(-280,1)*exp(2*pi*I*Rational(11,60)) + Rational(560,1)*exp(2*pi*I*Rational(13,60)) + Rational(420,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(420,1) + Rational(-560,1)*exp(2*pi*I*Rational(1,15)) + Rational(-280,1)*exp(2*pi*I*Rational(2,15)) + Rational(280,1)*exp(2*pi*I*Rational(3,15)) + Rational(-560,1)*exp(2*pi*I*Rational(4,15)) + Rational(280,1)*exp(2*pi*I*Rational(5,15)) + Rational(-280,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(-1456,1)*exp(2*pi*I*Rational(1,12)) + Rational(728,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-728,1) + Rational(-1456,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(-1300,1)*exp(2*pi*I*Rational(1,60)) + Rational(1300,1)*exp(2*pi*I*Rational(5,60)) + Rational(2600,1)*exp(2*pi*I*Rational(7,60)) + Rational(1300,1)*exp(2*pi*I*Rational(9,60)) + Rational(1300,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2600,1)*exp(2*pi*I*Rational(13,60)) + Rational(-1950,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-1950,1) + Rational(2600,1)*exp(2*pi*I*Rational(1,15)) + Rational(1300,1)*exp(2*pi*I*Rational(2,15)) + Rational(-1300,1)*exp(2*pi*I*Rational(3,15)) + Rational(2600,1)*exp(2*pi*I*Rational(4,15)) + Rational(-1300,1)*exp(2*pi*I*Rational(5,15)) + Rational(1300,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(-2288,1)*exp(2*pi*I*Rational(1,12)) + Rational(1144,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-1144,1) + Rational(-2288,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(728,1)*exp(2*pi*I*Rational(1,60)) + Rational(-728,1)*exp(2*pi*I*Rational(5,60)) + Rational(-1456,1)*exp(2*pi*I*Rational(7,60)) + Rational(-728,1)*exp(2*pi*I*Rational(9,60)) + Rational(-728,1)*exp(2*pi*I*Rational(11,60)) + Rational(1456,1)*exp(2*pi*I*Rational(13,60)) + Rational(1092,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(1092,1) + Rational(-1456,1)*exp(2*pi*I*Rational(1,15)) + Rational(-728,1)*exp(2*pi*I*Rational(2,15)) + Rational(728,1)*exp(2*pi*I*Rational(3,15)) + Rational(-1456,1)*exp(2*pi*I*Rational(4,15)) + Rational(728,1)*exp(2*pi*I*Rational(5,15)) + Rational(-728,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 7
                                 },
+                                {'e': (Rational(-40,1) + Rational(-80,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 11},
                                 {
-                                    'e': (Rational(-80,1)*exp(2*pi*I*Rational(1,12)) + Rational(40,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 11
-                                },
-                                {
-                                    'e': (Rational(34,1)*exp(2*pi*I*Rational(1,60)) + Rational(-34,1)*exp(2*pi*I*Rational(5,60)) + Rational(-68,1)*exp(2*pi*I*Rational(7,60)) + Rational(-34,1)*exp(2*pi*I*Rational(9,60)) + Rational(-34,1)*exp(2*pi*I*Rational(11,60)) + Rational(68,1)*exp(2*pi*I*Rational(13,60)) + Rational(51,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(51,1) + Rational(-68,1)*exp(2*pi*I*Rational(1,15)) + Rational(-34,1)*exp(2*pi*I*Rational(2,15)) + Rational(34,1)*exp(2*pi*I*Rational(3,15)) + Rational(-68,1)*exp(2*pi*I*Rational(4,15)) + Rational(34,1)*exp(2*pi*I*Rational(5,15)) + Rational(-34,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 15
                                 }
                             ],
@@ -206011,27 +205965,27 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(1,1), 'twoM': -15},
+                                {'e': (Rational(1,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -15},
                                 {
-                                    'e': (Rational(-40,1) + Rational(-80,1)*exp(2*pi*I*Rational(2,5)) + Rational(-80,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(80,1)*exp(2*pi*I*Rational(3,20)) + Rational(-40,1)*exp(2*pi*I*Rational(5,20)) + Rational(80,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(364,1), 'twoM': -7},
+                                {'e': (Rational(364,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(520,1) + Rational(1040,1)*exp(2*pi*I*Rational(2,5)) + Rational(1040,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1040,1)*exp(2*pi*I*Rational(3,20)) + Rational(520,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1040,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(1430,1), 'twoM': 1},
+                                {'e': (Rational(1430,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(-728,1) + Rational(-1456,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1456,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1456,1)*exp(2*pi*I*Rational(3,20)) + Rational(-728,1)*exp(2*pi*I*Rational(5,20)) + Rational(1456,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(140,1), 'twoM': 9},
+                                {'e': (Rational(140,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9},
                                 {
-                                    'e': (Rational(-136,1) + Rational(-272,1)*exp(2*pi*I*Rational(2,5)) + Rational(-272,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(272,1)*exp(2*pi*I*Rational(3,20)) + Rational(-136,1)*exp(2*pi*I*Rational(5,20)) + Rational(272,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 13
                                 },
-                                {'e': Rational(-15,1), 'twoM': 17}
+                                {'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 17}
                             ],
                             'mu': 4
                         }
@@ -206046,49 +206000,49 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(15,1), 'twoM': -15},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -15},
                                 {
-                                    'e': (Rational(120,1) + Rational(240,1)*exp(2*pi*I*Rational(2,5)) + Rational(240,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-240,1)*exp(2*pi*I*Rational(3,20)) + Rational(120,1)*exp(2*pi*I*Rational(5,20)) + Rational(-240,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(-4290,1), 'twoM': 1},
+                                {'e': (Rational(-4290,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(728,1) + Rational(1456,1)*exp(2*pi*I*Rational(2,5)) + Rational(1456,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1456,1)*exp(2*pi*I*Rational(3,20)) + Rational(728,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1456,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(-3640,1), 'twoM': 9},
+                                {'e': (Rational(-3640,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9},
                                 {
-                                    'e': (Rational(-464,1) + Rational(-928,1)*exp(2*pi*I*Rational(2,5)) + Rational(-928,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(928,1)*exp(2*pi*I*Rational(3,20)) + Rational(-464,1)*exp(2*pi*I*Rational(5,20)) + Rational(928,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 13
                                 },
-                                {'e': Rational(107,1), 'twoM': 17}
+                                {'e': (Rational(107,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 17}
                             ],
                             'mu': 1
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-15,1) + Rational(-30,1)*exp(2*pi*I*Rational(2,5)) + Rational(-30,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(30,1)*exp(2*pi*I*Rational(3,20)) + Rational(-15,1)*exp(2*pi*I*Rational(5,20)) + Rational(30,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -17
                                 },
-                                {'e': Rational(-280,1), 'twoM': -13},
+                                {'e': (Rational(-280,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -13},
                                 {
-                                    'e': (Rational(-560,1) + Rational(-1120,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1120,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1120,1)*exp(2*pi*I*Rational(3,20)) + Rational(-560,1)*exp(2*pi*I*Rational(5,20)) + Rational(1120,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(14560,1), 'twoM': -5},
+                                {'e': (Rational(14560,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(15730,1) + Rational(31460,1)*exp(2*pi*I*Rational(2,5)) + Rational(31460,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-31460,1)*exp(2*pi*I*Rational(3,20)) + Rational(15730,1)*exp(2*pi*I*Rational(5,20)) + Rational(-31460,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(-28600,1), 'twoM': 3},
+                                {'e': (Rational(-28600,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(16744,1) + Rational(33488,1)*exp(2*pi*I*Rational(2,5)) + Rational(33488,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-33488,1)*exp(2*pi*I*Rational(3,20)) + Rational(16744,1)*exp(2*pi*I*Rational(5,20)) + Rational(-33488,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(12400,1), 'twoM': 11},
+                                {'e': (Rational(12400,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11},
                                 {
-                                    'e': (Rational(-539,1) + Rational(-1078,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1078,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1078,1)*exp(2*pi*I*Rational(3,20)) + Rational(-539,1)*exp(2*pi*I*Rational(5,20)) + Rational(1078,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 15
                                 }
                             ],
@@ -206097,39 +206051,39 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(145,1)*exp(2*pi*I*Rational(1,8)) + Rational(-145,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(145,1)*exp(2*pi*I*Rational(1,8)) + Rational(145,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -15
                                 },
                                 {
-                                    'e': (Rational(1160,1)*exp(2*pi*I*Rational(1,40)) + Rational(1160,1)*exp(2*pi*I*Rational(3,40)) + Rational(-580,1)*exp(2*pi*I*Rational(5,40)) + Rational(-1160,1)*exp(2*pi*I*Rational(7,40)) + Rational(1160,1)*exp(2*pi*I*Rational(9,40)) + Rational(-580,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(1160,1)*exp(2*pi*I*Rational(1,40)) + Rational(-1160,1)*exp(2*pi*I*Rational(3,40)) + Rational(-580,1)*exp(2*pi*I*Rational(5,40)) + Rational(1160,1)*exp(2*pi*I*Rational(7,40)) + Rational(1160,1)*exp(2*pi*I*Rational(9,40)) + Rational(580,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -11
                                 },
                                 {
-                                    'e': (Rational(12740,1)*exp(2*pi*I*Rational(1,8)) + Rational(-12740,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(12740,1)*exp(2*pi*I*Rational(1,8)) + Rational(12740,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(-35464,1)*exp(2*pi*I*Rational(1,40)) + Rational(-35464,1)*exp(2*pi*I*Rational(3,40)) + Rational(17732,1)*exp(2*pi*I*Rational(5,40)) + Rational(35464,1)*exp(2*pi*I*Rational(7,40)) + Rational(-35464,1)*exp(2*pi*I*Rational(9,40)) + Rational(17732,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-35464,1)*exp(2*pi*I*Rational(1,40)) + Rational(35464,1)*exp(2*pi*I*Rational(3,40)) + Rational(17732,1)*exp(2*pi*I*Rational(5,40)) + Rational(-35464,1)*exp(2*pi*I*Rational(7,40)) + Rational(-35464,1)*exp(2*pi*I*Rational(9,40)) + Rational(-17732,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(-21450,1)*exp(2*pi*I*Rational(1,8)) + Rational(21450,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-21450,1)*exp(2*pi*I*Rational(1,8)) + Rational(-21450,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(-37128,1)*exp(2*pi*I*Rational(1,40)) + Rational(-37128,1)*exp(2*pi*I*Rational(3,40)) + Rational(18564,1)*exp(2*pi*I*Rational(5,40)) + Rational(37128,1)*exp(2*pi*I*Rational(7,40)) + Rational(-37128,1)*exp(2*pi*I*Rational(9,40)) + Rational(18564,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-37128,1)*exp(2*pi*I*Rational(1,40)) + Rational(37128,1)*exp(2*pi*I*Rational(3,40)) + Rational(18564,1)*exp(2*pi*I*Rational(5,40)) + Rational(-37128,1)*exp(2*pi*I*Rational(7,40)) + Rational(-37128,1)*exp(2*pi*I*Rational(9,40)) + Rational(-18564,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 5
                                 },
                                 {
-                                    'e': (Rational(10500,1)*exp(2*pi*I*Rational(1,8)) + Rational(-10500,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(10500,1)*exp(2*pi*I*Rational(1,8)) + Rational(10500,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 9
                                 },
                                 {
-                                    'e': (Rational(1032,1)*exp(2*pi*I*Rational(1,40)) + Rational(1032,1)*exp(2*pi*I*Rational(3,40)) + Rational(-516,1)*exp(2*pi*I*Rational(5,40)) + Rational(-1032,1)*exp(2*pi*I*Rational(7,40)) + Rational(1032,1)*exp(2*pi*I*Rational(9,40)) + Rational(-516,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(1032,1)*exp(2*pi*I*Rational(1,40)) + Rational(-1032,1)*exp(2*pi*I*Rational(3,40)) + Rational(-516,1)*exp(2*pi*I*Rational(5,40)) + Rational(1032,1)*exp(2*pi*I*Rational(7,40)) + Rational(1032,1)*exp(2*pi*I*Rational(9,40)) + Rational(516,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 13
                                 },
                                 {
-                                    'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,8)) + Rational(15,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,8)) + Rational(-15,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 17
                                 }
                             ],
@@ -206138,39 +206092,39 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,8)) + Rational(15,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,8)) + Rational(-15,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -17
                                 },
                                 {
-                                    'e': (Rational(1032,1)*exp(2*pi*I*Rational(1,40)) + Rational(1032,1)*exp(2*pi*I*Rational(3,40)) + Rational(-516,1)*exp(2*pi*I*Rational(5,40)) + Rational(-1032,1)*exp(2*pi*I*Rational(7,40)) + Rational(1032,1)*exp(2*pi*I*Rational(9,40)) + Rational(-516,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(1032,1)*exp(2*pi*I*Rational(1,40)) + Rational(-1032,1)*exp(2*pi*I*Rational(3,40)) + Rational(-516,1)*exp(2*pi*I*Rational(5,40)) + Rational(1032,1)*exp(2*pi*I*Rational(7,40)) + Rational(1032,1)*exp(2*pi*I*Rational(9,40)) + Rational(516,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -13
                                 },
                                 {
-                                    'e': (Rational(10500,1)*exp(2*pi*I*Rational(1,8)) + Rational(-10500,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(10500,1)*exp(2*pi*I*Rational(1,8)) + Rational(10500,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(-37128,1)*exp(2*pi*I*Rational(1,40)) + Rational(-37128,1)*exp(2*pi*I*Rational(3,40)) + Rational(18564,1)*exp(2*pi*I*Rational(5,40)) + Rational(37128,1)*exp(2*pi*I*Rational(7,40)) + Rational(-37128,1)*exp(2*pi*I*Rational(9,40)) + Rational(18564,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-37128,1)*exp(2*pi*I*Rational(1,40)) + Rational(37128,1)*exp(2*pi*I*Rational(3,40)) + Rational(18564,1)*exp(2*pi*I*Rational(5,40)) + Rational(-37128,1)*exp(2*pi*I*Rational(7,40)) + Rational(-37128,1)*exp(2*pi*I*Rational(9,40)) + Rational(-18564,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(-21450,1)*exp(2*pi*I*Rational(1,8)) + Rational(21450,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-21450,1)*exp(2*pi*I*Rational(1,8)) + Rational(-21450,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(-35464,1)*exp(2*pi*I*Rational(1,40)) + Rational(-35464,1)*exp(2*pi*I*Rational(3,40)) + Rational(17732,1)*exp(2*pi*I*Rational(5,40)) + Rational(35464,1)*exp(2*pi*I*Rational(7,40)) + Rational(-35464,1)*exp(2*pi*I*Rational(9,40)) + Rational(17732,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-35464,1)*exp(2*pi*I*Rational(1,40)) + Rational(35464,1)*exp(2*pi*I*Rational(3,40)) + Rational(17732,1)*exp(2*pi*I*Rational(5,40)) + Rational(-35464,1)*exp(2*pi*I*Rational(7,40)) + Rational(-35464,1)*exp(2*pi*I*Rational(9,40)) + Rational(-17732,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(12740,1)*exp(2*pi*I*Rational(1,8)) + Rational(-12740,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(12740,1)*exp(2*pi*I*Rational(1,8)) + Rational(12740,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 7
                                 },
                                 {
-                                    'e': (Rational(1160,1)*exp(2*pi*I*Rational(1,40)) + Rational(1160,1)*exp(2*pi*I*Rational(3,40)) + Rational(-580,1)*exp(2*pi*I*Rational(5,40)) + Rational(-1160,1)*exp(2*pi*I*Rational(7,40)) + Rational(1160,1)*exp(2*pi*I*Rational(9,40)) + Rational(-580,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(1160,1)*exp(2*pi*I*Rational(1,40)) + Rational(-1160,1)*exp(2*pi*I*Rational(3,40)) + Rational(-580,1)*exp(2*pi*I*Rational(5,40)) + Rational(1160,1)*exp(2*pi*I*Rational(7,40)) + Rational(1160,1)*exp(2*pi*I*Rational(9,40)) + Rational(580,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 11
                                 },
                                 {
-                                    'e': (Rational(145,1)*exp(2*pi*I*Rational(1,8)) + Rational(-145,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(145,1)*exp(2*pi*I*Rational(1,8)) + Rational(145,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 15
                                 }
                             ],
@@ -206179,27 +206133,27 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-539,1) + Rational(-1078,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1078,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1078,1)*exp(2*pi*I*Rational(3,20)) + Rational(-539,1)*exp(2*pi*I*Rational(5,20)) + Rational(1078,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -15
                                 },
-                                {'e': Rational(12400,1), 'twoM': -11},
+                                {'e': (Rational(12400,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(16744,1) + Rational(33488,1)*exp(2*pi*I*Rational(2,5)) + Rational(33488,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-33488,1)*exp(2*pi*I*Rational(3,20)) + Rational(16744,1)*exp(2*pi*I*Rational(5,20)) + Rational(-33488,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(-28600,1), 'twoM': -3},
+                                {'e': (Rational(-28600,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(15730,1) + Rational(31460,1)*exp(2*pi*I*Rational(2,5)) + Rational(31460,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-31460,1)*exp(2*pi*I*Rational(3,20)) + Rational(15730,1)*exp(2*pi*I*Rational(5,20)) + Rational(-31460,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(14560,1), 'twoM': 5},
+                                {'e': (Rational(14560,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(-560,1) + Rational(-1120,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1120,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1120,1)*exp(2*pi*I*Rational(3,20)) + Rational(-560,1)*exp(2*pi*I*Rational(5,20)) + Rational(1120,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 },
-                                {'e': Rational(-280,1), 'twoM': 13},
+                                {'e': (Rational(-280,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 13},
                                 {
-                                    'e': (Rational(-15,1) + Rational(-30,1)*exp(2*pi*I*Rational(2,5)) + Rational(-30,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(30,1)*exp(2*pi*I*Rational(3,20)) + Rational(-15,1)*exp(2*pi*I*Rational(5,20)) + Rational(30,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 17
                                 }
                             ],
@@ -206207,22 +206161,22 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(107,1), 'twoM': -17},
+                                {'e': (Rational(107,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -17},
                                 {
-                                    'e': (Rational(-464,1) + Rational(-928,1)*exp(2*pi*I*Rational(2,5)) + Rational(-928,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(928,1)*exp(2*pi*I*Rational(3,20)) + Rational(-464,1)*exp(2*pi*I*Rational(5,20)) + Rational(928,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -13
                                 },
-                                {'e': Rational(-3640,1), 'twoM': -9},
+                                {'e': (Rational(-3640,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(728,1) + Rational(1456,1)*exp(2*pi*I*Rational(2,5)) + Rational(1456,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1456,1)*exp(2*pi*I*Rational(3,20)) + Rational(728,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1456,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(-4290,1), 'twoM': -1},
+                                {'e': (Rational(-4290,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(120,1) + Rational(240,1)*exp(2*pi*I*Rational(2,5)) + Rational(240,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-240,1)*exp(2*pi*I*Rational(3,20)) + Rational(120,1)*exp(2*pi*I*Rational(5,20)) + Rational(-240,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 },
-                                {'e': Rational(15,1), 'twoM': 15}
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 15}
                             ],
                             'mu': 6
                         }
@@ -206237,54 +206191,54 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(-75,1), 'twoM': -15},
+                                {'e': (Rational(75,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -15},
                                 {
-                                    'e': (Rational(-600,1) + Rational(-1200,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1200,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1200,1)*exp(2*pi*I*Rational(3,20)) + Rational(600,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1200,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(540,1), 'twoM': -7},
+                                {'e': (Rational(-540,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(-2376,1) + Rational(-4752,1)*exp(2*pi*I*Rational(2,5)) + Rational(-4752,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-4752,1)*exp(2*pi*I*Rational(3,20)) + Rational(2376,1)*exp(2*pi*I*Rational(5,20)) + Rational(-4752,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(3630,1), 'twoM': 1},
+                                {'e': (Rational(-3630,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(1112,1) + Rational(2224,1)*exp(2*pi*I*Rational(2,5)) + Rational(2224,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2224,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1112,1)*exp(2*pi*I*Rational(5,20)) + Rational(2224,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(380,1), 'twoM': 9},
+                                {'e': (Rational(-380,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9},
                                 {
-                                    'e': (Rational(-56,1) + Rational(-112,1)*exp(2*pi*I*Rational(2,5)) + Rational(-112,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-112,1)*exp(2*pi*I*Rational(3,20)) + Rational(56,1)*exp(2*pi*I*Rational(5,20)) + Rational(-112,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 13
                                 },
-                                {'e': Rational(5,1), 'twoM': 17}
+                                {'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 17}
                             ],
                             'mu': 1
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(15,1) + Rational(30,1)*exp(2*pi*I*Rational(2,5)) + Rational(30,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(30,1)*exp(2*pi*I*Rational(3,20)) + Rational(-15,1)*exp(2*pi*I*Rational(5,20)) + Rational(30,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -17
                                 },
-                                {'e': Rational(280,1), 'twoM': -13},
+                                {'e': (Rational(-280,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -13},
                                 {
-                                    'e': (Rational(20,1) + Rational(40,1)*exp(2*pi*I*Rational(2,5)) + Rational(40,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(40,1)*exp(2*pi*I*Rational(3,20)) + Rational(-20,1)*exp(2*pi*I*Rational(5,20)) + Rational(40,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(-2680,1), 'twoM': -5},
+                                {'e': (Rational(2680,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(2090,1) + Rational(4180,1)*exp(2*pi*I*Rational(2,5)) + Rational(4180,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(4180,1)*exp(2*pi*I*Rational(3,20)) + Rational(-2090,1)*exp(2*pi*I*Rational(5,20)) + Rational(4180,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(4840,1), 'twoM': 3},
+                                {'e': (Rational(-4840,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(1076,1) + Rational(2152,1)*exp(2*pi*I*Rational(2,5)) + Rational(2152,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2152,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1076,1)*exp(2*pi*I*Rational(5,20)) + Rational(2152,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(-520,1), 'twoM': 11},
+                                {'e': (Rational(520,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11},
                                 {
-                                    'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-2,1)*exp(2*pi*I*Rational(3,20)) + Rational(1,1)*exp(2*pi*I*Rational(5,20)) + Rational(-2,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 15
                                 }
                             ],
@@ -206293,39 +206247,39 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-145,1)*exp(2*pi*I*Rational(1,8)) + Rational(145,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(145,1)*exp(2*pi*I*Rational(1,8)) + Rational(145,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -15
                                 },
                                 {
-                                    'e': (Rational(-80,1)*exp(2*pi*I*Rational(1,40)) + Rational(-80,1)*exp(2*pi*I*Rational(3,40)) + Rational(40,1)*exp(2*pi*I*Rational(5,40)) + Rational(80,1)*exp(2*pi*I*Rational(7,40)) + Rational(-80,1)*exp(2*pi*I*Rational(9,40)) + Rational(40,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(80,1)*exp(2*pi*I*Rational(1,40)) + Rational(-80,1)*exp(2*pi*I*Rational(3,40)) + Rational(-40,1)*exp(2*pi*I*Rational(5,40)) + Rational(80,1)*exp(2*pi*I*Rational(7,40)) + Rational(80,1)*exp(2*pi*I*Rational(9,40)) + Rational(40,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -11
                                 },
                                 {
-                                    'e': (Rational(-860,1)*exp(2*pi*I*Rational(1,8)) + Rational(860,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(860,1)*exp(2*pi*I*Rational(1,8)) + Rational(860,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(-176,1)*exp(2*pi*I*Rational(1,40)) + Rational(-176,1)*exp(2*pi*I*Rational(3,40)) + Rational(88,1)*exp(2*pi*I*Rational(5,40)) + Rational(176,1)*exp(2*pi*I*Rational(7,40)) + Rational(-176,1)*exp(2*pi*I*Rational(9,40)) + Rational(88,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(176,1)*exp(2*pi*I*Rational(1,40)) + Rational(-176,1)*exp(2*pi*I*Rational(3,40)) + Rational(-88,1)*exp(2*pi*I*Rational(5,40)) + Rational(176,1)*exp(2*pi*I*Rational(7,40)) + Rational(176,1)*exp(2*pi*I*Rational(9,40)) + Rational(88,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(-2310,1)*exp(2*pi*I*Rational(1,8)) + Rational(2310,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(2310,1)*exp(2*pi*I*Rational(1,8)) + Rational(2310,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(1488,1)*exp(2*pi*I*Rational(1,40)) + Rational(1488,1)*exp(2*pi*I*Rational(3,40)) + Rational(-744,1)*exp(2*pi*I*Rational(5,40)) + Rational(-1488,1)*exp(2*pi*I*Rational(7,40)) + Rational(1488,1)*exp(2*pi*I*Rational(9,40)) + Rational(-744,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-1488,1)*exp(2*pi*I*Rational(1,40)) + Rational(1488,1)*exp(2*pi*I*Rational(3,40)) + Rational(744,1)*exp(2*pi*I*Rational(5,40)) + Rational(-1488,1)*exp(2*pi*I*Rational(7,40)) + Rational(-1488,1)*exp(2*pi*I*Rational(9,40)) + Rational(-744,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 5
                                 },
                                 {
-                                    'e': (Rational(1380,1)*exp(2*pi*I*Rational(1,8)) + Rational(-1380,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-1380,1)*exp(2*pi*I*Rational(1,8)) + Rational(-1380,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 9
                                 },
                                 {
-                                    'e': (Rational(48,1)*exp(2*pi*I*Rational(1,40)) + Rational(48,1)*exp(2*pi*I*Rational(3,40)) + Rational(-24,1)*exp(2*pi*I*Rational(5,40)) + Rational(-48,1)*exp(2*pi*I*Rational(7,40)) + Rational(48,1)*exp(2*pi*I*Rational(9,40)) + Rational(-24,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-48,1)*exp(2*pi*I*Rational(1,40)) + Rational(48,1)*exp(2*pi*I*Rational(3,40)) + Rational(24,1)*exp(2*pi*I*Rational(5,40)) + Rational(-48,1)*exp(2*pi*I*Rational(7,40)) + Rational(-48,1)*exp(2*pi*I*Rational(9,40)) + Rational(-24,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 13
                                 },
                                 {
-                                    'e': (Rational(15,1)*exp(2*pi*I*Rational(1,8)) + Rational(-15,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,8)) + Rational(-15,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 17
                                 }
                             ],
@@ -206334,39 +206288,39 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(15,1)*exp(2*pi*I*Rational(1,8)) + Rational(-15,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,8)) + Rational(-15,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -17
                                 },
                                 {
-                                    'e': (Rational(48,1)*exp(2*pi*I*Rational(1,40)) + Rational(48,1)*exp(2*pi*I*Rational(3,40)) + Rational(-24,1)*exp(2*pi*I*Rational(5,40)) + Rational(-48,1)*exp(2*pi*I*Rational(7,40)) + Rational(48,1)*exp(2*pi*I*Rational(9,40)) + Rational(-24,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-48,1)*exp(2*pi*I*Rational(1,40)) + Rational(48,1)*exp(2*pi*I*Rational(3,40)) + Rational(24,1)*exp(2*pi*I*Rational(5,40)) + Rational(-48,1)*exp(2*pi*I*Rational(7,40)) + Rational(-48,1)*exp(2*pi*I*Rational(9,40)) + Rational(-24,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -13
                                 },
                                 {
-                                    'e': (Rational(1380,1)*exp(2*pi*I*Rational(1,8)) + Rational(-1380,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-1380,1)*exp(2*pi*I*Rational(1,8)) + Rational(-1380,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(1488,1)*exp(2*pi*I*Rational(1,40)) + Rational(1488,1)*exp(2*pi*I*Rational(3,40)) + Rational(-744,1)*exp(2*pi*I*Rational(5,40)) + Rational(-1488,1)*exp(2*pi*I*Rational(7,40)) + Rational(1488,1)*exp(2*pi*I*Rational(9,40)) + Rational(-744,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-1488,1)*exp(2*pi*I*Rational(1,40)) + Rational(1488,1)*exp(2*pi*I*Rational(3,40)) + Rational(744,1)*exp(2*pi*I*Rational(5,40)) + Rational(-1488,1)*exp(2*pi*I*Rational(7,40)) + Rational(-1488,1)*exp(2*pi*I*Rational(9,40)) + Rational(-744,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(-2310,1)*exp(2*pi*I*Rational(1,8)) + Rational(2310,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(2310,1)*exp(2*pi*I*Rational(1,8)) + Rational(2310,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(-176,1)*exp(2*pi*I*Rational(1,40)) + Rational(-176,1)*exp(2*pi*I*Rational(3,40)) + Rational(88,1)*exp(2*pi*I*Rational(5,40)) + Rational(176,1)*exp(2*pi*I*Rational(7,40)) + Rational(-176,1)*exp(2*pi*I*Rational(9,40)) + Rational(88,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(176,1)*exp(2*pi*I*Rational(1,40)) + Rational(-176,1)*exp(2*pi*I*Rational(3,40)) + Rational(-88,1)*exp(2*pi*I*Rational(5,40)) + Rational(176,1)*exp(2*pi*I*Rational(7,40)) + Rational(176,1)*exp(2*pi*I*Rational(9,40)) + Rational(88,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(-860,1)*exp(2*pi*I*Rational(1,8)) + Rational(860,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(860,1)*exp(2*pi*I*Rational(1,8)) + Rational(860,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 7
                                 },
                                 {
-                                    'e': (Rational(-80,1)*exp(2*pi*I*Rational(1,40)) + Rational(-80,1)*exp(2*pi*I*Rational(3,40)) + Rational(40,1)*exp(2*pi*I*Rational(5,40)) + Rational(80,1)*exp(2*pi*I*Rational(7,40)) + Rational(-80,1)*exp(2*pi*I*Rational(9,40)) + Rational(40,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(80,1)*exp(2*pi*I*Rational(1,40)) + Rational(-80,1)*exp(2*pi*I*Rational(3,40)) + Rational(-40,1)*exp(2*pi*I*Rational(5,40)) + Rational(80,1)*exp(2*pi*I*Rational(7,40)) + Rational(80,1)*exp(2*pi*I*Rational(9,40)) + Rational(40,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 11
                                 },
                                 {
-                                    'e': (Rational(-145,1)*exp(2*pi*I*Rational(1,8)) + Rational(145,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(145,1)*exp(2*pi*I*Rational(1,8)) + Rational(145,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 15
                                 }
                             ],
@@ -206375,27 +206329,27 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-1,1) + Rational(-2,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-2,1)*exp(2*pi*I*Rational(3,20)) + Rational(1,1)*exp(2*pi*I*Rational(5,20)) + Rational(-2,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -15
                                 },
-                                {'e': Rational(-520,1), 'twoM': -11},
+                                {'e': (Rational(520,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(1076,1) + Rational(2152,1)*exp(2*pi*I*Rational(2,5)) + Rational(2152,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2152,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1076,1)*exp(2*pi*I*Rational(5,20)) + Rational(2152,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(4840,1), 'twoM': -3},
+                                {'e': (Rational(-4840,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(2090,1) + Rational(4180,1)*exp(2*pi*I*Rational(2,5)) + Rational(4180,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(4180,1)*exp(2*pi*I*Rational(3,20)) + Rational(-2090,1)*exp(2*pi*I*Rational(5,20)) + Rational(4180,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(-2680,1), 'twoM': 5},
+                                {'e': (Rational(2680,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(20,1) + Rational(40,1)*exp(2*pi*I*Rational(2,5)) + Rational(40,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(40,1)*exp(2*pi*I*Rational(3,20)) + Rational(-20,1)*exp(2*pi*I*Rational(5,20)) + Rational(40,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 },
-                                {'e': Rational(280,1), 'twoM': 13},
+                                {'e': (Rational(-280,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 13},
                                 {
-                                    'e': (Rational(15,1) + Rational(30,1)*exp(2*pi*I*Rational(2,5)) + Rational(30,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(30,1)*exp(2*pi*I*Rational(3,20)) + Rational(-15,1)*exp(2*pi*I*Rational(5,20)) + Rational(30,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 17
                                 }
                             ],
@@ -206403,27 +206357,27 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(5,1), 'twoM': -17},
+                                {'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -17},
                                 {
-                                    'e': (Rational(-56,1) + Rational(-112,1)*exp(2*pi*I*Rational(2,5)) + Rational(-112,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-112,1)*exp(2*pi*I*Rational(3,20)) + Rational(56,1)*exp(2*pi*I*Rational(5,20)) + Rational(-112,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -13
                                 },
-                                {'e': Rational(380,1), 'twoM': -9},
+                                {'e': (Rational(-380,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(1112,1) + Rational(2224,1)*exp(2*pi*I*Rational(2,5)) + Rational(2224,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2224,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1112,1)*exp(2*pi*I*Rational(5,20)) + Rational(2224,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(3630,1), 'twoM': -1},
+                                {'e': (Rational(-3630,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(-2376,1) + Rational(-4752,1)*exp(2*pi*I*Rational(2,5)) + Rational(-4752,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-4752,1)*exp(2*pi*I*Rational(3,20)) + Rational(2376,1)*exp(2*pi*I*Rational(5,20)) + Rational(-4752,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(540,1), 'twoM': 7},
+                                {'e': (Rational(-540,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7},
                                 {
-                                    'e': (Rational(-600,1) + Rational(-1200,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1200,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1200,1)*exp(2*pi*I*Rational(3,20)) + Rational(600,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1200,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 },
-                                {'e': Rational(-75,1), 'twoM': 15}
+                                {'e': (Rational(75,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 15}
                             ],
                             'mu': 6
                         }
@@ -206438,29 +206392,29 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(15,1), 'twoM': -19},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -19},
                                 {
-                                    'e': (Rational(171,1) + Rational(342,1)*exp(2*pi*I*Rational(2,5)) + Rational(342,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-342,1)*exp(2*pi*I*Rational(3,20)) + Rational(171,1)*exp(2*pi*I*Rational(5,20)) + Rational(-342,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -15
                                 },
-                                {'e': Rational(-228,1), 'twoM': -11},
+                                {'e': (Rational(-228,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(1596,1) + Rational(3192,1)*exp(2*pi*I*Rational(2,5)) + Rational(3192,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-3192,1)*exp(2*pi*I*Rational(3,20)) + Rational(1596,1)*exp(2*pi*I*Rational(5,20)) + Rational(-3192,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(-4446,1), 'twoM': -3},
+                                {'e': (Rational(-4446,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(-2470,1) + Rational(-4940,1)*exp(2*pi*I*Rational(2,5)) + Rational(-4940,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(4940,1)*exp(2*pi*I*Rational(3,20)) + Rational(-2470,1)*exp(2*pi*I*Rational(5,20)) + Rational(4940,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(-2964,1), 'twoM': 5},
+                                {'e': (Rational(-2964,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(684,1) + Rational(1368,1)*exp(2*pi*I*Rational(2,5)) + Rational(1368,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1368,1)*exp(2*pi*I*Rational(3,20)) + Rational(684,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1368,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 },
-                                {'e': Rational(-57,1), 'twoM': 13},
+                                {'e': (Rational(-57,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 13},
                                 {
-                                    'e': (Rational(19,1) + Rational(38,1)*exp(2*pi*I*Rational(2,5)) + Rational(38,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-38,1)*exp(2*pi*I*Rational(3,20)) + Rational(19,1)*exp(2*pi*I*Rational(5,20)) + Rational(-38,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 17
                                 }
                             ],
@@ -206469,30 +206423,30 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-19,1) + Rational(-38,1)*exp(2*pi*I*Rational(2,5)) + Rational(-38,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(38,1)*exp(2*pi*I*Rational(3,20)) + Rational(-19,1)*exp(2*pi*I*Rational(5,20)) + Rational(38,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -17
                                 },
-                                {'e': Rational(57,1), 'twoM': -13},
+                                {'e': (Rational(57,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -13},
                                 {
-                                    'e': (Rational(-684,1) + Rational(-1368,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1368,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1368,1)*exp(2*pi*I*Rational(3,20)) + Rational(-684,1)*exp(2*pi*I*Rational(5,20)) + Rational(1368,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(2964,1), 'twoM': -5},
+                                {'e': (Rational(2964,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(2470,1) + Rational(4940,1)*exp(2*pi*I*Rational(2,5)) + Rational(4940,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-4940,1)*exp(2*pi*I*Rational(3,20)) + Rational(2470,1)*exp(2*pi*I*Rational(5,20)) + Rational(-4940,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(4446,1), 'twoM': 3},
+                                {'e': (Rational(4446,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(-1596,1) + Rational(-3192,1)*exp(2*pi*I*Rational(2,5)) + Rational(-3192,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(3192,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1596,1)*exp(2*pi*I*Rational(5,20)) + Rational(3192,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(228,1), 'twoM': 11},
+                                {'e': (Rational(228,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11},
                                 {
-                                    'e': (Rational(-171,1) + Rational(-342,1)*exp(2*pi*I*Rational(2,5)) + Rational(-342,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(342,1)*exp(2*pi*I*Rational(3,20)) + Rational(-171,1)*exp(2*pi*I*Rational(5,20)) + Rational(342,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 15
                                 },
-                                {'e': Rational(-15,1), 'twoM': 19}
+                                {'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 19}
                             ],
                             'mu': 2
                         }
@@ -206507,29 +206461,29 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(5,1), 'twoM': -19},
+                                {'e': (Rational(5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -19},
                                 {
-                                    'e': (Rational(-15,1) + Rational(-30,1)*exp(2*pi*I*Rational(2,5)) + Rational(-30,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(30,1)*exp(2*pi*I*Rational(3,20)) + Rational(-15,1)*exp(2*pi*I*Rational(5,20)) + Rational(30,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -15
                                 },
-                                {'e': Rational(-284,1), 'twoM': -11},
+                                {'e': (Rational(-284,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(-348,1) + Rational(-696,1)*exp(2*pi*I*Rational(2,5)) + Rational(-696,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(696,1)*exp(2*pi*I*Rational(3,20)) + Rational(-348,1)*exp(2*pi*I*Rational(5,20)) + Rational(696,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(-858,1), 'twoM': -3},
+                                {'e': (Rational(-858,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(286,1) + Rational(572,1)*exp(2*pi*I*Rational(2,5)) + Rational(572,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-572,1)*exp(2*pi*I*Rational(3,20)) + Rational(286,1)*exp(2*pi*I*Rational(5,20)) + Rational(-572,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(-1612,1), 'twoM': 5},
+                                {'e': (Rational(-1612,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(84,1) + Rational(168,1)*exp(2*pi*I*Rational(2,5)) + Rational(168,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-168,1)*exp(2*pi*I*Rational(3,20)) + Rational(84,1)*exp(2*pi*I*Rational(5,20)) + Rational(-168,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 },
-                                {'e': Rational(189,1), 'twoM': 13},
+                                {'e': (Rational(189,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 13},
                                 {
-                                    'e': (Rational(-7,1) + Rational(-14,1)*exp(2*pi*I*Rational(2,5)) + Rational(-14,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(14,1)*exp(2*pi*I*Rational(3,20)) + Rational(-7,1)*exp(2*pi*I*Rational(5,20)) + Rational(14,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 17
                                 }
                             ],
@@ -206538,30 +206492,30 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(7,1) + Rational(14,1)*exp(2*pi*I*Rational(2,5)) + Rational(14,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-14,1)*exp(2*pi*I*Rational(3,20)) + Rational(7,1)*exp(2*pi*I*Rational(5,20)) + Rational(-14,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -17
                                 },
-                                {'e': Rational(-189,1), 'twoM': -13},
+                                {'e': (Rational(-189,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -13},
                                 {
-                                    'e': (Rational(-84,1) + Rational(-168,1)*exp(2*pi*I*Rational(2,5)) + Rational(-168,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(168,1)*exp(2*pi*I*Rational(3,20)) + Rational(-84,1)*exp(2*pi*I*Rational(5,20)) + Rational(168,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(1612,1), 'twoM': -5},
+                                {'e': (Rational(1612,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(-286,1) + Rational(-572,1)*exp(2*pi*I*Rational(2,5)) + Rational(-572,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(572,1)*exp(2*pi*I*Rational(3,20)) + Rational(-286,1)*exp(2*pi*I*Rational(5,20)) + Rational(572,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(858,1), 'twoM': 3},
+                                {'e': (Rational(858,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(348,1) + Rational(696,1)*exp(2*pi*I*Rational(2,5)) + Rational(696,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-696,1)*exp(2*pi*I*Rational(3,20)) + Rational(348,1)*exp(2*pi*I*Rational(5,20)) + Rational(-696,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(284,1), 'twoM': 11},
+                                {'e': (Rational(284,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11},
                                 {
-                                    'e': (Rational(15,1) + Rational(30,1)*exp(2*pi*I*Rational(2,5)) + Rational(30,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-30,1)*exp(2*pi*I*Rational(3,20)) + Rational(15,1)*exp(2*pi*I*Rational(5,20)) + Rational(-30,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 15
                                 },
-                                {'e': Rational(-5,1), 'twoM': 19}
+                                {'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 19}
                             ],
                             'mu': 2
                         }
@@ -206576,29 +206530,29 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(15,1), 'twoM': -17},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -17},
                                 {
-                                    'e': (Rational(153,1) + Rational(306,1)*exp(2*pi*I*Rational(2,5)) + Rational(306,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-306,1)*exp(2*pi*I*Rational(3,20)) + Rational(153,1)*exp(2*pi*I*Rational(5,20)) + Rational(-306,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -13
                                 },
-                                {'e': Rational(-180,1), 'twoM': -9},
+                                {'e': (Rational(-180,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(1092,1) + Rational(2184,1)*exp(2*pi*I*Rational(2,5)) + Rational(2184,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-2184,1)*exp(2*pi*I*Rational(3,20)) + Rational(1092,1)*exp(2*pi*I*Rational(5,20)) + Rational(-2184,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(-2574,1), 'twoM': -1},
+                                {'e': (Rational(-2574,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(-1170,1) + Rational(-2340,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2340,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2340,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1170,1)*exp(2*pi*I*Rational(5,20)) + Rational(2340,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(-1092,1), 'twoM': 7},
+                                {'e': (Rational(-1092,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7},
                                 {
-                                    'e': (Rational(180,1) + Rational(360,1)*exp(2*pi*I*Rational(2,5)) + Rational(360,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-360,1)*exp(2*pi*I*Rational(3,20)) + Rational(180,1)*exp(2*pi*I*Rational(5,20)) + Rational(-360,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 },
-                                {'e': Rational(-9,1), 'twoM': 15},
+                                {'e': (Rational(-9,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 15},
                                 {
-                                    'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(2,5)) + Rational(2,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-2,1)*exp(2*pi*I*Rational(3,20)) + Rational(1,1)*exp(2*pi*I*Rational(5,20)) + Rational(-2,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 19
                                 }
                             ],
@@ -206606,44 +206560,35 @@ o3d = {
                         },
                         {
                             'components': [
+                                {'e': (Rational(15,1) + Rational(30,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -19},
                                 {
-                                    'e': (Rational(30,1)*exp(2*pi*I*Rational(1,12)) + Rational(-15,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -19
-                                },
-                                {
-                                    'e': (Rational(234,1)*exp(2*pi*I*Rational(1,60)) + Rational(-234,1)*exp(2*pi*I*Rational(5,60)) + Rational(-468,1)*exp(2*pi*I*Rational(7,60)) + Rational(-234,1)*exp(2*pi*I*Rational(9,60)) + Rational(-234,1)*exp(2*pi*I*Rational(11,60)) + Rational(468,1)*exp(2*pi*I*Rational(13,60)) + Rational(351,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(351,1) + Rational(-468,1)*exp(2*pi*I*Rational(1,15)) + Rational(-234,1)*exp(2*pi*I*Rational(2,15)) + Rational(234,1)*exp(2*pi*I*Rational(3,15)) + Rational(-468,1)*exp(2*pi*I*Rational(4,15)) + Rational(234,1)*exp(2*pi*I*Rational(5,15)) + Rational(-234,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -15
                                 },
                                 {
-                                    'e': (Rational(-168,1)*exp(2*pi*I*Rational(1,12)) + Rational(84,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-84,1) + Rational(-168,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -11
                                 },
                                 {
-                                    'e': (Rational(168,1)*exp(2*pi*I*Rational(1,60)) + Rational(-168,1)*exp(2*pi*I*Rational(5,60)) + Rational(-336,1)*exp(2*pi*I*Rational(7,60)) + Rational(-168,1)*exp(2*pi*I*Rational(9,60)) + Rational(-168,1)*exp(2*pi*I*Rational(11,60)) + Rational(336,1)*exp(2*pi*I*Rational(13,60)) + Rational(252,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(252,1) + Rational(-336,1)*exp(2*pi*I*Rational(1,15)) + Rational(-168,1)*exp(2*pi*I*Rational(2,15)) + Rational(168,1)*exp(2*pi*I*Rational(3,15)) + Rational(-336,1)*exp(2*pi*I*Rational(4,15)) + Rational(168,1)*exp(2*pi*I*Rational(5,15)) + Rational(-168,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(2340,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1170,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(1170,1) + Rational(2340,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(2860,1)*exp(2*pi*I*Rational(1,60)) + Rational(-2860,1)*exp(2*pi*I*Rational(5,60)) + Rational(-5720,1)*exp(2*pi*I*Rational(7,60)) + Rational(-2860,1)*exp(2*pi*I*Rational(9,60)) + Rational(-2860,1)*exp(2*pi*I*Rational(11,60)) + Rational(5720,1)*exp(2*pi*I*Rational(13,60)) + Rational(4290,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(4290,1) + Rational(-5720,1)*exp(2*pi*I*Rational(1,15)) + Rational(-2860,1)*exp(2*pi*I*Rational(2,15)) + Rational(2860,1)*exp(2*pi*I*Rational(3,15)) + Rational(-5720,1)*exp(2*pi*I*Rational(4,15)) + Rational(2860,1)*exp(2*pi*I*Rational(5,15)) + Rational(-2860,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 1
                                 },
+                                {'e': (Rational(2652,1) + Rational(5304,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 5},
                                 {
-                                    'e': (Rational(5304,1)*exp(2*pi*I*Rational(1,12)) + Rational(-2652,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 5
-                                },
-                                {
-                                    'e': (Rational(-1656,1)*exp(2*pi*I*Rational(1,60)) + Rational(1656,1)*exp(2*pi*I*Rational(5,60)) + Rational(3312,1)*exp(2*pi*I*Rational(7,60)) + Rational(1656,1)*exp(2*pi*I*Rational(9,60)) + Rational(1656,1)*exp(2*pi*I*Rational(11,60)) + Rational(-3312,1)*exp(2*pi*I*Rational(13,60)) + Rational(-2484,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-2484,1) + Rational(3312,1)*exp(2*pi*I*Rational(1,15)) + Rational(1656,1)*exp(2*pi*I*Rational(2,15)) + Rational(-1656,1)*exp(2*pi*I*Rational(3,15)) + Rational(3312,1)*exp(2*pi*I*Rational(4,15)) + Rational(-1656,1)*exp(2*pi*I*Rational(5,15)) + Rational(1656,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 9
                                 },
+                                {'e': (Rational(87,1) + Rational(174,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 13},
                                 {
-                                    'e': (Rational(174,1)*exp(2*pi*I*Rational(1,12)) + Rational(-87,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 13
-                                },
-                                {
-                                    'e': (Rational(-70,1)*exp(2*pi*I*Rational(1,60)) + Rational(70,1)*exp(2*pi*I*Rational(5,60)) + Rational(140,1)*exp(2*pi*I*Rational(7,60)) + Rational(70,1)*exp(2*pi*I*Rational(9,60)) + Rational(70,1)*exp(2*pi*I*Rational(11,60)) + Rational(-140,1)*exp(2*pi*I*Rational(13,60)) + Rational(-105,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-105,1) + Rational(140,1)*exp(2*pi*I*Rational(1,15)) + Rational(70,1)*exp(2*pi*I*Rational(2,15)) + Rational(-70,1)*exp(2*pi*I*Rational(3,15)) + Rational(140,1)*exp(2*pi*I*Rational(4,15)) + Rational(-70,1)*exp(2*pi*I*Rational(5,15)) + Rational(70,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 17
                                 }
                             ],
@@ -206652,75 +206597,63 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-70,1)*exp(2*pi*I*Rational(1,60)) + Rational(70,1)*exp(2*pi*I*Rational(5,60)) + Rational(140,1)*exp(2*pi*I*Rational(7,60)) + Rational(70,1)*exp(2*pi*I*Rational(9,60)) + Rational(70,1)*exp(2*pi*I*Rational(11,60)) + Rational(-140,1)*exp(2*pi*I*Rational(13,60)) + Rational(-105,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-105,1) + Rational(140,1)*exp(2*pi*I*Rational(1,15)) + Rational(70,1)*exp(2*pi*I*Rational(2,15)) + Rational(-70,1)*exp(2*pi*I*Rational(3,15)) + Rational(140,1)*exp(2*pi*I*Rational(4,15)) + Rational(-70,1)*exp(2*pi*I*Rational(5,15)) + Rational(70,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -17
                                 },
+                                {'e': (Rational(87,1) + Rational(174,1)*exp(2*pi*I*Rational(1,3))), 'twoM': -13},
                                 {
-                                    'e': (Rational(174,1)*exp(2*pi*I*Rational(1,12)) + Rational(-87,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': -13
-                                },
-                                {
-                                    'e': (Rational(-1656,1)*exp(2*pi*I*Rational(1,60)) + Rational(1656,1)*exp(2*pi*I*Rational(5,60)) + Rational(3312,1)*exp(2*pi*I*Rational(7,60)) + Rational(1656,1)*exp(2*pi*I*Rational(9,60)) + Rational(1656,1)*exp(2*pi*I*Rational(11,60)) + Rational(-3312,1)*exp(2*pi*I*Rational(13,60)) + Rational(-2484,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-2484,1) + Rational(3312,1)*exp(2*pi*I*Rational(1,15)) + Rational(1656,1)*exp(2*pi*I*Rational(2,15)) + Rational(-1656,1)*exp(2*pi*I*Rational(3,15)) + Rational(3312,1)*exp(2*pi*I*Rational(4,15)) + Rational(-1656,1)*exp(2*pi*I*Rational(5,15)) + Rational(1656,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(5304,1)*exp(2*pi*I*Rational(1,12)) + Rational(-2652,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(2652,1) + Rational(5304,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(2860,1)*exp(2*pi*I*Rational(1,60)) + Rational(-2860,1)*exp(2*pi*I*Rational(5,60)) + Rational(-5720,1)*exp(2*pi*I*Rational(7,60)) + Rational(-2860,1)*exp(2*pi*I*Rational(9,60)) + Rational(-2860,1)*exp(2*pi*I*Rational(11,60)) + Rational(5720,1)*exp(2*pi*I*Rational(13,60)) + Rational(4290,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(4290,1) + Rational(-5720,1)*exp(2*pi*I*Rational(1,15)) + Rational(-2860,1)*exp(2*pi*I*Rational(2,15)) + Rational(2860,1)*exp(2*pi*I*Rational(3,15)) + Rational(-5720,1)*exp(2*pi*I*Rational(4,15)) + Rational(2860,1)*exp(2*pi*I*Rational(5,15)) + Rational(-2860,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -1
                                 },
+                                {'e': (Rational(1170,1) + Rational(2340,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 3},
                                 {
-                                    'e': (Rational(2340,1)*exp(2*pi*I*Rational(1,12)) + Rational(-1170,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 3
-                                },
-                                {
-                                    'e': (Rational(168,1)*exp(2*pi*I*Rational(1,60)) + Rational(-168,1)*exp(2*pi*I*Rational(5,60)) + Rational(-336,1)*exp(2*pi*I*Rational(7,60)) + Rational(-168,1)*exp(2*pi*I*Rational(9,60)) + Rational(-168,1)*exp(2*pi*I*Rational(11,60)) + Rational(336,1)*exp(2*pi*I*Rational(13,60)) + Rational(252,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(252,1) + Rational(-336,1)*exp(2*pi*I*Rational(1,15)) + Rational(-168,1)*exp(2*pi*I*Rational(2,15)) + Rational(168,1)*exp(2*pi*I*Rational(3,15)) + Rational(-336,1)*exp(2*pi*I*Rational(4,15)) + Rational(168,1)*exp(2*pi*I*Rational(5,15)) + Rational(-168,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 7
                                 },
+                                {'e': (Rational(-84,1) + Rational(-168,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 11},
                                 {
-                                    'e': (Rational(-168,1)*exp(2*pi*I*Rational(1,12)) + Rational(84,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 11
-                                },
-                                {
-                                    'e': (Rational(234,1)*exp(2*pi*I*Rational(1,60)) + Rational(-234,1)*exp(2*pi*I*Rational(5,60)) + Rational(-468,1)*exp(2*pi*I*Rational(7,60)) + Rational(-234,1)*exp(2*pi*I*Rational(9,60)) + Rational(-234,1)*exp(2*pi*I*Rational(11,60)) + Rational(468,1)*exp(2*pi*I*Rational(13,60)) + Rational(351,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(351,1) + Rational(-468,1)*exp(2*pi*I*Rational(1,15)) + Rational(-234,1)*exp(2*pi*I*Rational(2,15)) + Rational(234,1)*exp(2*pi*I*Rational(3,15)) + Rational(-468,1)*exp(2*pi*I*Rational(4,15)) + Rational(234,1)*exp(2*pi*I*Rational(5,15)) + Rational(-234,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 15
                                 },
-                                {
-                                    'e': (Rational(30,1)*exp(2*pi*I*Rational(1,12)) + Rational(-15,1)*exp(2*pi*I*Rational(3,12))),
-                                    'twoM': 19
-                                }
+                                {'e': (Rational(15,1) + Rational(30,1)*exp(2*pi*I*Rational(1,3))), 'twoM': 19}
                             ],
                             'mu': 3
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(1,1) + Rational(2,1)*exp(2*pi*I*Rational(2,5)) + Rational(2,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-2,1)*exp(2*pi*I*Rational(3,20)) + Rational(1,1)*exp(2*pi*I*Rational(5,20)) + Rational(-2,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -19
                                 },
-                                {'e': Rational(-9,1), 'twoM': -15},
+                                {'e': (Rational(-9,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -15},
                                 {
-                                    'e': (Rational(180,1) + Rational(360,1)*exp(2*pi*I*Rational(2,5)) + Rational(360,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-360,1)*exp(2*pi*I*Rational(3,20)) + Rational(180,1)*exp(2*pi*I*Rational(5,20)) + Rational(-360,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(-1092,1), 'twoM': -7},
+                                {'e': (Rational(-1092,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(-1170,1) + Rational(-2340,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2340,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2340,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1170,1)*exp(2*pi*I*Rational(5,20)) + Rational(2340,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(-2574,1), 'twoM': 1},
+                                {'e': (Rational(-2574,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(1092,1) + Rational(2184,1)*exp(2*pi*I*Rational(2,5)) + Rational(2184,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-2184,1)*exp(2*pi*I*Rational(3,20)) + Rational(1092,1)*exp(2*pi*I*Rational(5,20)) + Rational(-2184,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(-180,1), 'twoM': 9},
+                                {'e': (Rational(-180,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9},
                                 {
-                                    'e': (Rational(153,1) + Rational(306,1)*exp(2*pi*I*Rational(2,5)) + Rational(306,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-306,1)*exp(2*pi*I*Rational(3,20)) + Rational(153,1)*exp(2*pi*I*Rational(5,20)) + Rational(-306,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 13
                                 },
-                                {'e': Rational(15,1), 'twoM': 17}
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 17}
                             ],
                             'mu': 4
                         }
@@ -206735,25 +206668,25 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(75,1), 'twoM': -19},
-                                {'e': Rational(19380,1), 'twoM': -11},
+                                {'e': (Rational(75,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -19},
+                                {'e': (Rational(19380,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(840,1) + Rational(1680,1)*exp(2*pi*I*Rational(2,5)) + Rational(1680,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1680,1)*exp(2*pi*I*Rational(3,20)) + Rational(840,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1680,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(104130,1), 'twoM': -3},
+                                {'e': (Rational(104130,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(-40040,1) + Rational(-80080,1)*exp(2*pi*I*Rational(2,5)) + Rational(-80080,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(80080,1)*exp(2*pi*I*Rational(3,20)) + Rational(-40040,1)*exp(2*pi*I*Rational(5,20)) + Rational(80080,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(-67020,1), 'twoM': 5},
+                                {'e': (Rational(-67020,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(-10056,1) + Rational(-20112,1)*exp(2*pi*I*Rational(2,5)) + Rational(-20112,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(20112,1)*exp(2*pi*I*Rational(3,20)) + Rational(-10056,1)*exp(2*pi*I*Rational(5,20)) + Rational(20112,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 },
-                                {'e': Rational(5515,1), 'twoM': 13},
+                                {'e': (Rational(5515,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 13},
                                 {
-                                    'e': (Rational(-24,1) + Rational(-48,1)*exp(2*pi*I*Rational(2,5)) + Rational(-48,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(48,1)*exp(2*pi*I*Rational(3,20)) + Rational(-24,1)*exp(2*pi*I*Rational(5,20)) + Rational(48,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 17
                                 }
                             ],
@@ -206761,29 +206694,29 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(-1045,1), 'twoM': -17},
+                                {'e': (Rational(-1045,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -17},
                                 {
-                                    'e': (Rational(-5814,1) + Rational(-11628,1)*exp(2*pi*I*Rational(2,5)) + Rational(-11628,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(11628,1)*exp(2*pi*I*Rational(3,20)) + Rational(-5814,1)*exp(2*pi*I*Rational(5,20)) + Rational(11628,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -13
                                 },
-                                {'e': Rational(14340,1), 'twoM': -9},
+                                {'e': (Rational(14340,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(-6656,1) + Rational(-13312,1)*exp(2*pi*I*Rational(2,5)) + Rational(-13312,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(13312,1)*exp(2*pi*I*Rational(3,20)) + Rational(-6656,1)*exp(2*pi*I*Rational(5,20)) + Rational(13312,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(-20878,1), 'twoM': -1},
+                                {'e': (Rational(-20878,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(-19020,1) + Rational(-38040,1)*exp(2*pi*I*Rational(2,5)) + Rational(-38040,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(38040,1)*exp(2*pi*I*Rational(3,20)) + Rational(-19020,1)*exp(2*pi*I*Rational(5,20)) + Rational(38040,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(-41244,1), 'twoM': 7},
+                                {'e': (Rational(-41244,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7},
                                 {
-                                    'e': (Rational(9520,1) + Rational(19040,1)*exp(2*pi*I*Rational(2,5)) + Rational(19040,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-19040,1)*exp(2*pi*I*Rational(3,20)) + Rational(9520,1)*exp(2*pi*I*Rational(5,20)) + Rational(-19040,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 },
-                                {'e': Rational(-453,1), 'twoM': 15},
+                                {'e': (Rational(-453,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 15},
                                 {
-                                    'e': (Rational(82,1) + Rational(164,1)*exp(2*pi*I*Rational(2,5)) + Rational(164,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-164,1)*exp(2*pi*I*Rational(3,20)) + Rational(82,1)*exp(2*pi*I*Rational(5,20)) + Rational(-164,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 19
                                 }
                             ],
@@ -206792,43 +206725,43 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-385,1)*exp(2*pi*I*Rational(1,8)) + Rational(385,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-385,1)*exp(2*pi*I*Rational(1,8)) + Rational(-385,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -19
                                 },
                                 {
-                                    'e': (Rational(2166,1)*exp(2*pi*I*Rational(1,40)) + Rational(2166,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1083,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2166,1)*exp(2*pi*I*Rational(7,40)) + Rational(2166,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1083,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(2166,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2166,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1083,1)*exp(2*pi*I*Rational(5,40)) + Rational(2166,1)*exp(2*pi*I*Rational(7,40)) + Rational(2166,1)*exp(2*pi*I*Rational(9,40)) + Rational(1083,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -15
                                 },
                                 {
-                                    'e': (Rational(-8724,1)*exp(2*pi*I*Rational(1,8)) + Rational(8724,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-8724,1)*exp(2*pi*I*Rational(1,8)) + Rational(-8724,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -11
                                 },
                                 {
-                                    'e': (Rational(-49448,1)*exp(2*pi*I*Rational(1,40)) + Rational(-49448,1)*exp(2*pi*I*Rational(3,40)) + Rational(24724,1)*exp(2*pi*I*Rational(5,40)) + Rational(49448,1)*exp(2*pi*I*Rational(7,40)) + Rational(-49448,1)*exp(2*pi*I*Rational(9,40)) + Rational(24724,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-49448,1)*exp(2*pi*I*Rational(1,40)) + Rational(49448,1)*exp(2*pi*I*Rational(3,40)) + Rational(24724,1)*exp(2*pi*I*Rational(5,40)) + Rational(-49448,1)*exp(2*pi*I*Rational(7,40)) + Rational(-49448,1)*exp(2*pi*I*Rational(9,40)) + Rational(-24724,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(-79950,1)*exp(2*pi*I*Rational(1,8)) + Rational(79950,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-79950,1)*exp(2*pi*I*Rational(1,8)) + Rational(-79950,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(106260,1)*exp(2*pi*I*Rational(1,40)) + Rational(106260,1)*exp(2*pi*I*Rational(3,40)) + Rational(-53130,1)*exp(2*pi*I*Rational(5,40)) + Rational(-106260,1)*exp(2*pi*I*Rational(7,40)) + Rational(106260,1)*exp(2*pi*I*Rational(9,40)) + Rational(-53130,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(106260,1)*exp(2*pi*I*Rational(1,40)) + Rational(-106260,1)*exp(2*pi*I*Rational(3,40)) + Rational(-53130,1)*exp(2*pi*I*Rational(5,40)) + Rational(106260,1)*exp(2*pi*I*Rational(7,40)) + Rational(106260,1)*exp(2*pi*I*Rational(9,40)) + Rational(53130,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(-9828,1)*exp(2*pi*I*Rational(1,8)) + Rational(9828,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-9828,1)*exp(2*pi*I*Rational(1,8)) + Rational(-9828,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 5
                                 },
                                 {
-                                    'e': (Rational(18936,1)*exp(2*pi*I*Rational(1,40)) + Rational(18936,1)*exp(2*pi*I*Rational(3,40)) + Rational(-9468,1)*exp(2*pi*I*Rational(5,40)) + Rational(-18936,1)*exp(2*pi*I*Rational(7,40)) + Rational(18936,1)*exp(2*pi*I*Rational(9,40)) + Rational(-9468,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(18936,1)*exp(2*pi*I*Rational(1,40)) + Rational(-18936,1)*exp(2*pi*I*Rational(3,40)) + Rational(-9468,1)*exp(2*pi*I*Rational(5,40)) + Rational(18936,1)*exp(2*pi*I*Rational(7,40)) + Rational(18936,1)*exp(2*pi*I*Rational(9,40)) + Rational(9468,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 9
                                 },
                                 {
-                                    'e': (Rational(327,1)*exp(2*pi*I*Rational(1,8)) + Rational(-327,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(327,1)*exp(2*pi*I*Rational(1,8)) + Rational(327,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 13
                                 },
                                 {
-                                    'e': (Rational(2470,1)*exp(2*pi*I*Rational(1,40)) + Rational(2470,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1235,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2470,1)*exp(2*pi*I*Rational(7,40)) + Rational(2470,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1235,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(2470,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2470,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1235,1)*exp(2*pi*I*Rational(5,40)) + Rational(2470,1)*exp(2*pi*I*Rational(7,40)) + Rational(2470,1)*exp(2*pi*I*Rational(9,40)) + Rational(1235,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 17
                                 }
                             ],
@@ -206837,43 +206770,43 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-2470,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2470,1)*exp(2*pi*I*Rational(3,40)) + Rational(1235,1)*exp(2*pi*I*Rational(5,40)) + Rational(2470,1)*exp(2*pi*I*Rational(7,40)) + Rational(-2470,1)*exp(2*pi*I*Rational(9,40)) + Rational(1235,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-2470,1)*exp(2*pi*I*Rational(1,40)) + Rational(2470,1)*exp(2*pi*I*Rational(3,40)) + Rational(1235,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2470,1)*exp(2*pi*I*Rational(7,40)) + Rational(-2470,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1235,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -17
                                 },
                                 {
-                                    'e': (Rational(-327,1)*exp(2*pi*I*Rational(1,8)) + Rational(327,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-327,1)*exp(2*pi*I*Rational(1,8)) + Rational(-327,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -13
                                 },
                                 {
-                                    'e': (Rational(-18936,1)*exp(2*pi*I*Rational(1,40)) + Rational(-18936,1)*exp(2*pi*I*Rational(3,40)) + Rational(9468,1)*exp(2*pi*I*Rational(5,40)) + Rational(18936,1)*exp(2*pi*I*Rational(7,40)) + Rational(-18936,1)*exp(2*pi*I*Rational(9,40)) + Rational(9468,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-18936,1)*exp(2*pi*I*Rational(1,40)) + Rational(18936,1)*exp(2*pi*I*Rational(3,40)) + Rational(9468,1)*exp(2*pi*I*Rational(5,40)) + Rational(-18936,1)*exp(2*pi*I*Rational(7,40)) + Rational(-18936,1)*exp(2*pi*I*Rational(9,40)) + Rational(-9468,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(9828,1)*exp(2*pi*I*Rational(1,8)) + Rational(-9828,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(9828,1)*exp(2*pi*I*Rational(1,8)) + Rational(9828,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(-106260,1)*exp(2*pi*I*Rational(1,40)) + Rational(-106260,1)*exp(2*pi*I*Rational(3,40)) + Rational(53130,1)*exp(2*pi*I*Rational(5,40)) + Rational(106260,1)*exp(2*pi*I*Rational(7,40)) + Rational(-106260,1)*exp(2*pi*I*Rational(9,40)) + Rational(53130,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-106260,1)*exp(2*pi*I*Rational(1,40)) + Rational(106260,1)*exp(2*pi*I*Rational(3,40)) + Rational(53130,1)*exp(2*pi*I*Rational(5,40)) + Rational(-106260,1)*exp(2*pi*I*Rational(7,40)) + Rational(-106260,1)*exp(2*pi*I*Rational(9,40)) + Rational(-53130,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(79950,1)*exp(2*pi*I*Rational(1,8)) + Rational(-79950,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(79950,1)*exp(2*pi*I*Rational(1,8)) + Rational(79950,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(49448,1)*exp(2*pi*I*Rational(1,40)) + Rational(49448,1)*exp(2*pi*I*Rational(3,40)) + Rational(-24724,1)*exp(2*pi*I*Rational(5,40)) + Rational(-49448,1)*exp(2*pi*I*Rational(7,40)) + Rational(49448,1)*exp(2*pi*I*Rational(9,40)) + Rational(-24724,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(49448,1)*exp(2*pi*I*Rational(1,40)) + Rational(-49448,1)*exp(2*pi*I*Rational(3,40)) + Rational(-24724,1)*exp(2*pi*I*Rational(5,40)) + Rational(49448,1)*exp(2*pi*I*Rational(7,40)) + Rational(49448,1)*exp(2*pi*I*Rational(9,40)) + Rational(24724,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 7
                                 },
                                 {
-                                    'e': (Rational(8724,1)*exp(2*pi*I*Rational(1,8)) + Rational(-8724,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(8724,1)*exp(2*pi*I*Rational(1,8)) + Rational(8724,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 11
                                 },
                                 {
-                                    'e': (Rational(-2166,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2166,1)*exp(2*pi*I*Rational(3,40)) + Rational(1083,1)*exp(2*pi*I*Rational(5,40)) + Rational(2166,1)*exp(2*pi*I*Rational(7,40)) + Rational(-2166,1)*exp(2*pi*I*Rational(9,40)) + Rational(1083,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-2166,1)*exp(2*pi*I*Rational(1,40)) + Rational(2166,1)*exp(2*pi*I*Rational(3,40)) + Rational(1083,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2166,1)*exp(2*pi*I*Rational(7,40)) + Rational(-2166,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1083,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 15
                                 },
                                 {
-                                    'e': (Rational(385,1)*exp(2*pi*I*Rational(1,8)) + Rational(-385,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(385,1)*exp(2*pi*I*Rational(1,8)) + Rational(385,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 19
                                 }
                             ],
@@ -206882,56 +206815,56 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-82,1) + Rational(-164,1)*exp(2*pi*I*Rational(2,5)) + Rational(-164,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(164,1)*exp(2*pi*I*Rational(3,20)) + Rational(-82,1)*exp(2*pi*I*Rational(5,20)) + Rational(164,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -19
                                 },
-                                {'e': Rational(453,1), 'twoM': -15},
+                                {'e': (Rational(453,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -15},
                                 {
-                                    'e': (Rational(-9520,1) + Rational(-19040,1)*exp(2*pi*I*Rational(2,5)) + Rational(-19040,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(19040,1)*exp(2*pi*I*Rational(3,20)) + Rational(-9520,1)*exp(2*pi*I*Rational(5,20)) + Rational(19040,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(41244,1), 'twoM': -7},
+                                {'e': (Rational(41244,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(19020,1) + Rational(38040,1)*exp(2*pi*I*Rational(2,5)) + Rational(38040,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-38040,1)*exp(2*pi*I*Rational(3,20)) + Rational(19020,1)*exp(2*pi*I*Rational(5,20)) + Rational(-38040,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(20878,1), 'twoM': 1},
+                                {'e': (Rational(20878,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(6656,1) + Rational(13312,1)*exp(2*pi*I*Rational(2,5)) + Rational(13312,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-13312,1)*exp(2*pi*I*Rational(3,20)) + Rational(6656,1)*exp(2*pi*I*Rational(5,20)) + Rational(-13312,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(-14340,1), 'twoM': 9},
+                                {'e': (Rational(-14340,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9},
                                 {
-                                    'e': (Rational(5814,1) + Rational(11628,1)*exp(2*pi*I*Rational(2,5)) + Rational(11628,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-11628,1)*exp(2*pi*I*Rational(3,20)) + Rational(5814,1)*exp(2*pi*I*Rational(5,20)) + Rational(-11628,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 13
                                 },
-                                {'e': Rational(1045,1), 'twoM': 17}
+                                {'e': (Rational(1045,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 17}
                             ],
                             'mu': 5
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(24,1) + Rational(48,1)*exp(2*pi*I*Rational(2,5)) + Rational(48,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-48,1)*exp(2*pi*I*Rational(3,20)) + Rational(24,1)*exp(2*pi*I*Rational(5,20)) + Rational(-48,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -17
                                 },
-                                {'e': Rational(-5515,1), 'twoM': -13},
+                                {'e': (Rational(-5515,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -13},
                                 {
-                                    'e': (Rational(10056,1) + Rational(20112,1)*exp(2*pi*I*Rational(2,5)) + Rational(20112,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-20112,1)*exp(2*pi*I*Rational(3,20)) + Rational(10056,1)*exp(2*pi*I*Rational(5,20)) + Rational(-20112,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(67020,1), 'twoM': -5},
+                                {'e': (Rational(67020,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(40040,1) + Rational(80080,1)*exp(2*pi*I*Rational(2,5)) + Rational(80080,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-80080,1)*exp(2*pi*I*Rational(3,20)) + Rational(40040,1)*exp(2*pi*I*Rational(5,20)) + Rational(-80080,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(-104130,1), 'twoM': 3},
+                                {'e': (Rational(-104130,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(-840,1) + Rational(-1680,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1680,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1680,1)*exp(2*pi*I*Rational(3,20)) + Rational(-840,1)*exp(2*pi*I*Rational(5,20)) + Rational(1680,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(-19380,1), 'twoM': 11},
-                                {'e': Rational(-75,1), 'twoM': 19}
+                                {'e': (Rational(-19380,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11},
+                                {'e': (Rational(-75,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 19}
                             ],
                             'mu': 6
                         }
@@ -206947,103 +206880,103 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-40755,1) + Rational(-81510,1)*exp(2*pi*I*Rational(2,5)) + Rational(-81510,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(81510,1)*exp(2*pi*I*Rational(3,20)) + Rational(-40755,1)*exp(2*pi*I*Rational(5,20)) + Rational(81510,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -19
                                 },
-                                {'e': Rational(1146495,1), 'twoM': -15},
+                                {'e': (Rational(1146495,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -15},
                                 {
-                                    'e': (Rational(-136204,1) + Rational(-272408,1)*exp(2*pi*I*Rational(2,5)) + Rational(-272408,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(272408,1)*exp(2*pi*I*Rational(3,20)) + Rational(-136204,1)*exp(2*pi*I*Rational(5,20)) + Rational(272408,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(-12982900,1), 'twoM': -7},
+                                {'e': (Rational(-12982900,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(-941018,1) + Rational(-1882036,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1882036,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1882036,1)*exp(2*pi*I*Rational(3,20)) + Rational(-941018,1)*exp(2*pi*I*Rational(5,20)) + Rational(1882036,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(-510510,1), 'twoM': 1},
+                                {'e': (Rational(-510510,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(-3326492,1) + Rational(-6652984,1)*exp(2*pi*I*Rational(2,5)) + Rational(-6652984,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(6652984,1)*exp(2*pi*I*Rational(3,20)) + Rational(-3326492,1)*exp(2*pi*I*Rational(5,20)) + Rational(6652984,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(-499460,1), 'twoM': 9},
+                                {'e': (Rational(-499460,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9},
                                 {
-                                    'e': (Rational(60469,1) + Rational(120938,1)*exp(2*pi*I*Rational(2,5)) + Rational(120938,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-120938,1)*exp(2*pi*I*Rational(3,20)) + Rational(60469,1)*exp(2*pi*I*Rational(5,20)) + Rational(-120938,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 13
                                 },
-                                {'e': Rational(-11225,1), 'twoM': 17}
+                                {'e': (Rational(-11225,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 17}
                             ],
                             'mu': 1
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(21851,1) + Rational(43702,1)*exp(2*pi*I*Rational(2,5)) + Rational(43702,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-43702,1)*exp(2*pi*I*Rational(3,20)) + Rational(21851,1)*exp(2*pi*I*Rational(5,20)) + Rational(-43702,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -17
                                 },
-                                {'e': Rational(-219011,1), 'twoM': -13},
+                                {'e': (Rational(-219011,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -13},
                                 {
-                                    'e': (Rational(-1069300,1) + Rational(-2138600,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2138600,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2138600,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1069300,1)*exp(2*pi*I*Rational(5,20)) + Rational(2138600,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(-1947452,1), 'twoM': -5},
+                                {'e': (Rational(-1947452,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(520234,1) + Rational(1040468,1)*exp(2*pi*I*Rational(2,5)) + Rational(1040468,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1040468,1)*exp(2*pi*I*Rational(3,20)) + Rational(520234,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1040468,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(-3575338,1), 'twoM': 3},
+                                {'e': (Rational(-3575338,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(30940,1) + Rational(61880,1)*exp(2*pi*I*Rational(2,5)) + Rational(61880,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-61880,1)*exp(2*pi*I*Rational(3,20)) + Rational(30940,1)*exp(2*pi*I*Rational(5,20)) + Rational(-61880,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(24276,1), 'twoM': 11},
+                                {'e': (Rational(24276,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11},
                                 {
-                                    'e': (Rational(-18029,1) + Rational(-36058,1)*exp(2*pi*I*Rational(2,5)) + Rational(-36058,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(36058,1)*exp(2*pi*I*Rational(3,20)) + Rational(-18029,1)*exp(2*pi*I*Rational(5,20)) + Rational(36058,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 15
                                 },
-                                {'e': Rational(1301,1), 'twoM': 19}
+                                {'e': (Rational(1301,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 19}
                             ],
                             'mu': 2
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(4018,1)*exp(2*pi*I*Rational(1,40)) + Rational(4018,1)*exp(2*pi*I*Rational(3,40)) + Rational(-2009,1)*exp(2*pi*I*Rational(5,40)) + Rational(-4018,1)*exp(2*pi*I*Rational(7,40)) + Rational(4018,1)*exp(2*pi*I*Rational(9,40)) + Rational(-2009,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(4018,1)*exp(2*pi*I*Rational(1,40)) + Rational(-4018,1)*exp(2*pi*I*Rational(3,40)) + Rational(-2009,1)*exp(2*pi*I*Rational(5,40)) + Rational(4018,1)*exp(2*pi*I*Rational(7,40)) + Rational(4018,1)*exp(2*pi*I*Rational(9,40)) + Rational(2009,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -19
                                 },
                                 {
-                                    'e': (Rational(11449,1)*exp(2*pi*I*Rational(1,8)) + Rational(-11449,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(11449,1)*exp(2*pi*I*Rational(1,8)) + Rational(11449,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -15
                                 },
                                 {
-                                    'e': (Rational(-715768,1)*exp(2*pi*I*Rational(1,40)) + Rational(-715768,1)*exp(2*pi*I*Rational(3,40)) + Rational(357884,1)*exp(2*pi*I*Rational(5,40)) + Rational(715768,1)*exp(2*pi*I*Rational(7,40)) + Rational(-715768,1)*exp(2*pi*I*Rational(9,40)) + Rational(357884,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-715768,1)*exp(2*pi*I*Rational(1,40)) + Rational(715768,1)*exp(2*pi*I*Rational(3,40)) + Rational(357884,1)*exp(2*pi*I*Rational(5,40)) + Rational(-715768,1)*exp(2*pi*I*Rational(7,40)) + Rational(-715768,1)*exp(2*pi*I*Rational(9,40)) + Rational(-357884,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -11
                                 },
                                 {
-                                    'e': (Rational(1200948,1)*exp(2*pi*I*Rational(1,8)) + Rational(-1200948,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(1200948,1)*exp(2*pi*I*Rational(1,8)) + Rational(1200948,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(1247324,1)*exp(2*pi*I*Rational(1,40)) + Rational(1247324,1)*exp(2*pi*I*Rational(3,40)) + Rational(-623662,1)*exp(2*pi*I*Rational(5,40)) + Rational(-1247324,1)*exp(2*pi*I*Rational(7,40)) + Rational(1247324,1)*exp(2*pi*I*Rational(9,40)) + Rational(-623662,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(1247324,1)*exp(2*pi*I*Rational(1,40)) + Rational(-1247324,1)*exp(2*pi*I*Rational(3,40)) + Rational(-623662,1)*exp(2*pi*I*Rational(5,40)) + Rational(1247324,1)*exp(2*pi*I*Rational(7,40)) + Rational(1247324,1)*exp(2*pi*I*Rational(9,40)) + Rational(623662,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(3505502,1)*exp(2*pi*I*Rational(1,8)) + Rational(-3505502,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(3505502,1)*exp(2*pi*I*Rational(1,8)) + Rational(3505502,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(680680,1)*exp(2*pi*I*Rational(1,40)) + Rational(680680,1)*exp(2*pi*I*Rational(3,40)) + Rational(-340340,1)*exp(2*pi*I*Rational(5,40)) + Rational(-680680,1)*exp(2*pi*I*Rational(7,40)) + Rational(680680,1)*exp(2*pi*I*Rational(9,40)) + Rational(-340340,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(680680,1)*exp(2*pi*I*Rational(1,40)) + Rational(-680680,1)*exp(2*pi*I*Rational(3,40)) + Rational(-340340,1)*exp(2*pi*I*Rational(5,40)) + Rational(680680,1)*exp(2*pi*I*Rational(7,40)) + Rational(680680,1)*exp(2*pi*I*Rational(9,40)) + Rational(340340,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 5
                                 },
                                 {
-                                    'e': (Rational(340612,1)*exp(2*pi*I*Rational(1,8)) + Rational(-340612,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(340612,1)*exp(2*pi*I*Rational(1,8)) + Rational(340612,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 9
                                 },
                                 {
-                                    'e': (Rational(-187646,1)*exp(2*pi*I*Rational(1,40)) + Rational(-187646,1)*exp(2*pi*I*Rational(3,40)) + Rational(93823,1)*exp(2*pi*I*Rational(5,40)) + Rational(187646,1)*exp(2*pi*I*Rational(7,40)) + Rational(-187646,1)*exp(2*pi*I*Rational(9,40)) + Rational(93823,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-187646,1)*exp(2*pi*I*Rational(1,40)) + Rational(187646,1)*exp(2*pi*I*Rational(3,40)) + Rational(93823,1)*exp(2*pi*I*Rational(5,40)) + Rational(-187646,1)*exp(2*pi*I*Rational(7,40)) + Rational(-187646,1)*exp(2*pi*I*Rational(9,40)) + Rational(-93823,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 13
                                 },
                                 {
-                                    'e': (Rational(-8399,1)*exp(2*pi*I*Rational(1,8)) + Rational(8399,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-8399,1)*exp(2*pi*I*Rational(1,8)) + Rational(-8399,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 17
                                 }
                             ],
@@ -207052,43 +206985,43 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(8399,1)*exp(2*pi*I*Rational(1,8)) + Rational(-8399,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(8399,1)*exp(2*pi*I*Rational(1,8)) + Rational(8399,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -17
                                 },
                                 {
-                                    'e': (Rational(187646,1)*exp(2*pi*I*Rational(1,40)) + Rational(187646,1)*exp(2*pi*I*Rational(3,40)) + Rational(-93823,1)*exp(2*pi*I*Rational(5,40)) + Rational(-187646,1)*exp(2*pi*I*Rational(7,40)) + Rational(187646,1)*exp(2*pi*I*Rational(9,40)) + Rational(-93823,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(187646,1)*exp(2*pi*I*Rational(1,40)) + Rational(-187646,1)*exp(2*pi*I*Rational(3,40)) + Rational(-93823,1)*exp(2*pi*I*Rational(5,40)) + Rational(187646,1)*exp(2*pi*I*Rational(7,40)) + Rational(187646,1)*exp(2*pi*I*Rational(9,40)) + Rational(93823,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -13
                                 },
                                 {
-                                    'e': (Rational(-340612,1)*exp(2*pi*I*Rational(1,8)) + Rational(340612,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-340612,1)*exp(2*pi*I*Rational(1,8)) + Rational(-340612,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(-680680,1)*exp(2*pi*I*Rational(1,40)) + Rational(-680680,1)*exp(2*pi*I*Rational(3,40)) + Rational(340340,1)*exp(2*pi*I*Rational(5,40)) + Rational(680680,1)*exp(2*pi*I*Rational(7,40)) + Rational(-680680,1)*exp(2*pi*I*Rational(9,40)) + Rational(340340,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-680680,1)*exp(2*pi*I*Rational(1,40)) + Rational(680680,1)*exp(2*pi*I*Rational(3,40)) + Rational(340340,1)*exp(2*pi*I*Rational(5,40)) + Rational(-680680,1)*exp(2*pi*I*Rational(7,40)) + Rational(-680680,1)*exp(2*pi*I*Rational(9,40)) + Rational(-340340,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(-3505502,1)*exp(2*pi*I*Rational(1,8)) + Rational(3505502,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-3505502,1)*exp(2*pi*I*Rational(1,8)) + Rational(-3505502,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(-1247324,1)*exp(2*pi*I*Rational(1,40)) + Rational(-1247324,1)*exp(2*pi*I*Rational(3,40)) + Rational(623662,1)*exp(2*pi*I*Rational(5,40)) + Rational(1247324,1)*exp(2*pi*I*Rational(7,40)) + Rational(-1247324,1)*exp(2*pi*I*Rational(9,40)) + Rational(623662,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-1247324,1)*exp(2*pi*I*Rational(1,40)) + Rational(1247324,1)*exp(2*pi*I*Rational(3,40)) + Rational(623662,1)*exp(2*pi*I*Rational(5,40)) + Rational(-1247324,1)*exp(2*pi*I*Rational(7,40)) + Rational(-1247324,1)*exp(2*pi*I*Rational(9,40)) + Rational(-623662,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(-1200948,1)*exp(2*pi*I*Rational(1,8)) + Rational(1200948,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-1200948,1)*exp(2*pi*I*Rational(1,8)) + Rational(-1200948,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 7
                                 },
                                 {
-                                    'e': (Rational(715768,1)*exp(2*pi*I*Rational(1,40)) + Rational(715768,1)*exp(2*pi*I*Rational(3,40)) + Rational(-357884,1)*exp(2*pi*I*Rational(5,40)) + Rational(-715768,1)*exp(2*pi*I*Rational(7,40)) + Rational(715768,1)*exp(2*pi*I*Rational(9,40)) + Rational(-357884,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(715768,1)*exp(2*pi*I*Rational(1,40)) + Rational(-715768,1)*exp(2*pi*I*Rational(3,40)) + Rational(-357884,1)*exp(2*pi*I*Rational(5,40)) + Rational(715768,1)*exp(2*pi*I*Rational(7,40)) + Rational(715768,1)*exp(2*pi*I*Rational(9,40)) + Rational(357884,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 11
                                 },
                                 {
-                                    'e': (Rational(-11449,1)*exp(2*pi*I*Rational(1,8)) + Rational(11449,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-11449,1)*exp(2*pi*I*Rational(1,8)) + Rational(-11449,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 15
                                 },
                                 {
-                                    'e': (Rational(-4018,1)*exp(2*pi*I*Rational(1,40)) + Rational(-4018,1)*exp(2*pi*I*Rational(3,40)) + Rational(2009,1)*exp(2*pi*I*Rational(5,40)) + Rational(4018,1)*exp(2*pi*I*Rational(7,40)) + Rational(-4018,1)*exp(2*pi*I*Rational(9,40)) + Rational(2009,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-4018,1)*exp(2*pi*I*Rational(1,40)) + Rational(4018,1)*exp(2*pi*I*Rational(3,40)) + Rational(2009,1)*exp(2*pi*I*Rational(5,40)) + Rational(-4018,1)*exp(2*pi*I*Rational(7,40)) + Rational(-4018,1)*exp(2*pi*I*Rational(9,40)) + Rational(-2009,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 19
                                 }
                             ],
@@ -207096,29 +207029,29 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(-1301,1), 'twoM': -19},
+                                {'e': (Rational(-1301,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -19},
                                 {
-                                    'e': (Rational(18029,1) + Rational(36058,1)*exp(2*pi*I*Rational(2,5)) + Rational(36058,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-36058,1)*exp(2*pi*I*Rational(3,20)) + Rational(18029,1)*exp(2*pi*I*Rational(5,20)) + Rational(-36058,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -15
                                 },
-                                {'e': Rational(-24276,1), 'twoM': -11},
+                                {'e': (Rational(-24276,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(-30940,1) + Rational(-61880,1)*exp(2*pi*I*Rational(2,5)) + Rational(-61880,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(61880,1)*exp(2*pi*I*Rational(3,20)) + Rational(-30940,1)*exp(2*pi*I*Rational(5,20)) + Rational(61880,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(3575338,1), 'twoM': -3},
+                                {'e': (Rational(3575338,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(-520234,1) + Rational(-1040468,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1040468,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1040468,1)*exp(2*pi*I*Rational(3,20)) + Rational(-520234,1)*exp(2*pi*I*Rational(5,20)) + Rational(1040468,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(1947452,1), 'twoM': 5},
+                                {'e': (Rational(1947452,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(1069300,1) + Rational(2138600,1)*exp(2*pi*I*Rational(2,5)) + Rational(2138600,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-2138600,1)*exp(2*pi*I*Rational(3,20)) + Rational(1069300,1)*exp(2*pi*I*Rational(5,20)) + Rational(-2138600,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 },
-                                {'e': Rational(219011,1), 'twoM': 13},
+                                {'e': (Rational(219011,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 13},
                                 {
-                                    'e': (Rational(-21851,1) + Rational(-43702,1)*exp(2*pi*I*Rational(2,5)) + Rational(-43702,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(43702,1)*exp(2*pi*I*Rational(3,20)) + Rational(-21851,1)*exp(2*pi*I*Rational(5,20)) + Rational(43702,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 17
                                 }
                             ],
@@ -207126,29 +207059,29 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(11225,1), 'twoM': -17},
+                                {'e': (Rational(11225,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -17},
                                 {
-                                    'e': (Rational(-60469,1) + Rational(-120938,1)*exp(2*pi*I*Rational(2,5)) + Rational(-120938,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(120938,1)*exp(2*pi*I*Rational(3,20)) + Rational(-60469,1)*exp(2*pi*I*Rational(5,20)) + Rational(120938,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -13
                                 },
-                                {'e': Rational(499460,1), 'twoM': -9},
+                                {'e': (Rational(499460,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(3326492,1) + Rational(6652984,1)*exp(2*pi*I*Rational(2,5)) + Rational(6652984,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-6652984,1)*exp(2*pi*I*Rational(3,20)) + Rational(3326492,1)*exp(2*pi*I*Rational(5,20)) + Rational(-6652984,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(510510,1), 'twoM': -1},
+                                {'e': (Rational(510510,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(941018,1) + Rational(1882036,1)*exp(2*pi*I*Rational(2,5)) + Rational(1882036,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1882036,1)*exp(2*pi*I*Rational(3,20)) + Rational(941018,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1882036,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(12982900,1), 'twoM': 7},
+                                {'e': (Rational(12982900,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7},
                                 {
-                                    'e': (Rational(136204,1) + Rational(272408,1)*exp(2*pi*I*Rational(2,5)) + Rational(272408,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-272408,1)*exp(2*pi*I*Rational(3,20)) + Rational(136204,1)*exp(2*pi*I*Rational(5,20)) + Rational(-272408,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 },
-                                {'e': Rational(-1146495,1), 'twoM': 15},
+                                {'e': (Rational(-1146495,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 15},
                                 {
-                                    'e': (Rational(40755,1) + Rational(81510,1)*exp(2*pi*I*Rational(2,5)) + Rational(81510,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-81510,1)*exp(2*pi*I*Rational(3,20)) + Rational(40755,1)*exp(2*pi*I*Rational(5,20)) + Rational(-81510,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 19
                                 }
                             ],
@@ -207165,63 +207098,63 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(3,1), 'twoM': -19},
+                                {'e': (Rational(3,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -19},
                                 {
-                                    'e': (Rational(38,1) + Rational(76,1)*exp(2*pi*I*Rational(2,5)) + Rational(76,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-76,1)*exp(2*pi*I*Rational(3,20)) + Rational(38,1)*exp(2*pi*I*Rational(5,20)) + Rational(-76,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -15
                                 },
-                                {'e': Rational(-57,1), 'twoM': -11},
+                                {'e': (Rational(-57,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(456,1) + Rational(912,1)*exp(2*pi*I*Rational(2,5)) + Rational(912,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-912,1)*exp(2*pi*I*Rational(3,20)) + Rational(456,1)*exp(2*pi*I*Rational(5,20)) + Rational(-912,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(-1482,1), 'twoM': -3},
+                                {'e': (Rational(-1482,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(-988,1) + Rational(-1976,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1976,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1976,1)*exp(2*pi*I*Rational(3,20)) + Rational(-988,1)*exp(2*pi*I*Rational(5,20)) + Rational(1976,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(-1482,1), 'twoM': 5},
+                                {'e': (Rational(-1482,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(456,1) + Rational(912,1)*exp(2*pi*I*Rational(2,5)) + Rational(912,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-912,1)*exp(2*pi*I*Rational(3,20)) + Rational(456,1)*exp(2*pi*I*Rational(5,20)) + Rational(-912,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 },
-                                {'e': Rational(-57,1), 'twoM': 13},
+                                {'e': (Rational(-57,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 13},
                                 {
-                                    'e': (Rational(38,1) + Rational(76,1)*exp(2*pi*I*Rational(2,5)) + Rational(76,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-76,1)*exp(2*pi*I*Rational(3,20)) + Rational(38,1)*exp(2*pi*I*Rational(5,20)) + Rational(-76,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 17
                                 },
-                                {'e': Rational(3,1), 'twoM': 21}
+                                {'e': (Rational(3,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 21}
                             ],
                             'mu': 1
                         },
                         {
                             'components': [
-                                {'e': Rational(3,1), 'twoM': -21},
+                                {'e': (Rational(3,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -21},
                                 {
-                                    'e': (Rational(38,1) + Rational(76,1)*exp(2*pi*I*Rational(2,5)) + Rational(76,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-76,1)*exp(2*pi*I*Rational(3,20)) + Rational(38,1)*exp(2*pi*I*Rational(5,20)) + Rational(-76,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -17
                                 },
-                                {'e': Rational(-57,1), 'twoM': -13},
+                                {'e': (Rational(-57,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -13},
                                 {
-                                    'e': (Rational(456,1) + Rational(912,1)*exp(2*pi*I*Rational(2,5)) + Rational(912,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-912,1)*exp(2*pi*I*Rational(3,20)) + Rational(456,1)*exp(2*pi*I*Rational(5,20)) + Rational(-912,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(-1482,1), 'twoM': -5},
+                                {'e': (Rational(-1482,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(-988,1) + Rational(-1976,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1976,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1976,1)*exp(2*pi*I*Rational(3,20)) + Rational(-988,1)*exp(2*pi*I*Rational(5,20)) + Rational(1976,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(-1482,1), 'twoM': 3},
+                                {'e': (Rational(-1482,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(456,1) + Rational(912,1)*exp(2*pi*I*Rational(2,5)) + Rational(912,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-912,1)*exp(2*pi*I*Rational(3,20)) + Rational(456,1)*exp(2*pi*I*Rational(5,20)) + Rational(-912,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(-57,1), 'twoM': 11},
+                                {'e': (Rational(-57,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11},
                                 {
-                                    'e': (Rational(38,1) + Rational(76,1)*exp(2*pi*I*Rational(2,5)) + Rational(76,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-76,1)*exp(2*pi*I*Rational(3,20)) + Rational(38,1)*exp(2*pi*I*Rational(5,20)) + Rational(-76,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 15
                                 },
-                                {'e': Rational(3,1), 'twoM': 19}
+                                {'e': (Rational(3,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 19}
                             ],
                             'mu': 2
                         }
@@ -207236,75 +207169,75 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(15,1), 'twoM': -21},
-                                {'e': Rational(5985,1), 'twoM': -13},
+                                {'e': (Rational(15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -21},
+                                {'e': (Rational(5985,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -13},
                                 {
-                                    'e': (Rational(336,1) + Rational(672,1)*exp(2*pi*I*Rational(2,5)) + Rational(672,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-672,1)*exp(2*pi*I*Rational(3,20)) + Rational(336,1)*exp(2*pi*I*Rational(5,20)) + Rational(-672,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(56070,1), 'twoM': -5},
+                                {'e': (Rational(56070,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(-30576,1) + Rational(-61152,1)*exp(2*pi*I*Rational(2,5)) + Rational(-61152,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(61152,1)*exp(2*pi*I*Rational(3,20)) + Rational(-30576,1)*exp(2*pi*I*Rational(5,20)) + Rational(61152,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(-78190,1), 'twoM': 3},
+                                {'e': (Rational(-78190,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(-20112,1) + Rational(-40224,1)*exp(2*pi*I*Rational(2,5)) + Rational(-40224,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(40224,1)*exp(2*pi*I*Rational(3,20)) + Rational(-20112,1)*exp(2*pi*I*Rational(5,20)) + Rational(40224,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(23163,1), 'twoM': 11},
+                                {'e': (Rational(23163,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11},
                                 {
-                                    'e': (Rational(-336,1) + Rational(-672,1)*exp(2*pi*I*Rational(2,5)) + Rational(-672,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(672,1)*exp(2*pi*I*Rational(3,20)) + Rational(-336,1)*exp(2*pi*I*Rational(5,20)) + Rational(672,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 15
                                 },
-                                {'e': Rational(637,1), 'twoM': 19}
+                                {'e': (Rational(637,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 19}
                             ],
                             'mu': 1
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(462,1)*exp(2*pi*I*Rational(1,60)) + Rational(-462,1)*exp(2*pi*I*Rational(5,60)) + Rational(-924,1)*exp(2*pi*I*Rational(7,60)) + Rational(-462,1)*exp(2*pi*I*Rational(9,60)) + Rational(-462,1)*exp(2*pi*I*Rational(11,60)) + Rational(924,1)*exp(2*pi*I*Rational(13,60)) + Rational(693,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(693,1) + Rational(-924,1)*exp(2*pi*I*Rational(1,15)) + Rational(-462,1)*exp(2*pi*I*Rational(2,15)) + Rational(462,1)*exp(2*pi*I*Rational(3,15)) + Rational(-924,1)*exp(2*pi*I*Rational(4,15)) + Rational(462,1)*exp(2*pi*I*Rational(5,15)) + Rational(-462,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -19
                                 },
                                 {
-                                    'e': (Rational(21280,1)*exp(2*pi*I*Rational(1,12)) + Rational(-10640,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(10640,1) + Rational(21280,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -15
                                 },
                                 {
-                                    'e': (Rational(-9534,1)*exp(2*pi*I*Rational(1,60)) + Rational(9534,1)*exp(2*pi*I*Rational(5,60)) + Rational(19068,1)*exp(2*pi*I*Rational(7,60)) + Rational(9534,1)*exp(2*pi*I*Rational(9,60)) + Rational(9534,1)*exp(2*pi*I*Rational(11,60)) + Rational(-19068,1)*exp(2*pi*I*Rational(13,60)) + Rational(-14301,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-14301,1) + Rational(19068,1)*exp(2*pi*I*Rational(1,15)) + Rational(9534,1)*exp(2*pi*I*Rational(2,15)) + Rational(-9534,1)*exp(2*pi*I*Rational(3,15)) + Rational(19068,1)*exp(2*pi*I*Rational(4,15)) + Rational(-9534,1)*exp(2*pi*I*Rational(5,15)) + Rational(9534,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -11
                                 },
                                 {
-                                    'e': (Rational(158880,1)*exp(2*pi*I*Rational(1,12)) + Rational(-79440,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(79440,1) + Rational(158880,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(-75348,1)*exp(2*pi*I*Rational(1,60)) + Rational(75348,1)*exp(2*pi*I*Rational(5,60)) + Rational(150696,1)*exp(2*pi*I*Rational(7,60)) + Rational(75348,1)*exp(2*pi*I*Rational(9,60)) + Rational(75348,1)*exp(2*pi*I*Rational(11,60)) + Rational(-150696,1)*exp(2*pi*I*Rational(13,60)) + Rational(-113022,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-113022,1) + Rational(150696,1)*exp(2*pi*I*Rational(1,15)) + Rational(75348,1)*exp(2*pi*I*Rational(2,15)) + Rational(-75348,1)*exp(2*pi*I*Rational(3,15)) + Rational(150696,1)*exp(2*pi*I*Rational(4,15)) + Rational(-75348,1)*exp(2*pi*I*Rational(5,15)) + Rational(75348,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(-197792,1)*exp(2*pi*I*Rational(1,12)) + Rational(98896,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-98896,1) + Rational(-197792,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(-17052,1)*exp(2*pi*I*Rational(1,60)) + Rational(17052,1)*exp(2*pi*I*Rational(5,60)) + Rational(34104,1)*exp(2*pi*I*Rational(7,60)) + Rational(17052,1)*exp(2*pi*I*Rational(9,60)) + Rational(17052,1)*exp(2*pi*I*Rational(11,60)) + Rational(-34104,1)*exp(2*pi*I*Rational(13,60)) + Rational(-25578,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-25578,1) + Rational(34104,1)*exp(2*pi*I*Rational(1,15)) + Rational(17052,1)*exp(2*pi*I*Rational(2,15)) + Rational(-17052,1)*exp(2*pi*I*Rational(3,15)) + Rational(34104,1)*exp(2*pi*I*Rational(4,15)) + Rational(-17052,1)*exp(2*pi*I*Rational(5,15)) + Rational(17052,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 5
                                 },
                                 {
-                                    'e': (Rational(-19488,1)*exp(2*pi*I*Rational(1,12)) + Rational(9744,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-9744,1) + Rational(-19488,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': 9
                                 },
                                 {
-                                    'e': (Rational(294,1)*exp(2*pi*I*Rational(1,60)) + Rational(-294,1)*exp(2*pi*I*Rational(5,60)) + Rational(-588,1)*exp(2*pi*I*Rational(7,60)) + Rational(-294,1)*exp(2*pi*I*Rational(9,60)) + Rational(-294,1)*exp(2*pi*I*Rational(11,60)) + Rational(588,1)*exp(2*pi*I*Rational(13,60)) + Rational(441,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(441,1) + Rational(-588,1)*exp(2*pi*I*Rational(1,15)) + Rational(-294,1)*exp(2*pi*I*Rational(2,15)) + Rational(294,1)*exp(2*pi*I*Rational(3,15)) + Rational(-588,1)*exp(2*pi*I*Rational(4,15)) + Rational(294,1)*exp(2*pi*I*Rational(5,15)) + Rational(-294,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 13
                                 },
                                 {
-                                    'e': (Rational(-8960,1)*exp(2*pi*I*Rational(1,12)) + Rational(4480,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-4480,1) + Rational(-8960,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': 17
                                 },
                                 {
-                                    'e': (Rational(-198,1)*exp(2*pi*I*Rational(1,60)) + Rational(198,1)*exp(2*pi*I*Rational(5,60)) + Rational(396,1)*exp(2*pi*I*Rational(7,60)) + Rational(198,1)*exp(2*pi*I*Rational(9,60)) + Rational(198,1)*exp(2*pi*I*Rational(11,60)) + Rational(-396,1)*exp(2*pi*I*Rational(13,60)) + Rational(-297,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-297,1) + Rational(396,1)*exp(2*pi*I*Rational(1,15)) + Rational(198,1)*exp(2*pi*I*Rational(2,15)) + Rational(-198,1)*exp(2*pi*I*Rational(3,15)) + Rational(396,1)*exp(2*pi*I*Rational(4,15)) + Rational(-198,1)*exp(2*pi*I*Rational(5,15)) + Rational(198,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 21
                                 }
                             ],
@@ -207313,47 +207246,47 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(198,1)*exp(2*pi*I*Rational(1,60)) + Rational(-198,1)*exp(2*pi*I*Rational(5,60)) + Rational(-396,1)*exp(2*pi*I*Rational(7,60)) + Rational(-198,1)*exp(2*pi*I*Rational(9,60)) + Rational(-198,1)*exp(2*pi*I*Rational(11,60)) + Rational(396,1)*exp(2*pi*I*Rational(13,60)) + Rational(297,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(297,1) + Rational(-396,1)*exp(2*pi*I*Rational(1,15)) + Rational(-198,1)*exp(2*pi*I*Rational(2,15)) + Rational(198,1)*exp(2*pi*I*Rational(3,15)) + Rational(-396,1)*exp(2*pi*I*Rational(4,15)) + Rational(198,1)*exp(2*pi*I*Rational(5,15)) + Rational(-198,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -21
                                 },
                                 {
-                                    'e': (Rational(8960,1)*exp(2*pi*I*Rational(1,12)) + Rational(-4480,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(4480,1) + Rational(8960,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -17
                                 },
                                 {
-                                    'e': (Rational(-294,1)*exp(2*pi*I*Rational(1,60)) + Rational(294,1)*exp(2*pi*I*Rational(5,60)) + Rational(588,1)*exp(2*pi*I*Rational(7,60)) + Rational(294,1)*exp(2*pi*I*Rational(9,60)) + Rational(294,1)*exp(2*pi*I*Rational(11,60)) + Rational(-588,1)*exp(2*pi*I*Rational(13,60)) + Rational(-441,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-441,1) + Rational(588,1)*exp(2*pi*I*Rational(1,15)) + Rational(294,1)*exp(2*pi*I*Rational(2,15)) + Rational(-294,1)*exp(2*pi*I*Rational(3,15)) + Rational(588,1)*exp(2*pi*I*Rational(4,15)) + Rational(-294,1)*exp(2*pi*I*Rational(5,15)) + Rational(294,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -13
                                 },
                                 {
-                                    'e': (Rational(19488,1)*exp(2*pi*I*Rational(1,12)) + Rational(-9744,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(9744,1) + Rational(19488,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(17052,1)*exp(2*pi*I*Rational(1,60)) + Rational(-17052,1)*exp(2*pi*I*Rational(5,60)) + Rational(-34104,1)*exp(2*pi*I*Rational(7,60)) + Rational(-17052,1)*exp(2*pi*I*Rational(9,60)) + Rational(-17052,1)*exp(2*pi*I*Rational(11,60)) + Rational(34104,1)*exp(2*pi*I*Rational(13,60)) + Rational(25578,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(25578,1) + Rational(-34104,1)*exp(2*pi*I*Rational(1,15)) + Rational(-17052,1)*exp(2*pi*I*Rational(2,15)) + Rational(17052,1)*exp(2*pi*I*Rational(3,15)) + Rational(-34104,1)*exp(2*pi*I*Rational(4,15)) + Rational(17052,1)*exp(2*pi*I*Rational(5,15)) + Rational(-17052,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(197792,1)*exp(2*pi*I*Rational(1,12)) + Rational(-98896,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(98896,1) + Rational(197792,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(75348,1)*exp(2*pi*I*Rational(1,60)) + Rational(-75348,1)*exp(2*pi*I*Rational(5,60)) + Rational(-150696,1)*exp(2*pi*I*Rational(7,60)) + Rational(-75348,1)*exp(2*pi*I*Rational(9,60)) + Rational(-75348,1)*exp(2*pi*I*Rational(11,60)) + Rational(150696,1)*exp(2*pi*I*Rational(13,60)) + Rational(113022,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(113022,1) + Rational(-150696,1)*exp(2*pi*I*Rational(1,15)) + Rational(-75348,1)*exp(2*pi*I*Rational(2,15)) + Rational(75348,1)*exp(2*pi*I*Rational(3,15)) + Rational(-150696,1)*exp(2*pi*I*Rational(4,15)) + Rational(75348,1)*exp(2*pi*I*Rational(5,15)) + Rational(-75348,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(-158880,1)*exp(2*pi*I*Rational(1,12)) + Rational(79440,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-79440,1) + Rational(-158880,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': 7
                                 },
                                 {
-                                    'e': (Rational(9534,1)*exp(2*pi*I*Rational(1,60)) + Rational(-9534,1)*exp(2*pi*I*Rational(5,60)) + Rational(-19068,1)*exp(2*pi*I*Rational(7,60)) + Rational(-9534,1)*exp(2*pi*I*Rational(9,60)) + Rational(-9534,1)*exp(2*pi*I*Rational(11,60)) + Rational(19068,1)*exp(2*pi*I*Rational(13,60)) + Rational(14301,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(14301,1) + Rational(-19068,1)*exp(2*pi*I*Rational(1,15)) + Rational(-9534,1)*exp(2*pi*I*Rational(2,15)) + Rational(9534,1)*exp(2*pi*I*Rational(3,15)) + Rational(-19068,1)*exp(2*pi*I*Rational(4,15)) + Rational(9534,1)*exp(2*pi*I*Rational(5,15)) + Rational(-9534,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 11
                                 },
                                 {
-                                    'e': (Rational(-21280,1)*exp(2*pi*I*Rational(1,12)) + Rational(10640,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-10640,1) + Rational(-21280,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': 15
                                 },
                                 {
-                                    'e': (Rational(-462,1)*exp(2*pi*I*Rational(1,60)) + Rational(462,1)*exp(2*pi*I*Rational(5,60)) + Rational(924,1)*exp(2*pi*I*Rational(7,60)) + Rational(462,1)*exp(2*pi*I*Rational(9,60)) + Rational(462,1)*exp(2*pi*I*Rational(11,60)) + Rational(-924,1)*exp(2*pi*I*Rational(13,60)) + Rational(-693,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-693,1) + Rational(924,1)*exp(2*pi*I*Rational(1,15)) + Rational(462,1)*exp(2*pi*I*Rational(2,15)) + Rational(-462,1)*exp(2*pi*I*Rational(3,15)) + Rational(924,1)*exp(2*pi*I*Rational(4,15)) + Rational(-462,1)*exp(2*pi*I*Rational(5,15)) + Rational(462,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 19
                                 }
                             ],
@@ -207361,28 +207294,28 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(-637,1), 'twoM': -19},
+                                {'e': (Rational(-637,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -19},
                                 {
-                                    'e': (Rational(336,1) + Rational(672,1)*exp(2*pi*I*Rational(2,5)) + Rational(672,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-672,1)*exp(2*pi*I*Rational(3,20)) + Rational(336,1)*exp(2*pi*I*Rational(5,20)) + Rational(-672,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -15
                                 },
-                                {'e': Rational(-23163,1), 'twoM': -11},
+                                {'e': (Rational(-23163,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(20112,1) + Rational(40224,1)*exp(2*pi*I*Rational(2,5)) + Rational(40224,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-40224,1)*exp(2*pi*I*Rational(3,20)) + Rational(20112,1)*exp(2*pi*I*Rational(5,20)) + Rational(-40224,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(78190,1), 'twoM': -3},
+                                {'e': (Rational(78190,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(30576,1) + Rational(61152,1)*exp(2*pi*I*Rational(2,5)) + Rational(61152,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-61152,1)*exp(2*pi*I*Rational(3,20)) + Rational(30576,1)*exp(2*pi*I*Rational(5,20)) + Rational(-61152,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(-56070,1), 'twoM': 5},
+                                {'e': (Rational(-56070,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(-336,1) + Rational(-672,1)*exp(2*pi*I*Rational(2,5)) + Rational(-672,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(672,1)*exp(2*pi*I*Rational(3,20)) + Rational(-336,1)*exp(2*pi*I*Rational(5,20)) + Rational(672,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 },
-                                {'e': Rational(-5985,1), 'twoM': 13},
-                                {'e': Rational(-15,1), 'twoM': 21}
+                                {'e': (Rational(-5985,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 13},
+                                {'e': (Rational(-15,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 21}
                             ],
                             'mu': 4
                         }
@@ -207398,32 +207331,32 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-13585,1) + Rational(-27170,1)*exp(2*pi*I*Rational(2,5)) + Rational(-27170,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(27170,1)*exp(2*pi*I*Rational(3,20)) + Rational(-13585,1)*exp(2*pi*I*Rational(5,20)) + Rational(27170,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -21
                                 },
-                                {'e': Rational(458350,1), 'twoM': -17},
+                                {'e': (Rational(458350,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -17},
                                 {
-                                    'e': (Rational(-195225,1) + Rational(-390450,1)*exp(2*pi*I*Rational(2,5)) + Rational(-390450,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(390450,1)*exp(2*pi*I*Rational(3,20)) + Rational(-195225,1)*exp(2*pi*I*Rational(5,20)) + Rational(390450,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -13
                                 },
-                                {'e': Rational(-8488440,1), 'twoM': -9},
+                                {'e': (Rational(-8488440,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(-2012290,1) + Rational(-4024580,1)*exp(2*pi*I*Rational(2,5)) + Rational(-4024580,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(4024580,1)*exp(2*pi*I*Rational(3,20)) + Rational(-2012290,1)*exp(2*pi*I*Rational(5,20)) + Rational(4024580,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(2603380,1), 'twoM': -1},
+                                {'e': (Rational(2603380,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(-4660890,1) + Rational(-9321780,1)*exp(2*pi*I*Rational(2,5)) + Rational(-9321780,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(9321780,1)*exp(2*pi*I*Rational(3,20)) + Rational(-4660890,1)*exp(2*pi*I*Rational(5,20)) + Rational(9321780,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(503880,1), 'twoM': 7},
+                                {'e': (Rational(503880,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7},
                                 {
-                                    'e': (Rational(-77197,1) + Rational(-154394,1)*exp(2*pi*I*Rational(2,5)) + Rational(-154394,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(154394,1)*exp(2*pi*I*Rational(3,20)) + Rational(-77197,1)*exp(2*pi*I*Rational(5,20)) + Rational(154394,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 },
-                                {'e': Rational(-220210,1), 'twoM': 15},
+                                {'e': (Rational(-220210,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 15},
                                 {
-                                    'e': (Rational(3667,1) + Rational(7334,1)*exp(2*pi*I*Rational(2,5)) + Rational(7334,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-7334,1)*exp(2*pi*I*Rational(3,20)) + Rational(3667,1)*exp(2*pi*I*Rational(5,20)) + Rational(-7334,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 19
                                 }
                             ],
@@ -207432,47 +207365,47 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-258690,1)*exp(2*pi*I*Rational(1,12)) + Rational(129345,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-129345,1) + Rational(-258690,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -19
                                 },
                                 {
-                                    'e': (Rational(467020,1)*exp(2*pi*I*Rational(1,60)) + Rational(-467020,1)*exp(2*pi*I*Rational(5,60)) + Rational(-934040,1)*exp(2*pi*I*Rational(7,60)) + Rational(-467020,1)*exp(2*pi*I*Rational(9,60)) + Rational(-467020,1)*exp(2*pi*I*Rational(11,60)) + Rational(934040,1)*exp(2*pi*I*Rational(13,60)) + Rational(700530,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(700530,1) + Rational(-934040,1)*exp(2*pi*I*Rational(1,15)) + Rational(-467020,1)*exp(2*pi*I*Rational(2,15)) + Rational(467020,1)*exp(2*pi*I*Rational(3,15)) + Rational(-934040,1)*exp(2*pi*I*Rational(4,15)) + Rational(467020,1)*exp(2*pi*I*Rational(5,15)) + Rational(-467020,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -15
                                 },
                                 {
-                                    'e': (Rational(18788910,1)*exp(2*pi*I*Rational(1,12)) + Rational(-9394455,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(9394455,1) + Rational(18788910,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -11
                                 },
                                 {
-                                    'e': (Rational(9379920,1)*exp(2*pi*I*Rational(1,60)) + Rational(-9379920,1)*exp(2*pi*I*Rational(5,60)) + Rational(-18759840,1)*exp(2*pi*I*Rational(7,60)) + Rational(-9379920,1)*exp(2*pi*I*Rational(9,60)) + Rational(-9379920,1)*exp(2*pi*I*Rational(11,60)) + Rational(18759840,1)*exp(2*pi*I*Rational(13,60)) + Rational(14069880,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(14069880,1) + Rational(-18759840,1)*exp(2*pi*I*Rational(1,15)) + Rational(-9379920,1)*exp(2*pi*I*Rational(2,15)) + Rational(9379920,1)*exp(2*pi*I*Rational(3,15)) + Rational(-18759840,1)*exp(2*pi*I*Rational(4,15)) + Rational(9379920,1)*exp(2*pi*I*Rational(5,15)) + Rational(-9379920,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(-21078980,1)*exp(2*pi*I*Rational(1,12)) + Rational(10539490,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-10539490,1) + Rational(-21078980,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(28183688,1)*exp(2*pi*I*Rational(1,60)) + Rational(-28183688,1)*exp(2*pi*I*Rational(5,60)) + Rational(-56367376,1)*exp(2*pi*I*Rational(7,60)) + Rational(-28183688,1)*exp(2*pi*I*Rational(9,60)) + Rational(-28183688,1)*exp(2*pi*I*Rational(11,60)) + Rational(56367376,1)*exp(2*pi*I*Rational(13,60)) + Rational(42275532,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(42275532,1) + Rational(-56367376,1)*exp(2*pi*I*Rational(1,15)) + Rational(-28183688,1)*exp(2*pi*I*Rational(2,15)) + Rational(28183688,1)*exp(2*pi*I*Rational(3,15)) + Rational(-56367376,1)*exp(2*pi*I*Rational(4,15)) + Rational(28183688,1)*exp(2*pi*I*Rational(5,15)) + Rational(-28183688,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(-13352820,1)*exp(2*pi*I*Rational(1,12)) + Rational(6676410,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-6676410,1) + Rational(-13352820,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': 5
                                 },
                                 {
-                                    'e': (Rational(3715792,1)*exp(2*pi*I*Rational(1,60)) + Rational(-3715792,1)*exp(2*pi*I*Rational(5,60)) + Rational(-7431584,1)*exp(2*pi*I*Rational(7,60)) + Rational(-3715792,1)*exp(2*pi*I*Rational(9,60)) + Rational(-3715792,1)*exp(2*pi*I*Rational(11,60)) + Rational(7431584,1)*exp(2*pi*I*Rational(13,60)) + Rational(5573688,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(5573688,1) + Rational(-7431584,1)*exp(2*pi*I*Rational(1,15)) + Rational(-3715792,1)*exp(2*pi*I*Rational(2,15)) + Rational(3715792,1)*exp(2*pi*I*Rational(3,15)) + Rational(-7431584,1)*exp(2*pi*I*Rational(4,15)) + Rational(3715792,1)*exp(2*pi*I*Rational(5,15)) + Rational(-3715792,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 9
                                 },
                                 {
-                                    'e': (Rational(5635590,1)*exp(2*pi*I*Rational(1,12)) + Rational(-2817795,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(2817795,1) + Rational(5635590,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': 13
                                 },
                                 {
-                                    'e': (Rational(-13300,1)*exp(2*pi*I*Rational(1,60)) + Rational(13300,1)*exp(2*pi*I*Rational(5,60)) + Rational(26600,1)*exp(2*pi*I*Rational(7,60)) + Rational(13300,1)*exp(2*pi*I*Rational(9,60)) + Rational(13300,1)*exp(2*pi*I*Rational(11,60)) + Rational(-26600,1)*exp(2*pi*I*Rational(13,60)) + Rational(-19950,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-19950,1) + Rational(26600,1)*exp(2*pi*I*Rational(1,15)) + Rational(13300,1)*exp(2*pi*I*Rational(2,15)) + Rational(-13300,1)*exp(2*pi*I*Rational(3,15)) + Rational(26600,1)*exp(2*pi*I*Rational(4,15)) + Rational(-13300,1)*exp(2*pi*I*Rational(5,15)) + Rational(13300,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 17
                                 },
                                 {
-                                    'e': (Rational(-20090,1)*exp(2*pi*I*Rational(1,12)) + Rational(10045,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-10045,1) + Rational(-20090,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': 21
                                 }
                             ],
@@ -207481,47 +207414,47 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(20090,1)*exp(2*pi*I*Rational(1,12)) + Rational(-10045,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(10045,1) + Rational(20090,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -21
                                 },
                                 {
-                                    'e': (Rational(13300,1)*exp(2*pi*I*Rational(1,60)) + Rational(-13300,1)*exp(2*pi*I*Rational(5,60)) + Rational(-26600,1)*exp(2*pi*I*Rational(7,60)) + Rational(-13300,1)*exp(2*pi*I*Rational(9,60)) + Rational(-13300,1)*exp(2*pi*I*Rational(11,60)) + Rational(26600,1)*exp(2*pi*I*Rational(13,60)) + Rational(19950,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(19950,1) + Rational(-26600,1)*exp(2*pi*I*Rational(1,15)) + Rational(-13300,1)*exp(2*pi*I*Rational(2,15)) + Rational(13300,1)*exp(2*pi*I*Rational(3,15)) + Rational(-26600,1)*exp(2*pi*I*Rational(4,15)) + Rational(13300,1)*exp(2*pi*I*Rational(5,15)) + Rational(-13300,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -17
                                 },
                                 {
-                                    'e': (Rational(-5635590,1)*exp(2*pi*I*Rational(1,12)) + Rational(2817795,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-2817795,1) + Rational(-5635590,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -13
                                 },
                                 {
-                                    'e': (Rational(-3715792,1)*exp(2*pi*I*Rational(1,60)) + Rational(3715792,1)*exp(2*pi*I*Rational(5,60)) + Rational(7431584,1)*exp(2*pi*I*Rational(7,60)) + Rational(3715792,1)*exp(2*pi*I*Rational(9,60)) + Rational(3715792,1)*exp(2*pi*I*Rational(11,60)) + Rational(-7431584,1)*exp(2*pi*I*Rational(13,60)) + Rational(-5573688,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-5573688,1) + Rational(7431584,1)*exp(2*pi*I*Rational(1,15)) + Rational(3715792,1)*exp(2*pi*I*Rational(2,15)) + Rational(-3715792,1)*exp(2*pi*I*Rational(3,15)) + Rational(7431584,1)*exp(2*pi*I*Rational(4,15)) + Rational(-3715792,1)*exp(2*pi*I*Rational(5,15)) + Rational(3715792,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(13352820,1)*exp(2*pi*I*Rational(1,12)) + Rational(-6676410,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(6676410,1) + Rational(13352820,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(-28183688,1)*exp(2*pi*I*Rational(1,60)) + Rational(28183688,1)*exp(2*pi*I*Rational(5,60)) + Rational(56367376,1)*exp(2*pi*I*Rational(7,60)) + Rational(28183688,1)*exp(2*pi*I*Rational(9,60)) + Rational(28183688,1)*exp(2*pi*I*Rational(11,60)) + Rational(-56367376,1)*exp(2*pi*I*Rational(13,60)) + Rational(-42275532,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-42275532,1) + Rational(56367376,1)*exp(2*pi*I*Rational(1,15)) + Rational(28183688,1)*exp(2*pi*I*Rational(2,15)) + Rational(-28183688,1)*exp(2*pi*I*Rational(3,15)) + Rational(56367376,1)*exp(2*pi*I*Rational(4,15)) + Rational(-28183688,1)*exp(2*pi*I*Rational(5,15)) + Rational(28183688,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(21078980,1)*exp(2*pi*I*Rational(1,12)) + Rational(-10539490,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(10539490,1) + Rational(21078980,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(-9379920,1)*exp(2*pi*I*Rational(1,60)) + Rational(9379920,1)*exp(2*pi*I*Rational(5,60)) + Rational(18759840,1)*exp(2*pi*I*Rational(7,60)) + Rational(9379920,1)*exp(2*pi*I*Rational(9,60)) + Rational(9379920,1)*exp(2*pi*I*Rational(11,60)) + Rational(-18759840,1)*exp(2*pi*I*Rational(13,60)) + Rational(-14069880,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-14069880,1) + Rational(18759840,1)*exp(2*pi*I*Rational(1,15)) + Rational(9379920,1)*exp(2*pi*I*Rational(2,15)) + Rational(-9379920,1)*exp(2*pi*I*Rational(3,15)) + Rational(18759840,1)*exp(2*pi*I*Rational(4,15)) + Rational(-9379920,1)*exp(2*pi*I*Rational(5,15)) + Rational(9379920,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 7
                                 },
                                 {
-                                    'e': (Rational(-18788910,1)*exp(2*pi*I*Rational(1,12)) + Rational(9394455,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(-9394455,1) + Rational(-18788910,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': 11
                                 },
                                 {
-                                    'e': (Rational(-467020,1)*exp(2*pi*I*Rational(1,60)) + Rational(467020,1)*exp(2*pi*I*Rational(5,60)) + Rational(934040,1)*exp(2*pi*I*Rational(7,60)) + Rational(467020,1)*exp(2*pi*I*Rational(9,60)) + Rational(467020,1)*exp(2*pi*I*Rational(11,60)) + Rational(-934040,1)*exp(2*pi*I*Rational(13,60)) + Rational(-700530,1)*exp(2*pi*I*Rational(15,60))),
+                                    'e': (Rational(-700530,1) + Rational(934040,1)*exp(2*pi*I*Rational(1,15)) + Rational(467020,1)*exp(2*pi*I*Rational(2,15)) + Rational(-467020,1)*exp(2*pi*I*Rational(3,15)) + Rational(934040,1)*exp(2*pi*I*Rational(4,15)) + Rational(-467020,1)*exp(2*pi*I*Rational(5,15)) + Rational(467020,1)*exp(2*pi*I*Rational(7,15))),
                                     'twoM': 15
                                 },
                                 {
-                                    'e': (Rational(258690,1)*exp(2*pi*I*Rational(1,12)) + Rational(-129345,1)*exp(2*pi*I*Rational(3,12))),
+                                    'e': (Rational(129345,1) + Rational(258690,1)*exp(2*pi*I*Rational(1,3))),
                                     'twoM': 19
                                 }
                             ],
@@ -207530,32 +207463,32 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-3667,1) + Rational(-7334,1)*exp(2*pi*I*Rational(2,5)) + Rational(-7334,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(7334,1)*exp(2*pi*I*Rational(3,20)) + Rational(-3667,1)*exp(2*pi*I*Rational(5,20)) + Rational(7334,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -19
                                 },
-                                {'e': Rational(220210,1), 'twoM': -15},
+                                {'e': (Rational(220210,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -15},
                                 {
-                                    'e': (Rational(77197,1) + Rational(154394,1)*exp(2*pi*I*Rational(2,5)) + Rational(154394,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-154394,1)*exp(2*pi*I*Rational(3,20)) + Rational(77197,1)*exp(2*pi*I*Rational(5,20)) + Rational(-154394,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(-503880,1), 'twoM': -7},
+                                {'e': (Rational(-503880,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(4660890,1) + Rational(9321780,1)*exp(2*pi*I*Rational(2,5)) + Rational(9321780,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-9321780,1)*exp(2*pi*I*Rational(3,20)) + Rational(4660890,1)*exp(2*pi*I*Rational(5,20)) + Rational(-9321780,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(-2603380,1), 'twoM': 1},
+                                {'e': (Rational(-2603380,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(2012290,1) + Rational(4024580,1)*exp(2*pi*I*Rational(2,5)) + Rational(4024580,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-4024580,1)*exp(2*pi*I*Rational(3,20)) + Rational(2012290,1)*exp(2*pi*I*Rational(5,20)) + Rational(-4024580,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(8488440,1), 'twoM': 9},
+                                {'e': (Rational(8488440,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9},
                                 {
-                                    'e': (Rational(195225,1) + Rational(390450,1)*exp(2*pi*I*Rational(2,5)) + Rational(390450,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-390450,1)*exp(2*pi*I*Rational(3,20)) + Rational(195225,1)*exp(2*pi*I*Rational(5,20)) + Rational(-390450,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 13
                                 },
-                                {'e': Rational(-458350,1), 'twoM': 17},
+                                {'e': (Rational(-458350,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 17},
                                 {
-                                    'e': (Rational(13585,1) + Rational(27170,1)*exp(2*pi*I*Rational(2,5)) + Rational(27170,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-27170,1)*exp(2*pi*I*Rational(3,20)) + Rational(13585,1)*exp(2*pi*I*Rational(5,20)) + Rational(-27170,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 21
                                 }
                             ],
@@ -207572,60 +207505,60 @@ o3d = {
                     'vectors': [
                         {
                             'components': [
-                                {'e': Rational(45,1), 'twoM': -19},
-                                {'e': Rational(14535,1), 'twoM': -11},
+                                {'e': (Rational(45,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -19},
+                                {'e': (Rational(14535,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(720,1) + Rational(1440,1)*exp(2*pi*I*Rational(2,5)) + Rational(1440,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1440,1)*exp(2*pi*I*Rational(3,20)) + Rational(720,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1440,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(104130,1), 'twoM': -3},
+                                {'e': (Rational(104130,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(-48048,1) + Rational(-96096,1)*exp(2*pi*I*Rational(2,5)) + Rational(-96096,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(96096,1)*exp(2*pi*I*Rational(3,20)) + Rational(-48048,1)*exp(2*pi*I*Rational(5,20)) + Rational(96096,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(-100530,1), 'twoM': 5},
+                                {'e': (Rational(-100530,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(-20112,1) + Rational(-40224,1)*exp(2*pi*I*Rational(2,5)) + Rational(-40224,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(40224,1)*exp(2*pi*I*Rational(3,20)) + Rational(-20112,1)*exp(2*pi*I*Rational(5,20)) + Rational(40224,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 },
-                                {'e': Rational(16545,1), 'twoM': 13},
+                                {'e': (Rational(16545,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 13},
                                 {
-                                    'e': (Rational(-144,1) + Rational(-288,1)*exp(2*pi*I*Rational(2,5)) + Rational(-288,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(288,1)*exp(2*pi*I*Rational(3,20)) + Rational(-144,1)*exp(2*pi*I*Rational(5,20)) + Rational(288,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 17
                                 },
-                                {'e': Rational(91,1), 'twoM': 21}
+                                {'e': (Rational(91,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 21}
                             ],
                             'mu': 1
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-45,1) + Rational(-90,1)*exp(2*pi*I*Rational(2,5)) + Rational(-90,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(90,1)*exp(2*pi*I*Rational(3,20)) + Rational(-45,1)*exp(2*pi*I*Rational(5,20)) + Rational(90,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -21
                                 },
-                                {'e': Rational(-3300,1), 'twoM': -17},
+                                {'e': (Rational(-3300,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -17},
                                 {
-                                    'e': (Rational(-38475,1) + Rational(-76950,1)*exp(2*pi*I*Rational(2,5)) + Rational(-76950,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(76950,1)*exp(2*pi*I*Rational(3,20)) + Rational(-38475,1)*exp(2*pi*I*Rational(5,20)) + Rational(76950,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -13
                                 },
-                                {'e': Rational(52320,1), 'twoM': -9},
+                                {'e': (Rational(52320,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(-198930,1) + Rational(-397860,1)*exp(2*pi*I*Rational(2,5)) + Rational(-397860,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(397860,1)*exp(2*pi*I*Rational(3,20)) + Rational(-198930,1)*exp(2*pi*I*Rational(5,20)) + Rational(397860,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(344760,1), 'twoM': -1},
+                                {'e': (Rational(344760,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(107770,1) + Rational(215540,1)*exp(2*pi*I*Rational(2,5)) + Rational(215540,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-215540,1)*exp(2*pi*I*Rational(3,20)) + Rational(107770,1)*exp(2*pi*I*Rational(5,20)) + Rational(-215540,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(-51840,1), 'twoM': 7},
+                                {'e': (Rational(-51840,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7},
                                 {
-                                    'e': (Rational(44751,1) + Rational(89502,1)*exp(2*pi*I*Rational(2,5)) + Rational(89502,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-89502,1)*exp(2*pi*I*Rational(3,20)) + Rational(44751,1)*exp(2*pi*I*Rational(5,20)) + Rational(-89502,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 },
-                                {'e': Rational(-4020,1), 'twoM': 15},
+                                {'e': (Rational(-4020,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 15},
                                 {
-                                    'e': (Rational(3009,1) + Rational(6018,1)*exp(2*pi*I*Rational(2,5)) + Rational(6018,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-6018,1)*exp(2*pi*I*Rational(3,20)) + Rational(3009,1)*exp(2*pi*I*Rational(5,20)) + Rational(-6018,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 19
                                 }
                             ],
@@ -207634,47 +207567,47 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-1155,1)*exp(2*pi*I*Rational(1,8)) + Rational(1155,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-1155,1)*exp(2*pi*I*Rational(1,8)) + Rational(-1155,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -19
                                 },
                                 {
-                                    'e': (Rational(15770,1)*exp(2*pi*I*Rational(1,40)) + Rational(15770,1)*exp(2*pi*I*Rational(3,40)) + Rational(-7885,1)*exp(2*pi*I*Rational(5,40)) + Rational(-15770,1)*exp(2*pi*I*Rational(7,40)) + Rational(15770,1)*exp(2*pi*I*Rational(9,40)) + Rational(-7885,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(15770,1)*exp(2*pi*I*Rational(1,40)) + Rational(-15770,1)*exp(2*pi*I*Rational(3,40)) + Rational(-7885,1)*exp(2*pi*I*Rational(5,40)) + Rational(15770,1)*exp(2*pi*I*Rational(7,40)) + Rational(15770,1)*exp(2*pi*I*Rational(9,40)) + Rational(7885,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -15
                                 },
                                 {
-                                    'e': (Rational(10170,1)*exp(2*pi*I*Rational(1,8)) + Rational(-10170,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(10170,1)*exp(2*pi*I*Rational(1,8)) + Rational(10170,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -11
                                 },
                                 {
-                                    'e': (Rational(18120,1)*exp(2*pi*I*Rational(1,40)) + Rational(18120,1)*exp(2*pi*I*Rational(3,40)) + Rational(-9060,1)*exp(2*pi*I*Rational(5,40)) + Rational(-18120,1)*exp(2*pi*I*Rational(7,40)) + Rational(18120,1)*exp(2*pi*I*Rational(9,40)) + Rational(-9060,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(18120,1)*exp(2*pi*I*Rational(1,40)) + Rational(-18120,1)*exp(2*pi*I*Rational(3,40)) + Rational(-9060,1)*exp(2*pi*I*Rational(5,40)) + Rational(18120,1)*exp(2*pi*I*Rational(7,40)) + Rational(18120,1)*exp(2*pi*I*Rational(9,40)) + Rational(9060,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(-54210,1)*exp(2*pi*I*Rational(1,8)) + Rational(54210,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-54210,1)*exp(2*pi*I*Rational(1,8)) + Rational(-54210,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(151788,1)*exp(2*pi*I*Rational(1,40)) + Rational(151788,1)*exp(2*pi*I*Rational(3,40)) + Rational(-75894,1)*exp(2*pi*I*Rational(5,40)) + Rational(-151788,1)*exp(2*pi*I*Rational(7,40)) + Rational(151788,1)*exp(2*pi*I*Rational(9,40)) + Rational(-75894,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(151788,1)*exp(2*pi*I*Rational(1,40)) + Rational(-151788,1)*exp(2*pi*I*Rational(3,40)) + Rational(-75894,1)*exp(2*pi*I*Rational(5,40)) + Rational(151788,1)*exp(2*pi*I*Rational(7,40)) + Rational(151788,1)*exp(2*pi*I*Rational(9,40)) + Rational(75894,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(-118440,1)*exp(2*pi*I*Rational(1,8)) + Rational(118440,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-118440,1)*exp(2*pi*I*Rational(1,8)) + Rational(-118440,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 5
                                 },
                                 {
-                                    'e': (Rational(-59928,1)*exp(2*pi*I*Rational(1,40)) + Rational(-59928,1)*exp(2*pi*I*Rational(3,40)) + Rational(29964,1)*exp(2*pi*I*Rational(5,40)) + Rational(59928,1)*exp(2*pi*I*Rational(7,40)) + Rational(-59928,1)*exp(2*pi*I*Rational(9,40)) + Rational(29964,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-59928,1)*exp(2*pi*I*Rational(1,40)) + Rational(59928,1)*exp(2*pi*I*Rational(3,40)) + Rational(29964,1)*exp(2*pi*I*Rational(5,40)) + Rational(-59928,1)*exp(2*pi*I*Rational(7,40)) + Rational(-59928,1)*exp(2*pi*I*Rational(9,40)) + Rational(-29964,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 9
                                 },
                                 {
-                                    'e': (Rational(-4995,1)*exp(2*pi*I*Rational(1,8)) + Rational(4995,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-4995,1)*exp(2*pi*I*Rational(1,8)) + Rational(-4995,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 13
                                 },
                                 {
-                                    'e': (Rational(2250,1)*exp(2*pi*I*Rational(1,40)) + Rational(2250,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1125,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2250,1)*exp(2*pi*I*Rational(7,40)) + Rational(2250,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1125,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(2250,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2250,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1125,1)*exp(2*pi*I*Rational(5,40)) + Rational(2250,1)*exp(2*pi*I*Rational(7,40)) + Rational(2250,1)*exp(2*pi*I*Rational(9,40)) + Rational(1125,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 17
                                 },
                                 {
-                                    'e': (Rational(-330,1)*exp(2*pi*I*Rational(1,8)) + Rational(330,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-330,1)*exp(2*pi*I*Rational(1,8)) + Rational(-330,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 21
                                 }
                             ],
@@ -207683,47 +207616,47 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-330,1)*exp(2*pi*I*Rational(1,8)) + Rational(330,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-330,1)*exp(2*pi*I*Rational(1,8)) + Rational(-330,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -21
                                 },
                                 {
-                                    'e': (Rational(2250,1)*exp(2*pi*I*Rational(1,40)) + Rational(2250,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1125,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2250,1)*exp(2*pi*I*Rational(7,40)) + Rational(2250,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1125,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(2250,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2250,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1125,1)*exp(2*pi*I*Rational(5,40)) + Rational(2250,1)*exp(2*pi*I*Rational(7,40)) + Rational(2250,1)*exp(2*pi*I*Rational(9,40)) + Rational(1125,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -17
                                 },
                                 {
-                                    'e': (Rational(-4995,1)*exp(2*pi*I*Rational(1,8)) + Rational(4995,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-4995,1)*exp(2*pi*I*Rational(1,8)) + Rational(-4995,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -13
                                 },
                                 {
-                                    'e': (Rational(-59928,1)*exp(2*pi*I*Rational(1,40)) + Rational(-59928,1)*exp(2*pi*I*Rational(3,40)) + Rational(29964,1)*exp(2*pi*I*Rational(5,40)) + Rational(59928,1)*exp(2*pi*I*Rational(7,40)) + Rational(-59928,1)*exp(2*pi*I*Rational(9,40)) + Rational(29964,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-59928,1)*exp(2*pi*I*Rational(1,40)) + Rational(59928,1)*exp(2*pi*I*Rational(3,40)) + Rational(29964,1)*exp(2*pi*I*Rational(5,40)) + Rational(-59928,1)*exp(2*pi*I*Rational(7,40)) + Rational(-59928,1)*exp(2*pi*I*Rational(9,40)) + Rational(-29964,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(-118440,1)*exp(2*pi*I*Rational(1,8)) + Rational(118440,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-118440,1)*exp(2*pi*I*Rational(1,8)) + Rational(-118440,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(151788,1)*exp(2*pi*I*Rational(1,40)) + Rational(151788,1)*exp(2*pi*I*Rational(3,40)) + Rational(-75894,1)*exp(2*pi*I*Rational(5,40)) + Rational(-151788,1)*exp(2*pi*I*Rational(7,40)) + Rational(151788,1)*exp(2*pi*I*Rational(9,40)) + Rational(-75894,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(151788,1)*exp(2*pi*I*Rational(1,40)) + Rational(-151788,1)*exp(2*pi*I*Rational(3,40)) + Rational(-75894,1)*exp(2*pi*I*Rational(5,40)) + Rational(151788,1)*exp(2*pi*I*Rational(7,40)) + Rational(151788,1)*exp(2*pi*I*Rational(9,40)) + Rational(75894,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(-54210,1)*exp(2*pi*I*Rational(1,8)) + Rational(54210,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-54210,1)*exp(2*pi*I*Rational(1,8)) + Rational(-54210,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(18120,1)*exp(2*pi*I*Rational(1,40)) + Rational(18120,1)*exp(2*pi*I*Rational(3,40)) + Rational(-9060,1)*exp(2*pi*I*Rational(5,40)) + Rational(-18120,1)*exp(2*pi*I*Rational(7,40)) + Rational(18120,1)*exp(2*pi*I*Rational(9,40)) + Rational(-9060,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(18120,1)*exp(2*pi*I*Rational(1,40)) + Rational(-18120,1)*exp(2*pi*I*Rational(3,40)) + Rational(-9060,1)*exp(2*pi*I*Rational(5,40)) + Rational(18120,1)*exp(2*pi*I*Rational(7,40)) + Rational(18120,1)*exp(2*pi*I*Rational(9,40)) + Rational(9060,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 7
                                 },
                                 {
-                                    'e': (Rational(10170,1)*exp(2*pi*I*Rational(1,8)) + Rational(-10170,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(10170,1)*exp(2*pi*I*Rational(1,8)) + Rational(10170,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 11
                                 },
                                 {
-                                    'e': (Rational(15770,1)*exp(2*pi*I*Rational(1,40)) + Rational(15770,1)*exp(2*pi*I*Rational(3,40)) + Rational(-7885,1)*exp(2*pi*I*Rational(5,40)) + Rational(-15770,1)*exp(2*pi*I*Rational(7,40)) + Rational(15770,1)*exp(2*pi*I*Rational(9,40)) + Rational(-7885,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(15770,1)*exp(2*pi*I*Rational(1,40)) + Rational(-15770,1)*exp(2*pi*I*Rational(3,40)) + Rational(-7885,1)*exp(2*pi*I*Rational(5,40)) + Rational(15770,1)*exp(2*pi*I*Rational(7,40)) + Rational(15770,1)*exp(2*pi*I*Rational(9,40)) + Rational(7885,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 15
                                 },
                                 {
-                                    'e': (Rational(-1155,1)*exp(2*pi*I*Rational(1,8)) + Rational(1155,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-1155,1)*exp(2*pi*I*Rational(1,8)) + Rational(-1155,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 19
                                 }
                             ],
@@ -207732,32 +207665,32 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(3009,1) + Rational(6018,1)*exp(2*pi*I*Rational(2,5)) + Rational(6018,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-6018,1)*exp(2*pi*I*Rational(3,20)) + Rational(3009,1)*exp(2*pi*I*Rational(5,20)) + Rational(-6018,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -19
                                 },
-                                {'e': Rational(-4020,1), 'twoM': -15},
+                                {'e': (Rational(-4020,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -15},
                                 {
-                                    'e': (Rational(44751,1) + Rational(89502,1)*exp(2*pi*I*Rational(2,5)) + Rational(89502,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-89502,1)*exp(2*pi*I*Rational(3,20)) + Rational(44751,1)*exp(2*pi*I*Rational(5,20)) + Rational(-89502,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(-51840,1), 'twoM': -7},
+                                {'e': (Rational(-51840,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(107770,1) + Rational(215540,1)*exp(2*pi*I*Rational(2,5)) + Rational(215540,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-215540,1)*exp(2*pi*I*Rational(3,20)) + Rational(107770,1)*exp(2*pi*I*Rational(5,20)) + Rational(-215540,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(344760,1), 'twoM': 1},
+                                {'e': (Rational(344760,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(-198930,1) + Rational(-397860,1)*exp(2*pi*I*Rational(2,5)) + Rational(-397860,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(397860,1)*exp(2*pi*I*Rational(3,20)) + Rational(-198930,1)*exp(2*pi*I*Rational(5,20)) + Rational(397860,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(52320,1), 'twoM': 9},
+                                {'e': (Rational(52320,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9},
                                 {
-                                    'e': (Rational(-38475,1) + Rational(-76950,1)*exp(2*pi*I*Rational(2,5)) + Rational(-76950,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(76950,1)*exp(2*pi*I*Rational(3,20)) + Rational(-38475,1)*exp(2*pi*I*Rational(5,20)) + Rational(76950,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 13
                                 },
-                                {'e': Rational(-3300,1), 'twoM': 17},
+                                {'e': (Rational(-3300,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 17},
                                 {
-                                    'e': (Rational(-45,1) + Rational(-90,1)*exp(2*pi*I*Rational(2,5)) + Rational(-90,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(90,1)*exp(2*pi*I*Rational(3,20)) + Rational(-45,1)*exp(2*pi*I*Rational(5,20)) + Rational(90,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 21
                                 }
                             ],
@@ -207765,28 +207698,28 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(91,1), 'twoM': -21},
+                                {'e': (Rational(91,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -21},
                                 {
-                                    'e': (Rational(-144,1) + Rational(-288,1)*exp(2*pi*I*Rational(2,5)) + Rational(-288,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(288,1)*exp(2*pi*I*Rational(3,20)) + Rational(-144,1)*exp(2*pi*I*Rational(5,20)) + Rational(288,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -17
                                 },
-                                {'e': Rational(16545,1), 'twoM': -13},
+                                {'e': (Rational(16545,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -13},
                                 {
-                                    'e': (Rational(-20112,1) + Rational(-40224,1)*exp(2*pi*I*Rational(2,5)) + Rational(-40224,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(40224,1)*exp(2*pi*I*Rational(3,20)) + Rational(-20112,1)*exp(2*pi*I*Rational(5,20)) + Rational(40224,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(-100530,1), 'twoM': -5},
+                                {'e': (Rational(-100530,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(-48048,1) + Rational(-96096,1)*exp(2*pi*I*Rational(2,5)) + Rational(-96096,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(96096,1)*exp(2*pi*I*Rational(3,20)) + Rational(-48048,1)*exp(2*pi*I*Rational(5,20)) + Rational(96096,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(104130,1), 'twoM': 3},
+                                {'e': (Rational(104130,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(720,1) + Rational(1440,1)*exp(2*pi*I*Rational(2,5)) + Rational(1440,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1440,1)*exp(2*pi*I*Rational(3,20)) + Rational(720,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1440,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(14535,1), 'twoM': 11},
-                                {'e': Rational(45,1), 'twoM': 19}
+                                {'e': (Rational(14535,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11},
+                                {'e': (Rational(45,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 19}
                             ],
                             'mu': 6
                         }
@@ -207802,32 +207735,32 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-9405,1) + Rational(-18810,1)*exp(2*pi*I*Rational(2,5)) + Rational(-18810,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(18810,1)*exp(2*pi*I*Rational(3,20)) + Rational(-9405,1)*exp(2*pi*I*Rational(5,20)) + Rational(18810,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -19
                                 },
-                                {'e': Rational(286650,1), 'twoM': -15},
+                                {'e': (Rational(286650,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -15},
                                 {
-                                    'e': (Rational(-113985,1) + Rational(-227970,1)*exp(2*pi*I*Rational(2,5)) + Rational(-227970,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(227970,1)*exp(2*pi*I*Rational(3,20)) + Rational(-113985,1)*exp(2*pi*I*Rational(5,20)) + Rational(227970,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -11
                                 },
-                                {'e': Rational(-4192200,1), 'twoM': -7},
+                                {'e': (Rational(-4192200,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -7},
                                 {
-                                    'e': (Rational(-895050,1) + Rational(-1790100,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1790100,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1790100,1)*exp(2*pi*I*Rational(3,20)) + Rational(-895050,1)*exp(2*pi*I*Rational(5,20)) + Rational(1790100,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -3
                                 },
-                                {'e': Rational(1021020,1), 'twoM': 1},
+                                {'e': (Rational(1021020,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 1},
                                 {
-                                    'e': (Rational(-1347930,1) + Rational(-2695860,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2695860,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2695860,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1347930,1)*exp(2*pi*I*Rational(5,20)) + Rational(2695860,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 5
                                 },
-                                {'e': Rational(148920,1), 'twoM': 9},
+                                {'e': (Rational(148920,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 9},
                                 {
-                                    'e': (Rational(-18105,1) + Rational(-36210,1)*exp(2*pi*I*Rational(2,5)) + Rational(-36210,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(36210,1)*exp(2*pi*I*Rational(3,20)) + Rational(-18105,1)*exp(2*pi*I*Rational(5,20)) + Rational(36210,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 13
                                 },
-                                {'e': Rational(-21510,1), 'twoM': 17},
+                                {'e': (Rational(-21510,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 17},
                                 {
-                                    'e': (Rational(91,1) + Rational(182,1)*exp(2*pi*I*Rational(2,5)) + Rational(182,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-182,1)*exp(2*pi*I*Rational(3,20)) + Rational(91,1)*exp(2*pi*I*Rational(5,20)) + Rational(-182,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 21
                                 }
                             ],
@@ -207835,79 +207768,79 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(9405,1), 'twoM': -21},
+                                {'e': (Rational(9405,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -21},
                                 {
-                                    'e': (Rational(-34050,1) + Rational(-68100,1)*exp(2*pi*I*Rational(2,5)) + Rational(-68100,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(68100,1)*exp(2*pi*I*Rational(3,20)) + Rational(-34050,1)*exp(2*pi*I*Rational(5,20)) + Rational(68100,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -17
                                 },
-                                {'e': Rational(-42255,1), 'twoM': -13},
+                                {'e': (Rational(-42255,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -13},
                                 {
-                                    'e': (Rational(-490008,1) + Rational(-980016,1)*exp(2*pi*I*Rational(2,5)) + Rational(-980016,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(980016,1)*exp(2*pi*I*Rational(3,20)) + Rational(-490008,1)*exp(2*pi*I*Rational(5,20)) + Rational(980016,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -9
                                 },
-                                {'e': Rational(-1765110,1), 'twoM': -5},
+                                {'e': (Rational(-1765110,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -5},
                                 {
-                                    'e': (Rational(792948,1) + Rational(1585896,1)*exp(2*pi*I*Rational(2,5)) + Rational(1585896,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1585896,1)*exp(2*pi*I*Rational(3,20)) + Rational(792948,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1585896,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -1
                                 },
-                                {'e': Rational(-5133830,1), 'twoM': 3},
+                                {'e': (Rational(-5133830,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 3},
                                 {
-                                    'e': (Rational(378216,1) + Rational(756432,1)*exp(2*pi*I*Rational(2,5)) + Rational(756432,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-756432,1)*exp(2*pi*I*Rational(3,20)) + Rational(378216,1)*exp(2*pi*I*Rational(5,20)) + Rational(-756432,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 7
                                 },
-                                {'e': Rational(-409479,1), 'twoM': 11},
+                                {'e': (Rational(-409479,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 11},
                                 {
-                                    'e': (Rational(-95682,1) + Rational(-191364,1)*exp(2*pi*I*Rational(2,5)) + Rational(-191364,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(191364,1)*exp(2*pi*I*Rational(3,20)) + Rational(-95682,1)*exp(2*pi*I*Rational(5,20)) + Rational(191364,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 15
                                 },
-                                {'e': Rational(1749,1), 'twoM': 19}
+                                {'e': (Rational(1749,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 19}
                             ],
                             'mu': 2
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(-21126,1)*exp(2*pi*I*Rational(1,40)) + Rational(-21126,1)*exp(2*pi*I*Rational(3,40)) + Rational(10563,1)*exp(2*pi*I*Rational(5,40)) + Rational(21126,1)*exp(2*pi*I*Rational(7,40)) + Rational(-21126,1)*exp(2*pi*I*Rational(9,40)) + Rational(10563,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-21126,1)*exp(2*pi*I*Rational(1,40)) + Rational(21126,1)*exp(2*pi*I*Rational(3,40)) + Rational(10563,1)*exp(2*pi*I*Rational(5,40)) + Rational(-21126,1)*exp(2*pi*I*Rational(7,40)) + Rational(-21126,1)*exp(2*pi*I*Rational(9,40)) + Rational(-10563,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -19
                                 },
                                 {
-                                    'e': (Rational(-67430,1)*exp(2*pi*I*Rational(1,8)) + Rational(67430,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-67430,1)*exp(2*pi*I*Rational(1,8)) + Rational(-67430,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -15
                                 },
                                 {
-                                    'e': (Rational(702882,1)*exp(2*pi*I*Rational(1,40)) + Rational(702882,1)*exp(2*pi*I*Rational(3,40)) + Rational(-351441,1)*exp(2*pi*I*Rational(5,40)) + Rational(-702882,1)*exp(2*pi*I*Rational(7,40)) + Rational(702882,1)*exp(2*pi*I*Rational(9,40)) + Rational(-351441,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(702882,1)*exp(2*pi*I*Rational(1,40)) + Rational(-702882,1)*exp(2*pi*I*Rational(3,40)) + Rational(-351441,1)*exp(2*pi*I*Rational(5,40)) + Rational(702882,1)*exp(2*pi*I*Rational(7,40)) + Rational(702882,1)*exp(2*pi*I*Rational(9,40)) + Rational(351441,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -11
                                 },
                                 {
-                                    'e': (Rational(-340680,1)*exp(2*pi*I*Rational(1,8)) + Rational(340680,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-340680,1)*exp(2*pi*I*Rational(1,8)) + Rational(-340680,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -7
                                 },
                                 {
-                                    'e': (Rational(177684,1)*exp(2*pi*I*Rational(1,40)) + Rational(177684,1)*exp(2*pi*I*Rational(3,40)) + Rational(-88842,1)*exp(2*pi*I*Rational(5,40)) + Rational(-177684,1)*exp(2*pi*I*Rational(7,40)) + Rational(177684,1)*exp(2*pi*I*Rational(9,40)) + Rational(-88842,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(177684,1)*exp(2*pi*I*Rational(1,40)) + Rational(-177684,1)*exp(2*pi*I*Rational(3,40)) + Rational(-88842,1)*exp(2*pi*I*Rational(5,40)) + Rational(177684,1)*exp(2*pi*I*Rational(7,40)) + Rational(177684,1)*exp(2*pi*I*Rational(9,40)) + Rational(88842,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -3
                                 },
                                 {
-                                    'e': (Rational(1912092,1)*exp(2*pi*I*Rational(1,8)) + Rational(-1912092,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(1912092,1)*exp(2*pi*I*Rational(1,8)) + Rational(1912092,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 1
                                 },
                                 {
-                                    'e': (Rational(766836,1)*exp(2*pi*I*Rational(1,40)) + Rational(766836,1)*exp(2*pi*I*Rational(3,40)) + Rational(-383418,1)*exp(2*pi*I*Rational(5,40)) + Rational(-766836,1)*exp(2*pi*I*Rational(7,40)) + Rational(766836,1)*exp(2*pi*I*Rational(9,40)) + Rational(-383418,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(766836,1)*exp(2*pi*I*Rational(1,40)) + Rational(-766836,1)*exp(2*pi*I*Rational(3,40)) + Rational(-383418,1)*exp(2*pi*I*Rational(5,40)) + Rational(766836,1)*exp(2*pi*I*Rational(7,40)) + Rational(766836,1)*exp(2*pi*I*Rational(9,40)) + Rational(383418,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 5
                                 },
                                 {
-                                    'e': (Rational(775608,1)*exp(2*pi*I*Rational(1,8)) + Rational(-775608,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(775608,1)*exp(2*pi*I*Rational(1,8)) + Rational(775608,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 9
                                 },
                                 {
-                                    'e': (Rational(-525582,1)*exp(2*pi*I*Rational(1,40)) + Rational(-525582,1)*exp(2*pi*I*Rational(3,40)) + Rational(262791,1)*exp(2*pi*I*Rational(5,40)) + Rational(525582,1)*exp(2*pi*I*Rational(7,40)) + Rational(-525582,1)*exp(2*pi*I*Rational(9,40)) + Rational(262791,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-525582,1)*exp(2*pi*I*Rational(1,40)) + Rational(525582,1)*exp(2*pi*I*Rational(3,40)) + Rational(262791,1)*exp(2*pi*I*Rational(5,40)) + Rational(-525582,1)*exp(2*pi*I*Rational(7,40)) + Rational(-525582,1)*exp(2*pi*I*Rational(9,40)) + Rational(-262791,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 13
                                 },
                                 {
-                                    'e': (Rational(11610,1)*exp(2*pi*I*Rational(1,8)) + Rational(-11610,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(11610,1)*exp(2*pi*I*Rational(1,8)) + Rational(11610,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 17
                                 },
                                 {
-                                    'e': (Rational(2154,1)*exp(2*pi*I*Rational(1,40)) + Rational(2154,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1077,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2154,1)*exp(2*pi*I*Rational(7,40)) + Rational(2154,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1077,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(2154,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2154,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1077,1)*exp(2*pi*I*Rational(5,40)) + Rational(2154,1)*exp(2*pi*I*Rational(7,40)) + Rational(2154,1)*exp(2*pi*I*Rational(9,40)) + Rational(1077,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 21
                                 }
                             ],
@@ -207916,47 +207849,47 @@ o3d = {
                         {
                             'components': [
                                 {
-                                    'e': (Rational(2154,1)*exp(2*pi*I*Rational(1,40)) + Rational(2154,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1077,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2154,1)*exp(2*pi*I*Rational(7,40)) + Rational(2154,1)*exp(2*pi*I*Rational(9,40)) + Rational(-1077,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(2154,1)*exp(2*pi*I*Rational(1,40)) + Rational(-2154,1)*exp(2*pi*I*Rational(3,40)) + Rational(-1077,1)*exp(2*pi*I*Rational(5,40)) + Rational(2154,1)*exp(2*pi*I*Rational(7,40)) + Rational(2154,1)*exp(2*pi*I*Rational(9,40)) + Rational(1077,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -21
                                 },
                                 {
-                                    'e': (Rational(11610,1)*exp(2*pi*I*Rational(1,8)) + Rational(-11610,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(11610,1)*exp(2*pi*I*Rational(1,8)) + Rational(11610,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -17
                                 },
                                 {
-                                    'e': (Rational(-525582,1)*exp(2*pi*I*Rational(1,40)) + Rational(-525582,1)*exp(2*pi*I*Rational(3,40)) + Rational(262791,1)*exp(2*pi*I*Rational(5,40)) + Rational(525582,1)*exp(2*pi*I*Rational(7,40)) + Rational(-525582,1)*exp(2*pi*I*Rational(9,40)) + Rational(262791,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-525582,1)*exp(2*pi*I*Rational(1,40)) + Rational(525582,1)*exp(2*pi*I*Rational(3,40)) + Rational(262791,1)*exp(2*pi*I*Rational(5,40)) + Rational(-525582,1)*exp(2*pi*I*Rational(7,40)) + Rational(-525582,1)*exp(2*pi*I*Rational(9,40)) + Rational(-262791,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -13
                                 },
                                 {
-                                    'e': (Rational(775608,1)*exp(2*pi*I*Rational(1,8)) + Rational(-775608,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(775608,1)*exp(2*pi*I*Rational(1,8)) + Rational(775608,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -9
                                 },
                                 {
-                                    'e': (Rational(766836,1)*exp(2*pi*I*Rational(1,40)) + Rational(766836,1)*exp(2*pi*I*Rational(3,40)) + Rational(-383418,1)*exp(2*pi*I*Rational(5,40)) + Rational(-766836,1)*exp(2*pi*I*Rational(7,40)) + Rational(766836,1)*exp(2*pi*I*Rational(9,40)) + Rational(-383418,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(766836,1)*exp(2*pi*I*Rational(1,40)) + Rational(-766836,1)*exp(2*pi*I*Rational(3,40)) + Rational(-383418,1)*exp(2*pi*I*Rational(5,40)) + Rational(766836,1)*exp(2*pi*I*Rational(7,40)) + Rational(766836,1)*exp(2*pi*I*Rational(9,40)) + Rational(383418,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': -5
                                 },
                                 {
-                                    'e': (Rational(1912092,1)*exp(2*pi*I*Rational(1,8)) + Rational(-1912092,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(1912092,1)*exp(2*pi*I*Rational(1,8)) + Rational(1912092,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': -1
                                 },
                                 {
-                                    'e': (Rational(177684,1)*exp(2*pi*I*Rational(1,40)) + Rational(177684,1)*exp(2*pi*I*Rational(3,40)) + Rational(-88842,1)*exp(2*pi*I*Rational(5,40)) + Rational(-177684,1)*exp(2*pi*I*Rational(7,40)) + Rational(177684,1)*exp(2*pi*I*Rational(9,40)) + Rational(-88842,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(177684,1)*exp(2*pi*I*Rational(1,40)) + Rational(-177684,1)*exp(2*pi*I*Rational(3,40)) + Rational(-88842,1)*exp(2*pi*I*Rational(5,40)) + Rational(177684,1)*exp(2*pi*I*Rational(7,40)) + Rational(177684,1)*exp(2*pi*I*Rational(9,40)) + Rational(88842,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 3
                                 },
                                 {
-                                    'e': (Rational(-340680,1)*exp(2*pi*I*Rational(1,8)) + Rational(340680,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-340680,1)*exp(2*pi*I*Rational(1,8)) + Rational(-340680,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 7
                                 },
                                 {
-                                    'e': (Rational(702882,1)*exp(2*pi*I*Rational(1,40)) + Rational(702882,1)*exp(2*pi*I*Rational(3,40)) + Rational(-351441,1)*exp(2*pi*I*Rational(5,40)) + Rational(-702882,1)*exp(2*pi*I*Rational(7,40)) + Rational(702882,1)*exp(2*pi*I*Rational(9,40)) + Rational(-351441,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(702882,1)*exp(2*pi*I*Rational(1,40)) + Rational(-702882,1)*exp(2*pi*I*Rational(3,40)) + Rational(-351441,1)*exp(2*pi*I*Rational(5,40)) + Rational(702882,1)*exp(2*pi*I*Rational(7,40)) + Rational(702882,1)*exp(2*pi*I*Rational(9,40)) + Rational(351441,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 11
                                 },
                                 {
-                                    'e': (Rational(-67430,1)*exp(2*pi*I*Rational(1,8)) + Rational(67430,1)*exp(2*pi*I*Rational(3,8))),
+                                    'e': (Rational(-67430,1)*exp(2*pi*I*Rational(1,8)) + Rational(-67430,1)*exp(2*pi*I*Rational(3,8))),
                                     'twoM': 15
                                 },
                                 {
-                                    'e': (Rational(-21126,1)*exp(2*pi*I*Rational(1,40)) + Rational(-21126,1)*exp(2*pi*I*Rational(3,40)) + Rational(10563,1)*exp(2*pi*I*Rational(5,40)) + Rational(21126,1)*exp(2*pi*I*Rational(7,40)) + Rational(-21126,1)*exp(2*pi*I*Rational(9,40)) + Rational(10563,1)*exp(2*pi*I*Rational(15,40))),
+                                    'e': (Rational(-21126,1)*exp(2*pi*I*Rational(1,40)) + Rational(21126,1)*exp(2*pi*I*Rational(3,40)) + Rational(10563,1)*exp(2*pi*I*Rational(5,40)) + Rational(-21126,1)*exp(2*pi*I*Rational(7,40)) + Rational(-21126,1)*exp(2*pi*I*Rational(9,40)) + Rational(-10563,1)*exp(2*pi*I*Rational(15,40))),
                                     'twoM': 19
                                 }
                             ],
@@ -207964,64 +207897,64 @@ o3d = {
                         },
                         {
                             'components': [
-                                {'e': Rational(1749,1), 'twoM': -19},
+                                {'e': (Rational(1749,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -19},
                                 {
-                                    'e': (Rational(-95682,1) + Rational(-191364,1)*exp(2*pi*I*Rational(2,5)) + Rational(-191364,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(191364,1)*exp(2*pi*I*Rational(3,20)) + Rational(-95682,1)*exp(2*pi*I*Rational(5,20)) + Rational(191364,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -15
                                 },
-                                {'e': Rational(-409479,1), 'twoM': -11},
+                                {'e': (Rational(-409479,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -11},
                                 {
-                                    'e': (Rational(378216,1) + Rational(756432,1)*exp(2*pi*I*Rational(2,5)) + Rational(756432,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-756432,1)*exp(2*pi*I*Rational(3,20)) + Rational(378216,1)*exp(2*pi*I*Rational(5,20)) + Rational(-756432,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -7
                                 },
-                                {'e': Rational(-5133830,1), 'twoM': -3},
+                                {'e': (Rational(-5133830,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -3},
                                 {
-                                    'e': (Rational(792948,1) + Rational(1585896,1)*exp(2*pi*I*Rational(2,5)) + Rational(1585896,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-1585896,1)*exp(2*pi*I*Rational(3,20)) + Rational(792948,1)*exp(2*pi*I*Rational(5,20)) + Rational(-1585896,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 1
                                 },
-                                {'e': Rational(-1765110,1), 'twoM': 5},
+                                {'e': (Rational(-1765110,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 5},
                                 {
-                                    'e': (Rational(-490008,1) + Rational(-980016,1)*exp(2*pi*I*Rational(2,5)) + Rational(-980016,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(980016,1)*exp(2*pi*I*Rational(3,20)) + Rational(-490008,1)*exp(2*pi*I*Rational(5,20)) + Rational(980016,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 9
                                 },
-                                {'e': Rational(-42255,1), 'twoM': 13},
+                                {'e': (Rational(-42255,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 13},
                                 {
-                                    'e': (Rational(-34050,1) + Rational(-68100,1)*exp(2*pi*I*Rational(2,5)) + Rational(-68100,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(68100,1)*exp(2*pi*I*Rational(3,20)) + Rational(-34050,1)*exp(2*pi*I*Rational(5,20)) + Rational(68100,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 17
                                 },
-                                {'e': Rational(9405,1), 'twoM': 21}
+                                {'e': (Rational(9405,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 21}
                             ],
                             'mu': 5
                         },
                         {
                             'components': [
                                 {
-                                    'e': (Rational(91,1) + Rational(182,1)*exp(2*pi*I*Rational(2,5)) + Rational(182,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(-182,1)*exp(2*pi*I*Rational(3,20)) + Rational(91,1)*exp(2*pi*I*Rational(5,20)) + Rational(-182,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -21
                                 },
-                                {'e': Rational(-21510,1), 'twoM': -17},
+                                {'e': (Rational(-21510,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -17},
                                 {
-                                    'e': (Rational(-18105,1) + Rational(-36210,1)*exp(2*pi*I*Rational(2,5)) + Rational(-36210,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(36210,1)*exp(2*pi*I*Rational(3,20)) + Rational(-18105,1)*exp(2*pi*I*Rational(5,20)) + Rational(36210,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -13
                                 },
-                                {'e': Rational(148920,1), 'twoM': -9},
+                                {'e': (Rational(148920,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -9},
                                 {
-                                    'e': (Rational(-1347930,1) + Rational(-2695860,1)*exp(2*pi*I*Rational(2,5)) + Rational(-2695860,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(2695860,1)*exp(2*pi*I*Rational(3,20)) + Rational(-1347930,1)*exp(2*pi*I*Rational(5,20)) + Rational(2695860,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': -5
                                 },
-                                {'e': Rational(1021020,1), 'twoM': -1},
+                                {'e': (Rational(1021020,1)*exp(2*pi*I*Rational(1,4))), 'twoM': -1},
                                 {
-                                    'e': (Rational(-895050,1) + Rational(-1790100,1)*exp(2*pi*I*Rational(2,5)) + Rational(-1790100,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(1790100,1)*exp(2*pi*I*Rational(3,20)) + Rational(-895050,1)*exp(2*pi*I*Rational(5,20)) + Rational(1790100,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 3
                                 },
-                                {'e': Rational(-4192200,1), 'twoM': 7},
+                                {'e': (Rational(-4192200,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 7},
                                 {
-                                    'e': (Rational(-113985,1) + Rational(-227970,1)*exp(2*pi*I*Rational(2,5)) + Rational(-227970,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(227970,1)*exp(2*pi*I*Rational(3,20)) + Rational(-113985,1)*exp(2*pi*I*Rational(5,20)) + Rational(227970,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 11
                                 },
-                                {'e': Rational(286650,1), 'twoM': 15},
+                                {'e': (Rational(286650,1)*exp(2*pi*I*Rational(1,4))), 'twoM': 15},
                                 {
-                                    'e': (Rational(-9405,1) + Rational(-18810,1)*exp(2*pi*I*Rational(2,5)) + Rational(-18810,1)*exp(2*pi*I*Rational(3,5))),
+                                    'e': (Rational(18810,1)*exp(2*pi*I*Rational(3,20)) + Rational(-9405,1)*exp(2*pi*I*Rational(5,20)) + Rational(18810,1)*exp(2*pi*I*Rational(7,20))),
                                     'twoM': 19
                                 }
                             ],
@@ -221393,7 +221326,7 @@ o3d = {
                                 'separation': 'unique'
                             },
                             {
-                                'N': (Rational(3248,1) + Rational(-2400,1)*exp(2*pi*I*Rational(1,12)) + Rational(1200,1)*exp(2*pi*I*Rational(3,12))),
+                                'N': (Rational(1296,1) + Rational(1440,1)*exp(2*pi*I*Rational(1,12)) + Rational(-720,1)*exp(2*pi*I*Rational(3,12))),
                                 'irrep': '2G3h',
                                 'kappa': 1,
                                 'partners': [
@@ -221401,19 +221334,19 @@ o3d = {
                                         'mu': 1,
                                         'terms': [
                                             {
-                                                'e': (Rational(26,1) + Rational(-14,1)*exp(2*pi*I*Rational(1,12)) + Rational(7,1)*exp(2*pi*I*Rational(3,12))),
+                                                'e': (Rational(18,1) + Rational(18,1)*exp(2*pi*I*Rational(1,12)) + Rational(-9,1)*exp(2*pi*I*Rational(3,12))),
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(-21,1) + Rational(9,1)*exp(2*pi*I*Rational(1,60)) + Rational(-8,1)*exp(2*pi*I*Rational(2,60)) + Rational(9,1)*exp(2*pi*I*Rational(4,60)) + Rational(2,1)*exp(2*pi*I*Rational(5,60)) + Rational(9,1)*exp(2*pi*I*Rational(6,60)) + Rational(-8,1)*exp(2*pi*I*Rational(7,60)) + Rational(8,1)*exp(2*pi*I*Rational(8,60)) + Rational(-9,1)*exp(2*pi*I*Rational(9,60)) + Rational(10,1)*exp(2*pi*I*Rational(10,60)) + Rational(-9,1)*exp(2*pi*I*Rational(11,60)) + Rational(8,1)*exp(2*pi*I*Rational(13,60)) + Rational(-9,1)*exp(2*pi*I*Rational(14,60)) + Rational(-4,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(7,1) + Rational(1,1)*exp(2*pi*I*Rational(1,60)) + Rational(4,1)*exp(2*pi*I*Rational(2,60)) + Rational(1,1)*exp(2*pi*I*Rational(4,60)) + Rational(6,1)*exp(2*pi*I*Rational(5,60)) + Rational(1,1)*exp(2*pi*I*Rational(6,60)) + Rational(4,1)*exp(2*pi*I*Rational(7,60)) + Rational(-4,1)*exp(2*pi*I*Rational(8,60)) + Rational(-1,1)*exp(2*pi*I*Rational(9,60)) + Rational(2,1)*exp(2*pi*I*Rational(10,60)) + Rational(-1,1)*exp(2*pi*I*Rational(11,60)) + Rational(-4,1)*exp(2*pi*I*Rational(13,60)) + Rational(-1,1)*exp(2*pi*I*Rational(14,60)) + Rational(4,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(-17,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,60)) + Rational(18,1)*exp(2*pi*I*Rational(4,60)) + Rational(4,1)*exp(2*pi*I*Rational(5,60)) + Rational(18,1)*exp(2*pi*I*Rational(6,60)) + Rational(8,1)*exp(2*pi*I*Rational(7,60)) + Rational(4,1)*exp(2*pi*I*Rational(9,60)) + Rational(16,1)*exp(2*pi*I*Rational(10,60)) + Rational(4,1)*exp(2*pi*I*Rational(11,60)) + Rational(-8,1)*exp(2*pi*I*Rational(13,60)) + Rational(-18,1)*exp(2*pi*I*Rational(14,60)) + Rational(-16,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(7,1) + Rational(4,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(4,60)) + Rational(-4,1)*exp(2*pi*I*Rational(5,60)) + Rational(-6,1)*exp(2*pi*I*Rational(6,60)) + Rational(-8,1)*exp(2*pi*I*Rational(7,60)) + Rational(-4,1)*exp(2*pi*I*Rational(9,60)) + Rational(-8,1)*exp(2*pi*I*Rational(10,60)) + Rational(-4,1)*exp(2*pi*I*Rational(11,60)) + Rational(8,1)*exp(2*pi*I*Rational(13,60)) + Rational(6,1)*exp(2*pi*I*Rational(14,60))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(5,1)*exp(2*pi*I*Rational(4,60)) + Rational(-18,1)*exp(2*pi*I*Rational(5,60)) + Rational(5,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(5,1)*exp(2*pi*I*Rational(9,60)) + Rational(24,1)*exp(2*pi*I*Rational(10,60)) + Rational(5,1)*exp(2*pi*I*Rational(11,60)) + Rational(-6,1)*exp(2*pi*I*Rational(13,60)) + Rational(-5,1)*exp(2*pi*I*Rational(14,60)) + Rational(-11,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-16,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,60)) + Rational(-2,1)*exp(2*pi*I*Rational(2,60)) + Rational(1,1)*exp(2*pi*I*Rational(4,60)) + Rational(-10,1)*exp(2*pi*I*Rational(5,60)) + Rational(1,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(2,1)*exp(2*pi*I*Rational(8,60)) + Rational(1,1)*exp(2*pi*I*Rational(9,60)) + Rational(12,1)*exp(2*pi*I*Rational(10,60)) + Rational(1,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(-1,1)*exp(2*pi*I*Rational(14,60)) + Rational(13,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 4
                                             }
                                         ]
@@ -221422,19 +221355,19 @@ o3d = {
                                         'mu': 2,
                                         'terms': [
                                             {
-                                                'e': (Rational(-6,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,60)) + Rational(12,1)*exp(2*pi*I*Rational(2,60)) + Rational(-2,1)*exp(2*pi*I*Rational(4,60)) + Rational(15,1)*exp(2*pi*I*Rational(5,60)) + Rational(-2,1)*exp(2*pi*I*Rational(6,60)) + Rational(12,1)*exp(2*pi*I*Rational(7,60)) + Rational(-12,1)*exp(2*pi*I*Rational(8,60)) + Rational(2,1)*exp(2*pi*I*Rational(9,60)) + Rational(3,1)*exp(2*pi*I*Rational(10,60)) + Rational(2,1)*exp(2*pi*I*Rational(11,60)) + Rational(-12,1)*exp(2*pi*I*Rational(13,60)) + Rational(2,1)*exp(2*pi*I*Rational(14,60)) + Rational(-20,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(10,1) + Rational(10,1)*exp(2*pi*I*Rational(1,60)) + Rational(8,1)*exp(2*pi*I*Rational(2,60)) + Rational(-10,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(5,60)) + Rational(-10,1)*exp(2*pi*I*Rational(6,60)) + Rational(-8,1)*exp(2*pi*I*Rational(7,60)) + Rational(-8,1)*exp(2*pi*I*Rational(8,60)) + Rational(-10,1)*exp(2*pi*I*Rational(9,60)) + Rational(-3,1)*exp(2*pi*I*Rational(10,60)) + Rational(-10,1)*exp(2*pi*I*Rational(11,60)) + Rational(8,1)*exp(2*pi*I*Rational(13,60)) + Rational(10,1)*exp(2*pi*I*Rational(14,60)) + Rational(8,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(-13,1) + Rational(-7,1)*exp(2*pi*I*Rational(1,60)) + Rational(-3,1)*exp(2*pi*I*Rational(4,60)) + Rational(7,1)*exp(2*pi*I*Rational(5,60)) + Rational(-3,1)*exp(2*pi*I*Rational(6,60)) + Rational(14,1)*exp(2*pi*I*Rational(7,60)) + Rational(7,1)*exp(2*pi*I*Rational(9,60)) + Rational(29,1)*exp(2*pi*I*Rational(10,60)) + Rational(7,1)*exp(2*pi*I*Rational(11,60)) + Rational(-14,1)*exp(2*pi*I*Rational(13,60)) + Rational(3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-43,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-3,1) + Rational(-3,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(3,1)*exp(2*pi*I*Rational(4,60)) + Rational(3,1)*exp(2*pi*I*Rational(5,60)) + Rational(3,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(3,1)*exp(2*pi*I*Rational(9,60)) + Rational(3,1)*exp(2*pi*I*Rational(10,60)) + Rational(3,1)*exp(2*pi*I*Rational(11,60)) + Rational(-3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-3,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(-3,1) + Rational(6,1)*exp(2*pi*I*Rational(1,60)) + Rational(-2,1)*exp(2*pi*I*Rational(2,60)) + Rational(-6,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(5,60)) + Rational(-6,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(2,1)*exp(2*pi*I*Rational(8,60)) + Rational(-6,1)*exp(2*pi*I*Rational(9,60)) + Rational(7,1)*exp(2*pi*I*Rational(10,60)) + Rational(-6,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(6,1)*exp(2*pi*I*Rational(14,60)) + Rational(7,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-7,1) + Rational(2,1)*exp(2*pi*I*Rational(1,60)) + Rational(2,1)*exp(2*pi*I*Rational(2,60)) + Rational(2,1)*exp(2*pi*I*Rational(4,60)) + Rational(-15,1)*exp(2*pi*I*Rational(5,60)) + Rational(2,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(-2,1)*exp(2*pi*I*Rational(8,60)) + Rational(-2,1)*exp(2*pi*I*Rational(9,60)) + Rational(-17,1)*exp(2*pi*I*Rational(10,60)) + Rational(-2,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(-2,1)*exp(2*pi*I*Rational(14,60)) + Rational(-7,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(8,1) + Rational(-21,1)*exp(2*pi*I*Rational(1,60)) + Rational(6,1)*exp(2*pi*I*Rational(2,60)) + Rational(-3,1)*exp(2*pi*I*Rational(4,60)) + Rational(-1,1)*exp(2*pi*I*Rational(5,60)) + Rational(-3,1)*exp(2*pi*I*Rational(6,60)) + Rational(-6,1)*exp(2*pi*I*Rational(8,60)) + Rational(21,1)*exp(2*pi*I*Rational(9,60)) + Rational(-3,1)*exp(2*pi*I*Rational(10,60)) + Rational(21,1)*exp(2*pi*I*Rational(11,60)) + Rational(3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-10,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(2,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,60)) + Rational(3,1)*exp(2*pi*I*Rational(4,60)) + Rational(1,1)*exp(2*pi*I*Rational(5,60)) + Rational(3,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(1,1)*exp(2*pi*I*Rational(9,60)) + Rational(-7,1)*exp(2*pi*I*Rational(10,60)) + Rational(1,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(-3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-12,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 4
                                             }
                                         ]
@@ -221576,7 +221509,7 @@ o3d = {
                                 'separation': 'unique'
                             },
                             {
-                                'N': (Rational(4320,1) + Rational(4800,1)*exp(2*pi*I*Rational(1,12)) + Rational(-2400,1)*exp(2*pi*I*Rational(3,12))),
+                                'N': (Rational(12960,1) + Rational(14400,1)*exp(2*pi*I*Rational(1,12)) + Rational(-7200,1)*exp(2*pi*I*Rational(3,12))),
                                 'irrep': '2G3h',
                                 'kappa': 1,
                                 'partners': [
@@ -221588,23 +221521,23 @@ o3d = {
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(5,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(4,1)*exp(2*pi*I*Rational(4,60)) + Rational(13,1)*exp(2*pi*I*Rational(5,60)) + Rational(4,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(4,1)*exp(2*pi*I*Rational(9,60)) + Rational(-7,1)*exp(2*pi*I*Rational(10,60)) + Rational(4,1)*exp(2*pi*I*Rational(11,60)) + Rational(-6,1)*exp(2*pi*I*Rational(13,60)) + Rational(-4,1)*exp(2*pi*I*Rational(14,60)) + Rational(-15,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-35,1) + Rational(-16,1)*exp(2*pi*I*Rational(1,60)) + Rational(-14,1)*exp(2*pi*I*Rational(2,60)) + Rational(16,1)*exp(2*pi*I*Rational(4,60)) + Rational(-3,1)*exp(2*pi*I*Rational(5,60)) + Rational(16,1)*exp(2*pi*I*Rational(6,60)) + Rational(14,1)*exp(2*pi*I*Rational(7,60)) + Rational(14,1)*exp(2*pi*I*Rational(8,60)) + Rational(16,1)*exp(2*pi*I*Rational(9,60)) + Rational(17,1)*exp(2*pi*I*Rational(10,60)) + Rational(16,1)*exp(2*pi*I*Rational(11,60)) + Rational(-14,1)*exp(2*pi*I*Rational(13,60)) + Rational(-16,1)*exp(2*pi*I*Rational(14,60)) + Rational(5,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(-12,1)*exp(2*pi*I*Rational(1,120)) + Rational(2,1)*exp(2*pi*I*Rational(3,120)) + Rational(11,1)*exp(2*pi*I*Rational(5,120)) + Rational(16,1)*exp(2*pi*I*Rational(7,120)) + Rational(14,1)*exp(2*pi*I*Rational(9,120)) + Rational(7,1)*exp(2*pi*I*Rational(15,120)) + Rational(-4,1)*exp(2*pi*I*Rational(19,120)) + Rational(-2,1)*exp(2*pi*I*Rational(21,120)) + Rational(-16,1)*exp(2*pi*I*Rational(23,120)) + Rational(-7,1)*exp(2*pi*I*Rational(25,120)) + Rational(-14,1)*exp(2*pi*I*Rational(27,120)) + Rational(-12,1)*exp(2*pi*I*Rational(29,120)) + Rational(4,1)*exp(2*pi*I*Rational(31,120))),
+                                                'e': (Rational(-6,1)*exp(2*pi*I*Rational(1,40)) + Rational(6,1)*exp(2*pi*I*Rational(3,40)) + Rational(3,1)*exp(2*pi*I*Rational(5,40)) + Rational(-6,1)*exp(2*pi*I*Rational(7,40)) + Rational(-6,1)*exp(2*pi*I*Rational(9,40)) + Rational(-3,1)*exp(2*pi*I*Rational(15,40))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(-9,1)*exp(2*pi*I*Rational(5,120)) + Rational(-10,1)*exp(2*pi*I*Rational(7,120)) + Rational(-18,1)*exp(2*pi*I*Rational(9,120)) + Rational(-5,1)*exp(2*pi*I*Rational(15,120)) + Rational(-10,1)*exp(2*pi*I*Rational(19,120)) + Rational(18,1)*exp(2*pi*I*Rational(21,120)) + Rational(10,1)*exp(2*pi*I*Rational(23,120)) + Rational(9,1)*exp(2*pi*I*Rational(25,120)) + Rational(10,1)*exp(2*pi*I*Rational(27,120)) + Rational(10,1)*exp(2*pi*I*Rational(31,120))),
+                                                'e': (Rational(11,1)*exp(2*pi*I*Rational(5,120)) + Rational(-14,1)*exp(2*pi*I*Rational(7,120)) + Rational(-18,1)*exp(2*pi*I*Rational(9,120)) + Rational(23,1)*exp(2*pi*I*Rational(15,120)) + Rational(-14,1)*exp(2*pi*I*Rational(19,120)) + Rational(18,1)*exp(2*pi*I*Rational(21,120)) + Rational(14,1)*exp(2*pi*I*Rational(23,120)) + Rational(29,1)*exp(2*pi*I*Rational(25,120)) + Rational(14,1)*exp(2*pi*I*Rational(27,120)) + Rational(14,1)*exp(2*pi*I*Rational(31,120))),
                                                 'i': 4
                                             },
                                             {
-                                                'e': (Rational(-14,1) + Rational(-6,1)*exp(2*pi*I*Rational(1,60)) + Rational(8,1)*exp(2*pi*I*Rational(4,60)) + Rational(6,1)*exp(2*pi*I*Rational(5,60)) + Rational(8,1)*exp(2*pi*I*Rational(6,60)) + Rational(12,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(9,60)) + Rational(20,1)*exp(2*pi*I*Rational(10,60)) + Rational(6,1)*exp(2*pi*I*Rational(11,60)) + Rational(-12,1)*exp(2*pi*I*Rational(13,60)) + Rational(-8,1)*exp(2*pi*I*Rational(14,60)) + Rational(11,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(38,1) + Rational(22,1)*exp(2*pi*I*Rational(1,60)) + Rational(-36,1)*exp(2*pi*I*Rational(4,60)) + Rational(-22,1)*exp(2*pi*I*Rational(5,60)) + Rational(-36,1)*exp(2*pi*I*Rational(6,60)) + Rational(-44,1)*exp(2*pi*I*Rational(7,60)) + Rational(-22,1)*exp(2*pi*I*Rational(9,60)) + Rational(-40,1)*exp(2*pi*I*Rational(10,60)) + Rational(-22,1)*exp(2*pi*I*Rational(11,60)) + Rational(44,1)*exp(2*pi*I*Rational(13,60)) + Rational(36,1)*exp(2*pi*I*Rational(14,60)) + Rational(3,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 5
                                             },
                                             {
-                                                'e': (Rational(5,1) + Rational(5,1)*exp(2*pi*I*Rational(1,12)) + Rational(5,1)*exp(2*pi*I*Rational(2,12)) + Rational(5,1)*exp(2*pi*I*Rational(3,12))),
+                                                'e': (Rational(-15,1) + Rational(-15,1)*exp(2*pi*I*Rational(1,12)) + Rational(-15,1)*exp(2*pi*I*Rational(2,12)) + Rational(-15,1)*exp(2*pi*I*Rational(3,12))),
                                                 'i': 6
                                             }
                                         ]
@@ -221613,27 +221546,27 @@ o3d = {
                                         'mu': 2,
                                         'terms': [
                                             {
-                                                'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,60)) + Rational(-10,1)*exp(2*pi*I*Rational(2,60)) + Rational(-5,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(6,60)) + Rational(-10,1)*exp(2*pi*I*Rational(7,60)) + Rational(10,1)*exp(2*pi*I*Rational(8,60)) + Rational(5,1)*exp(2*pi*I*Rational(9,60)) + Rational(10,1)*exp(2*pi*I*Rational(10,60)) + Rational(5,1)*exp(2*pi*I*Rational(11,60)) + Rational(10,1)*exp(2*pi*I*Rational(13,60)) + Rational(5,1)*exp(2*pi*I*Rational(14,60)) + Rational(5,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-60,1) + Rational(-45,1)*exp(2*pi*I*Rational(1,60)) + Rational(-30,1)*exp(2*pi*I*Rational(2,60)) + Rational(45,1)*exp(2*pi*I*Rational(4,60)) + Rational(45,1)*exp(2*pi*I*Rational(6,60)) + Rational(30,1)*exp(2*pi*I*Rational(7,60)) + Rational(30,1)*exp(2*pi*I*Rational(8,60)) + Rational(45,1)*exp(2*pi*I*Rational(9,60)) + Rational(30,1)*exp(2*pi*I*Rational(10,60)) + Rational(45,1)*exp(2*pi*I*Rational(11,60)) + Rational(-30,1)*exp(2*pi*I*Rational(13,60)) + Rational(-45,1)*exp(2*pi*I*Rational(14,60)) + Rational(-15,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(-11,1) + Rational(7,1)*exp(2*pi*I*Rational(1,60)) + Rational(2,1)*exp(2*pi*I*Rational(2,60)) + Rational(-1,1)*exp(2*pi*I*Rational(4,60)) + Rational(-15,1)*exp(2*pi*I*Rational(5,60)) + Rational(-1,1)*exp(2*pi*I*Rational(6,60)) + Rational(-2,1)*exp(2*pi*I*Rational(8,60)) + Rational(-7,1)*exp(2*pi*I*Rational(9,60)) + Rational(-1,1)*exp(2*pi*I*Rational(10,60)) + Rational(-7,1)*exp(2*pi*I*Rational(11,60)) + Rational(1,1)*exp(2*pi*I*Rational(14,60)) + Rational(11,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-17,1) + Rational(-7,1)*exp(2*pi*I*Rational(1,60)) + Rational(9,1)*exp(2*pi*I*Rational(4,60)) + Rational(7,1)*exp(2*pi*I*Rational(5,60)) + Rational(9,1)*exp(2*pi*I*Rational(6,60)) + Rational(14,1)*exp(2*pi*I*Rational(7,60)) + Rational(7,1)*exp(2*pi*I*Rational(9,60)) + Rational(25,1)*exp(2*pi*I*Rational(10,60)) + Rational(7,1)*exp(2*pi*I*Rational(11,60)) + Rational(-14,1)*exp(2*pi*I*Rational(13,60)) + Rational(-9,1)*exp(2*pi*I*Rational(14,60)) + Rational(-3,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(2,1)*exp(2*pi*I*Rational(3,40)) + Rational(5,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2,1)*exp(2*pi*I*Rational(7,40)) + Rational(-1,1)*exp(2*pi*I*Rational(15,40))),
+                                                'e': (Rational(32,1)*exp(2*pi*I*Rational(1,120)) + Rational(38,1)*exp(2*pi*I*Rational(3,120)) + Rational(23,1)*exp(2*pi*I*Rational(5,120)) + Rational(20,1)*exp(2*pi*I*Rational(7,120)) + Rational(-16,1)*exp(2*pi*I*Rational(9,120)) + Rational(-19,1)*exp(2*pi*I*Rational(15,120)) + Rational(-20,1)*exp(2*pi*I*Rational(19,120)) + Rational(-16,1)*exp(2*pi*I*Rational(21,120)) + Rational(-20,1)*exp(2*pi*I*Rational(23,120)) + Rational(-7,1)*exp(2*pi*I*Rational(25,120)) + Rational(18,1)*exp(2*pi*I*Rational(27,120)) + Rational(32,1)*exp(2*pi*I*Rational(29,120)) + Rational(20,1)*exp(2*pi*I*Rational(31,120))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(-18,1)*exp(2*pi*I*Rational(1,120)) + Rational(-8,1)*exp(2*pi*I*Rational(3,120)) + Rational(-11,1)*exp(2*pi*I*Rational(5,120)) + Rational(-4,1)*exp(2*pi*I*Rational(7,120)) + Rational(-4,1)*exp(2*pi*I*Rational(9,120)) + Rational(-3,1)*exp(2*pi*I*Rational(15,120)) + Rational(-14,1)*exp(2*pi*I*Rational(19,120)) + Rational(22,1)*exp(2*pi*I*Rational(21,120)) + Rational(4,1)*exp(2*pi*I*Rational(23,120)) + Rational(-3,1)*exp(2*pi*I*Rational(25,120)) + Rational(-4,1)*exp(2*pi*I*Rational(27,120)) + Rational(-18,1)*exp(2*pi*I*Rational(29,120)) + Rational(14,1)*exp(2*pi*I*Rational(31,120))),
+                                                'e': (Rational(-10,1)*exp(2*pi*I*Rational(1,120)) + Rational(-34,1)*exp(2*pi*I*Rational(3,120)) + Rational(-33,1)*exp(2*pi*I*Rational(5,120)) + Rational(-20,1)*exp(2*pi*I*Rational(7,120)) + Rational(14,1)*exp(2*pi*I*Rational(9,120)) + Rational(-3,1)*exp(2*pi*I*Rational(15,120)) + Rational(30,1)*exp(2*pi*I*Rational(19,120)) + Rational(-4,1)*exp(2*pi*I*Rational(21,120)) + Rational(20,1)*exp(2*pi*I*Rational(23,120)) + Rational(3,1)*exp(2*pi*I*Rational(25,120)) + Rational(-14,1)*exp(2*pi*I*Rational(27,120)) + Rational(-10,1)*exp(2*pi*I*Rational(29,120)) + Rational(-30,1)*exp(2*pi*I*Rational(31,120))),
                                                 'i': 4
                                             },
                                             {
-                                                'e': (Rational(26,1) + Rational(-7,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(7,1)*exp(2*pi*I*Rational(4,60)) + Rational(28,1)*exp(2*pi*I*Rational(5,60)) + Rational(7,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(7,1)*exp(2*pi*I*Rational(9,60)) + Rational(-22,1)*exp(2*pi*I*Rational(10,60)) + Rational(7,1)*exp(2*pi*I*Rational(11,60)) + Rational(-6,1)*exp(2*pi*I*Rational(13,60)) + Rational(-7,1)*exp(2*pi*I*Rational(14,60)) + Rational(-39,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-10,1) + Rational(-11,1)*exp(2*pi*I*Rational(1,60)) + Rational(-26,1)*exp(2*pi*I*Rational(2,60)) + Rational(-11,1)*exp(2*pi*I*Rational(4,60)) + Rational(-8,1)*exp(2*pi*I*Rational(5,60)) + Rational(-11,1)*exp(2*pi*I*Rational(6,60)) + Rational(-26,1)*exp(2*pi*I*Rational(7,60)) + Rational(26,1)*exp(2*pi*I*Rational(8,60)) + Rational(11,1)*exp(2*pi*I*Rational(9,60)) + Rational(18,1)*exp(2*pi*I*Rational(10,60)) + Rational(11,1)*exp(2*pi*I*Rational(11,60)) + Rational(26,1)*exp(2*pi*I*Rational(13,60)) + Rational(11,1)*exp(2*pi*I*Rational(14,60)) + Rational(5,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 5
                                             },
                                             {
-                                                'e': (Rational(-5,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,60)) + Rational(15,1)*exp(2*pi*I*Rational(4,60)) + Rational(5,1)*exp(2*pi*I*Rational(5,60)) + Rational(15,1)*exp(2*pi*I*Rational(6,60)) + Rational(10,1)*exp(2*pi*I*Rational(7,60)) + Rational(5,1)*exp(2*pi*I*Rational(9,60)) + Rational(-5,1)*exp(2*pi*I*Rational(10,60)) + Rational(5,1)*exp(2*pi*I*Rational(11,60)) + Rational(-10,1)*exp(2*pi*I*Rational(13,60)) + Rational(-15,1)*exp(2*pi*I*Rational(14,60)) + Rational(-15,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-15,1) + Rational(-15,1)*exp(2*pi*I*Rational(1,60)) + Rational(-10,1)*exp(2*pi*I*Rational(2,60)) + Rational(5,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(5,60)) + Rational(5,1)*exp(2*pi*I*Rational(6,60)) + Rational(10,1)*exp(2*pi*I*Rational(8,60)) + Rational(15,1)*exp(2*pi*I*Rational(9,60)) + Rational(5,1)*exp(2*pi*I*Rational(10,60)) + Rational(15,1)*exp(2*pi*I*Rational(11,60)) + Rational(-5,1)*exp(2*pi*I*Rational(14,60)) + Rational(-5,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 6
                                             }
                                         ]
@@ -221779,7 +221712,7 @@ o3d = {
                                 'separation': 'unique'
                             },
                             {
-                                'N': (Rational(3248,1) + Rational(-2400,1)*exp(2*pi*I*Rational(1,12)) + Rational(1200,1)*exp(2*pi*I*Rational(3,12))),
+                                'N': (Rational(1296,1) + Rational(1440,1)*exp(2*pi*I*Rational(1,12)) + Rational(-720,1)*exp(2*pi*I*Rational(3,12))),
                                 'irrep': '2G3h',
                                 'kappa': 1,
                                 'partners': [
@@ -221787,19 +221720,19 @@ o3d = {
                                         'mu': 1,
                                         'terms': [
                                             {
-                                                'e': (Rational(26,1) + Rational(-14,1)*exp(2*pi*I*Rational(1,12)) + Rational(7,1)*exp(2*pi*I*Rational(3,12))),
+                                                'e': (Rational(18,1) + Rational(18,1)*exp(2*pi*I*Rational(1,12)) + Rational(-9,1)*exp(2*pi*I*Rational(3,12))),
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(-21,1) + Rational(9,1)*exp(2*pi*I*Rational(1,60)) + Rational(-8,1)*exp(2*pi*I*Rational(2,60)) + Rational(9,1)*exp(2*pi*I*Rational(4,60)) + Rational(2,1)*exp(2*pi*I*Rational(5,60)) + Rational(9,1)*exp(2*pi*I*Rational(6,60)) + Rational(-8,1)*exp(2*pi*I*Rational(7,60)) + Rational(8,1)*exp(2*pi*I*Rational(8,60)) + Rational(-9,1)*exp(2*pi*I*Rational(9,60)) + Rational(10,1)*exp(2*pi*I*Rational(10,60)) + Rational(-9,1)*exp(2*pi*I*Rational(11,60)) + Rational(8,1)*exp(2*pi*I*Rational(13,60)) + Rational(-9,1)*exp(2*pi*I*Rational(14,60)) + Rational(-4,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(7,1) + Rational(1,1)*exp(2*pi*I*Rational(1,60)) + Rational(4,1)*exp(2*pi*I*Rational(2,60)) + Rational(1,1)*exp(2*pi*I*Rational(4,60)) + Rational(6,1)*exp(2*pi*I*Rational(5,60)) + Rational(1,1)*exp(2*pi*I*Rational(6,60)) + Rational(4,1)*exp(2*pi*I*Rational(7,60)) + Rational(-4,1)*exp(2*pi*I*Rational(8,60)) + Rational(-1,1)*exp(2*pi*I*Rational(9,60)) + Rational(2,1)*exp(2*pi*I*Rational(10,60)) + Rational(-1,1)*exp(2*pi*I*Rational(11,60)) + Rational(-4,1)*exp(2*pi*I*Rational(13,60)) + Rational(-1,1)*exp(2*pi*I*Rational(14,60)) + Rational(4,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(-17,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,60)) + Rational(18,1)*exp(2*pi*I*Rational(4,60)) + Rational(4,1)*exp(2*pi*I*Rational(5,60)) + Rational(18,1)*exp(2*pi*I*Rational(6,60)) + Rational(8,1)*exp(2*pi*I*Rational(7,60)) + Rational(4,1)*exp(2*pi*I*Rational(9,60)) + Rational(16,1)*exp(2*pi*I*Rational(10,60)) + Rational(4,1)*exp(2*pi*I*Rational(11,60)) + Rational(-8,1)*exp(2*pi*I*Rational(13,60)) + Rational(-18,1)*exp(2*pi*I*Rational(14,60)) + Rational(-16,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(7,1) + Rational(4,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(4,60)) + Rational(-4,1)*exp(2*pi*I*Rational(5,60)) + Rational(-6,1)*exp(2*pi*I*Rational(6,60)) + Rational(-8,1)*exp(2*pi*I*Rational(7,60)) + Rational(-4,1)*exp(2*pi*I*Rational(9,60)) + Rational(-8,1)*exp(2*pi*I*Rational(10,60)) + Rational(-4,1)*exp(2*pi*I*Rational(11,60)) + Rational(8,1)*exp(2*pi*I*Rational(13,60)) + Rational(6,1)*exp(2*pi*I*Rational(14,60))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(5,1)*exp(2*pi*I*Rational(4,60)) + Rational(-18,1)*exp(2*pi*I*Rational(5,60)) + Rational(5,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(5,1)*exp(2*pi*I*Rational(9,60)) + Rational(24,1)*exp(2*pi*I*Rational(10,60)) + Rational(5,1)*exp(2*pi*I*Rational(11,60)) + Rational(-6,1)*exp(2*pi*I*Rational(13,60)) + Rational(-5,1)*exp(2*pi*I*Rational(14,60)) + Rational(-11,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-16,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,60)) + Rational(-2,1)*exp(2*pi*I*Rational(2,60)) + Rational(1,1)*exp(2*pi*I*Rational(4,60)) + Rational(-10,1)*exp(2*pi*I*Rational(5,60)) + Rational(1,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(2,1)*exp(2*pi*I*Rational(8,60)) + Rational(1,1)*exp(2*pi*I*Rational(9,60)) + Rational(12,1)*exp(2*pi*I*Rational(10,60)) + Rational(1,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(-1,1)*exp(2*pi*I*Rational(14,60)) + Rational(13,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 4
                                             }
                                         ]
@@ -221808,19 +221741,19 @@ o3d = {
                                         'mu': 2,
                                         'terms': [
                                             {
-                                                'e': (Rational(-6,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,60)) + Rational(12,1)*exp(2*pi*I*Rational(2,60)) + Rational(-2,1)*exp(2*pi*I*Rational(4,60)) + Rational(15,1)*exp(2*pi*I*Rational(5,60)) + Rational(-2,1)*exp(2*pi*I*Rational(6,60)) + Rational(12,1)*exp(2*pi*I*Rational(7,60)) + Rational(-12,1)*exp(2*pi*I*Rational(8,60)) + Rational(2,1)*exp(2*pi*I*Rational(9,60)) + Rational(3,1)*exp(2*pi*I*Rational(10,60)) + Rational(2,1)*exp(2*pi*I*Rational(11,60)) + Rational(-12,1)*exp(2*pi*I*Rational(13,60)) + Rational(2,1)*exp(2*pi*I*Rational(14,60)) + Rational(-20,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(10,1) + Rational(10,1)*exp(2*pi*I*Rational(1,60)) + Rational(8,1)*exp(2*pi*I*Rational(2,60)) + Rational(-10,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(5,60)) + Rational(-10,1)*exp(2*pi*I*Rational(6,60)) + Rational(-8,1)*exp(2*pi*I*Rational(7,60)) + Rational(-8,1)*exp(2*pi*I*Rational(8,60)) + Rational(-10,1)*exp(2*pi*I*Rational(9,60)) + Rational(-3,1)*exp(2*pi*I*Rational(10,60)) + Rational(-10,1)*exp(2*pi*I*Rational(11,60)) + Rational(8,1)*exp(2*pi*I*Rational(13,60)) + Rational(10,1)*exp(2*pi*I*Rational(14,60)) + Rational(8,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(-13,1) + Rational(-7,1)*exp(2*pi*I*Rational(1,60)) + Rational(-3,1)*exp(2*pi*I*Rational(4,60)) + Rational(7,1)*exp(2*pi*I*Rational(5,60)) + Rational(-3,1)*exp(2*pi*I*Rational(6,60)) + Rational(14,1)*exp(2*pi*I*Rational(7,60)) + Rational(7,1)*exp(2*pi*I*Rational(9,60)) + Rational(29,1)*exp(2*pi*I*Rational(10,60)) + Rational(7,1)*exp(2*pi*I*Rational(11,60)) + Rational(-14,1)*exp(2*pi*I*Rational(13,60)) + Rational(3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-43,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-3,1) + Rational(-3,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(3,1)*exp(2*pi*I*Rational(4,60)) + Rational(3,1)*exp(2*pi*I*Rational(5,60)) + Rational(3,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(3,1)*exp(2*pi*I*Rational(9,60)) + Rational(3,1)*exp(2*pi*I*Rational(10,60)) + Rational(3,1)*exp(2*pi*I*Rational(11,60)) + Rational(-3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-3,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(-3,1) + Rational(6,1)*exp(2*pi*I*Rational(1,60)) + Rational(-2,1)*exp(2*pi*I*Rational(2,60)) + Rational(-6,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(5,60)) + Rational(-6,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(2,1)*exp(2*pi*I*Rational(8,60)) + Rational(-6,1)*exp(2*pi*I*Rational(9,60)) + Rational(7,1)*exp(2*pi*I*Rational(10,60)) + Rational(-6,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(6,1)*exp(2*pi*I*Rational(14,60)) + Rational(7,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-7,1) + Rational(2,1)*exp(2*pi*I*Rational(1,60)) + Rational(2,1)*exp(2*pi*I*Rational(2,60)) + Rational(2,1)*exp(2*pi*I*Rational(4,60)) + Rational(-15,1)*exp(2*pi*I*Rational(5,60)) + Rational(2,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(-2,1)*exp(2*pi*I*Rational(8,60)) + Rational(-2,1)*exp(2*pi*I*Rational(9,60)) + Rational(-17,1)*exp(2*pi*I*Rational(10,60)) + Rational(-2,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(-2,1)*exp(2*pi*I*Rational(14,60)) + Rational(-7,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(8,1) + Rational(-21,1)*exp(2*pi*I*Rational(1,60)) + Rational(6,1)*exp(2*pi*I*Rational(2,60)) + Rational(-3,1)*exp(2*pi*I*Rational(4,60)) + Rational(-1,1)*exp(2*pi*I*Rational(5,60)) + Rational(-3,1)*exp(2*pi*I*Rational(6,60)) + Rational(-6,1)*exp(2*pi*I*Rational(8,60)) + Rational(21,1)*exp(2*pi*I*Rational(9,60)) + Rational(-3,1)*exp(2*pi*I*Rational(10,60)) + Rational(21,1)*exp(2*pi*I*Rational(11,60)) + Rational(3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-10,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(2,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,60)) + Rational(3,1)*exp(2*pi*I*Rational(4,60)) + Rational(1,1)*exp(2*pi*I*Rational(5,60)) + Rational(3,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(1,1)*exp(2*pi*I*Rational(9,60)) + Rational(-7,1)*exp(2*pi*I*Rational(10,60)) + Rational(1,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(-3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-12,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 4
                                             }
                                         ]
@@ -221962,7 +221895,7 @@ o3d = {
                                 'separation': 'unique'
                             },
                             {
-                                'N': (Rational(4320,1) + Rational(4800,1)*exp(2*pi*I*Rational(1,12)) + Rational(-2400,1)*exp(2*pi*I*Rational(3,12))),
+                                'N': (Rational(12960,1) + Rational(14400,1)*exp(2*pi*I*Rational(1,12)) + Rational(-7200,1)*exp(2*pi*I*Rational(3,12))),
                                 'irrep': '2G3h',
                                 'kappa': 1,
                                 'partners': [
@@ -221974,23 +221907,23 @@ o3d = {
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(5,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(4,1)*exp(2*pi*I*Rational(4,60)) + Rational(13,1)*exp(2*pi*I*Rational(5,60)) + Rational(4,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(4,1)*exp(2*pi*I*Rational(9,60)) + Rational(-7,1)*exp(2*pi*I*Rational(10,60)) + Rational(4,1)*exp(2*pi*I*Rational(11,60)) + Rational(-6,1)*exp(2*pi*I*Rational(13,60)) + Rational(-4,1)*exp(2*pi*I*Rational(14,60)) + Rational(-15,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-35,1) + Rational(-16,1)*exp(2*pi*I*Rational(1,60)) + Rational(-14,1)*exp(2*pi*I*Rational(2,60)) + Rational(16,1)*exp(2*pi*I*Rational(4,60)) + Rational(-3,1)*exp(2*pi*I*Rational(5,60)) + Rational(16,1)*exp(2*pi*I*Rational(6,60)) + Rational(14,1)*exp(2*pi*I*Rational(7,60)) + Rational(14,1)*exp(2*pi*I*Rational(8,60)) + Rational(16,1)*exp(2*pi*I*Rational(9,60)) + Rational(17,1)*exp(2*pi*I*Rational(10,60)) + Rational(16,1)*exp(2*pi*I*Rational(11,60)) + Rational(-14,1)*exp(2*pi*I*Rational(13,60)) + Rational(-16,1)*exp(2*pi*I*Rational(14,60)) + Rational(5,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(-12,1)*exp(2*pi*I*Rational(1,120)) + Rational(2,1)*exp(2*pi*I*Rational(3,120)) + Rational(11,1)*exp(2*pi*I*Rational(5,120)) + Rational(16,1)*exp(2*pi*I*Rational(7,120)) + Rational(14,1)*exp(2*pi*I*Rational(9,120)) + Rational(7,1)*exp(2*pi*I*Rational(15,120)) + Rational(-4,1)*exp(2*pi*I*Rational(19,120)) + Rational(-2,1)*exp(2*pi*I*Rational(21,120)) + Rational(-16,1)*exp(2*pi*I*Rational(23,120)) + Rational(-7,1)*exp(2*pi*I*Rational(25,120)) + Rational(-14,1)*exp(2*pi*I*Rational(27,120)) + Rational(-12,1)*exp(2*pi*I*Rational(29,120)) + Rational(4,1)*exp(2*pi*I*Rational(31,120))),
+                                                'e': (Rational(-6,1)*exp(2*pi*I*Rational(1,40)) + Rational(6,1)*exp(2*pi*I*Rational(3,40)) + Rational(3,1)*exp(2*pi*I*Rational(5,40)) + Rational(-6,1)*exp(2*pi*I*Rational(7,40)) + Rational(-6,1)*exp(2*pi*I*Rational(9,40)) + Rational(-3,1)*exp(2*pi*I*Rational(15,40))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(-9,1)*exp(2*pi*I*Rational(5,120)) + Rational(-10,1)*exp(2*pi*I*Rational(7,120)) + Rational(-18,1)*exp(2*pi*I*Rational(9,120)) + Rational(-5,1)*exp(2*pi*I*Rational(15,120)) + Rational(-10,1)*exp(2*pi*I*Rational(19,120)) + Rational(18,1)*exp(2*pi*I*Rational(21,120)) + Rational(10,1)*exp(2*pi*I*Rational(23,120)) + Rational(9,1)*exp(2*pi*I*Rational(25,120)) + Rational(10,1)*exp(2*pi*I*Rational(27,120)) + Rational(10,1)*exp(2*pi*I*Rational(31,120))),
+                                                'e': (Rational(11,1)*exp(2*pi*I*Rational(5,120)) + Rational(-14,1)*exp(2*pi*I*Rational(7,120)) + Rational(-18,1)*exp(2*pi*I*Rational(9,120)) + Rational(23,1)*exp(2*pi*I*Rational(15,120)) + Rational(-14,1)*exp(2*pi*I*Rational(19,120)) + Rational(18,1)*exp(2*pi*I*Rational(21,120)) + Rational(14,1)*exp(2*pi*I*Rational(23,120)) + Rational(29,1)*exp(2*pi*I*Rational(25,120)) + Rational(14,1)*exp(2*pi*I*Rational(27,120)) + Rational(14,1)*exp(2*pi*I*Rational(31,120))),
                                                 'i': 4
                                             },
                                             {
-                                                'e': (Rational(-14,1) + Rational(-6,1)*exp(2*pi*I*Rational(1,60)) + Rational(8,1)*exp(2*pi*I*Rational(4,60)) + Rational(6,1)*exp(2*pi*I*Rational(5,60)) + Rational(8,1)*exp(2*pi*I*Rational(6,60)) + Rational(12,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(9,60)) + Rational(20,1)*exp(2*pi*I*Rational(10,60)) + Rational(6,1)*exp(2*pi*I*Rational(11,60)) + Rational(-12,1)*exp(2*pi*I*Rational(13,60)) + Rational(-8,1)*exp(2*pi*I*Rational(14,60)) + Rational(11,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(38,1) + Rational(22,1)*exp(2*pi*I*Rational(1,60)) + Rational(-36,1)*exp(2*pi*I*Rational(4,60)) + Rational(-22,1)*exp(2*pi*I*Rational(5,60)) + Rational(-36,1)*exp(2*pi*I*Rational(6,60)) + Rational(-44,1)*exp(2*pi*I*Rational(7,60)) + Rational(-22,1)*exp(2*pi*I*Rational(9,60)) + Rational(-40,1)*exp(2*pi*I*Rational(10,60)) + Rational(-22,1)*exp(2*pi*I*Rational(11,60)) + Rational(44,1)*exp(2*pi*I*Rational(13,60)) + Rational(36,1)*exp(2*pi*I*Rational(14,60)) + Rational(3,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 5
                                             },
                                             {
-                                                'e': (Rational(5,1) + Rational(5,1)*exp(2*pi*I*Rational(1,12)) + Rational(5,1)*exp(2*pi*I*Rational(2,12)) + Rational(5,1)*exp(2*pi*I*Rational(3,12))),
+                                                'e': (Rational(-15,1) + Rational(-15,1)*exp(2*pi*I*Rational(1,12)) + Rational(-15,1)*exp(2*pi*I*Rational(2,12)) + Rational(-15,1)*exp(2*pi*I*Rational(3,12))),
                                                 'i': 6
                                             }
                                         ]
@@ -221999,27 +221932,27 @@ o3d = {
                                         'mu': 2,
                                         'terms': [
                                             {
-                                                'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,60)) + Rational(-10,1)*exp(2*pi*I*Rational(2,60)) + Rational(-5,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(6,60)) + Rational(-10,1)*exp(2*pi*I*Rational(7,60)) + Rational(10,1)*exp(2*pi*I*Rational(8,60)) + Rational(5,1)*exp(2*pi*I*Rational(9,60)) + Rational(10,1)*exp(2*pi*I*Rational(10,60)) + Rational(5,1)*exp(2*pi*I*Rational(11,60)) + Rational(10,1)*exp(2*pi*I*Rational(13,60)) + Rational(5,1)*exp(2*pi*I*Rational(14,60)) + Rational(5,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-60,1) + Rational(-45,1)*exp(2*pi*I*Rational(1,60)) + Rational(-30,1)*exp(2*pi*I*Rational(2,60)) + Rational(45,1)*exp(2*pi*I*Rational(4,60)) + Rational(45,1)*exp(2*pi*I*Rational(6,60)) + Rational(30,1)*exp(2*pi*I*Rational(7,60)) + Rational(30,1)*exp(2*pi*I*Rational(8,60)) + Rational(45,1)*exp(2*pi*I*Rational(9,60)) + Rational(30,1)*exp(2*pi*I*Rational(10,60)) + Rational(45,1)*exp(2*pi*I*Rational(11,60)) + Rational(-30,1)*exp(2*pi*I*Rational(13,60)) + Rational(-45,1)*exp(2*pi*I*Rational(14,60)) + Rational(-15,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(-11,1) + Rational(7,1)*exp(2*pi*I*Rational(1,60)) + Rational(2,1)*exp(2*pi*I*Rational(2,60)) + Rational(-1,1)*exp(2*pi*I*Rational(4,60)) + Rational(-15,1)*exp(2*pi*I*Rational(5,60)) + Rational(-1,1)*exp(2*pi*I*Rational(6,60)) + Rational(-2,1)*exp(2*pi*I*Rational(8,60)) + Rational(-7,1)*exp(2*pi*I*Rational(9,60)) + Rational(-1,1)*exp(2*pi*I*Rational(10,60)) + Rational(-7,1)*exp(2*pi*I*Rational(11,60)) + Rational(1,1)*exp(2*pi*I*Rational(14,60)) + Rational(11,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-17,1) + Rational(-7,1)*exp(2*pi*I*Rational(1,60)) + Rational(9,1)*exp(2*pi*I*Rational(4,60)) + Rational(7,1)*exp(2*pi*I*Rational(5,60)) + Rational(9,1)*exp(2*pi*I*Rational(6,60)) + Rational(14,1)*exp(2*pi*I*Rational(7,60)) + Rational(7,1)*exp(2*pi*I*Rational(9,60)) + Rational(25,1)*exp(2*pi*I*Rational(10,60)) + Rational(7,1)*exp(2*pi*I*Rational(11,60)) + Rational(-14,1)*exp(2*pi*I*Rational(13,60)) + Rational(-9,1)*exp(2*pi*I*Rational(14,60)) + Rational(-3,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(2,1)*exp(2*pi*I*Rational(3,40)) + Rational(5,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2,1)*exp(2*pi*I*Rational(7,40)) + Rational(-1,1)*exp(2*pi*I*Rational(15,40))),
+                                                'e': (Rational(32,1)*exp(2*pi*I*Rational(1,120)) + Rational(38,1)*exp(2*pi*I*Rational(3,120)) + Rational(23,1)*exp(2*pi*I*Rational(5,120)) + Rational(20,1)*exp(2*pi*I*Rational(7,120)) + Rational(-16,1)*exp(2*pi*I*Rational(9,120)) + Rational(-19,1)*exp(2*pi*I*Rational(15,120)) + Rational(-20,1)*exp(2*pi*I*Rational(19,120)) + Rational(-16,1)*exp(2*pi*I*Rational(21,120)) + Rational(-20,1)*exp(2*pi*I*Rational(23,120)) + Rational(-7,1)*exp(2*pi*I*Rational(25,120)) + Rational(18,1)*exp(2*pi*I*Rational(27,120)) + Rational(32,1)*exp(2*pi*I*Rational(29,120)) + Rational(20,1)*exp(2*pi*I*Rational(31,120))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(-18,1)*exp(2*pi*I*Rational(1,120)) + Rational(-8,1)*exp(2*pi*I*Rational(3,120)) + Rational(-11,1)*exp(2*pi*I*Rational(5,120)) + Rational(-4,1)*exp(2*pi*I*Rational(7,120)) + Rational(-4,1)*exp(2*pi*I*Rational(9,120)) + Rational(-3,1)*exp(2*pi*I*Rational(15,120)) + Rational(-14,1)*exp(2*pi*I*Rational(19,120)) + Rational(22,1)*exp(2*pi*I*Rational(21,120)) + Rational(4,1)*exp(2*pi*I*Rational(23,120)) + Rational(-3,1)*exp(2*pi*I*Rational(25,120)) + Rational(-4,1)*exp(2*pi*I*Rational(27,120)) + Rational(-18,1)*exp(2*pi*I*Rational(29,120)) + Rational(14,1)*exp(2*pi*I*Rational(31,120))),
+                                                'e': (Rational(-10,1)*exp(2*pi*I*Rational(1,120)) + Rational(-34,1)*exp(2*pi*I*Rational(3,120)) + Rational(-33,1)*exp(2*pi*I*Rational(5,120)) + Rational(-20,1)*exp(2*pi*I*Rational(7,120)) + Rational(14,1)*exp(2*pi*I*Rational(9,120)) + Rational(-3,1)*exp(2*pi*I*Rational(15,120)) + Rational(30,1)*exp(2*pi*I*Rational(19,120)) + Rational(-4,1)*exp(2*pi*I*Rational(21,120)) + Rational(20,1)*exp(2*pi*I*Rational(23,120)) + Rational(3,1)*exp(2*pi*I*Rational(25,120)) + Rational(-14,1)*exp(2*pi*I*Rational(27,120)) + Rational(-10,1)*exp(2*pi*I*Rational(29,120)) + Rational(-30,1)*exp(2*pi*I*Rational(31,120))),
                                                 'i': 4
                                             },
                                             {
-                                                'e': (Rational(26,1) + Rational(-7,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(7,1)*exp(2*pi*I*Rational(4,60)) + Rational(28,1)*exp(2*pi*I*Rational(5,60)) + Rational(7,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(7,1)*exp(2*pi*I*Rational(9,60)) + Rational(-22,1)*exp(2*pi*I*Rational(10,60)) + Rational(7,1)*exp(2*pi*I*Rational(11,60)) + Rational(-6,1)*exp(2*pi*I*Rational(13,60)) + Rational(-7,1)*exp(2*pi*I*Rational(14,60)) + Rational(-39,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-10,1) + Rational(-11,1)*exp(2*pi*I*Rational(1,60)) + Rational(-26,1)*exp(2*pi*I*Rational(2,60)) + Rational(-11,1)*exp(2*pi*I*Rational(4,60)) + Rational(-8,1)*exp(2*pi*I*Rational(5,60)) + Rational(-11,1)*exp(2*pi*I*Rational(6,60)) + Rational(-26,1)*exp(2*pi*I*Rational(7,60)) + Rational(26,1)*exp(2*pi*I*Rational(8,60)) + Rational(11,1)*exp(2*pi*I*Rational(9,60)) + Rational(18,1)*exp(2*pi*I*Rational(10,60)) + Rational(11,1)*exp(2*pi*I*Rational(11,60)) + Rational(26,1)*exp(2*pi*I*Rational(13,60)) + Rational(11,1)*exp(2*pi*I*Rational(14,60)) + Rational(5,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 5
                                             },
                                             {
-                                                'e': (Rational(-5,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,60)) + Rational(15,1)*exp(2*pi*I*Rational(4,60)) + Rational(5,1)*exp(2*pi*I*Rational(5,60)) + Rational(15,1)*exp(2*pi*I*Rational(6,60)) + Rational(10,1)*exp(2*pi*I*Rational(7,60)) + Rational(5,1)*exp(2*pi*I*Rational(9,60)) + Rational(-5,1)*exp(2*pi*I*Rational(10,60)) + Rational(5,1)*exp(2*pi*I*Rational(11,60)) + Rational(-10,1)*exp(2*pi*I*Rational(13,60)) + Rational(-15,1)*exp(2*pi*I*Rational(14,60)) + Rational(-15,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-15,1) + Rational(-15,1)*exp(2*pi*I*Rational(1,60)) + Rational(-10,1)*exp(2*pi*I*Rational(2,60)) + Rational(5,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(5,60)) + Rational(5,1)*exp(2*pi*I*Rational(6,60)) + Rational(10,1)*exp(2*pi*I*Rational(8,60)) + Rational(15,1)*exp(2*pi*I*Rational(9,60)) + Rational(5,1)*exp(2*pi*I*Rational(10,60)) + Rational(15,1)*exp(2*pi*I*Rational(11,60)) + Rational(-5,1)*exp(2*pi*I*Rational(14,60)) + Rational(-5,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 6
                                             }
                                         ]
@@ -224051,7 +223984,7 @@ o3d = {
                                 'separation': 'unique'
                             },
                             {
-                                'N': (Rational(3248,1) + Rational(-2400,1)*exp(2*pi*I*Rational(1,12)) + Rational(1200,1)*exp(2*pi*I*Rational(3,12))),
+                                'N': (Rational(1296,1) + Rational(1440,1)*exp(2*pi*I*Rational(1,12)) + Rational(-720,1)*exp(2*pi*I*Rational(3,12))),
                                 'irrep': '2G3hg',
                                 'kappa': 1,
                                 'partners': [
@@ -224059,19 +223992,19 @@ o3d = {
                                         'mu': 1,
                                         'terms': [
                                             {
-                                                'e': (Rational(26,1) + Rational(-14,1)*exp(2*pi*I*Rational(1,12)) + Rational(7,1)*exp(2*pi*I*Rational(3,12))),
+                                                'e': (Rational(18,1) + Rational(18,1)*exp(2*pi*I*Rational(1,12)) + Rational(-9,1)*exp(2*pi*I*Rational(3,12))),
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(-21,1) + Rational(9,1)*exp(2*pi*I*Rational(1,60)) + Rational(-8,1)*exp(2*pi*I*Rational(2,60)) + Rational(9,1)*exp(2*pi*I*Rational(4,60)) + Rational(2,1)*exp(2*pi*I*Rational(5,60)) + Rational(9,1)*exp(2*pi*I*Rational(6,60)) + Rational(-8,1)*exp(2*pi*I*Rational(7,60)) + Rational(8,1)*exp(2*pi*I*Rational(8,60)) + Rational(-9,1)*exp(2*pi*I*Rational(9,60)) + Rational(10,1)*exp(2*pi*I*Rational(10,60)) + Rational(-9,1)*exp(2*pi*I*Rational(11,60)) + Rational(8,1)*exp(2*pi*I*Rational(13,60)) + Rational(-9,1)*exp(2*pi*I*Rational(14,60)) + Rational(-4,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(7,1) + Rational(1,1)*exp(2*pi*I*Rational(1,60)) + Rational(4,1)*exp(2*pi*I*Rational(2,60)) + Rational(1,1)*exp(2*pi*I*Rational(4,60)) + Rational(6,1)*exp(2*pi*I*Rational(5,60)) + Rational(1,1)*exp(2*pi*I*Rational(6,60)) + Rational(4,1)*exp(2*pi*I*Rational(7,60)) + Rational(-4,1)*exp(2*pi*I*Rational(8,60)) + Rational(-1,1)*exp(2*pi*I*Rational(9,60)) + Rational(2,1)*exp(2*pi*I*Rational(10,60)) + Rational(-1,1)*exp(2*pi*I*Rational(11,60)) + Rational(-4,1)*exp(2*pi*I*Rational(13,60)) + Rational(-1,1)*exp(2*pi*I*Rational(14,60)) + Rational(4,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(-17,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,60)) + Rational(18,1)*exp(2*pi*I*Rational(4,60)) + Rational(4,1)*exp(2*pi*I*Rational(5,60)) + Rational(18,1)*exp(2*pi*I*Rational(6,60)) + Rational(8,1)*exp(2*pi*I*Rational(7,60)) + Rational(4,1)*exp(2*pi*I*Rational(9,60)) + Rational(16,1)*exp(2*pi*I*Rational(10,60)) + Rational(4,1)*exp(2*pi*I*Rational(11,60)) + Rational(-8,1)*exp(2*pi*I*Rational(13,60)) + Rational(-18,1)*exp(2*pi*I*Rational(14,60)) + Rational(-16,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(7,1) + Rational(4,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(4,60)) + Rational(-4,1)*exp(2*pi*I*Rational(5,60)) + Rational(-6,1)*exp(2*pi*I*Rational(6,60)) + Rational(-8,1)*exp(2*pi*I*Rational(7,60)) + Rational(-4,1)*exp(2*pi*I*Rational(9,60)) + Rational(-8,1)*exp(2*pi*I*Rational(10,60)) + Rational(-4,1)*exp(2*pi*I*Rational(11,60)) + Rational(8,1)*exp(2*pi*I*Rational(13,60)) + Rational(6,1)*exp(2*pi*I*Rational(14,60))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(5,1)*exp(2*pi*I*Rational(4,60)) + Rational(-18,1)*exp(2*pi*I*Rational(5,60)) + Rational(5,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(5,1)*exp(2*pi*I*Rational(9,60)) + Rational(24,1)*exp(2*pi*I*Rational(10,60)) + Rational(5,1)*exp(2*pi*I*Rational(11,60)) + Rational(-6,1)*exp(2*pi*I*Rational(13,60)) + Rational(-5,1)*exp(2*pi*I*Rational(14,60)) + Rational(-11,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-16,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,60)) + Rational(-2,1)*exp(2*pi*I*Rational(2,60)) + Rational(1,1)*exp(2*pi*I*Rational(4,60)) + Rational(-10,1)*exp(2*pi*I*Rational(5,60)) + Rational(1,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(2,1)*exp(2*pi*I*Rational(8,60)) + Rational(1,1)*exp(2*pi*I*Rational(9,60)) + Rational(12,1)*exp(2*pi*I*Rational(10,60)) + Rational(1,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(-1,1)*exp(2*pi*I*Rational(14,60)) + Rational(13,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 4
                                             }
                                         ]
@@ -224080,19 +224013,19 @@ o3d = {
                                         'mu': 2,
                                         'terms': [
                                             {
-                                                'e': (Rational(-6,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,60)) + Rational(12,1)*exp(2*pi*I*Rational(2,60)) + Rational(-2,1)*exp(2*pi*I*Rational(4,60)) + Rational(15,1)*exp(2*pi*I*Rational(5,60)) + Rational(-2,1)*exp(2*pi*I*Rational(6,60)) + Rational(12,1)*exp(2*pi*I*Rational(7,60)) + Rational(-12,1)*exp(2*pi*I*Rational(8,60)) + Rational(2,1)*exp(2*pi*I*Rational(9,60)) + Rational(3,1)*exp(2*pi*I*Rational(10,60)) + Rational(2,1)*exp(2*pi*I*Rational(11,60)) + Rational(-12,1)*exp(2*pi*I*Rational(13,60)) + Rational(2,1)*exp(2*pi*I*Rational(14,60)) + Rational(-20,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(10,1) + Rational(10,1)*exp(2*pi*I*Rational(1,60)) + Rational(8,1)*exp(2*pi*I*Rational(2,60)) + Rational(-10,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(5,60)) + Rational(-10,1)*exp(2*pi*I*Rational(6,60)) + Rational(-8,1)*exp(2*pi*I*Rational(7,60)) + Rational(-8,1)*exp(2*pi*I*Rational(8,60)) + Rational(-10,1)*exp(2*pi*I*Rational(9,60)) + Rational(-3,1)*exp(2*pi*I*Rational(10,60)) + Rational(-10,1)*exp(2*pi*I*Rational(11,60)) + Rational(8,1)*exp(2*pi*I*Rational(13,60)) + Rational(10,1)*exp(2*pi*I*Rational(14,60)) + Rational(8,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(-13,1) + Rational(-7,1)*exp(2*pi*I*Rational(1,60)) + Rational(-3,1)*exp(2*pi*I*Rational(4,60)) + Rational(7,1)*exp(2*pi*I*Rational(5,60)) + Rational(-3,1)*exp(2*pi*I*Rational(6,60)) + Rational(14,1)*exp(2*pi*I*Rational(7,60)) + Rational(7,1)*exp(2*pi*I*Rational(9,60)) + Rational(29,1)*exp(2*pi*I*Rational(10,60)) + Rational(7,1)*exp(2*pi*I*Rational(11,60)) + Rational(-14,1)*exp(2*pi*I*Rational(13,60)) + Rational(3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-43,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-3,1) + Rational(-3,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(3,1)*exp(2*pi*I*Rational(4,60)) + Rational(3,1)*exp(2*pi*I*Rational(5,60)) + Rational(3,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(3,1)*exp(2*pi*I*Rational(9,60)) + Rational(3,1)*exp(2*pi*I*Rational(10,60)) + Rational(3,1)*exp(2*pi*I*Rational(11,60)) + Rational(-3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-3,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(-3,1) + Rational(6,1)*exp(2*pi*I*Rational(1,60)) + Rational(-2,1)*exp(2*pi*I*Rational(2,60)) + Rational(-6,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(5,60)) + Rational(-6,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(2,1)*exp(2*pi*I*Rational(8,60)) + Rational(-6,1)*exp(2*pi*I*Rational(9,60)) + Rational(7,1)*exp(2*pi*I*Rational(10,60)) + Rational(-6,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(6,1)*exp(2*pi*I*Rational(14,60)) + Rational(7,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-7,1) + Rational(2,1)*exp(2*pi*I*Rational(1,60)) + Rational(2,1)*exp(2*pi*I*Rational(2,60)) + Rational(2,1)*exp(2*pi*I*Rational(4,60)) + Rational(-15,1)*exp(2*pi*I*Rational(5,60)) + Rational(2,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(-2,1)*exp(2*pi*I*Rational(8,60)) + Rational(-2,1)*exp(2*pi*I*Rational(9,60)) + Rational(-17,1)*exp(2*pi*I*Rational(10,60)) + Rational(-2,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(-2,1)*exp(2*pi*I*Rational(14,60)) + Rational(-7,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(8,1) + Rational(-21,1)*exp(2*pi*I*Rational(1,60)) + Rational(6,1)*exp(2*pi*I*Rational(2,60)) + Rational(-3,1)*exp(2*pi*I*Rational(4,60)) + Rational(-1,1)*exp(2*pi*I*Rational(5,60)) + Rational(-3,1)*exp(2*pi*I*Rational(6,60)) + Rational(-6,1)*exp(2*pi*I*Rational(8,60)) + Rational(21,1)*exp(2*pi*I*Rational(9,60)) + Rational(-3,1)*exp(2*pi*I*Rational(10,60)) + Rational(21,1)*exp(2*pi*I*Rational(11,60)) + Rational(3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-10,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(2,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,60)) + Rational(3,1)*exp(2*pi*I*Rational(4,60)) + Rational(1,1)*exp(2*pi*I*Rational(5,60)) + Rational(3,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(1,1)*exp(2*pi*I*Rational(9,60)) + Rational(-7,1)*exp(2*pi*I*Rational(10,60)) + Rational(1,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(-3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-12,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 4
                                             }
                                         ]
@@ -224234,7 +224167,7 @@ o3d = {
                                 'separation': 'unique'
                             },
                             {
-                                'N': (Rational(4320,1) + Rational(4800,1)*exp(2*pi*I*Rational(1,12)) + Rational(-2400,1)*exp(2*pi*I*Rational(3,12))),
+                                'N': (Rational(12960,1) + Rational(14400,1)*exp(2*pi*I*Rational(1,12)) + Rational(-7200,1)*exp(2*pi*I*Rational(3,12))),
                                 'irrep': '2G3hg',
                                 'kappa': 1,
                                 'partners': [
@@ -224246,23 +224179,23 @@ o3d = {
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(5,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(4,1)*exp(2*pi*I*Rational(4,60)) + Rational(13,1)*exp(2*pi*I*Rational(5,60)) + Rational(4,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(4,1)*exp(2*pi*I*Rational(9,60)) + Rational(-7,1)*exp(2*pi*I*Rational(10,60)) + Rational(4,1)*exp(2*pi*I*Rational(11,60)) + Rational(-6,1)*exp(2*pi*I*Rational(13,60)) + Rational(-4,1)*exp(2*pi*I*Rational(14,60)) + Rational(-15,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-35,1) + Rational(-16,1)*exp(2*pi*I*Rational(1,60)) + Rational(-14,1)*exp(2*pi*I*Rational(2,60)) + Rational(16,1)*exp(2*pi*I*Rational(4,60)) + Rational(-3,1)*exp(2*pi*I*Rational(5,60)) + Rational(16,1)*exp(2*pi*I*Rational(6,60)) + Rational(14,1)*exp(2*pi*I*Rational(7,60)) + Rational(14,1)*exp(2*pi*I*Rational(8,60)) + Rational(16,1)*exp(2*pi*I*Rational(9,60)) + Rational(17,1)*exp(2*pi*I*Rational(10,60)) + Rational(16,1)*exp(2*pi*I*Rational(11,60)) + Rational(-14,1)*exp(2*pi*I*Rational(13,60)) + Rational(-16,1)*exp(2*pi*I*Rational(14,60)) + Rational(5,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(-12,1)*exp(2*pi*I*Rational(1,120)) + Rational(2,1)*exp(2*pi*I*Rational(3,120)) + Rational(11,1)*exp(2*pi*I*Rational(5,120)) + Rational(16,1)*exp(2*pi*I*Rational(7,120)) + Rational(14,1)*exp(2*pi*I*Rational(9,120)) + Rational(7,1)*exp(2*pi*I*Rational(15,120)) + Rational(-4,1)*exp(2*pi*I*Rational(19,120)) + Rational(-2,1)*exp(2*pi*I*Rational(21,120)) + Rational(-16,1)*exp(2*pi*I*Rational(23,120)) + Rational(-7,1)*exp(2*pi*I*Rational(25,120)) + Rational(-14,1)*exp(2*pi*I*Rational(27,120)) + Rational(-12,1)*exp(2*pi*I*Rational(29,120)) + Rational(4,1)*exp(2*pi*I*Rational(31,120))),
+                                                'e': (Rational(-6,1)*exp(2*pi*I*Rational(1,40)) + Rational(6,1)*exp(2*pi*I*Rational(3,40)) + Rational(3,1)*exp(2*pi*I*Rational(5,40)) + Rational(-6,1)*exp(2*pi*I*Rational(7,40)) + Rational(-6,1)*exp(2*pi*I*Rational(9,40)) + Rational(-3,1)*exp(2*pi*I*Rational(15,40))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(-9,1)*exp(2*pi*I*Rational(5,120)) + Rational(-10,1)*exp(2*pi*I*Rational(7,120)) + Rational(-18,1)*exp(2*pi*I*Rational(9,120)) + Rational(-5,1)*exp(2*pi*I*Rational(15,120)) + Rational(-10,1)*exp(2*pi*I*Rational(19,120)) + Rational(18,1)*exp(2*pi*I*Rational(21,120)) + Rational(10,1)*exp(2*pi*I*Rational(23,120)) + Rational(9,1)*exp(2*pi*I*Rational(25,120)) + Rational(10,1)*exp(2*pi*I*Rational(27,120)) + Rational(10,1)*exp(2*pi*I*Rational(31,120))),
+                                                'e': (Rational(11,1)*exp(2*pi*I*Rational(5,120)) + Rational(-14,1)*exp(2*pi*I*Rational(7,120)) + Rational(-18,1)*exp(2*pi*I*Rational(9,120)) + Rational(23,1)*exp(2*pi*I*Rational(15,120)) + Rational(-14,1)*exp(2*pi*I*Rational(19,120)) + Rational(18,1)*exp(2*pi*I*Rational(21,120)) + Rational(14,1)*exp(2*pi*I*Rational(23,120)) + Rational(29,1)*exp(2*pi*I*Rational(25,120)) + Rational(14,1)*exp(2*pi*I*Rational(27,120)) + Rational(14,1)*exp(2*pi*I*Rational(31,120))),
                                                 'i': 4
                                             },
                                             {
-                                                'e': (Rational(-14,1) + Rational(-6,1)*exp(2*pi*I*Rational(1,60)) + Rational(8,1)*exp(2*pi*I*Rational(4,60)) + Rational(6,1)*exp(2*pi*I*Rational(5,60)) + Rational(8,1)*exp(2*pi*I*Rational(6,60)) + Rational(12,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(9,60)) + Rational(20,1)*exp(2*pi*I*Rational(10,60)) + Rational(6,1)*exp(2*pi*I*Rational(11,60)) + Rational(-12,1)*exp(2*pi*I*Rational(13,60)) + Rational(-8,1)*exp(2*pi*I*Rational(14,60)) + Rational(11,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(38,1) + Rational(22,1)*exp(2*pi*I*Rational(1,60)) + Rational(-36,1)*exp(2*pi*I*Rational(4,60)) + Rational(-22,1)*exp(2*pi*I*Rational(5,60)) + Rational(-36,1)*exp(2*pi*I*Rational(6,60)) + Rational(-44,1)*exp(2*pi*I*Rational(7,60)) + Rational(-22,1)*exp(2*pi*I*Rational(9,60)) + Rational(-40,1)*exp(2*pi*I*Rational(10,60)) + Rational(-22,1)*exp(2*pi*I*Rational(11,60)) + Rational(44,1)*exp(2*pi*I*Rational(13,60)) + Rational(36,1)*exp(2*pi*I*Rational(14,60)) + Rational(3,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 5
                                             },
                                             {
-                                                'e': (Rational(5,1) + Rational(5,1)*exp(2*pi*I*Rational(1,12)) + Rational(5,1)*exp(2*pi*I*Rational(2,12)) + Rational(5,1)*exp(2*pi*I*Rational(3,12))),
+                                                'e': (Rational(-15,1) + Rational(-15,1)*exp(2*pi*I*Rational(1,12)) + Rational(-15,1)*exp(2*pi*I*Rational(2,12)) + Rational(-15,1)*exp(2*pi*I*Rational(3,12))),
                                                 'i': 6
                                             }
                                         ]
@@ -224271,27 +224204,27 @@ o3d = {
                                         'mu': 2,
                                         'terms': [
                                             {
-                                                'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,60)) + Rational(-10,1)*exp(2*pi*I*Rational(2,60)) + Rational(-5,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(6,60)) + Rational(-10,1)*exp(2*pi*I*Rational(7,60)) + Rational(10,1)*exp(2*pi*I*Rational(8,60)) + Rational(5,1)*exp(2*pi*I*Rational(9,60)) + Rational(10,1)*exp(2*pi*I*Rational(10,60)) + Rational(5,1)*exp(2*pi*I*Rational(11,60)) + Rational(10,1)*exp(2*pi*I*Rational(13,60)) + Rational(5,1)*exp(2*pi*I*Rational(14,60)) + Rational(5,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-60,1) + Rational(-45,1)*exp(2*pi*I*Rational(1,60)) + Rational(-30,1)*exp(2*pi*I*Rational(2,60)) + Rational(45,1)*exp(2*pi*I*Rational(4,60)) + Rational(45,1)*exp(2*pi*I*Rational(6,60)) + Rational(30,1)*exp(2*pi*I*Rational(7,60)) + Rational(30,1)*exp(2*pi*I*Rational(8,60)) + Rational(45,1)*exp(2*pi*I*Rational(9,60)) + Rational(30,1)*exp(2*pi*I*Rational(10,60)) + Rational(45,1)*exp(2*pi*I*Rational(11,60)) + Rational(-30,1)*exp(2*pi*I*Rational(13,60)) + Rational(-45,1)*exp(2*pi*I*Rational(14,60)) + Rational(-15,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(-11,1) + Rational(7,1)*exp(2*pi*I*Rational(1,60)) + Rational(2,1)*exp(2*pi*I*Rational(2,60)) + Rational(-1,1)*exp(2*pi*I*Rational(4,60)) + Rational(-15,1)*exp(2*pi*I*Rational(5,60)) + Rational(-1,1)*exp(2*pi*I*Rational(6,60)) + Rational(-2,1)*exp(2*pi*I*Rational(8,60)) + Rational(-7,1)*exp(2*pi*I*Rational(9,60)) + Rational(-1,1)*exp(2*pi*I*Rational(10,60)) + Rational(-7,1)*exp(2*pi*I*Rational(11,60)) + Rational(1,1)*exp(2*pi*I*Rational(14,60)) + Rational(11,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-17,1) + Rational(-7,1)*exp(2*pi*I*Rational(1,60)) + Rational(9,1)*exp(2*pi*I*Rational(4,60)) + Rational(7,1)*exp(2*pi*I*Rational(5,60)) + Rational(9,1)*exp(2*pi*I*Rational(6,60)) + Rational(14,1)*exp(2*pi*I*Rational(7,60)) + Rational(7,1)*exp(2*pi*I*Rational(9,60)) + Rational(25,1)*exp(2*pi*I*Rational(10,60)) + Rational(7,1)*exp(2*pi*I*Rational(11,60)) + Rational(-14,1)*exp(2*pi*I*Rational(13,60)) + Rational(-9,1)*exp(2*pi*I*Rational(14,60)) + Rational(-3,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(2,1)*exp(2*pi*I*Rational(3,40)) + Rational(5,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2,1)*exp(2*pi*I*Rational(7,40)) + Rational(-1,1)*exp(2*pi*I*Rational(15,40))),
+                                                'e': (Rational(32,1)*exp(2*pi*I*Rational(1,120)) + Rational(38,1)*exp(2*pi*I*Rational(3,120)) + Rational(23,1)*exp(2*pi*I*Rational(5,120)) + Rational(20,1)*exp(2*pi*I*Rational(7,120)) + Rational(-16,1)*exp(2*pi*I*Rational(9,120)) + Rational(-19,1)*exp(2*pi*I*Rational(15,120)) + Rational(-20,1)*exp(2*pi*I*Rational(19,120)) + Rational(-16,1)*exp(2*pi*I*Rational(21,120)) + Rational(-20,1)*exp(2*pi*I*Rational(23,120)) + Rational(-7,1)*exp(2*pi*I*Rational(25,120)) + Rational(18,1)*exp(2*pi*I*Rational(27,120)) + Rational(32,1)*exp(2*pi*I*Rational(29,120)) + Rational(20,1)*exp(2*pi*I*Rational(31,120))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(-18,1)*exp(2*pi*I*Rational(1,120)) + Rational(-8,1)*exp(2*pi*I*Rational(3,120)) + Rational(-11,1)*exp(2*pi*I*Rational(5,120)) + Rational(-4,1)*exp(2*pi*I*Rational(7,120)) + Rational(-4,1)*exp(2*pi*I*Rational(9,120)) + Rational(-3,1)*exp(2*pi*I*Rational(15,120)) + Rational(-14,1)*exp(2*pi*I*Rational(19,120)) + Rational(22,1)*exp(2*pi*I*Rational(21,120)) + Rational(4,1)*exp(2*pi*I*Rational(23,120)) + Rational(-3,1)*exp(2*pi*I*Rational(25,120)) + Rational(-4,1)*exp(2*pi*I*Rational(27,120)) + Rational(-18,1)*exp(2*pi*I*Rational(29,120)) + Rational(14,1)*exp(2*pi*I*Rational(31,120))),
+                                                'e': (Rational(-10,1)*exp(2*pi*I*Rational(1,120)) + Rational(-34,1)*exp(2*pi*I*Rational(3,120)) + Rational(-33,1)*exp(2*pi*I*Rational(5,120)) + Rational(-20,1)*exp(2*pi*I*Rational(7,120)) + Rational(14,1)*exp(2*pi*I*Rational(9,120)) + Rational(-3,1)*exp(2*pi*I*Rational(15,120)) + Rational(30,1)*exp(2*pi*I*Rational(19,120)) + Rational(-4,1)*exp(2*pi*I*Rational(21,120)) + Rational(20,1)*exp(2*pi*I*Rational(23,120)) + Rational(3,1)*exp(2*pi*I*Rational(25,120)) + Rational(-14,1)*exp(2*pi*I*Rational(27,120)) + Rational(-10,1)*exp(2*pi*I*Rational(29,120)) + Rational(-30,1)*exp(2*pi*I*Rational(31,120))),
                                                 'i': 4
                                             },
                                             {
-                                                'e': (Rational(26,1) + Rational(-7,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(7,1)*exp(2*pi*I*Rational(4,60)) + Rational(28,1)*exp(2*pi*I*Rational(5,60)) + Rational(7,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(7,1)*exp(2*pi*I*Rational(9,60)) + Rational(-22,1)*exp(2*pi*I*Rational(10,60)) + Rational(7,1)*exp(2*pi*I*Rational(11,60)) + Rational(-6,1)*exp(2*pi*I*Rational(13,60)) + Rational(-7,1)*exp(2*pi*I*Rational(14,60)) + Rational(-39,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-10,1) + Rational(-11,1)*exp(2*pi*I*Rational(1,60)) + Rational(-26,1)*exp(2*pi*I*Rational(2,60)) + Rational(-11,1)*exp(2*pi*I*Rational(4,60)) + Rational(-8,1)*exp(2*pi*I*Rational(5,60)) + Rational(-11,1)*exp(2*pi*I*Rational(6,60)) + Rational(-26,1)*exp(2*pi*I*Rational(7,60)) + Rational(26,1)*exp(2*pi*I*Rational(8,60)) + Rational(11,1)*exp(2*pi*I*Rational(9,60)) + Rational(18,1)*exp(2*pi*I*Rational(10,60)) + Rational(11,1)*exp(2*pi*I*Rational(11,60)) + Rational(26,1)*exp(2*pi*I*Rational(13,60)) + Rational(11,1)*exp(2*pi*I*Rational(14,60)) + Rational(5,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 5
                                             },
                                             {
-                                                'e': (Rational(-5,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,60)) + Rational(15,1)*exp(2*pi*I*Rational(4,60)) + Rational(5,1)*exp(2*pi*I*Rational(5,60)) + Rational(15,1)*exp(2*pi*I*Rational(6,60)) + Rational(10,1)*exp(2*pi*I*Rational(7,60)) + Rational(5,1)*exp(2*pi*I*Rational(9,60)) + Rational(-5,1)*exp(2*pi*I*Rational(10,60)) + Rational(5,1)*exp(2*pi*I*Rational(11,60)) + Rational(-10,1)*exp(2*pi*I*Rational(13,60)) + Rational(-15,1)*exp(2*pi*I*Rational(14,60)) + Rational(-15,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-15,1) + Rational(-15,1)*exp(2*pi*I*Rational(1,60)) + Rational(-10,1)*exp(2*pi*I*Rational(2,60)) + Rational(5,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(5,60)) + Rational(5,1)*exp(2*pi*I*Rational(6,60)) + Rational(10,1)*exp(2*pi*I*Rational(8,60)) + Rational(15,1)*exp(2*pi*I*Rational(9,60)) + Rational(5,1)*exp(2*pi*I*Rational(10,60)) + Rational(15,1)*exp(2*pi*I*Rational(11,60)) + Rational(-5,1)*exp(2*pi*I*Rational(14,60)) + Rational(-5,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 6
                                             }
                                         ]
@@ -224437,7 +224370,7 @@ o3d = {
                                 'separation': 'unique'
                             },
                             {
-                                'N': (Rational(3248,1) + Rational(-2400,1)*exp(2*pi*I*Rational(1,12)) + Rational(1200,1)*exp(2*pi*I*Rational(3,12))),
+                                'N': (Rational(1296,1) + Rational(1440,1)*exp(2*pi*I*Rational(1,12)) + Rational(-720,1)*exp(2*pi*I*Rational(3,12))),
                                 'irrep': '2G3hu',
                                 'kappa': 1,
                                 'partners': [
@@ -224445,19 +224378,19 @@ o3d = {
                                         'mu': 1,
                                         'terms': [
                                             {
-                                                'e': (Rational(26,1) + Rational(-14,1)*exp(2*pi*I*Rational(1,12)) + Rational(7,1)*exp(2*pi*I*Rational(3,12))),
+                                                'e': (Rational(18,1) + Rational(18,1)*exp(2*pi*I*Rational(1,12)) + Rational(-9,1)*exp(2*pi*I*Rational(3,12))),
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(-21,1) + Rational(9,1)*exp(2*pi*I*Rational(1,60)) + Rational(-8,1)*exp(2*pi*I*Rational(2,60)) + Rational(9,1)*exp(2*pi*I*Rational(4,60)) + Rational(2,1)*exp(2*pi*I*Rational(5,60)) + Rational(9,1)*exp(2*pi*I*Rational(6,60)) + Rational(-8,1)*exp(2*pi*I*Rational(7,60)) + Rational(8,1)*exp(2*pi*I*Rational(8,60)) + Rational(-9,1)*exp(2*pi*I*Rational(9,60)) + Rational(10,1)*exp(2*pi*I*Rational(10,60)) + Rational(-9,1)*exp(2*pi*I*Rational(11,60)) + Rational(8,1)*exp(2*pi*I*Rational(13,60)) + Rational(-9,1)*exp(2*pi*I*Rational(14,60)) + Rational(-4,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(7,1) + Rational(1,1)*exp(2*pi*I*Rational(1,60)) + Rational(4,1)*exp(2*pi*I*Rational(2,60)) + Rational(1,1)*exp(2*pi*I*Rational(4,60)) + Rational(6,1)*exp(2*pi*I*Rational(5,60)) + Rational(1,1)*exp(2*pi*I*Rational(6,60)) + Rational(4,1)*exp(2*pi*I*Rational(7,60)) + Rational(-4,1)*exp(2*pi*I*Rational(8,60)) + Rational(-1,1)*exp(2*pi*I*Rational(9,60)) + Rational(2,1)*exp(2*pi*I*Rational(10,60)) + Rational(-1,1)*exp(2*pi*I*Rational(11,60)) + Rational(-4,1)*exp(2*pi*I*Rational(13,60)) + Rational(-1,1)*exp(2*pi*I*Rational(14,60)) + Rational(4,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(-17,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,60)) + Rational(18,1)*exp(2*pi*I*Rational(4,60)) + Rational(4,1)*exp(2*pi*I*Rational(5,60)) + Rational(18,1)*exp(2*pi*I*Rational(6,60)) + Rational(8,1)*exp(2*pi*I*Rational(7,60)) + Rational(4,1)*exp(2*pi*I*Rational(9,60)) + Rational(16,1)*exp(2*pi*I*Rational(10,60)) + Rational(4,1)*exp(2*pi*I*Rational(11,60)) + Rational(-8,1)*exp(2*pi*I*Rational(13,60)) + Rational(-18,1)*exp(2*pi*I*Rational(14,60)) + Rational(-16,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(7,1) + Rational(4,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(4,60)) + Rational(-4,1)*exp(2*pi*I*Rational(5,60)) + Rational(-6,1)*exp(2*pi*I*Rational(6,60)) + Rational(-8,1)*exp(2*pi*I*Rational(7,60)) + Rational(-4,1)*exp(2*pi*I*Rational(9,60)) + Rational(-8,1)*exp(2*pi*I*Rational(10,60)) + Rational(-4,1)*exp(2*pi*I*Rational(11,60)) + Rational(8,1)*exp(2*pi*I*Rational(13,60)) + Rational(6,1)*exp(2*pi*I*Rational(14,60))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(5,1)*exp(2*pi*I*Rational(4,60)) + Rational(-18,1)*exp(2*pi*I*Rational(5,60)) + Rational(5,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(5,1)*exp(2*pi*I*Rational(9,60)) + Rational(24,1)*exp(2*pi*I*Rational(10,60)) + Rational(5,1)*exp(2*pi*I*Rational(11,60)) + Rational(-6,1)*exp(2*pi*I*Rational(13,60)) + Rational(-5,1)*exp(2*pi*I*Rational(14,60)) + Rational(-11,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-16,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,60)) + Rational(-2,1)*exp(2*pi*I*Rational(2,60)) + Rational(1,1)*exp(2*pi*I*Rational(4,60)) + Rational(-10,1)*exp(2*pi*I*Rational(5,60)) + Rational(1,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(2,1)*exp(2*pi*I*Rational(8,60)) + Rational(1,1)*exp(2*pi*I*Rational(9,60)) + Rational(12,1)*exp(2*pi*I*Rational(10,60)) + Rational(1,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(-1,1)*exp(2*pi*I*Rational(14,60)) + Rational(13,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 4
                                             }
                                         ]
@@ -224466,19 +224399,19 @@ o3d = {
                                         'mu': 2,
                                         'terms': [
                                             {
-                                                'e': (Rational(-6,1) + Rational(-2,1)*exp(2*pi*I*Rational(1,60)) + Rational(12,1)*exp(2*pi*I*Rational(2,60)) + Rational(-2,1)*exp(2*pi*I*Rational(4,60)) + Rational(15,1)*exp(2*pi*I*Rational(5,60)) + Rational(-2,1)*exp(2*pi*I*Rational(6,60)) + Rational(12,1)*exp(2*pi*I*Rational(7,60)) + Rational(-12,1)*exp(2*pi*I*Rational(8,60)) + Rational(2,1)*exp(2*pi*I*Rational(9,60)) + Rational(3,1)*exp(2*pi*I*Rational(10,60)) + Rational(2,1)*exp(2*pi*I*Rational(11,60)) + Rational(-12,1)*exp(2*pi*I*Rational(13,60)) + Rational(2,1)*exp(2*pi*I*Rational(14,60)) + Rational(-20,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(10,1) + Rational(10,1)*exp(2*pi*I*Rational(1,60)) + Rational(8,1)*exp(2*pi*I*Rational(2,60)) + Rational(-10,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(5,60)) + Rational(-10,1)*exp(2*pi*I*Rational(6,60)) + Rational(-8,1)*exp(2*pi*I*Rational(7,60)) + Rational(-8,1)*exp(2*pi*I*Rational(8,60)) + Rational(-10,1)*exp(2*pi*I*Rational(9,60)) + Rational(-3,1)*exp(2*pi*I*Rational(10,60)) + Rational(-10,1)*exp(2*pi*I*Rational(11,60)) + Rational(8,1)*exp(2*pi*I*Rational(13,60)) + Rational(10,1)*exp(2*pi*I*Rational(14,60)) + Rational(8,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(-13,1) + Rational(-7,1)*exp(2*pi*I*Rational(1,60)) + Rational(-3,1)*exp(2*pi*I*Rational(4,60)) + Rational(7,1)*exp(2*pi*I*Rational(5,60)) + Rational(-3,1)*exp(2*pi*I*Rational(6,60)) + Rational(14,1)*exp(2*pi*I*Rational(7,60)) + Rational(7,1)*exp(2*pi*I*Rational(9,60)) + Rational(29,1)*exp(2*pi*I*Rational(10,60)) + Rational(7,1)*exp(2*pi*I*Rational(11,60)) + Rational(-14,1)*exp(2*pi*I*Rational(13,60)) + Rational(3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-43,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-3,1) + Rational(-3,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(3,1)*exp(2*pi*I*Rational(4,60)) + Rational(3,1)*exp(2*pi*I*Rational(5,60)) + Rational(3,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(3,1)*exp(2*pi*I*Rational(9,60)) + Rational(3,1)*exp(2*pi*I*Rational(10,60)) + Rational(3,1)*exp(2*pi*I*Rational(11,60)) + Rational(-3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-3,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(-3,1) + Rational(6,1)*exp(2*pi*I*Rational(1,60)) + Rational(-2,1)*exp(2*pi*I*Rational(2,60)) + Rational(-6,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(5,60)) + Rational(-6,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(2,1)*exp(2*pi*I*Rational(8,60)) + Rational(-6,1)*exp(2*pi*I*Rational(9,60)) + Rational(7,1)*exp(2*pi*I*Rational(10,60)) + Rational(-6,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(6,1)*exp(2*pi*I*Rational(14,60)) + Rational(7,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-7,1) + Rational(2,1)*exp(2*pi*I*Rational(1,60)) + Rational(2,1)*exp(2*pi*I*Rational(2,60)) + Rational(2,1)*exp(2*pi*I*Rational(4,60)) + Rational(-15,1)*exp(2*pi*I*Rational(5,60)) + Rational(2,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(-2,1)*exp(2*pi*I*Rational(8,60)) + Rational(-2,1)*exp(2*pi*I*Rational(9,60)) + Rational(-17,1)*exp(2*pi*I*Rational(10,60)) + Rational(-2,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(-2,1)*exp(2*pi*I*Rational(14,60)) + Rational(-7,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(8,1) + Rational(-21,1)*exp(2*pi*I*Rational(1,60)) + Rational(6,1)*exp(2*pi*I*Rational(2,60)) + Rational(-3,1)*exp(2*pi*I*Rational(4,60)) + Rational(-1,1)*exp(2*pi*I*Rational(5,60)) + Rational(-3,1)*exp(2*pi*I*Rational(6,60)) + Rational(-6,1)*exp(2*pi*I*Rational(8,60)) + Rational(21,1)*exp(2*pi*I*Rational(9,60)) + Rational(-3,1)*exp(2*pi*I*Rational(10,60)) + Rational(21,1)*exp(2*pi*I*Rational(11,60)) + Rational(3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-10,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(2,1) + Rational(-1,1)*exp(2*pi*I*Rational(1,60)) + Rational(3,1)*exp(2*pi*I*Rational(4,60)) + Rational(1,1)*exp(2*pi*I*Rational(5,60)) + Rational(3,1)*exp(2*pi*I*Rational(6,60)) + Rational(2,1)*exp(2*pi*I*Rational(7,60)) + Rational(1,1)*exp(2*pi*I*Rational(9,60)) + Rational(-7,1)*exp(2*pi*I*Rational(10,60)) + Rational(1,1)*exp(2*pi*I*Rational(11,60)) + Rational(-2,1)*exp(2*pi*I*Rational(13,60)) + Rational(-3,1)*exp(2*pi*I*Rational(14,60)) + Rational(-12,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 4
                                             }
                                         ]
@@ -224620,7 +224553,7 @@ o3d = {
                                 'separation': 'unique'
                             },
                             {
-                                'N': (Rational(4320,1) + Rational(4800,1)*exp(2*pi*I*Rational(1,12)) + Rational(-2400,1)*exp(2*pi*I*Rational(3,12))),
+                                'N': (Rational(12960,1) + Rational(14400,1)*exp(2*pi*I*Rational(1,12)) + Rational(-7200,1)*exp(2*pi*I*Rational(3,12))),
                                 'irrep': '2G3hu',
                                 'kappa': 1,
                                 'partners': [
@@ -224632,23 +224565,23 @@ o3d = {
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(5,1) + Rational(-4,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(4,1)*exp(2*pi*I*Rational(4,60)) + Rational(13,1)*exp(2*pi*I*Rational(5,60)) + Rational(4,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(4,1)*exp(2*pi*I*Rational(9,60)) + Rational(-7,1)*exp(2*pi*I*Rational(10,60)) + Rational(4,1)*exp(2*pi*I*Rational(11,60)) + Rational(-6,1)*exp(2*pi*I*Rational(13,60)) + Rational(-4,1)*exp(2*pi*I*Rational(14,60)) + Rational(-15,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-35,1) + Rational(-16,1)*exp(2*pi*I*Rational(1,60)) + Rational(-14,1)*exp(2*pi*I*Rational(2,60)) + Rational(16,1)*exp(2*pi*I*Rational(4,60)) + Rational(-3,1)*exp(2*pi*I*Rational(5,60)) + Rational(16,1)*exp(2*pi*I*Rational(6,60)) + Rational(14,1)*exp(2*pi*I*Rational(7,60)) + Rational(14,1)*exp(2*pi*I*Rational(8,60)) + Rational(16,1)*exp(2*pi*I*Rational(9,60)) + Rational(17,1)*exp(2*pi*I*Rational(10,60)) + Rational(16,1)*exp(2*pi*I*Rational(11,60)) + Rational(-14,1)*exp(2*pi*I*Rational(13,60)) + Rational(-16,1)*exp(2*pi*I*Rational(14,60)) + Rational(5,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(-12,1)*exp(2*pi*I*Rational(1,120)) + Rational(2,1)*exp(2*pi*I*Rational(3,120)) + Rational(11,1)*exp(2*pi*I*Rational(5,120)) + Rational(16,1)*exp(2*pi*I*Rational(7,120)) + Rational(14,1)*exp(2*pi*I*Rational(9,120)) + Rational(7,1)*exp(2*pi*I*Rational(15,120)) + Rational(-4,1)*exp(2*pi*I*Rational(19,120)) + Rational(-2,1)*exp(2*pi*I*Rational(21,120)) + Rational(-16,1)*exp(2*pi*I*Rational(23,120)) + Rational(-7,1)*exp(2*pi*I*Rational(25,120)) + Rational(-14,1)*exp(2*pi*I*Rational(27,120)) + Rational(-12,1)*exp(2*pi*I*Rational(29,120)) + Rational(4,1)*exp(2*pi*I*Rational(31,120))),
+                                                'e': (Rational(-6,1)*exp(2*pi*I*Rational(1,40)) + Rational(6,1)*exp(2*pi*I*Rational(3,40)) + Rational(3,1)*exp(2*pi*I*Rational(5,40)) + Rational(-6,1)*exp(2*pi*I*Rational(7,40)) + Rational(-6,1)*exp(2*pi*I*Rational(9,40)) + Rational(-3,1)*exp(2*pi*I*Rational(15,40))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(-9,1)*exp(2*pi*I*Rational(5,120)) + Rational(-10,1)*exp(2*pi*I*Rational(7,120)) + Rational(-18,1)*exp(2*pi*I*Rational(9,120)) + Rational(-5,1)*exp(2*pi*I*Rational(15,120)) + Rational(-10,1)*exp(2*pi*I*Rational(19,120)) + Rational(18,1)*exp(2*pi*I*Rational(21,120)) + Rational(10,1)*exp(2*pi*I*Rational(23,120)) + Rational(9,1)*exp(2*pi*I*Rational(25,120)) + Rational(10,1)*exp(2*pi*I*Rational(27,120)) + Rational(10,1)*exp(2*pi*I*Rational(31,120))),
+                                                'e': (Rational(11,1)*exp(2*pi*I*Rational(5,120)) + Rational(-14,1)*exp(2*pi*I*Rational(7,120)) + Rational(-18,1)*exp(2*pi*I*Rational(9,120)) + Rational(23,1)*exp(2*pi*I*Rational(15,120)) + Rational(-14,1)*exp(2*pi*I*Rational(19,120)) + Rational(18,1)*exp(2*pi*I*Rational(21,120)) + Rational(14,1)*exp(2*pi*I*Rational(23,120)) + Rational(29,1)*exp(2*pi*I*Rational(25,120)) + Rational(14,1)*exp(2*pi*I*Rational(27,120)) + Rational(14,1)*exp(2*pi*I*Rational(31,120))),
                                                 'i': 4
                                             },
                                             {
-                                                'e': (Rational(-14,1) + Rational(-6,1)*exp(2*pi*I*Rational(1,60)) + Rational(8,1)*exp(2*pi*I*Rational(4,60)) + Rational(6,1)*exp(2*pi*I*Rational(5,60)) + Rational(8,1)*exp(2*pi*I*Rational(6,60)) + Rational(12,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(9,60)) + Rational(20,1)*exp(2*pi*I*Rational(10,60)) + Rational(6,1)*exp(2*pi*I*Rational(11,60)) + Rational(-12,1)*exp(2*pi*I*Rational(13,60)) + Rational(-8,1)*exp(2*pi*I*Rational(14,60)) + Rational(11,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(38,1) + Rational(22,1)*exp(2*pi*I*Rational(1,60)) + Rational(-36,1)*exp(2*pi*I*Rational(4,60)) + Rational(-22,1)*exp(2*pi*I*Rational(5,60)) + Rational(-36,1)*exp(2*pi*I*Rational(6,60)) + Rational(-44,1)*exp(2*pi*I*Rational(7,60)) + Rational(-22,1)*exp(2*pi*I*Rational(9,60)) + Rational(-40,1)*exp(2*pi*I*Rational(10,60)) + Rational(-22,1)*exp(2*pi*I*Rational(11,60)) + Rational(44,1)*exp(2*pi*I*Rational(13,60)) + Rational(36,1)*exp(2*pi*I*Rational(14,60)) + Rational(3,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 5
                                             },
                                             {
-                                                'e': (Rational(5,1) + Rational(5,1)*exp(2*pi*I*Rational(1,12)) + Rational(5,1)*exp(2*pi*I*Rational(2,12)) + Rational(5,1)*exp(2*pi*I*Rational(3,12))),
+                                                'e': (Rational(-15,1) + Rational(-15,1)*exp(2*pi*I*Rational(1,12)) + Rational(-15,1)*exp(2*pi*I*Rational(2,12)) + Rational(-15,1)*exp(2*pi*I*Rational(3,12))),
                                                 'i': 6
                                             }
                                         ]
@@ -224657,27 +224590,27 @@ o3d = {
                                         'mu': 2,
                                         'terms': [
                                             {
-                                                'e': (Rational(-5,1)*exp(2*pi*I*Rational(1,60)) + Rational(-10,1)*exp(2*pi*I*Rational(2,60)) + Rational(-5,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(6,60)) + Rational(-10,1)*exp(2*pi*I*Rational(7,60)) + Rational(10,1)*exp(2*pi*I*Rational(8,60)) + Rational(5,1)*exp(2*pi*I*Rational(9,60)) + Rational(10,1)*exp(2*pi*I*Rational(10,60)) + Rational(5,1)*exp(2*pi*I*Rational(11,60)) + Rational(10,1)*exp(2*pi*I*Rational(13,60)) + Rational(5,1)*exp(2*pi*I*Rational(14,60)) + Rational(5,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-60,1) + Rational(-45,1)*exp(2*pi*I*Rational(1,60)) + Rational(-30,1)*exp(2*pi*I*Rational(2,60)) + Rational(45,1)*exp(2*pi*I*Rational(4,60)) + Rational(45,1)*exp(2*pi*I*Rational(6,60)) + Rational(30,1)*exp(2*pi*I*Rational(7,60)) + Rational(30,1)*exp(2*pi*I*Rational(8,60)) + Rational(45,1)*exp(2*pi*I*Rational(9,60)) + Rational(30,1)*exp(2*pi*I*Rational(10,60)) + Rational(45,1)*exp(2*pi*I*Rational(11,60)) + Rational(-30,1)*exp(2*pi*I*Rational(13,60)) + Rational(-45,1)*exp(2*pi*I*Rational(14,60)) + Rational(-15,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 1
                                             },
                                             {
-                                                'e': (Rational(-11,1) + Rational(7,1)*exp(2*pi*I*Rational(1,60)) + Rational(2,1)*exp(2*pi*I*Rational(2,60)) + Rational(-1,1)*exp(2*pi*I*Rational(4,60)) + Rational(-15,1)*exp(2*pi*I*Rational(5,60)) + Rational(-1,1)*exp(2*pi*I*Rational(6,60)) + Rational(-2,1)*exp(2*pi*I*Rational(8,60)) + Rational(-7,1)*exp(2*pi*I*Rational(9,60)) + Rational(-1,1)*exp(2*pi*I*Rational(10,60)) + Rational(-7,1)*exp(2*pi*I*Rational(11,60)) + Rational(1,1)*exp(2*pi*I*Rational(14,60)) + Rational(11,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-17,1) + Rational(-7,1)*exp(2*pi*I*Rational(1,60)) + Rational(9,1)*exp(2*pi*I*Rational(4,60)) + Rational(7,1)*exp(2*pi*I*Rational(5,60)) + Rational(9,1)*exp(2*pi*I*Rational(6,60)) + Rational(14,1)*exp(2*pi*I*Rational(7,60)) + Rational(7,1)*exp(2*pi*I*Rational(9,60)) + Rational(25,1)*exp(2*pi*I*Rational(10,60)) + Rational(7,1)*exp(2*pi*I*Rational(11,60)) + Rational(-14,1)*exp(2*pi*I*Rational(13,60)) + Rational(-9,1)*exp(2*pi*I*Rational(14,60)) + Rational(-3,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 2
                                             },
                                             {
-                                                'e': (Rational(2,1)*exp(2*pi*I*Rational(3,40)) + Rational(5,1)*exp(2*pi*I*Rational(5,40)) + Rational(-2,1)*exp(2*pi*I*Rational(7,40)) + Rational(-1,1)*exp(2*pi*I*Rational(15,40))),
+                                                'e': (Rational(32,1)*exp(2*pi*I*Rational(1,120)) + Rational(38,1)*exp(2*pi*I*Rational(3,120)) + Rational(23,1)*exp(2*pi*I*Rational(5,120)) + Rational(20,1)*exp(2*pi*I*Rational(7,120)) + Rational(-16,1)*exp(2*pi*I*Rational(9,120)) + Rational(-19,1)*exp(2*pi*I*Rational(15,120)) + Rational(-20,1)*exp(2*pi*I*Rational(19,120)) + Rational(-16,1)*exp(2*pi*I*Rational(21,120)) + Rational(-20,1)*exp(2*pi*I*Rational(23,120)) + Rational(-7,1)*exp(2*pi*I*Rational(25,120)) + Rational(18,1)*exp(2*pi*I*Rational(27,120)) + Rational(32,1)*exp(2*pi*I*Rational(29,120)) + Rational(20,1)*exp(2*pi*I*Rational(31,120))),
                                                 'i': 3
                                             },
                                             {
-                                                'e': (Rational(-18,1)*exp(2*pi*I*Rational(1,120)) + Rational(-8,1)*exp(2*pi*I*Rational(3,120)) + Rational(-11,1)*exp(2*pi*I*Rational(5,120)) + Rational(-4,1)*exp(2*pi*I*Rational(7,120)) + Rational(-4,1)*exp(2*pi*I*Rational(9,120)) + Rational(-3,1)*exp(2*pi*I*Rational(15,120)) + Rational(-14,1)*exp(2*pi*I*Rational(19,120)) + Rational(22,1)*exp(2*pi*I*Rational(21,120)) + Rational(4,1)*exp(2*pi*I*Rational(23,120)) + Rational(-3,1)*exp(2*pi*I*Rational(25,120)) + Rational(-4,1)*exp(2*pi*I*Rational(27,120)) + Rational(-18,1)*exp(2*pi*I*Rational(29,120)) + Rational(14,1)*exp(2*pi*I*Rational(31,120))),
+                                                'e': (Rational(-10,1)*exp(2*pi*I*Rational(1,120)) + Rational(-34,1)*exp(2*pi*I*Rational(3,120)) + Rational(-33,1)*exp(2*pi*I*Rational(5,120)) + Rational(-20,1)*exp(2*pi*I*Rational(7,120)) + Rational(14,1)*exp(2*pi*I*Rational(9,120)) + Rational(-3,1)*exp(2*pi*I*Rational(15,120)) + Rational(30,1)*exp(2*pi*I*Rational(19,120)) + Rational(-4,1)*exp(2*pi*I*Rational(21,120)) + Rational(20,1)*exp(2*pi*I*Rational(23,120)) + Rational(3,1)*exp(2*pi*I*Rational(25,120)) + Rational(-14,1)*exp(2*pi*I*Rational(27,120)) + Rational(-10,1)*exp(2*pi*I*Rational(29,120)) + Rational(-30,1)*exp(2*pi*I*Rational(31,120))),
                                                 'i': 4
                                             },
                                             {
-                                                'e': (Rational(26,1) + Rational(-7,1)*exp(2*pi*I*Rational(1,60)) + Rational(-6,1)*exp(2*pi*I*Rational(2,60)) + Rational(7,1)*exp(2*pi*I*Rational(4,60)) + Rational(28,1)*exp(2*pi*I*Rational(5,60)) + Rational(7,1)*exp(2*pi*I*Rational(6,60)) + Rational(6,1)*exp(2*pi*I*Rational(7,60)) + Rational(6,1)*exp(2*pi*I*Rational(8,60)) + Rational(7,1)*exp(2*pi*I*Rational(9,60)) + Rational(-22,1)*exp(2*pi*I*Rational(10,60)) + Rational(7,1)*exp(2*pi*I*Rational(11,60)) + Rational(-6,1)*exp(2*pi*I*Rational(13,60)) + Rational(-7,1)*exp(2*pi*I*Rational(14,60)) + Rational(-39,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-10,1) + Rational(-11,1)*exp(2*pi*I*Rational(1,60)) + Rational(-26,1)*exp(2*pi*I*Rational(2,60)) + Rational(-11,1)*exp(2*pi*I*Rational(4,60)) + Rational(-8,1)*exp(2*pi*I*Rational(5,60)) + Rational(-11,1)*exp(2*pi*I*Rational(6,60)) + Rational(-26,1)*exp(2*pi*I*Rational(7,60)) + Rational(26,1)*exp(2*pi*I*Rational(8,60)) + Rational(11,1)*exp(2*pi*I*Rational(9,60)) + Rational(18,1)*exp(2*pi*I*Rational(10,60)) + Rational(11,1)*exp(2*pi*I*Rational(11,60)) + Rational(26,1)*exp(2*pi*I*Rational(13,60)) + Rational(11,1)*exp(2*pi*I*Rational(14,60)) + Rational(5,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 5
                                             },
                                             {
-                                                'e': (Rational(-5,1) + Rational(-5,1)*exp(2*pi*I*Rational(1,60)) + Rational(15,1)*exp(2*pi*I*Rational(4,60)) + Rational(5,1)*exp(2*pi*I*Rational(5,60)) + Rational(15,1)*exp(2*pi*I*Rational(6,60)) + Rational(10,1)*exp(2*pi*I*Rational(7,60)) + Rational(5,1)*exp(2*pi*I*Rational(9,60)) + Rational(-5,1)*exp(2*pi*I*Rational(10,60)) + Rational(5,1)*exp(2*pi*I*Rational(11,60)) + Rational(-10,1)*exp(2*pi*I*Rational(13,60)) + Rational(-15,1)*exp(2*pi*I*Rational(14,60)) + Rational(-15,1)*exp(2*pi*I*Rational(15,60))),
+                                                'e': (Rational(-15,1) + Rational(-15,1)*exp(2*pi*I*Rational(1,60)) + Rational(-10,1)*exp(2*pi*I*Rational(2,60)) + Rational(5,1)*exp(2*pi*I*Rational(4,60)) + Rational(-5,1)*exp(2*pi*I*Rational(5,60)) + Rational(5,1)*exp(2*pi*I*Rational(6,60)) + Rational(10,1)*exp(2*pi*I*Rational(8,60)) + Rational(15,1)*exp(2*pi*I*Rational(9,60)) + Rational(5,1)*exp(2*pi*I*Rational(10,60)) + Rational(15,1)*exp(2*pi*I*Rational(11,60)) + Rational(-5,1)*exp(2*pi*I*Rational(14,60)) + Rational(-5,1)*exp(2*pi*I*Rational(15,60))),
                                                 'i': 6
                                             }
                                         ]
