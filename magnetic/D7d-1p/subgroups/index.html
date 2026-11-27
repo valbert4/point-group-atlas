@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.1 Subgroup lattice · D7d-1p · Point Group Atlas</title>
+<meta name="description" content="Exact tables of the 98 point groups, 116 double point groups and 270 magnetic point groups: characters, Clebsch–Gordan coefficients and bases, in JSON, GAP, Wolfram Language and SymPy.">
+<link rel="canonical" href="https://valbert4.github.io/point-group-atlas/magnetic/D7d-1p/subgroups/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Point Group Atlas">
+<meta property="og:title" content="3.1 Subgroup lattice · D7d-1p · Point Group Atlas">
+<meta property="og:description" content="Exact tables of the 98 point groups, 116 double point groups and 270 magnetic point groups: characters, Clebsch–Gordan coefficients and bases, in JSON, GAP, Wolfram Language and SymPy.">
+<meta property="og:url" content="https://valbert4.github.io/point-group-atlas/magnetic/D7d-1p/subgroups/">
+<meta property="og:image" content="https://valbert4.github.io/point-group-atlas/static/social.png?v=f43cd83b17">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The mark and the title of the Point Group Atlas">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+try { var t = localStorage.getItem("atlas-theme");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+} catch (e) {}
+</script>
+<link rel="icon" type="image/svg+xml" href="../../../static/favicon-magnetic.svg">
+<link rel="stylesheet" href="../../../static/site.css?v=5308b4558b">
+<script src="../../../static/site.js?v=333a2d9dca" defer></script>
+</head>
+<body class="volume-magnetic">
+<header class="bar"><a class="atlas" href="../../../"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path class="c2" d="M55.55 47.7L95.94 47.7A46 46 0 0 0 84.11 19.14L55.55 47.7Z"/><path class="c0" d="M47.7 44.45L47.7 4.06A46 46 0 0 0 19.14 15.89L47.7 44.45Z"/><path class="c3" d="M44.45 52.3L4.06 52.3A46 46 0 0 0 15.89 80.86L44.45 52.3Z"/><path class="c1" d="M52.3 55.55L52.3 95.94A46 46 0 0 0 80.86 84.11L52.3 55.55Z"/><path class="c2 l" d="M52.3 44.45L80.86 15.89A46 46 0 0 0 52.3 4.06L52.3 44.45Z"/><path class="c0 l" d="M44.45 47.7L15.89 19.14A46 46 0 0 0 4.06 47.7L44.45 47.7Z"/><path class="c3 l" d="M47.7 55.55L19.14 84.11A46 46 0 0 0 47.7 95.94L47.7 55.55Z"/><path class="c1 l" d="M55.55 52.3L84.11 80.86A46 46 0 0 0 95.94 52.3L55.55 52.3Z"/></svg><img class="wordmark"
+ src="../../../static/wordmark.svg" alt="Point Group Atlas" width="816" height="91"></a><a class="volume" href="../../">Volume III: magnetic point groups</a>
+<span class="tools"><button type="button" class="daynight" title="Day or night"
+ aria-label="Switch between day and night">&#x1F312;</button></span></header>
+<nav class="crumbs" aria-label="breadcrumbs"><a href="../../../">Point Group Atlas</a> › <a href="../../">Volume III</a> › <a href="../../#family-Dnd">D<sub><i>N</i>d</sub></a> › <a href="../"><span class="grp">D<sub>7d</sub>1′</span></a> › <span><span class="no">3</span> Subgroups</span></nav>
+<nav class="tabs" aria-label="parts and sections"><ul class="parts"><li><a href="../identification/"><span class="no">1</span> The group</a></li><li><a href="../irreps/"><span class="no">2</span> Representations</a></li><li class="on"><a href="./"><span class="no">3</span> Subgroups</a></li><li><a href="../subduction_o3/"><span class="no">4</span> Angular momentum</a></li><li><a href="../multipoles/"><span class="no">5</span> Tensors</a></li></ul><ul class="sections"><li class="on"><a href="./"><span class="no">3.1</span> Subgroup lattice</a></li></ul></nav>
+<main>
+<h1 id="s:subgroups"><span class="no">3.1</span> Subgroup lattice <a class="mark-link" href="#s:subgroups" aria-label="link to this heading">¶</a></h1>
+<p class="data">Data: <code>subgroup_lattice</code> in <a class="dl" href="https://github.com/valbert4/point-group-atlas/raw/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/json/D7d-1p.json" data-raw="https://raw.githubusercontent.com/valbert4/point-group-atlas/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/json/D7d-1p.json" download="D7d-1p.json">JSON</a> · <a class="dl" href="https://github.com/valbert4/point-group-atlas/raw/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/gap/D7d-1p.g" data-raw="https://raw.githubusercontent.com/valbert4/point-group-atlas/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/gap/D7d-1p.g" download="D7d-1p.g">GAP</a> · <a class="dl" href="https://github.com/valbert4/point-group-atlas/raw/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/wolfram/D7d-1p.wl" data-raw="https://raw.githubusercontent.com/valbert4/point-group-atlas/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/wolfram/D7d-1p.wl" download="D7d-1p.wl">Wolfram Language</a> · <a class="dl" href="https://github.com/valbert4/point-group-atlas/raw/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/sympy/D7d-1p.py" data-raw="https://raw.githubusercontent.com/valbert4/point-group-atlas/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/sympy/D7d-1p.py" download="D7d-1p.py">SymPy</a></p>
+<p>Conventions: sections <a href="../../../rotation/conventions/15/#conv.15">15</a> and <a href="../../conventions/36/#conv.36">36</a>. The diagram shows the conjugacy classes of subgroups, each joined to the classes of its maximal subgroups, and the orders increase upward. <span class="anchor" id="n:index.conjugates.c"></span><span class="anchor" id="n:mark.conjugates"></span>A normal subgroup is framed, and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo lspace="0em" rspace="0em">×</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">{\times}c</annotation></semantics></math> is the number <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">c &gt; 1</annotation></semantics></math> of conjugate subgroups. The table lists the classes by order, then by magnetic type, those of one symbol together. <span class="anchor" id="n:head.subgroup"></span><span class="anchor" id="n:head.magnetic.type"></span><span class="anchor" id="n:head.order"></span><span class="anchor" id="n:head.conjugates"></span><span class="anchor" id="n:head.normal"></span>A row gives the representative of a class of subgroups (subgrp), its magnetic type (type), its order, the number of subgroups in the class (conjugates) and whether the representative is normal. <span class="anchor" id="n:head.normalizer"></span><span class="anchor" id="n:head.centralizer"></span>It also gives its normalizer and its centralizer in <span class="nowrap"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math>,</span> by their classes.</p>
+<div class="center"><figure class="diagram"><div class="scroll"><svg class="diagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-28.711 -43.66 466.941 386.977" width="747" height="619">
+<defs>
+<path id='d9529f9f4-g0-49' d='M1.919-4.047H1.787C1.399-3.688 .909-3.664 .55-3.652V-3.276C.783-3.282 1.082-3.294 1.381-3.413V-.377H.586V0H2.714V-.377H1.919V-4.047Z'/>
+<path id='d9529f9f4-g0-50' d='M1.692-.46C1.62-.46 1.548-.454 1.476-.454H.795L1.722-1.273C1.829-1.369 2.122-1.59 2.236-1.686C2.499-1.925 2.851-2.236 2.851-2.756C2.851-3.431 2.349-4.047 1.494-4.047C.861-4.047 .466-3.706 .263-3.096L.544-2.744C.681-3.246 .891-3.634 1.411-3.634C1.913-3.634 2.295-3.282 2.295-2.744C2.295-2.248 2.002-1.967 1.644-1.626C1.524-1.506 1.201-1.237 1.076-1.118C.903-.962 .49-.562 .317-.412V0H2.851V-.46H1.692Z'/>
+<path id='d9529f9f4-g0-52' d='M2.367-.998H2.989V-1.393H2.367V-3.921H1.775L.179-1.393V-.998H1.853V0H2.367V-.998ZM.687-1.393C.867-1.674 1.895-3.27 1.895-3.628V-1.393H.687Z'/>
+<path id='d9529f9f4-g0-55' d='M1.476-3.461C1.548-3.461 1.62-3.467 1.692-3.467H2.445C1.536-2.576 .956-1.327 .956 .06H1.518C1.518-1.686 2.367-2.941 2.905-3.503V-3.921H.263V-3.461H1.476Z'/>
+<path id='d9529f9f4-g0-67' d='M3.7-.729C3.282-.472 3.09-.359 2.493-.359C1.566-.359 1.004-1.225 1.004-2.086C1.004-2.971 1.62-3.802 2.493-3.802C2.887-3.802 3.294-3.676 3.569-3.467L3.664-4.011C3.246-4.166 2.911-4.214 2.475-4.214C1.291-4.214 .406-3.234 .406-2.08C.406-.849 1.345 .06 2.511 .06C3.096 .06 3.341-.06 3.736-.275L3.7-.729Z'/>
+<path id='d9529f9f4-g0-68' d='M.586-4.148V0H2.283C3.359 0 4.226-.909 4.226-2.038C4.226-3.21 3.353-4.148 2.283-4.148H.586ZM1.172-.353V-3.796H2.122C2.941-3.796 3.64-3.144 3.64-2.044C3.64-.933 2.911-.353 2.122-.353H1.172Z'/>
+<path id='d9529f9f4-g0-83' d='M2.953-3.981C2.57-4.178 2.23-4.274 1.787-4.274C.885-4.274 .353-3.664 .353-3.09C.353-2.845 .43-2.558 .723-2.283C.986-2.038 1.261-1.979 1.632-1.889C2.134-1.769 2.271-1.739 2.445-1.56C2.558-1.447 2.654-1.279 2.654-1.076C2.654-.705 2.319-.323 1.739-.323C1.399-.323 .849-.424 .377-.825L.281-.287C.58-.114 1.076 .126 1.745 .126C2.576 .126 3.168-.478 3.168-1.148C3.168-1.632 2.887-1.907 2.768-2.032C2.517-2.277 2.242-2.343 1.781-2.451C1.417-2.534 1.225-2.582 1.082-2.72C1.004-2.798 .867-2.935 .867-3.162C.867-3.497 1.201-3.844 1.781-3.844C2.236-3.844 2.552-3.7 2.857-3.443L2.953-3.981Z'/>
+<path id='d9529f9f4-g0-100' d='M2.768-4.148H2.266V-2.397C1.883-2.678 1.494-2.714 1.321-2.714C.693-2.714 .215-2.086 .215-1.327S.687 .06 1.303 .06C1.674 .06 2.02-.108 2.248-.311V0H2.768V-4.148ZM2.248-.741C2.098-.496 1.871-.335 1.584-.335C1.166-.335 .735-.628 .735-1.321C.735-2.068 1.243-2.319 1.65-2.319C1.889-2.319 2.092-2.218 2.248-2.014V-.741Z'/>
+<path id='d9529f9f4-g0-104' d='M2.78-1.769C2.78-2.236 2.642-2.714 1.907-2.714C1.393-2.714 1.118-2.415 .998-2.289V-4.148H.496V0H1.016V-1.453C1.016-1.847 1.184-2.319 1.644-2.319C2.26-2.319 2.26-1.901 2.26-1.728V0H2.78V-1.769Z'/>
+<path id='d9529f9f4-g0-105' d='M1.052-4.101H.448V-3.497H1.052V-4.101ZM1.004-2.654H.502V0H1.004V-2.654Z'/>
+<path id='d9529f9f4-g0-115' d='M2.182-2.558C1.775-2.726 1.476-2.744 1.261-2.744C1.112-2.744 .209-2.744 .209-1.949C.209-1.668 .365-1.512 .442-1.441C.652-1.231 .903-1.184 1.219-1.124C1.5-1.07 1.823-1.01 1.823-.723C1.823-.347 1.327-.347 1.243-.347C.861-.347 .502-.484 .263-.652L.179-.203C.383-.102 .747 .06 1.243 .06C1.512 .06 1.775 .018 1.997-.143C2.218-.311 2.289-.574 2.289-.777C2.289-.885 2.277-1.118 2.026-1.345C1.805-1.542 1.59-1.584 1.303-1.638C.95-1.704 .675-1.757 .675-2.02C.675-2.361 1.112-2.361 1.201-2.361C1.542-2.361 1.805-2.289 2.104-2.134L2.182-2.558Z'/>
+<path id='d9529f9f4-g0-118' d='M2.833-2.654H2.355C1.536-.652 1.5-.49 1.476-.353H1.47C1.423-.586 1.255-1.004 1.07-1.465L.592-2.654H.09L1.184 0H1.739L2.833-2.654Z'/>
+<use id='d9529f9f4-g1-49' xlink:href='#d9529f9f4-g0-49' transform='scale(1.333)'/>
+<use id='d9529f9f4-g1-67' xlink:href='#d9529f9f4-g0-67' transform='scale(1.333)'/>
+<use id='d9529f9f4-g1-68' xlink:href='#d9529f9f4-g0-68' transform='scale(1.333)'/>
+<use id='d9529f9f4-g1-83' xlink:href='#d9529f9f4-g0-83' transform='scale(1.333)'/>
+<path id='d9529f9f4-g2-48' d='M1.877-2.809C1.919-2.899 1.931-2.965 1.931-3.001C1.931-3.186 1.763-3.341 1.566-3.341C1.327-3.341 1.255-3.132 1.231-3.049L.395-.49C.383-.454 .365-.406 .365-.383C.365-.281 .604-.233 .61-.233C.664-.233 .687-.287 .711-.335L1.877-2.809Z'/>
+<path id='d9529f9f4-g3-40' d='M2.654 1.993C2.718 1.993 2.813 1.993 2.813 1.897C2.813 1.865 2.805 1.857 2.702 1.753C1.61 .725 1.339-.757 1.339-1.993C1.339-4.288 2.287-5.364 2.694-5.731C2.805-5.834 2.813-5.842 2.813-5.882S2.782-5.978 2.702-5.978C2.574-5.978 2.176-5.571 2.112-5.499C1.044-4.384 .821-2.949 .821-1.993C.821-.207 1.57 1.227 2.654 1.993Z'/>
+<path id='d9529f9f4-g3-41' d='M2.463-1.993C2.463-2.75 2.335-3.658 1.841-4.599C1.451-5.332 .725-5.978 .582-5.978C.502-5.978 .478-5.922 .478-5.882C.478-5.85 .478-5.834 .574-5.738C1.69-4.678 1.945-3.22 1.945-1.993C1.945 .295 .996 1.379 .59 1.745C.486 1.849 .478 1.857 .478 1.897S.502 1.993 .582 1.993C.709 1.993 1.108 1.586 1.172 1.514C2.24 .399 2.463-1.036 2.463-1.993Z'/>
+<path id='d9529f9f4-g4-2' d='M4.882-3.271C4.958-3.347 4.979-3.389 4.979-3.438C4.979-3.55 4.889-3.612 4.812-3.612C4.742-3.612 4.721-3.592 4.638-3.508L3.11-1.988L1.576-3.515C1.506-3.585 1.478-3.612 1.416-3.612C1.318-3.612 1.241-3.536 1.241-3.438C1.241-3.375 1.262-3.354 1.346-3.271L2.866-1.75L1.346-.23C1.248-.133 1.241-.098 1.241-.056C1.241 .042 1.318 .119 1.416 .119C1.478 .119 1.499 .098 1.576 .021L3.11-1.506L4.7 .084C4.735 .105 4.77 .119 4.812 .119C4.889 .119 4.979 .056 4.979-.056C4.979-.112 4.965-.126 4.944-.146C4.931-.174 3.578-1.527 3.354-1.743L4.882-3.271Z'/>
+<path id='d9529f9f4-g5-55' d='M3.731-4.212C3.801-4.296 3.801-4.31 3.801-4.491H1.974C1.695-4.491 1.618-4.498 1.367-4.519C1.004-4.547 .99-4.596 .969-4.714H.732L.488-3.222H.725C.739-3.327 .809-3.787 .921-3.857C.976-3.898 1.541-3.898 1.646-3.898H3.166C2.943-3.605 2.587-3.173 2.441-2.978C1.527-1.778 1.444-.669 1.444-.258C1.444-.181 1.444 .139 1.771 .139C2.106 .139 2.106-.174 2.106-.265V-.544C2.106-1.897 2.385-2.518 2.685-2.894L3.731-4.212Z'/>
+</defs>
+<g id='d9529f9f4-page1'>
+<path d='M197.207 338.336L154.121 284.477' stroke='#808080' fill='none' stroke-width='.399'/>
+<path d='M197.207 338.336L280.832 284.477' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M197.207 338.336L206.277 284.477' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M197.207 338.336L304.926 284.477' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M197.207 338.336L244.547 284.477' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M197.207 338.336L96.578 284.477' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M197.207 338.336L345.18 284.477' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M154.121 284.477L239.727 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M280.832 284.477L239.727 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M206.277 284.477L239.727 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M154.121 284.477L303.793 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M304.926 284.477L303.793 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M244.547 284.477L303.793 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M280.832 284.477L271.191 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M304.926 284.477L271.191 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M96.578 284.477L271.191 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M206.277 284.477L342.91 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M304.926 284.477L342.91 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M345.18 284.477L342.91 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M154.121 284.477L158.371 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M96.578 284.477L158.371 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M345.18 284.477L158.371 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M280.832 284.477L417.746 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M244.547 284.477L417.746 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M345.18 284.477L417.746 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M206.277 284.477L107.066 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M244.547 284.477L107.066 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M96.578 284.477L107.066 230.617' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M197.207 338.336L179.918 176.758' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M239.727 230.617L321.082 122.898' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M303.793 230.617L321.082 122.898' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M271.191 230.617L321.082 122.898' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M342.91 230.617L321.082 122.898' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M158.371 230.617L321.082 122.898' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M417.746 230.617L321.082 122.898' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M107.066 230.617L321.082 122.898' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M154.121 284.477L67.379 69.039' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M179.918 176.758L67.379 69.039' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M280.832 284.477L189.555 69.039' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M179.918 176.758L189.555 69.039' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M206.277 284.477L118.121 69.039' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M179.918 176.758L118.121 69.039' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M304.926 284.477L221.586 69.039' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M179.918 176.758L221.586 69.039' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M244.547 284.477L153.27 69.039' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M179.918 176.758L153.27 69.039' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M96.578 284.477L38.75 69.039' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M179.918 176.758L38.75 69.039' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M345.18 284.477L258.152 69.039' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M179.918 176.758L258.152 69.039' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M239.727 230.617L149.586 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M67.379 69.039L149.586 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M189.555 69.039L149.586 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M118.121 69.039L149.586 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M303.793 230.617L174.246 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M67.379 69.039L174.246 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M221.586 69.039L174.246 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M153.27 69.039L174.246 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M271.191 230.617L86.09 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M189.555 69.039L86.09 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M221.586 69.039L86.09 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M38.75 69.039L86.09 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M342.91 230.617L201.742 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M118.121 69.039L201.742 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M221.586 69.039L201.742 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M258.152 69.039L201.742 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M158.371 230.617L52.355 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M67.379 69.039L52.355 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M38.75 69.039L52.355 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M258.152 69.039L52.355 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M417.746 230.617L270.059 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M189.555 69.039L270.059 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M153.27 69.039L270.059 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M258.152 69.039L270.059 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M107.066 230.617L-11.141 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M118.121 69.039L-11.141 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M153.27 69.039L-11.141 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M38.75 69.039L-11.141 15.18' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M321.082 122.898L197.207-38.676' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M149.586 15.18L197.207-38.676' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M174.246 15.18L197.207-38.676' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M86.09 15.18L197.207-38.676' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M201.742 15.18L197.207-38.676' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M52.355 15.18L197.207-38.676' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M270.059 15.18L197.207-38.676' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M-11.141 15.18L197.207-38.676' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M191.172 343.117H203.246V333.551H191.172Z' fill='#fff'/>
+<path d='M191.172 343.117H203.246V333.551H191.172Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C1/" aria-label="C1">
+<g transform='matrix(1 0 0 1 -4.542 1.993)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.512' xlink:href='#d9529f9f4-g0-49'/>
+</g>
+<rect x='193.208' y='334.708' width='7.582' height='6.796' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M142.281 289.258H165.961V279.691H142.281Z' fill='#fff'/>
+<a href="../../../rotation/C2/" aria-label="C2">
+<g transform='matrix(1 0 0 1 -53.434 -51.866)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.512' xlink:href='#d9529f9f4-g0-50'/>
+</g>
+<rect x='144.316' y='280.849' width='7.72' height='6.796' fill='#fff' fill-opacity='0'/>
+</a>
+<g transform='matrix(1 0 0 1 -53.434 -51.866)'>
+<use x='207.704' y='338.334' xlink:href='#d9529f9f4-g4-2'/>
+<use x='213.93' y='338.334' xlink:href='#d9529f9f4-g5-55'/>
+</g>
+<path d='M275.625 289.258H286.039V279.691H275.625Z' fill='#fff'/>
+<path d='M275.625 289.258H286.039V279.691H275.625Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/S2/" aria-label="S2">
+<g transform='matrix(1 0 0 1 79.911 -51.866)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.685' xlink:href='#d9529f9f4-g0-105'/>
+</g>
+<rect x='277.661' y='280.849' width='5.92' height='6.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M194.809 289.258H217.75V279.691H194.809Z' fill='#fff'/>
+<a href="../../../rotation/C1v/" aria-label="C1v">
+<g transform='matrix(1 0 0 1 -.905 -51.866)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.331' xlink:href='#d9529f9f4-g0-115'/>
+</g>
+<rect x='196.845' y='280.849' width='7.158' height='6.675' fill='#fff' fill-opacity='0'/>
+</a>
+<g transform='matrix(1 0 0 1 -.905 -51.866)'>
+<use x='206.963' y='338.334' xlink:href='#d9529f9f4-g4-2'/>
+<use x='213.189' y='338.334' xlink:href='#d9529f9f4-g5-55'/>
+</g>
+<path d='M295.43 289.258H314.422V279.691H295.43Z' fill='#fff'/>
+<path d='M295.43 289.258H314.422V279.691H295.43Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C1-1p/" aria-label="C11′">
+<g transform='matrix(1 0 0 1 99.716 -51.866)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.512' xlink:href='#d9529f9f4-g0-49'/>
+<use x='206.292' y='338.334' xlink:href='#d9529f9f4-g1-49'/>
+<use x='210.526' y='335.522' xlink:href='#d9529f9f4-g2-48'/>
+</g>
+<rect x='297.466' y='280.314' width='14.707' height='7.332' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M224.871 289.258H264.223V279.691H224.871Z' fill='#fff'/>
+<a href="../../C2-C1/" aria-label="C2(C1)">
+<g transform='matrix(1 0 0 1 29.157 -51.866)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.512' xlink:href='#d9529f9f4-g0-50'/>
+<use x='206.292' y='338.334' xlink:href='#d9529f9f4-g3-40'/>
+<use x='209.585' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='214.996' y='339.512' xlink:href='#d9529f9f4-g0-49'/>
+<use x='218.669' y='338.334' xlink:href='#d9529f9f4-g3-41'/>
+</g>
+<rect x='226.907' y='280.491' width='23.382' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<g transform='matrix(1 0 0 1 29.157 -51.866)'>
+<use x='223.374' y='338.334' xlink:href='#d9529f9f4-g4-2'/>
+<use x='229.601' y='338.334' xlink:href='#d9529f9f4-g5-55'/>
+</g>
+<path d='M83.535 289.258H109.617V279.691H83.535Z' fill='#fff'/>
+<path d='M83.535 289.258H109.617V279.691H83.535Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../S2-C1/" aria-label="S2(C1)">
+<g transform='matrix(1 0 0 1 -112.179 -51.866)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.685' xlink:href='#d9529f9f4-g0-105'/>
+<use x='204.632' y='338.334' xlink:href='#d9529f9f4-g3-40'/>
+<use x='207.925' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='213.335' y='339.512' xlink:href='#d9529f9f4-g0-49'/>
+<use x='217.009' y='338.334' xlink:href='#d9529f9f4-g3-41'/>
+</g>
+<rect x='85.571' y='280.491' width='21.722' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M325.871 289.258H364.484V279.691H325.871Z' fill='#fff'/>
+<a href="../../C1v-C1/" aria-label="C1v(C1)">
+<g transform='matrix(1 0 0 1 130.158 -51.866)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.331' xlink:href='#d9529f9f4-g0-115'/>
+<use x='205.551' y='338.334' xlink:href='#d9529f9f4-g3-40'/>
+<use x='208.844' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='214.255' y='339.512' xlink:href='#d9529f9f4-g0-49'/>
+<use x='217.928' y='338.334' xlink:href='#d9529f9f4-g3-41'/>
+</g>
+<rect x='327.908' y='280.491' width='22.641' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<g transform='matrix(1 0 0 1 130.158 -51.866)'>
+<use x='222.633' y='338.334' xlink:href='#d9529f9f4-g4-2'/>
+<use x='228.86' y='338.334' xlink:href='#d9529f9f4-g5-55'/>
+</g>
+<path d='M226.246 235.398H253.211V225.836H226.246Z' fill='#fff'/>
+<a href="../../../rotation/C2h/" aria-label="C2h">
+<g transform='matrix(1 0 0 1 30.533 -105.725)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.74' xlink:href='#d9529f9f4-g0-50'/>
+<use x='205.794' y='339.74' xlink:href='#d9529f9f4-g0-104'/>
+</g>
+<rect x='228.283' y='226.99' width='10.824' height='7.025' fill='#fff' fill-opacity='0'/>
+</a>
+<g transform='matrix(1 0 0 1 30.533 -105.725)'>
+<use x='210.983' y='338.334' xlink:href='#d9529f9f4-g4-2'/>
+<use x='217.21' y='338.334' xlink:href='#d9529f9f4-g5-55'/>
+</g>
+<path d='M288.492 235.398H319.094V225.836H288.492Z' fill='#fff'/>
+<a href="../../C2-1p/" aria-label="C21′">
+<g transform='matrix(1 0 0 1 92.778 -105.725)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.512' xlink:href='#d9529f9f4-g0-50'/>
+<use x='206.292' y='338.334' xlink:href='#d9529f9f4-g1-49'/>
+<use x='210.526' y='335.522' xlink:href='#d9529f9f4-g2-48'/>
+</g>
+<rect x='290.528' y='226.455' width='14.707' height='7.332' fill='#fff' fill-opacity='0'/>
+</a>
+<g transform='matrix(1 0 0 1 92.778 -105.725)'>
+<use x='214.622' y='338.334' xlink:href='#d9529f9f4-g4-2'/>
+<use x='220.849' y='338.334' xlink:href='#d9529f9f4-g5-55'/>
+</g>
+<path d='M262.527 235.398H279.859V225.836H262.527Z' fill='#fff'/>
+<path d='M262.527 235.398H279.859V225.836H262.527Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../S2-1p/" aria-label="S21′">
+<g transform='matrix(1 0 0 1 66.814 -105.725)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.685' xlink:href='#d9529f9f4-g0-105'/>
+<use x='204.632' y='338.334' xlink:href='#d9529f9f4-g1-49'/>
+<use x='208.866' y='335.522' xlink:href='#d9529f9f4-g2-48'/>
+</g>
+<rect x='264.564' y='226.455' width='13.047' height='7.505' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M327.98 235.398H357.84V225.836H327.98Z' fill='#fff'/>
+<a href="../../C1v-1p/" aria-label="C1v1′">
+<g transform='matrix(1 0 0 1 132.267 -105.725)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.331' xlink:href='#d9529f9f4-g0-115'/>
+<use x='205.551' y='338.334' xlink:href='#d9529f9f4-g1-49'/>
+<use x='209.785' y='335.522' xlink:href='#d9529f9f4-g2-48'/>
+</g>
+<rect x='330.017' y='226.455' width='13.966' height='7.21' fill='#fff' fill-opacity='0'/>
+</a>
+<g transform='matrix(1 0 0 1 132.267 -105.725)'>
+<use x='213.881' y='338.334' xlink:href='#d9529f9f4-g4-2'/>
+<use x='220.108' y='338.334' xlink:href='#d9529f9f4-g5-55'/>
+</g>
+<path d='M137.055 235.398H179.691V225.836H137.055Z' fill='#fff'/>
+<a href="../../C2h-C2/" aria-label="C2h(C2)">
+<g transform='matrix(1 0 0 1 -58.657 -105.725)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.74' xlink:href='#d9529f9f4-g0-50'/>
+<use x='205.794' y='339.74' xlink:href='#d9529f9f4-g0-104'/>
+<use x='209.571' y='338.334' xlink:href='#d9529f9f4-g3-40'/>
+<use x='212.865' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='218.275' y='339.512' xlink:href='#d9529f9f4-g0-50'/>
+<use x='221.949' y='338.334' xlink:href='#d9529f9f4-g3-41'/>
+</g>
+<rect x='139.093' y='226.632' width='26.662' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<g transform='matrix(1 0 0 1 -58.657 -105.725)'>
+<use x='226.654' y='338.334' xlink:href='#d9529f9f4-g4-2'/>
+<use x='232.88' y='338.334' xlink:href='#d9529f9f4-g5-55'/>
+</g>
+<path d='M397.262 235.398H438.23V225.836H397.262Z' fill='#fff'/>
+<a href="../../C2h-S2/" aria-label="C2h(S2)">
+<g transform='matrix(1 0 0 1 201.546 -105.725)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.74' xlink:href='#d9529f9f4-g0-50'/>
+<use x='205.794' y='339.74' xlink:href='#d9529f9f4-g0-104'/>
+<use x='209.571' y='338.334' xlink:href='#d9529f9f4-g3-40'/>
+<use x='212.865' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='218.275' y='339.685' xlink:href='#d9529f9f4-g0-105'/>
+<use x='220.288' y='338.334' xlink:href='#d9529f9f4-g3-41'/>
+</g>
+<rect x='399.296' y='226.632' width='25.001' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<g transform='matrix(1 0 0 1 201.546 -105.725)'>
+<use x='224.993' y='338.334' xlink:href='#d9529f9f4-g4-2'/>
+<use x='231.22' y='338.334' xlink:href='#d9529f9f4-g5-55'/>
+</g>
+<path d='M86.121 235.398H128.012V225.836H86.121Z' fill='#fff'/>
+<a href="../../C2h-C1v/" aria-label="C2h(C1v)">
+<g transform='matrix(1 0 0 1 -109.594 -105.725)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.74' xlink:href='#d9529f9f4-g0-50'/>
+<use x='205.794' y='339.74' xlink:href='#d9529f9f4-g0-104'/>
+<use x='209.571' y='338.334' xlink:href='#d9529f9f4-g3-40'/>
+<use x='212.865' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='218.275' y='339.331' xlink:href='#d9529f9f4-g0-115'/>
+<use x='221.208' y='338.334' xlink:href='#d9529f9f4-g3-41'/>
+</g>
+<rect x='88.156' y='226.632' width='25.921' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<g transform='matrix(1 0 0 1 -109.594 -105.725)'>
+<use x='225.913' y='338.334' xlink:href='#d9529f9f4-g4-2'/>
+<use x='232.139' y='338.334' xlink:href='#d9529f9f4-g5-55'/>
+</g>
+<path d='M173.879 181.539H185.953V171.977H173.879Z' fill='#fff'/>
+<path d='M173.879 181.539H185.953V171.977H173.879Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C7/" aria-label="C7">
+<g transform='matrix(1 0 0 1 -21.834 -159.584)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.512' xlink:href='#d9529f9f4-g0-55'/>
+</g>
+<rect x='175.916' y='173.131' width='7.773' height='6.856' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M304.145 127.68H338.023V118.117H304.145Z' fill='#fff'/>
+<a href="../../C2h-1p/" aria-label="C2h1′">
+<g transform='matrix(1 0 0 1 108.429 -213.443)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.74' xlink:href='#d9529f9f4-g0-50'/>
+<use x='205.794' y='339.74' xlink:href='#d9529f9f4-g0-104'/>
+<use x='209.571' y='338.334' xlink:href='#d9529f9f4-g1-49'/>
+<use x='213.806' y='335.522' xlink:href='#d9529f9f4-g2-48'/>
+</g>
+<rect x='306.179' y='118.737' width='17.986' height='7.56' fill='#fff' fill-opacity='0'/>
+</a>
+<g transform='matrix(1 0 0 1 108.429 -213.443)'>
+<use x='217.902' y='338.334' xlink:href='#d9529f9f4-g4-2'/>
+<use x='224.128' y='338.334' xlink:href='#d9529f9f4-g5-55'/>
+</g>
+<path d='M60.988 73.82H73.77V64.258H60.988Z' fill='#fff'/>
+<path d='M60.988 73.82H73.77V64.258H60.988Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/D7/" aria-label="D7">
+<g transform='matrix(1 0 0 1 -134.723 -267.301)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-68'/>
+<use x='203.324' y='339.512' xlink:href='#d9529f9f4-g0-55'/>
+</g>
+<rect x='63.266' y='65.502' width='8.24' height='6.769' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M182.281 73.82H196.824V64.258H182.281Z' fill='#fff'/>
+<path d='M182.281 73.82H196.824V64.258H182.281Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/S14/" aria-label="S14">
+<g transform='matrix(1 0 0 1 -13.431 -267.301)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-83'/>
+<use x='201.913' y='339.512' xlink:href='#d9529f9f4-g0-49'/>
+<use x='205.088' y='339.512' xlink:href='#d9529f9f4-g0-52'/>
+</g>
+<rect x='184.151' y='65.334' width='10.494' height='6.876' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M110.578 73.82H125.664V64.258H110.578Z' fill='#fff'/>
+<path d='M110.578 73.82H125.664V64.258H110.578Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C7v/" aria-label="C7v">
+<g transform='matrix(1 0 0 1 -85.137 -267.301)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.512' xlink:href='#d9529f9f4-g0-55'/>
+<use x='205.794' y='339.512' xlink:href='#d9529f9f4-g0-118'/>
+</g>
+<rect x='112.613' y='65.414' width='10.877' height='6.856' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M212.09 73.82H231.082V64.258H212.09Z' fill='#fff'/>
+<path d='M212.09 73.82H231.082V64.258H212.09Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C7-1p/" aria-label="C71′">
+<g transform='matrix(1 0 0 1 16.377 -267.301)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.512' xlink:href='#d9529f9f4-g0-55'/>
+<use x='206.292' y='338.334' xlink:href='#d9529f9f4-g1-49'/>
+<use x='210.526' y='335.522' xlink:href='#d9529f9f4-g2-48'/>
+</g>
+<rect x='214.127' y='64.879' width='14.707' height='7.392' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M139.047 73.82H167.496V64.258H139.047Z' fill='#fff'/>
+<path d='M139.047 73.82H167.496V64.258H139.047Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../D7-C7/" aria-label="D7(C7)">
+<g transform='matrix(1 0 0 1 -56.668 -267.301)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-68'/>
+<use x='203.324' y='339.512' xlink:href='#d9529f9f4-g0-55'/>
+<use x='206.998' y='338.334' xlink:href='#d9529f9f4-g3-40'/>
+<use x='210.291' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='215.701' y='339.512' xlink:href='#d9529f9f4-g0-55'/>
+<use x='219.375' y='338.334' xlink:href='#d9529f9f4-g3-41'/>
+</g>
+<rect x='141.321' y='65.056' width='23.849' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M23.641 73.82H53.855V64.258H23.641Z' fill='#fff'/>
+<path d='M23.641 73.82H53.855V64.258H23.641Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../S14-C7/" aria-label="S14(C7)">
+<g transform='matrix(1 0 0 1 -172.071 -267.301)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-83'/>
+<use x='201.913' y='339.512' xlink:href='#d9529f9f4-g0-49'/>
+<use x='205.088' y='339.512' xlink:href='#d9529f9f4-g0-52'/>
+<use x='208.762' y='338.334' xlink:href='#d9529f9f4-g3-40'/>
+<use x='212.055' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='217.466' y='339.512' xlink:href='#d9529f9f4-g0-55'/>
+<use x='221.139' y='338.334' xlink:href='#d9529f9f4-g3-41'/>
+</g>
+<rect x='25.511' y='65.056' width='26.02' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M242.773 73.82H273.531V64.258H242.773Z' fill='#fff'/>
+<path d='M242.773 73.82H273.531V64.258H242.773Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C7v-C7/" aria-label="C7v(C7)">
+<g transform='matrix(1 0 0 1 47.061 -267.301)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.512' xlink:href='#d9529f9f4-g0-55'/>
+<use x='205.794' y='339.512' xlink:href='#d9529f9f4-g0-118'/>
+<use x='209.307' y='338.334' xlink:href='#d9529f9f4-g3-40'/>
+<use x='212.6' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='218.01' y='339.512' xlink:href='#d9529f9f4-g0-55'/>
+<use x='221.684' y='338.334' xlink:href='#d9529f9f4-g3-41'/>
+</g>
+<rect x='244.811' y='65.056' width='26.397' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M141.555 19.965H157.613V10.398H141.555Z' fill='#fff'/>
+<path d='M141.555 19.965H157.613V10.398H141.555Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/D7d/" aria-label="D7d">
+<g transform='matrix(1 0 0 1 -54.157 -321.16)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-68'/>
+<use x='203.324' y='339.74' xlink:href='#d9529f9f4-g0-55'/>
+<use x='206.5' y='339.74' xlink:href='#d9529f9f4-g0-100'/>
+</g>
+<rect x='143.832' y='11.643' width='11.278' height='6.997' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M164.398 19.965H184.098V10.398H164.398Z' fill='#fff'/>
+<path d='M164.398 19.965H184.098V10.398H164.398Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../D7-1p/" aria-label="D71′">
+<g transform='matrix(1 0 0 1 -31.315 -321.16)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-68'/>
+<use x='203.324' y='339.512' xlink:href='#d9529f9f4-g0-55'/>
+<use x='206.998' y='338.334' xlink:href='#d9529f9f4-g1-49'/>
+<use x='211.232' y='335.522' xlink:href='#d9529f9f4-g2-48'/>
+</g>
+<rect x='166.674' y='11.02' width='15.174' height='7.392' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M75.359 19.965H96.82V10.398H75.359Z' fill='#fff'/>
+<path d='M75.359 19.965H96.82V10.398H75.359Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../S14-1p/" aria-label="S141′">
+<g transform='matrix(1 0 0 1 -120.356 -321.16)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-83'/>
+<use x='201.913' y='339.512' xlink:href='#d9529f9f4-g0-49'/>
+<use x='205.088' y='339.512' xlink:href='#d9529f9f4-g0-52'/>
+<use x='208.762' y='338.334' xlink:href='#d9529f9f4-g1-49'/>
+<use x='212.996' y='335.522' xlink:href='#d9529f9f4-g2-48'/>
+</g>
+<rect x='77.227' y='11.02' width='17.344' height='7.332' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M190.742 19.965H212.746V10.398H190.742Z' fill='#fff'/>
+<path d='M190.742 19.965H212.746V10.398H190.742Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C7v-1p/" aria-label="C7v1′">
+<g transform='matrix(1 0 0 1 -4.973 -321.16)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='202.618' y='339.512' xlink:href='#d9529f9f4-g0-55'/>
+<use x='205.794' y='339.512' xlink:href='#d9529f9f4-g0-118'/>
+<use x='209.307' y='338.334' xlink:href='#d9529f9f4-g1-49'/>
+<use x='213.541' y='335.522' xlink:href='#d9529f9f4-g2-48'/>
+</g>
+<rect x='192.777' y='11.02' width='17.722' height='7.392' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M36.137 19.965H68.574V10.398H36.137Z' fill='#fff'/>
+<path d='M36.137 19.965H68.574V10.398H36.137Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../D7d-D7/" aria-label="D7d(D7)">
+<g transform='matrix(1 0 0 1 -159.575 -321.16)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-68'/>
+<use x='203.324' y='339.74' xlink:href='#d9529f9f4-g0-55'/>
+<use x='206.5' y='339.74' xlink:href='#d9529f9f4-g0-100'/>
+<use x='210.277' y='338.334' xlink:href='#d9529f9f4-g3-40'/>
+<use x='213.57' y='338.334' xlink:href='#d9529f9f4-g1-68'/>
+<use x='219.686' y='339.512' xlink:href='#d9529f9f4-g0-55'/>
+<use x='223.36' y='338.334' xlink:href='#d9529f9f4-g3-41'/>
+</g>
+<rect x='38.414' y='11.197' width='27.834' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M252.961 19.965H287.16V10.398H252.961Z' fill='#fff'/>
+<path d='M252.961 19.965H287.16V10.398H252.961Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../D7d-S14/" aria-label="D7d(S14)">
+<g transform='matrix(1 0 0 1 57.246 -321.16)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-68'/>
+<use x='203.324' y='339.74' xlink:href='#d9529f9f4-g0-55'/>
+<use x='206.5' y='339.74' xlink:href='#d9529f9f4-g0-100'/>
+<use x='210.277' y='338.334' xlink:href='#d9529f9f4-g3-40'/>
+<use x='213.57' y='338.334' xlink:href='#d9529f9f4-g1-83'/>
+<use x='218.275' y='339.512' xlink:href='#d9529f9f4-g0-49'/>
+<use x='221.451' y='339.512' xlink:href='#d9529f9f4-g0-52'/>
+<use x='225.124' y='338.334' xlink:href='#d9529f9f4-g3-41'/>
+</g>
+<rect x='255.235' y='11.197' width='29.598' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M-28.512 19.965H6.23V10.398H-28.512Z' fill='#fff'/>
+<path d='M-28.512 19.965H6.23V10.398H-28.512Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../D7d-C7v/" aria-label="D7d(C7v)">
+<g transform='matrix(1 0 0 1 -224.227 -321.16)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-68'/>
+<use x='203.324' y='339.74' xlink:href='#d9529f9f4-g0-55'/>
+<use x='206.5' y='339.74' xlink:href='#d9529f9f4-g0-100'/>
+<use x='210.277' y='338.334' xlink:href='#d9529f9f4-g3-40'/>
+<use x='213.57' y='338.334' xlink:href='#d9529f9f4-g1-67'/>
+<use x='218.981' y='339.512' xlink:href='#d9529f9f4-g0-55'/>
+<use x='222.156' y='339.512' xlink:href='#d9529f9f4-g0-118'/>
+<use x='225.669' y='338.334' xlink:href='#d9529f9f4-g3-41'/>
+</g>
+<rect x='-26.238' y='11.197' width='30.143' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M185.719-33.895H208.695V-43.461H185.719Z' fill='#fff'/>
+<path d='M185.719-33.895H208.695V-43.461H185.719Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<g transform='matrix(1 0 0 1 -9.994 -375.019)'>
+<use x='197.208' y='338.334' xlink:href='#d9529f9f4-g1-68'/>
+<use x='203.324' y='339.74' xlink:href='#d9529f9f4-g0-55'/>
+<use x='206.5' y='339.74' xlink:href='#d9529f9f4-g0-100'/>
+<use x='210.277' y='338.334' xlink:href='#d9529f9f4-g1-49'/>
+<use x='214.511' y='335.522' xlink:href='#d9529f9f4-g2-48'/>
+</g>
+</g>
+</svg></div></figure></div>
+<div class="scroll"><table><thead><tr><th class="c-l">subgrp</th><th class="c-l">type</th><th class="c-r">order</th><th class="c-r">conjugates</th><th class="c-l">normal</th><th class="c-l">normalizer</th><th class="c-l">centralizer</th></tr></thead><tbody><tr><td class="c-l"><a aria-label="C1" href="../../../rotation/C1/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟣</mn></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{1}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">1</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C2" href="../../../rotation/C2/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟤</mn></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{2}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">2</td><td class="c-r">7</td><td class="c-l">no</td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="Ci" href="../../../rotation/S2/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">2</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="Cs" href="../../../rotation/C1v/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗌</mi></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{s}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">2</td><td class="c-r">7</td><td class="c-l">no</td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C11′" href="../../C1-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟣</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{1}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">2</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C2(C1)" href="../../C2-C1/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟤</mn></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟣</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{2}}(\mathsf{C_{1}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">2</td><td class="c-r">7</td><td class="c-l">no</td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="Ci(C1)" href="../../S2-C1/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟣</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}}(\mathsf{C_{1}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">2</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="Cs(C1)" href="../../C1v-C1/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗌</mi></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟣</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{s}}(\mathsf{C_{1}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">2</td><td class="c-r">7</td><td class="c-l">no</td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C2h" href="../../../rotation/C2h/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">4</td><td class="c-r">7</td><td class="c-l">no</td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C21′" href="../../C2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟤</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">4</td><td class="c-r">7</td><td class="c-l">no</td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="Ci1′" href="../../S2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">4</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="Cs1′" href="../../C1v-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗌</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{s}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">4</td><td class="c-r">7</td><td class="c-l">no</td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C2h(C2)" href="../../C2h-C2/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟤</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}}(\mathsf{C_{2}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">4</td><td class="c-r">7</td><td class="c-l">no</td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C2h(Ci)" href="../../C2h-S2/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mi>𝗂</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}}(\mathsf{C_{i}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">4</td><td class="c-r">7</td><td class="c-l">no</td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C2h(Cs)" href="../../C2h-C1v/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mi>𝗌</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}}(\mathsf{C_{s}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">4</td><td class="c-r">7</td><td class="c-l">no</td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C7" href="../../../rotation/C7/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟩</mn></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{7}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">7</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="S141′" href="../../S14-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟣𝟦</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{S_{14}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">8</td><td class="c-r">7</td><td class="c-l">no</td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="S14" href="../../../rotation/S14/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟣𝟦</mn></msub></mrow><annotation encoding="application/x-tex">\mathsf{S_{14}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">14</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="S141′" href="../../S14-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟣𝟦</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{S_{14}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C7v" href="../../../rotation/C7v/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟩</mn><mi>𝗏</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{7v}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">14</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="Ci1′" href="../../S2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="D7" href="../../../rotation/D7/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mn>𝟩</mn></msub></mrow><annotation encoding="application/x-tex">\mathsf{D_{7}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">14</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="Ci1′" href="../../S2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C71′" href="../../C7-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟩</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{7}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">14</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="S141′" href="../../S14-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟣𝟦</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{S_{14}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="S14(C7)" href="../../S14-C7/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟣𝟦</mn></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟩</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{S_{14}}(\mathsf{C_{7}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">14</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="S141′" href="../../S14-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟣𝟦</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{S_{14}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C7v(C7)" href="../../C7v-C7/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟩</mn><mi>𝗏</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟩</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{7v}}(\mathsf{C_{7}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">14</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="Ci1′" href="../../S2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="D7(C7)" href="../../D7-C7/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mn>𝟩</mn></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟩</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{D_{7}}(\mathsf{C_{7}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">14</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="Ci1′" href="../../S2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="D7d" href="../../../rotation/D7d/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">28</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="Ci1′" href="../../S2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="S141′" href="../../S14-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟣𝟦</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{S_{14}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">28</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="S141′" href="../../S14-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟣𝟦</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{S_{14}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C7v1′" href="../../C7v-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟩</mn><mi>𝗏</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{7v}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">28</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="Ci1′" href="../../S2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="D71′" href="../../D7-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mn>𝟩</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">28</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="Ci1′" href="../../S2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="D7d(S14)" href="../../D7d-S14/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖲</mi><mn>𝟣𝟦</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}}(\mathsf{S_{14}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">28</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="Ci1′" href="../../S2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="D7d(C7v)" href="../../D7d-C7v/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mrow><mn>𝟩</mn><mi>𝗏</mi></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}}(\mathsf{C_{7v}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">28</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="Ci1′" href="../../S2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="D7d(D7)" href="../../D7d-D7/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖣</mi><mn>𝟩</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}}(\mathsf{D_{7}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">28</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="Ci1′" href="../../S2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">56</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="D7d1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖣</mi><mrow><mn>𝟩</mn><mi>𝖽</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{D_{7d}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="Ci1′" href="../../S2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}1'}</annotation></semantics></math></a></td></tr></tbody></table></div>
+</main>
+<nav class="pager"><a class="prev" href="../clebsch_gordan/">← <span class="no">2.6</span> Clebsch–Gordan coefficients</a><a class="next" href="../subduction_o3/"><span class="no">4.1</span> Subduction from <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝖮</mi><mo stretchy="false">(</mo><mn>𝟥</mn><mo stretchy="false">)</mo><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{O(3)1'}</annotation></semantics></math> →</a></nav>
+<footer class="foot">Point Group Atlas &middot; <a href="https://github.com/valbert4/point-group-atlas">GitHub</a> &middot; <a class="report" href="https://github.com/valbert4/point-group-atlas/issues/new?template=error.yml&amp;title=D7d-1p%2C%203.1%20Subgroup%20lattice%3A%20&amp;address=https%3A%2F%2Fvalbert4.github.io%2Fpoint-group-atlas%2Fmagnetic%2FD7d-1p%2Fsubgroups%2F&amp;version=119ff5dce05d8e7a8a172d2a70ee3e30e6168033" target="_blank" rel="noopener">Report an error</a></footer>
+</body>
+</html>

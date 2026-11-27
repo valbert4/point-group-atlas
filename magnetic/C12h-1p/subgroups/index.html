@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.1 Subgroup lattice · C12h-1p · Point Group Atlas</title>
+<meta name="description" content="Exact tables of the 98 point groups, 116 double point groups and 270 magnetic point groups: characters, Clebsch–Gordan coefficients and bases, in JSON, GAP, Wolfram Language and SymPy.">
+<link rel="canonical" href="https://valbert4.github.io/point-group-atlas/magnetic/C12h-1p/subgroups/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Point Group Atlas">
+<meta property="og:title" content="3.1 Subgroup lattice · C12h-1p · Point Group Atlas">
+<meta property="og:description" content="Exact tables of the 98 point groups, 116 double point groups and 270 magnetic point groups: characters, Clebsch–Gordan coefficients and bases, in JSON, GAP, Wolfram Language and SymPy.">
+<meta property="og:url" content="https://valbert4.github.io/point-group-atlas/magnetic/C12h-1p/subgroups/">
+<meta property="og:image" content="https://valbert4.github.io/point-group-atlas/static/social.png?v=f43cd83b17">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The mark and the title of the Point Group Atlas">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+try { var t = localStorage.getItem("atlas-theme");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+} catch (e) {}
+</script>
+<link rel="icon" type="image/svg+xml" href="../../../static/favicon-magnetic.svg">
+<link rel="stylesheet" href="../../../static/site.css?v=5308b4558b">
+<script src="../../../static/site.js?v=333a2d9dca" defer></script>
+</head>
+<body class="volume-magnetic">
+<header class="bar"><a class="atlas" href="../../../"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path class="c2" d="M55.55 47.7L95.94 47.7A46 46 0 0 0 84.11 19.14L55.55 47.7Z"/><path class="c0" d="M47.7 44.45L47.7 4.06A46 46 0 0 0 19.14 15.89L47.7 44.45Z"/><path class="c3" d="M44.45 52.3L4.06 52.3A46 46 0 0 0 15.89 80.86L44.45 52.3Z"/><path class="c1" d="M52.3 55.55L52.3 95.94A46 46 0 0 0 80.86 84.11L52.3 55.55Z"/><path class="c2 l" d="M52.3 44.45L80.86 15.89A46 46 0 0 0 52.3 4.06L52.3 44.45Z"/><path class="c0 l" d="M44.45 47.7L15.89 19.14A46 46 0 0 0 4.06 47.7L44.45 47.7Z"/><path class="c3 l" d="M47.7 55.55L19.14 84.11A46 46 0 0 0 47.7 95.94L47.7 55.55Z"/><path class="c1 l" d="M55.55 52.3L84.11 80.86A46 46 0 0 0 95.94 52.3L55.55 52.3Z"/></svg><img class="wordmark"
+ src="../../../static/wordmark.svg" alt="Point Group Atlas" width="816" height="91"></a><a class="volume" href="../../">Volume III: magnetic point groups</a>
+<span class="tools"><button type="button" class="daynight" title="Day or night"
+ aria-label="Switch between day and night">&#x1F312;</button></span></header>
+<nav class="crumbs" aria-label="breadcrumbs"><a href="../../../">Point Group Atlas</a> › <a href="../../">Volume III</a> › <a href="../../#family-Cnh">C<sub><i>N</i>h</sub></a> › <a href="../"><span class="grp">C<sub>12h</sub>1′</span></a> › <span><span class="no">3</span> Subgroups</span></nav>
+<nav class="tabs" aria-label="parts and sections"><ul class="parts"><li><a href="../identification/"><span class="no">1</span> The group</a></li><li><a href="../irreps/"><span class="no">2</span> Representations</a></li><li class="on"><a href="./"><span class="no">3</span> Subgroups</a></li><li><a href="../subduction_o3/"><span class="no">4</span> Angular momentum</a></li><li><a href="../multipoles/"><span class="no">5</span> Tensors</a></li></ul><ul class="sections"><li class="on"><a href="./"><span class="no">3.1</span> Subgroup lattice</a></li></ul></nav>
+<main>
+<h1 id="s:subgroups"><span class="no">3.1</span> Subgroup lattice <a class="mark-link" href="#s:subgroups" aria-label="link to this heading">¶</a></h1>
+<p class="data">Data: <code>subgroup_lattice</code> in <a class="dl" href="https://github.com/valbert4/point-group-atlas/raw/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/json/C12h-1p.json" data-raw="https://raw.githubusercontent.com/valbert4/point-group-atlas/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/json/C12h-1p.json" download="C12h-1p.json">JSON</a> · <a class="dl" href="https://github.com/valbert4/point-group-atlas/raw/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/gap/C12h-1p.g" data-raw="https://raw.githubusercontent.com/valbert4/point-group-atlas/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/gap/C12h-1p.g" download="C12h-1p.g">GAP</a> · <a class="dl" href="https://github.com/valbert4/point-group-atlas/raw/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/wolfram/C12h-1p.wl" data-raw="https://raw.githubusercontent.com/valbert4/point-group-atlas/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/wolfram/C12h-1p.wl" download="C12h-1p.wl">Wolfram Language</a> · <a class="dl" href="https://github.com/valbert4/point-group-atlas/raw/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/sympy/C12h-1p.py" data-raw="https://raw.githubusercontent.com/valbert4/point-group-atlas/119ff5dce05d8e7a8a172d2a70ee3e30e6168033/magnetic/data/sympy/C12h-1p.py" download="C12h-1p.py">SymPy</a></p>
+<p>Conventions: sections <a href="../../../rotation/conventions/15/#conv.15">15</a> and <a href="../../conventions/36/#conv.36">36</a>. The diagram shows the conjugacy classes of subgroups, each joined to the classes of its maximal subgroups, and the orders increase upward. <span class="anchor" id="n:index.conjugates.c"></span>A normal subgroup is framed, and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo lspace="0em" rspace="0em">×</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">{\times}c</annotation></semantics></math> is the number <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">c &gt; 1</annotation></semantics></math> of conjugate subgroups. The table lists the classes by order, then by magnetic type, those of one symbol together. <span class="anchor" id="n:head.subgroup"></span><span class="anchor" id="n:head.magnetic.type"></span><span class="anchor" id="n:head.order"></span><span class="anchor" id="n:head.conjugates"></span><span class="anchor" id="n:head.normal"></span>A row gives the representative of a class of subgroups (subgrp), its magnetic type (type), its order, the number of subgroups in the class (conjugates) and whether the representative is normal. <span class="anchor" id="n:head.normalizer"></span><span class="anchor" id="n:head.centralizer"></span>It also gives its normalizer and its centralizer in <span class="nowrap"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math>,</span> by their classes.</p>
+<div class="center"><figure class="diagram"><div class="scroll"><svg class="diagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-28.715 -43.66 482.239 520.207" width="772" height="832">
+<defs>
+<path id='dc653ada3-g0-49' d='M1.919-4.047H1.787C1.399-3.688 .909-3.664 .55-3.652V-3.276C.783-3.282 1.082-3.294 1.381-3.413V-.377H.586V0H2.714V-.377H1.919V-4.047Z'/>
+<path id='dc653ada3-g0-50' d='M1.692-.46C1.62-.46 1.548-.454 1.476-.454H.795L1.722-1.273C1.829-1.369 2.122-1.59 2.236-1.686C2.499-1.925 2.851-2.236 2.851-2.756C2.851-3.431 2.349-4.047 1.494-4.047C.861-4.047 .466-3.706 .263-3.096L.544-2.744C.681-3.246 .891-3.634 1.411-3.634C1.913-3.634 2.295-3.282 2.295-2.744C2.295-2.248 2.002-1.967 1.644-1.626C1.524-1.506 1.201-1.237 1.076-1.118C.903-.962 .49-.562 .317-.412V0H2.851V-.46H1.692Z'/>
+<path id='dc653ada3-g0-51' d='M.598-3.067C.843-3.545 1.273-3.676 1.56-3.676C1.913-3.676 2.176-3.473 2.176-3.132C2.176-2.815 1.961-2.427 1.506-2.349C1.476-2.343 1.453-2.343 1.058-2.313V-1.919H1.524C2.092-1.919 2.301-1.47 2.301-1.094C2.301-.628 2.014-.269 1.548-.269C1.124-.269 .64-.472 .341-.855L.263-.466C.61-.078 1.094 .126 1.56 .126C2.343 .126 2.905-.46 2.905-1.088C2.905-1.578 2.511-1.973 2.038-2.11C2.493-2.343 2.726-2.744 2.726-3.132C2.726-3.64 2.206-4.047 1.566-4.047C1.04-4.047 .604-3.772 .353-3.413L.598-3.067Z'/>
+<path id='dc653ada3-g0-52' d='M2.367-.998H2.989V-1.393H2.367V-3.921H1.775L.179-1.393V-.998H1.853V0H2.367V-.998ZM.687-1.393C.867-1.674 1.895-3.27 1.895-3.628V-1.393H.687Z'/>
+<path id='dc653ada3-g0-54' d='M2.624-3.927C2.301-4.047 2.074-4.047 1.961-4.047C1.052-4.047 .263-3.192 .263-1.931C.263-.311 .992 .126 1.596 .126C2.08 .126 2.331-.102 2.517-.293C2.899-.699 2.905-1.124 2.905-1.333C2.905-2.116 2.481-2.768 1.901-2.768C1.315-2.768 .998-2.463 .825-2.289C.903-3.108 1.321-3.676 1.967-3.676C2.086-3.676 2.325-3.664 2.624-3.551V-3.927ZM.831-1.315C.831-1.351 .831-1.441 .837-1.47C.837-1.877 1.094-2.373 1.626-2.373C2.355-2.373 2.355-1.536 2.355-1.333C2.355-1.106 2.355-.855 2.194-.604C2.05-.389 1.871-.269 1.596-.269C.962-.269 .861-1.052 .831-1.315Z'/>
+<path id='dc653ada3-g0-67' d='M3.7-.729C3.282-.472 3.09-.359 2.493-.359C1.566-.359 1.004-1.225 1.004-2.086C1.004-2.971 1.62-3.802 2.493-3.802C2.887-3.802 3.294-3.676 3.569-3.467L3.664-4.011C3.246-4.166 2.911-4.214 2.475-4.214C1.291-4.214 .406-3.234 .406-2.08C.406-.849 1.345 .06 2.511 .06C3.096 .06 3.341-.06 3.736-.275L3.7-.729Z'/>
+<path id='dc653ada3-g0-83' d='M2.953-3.981C2.57-4.178 2.23-4.274 1.787-4.274C.885-4.274 .353-3.664 .353-3.09C.353-2.845 .43-2.558 .723-2.283C.986-2.038 1.261-1.979 1.632-1.889C2.134-1.769 2.271-1.739 2.445-1.56C2.558-1.447 2.654-1.279 2.654-1.076C2.654-.705 2.319-.323 1.739-.323C1.399-.323 .849-.424 .377-.825L.281-.287C.58-.114 1.076 .126 1.745 .126C2.576 .126 3.168-.478 3.168-1.148C3.168-1.632 2.887-1.907 2.768-2.032C2.517-2.277 2.242-2.343 1.781-2.451C1.417-2.534 1.225-2.582 1.082-2.72C1.004-2.798 .867-2.935 .867-3.162C.867-3.497 1.201-3.844 1.781-3.844C2.236-3.844 2.552-3.7 2.857-3.443L2.953-3.981Z'/>
+<path id='dc653ada3-g0-104' d='M2.78-1.769C2.78-2.236 2.642-2.714 1.907-2.714C1.393-2.714 1.118-2.415 .998-2.289V-4.148H.496V0H1.016V-1.453C1.016-1.847 1.184-2.319 1.644-2.319C2.26-2.319 2.26-1.901 2.26-1.728V0H2.78V-1.769Z'/>
+<path id='dc653ada3-g0-105' d='M1.052-4.101H.448V-3.497H1.052V-4.101ZM1.004-2.654H.502V0H1.004V-2.654Z'/>
+<path id='dc653ada3-g0-115' d='M2.182-2.558C1.775-2.726 1.476-2.744 1.261-2.744C1.112-2.744 .209-2.744 .209-1.949C.209-1.668 .365-1.512 .442-1.441C.652-1.231 .903-1.184 1.219-1.124C1.5-1.07 1.823-1.01 1.823-.723C1.823-.347 1.327-.347 1.243-.347C.861-.347 .502-.484 .263-.652L.179-.203C.383-.102 .747 .06 1.243 .06C1.512 .06 1.775 .018 1.997-.143C2.218-.311 2.289-.574 2.289-.777C2.289-.885 2.277-1.118 2.026-1.345C1.805-1.542 1.59-1.584 1.303-1.638C.95-1.704 .675-1.757 .675-2.02C.675-2.361 1.112-2.361 1.201-2.361C1.542-2.361 1.805-2.289 2.104-2.134L2.182-2.558Z'/>
+<use id='dc653ada3-g1-49' xlink:href='#dc653ada3-g0-49' transform='scale(1.333)'/>
+<use id='dc653ada3-g1-67' xlink:href='#dc653ada3-g0-67' transform='scale(1.333)'/>
+<use id='dc653ada3-g1-83' xlink:href='#dc653ada3-g0-83' transform='scale(1.333)'/>
+<path id='dc653ada3-g2-48' d='M1.877-2.809C1.919-2.899 1.931-2.965 1.931-3.001C1.931-3.186 1.763-3.341 1.566-3.341C1.327-3.341 1.255-3.132 1.231-3.049L.395-.49C.383-.454 .365-.406 .365-.383C.365-.281 .604-.233 .61-.233C.664-.233 .687-.287 .711-.335L1.877-2.809Z'/>
+<path id='dc653ada3-g3-40' d='M2.654 1.993C2.718 1.993 2.813 1.993 2.813 1.897C2.813 1.865 2.805 1.857 2.702 1.753C1.61 .725 1.339-.757 1.339-1.993C1.339-4.288 2.287-5.364 2.694-5.731C2.805-5.834 2.813-5.842 2.813-5.882S2.782-5.978 2.702-5.978C2.574-5.978 2.176-5.571 2.112-5.499C1.044-4.384 .821-2.949 .821-1.993C.821-.207 1.57 1.227 2.654 1.993Z'/>
+<path id='dc653ada3-g3-41' d='M2.463-1.993C2.463-2.75 2.335-3.658 1.841-4.599C1.451-5.332 .725-5.978 .582-5.978C.502-5.978 .478-5.922 .478-5.882C.478-5.85 .478-5.834 .574-5.738C1.69-4.678 1.945-3.22 1.945-1.993C1.945 .295 .996 1.379 .59 1.745C.486 1.849 .478 1.857 .478 1.897S.502 1.993 .582 1.993C.709 1.993 1.108 1.586 1.172 1.514C2.24 .399 2.463-1.036 2.463-1.993Z'/>
+</defs>
+<g id='dc653ada3-page1'>
+<path d='M212.355 471.563L336.23 414.871' stroke='#808080' fill='none' stroke-width='.399'/>
+<path d='M212.355 471.563L166.434 414.871' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M212.355 471.563L286.34 414.871' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M212.355 471.563L144.891 414.871' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M212.355 471.563L194.781 414.871' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M212.355 471.563L62.684 414.871' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M212.355 471.563L-14.988 414.871' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M212.355 471.563L39.156 358.176' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M336.23 414.871L301.648 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M336.23 414.871L445.648 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M166.434 414.871L445.648 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M286.34 414.871L445.648 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M336.23 414.871L330.563 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M336.23 414.871L387.539 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M144.891 414.871L387.539 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M194.781 414.871L387.539 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M166.434 414.871L146.023 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M144.891 414.871L146.023 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M62.684 414.871L146.023 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M286.34 414.871L222.559 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M144.891 414.871L222.559 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M-14.988 414.871L222.559 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M336.23 414.871L357.207 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M336.23 414.871L85.93 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M62.684 414.871L85.93 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M166.434 414.871L176.07 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M194.781 414.871L176.07 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M-14.988 414.871L176.07 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M286.34 414.871L273.586 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M194.781 414.871L273.586 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M62.684 414.871L273.586 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M336.23 414.871L417.301 301.484' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M336.23 414.871L209.805 244.789' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M39.156 358.176L209.805 244.789' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M286.34 414.871L152.543 244.789' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M39.156 358.176L72.32 244.789' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M194.781 414.871L102.652 244.789' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M62.684 414.871L33.77 244.789' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M39.156 358.176L33.77 244.789' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M-14.988 414.871L-2.23 244.789' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M39.156 358.176L-2.23 244.789' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M301.648 301.484L353.805 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M445.648 301.484L353.805 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M330.563 301.484L353.805 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M301.648 301.484L377.898 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M387.539 301.484L377.898 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M357.207 301.484L377.898 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M445.648 301.484L328.012 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M387.539 301.484L328.012 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M146.023 301.484L328.012 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M222.559 301.484L328.012 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M176.07 301.484L328.012 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M273.586 301.484L328.012 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M330.563 301.484L403.129 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M387.539 301.484L403.129 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M417.301 301.484L403.129 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M301.648 301.484L293.145 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M85.93 301.484L293.145 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M417.301 301.484L293.145 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M445.648 301.484L436.012 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M357.207 301.484L436.012 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M417.301 301.484L436.012 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M330.563 301.484L236.734 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M357.207 301.484L236.734 188.098' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M301.648 301.484L153.109 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M209.805 244.789L153.109 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M129.301 244.789L260.543 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M152.543 244.789L260.543 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M209.805 244.789L200.449 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M209.805 244.789L176.922 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M72.32 244.789L176.922 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M102.652 244.789L176.922 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M129.301 244.789L84.793 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M72.32 244.789L84.793 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M33.77 244.789L84.793 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M222.559 301.484L57.863 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M152.543 244.789L57.863 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M72.32 244.789L57.863 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M-2.23 244.789L57.863 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M357.207 301.484L230.496 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M209.805 244.789L230.496 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M85.93 301.484L-13.004 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M209.805 244.789L-13.004 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M33.77 244.789L-13.004 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M-2.23 244.789L-13.004 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M129.301 244.789L24.699 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M102.652 244.789L24.699 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M-2.23 244.789L24.699 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M273.586 301.484L121.078 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M152.543 244.789L121.078 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M102.652 244.789L121.078 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M33.77 244.789L121.078 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M209.805 244.789L303.633 131.402' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M353.805 188.098L421.84 74.707' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M377.898 188.098L421.84 74.707' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M328.012 188.098L421.84 74.707' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M403.129 188.098L421.84 74.707' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M293.145 188.098L421.84 74.707' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M436.012 188.098L421.84 74.707' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M236.734 188.098L421.84 74.707' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M353.805 188.098L131 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M153.109 131.402L131 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M260.543 131.402L131 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M200.449 131.402L131 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M377.898 188.098L221.992 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M153.109 131.402L221.992 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M176.922 131.402L221.992 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M230.496 131.402L221.992 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M260.543 131.402L92.164 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M176.922 131.402L92.164 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M84.793 131.402L92.164 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M57.863 131.402L92.164 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M-13.004 131.402L92.164 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M24.699 131.402L92.164 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M121.078 131.402L92.164 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M403.129 188.098L250.34 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M200.449 131.402L250.34 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M176.922 131.402L250.34 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M303.633 131.402L250.34 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M153.109 131.402L33.77 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M-13.004 131.402L33.77 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M303.633 131.402L33.77 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M436.012 188.098L286.625 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M260.543 131.402L286.625 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M230.496 131.402L286.625 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M303.633 131.402L286.625 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M200.449 131.402L-10.168 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M230.496 131.402L-10.168 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M-13.004 131.402L-10.168 18.016' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M421.84 74.707L212.355-38.68' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M131 18.016L212.355-38.68' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M221.992 18.016L212.355-38.68' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M92.164 18.016L212.355-38.68' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M250.34 18.016L212.355-38.68' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M33.77 18.016L212.355-38.68' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M286.625 18.016L212.355-38.68' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M-10.168 18.016L212.355-38.68' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M206.32 476.348H218.391V466.781H206.32Z' fill='#fff'/>
+<path d='M206.32 476.348H218.391V466.781H206.32Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C1/" aria-label="C1">
+<g transform='matrix(1 0 0 1 -4.542 1.993)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-49'/>
+</g>
+<rect x='208.355' y='467.938' width='7.582' height='6.796' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M330.195 419.652H342.266V410.09H330.195Z' fill='#fff'/>
+<path d='M330.195 419.652H342.266V410.09H330.195Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C2/" aria-label="C2">
+<g transform='matrix(1 0 0 1 119.333 -54.701)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-50'/>
+</g>
+<rect x='332.23' y='411.244' width='7.72' height='6.796' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M161.227 419.652H171.641V410.09H161.227Z' fill='#fff'/>
+<path d='M161.227 419.652H171.641V410.09H161.227Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/S2/" aria-label="S2">
+<g transform='matrix(1 0 0 1 -49.634 -54.701)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.915' xlink:href='#dc653ada3-g0-105'/>
+</g>
+<rect x='163.263' y='411.244' width='5.92' height='6.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M280.676 419.652H292.008V410.09H280.676Z' fill='#fff'/>
+<path d='M280.676 419.652H292.008V410.09H280.676Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C1v/" aria-label="C1v">
+<g transform='matrix(1 0 0 1 69.814 -54.701)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.56' xlink:href='#dc653ada3-g0-115'/>
+</g>
+<rect x='282.711' y='411.244' width='7.158' height='6.675' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M135.395 419.652H154.387V410.09H135.395Z' fill='#fff'/>
+<path d='M135.395 419.652H154.387V410.09H135.395Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C1-1p/" aria-label="C11′">
+<g transform='matrix(1 0 0 1 -75.467 -54.701)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-49'/>
+<use x='221.439' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='225.674' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='137.43' y='410.709' width='14.707' height='7.332' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M180.906 419.652H208.652V410.09H180.906Z' fill='#fff'/>
+<path d='M180.906 419.652H208.652V410.09H180.906Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C2-C1/" aria-label="C2(C1)">
+<g transform='matrix(1 0 0 1 -29.952 -54.701)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-50'/>
+<use x='221.439' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='224.733' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='230.143' y='472.741' xlink:href='#dc653ada3-g0-49'/>
+<use x='233.817' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='182.945' y='410.885' width='23.382' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M49.641 419.652H75.727V410.09H49.641Z' fill='#fff'/>
+<path d='M49.641 419.652H75.727V410.09H49.641Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../S2-C1/" aria-label="S2(C1)">
+<g transform='matrix(1 0 0 1 -161.218 -54.701)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.915' xlink:href='#dc653ada3-g0-105'/>
+<use x='219.779' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='223.072' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='228.483' y='472.741' xlink:href='#dc653ada3-g0-49'/>
+<use x='232.156' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='51.679' y='410.885' width='21.722' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M-28.488 419.652H-1.484V410.09H-28.488Z' fill='#fff'/>
+<path d='M-28.488 419.652H-1.484V410.09H-28.488Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C1v-C1/" aria-label="C1v(C1)">
+<g transform='matrix(1 0 0 1 -239.349 -54.701)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.56' xlink:href='#dc653ada3-g0-115'/>
+<use x='220.698' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='223.992' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='229.402' y='472.741' xlink:href='#dc653ada3-g0-49'/>
+<use x='233.076' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='-26.451' y='410.885' width='22.641' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M33.121 362.957H45.191V353.395H33.121Z' fill='#fff'/>
+<path d='M33.121 362.957H45.191V353.395H33.121Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C3/" aria-label="C3">
+<g transform='matrix(1 0 0 1 -177.741 -111.395)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-51'/>
+</g>
+<rect x='35.156' y='354.55' width='7.773' height='6.922' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M295.609 306.266H307.684V296.699H295.609Z' fill='#fff'/>
+<path d='M295.609 306.266H307.684V296.699H295.609Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C4/" aria-label="C4">
+<g transform='matrix(1 0 0 1 84.75 -168.088)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-52'/>
+</g>
+<rect x='297.647' y='297.857' width='7.857' height='6.796' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M437.973 306.266H453.324V296.699H437.973Z' fill='#fff'/>
+<path d='M437.973 306.266H453.324V296.699H437.973Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C2h/" aria-label="C2h">
+<g transform='matrix(1 0 0 1 227.112 -168.088)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-50'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+</g>
+<rect x='440.009' y='297.857' width='10.824' height='7.025' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M324.879 306.266H336.246V296.699H324.879Z' fill='#fff'/>
+<path d='M324.879 306.266H336.246V296.699H324.879Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/S4/" aria-label="S4">
+<g transform='matrix(1 0 0 1 114.017 -168.088)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-83'/>
+<use x='217.06' y='472.741' xlink:href='#dc653ada3-g0-52'/>
+</g>
+<rect x='326.747' y='297.777' width='7.319' height='6.876' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M378.043 306.266H397.035V296.699H378.043Z' fill='#fff'/>
+<path d='M378.043 306.266H397.035V296.699H378.043Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C2-1p/" aria-label="C21′">
+<g transform='matrix(1 0 0 1 167.182 -168.088)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-50'/>
+<use x='221.439' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='225.674' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='380.079' y='297.322' width='14.707' height='7.332' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M137.359 306.266H154.688V296.699H137.359Z' fill='#fff'/>
+<path d='M137.359 306.266H154.688V296.699H137.359Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../S2-1p/" aria-label="S21′">
+<g transform='matrix(1 0 0 1 -73.503 -168.088)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.915' xlink:href='#dc653ada3-g0-105'/>
+<use x='219.779' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='224.013' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='139.394' y='297.322' width='13.047' height='7.505' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M213.434 306.266H231.684V296.699H213.434Z' fill='#fff'/>
+<path d='M213.434 306.266H231.684V296.699H213.434Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C1v-1p/" aria-label="C1v1′">
+<g transform='matrix(1 0 0 1 2.574 -168.088)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.56' xlink:href='#dc653ada3-g0-115'/>
+<use x='220.698' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='224.933' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='215.471' y='297.322' width='13.966' height='7.21' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M343.336 306.266H371.078V296.699H343.336Z' fill='#fff'/>
+<path d='M343.336 306.266H371.078V296.699H343.336Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C4-C2/" aria-label="C4(C2)">
+<g transform='matrix(1 0 0 1 132.475 -168.088)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-52'/>
+<use x='221.439' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='224.733' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='230.143' y='472.741' xlink:href='#dc653ada3-g0-50'/>
+<use x='233.817' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='345.372' y='297.498' width='23.382' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M70.418 306.266H101.441V296.699H70.418Z' fill='#fff'/>
+<path d='M70.418 306.266H101.441V296.699H70.418Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C2h-C2/" aria-label="C2h(C2)">
+<g transform='matrix(1 0 0 1 -140.444 -168.088)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-50'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='224.719' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='228.012' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='233.422' y='472.741' xlink:href='#dc653ada3-g0-50'/>
+<use x='237.096' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='72.453' y='297.498' width='26.662' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M161.391 306.266H190.754V296.699H161.391Z' fill='#fff'/>
+<path d='M161.391 306.266H190.754V296.699H161.391Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C2h-S2/" aria-label="C2h(S2)">
+<g transform='matrix(1 0 0 1 -49.471 -168.088)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-50'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='224.719' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='228.012' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='233.422' y='472.915' xlink:href='#dc653ada3-g0-105'/>
+<use x='235.436' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='163.426' y='297.498' width='25.001' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M258.441 306.266H288.727V296.699H258.441Z' fill='#fff'/>
+<path d='M258.441 306.266H288.727V296.699H258.441Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C2h-C1v/" aria-label="C2h(C1v)">
+<g transform='matrix(1 0 0 1 47.582 -168.088)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-50'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='224.719' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='228.012' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='233.422' y='472.56' xlink:href='#dc653ada3-g0-115'/>
+<use x='236.355' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='260.479' y='297.498' width='25.921' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M403.785 306.266H430.82V296.699H403.785Z' fill='#fff'/>
+<path d='M403.785 306.266H430.82V296.699H403.785Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../S4-C2/" aria-label="S4(C2)">
+<g transform='matrix(1 0 0 1 192.923 -168.088)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-83'/>
+<use x='217.06' y='472.741' xlink:href='#dc653ada3-g0-52'/>
+<use x='220.734' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='224.027' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='229.437' y='472.741' xlink:href='#dc653ada3-g0-50'/>
+<use x='233.111' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='405.653' y='297.498' width='22.844' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M203.766 249.57H215.84V240.008H203.766Z' fill='#fff'/>
+<path d='M203.766 249.57H215.84V240.008H203.766Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C6/" aria-label="C6">
+<g transform='matrix(1 0 0 1 -7.093 -224.782)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-54'/>
+</g>
+<rect x='205.804' y='241.163' width='7.773' height='6.922' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M123.617 249.57H134.984V240.008H123.617Z' fill='#fff'/>
+<path d='M123.617 249.57H134.984V240.008H123.617Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/S6/" aria-label="S6">
+<g transform='matrix(1 0 0 1 -87.245 -224.782)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-83'/>
+<use x='217.06' y='472.741' xlink:href='#dc653ada3-g0-54'/>
+</g>
+<rect x='125.485' y='241.083' width='7.235' height='7.002' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M144.867 249.57H160.219V240.008H144.867Z' fill='#fff'/>
+<path d='M144.867 249.57H160.219V240.008H144.867Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C3h/" aria-label="C3h">
+<g transform='matrix(1 0 0 1 -65.994 -224.782)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-51'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+</g>
+<rect x='146.903' y='241.163' width='10.824' height='7.15' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M62.824 249.57H81.816V240.008H62.824Z' fill='#fff'/>
+<path d='M62.824 249.57H81.816V240.008H62.824Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C3-1p/" aria-label="C31′">
+<g transform='matrix(1 0 0 1 -148.035 -224.782)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-51'/>
+<use x='221.439' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='225.674' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='64.863' y='240.628' width='14.707' height='7.457' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M88.781 249.57H116.523V240.008H88.781Z' fill='#fff'/>
+<path d='M88.781 249.57H116.523V240.008H88.781Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C6-C3/" aria-label="C6(C3)">
+<g transform='matrix(1 0 0 1 -122.08 -224.782)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-54'/>
+<use x='221.439' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='224.733' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='230.143' y='472.741' xlink:href='#dc653ada3-g0-51'/>
+<use x='233.817' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='90.818' y='240.804' width='23.382' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M20.25 249.57H47.289V240.008H20.25Z' fill='#fff'/>
+<path d='M20.25 249.57H47.289V240.008H20.25Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../S6-C3/" aria-label="S6(C3)">
+<g transform='matrix(1 0 0 1 -190.61 -224.782)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-83'/>
+<use x='217.06' y='472.741' xlink:href='#dc653ada3-g0-54'/>
+<use x='220.734' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='224.027' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='229.437' y='472.741' xlink:href='#dc653ada3-g0-51'/>
+<use x='233.111' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='22.12' y='240.804' width='22.844' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M-17.742 249.57H13.281V240.008H-17.742Z' fill='#fff'/>
+<path d='M-17.742 249.57H13.281V240.008H-17.742Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C3h-C3/" aria-label="C3h(C3)">
+<g transform='matrix(1 0 0 1 -228.603 -224.782)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-51'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='224.719' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='228.012' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='233.422' y='472.741' xlink:href='#dc653ada3-g0-51'/>
+<use x='237.096' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='-15.706' y='240.804' width='26.662' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M346.129 192.879H361.48V183.313H346.129Z' fill='#fff'/>
+<path d='M346.129 192.879H361.48V183.313H346.129Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C4h/" aria-label="C4h">
+<g transform='matrix(1 0 0 1 135.269 -281.476)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-52'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+</g>
+<rect x='348.166' y='184.469' width='10.824' height='7.025' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M368.406 192.879H387.395V183.313H368.406Z' fill='#fff'/>
+<path d='M368.406 192.879H387.395V183.313H368.406Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C4-1p/" aria-label="C41′">
+<g transform='matrix(1 0 0 1 157.544 -281.476)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-52'/>
+<use x='221.439' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='225.674' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='370.441' y='183.934' width='14.707' height='7.332' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M316.875 192.879H339.145V183.313H316.875Z' fill='#fff'/>
+<path d='M316.875 192.879H339.145V183.313H316.875Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C2h-1p/" aria-label="C2h1′">
+<g transform='matrix(1 0 0 1 106.014 -281.476)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-50'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='224.719' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='228.953' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='318.911' y='183.934' width='17.986' height='7.56' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M393.984 192.879H412.273V183.313H393.984Z' fill='#fff'/>
+<path d='M393.984 192.879H412.273V183.313H393.984Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../S4-1p/" aria-label="S41′">
+<g transform='matrix(1 0 0 1 183.125 -281.476)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-83'/>
+<use x='217.06' y='472.741' xlink:href='#dc653ada3-g0-52'/>
+<use x='220.734' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='224.968' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='395.855' y='183.934' width='14.169' height='7.332' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M277.633 192.879H308.656V183.313H277.633Z' fill='#fff'/>
+<path d='M277.633 192.879H308.656V183.313H277.633Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C4h-C4/" aria-label="C4h(C4)">
+<g transform='matrix(1 0 0 1 66.771 -281.476)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-52'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='224.719' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='228.012' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='233.422' y='472.741' xlink:href='#dc653ada3-g0-52'/>
+<use x='237.096' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='279.668' y='184.11' width='26.662' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M418.859 192.879H453.164V183.313H418.859Z' fill='#fff'/>
+<path d='M418.859 192.879H453.164V183.313H418.859Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C4h-C2h/" aria-label="C4h(C2h)">
+<g transform='matrix(1 0 0 1 207.999 -281.476)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-52'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='224.719' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='228.012' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='233.422' y='472.97' xlink:href='#dc653ada3-g0-50'/>
+<use x='236.598' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='240.376' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='420.896' y='184.11' width='29.941' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M221.574 192.879H251.891V183.313H221.574Z' fill='#fff'/>
+<path d='M221.574 192.879H251.891V183.313H221.574Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C4h-S4/" aria-label="C4h(S4)">
+<g transform='matrix(1 0 0 1 10.714 -281.476)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-52'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='224.719' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='228.012' y='471.564' xlink:href='#dc653ada3-g1-83'/>
+<use x='232.717' y='472.741' xlink:href='#dc653ada3-g0-52'/>
+<use x='236.39' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='223.611' y='184.11' width='25.956' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M145.484 136.184H160.734V126.621H145.484Z' fill='#fff'/>
+<path d='M145.484 136.184H160.734V126.621H145.484Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C12/" aria-label="C12">
+<g transform='matrix(1 0 0 1 -65.375 -338.169)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-49'/>
+<use x='220.941' y='472.741' xlink:href='#dc653ada3-g0-50'/>
+</g>
+<rect x='147.522' y='127.776' width='10.895' height='6.796' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M252.867 136.184H268.223V126.621H252.867Z' fill='#fff'/>
+<path d='M252.867 136.184H268.223V126.621H252.867Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C6h/" aria-label="C6h">
+<g transform='matrix(1 0 0 1 42.008 -338.169)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-54'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+</g>
+<rect x='254.905' y='127.776' width='10.824' height='7.15' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M193.18 136.184H207.723V126.621H193.18Z' fill='#fff'/>
+<path d='M193.18 136.184H207.723V126.621H193.18Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/S12/" aria-label="S12">
+<g transform='matrix(1 0 0 1 -17.683 -338.169)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-83'/>
+<use x='217.06' y='472.741' xlink:href='#dc653ada3-g0-49'/>
+<use x='220.236' y='472.741' xlink:href='#dc653ada3-g0-50'/>
+</g>
+<rect x='195.047' y='127.696' width='10.357' height='6.876' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M167.426 136.184H186.418V126.621H167.426Z' fill='#fff'/>
+<path d='M167.426 136.184H186.418V126.621H167.426Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C6-1p/" aria-label="C61′">
+<g transform='matrix(1 0 0 1 -43.435 -338.169)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-54'/>
+<use x='221.439' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='225.674' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='169.462' y='127.241' width='14.707' height='7.457' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M75.652 136.184H93.938V126.621H75.652Z' fill='#fff'/>
+<path d='M75.652 136.184H93.938V126.621H75.652Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../S6-1p/" aria-label="S61′">
+<g transform='matrix(1 0 0 1 -135.209 -338.169)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-83'/>
+<use x='217.06' y='472.741' xlink:href='#dc653ada3-g0-54'/>
+<use x='220.734' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='224.968' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='77.521' y='127.241' width='14.169' height='7.457' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M46.73 136.184H69V126.621H46.73Z' fill='#fff'/>
+<path d='M46.73 136.184H69V126.621H46.73Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C3h-1p/" aria-label="C3h1′">
+<g transform='matrix(1 0 0 1 -164.131 -338.169)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-51'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='224.719' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='228.953' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='48.766' y='127.241' width='17.986' height='7.686' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M215.039 136.184H245.957V126.621H215.039Z' fill='#fff'/>
+<path d='M215.039 136.184H245.957V126.621H215.039Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C12-C6/" aria-label="C12(C6)">
+<g transform='matrix(1 0 0 1 4.177 -338.169)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-49'/>
+<use x='220.941' y='472.741' xlink:href='#dc653ada3-g0-50'/>
+<use x='224.615' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='227.908' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='233.319' y='472.741' xlink:href='#dc653ada3-g0-54'/>
+<use x='236.992' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='217.074' y='127.417' width='26.558' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M-28.516 136.184H2.508V126.621H-28.516Z' fill='#fff'/>
+<path d='M-28.516 136.184H2.508V126.621H-28.516Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C6h-C6/" aria-label="C6h(C6)">
+<g transform='matrix(1 0 0 1 -239.374 -338.169)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-54'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='224.719' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='228.012' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='233.422' y='472.741' xlink:href='#dc653ada3-g0-54'/>
+<use x='237.096' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='-26.477' y='127.417' width='26.662' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M9.539 136.184H39.859V126.621H9.539Z' fill='#fff'/>
+<path d='M9.539 136.184H39.859V126.621H9.539Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C6h-S6/" aria-label="C6h(S6)">
+<g transform='matrix(1 0 0 1 -201.32 -338.169)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-54'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='224.719' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='228.012' y='471.564' xlink:href='#dc653ada3-g1-83'/>
+<use x='232.717' y='472.741' xlink:href='#dc653ada3-g0-54'/>
+<use x='236.39' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='11.577' y='127.417' width='25.956' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M103.926 136.184H138.231V126.621H103.926Z' fill='#fff'/>
+<path d='M103.926 136.184H138.231V126.621H103.926Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C6h-C3h/" aria-label="C6h(C3h)">
+<g transform='matrix(1 0 0 1 -106.934 -338.169)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-54'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='224.719' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='228.012' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='233.422' y='472.97' xlink:href='#dc653ada3-g0-51'/>
+<use x='236.598' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='240.376' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='105.963' y='127.417' width='29.941' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M288.523 136.184H318.738V126.621H288.523Z' fill='#fff'/>
+<path d='M288.523 136.184H318.738V126.621H288.523Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../S12-C6/" aria-label="S12(C6)">
+<g transform='matrix(1 0 0 1 77.664 -338.169)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-83'/>
+<use x='217.06' y='472.741' xlink:href='#dc653ada3-g0-49'/>
+<use x='220.236' y='472.741' xlink:href='#dc653ada3-g0-50'/>
+<use x='223.909' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='227.203' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='232.613' y='472.741' xlink:href='#dc653ada3-g0-54'/>
+<use x='236.287' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='290.394' y='127.417' width='26.02' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M410.703 79.492H432.973V69.926H410.703Z' fill='#fff'/>
+<path d='M410.703 79.492H432.973V69.926H410.703Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C4h-1p/" aria-label="C4h1′">
+<g transform='matrix(1 0 0 1 199.842 -394.863)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-52'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='224.719' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='228.953' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='412.739' y='70.547' width='17.986' height='7.56' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M121.734 22.797H140.266V13.234H121.734Z' fill='#fff'/>
+<path d='M121.734 22.797H140.266V13.234H121.734Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../../rotation/C12h/" aria-label="C12h">
+<g transform='matrix(1 0 0 1 -89.125 -451.557)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-49'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-50'/>
+<use x='224.117' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+</g>
+<rect x='123.772' y='14.388' width='13.999' height='7.025' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M210.91 22.797H233.078V13.234H210.91Z' fill='#fff'/>
+<path d='M210.91 22.797H233.078V13.234H210.91Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C12-1p/" aria-label="C121′">
+<g transform='matrix(1 0 0 1 .049 -451.557)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.741' xlink:href='#dc653ada3-g0-49'/>
+<use x='220.941' y='472.741' xlink:href='#dc653ada3-g0-50'/>
+<use x='224.615' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='228.849' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='212.946' y='13.853' width='17.883' height='7.332' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M81.027 22.797H103.301V13.234H81.027Z' fill='#fff'/>
+<path d='M81.027 22.797H103.301V13.234H81.027Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C6h-1p/" aria-label="C6h1′">
+<g transform='matrix(1 0 0 1 -129.832 -451.557)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-54'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='224.719' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='228.953' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='83.065' y='13.853' width='17.986' height='7.686' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M239.609 22.797H261.07V13.234H239.609Z' fill='#fff'/>
+<path d='M239.609 22.797H261.07V13.234H239.609Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../S12-1p/" aria-label="S121′">
+<g transform='matrix(1 0 0 1 28.748 -451.557)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-83'/>
+<use x='217.06' y='472.741' xlink:href='#dc653ada3-g0-49'/>
+<use x='220.236' y='472.741' xlink:href='#dc653ada3-g0-50'/>
+<use x='223.909' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='228.144' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<rect x='241.478' y='13.853' width='17.344' height='7.332' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M15.082 22.797H52.457V13.234H15.082Z' fill='#fff'/>
+<path d='M15.082 22.797H52.457V13.234H15.082Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C12h-C12/" aria-label="C12h(C12)">
+<g transform='matrix(1 0 0 1 -195.778 -451.557)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-49'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-50'/>
+<use x='224.117' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='227.894' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='231.188' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='236.598' y='472.741' xlink:href='#dc653ada3-g0-49'/>
+<use x='239.774' y='472.741' xlink:href='#dc653ada3-g0-50'/>
+<use x='243.447' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='17.119' y='14.03' width='33.013' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M267.883 22.797H305.363V13.234H267.883Z' fill='#fff'/>
+<path d='M267.883 22.797H305.363V13.234H267.883Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C12h-C6h/" aria-label="C12h(C6h)">
+<g transform='matrix(1 0 0 1 57.024 -451.557)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-49'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-50'/>
+<use x='224.117' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='227.894' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='231.188' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='236.598' y='472.97' xlink:href='#dc653ada3-g0-54'/>
+<use x='239.774' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='243.551' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='269.921' y='14.03' width='33.117' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M-28.504 22.797H8.168V13.234H-28.504Z' fill='#fff'/>
+<path d='M-28.504 22.797H8.168V13.234H-28.504Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<a href="../../C12h-S12/" aria-label="C12h(S12)">
+<g transform='matrix(1 0 0 1 -239.363 -451.557)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-49'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-50'/>
+<use x='224.117' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='227.894' y='471.564' xlink:href='#dc653ada3-g3-40'/>
+<use x='231.188' y='471.564' xlink:href='#dc653ada3-g1-83'/>
+<use x='235.892' y='472.741' xlink:href='#dc653ada3-g0-49'/>
+<use x='239.068' y='472.741' xlink:href='#dc653ada3-g0-50'/>
+<use x='242.742' y='471.564' xlink:href='#dc653ada3-g3-41'/>
+</g>
+<rect x='-26.465' y='14.03' width='32.307' height='7.97' fill='#fff' fill-opacity='0'/>
+</a>
+<path d='M199.633-33.898H225.078V-43.461H199.633Z' fill='#fff'/>
+<path d='M199.633-33.898H225.078V-43.461H199.633Z' stroke='#000' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<g transform='matrix(1 0 0 1 -11.229 -508.25)'>
+<use x='212.355' y='471.564' xlink:href='#dc653ada3-g1-67'/>
+<use x='217.766' y='472.97' xlink:href='#dc653ada3-g0-49'/>
+<use x='220.941' y='472.97' xlink:href='#dc653ada3-g0-50'/>
+<use x='224.117' y='472.97' xlink:href='#dc653ada3-g0-104'/>
+<use x='227.894' y='471.564' xlink:href='#dc653ada3-g1-49'/>
+<use x='232.129' y='468.751' xlink:href='#dc653ada3-g2-48'/>
+</g>
+<path d='M-10.555 409.891L81.5 306.465' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M165.348 409.891L130.383 249.77' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M43.113 353.195L125.344 249.77' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M44.137 353.195L147.57 249.77' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M142.766 409.891L74.441 249.77' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M41.945 353.195L99.867 249.77' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M96.559 296.5L317.391 193.078' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M92.551 296.5L230.117 193.078' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M440.234 296.5L265.953 136.383' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M212.031 239.809L258.32 136.383' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M326.754 296.5L204.25 136.383' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M381.375 296.5L183.074 136.383' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M144.231 296.5L86.582 136.383' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M171.645 296.5L29.121 136.383' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M413.977 296.5L306.953 136.383' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M321.109 183.113L99.055 22.996' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M285.555 183.113L41.348 22.996' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+<path d='M229.512 183.113L-2.953 22.996' stroke='#808080' fill='none' stroke-width='.399' stroke-miterlimit='10'/>
+</g>
+</svg></div></figure></div>
+<div class="scroll"><table><thead><tr><th class="c-l">subgrp</th><th class="c-l">type</th><th class="c-r">order</th><th class="c-r">conjugates</th><th class="c-l">normal</th><th class="c-l">normalizer</th><th class="c-l">centralizer</th></tr></thead><tbody><tr><td class="c-l"><a aria-label="C1" href="../../../rotation/C1/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟣</mn></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{1}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">1</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C2" href="../../../rotation/C2/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟤</mn></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{2}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">2</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="Ci" href="../../../rotation/S2/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">2</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="Cs" href="../../../rotation/C1v/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗌</mi></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{s}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">2</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C11′" href="../../C1-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟣</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{1}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">2</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C2(C1)" href="../../C2-C1/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟤</mn></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟣</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{2}}(\mathsf{C_{1}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">2</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="Ci(C1)" href="../../S2-C1/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟣</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}}(\mathsf{C_{1}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">2</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="Cs(C1)" href="../../C1v-C1/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗌</mi></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟣</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{s}}(\mathsf{C_{1}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">2</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C3" href="../../../rotation/C3/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟥</mn></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{3}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">3</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C4" href="../../../rotation/C4/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟦</mn></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{4}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">4</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="S4" href="../../../rotation/S4/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟦</mn></msub></mrow><annotation encoding="application/x-tex">\mathsf{S_{4}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">4</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C2h" href="../../../rotation/C2h/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">4</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C21′" href="../../C2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟤</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">4</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="Ci1′" href="../../S2-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗂</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{i}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">4</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="Cs1′" href="../../C1v-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mi>𝗌</mi></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{s}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">4</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C4(C2)" href="../../C4-C2/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟦</mn></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟤</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{4}}(\mathsf{C_{2}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">4</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="S4(C2)" href="../../S4-C2/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟦</mn></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟤</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{S_{4}}(\mathsf{C_{2}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">4</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C2h(C2)" href="../../C2h-C2/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟤</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}}(\mathsf{C_{2}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">4</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C2h(Ci)" href="../../C2h-S2/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mi>𝗂</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}}(\mathsf{C_{i}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">4</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C2h(Cs)" href="../../C2h-C1v/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mi>𝗌</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}}(\mathsf{C_{s}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">4</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C6" href="../../../rotation/C6/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟨</mn></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{6}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">6</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="S6" href="../../../rotation/S6/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟨</mn></msub></mrow><annotation encoding="application/x-tex">\mathsf{S_{6}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">6</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C3h" href="../../../rotation/C3h/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟥</mn><mi>𝗁</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{3h}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">6</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C31′" href="../../C3-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟥</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{3}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">6</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C6(C3)" href="../../C6-C3/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟨</mn></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟥</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{6}}(\mathsf{C_{3}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">6</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="S6(C3)" href="../../S6-C3/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟨</mn></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟥</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{S_{6}}(\mathsf{C_{3}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">6</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C3h(C3)" href="../../C3h-C3/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟥</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟥</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{3h}}(\mathsf{C_{3}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">6</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C4h" href="../../../rotation/C4h/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟦</mn><mi>𝗁</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{4h}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">8</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C41′" href="../../C4-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟦</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{4}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">8</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="S41′" href="../../S4-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟦</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{S_{4}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">8</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C2h1′" href="../../C2h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{2h}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">8</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C4h(C4)" href="../../C4h-C4/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟦</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟦</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{4h}}(\mathsf{C_{4}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">8</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C4h(S4)" href="../../C4h-S4/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟦</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖲</mi><mn>𝟦</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{4h}}(\mathsf{S_{4}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">8</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C4h(C2h)" href="../../C4h-C2h/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟦</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mrow><mn>𝟤</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{4h}}(\mathsf{C_{2h}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">8</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C12" href="../../../rotation/C12/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟣𝟤</mn></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{12}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">12</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="S12" href="../../../rotation/S12/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟣𝟤</mn></msub></mrow><annotation encoding="application/x-tex">\mathsf{S_{12}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">12</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C6h" href="../../../rotation/C6h/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟨</mn><mi>𝗁</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{6h}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">12</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C61′" href="../../C6-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟨</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{6}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">12</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="S61′" href="../../S6-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟨</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{S_{6}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">12</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C3h1′" href="../../C3h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟥</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{3h}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">12</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C12(C6)" href="../../C12-C6/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟣𝟤</mn></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟨</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{12}}(\mathsf{C_{6}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">12</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="S12(C6)" href="../../S12-C6/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟣𝟤</mn></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟨</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{S_{12}}(\mathsf{C_{6}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">12</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C6h(C6)" href="../../C6h-C6/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟨</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟨</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{6h}}(\mathsf{C_{6}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">12</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C6h(S6)" href="../../C6h-S6/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟨</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖲</mi><mn>𝟨</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{6h}}(\mathsf{S_{6}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">12</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C6h(C3h)" href="../../C6h-C3h/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟨</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mrow><mn>𝟥</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{6h}}(\mathsf{C_{3h}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">12</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C4h1′" href="../../C4h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟦</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{4h}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">16</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C12h" href="../../../rotation/C12h/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}}</annotation></semantics></math></a></td><td class="c-l">I</td><td class="c-r">24</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C121′" href="../../C12-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mn>𝟣𝟤</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">24</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="S121′" href="../../S12-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖲</mi><mn>𝟣𝟤</mn></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{S_{12}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">24</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C6h1′" href="../../C6h-1p/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟨</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{6h}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">24</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C12h(C12)" href="../../C12h-C12/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mn>𝟣𝟤</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}}(\mathsf{C_{12}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">24</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C12h(S12)" href="../../C12h-S12/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖲</mi><mn>𝟣𝟤</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}}(\mathsf{S_{12}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">24</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C12h(C6h)" href="../../C12h-C6h/"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>𝖢</mi><mrow><mn>𝟨</mn><mi>𝗁</mi></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}}(\mathsf{C_{6h}})</annotation></semantics></math></a></td><td class="c-l">III</td><td class="c-r">24</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr><tr><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l">II</td><td class="c-r">48</td><td class="c-r">1</td><td class="c-l">yes</td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td><td class="c-l"><a aria-label="C12h1′" href="../"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝖢</mi><mrow><mn>𝟣𝟤</mn><mi>𝗁</mi></mrow></msub><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{C_{12h}1'}</annotation></semantics></math></a></td></tr></tbody></table></div>
+</main>
+<nav class="pager"><a class="prev" href="../clebsch_gordan/">← <span class="no">2.6</span> Clebsch–Gordan coefficients</a><a class="next" href="../subduction_o3/"><span class="no">4.1</span> Subduction from <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝖮</mi><mo stretchy="false">(</mo><mn>𝟥</mn><mo stretchy="false">)</mo><msup><mn>𝟣</mn><mo class="v-sans-serif" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\mathsf{O(3)1'}</annotation></semantics></math> →</a></nav>
+<footer class="foot">Point Group Atlas &middot; <a href="https://github.com/valbert4/point-group-atlas">GitHub</a> &middot; <a class="report" href="https://github.com/valbert4/point-group-atlas/issues/new?template=error.yml&amp;title=C12h-1p%2C%203.1%20Subgroup%20lattice%3A%20&amp;address=https%3A%2F%2Fvalbert4.github.io%2Fpoint-group-atlas%2Fmagnetic%2FC12h-1p%2Fsubgroups%2F&amp;version=119ff5dce05d8e7a8a172d2a70ee3e30e6168033" target="_blank" rel="noopener">Report an error</a></footer>
+</body>
+</html>

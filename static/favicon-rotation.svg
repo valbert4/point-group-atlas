@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<title>Point Group Atlas</title>
+<style>.c0{fill:#991A1A}.c0.l{fill:#EC6B60}.c1{fill:#991A1A}.c1.l{fill:#EC6B60}.c2{fill:#991A1A}.c2.l{fill:#EC6B60}.c3{fill:#991A1A}.c3.l{fill:#EC6B60}@media (prefers-color-scheme:dark){.c0{fill:#EC6B60}.c0.l{fill:#991A1A}.c1{fill:#EC6B60}.c1.l{fill:#991A1A}.c2{fill:#EC6B60}.c2.l{fill:#991A1A}.c3{fill:#EC6B60}.c3.l{fill:#991A1A}}</style>
+<path class="c2" d="M55.55 47.7L95.94 47.7A46 46 0 0 0 84.11 19.14L55.55 47.7Z"/>
+<path class="c0" d="M47.7 44.45L47.7 4.06A46 46 0 0 0 19.14 15.89L47.7 44.45Z"/>
+<path class="c3" d="M44.45 52.3L4.06 52.3A46 46 0 0 0 15.89 80.86L44.45 52.3Z"/>
+<path class="c1" d="M52.3 55.55L52.3 95.94A46 46 0 0 0 80.86 84.11L52.3 55.55Z"/>
+<path class="c2 l" d="M52.3 44.45L80.86 15.89A46 46 0 0 0 52.3 4.06L52.3 44.45Z"/>
+<path class="c0 l" d="M44.45 47.7L15.89 19.14A46 46 0 0 0 4.06 47.7L44.45 47.7Z"/>
+<path class="c3 l" d="M47.7 55.55L19.14 84.11A46 46 0 0 0 47.7 95.94L47.7 55.55Z"/>
+<path class="c1 l" d="M55.55 52.3L84.11 80.86A46 46 0 0 0 95.94 52.3L55.55 52.3Z"/>
+</svg>

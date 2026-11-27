@@ -1,0 +1,309 @@
+/* The stylesheet of the site: the colors of the PDFs (links #145494; headings #991A1A for volume
+   I, #295A2C for volume II) with their dark forms, STIX Two for text and math, tables ruled as
+   booktabs rules them, equation numbers on the left as the PDFs set them (leqno); the background
+   white (day) or black (night) as the reader sets it with the button of the bar (site.js), else
+   as the system is set. */
+@font-face { font-family: "STIX Two Text"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("fonts/STIXTwoText-Regular.otf") format("opentype"); }
+@font-face { font-family: "STIX Two Text"; font-style: italic; font-weight: 400; font-display: swap;
+  src: url("fonts/STIXTwoText-Italic.otf") format("opentype"); }
+@font-face { font-family: "STIX Two Text"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("fonts/STIXTwoText-Bold.otf") format("opentype"); }
+@font-face { font-family: "STIX Two Text"; font-style: italic; font-weight: 700; font-display: swap;
+  src: url("fonts/STIXTwoText-BoldItalic.otf") format("opentype"); }
+@font-face { font-family: "STIX Two Math"; font-display: swap;
+  src: url("fonts/STIXTwoMath-Regular.otf") format("opentype"); }
+
+/* The colors of the four catalogues, each with its second tone; at night the two change places.
+   A volume's --accent and --accent-light follow from them (the class volume-<catalogue>, on the
+   body or on an item of the home's list); the files of the atlas itself take the text's color.
+   The bar is in the accent with its text in --on-accent; --on-accent-filter turns the title of
+   the bar, an image in black, into that color. */
+:root {
+  --text: #1b1b1b; --background: #ffffff; --muted: #5d6168; --rule: #1b1b1b;
+  --faint: #d5d7db; --shade: #e6e6e6; --link: #145494; --letter: #737373; --on-accent: #ffffff;
+  --on-accent-filter: brightness(0) invert(1);
+  --rotation: #991a1a; --rotation-light: #ec6b60; --double: #295a2c; --double-light: #6c9f6d;
+  --magnetic: #7a1466; --magnetic-light: #d66ebc; --magnetic-double: #9b690b;
+  --magnetic-double-light: #f2a618;
+  --sans: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --text: #e4e5e7; --background: #121417; --muted: #a3a7ae; --rule: #c9ccd1;
+    --faint: #3a3e45; --shade: #23262b; --link: #65a3e9; --letter: #9a9ea5; --on-accent: #121417;
+    --on-accent-filter: brightness(0);
+    --rotation: #ec6b60; --rotation-light: #991a1a; --double: #6c9f6d; --double-light: #295a2c;
+    --magnetic: #d66ebc; --magnetic-light: #7a1466; --magnetic-double: #f2a618;
+    --magnetic-double-light: #9b690b;
+  }
+}
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] {
+  --text: #e4e5e7; --background: #121417; --muted: #a3a7ae; --rule: #c9ccd1;
+  --faint: #3a3e45; --shade: #23262b; --link: #65a3e9; --letter: #9a9ea5; --on-accent: #121417;
+  --on-accent-filter: brightness(0);
+  --rotation: #ec6b60; --rotation-light: #991a1a; --double: #6c9f6d; --double-light: #295a2c;
+  --magnetic: #d66ebc; --magnetic-light: #7a1466; --magnetic-double: #f2a618;
+  --magnetic-double-light: #9b690b; color-scheme: dark;
+}
+.volume-rotation { --accent: var(--rotation); --accent-light: var(--rotation-light); }
+.volume-double { --accent: var(--double); --accent-light: var(--double-light); }
+.volume-magnetic { --accent: var(--magnetic); --accent-light: var(--magnetic-light); }
+.volume-magnetic-double { --accent: var(--magnetic-double);
+  --accent-light: var(--magnetic-double-light); }
+body.volume-home { --accent: var(--text); }
+
+html { font-size: 17px; }
+body { margin: 0; background: var(--background); color: var(--text);
+  font-family: "STIX Two Text", "Times New Roman", serif; line-height: 1.5; }
+main { max-width: 62rem; margin: 0 auto; padding: 0.5rem 16px 3rem; }
+a, a:visited { color: var(--link); }
+main a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+code, pre { font-family: "DejaVu Sans Mono", Menlo, Consolas, monospace; font-size: 0.86em; }
+pre { overflow-x: auto; background: var(--shade); padding: 0.6em 0.8em; }
+h1, h2, h3, h4 { font-family: var(--sans); color: var(--accent); line-height: 1.25; }
+h1 { font-size: 1.45rem; margin: 1.2em 0 0.5em; text-align: center; }
+h1.title { font-size: 1.7rem; }
+h2 { font-size: 1.15rem; margin: 1.4em 0 0.4em; }
+h3 { font-size: 1rem; margin: 1.2em 0 0.3em; }
+h4.paragraph { font-size: 0.92rem; margin: 1em 0 0.2em; }
+.no { margin-right: 0.35em; }
+.mark-link { visibility: hidden; text-decoration: none; margin-left: 0.3em; color: var(--muted); }
+h1:hover .mark-link, h2:hover .mark-link, h3:hover .mark-link { visibility: visible; }
+p { margin: 0.5em 0; }
+p.cont { margin-top: 0; }
+.runin { font-family: var(--sans); font-weight: bold; color: var(--accent); font-size: 0.9em;
+  margin-right: 0.4em; }
+.grp { font-family: var(--sans); }
+.note { color: var(--muted); }
+/* a data file that downloads in the background (site.js), while it is fetched */
+a.dl.fetching { cursor: progress; opacity: 0.6; }
+/* MathML Core ignores the attributes of mtable that KaTeX writes (columnalign, columnspacing,
+   rowspacing): for aligned, its columns right and left, close together, as the PDFs set them */
+mtable[columnalign^="right left"] > mtr > mtd { padding: 0.125em 0; }
+mtable[columnalign^="right left"] > mtr > mtd:nth-child(odd) { text-align: right; }
+mtable[columnalign^="right left"] > mtr > mtd:nth-child(even) { text-align: left; }
+mtable[columnalign="right left right left"][columnspacing="0em 1em 0em"] > mtr >
+  mtd:nth-child(3) { padding-left: 1em; }
+.unbuilt { color: var(--muted); }
+:target { scroll-margin-top: 1rem; }
+
+/* the bar, the breadcrumbs, the tabs, the pager, the foot */
+.bar { background: var(--accent); color: var(--on-accent); padding: 0.45rem 16px;
+  font-family: var(--sans); display: flex; gap: 1.2em; align-items: baseline; flex-wrap: wrap; }
+.bar a, .bar a:visited { color: var(--on-accent); text-decoration: none; }
+/* the title in the bar (logo/wordmark.svg, Point Group Atlas in lmsans10-bold.otf, its box 0.91
+   of its size high and its baseline 0.199 of it above the box's foot), at 1.06 times the size of
+   the bar's text, on the bar's baseline, in the color of the bar's text */
+.bar .wordmark { height: 0.965em; width: auto; vertical-align: -0.211em;
+  filter: var(--on-accent-filter); }
+/* the files of the atlas itself: a rule in the four colors under the bar */
+body.volume-home .bar { border-bottom: 4px solid; border-image: linear-gradient(to right,
+  var(--rotation) 0 25%, var(--double) 25% 50%, var(--magnetic) 50% 75%,
+  var(--magnetic-double) 75% 100%) 1; }
+.bar .tools { margin-left: auto; display: inline-flex; align-items: baseline; gap: 0.9em; }
+.daynight { font: inherit; font-size: 1.05rem; line-height: 1; color: inherit; background: none;
+  border: 0; margin: 0; padding: 0; cursor: pointer; }
+.crumbs { max-width: 62rem; margin: 0.6rem auto 0; padding: 0 16px; font-family: var(--sans);
+  font-size: 0.85rem; color: var(--muted); }
+.crumbs a { text-decoration: none; }
+.tabs { max-width: 62rem; margin: 0.5rem auto 0; padding: 0 16px; font-family: var(--sans); }
+.tabs ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 0.2rem; }
+.tabs .parts { border-bottom: 1px solid var(--faint); }
+.tabs .sections { font-size: 0.84rem; margin-top: 0.3rem; }
+.tabs a { display: block; padding: 0.3rem 0.6rem; text-decoration: none;
+  border-bottom: 3px solid transparent; }
+.tabs .parts a { font-weight: bold; font-size: 0.92rem; }
+.tabs li.on > a { color: var(--accent); border-bottom-color: var(--accent); }
+.tabs.conv .parts a { padding: 0.3rem 0.5rem; }
+.tabs.conv .parts li:not(.on) .t { display: none; }
+.pager { max-width: 62rem; margin: 0 auto 2rem; padding: 0 16px; display: flex;
+  justify-content: space-between; gap: 1rem; font-family: var(--sans); font-size: 0.88rem; }
+.pager a { text-decoration: none; }
+.pager .next { margin-left: auto; text-align: right; }
+.foot { border-top: 1px solid var(--faint); color: var(--muted); font-family: var(--sans);
+  font-size: 0.8rem; padding: 1rem 16px 2rem; text-align: center; }
+
+/* contents */
+ol.contents { list-style: none; padding: 0; columns: 2 15rem; column-gap: 2.5rem; }
+ol.contents > li { break-inside: avoid; }
+ol.contents > li.part { font-family: var(--sans); font-weight: bold; color: var(--accent);
+  margin-top: 1em; }
+ol.contents ol { list-style: none; padding-left: 1.2em; font-weight: normal;
+  font-family: "STIX Two Text", serif; }
+ol.contents a { text-decoration: none; }
+ol.contents.conv > li { margin: 0.3em 0; }
+ol.contents.conv ol { font-size: 0.92em; color: var(--muted); }
+ol.contents > li:first-child { margin-top: 0; }
+ol.contents ol .no { display: inline-block; min-width: 1.3em; text-align: right; }
+ol.contents.conv ol .no { min-width: 2.1em; }
+
+/* The mark of the atlas: an svg element of the file (site.py, mark), whose paths carry their
+   catalogue (c0 Rotation to c3 Magnetic double) and their tone (l, the light one). */
+.logo { display: inline-block; width: 1em; height: 1em; }
+.logo .c0 { fill: var(--rotation); } .logo .c0.l { fill: var(--rotation-light); }
+.logo .c1 { fill: var(--double); } .logo .c1.l { fill: var(--double-light); }
+.logo .c2 { fill: var(--magnetic); } .logo .c2.l { fill: var(--magnetic-light); }
+.logo .c3 { fill: var(--magnetic-double); } .logo .c3.l { fill: var(--magnetic-double-light); }
+/* in one volume's two tones */
+.logo.one path { fill: var(--accent); } .logo.one path.l { fill: var(--accent-light); }
+/* in the bar: the small form, in the color of the bar's text */
+.bar .logo { width: 1.3em; height: 1.3em; vertical-align: -0.3em; margin-right: 0.45em; }
+.bar .logo path, .bar .logo path.l { fill: currentColor; }
+.bar .logo path.l { opacity: 0.5; }
+/* above the title of a volume's file (its two tones) */
+main > .logo.head { display: block; width: 4.2rem; height: 4.2rem; margin: 1.3rem auto 0; }
+main > .logo + h1.title { margin-top: 0.55em; }
+/* the home's masthead: the mark in the four colors beside the title on its grid (logo/title.svg,
+   in the color of the text); the mark's box 1.05 times the title's height from its cap line to its
+   last baseline, the two 0.75 cap heights apart */
+.masthead { display: flex; align-items: center; justify-content: space-between;
+  max-width: 26rem; margin: 2.2rem auto 0.6rem; }
+.masthead .logo.hero { display: block; flex: 0 0 37.26%; width: 37.26%; height: auto;
+  aspect-ratio: 1 / 1; }
+.masthead h1.title { flex: 0 0 56.25%; margin: 0; color: var(--text); line-height: 0; }
+.masthead .titlegrid { display: block; width: 100%; height: auto; }
+/* the home's volumes, the double cover from I to II; each volume in its color with its small
+   mark */
+.square { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center; justify-items: center; gap: 0.5rem 0.8rem; max-width: 36rem;
+  margin: 1.6rem auto; }
+.square .vol { display: flex; flex-direction: column; align-items: center; text-align: center;
+  gap: 0.1rem; }
+.square .vol .logo { width: 2.2rem; height: 2.2rem; margin-bottom: 0.25rem; }
+.square .vol > a:hover .logo { opacity: 0.85; }
+.square .vol .name { font-family: var(--sans); font-weight: bold; color: var(--accent); }
+.square .vol .name a, .square .vol .what a { color: inherit; text-decoration: none; }
+/* a hover keeps the color, whose contrast the light variant lacks, and underlines */
+.square .vol .name a:hover, .square .vol .what a:hover { text-decoration: underline; }
+.square .vol .what { font-size: 0.95rem; color: var(--accent); }
+.square .vol > a { display: block; line-height: 0; }
+.square .vol .note { font-size: 0.82rem; color: var(--muted); }
+.square .arrow { display: flex; align-items: center; gap: 0.3rem; color: var(--text);
+  font-family: var(--sans); font-size: 0.78rem; }
+.square .arrow.across { flex-direction: column; gap: 0; }
+.square .arrow span[aria-hidden] { font-size: 1.7rem; line-height: 1; color: var(--text); }
+
+/* math */
+math { font-family: "STIX Two Math", math; font-size: 1.04em; }
+/* an inline formula and the text glued to it, kept on one line (site.py, keep_together) */
+.nowrap { white-space: nowrap; }
+/* a long one, which scrolls in a box of its own on a narrower line (site.py, WIDE_EM); a flex box
+   keeps the baseline of its text, and the padding keeps the ink of its glyphs inside it */
+.wide { display: inline-flex; align-items: baseline; max-width: 100%; overflow-x: auto;
+  overflow-y: hidden; padding: 0.2em 0; margin: -0.2em 0; vertical-align: baseline; }
+/* a long name in code breaks rather than run past the line */
+p code, li code, h1 code, h2 code, h3 code, h4 code { overflow-wrap: break-word; }
+.irr { font-variant-caps: all-small-caps; font-style: normal; }
+math .irr { font-family: "STIX Two Text", serif; text-transform: none; }
+math .sfit { font-family: var(--sans); font-style: italic; text-transform: none; }
+math .sf { font-family: var(--sans); font-style: normal; text-transform: none; }
+math .bb, math .script, math .bf, math .bfit, math .it { text-transform: none; }
+.display { display: flex; align-items: center; gap: 1em; margin: 0.7em 0; overflow-x: auto;
+  overflow-y: hidden; }
+.display .eqno { flex: 0 0 auto; min-width: 3.4em; font-family: var(--sans); font-weight: bold;
+  font-size: 0.78em; }
+.display .formula { flex: 1 1 auto; text-align: center; }
+.display.align { display: table; margin: 0.7em auto 0.7em 0; width: 100%; }
+.display.align .line { display: table-row; }
+.display.align .line > span { display: table-cell; vertical-align: middle; padding: 0.15em 0; }
+.display.align .cell.r { text-align: right; }
+.display.align .cell.l { text-align: left; }
+.display.align .eqno { width: 3.4em; }
+.display.align .pad { width: 50%; padding: 0; }
+.scroll > .display.align { margin: 0; }
+
+/* tables */
+.scroll { overflow-x: auto; overflow-y: hidden; margin: 0.8em 0; padding: 2px 0; }
+.scroll > table { margin-left: auto; margin-right: auto; }
+table { border-collapse: collapse; border-top: 1.4px solid var(--rule);
+  border-bottom: 1.4px solid var(--rule); font-size: 0.9em; line-height: 1.35; }
+thead tr:last-child > * { border-bottom: 0.8px solid var(--rule); }
+th, td { padding: 0.18em 0.55em; vertical-align: top; text-align: left; font-weight: normal; }
+th:first-child, td:first-child { padding-left: 0; }
+th:last-child, td:last-child { padding-right: 0; }
+.c-c { text-align: center; }
+.c-r { text-align: right; }
+.c-p { min-width: 12em; }
+/* what the column specification prints between two columns (@{...}, the = of a table of rules):
+   a column of its own, the cells beside it without their space on that side, as in the PDF */
+td.sep, th.sep { padding-left: 0; padding-right: 0; }
+.to-sep { padding-right: 0; }
+.from-sep { padding-left: 0; }
+tr.rule > * { border-top: 0.6px solid var(--rule); }
+tr.space > * { padding-top: 0.55em; }
+.vl { border-left: 0.8px solid var(--rule); padding-left: 0.55em; }
+.vr { border-right: 0.8px solid var(--rule); padding-right: 0.55em; }
+.cmid { border-top: 0.6px solid var(--rule); }
+table.families { border: none; }
+table.families th, table.families td { text-align: center; padding: 0.2em 0.45em; }
+table.families tbody th { text-align: right; font-family: var(--sans); }
+p.family .what { font-family: var(--sans); font-weight: bold; margin-right: 0.6em; }
+p.family a, p.family .unbuilt { margin-right: 0.6em; }
+/* the groups of volume III, a row for each point group, under the heading of its block */
+p.family + .scroll { margin-top: 0.3em; }
+.scroll > table.groups { margin-left: 0; }
+table.groups td { text-align: left; padding: 0.15em 1.1em 0.15em 0; }
+/* a long narrow table set as copies side by side, as in the PDF (latex.snake_plan): one band of
+   the copies, each with its head, centered; on a narrow screen they wrap below one another in
+   their order */
+.snake { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start;
+  gap: 0.8em 1.6em; margin: 0.8em 0; }
+.snake > .scroll { flex: 0 1 auto; min-width: 0; max-width: 100%; margin: 0; }
+.center { text-align: center; }
+.center > .scroll { display: inline-block; text-align: left; max-width: 100%; }
+.stack { display: inline-block; vertical-align: top; }
+.stack > .line { display: block; }
+.detbox { border: 1px solid currentColor; padding: 0 2px; }
+.mark { font-size: 0.72em; }
+.mark.letter { color: var(--letter); }
+.tint-black-40 { color: var(--muted); }
+p.data { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); text-align: center;
+  margin: -0.2rem 0 0.9rem; }
+table.files td:first-child { font-family: var(--sans); font-size: 0.92em; }
+/* the info box under a numbered display: what it defines, its symbols, the sections that cite
+   it, its permalink and its TeX */
+details.info { margin: -0.35em 0 0.6em; font-family: var(--sans); font-size: 0.78rem; }
+details.info > summary { cursor: pointer; color: var(--muted); text-align: right;
+  list-style: none; }
+details.info > summary::-webkit-details-marker { display: none; }
+details.info > summary::before { content: "\25B8\00A0"; }
+details.info[open] > summary::before { content: "\25BE\00A0"; }
+details.info dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.3em 0.9em;
+  margin: 0.3em 0 0.7em; padding: 0.6em 0.8em; background: var(--shade); color: var(--text);
+  font-size: 0.95em; }
+details.info dt { font-weight: bold; }
+details.info dd { margin: 0; }
+details.info ul { list-style: none; margin: 0; padding: 0; }
+details.info li { margin: 0.1em 0; }
+details.info .meaning { color: var(--muted); margin-left: 0.3em; }
+details.info code { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* the diagrams (figures.py), in the PDF's colors mapped by attribute to the site's */
+figure.diagram { margin: 1em 0; }
+figure.diagram > .scroll { text-align: center; }
+svg.diagram { color: var(--text); fill: currentColor; vertical-align: top; }
+svg.diagram [fill="#fff"] { fill: var(--background); }
+svg.diagram [stroke="#000"] { stroke: var(--text); }
+svg.diagram [stroke="#808080"] { stroke: var(--muted); }
+svg.diagram [fill="#737373"], svg.diagram [fill="#999"] { fill: var(--letter); }
+svg.diagram [stroke="#999"] { stroke: var(--letter); }
+svg.diagram [stroke="#bfbfbf"] { stroke: var(--faint); }
+svg.diagram a { fill: var(--link); }
+svg.diagram a:hover { fill: var(--accent); }
+
+/* lists */
+ol.roman, ol.alpha { counter-reset: item; list-style: none; padding-left: 2.4em; }
+ol.roman > li, ol.alpha > li { counter-increment: item; position: relative; margin: 0.25em 0; }
+ol.roman > li::before { content: "(" counter(item, lower-roman) ")"; position: absolute;
+  left: -2.4em; width: 2em; text-align: right; }
+ol.alpha > li::before { content: "(" counter(item, lower-alpha) ")"; position: absolute;
+  left: -2.4em; width: 2em; text-align: right; }
+ol.labelled { list-style: none; padding-left: 0; }
+ol.labelled > li { display: grid; grid-template-columns: 6.2em minmax(0, 1fr); gap: 0.6em;
+  margin: 0.35em 0; }
+/* a long address in an entry breaks rather than run past a narrow line */
+ol.labelled .entry { overflow-wrap: anywhere; }
+ol.labelled .label { font-family: var(--sans); font-size: 0.9em; }
